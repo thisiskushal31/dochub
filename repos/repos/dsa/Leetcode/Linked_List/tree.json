@@ -1,0 +1,62 @@
+[
+  {
+    "name": "061.Rotate-List",
+    "path": "061.Rotate-List",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Readme.md",
+        "path": "061.Rotate-List/Readme.md",
+        "type": "file",
+        "sha": "",
+        "size": 79
+      }
+    ]
+  },
+  {
+    "name": "082.Remove-Duplicates-from-Sorted-List-II",
+    "path": "082.Remove-Duplicates-from-Sorted-List-II",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Readme.md",
+        "path": "082.Remove-Duplicates-from-Sorted-List-II/Readme.md",
+        "type": "file",
+        "sha": "",
+        "size": 46
+      }
+    ]
+  },
+  {
+    "name": "086.Partition-List",
+    "path": "086.Partition-List",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Readme.md",
+        "path": "086.Partition-List/Readme.md",
+        "type": "file",
+        "sha": "",
+        "size": 85
+      }
+    ]
+  },
+  {
+    "name": "142.Linked-List-Cycle-II",
+    "path": "142.Linked-List-Cycle-II",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Readme.md",
+        "path": "142.Linked-List-Cycle-II/Readme.md",
+        "type": "file",
+        "sha": "",
+        "size": 1576
+      }
+    ]
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "name": "cyclically-rotate-an-array-by-one",
+    "path": "cyclically-rotate-an-array-by-one",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "find-a-peak-in-a-given-array",
+    "path": "find-a-peak-in-a-given-array",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "find-duplicates-in-an-array",
+    "path": "find-duplicates-in-an-array",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "find-transition-point-binary-array",
+    "path": "find-transition-point-binary-array",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "kth-smallestlargest-element-unsorted-array",
+    "path": "kth-smallestlargest-element-unsorted-array",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "largest-element-in-array",
+    "path": "largest-element-in-array",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "largest-sum-contiguous-subarray",
+    "path": "largest-sum-contiguous-subarray",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "maximum-and-minimum-in-an-array",
+    "path": "maximum-and-minimum-in-an-array",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "minimize-the-maximum-difference-between-the-heights",
+    "path": "minimize-the-maximum-difference-between-the-heights",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "minimum-number-of-jumps",
+    "path": "minimum-number-of-jumps",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "move-negative-numbers-beginning-positive-end-constant-extra-space",
+    "path": "move-negative-numbers-beginning-positive-end-constant-extra-space",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "remove-duplicate-elements-from-sorted-array",
+    "path": "remove-duplicate-elements-from-sorted-array",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "reverse-the-array",
+    "path": "reverse-the-array",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "search-an-element-in-a-sorted-and-pivoted-array",
+    "path": "search-an-element-in-a-sorted-and-pivoted-array",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "sort-an-array-of-0s-1s-and-2s",
+    "path": "sort-an-array-of-0s-1s-and-2s",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "sort-array-wave-form",
+    "path": "sort-array-wave-form",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "two-sum-ii-input-array-is-sorted",
+    "path": "two-sum-ii-input-array-is-sorted",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "union-of-two-arrays",
+    "path": "union-of-two-arrays",
+    "type": "dir",
+    "sha": ""
+  }
+]
