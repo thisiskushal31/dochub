@@ -1,0 +1,60 @@
+{
+  "site": {
+    "name": "Documentation Hub",
+    "shortName": "Docs Hub",
+    "description": "Documentation hub by Kushal Gupta - Browse and search documentation from multiple topics including Data Structures, Algorithms, Kubernetes, and more.",
+    "url": "https://thisiskushal31.github.io/dochub/",
+    "basePath": "/",
+    "ogImage": "https://thisiskushal31.github.io/og.png",
+    "favicon": "/favicon.ico"
+  },
+  "seo": {
+    "title": "Documentation Hub",
+    "description": "Kushal Gupta's documentation hub - Browse and search documentation from multiple topics. Data Structures, Algorithms, Kubernetes, and more.",
+    "keywords": "Kushal Gupta, Kushal Gupta Platform Engineer, Kushal Gupta Software Engineer, Kushal Gupta DevOps Engineer, Kushal Gupta Documentation, Documentation Hub, GitHub Documentation, Markdown Documentation, DSA Documentation, Algorithms Documentation, Data Structures Documentation, Kubernetes Documentation, Tech Documentation, Developer Documentation, Programming Documentation, Software Documentation, Engineering Documentation, Technical Documentation, Code Documentation, API Documentation, Tutorial Documentation, Guide Documentation, Reference Documentation, Knowledge Base, Documentation Site, Documentation Portal, Tech Resources, Developer Resources, Programming Resources, Software Resources, Engineering Resources, Technical Resources, Code Resources, Learning Resources, Educational Resources, Study Resources, Practice Resources, Interview Resources, Coding Resources, Algorithm Resources, Data Structure Resources, Kubernetes Resources, Cloud Resources, DevOps Resources, Platform Engineering Resources, Software Engineering Resources, Computer Science Resources, Technology Resources",
+    "author": "Kushal Gupta",
+    "googleSiteVerification": "KkRBAVneD7zLDOAEaykkdnfOQUvp_dL_V6ieN90ApsI",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "canonical": "https://thisiskushal31.github.io/dochub/"
+  },
+  "personal": {
+    "name": "Kushal Gupta",
+    "title": "Software Engineer | Platform Engineering · DevOps · Cloud Infrastructure · Cloud-Native Development",
+    "bio": "Experienced Software Engineer specializing in Platform Engineering, DevOps, and Cloud-Native Software Development. I build scalable infrastructure, automate deployment pipelines, and design cloud-native solutions. This is where I share my expertise, insights, and real-world experiences in modern software engineering practices.",
+    "location": "Global",
+    "avatar": "/dochub/profile.jpeg",
+    "email": "guptakushal070@gmail.com"
+  },
+  "websites": {
+    "portfolio": "https://thisiskushal31.github.io/",
+    "blog": "https://thisiskushal31.github.io/blog/",
+    "publicProfile": "https://thisiskushal31.github.io/link/",
+    "documentationHub": "https://thisiskushal31.github.io/dochub/"
+  },
+  "social": {
+    "github": "https://github.com/thisiskushal31",
+    "linkedin": "https://www.linkedin.com/in/thisiskushalgupta/",
+    "twitter": "https://x.com/thisis_kushal",
+    "email": "mailto:guptakushal070@gmail.com",
+    "website": "https://thisiskushal31.github.io"
+  },
+  "manifest": {
+    "name": "Documentation Hub",
+    "short_name": "Docs Hub",
+    "description": "Documentation hub by Kushal Gupta - Browse and search documentation from multiple topics including Data Structures, Algorithms, Kubernetes, and more.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "lang": "en"
+  },
+  "features": {
+    "enableSearch": true,
+    "enableDarkMode": true,
+    "enableTableOfContents": true,
+    "enableRepositorySwitching": true,
+    "searchPlaceholder": "Search documentation...",
+    "defaultTheme": "dark"
+  }
+}
+

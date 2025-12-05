@@ -1,0 +1,54 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install yarn
+        run: |
+          npm install -g yarn
+
+      - name: Install dependencies
+        run: |
+          # Use yarn as primary package manager (better at handling optional dependencies)
+          rm -rf node_modules package-lock.json yarn.lock
+          yarn install
+
+      - name: Clone repositories and copy files
+        run: |
+          node scripts/clone-repos.js
+
+      - name: Build
+        run: yarn build
+
+      - name: Generate sitemap
+        run: npm run generate-sitemap
+
+      - name: Copy sitemap.xml, 404.html, robots.txt, and repos to dist
+        run: |
+          cp sitemap.xml dist/sitemap.xml || echo "sitemap.xml not found, skipping"
+          cp 404.html dist/404.html || echo "404.html not found, skipping"
+          cp public/robots.txt dist/robots.txt || echo "robots.txt not found, skipping"
+          # Copy repos directory to dist if it exists
+          if [ -d "public/repos" ]; then
+            cp -r public/repos dist/repos || echo "Failed to copy repos directory"
+          fi
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+

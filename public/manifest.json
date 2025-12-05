@@ -1,0 +1,23 @@
+{
+  "name": "Kushal Gupta | Documentation Hub",
+  "short_name": "Kushal Gupta Docs",
+  "description": "Documentation hub by Kushal Gupta - Browse and search documentation from multiple GitHub repositories including Data Structures, Algorithms, Kubernetes, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48 64x64 96x96 128x128 256x256",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/og.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "en"
+}

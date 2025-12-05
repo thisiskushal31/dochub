@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thisiskushal31.github.io/dochub/sitemap.xml

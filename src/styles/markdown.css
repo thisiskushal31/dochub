@@ -1,0 +1,310 @@
+/* Documentation Markdown Styles */
+
+.blog-markdown {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: hsl(var(--foreground));
+  word-wrap: break-word;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Headings */
+.blog-markdown h1,
+.blog-markdown h2,
+.blog-markdown h3,
+.blog-markdown h4,
+.blog-markdown h5,
+.blog-markdown h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: hsl(var(--primary));
+}
+
+.blog-markdown h1 {
+  font-size: 2em;
+  border-bottom: 1px solid hsl(var(--border));
+  padding-bottom: 0.3em;
+}
+
+.blog-markdown h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid hsl(var(--border));
+  padding-bottom: 0.3em;
+}
+
+.blog-markdown h3 { font-size: 1.25em; }
+.blog-markdown h4 { font-size: 1em; }
+.blog-markdown h5 { font-size: 0.875em; }
+.blog-markdown h6 { 
+  font-size: 0.85em;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Paragraphs */
+.blog-markdown p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* Code blocks */
+.blog-markdown .highlight {
+  background-color: hsl(var(--code-bg));
+  border: 1px solid hsl(var(--code-border));
+  border-radius: 0.75rem;
+  margin-bottom: 16px;
+  overflow: auto;
+}
+
+.blog-markdown .highlight pre {
+  border-radius: 0.75rem !important;
+  padding: 16px !important;
+  overflow-x: auto !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+
+.blog-markdown .highlight pre code {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre;
+}
+
+/* Dark mode code blocks - match blog style */
+html.dark .blog-markdown .highlight pre,
+html.dark .blog-markdown pre.highlight,
+.dark .blog-markdown .highlight pre,
+.dark .blog-markdown pre.highlight {
+  background-color: hsl(217 32% 18%) !important;
+  border: 1px solid hsl(217 32% 25%) !important;
+  box-shadow: 0 2px 6px hsl(0 0% 0% / 0.3) !important;
+}
+
+html.dark .blog-markdown .highlight pre code,
+.dark .blog-markdown .highlight pre code {
+  color: #f0f6fc !important;
+}
+
+/* Light mode code blocks */
+html:not(.dark) .blog-markdown .highlight pre,
+html:not(.dark) .blog-markdown pre.highlight,
+:not(.dark) .blog-markdown .highlight pre,
+:not(.dark) .blog-markdown pre.highlight {
+  background-color: hsl(0 0% 96%) !important;
+  border: 1px solid hsl(0 0% 85%) !important;
+  box-shadow: 0 2px 6px hsl(0 0% 0% / 0.04) !important;
+}
+
+html:not(.dark) .blog-markdown .highlight pre code,
+:not(.dark) .blog-markdown .highlight pre code {
+  color: #4b5563 !important;
+}
+
+/* Inline code */
+.blog-markdown code {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--primary));
+  border-radius: 0.375rem;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, monospace;
+  font-size: 85%;
+  padding: 0.2em 0.4em;
+}
+
+.blog-markdown .highlight code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* Tables */
+.blog-markdown .table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+.blog-markdown table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.blog-markdown table th,
+.blog-markdown table td {
+  border: 1px solid hsl(var(--border));
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.blog-markdown table th {
+  background-color: hsl(var(--muted));
+  font-weight: 600;
+}
+
+.blog-markdown table tr:nth-child(even) {
+  background-color: hsl(var(--muted) / 0.5);
+}
+
+/* Blockquotes */
+.blog-markdown blockquote {
+  border-left: 4px solid hsl(var(--primary));
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 16px 0;
+  padding: 8px 16px;
+  background-color: hsl(var(--muted) / 0.5);
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+/* Lists */
+.blog-markdown ul,
+.blog-markdown ol {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-left: 2em;
+}
+
+.blog-markdown ul { list-style-type: disc; }
+.blog-markdown ul ul { list-style-type: circle; }
+.blog-markdown ul ul ul { list-style-type: square; }
+
+.blog-markdown li {
+  margin-bottom: 0.25em;
+}
+
+/* Task lists */
+.blog-markdown .task-list-item {
+  list-style-type: none;
+}
+
+.blog-markdown .task-list-item input[type="checkbox"] {
+  margin: 0 0.5em 0 -1.5em;
+  vertical-align: middle;
+}
+
+/* Links */
+.blog-markdown a {
+  color: hsl(var(--primary));
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.blog-markdown a:hover {
+  color: hsl(var(--accent));
+  text-decoration: underline;
+}
+
+/* Images */
+.blog-markdown .image-wrapper {
+  margin: 16px 0;
+  text-align: center;
+}
+
+.blog-markdown img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(var(--border));
+}
+
+/* Horizontal rules */
+.blog-markdown hr {
+  background-color: hsl(var(--border));
+  border: 0;
+  height: 2px;
+  margin: 24px 0;
+}
+
+/* Strong and emphasis */
+.blog-markdown strong { font-weight: 600; }
+.blog-markdown em { font-style: italic; }
+.blog-markdown del { text-decoration: line-through; }
+
+/* Anchor links */
+.blog-markdown .anchor {
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+}
+
+.blog-markdown .anchor:hover {
+  color: hsl(var(--primary));
+}
+
+/* YouTube embeds */
+.youtube-embed-wrapper {
+  margin: 16px 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Gist embeds */
+.gist-embed-wrapper {
+  margin: 16px 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--card));
+}
+
+.gist-header {
+  padding: 12px 16px;
+  background-color: hsl(var(--muted));
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.gist-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gist-filename {
+  font-weight: 600;
+  font-family: ui-monospace, monospace;
+  font-size: 14px;
+}
+
+.gist-language {
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.gist-body {
+  padding: 0;
+  overflow-x: auto;
+}
+
+.gist-body pre {
+  margin: 0;
+  padding: 16px;
+  background-color: hsl(var(--code-bg));
+}
+
+.gist-body code {
+  background: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+/* Override Prism.js styles for dark mode code blocks */
+html.dark pre[class*="language-"],
+.dark pre[class*="language-"],
+html.dark .blog-markdown pre[class*="language-"],
+.dark .blog-markdown pre[class*="language-"] {
+  background-color: hsl(217 32% 18%) !important;
+  border: 1px solid hsl(217 32% 25%) !important;
+}
+
+html.dark code[class*="language-"],
+.dark code[class*="language-"],
+html.dark .blog-markdown code[class*="language-"],
+.dark .blog-markdown code[class*="language-"] {
+  color: #f0f6fc !important;
+}

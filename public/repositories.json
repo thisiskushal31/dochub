@@ -1,0 +1,22 @@
+{
+  "repositories": [
+    {
+      "id": "dsa",
+      "name": "Data Structures & Algorithms",
+      "owner": "thisiskushal31",
+      "repo": "Datastructures-and-Algorithms",
+      "branch": "main",
+      "description": "DSA notes and solutions",
+      "icon": "📚"
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes Deep Dive",
+      "owner": "thisiskushal31",
+      "repo": "Kubernetes-Deep-Dive",
+      "branch": "main",
+      "description": "Kubernetes documentation",
+      "icon": "☸️"
+    }
+  ]
+}
