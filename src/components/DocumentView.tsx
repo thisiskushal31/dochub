@@ -234,11 +234,11 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
             </div>
             
             <div className="flex items-center gap-3 flex-wrap">
-              {lastUpdated && (
-                <span className="text-xs text-muted-foreground">
-                  Updated: {lastUpdated.toLocaleTimeString()}
-                </span>
-              )}
+                  {lastUpdated && (
+                    <span className="text-xs text-muted-foreground">
+                      Updated: {lastUpdated.toLocaleString()}
+                    </span>
+                  )}
               <Button
                 variant="ghost"
                 size="sm"
