@@ -258,6 +258,23 @@ This will:
 - Generate file tree JSON files
 - Serve files locally (no API calls needed)
 
+### Updating Cloned Repositories
+
+When source repositories are updated, you can update the cloned files:
+
+```bash
+# Update all cloned repositories with latest changes
+npm run update-repos
+```
+
+This will:
+- Pull latest changes from each source repository
+- Update markdown files in `public/repos/`
+- Regenerate file tree JSON files
+- Preserve existing structure (only updates changed files)
+
+**Note:** The CI/CD workflow automatically updates repositories on each deployment, so manual updates are only needed for local development.
+
 # Start dev server
 npm run dev
 
@@ -360,13 +377,18 @@ All formats work correctly - the display name is cleaned for readability, but th
 - Shows latest changes immediately
 
 ### CI/CD Build Process
-1. Clones all repositories from `src/config/repositories.ts`
+1. Updates or clones all repositories from `src/config/repositories.ts` (uses `update-repos.js` if repos exist, otherwise `clone-repos.js`)
 2. Copies markdown files to `public/repos/{repoId}/`
 3. Generates `tree.json` files for file tree navigation
-4. Builds the site with static files
-5. Deploys to GitHub Pages
+4. Generates sitemap.xml
+5. Builds the site with static files
+6. Deploys to GitHub Pages
 
-**To update content**: Just push to your repository's main branch, and the next CI run will pick up the changes.
+**To update content**: 
+- **Automatic (Scheduled)**: The workflow `update-content.yaml` runs daily at 2 AM UTC to check for updates
+- **Manual (GitHub Actions)**: Go to Actions → "Update Content from Source Repositories" → "Run workflow" to manually trigger an update
+- **Manual (Local)**: Run `npm run update-repos` to update cloned repositories locally, then commit and push the updated `public/repos/` directory
+- **Via Webhook**: Set up a webhook in your source repositories to trigger `repository_dispatch` events (see setup below)
 
 ---
 
@@ -398,6 +420,42 @@ The app includes cache-busting mechanisms:
 - ✅ Shows last update time
 - ✅ Provides visual feedback (spinner while loading)
 - ✅ Always fetches latest content from GitHub
+
+---
+
+## 🔔 Automatic Content Updates
+
+The documentation hub can automatically update when source repositories change. Here are the available methods:
+
+### Method 1: Scheduled Updates (Automatic)
+- The `update-content.yaml` workflow runs **daily at 2 AM UTC**
+- Automatically checks for updates in all source repositories
+- Updates and redeploys if changes are found
+- **No action needed** - works automatically
+
+### Method 2: Manual Trigger (GitHub Actions)
+1. Go to **Actions** tab in the `dochub` repository
+2. Select **"Update Content from Source Repositories"**
+3. Click **"Run workflow"** → **"Run workflow"**
+4. This will immediately check for updates and redeploy
+
+### Method 3: Webhook Setup (Real-Time Updates)
+To trigger updates immediately when you push to source repositories:
+
+1. **Go to your source repository** (e.g., `Datastructures-and-Algorithms`)
+2. **Settings → Webhooks → Add webhook**
+3. **Configure:**
+   - **Payload URL**: `https://api.github.com/repos/thisiskushal31/dochub/dispatches`
+   - **Content type**: `application/json`
+   - **Secret**: (optional)
+   - **Events**: Select "Just the push event"
+   - **Active**: ✅ Checked
+
+4. **Add authentication** (if needed):
+   - The workflow uses `GITHUB_TOKEN` which should work automatically
+   - For custom tokens, add as secret `SOURCE_REPO_TOKEN`
+
+**Note**: The scheduled daily update ensures content stays fresh even without webhooks.
 
 ---
 

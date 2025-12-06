@@ -1,11 +1,19 @@
-name: Deploy to GitHub Pages
+name: Update Content from Source Repositories
 
 on:
-  push:
-    branches: [main]
+  # Manual trigger
+  workflow_dispatch:
+  
+  # Scheduled runs (daily at 2 AM UTC)
+  schedule:
+    - cron: '0 2 * * *'
+  
+  # Repository dispatch (can be triggered by webhooks from source repos)
+  repository_dispatch:
+    types: [content-updated]
 
 jobs:
-  build-and-deploy:
+  update-and-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -28,16 +36,10 @@ jobs:
           rm -rf node_modules package-lock.json yarn.lock
           yarn install
 
-      - name: Clone or update repositories
+      - name: Update repositories
         run: |
-          # Check if repos already exist, if so update them, otherwise clone
-          if [ -d "public/repos" ] && [ "$(ls -A public/repos 2>/dev/null)" ]; then
-            echo "Repositories exist, updating..."
-            node scripts/update-repos.js || node scripts/clone-repos.js
-          else
-            echo "No repositories found, cloning..."
-            node scripts/clone-repos.js
-          fi
+          # Always update (assumes repos were cloned in previous CI run)
+          node scripts/update-repos.js || node scripts/clone-repos.js
 
       - name: Build
         run: yarn build
