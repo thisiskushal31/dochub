@@ -225,7 +225,9 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
               <h1 className="text-3xl font-bold text-primary mb-2">{displayName}</h1>
               {repo && (
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <span>{repo.icon}</span>
+                  {repo.icon ? (
+                    <i className={`${repo.icon} text-sm`}></i>
+                  ) : null}
                   <span>{repo.name}</span>
                   <span>/</span>
                   <span className="truncate max-w-[300px]">{filePath}</span>

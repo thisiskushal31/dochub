@@ -155,8 +155,11 @@ const SearchDialog: React.FC<SearchDialogProps> = ({
                     <div className="text-sm font-medium truncate">
                       {getFileDisplayName(result.file.name)}
                     </div>
-                    <div className="text-xs text-muted-foreground truncate">
-                      {result.repo.icon} {result.repo.name} / {result.file.path}
+                    <div className="text-xs text-muted-foreground truncate flex items-center gap-1">
+                      {result.repo.icon ? (
+                        <i className={`${result.repo.icon} text-xs`}></i>
+                      ) : null}
+                      <span>{result.repo.name} / {result.file.path}</span>
                     </div>
                   </div>
                 </button>
