@@ -37,12 +37,12 @@ const WelcomeView: React.FC<WelcomeViewProps> = ({ onOpenSearch }) => {
                 </defs>
                 <rect width="100%" height="100%" fill="url(#line-pattern)"/>
               </svg>
-            </div>
-            
+      </div>
+
             {/* Floating Tech Stack Logos */}
             {ANIMATED_BACKGROUND_ELEMENTS.map((element, index) => (
-              <div
-                key={index}
+          <div
+            key={index}
                 className={element.className}
                 style={element.style}
               >
@@ -86,8 +86,8 @@ const WelcomeView: React.FC<WelcomeViewProps> = ({ onOpenSearch }) => {
                     }}
                   />
                 </div>
-              </div>
-              
+      </div>
+
               {/* Bio */}
               <div className="flex-1 text-center md:text-left">
                 <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
@@ -144,7 +144,7 @@ const WelcomeView: React.FC<WelcomeViewProps> = ({ onOpenSearch }) => {
                   ) : (
                     <Book className="h-8 w-8 text-primary" />
                   )}
-                </div>
+      </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-semibold text-lg mb-1">{repo.name}</h3>
                   <p className="text-sm text-muted-foreground mb-2">{repo.description}</p>
@@ -153,7 +153,7 @@ const WelcomeView: React.FC<WelcomeViewProps> = ({ onOpenSearch }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-xs text-primary hover:underline"
-                  >
+        >
                     <Github className="h-3 w-3" />
                     View on GitHub
                   </a>
@@ -161,7 +161,7 @@ const WelcomeView: React.FC<WelcomeViewProps> = ({ onOpenSearch }) => {
               </div>
             ))}
           </div>
-        </div>
+      </div>
       </section>
 
     </div>

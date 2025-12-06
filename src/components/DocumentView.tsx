@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import MarkdownViewer from './MarkdownViewer';
 import TableOfContents from './TableOfContents';
-import { fetchMarkdown, processImagePaths, getFileDisplayName } from '@/utils/github';
+import { fetchMarkdown, processImagePaths, getFileDisplayName, calculateReadingTime } from '@/utils/github';
 import { getRepositoryById, getRawGitHubUrl, type RepositoryConfig } from '@/config/repositories';
 import { getCached, clearCache } from '@/utils/cache';
 
@@ -21,6 +21,7 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
   const [repo, setRepo] = useState<RepositoryConfig | null>(null);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [linkCopied, setLinkCopied] = useState(false);
+  const [readingTime, setReadingTime] = useState<number | null>(null);
   const { toast } = useToast();
 
   const loadContent = useCallback(async (forceRefresh = false) => {
@@ -42,6 +43,7 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
       markdown = processImagePaths(markdown, repoConfig, filePath);
       setContent(markdown);
       setLastUpdated(new Date());
+      setReadingTime(calculateReadingTime(markdown));
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to load document';
       
@@ -52,6 +54,7 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
           const processedMarkdown = processImagePaths(cached, repoConfig, filePath);
           setContent(processedMarkdown);
           setLastUpdated(new Date());
+          setReadingTime(calculateReadingTime(processedMarkdown));
           toast({
             title: "Using cached content",
             description: "GitHub API rate limit exceeded. Showing cached version.",
@@ -211,9 +214,9 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
     );
   }
 
-  return (
-    <div className="flex gap-6 max-w-full">
-      <article className="flex-1 min-w-0 animate-fade-in">
+      return (
+        <div className="flex gap-6 max-w-[98%] mx-auto">
+          <article className="flex-1 min-w-0 animate-fade-in">
         <div className="mb-6">
           <Button onClick={onBack} variant="ghost" size="sm" className="mb-4">
             <ArrowLeft className="h-4 w-4 mr-2" />
@@ -236,11 +239,16 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
             </div>
             
             <div className="flex items-center gap-3 flex-wrap">
-                  {lastUpdated && (
-                    <span className="text-xs text-muted-foreground">
-                      Updated: {lastUpdated.toLocaleString()}
-                    </span>
-                  )}
+              {lastUpdated && (
+                <span className="text-xs text-muted-foreground">
+                  Updated: {lastUpdated.toLocaleString()}
+                </span>
+              )}
+              {readingTime && (
+                <span className="text-xs text-muted-foreground">
+                  {readingTime} min read
+                </span>
+              )}
               <Button
                 variant="ghost"
                 size="sm"
@@ -291,8 +299,8 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
         </div>
       </article>
 
-      {/* Table of Contents - Desktop only */}
-      <aside className="hidden xl:block w-64 flex-shrink-0">
+      {/* Table of Contents - Desktop only, positioned on right */}
+      <aside className="hidden xl:block w-52 flex-shrink-0">
         <div className="sticky top-20">
           <TableOfContents content={content} />
         </div>

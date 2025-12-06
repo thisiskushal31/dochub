@@ -338,3 +338,29 @@ export function getFileDisplayName(filename: string): string {
     .replace(/[-_]/g, ' ')
     .replace(/^\d+[._\s]*/, '');
 }
+
+/**
+ * Calculate reading time in minutes based on word count
+ * Assumes average reading speed of 100 words per minute
+ */
+export function calculateReadingTime(content: string): number {
+  // Remove markdown syntax, code blocks, and HTML tags
+  const text = content
+    .replace(/```[\s\S]*?```/g, '') // Remove code blocks
+    .replace(/`[^`]+`/g, '') // Remove inline code
+    .replace(/<[^>]+>/g, '') // Remove HTML tags
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Convert links to just text
+    .replace(/[#*_~`]/g, '') // Remove markdown formatting
+    .replace(/\n+/g, ' ') // Replace newlines with spaces
+    .trim();
+  
+  // Count words (split by whitespace and filter empty strings)
+  const words = text.split(/\s+/).filter(word => word.length > 0);
+  const wordCount = words.length;
+  
+  // Calculate reading time (100 words per minute)
+  const readingTime = Math.ceil(wordCount / 100);
+  
+  // Minimum 1 minute
+  return Math.max(1, readingTime);
+}

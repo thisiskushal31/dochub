@@ -101,7 +101,7 @@ const Index: React.FC = () => {
 
         <main className="flex-1 overflow-y-auto">
           {selectedFile ? (
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="py-8">
               <DocumentView
                 repoId={selectedRepo.id}
                 filePath={selectedFile}
