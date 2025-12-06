@@ -3,6 +3,11 @@ name: Update Content from Source Repositories
 on:
   # Manual trigger
   workflow_dispatch:
+    inputs:
+      source_repo:
+        description: 'Source repository that triggered this update'
+        required: false
+        default: 'manual'
   
   # Scheduled runs (daily at 2 AM UTC)
   schedule:
@@ -19,6 +24,13 @@ jobs:
       contents: write
 
     steps:
+      - name: Debug - Show event information
+        run: |
+          echo "Event type: ${{ github.event_name }}"
+          echo "Repository dispatch type: ${{ github.event.action }}"
+          echo "Client payload: ${{ toJSON(github.event.client_payload) }}"
+          echo "Full event: ${{ toJSON(github.event) }}"
+      
       - uses: actions/checkout@v4
 
       - name: Setup Node.js
