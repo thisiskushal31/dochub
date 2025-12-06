@@ -53,7 +53,7 @@ const FileTreeItem: React.FC<{
         "w-full flex items-start gap-2 py-1.5 px-2 text-sm rounded-md transition-colors text-left",
         "hover:bg-muted/50 hover:text-foreground",
         isSelected && "bg-muted text-foreground font-medium",
-        "min-w-0 group" // Allow flex item to shrink, group for hover
+        "min-w-0 group overflow-visible" // Allow flex item to shrink, group for hover, allow overflow
       )}
       style={{ paddingLeft: `${level * 12 + 8}px` }}
     >
@@ -80,7 +80,7 @@ const FileTreeItem: React.FC<{
           </>
         )}
       </div>
-      <span className="break-words min-w-0 flex-1 text-left leading-relaxed">
+      <span className="break-words break-all min-w-0 flex-1 text-left leading-relaxed overflow-wrap-anywhere">
         {displayName}
       </span>
     </button>

@@ -46,7 +46,7 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
     try {
       setIsLoading(true);
       const parsedHtml = parserRef.current.parse(content);
-      const sanitizedHtml = DOMPurify.sanitize(parsedHtml, {
+      let sanitizedHtml = DOMPurify.sanitize(parsedHtml, {
         ALLOWED_TAGS: [
           'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
           'p', 'br', 'strong', 'em', 'u', 's', 'del',
@@ -70,6 +70,30 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
         ],
         ALLOW_DATA_ATTR: true,
         KEEP_CONTENT: true,
+      });
+
+      // Post-process to ensure all external links have target="_blank" and rel="noopener noreferrer"
+      sanitizedHtml = sanitizedHtml.replace(/<a\s+([^>]*?)href="([^"]+)"([^>]*?)>(.*?)<\/a>/gs, (match, beforeHref, href, afterHref, content) => {
+        // Skip anchor links (internal page navigation)
+        if (href.startsWith('#')) {
+          return match;
+        }
+        
+        // Check if target and rel already exist
+        const hasTarget = beforeHref.includes('target=') || afterHref.includes('target=');
+        const hasRel = beforeHref.includes('rel=') || afterHref.includes('rel=');
+        
+        if (!hasTarget && !hasRel) {
+          // Add both target and rel
+          return `<a ${beforeHref}href="${href}"${afterHref} target="_blank" rel="noopener noreferrer">${content}</a>`;
+        } else if (!hasTarget) {
+          // Add target only
+          return `<a ${beforeHref}href="${href}"${afterHref} target="_blank">${content}</a>`;
+        } else if (!hasRel) {
+          // Add rel only
+          return `<a ${beforeHref}href="${href}"${afterHref} rel="noopener noreferrer">${content}</a>`;
+        }
+        return match;
       });
 
       setHtmlContent(sanitizedHtml);

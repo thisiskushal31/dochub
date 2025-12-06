@@ -79,17 +79,31 @@ export class Renderer {
     // Blockquotes
     html = html.replace(/<blockquote>/g, '<blockquote class="border-l-4 border-primary pl-4 my-4 text-muted-foreground bg-muted/50 rounded-r-lg py-2">');
 
-    // Links
+    // Links - ensure all external links open in new tab
     if (this.openLinksInNewTab) {
-      html = html.replace(/<a\s+([^>]*?)href="([^"]+)"([^>]*?)>([^<]+)<\/a>/g, (match, beforeHref, href, afterHref, text) => {
-        if (!beforeHref.includes('target=') && !afterHref.includes('target=')) {
-          return `<a ${beforeHref}href="${href}"${afterHref} target="_blank" rel="noopener noreferrer">${text}</a>`;
+      // More comprehensive regex to match all link formats
+      // Match links with any attributes, including nested content
+      html = html.replace(/<a\s+([^>]*?)href="([^"]+)"([^>]*?)>(.*?)<\/a>/gs, (match, beforeHref, href, afterHref, content) => {
+        // Skip anchor links (internal page navigation)
+        if (href.startsWith('#')) {
+          return match;
+        }
+        
+        // Check if target already exists
+        const hasTarget = beforeHref.includes('target=') || afterHref.includes('target=');
+        const hasRel = beforeHref.includes('rel=') || afterHref.includes('rel=');
+        
+        if (!hasTarget) {
+          // Add target and rel attributes
+          const targetAttr = ' target="_blank"';
+          const relAttr = ' rel="noopener noreferrer"';
+          return `<a ${beforeHref}href="${href}"${afterHref}${targetAttr}${relAttr}>${content}</a>`;
+        } else if (!hasRel) {
+          // Add rel if target exists but rel doesn't
+          const relAttr = ' rel="noopener noreferrer"';
+          return `<a ${beforeHref}href="${href}"${afterHref}${relAttr}>${content}</a>`;
         }
         return match;
-      });
-
-      html = html.replace(/<a href="([^"]+)">([^<]+)<\/a>/g, (match, href, text) => {
-        return `<a href="${href}" target="_blank" rel="noopener noreferrer">${text}</a>`;
       });
     }
 
