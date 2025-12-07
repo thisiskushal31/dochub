@@ -141,7 +141,7 @@ const FileTree: React.FC<FileTreeProps> = ({ repoId, onSelectFile, selectedPath 
         if (isDev) {
           // Check if local files exist
           try {
-            const localTreePath = `/dochub/repos/${repoId}/tree.json`;
+            const localTreePath = `/dochub/repository/${repoId}/tree.json`;
             const localResponse = await fetch(localTreePath);
             if (!localResponse.ok) {
               console.log(`[DEV] Local files not found, fetching from GitHub API for ${repoId}`);

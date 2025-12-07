@@ -2,7 +2,7 @@ import { getRepositoryById, getRawGitHubUrl, type RepositoryConfig } from '@/con
 import { getCached, setCached, MARKDOWN_TTL, DEFAULT_TTL } from './cache';
 
 // Base path for local repository files (served from gh-pages)
-const LOCAL_REPOS_BASE = '/dochub/repos';
+const LOCAL_REPOS_BASE = '/dochub/repository';
 
 export interface GitHubFile {
   name: string;

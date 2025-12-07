@@ -12,7 +12,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const REPOS_DIR = 'public/repos';
+const REPOS_DIR = 'public/repository';
 const CONFIG_FILE = 'src/config/repositories.ts';
 
 // Helper to get absolute paths

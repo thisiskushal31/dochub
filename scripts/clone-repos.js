@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Clone repositories and copy markdown files to public/repos directory
+ * Clone repositories and copy markdown files to public/repository directory
  * Reads from src/config/repositories.ts and dynamically processes all repositories
  */
 
@@ -12,7 +12,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const REPOS_DIR = 'public/repos';
+const REPOS_DIR = 'public/repository';
 const CONFIG_FILE = 'src/config/repositories.ts';
 
 // Helper to get absolute paths

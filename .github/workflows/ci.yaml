@@ -50,9 +50,9 @@ jobs:
           cp sitemap.xml dist/sitemap.xml || echo "sitemap.xml not found, skipping"
           cp 404.html dist/404.html || echo "404.html not found, skipping"
           cp public/robots.txt dist/robots.txt || echo "robots.txt not found, skipping"
-          # Copy repos directory to dist if it exists
-          if [ -d "public/repos" ]; then
-            cp -r public/repos dist/repos || echo "Failed to copy repos directory"
+          # Copy repository directory to dist if it exists
+          if [ -d "public/repository" ]; then
+            cp -r public/repository dist/repository || echo "Failed to copy repository directory"
           fi
 
       - name: Deploy to GitHub Pages
