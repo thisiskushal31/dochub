@@ -28,6 +28,15 @@ export const repositories: RepositoryConfig[] = [
     description: 'Kubernetes documentation',
     icon: 'fas fa-cube'
   },
+  {
+    id: 'cheatsheets',
+    name: 'Commands and Cheatsheets',
+    owner: 'thisiskushal31',
+    repo: 'Commands-and-Cheatsheets',
+    branch: 'main',
+    description: 'A curated list of essential commands and cheatsheets',
+    icon: 'fas fa-terminal'
+  },
 ];
 
 export function getRawGitHubUrl(config: RepositoryConfig, path: string): string {
