@@ -45,11 +45,15 @@ jobs:
       - name: Generate sitemap
         run: npm run generate-sitemap
 
-      - name: Copy sitemap.xml, 404.html, robots.txt, and repos to dist
+      - name: Copy sitemap.xml, 404.html, robots.txt, and repository to dist
         run: |
           cp sitemap.xml dist/sitemap.xml || echo "sitemap.xml not found, skipping"
           cp 404.html dist/404.html || echo "404.html not found, skipping"
           cp public/robots.txt dist/robots.txt || echo "robots.txt not found, skipping"
+          # Remove repository folder from dist if it exists (to avoid nested structure from Vite copy)
+          if [ -d "dist/repository" ]; then
+            rm -rf dist/repository
+          fi
           # Copy repository directory to dist if it exists
           if [ -d "public/repository" ]; then
             cp -r public/repository dist/repository || echo "Failed to copy repository directory"

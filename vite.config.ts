@@ -38,5 +38,11 @@ export default defineConfig(({ mode }) => ({
   publicDir: 'public',
   build: {
     copyPublicDir: true,
+    // Exclude repository folder from automatic copy (we'll copy it manually in CI)
+    rollupOptions: {
+      output: {
+        // This doesn't directly exclude from publicDir, but we'll handle it in CI
+      }
+    }
   },
 }));
