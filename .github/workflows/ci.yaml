@@ -31,7 +31,7 @@ jobs:
       - name: Clone or update repositories
         run: |
           # Check if repos already exist, if so update them, otherwise clone
-          if [ -d "public/repos" ] && [ "$(ls -A public/repos 2>/dev/null)" ]; then
+          if [ -d "public/repository" ] && [ "$(ls -A public/repository 2>/dev/null)" ]; then
             echo "Repositories exist, updating..."
             node scripts/update-repos.js || node scripts/clone-repos.js
           else

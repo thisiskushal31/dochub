@@ -4,6 +4,12 @@ import { getCached, setCached, MARKDOWN_TTL, DEFAULT_TTL } from './cache';
 // Base path for local repository files (served from gh-pages)
 const LOCAL_REPOS_BASE = '/dochub/repository';
 
+// Helper function to encode a file path for use in URLs
+// Encodes each segment separately to handle special characters like #
+function encodePathForUrl(path: string): string {
+  return path.split('/').map(segment => encodeURIComponent(segment)).join('/');
+}
+
 export interface GitHubFile {
   name: string;
   path: string;
@@ -27,18 +33,43 @@ export async function fetchMarkdown(options: FetchOptions, forceRefresh = false)
   // If not forcing refresh, try local files first (from gh-pages or local dev)
   if (!forceRefresh) {
     try {
-      const localPath = `${LOCAL_REPOS_BASE}/${options.repoId}/${options.path}`;
+      // Encode the path properly for URLs (handles special characters like #)
+      const encodedPath = encodePathForUrl(options.path);
+      const localPath = `${LOCAL_REPOS_BASE}/${options.repoId}/${encodedPath}`;
       const response = await fetch(localPath, { cache: 'default' });
       
       if (response.ok) {
+        const contentType = response.headers.get('content-type') || '';
         const content = await response.text();
+        
+        // Check if we got HTML instead of markdown (common SPA fallback issue)
+        if (contentType.includes('text/html') || 
+            content.trim().startsWith('<!DOCTYPE') || 
+            content.trim().startsWith('<!doctype') || 
+            content.trim().startsWith('<html') ||
+            content.includes('<script type="module"')) {
+          console.warn(`Received HTML instead of markdown for ${options.path} at ${localPath}, treating as not found`);
+          // Don't cache HTML content, throw error to fall through to API
+          throw new Error('File returned HTML instead of markdown');
+        }
+        
+        // Verify it looks like markdown (starts with common markdown patterns)
+        if (content.trim().length > 0 && !content.trim().match(/^(#|[-*]|\d+\.|\w)/)) {
+          // Might still be valid markdown, but log a warning
+          console.debug(`Content for ${options.path} doesn't start with typical markdown patterns`);
+        }
+        
         // Cache the local content
         setCached('markdown', options.repoId, content, MARKDOWN_TTL, options.path);
         return content;
+      } else {
+        console.debug(`Local file fetch failed: ${localPath} returned ${response.status}`);
       }
     } catch (error) {
       // Local file not found, continue to check cache/API
-      console.debug(`Local file not found: ${options.path}, trying cache/API`);
+      if (error instanceof Error && error.message !== 'File returned HTML instead of markdown') {
+        console.debug(`Local file not found: ${options.path}, trying cache/API`);
+      }
     }
     
     // Check cache
@@ -83,7 +114,8 @@ export async function fetchMarkdown(options: FetchOptions, forceRefresh = false)
       if (response.status === 403) {
         // Rate limited - try local file or cached data
         try {
-          const localPath = `${LOCAL_REPOS_BASE}/${options.repoId}/${options.path}`;
+          const encodedPath = encodePathForUrl(options.path);
+          const localPath = `${LOCAL_REPOS_BASE}/${options.repoId}/${encodedPath}`;
           const localResponse = await fetch(localPath);
           if (localResponse.ok) {
             return await localResponse.text();
@@ -114,7 +146,8 @@ export async function fetchMarkdown(options: FetchOptions, forceRefresh = false)
     // If network error, try local file or cached data
     if (error instanceof Error && error.message.includes('Failed to fetch')) {
       try {
-        const localPath = `${LOCAL_REPOS_BASE}/${options.repoId}/${options.path}`;
+        const encodedPath = encodePathForUrl(options.path);
+        const localPath = `${LOCAL_REPOS_BASE}/${options.repoId}/${encodedPath}`;
         const localResponse = await fetch(localPath);
         if (localResponse.ok) {
           return await localResponse.text();
@@ -134,7 +167,8 @@ export async function fetchMarkdown(options: FetchOptions, forceRefresh = false)
     if (error instanceof Error && error.name === 'AbortError') {
       // Try local file or cached data on timeout
       try {
-        const localPath = `${LOCAL_REPOS_BASE}/${options.repoId}/${options.path}`;
+        const encodedPath = encodePathForUrl(options.path);
+        const localPath = `${LOCAL_REPOS_BASE}/${options.repoId}/${encodedPath}`;
         const localResponse = await fetch(localPath);
         if (localResponse.ok) {
           return await localResponse.text();
@@ -164,7 +198,9 @@ export async function fetchFileTree(repoId: string, path: string = '', forceRefr
   if (!forceRefresh) {
     try {
       const treePath = path ? `${path}/tree.json` : 'tree.json';
-      const localPath = `${LOCAL_REPOS_BASE}/${repoId}/${treePath}`;
+      // Encode the path properly for URLs (handles special characters like #)
+      const encodedTreePath = encodePathForUrl(treePath);
+      const localPath = `${LOCAL_REPOS_BASE}/${repoId}/${encodedTreePath}`;
       const response = await fetch(localPath, { cache: 'default' });
       
       if (response.ok) {
@@ -222,7 +258,8 @@ export async function fetchFileTree(repoId: string, path: string = '', forceRefr
         // Rate limited - try local file tree or cached data
         try {
           const treePath = path ? `${path}/tree.json` : 'tree.json';
-          const localPath = `${LOCAL_REPOS_BASE}/${repoId}/${treePath}`;
+          const encodedTreePath = encodePathForUrl(treePath);
+          const localPath = `${LOCAL_REPOS_BASE}/${repoId}/${encodedTreePath}`;
           const localResponse = await fetch(localPath);
           if (localResponse.ok) {
             const data = await localResponse.json();
@@ -256,7 +293,8 @@ export async function fetchFileTree(repoId: string, path: string = '', forceRefr
     if (error instanceof Error && (error.message.includes('Failed to fetch') || error.message.includes('rate limit'))) {
       try {
         const treePath = path ? `${path}/tree.json` : 'tree.json';
-        const localPath = `${LOCAL_REPOS_BASE}/${repoId}/${treePath}`;
+        const encodedTreePath = encodePathForUrl(treePath);
+        const localPath = `${LOCAL_REPOS_BASE}/${repoId}/${encodedTreePath}`;
         const localResponse = await fetch(localPath);
         if (localResponse.ok) {
           const data = await localResponse.json();
@@ -277,7 +315,8 @@ export async function fetchFileTree(repoId: string, path: string = '', forceRefr
       // Try local file tree or cached data on timeout
       try {
         const treePath = path ? `${path}/tree.json` : 'tree.json';
-        const localPath = `${LOCAL_REPOS_BASE}/${repoId}/${treePath}`;
+        const encodedTreePath = encodePathForUrl(treePath);
+        const localPath = `${LOCAL_REPOS_BASE}/${repoId}/${encodedTreePath}`;
         const localResponse = await fetch(localPath);
         if (localResponse.ok) {
           const data = await localResponse.json();

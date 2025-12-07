@@ -42,7 +42,9 @@ export const repositories: RepositoryConfig[] = [
 export function getRawGitHubUrl(config: RepositoryConfig, path: string): string {
   const basePath = config.basePath || '';
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  return `https://raw.githubusercontent.com/${config.owner}/${config.repo}/${config.branch}${basePath}/${cleanPath}`;
+  // Encode each path segment separately to handle special characters like #
+  const encodedPath = cleanPath.split('/').map(segment => encodeURIComponent(segment)).join('/');
+  return `https://raw.githubusercontent.com/${config.owner}/${config.repo}/${config.branch}${basePath}/${encodedPath}`;
 }
 
 export function getRepositoryById(id: string): RepositoryConfig | undefined {
