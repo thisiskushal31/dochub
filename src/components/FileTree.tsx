@@ -47,16 +47,16 @@ const FileTreeItem: React.FC<{
   const fullName = isDirectory ? node.name : node.name;
 
   const buttonContent = (
-    <button
-      onClick={handleClick}
-      className={cn(
+      <button
+        onClick={handleClick}
+        className={cn(
         "w-full flex items-start gap-2 py-1.5 px-2 text-sm rounded-md transition-colors text-left",
         "hover:bg-muted/50 hover:text-foreground",
         isSelected && "bg-muted text-foreground font-medium",
         "min-w-0 group overflow-visible" // Allow flex item to shrink, group for hover, allow overflow
-      )}
-      style={{ paddingLeft: `${level * 12 + 8}px` }}
-    >
+        )}
+        style={{ paddingLeft: `${level * 12 + 8}px` }}
+      >
       <div className="flex-shrink-0 flex items-start pt-0.5">
         {isDirectory ? (
           <>
@@ -83,7 +83,7 @@ const FileTreeItem: React.FC<{
       <span className="break-words break-all min-w-0 flex-1 text-left leading-relaxed overflow-wrap-anywhere">
         {displayName}
       </span>
-    </button>
+      </button>
   );
 
   return (

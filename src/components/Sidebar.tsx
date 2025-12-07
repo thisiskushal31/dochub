@@ -88,7 +88,7 @@ const Sidebar: React.FC<SidebarProps> = (props) => {
         </SheetTrigger>
         <SheetContent side="left" className="w-80 p-0 [&>button]:z-10">
           <div className="pt-12">
-            <SidebarContent {...props} />
+          <SidebarContent {...props} />
           </div>
         </SheetContent>
       </Sheet>

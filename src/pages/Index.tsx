@@ -100,7 +100,7 @@ const Index: React.FC = () => {
         <Header onOpenSearch={() => setSearchOpen(true)} />
 
         <main className="flex-1 overflow-y-auto">
-          {selectedFile ? (
+            {selectedFile ? (
             <div className="py-8">
               <DocumentView
                 repoId={selectedRepo.id}
@@ -108,9 +108,9 @@ const Index: React.FC = () => {
                 onBack={handleBack}
               />
             </div>
-          ) : (
-            <WelcomeView onOpenSearch={() => setSearchOpen(true)} />
-          )}
+            ) : (
+              <WelcomeView onOpenSearch={() => setSearchOpen(true)} />
+            )}
         </main>
       </div>
 

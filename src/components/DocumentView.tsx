@@ -25,26 +25,26 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
   const { toast } = useToast();
 
   const loadContent = useCallback(async (forceRefresh = false) => {
-    setIsLoading(true);
-    setError(null);
-    
-        const repoConfig = getRepositoryById(repoId);
-        if (!repoConfig) {
+      setIsLoading(true);
+      setError(null);
+      
+      const repoConfig = getRepositoryById(repoId);
+      if (!repoConfig) {
           setError('Topic not found');
-      setIsLoading(false);
-      return;
-    }
-    
-    setRepo(repoConfig);
+        setIsLoading(false);
+        return;
+      }
+      
+      setRepo(repoConfig);
 
-    try {
+      try {
       // Force refresh bypasses cache to get latest content
       let markdown = await fetchMarkdown({ repoId, path: filePath }, forceRefresh);
-      markdown = processImagePaths(markdown, repoConfig, filePath);
-      setContent(markdown);
+        markdown = processImagePaths(markdown, repoConfig, filePath);
+        setContent(markdown);
       setLastUpdated(new Date());
       setReadingTime(calculateReadingTime(markdown));
-    } catch (err) {
+      } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to load document';
       
       // If rate limited, try to load from cache
@@ -66,9 +66,9 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
       }
       
       setError(errorMessage);
-    } finally {
-      setIsLoading(false);
-    }
+      } finally {
+        setIsLoading(false);
+      }
   }, [repoId, filePath, toast]);
 
   useEffect(() => {
@@ -205,18 +205,18 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
               Clear Cache & Reload
             </Button>
           )}
-          <Button onClick={onBack} variant="outline">
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Go back
-          </Button>
+        <Button onClick={onBack} variant="outline">
+          <ArrowLeft className="h-4 w-4 mr-2" />
+          Go back
+        </Button>
         </div>
       </div>
     );
   }
 
-      return (
+  return (
         <div className="flex gap-6 max-w-[98%] mx-auto">
-          <article className="flex-1 min-w-0 animate-fade-in">
+      <article className="flex-1 min-w-0 animate-fade-in">
         <div className="mb-6">
           <Button onClick={onBack} variant="ghost" size="sm" className="mb-4">
             <ArrowLeft className="h-4 w-4 mr-2" />
@@ -279,17 +279,17 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
                 <RefreshCw className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
                 Refresh
               </Button>
-              {repo && (
-                <a
-                  href={`https://github.com/${repo.owner}/${repo.repo}/blob/${repo.branch}/${filePath}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <span>Edit on GitHub</span>
-                  <ExternalLink className="h-3 w-3" />
-                </a>
-              )}
+            {repo && (
+              <a
+                href={`https://github.com/${repo.owner}/${repo.repo}/blob/${repo.branch}/${filePath}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <span>Edit on GitHub</span>
+                <ExternalLink className="h-3 w-3" />
+              </a>
+            )}
             </div>
           </div>
         </div>

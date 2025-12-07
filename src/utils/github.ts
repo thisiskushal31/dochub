@@ -19,8 +19,8 @@ export interface FetchOptions {
 }
 
 export async function fetchMarkdown(options: FetchOptions, forceRefresh = false): Promise<string> {
-    const repo = getRepositoryById(options.repoId);
-    if (!repo) {
+  const repo = getRepositoryById(options.repoId);
+  if (!repo) {
       throw new Error(`Topic not found: ${options.repoId}`);
   }
   
@@ -79,7 +79,7 @@ export async function fetchMarkdown(options: FetchOptions, forceRefresh = false)
     
     clearTimeout(timeoutId);
     
-    if (!response.ok) {
+  if (!response.ok) {
       if (response.status === 403) {
         // Rate limited - try local file or cached data
         try {
@@ -100,7 +100,7 @@ export async function fetchMarkdown(options: FetchOptions, forceRefresh = false)
         throw new Error('GitHub API rate limit exceeded. Please try again later.');
       }
       throw new Error(`Failed to fetch from ${repo.name}: ${options.path} (${response.status})`);
-    }
+  }
     
     const content = await response.text();
     
@@ -118,7 +118,7 @@ export async function fetchMarkdown(options: FetchOptions, forceRefresh = false)
         const localResponse = await fetch(localPath);
         if (localResponse.ok) {
           return await localResponse.text();
-        }
+}
       } catch {
         // Local file not available
       }
@@ -155,8 +155,8 @@ export async function fetchMarkdown(options: FetchOptions, forceRefresh = false)
 }
 
 export async function fetchFileTree(repoId: string, path: string = '', forceRefresh = false): Promise<GitHubFile[]> {
-    const repo = getRepositoryById(repoId);
-    if (!repo) {
+  const repo = getRepositoryById(repoId);
+  if (!repo) {
       throw new Error(`Topic not found: ${repoId}`);
   }
   
@@ -217,8 +217,8 @@ export async function fetchFileTree(repoId: string, path: string = '', forceRefr
     
     clearTimeout(timeoutId);
     
-    if (!response.ok) {
-      if (response.status === 403) {
+  if (!response.ok) {
+    if (response.status === 403) {
         // Rate limited - try local file tree or cached data
         try {
           const treePath = path ? `${path}/tree.json` : 'tree.json';
@@ -237,12 +237,12 @@ export async function fetchFileTree(repoId: string, path: string = '', forceRefr
           console.warn('Rate limited, returning cached file tree');
           return cached;
         }
-        throw new Error('GitHub API rate limit exceeded. Please try again later.');
-      }
-      throw new Error(`Failed to fetch file tree from ${repo.name} (${response.status})`);
+      throw new Error('GitHub API rate limit exceeded. Please try again later.');
     }
-    
-    const data = await response.json();
+      throw new Error(`Failed to fetch file tree from ${repo.name} (${response.status})`);
+  }
+  
+  const data = await response.json();
     const files = Array.isArray(data) ? data : [data];
     
     // Cache the file tree
@@ -281,7 +281,7 @@ export async function fetchFileTree(repoId: string, path: string = '', forceRefr
         const localResponse = await fetch(localPath);
         if (localResponse.ok) {
           const data = await localResponse.json();
-          return Array.isArray(data) ? data : [data];
+  return Array.isArray(data) ? data : [data];
         }
       } catch {
         // Local file tree not available
