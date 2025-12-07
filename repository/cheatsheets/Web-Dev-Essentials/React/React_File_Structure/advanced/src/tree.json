@@ -1,0 +1,218 @@
+[
+  {
+    "name": "assets",
+    "path": "assets",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "components",
+    "path": "components",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "form",
+        "path": "components/form",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "ui",
+        "path": "components/ui",
+        "type": "dir",
+        "sha": ""
+      }
+    ]
+  },
+  {
+    "name": "context",
+    "path": "context",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "__tests__",
+        "path": "context/__tests__",
+        "type": "dir",
+        "sha": ""
+      }
+    ]
+  },
+  {
+    "name": "data",
+    "path": "data",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "features",
+    "path": "features",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "authentication",
+        "path": "features/authentication",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "components",
+            "path": "features/authentication/components",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "hooks",
+            "path": "features/authentication/hooks",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "services",
+            "path": "features/authentication/services",
+            "type": "dir",
+            "sha": ""
+          }
+        ]
+      },
+      {
+        "name": "projects",
+        "path": "features/projects",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "components",
+            "path": "features/projects/components",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "services",
+            "path": "features/projects/services",
+            "type": "dir",
+            "sha": ""
+          }
+        ]
+      },
+      {
+        "name": "settings",
+        "path": "features/settings",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "components",
+            "path": "features/settings/components",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "context",
+            "path": "features/settings/context",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "hooks",
+            "path": "features/settings/hooks",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "services",
+            "path": "features/settings/services",
+            "type": "dir",
+            "sha": ""
+          }
+        ]
+      },
+      {
+        "name": "todos",
+        "path": "features/todos",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "assets",
+            "path": "features/todos/assets",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "components",
+            "path": "features/todos/components",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "context",
+            "path": "features/todos/context",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "services",
+            "path": "features/todos/services",
+            "type": "dir",
+            "sha": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "hooks",
+    "path": "hooks",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "__tests__",
+        "path": "hooks/__tests__",
+        "type": "dir",
+        "sha": ""
+      }
+    ]
+  },
+  {
+    "name": "layouts",
+    "path": "layouts",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "lib",
+    "path": "lib",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "pages",
+    "path": "pages",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "services",
+    "path": "services",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "utils",
+    "path": "utils",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "__tests__",
+        "path": "utils/__tests__",
+        "type": "dir",
+        "sha": ""
+      }
+    ]
+  }
+]

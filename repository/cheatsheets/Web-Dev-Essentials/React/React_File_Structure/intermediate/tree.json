@@ -1,0 +1,137 @@
+[
+  {
+    "name": "public",
+    "path": "public",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "src",
+    "path": "src",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "assets",
+        "path": "src/assets",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "components",
+        "path": "src/components",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "form",
+            "path": "src/components/form",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "ui",
+            "path": "src/components/ui",
+            "type": "dir",
+            "sha": ""
+          }
+        ]
+      },
+      {
+        "name": "context",
+        "path": "src/context",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "__tests__",
+            "path": "src/context/__tests__",
+            "type": "dir",
+            "sha": ""
+          }
+        ]
+      },
+      {
+        "name": "data",
+        "path": "src/data",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "hooks",
+        "path": "src/hooks",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "__tests__",
+            "path": "src/hooks/__tests__",
+            "type": "dir",
+            "sha": ""
+          }
+        ]
+      },
+      {
+        "name": "pages",
+        "path": "src/pages",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "Home",
+            "path": "src/pages/Home",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "__tests__",
+                "path": "src/pages/Home/__tests__",
+                "type": "dir",
+                "sha": ""
+              }
+            ]
+          },
+          {
+            "name": "Login",
+            "path": "src/pages/Login",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "Settings",
+            "path": "src/pages/Settings",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "Signup",
+            "path": "src/pages/Signup",
+            "type": "dir",
+            "sha": ""
+          }
+        ]
+      },
+      {
+        "name": "utils",
+        "path": "src/utils",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "__tests__",
+            "path": "src/utils/__tests__",
+            "type": "dir",
+            "sha": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 3359
+  }
+]

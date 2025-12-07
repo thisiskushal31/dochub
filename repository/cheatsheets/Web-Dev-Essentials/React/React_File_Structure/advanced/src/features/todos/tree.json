@@ -1,0 +1,26 @@
+[
+  {
+    "name": "assets",
+    "path": "assets",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "components",
+    "path": "components",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "context",
+    "path": "context",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "services",
+    "path": "services",
+    "type": "dir",
+    "sha": ""
+  }
+]

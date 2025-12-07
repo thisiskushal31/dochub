@@ -1,0 +1,15 @@
+[
+  {
+    "name": "assets",
+    "path": "assets",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 34999
+  }
+]

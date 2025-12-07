@@ -1,0 +1,37 @@
+[
+  {
+    "name": "BigQuery.md",
+    "path": "BigQuery.md",
+    "type": "file",
+    "sha": "",
+    "size": 12779
+  },
+  {
+    "name": "Dataflow.md",
+    "path": "Dataflow.md",
+    "type": "file",
+    "sha": "",
+    "size": 30104
+  },
+  {
+    "name": "Introduction_to_GCP_for_BigData_and_ML.md",
+    "path": "Introduction_to_GCP_for_BigData_and_ML.md",
+    "type": "file",
+    "sha": "",
+    "size": 26096
+  },
+  {
+    "name": "ML_on_GCP_with_Datalab_and_TensorFlow.md",
+    "path": "ML_on_GCP_with_Datalab_and_TensorFlow.md",
+    "type": "file",
+    "sha": "",
+    "size": 83412
+  },
+  {
+    "name": "streaming_pipelines_on_GCP.md",
+    "path": "streaming_pipelines_on_GCP.md",
+    "type": "file",
+    "sha": "",
+    "size": 74400
+  }
+]

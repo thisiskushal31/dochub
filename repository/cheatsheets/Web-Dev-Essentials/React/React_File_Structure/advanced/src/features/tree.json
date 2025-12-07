@@ -1,0 +1,112 @@
+[
+  {
+    "name": "authentication",
+    "path": "authentication",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "components",
+        "path": "authentication/components",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "hooks",
+        "path": "authentication/hooks",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "services",
+        "path": "authentication/services",
+        "type": "dir",
+        "sha": ""
+      }
+    ]
+  },
+  {
+    "name": "projects",
+    "path": "projects",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "components",
+        "path": "projects/components",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "services",
+        "path": "projects/services",
+        "type": "dir",
+        "sha": ""
+      }
+    ]
+  },
+  {
+    "name": "settings",
+    "path": "settings",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "components",
+        "path": "settings/components",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "context",
+        "path": "settings/context",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "hooks",
+        "path": "settings/hooks",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "services",
+        "path": "settings/services",
+        "type": "dir",
+        "sha": ""
+      }
+    ]
+  },
+  {
+    "name": "todos",
+    "path": "todos",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "assets",
+        "path": "todos/assets",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "components",
+        "path": "todos/components",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "context",
+        "path": "todos/context",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "services",
+        "path": "todos/services",
+        "type": "dir",
+        "sha": ""
+      }
+    ]
+  }
+]

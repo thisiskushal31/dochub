@@ -1,0 +1,216 @@
+[
+  {
+    "name": "lab_Customize_clusters_leveraging_unstructured_data_part04",
+    "path": "lab_Customize_clusters_leveraging_unstructured_data_part04",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "lab04_BigQuery_ML_APIs",
+    "path": "lab04_BigQuery_ML_APIs",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "lab04_BigQuery_TensorFlow_prediction_demand_taxisNYC",
+    "path": "lab04_BigQuery_TensorFlow_prediction_demand_taxisNYC",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "lab_billing_data_with_BigQuery.md",
+    "path": "lab_billing_data_with_BigQuery.md",
+    "type": "file",
+    "sha": "",
+    "size": 8975
+  },
+  {
+    "name": "lab_Cloud_IAM.md",
+    "path": "lab_Cloud_IAM.md",
+    "type": "file",
+    "sha": "",
+    "size": 10706
+  },
+  {
+    "name": "lab_Cloud_SQL.md",
+    "path": "lab_Cloud_SQL.md",
+    "type": "file",
+    "sha": "",
+    "size": 10735
+  },
+  {
+    "name": "lab_Cloud_Storage.md",
+    "path": "lab_Cloud_Storage.md",
+    "type": "file",
+    "sha": "",
+    "size": 22543
+  },
+  {
+    "name": "lab_complx_network_on_GCP.md",
+    "path": "lab_complx_network_on_GCP.md",
+    "type": "file",
+    "sha": "",
+    "size": 24132
+  },
+  {
+    "name": "lab_console_cloudshell.md",
+    "path": "lab_console_cloudshell.md",
+    "type": "file",
+    "sha": "",
+    "size": 11757
+  },
+  {
+    "name": "lab_create_a_webserver_deployed_on_kubernetes_cluster.md",
+    "path": "lab_create_a_webserver_deployed_on_kubernetes_cluster.md",
+    "type": "file",
+    "sha": "",
+    "size": 5631
+  },
+  {
+    "name": "lab_create_blog_with_Cloud_Storage_Cloud_SQL_and_Compute_Engine.md",
+    "path": "lab_create_blog_with_Cloud_Storage_Cloud_SQL_and_Compute_Engine.md",
+    "type": "file",
+    "sha": "",
+    "size": 3893
+  },
+  {
+    "name": "lab_create_VMs_with_Compute_Engine.md",
+    "path": "lab_create_VMs_with_Compute_Engine.md",
+    "type": "file",
+    "sha": "",
+    "size": 6103
+  },
+  {
+    "name": "lab_deploy_appengine_webapp.md",
+    "path": "lab_deploy_appengine_webapp.md",
+    "type": "file",
+    "sha": "",
+    "size": 5460
+  },
+  {
+    "name": "lab_deployment_infrastructure_using_Terraform_automode_network_with_firewall.md",
+    "path": "lab_deployment_infrastructure_using_Terraform_automode_network_with_firewall.md",
+    "type": "file",
+    "sha": "",
+    "size": 15498
+  },
+  {
+    "name": "lab_deployment_manager_Adding_load_balancing_for_autoscaling.md",
+    "path": "lab_deployment_manager_Adding_load_balancing_for_autoscaling.md",
+    "type": "file",
+    "sha": "",
+    "size": 26492
+  },
+  {
+    "name": "lab_deployment_manager_and_monitoring.md",
+    "path": "lab_deployment_manager_and_monitoring.md",
+    "type": "file",
+    "sha": "",
+    "size": 8775
+  },
+  {
+    "name": "lab_deployment_manager_from_templates_automode_network_with_firewall.md",
+    "path": "lab_deployment_manager_from_templates_automode_network_with_firewall.md",
+    "type": "file",
+    "sha": "",
+    "size": 17367
+  },
+  {
+    "name": "lab_Deployment_Manager_Full_Production.md",
+    "path": "lab_Deployment_Manager_Full_Production.md",
+    "type": "file",
+    "sha": "",
+    "size": 19312
+  },
+  {
+    "name": "lab_design_and_process_appserver_with_deployment_manager.md",
+    "path": "lab_design_and_process_appserver_with_deployment_manager.md",
+    "type": "file",
+    "sha": "",
+    "size": 42132
+  },
+  {
+    "name": "lab_design_and_process_develop_and_deploy_a_service_with_deployment_manager.md",
+    "path": "lab_design_and_process_develop_and_deploy_a_service_with_deployment_manager.md",
+    "type": "file",
+    "sha": "",
+    "size": 29743
+  },
+  {
+    "name": "lab_Internal_Load_balancer.md",
+    "path": "lab_Internal_Load_balancer.md",
+    "type": "file",
+    "sha": "",
+    "size": 14155
+  },
+  {
+    "name": "lab_jenkins_with_Cloud_Deployment_Manager.md",
+    "path": "lab_jenkins_with_Cloud_Deployment_Manager.md",
+    "type": "file",
+    "sha": "",
+    "size": 6388
+  },
+  {
+    "name": "Lab_Kubernetes_Load_Balancing.md",
+    "path": "Lab_Kubernetes_Load_Balancing.md",
+    "type": "file",
+    "sha": "",
+    "size": 11708
+  },
+  {
+    "name": "lab_Load_balancer_with_Autoscaling.md",
+    "path": "lab_Load_balancer_with_Autoscaling.md",
+    "type": "file",
+    "sha": "",
+    "size": 17222
+  },
+  {
+    "name": "lab_load_data_and_query_BigQuery.md",
+    "path": "lab_load_data_and_query_BigQuery.md",
+    "type": "file",
+    "sha": "",
+    "size": 6883
+  },
+  {
+    "name": "lab_monitoring_with_StackDriver.md",
+    "path": "lab_monitoring_with_StackDriver.md",
+    "type": "file",
+    "sha": "",
+    "size": 5636
+  },
+  {
+    "name": "lab_Networking_Bastion_host.md",
+    "path": "lab_Networking_Bastion_host.md",
+    "type": "file",
+    "sha": "",
+    "size": 9391
+  },
+  {
+    "name": "lab_Stackdriver_error_reporting_debugging.md",
+    "path": "lab_Stackdriver_error_reporting_debugging.md",
+    "type": "file",
+    "sha": "",
+    "size": 6363
+  },
+  {
+    "name": "lab_Virtual_Private_Networks.md",
+    "path": "lab_Virtual_Private_Networks.md",
+    "type": "file",
+    "sha": "",
+    "size": 8372
+  },
+  {
+    "name": "lab_VM_backups_application_in_production.md",
+    "path": "lab_VM_backups_application_in_production.md",
+    "type": "file",
+    "sha": "",
+    "size": 16067
+  },
+  {
+    "name": "lab_VMS_Linux_Windows.md",
+    "path": "lab_VMS_Linux_Windows.md",
+    "type": "file",
+    "sha": "",
+    "size": 7284
+  }
+]

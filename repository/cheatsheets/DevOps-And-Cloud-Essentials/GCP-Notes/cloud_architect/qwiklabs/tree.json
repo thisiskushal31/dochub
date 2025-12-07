@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Deployment_Manager_-_Full_Production.md",
+    "path": "Deployment_Manager_-_Full_Production.md",
+    "type": "file",
+    "sha": "",
+    "size": 22492
+  },
+  {
+    "name": "Managing_Deployments_Using_Kubernetes_Engine.md",
+    "path": "Managing_Deployments_Using_Kubernetes_Engine.md",
+    "type": "file",
+    "sha": "",
+    "size": 21794
+  },
+  {
+    "name": "Multiple_VPC_Networks.md",
+    "path": "Multiple_VPC_Networks.md",
+    "type": "file",
+    "sha": "",
+    "size": 28784
+  },
+  {
+    "name": "Orchestrating_the_Cloud_with_Kubernetes.md",
+    "path": "Orchestrating_the_Cloud_with_Kubernetes.md",
+    "type": "file",
+    "sha": "",
+    "size": 23571
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 3309
+  },
+  {
+    "name": "Site_Reliability_Troubleshooting_with_Stackdriver_APM.md",
+    "path": "Site_Reliability_Troubleshooting_with_Stackdriver_APM.md",
+    "type": "file",
+    "sha": "",
+    "size": 33570
+  }
+]

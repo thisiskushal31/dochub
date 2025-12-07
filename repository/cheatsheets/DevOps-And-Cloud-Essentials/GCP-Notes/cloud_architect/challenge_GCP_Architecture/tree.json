@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Build_and_Deploy_a_Docker_Image_to_a_Kubernetes_Cluster",
+    "path": "Build_and_Deploy_a_Docker_Image_to_a_Kubernetes_Cluster",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Build_and_Deploy_a_Docker_Image_to_a_Kubernetes_Cluster/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 11408
+      }
+    ]
+  },
+  {
+    "name": "Configure_a_Firewall_and_a_Startup_Script_with_Deployment_Manager",
+    "path": "Configure_a_Firewall_and_a_Startup_Script_with_Deployment_Manager",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Configure_Secure_RDP_using_a_Windows_Bastion_Host",
+    "path": "Configure_Secure_RDP_using_a_Windows_Bastion_Host",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Configure_Secure_RDP_using_a_Windows_Bastion_Host/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2786
+      }
+    ]
+  },
+  {
+    "name": "Migrate_a_MySQL_Database_to_Google_Cloud_SQL",
+    "path": "Migrate_a_MySQL_Database_to_Google_Cloud_SQL",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Migrate_a_MySQL_Database_to_Google_Cloud_SQL/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2755
+      }
+    ]
+  },
+  {
+    "name": "Scale_Out_and_Update_a_Containerized_Application_on_a_Kubernetes_Cluster",
+    "path": "Scale_Out_and_Update_a_Containerized_Application_on_a_Kubernetes_Cluster",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Scale_Out_and_Update_a_Containerized_Application_on_a_Kubernetes_Cluster/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 4812
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 4010
+  }
+]

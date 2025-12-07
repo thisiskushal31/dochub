@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Home",
+    "path": "Home",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "__tests__",
+        "path": "Home/__tests__",
+        "type": "dir",
+        "sha": ""
+      }
+    ]
+  },
+  {
+    "name": "Login",
+    "path": "Login",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Settings",
+    "path": "Settings",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Signup",
+    "path": "Signup",
+    "type": "dir",
+    "sha": ""
+  }
+]

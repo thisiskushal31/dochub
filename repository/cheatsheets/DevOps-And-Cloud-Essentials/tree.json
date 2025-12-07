@@ -1,0 +1,583 @@
+[
+  {
+    "name": "AWS-Notes",
+    "path": "AWS-Notes",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "#1-aws-certified-solutions-architect-associate-notes-by-jvidalgz.md",
+        "path": "AWS-Notes/#1-aws-certified-solutions-architect-associate-notes-by-jvidalgz.md",
+        "type": "file",
+        "sha": "",
+        "size": 96228
+      },
+      {
+        "name": "#2-AWS-SAA-C02-Study-Guide-By-keenanromain.md",
+        "path": "AWS-Notes/#2-AWS-SAA-C02-Study-Guide-By-keenanromain.md",
+        "type": "file",
+        "sha": "",
+        "size": 203421
+      },
+      {
+        "name": "Readme.md",
+        "path": "AWS-Notes/Readme.md",
+        "type": "file",
+        "sha": "",
+        "size": 939
+      }
+    ]
+  },
+  {
+    "name": "GCP-Notes",
+    "path": "GCP-Notes",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "cloud_architect",
+        "path": "GCP-Notes/cloud_architect",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "challenge_GCP_Architecture",
+            "path": "GCP-Notes/cloud_architect/challenge_GCP_Architecture",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "Build_and_Deploy_a_Docker_Image_to_a_Kubernetes_Cluster",
+                "path": "GCP-Notes/cloud_architect/challenge_GCP_Architecture/Build_and_Deploy_a_Docker_Image_to_a_Kubernetes_Cluster",
+                "type": "dir",
+                "sha": "",
+                "children": [
+                  {
+                    "name": "README.md",
+                    "path": "GCP-Notes/cloud_architect/challenge_GCP_Architecture/Build_and_Deploy_a_Docker_Image_to_a_Kubernetes_Cluster/README.md",
+                    "type": "file",
+                    "sha": "",
+                    "size": 11408
+                  }
+                ]
+              },
+              {
+                "name": "Configure_a_Firewall_and_a_Startup_Script_with_Deployment_Manager",
+                "path": "GCP-Notes/cloud_architect/challenge_GCP_Architecture/Configure_a_Firewall_and_a_Startup_Script_with_Deployment_Manager",
+                "type": "dir",
+                "sha": ""
+              },
+              {
+                "name": "Configure_Secure_RDP_using_a_Windows_Bastion_Host",
+                "path": "GCP-Notes/cloud_architect/challenge_GCP_Architecture/Configure_Secure_RDP_using_a_Windows_Bastion_Host",
+                "type": "dir",
+                "sha": "",
+                "children": [
+                  {
+                    "name": "README.md",
+                    "path": "GCP-Notes/cloud_architect/challenge_GCP_Architecture/Configure_Secure_RDP_using_a_Windows_Bastion_Host/README.md",
+                    "type": "file",
+                    "sha": "",
+                    "size": 2786
+                  }
+                ]
+              },
+              {
+                "name": "Migrate_a_MySQL_Database_to_Google_Cloud_SQL",
+                "path": "GCP-Notes/cloud_architect/challenge_GCP_Architecture/Migrate_a_MySQL_Database_to_Google_Cloud_SQL",
+                "type": "dir",
+                "sha": "",
+                "children": [
+                  {
+                    "name": "README.md",
+                    "path": "GCP-Notes/cloud_architect/challenge_GCP_Architecture/Migrate_a_MySQL_Database_to_Google_Cloud_SQL/README.md",
+                    "type": "file",
+                    "sha": "",
+                    "size": 2755
+                  }
+                ]
+              },
+              {
+                "name": "Scale_Out_and_Update_a_Containerized_Application_on_a_Kubernetes_Cluster",
+                "path": "GCP-Notes/cloud_architect/challenge_GCP_Architecture/Scale_Out_and_Update_a_Containerized_Application_on_a_Kubernetes_Cluster",
+                "type": "dir",
+                "sha": "",
+                "children": [
+                  {
+                    "name": "README.md",
+                    "path": "GCP-Notes/cloud_architect/challenge_GCP_Architecture/Scale_Out_and_Update_a_Containerized_Application_on_a_Kubernetes_Cluster/README.md",
+                    "type": "file",
+                    "sha": "",
+                    "size": 4812
+                  }
+                ]
+              },
+              {
+                "name": "README.md",
+                "path": "GCP-Notes/cloud_architect/challenge_GCP_Architecture/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 4010
+              }
+            ]
+          },
+          {
+            "name": "qwiklabs",
+            "path": "GCP-Notes/cloud_architect/qwiklabs",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "Deployment_Manager_-_Full_Production.md",
+                "path": "GCP-Notes/cloud_architect/qwiklabs/Deployment_Manager_-_Full_Production.md",
+                "type": "file",
+                "sha": "",
+                "size": 22492
+              },
+              {
+                "name": "Managing_Deployments_Using_Kubernetes_Engine.md",
+                "path": "GCP-Notes/cloud_architect/qwiklabs/Managing_Deployments_Using_Kubernetes_Engine.md",
+                "type": "file",
+                "sha": "",
+                "size": 21794
+              },
+              {
+                "name": "Multiple_VPC_Networks.md",
+                "path": "GCP-Notes/cloud_architect/qwiklabs/Multiple_VPC_Networks.md",
+                "type": "file",
+                "sha": "",
+                "size": 28784
+              },
+              {
+                "name": "Orchestrating_the_Cloud_with_Kubernetes.md",
+                "path": "GCP-Notes/cloud_architect/qwiklabs/Orchestrating_the_Cloud_with_Kubernetes.md",
+                "type": "file",
+                "sha": "",
+                "size": 23571
+              },
+              {
+                "name": "README.md",
+                "path": "GCP-Notes/cloud_architect/qwiklabs/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 3309
+              },
+              {
+                "name": "Site_Reliability_Troubleshooting_with_Stackdriver_APM.md",
+                "path": "GCP-Notes/cloud_architect/qwiklabs/Site_Reliability_Troubleshooting_with_Stackdriver_APM.md",
+                "type": "file",
+                "sha": "",
+                "size": 33570
+              }
+            ]
+          },
+          {
+            "name": "cloud_services_in_a_table.md",
+            "path": "GCP-Notes/cloud_architect/cloud_services_in_a_table.md",
+            "type": "file",
+            "sha": "",
+            "size": 3535
+          },
+          {
+            "name": "course_1_Core_Infrastructure.md",
+            "path": "GCP-Notes/cloud_architect/course_1_Core_Infrastructure.md",
+            "type": "file",
+            "sha": "",
+            "size": 44184
+          },
+          {
+            "name": "course_2_Essential_Cloud_Infrastructure__Foundation.md",
+            "path": "GCP-Notes/cloud_architect/course_2_Essential_Cloud_Infrastructure__Foundation.md",
+            "type": "file",
+            "sha": "",
+            "size": 20513
+          },
+          {
+            "name": "course_3_Essential_Cloud_Infrastructure__Core_Services.md",
+            "path": "GCP-Notes/cloud_architect/course_3_Essential_Cloud_Infrastructure__Core_Services.md",
+            "type": "file",
+            "sha": "",
+            "size": 37520
+          },
+          {
+            "name": "course_4_Elastic_Cloud_Infrastructure__Scaling_and_Automation.md",
+            "path": "GCP-Notes/cloud_architect/course_4_Elastic_Cloud_Infrastructure__Scaling_and_Automation.md",
+            "type": "file",
+            "sha": "",
+            "size": 31893
+          },
+          {
+            "name": "course_5_Elastic_Cloud_Infrastructure_Containers_and_Services.md",
+            "path": "GCP-Notes/cloud_architect/course_5_Elastic_Cloud_Infrastructure_Containers_and_Services.md",
+            "type": "file",
+            "sha": "",
+            "size": 19347
+          },
+          {
+            "name": "course_6_Reliable_Cloud_Infrastructure_Design_and_Process.md",
+            "path": "GCP-Notes/cloud_architect/course_6_Reliable_Cloud_Infrastructure_Design_and_Process.md",
+            "type": "file",
+            "sha": "",
+            "size": 87176
+          },
+          {
+            "name": "course_6_Reliable_Cloud_Infrastructure_Design_for_Resiliency_Scalability_and_Disaster_Recovery.md",
+            "path": "GCP-Notes/cloud_architect/course_6_Reliable_Cloud_Infrastructure_Design_for_Resiliency_Scalability_and_Disaster_Recovery.md",
+            "type": "file",
+            "sha": "",
+            "size": 79330
+          },
+          {
+            "name": "Exam_Case_Studies.md",
+            "path": "GCP-Notes/cloud_architect/Exam_Case_Studies.md",
+            "type": "file",
+            "sha": "",
+            "size": 863
+          },
+          {
+            "name": "Exam_rules.md",
+            "path": "GCP-Notes/cloud_architect/Exam_rules.md",
+            "type": "file",
+            "sha": "",
+            "size": 11713
+          },
+          {
+            "name": "lab_graded_Cloud_essentials_content.md",
+            "path": "GCP-Notes/cloud_architect/lab_graded_Cloud_essentials_content.md",
+            "type": "file",
+            "sha": "",
+            "size": 4588
+          },
+          {
+            "name": "lab_graded_ScaleOut_containerized_app_on_GKE.md",
+            "path": "GCP-Notes/cloud_architect/lab_graded_ScaleOut_containerized_app_on_GKE.md",
+            "type": "file",
+            "sha": "",
+            "size": 8369
+          },
+          {
+            "name": "Preparing_for_the_Professional_Cloud_Architect_Examination.md",
+            "path": "GCP-Notes/cloud_architect/Preparing_for_the_Professional_Cloud_Architect_Examination.md",
+            "type": "file",
+            "sha": "",
+            "size": 108522
+          }
+        ]
+      },
+      {
+        "name": "data_engineering",
+        "path": "GCP-Notes/data_engineering",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "BigQuery.md",
+            "path": "GCP-Notes/data_engineering/BigQuery.md",
+            "type": "file",
+            "sha": "",
+            "size": 12779
+          },
+          {
+            "name": "Dataflow.md",
+            "path": "GCP-Notes/data_engineering/Dataflow.md",
+            "type": "file",
+            "sha": "",
+            "size": 30104
+          },
+          {
+            "name": "Introduction_to_GCP_for_BigData_and_ML.md",
+            "path": "GCP-Notes/data_engineering/Introduction_to_GCP_for_BigData_and_ML.md",
+            "type": "file",
+            "sha": "",
+            "size": 26096
+          },
+          {
+            "name": "ML_on_GCP_with_Datalab_and_TensorFlow.md",
+            "path": "GCP-Notes/data_engineering/ML_on_GCP_with_Datalab_and_TensorFlow.md",
+            "type": "file",
+            "sha": "",
+            "size": 83412
+          },
+          {
+            "name": "streaming_pipelines_on_GCP.md",
+            "path": "GCP-Notes/data_engineering/streaming_pipelines_on_GCP.md",
+            "type": "file",
+            "sha": "",
+            "size": 74400
+          }
+        ]
+      },
+      {
+        "name": "images",
+        "path": "GCP-Notes/images",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "labs",
+        "path": "GCP-Notes/labs",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "lab_Customize_clusters_leveraging_unstructured_data_part04",
+            "path": "GCP-Notes/labs/lab_Customize_clusters_leveraging_unstructured_data_part04",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "lab04_BigQuery_ML_APIs",
+            "path": "GCP-Notes/labs/lab04_BigQuery_ML_APIs",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "lab04_BigQuery_TensorFlow_prediction_demand_taxisNYC",
+            "path": "GCP-Notes/labs/lab04_BigQuery_TensorFlow_prediction_demand_taxisNYC",
+            "type": "dir",
+            "sha": ""
+          },
+          {
+            "name": "lab_billing_data_with_BigQuery.md",
+            "path": "GCP-Notes/labs/lab_billing_data_with_BigQuery.md",
+            "type": "file",
+            "sha": "",
+            "size": 8975
+          },
+          {
+            "name": "lab_Cloud_IAM.md",
+            "path": "GCP-Notes/labs/lab_Cloud_IAM.md",
+            "type": "file",
+            "sha": "",
+            "size": 10706
+          },
+          {
+            "name": "lab_Cloud_SQL.md",
+            "path": "GCP-Notes/labs/lab_Cloud_SQL.md",
+            "type": "file",
+            "sha": "",
+            "size": 10735
+          },
+          {
+            "name": "lab_Cloud_Storage.md",
+            "path": "GCP-Notes/labs/lab_Cloud_Storage.md",
+            "type": "file",
+            "sha": "",
+            "size": 22543
+          },
+          {
+            "name": "lab_complx_network_on_GCP.md",
+            "path": "GCP-Notes/labs/lab_complx_network_on_GCP.md",
+            "type": "file",
+            "sha": "",
+            "size": 24132
+          },
+          {
+            "name": "lab_console_cloudshell.md",
+            "path": "GCP-Notes/labs/lab_console_cloudshell.md",
+            "type": "file",
+            "sha": "",
+            "size": 11757
+          },
+          {
+            "name": "lab_create_a_webserver_deployed_on_kubernetes_cluster.md",
+            "path": "GCP-Notes/labs/lab_create_a_webserver_deployed_on_kubernetes_cluster.md",
+            "type": "file",
+            "sha": "",
+            "size": 5631
+          },
+          {
+            "name": "lab_create_blog_with_Cloud_Storage_Cloud_SQL_and_Compute_Engine.md",
+            "path": "GCP-Notes/labs/lab_create_blog_with_Cloud_Storage_Cloud_SQL_and_Compute_Engine.md",
+            "type": "file",
+            "sha": "",
+            "size": 3893
+          },
+          {
+            "name": "lab_create_VMs_with_Compute_Engine.md",
+            "path": "GCP-Notes/labs/lab_create_VMs_with_Compute_Engine.md",
+            "type": "file",
+            "sha": "",
+            "size": 6103
+          },
+          {
+            "name": "lab_deploy_appengine_webapp.md",
+            "path": "GCP-Notes/labs/lab_deploy_appengine_webapp.md",
+            "type": "file",
+            "sha": "",
+            "size": 5460
+          },
+          {
+            "name": "lab_deployment_infrastructure_using_Terraform_automode_network_with_firewall.md",
+            "path": "GCP-Notes/labs/lab_deployment_infrastructure_using_Terraform_automode_network_with_firewall.md",
+            "type": "file",
+            "sha": "",
+            "size": 15498
+          },
+          {
+            "name": "lab_deployment_manager_Adding_load_balancing_for_autoscaling.md",
+            "path": "GCP-Notes/labs/lab_deployment_manager_Adding_load_balancing_for_autoscaling.md",
+            "type": "file",
+            "sha": "",
+            "size": 26492
+          },
+          {
+            "name": "lab_deployment_manager_and_monitoring.md",
+            "path": "GCP-Notes/labs/lab_deployment_manager_and_monitoring.md",
+            "type": "file",
+            "sha": "",
+            "size": 8775
+          },
+          {
+            "name": "lab_deployment_manager_from_templates_automode_network_with_firewall.md",
+            "path": "GCP-Notes/labs/lab_deployment_manager_from_templates_automode_network_with_firewall.md",
+            "type": "file",
+            "sha": "",
+            "size": 17367
+          },
+          {
+            "name": "lab_Deployment_Manager_Full_Production.md",
+            "path": "GCP-Notes/labs/lab_Deployment_Manager_Full_Production.md",
+            "type": "file",
+            "sha": "",
+            "size": 19312
+          },
+          {
+            "name": "lab_design_and_process_appserver_with_deployment_manager.md",
+            "path": "GCP-Notes/labs/lab_design_and_process_appserver_with_deployment_manager.md",
+            "type": "file",
+            "sha": "",
+            "size": 42132
+          },
+          {
+            "name": "lab_design_and_process_develop_and_deploy_a_service_with_deployment_manager.md",
+            "path": "GCP-Notes/labs/lab_design_and_process_develop_and_deploy_a_service_with_deployment_manager.md",
+            "type": "file",
+            "sha": "",
+            "size": 29743
+          },
+          {
+            "name": "lab_Internal_Load_balancer.md",
+            "path": "GCP-Notes/labs/lab_Internal_Load_balancer.md",
+            "type": "file",
+            "sha": "",
+            "size": 14155
+          },
+          {
+            "name": "lab_jenkins_with_Cloud_Deployment_Manager.md",
+            "path": "GCP-Notes/labs/lab_jenkins_with_Cloud_Deployment_Manager.md",
+            "type": "file",
+            "sha": "",
+            "size": 6388
+          },
+          {
+            "name": "Lab_Kubernetes_Load_Balancing.md",
+            "path": "GCP-Notes/labs/Lab_Kubernetes_Load_Balancing.md",
+            "type": "file",
+            "sha": "",
+            "size": 11708
+          },
+          {
+            "name": "lab_Load_balancer_with_Autoscaling.md",
+            "path": "GCP-Notes/labs/lab_Load_balancer_with_Autoscaling.md",
+            "type": "file",
+            "sha": "",
+            "size": 17222
+          },
+          {
+            "name": "lab_load_data_and_query_BigQuery.md",
+            "path": "GCP-Notes/labs/lab_load_data_and_query_BigQuery.md",
+            "type": "file",
+            "sha": "",
+            "size": 6883
+          },
+          {
+            "name": "lab_monitoring_with_StackDriver.md",
+            "path": "GCP-Notes/labs/lab_monitoring_with_StackDriver.md",
+            "type": "file",
+            "sha": "",
+            "size": 5636
+          },
+          {
+            "name": "lab_Networking_Bastion_host.md",
+            "path": "GCP-Notes/labs/lab_Networking_Bastion_host.md",
+            "type": "file",
+            "sha": "",
+            "size": 9391
+          },
+          {
+            "name": "lab_Stackdriver_error_reporting_debugging.md",
+            "path": "GCP-Notes/labs/lab_Stackdriver_error_reporting_debugging.md",
+            "type": "file",
+            "sha": "",
+            "size": 6363
+          },
+          {
+            "name": "lab_Virtual_Private_Networks.md",
+            "path": "GCP-Notes/labs/lab_Virtual_Private_Networks.md",
+            "type": "file",
+            "sha": "",
+            "size": 8372
+          },
+          {
+            "name": "lab_VM_backups_application_in_production.md",
+            "path": "GCP-Notes/labs/lab_VM_backups_application_in_production.md",
+            "type": "file",
+            "sha": "",
+            "size": 16067
+          },
+          {
+            "name": "lab_VMS_Linux_Windows.md",
+            "path": "GCP-Notes/labs/lab_VMS_Linux_Windows.md",
+            "type": "file",
+            "sha": "",
+            "size": 7284
+          }
+        ]
+      },
+      {
+        "name": "machine_learning",
+        "path": "GCP-Notes/machine_learning",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "GCP-Notes/machine_learning/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 94
+          }
+        ]
+      },
+      {
+        "name": "Cloud_Shell_gcloud.md",
+        "path": "GCP-Notes/Cloud_Shell_gcloud.md",
+        "type": "file",
+        "sha": "",
+        "size": 1918
+      },
+      {
+        "name": "GCP_cheatsheets.md",
+        "path": "GCP-Notes/GCP_cheatsheets.md",
+        "type": "file",
+        "sha": "",
+        "size": 5409
+      },
+      {
+        "name": "README.md",
+        "path": "GCP-Notes/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 8373
+      }
+    ]
+  },
+  {
+    "name": "Readme.md",
+    "path": "Readme.md",
+    "type": "file",
+    "sha": "",
+    "size": 1004
+  }
+]
