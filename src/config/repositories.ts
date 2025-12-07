@@ -34,7 +34,7 @@ export const repositories: RepositoryConfig[] = [
     owner: 'thisiskushal31',
     repo: 'Commands-and-Cheatsheets',
     branch: 'main',
-    description: 'A curated list of essential commands and cheatsheets',
+    description: 'Essential commands and cheatsheets',
     icon: 'fas fa-terminal'
   },
 ];
