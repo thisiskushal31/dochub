@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # Repos directory
-public/repos/
+public/repository/*
