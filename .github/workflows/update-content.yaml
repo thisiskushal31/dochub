@@ -28,8 +28,11 @@ jobs:
         run: |
           echo "Event type: ${{ github.event_name }}"
           echo "Repository dispatch type: ${{ github.event.action }}"
-          echo "Client payload: ${{ toJSON(github.event.client_payload) }}"
-          echo "Full event: ${{ toJSON(github.event) }}"
+          echo "Source repo: ${{ github.event.client_payload.source_repo }}"
+          echo "Source branch: ${{ github.event.client_payload.source_branch }}"
+          echo "Source commit: ${{ github.event.client_payload.source_commit }}"
+          echo "Triggered by: ${{ github.event.client_payload.triggered_by }}"
+          echo "Triggered at: ${{ github.event.client_payload.triggered_at }}"
       
       - uses: actions/checkout@v4
 
