@@ -21,31 +21,32 @@ A modern, production-ready documentation website that fetches and displays markd
 ```
 dochub/
 ├── src/
-│   ├── components/       # React components
-│   │   ├── ui/          # shadcn/ui components
-│   │   ├── DocumentView.tsx
-│   │   ├── FileTree.tsx
-│   │   ├── MarkdownViewer.tsx
-│   │   ├── RepositorySelector.tsx
-│   │   ├── SEOHead.tsx  # Dynamic SEO meta tags
+│   ├── components/                # React components
+│   │   ├── ui/                    # shadcn/ui components
+│   │   ├── DocumentView.tsx       # Document view component
+│   │   ├── FileTree.tsx           # File tree component
+│   │   ├── MarkdownViewer.tsx     # Markdown viewer component
+│   │   ├── RepositorySelector.tsx # Repository selector component
+│   │   ├── SEOHead.tsx            # Dynamic SEO meta tags
 │   │   └── ...
-│   ├── config/          # Configuration files
-│   │   ├── site.json    # Centralized site configuration
-│   │   ├── config.ts    # Config exports
-│   │   └── repositories.ts  # Repository configurations
-│   ├── hooks/           # Custom React hooks
-│   │   └── useTheme.tsx
-│   ├── lib/             # Libraries
-│   │   └── marked/      # Markdown renderer (from blog)
-│   ├── pages/           # Page components
-│   ├── styles/          # CSS files
-│   │   └── markdown.css # Markdown styling (from blog)
-│   ├── utils/           # Utility functions
-│   │   └── github.ts    # GitHub API utilities
-│   └── App.tsx
+│   ├── config/                    # Configuration files
+│   │   ├── site.json              # Centralized site configuration
+│   │   ├── config.ts              # Config exports
+│   │   └── repositories.ts        # Repository configurations
+│   ├── hooks/                     # Custom React hooks
+│   │   └── useTheme.tsx           # Theme hook
+│   ├── lib/                       # Libraries
+│   │   └── marked/                # Markdown renderer (from blog)
+│   ├── pages/                     # Page components
+│   ├── styles/                    # CSS files
+│   │   └── markdown.css           # Markdown styling (from blog)
+│   ├── utils/                     # Utility functions
+│   │   └── github.ts              # GitHub API utilities
+│   │   └── cache.ts               # Cache utilities
+│   └── App.tsx                    # Main application component
 ├── public/
-│   └── repositories.json # Repository config (optional)
-└── package.json
+│   └── repositories.json          # Repository config (optional)
+└── package.json                   # Package configuration
 ```
 
 ## ⚙️ Configuration
