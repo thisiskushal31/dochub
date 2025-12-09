@@ -10,7 +10,7 @@
     "path": "01-Array_&_String.md",
     "type": "file",
     "sha": "",
-    "size": 11472
+    "size": 11497
   },
   {
     "name": "02-Linked_List.md",
@@ -24,7 +24,7 @@
     "path": "03-Stack.md",
     "type": "file",
     "sha": "",
-    "size": 6514
+    "size": 6557
   },
   {
     "name": "04-Queue.md",
@@ -38,14 +38,14 @@
     "path": "05-Hashing.md",
     "type": "file",
     "sha": "",
-    "size": 4810
+    "size": 4816
   },
   {
     "name": "06-Heap.md",
     "path": "06-Heap.md",
     "type": "file",
     "sha": "",
-    "size": 827
+    "size": 864
   },
   {
     "name": "07-Graph.md",
@@ -66,14 +66,14 @@
     "path": "09-Tree.md",
     "type": "file",
     "sha": "",
-    "size": 11410
+    "size": 11416
   },
   {
     "name": "10-Binary_Tree.md",
     "path": "10-Binary_Tree.md",
     "type": "file",
     "sha": "",
-    "size": 24769
+    "size": 24780
   },
   {
     "name": "11-Binary_Search_Tree.md",
