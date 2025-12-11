@@ -29,6 +29,24 @@ export const repositories: RepositoryConfig[] = [
     icon: 'fas fa-box'
   },
   {
+    id: 'databases',
+    name: 'Databases Deep Dive',
+    owner: 'thisiskushal31',
+    repo: 'Databases-Deep-Dive',
+    branch: 'main',
+    description: 'Databases fundamentals across engines and managed services',
+    icon: 'fas fa-database'
+  },
+  {
+    id: 'networks',
+    name: 'Networks Deep Dive',
+    owner: 'thisiskushal31',
+    repo: 'Networks-Deep-Dive',
+    branch: 'main',
+    description: 'Networking from physical layers to cloud-native patterns',
+    icon: 'fas fa-network-wired'
+  },
+  {
     id: 'cheatsheets',
     name: 'Commands and Cheatsheets',
     owner: 'thisiskushal31',
