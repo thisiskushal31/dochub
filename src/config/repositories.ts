@@ -47,6 +47,15 @@ export const repositories: RepositoryConfig[] = [
     icon: 'fas fa-network-wired'
   },
   {
+    id: 'system-design',
+    name: 'System Design Concepts',
+    owner: 'thisiskushal31',
+    repo: 'System-Design-Concepts',
+    branch: 'main',
+    description: 'System design patterns, components, and trade-offs by use case',
+    icon: 'fas fa-project-diagram'
+  },
+  {
     id: 'cheatsheets',
     name: 'Commands and Cheatsheets',
     owner: 'thisiskushal31',
