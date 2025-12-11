@@ -1,0 +1,54 @@
+[
+  {
+    "name": "containerization-basic",
+    "path": "containerization-basic",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "containerization-basic/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 501
+      }
+    ]
+  },
+  {
+    "name": "docker",
+    "path": "docker",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "docker/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 501
+      }
+    ]
+  },
+  {
+    "name": "kubernetes",
+    "path": "kubernetes",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "kubernetes/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 597
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1025
+  }
+]
