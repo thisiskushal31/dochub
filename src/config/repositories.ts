@@ -20,6 +20,15 @@ export const repositories: RepositoryConfig[] = [
     icon: 'fas fa-book-open'
   },
   {
+    id: 'devops',
+    name: 'DevOps Handbook',
+    owner: 'thisiskushal31',
+    repo: 'DevOps-Handbook',
+    branch: 'main',
+    description: 'CI/CD, IaC, cloud-native, observability, and security best practices',
+    icon: 'fas fa-rocket'
+  },
+  {
     id: 'container',
     name: 'Containerization Deep Dive',
     owner: 'thisiskushal31',
@@ -63,16 +72,7 @@ export const repositories: RepositoryConfig[] = [
     branch: 'main',
     description: 'Essential commands and cheatsheets',
     icon: 'fas fa-terminal'
-  },
-  {
-    id: 'devops',
-    name: 'DevOps Handbook',
-    owner: 'thisiskushal31',
-    repo: 'DevOps-Handbook',
-    branch: 'main',
-    description: 'CI/CD, IaC, cloud-native, observability, and security best practices',
-    icon: 'fas fa-rocket'
-  },
+  }
 ];
 
 export function getRawGitHubUrl(config: RepositoryConfig, path: string): string {
