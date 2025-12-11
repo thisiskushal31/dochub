@@ -5,3 +5,4 @@
 - Patterns: 12-factor app, cloud-native design principles, distributed systems patterns
 - Platform engineering: internal developer platforms, self-service infrastructure, developer experience
 
+

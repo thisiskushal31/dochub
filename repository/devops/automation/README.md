@@ -5,3 +5,4 @@
 - Patterns: idempotent scripts, error handling, logging, retry logic, dry-run modes
 - Tools: Ansible, Chef, Puppet, systemd timers, cron, workflow engines
 
+

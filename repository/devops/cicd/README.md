@@ -5,3 +5,4 @@
 - Practices: parallelization, caching, matrix builds, conditional steps, pipeline as code
 - Deployment: blue-green, canary, rolling, feature flags, rollback strategies
 
+
