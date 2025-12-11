@@ -25,7 +25,7 @@ export const repositories: RepositoryConfig[] = [
     owner: 'thisiskushal31',
     repo: 'Containerization-Deep-Dive',
     branch: 'main',
-    description: 'Containerization fundamentals: OCI images, runtimes, Docker, Kubernetes',
+    description: 'Containerization fundamentals',
     icon: 'fas fa-box'
   },
   {
