@@ -10,13 +10,13 @@
       "icon": "📚"
     },
     {
-      "id": "kubernetes",
-      "name": "Kubernetes Deep Dive",
+      "id": "container",
+      "name": "Containerization Deep Dive",
       "owner": "thisiskushal31",
-      "repo": "Kubernetes-Deep-Dive",
+      "repo": "Containerization-Deep-Dive",
       "branch": "main",
-      "description": "Kubernetes documentation",
-      "icon": "☸️"
+      "description": "Containerization fundamentals",
+      "icon": "📦"
     }
   ]
 }

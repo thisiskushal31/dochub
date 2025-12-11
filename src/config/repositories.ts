@@ -20,13 +20,13 @@ export const repositories: RepositoryConfig[] = [
     icon: 'fas fa-book-open'
   },
   {
-    id: 'kubernetes',
-    name: 'Kubernetes Deep Dive',
+    id: 'container',
+    name: 'Containerization Deep Dive',
     owner: 'thisiskushal31',
-    repo: 'Kubernetes-Deep-Dive',
+    repo: 'Containerization-Deep-Dive',
     branch: 'main',
-    description: 'Kubernetes documentation',
-    icon: 'fas fa-cube'
+    description: 'Containerization fundamentals: OCI images, runtimes, Docker, Kubernetes',
+    icon: 'fas fa-box'
   },
   {
     id: 'cheatsheets',
