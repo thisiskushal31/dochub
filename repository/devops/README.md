@@ -1,6 +1,6 @@
 # DevOps Handbook
 
-Comprehensive DevOps handbook: methodologies, best practices, tooling guides, automation patterns, and real-world implementation notes — from CI/CD and infrastructure-as-code to cloud-native architectures, observability, and security.
+Comprehensive DevOps handbook covering methodologies, best practices, tooling guides, automation patterns, and real-world implementation notes — from CI/CD and infrastructure-as-code to cloud-native architectures, observability, and security.
 
 ## Structure
 
