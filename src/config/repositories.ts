@@ -64,6 +64,15 @@ export const repositories: RepositoryConfig[] = [
     description: 'Essential commands and cheatsheets',
     icon: 'fas fa-terminal'
   },
+  {
+    id: 'devops',
+    name: 'DevOps Handbook',
+    owner: 'thisiskushal31',
+    repo: 'DevOps-Handbook',
+    branch: 'main',
+    description: 'CI/CD, IaC, cloud-native, observability, and security best practices',
+    icon: 'fas fa-rocket'
+  },
 ];
 
 export function getRawGitHubUrl(config: RepositoryConfig, path: string): string {
