@@ -1,9 +1,114 @@
 [
   {
+    "name": "automation",
+    "path": "automation",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "automation/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 326
+      }
+    ]
+  },
+  {
+    "name": "cicd",
+    "path": "cicd",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "cicd/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 336
+      }
+    ]
+  },
+  {
+    "name": "cloud-native",
+    "path": "cloud-native",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "cloud-native/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 371
+      }
+    ]
+  },
+  {
+    "name": "iac",
+    "path": "iac",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "iac/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 321
+      }
+    ]
+  },
+  {
+    "name": "methodologies",
+    "path": "methodologies",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "methodologies/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 386
+      }
+    ]
+  },
+  {
+    "name": "observability",
+    "path": "observability",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "observability/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 338
+      }
+    ]
+  },
+  {
+    "name": "security",
+    "path": "security",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "security/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 337
+      }
+    ]
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 17
+    "size": 1514
   }
 ]
