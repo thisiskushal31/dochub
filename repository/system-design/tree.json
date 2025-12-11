@@ -1,0 +1,159 @@
+[
+  {
+    "name": "availability",
+    "path": "availability",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "availability/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 386
+      }
+    ]
+  },
+  {
+    "name": "caching",
+    "path": "caching",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "caching/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 350
+      }
+    ]
+  },
+  {
+    "name": "consistency",
+    "path": "consistency",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "consistency/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 342
+      }
+    ]
+  },
+  {
+    "name": "fundamentals",
+    "path": "fundamentals",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "fundamentals/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 300
+      }
+    ]
+  },
+  {
+    "name": "messaging",
+    "path": "messaging",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "messaging/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 377
+      }
+    ]
+  },
+  {
+    "name": "observability",
+    "path": "observability",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "observability/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 404
+      }
+    ]
+  },
+  {
+    "name": "patterns",
+    "path": "patterns",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "patterns/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 352
+      }
+    ]
+  },
+  {
+    "name": "performance",
+    "path": "performance",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "performance/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 355
+      }
+    ]
+  },
+  {
+    "name": "security",
+    "path": "security",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "security/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 363
+      }
+    ]
+  },
+  {
+    "name": "storage",
+    "path": "storage",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "storage/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 369
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1662
+  }
+]
