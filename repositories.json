@@ -44,6 +44,15 @@
       "branch": "main",
       "description": "System design patterns, components, and trade-offs by use case",
       "icon": "🧠"
+    },
+    {
+      "id": "devops",
+      "name": "DevOps Handbook",
+      "owner": "thisiskushal31",
+      "repo": "DevOps-Handbook",
+      "branch": "main",
+      "description": "CI/CD, IaC, cloud-native, observability, and security best practices",
+      "icon": "🚀"
     }
   ]
 }
