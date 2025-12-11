@@ -223,20 +223,18 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
             Back to files
           </Button>
           
-          <div className="flex items-center justify-between flex-wrap gap-4">
-            <div>
-              <h1 className="text-3xl font-bold text-primary mb-2">{displayName}</h1>
-              {repo && (
-                <div className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
-                  {repo.icon ? (
-                    <i className={`${repo.icon} text-sm`}></i>
-                  ) : null}
-                  <span>{repo.name}</span>
-                  <span>/</span>
-                  <span className="break-words">{filePath}</span>
-                </div>
-              )}
-            </div>
+          <div>
+            <h1 className="text-3xl font-bold text-primary mb-2">{displayName}</h1>
+            {repo && (
+              <div className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap mb-3">
+                {repo.icon ? (
+                  <i className={`${repo.icon} text-sm`}></i>
+                ) : null}
+                <span>{repo.name}</span>
+                <span>/</span>
+                <span className="break-words">{filePath}</span>
+              </div>
+            )}
             
             <div className="flex items-center gap-3 flex-wrap">
               {lastUpdated && (
