@@ -17,6 +17,24 @@
       "branch": "main",
       "description": "Containerization fundamentals",
       "icon": "📦"
+    },
+    {
+      "id": "databases",
+      "name": "Databases Deep Dive",
+      "owner": "thisiskushal31",
+      "repo": "Databases-Deep-Dive",
+      "branch": "main",
+      "description": "Databases fundamentals across engines and managed services",
+      "icon": "🗄️"
+    },
+    {
+      "id": "networks",
+      "name": "Networks Deep Dive",
+      "owner": "thisiskushal31",
+      "repo": "Networks-Deep-Dive",
+      "branch": "main",
+      "description": "Networking from physical layers to cloud-native patterns",
+      "icon": "🌐"
     }
   ]
 }

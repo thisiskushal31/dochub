@@ -1,0 +1,69 @@
+[
+  {
+    "name": "cloud-managed",
+    "path": "cloud-managed",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "cloud-managed/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 476
+      }
+    ]
+  },
+  {
+    "name": "concepts",
+    "path": "concepts",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "concepts/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 526
+      }
+    ]
+  },
+  {
+    "name": "nosql",
+    "path": "nosql",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "nosql/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 433
+      }
+    ]
+  },
+  {
+    "name": "relational",
+    "path": "relational",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "relational/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 419
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1193
+  }
+]

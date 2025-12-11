@@ -1,0 +1,99 @@
+[
+  {
+    "name": "cloud-native",
+    "path": "cloud-native",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "cloud-native/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 421
+      }
+    ]
+  },
+  {
+    "name": "foundations",
+    "path": "foundations",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "foundations/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 312
+      }
+    ]
+  },
+  {
+    "name": "observability",
+    "path": "observability",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "observability/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 390
+      }
+    ]
+  },
+  {
+    "name": "routing-switching",
+    "path": "routing-switching",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "routing-switching/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 394
+      }
+    ]
+  },
+  {
+    "name": "security",
+    "path": "security",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "security/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 389
+      }
+    ]
+  },
+  {
+    "name": "services",
+    "path": "services",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "services/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 412
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1334
+  }
+]
