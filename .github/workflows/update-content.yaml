@@ -9,11 +9,9 @@ on:
         required: false
         default: 'manual'
   
-  # Scheduled runs (twice daily for reliability: 2 AM and 2 PM UTC)
+  # Scheduled runs (daily at 2 AM UTC)
   schedule:
-    - cron: '*/5 * * * *'  # TEST: Every 5 minutes (remove after testing)
-    - cron: '0 2 * * *'    # Daily at 2 AM UTC
-    - cron: '0 14 * * *'   # Daily at 2 PM UTC (backup)
+    - cron: '0 2 * * *'   # Daily at 2 AM UTC
   
   # Repository dispatch (can be triggered by webhooks from source repos)
   repository_dispatch:
