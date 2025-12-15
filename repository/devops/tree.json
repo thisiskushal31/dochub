@@ -10,7 +10,7 @@
         "path": "automation/README.md",
         "type": "file",
         "sha": "",
-        "size": 327
+        "size": 328
       }
     ]
   },
@@ -25,7 +25,7 @@
         "path": "cicd/README.md",
         "type": "file",
         "sha": "",
-        "size": 337
+        "size": 338
       }
     ]
   },
@@ -40,7 +40,7 @@
         "path": "cloud-native/README.md",
         "type": "file",
         "sha": "",
-        "size": 372
+        "size": 373
       }
     ]
   },
@@ -55,7 +55,7 @@
         "path": "iac/README.md",
         "type": "file",
         "sha": "",
-        "size": 322
+        "size": 323
       }
     ]
   },
@@ -70,7 +70,7 @@
         "path": "methodologies/README.md",
         "type": "file",
         "sha": "",
-        "size": 387
+        "size": 388
       }
     ]
   },
@@ -100,7 +100,7 @@
         "path": "security/README.md",
         "type": "file",
         "sha": "",
-        "size": 338
+        "size": 339
       }
     ]
   },
