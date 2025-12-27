@@ -4,49 +4,49 @@
     "path": "1-basics-of-dbms.md",
     "type": "file",
     "sha": "",
-    "size": 4735
+    "size": 5023
   },
   {
     "name": "2-er-relational-model.md",
     "path": "2-er-relational-model.md",
     "type": "file",
     "sha": "",
-    "size": 7490
+    "size": 8233
   },
   {
     "name": "3-relational-algebra.md",
     "path": "3-relational-algebra.md",
     "type": "file",
     "sha": "",
-    "size": 6380
+    "size": 6774
   },
   {
     "name": "4-functional-dependencies-normalisation.md",
     "path": "4-functional-dependencies-normalisation.md",
     "type": "file",
     "sha": "",
-    "size": 6694
+    "size": 7171
   },
   {
     "name": "5-transactions-concurrency-control.md",
     "path": "5-transactions-concurrency-control.md",
     "type": "file",
     "sha": "",
-    "size": 7567
+    "size": 8037
   },
   {
     "name": "6-advanced-dbms.md",
     "path": "6-advanced-dbms.md",
     "type": "file",
     "sha": "",
-    "size": 8207
+    "size": 8612
   },
   {
     "name": "7-practice-questions.md",
     "path": "7-practice-questions.md",
     "type": "file",
     "sha": "",
-    "size": 4174
+    "size": 4713
   },
   {
     "name": "README.md",

@@ -2,6 +2,17 @@
 
 [← Back to PostgreSQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Infrastructure as Code (IaC)](#infrastructure-as-code-iac)
+  - [Pulumi PostgreSQL Provider](#pulumi-postgresql-provider)
+- [Security](#security)
+  - [User and Role Management](#user-and-role-management)
+  - [Privileges and Permissions](#privileges-and-permissions)
+  - [Row-Level Security](#row-level-security)
+  - [Encryption](#encryption)
+  - [SSL/TLS Configuration](#ssltls-configuration)
+
 ## Infrastructure as Code (IaC)
 
 Infrastructure as Code (IaC) allows you to manage PostgreSQL resources programmatically, enabling version control, automation, and consistent deployments. The [Pulumi PostgreSQL Provider](https://www.pulumi.com/registry/packages/postgresql/) provides a powerful way to manage PostgreSQL databases, users, roles, and other resources using code.

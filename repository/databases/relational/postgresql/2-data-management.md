@@ -2,6 +2,25 @@
 
 [← Back to PostgreSQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Data Types](#data-types)
+  - [Numeric Types](#numeric-types)
+  - [Character Types](#character-types)
+  - [Date/Time Types](#datetime-types)
+  - [Boolean Type](#boolean-type)
+  - [JSON and JSONB](#json-and-jsonb)
+  - [Arrays](#arrays)
+  - [UUID](#uuid)
+  - [Custom Types](#custom-types)
+  - [Sequences and Identity Columns](#sequences-and-identity-columns)
+- [Schema Design](#schema-design)
+  - [DDL Commands (Data Definition Language)](#ddl-commands-data-definition-language)
+  - [Tables and Constraints](#tables-and-constraints)
+  - [Indexes](#indexes)
+  - [Foreign Keys](#foreign-keys)
+  - [Schemas](#schemas)
+
 ## Data Types
 
 PostgreSQL provides a rich set of native data types. According to the [PostgreSQL documentation](https://www.postgresql.org/docs/current/datatype.html), users can also define custom data types to suit specific application needs.

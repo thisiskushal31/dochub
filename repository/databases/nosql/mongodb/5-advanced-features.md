@@ -4,6 +4,19 @@
 
 [← Back to MongoDB Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Text Search](#text-search)
+- [Geospatial Queries](#geospatial-queries)
+- [Transactions](#transactions)
+  - [Basic Transactions](#basic-transactions)
+- [Replication](#replication)
+  - [Replica Set Setup](#replica-set-setup)
+  - [Read Preferences](#read-preferences)
+- [Sharding](#sharding)
+  - [Sharded Cluster Setup](#sharded-cluster-setup)
+  - [Shard Key Selection](#shard-key-selection)
+
 ## Text Search
 
 MongoDB supports full-text search capabilities using text indexes.

@@ -4,6 +4,33 @@
 
 [← Back to Aerospike Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Basic Operations](#basic-operations)
+  - [Python Client](#python-client)
+  - [Java Client](#java-client)
+- [Batch Operations](#batch-operations)
+  - [Batch Read](#batch-read)
+  - [Batch Write](#batch-write)
+  - [Batch Operations Policy](#batch-operations-policy)
+- [Query Operations](#query-operations)
+  - [Basic Query](#basic-query)
+  - [Query with Predicates](#query-with-predicates)
+  - [Query Policies](#query-policies)
+- [Scan Operations](#scan-operations)
+  - [Basic Scan](#basic-scan)
+  - [Scan Policies](#scan-policies)
+  - [Parallel Scans](#parallel-scans)
+- [Aggregations](#aggregations)
+  - [Built-in Aggregations](#built-in-aggregations)
+  - [UDF Aggregations](#udf-aggregations)
+  - [Using Aggregations](#using-aggregations)
+- [User-Defined Functions (UDF)](#user-defined-functions-udf)
+  - [UDF Types](#udf-types)
+  - [Record UDF Example](#record-udf-example)
+  - [Using Record UDFs](#using-record-udfs)
+  - [Stream UDF Example](#stream-udf-example)
+
 ## Basic Operations
 
 ### Python Client

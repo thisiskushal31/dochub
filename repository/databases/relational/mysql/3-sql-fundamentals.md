@@ -4,6 +4,20 @@
 
 [← Back to MySQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [SQL Fundamentals](#sql-fundamentals)
+  - [Introduction to SQL](#introduction-to-sql)
+  - [Querying Data](#querying-data)
+  - [SQL Operators](#sql-operators)
+  - [DML Commands (Data Manipulation Language)](#dml-commands-data-manipulation-language)
+  - [Data Types and Constraints](#data-types-and-constraints)
+  - [Joins](#joins)
+  - [Aggregations and Grouping](#aggregations-and-grouping)
+  - [Window Functions (MySQL 8.0+)](#window-functions-mysql-80)
+  - [Subqueries and Views](#subqueries-and-views)
+  - [Common Table Expressions (CTEs) - MySQL 8.0+](#common-table-expressions-ctes-mysql-80)
+
 ## SQL Fundamentals
 
 This section covers essential SQL concepts for working with MySQL, providing comprehensive coverage of SQL commands, operators, and best practices.

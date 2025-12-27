@@ -4,70 +4,70 @@
     "path": "1-overview-architecture.md",
     "type": "file",
     "sha": "",
-    "size": 2725
+    "size": 3061
   },
   {
     "name": "10-best-practices.md",
     "path": "10-best-practices.md",
     "type": "file",
     "sha": "",
-    "size": 5840
+    "size": 6459
   },
   {
     "name": "2-data-management.md",
     "path": "2-data-management.md",
     "type": "file",
     "sha": "",
-    "size": 15748
+    "size": 16386
   },
   {
     "name": "3-sql-fundamentals.md",
     "path": "3-sql-fundamentals.md",
     "type": "file",
     "sha": "",
-    "size": 15876
+    "size": 16469
   },
   {
     "name": "4-transactions-concurrency.md",
     "path": "4-transactions-concurrency.md",
     "type": "file",
     "sha": "",
-    "size": 2732
+    "size": 3117
   },
   {
     "name": "5-high-availability.md",
     "path": "5-high-availability.md",
     "type": "file",
     "sha": "",
-    "size": 16958
+    "size": 17867
   },
   {
     "name": "6-performance-operations.md",
     "path": "6-performance-operations.md",
     "type": "file",
     "sha": "",
-    "size": 6583
+    "size": 7286
   },
   {
     "name": "7-advanced-topics.md",
     "path": "7-advanced-topics.md",
     "type": "file",
     "sha": "",
-    "size": 6695
+    "size": 6991
   },
   {
     "name": "8-infrastructure-security.md",
     "path": "8-infrastructure-security.md",
     "type": "file",
     "sha": "",
-    "size": 11567
+    "size": 11985
   },
   {
     "name": "9-utilities-recipes.md",
     "path": "9-utilities-recipes.md",
     "type": "file",
     "sha": "",
-    "size": 4559
+    "size": 4982
   },
   {
     "name": "README.md",

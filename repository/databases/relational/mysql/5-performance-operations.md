@@ -4,6 +4,28 @@
 
 [← Back to MySQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Performance Optimization](#performance-optimization)
+  - [Query Optimization](#query-optimization)
+  - [Index Optimization](#index-optimization)
+  - [Connection Pooling](#connection-pooling)
+- [Replication](#replication)
+  - [Master-Slave Setup](#master-slave-setup)
+  - [MySQL Group Replication](#mysql-group-replication)
+- [High Availability](#high-availability)
+  - [MySQL InnoDB Cluster](#mysql-innodb-cluster)
+  - [Failover Strategies](#failover-strategies)
+- [Backup & Recovery](#backup-recovery)
+  - [mysqldump](#mysqldump)
+  - [Restore](#restore)
+  - [Binary Log Backup](#binary-log-backup)
+  - [Point-in-Time Recovery](#point-in-time-recovery)
+- [Monitoring](#monitoring)
+  - [Performance Schema](#performance-schema)
+  - [Slow Query Log](#slow-query-log)
+  - [Status Variables](#status-variables)
+
 ## Performance Optimization
 
 ### Query Optimization

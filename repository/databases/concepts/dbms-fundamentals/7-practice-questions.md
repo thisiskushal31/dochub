@@ -1,5 +1,17 @@
 # Practice Questions
 
+## Table of Contents
+
+- [Resources](#resources)
+  - [Last Minute Notes - DBMS](#last-minute-notes-dbms)
+  - [DBMS Interview Questions](#dbms-interview-questions)
+  - [Commonly Asked DBMS Interview Questions - Set 2](#commonly-asked-dbms-interview-questions-set-2)
+  - [GATE CSE Previous Year Questions](#gate-cse-previous-year-questions)
+- [Study Strategy](#study-strategy)
+  - [For Interviews](#for-interviews)
+  - [For Exams (GATE, University)](#for-exams-gate-university)
+- [Related Topics](#related-topics)
+- [References](#references)
 Practice resources, interview questions, and exam preparation materials for Database Management Systems (DBMS).
 
 > **Reference**: [Database Design in DBMS - GeeksforGeeks](https://www.geeksforgeeks.org/dbms/database-design-in-dbms/)

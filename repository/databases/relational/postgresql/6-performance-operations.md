@@ -2,6 +2,25 @@
 
 [← Back to PostgreSQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Backup & Recovery](#backup-recovery)
+  - [pg_dump / pg_restore](#pg_dump-pg_restore)
+  - [pg_basebackup](#pg_basebackup)
+  - [Continuous Archiving](#continuous-archiving)
+  - [Point-in-Time Recovery (PITR)](#point-in-time-recovery-pitr)
+  - [Backup Tools](#backup-tools)
+- [Monitoring](#monitoring)
+  - [Key Metrics](#key-metrics)
+  - [Monitoring Queries](#monitoring-queries)
+  - [Logging](#logging)
+- [Performance Optimization](#performance-optimization)
+  - [Query Optimization](#query-optimization)
+  - [EXPLAIN and Query Plans](#explain-and-query-plans)
+  - [Indexing](#indexing)
+  - [pg_stat_statements](#pg_stat_statements)
+  - [Vacuum and Analyze](#vacuum-and-analyze)
+
 ## Backup & Recovery
 
 ### pg_dump / pg_restore

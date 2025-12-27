@@ -4,6 +4,28 @@
 
 [← Back to Redis Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Caching Patterns](#caching-patterns)
+  - [Cache-Aside Pattern](#cache-aside-pattern)
+  - [Write-Through Pattern](#write-through-pattern)
+  - [Write-Behind Pattern](#write-behind-pattern)
+- [Session Management](#session-management)
+- [Rate Limiting](#rate-limiting)
+  - [Simple Rate Limiting](#simple-rate-limiting)
+  - [Sliding Window Rate Limiting](#sliding-window-rate-limiting)
+- [Leaderboards](#leaderboards)
+- [Real-time Analytics](#real-time-analytics)
+- [Message Queues](#message-queues)
+  - [Simple Queue](#simple-queue)
+  - [Priority Queue](#priority-queue)
+- [Best Practices](#best-practices)
+- [Resources](#resources)
+  - [Official Documentation](#official-documentation)
+  - [Learning Resources](#learning-resources)
+  - [Tools](#tools)
+  - [Community](#community)
+
 ## Caching Patterns
 
 ### Cache-Aside Pattern

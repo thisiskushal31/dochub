@@ -1,5 +1,17 @@
 # Advanced DBMS
 
+## Table of Contents
+
+- [Topics](#topics)
+  - [Indexing in Databases](#indexing-in-databases)
+  - [B Tree](#b-tree)
+  - [B+ Tree](#b-tree)
+  - [Bitmap Indexing](#bitmap-indexing)
+  - [Inverted Index](#inverted-index)
+  - [Clustered and Non-Clustered Indexes](#clustered-and-non-clustered-indexes)
+  - [File Organization](#file-organization)
+- [Related Topics](#related-topics)
+- [References](#references)
 Advanced database concepts including indexing techniques, B-tree and B+ tree structures, bitmap indexing, and file organization methods.
 
 > **Reference**: [Database Design in DBMS - GeeksforGeeks](https://www.geeksforgeeks.org/dbms/database-design-in-dbms/)

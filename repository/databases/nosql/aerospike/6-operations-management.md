@@ -4,6 +4,28 @@
 
 [← Back to Aerospike Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Monitoring](#monitoring)
+  - [Key Metrics](#key-metrics)
+  - [Monitoring Tools](#monitoring-tools)
+  - [Monitoring with asadm](#monitoring-with-asadm)
+- [Performance Optimization](#performance-optimization)
+  - [Memory Configuration](#memory-configuration)
+  - [Index Optimization](#index-optimization)
+  - [Service Threads](#service-threads)
+  - [Best Practices](#best-practices)
+- [Backup & Recovery](#backup-recovery)
+  - [Backup Strategies](#backup-strategies)
+  - [Backup Schedule](#backup-schedule)
+  - [Recovery Procedures](#recovery-procedures)
+- [Security](#security)
+  - [Authentication](#authentication)
+  - [Access Control](#access-control)
+  - [TLS/SSL](#tlsssl)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+
 ## Monitoring
 
 ### Key Metrics

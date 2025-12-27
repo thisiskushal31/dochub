@@ -1,5 +1,17 @@
 # Transactions & Concurrency Control
 
+## Table of Contents
+
+- [Topics](#topics)
+  - [ACID Properties](#acid-properties)
+  - [Types of Schedules](#types-of-schedules)
+  - [Concurrency Control](#concurrency-control)
+  - [Graph Based Concurrency Control](#graph-based-concurrency-control)
+  - [Multiple Granularity Locking](#multiple-granularity-locking)
+  - [Database Recovery Techniques](#database-recovery-techniques)
+  - [Deadlock](#deadlock)
+- [Related Topics](#related-topics)
+- [References](#references)
 ACID properties, transaction schedules, concurrency control protocols, locking mechanisms, and database recovery techniques.
 
 > **Reference**: [Database Design in DBMS - GeeksforGeeks](https://www.geeksforgeeks.org/dbms/database-design-in-dbms/)

@@ -4,6 +4,19 @@
 
 [← Back to MongoDB Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Data Types](#data-types)
+  - [Basic Types](#basic-types)
+  - [Complex Types](#complex-types)
+- [Schema Design](#schema-design)
+  - [Collections & Documents](#collections-documents)
+  - [Data Modeling Patterns](#data-modeling-patterns)
+- [Indexing](#indexing)
+  - [Index Types](#index-types)
+  - [Index Management](#index-management)
+  - [Analyzing Indexes](#analyzing-indexes)
+
 ## Data Types
 
 ### Basic Types

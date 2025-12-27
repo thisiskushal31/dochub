@@ -4,6 +4,27 @@
 
 [← Back to Redis Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Transactions](#transactions)
+  - [Transaction Commands](#transaction-commands)
+  - [Transaction Example](#transaction-example)
+  - [Transaction Limitations](#transaction-limitations)
+- [Pub/Sub](#pubsub)
+  - [Pub/Sub Commands](#pubsub-commands)
+  - [Pub/Sub Example](#pubsub-example)
+  - [Pub/Sub Use Cases](#pubsub-use-cases)
+- [Lua Scripting](#lua-scripting)
+  - [Basic Lua Scripting](#basic-lua-scripting)
+  - [Lua Script Examples](#lua-script-examples)
+  - [Script Management](#script-management)
+- [Pipelining](#pipelining)
+  - [Pipelining Example (Python)](#pipelining-example-python)
+  - [Pipelining Benefits](#pipelining-benefits)
+- [Blocking Operations](#blocking-operations)
+  - [Blocking List Operations](#blocking-list-operations)
+  - [Blocking Stream Operations](#blocking-stream-operations)
+
 ## Transactions
 
 Redis transactions allow you to execute a group of commands atomically. All commands in a transaction are serialized and executed sequentially.

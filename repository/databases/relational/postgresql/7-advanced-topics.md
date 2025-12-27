@@ -2,6 +2,16 @@
 
 [← Back to PostgreSQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Stored Procedures and Functions](#stored-procedures-and-functions)
+  - [PL/pgSQL](#plpgsql)
+  - [User-Defined Functions](#user-defined-functions)
+- [Triggers](#triggers)
+- [Extensions](#extensions)
+- [Full-Text Search](#full-text-search)
+- [Partitioning](#partitioning)
+
 ## Stored Procedures and Functions
 
 ### PL/pgSQL

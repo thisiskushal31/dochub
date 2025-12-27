@@ -4,6 +4,15 @@
 
 [← Back to MySQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Transactions and Concurrency Control](#transactions-and-concurrency-control)
+  - [Transactions and ACID Properties](#transactions-and-acid-properties)
+  - [TCL Commands (Transaction Control Language)](#tcl-commands-transaction-control-language)
+  - [Isolation Levels](#isolation-levels)
+  - [Locking](#locking)
+  - [Concurrency Control Best Practices](#concurrency-control-best-practices)
+
 ## Transactions and Concurrency Control
 
 Transactions ensure data integrity and maintain consistency in multi-user database environments. Understanding transactions and concurrency control is vital when dealing with concurrent database operations.

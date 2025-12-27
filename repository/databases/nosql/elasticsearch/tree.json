@@ -11,42 +11,42 @@
     "path": "2-mapping-analysis.md",
     "type": "file",
     "sha": "",
-    "size": 22559
+    "size": 30477
   },
   {
     "name": "3-searching.md",
     "path": "3-searching.md",
     "type": "file",
     "sha": "",
-    "size": 18598
+    "size": 22241
   },
   {
     "name": "4-joining-queries.md",
     "path": "4-joining-queries.md",
     "type": "file",
     "sha": "",
-    "size": 10270
+    "size": 12296
   },
   {
     "name": "5-controlling-results.md",
     "path": "5-controlling-results.md",
     "type": "file",
     "sha": "",
-    "size": 3764
+    "size": 5456
   },
   {
     "name": "6-aggregations.md",
     "path": "6-aggregations.md",
     "type": "file",
     "sha": "",
-    "size": 15005
+    "size": 19074
   },
   {
     "name": "7-improving-results.md",
     "path": "7-improving-results.md",
     "type": "file",
     "sha": "",
-    "size": 6507
+    "size": 8282
   },
   {
     "name": "README.md",

@@ -4,6 +4,24 @@
 
 [← Back to Redis Deep Dive](../README.md)
 
+## Table of Contents
+
+- [RediSearch](#redisearch)
+  - [Installation](#installation)
+  - [Basic Usage](#basic-usage)
+- [RedisJSON](#redisjson)
+  - [Installation](#installation)
+  - [Basic Usage](#basic-usage)
+- [RedisTimeSeries](#redistimeseries)
+  - [Installation](#installation)
+  - [Basic Usage](#basic-usage)
+- [RedisAI](#redisai)
+  - [Installation](#installation)
+  - [Basic Usage](#basic-usage)
+- [RedisGraph](#redisgraph)
+  - [Installation](#installation)
+  - [Basic Usage](#basic-usage)
+
 ## RediSearch
 
 RediSearch is a full-text search and secondary index module for Redis.

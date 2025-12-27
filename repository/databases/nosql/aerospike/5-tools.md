@@ -4,6 +4,22 @@
 
 [← Back to Aerospike Deep Dive](../README.md)
 
+## Table of Contents
+
+- [AQL (Aerospike Query Language)](#aql-aerospike-query-language)
+  - [Basic AQL Commands](#basic-aql-commands)
+  - [AQL Examples](#aql-examples)
+- [asadm (Administration Tool)](#asadm-administration-tool)
+  - [Starting asadm](#starting-asadm)
+  - [asadm Commands](#asadm-commands)
+- [asbackup & asrestore](#asbackup-asrestore)
+  - [Backup](#backup)
+  - [Restore](#restore)
+- [asbench (Benchmarking)](#asbench-benchmarking)
+  - [Benchmark Examples](#benchmark-examples)
+- [asinfo (Information Tool)](#asinfo-information-tool)
+  - [asinfo Examples](#asinfo-examples)
+
 ## AQL (Aerospike Query Language)
 
 AQL is a command-line tool for interacting with Aerospike.

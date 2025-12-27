@@ -4,6 +4,18 @@
 
 [← Back to MySQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Overview](#overview)
+  - [Key Features](#key-features)
+- [Architecture](#architecture)
+  - [Storage Engines](#storage-engines)
+  - [Components](#components)
+- [Installation & Configuration](#installation-configuration)
+  - [Installation](#installation)
+  - [Initial Configuration](#initial-configuration)
+  - [Configuration File (my.cnf)](#configuration-file-mycnf)
+
 ## Overview
 
 MySQL is an open-source relational database management system (RDBMS) that uses SQL (Structured Query Language) for database operations. It's widely used in web applications and is a core component of the LAMP (Linux, Apache, MySQL, PHP/Python/Perl) stack.

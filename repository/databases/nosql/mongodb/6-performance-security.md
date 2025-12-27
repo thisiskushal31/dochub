@@ -4,6 +4,18 @@
 
 [← Back to MongoDB Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Performance Optimization](#performance-optimization)
+  - [Query Optimization](#query-optimization)
+  - [Monitoring](#monitoring)
+- [Backup & Recovery](#backup-recovery)
+  - [mongodump](#mongodump)
+  - [mongorestore](#mongorestore)
+- [Security](#security)
+  - [Authentication](#authentication)
+  - [Authorization](#authorization)
+
 ## Performance Optimization
 
 ### Query Optimization

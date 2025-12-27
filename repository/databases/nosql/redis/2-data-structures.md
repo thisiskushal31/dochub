@@ -4,6 +4,42 @@
 
 [← Back to Redis Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Basic Operations](#basic-operations)
+  - [Key Management](#key-management)
+  - [Expiration](#expiration)
+- [Strings](#strings)
+  - [Basic Operations](#basic-operations)
+  - [Numeric Operations](#numeric-operations)
+  - [String Patterns](#string-patterns)
+- [Hashes](#hashes)
+  - [Hash Operations](#hash-operations)
+  - [Hash Use Cases](#hash-use-cases)
+- [Lists](#lists)
+  - [List Operations](#list-operations)
+  - [List Use Cases](#list-use-cases)
+- [Sets](#sets)
+  - [Set Operations](#set-operations)
+  - [Set Operations (Multiple Sets)](#set-operations-multiple-sets)
+  - [Set Use Cases](#set-use-cases)
+- [Sorted Sets](#sorted-sets)
+  - [Sorted Set Operations](#sorted-set-operations)
+  - [Sorted Set Operations (Multiple Sets)](#sorted-set-operations-multiple-sets)
+  - [Sorted Set Use Cases](#sorted-set-use-cases)
+- [Bitmaps](#bitmaps)
+  - [Bitmap Operations](#bitmap-operations)
+  - [Bitmap Use Cases](#bitmap-use-cases)
+- [HyperLogLog](#hyperloglog)
+  - [HyperLogLog Operations](#hyperloglog-operations)
+  - [HyperLogLog Use Cases](#hyperloglog-use-cases)
+- [Streams](#streams)
+  - [Stream Operations](#stream-operations)
+  - [Stream Use Cases](#stream-use-cases)
+- [Geospatial](#geospatial)
+  - [Geospatial Operations](#geospatial-operations)
+  - [Geospatial Use Cases](#geospatial-use-cases)
+
 ## Basic Operations
 
 ### Key Management

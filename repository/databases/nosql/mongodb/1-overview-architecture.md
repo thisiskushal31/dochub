@@ -4,6 +4,23 @@
 
 [← Back to MongoDB Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Overview](#overview)
+  - [What is NoSQL?](#what-is-nosql)
+  - [JSON and BSON](#json-and-bson)
+- [RDBMS vs NoSQL](#rdbms-vs-nosql)
+  - [Non-Technical Criteria](#non-technical-criteria)
+  - [Technical Criteria](#technical-criteria)
+  - [Key Features](#key-features)
+- [Architecture](#architecture)
+  - [Components](#components)
+  - [Data Model](#data-model)
+- [Installation & Configuration](#installation-configuration)
+  - [Installation](#installation)
+  - [Connecting to MongoDB](#connecting-to-mongodb)
+  - [Configuration](#configuration)
+
 ## Overview
 
 MongoDB is a document-oriented NoSQL database that stores data in flexible, JSON-like documents called BSON (Binary JSON). It's designed for scalability and developer productivity.

@@ -4,6 +4,19 @@
 
 [← Back to MySQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Security](#security)
+  - [User Management](#user-management)
+  - [Encryption](#encryption)
+- [Operational Checklists](#operational-checklists)
+  - [Daily Operations](#daily-operations)
+  - [Weekly Operations](#weekly-operations)
+  - [Monthly Operations](#monthly-operations)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Debugging](#debugging)
+
 ## Security
 
 ### User Management

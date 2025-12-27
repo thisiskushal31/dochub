@@ -1,5 +1,17 @@
 # Functional Dependencies & Normalisation
 
+## Table of Contents
+
+- [Topics](#topics)
+  - [Attribute Closure](#attribute-closure)
+  - [Armstrong's Axioms](#armstrongs-axioms)
+  - [Canonical Cover](#canonical-cover)
+  - [Normal Forms](#normal-forms)
+  - [Problem of Redundancy](#problem-of-redundancy)
+  - [Lossless Join and Dependency Preserving Decomposition](#lossless-join-and-dependency-preserving-decomposition)
+  - [Denormalization](#denormalization)
+- [Related Topics](#related-topics)
+- [References](#references)
 Functional dependencies, normalization forms, and techniques to eliminate redundancy and anomalies in database design.
 
 > **Reference**: [Database Design in DBMS - GeeksforGeeks](https://www.geeksforgeeks.org/dbms/database-design-in-dbms/)

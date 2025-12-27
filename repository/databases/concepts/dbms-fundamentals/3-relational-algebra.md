@@ -1,5 +1,15 @@
 # Relational Algebra
 
+## Table of Contents
+
+- [Topics](#topics)
+  - [Introduction of Relational Algebra](#introduction-of-relational-algebra)
+  - [SQL Joins](#sql-joins)
+  - [Join vs Nested Query](#join-vs-nested-query)
+  - [Tuple Relational Calculus (TRC)](#tuple-relational-calculus-trc)
+  - [Domain Relational Calculus](#domain-relational-calculus)
+- [Related Topics](#related-topics)
+- [References](#references)
 Relational algebra operations for querying databases, including selection, projection, joins, and relational calculus.
 
 > **Reference**: [Database Design in DBMS - GeeksforGeeks](https://www.geeksforgeeks.org/dbms/database-design-in-dbms/)

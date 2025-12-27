@@ -4,6 +4,19 @@
 
 [← Back to MySQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Advanced SQL Topics](#advanced-sql-topics)
+  - [Stored Procedures](#stored-procedures)
+  - [Triggers](#triggers)
+  - [User-Defined Functions](#user-defined-functions)
+- [Best Practices](#best-practices)
+  - [SQL Code Best Practices](#sql-code-best-practices)
+  - [MySQL-Specific Best Practices](#mysql-specific-best-practices)
+- [Learning Resources](#learning-resources)
+  - [Recommended Learning Resources](#recommended-learning-resources)
+- [Resources](#resources)
+
 ## Advanced SQL Topics
 
 ### Stored Procedures

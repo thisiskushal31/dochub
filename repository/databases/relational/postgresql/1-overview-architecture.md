@@ -2,6 +2,16 @@
 
 [← Back to PostgreSQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Overview](#overview)
+  - [Key Features](#key-features)
+- [Architecture](#architecture)
+- [Installation & Configuration](#installation-configuration)
+  - [Installation](#installation)
+  - [Basic Configuration](#basic-configuration)
+  - [Configuration File (postgresql.conf)](#configuration-file-postgresqlconf)
+
 ## Overview
 
 PostgreSQL is a powerful, open-source object-relational database system with over 35 years of active development. It has earned a strong reputation for reliability, feature robustness, and performance. PostgreSQL runs on all major operating systems and has been ACID-compliant since 2001.

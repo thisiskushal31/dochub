@@ -4,6 +4,26 @@
 
 [← Back to Redis Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Persistence](#persistence)
+  - [RDB (Redis Database Backup)](#rdb-redis-database-backup)
+  - [AOF (Append Only File)](#aof-append-only-file)
+  - [Hybrid Approach](#hybrid-approach)
+- [Replication](#replication)
+  - [Master-Replica Setup](#master-replica-setup)
+  - [Replication Process](#replication-process)
+  - [Replication Commands](#replication-commands)
+  - [Replication Features](#replication-features)
+- [High Availability](#high-availability)
+  - [Redis Sentinel](#redis-sentinel)
+  - [Sentinel Features](#sentinel-features)
+- [Redis Cluster](#redis-cluster)
+  - [Cluster Setup](#cluster-setup)
+  - [Cluster Configuration](#cluster-configuration)
+  - [Cluster Commands](#cluster-commands)
+  - [Cluster Features](#cluster-features)
+
 ## Persistence
 
 Redis provides two persistence mechanisms: RDB (snapshots) and AOF (append-only file).

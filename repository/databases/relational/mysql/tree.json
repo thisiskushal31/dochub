@@ -4,49 +4,49 @@
     "path": "1-overview-architecture.md",
     "type": "file",
     "sha": "",
-    "size": 3441
+    "size": 3833
   },
   {
     "name": "2-data-management.md",
     "path": "2-data-management.md",
     "type": "file",
     "sha": "",
-    "size": 7502
+    "size": 7876
   },
   {
     "name": "3-sql-fundamentals.md",
     "path": "3-sql-fundamentals.md",
     "type": "file",
     "sha": "",
-    "size": 19774
+    "size": 20395
   },
   {
     "name": "4-transactions-concurrency.md",
     "path": "4-transactions-concurrency.md",
     "type": "file",
     "sha": "",
-    "size": 6838
+    "size": 7253
   },
   {
     "name": "5-performance-operations.md",
     "path": "5-performance-operations.md",
     "type": "file",
     "sha": "",
-    "size": 4701
+    "size": 5534
   },
   {
     "name": "6-security-maintenance.md",
     "path": "6-security-maintenance.md",
     "type": "file",
     "sha": "",
-    "size": 2664
+    "size": 3067
   },
   {
     "name": "7-advanced-topics.md",
     "path": "7-advanced-topics.md",
     "type": "file",
     "sha": "",
-    "size": 5377
+    "size": 5870
   },
   {
     "name": "README.md",

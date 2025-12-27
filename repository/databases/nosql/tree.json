@@ -17,42 +17,42 @@
         "path": "aerospike/2-operations.md",
         "type": "file",
         "sha": "",
-        "size": 8166
+        "size": 9157
       },
       {
         "name": "3-advanced-features.md",
         "path": "aerospike/3-advanced-features.md",
         "type": "file",
         "sha": "",
-        "size": 4155
+        "size": 4920
       },
       {
         "name": "4-clustering-replication.md",
         "path": "aerospike/4-clustering-replication.md",
         "type": "file",
         "sha": "",
-        "size": 3338
+        "size": 4053
       },
       {
         "name": "5-tools.md",
         "path": "aerospike/5-tools.md",
         "type": "file",
         "sha": "",
-        "size": 3718
+        "size": 4307
       },
       {
         "name": "6-operations-management.md",
         "path": "aerospike/6-operations-management.md",
         "type": "file",
         "sha": "",
-        "size": 4228
+        "size": 5004
       },
       {
         "name": "7-deployment-best-practices.md",
         "path": "aerospike/7-deployment-best-practices.md",
         "type": "file",
         "sha": "",
-        "size": 6098
+        "size": 7255
       },
       {
         "name": "README.md",
@@ -81,42 +81,42 @@
         "path": "elasticsearch/2-mapping-analysis.md",
         "type": "file",
         "sha": "",
-        "size": 22559
+        "size": 30477
       },
       {
         "name": "3-searching.md",
         "path": "elasticsearch/3-searching.md",
         "type": "file",
         "sha": "",
-        "size": 18598
+        "size": 22241
       },
       {
         "name": "4-joining-queries.md",
         "path": "elasticsearch/4-joining-queries.md",
         "type": "file",
         "sha": "",
-        "size": 10270
+        "size": 12296
       },
       {
         "name": "5-controlling-results.md",
         "path": "elasticsearch/5-controlling-results.md",
         "type": "file",
         "sha": "",
-        "size": 3764
+        "size": 5456
       },
       {
         "name": "6-aggregations.md",
         "path": "elasticsearch/6-aggregations.md",
         "type": "file",
         "sha": "",
-        "size": 15005
+        "size": 19074
       },
       {
         "name": "7-improving-results.md",
         "path": "elasticsearch/7-improving-results.md",
         "type": "file",
         "sha": "",
-        "size": 6507
+        "size": 8282
       },
       {
         "name": "README.md",
@@ -138,49 +138,49 @@
         "path": "mongodb/1-overview-architecture.md",
         "type": "file",
         "sha": "",
-        "size": 10443
+        "size": 11009
       },
       {
         "name": "2-data-management.md",
         "path": "mongodb/2-data-management.md",
         "type": "file",
         "sha": "",
-        "size": 4780
+        "size": 5183
       },
       {
         "name": "3-operations.md",
         "path": "mongodb/3-operations.md",
         "type": "file",
         "sha": "",
-        "size": 12676
+        "size": 13249
       },
       {
         "name": "4-aggregation.md",
         "path": "mongodb/4-aggregation.md",
         "type": "file",
         "sha": "",
-        "size": 3539
+        "size": 3702
       },
       {
         "name": "5-advanced-features.md",
         "path": "mongodb/5-advanced-features.md",
         "type": "file",
         "sha": "",
-        "size": 5000
+        "size": 5415
       },
       {
         "name": "6-performance-security.md",
         "path": "mongodb/6-performance-security.md",
         "type": "file",
         "sha": "",
-        "size": 2212
+        "size": 2567
       },
       {
         "name": "7-best-practices.md",
         "path": "mongodb/7-best-practices.md",
         "type": "file",
         "sha": "",
-        "size": 12002
+        "size": 12425
       },
       {
         "name": "README.md",
@@ -202,49 +202,49 @@
         "path": "redis/1-overview-architecture.md",
         "type": "file",
         "sha": "",
-        "size": 4991
+        "size": 5412
       },
       {
         "name": "2-data-structures.md",
         "path": "redis/2-data-structures.md",
         "type": "file",
         "sha": "",
-        "size": 11011
+        "size": 12340
       },
       {
         "name": "3-advanced-features.md",
         "path": "redis/3-advanced-features.md",
         "type": "file",
         "sha": "",
-        "size": 4487
+        "size": 5318
       },
       {
         "name": "4-persistence-replication.md",
         "path": "redis/4-persistence-replication.md",
         "type": "file",
         "sha": "",
-        "size": 5265
+        "size": 6030
       },
       {
         "name": "5-modules.md",
         "path": "redis/5-modules.md",
         "type": "file",
         "sha": "",
-        "size": 2510
+        "size": 3005
       },
       {
         "name": "6-operations-management.md",
         "path": "redis/6-operations-management.md",
         "type": "file",
         "sha": "",
-        "size": 4699
+        "size": 5493
       },
       {
         "name": "7-use-cases-best-practices.md",
         "path": "redis/7-use-cases-best-practices.md",
         "type": "file",
         "sha": "",
-        "size": 6630
+        "size": 7433
       },
       {
         "name": "README.md",

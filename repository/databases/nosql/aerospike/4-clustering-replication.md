@@ -4,6 +4,24 @@
 
 [← Back to Aerospike Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Clustering Overview](#clustering-overview)
+  - [Cluster Components](#cluster-components)
+  - [Cluster Formation](#cluster-formation)
+- [Data Distribution](#data-distribution)
+  - [Partition Distribution](#partition-distribution)
+  - [Partition Ownership](#partition-ownership)
+- [Rack Awareness](#rack-awareness)
+  - [Rack Configuration](#rack-configuration)
+  - [Rack-Aware Replication](#rack-aware-replication)
+- [Consistency Modes](#consistency-modes)
+  - [Consistency Levels](#consistency-levels)
+  - [Configuration](#configuration)
+- [Cross-Datacenter Replication (XDR)](#cross-datacenter-replication-xdr)
+  - [XDR Configuration](#xdr-configuration)
+  - [XDR Features](#xdr-features)
+
 ## Clustering Overview
 
 Aerospike clusters distribute data across multiple nodes for scalability and availability.

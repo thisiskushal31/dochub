@@ -5,6 +5,31 @@
 [← Back to Elasticsearch Deep Dive](../README.md)
 
 
+## Table of Contents
+
+- [Adding a `filter` clause to the `bool` query](#adding-a-filter-clause-to-the-bool-query)
+  - [Sorting by multi-value fields](#sorting-by-multi-value-fields)
+- [Sorting by the average rating (descending)](#sorting-by-the-average-rating-descending)
+  - [Sorting results](#sorting-results)
+- [Sorting by ascending order (implicitly)](#sorting-by-ascending-order-implicitly)
+- [Sorting by descending order](#sorting-by-descending-order)
+- [Sorting by multiple fields](#sorting-by-multiple-fields)
+  - [Source filtering](#source-filtering)
+- [Excluding the `_source` field altogether](#excluding-the-_source-field-altogether)
+- [Only returning the `created` field](#only-returning-the-created-field)
+- [Only returning an object's key](#only-returning-an-objects-key)
+- [Returning all of an object's keys](#returning-all-of-an-objects-keys)
+- [Returning the `ingredients` object with all keys, __and__ the `servings` field](#returning-the-ingredients-object-with-all-keys-__and__-the-servings-field)
+- [Including all of the `ingredients` object's keys, except the `name` key](#including-all-of-the-ingredients-objects-keys-except-the-name-key)
+  - [Specifying an offset](#specifying-an-offset)
+- [Specifying an offset with the `from` parameter](#specifying-an-offset-with-the-from-parameter)
+  - [Specifying the result format](#specifying-the-result-format)
+- [Returning results as YAML](#returning-results-as-yaml)
+- [Returning pretty JSON](#returning-pretty-json)
+  - [Specifying the result size](#specifying-the-result-size)
+- [Using a query parameter](#using-a-query-parameter)
+- [Using a parameter within the request body](#using-a-parameter-within-the-request-body)
+
 ## Adding a `filter` clause to the `bool` query
 
 ```

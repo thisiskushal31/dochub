@@ -2,6 +2,18 @@
 
 [← Back to PostgreSQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Import & Export Data](#import-export-data)
+  - [COPY Command](#copy-command)
+- [psql Commands](#psql-commands)
+- [PostgreSQL Recipes](#postgresql-recipes)
+  - [Compare Two Tables](#compare-two-tables)
+  - [Delete Duplicate Rows](#delete-duplicate-rows)
+  - [Generate Random Number in Range](#generate-random-number-in-range)
+  - [Temporary Tables](#temporary-tables)
+  - [Copy Table](#copy-table)
+
 ## Import & Export Data
 
 ### COPY Command

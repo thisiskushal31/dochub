@@ -1,5 +1,19 @@
 # ER & Relational Model
 
+## Table of Contents
+
+- [Topics](#topics)
+  - [Introduction of ER Model](#introduction-of-er-model)
+  - [Structural Constraints of Relationships](#structural-constraints-of-relationships)
+  - [Generalization, Specialization and Aggregation](#generalization-specialization-and-aggregation)
+  - [Relational Model and Codd Rules](#relational-model-and-codd-rules)
+  - [Keys in Relational Model](#keys-in-relational-model)
+  - [Mapping from ER Model to Relational Model](#mapping-from-er-model-to-relational-model)
+  - [Logical Design Example](#logical-design-example)
+  - [Physical Design Example](#physical-design-example)
+  - [Schema Design Strategies](#schema-design-strategies)
+- [Related Topics](#related-topics)
+- [References](#references)
 Entity-Relationship (ER) modeling and Relational Model concepts for database design, including entity types, relationships, keys, and schema design strategies.
 
 > **Reference**: [Database Design in DBMS - GeeksforGeeks](https://www.geeksforgeeks.org/dbms/database-design-in-dbms/)

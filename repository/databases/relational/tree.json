@@ -10,49 +10,49 @@
         "path": "mysql/1-overview-architecture.md",
         "type": "file",
         "sha": "",
-        "size": 3441
+        "size": 3833
       },
       {
         "name": "2-data-management.md",
         "path": "mysql/2-data-management.md",
         "type": "file",
         "sha": "",
-        "size": 7502
+        "size": 7876
       },
       {
         "name": "3-sql-fundamentals.md",
         "path": "mysql/3-sql-fundamentals.md",
         "type": "file",
         "sha": "",
-        "size": 19774
+        "size": 20395
       },
       {
         "name": "4-transactions-concurrency.md",
         "path": "mysql/4-transactions-concurrency.md",
         "type": "file",
         "sha": "",
-        "size": 6838
+        "size": 7253
       },
       {
         "name": "5-performance-operations.md",
         "path": "mysql/5-performance-operations.md",
         "type": "file",
         "sha": "",
-        "size": 4701
+        "size": 5534
       },
       {
         "name": "6-security-maintenance.md",
         "path": "mysql/6-security-maintenance.md",
         "type": "file",
         "sha": "",
-        "size": 2664
+        "size": 3067
       },
       {
         "name": "7-advanced-topics.md",
         "path": "mysql/7-advanced-topics.md",
         "type": "file",
         "sha": "",
-        "size": 5377
+        "size": 5870
       },
       {
         "name": "README.md",
@@ -74,70 +74,70 @@
         "path": "postgresql/1-overview-architecture.md",
         "type": "file",
         "sha": "",
-        "size": 2725
+        "size": 3061
       },
       {
         "name": "10-best-practices.md",
         "path": "postgresql/10-best-practices.md",
         "type": "file",
         "sha": "",
-        "size": 5840
+        "size": 6459
       },
       {
         "name": "2-data-management.md",
         "path": "postgresql/2-data-management.md",
         "type": "file",
         "sha": "",
-        "size": 15748
+        "size": 16386
       },
       {
         "name": "3-sql-fundamentals.md",
         "path": "postgresql/3-sql-fundamentals.md",
         "type": "file",
         "sha": "",
-        "size": 15876
+        "size": 16469
       },
       {
         "name": "4-transactions-concurrency.md",
         "path": "postgresql/4-transactions-concurrency.md",
         "type": "file",
         "sha": "",
-        "size": 2732
+        "size": 3117
       },
       {
         "name": "5-high-availability.md",
         "path": "postgresql/5-high-availability.md",
         "type": "file",
         "sha": "",
-        "size": 16958
+        "size": 17867
       },
       {
         "name": "6-performance-operations.md",
         "path": "postgresql/6-performance-operations.md",
         "type": "file",
         "sha": "",
-        "size": 6583
+        "size": 7286
       },
       {
         "name": "7-advanced-topics.md",
         "path": "postgresql/7-advanced-topics.md",
         "type": "file",
         "sha": "",
-        "size": 6695
+        "size": 6991
       },
       {
         "name": "8-infrastructure-security.md",
         "path": "postgresql/8-infrastructure-security.md",
         "type": "file",
         "sha": "",
-        "size": 11567
+        "size": 11985
       },
       {
         "name": "9-utilities-recipes.md",
         "path": "postgresql/9-utilities-recipes.md",
         "type": "file",
         "sha": "",
-        "size": 4559
+        "size": 4982
       },
       {
         "name": "README.md",

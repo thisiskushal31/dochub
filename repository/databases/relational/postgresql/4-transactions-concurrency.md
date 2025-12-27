@@ -2,6 +2,16 @@
 
 [← Back to PostgreSQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Transactions & Concurrency](#transactions-concurrency)
+  - [Transactions and ACID Properties](#transactions-and-acid-properties)
+  - [Transaction Control](#transaction-control)
+  - [Isolation Levels](#isolation-levels)
+  - [MVCC (Multi-Version Concurrency Control)](#mvcc-multi-version-concurrency-control)
+  - [Locking](#locking)
+  - [Deadlocks](#deadlocks)
+
 ## Transactions & Concurrency
 
 ### Transactions and ACID Properties

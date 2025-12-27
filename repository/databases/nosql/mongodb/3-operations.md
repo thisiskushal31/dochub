@@ -4,6 +4,23 @@
 
 [← Back to MongoDB Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Using MongoDB](#using-mongodb)
+  - [Opening MongoDB Console](#opening-mongodb-console)
+  - [Database Operations](#database-operations)
+  - [Collection Operations](#collection-operations)
+  - [Inserting Data](#inserting-data)
+  - [Importing Data](#importing-data)
+- [Querying](#querying)
+  - [Basic Queries](#basic-queries)
+  - [Projections](#projections)
+  - [Sorting, Limit, and Skip](#sorting-limit-and-skip)
+  - [Get Distinct Values](#get-distinct-values)
+  - [Query Operators](#query-operators)
+  - [Updates](#updates)
+  - [Deletes](#deletes)
+
 ## Using MongoDB
 
 ### Opening MongoDB Console

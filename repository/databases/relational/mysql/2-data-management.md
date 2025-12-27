@@ -4,6 +4,18 @@
 
 [← Back to MySQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Data Types](#data-types)
+  - [Numeric Types](#numeric-types)
+  - [String Types](#string-types)
+  - [Date/Time Types](#datetime-types)
+- [Schema Design](#schema-design)
+  - [DDL Commands (Data Definition Language)](#ddl-commands-data-definition-language)
+  - [Normalization](#normalization)
+  - [Indexes](#indexes)
+  - [Foreign Keys](#foreign-keys)
+
 ## Data Types
 
 ### Numeric Types

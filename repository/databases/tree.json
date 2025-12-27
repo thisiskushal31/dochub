@@ -51,49 +51,49 @@
             "path": "concepts/dbms-fundamentals/1-basics-of-dbms.md",
             "type": "file",
             "sha": "",
-            "size": 4735
+            "size": 5023
           },
           {
             "name": "2-er-relational-model.md",
             "path": "concepts/dbms-fundamentals/2-er-relational-model.md",
             "type": "file",
             "sha": "",
-            "size": 7490
+            "size": 8233
           },
           {
             "name": "3-relational-algebra.md",
             "path": "concepts/dbms-fundamentals/3-relational-algebra.md",
             "type": "file",
             "sha": "",
-            "size": 6380
+            "size": 6774
           },
           {
             "name": "4-functional-dependencies-normalisation.md",
             "path": "concepts/dbms-fundamentals/4-functional-dependencies-normalisation.md",
             "type": "file",
             "sha": "",
-            "size": 6694
+            "size": 7171
           },
           {
             "name": "5-transactions-concurrency-control.md",
             "path": "concepts/dbms-fundamentals/5-transactions-concurrency-control.md",
             "type": "file",
             "sha": "",
-            "size": 7567
+            "size": 8037
           },
           {
             "name": "6-advanced-dbms.md",
             "path": "concepts/dbms-fundamentals/6-advanced-dbms.md",
             "type": "file",
             "sha": "",
-            "size": 8207
+            "size": 8612
           },
           {
             "name": "7-practice-questions.md",
             "path": "concepts/dbms-fundamentals/7-practice-questions.md",
             "type": "file",
             "sha": "",
-            "size": 4174
+            "size": 4713
           },
           {
             "name": "README.md",
@@ -137,42 +137,42 @@
             "path": "nosql/aerospike/2-operations.md",
             "type": "file",
             "sha": "",
-            "size": 8166
+            "size": 9157
           },
           {
             "name": "3-advanced-features.md",
             "path": "nosql/aerospike/3-advanced-features.md",
             "type": "file",
             "sha": "",
-            "size": 4155
+            "size": 4920
           },
           {
             "name": "4-clustering-replication.md",
             "path": "nosql/aerospike/4-clustering-replication.md",
             "type": "file",
             "sha": "",
-            "size": 3338
+            "size": 4053
           },
           {
             "name": "5-tools.md",
             "path": "nosql/aerospike/5-tools.md",
             "type": "file",
             "sha": "",
-            "size": 3718
+            "size": 4307
           },
           {
             "name": "6-operations-management.md",
             "path": "nosql/aerospike/6-operations-management.md",
             "type": "file",
             "sha": "",
-            "size": 4228
+            "size": 5004
           },
           {
             "name": "7-deployment-best-practices.md",
             "path": "nosql/aerospike/7-deployment-best-practices.md",
             "type": "file",
             "sha": "",
-            "size": 6098
+            "size": 7255
           },
           {
             "name": "README.md",
@@ -201,42 +201,42 @@
             "path": "nosql/elasticsearch/2-mapping-analysis.md",
             "type": "file",
             "sha": "",
-            "size": 22559
+            "size": 30477
           },
           {
             "name": "3-searching.md",
             "path": "nosql/elasticsearch/3-searching.md",
             "type": "file",
             "sha": "",
-            "size": 18598
+            "size": 22241
           },
           {
             "name": "4-joining-queries.md",
             "path": "nosql/elasticsearch/4-joining-queries.md",
             "type": "file",
             "sha": "",
-            "size": 10270
+            "size": 12296
           },
           {
             "name": "5-controlling-results.md",
             "path": "nosql/elasticsearch/5-controlling-results.md",
             "type": "file",
             "sha": "",
-            "size": 3764
+            "size": 5456
           },
           {
             "name": "6-aggregations.md",
             "path": "nosql/elasticsearch/6-aggregations.md",
             "type": "file",
             "sha": "",
-            "size": 15005
+            "size": 19074
           },
           {
             "name": "7-improving-results.md",
             "path": "nosql/elasticsearch/7-improving-results.md",
             "type": "file",
             "sha": "",
-            "size": 6507
+            "size": 8282
           },
           {
             "name": "README.md",
@@ -258,49 +258,49 @@
             "path": "nosql/mongodb/1-overview-architecture.md",
             "type": "file",
             "sha": "",
-            "size": 10443
+            "size": 11009
           },
           {
             "name": "2-data-management.md",
             "path": "nosql/mongodb/2-data-management.md",
             "type": "file",
             "sha": "",
-            "size": 4780
+            "size": 5183
           },
           {
             "name": "3-operations.md",
             "path": "nosql/mongodb/3-operations.md",
             "type": "file",
             "sha": "",
-            "size": 12676
+            "size": 13249
           },
           {
             "name": "4-aggregation.md",
             "path": "nosql/mongodb/4-aggregation.md",
             "type": "file",
             "sha": "",
-            "size": 3539
+            "size": 3702
           },
           {
             "name": "5-advanced-features.md",
             "path": "nosql/mongodb/5-advanced-features.md",
             "type": "file",
             "sha": "",
-            "size": 5000
+            "size": 5415
           },
           {
             "name": "6-performance-security.md",
             "path": "nosql/mongodb/6-performance-security.md",
             "type": "file",
             "sha": "",
-            "size": 2212
+            "size": 2567
           },
           {
             "name": "7-best-practices.md",
             "path": "nosql/mongodb/7-best-practices.md",
             "type": "file",
             "sha": "",
-            "size": 12002
+            "size": 12425
           },
           {
             "name": "README.md",
@@ -322,49 +322,49 @@
             "path": "nosql/redis/1-overview-architecture.md",
             "type": "file",
             "sha": "",
-            "size": 4991
+            "size": 5412
           },
           {
             "name": "2-data-structures.md",
             "path": "nosql/redis/2-data-structures.md",
             "type": "file",
             "sha": "",
-            "size": 11011
+            "size": 12340
           },
           {
             "name": "3-advanced-features.md",
             "path": "nosql/redis/3-advanced-features.md",
             "type": "file",
             "sha": "",
-            "size": 4487
+            "size": 5318
           },
           {
             "name": "4-persistence-replication.md",
             "path": "nosql/redis/4-persistence-replication.md",
             "type": "file",
             "sha": "",
-            "size": 5265
+            "size": 6030
           },
           {
             "name": "5-modules.md",
             "path": "nosql/redis/5-modules.md",
             "type": "file",
             "sha": "",
-            "size": 2510
+            "size": 3005
           },
           {
             "name": "6-operations-management.md",
             "path": "nosql/redis/6-operations-management.md",
             "type": "file",
             "sha": "",
-            "size": 4699
+            "size": 5493
           },
           {
             "name": "7-use-cases-best-practices.md",
             "path": "nosql/redis/7-use-cases-best-practices.md",
             "type": "file",
             "sha": "",
-            "size": 6630
+            "size": 7433
           },
           {
             "name": "README.md",
@@ -401,49 +401,49 @@
             "path": "relational/mysql/1-overview-architecture.md",
             "type": "file",
             "sha": "",
-            "size": 3441
+            "size": 3833
           },
           {
             "name": "2-data-management.md",
             "path": "relational/mysql/2-data-management.md",
             "type": "file",
             "sha": "",
-            "size": 7502
+            "size": 7876
           },
           {
             "name": "3-sql-fundamentals.md",
             "path": "relational/mysql/3-sql-fundamentals.md",
             "type": "file",
             "sha": "",
-            "size": 19774
+            "size": 20395
           },
           {
             "name": "4-transactions-concurrency.md",
             "path": "relational/mysql/4-transactions-concurrency.md",
             "type": "file",
             "sha": "",
-            "size": 6838
+            "size": 7253
           },
           {
             "name": "5-performance-operations.md",
             "path": "relational/mysql/5-performance-operations.md",
             "type": "file",
             "sha": "",
-            "size": 4701
+            "size": 5534
           },
           {
             "name": "6-security-maintenance.md",
             "path": "relational/mysql/6-security-maintenance.md",
             "type": "file",
             "sha": "",
-            "size": 2664
+            "size": 3067
           },
           {
             "name": "7-advanced-topics.md",
             "path": "relational/mysql/7-advanced-topics.md",
             "type": "file",
             "sha": "",
-            "size": 5377
+            "size": 5870
           },
           {
             "name": "README.md",
@@ -465,70 +465,70 @@
             "path": "relational/postgresql/1-overview-architecture.md",
             "type": "file",
             "sha": "",
-            "size": 2725
+            "size": 3061
           },
           {
             "name": "10-best-practices.md",
             "path": "relational/postgresql/10-best-practices.md",
             "type": "file",
             "sha": "",
-            "size": 5840
+            "size": 6459
           },
           {
             "name": "2-data-management.md",
             "path": "relational/postgresql/2-data-management.md",
             "type": "file",
             "sha": "",
-            "size": 15748
+            "size": 16386
           },
           {
             "name": "3-sql-fundamentals.md",
             "path": "relational/postgresql/3-sql-fundamentals.md",
             "type": "file",
             "sha": "",
-            "size": 15876
+            "size": 16469
           },
           {
             "name": "4-transactions-concurrency.md",
             "path": "relational/postgresql/4-transactions-concurrency.md",
             "type": "file",
             "sha": "",
-            "size": 2732
+            "size": 3117
           },
           {
             "name": "5-high-availability.md",
             "path": "relational/postgresql/5-high-availability.md",
             "type": "file",
             "sha": "",
-            "size": 16958
+            "size": 17867
           },
           {
             "name": "6-performance-operations.md",
             "path": "relational/postgresql/6-performance-operations.md",
             "type": "file",
             "sha": "",
-            "size": 6583
+            "size": 7286
           },
           {
             "name": "7-advanced-topics.md",
             "path": "relational/postgresql/7-advanced-topics.md",
             "type": "file",
             "sha": "",
-            "size": 6695
+            "size": 6991
           },
           {
             "name": "8-infrastructure-security.md",
             "path": "relational/postgresql/8-infrastructure-security.md",
             "type": "file",
             "sha": "",
-            "size": 11567
+            "size": 11985
           },
           {
             "name": "9-utilities-recipes.md",
             "path": "relational/postgresql/9-utilities-recipes.md",
             "type": "file",
             "sha": "",
-            "size": 4559
+            "size": 4982
           },
           {
             "name": "README.md",

@@ -4,6 +4,12 @@
 
 [← Back to MongoDB Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Aggregation Pipeline](#aggregation-pipeline)
+  - [Pipeline Stages](#pipeline-stages)
+  - [Aggregation Operators](#aggregation-operators)
+
 ## Aggregation Pipeline
 
 MongoDB's Aggregation Framework is a powerful tool for data transformation and analysis. It uses a pipeline of stages to process and aggregate data.

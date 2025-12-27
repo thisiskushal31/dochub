@@ -4,6 +4,38 @@
 
 [← Back to Elasticsearch Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Create a new index](#create-a-new-index)
+- [Add two test documents](#add-two-test-documents)
+  - [Adding documents](#adding-documents)
+- [Adding departments](#adding-departments)
+- [Adding employees for departments](#adding-employees-for-departments)
+  - [Mapping document relationships](#mapping-document-relationships)
+  - [Multi-level relations](#multi-level-relations)
+- [Creating the index with mapping](#creating-the-index-with-mapping)
+- [Adding a company](#adding-a-company)
+- [Adding a department](#adding-a-department)
+- [Adding an employee](#adding-an-employee)
+- [Adding some more test data](#adding-some-more-test-data)
+- [Example of querying multi-level relations](#example-of-querying-multi-level-relations)
+  - [Parent/child inner hits](#parentchild-inner-hits)
+- [Including inner hits for the `has_child` query](#including-inner-hits-for-the-has_child-query)
+- [Including inner hits for the `has_parent` query](#including-inner-hits-for-the-has_parent-query)
+  - [Querying by parent](#querying-by-parent)
+  - [Querying child documents by parent](#querying-child-documents-by-parent)
+- [Matching child documents by parent criteria](#matching-child-documents-by-parent-criteria)
+- [Incorporating the parent documents' relevance scores](#incorporating-the-parent-documents-relevance-scores)
+  - [Querying parent by child documents](#querying-parent-by-child-documents)
+- [Finding parents with child documents matching a `bool` query](#finding-parents-with-child-documents-matching-a-bool-query)
+- [Taking relevance scores into account with `score_mode`](#taking-relevance-scores-into-account-with-score_mode)
+- [Specifying the minimum and maximum number of children](#specifying-the-minimum-and-maximum-number-of-children)
+  - [Terms lookup mechanism](#terms-lookup-mechanism)
+- [Adding test data](#adding-test-data)
+- [Querying stories from a user's followers](#querying-stories-from-a-users-followers)
+- [Controlling Query Results](#controlling-query-results)
+  - [Filters](#filters)
+
 ## Create a new index
 
 ```

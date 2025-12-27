@@ -4,6 +4,20 @@
 
 [← Back to Redis Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Overview](#overview)
+  - [Key Features](#key-features)
+  - [Use Cases](#use-cases)
+- [Architecture](#architecture)
+  - [Core Components](#core-components)
+  - [Data Model](#data-model)
+  - [Threading Model](#threading-model)
+- [Installation & Configuration](#installation-configuration)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+  - [Starting Redis](#starting-redis)
+
 ## Overview
 
 Redis (Remote Dictionary Server) is an open-source, in-memory data structure store that can be used as a database, cache, message broker, and streaming engine. It supports various data structures including strings, hashes, lists, sets, sorted sets, bitmaps, hyperloglogs, geospatial indexes, and streams.

@@ -2,6 +2,21 @@
 
 [← Back to PostgreSQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [SQL Fundamentals](#sql-fundamentals)
+  - [Introduction to SQL](#introduction-to-sql)
+  - [Querying Data](#querying-data)
+  - [SQL Operators](#sql-operators)
+  - [DML Commands (Data Manipulation Language)](#dml-commands-data-manipulation-language)
+  - [Joins](#joins)
+  - [Aggregations and Grouping](#aggregations-and-grouping)
+  - [Window Functions](#window-functions)
+  - [Common Table Expressions (CTEs)](#common-table-expressions-ctes)
+  - [Subqueries](#subqueries)
+  - [Views](#views)
+  - [Conditional Expressions & Operators](#conditional-expressions-operators)
+
 ## SQL Fundamentals
 
 ### Introduction to SQL

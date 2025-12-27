@@ -2,6 +2,26 @@
 
 [← Back to PostgreSQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [High Availability Overview](#high-availability-overview)
+  - [When to Consider HA Architecture](#when-to-consider-ha-architecture)
+  - [HA Requirements Assessment](#ha-requirements-assessment)
+- [HA Architectures](#ha-architectures)
+  - [Patroni-based HA](#patroni-based-ha)
+  - [pg_auto_failover](#pg_auto_failover)
+  - [Stateful MIGs with Regional Persistent Disk](#stateful-migs-with-regional-persistent-disk)
+- [Replication](#replication)
+  - [Streaming Replication](#streaming-replication)
+  - [Logical Replication](#logical-replication)
+  - [Synchronous vs Asynchronous](#synchronous-vs-asynchronous)
+- [Failover & Recovery](#failover-recovery)
+  - [Recovery Time Objective (RTO)](#recovery-time-objective-rto)
+  - [Recovery Point Objective (RPO)](#recovery-point-objective-rpo)
+  - [Failover Process](#failover-process)
+  - [Switchover](#switchover)
+  - [Fallback](#fallback)
+
 ## High Availability Overview
 
 High availability (HA) ensures that your PostgreSQL database remains operational and accessible, even in the event of component failures. HA is the measure of system resiliency in response to underlying infrastructure failure.

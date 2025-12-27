@@ -2,6 +2,22 @@
 
 [← Back to PostgreSQL Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Connection Pooling](#connection-pooling)
+  - [PgBouncer](#pgbouncer)
+  - [Pgpool-II](#pgpool-ii)
+- [Best Practices](#best-practices)
+  - [Maintenance and Monitoring](#maintenance-and-monitoring)
+  - [High Availability](#high-availability)
+  - [Performance](#performance)
+- [Resources](#resources)
+  - [Official Documentation](#official-documentation)
+  - [High Availability Solutions](#high-availability-solutions)
+  - [Tools and Extensions](#tools-and-extensions)
+  - [Infrastructure as Code](#infrastructure-as-code)
+  - [Tutorials and Learning Resources](#tutorials-and-learning-resources)
+
 ## Connection Pooling
 
 Connection pooling helps efficiently manage database connections, reducing overhead and improving performance.

@@ -4,6 +4,24 @@
 
 [← Back to Aerospike Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Transactions](#transactions)
+  - [Transaction Characteristics](#transaction-characteristics)
+  - [Transaction Operations](#transaction-operations)
+  - [Transaction Policies](#transaction-policies)
+- [Strong Consistency](#strong-consistency)
+  - [Consistency Levels](#consistency-levels)
+  - [Enabling Strong Consistency](#enabling-strong-consistency)
+  - [Using Strong Consistency](#using-strong-consistency)
+- [Durable Deletes](#durable-deletes)
+  - [Enabling Durable Deletes](#enabling-durable-deletes)
+  - [Using Durable Deletes](#using-durable-deletes)
+- [Expressions](#expressions)
+  - [Expression Examples](#expression-examples)
+- [Expression Indexes](#expression-indexes)
+  - [Creating Expression Index](#creating-expression-index)
+
 ## Transactions
 
 Aerospike supports ACID transactions for strong consistency.

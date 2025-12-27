@@ -4,6 +4,29 @@
 
 [← Back to Redis Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Monitoring](#monitoring)
+  - [INFO Command](#info-command)
+  - [Monitoring Tools](#monitoring-tools)
+  - [Key Metrics](#key-metrics)
+- [Performance Optimization](#performance-optimization)
+  - [Memory Optimization](#memory-optimization)
+  - [Optimization Tips](#optimization-tips)
+  - [Connection Pooling](#connection-pooling)
+- [Security](#security)
+  - [Authentication](#authentication)
+  - [Network Security](#network-security)
+  - [Command Renaming](#command-renaming)
+  - [TLS/SSL](#tlsssl)
+- [Backup & Recovery](#backup-recovery)
+  - [RDB Backup](#rdb-backup)
+  - [AOF Backup](#aof-backup)
+  - [Backup Best Practices](#backup-best-practices)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Debugging Commands](#debugging-commands)
+
 ## Monitoring
 
 ### INFO Command

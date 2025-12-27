@@ -1,5 +1,14 @@
 # Basics of DBMS
 
+## Table of Contents
+
+- [Topics](#topics)
+  - [Introduction of DBMS](#introduction-of-dbms)
+  - [History of DBMS](#history-of-dbms)
+  - [DBMS Architecture](#dbms-architecture)
+  - [File System vs DBMS](#file-system-vs-dbms)
+- [Related Topics](#related-topics)
+- [References](#references)
 Fundamental concepts and introduction to Database Management Systems (DBMS), including history, architecture, and comparison with file systems.
 
 > **Reference**: [Database Design in DBMS - GeeksforGeeks](https://www.geeksforgeeks.org/dbms/database-design-in-dbms/)

@@ -4,6 +4,32 @@
 
 [← Back to Elasticsearch Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Searching the index for synonyms](#searching-the-index-for-synonyms)
+  - [Affecting relevance scoring with proximity](#affecting-relevance-scoring-with-proximity)
+- [A simple `match` query within a `bool` query](#a-simple-match-query-within-a-bool-query)
+- [Boosting relevance based on proximity](#boosting-relevance-based-on-proximity)
+- [Adding the `slop` parameter](#adding-the-slop-parameter)
+  - [Fuzzy `match` query](#fuzzy-match-query)
+- [Searching with `fuzziness` set to `auto`](#searching-with-fuzziness-set-to-auto)
+- [Fuzziness is per term (and specifying an integer)](#fuzziness-is-per-term-and-specifying-an-integer)
+- [Switching letters around with transpositions](#switching-letters-around-with-transpositions)
+- [Disabling transpositions](#disabling-transpositions)
+  - [`fuzzy` query](#fuzzy-query)
+  - [Highlighting matches in fields](#highlighting-matches-in-fields)
+- [Adding a test document](#adding-a-test-document)
+- [Highlighting matches within the `description` field](#highlighting-matches-within-the-description-field)
+- [Specifying a custom tag](#specifying-a-custom-tag)
+  - [Proximity searches](#proximity-searches)
+- [Adding test documents](#adding-test-documents)
+- [Adding the `slop` parameter to a `match_phrase` query](#adding-the-slop-parameter-to-a-match_phrase-query)
+  - [Stemming](#stemming)
+- [Creating a test index](#creating-a-test-index)
+- [Adding a test document](#adding-a-test-document)
+- [Matching the document with the base word (`work`)](#matching-the-document-with-the-base-word-work)
+- [The query is stemmed, so the document still matches](#the-query-is-stemmed-so-the-document-still-matches)
+- [Synonyms and stemmed words are still highlighted](#synonyms-and-stemmed-words-are-still-highlighted)
 {
   "description": "Elasticsearch is awesome, but can also seem weird sometimes."
 }

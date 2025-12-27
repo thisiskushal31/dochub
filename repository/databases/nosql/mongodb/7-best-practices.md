@@ -4,6 +4,18 @@
 
 [← Back to MongoDB Deep Dive](../README.md)
 
+## Table of Contents
+
+- [Advanced Features](#advanced-features)
+  - [Capped Collections](#capped-collections)
+  - [Change Streams](#change-streams)
+  - [Storage Engines](#storage-engines)
+  - [Write Concern and Read Concern](#write-concern-and-read-concern)
+  - [Covered Queries](#covered-queries)
+- [Best Practices](#best-practices)
+- [MongoDB Interview Questions](#mongodb-interview-questions)
+- [Resources](#resources)
+
 ## Advanced Features
 
 ### Capped Collections
