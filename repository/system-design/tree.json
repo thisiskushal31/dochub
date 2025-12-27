@@ -1,5 +1,19 @@
 [
   {
+    "name": "assets",
+    "path": "assets",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "databases",
+        "path": "assets/databases",
+        "type": "dir",
+        "sha": ""
+      }
+    ]
+  },
+  {
     "name": "availability",
     "path": "availability",
     "type": "dir",
@@ -41,6 +55,84 @@
         "type": "file",
         "sha": "",
         "size": 342
+      }
+    ]
+  },
+  {
+    "name": "databases",
+    "path": "databases",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-database-design-overview.md",
+        "path": "databases/1-database-design-overview.md",
+        "type": "file",
+        "sha": "",
+        "size": 6320
+      },
+      {
+        "name": "2-sql-vs-nosql-selection.md",
+        "path": "databases/2-sql-vs-nosql-selection.md",
+        "type": "file",
+        "sha": "",
+        "size": 9709
+      },
+      {
+        "name": "3-storage-systems.md",
+        "path": "databases/3-storage-systems.md",
+        "type": "file",
+        "sha": "",
+        "size": 15439
+      },
+      {
+        "name": "4-database-sharding.md",
+        "path": "databases/4-database-sharding.md",
+        "type": "file",
+        "sha": "",
+        "size": 11552
+      },
+      {
+        "name": "5-database-replication.md",
+        "path": "databases/5-database-replication.md",
+        "type": "file",
+        "sha": "",
+        "size": 12701
+      },
+      {
+        "name": "6-cap-theorem.md",
+        "path": "databases/6-cap-theorem.md",
+        "type": "file",
+        "sha": "",
+        "size": 4526
+      },
+      {
+        "name": "7-database-selection-guide.md",
+        "path": "databases/7-database-selection-guide.md",
+        "type": "file",
+        "sha": "",
+        "size": 4843
+      },
+      {
+        "name": "8-common-challenges.md",
+        "path": "databases/8-common-challenges.md",
+        "type": "file",
+        "sha": "",
+        "size": 4614
+      },
+      {
+        "name": "9-best-practices.md",
+        "path": "databases/9-best-practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 5064
+      },
+      {
+        "name": "README.md",
+        "path": "databases/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 4554
       }
     ]
   },
@@ -154,6 +246,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1662
+    "size": 1769
   }
 ]

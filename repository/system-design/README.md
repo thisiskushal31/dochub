@@ -9,6 +9,7 @@ building blocks, and when to apply each technique.
 - `patterns/` — load balancing, sharding, CQRS, event sourcing, leader election.
 - `caching/` — cache patterns (CDN, request/response, object), invalidation, TTLs.
 - `messaging/` — queues vs streams, ordering, exactly-once patterns, DLQ/parking.
+- `databases/` — database selection (SQL vs NoSQL), sharding, replication, CAP theorem, storage systems.
 - `storage/` — SQL vs NoSQL, indexing, partitioning, replication, backups/PITR.
 - `consistency/` — CAP/PCP trade-offs, quorum, idempotency, saga compensation.
 - `availability/` — HA/DR, multi-AZ/region, failover, circuit breakers, retries/backoff.

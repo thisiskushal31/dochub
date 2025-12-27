@@ -1,0 +1,58 @@
+[
+  {
+    "name": "1-overview-architecture.md",
+    "path": "1-overview-architecture.md",
+    "type": "file",
+    "sha": "",
+    "size": 14060
+  },
+  {
+    "name": "2-operations.md",
+    "path": "2-operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 8166
+  },
+  {
+    "name": "3-advanced-features.md",
+    "path": "3-advanced-features.md",
+    "type": "file",
+    "sha": "",
+    "size": 4155
+  },
+  {
+    "name": "4-clustering-replication.md",
+    "path": "4-clustering-replication.md",
+    "type": "file",
+    "sha": "",
+    "size": 3338
+  },
+  {
+    "name": "5-tools.md",
+    "path": "5-tools.md",
+    "type": "file",
+    "sha": "",
+    "size": 3718
+  },
+  {
+    "name": "6-operations-management.md",
+    "path": "6-operations-management.md",
+    "type": "file",
+    "sha": "",
+    "size": 4228
+  },
+  {
+    "name": "7-deployment-best-practices.md",
+    "path": "7-deployment-best-practices.md",
+    "type": "file",
+    "sha": "",
+    "size": 6098
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1722
+  }
+]

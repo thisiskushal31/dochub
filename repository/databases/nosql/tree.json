@@ -1,9 +1,265 @@
 [
   {
+    "name": "aerospike",
+    "path": "aerospike",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-overview-architecture.md",
+        "path": "aerospike/1-overview-architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 14060
+      },
+      {
+        "name": "2-operations.md",
+        "path": "aerospike/2-operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 8166
+      },
+      {
+        "name": "3-advanced-features.md",
+        "path": "aerospike/3-advanced-features.md",
+        "type": "file",
+        "sha": "",
+        "size": 4155
+      },
+      {
+        "name": "4-clustering-replication.md",
+        "path": "aerospike/4-clustering-replication.md",
+        "type": "file",
+        "sha": "",
+        "size": 3338
+      },
+      {
+        "name": "5-tools.md",
+        "path": "aerospike/5-tools.md",
+        "type": "file",
+        "sha": "",
+        "size": 3718
+      },
+      {
+        "name": "6-operations-management.md",
+        "path": "aerospike/6-operations-management.md",
+        "type": "file",
+        "sha": "",
+        "size": 4228
+      },
+      {
+        "name": "7-deployment-best-practices.md",
+        "path": "aerospike/7-deployment-best-practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 6098
+      },
+      {
+        "name": "README.md",
+        "path": "aerospike/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1722
+      }
+    ]
+  },
+  {
+    "name": "elasticsearch",
+    "path": "elasticsearch",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-overview-getting-started.md",
+        "path": "elasticsearch/1-overview-getting-started.md",
+        "type": "file",
+        "sha": "",
+        "size": 20684
+      },
+      {
+        "name": "2-mapping-analysis.md",
+        "path": "elasticsearch/2-mapping-analysis.md",
+        "type": "file",
+        "sha": "",
+        "size": 22559
+      },
+      {
+        "name": "3-searching.md",
+        "path": "elasticsearch/3-searching.md",
+        "type": "file",
+        "sha": "",
+        "size": 18598
+      },
+      {
+        "name": "4-joining-queries.md",
+        "path": "elasticsearch/4-joining-queries.md",
+        "type": "file",
+        "sha": "",
+        "size": 10270
+      },
+      {
+        "name": "5-controlling-results.md",
+        "path": "elasticsearch/5-controlling-results.md",
+        "type": "file",
+        "sha": "",
+        "size": 3764
+      },
+      {
+        "name": "6-aggregations.md",
+        "path": "elasticsearch/6-aggregations.md",
+        "type": "file",
+        "sha": "",
+        "size": 15005
+      },
+      {
+        "name": "7-improving-results.md",
+        "path": "elasticsearch/7-improving-results.md",
+        "type": "file",
+        "sha": "",
+        "size": 6507
+      },
+      {
+        "name": "README.md",
+        "path": "elasticsearch/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1395
+      }
+    ]
+  },
+  {
+    "name": "mongodb",
+    "path": "mongodb",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-overview-architecture.md",
+        "path": "mongodb/1-overview-architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 10443
+      },
+      {
+        "name": "2-data-management.md",
+        "path": "mongodb/2-data-management.md",
+        "type": "file",
+        "sha": "",
+        "size": 4780
+      },
+      {
+        "name": "3-operations.md",
+        "path": "mongodb/3-operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 12676
+      },
+      {
+        "name": "4-aggregation.md",
+        "path": "mongodb/4-aggregation.md",
+        "type": "file",
+        "sha": "",
+        "size": 3539
+      },
+      {
+        "name": "5-advanced-features.md",
+        "path": "mongodb/5-advanced-features.md",
+        "type": "file",
+        "sha": "",
+        "size": 5000
+      },
+      {
+        "name": "6-performance-security.md",
+        "path": "mongodb/6-performance-security.md",
+        "type": "file",
+        "sha": "",
+        "size": 2212
+      },
+      {
+        "name": "7-best-practices.md",
+        "path": "mongodb/7-best-practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 12002
+      },
+      {
+        "name": "README.md",
+        "path": "mongodb/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 3302
+      }
+    ]
+  },
+  {
+    "name": "redis",
+    "path": "redis",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-overview-architecture.md",
+        "path": "redis/1-overview-architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 4991
+      },
+      {
+        "name": "2-data-structures.md",
+        "path": "redis/2-data-structures.md",
+        "type": "file",
+        "sha": "",
+        "size": 11011
+      },
+      {
+        "name": "3-advanced-features.md",
+        "path": "redis/3-advanced-features.md",
+        "type": "file",
+        "sha": "",
+        "size": 4487
+      },
+      {
+        "name": "4-persistence-replication.md",
+        "path": "redis/4-persistence-replication.md",
+        "type": "file",
+        "sha": "",
+        "size": 5265
+      },
+      {
+        "name": "5-modules.md",
+        "path": "redis/5-modules.md",
+        "type": "file",
+        "sha": "",
+        "size": 2510
+      },
+      {
+        "name": "6-operations-management.md",
+        "path": "redis/6-operations-management.md",
+        "type": "file",
+        "sha": "",
+        "size": 4699
+      },
+      {
+        "name": "7-use-cases-best-practices.md",
+        "path": "redis/7-use-cases-best-practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 6630
+      },
+      {
+        "name": "README.md",
+        "path": "redis/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1508
+      }
+    ]
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 433
+    "size": 4506
   }
 ]

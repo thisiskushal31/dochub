@@ -1,0 +1,14 @@
+[
+  {
+    "name": "dbms-fundamentals",
+    "path": "dbms-fundamentals",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "postgresql",
+    "path": "postgresql",
+    "type": "dir",
+    "sha": ""
+  }
+]
