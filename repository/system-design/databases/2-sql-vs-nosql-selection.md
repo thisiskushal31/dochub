@@ -1,5 +1,16 @@
 # SQL vs NoSQL Selection
 
+## Table of Contents
+
+  - [What is SQL Database?](#what-is-sql-database)
+  - [What is NoSQL Database?](#what-is-nosql-database)
+  - [SQL vs. NoSQL - Scalability and Performance](#sql-vs-nosql-scalability-and-performance)
+  - [SQL vs. NoSQL - Query Language and Transactions](#sql-vs-nosql-query-language-and-transactions)
+  - [SQL vs. NoSQL - Flexibility and Schema Evolution](#sql-vs-nosql-flexibility-and-schema-evolution)
+  - [When Should You Choose SQL Database Over NoSQL Database?](#when-should-you-choose-sql-database-over-nosql-database)
+  - [When Should You Choose NoSQL Database Over SQL Database?](#when-should-you-choose-nosql-database-over-sql-database)
+  - [Detailed Comparison Table](#detailed-comparison-table)
+
 ### What is SQL Database?
 
 SQL databases, also known as relational databases, organize records into tables with rows and columns. They use a structured query language (SQL) to manage and query data.

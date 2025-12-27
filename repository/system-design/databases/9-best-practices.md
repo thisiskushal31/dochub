@@ -1,5 +1,17 @@
 # Best Practices
 
+## Table of Contents
+
+  - [1. Plan Before You Design](#1-plan-before-you-design)
+  - [2. Use Normalization](#2-use-normalization)
+  - [3. Use Proper Indexing](#3-use-proper-indexing)
+  - [4. Define Clear Primary and Foreign Keys](#4-define-clear-primary-and-foreign-keys)
+  - [5. Optimize for Performance](#5-optimize-for-performance)
+  - [6. Consider Data Security](#6-consider-data-security)
+  - [7. Plan for Scalability](#7-plan-for-scalability)
+  - [8. Document Your Design](#8-document-your-design)
+  - [9. Implement Proper Backup and Recovery](#9-implement-proper-backup-and-recovery)
+  - [10. Monitor and Maintain](#10-monitor-and-maintain)
 Designing a good database is essential for the performance, scalability, and maintainability of your application. Here are some best practices to follow:
 
 ### 1. Plan Before You Design

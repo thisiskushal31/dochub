@@ -1,5 +1,10 @@
 # Database Selection Guide
 
+## Table of Contents
+
+  - [Factors to Consider](#factors-to-consider)
+  - [Decision Matrix](#decision-matrix)
+  - [Decision Factors for System Design](#decision-factors-for-system-design)
 Choosing the right database depends on the needs of your application. Here are a few key factors to consider when making this decision:
 
 ### Factors to Consider

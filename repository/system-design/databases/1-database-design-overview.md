@@ -1,5 +1,13 @@
 # Database Design Overview
 
+## Table of Contents
+
+  - [What is a Database?](#what-is-a-database)
+  - [Terminologies Used in the Database](#terminologies-used-in-the-database)
+  - [Types of Databases](#types-of-databases)
+  - [Importance of Database Design in System Design](#importance-of-database-design-in-system-design)
+  - [Database Patterns](#database-patterns)
+
 ### What is a Database?
 
 A database is an organized collection of data that is stored and managed so that it can be easily accessed, updated, and retrieved when needed. A database helps store large amounts of data in a structured and efficient way. It's used in various applications, from websites and mobile apps to enterprise systems. Think of it as a digital filing cabinet where information is systematically arranged to make it easy to find and use.

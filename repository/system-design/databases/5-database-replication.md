@@ -1,5 +1,16 @@
 # Database Replication
 
+## Table of Contents
+
+  - [What is Replication?](#what-is-replication)
+  - [Importance of Database Replication](#importance-of-database-replication)
+  - [How Does Database Replication Work?](#how-does-database-replication-work)
+  - [Types of Database Replication](#types-of-database-replication)
+  - [Strategies for Database Replication](#strategies-for-database-replication)
+  - [Configurations of Database Replication](#configurations-of-database-replication)
+  - [Challenges with Database Replication](#challenges-with-database-replication)
+  - [PostgreSQL High Availability Patterns](#postgresql-high-availability-patterns)
+
 ### What is Replication?
 
 Making and keeping duplicate copies of a database on other servers is known as database replication. It is essential for improving modern systems' scalability, reliability, and data availability.

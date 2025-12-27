@@ -1,5 +1,12 @@
 # CAP Theorem in Database Design
 
+## Table of Contents
+
+  - [CAP Theorem](#cap-theorem)
+  - [CP Database (Consistency + Partition Tolerance)](#cp-database-consistency-partition-tolerance)
+  - [AP Database (Availability + Partition Tolerance)](#ap-database-availability-partition-tolerance)
+  - [CA Database (Consistency + Availability)](#ca-database-consistency-availability)
+
 ### CAP Theorem
 
 The CAP theorem states that it is not possible to guarantee all three of the desirable properties – **Consistency**, **Availability**, and **Partition Tolerance** – at the same time in a distributed system with data replication.

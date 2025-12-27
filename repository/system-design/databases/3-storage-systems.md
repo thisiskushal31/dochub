@@ -1,5 +1,12 @@
 # Storage Systems
 
+## Table of Contents
+
+  - [File-Based Storage System](#file-based-storage-system)
+  - [Database Storage Systems](#database-storage-systems)
+  - [Differences Between File and Database Storage Systems](#differences-between-file-and-database-storage-systems)
+  - [Block, Object, and File Storage](#block-object-and-file-storage)
+  - [Block Storage vs. Object Storage vs. File Storage](#block-storage-vs-object-storage-vs-file-storage)
 File and database storage systems are important to the effective management and arrangement of data in system design. These systems offer a structure for data organization, retrieval, and storage in applications while guaranteeing data accessibility and integrity. Database systems provide structured data management with advanced querying capabilities, whereas file systems manage both structured and unstructured data.
 
 ![File and Database Storage Systems](../assets/databases/storage-file-database.webp)

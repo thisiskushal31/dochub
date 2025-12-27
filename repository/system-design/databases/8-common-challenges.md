@@ -1,5 +1,15 @@
 # Common Challenges
 
+## Table of Contents
+
+  - [1. Data Redundancy](#1-data-redundancy)
+  - [2. Scalability](#2-scalability)
+  - [3. Performance](#3-performance)
+  - [4. Security](#4-security)
+  - [5. Evolving Requirements](#5-evolving-requirements)
+  - [6. Handling Complex Relationships](#6-handling-complex-relationships)
+  - [7. Data Consistency](#7-data-consistency)
+  - [8. Backup and Recovery](#8-backup-and-recovery)
 Designing a database is not always easy. It involves balancing many factors to ensure the database works efficiently, scales well, and meets the needs of your application. Here are some common challenges in database design:
 
 ### 1. Data Redundancy

@@ -1,5 +1,14 @@
 # Database Sharding
 
+## Table of Contents
+
+  - [What is Sharding?](#what-is-sharding)
+  - [Methods of Sharding](#methods-of-sharding)
+  - [Ways to Optimize Database Sharding for Even Data Distribution](#ways-to-optimize-database-sharding-for-even-data-distribution)
+  - [Alternatives to Database Sharding](#alternatives-to-database-sharding)
+  - [Advantages of Sharding](#advantages-of-sharding)
+  - [Disadvantages of Sharding](#disadvantages-of-sharding)
+
 ### What is Sharding?
 
 Database sharding is a technique for horizontal scaling of databases, where the data is split across multiple database instances, or shards, to improve performance and reduce the impact of large amounts of data on a single database.
