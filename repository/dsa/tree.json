@@ -26,13 +26,6 @@
         "size": 18763
       },
       {
-        "name": "02_Greedy_Algo.md",
-        "path": "Algorithms/02_Greedy_Algo.md",
-        "type": "file",
-        "sha": "",
-        "size": 13591
-      },
-      {
         "name": "02_Searching_and_Sorting.md",
         "path": "Algorithms/02_Searching_and_Sorting.md",
         "type": "file",
@@ -82,25 +75,11 @@
         "size": 10815
       },
       {
-        "name": "08_Geometric_Algorithms.md",
-        "path": "Algorithms/08_Geometric_Algorithms.md",
-        "type": "file",
-        "sha": "",
-        "size": 5568
-      },
-      {
         "name": "09_Geometric_Algorithms.md",
         "path": "Algorithms/09_Geometric_Algorithms.md",
         "type": "file",
         "sha": "",
         "size": 6249
-      },
-      {
-        "name": "10_Bit_Algorithms.md",
-        "path": "Algorithms/10_Bit_Algorithms.md",
-        "type": "file",
-        "sha": "",
-        "size": 10184
       },
       {
         "name": "10_Mathematical_Algorithms.md",
@@ -124,13 +103,6 @@
         "size": 15019
       },
       {
-        "name": "13_Branch_and_Bound.md",
-        "path": "Algorithms/13_Branch_and_Bound.md",
-        "type": "file",
-        "sha": "",
-        "size": 7847
-      },
-      {
         "name": "13_Randomized_Algorithms.md",
         "path": "Algorithms/13_Randomized_Algorithms.md",
         "type": "file",
@@ -149,14 +121,7 @@
         "path": "Algorithms/15_Two_Pointer_Algorithm.md",
         "type": "file",
         "sha": "",
-        "size": 4982
-      },
-      {
-        "name": "16_Game_Theory.md",
-        "path": "Algorithms/16_Game_Theory.md",
-        "type": "file",
-        "sha": "",
-        "size": 4892
+        "size": 4987
       },
       {
         "name": "16_Recursion_Algorithms.md",
