@@ -170,7 +170,7 @@
         "path": "DataStructures/03-Stack.md",
         "type": "file",
         "sha": "",
-        "size": 6557
+        "size": 16014
       },
       {
         "name": "04-Queue.md",
@@ -191,21 +191,21 @@
         "path": "DataStructures/06-Heap.md",
         "type": "file",
         "sha": "",
-        "size": 873
+        "size": 9435
       },
       {
         "name": "07-Graph.md",
         "path": "DataStructures/07-Graph.md",
         "type": "file",
         "sha": "",
-        "size": 9
+        "size": 12065
       },
       {
         "name": "08-Matrix.md",
         "path": "DataStructures/08-Matrix.md",
         "type": "file",
         "sha": "",
-        "size": 10
+        "size": 10737
       },
       {
         "name": "09-Tree.md",
@@ -226,98 +226,98 @@
         "path": "DataStructures/11-Binary_Search_Tree.md",
         "type": "file",
         "sha": "",
-        "size": 912
+        "size": 11234
       },
       {
         "name": "12-Segment_Tree.md",
         "path": "DataStructures/12-Segment_Tree.md",
         "type": "file",
         "sha": "",
-        "size": 16
+        "size": 11451
       },
       {
         "name": "13-Trie.md",
         "path": "DataStructures/13-Trie.md",
         "type": "file",
         "sha": "",
-        "size": 8
+        "size": 9498
       },
       {
         "name": "14-Binary_Indexed_Tree.md",
         "path": "DataStructures/14-Binary_Indexed_Tree.md",
         "type": "file",
         "sha": "",
-        "size": 23
+        "size": 9347
       },
       {
         "name": "15-Suffix_Array.md",
         "path": "DataStructures/15-Suffix_Array.md",
         "type": "file",
         "sha": "",
-        "size": 16
+        "size": 6752
       },
       {
         "name": "16-Suffix_Tree.md",
         "path": "DataStructures/16-Suffix_Tree.md",
         "type": "file",
         "sha": "",
-        "size": 15
+        "size": 10623
       },
       {
         "name": "17-AVL_Tree.md",
         "path": "DataStructures/17-AVL_Tree.md",
         "type": "file",
         "sha": "",
-        "size": 12
+        "size": 9564
       },
       {
         "name": "18-Splay_Tree.md",
         "path": "DataStructures/18-Splay_Tree.md",
         "type": "file",
         "sha": "",
-        "size": 14
+        "size": 9425
       },
       {
         "name": "19-B_Tree.md",
         "path": "DataStructures/19-B_Tree.md",
         "type": "file",
         "sha": "",
-        "size": 10
+        "size": 8449
       },
       {
         "name": "20-Self_Balancing_Binary_Search_Trees.md",
         "path": "DataStructures/20-Self_Balancing_Binary_Search_Trees.md",
         "type": "file",
         "sha": "",
-        "size": 38
+        "size": 6107
       },
       {
         "name": "21-Red_Black_Tree.md",
         "path": "DataStructures/21-Red_Black_Tree.md",
         "type": "file",
         "sha": "",
-        "size": 18
+        "size": 12666
       },
       {
         "name": "22-K_Dimensional_Tree.md",
         "path": "DataStructures/22-K_Dimensional_Tree.md",
         "type": "file",
         "sha": "",
-        "size": 22
+        "size": 9256
       },
       {
         "name": "23-Others.md",
         "path": "DataStructures/23-Others.md",
         "type": "file",
         "sha": "",
-        "size": 10
+        "size": 9124
       },
       {
         "name": "Readme.md",
         "path": "DataStructures/Readme.md",
         "type": "file",
         "sha": "",
-        "size": 4183
+        "size": 3982
       }
     ]
   },
