@@ -6,129 +6,178 @@
     "sha": ""
   },
   {
-    "name": "00_Time_Complexity_and_Space_Complexity.md",
-    "path": "00_Time_Complexity_and_Space_Complexity.md",
+    "name": "00_Logic_Building.md",
+    "path": "00_Logic_Building.md",
+    "type": "file",
+    "sha": "",
+    "size": 8461
+  },
+  {
+    "name": "01_Time_Complexity_and_Space_Complexity.md",
+    "path": "01_Time_Complexity_and_Space_Complexity.md",
     "type": "file",
     "sha": "",
     "size": 18763
-  },
-  {
-    "name": "01_Searching_and_Sorting.md",
-    "path": "01_Searching_and_Sorting.md",
-    "type": "file",
-    "sha": "",
-    "size": 62612
   },
   {
     "name": "02_Greedy_Algo.md",
     "path": "02_Greedy_Algo.md",
     "type": "file",
     "sha": "",
-    "size": 29
+    "size": 13591
   },
   {
-    "name": "03_Dynamic_Programming.md",
-    "path": "03_Dynamic_Programming.md",
+    "name": "02_Searching_and_Sorting.md",
+    "path": "02_Searching_and_Sorting.md",
     "type": "file",
     "sha": "",
-    "size": 23
+    "size": 62612
   },
   {
-    "name": "04_Pattern_Searching.md",
-    "path": "04_Pattern_Searching.md",
+    "name": "03_Greedy_Algo.md",
+    "path": "03_Greedy_Algo.md",
     "type": "file",
     "sha": "",
-    "size": 20
+    "size": 14016
   },
   {
-    "name": "05_Other_String_Algorithms.md",
-    "path": "05_Other_String_Algorithms.md",
+    "name": "04_Dynamic_Programming.md",
+    "path": "04_Dynamic_Programming.md",
     "type": "file",
     "sha": "",
-    "size": 25
+    "size": 13134
   },
   {
-    "name": "06_Backtracking.md",
-    "path": "06_Backtracking.md",
+    "name": "05_Pattern_Searching.md",
+    "path": "05_Pattern_Searching.md",
     "type": "file",
     "sha": "",
-    "size": 15
+    "size": 7671
+  },
+  {
+    "name": "06_Other_String_Algorithms.md",
+    "path": "06_Other_String_Algorithms.md",
+    "type": "file",
+    "sha": "",
+    "size": 7383
+  },
+  {
+    "name": "07_Backtracking.md",
+    "path": "07_Backtracking.md",
+    "type": "file",
+    "sha": "",
+    "size": 13662
+  },
+  {
+    "name": "08_Divide_and_Conquer.md",
+    "path": "08_Divide_and_Conquer.md",
+    "type": "file",
+    "sha": "",
+    "size": 10815
   },
   {
     "name": "08_Geometric_Algorithms.md",
     "path": "08_Geometric_Algorithms.md",
     "type": "file",
     "sha": "",
-    "size": 22
+    "size": 5568
   },
   {
-    "name": "09_Mathematical_Algorithms.md",
-    "path": "09_Mathematical_Algorithms.md",
+    "name": "09_Geometric_Algorithms.md",
+    "path": "09_Geometric_Algorithms.md",
     "type": "file",
     "sha": "",
-    "size": 25
+    "size": 6249
   },
   {
     "name": "10_Bit_Algorithms.md",
     "path": "10_Bit_Algorithms.md",
     "type": "file",
     "sha": "",
-    "size": 16
+    "size": 10184
   },
   {
-    "name": "11_Graph_Algorithms.md",
-    "path": "11_Graph_Algorithms.md",
+    "name": "10_Mathematical_Algorithms.md",
+    "path": "10_Mathematical_Algorithms.md",
     "type": "file",
     "sha": "",
-    "size": 18
+    "size": 8222
   },
   {
-    "name": "12_Randomized_Algorithms.md",
-    "path": "12_Randomized_Algorithms.md",
+    "name": "11_Bit_Algorithms.md",
+    "path": "11_Bit_Algorithms.md",
     "type": "file",
     "sha": "",
-    "size": 23
+    "size": 10738
+  },
+  {
+    "name": "12_Graph_Algorithms.md",
+    "path": "12_Graph_Algorithms.md",
+    "type": "file",
+    "sha": "",
+    "size": 15019
   },
   {
     "name": "13_Branch_and_Bound.md",
     "path": "13_Branch_and_Bound.md",
     "type": "file",
     "sha": "",
-    "size": 18
+    "size": 7847
   },
   {
-    "name": "14_Two_Pointer_Algorithm.md",
-    "path": "14_Two_Pointer_Algorithm.md",
+    "name": "13_Randomized_Algorithms.md",
+    "path": "13_Randomized_Algorithms.md",
     "type": "file",
     "sha": "",
-    "size": 4555
+    "size": 6668
   },
   {
-    "name": "15_Recursion_Algorithms.md",
-    "path": "15_Recursion_Algorithms.md",
+    "name": "14_Branch_and_Bound.md",
+    "path": "14_Branch_and_Bound.md",
     "type": "file",
     "sha": "",
-    "size": 23
+    "size": 8713
+  },
+  {
+    "name": "15_Two_Pointer_Algorithm.md",
+    "path": "15_Two_Pointer_Algorithm.md",
+    "type": "file",
+    "sha": "",
+    "size": 4982
   },
   {
     "name": "16_Game_Theory.md",
     "path": "16_Game_Theory.md",
     "type": "file",
     "sha": "",
-    "size": 15
+    "size": 4892
   },
   {
-    "name": "17_Utility_Algorithms.md",
-    "path": "17_Utility_Algorithms.md",
+    "name": "16_Recursion_Algorithms.md",
+    "path": "16_Recursion_Algorithms.md",
     "type": "file",
     "sha": "",
-    "size": 83
+    "size": 10657
+  },
+  {
+    "name": "17_Game_Theory.md",
+    "path": "17_Game_Theory.md",
+    "type": "file",
+    "sha": "",
+    "size": 5396
+  },
+  {
+    "name": "18_Utility_Algorithms.md",
+    "path": "18_Utility_Algorithms.md",
+    "type": "file",
+    "sha": "",
+    "size": 11229
   },
   {
     "name": "Readme.md",
     "path": "Readme.md",
     "type": "file",
     "sha": "",
-    "size": 3612
+    "size": 3714
   }
 ]
