@@ -4,41 +4,76 @@
     "path": "1-overview-and-concepts.md",
     "type": "file",
     "sha": "",
-    "size": 9681
+    "size": 16190
+  },
+  {
+    "name": "10-windows-edge-ai-hardware.md",
+    "path": "10-windows-edge-ai-hardware.md",
+    "type": "file",
+    "sha": "",
+    "size": 11171
   },
   {
     "name": "2-installation.md",
     "path": "2-installation.md",
     "type": "file",
     "sha": "",
-    "size": 4528
+    "size": 16470
   },
   {
     "name": "3-configure-and-manage.md",
     "path": "3-configure-and-manage.md",
     "type": "file",
     "sha": "",
-    "size": 4201
+    "size": 12935
   },
   {
     "name": "4-develop-and-operators.md",
     "path": "4-develop-and-operators.md",
     "type": "file",
     "sha": "",
-    "size": 5597
+    "size": 13713
   },
   {
     "name": "5-networking-security-observability.md",
     "path": "5-networking-security-observability.md",
     "type": "file",
     "sha": "",
-    "size": 4719
+    "size": 13940
+  },
+  {
+    "name": "6-service-mesh.md",
+    "path": "6-service-mesh.md",
+    "type": "file",
+    "sha": "",
+    "size": 8203
+  },
+  {
+    "name": "7-virtualization.md",
+    "path": "7-virtualization.md",
+    "type": "file",
+    "sha": "",
+    "size": 8922
+  },
+  {
+    "name": "8-etcd-hosted-control-planes.md",
+    "path": "8-etcd-hosted-control-planes.md",
+    "type": "file",
+    "sha": "",
+    "size": 9963
+  },
+  {
+    "name": "9-updating-registry-api.md",
+    "path": "9-updating-registry-api.md",
+    "type": "file",
+    "sha": "",
+    "size": 10010
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3036
+    "size": 6577
   }
 ]
