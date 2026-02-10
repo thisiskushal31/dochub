@@ -55,11 +55,175 @@
     "sha": "",
     "children": [
       {
+        "name": "aks",
+        "path": "managed-services/aks",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1-architecture-and-modes.md",
+            "path": "managed-services/aks/1-architecture-and-modes.md",
+            "type": "file",
+            "sha": "",
+            "size": 2167
+          },
+          {
+            "name": "2-node-pools-and-compute.md",
+            "path": "managed-services/aks/2-node-pools-and-compute.md",
+            "type": "file",
+            "sha": "",
+            "size": 2402
+          },
+          {
+            "name": "3-networking.md",
+            "path": "managed-services/aks/3-networking.md",
+            "type": "file",
+            "sha": "",
+            "size": 3645
+          },
+          {
+            "name": "4-identity-and-security.md",
+            "path": "managed-services/aks/4-identity-and-security.md",
+            "type": "file",
+            "sha": "",
+            "size": 3309
+          },
+          {
+            "name": "5-operations-and-pricing.md",
+            "path": "managed-services/aks/5-operations-and-pricing.md",
+            "type": "file",
+            "sha": "",
+            "size": 3731
+          },
+          {
+            "name": "README.md",
+            "path": "managed-services/aks/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 2569
+          }
+        ]
+      },
+      {
+        "name": "eks",
+        "path": "managed-services/eks",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1-architecture-and-compute.md",
+            "path": "managed-services/eks/1-architecture-and-compute.md",
+            "type": "file",
+            "sha": "",
+            "size": 3718
+          },
+          {
+            "name": "2-addons-and-capabilities.md",
+            "path": "managed-services/eks/2-addons-and-capabilities.md",
+            "type": "file",
+            "sha": "",
+            "size": 2317
+          },
+          {
+            "name": "3-networking-and-storage.md",
+            "path": "managed-services/eks/3-networking-and-storage.md",
+            "type": "file",
+            "sha": "",
+            "size": 1597
+          },
+          {
+            "name": "4-security-identity.md",
+            "path": "managed-services/eks/4-security-identity.md",
+            "type": "file",
+            "sha": "",
+            "size": 1663
+          },
+          {
+            "name": "5-operations-and-pricing.md",
+            "path": "managed-services/eks/5-operations-and-pricing.md",
+            "type": "file",
+            "sha": "",
+            "size": 3179
+          },
+          {
+            "name": "README.md",
+            "path": "managed-services/eks/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 3388
+          }
+        ]
+      },
+      {
+        "name": "gke",
+        "path": "managed-services/gke",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1-architecture-and-modes.md",
+            "path": "managed-services/gke/1-architecture-and-modes.md",
+            "type": "file",
+            "sha": "",
+            "size": 3091
+          },
+          {
+            "name": "2-node-images-and-compute.md",
+            "path": "managed-services/gke/2-node-images-and-compute.md",
+            "type": "file",
+            "sha": "",
+            "size": 3201
+          },
+          {
+            "name": "3-networking.md",
+            "path": "managed-services/gke/3-networking.md",
+            "type": "file",
+            "sha": "",
+            "size": 6686
+          },
+          {
+            "name": "4-security-identity.md",
+            "path": "managed-services/gke/4-security-identity.md",
+            "type": "file",
+            "sha": "",
+            "size": 4142
+          },
+          {
+            "name": "5-operations-and-pricing.md",
+            "path": "managed-services/gke/5-operations-and-pricing.md",
+            "type": "file",
+            "sha": "",
+            "size": 4390
+          },
+          {
+            "name": "README.md",
+            "path": "managed-services/gke/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 3539
+          }
+        ]
+      },
+      {
+        "name": "1-overview-when-to-use.md",
+        "path": "managed-services/1-overview-when-to-use.md",
+        "type": "file",
+        "sha": "",
+        "size": 4974
+      },
+      {
+        "name": "5-openshift-managed-and-turnkey.md",
+        "path": "managed-services/5-openshift-managed-and-turnkey.md",
+        "type": "file",
+        "sha": "",
+        "size": 3686
+      },
+      {
         "name": "README.md",
         "path": "managed-services/README.md",
         "type": "file",
         "sha": "",
-        "size": 10881
+        "size": 1728
       }
     ]
   },
@@ -211,11 +375,53 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-and-concepts.md",
+            "path": "orchestration/swarm/1-overview-and-concepts.md",
+            "type": "file",
+            "sha": "",
+            "size": 4137
+          },
+          {
+            "name": "2-initialize-and-nodes.md",
+            "path": "orchestration/swarm/2-initialize-and-nodes.md",
+            "type": "file",
+            "sha": "",
+            "size": 1512
+          },
+          {
+            "name": "3-services-and-tasks.md",
+            "path": "orchestration/swarm/3-services-and-tasks.md",
+            "type": "file",
+            "sha": "",
+            "size": 3406
+          },
+          {
+            "name": "4-stacks-and-compose.md",
+            "path": "orchestration/swarm/4-stacks-and-compose.md",
+            "type": "file",
+            "sha": "",
+            "size": 1559
+          },
+          {
+            "name": "5-networking-storage-secrets.md",
+            "path": "orchestration/swarm/5-networking-storage-secrets.md",
+            "type": "file",
+            "sha": "",
+            "size": 1699
+          },
+          {
+            "name": "6-scaling-updates-and-when-to-use.md",
+            "path": "orchestration/swarm/6-scaling-updates-and-when-to-use.md",
+            "type": "file",
+            "sha": "",
+            "size": 3297
+          },
+          {
             "name": "README.md",
             "path": "orchestration/swarm/README.md",
             "type": "file",
             "sha": "",
-            "size": 869
+            "size": 2604
           }
         ]
       },
@@ -291,11 +497,46 @@
         "sha": "",
         "children": [
           {
+            "name": "1-get-podman-first-steps.md",
+            "path": "runtimes/podman/1-get-podman-first-steps.md",
+            "type": "file",
+            "sha": "",
+            "size": 3951
+          },
+          {
+            "name": "2-podman-concepts.md",
+            "path": "runtimes/podman/2-podman-concepts.md",
+            "type": "file",
+            "sha": "",
+            "size": 1391
+          },
+          {
+            "name": "3-building-images.md",
+            "path": "runtimes/podman/3-building-images.md",
+            "type": "file",
+            "sha": "",
+            "size": 2053
+          },
+          {
+            "name": "4-running-containers.md",
+            "path": "runtimes/podman/4-running-containers.md",
+            "type": "file",
+            "sha": "",
+            "size": 1798
+          },
+          {
+            "name": "5-pods-and-rootless.md",
+            "path": "runtimes/podman/5-pods-and-rootless.md",
+            "type": "file",
+            "sha": "",
+            "size": 4512
+          },
+          {
             "name": "README.md",
             "path": "runtimes/podman/README.md",
             "type": "file",
             "sha": "",
-            "size": 841
+            "size": 2001
           }
         ]
       },
@@ -313,6 +554,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 4922
+    "size": 6233
   }
 ]

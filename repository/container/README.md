@@ -31,7 +31,7 @@ Day-to-day container usage: building images, running containers, composing apps.
 | Runtime | Description |
 |--------|-------------|
 | [**Docker**](./runtimes/docker/README.md) | Docker Engine, Dockerfile, Docker Compose. Get Docker, concepts, building images, running containers, workshop. |
-| [**Podman**](./runtimes/podman/README.md) | Daemonless, rootless runtime with a Docker-compatible CLI. (Topics coming soon.) |
+| [**Podman**](./runtimes/podman/README.md) | Daemonless, rootless runtime; Docker-compatible CLI. Get Podman, concepts, building images, running containers, pods and rootless. |
 
 New runtimes can be added as subfolders under `runtimes/`.
 
@@ -43,25 +43,28 @@ Running containerized workloads at scale: scheduling, scaling, networking.
 |----------|-------------|
 | [**Kubernetes**](./orchestration/kubernetes/README.md) | Setup to production: concepts, tasks, tutorials, operations. |
 | [**OpenShift Container Platform**](./orchestration/openshift/README.md) | Red Hat’s Kubernetes-based platform: overview, install, configure, develop, Operators, networking, security, observability. |
-| [**Docker Swarm**](./orchestration/swarm/README.md) | Docker’s built-in orchestration. (Topics coming soon.) |
+| [**Docker Swarm**](./orchestration/swarm/README.md) | Docker’s built-in orchestration. Overview, initialize and nodes, services and tasks, stacks and Compose, networking and secrets, scaling and when to use. |
 
 New orchestrators can be added as subfolders under `orchestration/`.
 
 ### [**managed-services/**](./managed-services/README.md)
 
-Managed Kubernetes and container platforms.
+Managed Kubernetes and container platforms. Full deep-dive topic files.
 
-- Google Kubernetes Engine (GKE), Amazon EKS, Azure AKS, Red Hat OpenShift
-- When to use which; links to official provisioning and operations docs
+- **Overview and when to use which** – GKE, EKS, AKS, OpenShift managed, turnkey comparison
+- **GKE** (folder **gke/**) – Architecture and modes, node images and ComputeClasses, networking (Dataplane V2), security (Workload Identity), operations and pricing; each topic calls out Kubernetes vs GKE-specific behavior
+- **EKS** (folder **eks/**) – Architecture and compute (Auto Mode, Fargate, Karpenter), add-ons and Capabilities, networking and storage, IRSA/Pod Identity, operations and pricing
+- **AKS** (folder **aks/**) – Architecture and cluster modes, node pools and compute, networking (Azure CNI, overlay), identity and security (Entra ID, workload identity), operations and pricing
+- **OpenShift managed and turnkey** – ROSA, ARO; k3s, k0s, RKE2, MicroK8s, Minikube, Kind; certified K8s list
 
 ## Learning path (zero → advanced)
 
 1. **[Containerization basics](./containerization-basic/README.md)** – concepts, images, runtimes, registries
 2. **[Docker](./runtimes/docker/README.md)** – get Docker, first container, workshop (containerize → push → persist → Compose)
 3. **[Kubernetes](./orchestration/kubernetes/README.md)** – getting started, concepts, tasks, tutorials, production
-4. **[Managed services](./managed-services/README.md)** – GKE, EKS, AKS, OpenShift
+4. **[Managed services](./managed-services/README.md)** – Overview, GKE, EKS, AKS, OpenShift managed (ROSA/ARO), turnkey Kubernetes (k3s, k0s, etc.)
 
-Optional: [Podman](./runtimes/podman/README.md) (Docker alternative), [OpenShift](./orchestration/openshift/README.md) (Kubernetes-based enterprise platform), [Swarm](./orchestration/swarm/README.md) (lightweight orchestration).
+Optional: [Podman](./runtimes/podman/README.md) (daemonless, rootless Docker alternative), [OpenShift](./orchestration/openshift/README.md) (Kubernetes-based enterprise platform), [Swarm](./orchestration/swarm/README.md) (lightweight orchestration).
 
 ## How to use this guide
 
@@ -70,7 +73,7 @@ Optional: [Podman](./runtimes/podman/README.md) (Docker alternative), [OpenShift
 
 ## Assets (images)
 
-Diagrams and screenshots are in **[assets/](./assets/)**. Reference them with `![alt text](path/to/assets/...)` and use descriptive alt text.
+Diagrams and screenshots are in **[assets/](./assets/)**. Reference them with `![alt text](path/to/assets/...)` and use descriptive alt text. Included: Kubernetes and container evolution diagrams; OpenShift stack and installation diagrams; **GKE** cluster architecture (`gke-architecture.svg`); **EKS** (`eks-whatis.png`, `eks-k8sinaction.png`); **AKS** baseline and microservices (`aks-baseline-architecture.svg`, `aks-microservices-architecture.svg`). See [managed-services](./managed-services/README.md) for source links.
 
 ## References (official)
 

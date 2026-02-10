@@ -1,9 +1,173 @@
 [
   {
+    "name": "aks",
+    "path": "aks",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-architecture-and-modes.md",
+        "path": "aks/1-architecture-and-modes.md",
+        "type": "file",
+        "sha": "",
+        "size": 2167
+      },
+      {
+        "name": "2-node-pools-and-compute.md",
+        "path": "aks/2-node-pools-and-compute.md",
+        "type": "file",
+        "sha": "",
+        "size": 2402
+      },
+      {
+        "name": "3-networking.md",
+        "path": "aks/3-networking.md",
+        "type": "file",
+        "sha": "",
+        "size": 3645
+      },
+      {
+        "name": "4-identity-and-security.md",
+        "path": "aks/4-identity-and-security.md",
+        "type": "file",
+        "sha": "",
+        "size": 3309
+      },
+      {
+        "name": "5-operations-and-pricing.md",
+        "path": "aks/5-operations-and-pricing.md",
+        "type": "file",
+        "sha": "",
+        "size": 3731
+      },
+      {
+        "name": "README.md",
+        "path": "aks/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2569
+      }
+    ]
+  },
+  {
+    "name": "eks",
+    "path": "eks",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-architecture-and-compute.md",
+        "path": "eks/1-architecture-and-compute.md",
+        "type": "file",
+        "sha": "",
+        "size": 3718
+      },
+      {
+        "name": "2-addons-and-capabilities.md",
+        "path": "eks/2-addons-and-capabilities.md",
+        "type": "file",
+        "sha": "",
+        "size": 2317
+      },
+      {
+        "name": "3-networking-and-storage.md",
+        "path": "eks/3-networking-and-storage.md",
+        "type": "file",
+        "sha": "",
+        "size": 1597
+      },
+      {
+        "name": "4-security-identity.md",
+        "path": "eks/4-security-identity.md",
+        "type": "file",
+        "sha": "",
+        "size": 1663
+      },
+      {
+        "name": "5-operations-and-pricing.md",
+        "path": "eks/5-operations-and-pricing.md",
+        "type": "file",
+        "sha": "",
+        "size": 3179
+      },
+      {
+        "name": "README.md",
+        "path": "eks/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 3388
+      }
+    ]
+  },
+  {
+    "name": "gke",
+    "path": "gke",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-architecture-and-modes.md",
+        "path": "gke/1-architecture-and-modes.md",
+        "type": "file",
+        "sha": "",
+        "size": 3091
+      },
+      {
+        "name": "2-node-images-and-compute.md",
+        "path": "gke/2-node-images-and-compute.md",
+        "type": "file",
+        "sha": "",
+        "size": 3201
+      },
+      {
+        "name": "3-networking.md",
+        "path": "gke/3-networking.md",
+        "type": "file",
+        "sha": "",
+        "size": 6686
+      },
+      {
+        "name": "4-security-identity.md",
+        "path": "gke/4-security-identity.md",
+        "type": "file",
+        "sha": "",
+        "size": 4142
+      },
+      {
+        "name": "5-operations-and-pricing.md",
+        "path": "gke/5-operations-and-pricing.md",
+        "type": "file",
+        "sha": "",
+        "size": 4390
+      },
+      {
+        "name": "README.md",
+        "path": "gke/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 3539
+      }
+    ]
+  },
+  {
+    "name": "1-overview-when-to-use.md",
+    "path": "1-overview-when-to-use.md",
+    "type": "file",
+    "sha": "",
+    "size": 4974
+  },
+  {
+    "name": "5-openshift-managed-and-turnkey.md",
+    "path": "5-openshift-managed-and-turnkey.md",
+    "type": "file",
+    "sha": "",
+    "size": 3686
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 10881
+    "size": 1728
   }
 ]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "1-architecture-and-modes.md",
+    "path": "1-architecture-and-modes.md",
+    "type": "file",
+    "sha": "",
+    "size": 2167
+  },
+  {
+    "name": "2-node-pools-and-compute.md",
+    "path": "2-node-pools-and-compute.md",
+    "type": "file",
+    "sha": "",
+    "size": 2402
+  },
+  {
+    "name": "3-networking.md",
+    "path": "3-networking.md",
+    "type": "file",
+    "sha": "",
+    "size": 3645
+  },
+  {
+    "name": "4-identity-and-security.md",
+    "path": "4-identity-and-security.md",
+    "type": "file",
+    "sha": "",
+    "size": 3309
+  },
+  {
+    "name": "5-operations-and-pricing.md",
+    "path": "5-operations-and-pricing.md",
+    "type": "file",
+    "sha": "",
+    "size": 3731
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 2569
+  }
+]

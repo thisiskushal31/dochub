@@ -1,9 +1,51 @@
 [
   {
+    "name": "1-overview-and-concepts.md",
+    "path": "1-overview-and-concepts.md",
+    "type": "file",
+    "sha": "",
+    "size": 4137
+  },
+  {
+    "name": "2-initialize-and-nodes.md",
+    "path": "2-initialize-and-nodes.md",
+    "type": "file",
+    "sha": "",
+    "size": 1512
+  },
+  {
+    "name": "3-services-and-tasks.md",
+    "path": "3-services-and-tasks.md",
+    "type": "file",
+    "sha": "",
+    "size": 3406
+  },
+  {
+    "name": "4-stacks-and-compose.md",
+    "path": "4-stacks-and-compose.md",
+    "type": "file",
+    "sha": "",
+    "size": 1559
+  },
+  {
+    "name": "5-networking-storage-secrets.md",
+    "path": "5-networking-storage-secrets.md",
+    "type": "file",
+    "sha": "",
+    "size": 1699
+  },
+  {
+    "name": "6-scaling-updates-and-when-to-use.md",
+    "path": "6-scaling-updates-and-when-to-use.md",
+    "type": "file",
+    "sha": "",
+    "size": 3297
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 869
+    "size": 2604
   }
 ]
