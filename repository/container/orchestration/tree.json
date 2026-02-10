@@ -1,0 +1,124 @@
+[
+  {
+    "name": "kubernetes",
+    "path": "kubernetes",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-getting-started-install.md",
+        "path": "kubernetes/1-getting-started-install.md",
+        "type": "file",
+        "sha": "",
+        "size": 9155
+      },
+      {
+        "name": "2-concepts.md",
+        "path": "kubernetes/2-concepts.md",
+        "type": "file",
+        "sha": "",
+        "size": 7725
+      },
+      {
+        "name": "3-tasks.md",
+        "path": "kubernetes/3-tasks.md",
+        "type": "file",
+        "sha": "",
+        "size": 7599
+      },
+      {
+        "name": "4-tutorials.md",
+        "path": "kubernetes/4-tutorials.md",
+        "type": "file",
+        "sha": "",
+        "size": 6123
+      },
+      {
+        "name": "5-production-operations.md",
+        "path": "kubernetes/5-production-operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 8443
+      },
+      {
+        "name": "README.md",
+        "path": "kubernetes/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2772
+      }
+    ]
+  },
+  {
+    "name": "openshift",
+    "path": "openshift",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-overview-and-concepts.md",
+        "path": "openshift/1-overview-and-concepts.md",
+        "type": "file",
+        "sha": "",
+        "size": 9681
+      },
+      {
+        "name": "2-installation.md",
+        "path": "openshift/2-installation.md",
+        "type": "file",
+        "sha": "",
+        "size": 4528
+      },
+      {
+        "name": "3-configure-and-manage.md",
+        "path": "openshift/3-configure-and-manage.md",
+        "type": "file",
+        "sha": "",
+        "size": 4201
+      },
+      {
+        "name": "4-develop-and-operators.md",
+        "path": "openshift/4-develop-and-operators.md",
+        "type": "file",
+        "sha": "",
+        "size": 5597
+      },
+      {
+        "name": "5-networking-security-observability.md",
+        "path": "openshift/5-networking-security-observability.md",
+        "type": "file",
+        "sha": "",
+        "size": 4719
+      },
+      {
+        "name": "README.md",
+        "path": "openshift/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 3036
+      }
+    ]
+  },
+  {
+    "name": "swarm",
+    "path": "swarm",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "swarm/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 869
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1523
+  }
+]

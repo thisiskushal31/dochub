@@ -1,0 +1,74 @@
+[
+  {
+    "name": "docker",
+    "path": "docker",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-get-docker-first-steps.md",
+        "path": "docker/1-get-docker-first-steps.md",
+        "type": "file",
+        "sha": "",
+        "size": 5749
+      },
+      {
+        "name": "2-docker-concepts.md",
+        "path": "docker/2-docker-concepts.md",
+        "type": "file",
+        "sha": "",
+        "size": 6243
+      },
+      {
+        "name": "3-building-images.md",
+        "path": "docker/3-building-images.md",
+        "type": "file",
+        "sha": "",
+        "size": 6937
+      },
+      {
+        "name": "4-running-containers.md",
+        "path": "docker/4-running-containers.md",
+        "type": "file",
+        "sha": "",
+        "size": 6081
+      },
+      {
+        "name": "5-docker-workshop.md",
+        "path": "docker/5-docker-workshop.md",
+        "type": "file",
+        "sha": "",
+        "size": 8105
+      },
+      {
+        "name": "README.md",
+        "path": "docker/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2437
+      }
+    ]
+  },
+  {
+    "name": "podman",
+    "path": "podman",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "podman/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 841
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1157
+  }
+]

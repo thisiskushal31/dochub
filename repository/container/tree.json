@@ -1,46 +1,275 @@
 [
   {
+    "name": "assets",
+    "path": "assets",
+    "type": "dir",
+    "sha": ""
+  },
+  {
     "name": "containerization-basic",
     "path": "containerization-basic",
     "type": "dir",
     "sha": "",
     "children": [
       {
+        "name": "1-containers-vms-runtimes.md",
+        "path": "containerization-basic/1-containers-vms-runtimes.md",
+        "type": "file",
+        "sha": "",
+        "size": 10970
+      },
+      {
+        "name": "2-images-registries.md",
+        "path": "containerization-basic/2-images-registries.md",
+        "type": "file",
+        "sha": "",
+        "size": 8313
+      },
+      {
+        "name": "3-networking-storage.md",
+        "path": "containerization-basic/3-networking-storage.md",
+        "type": "file",
+        "sha": "",
+        "size": 8900
+      },
+      {
+        "name": "4-security-basics.md",
+        "path": "containerization-basic/4-security-basics.md",
+        "type": "file",
+        "sha": "",
+        "size": 7223
+      },
+      {
         "name": "README.md",
         "path": "containerization-basic/README.md",
         "type": "file",
         "sha": "",
-        "size": 501
+        "size": 1781
       }
     ]
   },
   {
-    "name": "docker",
-    "path": "docker",
+    "name": "managed-services",
+    "path": "managed-services",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "README.md",
-        "path": "docker/README.md",
+        "path": "managed-services/README.md",
         "type": "file",
         "sha": "",
-        "size": 501
+        "size": 10881
       }
     ]
   },
   {
-    "name": "kubernetes",
-    "path": "kubernetes",
+    "name": "orchestration",
+    "path": "orchestration",
     "type": "dir",
     "sha": "",
     "children": [
       {
+        "name": "kubernetes",
+        "path": "orchestration/kubernetes",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1-getting-started-install.md",
+            "path": "orchestration/kubernetes/1-getting-started-install.md",
+            "type": "file",
+            "sha": "",
+            "size": 9155
+          },
+          {
+            "name": "2-concepts.md",
+            "path": "orchestration/kubernetes/2-concepts.md",
+            "type": "file",
+            "sha": "",
+            "size": 7725
+          },
+          {
+            "name": "3-tasks.md",
+            "path": "orchestration/kubernetes/3-tasks.md",
+            "type": "file",
+            "sha": "",
+            "size": 7599
+          },
+          {
+            "name": "4-tutorials.md",
+            "path": "orchestration/kubernetes/4-tutorials.md",
+            "type": "file",
+            "sha": "",
+            "size": 6123
+          },
+          {
+            "name": "5-production-operations.md",
+            "path": "orchestration/kubernetes/5-production-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 8443
+          },
+          {
+            "name": "README.md",
+            "path": "orchestration/kubernetes/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 2772
+          }
+        ]
+      },
+      {
+        "name": "openshift",
+        "path": "orchestration/openshift",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1-overview-and-concepts.md",
+            "path": "orchestration/openshift/1-overview-and-concepts.md",
+            "type": "file",
+            "sha": "",
+            "size": 9681
+          },
+          {
+            "name": "2-installation.md",
+            "path": "orchestration/openshift/2-installation.md",
+            "type": "file",
+            "sha": "",
+            "size": 4528
+          },
+          {
+            "name": "3-configure-and-manage.md",
+            "path": "orchestration/openshift/3-configure-and-manage.md",
+            "type": "file",
+            "sha": "",
+            "size": 4201
+          },
+          {
+            "name": "4-develop-and-operators.md",
+            "path": "orchestration/openshift/4-develop-and-operators.md",
+            "type": "file",
+            "sha": "",
+            "size": 5597
+          },
+          {
+            "name": "5-networking-security-observability.md",
+            "path": "orchestration/openshift/5-networking-security-observability.md",
+            "type": "file",
+            "sha": "",
+            "size": 4719
+          },
+          {
+            "name": "README.md",
+            "path": "orchestration/openshift/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 3036
+          }
+        ]
+      },
+      {
+        "name": "swarm",
+        "path": "orchestration/swarm",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "orchestration/swarm/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 869
+          }
+        ]
+      },
+      {
         "name": "README.md",
-        "path": "kubernetes/README.md",
+        "path": "orchestration/README.md",
         "type": "file",
         "sha": "",
-        "size": 597
+        "size": 1523
+      }
+    ]
+  },
+  {
+    "name": "runtimes",
+    "path": "runtimes",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "docker",
+        "path": "runtimes/docker",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1-get-docker-first-steps.md",
+            "path": "runtimes/docker/1-get-docker-first-steps.md",
+            "type": "file",
+            "sha": "",
+            "size": 5749
+          },
+          {
+            "name": "2-docker-concepts.md",
+            "path": "runtimes/docker/2-docker-concepts.md",
+            "type": "file",
+            "sha": "",
+            "size": 6243
+          },
+          {
+            "name": "3-building-images.md",
+            "path": "runtimes/docker/3-building-images.md",
+            "type": "file",
+            "sha": "",
+            "size": 6937
+          },
+          {
+            "name": "4-running-containers.md",
+            "path": "runtimes/docker/4-running-containers.md",
+            "type": "file",
+            "sha": "",
+            "size": 6081
+          },
+          {
+            "name": "5-docker-workshop.md",
+            "path": "runtimes/docker/5-docker-workshop.md",
+            "type": "file",
+            "sha": "",
+            "size": 8105
+          },
+          {
+            "name": "README.md",
+            "path": "runtimes/docker/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 2437
+          }
+        ]
+      },
+      {
+        "name": "podman",
+        "path": "runtimes/podman",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "runtimes/podman/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 841
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "runtimes/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1157
       }
     ]
   },
@@ -49,6 +278,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1025
+    "size": 4922
   }
 ]

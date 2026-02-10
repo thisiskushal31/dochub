@@ -1,0 +1,44 @@
+[
+  {
+    "name": "1-get-docker-first-steps.md",
+    "path": "1-get-docker-first-steps.md",
+    "type": "file",
+    "sha": "",
+    "size": 5749
+  },
+  {
+    "name": "2-docker-concepts.md",
+    "path": "2-docker-concepts.md",
+    "type": "file",
+    "sha": "",
+    "size": 6243
+  },
+  {
+    "name": "3-building-images.md",
+    "path": "3-building-images.md",
+    "type": "file",
+    "sha": "",
+    "size": 6937
+  },
+  {
+    "name": "4-running-containers.md",
+    "path": "4-running-containers.md",
+    "type": "file",
+    "sha": "",
+    "size": 6081
+  },
+  {
+    "name": "5-docker-workshop.md",
+    "path": "5-docker-workshop.md",
+    "type": "file",
+    "sha": "",
+    "size": 8105
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 2437
+  }
+]

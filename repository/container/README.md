@@ -1,27 +1,88 @@
 # Containerization Deep Dive
 
-Hands-on notes and guides for containerization in general: fundamentals,
-OCI images, runtimes, Docker, and Kubernetes. This repo is meant to be a
-single place to explore core concepts, commands, patterns, and troubleshooting
-tips.
+Hands-on notes and guides for containerization from zero to advanced: fundamentals, container runtimes (Docker, Podman), orchestration (Kubernetes, Swarm), and managed services (GKE, EKS, AKS, OpenShift). **Everything you need is written here**—concepts, commands, and step-by-step instructions. Read deeply in this repo first; use the links at the end of each topic only if you want more detail or the latest official wording.
+
+The repo is **structured so new runtimes and orchestrators can be added** as separate sections without changing the overall layout.
+
+## Overview
+
+- **Full explanations** of concepts (no “read the link for details”—the detail is in these notes)
+- Copy-paste commands and hands-on steps
+- **References** at the end of each file for further reading
 
 ## Structure
 
-- `containerization-basic/` – core concepts, images vs. containers, registry
-  basics, networking, and storage fundamentals.
-- `docker/` – CLI reference, images, layers, Dockerfiles, Compose, build &
-  push workflows, and debugging.
-- `kubernetes/` – cluster architecture, manifests, controllers, networking,
-  storage, security, and operations playbooks.
+### [**containerization-basic/**](./containerization-basic/README.md)
 
-## How to use
+Core concepts that apply to all container tooling.
 
-1. Pick a folder that matches the topic you’re learning.
-2. Start with the README for a quick overview, then drill into subtopics.
-3. Use the commands and checklists as copy/paste-friendly references.
+- What containers are vs VMs; isolation, images, layers, runtimes
+- Image lifecycle: build, tag, push, pull; registries and caching
+- Networking: ports, bridges, service discovery
+- Storage: bind mounts vs volumes; persistence patterns
+- Security: least-privilege images, scanning, minimal bases
+
+**Use this first** if you are new to containerization.
+
+### [**runtimes/**](./runtimes/README.md) – Container runtimes
+
+Day-to-day container usage: building images, running containers, composing apps.
+
+| Runtime | Description |
+|--------|-------------|
+| [**Docker**](./runtimes/docker/README.md) | Docker Engine, Dockerfile, Docker Compose. Get Docker, concepts, building images, running containers, workshop. |
+| [**Podman**](./runtimes/podman/README.md) | Daemonless, rootless runtime with a Docker-compatible CLI. (Topics coming soon.) |
+
+New runtimes can be added as subfolders under `runtimes/`.
+
+### [**orchestration/**](./orchestration/README.md) – Orchestration
+
+Running containerized workloads at scale: scheduling, scaling, networking.
+
+| Platform | Description |
+|----------|-------------|
+| [**Kubernetes**](./orchestration/kubernetes/README.md) | Setup to production: concepts, tasks, tutorials, operations. |
+| [**OpenShift Container Platform**](./orchestration/openshift/README.md) | Red Hat’s Kubernetes-based platform: overview, install, configure, develop, Operators, networking, security, observability. |
+| [**Docker Swarm**](./orchestration/swarm/README.md) | Docker’s built-in orchestration. (Topics coming soon.) |
+
+New orchestrators can be added as subfolders under `orchestration/`.
+
+### [**managed-services/**](./managed-services/README.md)
+
+Managed Kubernetes and container platforms.
+
+- Google Kubernetes Engine (GKE), Amazon EKS, Azure AKS, Red Hat OpenShift
+- When to use which; links to official provisioning and operations docs
+
+## Learning path (zero → advanced)
+
+1. **[Containerization basics](./containerization-basic/README.md)** – concepts, images, runtimes, registries
+2. **[Docker](./runtimes/docker/README.md)** – get Docker, first container, workshop (containerize → push → persist → Compose)
+3. **[Kubernetes](./orchestration/kubernetes/README.md)** – getting started, concepts, tasks, tutorials, production
+4. **[Managed services](./managed-services/README.md)** – GKE, EKS, AKS, OpenShift
+
+Optional: [Podman](./runtimes/podman/README.md) (Docker alternative), [OpenShift](./orchestration/openshift/README.md) (Kubernetes-based enterprise platform), [Swarm](./orchestration/swarm/README.md) (lightweight orchestration).
+
+## How to use this guide
+
+- **Beginners:** Start with [containerization-basic](./containerization-basic/README.md), then [runtimes/docker](./runtimes/docker/README.md), then [orchestration/kubernetes](./orchestration/kubernetes/README.md). Use **References** at the end of each file only when you want more.
+- **Adding a new technology:** Add a new subfolder under [runtimes/](./runtimes/README.md) (e.g. another runtime) or [orchestration/](./orchestration/README.md) (e.g. another orchestrator) with its own README and topic files.
+
+## Assets (images)
+
+Diagrams and screenshots are in **[assets/](./assets/)**. Reference them with `![alt text](path/to/assets/...)` and use descriptive alt text.
+
+## References (official)
+
+- [Kubernetes](https://kubernetes.io/docs/) · [Docker](https://docs.docker.com/) · [OpenShift Container Platform 4.21](https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/)
 
 ## Contributing
 
-- Keep examples minimal and reproducible.
-- Prefer clear, copyable commands over long prose.
-- Add diagrams or links if they clarify tricky concepts.
+- Write **full explanations** in the markdown so readers learn here first; do not rely on "read the link" for core concepts.
+- Put optional **References** at the end of each topic for further reading.
+- Add images under **assets/** with descriptive alt text.
+- Keep commands and examples copy-paste ready and runnable.
+
+---
+
+*Read the content here for depth; use the references when you need more or the latest from the official documentation.*
