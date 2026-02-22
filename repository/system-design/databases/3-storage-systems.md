@@ -9,9 +9,18 @@
   - [Block Storage vs. Object Storage vs. File Storage](#block-storage-vs-object-storage-vs-file-storage)
 File and database storage systems are important to the effective management and arrangement of data in system design. These systems offer a structure for data organization, retrieval, and storage in applications while guaranteeing data accessibility and integrity. Database systems provide structured data management with advanced querying capabilities, whereas file systems manage both structured and unstructured data.
 
-![File and Database Storage Systems](../assets/databases/storage-file-database.webp)
-
-*Image Source: [File and Database Storage Systems in System Design - GeeksforGeeks](https://www.geeksforgeeks.org/system-design/file-and-database-storage-systems-in-system-design/)*
+```mermaid
+flowchart LR
+    subgraph File["File-based storage"]
+        F1[Files / Directories]
+    end
+    subgraph DB["Database storage"]
+        D1[(Tables / Indexes)]
+    end
+    App[Application] --> F1
+    App --> D1
+```
+*Concept adapted from GeeksforGeeks: [File and Database Storage Systems](https://www.geeksforgeeks.org/system-design/file-and-database-storage-systems-in-system-design/).*
 
 ### File-Based Storage System
 
@@ -108,9 +117,17 @@ Consider a cloud-based database service where you need to store a large amount o
 - The system retrieves the required blocks and reassembles them into meaningful data for your application
 - Amazon Elastic Block Store (EBS) is a real-world example of block storage
 
-![Block Storage Architecture](../assets/databases/storage-block-direct-access.webp)
-
-*Image Source: [Block, Object, and File Storage in System Design - GeeksforGeeks](https://www.geeksforgeeks.org/system-design/block-object-and-file-storage-in-cloud-with-difference/)*
+```mermaid
+flowchart LR
+    App[Application] --> Vol[Volume]
+    Vol --> B1[Block 1]
+    Vol --> B2[Block 2]
+    Vol --> B3[Block N]
+    B1 --> Disk[Storage Device]
+    B2 --> Disk
+    B3 --> Disk
+```
+*Concept adapted from GeeksforGeeks: [Block, Object, and File Storage](https://www.geeksforgeeks.org/system-design/block-object-and-file-storage-in-cloud-with-difference/).*
 
 **Use Cases:**
 - Databases (MySQL, PostgreSQL)
@@ -185,9 +202,15 @@ File storage organizes data in a tree structure with directories (folders) conta
 - **Development Environments**: Developers work with codebases organized in folder structures, relying on file storage for source control integration
 - **Home Directories**: User workspaces on servers maintain personal files in individual, permission-protected directories
 
-![File Storage (NAS)](../assets/databases/storage-file-nas.webp)
-
-*Image Source: [Block, Object, and File Storage in System Design - GeeksforGeeks](https://www.geeksforgeeks.org/system-design/block-object-and-file-storage-in-cloud-with-difference/)*
+```mermaid
+flowchart TB
+    Client[Clients] --> NAS[NAS / File Server]
+    NAS --> Dir[/Directory Tree]
+    Dir --> F1[File 1]
+    Dir --> F2[File 2]
+    Dir --> F3[File N]
+```
+*Concept adapted from GeeksforGeeks: [Block, Object, and File Storage](https://www.geeksforgeeks.org/system-design/block-object-and-file-storage-in-cloud-with-difference/).*
 
 **Use Cases:**
 - Shared file systems
@@ -205,9 +228,7 @@ File storage organizes data in a tree structure with directories (folders) conta
 
 ### Block Storage vs. Object Storage vs. File Storage
 
-![Storage Comparison](../assets/databases/storage-comparison.webp)
-
-*Image Source: [Block, Object, and File Storage in System Design - GeeksforGeeks](https://www.geeksforgeeks.org/system-design/block-object-and-file-storage-in-cloud-with-difference/)*
+*Visual comparison: see the **Detailed Comparison** table below.*
 
 **Detailed Comparison:**
 
@@ -220,6 +241,12 @@ File storage organizes data in a tree structure with directories (folders) conta
 | **Metadata** | Minimal metadata, often handled by the application layer | Extensive metadata stored with each object, enabling advanced search and analytics | Basic metadata, such as file name, type, and permissions |
 | **Durability** | Requires manual backup or snapshot configurations for data durability | Highly durable with built-in redundancy across multiple locations | Data durability depends on the underlying file system and backup strategies |
 | **Examples** | AWS EBS, Google Persistent Disks, SAN | AWS S3, Azure Blob Storage, Google Cloud Storage | Network Attached Storage (NAS), Shared Drives, Local File Systems |
+
+### Examples and product cases
+
+- **Google Drive / Dropbox** — File blocks (chunks) stored in **object storage** by content hash; metadata (file tree, versions) in a database. See [Google Drive / file sync case](../cases/1-google-drive-file-sync.md).
+- **YouTube / Netflix** — Raw and transcoded video segments in **object storage**; served via CDN. See [YouTube / Netflix case](../cases/5-youtube-netflix.md).
+- **WhatsApp / social apps** — Media (images, videos) in **object storage**; CDN for delivery. See [WhatsApp case](../cases/2-whatsapp.md).
 
 ---
 

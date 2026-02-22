@@ -1,9 +1,37 @@
 [
   {
+    "name": "1-performance-antipatterns.md",
+    "path": "1-performance-antipatterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 2140
+  },
+  {
+    "name": "2-rate-limiting.md",
+    "path": "2-rate-limiting.md",
+    "type": "file",
+    "sha": "",
+    "size": 4734
+  },
+  {
+    "name": "3-latency-and-throughput.md",
+    "path": "3-latency-and-throughput.md",
+    "type": "file",
+    "sha": "",
+    "size": 1459
+  },
+  {
+    "name": "4-cost-vs-performance.md",
+    "path": "4-cost-vs-performance.md",
+    "type": "file",
+    "sha": "",
+    "size": 1987
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 355
+    "size": 950
   }
 ]

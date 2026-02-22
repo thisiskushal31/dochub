@@ -6,10 +6,80 @@
     "sha": "",
     "children": [
       {
+        "name": "availability",
+        "path": "assets/availability",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "caching",
+        "path": "assets/caching",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "consistency",
+        "path": "assets/consistency",
+        "type": "dir",
+        "sha": ""
+      },
+      {
         "name": "databases",
         "path": "assets/databases",
         "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "assets/databases/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 581
+          }
+        ]
+      },
+      {
+        "name": "fundamentals",
+        "path": "assets/fundamentals",
+        "type": "dir",
         "sha": ""
+      },
+      {
+        "name": "messaging",
+        "path": "assets/messaging",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "patterns",
+        "path": "assets/patterns",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "performance",
+        "path": "assets/performance",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "security",
+        "path": "assets/security",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "storage",
+        "path": "assets/storage",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "README.md",
+        "path": "assets/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2558
       }
     ]
   },
@@ -20,11 +90,74 @@
     "sha": "",
     "children": [
       {
+        "name": "1-availability-patterns.md",
+        "path": "availability/1-availability-patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 533
+      },
+      {
+        "name": "2-failover.md",
+        "path": "availability/2-failover.md",
+        "type": "file",
+        "sha": "",
+        "size": 3437
+      },
+      {
+        "name": "3-replication.md",
+        "path": "availability/3-replication.md",
+        "type": "file",
+        "sha": "",
+        "size": 1038
+      },
+      {
+        "name": "4-availability-in-numbers.md",
+        "path": "availability/4-availability-in-numbers.md",
+        "type": "file",
+        "sha": "",
+        "size": 2751
+      },
+      {
+        "name": "5-background-jobs.md",
+        "path": "availability/5-background-jobs.md",
+        "type": "file",
+        "sha": "",
+        "size": 1291
+      },
+      {
+        "name": "6-load-balancing-vs-failover.md",
+        "path": "availability/6-load-balancing-vs-failover.md",
+        "type": "file",
+        "sha": "",
+        "size": 1814
+      },
+      {
+        "name": "7-fault-tolerance.md",
+        "path": "availability/7-fault-tolerance.md",
+        "type": "file",
+        "sha": "",
+        "size": 2055
+      },
+      {
+        "name": "8-reliability.md",
+        "path": "availability/8-reliability.md",
+        "type": "file",
+        "sha": "",
+        "size": 1628
+      },
+      {
+        "name": "9-maintainability.md",
+        "path": "availability/9-maintainability.md",
+        "type": "file",
+        "sha": "",
+        "size": 1533
+      },
+      {
         "name": "README.md",
         "path": "availability/README.md",
         "type": "file",
         "sha": "",
-        "size": 386
+        "size": 1756
       }
     ]
   },
@@ -35,11 +168,138 @@
     "sha": "",
     "children": [
       {
+        "name": "1-caching-overview.md",
+        "path": "caching/1-caching-overview.md",
+        "type": "file",
+        "sha": "",
+        "size": 2036
+      },
+      {
+        "name": "2-cache-aside.md",
+        "path": "caching/2-cache-aside.md",
+        "type": "file",
+        "sha": "",
+        "size": 3038
+      },
+      {
+        "name": "3-write-through.md",
+        "path": "caching/3-write-through.md",
+        "type": "file",
+        "sha": "",
+        "size": 1451
+      },
+      {
+        "name": "4-write-behind.md",
+        "path": "caching/4-write-behind.md",
+        "type": "file",
+        "sha": "",
+        "size": 960
+      },
+      {
+        "name": "5-refresh-ahead.md",
+        "path": "caching/5-refresh-ahead.md",
+        "type": "file",
+        "sha": "",
+        "size": 861
+      },
+      {
+        "name": "6-cache-layers.md",
+        "path": "caching/6-cache-layers.md",
+        "type": "file",
+        "sha": "",
+        "size": 2250
+      },
+      {
+        "name": "7-cache-eviction-policies.md",
+        "path": "caching/7-cache-eviction-policies.md",
+        "type": "file",
+        "sha": "",
+        "size": 1866
+      },
+      {
+        "name": "8-edge-caching.md",
+        "path": "caching/8-edge-caching.md",
+        "type": "file",
+        "sha": "",
+        "size": 1823
+      },
+      {
+        "name": "9-cold-and-warm-cache.md",
+        "path": "caching/9-cold-and-warm-cache.md",
+        "type": "file",
+        "sha": "",
+        "size": 1652
+      },
+      {
         "name": "README.md",
         "path": "caching/README.md",
         "type": "file",
         "sha": "",
-        "size": 350
+        "size": 1354
+      }
+    ]
+  },
+  {
+    "name": "cases",
+    "path": "cases",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "0-companies-and-products.md",
+        "path": "cases/0-companies-and-products.md",
+        "type": "file",
+        "sha": "",
+        "size": 14754
+      },
+      {
+        "name": "1-google-drive-file-sync.md",
+        "path": "cases/1-google-drive-file-sync.md",
+        "type": "file",
+        "sha": "",
+        "size": 2062
+      },
+      {
+        "name": "2-whatsapp.md",
+        "path": "cases/2-whatsapp.md",
+        "type": "file",
+        "sha": "",
+        "size": 2564
+      },
+      {
+        "name": "3-twitter.md",
+        "path": "cases/3-twitter.md",
+        "type": "file",
+        "sha": "",
+        "size": 5058
+      },
+      {
+        "name": "4-uber.md",
+        "path": "cases/4-uber.md",
+        "type": "file",
+        "sha": "",
+        "size": 3269
+      },
+      {
+        "name": "5-youtube-netflix.md",
+        "path": "cases/5-youtube-netflix.md",
+        "type": "file",
+        "sha": "",
+        "size": 3329
+      },
+      {
+        "name": "6-url-shortener.md",
+        "path": "cases/6-url-shortener.md",
+        "type": "file",
+        "sha": "",
+        "size": 4026
+      },
+      {
+        "name": "README.md",
+        "path": "cases/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2432
       }
     ]
   },
@@ -50,11 +310,53 @@
     "sha": "",
     "children": [
       {
+        "name": "1-availability-vs-consistency.md",
+        "path": "consistency/1-availability-vs-consistency.md",
+        "type": "file",
+        "sha": "",
+        "size": 712
+      },
+      {
+        "name": "2-cap-theorem.md",
+        "path": "consistency/2-cap-theorem.md",
+        "type": "file",
+        "sha": "",
+        "size": 1317
+      },
+      {
+        "name": "3-consistency-patterns.md",
+        "path": "consistency/3-consistency-patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 1225
+      },
+      {
+        "name": "4-idempotency.md",
+        "path": "consistency/4-idempotency.md",
+        "type": "file",
+        "sha": "",
+        "size": 1230
+      },
+      {
+        "name": "5-consensus-algorithms.md",
+        "path": "consistency/5-consensus-algorithms.md",
+        "type": "file",
+        "sha": "",
+        "size": 2446
+      },
+      {
+        "name": "6-compensating-transactions.md",
+        "path": "consistency/6-compensating-transactions.md",
+        "type": "file",
+        "sha": "",
+        "size": 2247
+      },
+      {
         "name": "README.md",
         "path": "consistency/README.md",
         "type": "file",
         "sha": "",
-        "size": 342
+        "size": 1222
       }
     ]
   },
@@ -69,7 +371,28 @@
         "path": "databases/1-database-design-overview.md",
         "type": "file",
         "sha": "",
-        "size": 6660
+        "size": 7260
+      },
+      {
+        "name": "10-denormalization.md",
+        "path": "databases/10-denormalization.md",
+        "type": "file",
+        "sha": "",
+        "size": 2124
+      },
+      {
+        "name": "11-federation.md",
+        "path": "databases/11-federation.md",
+        "type": "file",
+        "sha": "",
+        "size": 2020
+      },
+      {
+        "name": "12-sql-tuning.md",
+        "path": "databases/12-sql-tuning.md",
+        "type": "file",
+        "sha": "",
+        "size": 2217
       },
       {
         "name": "2-sql-vs-nosql-selection.md",
@@ -83,21 +406,21 @@
         "path": "databases/3-storage-systems.md",
         "type": "file",
         "sha": "",
-        "size": 15871
+        "size": 16580
       },
       {
         "name": "4-database-sharding.md",
         "path": "databases/4-database-sharding.md",
         "type": "file",
         "sha": "",
-        "size": 11988
+        "size": 12777
       },
       {
         "name": "5-database-replication.md",
         "path": "databases/5-database-replication.md",
         "type": "file",
         "sha": "",
-        "size": 13330
+        "size": 13676
       },
       {
         "name": "6-cap-theorem.md",
@@ -132,7 +455,7 @@
         "path": "databases/README.md",
         "type": "file",
         "sha": "",
-        "size": 4554
+        "size": 4913
       }
     ]
   },
@@ -143,11 +466,144 @@
     "sha": "",
     "children": [
       {
+        "name": "1-intro-and-approach.md",
+        "path": "fundamentals/1-intro-and-approach.md",
+        "type": "file",
+        "sha": "",
+        "size": 1342
+      },
+      {
+        "name": "10-communication-protocols.md",
+        "path": "fundamentals/10-communication-protocols.md",
+        "type": "file",
+        "sha": "",
+        "size": 2025
+      },
+      {
+        "name": "11-api-styles.md",
+        "path": "fundamentals/11-api-styles.md",
+        "type": "file",
+        "sha": "",
+        "size": 1964
+      },
+      {
+        "name": "12-hld-and-lld.md",
+        "path": "fundamentals/12-hld-and-lld.md",
+        "type": "file",
+        "sha": "",
+        "size": 4005
+      },
+      {
+        "name": "13-api-gateway.md",
+        "path": "fundamentals/13-api-gateway.md",
+        "type": "file",
+        "sha": "",
+        "size": 2074
+      },
+      {
+        "name": "14-proxies-and-websockets.md",
+        "path": "fundamentals/14-proxies-and-websockets.md",
+        "type": "file",
+        "sha": "",
+        "size": 2317
+      },
+      {
+        "name": "15-stateful-vs-stateless.md",
+        "path": "fundamentals/15-stateful-vs-stateless.md",
+        "type": "file",
+        "sha": "",
+        "size": 1769
+      },
+      {
+        "name": "16-monolithic-vs-microservices.md",
+        "path": "fundamentals/16-monolithic-vs-microservices.md",
+        "type": "file",
+        "sha": "",
+        "size": 1982
+      },
+      {
+        "name": "17-consistent-hashing.md",
+        "path": "fundamentals/17-consistent-hashing.md",
+        "type": "file",
+        "sha": "",
+        "size": 1875
+      },
+      {
+        "name": "18-scalability-bottlenecks.md",
+        "path": "fundamentals/18-scalability-bottlenecks.md",
+        "type": "file",
+        "sha": "",
+        "size": 1882
+      },
+      {
+        "name": "19-designing-scalable-systems.md",
+        "path": "fundamentals/19-designing-scalable-systems.md",
+        "type": "file",
+        "sha": "",
+        "size": 2127
+      },
+      {
+        "name": "2-performance-and-latency.md",
+        "path": "fundamentals/2-performance-and-latency.md",
+        "type": "file",
+        "sha": "",
+        "size": 887
+      },
+      {
+        "name": "3-dns.md",
+        "path": "fundamentals/3-dns.md",
+        "type": "file",
+        "sha": "",
+        "size": 1222
+      },
+      {
+        "name": "4-cdn.md",
+        "path": "fundamentals/4-cdn.md",
+        "type": "file",
+        "sha": "",
+        "size": 1928
+      },
+      {
+        "name": "5-load-balancers.md",
+        "path": "fundamentals/5-load-balancers.md",
+        "type": "file",
+        "sha": "",
+        "size": 2934
+      },
+      {
+        "name": "6-horizontal-scaling.md",
+        "path": "fundamentals/6-horizontal-scaling.md",
+        "type": "file",
+        "sha": "",
+        "size": 792
+      },
+      {
+        "name": "7-application-layer.md",
+        "path": "fundamentals/7-application-layer.md",
+        "type": "file",
+        "sha": "",
+        "size": 735
+      },
+      {
+        "name": "8-microservices.md",
+        "path": "fundamentals/8-microservices.md",
+        "type": "file",
+        "sha": "",
+        "size": 816
+      },
+      {
+        "name": "9-service-discovery.md",
+        "path": "fundamentals/9-service-discovery.md",
+        "type": "file",
+        "sha": "",
+        "size": 559
+      },
+      {
         "name": "README.md",
         "path": "fundamentals/README.md",
         "type": "file",
         "sha": "",
-        "size": 300
+        "size": 2296
       }
     ]
   },
@@ -158,11 +614,67 @@
     "sha": "",
     "children": [
       {
+        "name": "1-message-queues.md",
+        "path": "messaging/1-message-queues.md",
+        "type": "file",
+        "sha": "",
+        "size": 6715
+      },
+      {
+        "name": "2-task-queues.md",
+        "path": "messaging/2-task-queues.md",
+        "type": "file",
+        "sha": "",
+        "size": 1269
+      },
+      {
+        "name": "3-backpressure.md",
+        "path": "messaging/3-backpressure.md",
+        "type": "file",
+        "sha": "",
+        "size": 1368
+      },
+      {
+        "name": "4-queues-vs-streams.md",
+        "path": "messaging/4-queues-vs-streams.md",
+        "type": "file",
+        "sha": "",
+        "size": 3142
+      },
+      {
+        "name": "5-dlq-and-reliability.md",
+        "path": "messaging/5-dlq-and-reliability.md",
+        "type": "file",
+        "sha": "",
+        "size": 1730
+      },
+      {
+        "name": "6-types-of-message-queues.md",
+        "path": "messaging/6-types-of-message-queues.md",
+        "type": "file",
+        "sha": "",
+        "size": 11699
+      },
+      {
+        "name": "7-scaling-message-queues.md",
+        "path": "messaging/7-scaling-message-queues.md",
+        "type": "file",
+        "sha": "",
+        "size": 2980
+      },
+      {
+        "name": "8-database-as-message-queue-anti-pattern.md",
+        "path": "messaging/8-database-as-message-queue-anti-pattern.md",
+        "type": "file",
+        "sha": "",
+        "size": 5290
+      },
+      {
         "name": "README.md",
         "path": "messaging/README.md",
         "type": "file",
         "sha": "",
-        "size": 377
+        "size": 2278
       }
     ]
   },
@@ -173,11 +685,74 @@
     "sha": "",
     "children": [
       {
+        "name": "1-monitoring-overview.md",
+        "path": "observability/1-monitoring-overview.md",
+        "type": "file",
+        "sha": "",
+        "size": 1592
+      },
+      {
+        "name": "2-health-monitoring.md",
+        "path": "observability/2-health-monitoring.md",
+        "type": "file",
+        "sha": "",
+        "size": 1321
+      },
+      {
+        "name": "3-availability-monitoring.md",
+        "path": "observability/3-availability-monitoring.md",
+        "type": "file",
+        "sha": "",
+        "size": 1306
+      },
+      {
+        "name": "4-performance-monitoring.md",
+        "path": "observability/4-performance-monitoring.md",
+        "type": "file",
+        "sha": "",
+        "size": 1451
+      },
+      {
+        "name": "5-security-monitoring.md",
+        "path": "observability/5-security-monitoring.md",
+        "type": "file",
+        "sha": "",
+        "size": 1390
+      },
+      {
+        "name": "6-usage-monitoring.md",
+        "path": "observability/6-usage-monitoring.md",
+        "type": "file",
+        "sha": "",
+        "size": 1294
+      },
+      {
+        "name": "7-instrumentation.md",
+        "path": "observability/7-instrumentation.md",
+        "type": "file",
+        "sha": "",
+        "size": 1561
+      },
+      {
+        "name": "8-visualization-and-alerts.md",
+        "path": "observability/8-visualization-and-alerts.md",
+        "type": "file",
+        "sha": "",
+        "size": 1561
+      },
+      {
+        "name": "9-distributed-tracing.md",
+        "path": "observability/9-distributed-tracing.md",
+        "type": "file",
+        "sha": "",
+        "size": 2054
+      },
+      {
         "name": "README.md",
         "path": "observability/README.md",
         "type": "file",
         "sha": "",
-        "size": 404
+        "size": 1590
       }
     ]
   },
@@ -188,11 +763,67 @@
     "sha": "",
     "children": [
       {
+        "name": "1-event-sourcing.md",
+        "path": "patterns/1-event-sourcing.md",
+        "type": "file",
+        "sha": "",
+        "size": 4140
+      },
+      {
+        "name": "2-cqrs.md",
+        "path": "patterns/2-cqrs.md",
+        "type": "file",
+        "sha": "",
+        "size": 4094
+      },
+      {
+        "name": "3-leader-election.md",
+        "path": "patterns/3-leader-election.md",
+        "type": "file",
+        "sha": "",
+        "size": 1543
+      },
+      {
+        "name": "4-circuit-breaker.md",
+        "path": "patterns/4-circuit-breaker.md",
+        "type": "file",
+        "sha": "",
+        "size": 4167
+      },
+      {
+        "name": "5-bulkhead-and-retry.md",
+        "path": "patterns/5-bulkhead-and-retry.md",
+        "type": "file",
+        "sha": "",
+        "size": 1285
+      },
+      {
+        "name": "6-event-driven-architecture.md",
+        "path": "patterns/6-event-driven-architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 2454
+      },
+      {
+        "name": "7-serverless.md",
+        "path": "patterns/7-serverless.md",
+        "type": "file",
+        "sha": "",
+        "size": 1887
+      },
+      {
+        "name": "8-event-sourcing-vs-event-streaming.md",
+        "path": "patterns/8-event-sourcing-vs-event-streaming.md",
+        "type": "file",
+        "sha": "",
+        "size": 2023
+      },
+      {
         "name": "README.md",
         "path": "patterns/README.md",
         "type": "file",
         "sha": "",
-        "size": 352
+        "size": 1708
       }
     ]
   },
@@ -203,11 +834,62 @@
     "sha": "",
     "children": [
       {
+        "name": "1-performance-antipatterns.md",
+        "path": "performance/1-performance-antipatterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 2140
+      },
+      {
+        "name": "2-rate-limiting.md",
+        "path": "performance/2-rate-limiting.md",
+        "type": "file",
+        "sha": "",
+        "size": 4734
+      },
+      {
+        "name": "3-latency-and-throughput.md",
+        "path": "performance/3-latency-and-throughput.md",
+        "type": "file",
+        "sha": "",
+        "size": 1459
+      },
+      {
+        "name": "4-cost-vs-performance.md",
+        "path": "performance/4-cost-vs-performance.md",
+        "type": "file",
+        "sha": "",
+        "size": 1987
+      },
+      {
         "name": "README.md",
         "path": "performance/README.md",
         "type": "file",
         "sha": "",
-        "size": 355
+        "size": 950
+      }
+    ]
+  },
+  {
+    "name": "resources",
+    "path": "resources",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "PDFs",
+        "path": "resources/PDFs",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "resources/PDFs/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 1972
+          }
+        ]
       }
     ]
   },
@@ -218,11 +900,60 @@
     "sha": "",
     "children": [
       {
+        "name": "1-security-overview.md",
+        "path": "security/1-security-overview.md",
+        "type": "file",
+        "sha": "",
+        "size": 1268
+      },
+      {
+        "name": "2-federated-identity.md",
+        "path": "security/2-federated-identity.md",
+        "type": "file",
+        "sha": "",
+        "size": 1316
+      },
+      {
+        "name": "3-gatekeeper.md",
+        "path": "security/3-gatekeeper.md",
+        "type": "file",
+        "sha": "",
+        "size": 1333
+      },
+      {
+        "name": "4-valet-key.md",
+        "path": "security/4-valet-key.md",
+        "type": "file",
+        "sha": "",
+        "size": 1458
+      },
+      {
+        "name": "5-data-backup-and-disaster-recovery.md",
+        "path": "security/5-data-backup-and-disaster-recovery.md",
+        "type": "file",
+        "sha": "",
+        "size": 1974
+      },
+      {
+        "name": "6-ssl-and-tls.md",
+        "path": "security/6-ssl-and-tls.md",
+        "type": "file",
+        "sha": "",
+        "size": 1783
+      },
+      {
+        "name": "7-authentication-vs-authorization.md",
+        "path": "security/7-authentication-vs-authorization.md",
+        "type": "file",
+        "sha": "",
+        "size": 1868
+      },
+      {
         "name": "README.md",
         "path": "security/README.md",
         "type": "file",
         "sha": "",
-        "size": 363
+        "size": 1366
       }
     ]
   },
@@ -233,11 +964,46 @@
     "sha": "",
     "children": [
       {
+        "name": "1-indexing.md",
+        "path": "storage/1-indexing.md",
+        "type": "file",
+        "sha": "",
+        "size": 1308
+      },
+      {
+        "name": "2-partitioning.md",
+        "path": "storage/2-partitioning.md",
+        "type": "file",
+        "sha": "",
+        "size": 1337
+      },
+      {
+        "name": "3-wal-and-durability.md",
+        "path": "storage/3-wal-and-durability.md",
+        "type": "file",
+        "sha": "",
+        "size": 1286
+      },
+      {
+        "name": "4-oltp-vs-olap.md",
+        "path": "storage/4-oltp-vs-olap.md",
+        "type": "file",
+        "sha": "",
+        "size": 1382
+      },
+      {
+        "name": "5-materialized-views.md",
+        "path": "storage/5-materialized-views.md",
+        "type": "file",
+        "sha": "",
+        "size": 1780
+      },
+      {
         "name": "README.md",
         "path": "storage/README.md",
         "type": "file",
         "sha": "",
-        "size": 369
+        "size": 1103
       }
     ]
   },
@@ -246,6 +1012,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1769
+    "size": 3369
   }
 ]

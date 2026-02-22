@@ -38,6 +38,12 @@ This section provides comprehensive coverage of database design concepts in syst
 
 9. **[Best Practices](9-best-practices.md)**: Learn best practices for database design, including normalization, indexing, security, and scalability planning.
 
+10. **[Denormalization](10-denormalization.md)**: When and how to introduce redundancy for read performance; trade-offs with normalization.
+
+11. **[Federation](11-federation.md)**: Single logical interface over multiple databases; when to use and trade-offs.
+
+12. **[SQL Tuning](12-sql-tuning.md)**: Query optimization, indexing, and tuning for performance.
+
 ## Quick Reference
 
 ### Database Types

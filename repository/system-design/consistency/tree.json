@@ -1,9 +1,51 @@
 [
   {
+    "name": "1-availability-vs-consistency.md",
+    "path": "1-availability-vs-consistency.md",
+    "type": "file",
+    "sha": "",
+    "size": 712
+  },
+  {
+    "name": "2-cap-theorem.md",
+    "path": "2-cap-theorem.md",
+    "type": "file",
+    "sha": "",
+    "size": 1317
+  },
+  {
+    "name": "3-consistency-patterns.md",
+    "path": "3-consistency-patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 1225
+  },
+  {
+    "name": "4-idempotency.md",
+    "path": "4-idempotency.md",
+    "type": "file",
+    "sha": "",
+    "size": 1230
+  },
+  {
+    "name": "5-consensus-algorithms.md",
+    "path": "5-consensus-algorithms.md",
+    "type": "file",
+    "sha": "",
+    "size": 2446
+  },
+  {
+    "name": "6-compensating-transactions.md",
+    "path": "6-compensating-transactions.md",
+    "type": "file",
+    "sha": "",
+    "size": 2247
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 342
+    "size": 1222
   }
 ]

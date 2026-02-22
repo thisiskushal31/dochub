@@ -1,9 +1,44 @@
 [
   {
+    "name": "1-indexing.md",
+    "path": "1-indexing.md",
+    "type": "file",
+    "sha": "",
+    "size": 1308
+  },
+  {
+    "name": "2-partitioning.md",
+    "path": "2-partitioning.md",
+    "type": "file",
+    "sha": "",
+    "size": 1337
+  },
+  {
+    "name": "3-wal-and-durability.md",
+    "path": "3-wal-and-durability.md",
+    "type": "file",
+    "sha": "",
+    "size": 1286
+  },
+  {
+    "name": "4-oltp-vs-olap.md",
+    "path": "4-oltp-vs-olap.md",
+    "type": "file",
+    "sha": "",
+    "size": 1382
+  },
+  {
+    "name": "5-materialized-views.md",
+    "path": "5-materialized-views.md",
+    "type": "file",
+    "sha": "",
+    "size": 1780
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 369
+    "size": 1103
   }
 ]

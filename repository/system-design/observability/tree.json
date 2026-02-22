@@ -1,9 +1,72 @@
 [
   {
+    "name": "1-monitoring-overview.md",
+    "path": "1-monitoring-overview.md",
+    "type": "file",
+    "sha": "",
+    "size": 1592
+  },
+  {
+    "name": "2-health-monitoring.md",
+    "path": "2-health-monitoring.md",
+    "type": "file",
+    "sha": "",
+    "size": 1321
+  },
+  {
+    "name": "3-availability-monitoring.md",
+    "path": "3-availability-monitoring.md",
+    "type": "file",
+    "sha": "",
+    "size": 1306
+  },
+  {
+    "name": "4-performance-monitoring.md",
+    "path": "4-performance-monitoring.md",
+    "type": "file",
+    "sha": "",
+    "size": 1451
+  },
+  {
+    "name": "5-security-monitoring.md",
+    "path": "5-security-monitoring.md",
+    "type": "file",
+    "sha": "",
+    "size": 1390
+  },
+  {
+    "name": "6-usage-monitoring.md",
+    "path": "6-usage-monitoring.md",
+    "type": "file",
+    "sha": "",
+    "size": 1294
+  },
+  {
+    "name": "7-instrumentation.md",
+    "path": "7-instrumentation.md",
+    "type": "file",
+    "sha": "",
+    "size": 1561
+  },
+  {
+    "name": "8-visualization-and-alerts.md",
+    "path": "8-visualization-and-alerts.md",
+    "type": "file",
+    "sha": "",
+    "size": 1561
+  },
+  {
+    "name": "9-distributed-tracing.md",
+    "path": "9-distributed-tracing.md",
+    "type": "file",
+    "sha": "",
+    "size": 2054
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 404
+    "size": 1590
   }
 ]

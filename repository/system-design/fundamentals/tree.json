@@ -1,9 +1,142 @@
 [
   {
+    "name": "1-intro-and-approach.md",
+    "path": "1-intro-and-approach.md",
+    "type": "file",
+    "sha": "",
+    "size": 1342
+  },
+  {
+    "name": "10-communication-protocols.md",
+    "path": "10-communication-protocols.md",
+    "type": "file",
+    "sha": "",
+    "size": 2025
+  },
+  {
+    "name": "11-api-styles.md",
+    "path": "11-api-styles.md",
+    "type": "file",
+    "sha": "",
+    "size": 1964
+  },
+  {
+    "name": "12-hld-and-lld.md",
+    "path": "12-hld-and-lld.md",
+    "type": "file",
+    "sha": "",
+    "size": 4005
+  },
+  {
+    "name": "13-api-gateway.md",
+    "path": "13-api-gateway.md",
+    "type": "file",
+    "sha": "",
+    "size": 2074
+  },
+  {
+    "name": "14-proxies-and-websockets.md",
+    "path": "14-proxies-and-websockets.md",
+    "type": "file",
+    "sha": "",
+    "size": 2317
+  },
+  {
+    "name": "15-stateful-vs-stateless.md",
+    "path": "15-stateful-vs-stateless.md",
+    "type": "file",
+    "sha": "",
+    "size": 1769
+  },
+  {
+    "name": "16-monolithic-vs-microservices.md",
+    "path": "16-monolithic-vs-microservices.md",
+    "type": "file",
+    "sha": "",
+    "size": 1982
+  },
+  {
+    "name": "17-consistent-hashing.md",
+    "path": "17-consistent-hashing.md",
+    "type": "file",
+    "sha": "",
+    "size": 1875
+  },
+  {
+    "name": "18-scalability-bottlenecks.md",
+    "path": "18-scalability-bottlenecks.md",
+    "type": "file",
+    "sha": "",
+    "size": 1882
+  },
+  {
+    "name": "19-designing-scalable-systems.md",
+    "path": "19-designing-scalable-systems.md",
+    "type": "file",
+    "sha": "",
+    "size": 2127
+  },
+  {
+    "name": "2-performance-and-latency.md",
+    "path": "2-performance-and-latency.md",
+    "type": "file",
+    "sha": "",
+    "size": 887
+  },
+  {
+    "name": "3-dns.md",
+    "path": "3-dns.md",
+    "type": "file",
+    "sha": "",
+    "size": 1222
+  },
+  {
+    "name": "4-cdn.md",
+    "path": "4-cdn.md",
+    "type": "file",
+    "sha": "",
+    "size": 1928
+  },
+  {
+    "name": "5-load-balancers.md",
+    "path": "5-load-balancers.md",
+    "type": "file",
+    "sha": "",
+    "size": 2934
+  },
+  {
+    "name": "6-horizontal-scaling.md",
+    "path": "6-horizontal-scaling.md",
+    "type": "file",
+    "sha": "",
+    "size": 792
+  },
+  {
+    "name": "7-application-layer.md",
+    "path": "7-application-layer.md",
+    "type": "file",
+    "sha": "",
+    "size": 735
+  },
+  {
+    "name": "8-microservices.md",
+    "path": "8-microservices.md",
+    "type": "file",
+    "sha": "",
+    "size": 816
+  },
+  {
+    "name": "9-service-discovery.md",
+    "path": "9-service-discovery.md",
+    "type": "file",
+    "sha": "",
+    "size": 559
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 300
+    "size": 2296
   }
 ]

@@ -46,9 +46,31 @@ Good database design is important in system design because it ensures that the s
 - **Cost-Efficiency**: Optimized database designs use resources efficiently, reducing server costs and improving overall system performance
 - **Security**: Good design includes measures to protect sensitive data from unauthorized access
 
-![Database Design Overview](../assets/databases/database-design-overview.webp)
+The diagram below summarizes how database design fits into system design: requirements drive the choice of database type and patterns (sharding, replication, etc.).
 
-*Image Source: [Complete Guide to Database Design - System Design - GeeksforGeeks](https://www.geeksforgeeks.org/system-design/complete-reference-to-databases-in-designing-systems/)*
+```mermaid
+flowchart TB
+    subgraph Requirements
+        R[Requirements]
+    end
+    subgraph Design
+        R --> Types[Database Types]
+        Types --> SQL[(Relational / SQL)]
+        Types --> NoSQL[(NoSQL)]
+        SQL --> P1[Sharding]
+        SQL --> P2[Replication]
+        SQL --> P3[Partitioning]
+        NoSQL --> P1
+        NoSQL --> P2
+    end
+    subgraph Outcomes
+        P1 --> Perf[Performance & Scale]
+        P2 --> Avail[Availability]
+        P3 --> Manage[Manageable Data]
+    end
+```
+
+*Concept adapted from GeeksforGeeks: [Complete Guide to Database Design - System Design](https://www.geeksforgeeks.org/system-design/complete-reference-to-databases-in-designing-systems/).*
 
 ### Database Patterns
 

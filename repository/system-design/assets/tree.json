@@ -1,8 +1,78 @@
 [
   {
+    "name": "availability",
+    "path": "availability",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "caching",
+    "path": "caching",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "consistency",
+    "path": "consistency",
+    "type": "dir",
+    "sha": ""
+  },
+  {
     "name": "databases",
     "path": "databases",
     "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "databases/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 581
+      }
+    ]
+  },
+  {
+    "name": "fundamentals",
+    "path": "fundamentals",
+    "type": "dir",
     "sha": ""
+  },
+  {
+    "name": "messaging",
+    "path": "messaging",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "patterns",
+    "path": "patterns",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "performance",
+    "path": "performance",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "security",
+    "path": "security",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "storage",
+    "path": "storage",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 2558
   }
 ]

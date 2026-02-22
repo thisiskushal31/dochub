@@ -20,15 +20,34 @@ It is basically a database architecture pattern in which we split a large datase
 - We distribute the data in such a way that each row appears in exactly one shard
 - It's a good mechanism to improve the scalability of an application
 
-![Database Sharding Overview](../assets/databases/sharding-overview.jpg)
+The diagram below shows data split into shards across multiple database instances.
 
-*Image Source: [Database Sharding - System Design - GeeksforGeeks](https://www.geeksforgeeks.org/system-design/database-sharding-a-system-design-concept/)*
+![Sharding overview: data distributed across shards](../assets/databases/sharding.png)
+
+```mermaid
+flowchart LR
+    subgraph Application
+        App[Application]
+    end
+    subgraph Shards
+        S1[(Shard 1)]
+        S2[(Shard 2)]
+        S3[(Shard 3)]
+    end
+    App --> S1
+    App --> S2
+    App --> S3
+```
+
+*Concept adapted from GeeksforGeeks: [Database Sharding - System Design](https://www.geeksforgeeks.org/system-design/database-sharding-a-system-design-concept/).*
 
 ### Methods of Sharding
 
 #### 1. Key-Based Sharding (Hash-Based Sharding)
 
-Key-Based Sharding is a technique also known as hash-based sharding. Here, we take the value of an entity such as customer ID, customer email, IP address of a client, zip code, etc., and we use this value as an input of the hash function. This process generates a hash value which is used to determine which shard we need to use to store the data.
+Key-Based Sharding is a technique also known as hash-based sharding. The shard key is hashed to decide which shard holds the row. The diagram below shows that flow.
+
+![Key-based sharding: shard key → hash → shard](../assets/databases/sharding-key-based.png) Here, we take the value of an entity such as customer ID, customer email, IP address of a client, zip code, etc., and we use this value as an input of the hash function. This process generates a hash value which is used to determine which shard we need to use to store the data.
 
 **Key Points:**
 - The values entered into the hash function should all come from the same column (shard key) to ensure data is placed in the correct order and in a consistent manner
@@ -37,9 +56,14 @@ Key-Based Sharding is a technique also known as hash-based sharding. Here, we ta
 **Example:**
 You have 3 database servers and each request has an application id which is incremented by 1 every time a new application is registered. To determine which server data should be placed on, we perform a modulo operation on these application ids with the number 3. Then the remainder is used to identify the server to store our data.
 
-![Hash-Based Sharding](../assets/databases/sharding-key-based.jpg)
-
-*Image Source: [Database Sharding - System Design - GeeksforGeeks](https://www.geeksforgeeks.org/system-design/database-sharding-a-system-design-concept/)*
+```mermaid
+flowchart LR
+    Key[Shard Key] --> Hash[Hash Function]
+    Hash --> M[Mod N]
+    M --> S1[(Shard 1)]
+    M --> S2[(Shard 2)]
+    M --> S3[(Shard 3)]
+```
 
 **Advantages of Key-Based Sharding:**
 - Key-based sharding assigns each key to a specific shard, ensuring uniform and consistent data distribution
@@ -52,16 +76,21 @@ You have 3 database servers and each request has an application id which is incr
 
 #### 2. Range-Based Sharding (Horizontal Sharding)
 
-In Range-Based Sharding, we divide the data by separating it into different parts based on the range of a specific value within each record.
+In Range-Based Sharding, we divide the data by separating it into different parts based on the range of a specific value within each record (e.g. A–M in one shard, N–Z in another). The diagram below illustrates this.
+
+![Range-based sharding: data split by value ranges](../assets/databases/sharding-range-based.png)
 
 **Example:**
 Let's say you have a database of your online customers' names and email information. You can split this information into two shards:
 - In one shard, you can keep the info of customers whose first name starts with A-P
 - In another shard, keep the information of the rest of the customers
 
-![Range-Based Sharding](../assets/databases/sharding-range-based.png)
-
-*Image Source: [Database Sharding - System Design - GeeksforGeeks](https://www.geeksforgeeks.org/system-design/database-sharding-a-system-design-concept/)*
+```mermaid
+flowchart LR
+    Data[Data] --> R1{Range?}
+    R1 -->|A–M| S1[(Shard 1)]
+    R1 -->|N–Z| S2[(Shard 2)]
+```
 
 **Advantages of Range-Based Sharding:**
 - **Scalability**: Horizontal or range-based sharding allows for seamless scalability by distributing data across multiple shards, accommodating growing datasets
@@ -73,7 +102,11 @@ Let's say you have a database of your online customers' names and email informat
 
 #### 3. Vertical Sharding
 
-In Vertical Sharding, we split the entire column from the table and we put those columns into new distinct tables. Data is totally independent of one partition to the other ones. Also, each partition holds both distinct rows and columns. We can split different features of an entity in different shards on different machines.
+In Vertical Sharding, we split the entire column from the table and put those columns into new distinct tables (e.g. user profiles in one shard, followers in another). The diagram below shows column-based splitting.
+
+![Vertical sharding: columns split across shards](../assets/databases/sharding-vertical.png)
+
+Data is independent across partitions; each partition holds distinct rows and columns. We can split different features of an entity in different shards on different machines.
 
 **Example:**
 On Twitter, users might have a profile, number of followers, and some tweets posted by their own. We can place the user profiles on one shard, followers in the second shard, and tweets on a third shard.
@@ -88,16 +121,25 @@ On Twitter, users might have a profile, number of followers, and some tweets pos
 
 #### 4. Directory-Based Sharding
 
-In Directory-Based Sharding, we create and maintain a lookup service or lookup table for the original database. Basically, we use a shard key for the lookup table and we do mapping for each entity that exists in the database. This way we keep track of which database shards hold which data.
+In Directory-Based Sharding, we create and maintain a lookup service or lookup table that maps each key to a shard. The application asks the directory which shard to use, then talks to that shard. The diagram below shows this flow.
+
+![Directory-based sharding: lookup service maps keys to shards](../assets/databases/sharding-directory-based.png)
 
 **How It Works:**
 - The lookup table holds a static set of information about where specific data can be found
 - Firstly, the client application queries the lookup service to find out the shard (database partition) on which the data is placed
 - When the lookup service returns the shard, it queries/updates that shard
 
-![Directory-Based Sharding](../assets/databases/sharding-directory-based.jpg)
-
-*Image Source: [Database Sharding - System Design - GeeksforGeeks](https://www.geeksforgeeks.org/system-design/database-sharding-a-system-design-concept/)*
+```mermaid
+sequenceDiagram
+    participant App
+    participant Directory as Lookup Directory
+    participant S1 as Shard 1
+    participant S2 as Shard 2
+    App->>Directory: Which shard for key?
+    Directory->>App: Shard id
+    App->>S1: Query/Update (if shard 1)
+```
 
 **Advantages of Directory-Based Sharding:**
 - **Flexible Data Distribution**: Directory-based sharding allows for flexible data distribution, where the central directory can dynamically manage and update the mapping of data to shard locations

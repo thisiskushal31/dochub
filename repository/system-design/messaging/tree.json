@@ -1,9 +1,65 @@
 [
   {
+    "name": "1-message-queues.md",
+    "path": "1-message-queues.md",
+    "type": "file",
+    "sha": "",
+    "size": 6715
+  },
+  {
+    "name": "2-task-queues.md",
+    "path": "2-task-queues.md",
+    "type": "file",
+    "sha": "",
+    "size": 1269
+  },
+  {
+    "name": "3-backpressure.md",
+    "path": "3-backpressure.md",
+    "type": "file",
+    "sha": "",
+    "size": 1368
+  },
+  {
+    "name": "4-queues-vs-streams.md",
+    "path": "4-queues-vs-streams.md",
+    "type": "file",
+    "sha": "",
+    "size": 3142
+  },
+  {
+    "name": "5-dlq-and-reliability.md",
+    "path": "5-dlq-and-reliability.md",
+    "type": "file",
+    "sha": "",
+    "size": 1730
+  },
+  {
+    "name": "6-types-of-message-queues.md",
+    "path": "6-types-of-message-queues.md",
+    "type": "file",
+    "sha": "",
+    "size": 11699
+  },
+  {
+    "name": "7-scaling-message-queues.md",
+    "path": "7-scaling-message-queues.md",
+    "type": "file",
+    "sha": "",
+    "size": 2980
+  },
+  {
+    "name": "8-database-as-message-queue-anti-pattern.md",
+    "path": "8-database-as-message-queue-anti-pattern.md",
+    "type": "file",
+    "sha": "",
+    "size": 5290
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 377
+    "size": 2278
   }
 ]

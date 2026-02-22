@@ -38,6 +38,10 @@ Database replication is important for several reasons:
 
 ### How Does Database Replication Work?
 
+Writes go to the primary (master); replicas (secondaries) receive changes via logs or change streams and stay in sync. Reads can be served from the primary or from replicas to spread load. The diagram below shows a typical master and replicas.
+
+![Master-slave replication: primary and replicas](../assets/databases/master-slave-replication.png)
+
 Here are the steps explaining how database replication works:
 
 1. **Step 1: Identify the Primary Database (Source)**: A primary (or master) database is chosen as the main source of truth where data changes originate.

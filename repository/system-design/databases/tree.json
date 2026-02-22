@@ -4,7 +4,28 @@
     "path": "1-database-design-overview.md",
     "type": "file",
     "sha": "",
-    "size": 6660
+    "size": 7260
+  },
+  {
+    "name": "10-denormalization.md",
+    "path": "10-denormalization.md",
+    "type": "file",
+    "sha": "",
+    "size": 2124
+  },
+  {
+    "name": "11-federation.md",
+    "path": "11-federation.md",
+    "type": "file",
+    "sha": "",
+    "size": 2020
+  },
+  {
+    "name": "12-sql-tuning.md",
+    "path": "12-sql-tuning.md",
+    "type": "file",
+    "sha": "",
+    "size": 2217
   },
   {
     "name": "2-sql-vs-nosql-selection.md",
@@ -18,21 +39,21 @@
     "path": "3-storage-systems.md",
     "type": "file",
     "sha": "",
-    "size": 15871
+    "size": 16580
   },
   {
     "name": "4-database-sharding.md",
     "path": "4-database-sharding.md",
     "type": "file",
     "sha": "",
-    "size": 11988
+    "size": 12777
   },
   {
     "name": "5-database-replication.md",
     "path": "5-database-replication.md",
     "type": "file",
     "sha": "",
-    "size": 13330
+    "size": 13676
   },
   {
     "name": "6-cap-theorem.md",
@@ -67,6 +88,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 4554
+    "size": 4913
   }
 ]

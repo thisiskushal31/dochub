@@ -1,9 +1,58 @@
 [
   {
+    "name": "1-security-overview.md",
+    "path": "1-security-overview.md",
+    "type": "file",
+    "sha": "",
+    "size": 1268
+  },
+  {
+    "name": "2-federated-identity.md",
+    "path": "2-federated-identity.md",
+    "type": "file",
+    "sha": "",
+    "size": 1316
+  },
+  {
+    "name": "3-gatekeeper.md",
+    "path": "3-gatekeeper.md",
+    "type": "file",
+    "sha": "",
+    "size": 1333
+  },
+  {
+    "name": "4-valet-key.md",
+    "path": "4-valet-key.md",
+    "type": "file",
+    "sha": "",
+    "size": 1458
+  },
+  {
+    "name": "5-data-backup-and-disaster-recovery.md",
+    "path": "5-data-backup-and-disaster-recovery.md",
+    "type": "file",
+    "sha": "",
+    "size": 1974
+  },
+  {
+    "name": "6-ssl-and-tls.md",
+    "path": "6-ssl-and-tls.md",
+    "type": "file",
+    "sha": "",
+    "size": 1783
+  },
+  {
+    "name": "7-authentication-vs-authorization.md",
+    "path": "7-authentication-vs-authorization.md",
+    "type": "file",
+    "sha": "",
+    "size": 1868
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 363
+    "size": 1366
   }
 ]

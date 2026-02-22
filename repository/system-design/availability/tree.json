@@ -1,9 +1,72 @@
 [
   {
+    "name": "1-availability-patterns.md",
+    "path": "1-availability-patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 533
+  },
+  {
+    "name": "2-failover.md",
+    "path": "2-failover.md",
+    "type": "file",
+    "sha": "",
+    "size": 3437
+  },
+  {
+    "name": "3-replication.md",
+    "path": "3-replication.md",
+    "type": "file",
+    "sha": "",
+    "size": 1038
+  },
+  {
+    "name": "4-availability-in-numbers.md",
+    "path": "4-availability-in-numbers.md",
+    "type": "file",
+    "sha": "",
+    "size": 2751
+  },
+  {
+    "name": "5-background-jobs.md",
+    "path": "5-background-jobs.md",
+    "type": "file",
+    "sha": "",
+    "size": 1291
+  },
+  {
+    "name": "6-load-balancing-vs-failover.md",
+    "path": "6-load-balancing-vs-failover.md",
+    "type": "file",
+    "sha": "",
+    "size": 1814
+  },
+  {
+    "name": "7-fault-tolerance.md",
+    "path": "7-fault-tolerance.md",
+    "type": "file",
+    "sha": "",
+    "size": 2055
+  },
+  {
+    "name": "8-reliability.md",
+    "path": "8-reliability.md",
+    "type": "file",
+    "sha": "",
+    "size": 1628
+  },
+  {
+    "name": "9-maintainability.md",
+    "path": "9-maintainability.md",
+    "type": "file",
+    "sha": "",
+    "size": 1533
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 386
+    "size": 1756
   }
 ]

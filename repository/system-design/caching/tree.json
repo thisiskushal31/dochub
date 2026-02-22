@@ -1,9 +1,72 @@
 [
   {
+    "name": "1-caching-overview.md",
+    "path": "1-caching-overview.md",
+    "type": "file",
+    "sha": "",
+    "size": 2036
+  },
+  {
+    "name": "2-cache-aside.md",
+    "path": "2-cache-aside.md",
+    "type": "file",
+    "sha": "",
+    "size": 3038
+  },
+  {
+    "name": "3-write-through.md",
+    "path": "3-write-through.md",
+    "type": "file",
+    "sha": "",
+    "size": 1451
+  },
+  {
+    "name": "4-write-behind.md",
+    "path": "4-write-behind.md",
+    "type": "file",
+    "sha": "",
+    "size": 960
+  },
+  {
+    "name": "5-refresh-ahead.md",
+    "path": "5-refresh-ahead.md",
+    "type": "file",
+    "sha": "",
+    "size": 861
+  },
+  {
+    "name": "6-cache-layers.md",
+    "path": "6-cache-layers.md",
+    "type": "file",
+    "sha": "",
+    "size": 2250
+  },
+  {
+    "name": "7-cache-eviction-policies.md",
+    "path": "7-cache-eviction-policies.md",
+    "type": "file",
+    "sha": "",
+    "size": 1866
+  },
+  {
+    "name": "8-edge-caching.md",
+    "path": "8-edge-caching.md",
+    "type": "file",
+    "sha": "",
+    "size": 1823
+  },
+  {
+    "name": "9-cold-and-warm-cache.md",
+    "path": "9-cold-and-warm-cache.md",
+    "type": "file",
+    "sha": "",
+    "size": 1652
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 350
+    "size": 1354
   }
 ]
