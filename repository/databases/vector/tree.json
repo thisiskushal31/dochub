@@ -1,0 +1,69 @@
+[
+  {
+    "name": "milvus",
+    "path": "milvus",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "milvus/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 151
+      }
+    ]
+  },
+  {
+    "name": "pgvector",
+    "path": "pgvector",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "pgvector/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 238
+      }
+    ]
+  },
+  {
+    "name": "pinecone",
+    "path": "pinecone",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "pinecone/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 153
+      }
+    ]
+  },
+  {
+    "name": "weaviate",
+    "path": "weaviate",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "weaviate/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 153
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1922
+  }
+]

@@ -23,6 +23,12 @@ Relational Database Management Systems (RDBMS) store data in structured tables w
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)
 - [PostgreSQL Performance Tuning](https://www.postgresql.org/docs/current/performance-tips.html)
 
+### Planned (we're going to cover these)
+
+- **[Oracle](./oracle/README.md)** — deep dive planned
+- **[SQL Server](./sql-server/README.md)** — deep dive planned
+- **[SQLite](./sqlite/README.md)** — deep dive planned (embedded / local)
+
 ## Related Content
 
 - **[Databases Deep Dive Overview](../README.md)**: Main index with all database categories

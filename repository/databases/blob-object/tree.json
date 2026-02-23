@@ -1,0 +1,69 @@
+[
+  {
+    "name": "azure-blob",
+    "path": "azure-blob",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "azure-blob/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 181
+      }
+    ]
+  },
+  {
+    "name": "gcs",
+    "path": "gcs",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "gcs/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 183
+      }
+    ]
+  },
+  {
+    "name": "minio",
+    "path": "minio",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "minio/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 184
+      }
+    ]
+  },
+  {
+    "name": "s3",
+    "path": "s3",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "s3/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 172
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1884
+  }
+]

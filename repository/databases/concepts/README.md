@@ -2,8 +2,6 @@
 
 Fundamental database concepts that apply across all database systems, regardless of type or vendor. This section provides technical deep dives on cross-cutting database concerns including replication mechanisms, sharding techniques, consistency models, transactions, durability, performance optimization, and operational patterns.
 
-> **For system design concepts related to databases (database selection, CAP theorem, design patterns), see [Databases in System Design](https://github.com/thisiskushal31/System-Design-Concepts/blob/main/databases/README.md).**
->
 > **For deployment strategies, decision frameworks, and high-level overviews, see the [MySQL Mastery Series](https://thisiskushal31.github.io/blog/#/blog/mysql-mastery-series), [MongoDB Mastery Series](https://thisiskushal31.github.io/blog/#/blog/mongodb-mastery-series), [Redis Mastery Series](https://thisiskushal31.github.io/blog/#/blog/redis-mastery-series), [Aerospike Mastery Series](https://thisiskushal31.github.io/blog/#/blog/aerospike-mastery-series), and [Elasticsearch Deployment Guide](https://thisiskushal31.github.io/blog/#/blog/elasticsearch-deployment-guide).**
 
 ## Deep Dive Documentation
@@ -175,9 +173,8 @@ Fundamental database concepts that apply across all database systems, regardless
 
 - **[Databases Deep Dive Overview](../README.md)**: Main index with all database categories
 - **[Relational Databases](../relational/README.md)**: MySQL and PostgreSQL guides
-- **[NoSQL Databases](../nosql/README.md)**: MongoDB, Redis, Aerospike, Elasticsearch guides
+- **[Document, Key-Value, Search, etc.](../nosql/README.md)**: MongoDB, Redis, Aerospike, Elasticsearch and other type folders
 - **[Cloud-Managed Databases](../cloud-managed/README.md)**: Managed services across AWS, GCP, Azure
-- **[Databases in System Design](https://github.com/thisiskushal31/System-Design-Concepts/blob/main/databases/README.md)**: System design concepts for database selection, CAP theorem, sharding, replication patterns
 
 ## DBMS Fundamentals
 
