@@ -64,11 +64,13 @@ NoSQL databases are designed to handle unstructured or semi-structured data and 
 
 4. **Proprietary Query Language**: NoSQL databases typically have their own query languages tailored to their specific data models. These query languages are often simpler and better suited to the data structure.
 
-**Common Examples of NoSQL Databases:**
-- **MongoDB**: A popular document store that is flexible and scalable
-- **Cassandra**: A wide-column store known for handling large amounts of data and high write throughput
-- **Redis**: In-memory key-value store
-- **DynamoDB**: AWS managed NoSQL database
+**Common Examples of NoSQL Databases (by type):**
+- **MongoDB**: Document store — flexible schema, document-centric data ([Database Types & Use Cases](README.md#database-types--use-cases))
+- **Cassandra**: Wide-column store — massive scale, high write throughput
+- **Redis**: Key-value and in-memory cache — fast lookups, sessions, caching
+- **DynamoDB**: Key-value (managed) — serverless, high throughput
+
+For the full **10-type taxonomy** (including time-series, search engine, blob/object, vector) and when to use each, see [Database Types & Use Cases](README.md#database-types--use-cases) in the [README](README.md).
 
 **When to Use NoSQL:**
 - **Social Media & Big Data Platforms**: Handling unstructured user-generated content at scale

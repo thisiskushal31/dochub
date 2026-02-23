@@ -5,6 +5,7 @@
   - [What is a Database?](#what-is-a-database)
   - [Terminologies Used in the Database](#terminologies-used-in-the-database)
   - [Types of Databases](#types-of-databases)
+  - [Use cases by type](#use-cases-by-type-why-you-use-each)
   - [Importance of Database Design in System Design](#importance-of-database-design-in-system-design)
   - [Database Patterns](#database-patterns)
 
@@ -21,19 +22,35 @@ A database is an organized collection of data that is stored and managed so that
 
 ### Types of Databases
 
-#### 1. Relational Databases (SQL)
+This section uses a **10-type taxonomy** shared across the system design and database deep-dive content. The table below summarizes; **use cases by type** follow so you can see why you’d pick each. The [README](README.md#database-types--use-cases) has the same taxonomy with more detail and deep-dive links.
 
-- Organize data into tables (rows and columns), where each table has a predefined structure
-- Tables can have relationships with one another using keys (e.g., primary and foreign keys)
-- **Examples**: MySQL, PostgreSQL, and Oracle Database
-- **Best for**: Structured data like financial systems or inventory management
+| # | Type | One-line use case | Examples |
+|---|------|-------------------|----------|
+| 1 | **Relational** | Transactions, ACID, complex SQL, reporting | MySQL, PostgreSQL, Oracle, SQLite |
+| 2 | **Document Store** | Flexible schema, document-centric data | MongoDB, CouchDB |
+| 3 | **Key-Value** | Fast lookups by key, high throughput | Redis, DynamoDB, Aerospike |
+| 4 | **Wide-Column** | Massive reads/writes, large partitions | Cassandra, HBase, ScyllaDB |
+| 5 | **Graph** | Relationships, traversals, recommendations | Neo4j, Neptune, ArangoDB |
+| 6 | **Time-Series** | Timestamped data, metrics, IoT | InfluxDB, TimescaleDB, Prometheus |
+| 7 | **Search Engine** | Full-text search, facets, log analytics | Elasticsearch, Solr, Meilisearch |
+| 8 | **In-Memory Cache** | Sub-ms latency, offload DB, sessions | Redis, Memcached, Hazelcast |
+| 9 | **Blob/Object Storage** | Files, media, backups, data lakes | S3, GCS, MinIO, Azure Blob |
+| 10 | **Vector** | Similarity search, semantic search, RAG | Pinecone, Weaviate, Milvus |
 
-#### 2. Non-Relational Databases (NoSQL)
+**Traditional grouping:** Type 1 is **SQL/relational**. Types 2–8 are often called **NoSQL**. Types 9–10 are **storage and AI-oriented** (object storage, vector DBs).
 
-- Do not use tables. Instead, they store data in flexible formats like documents, key-value pairs, graphs, or columns
-- Designed to handle unstructured or semi-structured data, such as social media posts or IoT data
-- **Examples**: MongoDB, Cassandra, and DynamoDB
-- **Ideal for**: Applications that require high scalability and flexibility
+#### Use cases by type (why you use each)
+
+1. **Relational** — Transactional applications (banking, e-commerce, inventory); structured reporting and dashboards; complex queries with joins; data integrity and referential constraints; legacy/enterprise systems. *SQLite:* embedded, single-file, or local-first apps (mobile, edge).
+2. **Document Store** — Flexible or evolving schemas; document-centric workloads (catalogs, content, configs); rapid iteration without migrations; horizontal scaling; semi-structured data (forms, API payloads).
+3. **Key-Value** — Fast lookups by key (sessions, preferences, feature flags); high throughput and simple get/put; leaderboards, counters, rate limiters; serverless/auto-scaling (e.g. DynamoDB).
+4. **Wide-Column** — Massive write throughput (events, IoT, clickstreams); very large partitions; multi-datacenter replication; sparse columns; no single point of failure, linear scale-out.
+5. **Graph** — Relationship-heavy data (social, followers); recommendations and “similar to”; fraud/identity and connected-account analysis; knowledge graphs; network/dependency analysis.
+6. **Time-Series** — Metrics and monitoring; IoT/sensor telemetry; financial tick data; event streams and audits; efficient retention, downsampling, and time-range aggregation.
+7. **Search Engine** — Full-text and fuzzy search; faceted search and autocomplete; log and security analytics (SIEM); relevance tuning and highlighting.
+8. **In-Memory Cache** — Reduce latency and load on primary store; cache DB/API results; session and short-lived state; rate limiting and counters; pub/sub and lightweight queues.
+9. **Blob/Object Storage** — Media and static assets; backups and archives; data lakes; unstructured data at scale; high durability and optional versioning.
+10. **Vector** — Semantic search (by meaning, not just keywords); RAG and AI retrieval; “similar items”/recommendations; deduplication and clustering; image/audio similarity.
 
 ### Importance of Database Design in System Design
 

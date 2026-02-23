@@ -11,7 +11,7 @@ Topics are organized into these folders:
 | Folder | Covers |
 |--------|--------|
 | **`fundamentals/`** | DNS, HTTP, load balancers, CDNs, HLD/LLD, API gateway, proxies, WebSockets, scaling, monolithic vs microservices, stateful vs stateless, consistent hashing. |
-| **`databases/`** | SQL vs NoSQL, sharding, replication, CAP, storage systems, denormalization. |
+| **`databases/`** | SQL vs NoSQL, sharding, replication, CAP, storage systems, denormalization; [10-type taxonomy & flowchart](databases/README.md#database-types--use-cases). |
 | **`storage/`** | Indexing, partitioning, WAL/backups, OLTP vs OLAP. |
 | **`patterns/`** | Event sourcing, CQRS, leader election, circuit breaker, bulkhead/retry, event-driven architecture, serverless, event sourcing vs streaming. |
 | **`caching/`** | Cache strategies, eviction (LRU/LFU/TTL), edge caching, cold/warm cache, cache layers. |
@@ -22,6 +22,19 @@ Topics are organized into these folders:
 | **`security/`** | Authn/authz, federated identity, gatekeeper, valet key, backup/DR, SSL/TLS. |
 | **`observability/`** | Monitoring, health, availability, performance, security, usage, instrumentation, distributed tracing, visualization and alerts. |
 | **`cases/`** | **Product system design cases**: how major systems are built (Google Drive/Dropbox, WhatsApp, Twitter, Uber, YouTube/Netflix, URL shortener). Requirements, high-level design, and links to concept notes. |
+
+---
+
+## Status
+
+Progress on coverage. Update as topics and database types are completed.
+
+| Area | Status | Notes |
+|------|--------|--------|
+| **Databases — learning path** | ✅ 12/12 topics | Overview, SQL vs NoSQL, storage, sharding, replication, CAP, selection, challenges, best practices, denormalization, federation, SQL tuning — in [databases/](databases/README.md) (1–12 + README). |
+| **Databases — 10 types (concepts)** | ✅ Covered | All 10 types, use cases, and flowchart in [databases/README.md](databases/README.md#database-types--use-cases). Deep dives live in [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive). |
+
+Full status: [databases/README.md#status](databases/README.md#status).
 
 ---
 

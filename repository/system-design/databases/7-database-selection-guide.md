@@ -5,7 +5,7 @@
   - [Factors to Consider](#factors-to-consider)
   - [Decision Matrix](#decision-matrix)
   - [Decision Factors for System Design](#decision-factors-for-system-design)
-Choosing the right database depends on the needs of your application. Here are a few key factors to consider when making this decision:
+Choosing the right database depends on the needs of your application. For a **type-first view** (which of the 10 database/storage types fits your data and access patterns), see [Database Types & Use Cases](README.md#database-types--use-cases) in the [README](README.md). The factors below help refine that choice (structure, scale, consistency, cost, etc.).
 
 ### Factors to Consider
 

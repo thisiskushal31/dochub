@@ -52,12 +52,19 @@ On a computer or server, a file-based storage system keeps data as separate file
 
 A database storage system is a structured way to store, manage, and retrieve data efficiently. Unlike file-based systems, databases organize data into tables, rows, and columns, making it easier to query and maintain. These systems are commonly used in applications requiring data relationships, transactions, and large-scale processing.
 
-**Types of Database Storage Systems:**
+**Types of Database Storage Systems:**  
+The section uses a standard **10-type taxonomy**. Below are the main ones; for the full list with use cases and examples, see [Database Types & Use Cases](README.md#database-types--use-cases) in the [README](README.md).
+
 - **Relational**: Tables with relationships (MySQL, PostgreSQL)
 - **Document**: JSON/BSON documents (MongoDB)
 - **Key-Value**: Simple key-value pairs (Redis, DynamoDB)
-- **Columnar**: Column families (Cassandra, HBase)
-- **Graph**: Nodes and edges (Neo4j)
+- **Wide-Column**: Column families (Cassandra, HBase, ScyllaDB)
+- **Graph**: Nodes and edges (Neo4j, Neptune)
+- **Time-Series**: Timestamped data (InfluxDB, TimescaleDB, Prometheus)
+- **Search Engine**: Full-text search (Elasticsearch, Solr)
+- **In-Memory Cache**: RAM-backed cache (Redis, Memcached)
+- **Blob/Object Storage**: Unstructured files (S3, GCS, MinIO) — see also [Block, Object, and File Storage](#block-object-and-file-storage) below
+- **Vector**: Embeddings and similarity search (Pinecone, Weaviate, Milvus)
 
 **Pros of Database Storage Systems:**
 - **Efficient Querying**: Allows advanced searches and operations using query languages like SQL

@@ -371,7 +371,7 @@
         "path": "databases/1-database-design-overview.md",
         "type": "file",
         "sha": "",
-        "size": 7260
+        "size": 10084
       },
       {
         "name": "10-denormalization.md",
@@ -399,14 +399,14 @@
         "path": "databases/2-sql-vs-nosql-selection.md",
         "type": "file",
         "sha": "",
-        "size": 10437
+        "size": 10770
       },
       {
         "name": "3-storage-systems.md",
         "path": "databases/3-storage-systems.md",
         "type": "file",
         "sha": "",
-        "size": 16580
+        "size": 17240
       },
       {
         "name": "4-database-sharding.md",
@@ -434,7 +434,7 @@
         "path": "databases/7-database-selection-guide.md",
         "type": "file",
         "sha": "",
-        "size": 5031
+        "size": 5253
       },
       {
         "name": "8-common-challenges.md",
@@ -455,7 +455,7 @@
         "path": "databases/README.md",
         "type": "file",
         "sha": "",
-        "size": 4913
+        "size": 13039
       }
     ]
   },
@@ -1012,6 +1012,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3369
+    "size": 4188
   }
 ]
