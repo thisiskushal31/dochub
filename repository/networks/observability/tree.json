@@ -1,9 +1,51 @@
 [
   {
+    "name": "1_Signals_Performance.md",
+    "path": "1_Signals_Performance.md",
+    "type": "file",
+    "sha": "",
+    "size": 4628
+  },
+  {
+    "name": "2_Packet_Capture.md",
+    "path": "2_Packet_Capture.md",
+    "type": "file",
+    "sha": "",
+    "size": 8365
+  },
+  {
+    "name": "3_Wireshark.md",
+    "path": "3_Wireshark.md",
+    "type": "file",
+    "sha": "",
+    "size": 11217
+  },
+  {
+    "name": "4_Qos_Congestion.md",
+    "path": "4_Qos_Congestion.md",
+    "type": "file",
+    "sha": "",
+    "size": 6641
+  },
+  {
+    "name": "5_Security_Monitoring.md",
+    "path": "5_Security_Monitoring.md",
+    "type": "file",
+    "sha": "",
+    "size": 9519
+  },
+  {
+    "name": "6_Network_Operations.md",
+    "path": "6_Network_Operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 19134
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 390
+    "size": 2110
   }
 ]
