@@ -14,7 +14,7 @@ Building test networks; hands-on security labs.
 
 ## Building test networks
 
-**Test networks** let you try **routing**, **services**, and **security** without affecting production. **VirtualBox** (or similar) runs **multiple VMs** (e.g. Linux, Windows); **internal** or **host-only** networks connect them. **OpenWRT** on a VM or device gives a **realistic** router (DHCP, firewall, VLANs) for **home/SOHO** labs. **Multi-VM** setups: e.g. one VM as “router,” others as “clients” and “servers,” with **static** or **DHCP** addressing. Source: edu-resources, gists (Learning Computer Security – OpenWRT, VirtualBox).
+**Test networks** let you try **routing**, **services**, and **security** without affecting production. **VirtualBox** (or similar) runs **multiple VMs** (e.g. Linux, Windows); **internal** or **host-only** networks connect them. **OpenWRT** on a VM or device gives a **realistic** router (DHCP, firewall, VLANs) for **home/SOHO** labs. For how home lab and SOHO fit in the full network scale (same concepts from home lab to data center), see [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md#network-scale-spectrum-home-lab-to-data-center). **Multi-VM** setups: e.g. one VM as “router,” others as “clients” and “servers,” with **static** or **DHCP** addressing. Source: edu-resources, gists (Learning Computer Security – OpenWRT, VirtualBox).
 
 ---
 

@@ -82,7 +82,7 @@ Software-defined networking and network functions virtualization.
   Packet out
 ```
 
-**Takeaway:** P4 is **optional** for a general network deep dive; it is useful to **know it exists** for **programmable data planes** and **advanced** SDN. For hands-on, see P4 tutorials and BMv2; for production, it is mostly in **specialized** or **research** environments.
+**Takeaway:** P4 is **optional** for a general networking overview; it is useful to **know it exists** for **programmable data planes** and **advanced** SDN. For hands-on, see P4 tutorials and BMv2; for production, it is mostly in **specialized** or **research** environments.
 
 ---
 

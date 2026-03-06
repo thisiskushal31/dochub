@@ -18,7 +18,7 @@ TLS 0-RTT (early data, replay risks, when to use).
 
 ### [4. On-premises & enterprise networking](./4_On_Premises_Enterprise.md)
 
-Building a network with enterprise devices; Cisco switches, IOS, routers; console connection; troubleshooting; Packet Tracer and simulation.
+Building a network with enterprise devices; Cisco switches, IOS, routers; console connection; troubleshooting; Packet Tracer and simulation. Links to **home lab/SOHO** and **data center** scale (routing-switching/5) and **virtualized hosts** (cloud-native/1).
 
 ### [5. Wireless & special networks](./5_Wireless_Special_Networks.md)
 

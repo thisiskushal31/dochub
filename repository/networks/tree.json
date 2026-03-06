@@ -31,7 +31,7 @@
         "path": "advanced/4_On_Premises_Enterprise.md",
         "type": "file",
         "sha": "",
-        "size": 6394
+        "size": 6972
       },
       {
         "name": "5_Wireless_Special_Networks.md",
@@ -45,7 +45,7 @@
         "path": "advanced/README.md",
         "type": "file",
         "sha": "",
-        "size": 1712
+        "size": 1831
       }
     ]
   },
@@ -117,21 +117,21 @@
         "path": "cloud-native/1_Cloud_Networking_Overview.md",
         "type": "file",
         "sha": "",
-        "size": 6683
+        "size": 34296
       },
       {
         "name": "2_Docker_Kubernetes.md",
         "path": "cloud-native/2_Docker_Kubernetes.md",
         "type": "file",
         "sha": "",
-        "size": 12047
+        "size": 27326
       },
       {
         "name": "3_Sdn_Nfv.md",
         "path": "cloud-native/3_Sdn_Nfv.md",
         "type": "file",
         "sha": "",
-        "size": 6076
+        "size": 6078
       },
       {
         "name": "4_Iot_5g.md",
@@ -145,7 +145,7 @@
         "path": "cloud-native/README.md",
         "type": "file",
         "sha": "",
-        "size": 1430
+        "size": 2184
       }
     ]
   },
@@ -231,7 +231,7 @@
         "path": "labs/4_Labs_Vms.md",
         "type": "file",
         "sha": "",
-        "size": 2537
+        "size": 2796
       },
       {
         "name": "5_Reference_Practice.md",
@@ -295,7 +295,7 @@
         "path": "observability/6_Network_Operations.md",
         "type": "file",
         "sha": "",
-        "size": 19134
+        "size": 19441
       },
       {
         "name": "README.md",
@@ -345,14 +345,14 @@
         "path": "routing-switching/5_Switching_Resiliency_Design.md",
         "type": "file",
         "sha": "",
-        "size": 12091
+        "size": 22792
       },
       {
         "name": "README.md",
         "path": "routing-switching/README.md",
         "type": "file",
         "sha": "",
-        "size": 1533
+        "size": 1810
       }
     ]
   },
@@ -574,6 +574,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 4328
+    "size": 4487
   }
 ]

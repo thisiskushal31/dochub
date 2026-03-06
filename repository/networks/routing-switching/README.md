@@ -22,7 +22,7 @@ HSRP, GLBP, load balancing and redundancy in L3 design.
 
 ### [5. Switching, resiliency & network design](./5_Switching_Resiliency_Design.md)
 
-Switching advanced (STP, MLAG, VXLAN/EVPN), VRF and MPLS VPNs, resiliency, validation, network design, SD-WAN.
+Switching advanced (STP, MLAG, VXLAN/EVPN), VRF and MPLS VPNs, resiliency, validation, network design (including **data center networking**: spine-leaf, Clos, ToR, oversubscription; **how real networks are configured**—VLAN plan, IP plan, routing, redundancy, policy; **network scale spectrum**: home lab → SOHO → campus/enterprise → data center and running your own DC), SD-WAN.
 
 ## Learning path
 

@@ -143,7 +143,7 @@ When SLA 1 fails (e.g. 10.0.0.1 unreachable), track 1 goes down; the primary def
 
 ## Network change management
 
-Changes (config updates, upgrades, new links) can fix issues or cause them. Change management reduces risk.
+Changes (config updates, upgrades, new links) can fix issues or cause them. Change management reduces risk. For how typical networks are structured and configured (VLAN plan, IP plan, routing, redundancy, data center spine-leaf), see [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md) (Network design, Data center networking, How real networks are configured).
 
 **Basics:** Document the current state (config backup, topology) before changing anything. Describe the change, reason, and rollback steps. Use a maintenance window when the change can cause outage. Test in a lab or staging environment when possible. After the change, verify and update documentation.
 

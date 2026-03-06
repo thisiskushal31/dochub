@@ -11,6 +11,9 @@ STP variants, VRF/MPLS VPNs, resiliency, validation, SD-WAN.
 - [Resiliency](#resiliency)
 - [Validation](#validation)
 - [Network design](#network-design)
+  - [Data center networking (spine-leaf, Clos, ToR)](#data-center-networking-spine-leaf-clos-tor)
+  - [How real networks are configured (building blocks)](#how-real-networks-are-configured-building-blocks)
+  - [Network scale spectrum: home lab to data center](#network-scale-spectrum-home-lab-to-data-center)
 - [SD-WAN](#sd-wan)
 - [References](#references)
 
@@ -112,6 +115,109 @@ Validation is how you check that the network behaves as intended after a change 
                   policy,             backbone          roles
                   summarization
 ```
+
+### Data center networking (spine-leaf, Clos, ToR)
+
+Modern **data center** networks often use a **spine-leaf** (or **leaf-spine**) topology instead of a traditional three-tier core/distribution/access. This is the **networking level** of how today’s data centers are built.
+
+**Why spine-leaf:**
+
+- **Equal path counts** — Every leaf (access) is the same number of hops from every other leaf via the spine. So **east-west** traffic (server-to-server, common in DCs) has **predictable latency** and **no single choke point**.
+- **Scale-out** — Add more **spine** switches to add bandwidth between leaves; add more **leaf** switches to add servers. No need to replace a single large core.
+- **No STP blocking** — Spine-leaf is usually **L3 between spine and leaf** (each link is a routed link, or L2 with ECMP). So there are **no L2 loops** across the fabric and **no spanning-tree blocking**; all links can forward.
+- **ToR (top-of-rack)** — The **leaf** is typically the **top-of-rack** switch: servers in the rack connect to it. The leaf connects **up** to **all** (or a set of) spine switches. So each rack’s traffic can use the full spine bandwidth.
+
+**Clos / fat-tree:**
+
+- A **Clos network** (or **fat-tree** in computer networks) is a **multi-stage** topology: multiple stages of switches so that between any two endpoints there are **multiple paths**. **Spine-leaf** is a **two-stage Clos**: leaf = first stage (ingress/egress), spine = middle stage. Larger DCs may use **three stages** (leaf → spine → core or super-spine).
+- **Oversubscription** — The ratio of **downstream** (e.g. server) capacity to **upstream** (e.g. spine) capacity. Example: 48 servers at 25 Gbps each = 1.2 Tbps; one leaf with 4×100 Gbps uplinks = 400 Gbps to spine. Ratio 1200:400 = **3:1 oversubscription**: in the worst case (all servers sending at once to other racks), the uplinks are the bottleneck. **1:1** is non-blocking but expensive; **3:1** or **5:1** is common for cost/performance trade-off.
+
+**Visual (spine-leaf):**
+
+```text
+  Leaf 1 (ToR)     Leaf 2 (ToR)     Leaf 3 (ToR)     Leaf 4 (ToR)
+  [Server Server]  [Server Server]  [Server Server]  [Server Server]
+       |                 |                 |                 |
+       +--------+--------+--------+--------+--------+--------+
+                |        |        |        |        |
+            [Spine 1] [Spine 2] [Spine 3] [Spine 4]  ...
+                |        |        |        |
+       +--------+--------+--------+--------+
+  Every leaf connects to every spine (or a subset). L3 or L2 with ECMP; no STP across spine.
+```
+
+**What runs in the DC at the network level:**
+
+- **Underlay** — Usually **IP + ECMP** (equal-cost multi-path) or **BGP** for spine-leaf. Some fabrics use **VXLAN** over the underlay so L2 segments can span racks.
+- **Overlay** — **VXLAN/EVPN** (see [VXLAN and EVPN](#vxlan-and-evpn-advanced)) for tenant or segment isolation. The spine-leaf underlay carries the overlay tunnels.
+- **Automation** — Data center networks are often **provisioned and updated** via **automation** (NETCONF/RESTCONF, Ansible, or vendor controllers) rather than manual CLI only. See [observability/6_Network_Operations](../observability/6_Network_Operations.md) (model-driven programmability, automation).
+
+### How real networks are configured (building blocks)
+
+When you **configure** a real network (enterprise or data center), you typically work in layers. Nothing is “out of place” if you follow a clear order.
+
+1. **Physical and interfaces** — Bring up ports, set speed/duplex (or auto), enable the interfaces. Without this, nothing else works.
+2. **VLAN plan** — Create VLANs and assign **access** ports (one VLAN per port) or **trunk** ports (allowed VLAN list, native VLAN). Naming and numbering should match your **documentation** (e.g. VLAN 10 = HR, 20 = Engineering).
+3. **IP addressing** — Assign **SVIs** (VLAN interfaces) or **L3 interfaces** with an **IP address and mask** per subnet. Use an **addressing plan** (e.g. 10.0.1.0/24 for VLAN 10, 10.0.2.0/24 for VLAN 20) so you can **summarize** at distribution/core.
+4. **Routing** — Enable **static** routes or **dynamic** routing (OSPF, BGP, EIGRP). On L3 switches or routers, ensure **default gateway** or **default route** points to the right place; use **first-hop redundancy** (HSRP/VRRP/GLBP) at the access edge so hosts have one gateway IP.
+5. **Redundancy and resilience** — **LACP** on links between switches; **STP/RSTP** (or disable where you use L3 only); **first-hop redundancy** for the default gateway. So the network keeps working when one link or one device fails.
+6. **Policy and security** — **ACLs**, **firewall** rules, or **security groups** (in cloud) to allow only required traffic. **Management** access (SSH, SNMP) restricted to a management VLAN or ACL.
+7. **Services** — **DHCP** (relay if the server is in another subnet), **DNS** (forwarding or resolver), **NTP** for time. Optional: **logging** (syslog), **monitoring** (SNMP).
+
+**Visual (configuration layers):**
+
+```text
+  Layer 1: Interfaces up, speed/duplex
+       ↓
+  Layer 2: VLANs, access/trunk, STP/LACP
+       ↓
+  Layer 3: IP on SVIs/L3 ports, routing (static/dynamic), FHRP
+       ↓
+  Policy: ACLs, firewall, management access
+       ↓
+  Services: DHCP relay, NTP, DNS, logging
+```
+
+Document the **addressing plan**, **VLAN plan**, and **routing design** so that changes and troubleshooting are consistent. See [observability/6_Network_Operations](../observability/6_Network_Operations.md) (inventory, IPAM, change management) and [advanced/4_On_Premises_Enterprise](../advanced/4_On_Premises_Enterprise.md) (Cisco IOS, show commands).
+
+### Network scale spectrum: home lab to data center
+
+The **same network concepts** (L2/L3, VLANs, IP, routing, redundancy) apply at every scale. What changes is **topology**, **protocol choice**, and **automation**. Scope here is **network only**—addressing, switching, routing, and how traffic flows—so you can design or support anything from a home lab to a large data center.
+
+**Home lab**
+
+- **Topology:** One **router** (often combined router/switch/Wi‑Fi). One **broadband** link; one **public IP** (or CGNAT). Internal devices in one **subnet** or two (e.g. 192.168.1.0/24 and a separate VLAN for lab VMs).
+- **Network level:** **NAT** at the router; **DHCP** from the router for LAN; no dynamic routing (single default route to ISP). Optional: **VLAN** on a managed switch to separate “lab” from “home” so lab traffic is isolated. No BGP/OSPF; no first-hop redundancy.
+- **Use case:** Learning, labs, small services. Good for understanding IP, subnets, VLANs, and basic firewall/NAT.
+
+**SOHO (small office / home office)**
+
+- Similar to home lab: **single router** (or router + switch), **NAT**, **DHCP**. May have a **static public IP** from the ISP for a server or VPN. Optional **site-to-site VPN** or **client VPN** for remote access; from a network view that’s an encrypted tunnel and routing over the tunnel.
+- Still **no dynamic routing** inside the LAN; optional **VLAN** for guest vs corporate. Traffic flow: LAN ↔ router ↔ internet (or VPN).
+
+**Campus / enterprise (on-prem)**
+
+- **Hierarchical** design: **access** (switches to desks/Wi‑Fi) → **distribution** (aggregation, VLANs, L3) → **core** (high-speed backbone). Multiple **VLANs** and **subnets**; **OSPF** or **EIGRP** (or static) for internal routing; **HSRP/VRRP** at the distribution layer so hosts have a single default gateway. **WAN** to other sites or internet via dedicated links or MPLS. **802.1X** and **ACLs** for access control. See [advanced/4_On_Premises_Enterprise](../advanced/4_On_Premises_Enterprise.md) for device-level (Cisco IOS) and [How real networks are configured](#how-real-networks-are-configured-building-blocks) for the configuration layers.
+
+**Data center (single site, many racks)**
+
+- **Spine-leaf** (or leaf-spine): **ToR** leaf switches per rack; **spine** layer for east-west and north-south. **L3 underlay** (BGP or OSPF) with **ECMP**; **VXLAN/EVPN** overlay for L2 segments across racks. **Automation** (NETCONF, Ansible, vendor controllers) for config and rollout. See [Data center networking (spine-leaf, Clos, ToR)](#data-center-networking-spine-leaf-clos-tor).
+
+**Running your own data center / scaling to many racks**
+
+- Same **spine-leaf and Clos** ideas: add **more spine** switches for bandwidth, **more leaf** switches for more racks. **Oversubscription** (e.g. 3:1) is a design choice between cost and non-blocking capacity. **Interconnect:** traffic leaves the DC via **edge routers** (BGP to ISP or exchange); **DCI (data center interconnect)** links multiple DCs (e.g. dark fibre, VXLAN or MPLS over the WAN). At “petabyte scale” or large DCs, the **network** side is still: underlay (BGP, ECMP), overlay (VXLAN/EVPN if you need L2 stretch), and **automation** for consistency. No change to the OSI stack—just more devices, more spines/leaves, and stricter operations (monitoring, flow collection, change control). See [observability/6_Network_Operations](../observability/6_Network_Operations.md).
+
+**Visual (scale spectrum, network view):**
+
+```text
+  Home lab / SOHO          Campus / Enterprise              Data center
+  ─────────────────        ─────────────────────            ─────────────
+  [PCs]──[Router]──ISP     [Access]──[Dist]──[Core]──WAN    [Leaf]──[Spine]
+   NAT, DHCP, 1 subnet     VLANs, OSPF, HSRP, ACLs          BGP, VXLAN, automation
+   No dynamic routing      Multiple sites, 802.1X            ToR, Clos, DCI
+```
+
+**Serving clients (on-prem, VMware, vanilla VMs):** Whether the client runs **vanilla** VMs (e.g. KVM, Hyper-V), **VMware**, or physical servers, the **network** you design is the same: **VLANs** (or equivalent) for segments, **IP addressing**, **routing**, and **firewall/ACL** at the boundary. Virtualized hosts use a **virtual switch** (vSwitch) that presents **port groups** (VLANs) to VMs and **uplinks** to the physical switch; from the physical network’s view, the host is one (or a few) cables carrying tagged VLANs. See [cloud-native/1_Cloud_Networking_Overview](../cloud-native/1_Cloud_Networking_Overview.md) (virtualized hosts: network perspective).
 
 ---
 

@@ -21,6 +21,8 @@ Building networks with enterprise devices; Cisco switches, IOS, routers; console
 
 **Enterprise** networks are built with **switches** (L2, access/aggregation) and **routers** (L3, WAN, internet edge). **Physical topology**: devices are **cabled** (copper or fiber); **hierarchical** design (access → distribution → core) scales and isolates failure domains. Source: Networking-Essentials (Cisco), [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md).
 
+For **home lab**, **SOHO**, or **data center** scale from a network perspective (same concepts, different topology and protocols), see [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md#network-scale-spectrum-home-lab-to-data-center) (Network scale spectrum). For **virtualized** hosts (VMware, KVM, Hyper-V) and how VM traffic hits the physical network (vSwitch, port groups, uplinks), see [cloud-native/1_Cloud_Networking_Overview](../cloud-native/1_Cloud_Networking_Overview.md) (Virtualized hosts: network perspective).
+
 ---
 
 ## Cisco switches

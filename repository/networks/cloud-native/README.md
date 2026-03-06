@@ -6,11 +6,11 @@ Cloud, container, and orchestration networking. Each topic has a dedicated file 
 
 ### [1. Cloud networking overview](./1_Cloud_Networking_Overview.md)
 
-Cloud networking, types of cloud services, VPC/VNet (subnets, peering, private endpoints), hybrid connectivity (VPN, Direct Connect/Interconnect/ExpressRoute).
+Cloud networking, types of cloud services, VPC/VNet (subnets, peering, private endpoints), hybrid connectivity (VPN, Direct Connect/Interconnect/ExpressRoute), **virtualized hosts (VMware, KVM, Hyper-V): network perspective** (vSwitch, port groups, VLANs, uplinks, physical layer). **On-prem VM hosting**—end-to-end design and implementation from physical cabling through VLAN plan, IP addressing, routing, security, redundancy, and verification so you can deliver the network for an on-prem setup where everything is hosted on the client's servers (VMs and workloads).
 
 ### [2. Docker & Kubernetes networking](./2_Docker_Kubernetes.md)
 
-Docker networking (bridge, host, overlay); Kubernetes (CNI, Services, Ingress/Gateway API, service mesh); platform LB (ALB/ELB/NLB/GLB); policy and security (SG/NSG, network policies); eBPF, Cilium, Hubble (observability).
+Docker networking (bridge, host, overlay); Kubernetes (CNI, Services, Ingress/Gateway API, service mesh); platform LB (ALB/ELB/NLB/GLB); policy and security (SG/NSG, network policies); eBPF, Cilium, Hubble (observability). **On-prem container and orchestration hosting**—designing and implementing the network when a client hosts **containers** (Docker) or **container orchestration** (Kubernetes) on-prem: physical, VLAN, IP for nodes, overlay vs routable pod networks, NodePort/MetalLB/Ingress for external access, firewall and NetworkPolicy, and verification.
 
 ### [3. SDN & NFV](./3_Sdn_Nfv.md)
 
