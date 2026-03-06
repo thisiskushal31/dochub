@@ -171,7 +171,7 @@ If a **client** or **organization** wants to **host containers** (Docker) or **c
        │                                    │
        └──────── overlay (e.g. VXLAN)  ─────┘  (encapsulated between node IPs)
        │                                    │
-  [Physical NIC] ── cable ── [Access switch] ◄── trunk: VLAN 10 (nodes)
+    [Physical NIC] ── cable ── [Access switch] ◄── trunk: VLAN 10 (nodes)
                                     │
                                     │  VLAN 10 → 10.0.10.0/24, gateway .1
                                     ▼
