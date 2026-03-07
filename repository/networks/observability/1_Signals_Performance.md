@@ -18,7 +18,7 @@ For **network observability**, you collect three kinds of signals and use them f
 
 The diagram below illustrates the three pillars of observability (logging, tracing, metrics) and typical architectures. Source and image: [ByteByteGo – Logging, Tracing, and Metrics](https://bytebytego.com/guides/logging-tracing-metrics/).
 
-![Logging, tracing, and metrics — three pillars of observability (ByteByteGo)](../assets/observability/bytebytego-logging-tracing-metrics.png)
+![Logging, tracing, and metrics — three pillars of observability (ByteByteGo)](../Assets/Observability/bytebytego-logging-tracing-metrics.png)
 
 - **Metrics** — **Counters** and **gauges** over time: throughput (bytes/packets per second), **error/drop** rates, **connection** counts, **interface** utilization, **round-trip time (RTT)**. Collected from devices (SNMP, NetFlow, vendor APIs), hosts (e.g. node_exporter), and applications (e.g. request rate, latency percentiles). Stored in time-series DBs (Prometheus, InfluxDB) for dashboards and alerting.
 - **Logs** — **Event records** from network devices (syslog, auth, config change), **flow** or **session** logs (Zeek conn.log, firewall logs), and **application** logs (request/response, errors). Used for **audit**, **incident investigation**, and **correlation** in a SIEM. See [5_Security_Monitoring](./5_Security_Monitoring.md).
@@ -34,7 +34,7 @@ The diagram below illustrates the three pillars of observability (logging, traci
 
 The diagram below shows **relative latency numbers** (from cache to network round-trip) that help reason about where delay comes from. Source and image: [ByteByteGo – Which Latency Numbers Should You Know?](https://bytebytego.com/guides/which-latency-numbers-should-you-know/) (note: approximate benchmarks; useful for context).
 
-![Latency numbers — from L1 cache to network RTT (ByteByteGo)](../assets/observability/bytebytego-latency-numbers.jpg)
+![Latency numbers — from L1 cache to network RTT (ByteByteGo)](../Assets/Observability/bytebytego-latency-numbers.jpg)
 - **Jitter** — **Variation** in delay between packets (e.g. due to queuing, congestion, path change). Bad for **voice and video**; often smoothed with a **jitter buffer** at the receiver.
 - **Loss** — **Packet loss** (dropped or corrupted). Expressed as % or count. Causes: congestion, errors, policy (e.g. firewall). Affects throughput and real-time quality. See [4_Qos_Congestion](./4_Qos_Congestion.md).
 

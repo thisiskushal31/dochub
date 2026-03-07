@@ -21,7 +21,7 @@ The **application layer** (Layer 7) is the top of the OSI model. It is the **int
 
 ## Client–server model
 
-At the application layer, the **client–server** model is dominant: a **client** (e.g. browser, email app) sends **requests** to a **server** (e.g. web server, mail server), which processes them and returns **responses**. The client initiates the connection (often using a transport endpoint such as TCP port 80 or 443); the server **listens** and serves many clients. This model underlies HTTP, SMTP, DNS, FTP, and most application protocols. For a fuller treatment, see [foundations/1_Basics_And_Architecture — Client–server architecture](../foundations/1_Basics_And_Architecture.md#clientserver-architecture).
+At the application layer, the **client–server** model is dominant: a **client** (e.g. browser, email app) sends **requests** to a **server** (e.g. web server, mail server), which processes them and returns **responses**. The client initiates the connection (often using a transport endpoint such as TCP port 80 or 443); the server **listens** and serves many clients. This model underlies HTTP, SMTP, DNS, FTP, and most application protocols. For a fuller treatment, see [Foundations/1_Basics_And_Architecture — Client–server architecture](../Foundations/1_Basics_And_Architecture.md#clientserver-architecture).
 
 ---
 
@@ -34,4 +34,4 @@ Application layer protocols define how specific services work. Examples: **HTTP/
 ## References
 
 - [GeeksforGeeks – Application Layer in OSI Model](https://www.geeksforgeeks.org/computer-networks/application-layer-in-osi-model/)
-- [Foundations – Client–server](../foundations/1_Basics_And_Architecture.md#clientserver-architecture)
+- [Foundations – Client–server](../Foundations/1_Basics_And_Architecture.md#clientserver-architecture)

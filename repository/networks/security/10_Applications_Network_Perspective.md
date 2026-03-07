@@ -1,5 +1,7 @@
 # Applications & Security: Network Perspective
 
+[← Back to Security](./README.md)
+
 This document covers **application security from a network perspective**: web, mobile, AI/APIs, and containers. We focus on **what happens on the wire**, **how traffic is protected and inspected**, and **what network and security engineers need to know** to defend these workloads. All content is **standalone**—you can learn what you need here without leaving the repository. Optional further reading is listed at the end.
 
 ## Table of Contents
@@ -179,4 +181,4 @@ All of this is **in-repo**: you don’t need to follow external links to underst
 
 ## Further reading (optional)
 
-- **In this repo:** [2_Encryption_Tls](./2_Encryption_Tls.md) (TLS); [5_Firewalls_Aaa](./5_Firewalls_Aaa.md) (firewalls, segmentation); [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md) (WAF, rate limiting); [cloud-native/2_Docker_Kubernetes](../cloud-native/2_Docker_Kubernetes.md) (container/Kubernetes networking).
+- **In this repo:** [2_Encryption_Tls](./2_Encryption_Tls.md) (TLS); [5_Firewalls_Aaa](./5_Firewalls_Aaa.md) (firewalls, segmentation); [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md) (WAF, rate limiting); [Cloud-Native/2_Docker_Kubernetes](../Cloud-Native/2_Docker_Kubernetes.md) (container/Kubernetes networking).

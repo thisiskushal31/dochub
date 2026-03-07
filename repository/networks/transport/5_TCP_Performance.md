@@ -18,7 +18,7 @@ MSS, MTU, PMTUD, Nagle, delayed ACK, connection cost, TFO, and head-of-line bloc
 
 ## MSS vs MTU vs PMTUD
 
-**MTU** is the max packet size on a link (e.g. 1500 for Ethernet). **Path MTU** is the minimum MTU along the path. **MSS** is the max TCP payload a host will receive; advertised in the handshake, typically MTU − 40. **PMTUD**: sender sets DF (IPv4); if a router cannot forward, it drops and sends ICMP "Fragmentation Needed" with its MTU; sender reduces segment size. If ICMP is blocked, PMTUD can **black hole** (packets dropped, no feedback). **PLPMTUD** (RFC 4821) probes without relying on ICMP. See [foundations/5_Network_Layer](../foundations/5_Network_Layer.md) for fragmentation.
+**MTU** is the max packet size on a link (e.g. 1500 for Ethernet). **Path MTU** is the minimum MTU along the path. **MSS** is the max TCP payload a host will receive; advertised in the handshake, typically MTU − 40. **PMTUD**: sender sets DF (IPv4); if a router cannot forward, it drops and sends ICMP "Fragmentation Needed" with its MTU; sender reduces segment size. If ICMP is blocked, PMTUD can **black hole** (packets dropped, no feedback). **PLPMTUD** (RFC 4821) probes without relying on ICMP. See [Foundations/5_Network_Layer](../Foundations/5_Network_Layer.md) for fragmentation.
 
 ---
 
@@ -48,11 +48,11 @@ The **three-way handshake** costs **1 RTT** before the first data. **TLS** adds 
 
 ## TCP head-of-line blocking
 
-TCP delivers bytes **in order**. If segment N is lost, segments N+1, N+2, … cannot be delivered until N is retransmitted — **one loss blocks the whole stream**. QUIC avoids this with multiple **streams**: loss on one stream does not block others. See [Other protocols](./6_Other_Protocols.md) and [advanced/](../advanced/README.md).
+TCP delivers bytes **in order**. If segment N is lost, segments N+1, N+2, … cannot be delivered until N is retransmitted — **one loss blocks the whole stream**. QUIC avoids this with multiple **streams**: loss on one stream does not block others. See [Other protocols](./6_Other_Protocols.md) and [Advanced/](../Advanced/README.md).
 
 ---
 
 ## References
 
 - RFC 1191 (PMTUD); RFC 4821 (PLPMTUD); RFC 896 (Nagle); RFC 7413 (TFO)
-- [TCP](./3_TCP.md); [Advanced](../advanced/README.md)
+- [TCP](./3_TCP.md); [Advanced](../Advanced/README.md)

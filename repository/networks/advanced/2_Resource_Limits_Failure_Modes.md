@@ -34,4 +34,4 @@ This **case study** illustrates how **network devices** (e.g. a **Cisco router**
 ## References
 
 - Course outline: Running out of TCP Source Ports, Postgres failure caused by a Cisco router (TCP issue)
-- [transport/4_Sockets_Kernel_Nat](../transport/4_Sockets_Kernel_Nat.md); [transport/5_TCP_Performance](../transport/5_TCP_Performance.md)
+- [Transport/4_Sockets_Kernel_Nat](../Transport/4_Sockets_Kernel_Nat.md); [Transport/5_TCP_Performance](../Transport/5_TCP_Performance.md)

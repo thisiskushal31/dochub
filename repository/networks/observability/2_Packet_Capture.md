@@ -119,24 +119,24 @@ Then on the **capture host** connected to Gi0/10, run `tcpdump -i eth0 -w captur
 - **ARP:** Filter with `arp`. You see **request/reply** (who-has / tell), **MAC–IP** mapping. Useful for **L2/L3** debugging and **ARP spoofing** detection.
 - **ICMP:** Filter with `icmp`. You see **echo request/reply** (ping), **type/code** (e.g. unreachable, TTL exceeded for traceroute). Use to verify **reachability** and **path**.
 
-Example: `tcpdump -i eth0 -n 'icmp or arp'`. See [labs/2_Packet_Capture_Walkthroughs](../labs/2_Packet_Capture_Walkthroughs.md) for step-by-step walkthroughs.
+Example: `tcpdump -i eth0 -n 'icmp or arp'`. See [Labs/2_Packet_Capture_Walkthroughs](../Labs/2_Packet_Capture_Walkthroughs.md) for step-by-step walkthroughs.
 
 ---
 
 ## Capturing UDP traffic with tcpdump
 
 - **UDP:** Filter with `udp` or `udp port <port>`. tcpdump shows **src/dst IP:port**, **length**. No flags or sequence numbers (unlike TCP). Common for **DNS** (53), **DHCP** (67/68), **NTP** (123), **custom** app protocols.
-- **Interpretation:** Check **direction** (who sent what), **payload length**, and **rate** (e.g. for DNS or DoS patterns). For **DNS**, inspect payload in verbose mode or use Wireshark for full decode. See [labs/2_Packet_Capture_Walkthroughs](../labs/2_Packet_Capture_Walkthroughs.md).
+- **Interpretation:** Check **direction** (who sent what), **payload length**, and **rate** (e.g. for DNS or DoS patterns). For **DNS**, inspect payload in verbose mode or use Wireshark for full decode. See [Labs/2_Packet_Capture_Walkthroughs](../Labs/2_Packet_Capture_Walkthroughs.md).
 
 ---
 
 ## Capturing TCP segments with tcpdump
 
 - **TCP:** Filter with `tcp` or `tcp port 80`. tcpdump shows **flags** (S=SYN, F=FIN, P=PUSH, R=RST), **seq/ack** numbers, **window**. **SYN/SYN-ACK/ACK** indicate handshake; **FIN** or **RST** indicate teardown or abort.
-- **Flags and retransmits** — **Retransmissions** (same seq reappearing) suggest **loss** or **congestion**. **RST** can mean connection refused or reset by peer or firewall. Use **-v** or **-vv** for more detail; for **full stream** reassembly and payload use **Wireshark** (Follow → TCP Stream). See [3_Wireshark](./3_Wireshark.md) and [labs/2_Packet_Capture_Walkthroughs](../labs/2_Packet_Capture_Walkthroughs.md).
+- **Flags and retransmits** — **Retransmissions** (same seq reappearing) suggest **loss** or **congestion**. **RST** can mean connection refused or reset by peer or firewall. Use **-v** or **-vv** for more detail; for **full stream** reassembly and payload use **Wireshark** (Follow → TCP Stream). See [3_Wireshark](./3_Wireshark.md) and [Labs/2_Packet_Capture_Walkthroughs](../Labs/2_Packet_Capture_Walkthroughs.md).
 
 ---
 
 ## References
 
-- [1_Signals_Performance](./1_Signals_Performance.md); [3_Wireshark](./3_Wireshark.md); [labs/2_Packet_Capture_Walkthroughs](../labs/2_Packet_Capture_Walkthroughs.md)
+- [1_Signals_Performance](./1_Signals_Performance.md); [3_Wireshark](./3_Wireshark.md); [Labs/2_Packet_Capture_Walkthroughs](../Labs/2_Packet_Capture_Walkthroughs.md)

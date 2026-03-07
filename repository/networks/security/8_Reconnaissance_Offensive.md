@@ -1,5 +1,7 @@
 # Reconnaissance & Network Offensive Basics
 
+[← Back to Security](./README.md)
+
 Reconnaissance (passive and active), scanning, and network-level offensive measures from a **defensive and awareness** perspective. Understanding what attackers do helps you **harden**, **monitor**, and **respond**. This document is a **deep dive**: we walk through each phase like a professor in a lab—what you run, what each flag does, and what you’re actually seeing. **Only run these techniques on systems you own or have explicit written authorization to test.** Unauthorized scanning can be illegal and can trigger IDS alerts or crash fragile systems.
 
 ## Table of Contents
@@ -462,5 +464,5 @@ All of the following can be done **within this repository**—the concepts and w
 
 Everything you need to use this material is **in this repository**. The links below are for optional deeper detail or external references.
 
-- **In this repo:** [4_Attacks_Mitigations](./4_Attacks_Mitigations.md) (L1–L3 attacks, DNS/ARP, mitigations); [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md) (Snort, WAF, baselines); [9_Blue_Team_Defensive](./9_Blue_Team_Defensive.md) (blue team, NSM, incident response); [observability/5_Security_Monitoring](../observability/5_Security_Monitoring.md) (Zeek, Suricata); [labs/3_Operational_Simulators_Tools](../labs/3_Operational_Simulators_Tools.md) (Nmap in labs).
+- **In this repo:** [4_Attacks_Mitigations](./4_Attacks_Mitigations.md) (L1–L3 attacks, DNS/ARP, mitigations); [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md) (Snort, WAF, baselines); [9_Blue_Team_Defensive](./9_Blue_Team_Defensive.md) (blue team, NSM, incident response); [Observability/5_Security_Monitoring](../Observability/5_Security_Monitoring.md) (Zeek, Suricata); [Labs/3_Operational_Simulators_Tools](../Labs/3_Operational_Simulators_Tools.md) (Nmap in labs).
 - **External (optional):** Nmap docs (scan types, timing, output); Suricata rule format; DNS zone transfer guides.

@@ -44,7 +44,7 @@ See [UDP](./2_UDP.md) and [TCP](./3_TCP.md) for full detail.
 - **Connection migration** — Connection ID allows the connection to survive **IP or port changes** (e.g. mobile switching networks).
 - **Built on UDP** — Deployed without kernel or middlebox changes to TCP; only UDP and the application need to support QUIC.
 
-**Use cases:** HTTP/3, and any application that wants low-latency, multiplexed, encrypted transport. See [advanced/](../advanced/README.md) for “replacing TCP” and [services/](../services/README.md) for HTTP.
+**Use cases:** HTTP/3, and any application that wants low-latency, multiplexed, encrypted transport. See [Advanced/](../Advanced/README.md) for “replacing TCP” and [Services/](../Services/README.md) for HTTP.
 
 ---
 
@@ -87,4 +87,4 @@ See [UDP](./2_UDP.md) and [TCP](./3_TCP.md) for full detail.
 - [GeeksforGeeks – Transport Layer Protocols](https://www.geeksforgeeks.org/computer-networks/transport-layer-protocols/)
 - RFC 4960 – Stream Control Transmission Protocol (SCTP)
 - RFC 4340 – Datagram Congestion Control Protocol (DCCP)
-- IETF QUIC (RFC 9000 and related); [Advanced – Replacing TCP](../advanced/README.md)
+- IETF QUIC (RFC 9000 and related); [Advanced – Replacing TCP](../Advanced/README.md)

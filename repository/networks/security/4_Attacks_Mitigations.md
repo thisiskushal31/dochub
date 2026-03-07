@@ -1,5 +1,7 @@
 # Network Attacks & Mitigations (L1, L2 & L3)
 
+[← Back to Security](./README.md)
+
 Physical (L1), data-link and network (L2/L3) attacks and mitigations. Covers **L1** (wiretapping, rogue devices, RF jamming, physical access), **L2** (CAM overflow, DHCP, ARP, STP, VLAN), and **L3/L7** (DNS spoofing, RIP poisoning, idle scan, ICMP redirect) and the **mitigations** used in network security.
 
 ## Table of Contents
@@ -121,7 +123,7 @@ show port-security interface GigabitEthernet0/1
         |  All client traffic to internet goes via attacker → MitM
 ```
 
-**Mitigation:** **DHCP snooping** on switches: configure **trusted** ports (only toward the real DHCP server). On **untrusted** ports, the switch drops DHCP server messages (Offer, ACK) from clients; only client messages (Discover, Request) are allowed. The switch can also build a **snooping binding table** (IP, MAC, port, VLAN) and use it for **Dynamic ARP Inspection (DAI)** or IP Source Guard. **Rate limiting** and **port security** reduce starvation. See [services/8_DHCP](../services/8_DHCP.md) for DHCP basics and security.
+**Mitigation:** **DHCP snooping** on switches: configure **trusted** ports (only toward the real DHCP server). On **untrusted** ports, the switch drops DHCP server messages (Offer, ACK) from clients; only client messages (Discover, Request) are allowed. The switch can also build a **snooping binding table** (IP, MAC, port, VLAN) and use it for **Dynamic ARP Inspection (DAI)** or IP Source Guard. **Rate limiting** and **port security** reduce starvation. See [Services/8_DHCP](../Services/8_DHCP.md) for DHCP basics and security.
 
 **Hands-on (Cisco IOS):** Verify DHCP snooping. You are checking which ports are trusted and that the binding table is populated (used later by DAI).
 
@@ -151,9 +153,9 @@ show ip dhcp snooping binding
         |  Attacker sees all victim↔internet traffic (MitM)
 ```
 
-**Mitigation:** **Dynamic ARP Inspection (DAI):** The switch uses the **DHCP snooping binding table** (or static entries) to check that ARP packets are consistent (e.g. this IP is allowed on this port with this MAC). Invalid ARP is dropped. **Static ARP** on critical hosts is possible but doesn’t scale. **Detection:** Monitor for duplicate IP (same IP, different MAC) or sudden ARP changes. See [foundations/5_Network_Layer](../foundations/5_Network_Layer.md) for ARP.
+**Mitigation:** **Dynamic ARP Inspection (DAI):** The switch uses the **DHCP snooping binding table** (or static entries) to check that ARP packets are consistent (e.g. this IP is allowed on this port with this MAC). Invalid ARP is dropped. **Static ARP** on critical hosts is possible but doesn’t scale. **Detection:** Monitor for duplicate IP (same IP, different MAC) or sudden ARP changes. See [Foundations/5_Network_Layer](../Foundations/5_Network_Layer.md) for ARP.
 
-**Hands-on (host):** View ARP cache to see current IP→MAC mappings. See [foundations/5_Network_Layer — ARP](../foundations/5_Network_Layer.md#arp-and-nd-for-ipv6): Linux `ip neigh show` or `arp -n`; Windows `arp -a`.
+**Hands-on (host):** View ARP cache to see current IP→MAC mappings. See [Foundations/5_Network_Layer — ARP](../Foundations/5_Network_Layer.md#arp-and-nd-for-ipv6): Linux `ip neigh show` or `arp -n`; Windows `arp -a`.
 
 ---
 
@@ -161,7 +163,7 @@ show ip dhcp snooping binding
 
 **Basics:** Spanning Tree uses **BPDUs** to elect the root and decide which ports forward or block. If an attacker can **inject forged BPDUs** (e.g. claiming to be the root with a better bridge ID), the topology can change: the attacker’s port might become root or designated, so traffic is redirected toward the attacker, or the network can be disrupted (repeated topology changes, blocking of legitimate paths).
 
-**Mitigation:** **BPDU guard** on **edge ports** (ports that should only see hosts): if a BPDU is received, the port is disabled (errdisabled). This stops someone from adding a switch or a BPDU-injecting tool. **Root guard** on ports that must not accept a better root: if a superior BPDU is received, the port goes to root-inconsistent and does not forward. Use root guard on ports toward parts of the network that should not become root. See [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md) for STP/RSTP and BPDU/root guard.
+**Mitigation:** **BPDU guard** on **edge ports** (ports that should only see hosts): if a BPDU is received, the port is disabled (errdisabled). This stops someone from adding a switch or a BPDU-injecting tool. **Root guard** on ports that must not accept a better root: if a superior BPDU is received, the port goes to root-inconsistent and does not forward. Use root guard on ports toward parts of the network that should not become root. See [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md) for STP/RSTP and BPDU/root guard.
 
 ---
 
@@ -177,7 +179,7 @@ show ip dhcp snooping binding
 
 **Basics:** **DNS spoofing** (or **DNS cache poisoning**) means an attacker causes a resolver or client to get a **wrong IP** for a domain (e.g. example.com → attacker’s IP). The user then connects to the attacker’s server (phishing, MitM). Attack methods include: rogue DNS server on the LAN (e.g. via DHCP), poisoning the resolver’s cache with a forged response, or MitM on DNS traffic. **DNS hijacking** (changing authoritative or resolver config) is a related threat.
 
-**Mitigation:** **DNSSEC** lets resolvers **verify** that DNS responses are signed by the zone’s key; if the response is tampered with, verification fails. Deploy DNSSEC on authoritative servers and use validating resolvers. **DNS over HTTPS (DoH)** or **DNS over TLS (DoT)** encrypts DNS queries so on-path attackers cannot see or easily modify them. **Hardening:** Restrict which hosts can act as DNS; use trusted DHCP so clients get trusted DNS server addresses; monitor for unexpected DNS changes. See [services/2_DNS](../services/2_DNS.md) for DNS and DoH/DoT.
+**Mitigation:** **DNSSEC** lets resolvers **verify** that DNS responses are signed by the zone’s key; if the response is tampered with, verification fails. Deploy DNSSEC on authoritative servers and use validating resolvers. **DNS over HTTPS (DoH)** or **DNS over TLS (DoT)** encrypts DNS queries so on-path attackers cannot see or easily modify them. **Hardening:** Restrict which hosts can act as DNS; use trusted DHCP so clients get trusted DNS server addresses; monitor for unexpected DNS changes. See [Services/2_DNS](../Services/2_DNS.md) for DNS and DoH/DoT.
 
 ---
 
@@ -209,6 +211,6 @@ show ip dhcp snooping binding
 
 - Physical layer security: RF jamming, wiretapping, rogue devices — see [1_Overview_Perimeter](./1_Overview_Perimeter.md) (physical controls); [3_Cybersecurity_Threats_Config](./3_Cybersecurity_Threats_Config.md) (wireless security)
 - [GeeksforGeeks – DHCP Snooping](https://www.geeksforgeeks.org/computer-networks/dhcp-snooping/); [GeeksforGeeks – ARP Spoofing and ARP Poisoning](https://www.geeksforgeeks.org/computer-networks/arp-spoofing-and-arp-poisoning/); [GeeksforGeeks – Dynamic ARP Inspection](https://www.geeksforgeeks.org/what-is-dynamic-arp-inspection/)
-- [services/8_DHCP](../services/8_DHCP.md) (DHCP security); [services/2_DNS](../services/2_DNS.md) (DNS, DoH/DoT)
-- [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md) (STP, BPDU guard, root guard)
-- [foundations/5_Network_Layer](../foundations/5_Network_Layer.md) (ARP)
+- [Services/8_DHCP](../Services/8_DHCP.md) (DHCP security); [Services/2_DNS](../Services/2_DNS.md) (DNS, DoH/DoT)
+- [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md) (STP, BPDU guard, root guard)
+- [Foundations/5_Network_Layer](../Foundations/5_Network_Layer.md) (ARP)

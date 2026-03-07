@@ -93,7 +93,7 @@ HTTP is an **application-layer**, **request–response** protocol. The client se
 4. **Key exchange** — Client generates a pre-master secret (or uses DH/ECDH); only the server (with its private key) can use it. Both sides derive the same **session keys** from randoms + secret.
 5. **Finished** — Encrypted application data (e.g. HTTP) is then sent using the session keys.
 
-**Certificates (from source):** A certificate binds an identity (e.g. domain) to a **public key** and is **signed by a CA**. Contents typically include: subject (e.g. example.com), issuer (CA), validity period, public key, and signature. **Certificate chain**: your certificate is signed by an **intermediate** CA, which is signed by a **root** CA; clients trust roots (pre-installed). **Types**: **DV** (domain validation), **OV** (organization validation), **EV** (extended validation). **Wildcard** certs (e.g. *.example.com) cover subdomains but not the apex (example.com) or nested subdomains. See [security/2_Encryption_Tls](../security/2_Encryption_Tls.md) for TLS/mTLS and SNI in more depth.
+**Certificates (from source):** A certificate binds an identity (e.g. domain) to a **public key** and is **signed by a CA**. Contents typically include: subject (e.g. example.com), issuer (CA), validity period, public key, and signature. **Certificate chain**: your certificate is signed by an **intermediate** CA, which is signed by a **root** CA; clients trust roots (pre-installed). **Types**: **DV** (domain validation), **OV** (organization validation), **EV** (extended validation). **Wildcard** certs (e.g. *.example.com) cover subdomains but not the apex (example.com) or nested subdomains. See [Security/2_Encryption_Tls](../Security/2_Encryption_Tls.md) for TLS/mTLS and SNI in more depth.
 
 **Hands-on: what you're doing when you inspect TLS with openssl**
 
@@ -122,4 +122,4 @@ openssl s_client -connect example.com:443 -servername example.com
 ## References
 
 - A-to-Z of Networking: HTTP/HTTPS & Web Protocols (request flow, TLS handshake, certificates, keep-alive, HTTP/2, compression)
-- [security/2_Encryption_Tls](../security/2_Encryption_Tls.md) (TLS, mTLS, SNI, 0-RTT)
+- [Security/2_Encryption_Tls](../Security/2_Encryption_Tls.md) (TLS, mTLS, SNI, 0-RTT)

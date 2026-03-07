@@ -86,7 +86,7 @@ The **World Wide Web (WWW)** is a system of **interconnected web pages and infor
 
 **Message format:** A syslog message typically includes **priority** (facility + severity), **timestamp**, **hostname**, **process**, and **message text**. Facility indicates the source (e.g. kernel, auth, network); severity is 0 (emergency) through 7 (debug). The server stores and can filter, search, and alert on messages. **Structured logging** (e.g. RFC 5424) adds structured data (key-value pairs) for easier parsing.
 
-**Use in networks:** Routers and switches can log ACL hits, interface up/down, config changes, and authentication events. Sending logs to a central server preserves them if the device is replaced or compromised. In operations, syslog feeds SIEMs and runbooks (e.g. “if you see this message, do this”). See [observability](../observability/README.md) for monitoring and incident workflows.
+**Use in networks:** Routers and switches can log ACL hits, interface up/down, config changes, and authentication events. Sending logs to a central server preserves them if the device is replaced or compromised. In operations, syslog feeds SIEMs and runbooks (e.g. “if you see this message, do this”). See [observability](../Observability/README.md) for monitoring and incident workflows.
 
 ---
 
@@ -96,7 +96,7 @@ The **World Wide Web (WWW)** is a system of **interconnected web pages and infor
 
 **Basics:** The **SNMP manager** (e.g. LibreNMS, Observium, PRTG) sends **GET** (single value), **GETNEXT** (walk a table), or **GETBULK** to the **SNMP agent** on the device. The agent holds a **MIB (Management Information Base)**—a tree of **OIDs (Object Identifiers)**. Each OID represents a counter, setting, or table (e.g. interface table). The manager uses the MIB to interpret numeric OIDs as names (e.g. ifInOctets). **SNMPv2c** uses **community strings** (plaintext) for read/write; **SNMPv3** adds authentication and encryption. For read-only monitoring, v2c is common; for write or over untrusted networks, v3 is preferred.
 
-**Traps and informs:** The device sends a **trap** (v2c) or **inform** (v2c/v3, with acknowledgment) when an event occurs (link down, threshold exceeded). The manager must listen on 162 and map trap OIDs to actions (alert, ticket). See [observability/6_Network_Operations](../observability/6_Network_Operations.md) for how monitoring uses SNMP.
+**Traps and informs:** The device sends a **trap** (v2c) or **inform** (v2c/v3, with acknowledgment) when an event occurs (link down, threshold exceeded). The manager must listen on 162 and map trap OIDs to actions (alert, ticket). See [Observability/6_Network_Operations](../Observability/6_Network_Operations.md) for how monitoring uses SNMP.
 
 ---
 
@@ -110,7 +110,7 @@ The **World Wide Web (WWW)** is a system of **interconnected web pages and infor
 
 ## LDAP
 
-**LDAP (Lightweight Directory Access Protocol)** is used to **query and modify** directory services (e.g. user accounts, groups, org structure). It runs over **TCP**: **port 389** (plain), **port 636** (LDAPS, TLS). Applications use LDAP to **authenticate** users (e.g. bind with username/password), **look up** attributes (email, phone, group membership), and **search** the directory tree. Common in enterprise (Microsoft Active Directory, OpenLDAP) for single sign-on and identity stores. Data is organized in a **hierarchical tree** (DIT); entries are identified by **Distinguished Names (DN)**. See [security/5_Firewalls_Aaa](../security/5_Firewalls_Aaa.md) for 802.1X and RADIUS, which often use LDAP back ends.
+**LDAP (Lightweight Directory Access Protocol)** is used to **query and modify** directory services (e.g. user accounts, groups, org structure). It runs over **TCP**: **port 389** (plain), **port 636** (LDAPS, TLS). Applications use LDAP to **authenticate** users (e.g. bind with username/password), **look up** attributes (email, phone, group membership), and **search** the directory tree. Common in enterprise (Microsoft Active Directory, OpenLDAP) for single sign-on and identity stores. Data is organized in a **hierarchical tree** (DIT); entries are identified by **Distinguished Names (DN)**. See [Security/5_Firewalls_Aaa](../Security/5_Firewalls_Aaa.md) for 802.1X and RADIUS, which often use LDAP back ends.
 
 ---
 
@@ -128,4 +128,4 @@ The **World Wide Web (WWW)** is a system of **interconnected web pages and infor
 - [GeeksforGeeks – World Wide Web (WWW)](https://www.geeksforgeeks.org/computer-networks/world-wide-web-www/)
 - [GeeksforGeeks – Introduction to Electronic Mail](https://www.geeksforgeeks.org/computer-science-fundamentals/introduction-to-electronic-mail/)
 - Networking-Essentials (Cisco): File Transfer Protocol, Email Protocols (SMTP, POP3, IMAP4)
-- [HTTP(S) & TLS](./3_Http_Tls.md); [security/5_Firewalls_Aaa](../security/5_Firewalls_Aaa.md)
+- [HTTP(S) & TLS](./3_Http_Tls.md); [Security/5_Firewalls_Aaa](../Security/5_Firewalls_Aaa.md)

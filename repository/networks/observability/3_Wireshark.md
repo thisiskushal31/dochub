@@ -192,4 +192,4 @@ Use these with the protocol and filter concepts above so you’re not running co
 
 - [Wireshark User’s Guide – Display Filters](https://www.wireshark.org/docs/wsug_html_chunked/ChWorkDisplayFilterSection.html); [tshark capture filters](https://tshark.dev/capture/capture_filters/) (BPF); [tshark man page](https://www.wireshark.org/docs/man-pages/tshark.html)
 - Course outline: Wiresharking UDP, TCP/HTTP, HTTP/2 (Decrypting TLS), MongoDB, Server Sent Events
-- [2_Packet_Capture](./2_Packet_Capture.md); [services/3_Http_Tls](../services/3_Http_Tls.md); [labs/2_Packet_Capture_Walkthroughs](../labs/2_Packet_Capture_Walkthroughs.md)
+- [2_Packet_Capture](./2_Packet_Capture.md); [Services/3_Http_Tls](../Services/3_Http_Tls.md); [Labs/2_Packet_Capture_Walkthroughs](../Labs/2_Packet_Capture_Walkthroughs.md)

@@ -20,7 +20,7 @@ Listening server, network access control, data communications, and end-to-end fl
 
 ## Listening server
 
-A **listening server** **binds** to a port and **accepts** incoming connections (TCP) or receives datagrams (UDP). For **TCP**, the typical flow is: **socket()** → **bind()** to address:port → **listen()** with a **backlog** → **accept()** (blocks until a new connection) → **read()/write()** on the accepted socket. The **backlog** limits how many **pending** connections can wait; the kernel often has a **SYN queue** (incoming SYNs not yet completed) and an **accept queue** (handshake done, not yet `accept()`ed). If the backlog or queue is full, new SYNs may be dropped. **Tuning:** Increase backlog under load; monitor overflow/drop counters (e.g. `ListenOverflows` on Linux). For **UDP**, the server **bind()**s then **recvfrom()/sendto()**; there is no `listen` or `accept`. See [transport/4_Sockets_Kernel_Nat](../transport/4_Sockets_Kernel_Nat.md) for kernel queues, SYN/accept queues, and NAT.
+A **listening server** **binds** to a port and **accepts** incoming connections (TCP) or receives datagrams (UDP). For **TCP**, the typical flow is: **socket()** → **bind()** to address:port → **listen()** with a **backlog** → **accept()** (blocks until a new connection) → **read()/write()** on the accepted socket. The **backlog** limits how many **pending** connections can wait; the kernel often has a **SYN queue** (incoming SYNs not yet completed) and an **accept queue** (handshake done, not yet `accept()`ed). If the backlog or queue is full, new SYNs may be dropped. **Tuning:** Increase backlog under load; monitor overflow/drop counters (e.g. `ListenOverflows` on Linux). For **UDP**, the server **bind()**s then **recvfrom()/sendto()**; there is no `listen` or `accept`. See [Transport/4_Sockets_Kernel_Nat](../Transport/4_Sockets_Kernel_Nat.md) for kernel queues, SYN/accept queues, and NAT.
 
 ---
 
@@ -31,7 +31,7 @@ Controlling **who can reach** database (and other backend) servers reduces attac
 - **Segmentation** — Put databases in a **separate network segment** (e.g. private VLAN or subnet) that is not directly reachable from the internet or user-facing tier. Only application servers, bastions, or management hosts that need access should have a route.
 - **Allowlists** — Restrict access by **source IP** or **security group**: only known application hosts (or a load balancer) can connect to the database port (e.g. 5432, 3306). Firewalls and NAC enforce this.
 - **Private endpoints / no public IP** — Database instances have **no public IP**; access is only from within the VPC or via a **private link** or VPN. Clients (e.g. app servers) reach the database over the private network.
-- **Authentication and encryption** — Use strong auth (passwords, certificates, IAM) and **TLS** for the connection so that even if the network is tapped, traffic is encrypted. See [security/5_Firewalls_Aaa](../security/5_Firewalls_Aaa.md) and [security/2_Encryption_Tls](../security/2_Encryption_Tls.md).
+- **Authentication and encryption** — Use strong auth (passwords, certificates, IAM) and **TLS** for the connection so that even if the network is tapped, traffic is encrypted. See [Security/5_Firewalls_Aaa](../Security/5_Firewalls_Aaa.md) and [Security/2_Encryption_Tls](../Security/2_Encryption_Tls.md).
 
 ---
 
@@ -41,13 +41,13 @@ Common patterns to keep services available and avoid cascading failures:
 
 - **Blue/green and canary** — **Blue/green:** Two identical environments (blue, green); traffic is switched from one to the other at release time for instant rollback. **Canary:** New version gets a **small fraction** of traffic; if metrics are good, increase the fraction; if not, roll back. Both rely on **routing** (load balancer or DNS) to direct traffic.
 - **Circuit breaker** — If a dependency (e.g. downstream API) fails repeatedly, the **circuit opens**: calls fail fast instead of timing out. After a cooldown, the client tries again (half-open); if success, the circuit closes. Prevents a failing dependency from exhausting threads or connections.
-- **Retries and backoff** — **Retry** failed requests (with a limit). **Exponential backoff** (and jitter) between retries to avoid thundering herd. Use for **transient** failures (e.g. network blip); do not retry non-idempotent operations blindly. See [observability/6_Network_Operations](../observability/6_Network_Operations.md) for incident and rollback workflows.
+- **Retries and backoff** — **Retry** failed requests (with a limit). **Exponential backoff** (and jitter) between retries to avoid thundering herd. Use for **transient** failures (e.g. network blip); do not retry non-idempotent operations blindly. See [Observability/6_Network_Operations](../Observability/6_Network_Operations.md) for incident and rollback workflows.
 
 ---
 
 ## How clients access internet services
 
-A **client** (browser, app, device) accesses an **internet service** by resolving its **hostname** (DNS), establishing a **transport** connection (TCP or UDP), and often **TLS** (for HTTPS), then sending **application** requests (e.g. HTTP). The request flows **down** the client stack (Application → Transport → Internet → Link → Physical), over the **network** (routers forward by IP; only end hosts use Transport and Application), and **up** the server stack; the response returns the same way in reverse. So: **DNS** (get IP) → **TCP connect** (and **TLS handshake** if HTTPS) → **HTTP request** → **HTTP response**. See [The networking behind clicking a link](#the-networking-behind-clicking-a-link) and [foundations/2_Models](../foundations/2_Models.md#how-a-request-flows-through-the-tcpip-model) for the full TCP/IP flow.
+A **client** (browser, app, device) accesses an **internet service** by resolving its **hostname** (DNS), establishing a **transport** connection (TCP or UDP), and often **TLS** (for HTTPS), then sending **application** requests (e.g. HTTP). The request flows **down** the client stack (Application → Transport → Internet → Link → Physical), over the **network** (routers forward by IP; only end hosts use Transport and Application), and **up** the server stack; the response returns the same way in reverse. So: **DNS** (get IP) → **TCP connect** (and **TLS handshake** if HTTPS) → **HTTP request** → **HTTP response**. See [The networking behind clicking a link](#the-networking-behind-clicking-a-link) and [Foundations/2_Models](../Foundations/2_Models.md#how-a-request-flows-through-the-tcpip-model) for the full TCP/IP flow.
 
 ---
 
@@ -66,17 +66,17 @@ Other common services: **NTP** (time), **Syslog** (logging), **SNMP** (device mo
 
 ## Connecting to the Internet
 
-A host or network **connects to the Internet** via an **ISP (Internet Service Provider)**. The ISP assigns **addressing** (e.g. public IP or prefix via DHCP or static config) and provides **routing** (default route to the ISP’s network). **Home/small office:** Often a single public IP (or CGNAT); a **router** does NAT so many internal devices share that IP. **Enterprise:** May have a **block of public IPs** or a **prefix**, BGP with the ISP, and firewalls at the perimeter. **Virtualization and connectivity:** VMs and containers get IPs from the host or an overlay; they reach the Internet via the host’s or gateway’s NAT and routing. See [foundations/5_Network_Layer](../foundations/5_Network_Layer.md) (NAT, addressing) and [security/1_Overview_Perimeter](../security/1_Overview_Perimeter.md) (perimeter).
+A host or network **connects to the Internet** via an **ISP (Internet Service Provider)**. The ISP assigns **addressing** (e.g. public IP or prefix via DHCP or static config) and provides **routing** (default route to the ISP’s network). **Home/small office:** Often a single public IP (or CGNAT); a **router** does NAT so many internal devices share that IP. **Enterprise:** May have a **block of public IPs** or a **prefix**, BGP with the ISP, and firewalls at the perimeter. **Virtualization and connectivity:** VMs and containers get IPs from the host or an overlay; they reach the Internet via the host’s or gateway’s NAT and routing. See [Foundations/5_Network_Layer](../Foundations/5_Network_Layer.md) (NAT, addressing) and [Security/1_Overview_Perimeter](../Security/1_Overview_Perimeter.md) (perimeter).
 
 ---
 
 ## The networking behind clicking a link
 
-When you **click a link** (e.g. https://example.com/page), the following happens in order. See [foundations/2_Models – How a request flows through the TCP/IP model](../foundations/2_Models.md#how-a-request-flows-through-the-tcpip-model).
+When you **click a link** (e.g. https://example.com/page), the following happens in order. See [Foundations/2_Models – How a request flows through the TCP/IP model](../Foundations/2_Models.md#how-a-request-flows-through-the-tcpip-model).
 
 The diagram below summarizes the journey from typing a URL to the browser rendering the page (DNS, TCP, TLS, HTTP). Source and image: [ByteByteGo – What Happens When You Type a URL Into Your Browser?](https://bytebytego.com/guides/what-happens-when-you-type-a-url-into-your-browser/).
 
-![What happens when you type a URL into your browser (ByteByteGo)](../assets/services/bytebytego-what-happens-when-you-type-url.png)
+![What happens when you type a URL into your browser (ByteByteGo)](../Assets/Services/bytebytego-what-happens-when-you-type-url.png)
 
 **Commands (hands-on):** you can see DNS, TCP, and HTTP in action with `curl`. Use these from a terminal to mimic what the browser does (resolve, connect, TLS, request).
 
@@ -135,7 +135,7 @@ curl.exe -I https://example.com
 5. **Server processing** — The server’s web process handles the request, builds the response (e.g. HTML, assets), and sends an **HTTP response** (status, headers, body) back over the same TLS/TCP connection.
 6. **Response** — The response travels back: server stack (App → Transport → Internet → Link) → network → client stack (Link → Internet → Transport → App). The browser **decrypts** (TLS), **reassembles** (TCP), and **renders** the page. Further assets (images, CSS, JS) may trigger more DNS lookups and TCP/TLS/HTTP requests (or reuse the same connection with HTTP/1.1 or multiplexing with HTTP/2).
 
-So: **DNS → TCP → TLS → HTTP** (request) → **HTTP** (response) → **render**. Each step uses the TCP/IP (and OSI) layers as described in [foundations/2_Models](../foundations/2_Models.md).
+So: **DNS → TCP → TLS → HTTP** (request) → **HTTP** (response) → **render**. Each step uses the TCP/IP (and OSI) layers as described in [Foundations/2_Models](../Foundations/2_Models.md).
 
 ---
 
@@ -155,14 +155,14 @@ A **local server** (e.g. dev server on localhost:3000) is not reachable from the
 - **Port forwarding** — On your **router**, you can forward **external port** (e.g. 8080) to **internal IP:port** (e.g. 192.168.1.10:3000). Then anyone reaching your **public IP:8080** is sent to the dev machine. Requires a stable public IP or DynDNS; less safe than a short-lived tunnel if left open.
 - **VPN** — Put the client (e.g. colleague) on a **VPN** that can reach your LAN; they access the server by its **private** IP. No exposure to the whole Internet.
 
-Use **tunnels** for quick, temporary exposure; use **VPN** or **private links** when you need controlled, long-term access. See [labs](../labs/README.md) for hands-on and [routing-switching/3_Tunneling_Mpls](../routing-switching/3_Tunneling_Mpls.md) for tunneling concepts.
+Use **tunnels** for quick, temporary exposure; use **VPN** or **private links** when you need controlled, long-term access. See [labs](../Labs/README.md) for hands-on and [Routing-Switching/3_Tunneling_Mpls](../Routing-Switching/3_Tunneling_Mpls.md) for tunneling concepts.
 
 ---
 
 ## References
 
 - [ByteByteGo – What Happens When You Type a URL Into Your Browser?](https://bytebytego.com/guides/what-happens-when-you-type-a-url-into-your-browser/) (diagram; used with credit)
-- [transport/4_Sockets_Kernel_Nat](../transport/4_Sockets_Kernel_Nat.md) (listening server, backlog, SYN/accept queues)
-- [foundations/2_Models – How a request flows through the TCP/IP model](../foundations/2_Models.md#how-a-request-flows-through-the-tcpip-model)
+- [Transport/4_Sockets_Kernel_Nat](../Transport/4_Sockets_Kernel_Nat.md) (listening server, backlog, SYN/accept queues)
+- [Foundations/2_Models – How a request flows through the TCP/IP model](../Foundations/2_Models.md#how-a-request-flows-through-the-tcpip-model)
 - [DNS](./2_DNS.md), [DHCP](./8_DHCP.md), [HTTP(S) & TLS](./3_Http_Tls.md), [Web, Email & Application Protocols](./5_Web_Email_Protocols.md)
-- [security/5_Firewalls_Aaa](../security/5_Firewalls_Aaa.md), [security/1_Overview_Perimeter](../security/1_Overview_Perimeter.md); [observability/6_Network_Operations](../observability/6_Network_Operations.md); [labs](../labs/README.md)
+- [Security/5_Firewalls_Aaa](../Security/5_Firewalls_Aaa.md), [Security/1_Overview_Perimeter](../Security/1_Overview_Perimeter.md); [Observability/6_Network_Operations](../Observability/6_Network_Operations.md); [labs](../Labs/README.md)

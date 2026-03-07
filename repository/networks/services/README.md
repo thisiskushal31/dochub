@@ -39,11 +39,11 @@ Dynamic Host Configuration Protocol: DORA, lease, relay, packet format, DHCPv6, 
 ## Learning path
 
 1. [Application overview](./1_Application_Overview.md) → [DNS](./2_DNS.md) → [HTTP & TLS](./3_Http_Tls.md) → [Load balancing & proxies](./4_Load_Balancing_Proxies.md) → [Web & protocols](./5_Web_Email_Protocols.md) → [Session & presentation](./6_Session_Presentation.md) → [Servers & flows](./7_Servers_Access_Flows.md) → [DHCP](./8_DHCP.md)
-2. For transport (TCP/UDP, connection lifecycle) see [transport/](../transport/README.md).
-3. For TLS/mTLS and SNI in security context see [security/](../security/README.md).
+2. For transport (TCP/UDP, connection lifecycle) see [Transport/](../Transport/README.md).
+3. For TLS/mTLS and SNI in security context see [Security/](../Security/README.md).
 
 ## Cross-references
 
-- **Transport:** TCP/UDP, connection lifecycle — [transport/](../transport/README.md)
-- **Security:** TLS/mTLS, SNI — [security/](../security/README.md)
-- **Labs:** Code examples for servers and captures — [labs/](../labs/README.md)
+- **Transport:** TCP/UDP, connection lifecycle — [Transport/](../Transport/README.md)
+- **Security:** TLS/mTLS, SNI — [Security/](../Security/README.md)
+- **Labs:** Code examples for servers and captures — [Labs/](../Labs/README.md)

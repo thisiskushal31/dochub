@@ -1,5 +1,7 @@
 # Cybersecurity: Threats & Security Configuration
 
+[← Back to Security](./README.md)
+
 Security threats, social engineering, malware, DoS/DDoS, antimalware; wireless and firewall configuration.
 
 ## Table of Contents
@@ -89,7 +91,7 @@ See [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md) for DoS and [Antimalware](#a
 **Wireless** networks are vulnerable because traffic travels **over the air** and can be **intercepted**; attackers do not need a physical connection. Source: Networking-Essentials.
 
 - **War-driving / war-walking** — Searching for WLANs (by driving or walking) and logging or sharing their locations; goal may be to access the WLAN or demonstrate insecurity.
-- **Mitigations:** Plan security **before** deployment. Use a **security plan**; change **default** passwords and settings; consider **SSID** (e.g. disable broadcast if appropriate); use **MAC filtering** as an extra layer (see [1_Overview_Perimeter](./1_Overview_Perimeter.md)); use **strong encryption and authentication** (e.g. WPA3). See [advanced/5_Wireless_Special_Networks](../advanced/5_Wireless_Special_Networks.md).
+- **Mitigations:** Plan security **before** deployment. Use a **security plan**; change **default** passwords and settings; consider **SSID** (e.g. disable broadcast if appropriate); use **MAC filtering** as an extra layer (see [1_Overview_Perimeter](./1_Overview_Perimeter.md)); use **strong encryption and authentication** (e.g. WPA3). See [Advanced/5_Wireless_Special_Networks](../Advanced/5_Wireless_Special_Networks.md).
 
 ---
 
@@ -118,12 +120,12 @@ See [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md) for DoS and [Antimalware](#a
 - **Patching** — Keep OS and applications updated to reduce vulnerability to malware and exploitation.
 - **Strong authentication** — Avoid default passwords; use MFA where possible; 802.1X for network access where appropriate.
 - **Principle of least privilege** — Users and services get only the access they need.
-- **Monitoring and response** — Log and monitor; tune IDS/IPS; have an incident response process. See [observability/5_Security_Monitoring](../observability/5_Security_Monitoring.md) and [observability/6_Network_Operations](../observability/6_Network_Operations.md).
+- **Monitoring and response** — Log and monitor; tune IDS/IPS; have an incident response process. See [Observability/5_Security_Monitoring](../Observability/5_Security_Monitoring.md) and [Observability/6_Network_Operations](../Observability/6_Network_Operations.md).
 
 ---
 
 ## References
 
-- [GeeksforGeeks – Introduction of Firewall](https://www.geeksforgeeks.org/computer-networks/introduction-of-firewall-in-computer-network/); [GeeksforGeeks – What is Network Security?](https://www.geeksforgeeks.org/computer-networks/network-security/)
+- [GeeksforGeeks – Introduction of Firewall](https://www.geeksforgeeks.org/computer-networks/introduction-of-firewall-in-computer-network/); [GeeksforGeeks – What is Network Security?](https://www.geeksforgeeks.org/computer-networks/network-Security/)
 - Networking-Essentials (Cisco): Security Threats, Social Engineering, Malware, DoS, Antimalware, Wireless Security, Wireless Authentication, Firewall (DMZ, Port Forwarding)
-- [1_Overview_Perimeter](./1_Overview_Perimeter.md); [4_Attacks_Mitigations](./4_Attacks_Mitigations.md); [5_Firewalls_Aaa](./5_Firewalls_Aaa.md); [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md); [observability/5_Security_Monitoring](../observability/5_Security_Monitoring.md); [advanced/5_Wireless_Special_Networks](../advanced/5_Wireless_Special_Networks.md) (wireless)
+- [1_Overview_Perimeter](./1_Overview_Perimeter.md); [4_Attacks_Mitigations](./4_Attacks_Mitigations.md); [5_Firewalls_Aaa](./5_Firewalls_Aaa.md); [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md); [Observability/5_Security_Monitoring](../Observability/5_Security_Monitoring.md); [Advanced/5_Wireless_Special_Networks](../Advanced/5_Wireless_Special_Networks.md) (wireless)

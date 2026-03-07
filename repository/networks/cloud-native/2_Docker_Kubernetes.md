@@ -22,7 +22,7 @@ Docker gives **containers** isolated **network namespaces** and connects them vi
 
 The diagram below shows how Docker works: client, daemon, images, containers, and the flow from build to run. Source and image: [ByteByteGo – How does Docker work?](https://bytebytego.com/guides/how-does-docker-work/).
 
-![How Docker works — client, daemon, images, containers (ByteByteGo)](../assets/cloud-native/bytebytego-how-docker-works.png)
+![How Docker works — client, daemon, images, containers (ByteByteGo)](../Assets/Cloud-Native/bytebytego-how-docker-works.png)
 
 - **Bridge (default)** — A **software bridge** (e.g. `docker0`) on the host; each container gets a **veth** into the bridge and an IP from the bridge subnet (e.g. 172.17.0.0/16). **Container-to-container** on the same bridge: traffic goes by MAC at L2. **Container to internet**: NAT via host; **port publishing** (e.g. `-p 8080:80`) maps host port to container port.
 - **Host** — Container shares the **host network namespace** (same interfaces, ports); no isolation; used for performance or when host network is needed.
@@ -57,7 +57,7 @@ Kubernetes assumes a **flat Pod network**: **every Pod has its own IP**; **Pods 
 
 The diagram below summarizes the **four main Kubernetes Service types** (ClusterIP, NodePort, LoadBalancer, Headless) and how they expose Pods. Source and image: [ByteByteGo – Top 4 Kubernetes Service Types](https://bytebytego.com/guides/top-4-kubernetes-service-types-in-one-diagram/).
 
-![Top 4 Kubernetes Service types (ByteByteGo)](../assets/cloud-native/bytebytego-k8s-service-types.png)
+![Top 4 Kubernetes Service types (ByteByteGo)](../Assets/Cloud-Native/bytebytego-k8s-service-types.png)
 
 - **CNI** — When a Pod is created, the **kubelet** calls the **CNI plugin** (e.g. Calico, Flannel, Cilium). The plugin **assigns** the Pod an IP, **attaches** the Pod to the node network (veth + bridge or overlay), and **configures** routing so other Pods and nodes can reach it. **IPAM** (IP address management) is often part of the CNI or a separate plugin.
 - **Services** — Stable **clusterIP** (virtual IP) for a set of Pods; **kube-proxy** (or equivalent) programs **DNAT** so that traffic to the Service IP:port is sent to a backing Pod. **NodePort** and **LoadBalancer** expose Services outside the cluster.
@@ -135,7 +135,7 @@ In cloud and Kubernetes, **load balancers** expose apps and distribute traffic.
 
 **Hands-on (conceptual):** With Cilium and Hubble installed (e.g. via Helm or Cilium CLI), you can run `hubble observe` to stream flows, or open the Hubble UI to see the service map. Filter by namespace, pod, or verdict (e.g. `hubble observe --namespace default --verdict DROPPED`). See Cilium and Hubble documentation for exact commands and install.
 
-**Takeaway:** **eBPF** enables **high-performance**, **kernel-level** networking and visibility; **Cilium** uses it for **Kubernetes** CNI, **Services**, and **NetworkPolicy**; **Hubble** uses it for **flow logs** and **service maps**. Together they give a modern, observable, and policy-driven data plane for Kubernetes. See [security/10_Applications_Network_Perspective](../security/10_Applications_Network_Perspective.md) for containers from a security perspective.
+**Takeaway:** **eBPF** enables **high-performance**, **kernel-level** networking and visibility; **Cilium** uses it for **Kubernetes** CNI, **Services**, and **NetworkPolicy**; **Hubble** uses it for **flow logs** and **service maps**. Together they give a modern, observable, and policy-driven data plane for Kubernetes. See [Security/10_Applications_Network_Perspective](../Security/10_Applications_Network_Perspective.md) for containers from a security perspective.
 
 ---
 
@@ -229,7 +229,7 @@ If a **client** or **organization** wants to **host containers** (Docker) or **c
 ### Step 5: Security (ACLs, firewall, NetworkPolicy)
 
 - **Underlay (physical network):** **ACLs** or **firewall** rules: restrict **management** (SSH, K8s API 6443) to admin/jump subnet; allow **node subnet** (and MetalLB pool) to reach each other and the gateway; allow **external** clients to **node IP:NodePort** or **MetalLB IP:port** only as required. **Least privilege:** only open ports that are needed.
-- **Kubernetes NetworkPolicy:** **Pod-to-pod** and **egress** policy is enforced by the **CNI** (e.g. Calico, Cilium) **inside** the cluster. You configure **NetworkPolicy** resources; the **underlay** network does not see pod-level policy—it only sees **node** (and MetalLB) IPs. So: **underlay** secures **node** and **external** access; **NetworkPolicy** secures **pod** traffic. Both matter. See [Policy and security](#policy-and-security) and [security/10_Applications_Network_Perspective](../security/10_Applications_Network_Perspective.md).
+- **Kubernetes NetworkPolicy:** **Pod-to-pod** and **egress** policy is enforced by the **CNI** (e.g. Calico, Cilium) **inside** the cluster. You configure **NetworkPolicy** resources; the **underlay** network does not see pod-level policy—it only sees **node** (and MetalLB) IPs. So: **underlay** secures **node** and **external** access; **NetworkPolicy** secures **pod** traffic. Both matter. See [Policy and security](#policy-and-security) and [Security/10_Applications_Network_Perspective](../Security/10_Applications_Network_Perspective.md).
 
 ---
 
@@ -256,11 +256,11 @@ If a **client** or **organization** wants to **host containers** (Docker) or **c
 
 | Topic | Where |
 |-------|--------|
-| Physical, VLAN, IP, routing, firewall (same as VM hosting) | [1_Cloud_Networking_Overview](./1_Cloud_Networking_Overview.md) (On-prem VM hosting); [foundations/3_Physical_Layer](../foundations/3_Physical_Layer.md); [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md) |
+| Physical, VLAN, IP, routing, firewall (same as VM hosting) | [1_Cloud_Networking_Overview](./1_Cloud_Networking_Overview.md) (On-prem VM hosting); [Foundations/3_Physical_Layer](../Foundations/3_Physical_Layer.md); [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md) |
 | Docker bridge, overlay, NAT, port publish | This file [Docker networking](#docker-networking) |
 | Kubernetes CNI, Services, NodePort, LoadBalancer, Ingress | This file [Kubernetes networking](#kubernetes-networking); [Platform load balancers](#platform-load-balancers) |
 | NetworkPolicy, Cilium, Hubble | This file [Policy and security](#policy-and-security); [eBPF, Cilium, and Hubble](#ebpf-cilium-and-hubble) |
-| Container security (network perspective) | [security/10_Applications_Network_Perspective](../security/10_Applications_Network_Perspective.md) |
+| Container security (network perspective) | [Security/10_Applications_Network_Perspective](../Security/10_Applications_Network_Perspective.md) |
 
 **Takeaway:** **On-prem container hosting** (Docker) and **on-prem container orchestration** (Kubernetes) use the **same physical and L2/L3 principles** as on-prem VM hosting: **physical** connectivity, **VLAN** (and optional segmentation), **IP and routing** for hosts/nodes, and **firewall/ACL** at the boundary. The extra pieces are: **Docker** host NAT and port publish (no separate container subnet on the wire), and for **Kubernetes** **node** subnet, **pod network** (overlay vs routable), **MetalLB** (or similar) for LoadBalancer, and **NetworkPolicy** for pod-level policy. With this and the linked sections, you can design and operate the **network** for on-prem container and orchestration hosting.
 
@@ -271,4 +271,4 @@ If a **client** or **organization** wants to **host containers** (Docker) or **c
 - [ByteByteGo – How does Docker work?](https://bytebytego.com/guides/how-does-docker-work/) (diagram; used with credit)
 - [ByteByteGo – Top 4 Kubernetes Service Types](https://bytebytego.com/guides/top-4-kubernetes-service-types-in-one-diagram/) (diagram; used with credit)
 - A-to-Z of Networking: Docker Networking, Kubernetes Networking
-- [1_Cloud_Networking_Overview](./1_Cloud_Networking_Overview.md); [services/4_Load_Balancing_Proxies](../services/4_Load_Balancing_Proxies.md)
+- [1_Cloud_Networking_Overview](./1_Cloud_Networking_Overview.md); [Services/4_Load_Balancing_Proxies](../Services/4_Load_Balancing_Proxies.md)

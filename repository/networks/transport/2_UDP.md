@@ -26,7 +26,7 @@ UDP is used where speed and small overhead are important and occasional loss is 
 
 **Top use cases for UDP (from [ByteByteGo – Top 4 Most Popular Use Cases for UDP](https://bytebytego.com/guides/top-4-most-popular-use-cases-for-udp/)):**
 
-![Top 4 UDP use cases (ByteByteGo)](../assets/transport/bytebytego-top-4-udp-use-cases.png)
+![Top 4 UDP use cases (ByteByteGo)](../Assets/Transport/bytebytego-top-4-udp-use-cases.png)
 
 ```text
   1. Streaming     →  Video/audio; occasional drops OK; low latency matters
@@ -35,7 +35,7 @@ UDP is used where speed and small overhead are important and occasional loss is 
   4. IoT           →  Small, frequent sensor data; low power; loss tolerable
 ```
 
-![UDP — connectionless datagram delivery](../assets/transport/udp-datagram.gif)
+![UDP — connectionless datagram delivery](../Assets/Transport/udp-datagram.gif)
 
 ---
 
@@ -95,7 +95,7 @@ For the **checksum**, UDP (and TCP) uses a **pseudo header** that is **not** sen
 - **Use UDP** when: low latency is critical (games, VoIP, live streaming), messages are small and idempotent (DNS), or you need broadcast/multicast. Acceptable to lose or reorder some packets.
 - **Use TCP** when: data must arrive complete and in order (file transfer, HTTP, email), or you want built-in flow and congestion control.
 
-See [TCP](./3_TCP.md) for connection-oriented, reliable delivery. For UDP server examples and captures, see [labs/](../labs/README.md).
+See [TCP](./3_TCP.md) for connection-oriented, reliable delivery. For UDP server examples and captures, see [Labs/](../Labs/README.md).
 
 ---
 

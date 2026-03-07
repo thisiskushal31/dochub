@@ -39,7 +39,7 @@ Wi-Fi, Bluetooth, generations of wireless, WLAN, Zigbee.
 
 **Cellular** generations (**1G–5G**) define **mobile network** capabilities. Source: [GeeksforGeeks – Generations of Wireless Communication](https://www.geeksforgeeks.org/computer-networks/generations-of-wireless-communication/).
 
-- **1G** — Analog voice. **2G** — Digital voice, SMS. **3G** — Data (e.g. UMTS). **4G (LTE)** — IP-based, high data rates. **5G** — Higher throughput, **low latency**, **massive IoT**, **network slicing** (see [cloud-native/4_Iot_5g](../cloud-native/4_Iot_5g.md)).
+- **1G** — Analog voice. **2G** — Digital voice, SMS. **3G** — Data (e.g. UMTS). **4G (LTE)** — IP-based, high data rates. **5G** — Higher throughput, **low latency**, **massive IoT**, **network slicing** (see [Cloud-Native/4_Iot_5g](../Cloud-Native/4_Iot_5g.md)).
 
 ### 6G (emerging)
 
@@ -67,7 +67,7 @@ Wi-Fi, Bluetooth, generations of wireless, WLAN, Zigbee.
 
 ## Wireless LAN (WLAN)
 
-**WLAN** is a **LAN** over **radio** (typically **Wi-Fi**). **Architecture:** **Access points (APs)** connect **wireless clients** to the **wired** network. **SSID** identifies the network; **BSS** (Basic Service Set) is one AP and its clients; **ESS** (Extended Service Set) is multiple APs with the same SSID. **Controller-based** (e.g. Cisco WLC) or **autonomous** APs. **Security:** WPA2/WPA3, 802.1X. See [security/3_Cybersecurity_Threats_Config](../security/3_Cybersecurity_Threats_Config.md) (wireless security).
+**WLAN** is a **LAN** over **radio** (typically **Wi-Fi**). **Architecture:** **Access points (APs)** connect **wireless clients** to the **wired** network. **SSID** identifies the network; **BSS** (Basic Service Set) is one AP and its clients; **ESS** (Extended Service Set) is multiple APs with the same SSID. **Controller-based** (e.g. Cisco WLC) or **autonomous** APs. **Security:** WPA2/WPA3, 802.1X. See [Security/3_Cybersecurity_Threats_Config](../Security/3_Cybersecurity_Threats_Config.md) (wireless security).
 
 **Hands-on: what you're doing when you inspect Wi-Fi from the CLI**
 
@@ -134,4 +134,4 @@ Use these so you’re not running commands blindly: you’re either **listing in
 - [GeeksforGeeks – Wi-Fi Standards](https://www.geeksforgeeks.org/computer-networks/wi-fi-standards-explained/)
 - [GeeksforGeeks – What is Bluetooth?](https://www.geeksforgeeks.org/computer-networks/bluetooth/)
 - [GeeksforGeeks – Generations of Wireless Communication](https://www.geeksforgeeks.org/computer-networks/generations-of-wireless-communication/)
-- [cloud-native/4_Iot_5g](../cloud-native/4_Iot_5g.md); [security/3_Cybersecurity_Threats_Config](../security/3_Cybersecurity_Threats_Config.md)
+- [Cloud-Native/4_Iot_5g](../Cloud-Native/4_Iot_5g.md); [Security/3_Cybersecurity_Threats_Config](../Security/3_Cybersecurity_Threats_Config.md)

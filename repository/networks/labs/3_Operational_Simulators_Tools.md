@@ -20,7 +20,7 @@ Exposing local servers; GNS3, Packet Tracer, Mininet; traffic generators; Nmap.
 
 ## Exposing local servers publicly
 
-To make a **local** server (e.g. dev app on localhost:8080) reachable from the **internet**: **Tunnels** (e.g. **ngrok**, **cloudflared**) create a **public URL** that forwards to your machine; **SSH reverse tunnel** (`ssh -R 80:localhost:8080 user@public-server`) uses a VPS; **port forwarding** on the **router** maps a public port to a local IP:port (less secure; use with care). See [services/7_Servers_Access_Flows](../services/7_Servers_Access_Flows.md) (Exposing local servers publicly). Source: Course outline (Exposing local servers publicly).
+To make a **local** server (e.g. dev app on localhost:8080) reachable from the **internet**: **Tunnels** (e.g. **ngrok**, **cloudflared**) create a **public URL** that forwards to your machine; **SSH reverse tunnel** (`ssh -R 80:localhost:8080 user@public-server`) uses a VPS; **port forwarding** on the **router** maps a public port to a local IP:port (less secure; use with care). See [Services/7_Servers_Access_Flows](../Services/7_Servers_Access_Flows.md) (Exposing local servers publicly). Source: Course outline (Exposing local servers publicly).
 
 ---
 
@@ -32,7 +32,7 @@ To make a **local** server (e.g. dev app on localhost:8080) reachable from the *
 
 ## Cisco Packet Tracer
 
-**Cisco Packet Tracer** is a **visual** network **simulator** for **learning**: drag **switches**, **routers**, **PCs**, **cables**; configure devices via **CLI** or **GUI**; **ping** and **traceroute** to verify. Lighter than GNS3; good for **intro** and **CCNA**-style labs. See [advanced/4_On_Premises_Enterprise](../advanced/4_On_Premises_Enterprise.md). Source: Networking-Essentials (Cisco Packet Tracer).
+**Cisco Packet Tracer** is a **visual** network **simulator** for **learning**: drag **switches**, **routers**, **PCs**, **cables**; configure devices via **CLI** or **GUI**; **ping** and **traceroute** to verify. Lighter than GNS3; good for **intro** and **CCNA**-style labs. See [Advanced/4_On_Premises_Enterprise](../Advanced/4_On_Premises_Enterprise.md). Source: Networking-Essentials (Cisco Packet Tracer).
 
 ---
 
@@ -86,14 +86,14 @@ Use these tools together with the **concepts** in the repo for focused practice.
 
 | Theme | What to practice | Repo reference |
 |-------|------------------|----------------|
-| **Recon & scanning** | `dig`, `whois`, `nmap` (host discovery, port scan, service/OS detection) on **your own** lab hosts or DevNet sandbox. Understand what each command does before running. | [security/8_Reconnaissance_Offensive](../security/8_Reconnaissance_Offensive.md) |
-| **Cisco / enterprise** | In **Packet Tracer** or **GNS3**: VLANs, trunk/access, STP, ACLs, HSRP, basic routing (static, OSPF), `show` commands. Matches on-prem and CCNA-style content. | [routing-switching/](../routing-switching/README.md), [advanced/4_On_Premises_Enterprise](../advanced/4_On_Premises_Enterprise.md) |
-| **SDN / programmable** | **Mininet** + OpenFlow controller (e.g. OpenDaylight) for custom forwarding and topology. | [cloud-native/3_Sdn_Nfv](../cloud-native/3_Sdn_Nfv.md) |
-| **Containers / K8s (optional)** | **minikube** or **kind** with **Cilium** CNI; run `hubble observe` for flow visibility. Reinforces eBPF, Services, NetworkPolicy. | [cloud-native/2_Docker_Kubernetes](../cloud-native/2_Docker_Kubernetes.md#ebpf-cilium-and-hubble) |
+| **Recon & scanning** | `dig`, `whois`, `nmap` (host discovery, port scan, service/OS detection) on **your own** lab hosts or DevNet sandbox. Understand what each command does before running. | [Security/8_Reconnaissance_Offensive](../Security/8_Reconnaissance_Offensive.md) |
+| **Cisco / enterprise** | In **Packet Tracer** or **GNS3**: VLANs, trunk/access, STP, ACLs, HSRP, basic routing (static, OSPF), `show` commands. Matches on-prem and CCNA-style content. | [Routing-Switching/](../Routing-Switching/README.md), [Advanced/4_On_Premises_Enterprise](../Advanced/4_On_Premises_Enterprise.md) |
+| **SDN / programmable** | **Mininet** + OpenFlow controller (e.g. OpenDaylight) for custom forwarding and topology. | [Cloud-Native/3_Sdn_Nfv](../Cloud-Native/3_Sdn_Nfv.md) |
+| **Containers / K8s (optional)** | **minikube** or **kind** with **Cilium** CNI; run `hubble observe` for flow visibility. Reinforces eBPF, Services, NetworkPolicy. | [Cloud-Native/2_Docker_Kubernetes](../Cloud-Native/2_Docker_Kubernetes.md#ebpf-cilium-and-hubble) |
 
 ---
 
 ## References
 
 - Course outline: Exposing local servers publicly; Networking-Essentials: Packet Tracer
-- [services/7_Servers_Access_Flows](../services/7_Servers_Access_Flows.md); [advanced/4_On_Premises_Enterprise](../advanced/4_On_Premises_Enterprise.md); cybersecurity-networking (GNS3, Mininet, DevNet, Nmap)
+- [Services/7_Servers_Access_Flows](../Services/7_Servers_Access_Flows.md); [Advanced/4_On_Premises_Enterprise](../Advanced/4_On_Premises_Enterprise.md); cybersecurity-networking (GNS3, Mininet, DevNet, Nmap)

@@ -45,7 +45,7 @@ In a switched network, if you connect switches in a **loop** (e.g. Switch A – 
 - **BPDU guard** — On ports that should only see hosts (edge ports), if a BPDU is received, the port is **errdisabled** (or similar). This stops a user from plugging in a switch and changing the topology or becoming root.
 - **Root guard** — On a port, if a better BPDU (claiming a better root) is received, the port goes to **root-inconsistent** and does not forward. This prevents a downstream switch from taking over as root. Used on ports toward parts of the network that should not be the root.
 
-See [security/4_Attacks_Mitigations](../security/4_Attacks_Mitigations.md) for **STP manipulation** (attacker sending forged BPDUs) and these mitigations.
+See [Security/4_Attacks_Mitigations](../Security/4_Attacks_Mitigations.md) for **STP manipulation** (attacker sending forged BPDUs) and these mitigations.
 
 ### Link aggregation (LACP, 802.1AX) and MLAG
 
@@ -53,7 +53,7 @@ See [security/4_Attacks_Mitigations](../security/4_Attacks_Mitigations.md) for *
 
 ### VXLAN and EVPN (advanced)
 
-**VXLAN** extends L2 segments over an L3 underlay by encapsulating Ethernet frames in UDP. Used in data centers to span VLANs across racks or sites. **EVPN (Ethernet VPN)** is a control plane for VXLAN (and other overlay types): it uses BGP to advertise MAC and IP reachability so that learning and forwarding are controlled and loops are avoided. Details are in data-center and vendor docs; the repo’s [Tunneling & MPLS](./3_Tunneling_Mpls.md) and [cloud-native](../cloud-native/README.md) sections give more context.
+**VXLAN** extends L2 segments over an L3 underlay by encapsulating Ethernet frames in UDP. Used in data centers to span VLANs across racks or sites. **EVPN (Ethernet VPN)** is a control plane for VXLAN (and other overlay types): it uses BGP to advertise MAC and IP reachability so that learning and forwarding are controlled and loops are avoided. Details are in data-center and vendor docs; the repo’s [Tunneling & MPLS](./3_Tunneling_Mpls.md) and [cloud-native](../Cloud-Native/README.md) sections give more context.
 
 ---
 
@@ -103,7 +103,7 @@ Validation is how you check that the network behaves as intended after a change 
 **Network design** organizes the network into **zones and layers** so it is manageable, scalable, and resilient.
 
 - **Design zones** — Separate parts of the network by function and trust: e.g. **access** (where hosts connect), **distribution** (aggregation, policy), **core** (high-speed backbone). In a data center: access (ToR), aggregation, core. Boundaries are natural places for **ACLs**, **firewalls**, and **summarization**.
-- **Scaling** — Use **hierarchy** and **route summarization** so the core does not carry every subnet; use **addressing** that allows summarization (e.g. contiguous blocks per region). As the network grows, keep a clear **addressing plan** and **documentation** (see [observability/6_Network_Operations](../observability/6_Network_Operations.md)).
+- **Scaling** — Use **hierarchy** and **route summarization** so the core does not carry every subnet; use **addressing** that allows summarization (e.g. contiguous blocks per region). As the network grows, keep a clear **addressing plan** and **documentation** (see [Observability/6_Network_Operations](../Observability/6_Network_Operations.md)).
 - **Validated designs** — Before or after changes, validate with **ping/traceroute**, **control-plane checks** (e.g. `show ip route`), and optionally **configuration analysis** (e.g. Batfish) to catch misconfigurations. Compare **before/after** state when making changes.
 
 **Visual (simplified layered design):**
@@ -150,7 +150,7 @@ Modern **data center** networks often use a **spine-leaf** (or **leaf-spine**) t
 
 - **Underlay** — Usually **IP + ECMP** (equal-cost multi-path) or **BGP** for spine-leaf. Some fabrics use **VXLAN** over the underlay so L2 segments can span racks.
 - **Overlay** — **VXLAN/EVPN** (see [VXLAN and EVPN](#vxlan-and-evpn-advanced)) for tenant or segment isolation. The spine-leaf underlay carries the overlay tunnels.
-- **Automation** — Data center networks are often **provisioned and updated** via **automation** (NETCONF/RESTCONF, Ansible, or vendor controllers) rather than manual CLI only. See [observability/6_Network_Operations](../observability/6_Network_Operations.md) (model-driven programmability, automation).
+- **Automation** — Data center networks are often **provisioned and updated** via **automation** (NETCONF/RESTCONF, Ansible, or vendor controllers) rather than manual CLI only. See [Observability/6_Network_Operations](../Observability/6_Network_Operations.md) (model-driven programmability, automation).
 
 ### How real networks are configured (building blocks)
 
@@ -178,7 +178,7 @@ When you **configure** a real network (enterprise or data center), you typically
   Services: DHCP relay, NTP, DNS, logging
 ```
 
-Document the **addressing plan**, **VLAN plan**, and **routing design** so that changes and troubleshooting are consistent. See [observability/6_Network_Operations](../observability/6_Network_Operations.md) (inventory, IPAM, change management) and [advanced/4_On_Premises_Enterprise](../advanced/4_On_Premises_Enterprise.md) (Cisco IOS, show commands).
+Document the **addressing plan**, **VLAN plan**, and **routing design** so that changes and troubleshooting are consistent. See [Observability/6_Network_Operations](../Observability/6_Network_Operations.md) (inventory, IPAM, change management) and [Advanced/4_On_Premises_Enterprise](../Advanced/4_On_Premises_Enterprise.md) (Cisco IOS, show commands).
 
 ### Network scale spectrum: home lab to data center
 
@@ -197,7 +197,7 @@ The **same network concepts** (L2/L3, VLANs, IP, routing, redundancy) apply at e
 
 **Campus / enterprise (on-prem)**
 
-- **Hierarchical** design: **access** (switches to desks/Wi‑Fi) → **distribution** (aggregation, VLANs, L3) → **core** (high-speed backbone). Multiple **VLANs** and **subnets**; **OSPF** or **EIGRP** (or static) for internal routing; **HSRP/VRRP** at the distribution layer so hosts have a single default gateway. **WAN** to other sites or internet via dedicated links or MPLS. **802.1X** and **ACLs** for access control. See [advanced/4_On_Premises_Enterprise](../advanced/4_On_Premises_Enterprise.md) for device-level (Cisco IOS) and [How real networks are configured](#how-real-networks-are-configured-building-blocks) for the configuration layers.
+- **Hierarchical** design: **access** (switches to desks/Wi‑Fi) → **distribution** (aggregation, VLANs, L3) → **core** (high-speed backbone). Multiple **VLANs** and **subnets**; **OSPF** or **EIGRP** (or static) for internal routing; **HSRP/VRRP** at the distribution layer so hosts have a single default gateway. **WAN** to other sites or internet via dedicated links or MPLS. **802.1X** and **ACLs** for access control. See [Advanced/4_On_Premises_Enterprise](../Advanced/4_On_Premises_Enterprise.md) for device-level (Cisco IOS) and [How real networks are configured](#how-real-networks-are-configured-building-blocks) for the configuration layers.
 
 **Data center (single site, many racks)**
 
@@ -205,7 +205,7 @@ The **same network concepts** (L2/L3, VLANs, IP, routing, redundancy) apply at e
 
 **Running your own data center / scaling to many racks**
 
-- Same **spine-leaf and Clos** ideas: add **more spine** switches for bandwidth, **more leaf** switches for more racks. **Oversubscription** (e.g. 3:1) is a design choice between cost and non-blocking capacity. **Interconnect:** traffic leaves the DC via **edge routers** (BGP to ISP or exchange); **DCI (data center interconnect)** links multiple DCs (e.g. dark fibre, VXLAN or MPLS over the WAN). At “petabyte scale” or large DCs, the **network** side is still: underlay (BGP, ECMP), overlay (VXLAN/EVPN if you need L2 stretch), and **automation** for consistency. No change to the OSI stack—just more devices, more spines/leaves, and stricter operations (monitoring, flow collection, change control). See [observability/6_Network_Operations](../observability/6_Network_Operations.md).
+- Same **spine-leaf and Clos** ideas: add **more spine** switches for bandwidth, **more leaf** switches for more racks. **Oversubscription** (e.g. 3:1) is a design choice between cost and non-blocking capacity. **Interconnect:** traffic leaves the DC via **edge routers** (BGP to ISP or exchange); **DCI (data center interconnect)** links multiple DCs (e.g. dark fibre, VXLAN or MPLS over the WAN). At “petabyte scale” or large DCs, the **network** side is still: underlay (BGP, ECMP), overlay (VXLAN/EVPN if you need L2 stretch), and **automation** for consistency. No change to the OSI stack—just more devices, more spines/leaves, and stricter operations (monitoring, flow collection, change control). See [Observability/6_Network_Operations](../Observability/6_Network_Operations.md).
 
 **Visual (scale spectrum, network view):**
 
@@ -217,7 +217,7 @@ The **same network concepts** (L2/L3, VLANs, IP, routing, redundancy) apply at e
    No dynamic routing      Multiple sites, 802.1X            ToR, Clos, DCI
 ```
 
-**Serving clients (on-prem, VMware, vanilla VMs):** Whether the client runs **vanilla** VMs (e.g. KVM, Hyper-V), **VMware**, or physical servers, the **network** you design is the same: **VLANs** (or equivalent) for segments, **IP addressing**, **routing**, and **firewall/ACL** at the boundary. Virtualized hosts use a **virtual switch** (vSwitch) that presents **port groups** (VLANs) to VMs and **uplinks** to the physical switch; from the physical network’s view, the host is one (or a few) cables carrying tagged VLANs. See [cloud-native/1_Cloud_Networking_Overview](../cloud-native/1_Cloud_Networking_Overview.md) (virtualized hosts: network perspective).
+**Serving clients (on-prem, VMware, vanilla VMs):** Whether the client runs **vanilla** VMs (e.g. KVM, Hyper-V), **VMware**, or physical servers, the **network** you design is the same: **VLANs** (or equivalent) for segments, **IP addressing**, **routing**, and **firewall/ACL** at the boundary. Virtualized hosts use a **virtual switch** (vSwitch) that presents **port groups** (VLANs) to VMs and **uplinks** to the physical switch; from the physical network’s view, the host is one (or a few) cables carrying tagged VLANs. See [Cloud-Native/1_Cloud_Networking_Overview](../Cloud-Native/1_Cloud_Networking_Overview.md) (virtualized hosts: network perspective).
 
 ---
 
@@ -229,12 +229,12 @@ The **same network concepts** (L2/L3, VLANs, IP, routing, redundancy) apply at e
 - **Control plane** — A **central controller** (or cluster) often manages policy, topology, and sometimes key distribution. Edge devices (CPE) establish tunnels and apply policies so that traffic can use the best link (e.g. low latency for VoIP, high bandwidth for backup) and **fail over** when a link fails.
 - **Application-aware routing** — Policies can be defined per application or SLA (e.g. send critical apps over a premium link, bulk traffic over internet).
 
-SD-WAN solutions are offered by many vendors (e.g. Silver Peak, Cisco, VMware). They are used to **replace or complement** traditional WAN (e.g. MPLS-only) with **internet links** and **centralized, application-driven** control. See [cloud-native](../cloud-native/README.md) for related SDN/overlay concepts.
+SD-WAN solutions are offered by many vendors (e.g. Silver Peak, Cisco, VMware). They are used to **replace or complement** traditional WAN (e.g. MPLS-only) with **internet links** and **centralized, application-driven** control. See [cloud-native](../Cloud-Native/README.md) for related SDN/overlay concepts.
 
 ---
 
 ## References
 
-- IEEE 802.1D (STP), 802.1w (RSTP), 802.1AX (LACP); [security/4_Attacks_Mitigations](../security/4_Attacks_Mitigations.md) (STP manipulation, BPDU guard, root guard)
-- [foundations/4_Data_Link_Layer](../foundations/4_Data_Link_Layer.md) (switching, VLANs)
+- IEEE 802.1D (STP), 802.1w (RSTP), 802.1AX (LACP); [Security/4_Attacks_Mitigations](../Security/4_Attacks_Mitigations.md) (STP manipulation, BPDU guard, root guard)
+- [Foundations/4_Data_Link_Layer](../Foundations/4_Data_Link_Layer.md) (switching, VLANs)
 - [GeeksforGeeks – Difference between VPN and MPLS](https://www.geeksforgeeks.org/computer-networks/difference-between-virtual-private-network-vpn-and-multi-protocol-label-switching-mpls/); Network-Security (VRF/MPLS VPNs); cybersecurity-networking (SD-WAN, network design/implementation)

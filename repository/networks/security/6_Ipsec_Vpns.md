@@ -1,5 +1,7 @@
 # IPSec & VPNs (Deep Dive)
 
+[← Back to Security](./README.md)
+
 Tunneling, IPSec (ESP/AH, NAT-T), GRE over IPSec, DMVPN, GETVPN.
 
 ## Table of Contents
@@ -17,7 +19,7 @@ Tunneling, IPSec (ESP/AH, NAT-T), GRE over IPSec, DMVPN, GETVPN.
 
 **Tunneling** encapsulates one protocol inside another so traffic can cross a network that does not natively support it. Source: Network-Security (BFreitas16), A-to-Z VPN & Tunneling.
 
-- **GRE (Generic Routing Encapsulation)** — Encapsulates an inner packet (e.g. IP) in an outer IP packet. **No encryption**; often used with **IPSec** for security. See [routing-switching/3_Tunneling_Mpls](../routing-switching/3_Tunneling_Mpls.md).
+- **GRE (Generic Routing Encapsulation)** — Encapsulates an inner packet (e.g. IP) in an outer IP packet. **No encryption**; often used with **IPSec** for security. See [Routing-Switching/3_Tunneling_Mpls](../Routing-Switching/3_Tunneling_Mpls.md).
 - **IPv6 over IPv4** — IPv6 packets are carried inside IPv4 tunnels (e.g. 6to4, 6in4) so IPv6 can traverse IPv4-only networks. Tunnel endpoints encapsulate/decapsulate.
 
 ```text
@@ -103,4 +105,4 @@ sudo wg-quick down wg0
 - [GeeksforGeeks – PPTP](https://www.geeksforgeeks.org/computer-networks/pptp-full-form/) (tunneling); [WireGuard](https://www.wireguard.com/quickstart/) (quick start)
 - A-to-Z of Networking: VPN & Tunneling (IPSec modes, AH, ESP, IKE, GRE)
 - Network-Security (BFreitas16): IPSec & VPNs (Tunneling, GRE, IPv6 over IPv4, IPSec ESP/AH, NAT-T, GRE over IPSec, DMVPN, GETVPN)
-- [routing-switching/3_Tunneling_Mpls](../routing-switching/3_Tunneling_Mpls.md); [security/2_Encryption_Tls](./2_Encryption_Tls.md); [security/1_Overview_Perimeter](./1_Overview_Perimeter.md)
+- [Routing-Switching/3_Tunneling_Mpls](../Routing-Switching/3_Tunneling_Mpls.md); [Security/2_Encryption_Tls](./2_Encryption_Tls.md); [Security/1_Overview_Perimeter](./1_Overview_Perimeter.md)

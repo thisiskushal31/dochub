@@ -1,5 +1,7 @@
 # NIDS/NIPS, DoS Types & Identity
 
+[← Back to Security](./README.md)
+
 Snort, DoS attack types, Zero Trust, WAF, rate limiting, baselines, audits.
 
 ## Table of Contents
@@ -19,7 +21,7 @@ Snort, DoS attack types, Zero Trust, WAF, rate limiting, baselines, audits.
 **Snort** is an open-source **NIDS/NIPS** (Network Intrusion Detection/Prevention System). It inspects traffic against **rules** (signatures and protocol/flow conditions) and can **alert** (IDS) or **drop** (IPS). Source: Network-Security (BFreitas16).
 
 - **Rule-based detection** — Rules describe patterns (e.g. suspicious payload, port scan, known exploit). When traffic matches, Snort logs the event and can generate **alerts**. Rules can be tuned for **DoS** patterns (e.g. SYN flood, ICMP flood) so that high rates or malformed packets trigger alerts.
-- **Alerting for DoS** — Snort rules can detect DoS behaviors (e.g. threshold on SYN rate, ICMP rate, oversized ICMP). Alerts feed into a SIEM or dashboard for **incident response**. See [observability/5_Security_Monitoring](../observability/5_Security_Monitoring.md) for Zeek, Suricata, and SIEM; Suricata is a similar rule-based IDS/IPS.
+- **Alerting for DoS** — Snort rules can detect DoS behaviors (e.g. threshold on SYN rate, ICMP rate, oversized ICMP). Alerts feed into a SIEM or dashboard for **incident response**. See [Observability/5_Security_Monitoring](../Observability/5_Security_Monitoring.md) for Zeek, Suricata, and SIEM; Suricata is a similar rule-based IDS/IPS.
 
 **Hands-on: what you're doing when you run Snort**
 
@@ -39,7 +41,7 @@ sudo snort -c /etc/snort/snort.lua -r capture.pcap
 sudo snort -c /etc/snort/snort.lua -R custom.rules -r capture.pcap
 ```
 
-**What you're doing:** `-T` = test only; `-i eth0` = live capture on that interface; `-r file` = read PCAP (offline analysis). Alerts go to the console or to the log directory depending on config. See [observability/5_Security_Monitoring](../observability/5_Security_Monitoring.md) for Suricata (similar workflow) and Zeek (log-based).
+**What you're doing:** `-T` = test only; `-i eth0` = live capture on that interface; `-r file` = read PCAP (offline analysis). Alerts go to the console or to the log directory depending on config. See [Observability/5_Security_Monitoring](../Observability/5_Security_Monitoring.md) for Suricata (similar workflow) and Zeek (log-based).
 
 ---
 
@@ -93,7 +95,7 @@ The following DoS types are commonly described in security curricula and can be 
 ## Security baselines and audits
 
 - **Security baselines** — Standard **hardened** configuration for devices and systems (e.g. disable unused services, strong auth, logging). Used to keep **consistency** and reduce **attack surface**.
-- **Audits** — **Validate** that controls are in place: firewall rules, access controls, patching, logging. **Logging and alerting** for network controls (e.g. firewall deny, auth failure, admin login) feed **audit trails** and **SIEM**. Regular **reviews** of rules and access (e.g. who can access what) support compliance and incident response. See [observability/6_Network_Operations](../observability/6_Network_Operations.md) (change management, compliance).
+- **Audits** — **Validate** that controls are in place: firewall rules, access controls, patching, logging. **Logging and alerting** for network controls (e.g. firewall deny, auth failure, admin login) feed **audit trails** and **SIEM**. Regular **reviews** of rules and access (e.g. who can access what) support compliance and incident response. See [Observability/6_Network_Operations](../Observability/6_Network_Operations.md) (change management, compliance).
 
 ---
 
@@ -101,4 +103,4 @@ The following DoS types are commonly described in security curricula and can be 
 
 - [Snort 3 — Command line](https://docs.snort.org/start/help.html); [Snort 3 — Rules](https://docs.snort.org/start/rules.html)
 - Network-Security (BFreitas16): Snort – alerting DoS attacks (ICMP flood, SYN flood, ping of death, land, HTTP flooding, TCP reset, Christmas tree, UDP flood, DNS flood, Smurf)
-- [3_Cybersecurity_Threats_Config](./3_Cybersecurity_Threats_Config.md); [5_Firewalls_Aaa](./5_Firewalls_Aaa.md); [1_Overview_Perimeter](./1_Overview_Perimeter.md); [observability/5_Security_Monitoring](../observability/5_Security_Monitoring.md); [observability/6_Network_Operations](../observability/6_Network_Operations.md)
+- [3_Cybersecurity_Threats_Config](./3_Cybersecurity_Threats_Config.md); [5_Firewalls_Aaa](./5_Firewalls_Aaa.md); [1_Overview_Perimeter](./1_Overview_Perimeter.md); [Observability/5_Security_Monitoring](../Observability/5_Security_Monitoring.md); [Observability/6_Network_Operations](../Observability/6_Network_Operations.md)

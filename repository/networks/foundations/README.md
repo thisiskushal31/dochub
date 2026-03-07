@@ -27,11 +27,11 @@ Network layer in OSI, IP address, classful/classless (CIDR), IP building blocks,
 ## Learning path
 
 1. [Basics & architecture](./1_Basics_And_Architecture.md) → [Models](./2_Models.md) → [Physical layer](./3_Physical_Layer.md) → [Data link layer](./4_Data_Link_Layer.md) → [Network layer](./5_Network_Layer.md)
-2. For transport (UDP/TCP, NAT, sockets) see [transport/](../transport/README.md).
-3. For capturing IP/ARP/ICMP see [observability/](../observability/README.md) and [labs/](../labs/README.md).
+2. For transport (UDP/TCP, NAT, sockets) see [Transport/](../Transport/README.md).
+3. For capturing IP/ARP/ICMP see [Observability/](../Observability/README.md) and [Labs/](../Labs/README.md).
 
 ## Cross-references
 
-- **Transport:** UDP/TCP, NAT, sockets — [transport/](../transport/README.md)
-- **Observability:** Capturing IP/ARP/ICMP with tcpdump — [observability/](../observability/README.md), [labs/](../labs/README.md)
-- **Routing protocols:** RIP, OSPF, BGP, etc. — [routing-switching/](../routing-switching/README.md)
+- **Transport:** UDP/TCP, NAT, sockets — [Transport/](../Transport/README.md)
+- **Observability:** Capturing IP/ARP/ICMP with tcpdump — [Observability/](../Observability/README.md), [Labs/](../Labs/README.md)
+- **Routing protocols:** RIP, OSPF, BGP, etc. — [Routing-Switching/](../Routing-Switching/README.md)

@@ -64,7 +64,7 @@ Cloud vs on-prem, types of cloud services, VPC/VNet, hybrid connectivity.
 
 AWS provides networking building blocks for secure, scalable connectivity between the internet, remote workers, data centers, and within AWS. The diagram below shows a **typical AWS network architecture** with key components. Source and image: [ByteByteGo – Typical AWS Network Architecture](https://bytebytego.com/guides/typical-aws-network-architecture-in-one-diagram/).
 
-![Typical AWS network architecture (ByteByteGo)](../assets/cloud-native/bytebytego-typical-aws-network-architecture.png)
+![Typical AWS network architecture (ByteByteGo)](../Assets/Cloud-Native/bytebytego-typical-aws-network-architecture.png)
 
 **Key components:**
 
@@ -84,7 +84,7 @@ AWS provides networking building blocks for secure, scalable connectivity betwee
   8. SaaS private access   →  PrivateLink: private connectivity to SaaS on AWS or on-prem
 ```
 
-Use this as a reference when designing VPCs, subnets, and hybrid connectivity; see [Hybrid connectivity](#hybrid-connectivity) and [security/5_Firewalls_Aaa](../security/5_Firewalls_Aaa.md) (cloud-native security groups).
+Use this as a reference when designing VPCs, subnets, and hybrid connectivity; see [Hybrid connectivity](#hybrid-connectivity) and [Security/5_Firewalls_Aaa](../Security/5_Firewalls_Aaa.md) (cloud-native security groups).
 
 ---
 
@@ -92,7 +92,7 @@ Use this as a reference when designing VPCs, subnets, and hybrid connectivity; s
 
 **Hybrid connectivity** links **on-premises** networks to **cloud** VPCs so workloads can communicate securely.
 
-- **VPN** — **Site-to-site** VPN (e.g. IPSec over the internet) between your router/firewall and the cloud **VPN gateway**. Lower bandwidth, higher latency than dedicated; good for backup or small sites. See [security/6_Ipsec_Vpns](../security/6_Ipsec_Vpns.md).
+- **VPN** — **Site-to-site** VPN (e.g. IPSec over the internet) between your router/firewall and the cloud **VPN gateway**. Lower bandwidth, higher latency than dedicated; good for backup or small sites. See [Security/6_Ipsec_Vpns](../Security/6_Ipsec_Vpns.md).
 - **Dedicated connections** — **AWS Direct Connect**, **Azure ExpressRoute**, **GCP Partner Interconnect**: a **private** link (e.g. from your colo or ISP) into the provider. **Higher** bandwidth, **lower** latency, more predictable; often used with **redundant** circuits and **HA** (e.g. two links, BGP).
 - **HA and failover** — Use **redundant** VPN tunnels or **multiple** dedicated connections with **BGP** so that if one path fails, traffic fails over. Some designs use VPN as backup when the primary dedicated link is down.
 
@@ -116,7 +116,7 @@ Before any VM traffic can leave the host, the **physical path** must be in place
 
 **Cabling: server NIC to switch port**
 
-- **Copper** — **RJ-45** patch cable (e.g. Cat 6, Cat 6a) from the server NIC to the **switch port**. Typical for 1 Gbps and short runs (up to 100 m). Same **cabling standards** as elsewhere: correct category for the speed, good termination, no kinks or sharp bends. See [foundations/3_Physical_Layer](../foundations/3_Physical_Layer.md) (cabling standards).
+- **Copper** — **RJ-45** patch cable (e.g. Cat 6, Cat 6a) from the server NIC to the **switch port**. Typical for 1 Gbps and short runs (up to 100 m). Same **cabling standards** as elsewhere: correct category for the speed, good termination, no kinks or sharp bends. See [Foundations/3_Physical_Layer](../Foundations/3_Physical_Layer.md) (cabling standards).
 - **Fibre** — **SFP/SFP+** (or QSFP for higher speeds) **transceivers** in the NIC and in the switch; **fibre patch** (multimode or single-mode) between them. Used for 10G+ and longer runs, or where electrical isolation is required. Connector type (LC, SC, etc.) and fibre type must match the transceivers.
 - **One cable per physical link.** If the host has two NICs used as uplinks, you run **two cables** to the switch (or one to each of two switches for redundancy).
 
@@ -174,7 +174,7 @@ Before any VM traffic can leave the host, the **physical path** must be in place
   Physical port = trunk with VLANs 10, 20 allowed; cable from server NIC to this port.
 ```
 
-See [foundations/3_Physical_Layer](../foundations/3_Physical_Layer.md) for cabling and physical layer basics; [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md) (Network scale spectrum, How real networks are configured) for how this fits home lab to data center; [2_Docker_Kubernetes](./2_Docker_Kubernetes.md) for **containers** (different abstraction, same need for IP/VLAN/security at the network edge).
+See [Foundations/3_Physical_Layer](../Foundations/3_Physical_Layer.md) for cabling and physical layer basics; [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md) (Network scale spectrum, How real networks are configured) for how this fits home lab to data center; [2_Docker_Kubernetes](./2_Docker_Kubernetes.md) for **containers** (different abstraction, same need for IP/VLAN/security at the network edge).
 
 ---
 
@@ -254,32 +254,32 @@ You **document** the plan (e.g. “VLAN 10 = Management, VLAN 20 = VM Production
 
 Each **VLAN** that needs to talk to other subnets or the internet needs an **IP subnet** and a **default gateway**.
 
-- **Subnet per VLAN:** Assign a **CIDR block** to each VLAN (e.g. Management 10.0.1.0/24, VM Production 10.0.2.0/24). Size the subnet for the number of hosts (hypervisor management IPs, VMs, future growth). Use a consistent **addressing plan** so you can summarize or document clearly. See [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md) (How real networks are configured).
+- **Subnet per VLAN:** Assign a **CIDR block** to each VLAN (e.g. Management 10.0.1.0/24, VM Production 10.0.2.0/24). Size the subnet for the number of hosts (hypervisor management IPs, VMs, future growth). Use a consistent **addressing plan** so you can summarize or document clearly. See [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md) (How real networks are configured).
 - **Default gateway:** The **default gateway** for each subnet is usually the **SVI** (Switched Virtual Interface) on the **L3 switch** that has that VLAN—e.g. VLAN 10 SVI = 10.0.1.1/24, VLAN 20 SVI = 10.0.2.1/24. Alternatively, the gateway can be a **firewall** or **router** interface. VMs and hypervisor management get an IP in the subnet (e.g. 10.0.2.10) and **gateway** = 10.0.2.1. The client (or you) configures this in the guest OS or in the hypervisor for the management interface.
 - **DHCP (optional):** For VM subnets, you can run **DHCP** (e.g. from a server or from the L3 switch if it supports it) so VMs get an IP automatically. **Reservations** for hypervisor management IPs are recommended so they are stable. For management and vMotion VLANs, **static** IPs are common.
-- **Documentation:** Maintain an **IPAM** or spreadsheet: which subnet per VLAN, which IP is the gateway, which IPs are reserved for management, and (if applicable) DHCP range. See [observability/6_Network_Operations](../observability/6_Network_Operations.md) (inventory, IPAM).
+- **Documentation:** Maintain an **IPAM** or spreadsheet: which subnet per VLAN, which IP is the gateway, which IPs are reserved for management, and (if applicable) DHCP range. See [Observability/6_Network_Operations](../Observability/6_Network_Operations.md) (inventory, IPAM).
 
 ---
 
 ### Step 4: Routing and internet/WAN access
 
 - **Where routing runs:** The **L3 switch** (or firewall) that has the **SVIs** for the VM and management VLANs must have **routes** to the rest of the network. Typically: **default route** (0.0.0.0/0) toward the **firewall** or **internet router**; **static** or **dynamic** (OSPF, EIGRP) routes for other internal networks. So: VM → gateway (SVI) → L3 switch routing table → next hop (e.g. firewall) → internet or other site.
-- **First-hop redundancy (optional but recommended):** If the gateway is on a single device and that device fails, all VMs in that subnet lose their gateway. Use **HSRP**, **VRRP**, or **GLBP** on a **pair** of L3 switches (or firewalls) so that the subnet has a **virtual gateway IP** and the other device takes over if one fails. See [routing-switching/4_Redundancy_And_Load_Balancing](../routing-switching/4_Redundancy_And_Load_Balancing.md).
-- **NAT and internet:** For VMs to reach the internet, the **firewall** (or router) at the edge typically does **NAT** (e.g. PAT so many private IPs share one public IP) and **allow/deny** rules. From a network perspective, you ensure the **default route** from the VM VLANs points to that firewall and that the firewall has a **route** back to the VM subnets (or a default). The firewall config (which ports/protocols are allowed) is part of [security/5_Firewalls_Aaa](../security/5_Firewalls_Aaa.md).
+- **First-hop redundancy (optional but recommended):** If the gateway is on a single device and that device fails, all VMs in that subnet lose their gateway. Use **HSRP**, **VRRP**, or **GLBP** on a **pair** of L3 switches (or firewalls) so that the subnet has a **virtual gateway IP** and the other device takes over if one fails. See [Routing-Switching/4_Redundancy_And_Load_Balancing](../Routing-Switching/4_Redundancy_And_Load_Balancing.md).
+- **NAT and internet:** For VMs to reach the internet, the **firewall** (or router) at the edge typically does **NAT** (e.g. PAT so many private IPs share one public IP) and **allow/deny** rules. From a network perspective, you ensure the **default route** from the VM VLANs points to that firewall and that the firewall has a **route** back to the VM subnets (or a default). The firewall config (which ports/protocols are allowed) is part of [Security/5_Firewalls_Aaa](../Security/5_Firewalls_Aaa.md).
 
 ---
 
 ### Step 5: Security (ACLs and firewall)
 
 - **Segmentation:** Use **ACLs** on the L3 switch or **firewall rules** to control what can reach what. **Management** VLAN: allow only from a **jump host** or **admin subnet** (e.g. SSH, HTTPS to vCenter). **VM VLANs:** allow as needed (e.g. VM subnet A can talk to VM subnet B and to the internet on 80/443; block everything else by default). **vMotion/storage** VLANs: often **no routing** to user networks (stay L2-only within the segment) or only between trusted hosts.
-- **Principle of least privilege:** Only open the **ports and sources** that are required. Document the rules so that changes and audits are straightforward. See [security/5_Firewalls_Aaa](../security/5_Firewalls_Aaa.md) and [security/4_Attacks_Mitigations](../security/4_Attacks_Mitigations.md) for L2/L3 hardening (e.g. DHCP snooping, ARP inspection) if the client needs them.
+- **Principle of least privilege:** Only open the **ports and sources** that are required. Document the rules so that changes and audits are straightforward. See [Security/5_Firewalls_Aaa](../Security/5_Firewalls_Aaa.md) and [Security/4_Attacks_Mitigations](../Security/4_Attacks_Mitigations.md) for L2/L3 hardening (e.g. DHCP snooping, ARP inspection) if the client needs them.
 
 ---
 
 ### Step 6: Redundancy at the host and switch
 
 - **NIC teaming on the hypervisor:** Use **two or more** physical NICs per host, each cabled to the switch (or one to each of two switches). Configure **teaming** in the vSwitch: **active/standby** or **LACP**. If LACP, the **switch port** side must be in an **LACP port-channel** (two ports bundled). So: one link fails → traffic continues over the other. See [Physical layer: server to switch](#physical-layer-server-to-switch) (Redundancy at the physical layer).
-- **Switch and gateway redundancy:** **Two** access switches (or ToR) with **LACP** or **STP** so the host can reach the network even if one switch fails. **First-hop redundancy** (HSRP/VRRP) so the gateway IP is always reachable. See [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md) (Resiliency).
+- **Switch and gateway redundancy:** **Two** access switches (or ToR) with **LACP** or **STP** so the host can reach the network even if one switch fails. **First-hop redundancy** (HSRP/VRRP) so the gateway IP is always reachable. See [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md) (Resiliency).
 
 ---
 
@@ -303,7 +303,7 @@ Each **VLAN** that needs to talk to other subnets or the internet needs an **IP 
 - **VM cannot reach the internet:** Check **default route** on the VM (must point to the gateway). On the gateway (L3 switch/firewall): **default route** to the internet edge? **NAT** and **allow** rules on the firewall for outbound?
 - **Management (vCenter, hypervisor) unreachable:** Confirm **management** is on the right VLAN and that the **trunk** allows that VLAN. Confirm **ACL/firewall** allows your **admin subnet** to reach the management VLAN on the required ports (e.g. 443, 22).
 
-See [observability/6_Network_Operations](../observability/6_Network_Operations.md) (troubleshooting methodology) and [advanced/4_On_Premises_Enterprise](../advanced/4_On_Premises_Enterprise.md) (Cisco IOS `show` commands, console access).
+See [Observability/6_Network_Operations](../Observability/6_Network_Operations.md) (troubleshooting methodology) and [Advanced/4_On_Premises_Enterprise](../Advanced/4_On_Premises_Enterprise.md) (Cisco IOS `show` commands, console access).
 
 ---
 
@@ -311,13 +311,13 @@ See [observability/6_Network_Operations](../observability/6_Network_Operations.m
 
 | Goal | Where to read |
 |------|----------------|
-| Physical cabling, NICs, link speed/duplex | [foundations/3_Physical_Layer](../foundations/3_Physical_Layer.md); this file [Physical layer: server to switch](#physical-layer-server-to-switch) |
-| VLANs, trunk, 802.1Q, switch config | [foundations/4_Data_Link_Layer](../foundations/4_Data_Link_Layer.md); [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md) (How real networks are configured) |
-| IP addressing, subnetting, gateway | [foundations/5_Network_Layer](../foundations/5_Network_Layer.md); [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md) |
-| Routing, HSRP, default route | [routing-switching/1_Routing_Fundamentals](../routing-switching/1_Routing_Fundamentals.md); [routing-switching/4_Redundancy_And_Load_Balancing](../routing-switching/4_Redundancy_And_Load_Balancing.md) |
-| Firewall, ACLs, security | [security/5_Firewalls_Aaa](../security/5_Firewalls_Aaa.md); [security/4_Attacks_Mitigations](../security/4_Attacks_Mitigations.md) |
-| Cisco IOS (show commands, config) | [advanced/4_On_Premises_Enterprise](../advanced/4_On_Premises_Enterprise.md) |
-| Operations (IPAM, change management, troubleshooting) | [observability/6_Network_Operations](../observability/6_Network_Operations.md) |
+| Physical cabling, NICs, link speed/duplex | [Foundations/3_Physical_Layer](../Foundations/3_Physical_Layer.md); this file [Physical layer: server to switch](#physical-layer-server-to-switch) |
+| VLANs, trunk, 802.1Q, switch config | [Foundations/4_Data_Link_Layer](../Foundations/4_Data_Link_Layer.md); [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md) (How real networks are configured) |
+| IP addressing, subnetting, gateway | [Foundations/5_Network_Layer](../Foundations/5_Network_Layer.md); [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md) |
+| Routing, HSRP, default route | [Routing-Switching/1_Routing_Fundamentals](../Routing-Switching/1_Routing_Fundamentals.md); [Routing-Switching/4_Redundancy_And_Load_Balancing](../Routing-Switching/4_Redundancy_And_Load_Balancing.md) |
+| Firewall, ACLs, security | [Security/5_Firewalls_Aaa](../Security/5_Firewalls_Aaa.md); [Security/4_Attacks_Mitigations](../Security/4_Attacks_Mitigations.md) |
+| Cisco IOS (show commands, config) | [Advanced/4_On_Premises_Enterprise](../Advanced/4_On_Premises_Enterprise.md) |
+| Operations (IPAM, change management, troubleshooting) | [Observability/6_Network_Operations](../Observability/6_Network_Operations.md) |
 
 ---
 
@@ -325,4 +325,4 @@ See [observability/6_Network_Operations](../observability/6_Network_Operations.m
 
 - [ByteByteGo – Typical AWS Network Architecture](https://bytebytego.com/guides/typical-aws-network-architecture-in-one-diagram/) (diagram; used with credit)
 - [GeeksforGeeks – Cloud Networking](https://www.geeksforgeeks.org/computer-networks/cloud-networking/)
-- [2_Docker_Kubernetes](./2_Docker_Kubernetes.md); [3_Sdn_Nfv](./3_Sdn_Nfv.md); [security/5_Firewalls_Aaa](../security/5_Firewalls_Aaa.md); [security/6_Ipsec_Vpns](../security/6_Ipsec_Vpns.md)
+- [2_Docker_Kubernetes](./2_Docker_Kubernetes.md); [3_Sdn_Nfv](./3_Sdn_Nfv.md); [Security/5_Firewalls_Aaa](../Security/5_Firewalls_Aaa.md); [Security/6_Ipsec_Vpns](../Security/6_Ipsec_Vpns.md)

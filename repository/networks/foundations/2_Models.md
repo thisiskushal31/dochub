@@ -20,7 +20,7 @@ Layered models used to describe network protocols and communication. Both OSI an
 
 The **OSI (Open Systems Interconnection) model** was developed by the International Organization for Standardization (ISO). It is a **seven-layer** conceptual framework used to understand and design network communication. Each layer has a clearly defined function and works independently. The OSI model is widely used as a reference to understand how network systems function and to troubleshoot by focusing on one layer at a time.
 
-![OSI model — seven layers from Application (top) to Physical (bottom)](../assets/foundations/osi-model.gif)
+![OSI model — seven layers from Application (top) to Physical (bottom)](../Assets/Foundations/osi-model.gif)
 
 The stack can be visualized as follows (Application at top, Physical at bottom; data flows down on send, up on receive):
 
@@ -91,7 +91,7 @@ Provides **end-to-end delivery** of the complete message. It takes services from
   - **Service point addressing (ports)** — Header includes port address so the message is delivered to the correct process on the destination host.
   - **Segmentation and reassembly** — Breaks the message into smaller units (segments); each has a header. The destination transport layer reassembles the message.
   - **Flow control and error control** — Ensures reliable delivery (e.g. TCP: acknowledgments, retransmission, sequencing).
-- **Protocols:** TCP, UDP, SCTP, NetBIOS, PPTP. See [Transport layer](../transport/README.md).
+- **Protocols:** TCP, UDP, SCTP, NetBIOS, PPTP. See [Transport layer](../Transport/README.md).
 
 ### Layer 5: Session layer
 
@@ -123,7 +123,7 @@ The top layer. It is implemented by network applications and provides the **inte
 - **Functions:**
   - **Application services** — Mail services, file transfer (FTAM), directory services, network virtual terminal (NVT).
   - **Protocol support** — SMTP, FTP, DNS, DHCP, HTTP, etc.
-- **Protocols:** FTP, SMTP, DNS, **DHCP**, HTTP, and many others. These are **application-layer** protocols: they define message format and semantics. They **use** the transport layer (TCP or UDP) to send their messages—e.g. DNS and DHCP use **UDP**; HTTP typically uses **TCP**. So DHCP is **not** part of the transport layer; it is an application that runs **over** UDP (ports 67/68). See [Services](../services/README.md) and [DHCP](../services/8_DHCP.md).
+- **Protocols:** FTP, SMTP, DNS, **DHCP**, HTTP, and many others. These are **application-layer** protocols: they define message format and semantics. They **use** the transport layer (TCP or UDP) to send their messages—e.g. DNS and DHCP use **UDP**; HTTP typically uses **TCP**. So DHCP is **not** part of the transport layer; it is an application that runs **over** UDP (ports 67/68). See [Services](../Services/README.md) and [DHCP](../Services/8_DHCP.md).
 
 ### Protocols and PDUs by layer (OSI)
 
@@ -157,7 +157,7 @@ The top layer, closest to the user. Applications (web browsers, email clients, f
 Ensures **reliable or fast delivery** of data between devices: segmentation, ordering, flow control, and (for TCP) retransmission and error handling.
 
 - **Role:** Segmentation and reassembly; multiplexing via port numbers; flow control; for TCP: reliable, connection-oriented delivery; for UDP: low-latency, connectionless delivery.
-- **Protocols:** **TCP** (reliable, connection-oriented, ordered, retransmission, error checking) and **UDP** (lightweight, no guarantee of order or delivery, no retransmission). See [Transport layer](../transport/README.md).
+- **Protocols:** **TCP** (reliable, connection-oriented, ordered, retransmission, error checking) and **UDP** (lightweight, no guarantee of order or delivery, no retransmission). See [Transport layer](../Transport/README.md).
 
 ### 3. Internet layer
 
@@ -218,7 +218,7 @@ As data moves **down** the stack (sender), each layer **encapsulates** the PDU f
 
 The diagram below (from [ByteByteGo – OSI Model Explained](https://bytebytego.com/guides/what-is-osi-model/)) shows how data is encapsulated and de-encapsulated when Device A sends to Device B over the network (e.g. via HTTP).
 
-![OSI encapsulation and de-encapsulation (ByteByteGo)](../assets/foundations/bytebytego-osi-model-encapsulation.jpeg)
+![OSI encapsulation and de-encapsulation (ByteByteGo)](../Assets/Foundations/bytebytego-osi-model-encapsulation.jpeg)
 
 **Step-by-step (sender → receiver):**
 
@@ -312,7 +312,7 @@ So: **application data** is wrapped by **transport** (ports, reliability), then 
 
 Network protocols are standard methods of transferring data between two computers. The diagram below summarizes **eight common protocols** and where they sit in the stack. Source and image: [ByteByteGo – Explaining 8 Popular Network Protocols in 1 Diagram](https://bytebytego.com/guides/explaining-8-popular-network-protocols-in-1-diagram/).
 
-![8 popular network protocols (ByteByteGo)](../assets/foundations/bytebytego-8-network-protocols.png)
+![8 popular network protocols (ByteByteGo)](../Assets/Foundations/bytebytego-8-network-protocols.png)
 
 **Quick reference:**
 
@@ -327,7 +327,7 @@ Network protocols are standard methods of transferring data between two computer
 | **SMTP** | Transfer of electronic mail between servers and clients. |
 | **FTP** | File transfer; separate control (e.g. port 21) and data channels. |
 
-See [Transport layer](../transport/README.md) (TCP, UDP), [Services](../services/README.md) (HTTP, DNS, DHCP, etc.), and [security/2_Encryption_Tls](../security/2_Encryption_Tls.md) (TLS/HTTPS).
+See [Transport layer](../Transport/README.md) (TCP, UDP), [Services](../Services/README.md) (HTTP, DNS, DHCP, etc.), and [Security/2_Encryption_Tls](../Security/2_Encryption_Tls.md) (TLS/HTTPS).
 
 ---
 

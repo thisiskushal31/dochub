@@ -1,5 +1,7 @@
 # Firewalls & AAA (Enterprise)
 
+[← Back to Security](./README.md)
+
 Zone-based firewalls, DoS defense, AAA, TACACS+, RADIUS, 802.1X, ASA.
 
 ## Table of Contents
@@ -93,7 +95,7 @@ In **cloud** (e.g. AWS, Azure, GCP), **firewall-like** controls use **VPC**, **s
 
 - **VPC** — Isolated network with its own CIDR. Segment workloads by VPC or subnets so rules apply per segment.
 - **Subnets** — Divide VPC (e.g. web, app, data). **Route tables** control forwarding (e.g. public → internet gateway; private → NAT). **NACLs** are stateless rules at **subnet** level; first match wins.
-- **Security groups (SGs)** — **Stateful** rules at the **instance** (ENI) level. Allow inbound/outbound by source/dest (IP or SG), protocol, port. **Default deny**; only allow rules permit traffic. Use **least privilege** (e.g. app SG allows 443 only from LB SG). Avoid open **0.0.0.0/0** on sensitive ports; use **private subnets** and **NAT** or **VPC endpoints** for backends. Document and automate (IaC) like on-prem. See [cloud-native/1_Cloud_Networking_Overview](../cloud-native/1_Cloud_Networking_Overview.md).
+- **Security groups (SGs)** — **Stateful** rules at the **instance** (ENI) level. Allow inbound/outbound by source/dest (IP or SG), protocol, port. **Default deny**; only allow rules permit traffic. Use **least privilege** (e.g. app SG allows 443 only from LB SG). Avoid open **0.0.0.0/0** on sensitive ports; use **private subnets** and **NAT** or **VPC endpoints** for backends. Document and automate (IaC) like on-prem. See [Cloud-Native/1_Cloud_Networking_Overview](../Cloud-Native/1_Cloud_Networking_Overview.md).
 
 ---
 
@@ -156,7 +158,7 @@ Many modern routers and switches expose a **REST API** (or **RESTCONF**) for **c
   └─────────────────┘                └─────────────────┘
 ```
 
-**Takeaway:** Treat the device’s **REST API** like a **management interface**: restrict who can reach it, require strong auth and TLS, limit rate, and log access. See [observability/6_Network_Operations](../observability/6_Network_Operations.md) for model-driven programmability (NETCONF, RESTCONF, YANG).
+**Takeaway:** Treat the device’s **REST API** like a **management interface**: restrict who can reach it, require strong auth and TLS, limit rate, and log access. See [Observability/6_Network_Operations](../Observability/6_Network_Operations.md) for model-driven programmability (NETCONF, RESTCONF, YANG).
 
 ---
 
@@ -236,5 +238,5 @@ interface GigabitEthernet0/1
 
 - [GeeksforGeeks – Authentication in Computer Network](https://www.geeksforgeeks.org/computer-networks/authentication-in-computer-network/); [GeeksforGeeks – Introduction of Firewall](https://www.geeksforgeeks.org/computer-networks/introduction-of-firewall-in-computer-network/)
 - [Network-Security (BFreitas16) — Firewalls & AAA](https://github.com/BFreitas16/Network-Security) (config concepts and ZBFW/AAA/802.1X/ASA)
-- [1_Overview_Perimeter](./1_Overview_Perimeter.md) (firewall basics); [cloud-native/1_Cloud_Networking_Overview](../cloud-native/1_Cloud_Networking_Overview.md) (VPC, subnets)
+- [1_Overview_Perimeter](./1_Overview_Perimeter.md) (firewall basics); [Cloud-Native/1_Cloud_Networking_Overview](../Cloud-Native/1_Cloud_Networking_Overview.md) (VPC, subnets)
 - [NIDS & DoS](./7_Nids_DoS_Identity.md); [Attacks & mitigations](./4_Attacks_Mitigations.md)

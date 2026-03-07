@@ -19,9 +19,9 @@ Building networks with enterprise devices; Cisco switches, IOS, routers; console
 
 ## Building a network with enterprise devices
 
-**Enterprise** networks are built with **switches** (L2, access/aggregation) and **routers** (L3, WAN, internet edge). **Physical topology**: devices are **cabled** (copper or fiber); **hierarchical** design (access → distribution → core) scales and isolates failure domains. Source: Networking-Essentials (Cisco), [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md).
+**Enterprise** networks are built with **switches** (L2, access/aggregation) and **routers** (L3, WAN, internet edge). **Physical topology**: devices are **cabled** (copper or fiber); **hierarchical** design (access → distribution → core) scales and isolates failure domains. Source: Networking-Essentials (Cisco), [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md).
 
-For **home lab**, **SOHO**, or **data center** scale from a network perspective (same concepts, different topology and protocols), see [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md#network-scale-spectrum-home-lab-to-data-center) (Network scale spectrum). For **virtualized** hosts (VMware, KVM, Hyper-V) and how VM traffic hits the physical network (vSwitch, port groups, uplinks), see [cloud-native/1_Cloud_Networking_Overview](../cloud-native/1_Cloud_Networking_Overview.md) (Virtualized hosts: network perspective).
+For **home lab**, **SOHO**, or **data center** scale from a network perspective (same concepts, different topology and protocols), see [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md#network-scale-spectrum-home-lab-to-data-center) (Network scale spectrum). For **virtualized** hosts (VMware, KVM, Hyper-V) and how VM traffic hits the physical network (vSwitch, port groups, uplinks), see [Cloud-Native/1_Cloud_Networking_Overview](../Cloud-Native/1_Cloud_Networking_Overview.md) (Virtualized hosts: network perspective).
 
 ---
 
@@ -31,7 +31,7 @@ For **home lab**, **SOHO**, or **data center** scale from a network perspective 
 
 - **Ports:** **Copper** (twisted-pair) for most access; **fiber** for **uplinks** or long runs. **Speed**: 10/100, **Gigabit** (10/100/1000), or higher (e.g. 40 Gbps uplinks on Catalyst 9300 48S). Choose **ports** and **speed** to match **bandwidth** needs (e.g. gigabit if internet or uplink > 100 Mbps).
 - **Expandability:** **Fixed** (fixed number/type of ports) vs **modular** (chassis with **expansion** slots for line cards).
-- **Manageability:** **Managed** switches run **Cisco IOS** (or similar); you can configure **VLANs**, **port security**, **STP**, and **monitoring**. **Unmanaged** switches have no config. **In-band** management: over the **network** (SSH, Telnet, HTTP). **Out-of-band**: **console** (serial) so you can access the device even when the network is down. See [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md).
+- **Manageability:** **Managed** switches run **Cisco IOS** (or similar); you can configure **VLANs**, **port security**, **STP**, and **monitoring**. **Unmanaged** switches have no config. **In-band** management: over the **network** (SSH, Telnet, HTTP). **Out-of-band**: **console** (serial) so you can access the device even when the network is down. See [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md).
 
 ---
 
@@ -104,18 +104,18 @@ write memory
 When **configuration does not work**, use a **structured** approach: Source: observability and operations best practices.
 
 - **Gather information:** What **changed**? What **symptoms**? **Ping**, **traceroute**, **show** commands (interfaces, routes, ARP, MAC).
-- **Layer-by-layer:** **Physical** (link up? cable? wrong port?), **L2** (VLAN, STP, MAC), **L3** (IP, routing, ACL), **L4** (firewall, NAT, port). See [observability/6_Network_Operations](../observability/6_Network_Operations.md) (troubleshooting methodology).
+- **Layer-by-layer:** **Physical** (link up? cable? wrong port?), **L2** (VLAN, STP, MAC), **L3** (IP, routing, ACL), **L4** (firewall, NAT, port). See [Observability/6_Network_Operations](../Observability/6_Network_Operations.md) (troubleshooting methodology).
 - **Common issues:** **Wrong IP/mask/gateway**, **ACL** blocking, **VLAN** mismatch, **duplicate IP**, **routing loop**, **MTU** mismatch, **device** or **link** failure.
 
 ---
 
 ## Packet Tracer and simulation
 
-**Cisco Packet Tracer** is a **simulator** for building and testing **small** networks (switches, routers, PCs, cables). You can **design** topology, **configure** devices (CLI or GUI), and **verify** connectivity (ping, trace). Useful for **learning** IOS basics, **subnetting**, **VLANs**, and **routing** without physical hardware. Source: Networking-Essentials (Cisco Packet Tracer). See [labs/3_Operational_Simulators_Tools](../labs/3_Operational_Simulators_Tools.md).
+**Cisco Packet Tracer** is a **simulator** for building and testing **small** networks (switches, routers, PCs, cables). You can **design** topology, **configure** devices (CLI or GUI), and **verify** connectivity (ping, trace). Useful for **learning** IOS basics, **subnetting**, **VLANs**, and **routing** without physical hardware. Source: Networking-Essentials (Cisco Packet Tracer). See [Labs/3_Operational_Simulators_Tools](../Labs/3_Operational_Simulators_Tools.md).
 
 ---
 
 ## References
 
 - Networking-Essentials (Cisco): Cisco LAN Switches, Router Components, Cisco IOS, Router Boot Process, Packet Tracer
-- [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md); [observability/6_Network_Operations](../observability/6_Network_Operations.md); [labs/3_Operational_Simulators_Tools](../labs/3_Operational_Simulators_Tools.md)
+- [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md); [Observability/6_Network_Operations](../Observability/6_Network_Operations.md); [Labs/3_Operational_Simulators_Tools](../Labs/3_Operational_Simulators_Tools.md)

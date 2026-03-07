@@ -18,7 +18,7 @@ Software-defined networking and network functions virtualization.
 **SDN** separates the **control plane** (deciding how traffic should flow) from the **data plane** (forwarding packets). The **control plane** is moved to a **centralized controller** (or distributed control cluster); **switches and routers** become **forwarding elements** that receive rules from the controller. Source: Networking-Essentials (Cisco), GFG Cloud Networking.
 
 - **Traditional:** Each device runs its own **control plane** (routing protocols, ACL logic) and **data plane** (forwarding). Config is **per device**.
-- **SDN:** A **centralized SDN controller** (typically on a server) **manages** how the data plane of switches and routers handles traffic. The controller **orchestrates** communication between **applications** and **network elements**. Benefits: **centralized** management, **automation**, **programmability** (APIs), **agility** (change policy without touching every box). Used in data centers (e.g. OpenFlow-style or vendor SDN) and **cloud** (virtual networks, overlay control). See [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md) (SD-WAN).
+- **SDN:** A **centralized SDN controller** (typically on a server) **manages** how the data plane of switches and routers handles traffic. The controller **orchestrates** communication between **applications** and **network elements**. Benefits: **centralized** management, **automation**, **programmability** (APIs), **agility** (change policy without touching every box). Used in data centers (e.g. OpenFlow-style or vendor SDN) and **cloud** (virtual networks, overlay control). See [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md) (SD-WAN).
 
 **Visual (control vs data plane):**
 
@@ -90,4 +90,4 @@ Software-defined networking and network functions virtualization.
 
 - Networking-Essentials (Cisco): Network Virtualization and SDN, SDN Architecture
 - [GeeksforGeeks – Cloud Networking](https://www.geeksforgeeks.org/computer-networks/cloud-networking/)
-- [1_Cloud_Networking_Overview](./1_Cloud_Networking_Overview.md); [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md)
+- [1_Cloud_Networking_Overview](./1_Cloud_Networking_Overview.md); [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md)

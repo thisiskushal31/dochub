@@ -49,7 +49,7 @@ RIP, OSPF, IS-IS, EIGRP, BGP, IGMP.
 
 ## IGMP
 
-**IGMP (Internet Group Management Protocol)** is used for **multicast** group membership: hosts tell their local **multicast router** which multicast groups they want to receive. The router then forwards multicast traffic for those groups onto the LAN. Works with multicast routing (e.g. PIM). **IGMP snooping** on switches restricts multicast forwarding to ports with interested hosts. See [foundations/5_Network_Layer](../foundations/5_Network_Layer.md) for multicast addressing; network layer protocols (ICMP, IGMP) are also covered there.
+**IGMP (Internet Group Management Protocol)** is used for **multicast** group membership: hosts tell their local **multicast router** which multicast groups they want to receive. The router then forwards multicast traffic for those groups onto the LAN. Works with multicast routing (e.g. PIM). **IGMP snooping** on switches restricts multicast forwarding to ports with interested hosts. See [Foundations/5_Network_Layer](../Foundations/5_Network_Layer.md) for multicast addressing; network layer protocols (ICMP, IGMP) are also covered there.
 
 ---
 

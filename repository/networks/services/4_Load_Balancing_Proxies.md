@@ -34,7 +34,7 @@ Load balancing **distributes traffic** across multiple servers to improve **scal
 
 Load balancers use **algorithms** to decide which backend receives each request. The six most common are grouped into **static** (no live backend state) and **dynamic** (use current load or performance). Content and diagram below from [ByteByteGo – Top 6 Load Balancing Algorithms](https://bytebytego.com/guides/top-6-load-balancing-algorithms/).
 
-![Top 6 Load Balancing Algorithms (ByteByteGo)](../assets/services/bytebytego-top-6-load-balancing-algorithms.png)
+![Top 6 Load Balancing Algorithms (ByteByteGo)](../Assets/Services/bytebytego-top-6-load-balancing-algorithms.png)
 
 ### Static algorithms
 

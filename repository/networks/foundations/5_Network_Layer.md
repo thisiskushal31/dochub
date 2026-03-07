@@ -35,12 +35,12 @@ The **network layer** is the third layer of the OSI model. It is responsible for
 ### Key responsibilities
 
 - **Logical addressing** — Assigns unique **IP addresses** to devices so they can be identified and reached across networks.
-- **Routing** — Determines the **best path** for packets to travel across multiple networks using routing tables and protocols (e.g. RIP, OSPF, BGP; see [routing-switching/](../routing-switching/README.md)).
+- **Routing** — Determines the **best path** for packets to travel across multiple networks using routing tables and protocols (e.g. RIP, OSPF, BGP; see [Routing-Switching/](../Routing-Switching/README.md)).
 - **Forwarding** — Moves packets from an router’s input interface to the appropriate output interface based on the **destination IP**.
 - **Fragmentation and reassembly** — Splits large packets into smaller **fragments** when they exceed the **MTU** of a link; reassembles them at the destination.
 - **Host-to-host delivery** — Delivers packets from sender to intended receiver across diverse networks.
 - **Packetization** — Encapsulates transport-layer segments into **packets** with network-layer headers (e.g. IP).
-- **NAT** — Maps private IPs to public IPs for internet access, conserving address space and adding a layer of indirection (NAT is often implemented at the edge; see [transport](../transport/README.md)).
+- **NAT** — Maps private IPs to public IPs for internet access, conserving address space and adding a layer of indirection (NAT is often implemented at the edge; see [transport](../Transport/README.md)).
 
 ### How the network layer works (high level)
 
@@ -61,7 +61,7 @@ The **network layer** is the third layer of the OSI model. It is responsible for
 - **IPSec** — Encryption and authentication for IP.
 - **MPLS** — Label-based forwarding (often considered between L2 and L3).
 
-Routing protocols (RIP, OSPF, BGP) populate routing tables; they are covered in [routing-switching/](../routing-switching/README.md).
+Routing protocols (RIP, OSPF, BGP) populate routing tables; they are covered in [Routing-Switching/](../Routing-Switching/README.md).
 
 ### Advantages and limitations
 
@@ -88,7 +88,7 @@ An **IP address (Internet Protocol address)** is a **unique numerical label** as
 → Network ID: **192.168.1.0**  
 → Host ID: **10**
 
-![IP address — network and host portions, subnet mask](../assets/foundations/ip-address-representation.jpg)
+![IP address — network and host portions, subnet mask](../Assets/Foundations/ip-address-representation.jpg)
 
 ### Types of IP (summary)
 
@@ -114,9 +114,9 @@ IP addresses can be classified in several ways. The following table and list cov
 | **Multicast** | One sender → a group of receivers | IPTV, video conferencing (IPv4: 224.0.0.0–239.255.255.255) |
 | **Anycast** | One sender → nearest of a group (by routing) | CDN, DNS (same IP at multiple locations) |
 
-![Unicast, multicast, and broadcast compared](../assets/foundations/ip-unicast-multicast-broadcast.png)
+![Unicast, multicast, and broadcast compared](../Assets/Foundations/ip-unicast-multicast-broadcast.png)
 
-![Anycast — one sender to nearest of a group (by routing distance)](../assets/foundations/ip-anycast.png)
+![Anycast — one sender to nearest of a group (by routing distance)](../Assets/Foundations/ip-anycast.png)
 
 ### IPv4 and IPv6
 
@@ -129,9 +129,9 @@ IP addresses can be classified in several ways. The following table and list cov
 
 **Classful IP addressing** (1981–1993) divided the IPv4 address space into **fixed classes** (A, B, C, D, E). The **first few bits** of the address determined the class, which in turn fixed the boundary between **network ID** and **host ID**. This made allocation and routing simple but led to **waste** (e.g. a Class B for a small network). It was superseded by **classless addressing (CIDR)**.
 
-![Classful addressing — classes A, B, C, D, E and default masks](../assets/foundations/classful-classes.jpg)
+![Classful addressing — classes A, B, C, D, E and default masks](../Assets/Foundations/classful-classes.jpg)
 
-![Classful IP address structure (network vs host bits)](../assets/foundations/classful-addressing.png)
+![Classful IP address structure (network vs host bits)](../Assets/Foundations/classful-addressing.png)
 
 ### Classes (summary)
 
@@ -320,7 +320,7 @@ So end-to-end delivery is achieved by: **destination IP in header** → **routin
 
 The **IPv4 header** is at least **20 bytes** (without options). With options it can go up to **60 bytes**. The receiver uses the header to route, fragment/reassemble, and pass the payload to the correct upper-layer protocol.
 
-![IPv4 datagram header — fields and layout](../assets/foundations/ipv4-datagram-header.jpg)
+![IPv4 datagram header — fields and layout](../Assets/Foundations/ipv4-datagram-header.jpg)
 
 **Header layout (simplified):**
 
@@ -366,7 +366,7 @@ The **IPv4 header** is at least **20 bytes** (without options). With options it 
 
 Key differences between IPv4 and IPv6 in one diagram. Source and image: [ByteByteGo – IPv4 vs. IPv6: Differences](https://bytebytego.com/guides/ipv4-vs-ipv6/).
 
-![IPv4 vs IPv6 (ByteByteGo)](../assets/foundations/bytebytego-ipv4-vs-ipv6.png)
+![IPv4 vs IPv6 (ByteByteGo)](../Assets/Foundations/bytebytego-ipv4-vs-ipv6.png)
 
 | Aspect | IPv4 | IPv6 |
 |--------|------|------|
@@ -380,7 +380,7 @@ Key differences between IPv4 and IPv6 in one diagram. Source and image: [ByteByt
 | **Security** | IPsec optional | IPsec part of the design |
 | **Flow identification** | No dedicated field | Flow Label field |
 
-**Transition:** Dual stacking (run both), tunneling (IPv6 over IPv4), and NAT64/translators allow coexistence. IPv6 uses **Neighbor Discovery (ND)** instead of ARP for address resolution on the link. See [security/6_Ipsec_Vpns](../security/6_Ipsec_Vpns.md) for IPv6 over IPv4 tunneling.
+**Transition:** Dual stacking (run both), tunneling (IPv6 over IPv4), and NAT64/translators allow coexistence. IPv6 uses **Neighbor Discovery (ND)** instead of ARP for address resolution on the link. See [Security/6_Ipsec_Vpns](../Security/6_Ipsec_Vpns.md) for IPv6 over IPv4 tunneling.
 
 ---
 
@@ -587,11 +587,11 @@ tracert 8.8.8.8
 
 **ARP (Address Resolution Protocol)** maps a **network-layer address (IPv4)** to a **data-link-layer address (MAC)** on the **same local network**. Applications and the kernel use **IP addresses**; the NIC and switches use **MAC addresses**. ARP bridges the two on the LAN.
 
-![How ARP works — request (broadcast) and reply (unicast)](../assets/foundations/arp-works.gif)
+![How ARP works — request (broadcast) and reply (unicast)](../Assets/Foundations/arp-works.gif)
 
-![ARP in the network layer — IP to MAC resolution](../assets/foundations/arp-network-layer.jpg)
+![ARP in the network layer — IP to MAC resolution](../Assets/Foundations/arp-network-layer.jpg)
 
-![ARP request and reply flow](../assets/foundations/arp-diagram.png)
+![ARP request and reply flow](../Assets/Foundations/arp-diagram.png)
 
 ### How ARP works
 
@@ -600,7 +600,7 @@ tracert 8.8.8.8
 3. The host with IP **X** replies (unicast): “IP X is at MAC M.”
 4. Sender stores **IP X → MAC M** in its **ARP cache** and then sends the frame to MAC M.
 
-![ARP request and reply — sender/receiver IP and MAC](../assets/foundations/arp-request-reply.jpg)
+![ARP request and reply — sender/receiver IP and MAC](../Assets/Foundations/arp-request-reply.jpg)
 
 **ARP request** is a **broadcast** (destination MAC = FF:FF:FF:FF:FF:FF). **ARP reply** is **unicast**.
 
@@ -619,7 +619,7 @@ A host sends an ARP request for **its own IP**. Used to:
 ### ARP cache and security
 
 - Entries are **cached** for a short time to avoid repeated ARP requests.
-- **ARP spoofing / poisoning** — Attacker sends fake ARP replies to associate their MAC with another host’s IP, leading to traffic interception or DoS. Mitigations: static ARP, DHCP snooping, ARP inspection (see [security](../security/README.md)).
+- **ARP spoofing / poisoning** — Attacker sends fake ARP replies to associate their MAC with another host’s IP, leading to traffic interception or DoS. Mitigations: static ARP, DHCP snooping, ARP inspection (see [security](../Security/README.md)).
 
 ### IPv6: Neighbor Discovery (ND)
 
@@ -721,7 +721,7 @@ So: **IP addresses** (and ports) stay from end to end; **MAC addresses** change 
 | **RARP** | Reverse ARP (MAC → IP); obsolete, replaced by DHCP. |
 | **DHCP** | Assigns IP and other config to hosts; often considered application layer but involves network-layer addressing. |
 
-**Routing protocols** (RIP, OSPF, BGP, etc.) run on routers to build and exchange routing information; they are covered in [routing-switching/](../routing-switching/README.md). **NAT** is usually implemented at the edge (router or firewall); see [transport](../transport/README.md) for port-based NAT.
+**Routing protocols** (RIP, OSPF, BGP, etc.) run on routers to build and exchange routing information; they are covered in [Routing-Switching/](../Routing-Switching/README.md). **NAT** is usually implemented at the edge (router or firewall); see [transport](../Transport/README.md) for port-based NAT.
 
 ---
 

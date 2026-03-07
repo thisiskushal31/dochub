@@ -1,5 +1,7 @@
 # Network Security Overview & Perimeter
 
+[← Back to Security](./README.md)
+
 What is network security; firewalls, MAC filtering, VPN, IDS/IPS.
 
 ## Table of Contents
@@ -16,7 +18,7 @@ What is network security; firewalls, MAC filtering, VPN, IDS/IPS.
 
 ## What is network security?
 
-**Network security** protects networks and the data they carry from **unauthorized access**, **misuse**, and **cyberattacks**. It aims to keep systems **confidential**, **available**, and **trustworthy**. Source: [GeeksforGeeks – What is Network Security?](https://www.geeksforgeeks.org/computer-networks/network-security/).
+**Network security** protects networks and the data they carry from **unauthorized access**, **misuse**, and **cyberattacks**. It aims to keep systems **confidential**, **available**, and **trustworthy**. Source: [GeeksforGeeks – What is Network Security?](https://www.geeksforgeeks.org/computer-networks/network-Security/).
 
 - **Goals:** Safe communication; reliable operations; **confidentiality**, **integrity**, and **availability** of data; prevention of unauthorized access and threats.
 - **How it works:** **Layered** controls at the network edge and inside the environment. Traffic is checked against rules; only authorized users and traffic are allowed. Layers include:
@@ -34,7 +36,7 @@ A **firewall** is a **network security system** (hardware or software) that **mo
 
 The diagram below illustrates how a firewall sits between trusted and untrusted networks and filters traffic. Source and image: [ByteByteGo – Firewall Explained to Kids and Adults](https://bytebytego.com/guides/firewall-explained-to-kids-and-adults/).
 
-![Firewall as barrier between trusted and untrusted networks (ByteByteGo)](../assets/security/bytebytego-firewall-explained.jpeg)
+![Firewall as barrier between trusted and untrusted networks (ByteByteGo)](../Assets/Security/bytebytego-firewall-explained.jpeg)
 
 - **Actions:** **Accept** (allow), **Reject** (block with error), **Drop** (block silently). Best practice: **default deny** (drop or reject) for traffic not explicitly allowed.
 - **Working:** Every packet is checked against rules; matches can allow or block. Blocked or unusual traffic is logged; alerts can be generated. Rules are set by the organization (e.g. by IP, port, protocol, application).
@@ -58,9 +60,9 @@ A **VPN (Virtual Private Network)** creates a **secure, encrypted** connection o
 
 The diagram below shows how a VPN tunnels traffic between your device and a VPN server so that data is encrypted over the public internet. Source and image: [ByteByteGo – How Does a VPN Work?](https://bytebytego.com/guides/how-does-a-vpn-work/).
 
-![How a VPN works — encrypted tunnel (ByteByteGo)](../assets/security/bytebytego-how-vpn-works.png)
+![How a VPN works — encrypted tunnel (ByteByteGo)](../Assets/Security/bytebytego-how-vpn-works.png)
 
-- **Types:** **Remote access** (user to corporate network); **site-to-site** (network to network); **cloud VPN** (on-prem to cloud). See [routing-switching/3_Tunneling_Mpls](../routing-switching/3_Tunneling_Mpls.md) (GRE) and [6_Ipsec_Vpns](./6_Ipsec_Vpns.md).
+- **Types:** **Remote access** (user to corporate network); **site-to-site** (network to network); **cloud VPN** (on-prem to cloud). See [Routing-Switching/3_Tunneling_Mpls](../Routing-Switching/3_Tunneling_Mpls.md) (GRE) and [6_Ipsec_Vpns](./6_Ipsec_Vpns.md).
 - **How it works:** Traffic is **encapsulated** (and usually **encrypted**); it is sent through a **tunnel** to the VPN gateway, which decapsulates and forwards to the internal network. The VPN can use **IPSec**, **TLS** (e.g. OpenVPN, SSL VPN), or **WireGuard**. VPN security: encrypts data, can authenticate users/devices, and (for remote access) can mask the client’s public IP. See [2_Encryption_Tls](./2_Encryption_Tls.md) and [6_Ipsec_Vpns](./6_Ipsec_Vpns.md).
 
 ---
@@ -105,13 +107,13 @@ The diagram below shows how a VPN tunnels traffic between your device and a VPN 
 - **IDS (Intrusion Detection System)** — **Monitors** network (or host) traffic to **detect** suspicious or malicious activity. It **alerts** and logs; it does **not** block traffic by itself. Can be **network-based (NIDS)** or **host-based (HIDS)**.
 - **IPS (Intrusion Prevention System)** — Like IDS but **also blocks** (or mitigates) malicious traffic in **real time**. Inline; can drop packets, reset connections, or trigger other responses. Also called **IDPS**. Source: GFG Network Security (IPS monitors, prevents, blocks; generates logs and reports).
 
-**Use:** IPS/IDS identify attacks (e.g. exploits, DoS patterns, policy violations). Alerts feed **SIEM** and **incident response**. Tuning is needed to limit false positives. See [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md) (Snort, DoS types) and [observability/5_Security_Monitoring](../observability/5_Security_Monitoring.md) (Zeek, Suricata).
+**Use:** IPS/IDS identify attacks (e.g. exploits, DoS patterns, policy violations). Alerts feed **SIEM** and **incident response**. Tuning is needed to limit false positives. See [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md) (Snort, DoS types) and [Observability/5_Security_Monitoring](../Observability/5_Security_Monitoring.md) (Zeek, Suricata).
 
 ---
 
 ## References
 
-- [GeeksforGeeks – What is Network Security?](https://www.geeksforgeeks.org/computer-networks/network-security/) (goals, how it works, threats)
+- [GeeksforGeeks – What is Network Security?](https://www.geeksforgeeks.org/computer-networks/network-Security/) (goals, how it works, threats)
 - [GeeksforGeeks – Introduction of Firewall in Computer Network](https://www.geeksforgeeks.org/computer-networks/introduction-of-firewall-in-computer-network/); [GeeksforGeeks – MAC Filtering in Computer Network](https://www.geeksforgeeks.org/computer-networks/mac-filtering-in-computer-network/)
 - [ByteByteGo – Firewall Explained to Kids and Adults](https://bytebytego.com/guides/firewall-explained-to-kids-and-adults/) (diagram; used with credit); [ByteByteGo – How Does a VPN Work?](https://bytebytego.com/guides/how-does-a-vpn-work/) (diagram; used with credit)
-- [4_Attacks_Mitigations](./4_Attacks_Mitigations.md) (L1–L3); [8_Reconnaissance_Offensive](./8_Reconnaissance_Offensive.md) (recon, scanning); [9_Blue_Team_Defensive](./9_Blue_Team_Defensive.md) (blue team, NSM, IR); [10_Applications_Network_Perspective](./10_Applications_Network_Perspective.md) (web, mobile, AI, containers); [5_Firewalls_Aaa](./5_Firewalls_Aaa.md); [6_Ipsec_Vpns](./6_Ipsec_Vpns.md); [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md); [observability/5_Security_Monitoring](../observability/5_Security_Monitoring.md)
+- [4_Attacks_Mitigations](./4_Attacks_Mitigations.md) (L1–L3); [8_Reconnaissance_Offensive](./8_Reconnaissance_Offensive.md) (recon, scanning); [9_Blue_Team_Defensive](./9_Blue_Team_Defensive.md) (blue team, NSM, IR); [10_Applications_Network_Perspective](./10_Applications_Network_Perspective.md) (web, mobile, AI, containers); [5_Firewalls_Aaa](./5_Firewalls_Aaa.md); [6_Ipsec_Vpns](./6_Ipsec_Vpns.md); [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md); [Observability/5_Security_Monitoring](../Observability/5_Security_Monitoring.md)

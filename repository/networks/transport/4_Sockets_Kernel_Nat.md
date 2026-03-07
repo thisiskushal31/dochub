@@ -24,7 +24,7 @@ A **socket** is an endpoint for communication: the combination of **IP address**
 - **SYN queue** — When a SYN arrives, the kernel can store it in a SYN queue (or equivalent) while replying with SYN-ACK. If the backlog is full or the queue overflows, new SYNs may be dropped or ignored.
 - **Accept queue** — Once the three-way handshake completes, the connection moves to the accept queue. When the server calls `accept()`, it takes a connection from this queue. If the accept queue is full, the kernel may drop incoming SYNs or delay completion; behaviour is OS-dependent.
 
-Tuning **backlog** and understanding **SYN flood** protection (e.g. SYN cookies) matters for high-load servers. See [Listening server](#listening-server) and [labs/](../labs/README.md) for server examples.
+Tuning **backlog** and understanding **SYN flood** protection (e.g. SYN cookies) matters for high-load servers. See [Listening server](#listening-server) and [Labs/](../Labs/README.md) for server examples.
 
 **Hands-on: what you're doing when you list sockets and connections**
 
@@ -94,7 +94,7 @@ A **listening server** binds to a port and accepts incoming TCP connections (or 
 
 **Backlog tuning:** If connections are dropped under load, increasing the **listen backlog** can help, but the kernel may cap it or use it for both SYN and accept queues. Some systems allow tuning SYN and accept queue sizes separately. Monitoring **overflow** or **drop** counters (e.g. `ListenOverflows`, `ListenDrops` on Linux) helps.
 
-For UDP, the server typically **bind()**s and then **recvfrom()** / **sendto()**; there is no `listen` or `accept`. See [labs/](../labs/README.md) for code examples.
+For UDP, the server typically **bind()**s and then **recvfrom()** / **sendto()**; there is no `listen` or `accept`. See [Labs/](../Labs/README.md) for code examples.
 
 ---
 
@@ -106,7 +106,7 @@ The kernel maintains **per-connection state** for each TCP connection: sequence 
 - **Timers** — Retransmission timer (RTO), keepalive, and for the closing side, TIME_WAIT (e.g. 2×MSL) so that delayed segments are discarded before the same four-tuple (src IP, src port, dst IP, dst port) is reused.
 - **Connection limit** — The kernel has a finite number of file descriptors and connection structures; too many connections or too small a backlog can cause failures or drops.
 
-Understanding this helps when debugging connection failures, port exhaustion, or high latency. See [advanced/](../advanced/README.md) for port exhaustion and TCP failure case studies.
+Understanding this helps when debugging connection failures, port exhaustion, or high latency. See [Advanced/](../Advanced/README.md) for port exhaustion and TCP failure case studies.
 
 ---
 
@@ -146,7 +146,7 @@ If two internal hosts use the same source port to the same destination, NAT must
 
 **Pros:** Saves public IPv4 addresses; hides internal addresses; single point of control at the border.
 
-**Cons:** Breaks **end-to-end** addressing (hosts behind NAT are not directly addressable); can complicate **peer-to-peer** and some protocols (VoIP, gaming); requires **state** (mapping table); can cause **port exhaustion** when many connections use one public IP. IPv6 reduces the need for NAT; see [foundations/5_Network_Layer](../foundations/5_Network_Layer.md).
+**Cons:** Breaks **end-to-end** addressing (hosts behind NAT are not directly addressable); can complicate **peer-to-peer** and some protocols (VoIP, gaming); requires **state** (mapping table); can cause **port exhaustion** when many connections use one public IP. IPv6 reduces the need for NAT; see [Foundations/5_Network_Layer](../Foundations/5_Network_Layer.md).
 
 ---
 
@@ -154,10 +154,10 @@ If two internal hosts use the same source port to the same destination, NAT must
 
 **Private IP addresses** (RFC 1918) are not routable on the public internet. They are used **inside** a network (home, office, or other private space). NAT (or a proxy) at the border translates between private and public so that internal hosts can reach the internet.
 
-- **Ranges (IPv4):** 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16. See [foundations/5_Network_Layer — Public and private IPs](../foundations/5_Network_Layer.md#public-and-private-ip-addresses).
+- **Ranges (IPv4):** 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16. See [Foundations/5_Network_Layer — Public and private IPs](../Foundations/5_Network_Layer.md#public-and-private-ip-addresses).
 - **Use cases:** Home and office LANs, in-flight or hotel Wi‑Fi, corporate intranets. Devices get private IPs via DHCP; the gateway does NAT for outbound traffic.
 
-Private IPs are **not** inherently secure; security comes from firewalls, access control, and encryption (e.g. TLS). See [security/](../security/README.md).
+Private IPs are **not** inherently secure; security comes from firewalls, access control, and encryption (e.g. TLS). See [Security/](../Security/README.md).
 
 ---
 
@@ -166,4 +166,4 @@ Private IPs are **not** inherently secure; security comes from firewalls, access
 - `ss(8)` and `netstat(8)` man pages (listening sockets and connections)
 - [GeeksforGeeks – Network Address Translation (NAT)](https://www.geeksforgeeks.org/computer-networks/network-address-translation-nat/)
 - RFC 1918 – Address Allocation for Private Internets
-- [Foundations – Public and private IP addresses](../foundations/5_Network_Layer.md#public-and-private-ip-addresses)
+- [Foundations – Public and private IP addresses](../Foundations/5_Network_Layer.md#public-and-private-ip-addresses)

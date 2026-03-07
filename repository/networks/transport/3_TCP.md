@@ -165,7 +165,7 @@ Typically one side sends **FIN**; the other **ACK**s and may continue sending; w
 - **Head-of-line blocking** — If one segment is lost, later segments may be held until it is retransmitted; a single loss can delay the whole stream (see [TCP performance](./5_TCP_Performance.md)).
 - **Connection setup cost** — One RTT for the three-way handshake before the first data (mitigations: TCP Fast Open, connection reuse).
 
-For performance tuning, MSS/MTU, Nagle, delayed ACK, and TCP Fast Open, see [TCP performance & tuning](./5_TCP_Performance.md). For server examples and captures, see [labs/](../labs/README.md).
+For performance tuning, MSS/MTU, Nagle, delayed ACK, and TCP Fast Open, see [TCP performance & tuning](./5_TCP_Performance.md). For server examples and captures, see [Labs/](../Labs/README.md).
 
 ---
 

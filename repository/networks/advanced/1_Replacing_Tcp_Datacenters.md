@@ -26,7 +26,7 @@ In **datacenters**, TCP can be **suboptimal** for certain workloads and topologi
 
 ## Part 2: QUIC and alternatives
 
-**QUIC (Quick UDP Internet Connections)** is a **transport** protocol over **UDP** that provides **encryption**, **multiplexing**, and **low-latency** connection establishment. Source: [transport/6_Other_Protocols](../transport/6_Other_Protocols.md), course outline.
+**QUIC (Quick UDP Internet Connections)** is a **transport** protocol over **UDP** that provides **encryption**, **multiplexing**, and **low-latency** connection establishment. Source: [Transport/6_Other_Protocols](../Transport/6_Other_Protocols.md), course outline.
 
 - **QUIC:** **Connection** and **0–1 RTT** setup (resumption); **multiple streams** over one connection with **per-stream** flow control; **no head-of-line blocking** between streams (loss on one stream does not block others). **Encryption** (TLS 1.3) is mandatory. Used in **HTTP/3** and for **custom** protocols. **Trade-off:** Runs in **user space** (or kernel implementations); **NAT/firewall** must allow UDP; **visibility** is harder (encrypted).
 - **Other alternatives:** **SCTP** (streams, multihoming; less adoption). **Custom** UDP-based or **kernel-bypass** stacks (e.g. **DPDK**, **io_uring**) for **extreme** latency/throughput in controlled DCs. **TCP** with **TFO** and **multiple connections** or **connection pooling** remains common where QUIC is not yet deployed.
@@ -43,4 +43,4 @@ In **datacenters**, TCP can be **suboptimal** for certain workloads and topologi
 ## References
 
 - Course outline: Replacing TCP for Data Centers (Parts 1–3)
-- [transport/5_TCP_Performance](../transport/5_TCP_Performance.md) (head-of-line blocking, TFO); [transport/6_Other_Protocols](../transport/6_Other_Protocols.md) (QUIC)
+- [Transport/5_TCP_Performance](../Transport/5_TCP_Performance.md) (head-of-line blocking, TFO); [Transport/6_Other_Protocols](../Transport/6_Other_Protocols.md) (QUIC)

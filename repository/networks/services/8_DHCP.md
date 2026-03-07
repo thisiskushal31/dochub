@@ -170,7 +170,7 @@ When the **DHCP server** is on a **different subnet** than the client, **broadca
 - **DHCP starvation** — Attacker sends many Discover/Request with **spoofed MACs** to exhaust the pool; legitimate clients get no address. **Mitigation:** Rate limiting, port security (limit MACs per port), and DHCP snooping with limits on leases per port.
 - **Malicious options** — Wrong DNS (option 6) can redirect traffic. Snooping and monitoring (e.g. audit logs of assigned IPs and options) help detect abuse.
 
-See [security/4_Attacks_Mitigations](../security/4_Attacks_Mitigations.md) for DHCP attacks in the security section.
+See [Security/4_Attacks_Mitigations](../Security/4_Attacks_Mitigations.md) for DHCP attacks in the security section.
 
 ---
 
@@ -178,4 +178,4 @@ See [security/4_Attacks_Mitigations](../security/4_Attacks_Mitigations.md) for D
 
 - [GeeksforGeeks – Dynamic Host Configuration Protocol (DHCP)](https://www.geeksforgeeks.org/computer-networks/dynamic-host-configuration-protocol-dhcp/)
 - RFC 2131 – DHCP; RFC 2132 – DHCP options; RFC 8415 – DHCPv6
-- [Application overview – protocols](./1_Application_Overview.md); [Security – DHCP attacks](../security/4_Attacks_Mitigations.md)
+- [Application overview – protocols](./1_Application_Overview.md); [Security – DHCP attacks](../Security/4_Attacks_Mitigations.md)

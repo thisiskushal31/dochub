@@ -10,7 +10,7 @@ Metrics, logs, traces; latency/jitter/loss, SLIs, synthetic checks.
 
 ### [2. Packet capture (tcpdump)](./2_Packet_Capture.md)
 
-tcpdump basics, filters; SPAN, RSPAN, ERSPAN (getting traffic to your capture host); capturing IP/ARP/ICMP, UDP, TCP. See [labs/](../labs/README.md) for walkthroughs.
+tcpdump basics, filters; SPAN, RSPAN, ERSPAN (getting traffic to your capture host); capturing IP/ARP/ICMP, UDP, TCP. See [Labs/](../Labs/README.md) for walkthroughs.
 
 ### [3. Wireshark](./3_Wireshark.md)
 
@@ -18,7 +18,7 @@ Wireshark: UDP, TCP/HTTP, HTTP/2 (decrypting TLS), MongoDB, Server-Sent Events.
 
 ### [4. QoS & congestion control](./4_Qos_Congestion.md)
 
-Quality of Service, token/leaky bucket, techniques, congestion control (see [transport/](../transport/README.md) for TCP).
+Quality of Service, token/leaky bucket, techniques, congestion control (see [Transport/](../Transport/README.md) for TCP).
 
 ### [5. Security monitoring & threat hunting](./5_Security_Monitoring.md)
 
@@ -31,9 +31,9 @@ Troubleshooting methodology (identify, theory, test, plan, verify, document); ne
 ## Learning path
 
 1. [Signals & performance](./1_Signals_Performance.md) → [Packet capture](./2_Packet_Capture.md) → [Wireshark](./3_Wireshark.md) → [QoS](./4_Qos_Congestion.md) → [Security monitoring](./5_Security_Monitoring.md) → [Network operations](./6_Network_Operations.md)
-2. For kernel/TCP visibility see [transport/](../transport/README.md). For step-by-step captures see [labs/](../labs/README.md).
+2. For kernel/TCP visibility see [Transport/](../Transport/README.md). For step-by-step captures see [Labs/](../Labs/README.md).
 
 ## Cross-references
 
-- **Transport:** TCP/UDP behavior to interpret in captures — [transport/](../transport/README.md)
-- **Labs:** Step-by-step tcpdump and Wireshark walkthroughs — [labs/](../labs/README.md)
+- **Transport:** TCP/UDP behavior to interpret in captures — [Transport/](../Transport/README.md)
+- **Labs:** Step-by-step tcpdump and Wireshark walkthroughs — [Labs/](../Labs/README.md)

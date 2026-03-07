@@ -17,7 +17,7 @@ Network security, encryption, and access control. Each topic has a dedicated fil
 | **Blue team & defensive** | Security engineer workflow (network); NSM, visibility (flow, Zeek, Suricata), detection/alerting, incident response (network), hardening, threat intel/IOCs, log investigation | [9_Blue_Team_Defensive](./9_Blue_Team_Defensive.md) |
 | **Applications (network)** | Web (WAF, TLS, API, rate limit); mobile/iOS (device on network, cert pinning, NAC/MDM); AI/API (rate limit, endpoints); containers (NetworkPolicy, visibility) | [10_Applications_Network_Perspective](./10_Applications_Network_Perspective.md) |
 
-Use the learning path below to go from basics to enterprise and VPNs; cross-references link to [services/](../services/) (HTTPS, TLS) and [observability/](../observability/) (security monitoring, Zeek, Suricata).
+Use the learning path below to go from basics to enterprise and VPNs; cross-references link to [Services/](../Services/) (HTTPS, TLS) and [Observability/](../Observability/) (security monitoring, Zeek, Suricata).
 
 ## Topics
 
@@ -64,10 +64,10 @@ Snort and NIDS, DoS attack types, authentication, Zero Trust, WAF, rate limiting
 ## Learning path
 
 1. [Overview & perimeter](./1_Overview_Perimeter.md) → [Encryption & TLS](./2_Encryption_Tls.md) → [Cybersecurity threats & config](./3_Cybersecurity_Threats_Config.md) → [Attacks & mitigations (L1–L3)](./4_Attacks_Mitigations.md) → [Firewalls & AAA](./5_Firewalls_Aaa.md) → [IPSec & VPNs](./6_Ipsec_Vpns.md) → [NIDS & identity](./7_Nids_DoS_Identity.md) → [Recon & offensive](./8_Reconnaissance_Offensive.md) → [Blue team & defensive](./9_Blue_Team_Defensive.md) → [Applications (network)](./10_Applications_Network_Perspective.md)
-2. For HTTPS and TLS termination see [services/](../services/README.md).
+2. For HTTPS and TLS termination see [Services/](../Services/README.md).
 
 ## Cross-references
 
-- **Services:** HTTPS, TLS termination, proxies — [services/](../services/README.md)
-- **Advanced:** TLS 0-RTT details — [advanced/](../advanced/README.md)
-- **Cloud-native:** Container/Kubernetes networking — [cloud-native/](../cloud-native/README.md); application security from network perspective — [10_Applications_Network_Perspective](./10_Applications_Network_Perspective.md)
+- **Services:** HTTPS, TLS termination, proxies — [Services/](../Services/README.md)
+- **Advanced:** TLS 0-RTT details — [Advanced/](../Advanced/README.md)
+- **Cloud-native:** Container/Kubernetes networking — [Cloud-Native/](../Cloud-Native/README.md); application security from network perspective — [10_Applications_Network_Perspective](./10_Applications_Network_Perspective.md)

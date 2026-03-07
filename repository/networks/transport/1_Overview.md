@@ -21,7 +21,7 @@ The **transport layer** is **Layer 4** of the OSI model. It is responsible for *
 - **Reliability and ordering** — When required (e.g. TCP), the transport layer provides error detection, retransmission, sequencing, and flow control so data arrives complete and in order.
 - **Multiplexing and demultiplexing** — Several application streams share the same network path; port numbers allow the receiver to deliver each segment to the correct process.
 
-![Transport layer in the stack — between application and network layers](../assets/transport/transport-layer.jpg)
+![Transport layer in the stack — between application and network layers](../Assets/Transport/transport-layer.jpg)
 
 ### Functions of the transport layer
 

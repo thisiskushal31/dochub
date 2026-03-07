@@ -135,7 +135,7 @@ Building a simple network (simulated or physical) involves:
 4. **Topology** — How devices are connected (star, bus, etc.). In a small LAN, a single switch with devices in a star is common.
 5. **Simulation** — Tools like **Cisco Packet Tracer** let you create and configure a simulated network (switches, routers, PCs) to practice without hardware.
 
-For physical labs: connect devices to a switch with Ethernet; configure IPs (or use DHCP); ensure the same subnet and gateway for connectivity. For more detail on enterprise devices and CLI, see [On-premises & enterprise networking](../advanced/4_On_Premises_Enterprise.md).
+For physical labs: connect devices to a switch with Ethernet; configure IPs (or use DHCP); ensure the same subnet and gateway for connectivity. For more detail on enterprise devices and CLI, see [On-premises & enterprise networking](../Advanced/4_On_Premises_Enterprise.md).
 
 ---
 
@@ -148,7 +148,7 @@ A typical home network includes:
 - **Switch** (optional) — Extra Ethernet ports when the router has too few.
 - **Cabling** — Ethernet from router/switch to fixed devices; Wi‑Fi for portables.
 
-Concepts that apply: one **subnet** (e.g. 192.168.1.0/24), **default gateway** (the router), **DNS** (often provided by the router or ISP). Security: strong Wi‑Fi password, change default router login, and consider firewall and guest network. See [Security](../security/README.md) and [Wireless & special networks](../advanced/5_Wireless_Special_Networks.md) for more.
+Concepts that apply: one **subnet** (e.g. 192.168.1.0/24), **default gateway** (the router), **DNS** (often provided by the router or ISP). Security: strong Wi‑Fi password, change default router login, and consider firewall and guest network. See [Security](../Security/README.md) and [Wireless & special networks](../Advanced/5_Wireless_Special_Networks.md) for more.
 
 ---
 
@@ -260,7 +260,7 @@ Communication follows a **request–response** cycle:
 - **Encapsulation** — Data is wrapped in headers (and trailers) at each layer. For example: application data → TCP segment (L4) → IP packet (L3) → Ethernet frame (L2) → bits on the wire (L1). Each layer adds addressing and control information needed for that hop or for the end system.
 - **Addressing at each layer** — L2 uses **MAC addresses** (for the next hop on the same LAN); L3 uses **IP addresses** (for source and destination host); L4 uses **ports** (for the application on each host).
 
-So “host-to-host” is achieved by: **application (socket) → transport (port, reliability) → network (IP, routing) → data link (MAC, local delivery) → physical (signals).** For the path a single packet takes, see [Routing example](./5_Network_Layer.md#routing-example). For transport details, see [Transport layer](../transport/README.md).
+So “host-to-host” is achieved by: **application (socket) → transport (port, reliability) → network (IP, routing) → data link (MAC, local delivery) → physical (signals).** For the path a single packet takes, see [Routing example](./5_Network_Layer.md#routing-example). For transport details, see [Transport layer](../Transport/README.md).
 
 **Visual (hop-by-hop delivery):**
 

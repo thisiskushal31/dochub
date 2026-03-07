@@ -27,4 +27,4 @@ IoT networking (constrained devices, protocols), network slicing in 5G.
 
 ## Cross-references
 
-- **Foundations, transport, services:** Core networking — [foundations/](../foundations/README.md), [transport/](../transport/README.md), [services/](../services/README.md)
+- **Foundations, transport, services:** Core networking — [Foundations/](../Foundations/README.md), [Transport/](../Transport/README.md), [Services/](../Services/README.md)

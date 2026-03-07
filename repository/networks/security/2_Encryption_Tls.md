@@ -1,5 +1,7 @@
 # Encryption & TLS
 
+[← Back to Security](./README.md)
+
 Encryption algorithms, TLS/mTLS, SNI, TLS 0-RTT, SSL/PPTP. TLS is a frequently asked topic; this file covers what TLS is, how it is set up, and how it fits into the stack.
 
 ## Table of Contents
@@ -58,7 +60,7 @@ The **handshake** establishes the TLS session: both sides agree on version and c
      |<=============================================>|
 ```
 
-**Session resumption:** A previous session can be resumed (e.g. with a session ticket or session ID) so that a new handshake is shorter or **0-RTT** (see below). See [services/3_Http_Tls](../services/3_Http_Tls.md) for HTTPS and certificates.
+**Session resumption:** A previous session can be resumed (e.g. with a session ticket or session ID) so that a new handshake is shorter or **0-RTT** (see below). See [Services/3_Http_Tls](../Services/3_Http_Tls.md) for HTTPS and certificates.
 
 ---
 
@@ -91,7 +93,7 @@ TLS uses **symmetric encryption** for application data (e.g. **AES-GCM**) and **
 
 ## TLS 0-RTT
 
-**TLS 1.3** supports **0-RTT (zero round-trip time) resumption:** when resuming a previous session, the client can send **application data** in the first flight along with the resumption request, so the first request does not wait for a full handshake. **Replay risk:** That early data can be **replayed** by an attacker who captured it (the server cannot distinguish a fresh 0-RTT send from a replayed one). So **0-RTT** should only be used for **idempotent** or otherwise replay-safe operations. See [advanced/3_Tls_Extensions](../advanced/3_Tls_Extensions.md) for more.
+**TLS 1.3** supports **0-RTT (zero round-trip time) resumption:** when resuming a previous session, the client can send **application data** in the first flight along with the resumption request, so the first request does not wait for a full handshake. **Replay risk:** That early data can be **replayed** by an attacker who captured it (the server cannot distinguish a fresh 0-RTT send from a replayed one). So **0-RTT** should only be used for **idempotent** or otherwise replay-safe operations. See [Advanced/3_Tls_Extensions](../Advanced/3_Tls_Extensions.md) for more.
 
 ---
 
@@ -99,7 +101,7 @@ TLS uses **symmetric encryption** for application data (e.g. **AES-GCM**) and **
 
 **SSL (Secure Sockets Layer)** — From GFG: Original protocol (Netscape, 1995) providing **encryption**, **authentication**, and **data integrity**. SSL had Record Protocol (fragmentation, optional compression, MAC, encryption), Handshake Protocol (negotiation, certificates, key exchange), Change Cipher Spec, and Alert Protocol. **Versions:** SSL 2 (insecure), SSL 3 (deprecated); **TLS 1.0–1.3** replaced SSL. Today we use TLS; "SSL" in practice usually means TLS (e.g. SSL/TLS, SSL certificate).
 
-**PPTP (Point-to-Point Tunneling Protocol)** — From GFG: An older **VPN** protocol (Microsoft et al., 1990s). It **tunnels** PPP over TCP/IP; control over **TCP 1723**, data over **GRE (IP protocol 47)**. Uses **MPPE** (Microsoft Point-to-Point Encryption) up to 128-bit. **Voluntary tunneling:** client initiates VPN. **Compulsory tunneling:** server-side forces VPN. **Pros:** simple, fast, widely supported. **Cons:** weak security, vulnerable; **not recommended** for sensitive use. Prefer **L2TP/IPsec**, **OpenVPN**, or **WireGuard**. See [routing-switching/3_Tunneling_Mpls](../routing-switching/3_Tunneling_Mpls.md) for GRE.
+**PPTP (Point-to-Point Tunneling Protocol)** — From GFG: An older **VPN** protocol (Microsoft et al., 1990s). It **tunnels** PPP over TCP/IP; control over **TCP 1723**, data over **GRE (IP protocol 47)**. Uses **MPPE** (Microsoft Point-to-Point Encryption) up to 128-bit. **Voluntary tunneling:** client initiates VPN. **Compulsory tunneling:** server-side forces VPN. **Pros:** simple, fast, widely supported. **Cons:** weak security, vulnerable; **not recommended** for sensitive use. Prefer **L2TP/IPsec**, **OpenVPN**, or **WireGuard**. See [Routing-Switching/3_Tunneling_Mpls](../Routing-Switching/3_Tunneling_Mpls.md) for GRE.
 
 ---
 
@@ -108,4 +110,4 @@ TLS uses **symmetric encryption** for application data (e.g. **AES-GCM**) and **
 - [GeeksforGeeks – Secure Socket Layer (SSL)](https://www.geeksforgeeks.org/computer-networks/secure-socket-layer-ssl/); [GeeksforGeeks – PPTP](https://www.geeksforgeeks.org/computer-networks/pptp-full-form/)
 - [GeeksforGeeks – Encryption, Its Algorithms And Its Future](https://www.geeksforgeeks.org/ethical-hacking/encryption-its-algorithms-and-its-future/) (symmetric/asymmetric, algorithms)
 - A-to-Z of Networking: HTTP/HTTPS (TLS handshake, certificates); VPN & Tunneling (OpenVPN, WireGuard, IPSec)
-- [services/3_Http_Tls](../services/3_Http_Tls.md) (HTTPS, openssl s_client); [advanced/3_Tls_Extensions](../advanced/3_Tls_Extensions.md); [6_Ipsec_Vpns](./6_Ipsec_Vpns.md)
+- [Services/3_Http_Tls](../Services/3_Http_Tls.md) (HTTPS, openssl s_client); [Advanced/3_Tls_Extensions](../Advanced/3_Tls_Extensions.md); [6_Ipsec_Vpns](./6_Ipsec_Vpns.md)

@@ -27,9 +27,9 @@ Switching advanced (STP, MLAG, VXLAN/EVPN), VRF and MPLS VPNs, resiliency, valid
 ## Learning path
 
 1. [Routing fundamentals](./1_Routing_Fundamentals.md) → [Routing protocols](./2_Routing_Protocols.md) → [Tunneling & MPLS](./3_Tunneling_Mpls.md) → [Redundancy & load balancing](./4_Redundancy_And_Load_Balancing.md) → [Switching & design](./5_Switching_Resiliency_Design.md)
-2. For IP and addressing basics see [foundations/](../foundations/README.md).
+2. For IP and addressing basics see [Foundations/](../Foundations/README.md).
 
 ## Cross-references
 
-- **Foundations:** IP, addressing, first-hop routing — [foundations/](../foundations/README.md)
-- **Observability:** Traceroute, flow logs — [observability/](../observability/README.md)
+- **Foundations:** IP, addressing, first-hop routing — [Foundations/](../Foundations/README.md)
+- **Observability:** Traceroute, flow logs — [Observability/](../Observability/README.md)

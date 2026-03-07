@@ -149,4 +149,4 @@ Multiple labels can be **stacked** for hierarchical routing.
 
 - [GeeksforGeeks – Multi-Protocol Label Switching (MPLS)](https://www.geeksforgeeks.org/multi-protocol-label-switching-mpls/)
 - A-to-Z of Networking: VPN & Tunneling (GRE, tunneling concepts)
-- [security/6_Ipsec_Vpns](../security/6_Ipsec_Vpns.md) (GRE over IPSec)
+- [Security/6_Ipsec_Vpns](../Security/6_Ipsec_Vpns.md) (GRE over IPSec)

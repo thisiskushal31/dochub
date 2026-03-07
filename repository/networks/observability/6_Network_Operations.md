@@ -74,7 +74,7 @@ Write down: symptom, root cause, fix, and any follow-up. This helps next time th
 | TCP port reachable | `nc -zv host 443` or `telnet host 443` | `Test-NetConnection host -Port 443` |
 | HTTP(S) request | `curl -I https://example.com` | `curl.exe -I https://example.com` |
 
-See [Packet capture](./2_Packet_Capture.md) and [Wireshark](./3_Wireshark.md) for capture-based troubleshooting; [Signals & performance](./1_Signals_Performance.md) for metrics and SLIs; [foundations/5_Network_Layer](../foundations/5_Network_Layer.md) and [services/2_DNS](../services/2_DNS.md) for more command examples.
+See [Packet capture](./2_Packet_Capture.md) and [Wireshark](./3_Wireshark.md) for capture-based troubleshooting; [Signals & performance](./1_Signals_Performance.md) for metrics and SLIs; [Foundations/5_Network_Layer](../Foundations/5_Network_Layer.md) and [Services/2_DNS](../Services/2_DNS.md) for more command examples.
 
 ---
 
@@ -143,7 +143,7 @@ When SLA 1 fails (e.g. 10.0.0.1 unreachable), track 1 goes down; the primary def
 
 ## Network change management
 
-Changes (config updates, upgrades, new links) can fix issues or cause them. Change management reduces risk. For how typical networks are structured and configured (VLAN plan, IP plan, routing, redundancy, data center spine-leaf), see [routing-switching/5_Switching_Resiliency_Design](../routing-switching/5_Switching_Resiliency_Design.md) (Network design, Data center networking, How real networks are configured).
+Changes (config updates, upgrades, new links) can fix issues or cause them. Change management reduces risk. For how typical networks are structured and configured (VLAN plan, IP plan, routing, redundancy, data center spine-leaf), see [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md) (Network design, Data center networking, How real networks are configured).
 
 **Basics:** Document the current state (config backup, topology) before changing anything. Describe the change, reason, and rollback steps. Use a maintenance window when the change can cause outage. Test in a lab or staging environment when possible. After the change, verify and update documentation.
 

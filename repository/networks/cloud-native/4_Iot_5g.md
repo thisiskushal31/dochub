@@ -14,11 +14,11 @@ IoT networking and 5G network slicing.
 
 ## IoT networking
 
-**IoT (Internet of Things)** connects **constrained devices** (sensors, actuators, gateways) to networks and cloud. Networking for IoT must account for **limited** power, **CPU**, and **link** (e.g. wireless, LPWAN). Source: cybersecurity-networking (IoT devices), [services/5_Web_Email_Protocols](../services/5_Web_Email_Protocols.md) (MQTT).
+**IoT (Internet of Things)** connects **constrained devices** (sensors, actuators, gateways) to networks and cloud. Networking for IoT must account for **limited** power, **CPU**, and **link** (e.g. wireless, LPWAN). Source: cybersecurity-networking (IoT devices), [Services/5_Web_Email_Protocols](../Services/5_Web_Email_Protocols.md) (MQTT).
 
 - **Constrained devices** — Often **battery-powered**, **low bandwidth**, **intermittent** connectivity. Protocols are chosen for **small payloads** and **efficiency**.
 - **Protocols:** **MQTT** (pub/sub over TCP; common for sensor data and control). **CoAP** (REST-like over UDP; constrained). **HTTP/HTTPS** used where devices have more resources. **LPWAN** (e.g. LoRa, NB-IoT) for **long range**, **low data rate** connectivity. **Bluetooth, Zigbee** for **short range** and **mesh**.
-- **Gateways** — Many IoT deployments use a **gateway** that aggregates local devices (e.g. over BLE or Zigbee) and connects to the cloud (e.g. over Wi‑Fi or cellular), handling **protocol translation** and **security** (TLS, credentials). See [advanced/5_Wireless_Special_Networks](../advanced/5_Wireless_Special_Networks.md) (wireless).
+- **Gateways** — Many IoT deployments use a **gateway** that aggregates local devices (e.g. over BLE or Zigbee) and connects to the cloud (e.g. over Wi‑Fi or cellular), handling **protocol translation** and **security** (TLS, credentials). See [Advanced/5_Wireless_Special_Networks](../Advanced/5_Wireless_Special_Networks.md) (wireless).
 
 ---
 
@@ -34,4 +34,4 @@ IoT networking and 5G network slicing.
 ## References
 
 - [GeeksforGeeks – Generations of Wireless Communication](https://www.geeksforgeeks.org/computer-networks/generations-of-wireless-communication/)
-- [services/5_Web_Email_Protocols](../services/5_Web_Email_Protocols.md) (MQTT); [advanced/5_Wireless_Special_Networks](../advanced/5_Wireless_Special_Networks.md)
+- [Services/5_Web_Email_Protocols](../Services/5_Web_Email_Protocols.md) (MQTT); [Advanced/5_Wireless_Special_Networks](../Advanced/5_Wireless_Special_Networks.md)
