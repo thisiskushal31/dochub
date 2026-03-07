@@ -14,6 +14,7 @@ Comprehensive DevOps handbook covering methodologies, best practices, tooling gu
 - `Observability/` — Monitoring, logging, tracing, SLO/SLI; one folder per tool (Prometheus, Grafana, OpenTelemetry, etc.)
 - `Security/` — Security practices, compliance, secrets management, and threat mitigation
 - `Operating-Systems/` — **Fundamentals/** (OS-agnostic theory), **Linux/**, **Windows/**, **Unix/**, **MacOS/**: deep coverage of OS topics (process, memory, I/O, shell, services, storage, virtualization, etc.); add new topics as needed
+- `Languages/` — General-purpose, config/query, **niche/security** (Assembly, Nim, VBA, R, Erlang, Zig, Delphi, COBOL, Objective-C, OCaml, F#, Ada, Julia, Dart, D, Haskell, Clojure, Crystal, VB.NET, Tcl, Fortran), and **Web3** (Solidity, Vyper, Move, Cairo): C/C++, Python, Go, Java, JavaScript, Rust, TypeScript, Ruby, Groovy, C#, Scala, Perl, Kotlin, PHP, Lua, Swift, Elixir, LaTeX, Shell, HCL, JSON, YAML; Shell in Operating-Systems, HCL in IAC, JSON/YAML across CiCd/IAC/Cloud-Native; database query languages (e.g. SQL, PromQL) in Databases-Deep-Dive; one folder per language; add topic files as needed
 - `Assets/` — Images and diagrams (with credit in the topic files). See [Assets/README.md](Assets/README.md) for structure and where to store images per section.
 
 ## Visual guides and images
@@ -31,10 +32,11 @@ Images from these sources can be downloaded into the right `Assets/` subfolder a
 
 1. Start with `Methodologies/` for DevOps culture and foundational practices
 2. Use `Operating-Systems/` for OS fundamentals (theory first in **Fundamentals/**), then Linux, Windows, Unix, or macOS implementation and commands
-3. Jump into `CiCd/` or `IAC/` based on your immediate needs
-4. Use `Automation/` for workflow and orchestration patterns
-5. Reference `Observability/` and `Security/` for production operations
-6. Keep checklists and commands handy for day-to-day operations
+3. Use `Languages/` when you need to read or write code (Python for automation, Go for K8s/Terraform, etc.)
+4. Jump into `CiCd/` or `IAC/` based on your immediate needs
+5. Use `Automation/` for workflow and orchestration patterns
+6. Reference `Observability/` and `Security/` for production operations
+7. Keep checklists and commands handy for day-to-day operations
 
 ## Where to go deeper
 

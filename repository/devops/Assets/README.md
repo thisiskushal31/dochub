@@ -15,6 +15,7 @@ Images and diagrams used in the DevOps Handbook. **Credit is given in the topic 
 | `Cloud-Native/` | Docker, Kubernetes, service mesh, cloud-native (e.g. ByteByteGo Docker, K8s). |
 | `Observability/` | Logging, tracing, metrics, dashboards (e.g. ByteByteGo logging/tracing/metrics). |
 | `Security/` | Security and compliance visuals when added. |
+| `Languages/` | Language and tooling diagrams (e.g. build pipelines, runtime) when added. |
 
 Create a section subfolder when you first add an image for that section.
 

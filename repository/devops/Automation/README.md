@@ -22,4 +22,4 @@ To add a new tool: create a folder and add it to the table above. Community-main
 ## Scope
 
 - **Covered here:** Automation patterns and tool usage for DevOps. Deep config-mgmt theory elsewhere.
-- **Go deeper:** [Operating-Systems](../Operating-Systems/README.md) for shell and OS commands.
+- **Go deeper:** [Operating-Systems](../Operating-Systems/README.md) for shell and OS commands; [Languages](../Languages/README.md) for Python, Go, JavaScript, and other languages used in automation and tooling.
