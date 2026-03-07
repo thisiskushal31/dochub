@@ -1,9 +1,135 @@
 [
   {
+    "name": "Argo_CD",
+    "path": "Argo_CD",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Argo_CD/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 269
+      }
+    ]
+  },
+  {
+    "name": "CircleCI",
+    "path": "CircleCI",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "CircleCI/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 245
+      }
+    ]
+  },
+  {
+    "name": "Flux",
+    "path": "Flux",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Flux/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 266
+      }
+    ]
+  },
+  {
+    "name": "GitHub_Actions",
+    "path": "GitHub_Actions",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "GitHub_Actions/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 301
+      }
+    ]
+  },
+  {
+    "name": "GitLab_CI",
+    "path": "GitLab_CI",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "GitLab_CI/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 279
+      }
+    ]
+  },
+  {
+    "name": "Jenkins",
+    "path": "Jenkins",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Jenkins/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 335
+      }
+    ]
+  },
+  {
+    "name": "Tekton",
+    "path": "Tekton",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Tekton/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 249
+      }
+    ]
+  },
+  {
+    "name": "1_Pipelines_Build_Test_Deploy.md",
+    "path": "1_Pipelines_Build_Test_Deploy.md",
+    "type": "file",
+    "sha": "",
+    "size": 341
+  },
+  {
+    "name": "2_CI_CD_Tools.md",
+    "path": "2_CI_CD_Tools.md",
+    "type": "file",
+    "sha": "",
+    "size": 901
+  },
+  {
+    "name": "3_Deployment_Strategies.md",
+    "path": "3_Deployment_Strategies.md",
+    "type": "file",
+    "sha": "",
+    "size": 248
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 338
+    "size": 1560
   }
 ]

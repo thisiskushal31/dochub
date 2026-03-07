@@ -1,9 +1,90 @@
 [
   {
+    "name": "Helm",
+    "path": "Helm",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Helm/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 248
+      }
+    ]
+  },
+  {
+    "name": "Istio",
+    "path": "Istio",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Istio/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 280
+      }
+    ]
+  },
+  {
+    "name": "Kubernetes",
+    "path": "Kubernetes",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Kubernetes/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 329
+      }
+    ]
+  },
+  {
+    "name": "Linkerd",
+    "path": "Linkerd",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Linkerd/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 232
+      }
+    ]
+  },
+  {
+    "name": "1_Cloud_Native_Architectures.md",
+    "path": "1_Cloud_Native_Architectures.md",
+    "type": "file",
+    "sha": "",
+    "size": 385
+  },
+  {
+    "name": "2_Kubernetes_And_Platforms.md",
+    "path": "2_Kubernetes_And_Platforms.md",
+    "type": "file",
+    "sha": "",
+    "size": 572
+  },
+  {
+    "name": "3_Platform_Engineering.md",
+    "path": "3_Platform_Engineering.md",
+    "type": "file",
+    "sha": "",
+    "size": 280
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 373
+    "size": 1500
   }
 ]

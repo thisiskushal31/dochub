@@ -1,9 +1,68 @@
 [
   {
+    "name": "Ansible",
+    "path": "Ansible",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Ansible/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 358
+      }
+    ]
+  },
+  {
+    "name": "Chef",
+    "path": "Chef",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Chef/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 310
+      }
+    ]
+  },
+  {
+    "name": "Puppet",
+    "path": "Puppet",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Puppet/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 305
+      }
+    ]
+  },
+  {
+    "name": "1_Scripting_And_Orchestration.md",
+    "path": "1_Scripting_And_Orchestration.md",
+    "type": "file",
+    "sha": "",
+    "size": 326
+  },
+  {
+    "name": "2_Automation_Patterns_And_Tools.md",
+    "path": "2_Automation_Patterns_And_Tools.md",
+    "type": "file",
+    "sha": "",
+    "size": 796
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 328
+    "size": 1267
   }
 ]

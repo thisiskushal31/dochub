@@ -1,9 +1,135 @@
 [
   {
+    "name": "Ansible",
+    "path": "Ansible",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Ansible/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 328
+      }
+    ]
+  },
+  {
+    "name": "Chef",
+    "path": "Chef",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Chef/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 292
+      }
+    ]
+  },
+  {
+    "name": "CloudFormation",
+    "path": "CloudFormation",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "CloudFormation/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 311
+      }
+    ]
+  },
+  {
+    "name": "Crossplane",
+    "path": "Crossplane",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Crossplane/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 318
+      }
+    ]
+  },
+  {
+    "name": "Pulumi",
+    "path": "Pulumi",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Pulumi/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 319
+      }
+    ]
+  },
+  {
+    "name": "Puppet",
+    "path": "Puppet",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Puppet/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 324
+      }
+    ]
+  },
+  {
+    "name": "Terraform",
+    "path": "Terraform",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Terraform/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 329
+      }
+    ]
+  },
+  {
+    "name": "1_IAC_Tools_And_Patterns.md",
+    "path": "1_IAC_Tools_And_Patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 531
+  },
+  {
+    "name": "2_State_Modules_And_Backends.md",
+    "path": "2_State_Modules_And_Backends.md",
+    "type": "file",
+    "sha": "",
+    "size": 457
+  },
+  {
+    "name": "3_Multi_Cloud_And_Best_Practices.md",
+    "path": "3_Multi_Cloud_And_Best_Practices.md",
+    "type": "file",
+    "sha": "",
+    "size": 263
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 323
+    "size": 1704
   }
 ]

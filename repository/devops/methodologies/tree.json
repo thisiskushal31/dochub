@@ -1,9 +1,30 @@
 [
   {
+    "name": "1_DevOps_Culture_And_Collaboration.md",
+    "path": "1_DevOps_Culture_And_Collaboration.md",
+    "type": "file",
+    "sha": "",
+    "size": 364
+  },
+  {
+    "name": "2_Practices_And_Workflows.md",
+    "path": "2_Practices_And_Workflows.md",
+    "type": "file",
+    "sha": "",
+    "size": 397
+  },
+  {
+    "name": "3_Team_Patterns_SRE_Incident.md",
+    "path": "3_Team_Patterns_SRE_Incident.md",
+    "type": "file",
+    "sha": "",
+    "size": 317
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 388
+    "size": 958
   }
 ]

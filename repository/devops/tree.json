@@ -1,16 +1,96 @@
 [
   {
+    "name": "Assets",
+    "path": "Assets",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Operating-Systems",
+        "path": "Assets/Operating-Systems",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "README.md",
+        "path": "Assets/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2947
+      }
+    ]
+  },
+  {
     "name": "automation",
     "path": "automation",
     "type": "dir",
     "sha": "",
     "children": [
       {
+        "name": "Ansible",
+        "path": "automation/Ansible",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "automation/Ansible/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 358
+          }
+        ]
+      },
+      {
+        "name": "Chef",
+        "path": "automation/Chef",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "automation/Chef/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 310
+          }
+        ]
+      },
+      {
+        "name": "Puppet",
+        "path": "automation/Puppet",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "automation/Puppet/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 305
+          }
+        ]
+      },
+      {
+        "name": "1_Scripting_And_Orchestration.md",
+        "path": "automation/1_Scripting_And_Orchestration.md",
+        "type": "file",
+        "sha": "",
+        "size": 326
+      },
+      {
+        "name": "2_Automation_Patterns_And_Tools.md",
+        "path": "automation/2_Automation_Patterns_And_Tools.md",
+        "type": "file",
+        "sha": "",
+        "size": 796
+      },
+      {
         "name": "README.md",
         "path": "automation/README.md",
         "type": "file",
         "sha": "",
-        "size": 328
+        "size": 1267
       }
     ]
   },
@@ -21,11 +101,137 @@
     "sha": "",
     "children": [
       {
+        "name": "Argo_CD",
+        "path": "cicd/Argo_CD",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "cicd/Argo_CD/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 269
+          }
+        ]
+      },
+      {
+        "name": "CircleCI",
+        "path": "cicd/CircleCI",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "cicd/CircleCI/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 245
+          }
+        ]
+      },
+      {
+        "name": "Flux",
+        "path": "cicd/Flux",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "cicd/Flux/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 266
+          }
+        ]
+      },
+      {
+        "name": "GitHub_Actions",
+        "path": "cicd/GitHub_Actions",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "cicd/GitHub_Actions/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 301
+          }
+        ]
+      },
+      {
+        "name": "GitLab_CI",
+        "path": "cicd/GitLab_CI",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "cicd/GitLab_CI/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 279
+          }
+        ]
+      },
+      {
+        "name": "Jenkins",
+        "path": "cicd/Jenkins",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "cicd/Jenkins/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 335
+          }
+        ]
+      },
+      {
+        "name": "Tekton",
+        "path": "cicd/Tekton",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "cicd/Tekton/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 249
+          }
+        ]
+      },
+      {
+        "name": "1_Pipelines_Build_Test_Deploy.md",
+        "path": "cicd/1_Pipelines_Build_Test_Deploy.md",
+        "type": "file",
+        "sha": "",
+        "size": 341
+      },
+      {
+        "name": "2_CI_CD_Tools.md",
+        "path": "cicd/2_CI_CD_Tools.md",
+        "type": "file",
+        "sha": "",
+        "size": 901
+      },
+      {
+        "name": "3_Deployment_Strategies.md",
+        "path": "cicd/3_Deployment_Strategies.md",
+        "type": "file",
+        "sha": "",
+        "size": 248
+      },
+      {
         "name": "README.md",
         "path": "cicd/README.md",
         "type": "file",
         "sha": "",
-        "size": 338
+        "size": 1560
       }
     ]
   },
@@ -36,11 +242,92 @@
     "sha": "",
     "children": [
       {
+        "name": "Helm",
+        "path": "cloud-native/Helm",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "cloud-native/Helm/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 248
+          }
+        ]
+      },
+      {
+        "name": "Istio",
+        "path": "cloud-native/Istio",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "cloud-native/Istio/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 280
+          }
+        ]
+      },
+      {
+        "name": "Kubernetes",
+        "path": "cloud-native/Kubernetes",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "cloud-native/Kubernetes/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 329
+          }
+        ]
+      },
+      {
+        "name": "Linkerd",
+        "path": "cloud-native/Linkerd",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "cloud-native/Linkerd/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 232
+          }
+        ]
+      },
+      {
+        "name": "1_Cloud_Native_Architectures.md",
+        "path": "cloud-native/1_Cloud_Native_Architectures.md",
+        "type": "file",
+        "sha": "",
+        "size": 385
+      },
+      {
+        "name": "2_Kubernetes_And_Platforms.md",
+        "path": "cloud-native/2_Kubernetes_And_Platforms.md",
+        "type": "file",
+        "sha": "",
+        "size": 572
+      },
+      {
+        "name": "3_Platform_Engineering.md",
+        "path": "cloud-native/3_Platform_Engineering.md",
+        "type": "file",
+        "sha": "",
+        "size": 280
+      },
+      {
         "name": "README.md",
         "path": "cloud-native/README.md",
         "type": "file",
         "sha": "",
-        "size": 373
+        "size": 1500
       }
     ]
   },
@@ -51,11 +338,137 @@
     "sha": "",
     "children": [
       {
+        "name": "Ansible",
+        "path": "iac/Ansible",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "iac/Ansible/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 328
+          }
+        ]
+      },
+      {
+        "name": "Chef",
+        "path": "iac/Chef",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "iac/Chef/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 292
+          }
+        ]
+      },
+      {
+        "name": "CloudFormation",
+        "path": "iac/CloudFormation",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "iac/CloudFormation/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 311
+          }
+        ]
+      },
+      {
+        "name": "Crossplane",
+        "path": "iac/Crossplane",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "iac/Crossplane/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 318
+          }
+        ]
+      },
+      {
+        "name": "Pulumi",
+        "path": "iac/Pulumi",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "iac/Pulumi/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 319
+          }
+        ]
+      },
+      {
+        "name": "Puppet",
+        "path": "iac/Puppet",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "iac/Puppet/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 324
+          }
+        ]
+      },
+      {
+        "name": "Terraform",
+        "path": "iac/Terraform",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "iac/Terraform/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 329
+          }
+        ]
+      },
+      {
+        "name": "1_IAC_Tools_And_Patterns.md",
+        "path": "iac/1_IAC_Tools_And_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 531
+      },
+      {
+        "name": "2_State_Modules_And_Backends.md",
+        "path": "iac/2_State_Modules_And_Backends.md",
+        "type": "file",
+        "sha": "",
+        "size": 457
+      },
+      {
+        "name": "3_Multi_Cloud_And_Best_Practices.md",
+        "path": "iac/3_Multi_Cloud_And_Best_Practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 263
+      },
+      {
         "name": "README.md",
         "path": "iac/README.md",
         "type": "file",
         "sha": "",
-        "size": 323
+        "size": 1704
       }
     ]
   },
@@ -66,11 +479,32 @@
     "sha": "",
     "children": [
       {
+        "name": "1_DevOps_Culture_And_Collaboration.md",
+        "path": "methodologies/1_DevOps_Culture_And_Collaboration.md",
+        "type": "file",
+        "sha": "",
+        "size": 364
+      },
+      {
+        "name": "2_Practices_And_Workflows.md",
+        "path": "methodologies/2_Practices_And_Workflows.md",
+        "type": "file",
+        "sha": "",
+        "size": 397
+      },
+      {
+        "name": "3_Team_Patterns_SRE_Incident.md",
+        "path": "methodologies/3_Team_Patterns_SRE_Incident.md",
+        "type": "file",
+        "sha": "",
+        "size": 317
+      },
+      {
         "name": "README.md",
         "path": "methodologies/README.md",
         "type": "file",
         "sha": "",
-        "size": 388
+        "size": 958
       }
     ]
   },
@@ -81,11 +515,760 @@
     "sha": "",
     "children": [
       {
+        "name": "Datadog",
+        "path": "observability/Datadog",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "observability/Datadog/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 481
+          }
+        ]
+      },
+      {
+        "name": "Elastic",
+        "path": "observability/Elastic",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "observability/Elastic/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 489
+          }
+        ]
+      },
+      {
+        "name": "Grafana",
+        "path": "observability/Grafana",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "observability/Grafana/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 483
+          }
+        ]
+      },
+      {
+        "name": "New_Relic",
+        "path": "observability/New_Relic",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "observability/New_Relic/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 483
+          }
+        ]
+      },
+      {
+        "name": "OpenTelemetry",
+        "path": "observability/OpenTelemetry",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "observability/OpenTelemetry/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 527
+          }
+        ]
+      },
+      {
+        "name": "Prometheus",
+        "path": "observability/Prometheus",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "observability/Prometheus/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 503
+          }
+        ]
+      },
+      {
+        "name": "1_Monitoring_And_Metrics.md",
+        "path": "observability/1_Monitoring_And_Metrics.md",
+        "type": "file",
+        "sha": "",
+        "size": 236
+      },
+      {
+        "name": "2_Logging_And_Tracing.md",
+        "path": "observability/2_Logging_And_Tracing.md",
+        "type": "file",
+        "sha": "",
+        "size": 341
+      },
+      {
+        "name": "3_Observability_Tools.md",
+        "path": "observability/3_Observability_Tools.md",
+        "type": "file",
+        "sha": "",
+        "size": 1245
+      },
+      {
         "name": "README.md",
         "path": "observability/README.md",
         "type": "file",
         "sha": "",
-        "size": 338
+        "size": 1719
+      }
+    ]
+  },
+  {
+    "name": "Operating-Systems",
+    "path": "Operating-Systems",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Fundamentals",
+        "path": "Operating-Systems/Fundamentals",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Kernel_And_OS_Architecture.md",
+            "path": "Operating-Systems/Fundamentals/1_Kernel_And_OS_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 23530
+          },
+          {
+            "name": "10_Storage_And_IO.md",
+            "path": "Operating-Systems/Fundamentals/10_Storage_And_IO.md",
+            "type": "file",
+            "sha": "",
+            "size": 27061
+          },
+          {
+            "name": "11_User_Interface_And_Shell.md",
+            "path": "Operating-Systems/Fundamentals/11_User_Interface_And_Shell.md",
+            "type": "file",
+            "sha": "",
+            "size": 7436
+          },
+          {
+            "name": "12_Sockets_And_Network_IO.md",
+            "path": "Operating-Systems/Fundamentals/12_Sockets_And_Network_IO.md",
+            "type": "file",
+            "sha": "",
+            "size": 6316
+          },
+          {
+            "name": "13_OS_Concepts_Compilers_Linkers_Virtualization.md",
+            "path": "Operating-Systems/Fundamentals/13_OS_Concepts_Compilers_Linkers_Virtualization.md",
+            "type": "file",
+            "sha": "",
+            "size": 11009
+          },
+          {
+            "name": "14_Interrupts_Exceptions_And_Traps.md",
+            "path": "Operating-Systems/Fundamentals/14_Interrupts_Exceptions_And_Traps.md",
+            "type": "file",
+            "sha": "",
+            "size": 5698
+          },
+          {
+            "name": "15_Boot_Process_Detailed.md",
+            "path": "Operating-Systems/Fundamentals/15_Boot_Process_Detailed.md",
+            "type": "file",
+            "sha": "",
+            "size": 3804
+          },
+          {
+            "name": "16_Device_Drivers_And_IO_Subsystem.md",
+            "path": "Operating-Systems/Fundamentals/16_Device_Drivers_And_IO_Subsystem.md",
+            "type": "file",
+            "sha": "",
+            "size": 4154
+          },
+          {
+            "name": "17_File_System_Interface.md",
+            "path": "Operating-Systems/Fundamentals/17_File_System_Interface.md",
+            "type": "file",
+            "sha": "",
+            "size": 3920
+          },
+          {
+            "name": "18_Protection_And_Security.md",
+            "path": "Operating-Systems/Fundamentals/18_Protection_And_Security.md",
+            "type": "file",
+            "sha": "",
+            "size": 4120
+          },
+          {
+            "name": "19_Request_Flow_And_System_Architecture.md",
+            "path": "Operating-Systems/Fundamentals/19_Request_Flow_And_System_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 17086
+          },
+          {
+            "name": "2_Process_And_PCB.md",
+            "path": "Operating-Systems/Fundamentals/2_Process_And_PCB.md",
+            "type": "file",
+            "sha": "",
+            "size": 11428
+          },
+          {
+            "name": "20_Virtualization_Hypervisors_And_Datacenter.md",
+            "path": "Operating-Systems/Fundamentals/20_Virtualization_Hypervisors_And_Datacenter.md",
+            "type": "file",
+            "sha": "",
+            "size": 9995
+          },
+          {
+            "name": "3_Process_Anatomy_Address_Space.md",
+            "path": "Operating-Systems/Fundamentals/3_Process_Anatomy_Address_Space.md",
+            "type": "file",
+            "sha": "",
+            "size": 6208
+          },
+          {
+            "name": "4_CPU_Scheduling.md",
+            "path": "Operating-Systems/Fundamentals/4_CPU_Scheduling.md",
+            "type": "file",
+            "sha": "",
+            "size": 12087
+          },
+          {
+            "name": "5_Inside_The_CPU.md",
+            "path": "Operating-Systems/Fundamentals/5_Inside_The_CPU.md",
+            "type": "file",
+            "sha": "",
+            "size": 7154
+          },
+          {
+            "name": "6_Process_Synchronization.md",
+            "path": "Operating-Systems/Fundamentals/6_Process_Synchronization.md",
+            "type": "file",
+            "sha": "",
+            "size": 12057
+          },
+          {
+            "name": "7_Deadlock.md",
+            "path": "Operating-Systems/Fundamentals/7_Deadlock.md",
+            "type": "file",
+            "sha": "",
+            "size": 9965
+          },
+          {
+            "name": "8_Threads_And_Concurrency.md",
+            "path": "Operating-Systems/Fundamentals/8_Threads_And_Concurrency.md",
+            "type": "file",
+            "sha": "",
+            "size": 7057
+          },
+          {
+            "name": "9_Memory_Management.md",
+            "path": "Operating-Systems/Fundamentals/9_Memory_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 20760
+          },
+          {
+            "name": "README.md",
+            "path": "Operating-Systems/Fundamentals/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 16400
+          }
+        ]
+      },
+      {
+        "name": "Linux",
+        "path": "Operating-Systems/Linux",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "Distributions",
+            "path": "Operating-Systems/Linux/Distributions",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "Alpine.md",
+                "path": "Operating-Systems/Linux/Distributions/Alpine.md",
+                "type": "file",
+                "sha": "",
+                "size": 5069
+              },
+              {
+                "name": "Arch_Family.md",
+                "path": "Operating-Systems/Linux/Distributions/Arch_Family.md",
+                "type": "file",
+                "sha": "",
+                "size": 4564
+              },
+              {
+                "name": "Debian_Family.md",
+                "path": "Operating-Systems/Linux/Distributions/Debian_Family.md",
+                "type": "file",
+                "sha": "",
+                "size": 10015
+              },
+              {
+                "name": "openSUSE_SUSE.md",
+                "path": "Operating-Systems/Linux/Distributions/openSUSE_SUSE.md",
+                "type": "file",
+                "sha": "",
+                "size": 4187
+              },
+              {
+                "name": "README.md",
+                "path": "Operating-Systems/Linux/Distributions/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 3731
+              },
+              {
+                "name": "RHEL_Family.md",
+                "path": "Operating-Systems/Linux/Distributions/RHEL_Family.md",
+                "type": "file",
+                "sha": "",
+                "size": 12970
+              }
+            ]
+          },
+          {
+            "name": "00_Learn_Linux_Hands_On.md",
+            "path": "Operating-Systems/Linux/00_Learn_Linux_Hands_On.md",
+            "type": "file",
+            "sha": "",
+            "size": 13443
+          },
+          {
+            "name": "1_Introduction_And_Basics.md",
+            "path": "Operating-Systems/Linux/1_Introduction_And_Basics.md",
+            "type": "file",
+            "sha": "",
+            "size": 19906
+          },
+          {
+            "name": "10_Users_Groups_And_Scheduling.md",
+            "path": "Operating-Systems/Linux/10_Users_Groups_And_Scheduling.md",
+            "type": "file",
+            "sha": "",
+            "size": 11588
+          },
+          {
+            "name": "11_Networking_And_Firewall.md",
+            "path": "Operating-Systems/Linux/11_Networking_And_Firewall.md",
+            "type": "file",
+            "sha": "",
+            "size": 7031
+          },
+          {
+            "name": "12_Storage_Advanced_LVM_ACLs.md",
+            "path": "Operating-Systems/Linux/12_Storage_Advanced_LVM_ACLs.md",
+            "type": "file",
+            "sha": "",
+            "size": 13489
+          },
+          {
+            "name": "13_Container_Filesystem_Docker_And_Storage.md",
+            "path": "Operating-Systems/Linux/13_Container_Filesystem_Docker_And_Storage.md",
+            "type": "file",
+            "sha": "",
+            "size": 8379
+          },
+          {
+            "name": "14_Virtualization_On_Linux.md",
+            "path": "Operating-Systems/Linux/14_Virtualization_On_Linux.md",
+            "type": "file",
+            "sha": "",
+            "size": 9926
+          },
+          {
+            "name": "15_Logging_Time_And_Kernel_Observability.md",
+            "path": "Operating-Systems/Linux/15_Logging_Time_And_Kernel_Observability.md",
+            "type": "file",
+            "sha": "",
+            "size": 10001
+          },
+          {
+            "name": "16_Security_OS_View.md",
+            "path": "Operating-Systems/Linux/16_Security_OS_View.md",
+            "type": "file",
+            "sha": "",
+            "size": 7034
+          },
+          {
+            "name": "2_Process_Management.md",
+            "path": "Operating-Systems/Linux/2_Process_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 13677
+          },
+          {
+            "name": "3_CPU_Scheduling.md",
+            "path": "Operating-Systems/Linux/3_CPU_Scheduling.md",
+            "type": "file",
+            "sha": "",
+            "size": 5293
+          },
+          {
+            "name": "4_Process_Synchronization.md",
+            "path": "Operating-Systems/Linux/4_Process_Synchronization.md",
+            "type": "file",
+            "sha": "",
+            "size": 7221
+          },
+          {
+            "name": "5_Deadlock.md",
+            "path": "Operating-Systems/Linux/5_Deadlock.md",
+            "type": "file",
+            "sha": "",
+            "size": 6629
+          },
+          {
+            "name": "6_Multithreading.md",
+            "path": "Operating-Systems/Linux/6_Multithreading.md",
+            "type": "file",
+            "sha": "",
+            "size": 5531
+          },
+          {
+            "name": "7_Memory_Management.md",
+            "path": "Operating-Systems/Linux/7_Memory_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 7211
+          },
+          {
+            "name": "8_Storage_And_IO.md",
+            "path": "Operating-Systems/Linux/8_Storage_And_IO.md",
+            "type": "file",
+            "sha": "",
+            "size": 28634
+          },
+          {
+            "name": "9_Shell_And_Scripting.md",
+            "path": "Operating-Systems/Linux/9_Shell_And_Scripting.md",
+            "type": "file",
+            "sha": "",
+            "size": 30355
+          },
+          {
+            "name": "README.md",
+            "path": "Operating-Systems/Linux/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 5495
+          }
+        ]
+      },
+      {
+        "name": "MacOS",
+        "path": "Operating-Systems/MacOS",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "0_MacOS_Architecture_And_Structure.md",
+            "path": "Operating-Systems/MacOS/0_MacOS_Architecture_And_Structure.md",
+            "type": "file",
+            "sha": "",
+            "size": 11070
+          },
+          {
+            "name": "1_Introduction_And_Basics.md",
+            "path": "Operating-Systems/MacOS/1_Introduction_And_Basics.md",
+            "type": "file",
+            "sha": "",
+            "size": 7800
+          },
+          {
+            "name": "10_Users_Networking_Logging_And_Security.md",
+            "path": "Operating-Systems/MacOS/10_Users_Networking_Logging_And_Security.md",
+            "type": "file",
+            "sha": "",
+            "size": 12736
+          },
+          {
+            "name": "11_Storage_Advanced_And_Virtualization.md",
+            "path": "Operating-Systems/MacOS/11_Storage_Advanced_And_Virtualization.md",
+            "type": "file",
+            "sha": "",
+            "size": 4938
+          },
+          {
+            "name": "2_Process_Management.md",
+            "path": "Operating-Systems/MacOS/2_Process_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 3279
+          },
+          {
+            "name": "3_CPU_Scheduling.md",
+            "path": "Operating-Systems/MacOS/3_CPU_Scheduling.md",
+            "type": "file",
+            "sha": "",
+            "size": 2755
+          },
+          {
+            "name": "4_Process_Synchronization.md",
+            "path": "Operating-Systems/MacOS/4_Process_Synchronization.md",
+            "type": "file",
+            "sha": "",
+            "size": 3376
+          },
+          {
+            "name": "5_Deadlock.md",
+            "path": "Operating-Systems/MacOS/5_Deadlock.md",
+            "type": "file",
+            "sha": "",
+            "size": 2044
+          },
+          {
+            "name": "6_Multithreading.md",
+            "path": "Operating-Systems/MacOS/6_Multithreading.md",
+            "type": "file",
+            "sha": "",
+            "size": 2746
+          },
+          {
+            "name": "7_Memory_Management.md",
+            "path": "Operating-Systems/MacOS/7_Memory_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 3181
+          },
+          {
+            "name": "8_Storage_And_IO.md",
+            "path": "Operating-Systems/MacOS/8_Storage_And_IO.md",
+            "type": "file",
+            "sha": "",
+            "size": 4308
+          },
+          {
+            "name": "9_Shell_And_Scripting.md",
+            "path": "Operating-Systems/MacOS/9_Shell_And_Scripting.md",
+            "type": "file",
+            "sha": "",
+            "size": 3140
+          },
+          {
+            "name": "README.md",
+            "path": "Operating-Systems/MacOS/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 6237
+          }
+        ]
+      },
+      {
+        "name": "Unix",
+        "path": "Operating-Systems/Unix",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "Flavors",
+            "path": "Operating-Systems/Unix/Flavors",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "AIX.md",
+                "path": "Operating-Systems/Unix/Flavors/AIX.md",
+                "type": "file",
+                "sha": "",
+                "size": 1402
+              },
+              {
+                "name": "BSD_Family.md",
+                "path": "Operating-Systems/Unix/Flavors/BSD_Family.md",
+                "type": "file",
+                "sha": "",
+                "size": 1952
+              },
+              {
+                "name": "HP_UX.md",
+                "path": "Operating-Systems/Unix/Flavors/HP_UX.md",
+                "type": "file",
+                "sha": "",
+                "size": 1284
+              },
+              {
+                "name": "README.md",
+                "path": "Operating-Systems/Unix/Flavors/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 2516
+              },
+              {
+                "name": "Solaris_illumos.md",
+                "path": "Operating-Systems/Unix/Flavors/Solaris_illumos.md",
+                "type": "file",
+                "sha": "",
+                "size": 1500
+              }
+            ]
+          },
+          {
+            "name": "1_Introduction_And_Basics.md",
+            "path": "Operating-Systems/Unix/1_Introduction_And_Basics.md",
+            "type": "file",
+            "sha": "",
+            "size": 3784
+          },
+          {
+            "name": "10_Users_Networking_Logging_And_Security.md",
+            "path": "Operating-Systems/Unix/10_Users_Networking_Logging_And_Security.md",
+            "type": "file",
+            "sha": "",
+            "size": 4548
+          },
+          {
+            "name": "2_Process_Management.md",
+            "path": "Operating-Systems/Unix/2_Process_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 1671
+          },
+          {
+            "name": "3_CPU_Scheduling.md",
+            "path": "Operating-Systems/Unix/3_CPU_Scheduling.md",
+            "type": "file",
+            "sha": "",
+            "size": 4341
+          },
+          {
+            "name": "4_Process_Synchronization.md",
+            "path": "Operating-Systems/Unix/4_Process_Synchronization.md",
+            "type": "file",
+            "sha": "",
+            "size": 4571
+          },
+          {
+            "name": "5_Deadlock.md",
+            "path": "Operating-Systems/Unix/5_Deadlock.md",
+            "type": "file",
+            "sha": "",
+            "size": 2041
+          },
+          {
+            "name": "6_Multithreading.md",
+            "path": "Operating-Systems/Unix/6_Multithreading.md",
+            "type": "file",
+            "sha": "",
+            "size": 2483
+          },
+          {
+            "name": "7_Memory_Management.md",
+            "path": "Operating-Systems/Unix/7_Memory_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 5076
+          },
+          {
+            "name": "8_Storage_And_IO.md",
+            "path": "Operating-Systems/Unix/8_Storage_And_IO.md",
+            "type": "file",
+            "sha": "",
+            "size": 4609
+          },
+          {
+            "name": "9_Shell_And_Scripting.md",
+            "path": "Operating-Systems/Unix/9_Shell_And_Scripting.md",
+            "type": "file",
+            "sha": "",
+            "size": 1861
+          },
+          {
+            "name": "README.md",
+            "path": "Operating-Systems/Unix/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 5717
+          }
+        ]
+      },
+      {
+        "name": "Windows",
+        "path": "Operating-Systems/Windows",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "0_Windows_Architecture_And_Structure.md",
+            "path": "Operating-Systems/Windows/0_Windows_Architecture_And_Structure.md",
+            "type": "file",
+            "sha": "",
+            "size": 34408
+          },
+          {
+            "name": "1_Windows_Commands_And_PowerShell.md",
+            "path": "Operating-Systems/Windows/1_Windows_Commands_And_PowerShell.md",
+            "type": "file",
+            "sha": "",
+            "size": 7312
+          },
+          {
+            "name": "2_Services_And_Networking.md",
+            "path": "Operating-Systems/Windows/2_Services_And_Networking.md",
+            "type": "file",
+            "sha": "",
+            "size": 5498
+          },
+          {
+            "name": "3_Process_Memory_And_Storage.md",
+            "path": "Operating-Systems/Windows/3_Process_Memory_And_Storage.md",
+            "type": "file",
+            "sha": "",
+            "size": 27438
+          },
+          {
+            "name": "4_Virtualization_And_Storage_Advanced.md",
+            "path": "Operating-Systems/Windows/4_Virtualization_And_Storage_Advanced.md",
+            "type": "file",
+            "sha": "",
+            "size": 5982
+          },
+          {
+            "name": "5_Event_Logs_Security_And_WSL.md",
+            "path": "Operating-Systems/Windows/5_Event_Logs_Security_And_WSL.md",
+            "type": "file",
+            "sha": "",
+            "size": 11274
+          },
+          {
+            "name": "README.md",
+            "path": "Operating-Systems/Windows/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 5364
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "Operating-Systems/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 6922
       }
     ]
   },
@@ -96,11 +1279,107 @@
     "sha": "",
     "children": [
       {
+        "name": "Checkov",
+        "path": "security/Checkov",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "security/Checkov/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 276
+          }
+        ]
+      },
+      {
+        "name": "OPA",
+        "path": "security/OPA",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "security/OPA/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 276
+          }
+        ]
+      },
+      {
+        "name": "Snyk",
+        "path": "security/Snyk",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "security/Snyk/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 242
+          }
+        ]
+      },
+      {
+        "name": "Trivy",
+        "path": "security/Trivy",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "security/Trivy/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 250
+          }
+        ]
+      },
+      {
+        "name": "Vault",
+        "path": "security/Vault",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "security/Vault/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 276
+          }
+        ]
+      },
+      {
+        "name": "1_Security_Practices_And_Secrets.md",
+        "path": "security/1_Security_Practices_And_Secrets.md",
+        "type": "file",
+        "sha": "",
+        "size": 382
+      },
+      {
+        "name": "2_Compliance_And_Threat_Mitigation.md",
+        "path": "security/2_Compliance_And_Threat_Mitigation.md",
+        "type": "file",
+        "sha": "",
+        "size": 356
+      },
+      {
+        "name": "3_Security_Tools_And_Automation.md",
+        "path": "security/3_Security_Tools_And_Automation.md",
+        "type": "file",
+        "sha": "",
+        "size": 745
+      },
+      {
         "name": "README.md",
         "path": "security/README.md",
         "type": "file",
         "sha": "",
-        "size": 339
+        "size": 1467
       }
     ]
   },
@@ -109,6 +1388,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1491
+    "size": 6342
   }
 ]
