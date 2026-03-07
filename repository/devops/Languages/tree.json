@@ -126,11 +126,102 @@
     "sha": "",
     "children": [
       {
+        "name": "1_Basics_Registers_And_Instructions.md",
+        "path": "Assembly/1_Basics_Registers_And_Instructions.md",
+        "type": "file",
+        "sha": "",
+        "size": 7269
+      },
+      {
+        "name": "10_Numbers_Strings_And_Arrays.md",
+        "path": "Assembly/10_Numbers_Strings_And_Arrays.md",
+        "type": "file",
+        "sha": "",
+        "size": 3786
+      },
+      {
+        "name": "11_Recursion_File_And_Memory_Management.md",
+        "path": "Assembly/11_Recursion_File_And_Memory_Management.md",
+        "type": "file",
+        "sha": "",
+        "size": 4278
+      },
+      {
+        "name": "12_Use_Cases_Ecosystem_And_Online_Tools.md",
+        "path": "Assembly/12_Use_Cases_Ecosystem_And_Online_Tools.md",
+        "type": "file",
+        "sha": "",
+        "size": 7894
+      },
+      {
+        "name": "13_Case_Studies.md",
+        "path": "Assembly/13_Case_Studies.md",
+        "type": "file",
+        "sha": "",
+        "size": 7767
+      },
+      {
+        "name": "2_Reading_Disassembly_And_Calling_Conventions.md",
+        "path": "Assembly/2_Reading_Disassembly_And_Calling_Conventions.md",
+        "type": "file",
+        "sha": "",
+        "size": 5185
+      },
+      {
+        "name": "3_Where_It_Shows_Up.md",
+        "path": "Assembly/3_Where_It_Shows_Up.md",
+        "type": "file",
+        "sha": "",
+        "size": 7159
+      },
+      {
+        "name": "4_Tooling.md",
+        "path": "Assembly/4_Tooling.md",
+        "type": "file",
+        "sha": "",
+        "size": 5147
+      },
+      {
+        "name": "5_Environment_Syntax_And_Program_Structure.md",
+        "path": "Assembly/5_Environment_Syntax_And_Program_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 5535
+      },
+      {
+        "name": "6_Registers_Flags_And_System_Calls.md",
+        "path": "Assembly/6_Registers_Flags_And_System_Calls.md",
+        "type": "file",
+        "sha": "",
+        "size": 4733
+      },
+      {
+        "name": "7_Addressing_Variables_Constants.md",
+        "path": "Assembly/7_Addressing_Variables_Constants.md",
+        "type": "file",
+        "sha": "",
+        "size": 5076
+      },
+      {
+        "name": "8_Arithmetic_Logical_And_Control_Flow.md",
+        "path": "Assembly/8_Arithmetic_Logical_And_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 4938
+      },
+      {
+        "name": "9_Procedures_Stack_And_Macros.md",
+        "path": "Assembly/9_Procedures_Stack_And_Macros.md",
+        "type": "file",
+        "sha": "",
+        "size": 4373
+      },
+      {
         "name": "README.md",
         "path": "Assembly/README.md",
         "type": "file",
         "sha": "",
-        "size": 1385
+        "size": 5219
       }
     ]
   },
