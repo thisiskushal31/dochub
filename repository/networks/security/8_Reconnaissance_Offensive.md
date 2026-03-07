@@ -1,7 +1,5 @@
 # Reconnaissance & Network Offensive Basics
 
-[← Back to Security](./README.md)
-
 Reconnaissance (passive and active), scanning, and network-level offensive measures from a **defensive and awareness** perspective. Understanding what attackers do helps you **harden**, **monitor**, and **respond**. This document is a **deep dive**: we walk through each phase like a professor in a lab—what you run, what each flag does, and what you’re actually seeing. **Only run these techniques on systems you own or have explicit written authorization to test.** Unauthorized scanning can be illegal and can trigger IDS alerts or crash fragile systems.
 
 ## Table of Contents

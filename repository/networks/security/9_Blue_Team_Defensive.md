@@ -1,7 +1,5 @@
 # Blue Team & Defensive Security
 
-[← Back to Security](./README.md)
-
 Defensive security operations from a **blue team** perspective: what defenders do on the **network** to **monitor**, **detect**, **respond**, and **harden**. This document is a **deep dive** with a **teacher’s mindset**: we walk through *why* we do each step, *what* the commands actually do, and *how* to interpret the results. You’ll get copy-paste commands and enough context to use them with a clear head—like a professor and engineer in the same room.
 
 ## Table of Contents

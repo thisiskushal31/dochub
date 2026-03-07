@@ -1,7 +1,5 @@
 # Cybersecurity: Threats & Security Configuration
 
-[← Back to Security](./README.md)
-
 Security threats, social engineering, malware, DoS/DDoS, antimalware; wireless and firewall configuration.
 
 ## Table of Contents

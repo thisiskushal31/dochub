@@ -1,7 +1,5 @@
 # Network Attacks & Mitigations (L1, L2 & L3)
 
-[← Back to Security](./README.md)
-
 Physical (L1), data-link and network (L2/L3) attacks and mitigations. Covers **L1** (wiretapping, rogue devices, RF jamming, physical access), **L2** (CAM overflow, DHCP, ARP, STP, VLAN), and **L3/L7** (DNS spoofing, RIP poisoning, idle scan, ICMP redirect) and the **mitigations** used in network security.
 
 ## Table of Contents

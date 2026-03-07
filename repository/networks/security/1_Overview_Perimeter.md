@@ -1,7 +1,5 @@
 # Network Security Overview & Perimeter
 
-[← Back to Security](./README.md)
-
 What is network security; firewalls, MAC filtering, VPN, IDS/IPS.
 
 ## Table of Contents

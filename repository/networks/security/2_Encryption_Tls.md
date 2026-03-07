@@ -1,7 +1,5 @@
 # Encryption & TLS
 
-[← Back to Security](./README.md)
-
 Encryption algorithms, TLS/mTLS, SNI, TLS 0-RTT, SSL/PPTP. TLS is a frequently asked topic; this file covers what TLS is, how it is set up, and how it fits into the stack.
 
 ## Table of Contents

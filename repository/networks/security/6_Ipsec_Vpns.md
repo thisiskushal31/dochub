@@ -1,7 +1,5 @@
 # IPSec & VPNs (Deep Dive)
 
-[← Back to Security](./README.md)
-
 Tunneling, IPSec (ESP/AH, NAT-T), GRE over IPSec, DMVPN, GETVPN.
 
 ## Table of Contents

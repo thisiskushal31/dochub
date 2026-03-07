@@ -1,7 +1,5 @@
 # Firewalls & AAA (Enterprise)
 
-[← Back to Security](./README.md)
-
 Zone-based firewalls, DoS defense, AAA, TACACS+, RADIUS, 802.1X, ASA.
 
 ## Table of Contents

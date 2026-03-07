@@ -1,7 +1,5 @@
 # NIDS/NIPS, DoS Types & Identity
 
-[← Back to Security](./README.md)
-
 Snort, DoS attack types, Zero Trust, WAF, rate limiting, baselines, audits.
 
 ## Table of Contents

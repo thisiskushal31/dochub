@@ -1,7 +1,5 @@
 # Applications & Security: Network Perspective
 
-[← Back to Security](./README.md)
-
 This document covers **application security from a network perspective**: web, mobile, AI/APIs, and containers. We focus on **what happens on the wire**, **how traffic is protected and inspected**, and **what network and security engineers need to know** to defend these workloads. All content is **standalone**—you can learn what you need here without leaving the repository. Optional further reading is listed at the end.
 
 ## Table of Contents
