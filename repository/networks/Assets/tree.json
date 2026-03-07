@@ -1,0 +1,51 @@
+[
+  {
+    "name": "cloud-native",
+    "path": "cloud-native",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "foundations",
+    "path": "foundations",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "observability",
+    "path": "observability",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "routing-switching",
+    "path": "routing-switching",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "security",
+    "path": "security",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "services",
+    "path": "services",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "transport",
+    "path": "transport",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1989
+  }
+]
