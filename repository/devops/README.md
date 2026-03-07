@@ -13,7 +13,7 @@ Comprehensive DevOps handbook covering methodologies, best practices, tooling gu
 - `Cloud-Native/` — Cloud-native architectures, patterns, and platform engineering
 - `Observability/` — Monitoring, logging, tracing, SLO/SLI; one folder per tool (Prometheus, Grafana, OpenTelemetry, etc.)
 - `Security/` — Security practices, compliance, secrets management, and threat mitigation
-- `Operating-Systems/` — **Linux/** and **Windows/** folders: deep coverage of OS topics (process, memory, I/O, shell, etc.); add new topics as needed
+- `Operating-Systems/` — **Fundamentals/** (OS-agnostic theory), **Linux/**, **Windows/**, **Unix/**, **MacOS/**: deep coverage of OS topics (process, memory, I/O, shell, services, storage, virtualization, etc.); add new topics as needed
 - `Assets/` — Images and diagrams (with credit in the topic files). See [Assets/README.md](Assets/README.md) for structure and where to store images per section.
 
 ## Visual guides and images
@@ -30,7 +30,7 @@ Images from these sources can be downloaded into the right `Assets/` subfolder a
 ## How to use
 
 1. Start with `Methodologies/` for DevOps culture and foundational practices
-2. Use `Operating-Systems/` for Linux and Windows fundamentals and commands
+2. Use `Operating-Systems/` for OS fundamentals (theory first in **Fundamentals/**), then Linux, Windows, Unix, or macOS implementation and commands
 3. Jump into `CiCd/` or `IAC/` based on your immediate needs
 4. Use `Automation/` for workflow and orchestration patterns
 5. Reference `Observability/` and `Security/` for production operations

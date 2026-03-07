@@ -2,7 +2,7 @@
 
 [← Back to Operating Systems](../README.md)
 
-**Operating system concepts that apply to any OS** — not Linux, not Windows, but **how the operating system works**. This section is theory and architecture only; no platform-specific commands or APIs. Those appear in [Linux](../Linux/README.md) and [Windows](../Windows/README.md).
+**Operating system concepts that apply to any OS** — not Linux, not Windows, but **how the operating system works**. This section is theory and architecture only; no platform-specific commands or APIs. Those appear in [Linux](../Linux/README.md), [Windows](../Windows/README.md), [Unix](../Unix/README.md), and [MacOS](../MacOS/README.md).
 
 **Study order:** Work through the sections below in order (1. OS Basics → 2. Process Management → 3. Process Synchronization → 4. Deadlock → 5. Multithreading → 6. Memory Management → 7. Disk/I/O → 8. Additional topics). Use the **concept index** to find where a specific topic (e.g. context switch, RAG, page replacement) is covered.
 
@@ -70,7 +70,7 @@ These topics are part of a full OS course. Study them after the sections above o
 | **Device drivers and I/O subsystem** | [16_Device_Drivers_And_IO_Subsystem](./16_Device_Drivers_And_IO_Subsystem.md) | Device drivers, block vs character devices, I/O layers, DMA |
 | **Protection and security** | [18_Protection_And_Security](./18_Protection_And_Security.md) | Protection vs security; access control (DAC, MAC); authentication, authorization; security threats |
 | **Request flow and system architecture** | [19_Request_Flow_And_System_Architecture](./19_Request_Flow_And_System_Architecture.md) | How a request flows in **any** system (x86, x64, ARM): user → trap → kernel → subsystem → driver → hardware; architecture layers; I/O and interrupt path |
-| **Virtualization, hypervisors, and datacenter** | [20_Virtualization_Hypervisors_And_Datacenter](./20_Virtualization_Hypervisors_And_Datacenter.md) | Type 1 vs Type 2 hypervisors; CPU and memory virtualization; how the datacenter shares and divides CPU and memory; I/O and storage (concepts only; platform config in Linux/Windows) |
+| **Virtualization, hypervisors, and datacenter** | [20_Virtualization_Hypervisors_And_Datacenter](./20_Virtualization_Hypervisors_And_Datacenter.md) | Type 1 vs Type 2 hypervisors; CPU and memory virtualization; how the datacenter shares and divides CPU and memory; I/O and storage (concepts only; platform config in Linux, Windows, Unix, macOS) |
 
 ---
 
