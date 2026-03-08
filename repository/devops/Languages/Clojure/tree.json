@@ -1,9 +1,247 @@
 [
   {
+    "name": "1_What_Is_Clojure.md",
+    "path": "1_What_Is_Clojure.md",
+    "type": "file",
+    "sha": "",
+    "size": 2112
+  },
+  {
+    "name": "10_Sequences.md",
+    "path": "10_Sequences.md",
+    "type": "file",
+    "sha": "",
+    "size": 2124
+  },
+  {
+    "name": "11_Namespaces_And_Project_Structure.md",
+    "path": "11_Namespaces_And_Project_Structure.md",
+    "type": "file",
+    "sha": "",
+    "size": 2071
+  },
+  {
+    "name": "12_Exception_Handling.md",
+    "path": "12_Exception_Handling.md",
+    "type": "file",
+    "sha": "",
+    "size": 1683
+  },
+  {
+    "name": "13_Destructuring_And_Threading_Macros.md",
+    "path": "13_Destructuring_And_Threading_Macros.md",
+    "type": "file",
+    "sha": "",
+    "size": 2338
+  },
+  {
+    "name": "14_Metadata_And_Reader_Conditionals.md",
+    "path": "14_Metadata_And_Reader_Conditionals.md",
+    "type": "file",
+    "sha": "",
+    "size": 1847
+  },
+  {
+    "name": "15_Concurrency.md",
+    "path": "15_Concurrency.md",
+    "type": "file",
+    "sha": "",
+    "size": 2645
+  },
+  {
+    "name": "16_Macros.md",
+    "path": "16_Macros.md",
+    "type": "file",
+    "sha": "",
+    "size": 2013
+  },
+  {
+    "name": "17_Java_Interop_And_Deployment.md",
+    "path": "17_Java_Interop_And_Deployment.md",
+    "type": "file",
+    "sha": "",
+    "size": 2054
+  },
+  {
+    "name": "18_Testing.md",
+    "path": "18_Testing.md",
+    "type": "file",
+    "sha": "",
+    "size": 1911
+  },
+  {
+    "name": "19_Tools_Deps_And_Build.md",
+    "path": "19_Tools_Deps_And_Build.md",
+    "type": "file",
+    "sha": "",
+    "size": 1786
+  },
+  {
+    "name": "2_Getting_Started.md",
+    "path": "2_Getting_Started.md",
+    "type": "file",
+    "sha": "",
+    "size": 2813
+  },
+  {
+    "name": "20_Spec_And_Validation.md",
+    "path": "20_Spec_And_Validation.md",
+    "type": "file",
+    "sha": "",
+    "size": 1819
+  },
+  {
+    "name": "21_Use_Cases_And_Applications.md",
+    "path": "21_Use_Cases_And_Applications.md",
+    "type": "file",
+    "sha": "",
+    "size": 8146
+  },
+  {
+    "name": "22_Security_Pitfalls_And_Best_Practices.md",
+    "path": "22_Security_Pitfalls_And_Best_Practices.md",
+    "type": "file",
+    "sha": "",
+    "size": 2969
+  },
+  {
+    "name": "23_Numbers.md",
+    "path": "23_Numbers.md",
+    "type": "file",
+    "sha": "",
+    "size": 1627
+  },
+  {
+    "name": "24_Recursion.md",
+    "path": "24_Recursion.md",
+    "type": "file",
+    "sha": "",
+    "size": 1620
+  },
+  {
+    "name": "25_Strings.md",
+    "path": "25_Strings.md",
+    "type": "file",
+    "sha": "",
+    "size": 1792
+  },
+  {
+    "name": "26_File_IO.md",
+    "path": "26_File_IO.md",
+    "type": "file",
+    "sha": "",
+    "size": 1939
+  },
+  {
+    "name": "27_Regular_Expressions.md",
+    "path": "27_Regular_Expressions.md",
+    "type": "file",
+    "sha": "",
+    "size": 1660
+  },
+  {
+    "name": "28_Predicates.md",
+    "path": "28_Predicates.md",
+    "type": "file",
+    "sha": "",
+    "size": 1561
+  },
+  {
+    "name": "29_Date_And_Time.md",
+    "path": "29_Date_And_Time.md",
+    "type": "file",
+    "sha": "",
+    "size": 1598
+  },
+  {
+    "name": "3_Basic_Syntax_And_REPL.md",
+    "path": "3_Basic_Syntax_And_REPL.md",
+    "type": "file",
+    "sha": "",
+    "size": 2854
+  },
+  {
+    "name": "30_StructMaps.md",
+    "path": "30_StructMaps.md",
+    "type": "file",
+    "sha": "",
+    "size": 1893
+  },
+  {
+    "name": "31_Equality_And_Comparators.md",
+    "path": "31_Equality_And_Comparators.md",
+    "type": "file",
+    "sha": "",
+    "size": 2550
+  },
+  {
+    "name": "32_Databases.md",
+    "path": "32_Databases.md",
+    "type": "file",
+    "sha": "",
+    "size": 2207
+  },
+  {
+    "name": "33_Libraries.md",
+    "path": "33_Libraries.md",
+    "type": "file",
+    "sha": "",
+    "size": 2004
+  },
+  {
+    "name": "34_Dev_Startup_Time.md",
+    "path": "34_Dev_Startup_Time.md",
+    "type": "file",
+    "sha": "",
+    "size": 2253
+  },
+  {
+    "name": "4_Data_Types_And_Literals.md",
+    "path": "4_Data_Types_And_Literals.md",
+    "type": "file",
+    "sha": "",
+    "size": 2140
+  },
+  {
+    "name": "5_Variables_And_Bindings.md",
+    "path": "5_Variables_And_Bindings.md",
+    "type": "file",
+    "sha": "",
+    "size": 1922
+  },
+  {
+    "name": "6_Operators_And_Expressions.md",
+    "path": "6_Operators_And_Expressions.md",
+    "type": "file",
+    "sha": "",
+    "size": 1926
+  },
+  {
+    "name": "7_Control_Flow.md",
+    "path": "7_Control_Flow.md",
+    "type": "file",
+    "sha": "",
+    "size": 2561
+  },
+  {
+    "name": "8_Functions.md",
+    "path": "8_Functions.md",
+    "type": "file",
+    "sha": "",
+    "size": 2257
+  },
+  {
+    "name": "9_Collections.md",
+    "path": "9_Collections.md",
+    "type": "file",
+    "sha": "",
+    "size": 2478
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 791
+    "size": 4905
   }
 ]
