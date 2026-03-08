@@ -6,6 +6,20 @@
     "sha": "",
     "children": [
       {
+        "name": "Languages",
+        "path": "Assets/Languages",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "C-C++",
+            "path": "Assets/Languages/C-C++",
+            "type": "dir",
+            "sha": ""
+          }
+        ]
+      },
+      {
         "name": "Operating-Systems",
         "path": "Assets/Operating-Systems",
         "type": "dir",
@@ -16,7 +30,7 @@
         "path": "Assets/README.md",
         "type": "file",
         "sha": "",
-        "size": 3040
+        "size": 3536
       }
     ]
   },
@@ -711,11 +725,123 @@
         "sha": "",
         "children": [
           {
+            "name": "1_What_Is_C_And_C++.md",
+            "path": "Languages/C-C++/1_What_Is_C_And_C++.md",
+            "type": "file",
+            "sha": "",
+            "size": 5645
+          },
+          {
+            "name": "10_Memory_Storage_And_Dynamic_Allocation.md",
+            "path": "Languages/C-C++/10_Memory_Storage_And_Dynamic_Allocation.md",
+            "type": "file",
+            "sha": "",
+            "size": 4946
+          },
+          {
+            "name": "11_Structures_Unions_Typedef.md",
+            "path": "Languages/C-C++/11_Structures_Unions_Typedef.md",
+            "type": "file",
+            "sha": "",
+            "size": 6964
+          },
+          {
+            "name": "12_Preprocessor_And_File_IO.md",
+            "path": "Languages/C-C++/12_Preprocessor_And_File_IO.md",
+            "type": "file",
+            "sha": "",
+            "size": 10634
+          },
+          {
+            "name": "13_C++_Object_Oriented_Programming.md",
+            "path": "Languages/C-C++/13_C++_Object_Oriented_Programming.md",
+            "type": "file",
+            "sha": "",
+            "size": 14692
+          },
+          {
+            "name": "14_C++_Templates_STL_Exceptions_And_More.md",
+            "path": "Languages/C-C++/14_C++_Templates_STL_Exceptions_And_More.md",
+            "type": "file",
+            "sha": "",
+            "size": 17979
+          },
+          {
+            "name": "15_Use_Cases_Cybersecurity_And_Engineering.md",
+            "path": "Languages/C-C++/15_Use_Cases_Cybersecurity_And_Engineering.md",
+            "type": "file",
+            "sha": "",
+            "size": 11717
+          },
+          {
+            "name": "16_Case_Studies.md",
+            "path": "Languages/C-C++/16_Case_Studies.md",
+            "type": "file",
+            "sha": "",
+            "size": 4113
+          },
+          {
+            "name": "2_Environment_And_First_Program.md",
+            "path": "Languages/C-C++/2_Environment_And_First_Program.md",
+            "type": "file",
+            "sha": "",
+            "size": 4219
+          },
+          {
+            "name": "3_Basic_Syntax_And_Structure.md",
+            "path": "Languages/C-C++/3_Basic_Syntax_And_Structure.md",
+            "type": "file",
+            "sha": "",
+            "size": 4753
+          },
+          {
+            "name": "4_Data_Types_Variables_Constants.md",
+            "path": "Languages/C-C++/4_Data_Types_Variables_Constants.md",
+            "type": "file",
+            "sha": "",
+            "size": 4961
+          },
+          {
+            "name": "5_Operators_And_Expressions.md",
+            "path": "Languages/C-C++/5_Operators_And_Expressions.md",
+            "type": "file",
+            "sha": "",
+            "size": 4332
+          },
+          {
+            "name": "6_Control_Flow_Decision_And_Loops.md",
+            "path": "Languages/C-C++/6_Control_Flow_Decision_And_Loops.md",
+            "type": "file",
+            "sha": "",
+            "size": 5114
+          },
+          {
+            "name": "7_Functions.md",
+            "path": "Languages/C-C++/7_Functions.md",
+            "type": "file",
+            "sha": "",
+            "size": 6159
+          },
+          {
+            "name": "8_Arrays_And_Strings.md",
+            "path": "Languages/C-C++/8_Arrays_And_Strings.md",
+            "type": "file",
+            "sha": "",
+            "size": 6581
+          },
+          {
+            "name": "9_Pointers.md",
+            "path": "Languages/C-C++/9_Pointers.md",
+            "type": "file",
+            "sha": "",
+            "size": 7850
+          },
+          {
             "name": "README.md",
             "path": "Languages/C-C++/README.md",
             "type": "file",
             "sha": "",
-            "size": 845
+            "size": 5196
           }
         ]
       },

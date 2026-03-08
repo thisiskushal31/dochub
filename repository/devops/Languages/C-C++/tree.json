@@ -1,9 +1,121 @@
 [
   {
+    "name": "1_What_Is_C_And_C++.md",
+    "path": "1_What_Is_C_And_C++.md",
+    "type": "file",
+    "sha": "",
+    "size": 5645
+  },
+  {
+    "name": "10_Memory_Storage_And_Dynamic_Allocation.md",
+    "path": "10_Memory_Storage_And_Dynamic_Allocation.md",
+    "type": "file",
+    "sha": "",
+    "size": 4946
+  },
+  {
+    "name": "11_Structures_Unions_Typedef.md",
+    "path": "11_Structures_Unions_Typedef.md",
+    "type": "file",
+    "sha": "",
+    "size": 6964
+  },
+  {
+    "name": "12_Preprocessor_And_File_IO.md",
+    "path": "12_Preprocessor_And_File_IO.md",
+    "type": "file",
+    "sha": "",
+    "size": 10634
+  },
+  {
+    "name": "13_C++_Object_Oriented_Programming.md",
+    "path": "13_C++_Object_Oriented_Programming.md",
+    "type": "file",
+    "sha": "",
+    "size": 14692
+  },
+  {
+    "name": "14_C++_Templates_STL_Exceptions_And_More.md",
+    "path": "14_C++_Templates_STL_Exceptions_And_More.md",
+    "type": "file",
+    "sha": "",
+    "size": 17979
+  },
+  {
+    "name": "15_Use_Cases_Cybersecurity_And_Engineering.md",
+    "path": "15_Use_Cases_Cybersecurity_And_Engineering.md",
+    "type": "file",
+    "sha": "",
+    "size": 11717
+  },
+  {
+    "name": "16_Case_Studies.md",
+    "path": "16_Case_Studies.md",
+    "type": "file",
+    "sha": "",
+    "size": 4113
+  },
+  {
+    "name": "2_Environment_And_First_Program.md",
+    "path": "2_Environment_And_First_Program.md",
+    "type": "file",
+    "sha": "",
+    "size": 4219
+  },
+  {
+    "name": "3_Basic_Syntax_And_Structure.md",
+    "path": "3_Basic_Syntax_And_Structure.md",
+    "type": "file",
+    "sha": "",
+    "size": 4753
+  },
+  {
+    "name": "4_Data_Types_Variables_Constants.md",
+    "path": "4_Data_Types_Variables_Constants.md",
+    "type": "file",
+    "sha": "",
+    "size": 4961
+  },
+  {
+    "name": "5_Operators_And_Expressions.md",
+    "path": "5_Operators_And_Expressions.md",
+    "type": "file",
+    "sha": "",
+    "size": 4332
+  },
+  {
+    "name": "6_Control_Flow_Decision_And_Loops.md",
+    "path": "6_Control_Flow_Decision_And_Loops.md",
+    "type": "file",
+    "sha": "",
+    "size": 5114
+  },
+  {
+    "name": "7_Functions.md",
+    "path": "7_Functions.md",
+    "type": "file",
+    "sha": "",
+    "size": 6159
+  },
+  {
+    "name": "8_Arrays_And_Strings.md",
+    "path": "8_Arrays_And_Strings.md",
+    "type": "file",
+    "sha": "",
+    "size": 6581
+  },
+  {
+    "name": "9_Pointers.md",
+    "path": "9_Pointers.md",
+    "type": "file",
+    "sha": "",
+    "size": 7850
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 845
+    "size": 5196
   }
 ]
