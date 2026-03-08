@@ -852,11 +852,158 @@
         "sha": "",
         "children": [
           {
+            "name": "1_What_Is_Cairo.md",
+            "path": "Languages/Cairo/1_What_Is_Cairo.md",
+            "type": "file",
+            "sha": "",
+            "size": 5172
+          },
+          {
+            "name": "10_Dictionaries.md",
+            "path": "Languages/Cairo/10_Dictionaries.md",
+            "type": "file",
+            "sha": "",
+            "size": 2692
+          },
+          {
+            "name": "11_Comments_And_Documentation.md",
+            "path": "Languages/Cairo/11_Comments_And_Documentation.md",
+            "type": "file",
+            "sha": "",
+            "size": 1885
+          },
+          {
+            "name": "12_Proving_And_Executables.md",
+            "path": "Languages/Cairo/12_Proving_And_Executables.md",
+            "type": "file",
+            "sha": "",
+            "size": 2920
+          },
+          {
+            "name": "13_Modules_Packages_And_Crates.md",
+            "path": "Languages/Cairo/13_Modules_Packages_And_Crates.md",
+            "type": "file",
+            "sha": "",
+            "size": 4728
+          },
+          {
+            "name": "14_Generic_Types_And_Traits.md",
+            "path": "Languages/Cairo/14_Generic_Types_And_Traits.md",
+            "type": "file",
+            "sha": "",
+            "size": 2621
+          },
+          {
+            "name": "15_Error_Handling.md",
+            "path": "Languages/Cairo/15_Error_Handling.md",
+            "type": "file",
+            "sha": "",
+            "size": 2644
+          },
+          {
+            "name": "16_Testing.md",
+            "path": "Languages/Cairo/16_Testing.md",
+            "type": "file",
+            "sha": "",
+            "size": 2011
+          },
+          {
+            "name": "17_Closures.md",
+            "path": "Languages/Cairo/17_Closures.md",
+            "type": "file",
+            "sha": "",
+            "size": 1390
+          },
+          {
+            "name": "18_Advanced_Cairo_Features.md",
+            "path": "Languages/Cairo/18_Advanced_Cairo_Features.md",
+            "type": "file",
+            "sha": "",
+            "size": 6312
+          },
+          {
+            "name": "19_Smart_Contracts_On_Starknet.md",
+            "path": "Languages/Cairo/19_Smart_Contracts_On_Starknet.md",
+            "type": "file",
+            "sha": "",
+            "size": 12278
+          },
+          {
+            "name": "2_Getting_Started.md",
+            "path": "Languages/Cairo/2_Getting_Started.md",
+            "type": "file",
+            "sha": "",
+            "size": 4107
+          },
+          {
+            "name": "20_Cairo_VM_And_Appendix.md",
+            "path": "Languages/Cairo/20_Cairo_VM_And_Appendix.md",
+            "type": "file",
+            "sha": "",
+            "size": 8335
+          },
+          {
+            "name": "21_Use_Cases_And_Case_Studies.md",
+            "path": "Languages/Cairo/21_Use_Cases_And_Case_Studies.md",
+            "type": "file",
+            "sha": "",
+            "size": 13894
+          },
+          {
+            "name": "3_Variables_And_Data_Types.md",
+            "path": "Languages/Cairo/3_Variables_And_Data_Types.md",
+            "type": "file",
+            "sha": "",
+            "size": 8272
+          },
+          {
+            "name": "4_Functions.md",
+            "path": "Languages/Cairo/4_Functions.md",
+            "type": "file",
+            "sha": "",
+            "size": 4262
+          },
+          {
+            "name": "5_Control_Flow.md",
+            "path": "Languages/Cairo/5_Control_Flow.md",
+            "type": "file",
+            "sha": "",
+            "size": 4258
+          },
+          {
+            "name": "6_Arrays_And_Collections.md",
+            "path": "Languages/Cairo/6_Arrays_And_Collections.md",
+            "type": "file",
+            "sha": "",
+            "size": 3942
+          },
+          {
+            "name": "7_Ownership_And_References.md",
+            "path": "Languages/Cairo/7_Ownership_And_References.md",
+            "type": "file",
+            "sha": "",
+            "size": 4865
+          },
+          {
+            "name": "8_Structs.md",
+            "path": "Languages/Cairo/8_Structs.md",
+            "type": "file",
+            "sha": "",
+            "size": 5288
+          },
+          {
+            "name": "9_Enums_And_Pattern_Matching.md",
+            "path": "Languages/Cairo/9_Enums_And_Pattern_Matching.md",
+            "type": "file",
+            "sha": "",
+            "size": 3650
+          },
+          {
             "name": "README.md",
             "path": "Languages/Cairo/README.md",
             "type": "file",
             "sha": "",
-            "size": 826
+            "size": 7037
           }
         ]
       },
