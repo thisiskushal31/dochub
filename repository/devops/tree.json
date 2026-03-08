@@ -1018,7 +1018,7 @@
             "path": "Languages/Clojure/1_What_Is_Clojure.md",
             "type": "file",
             "sha": "",
-            "size": 2112
+            "size": 3357
           },
           {
             "name": "10_Sequences.md",
@@ -1256,7 +1256,7 @@
             "path": "Languages/Clojure/README.md",
             "type": "file",
             "sha": "",
-            "size": 4905
+            "size": 5403
           }
         ]
       },

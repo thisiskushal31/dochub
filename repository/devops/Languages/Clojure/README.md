@@ -2,7 +2,9 @@
 
 [← Back to Languages](../README.md)
 
-**Why in DevOps and security:** **Clojure** is a JVM Lisp used in **data processing**, backend services, and tooling. It appears in data pipelines and JVM-heavy shops; useful when you operate or audit Clojure services. This section covers Clojure from beginner to advanced. **Content is merged from both sources:** the scraped TutorialsPoint Clojure tutorial (43 chapters) and the official Clojure guides (18 pages). Every topic from both is reflected here—no stone unturned.
+**Why in DevOps and security:** **Clojure** is a JVM Lisp used in **data processing**, backend services, and tooling. It appears in data pipelines and JVM-heavy shops; useful when you operate or audit Clojure services. **Before you dive in:** Topic 1 explains **what this language does** and **why it's here**. The section then goes **basics → advanced → implementation**: language details first (syntax, data types, functions, collections, concurrency, macros, tooling), use cases and how to implement them last (Topic 21). Content is merged from the scraped TutorialsPoint Clojure tutorial (43 chapters) and official Clojure guides (18 pages).
+
+**Use cases and implementation:** For where Clojure is used in practice (data pipelines, APIs, DevOps, tooling) and **how to implement** common scenarios (REST API, CLI, data pipeline, config-driven ETL, background workers, ops scripts), see **[Topic 21 — Use cases and applications](./21_Use_Cases_And_Applications.md)**.
 
 ---
 

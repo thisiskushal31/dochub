@@ -2,6 +2,18 @@
 
 [← Clojure README](./README.md)
 
+---
+
+## What this language does and why it's here
+
+**What Clojure does:** Clojure is used to build **data-centric applications** on the JVM: you transform data with pure functions, run **backend services and APIs**, write **data pipelines and ETL**, and build **tooling and automation** that plug into the Java ecosystem. It emphasizes immutability, clear concurrency primitives, and a REPL for interactive development.
+
+**Why it's in this handbook:** You will run into Clojure in **data pipelines**, **JVM-heavy shops**, and **internal tooling**. This section is here so you can (1) understand **what the language is and what it’s for** before you start, (2) learn it from **basics to advanced** in order, and (3) see **where and how to implement it**—with use cases and concrete implementation patterns at the end (Topic 21). If you operate, debug, or adopt Clojure services, the material is ordered so those three questions are answered.
+
+---
+
+## The language in brief
+
 Clojure is a **high-level, dynamic, functional programming language** that runs on the **JVM** (and the .NET runtime via ClojureCLR). It is designed around **Lisp** ideas: a small language core, minimal syntax, and powerful macros so you can shape the language to your design. Code is expressed as **data structures** (lists, vectors, maps) that are then evaluated; this **homoiconicity** makes metaprogramming and tooling natural.
 
 Clojure emphasizes **immutability**: data structures are persistent and immutable by default, so you avoid in-place mutation and many classes of bugs. The language also provides **managed state** and **concurrency** primitives (atoms, refs, agents, vars) so you can handle mutable state safely when needed. It **embraces the host**: on the JVM you get full access to the Java ecosystem and libraries while writing idiomatic Clojure.
@@ -21,6 +33,8 @@ Clojure emphasizes **immutability**: data structures are persistent and immutabl
 ## Where Clojure is used
 
 Clojure appears in **data pipelines**, **backend services**, **APIs**, and **internal tooling** in JVM-heavy environments. It is less common in mainstream DevOps than Python or Go but is relevant when you operate, debug, or audit systems written in Clojure—or when you choose it for data processing and services where immutability and expressiveness matter.
+
+For a full list of **use cases** (where Clojure is used) and **implementation use cases** (how to build REST APIs, CLIs, data pipelines, ETL, background workers, and ops scripts), see **[Topic 21 — Use cases and applications](./21_Use_Cases_And_Applications.md)**.
 
 ---
 
