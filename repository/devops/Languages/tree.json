@@ -1021,11 +1021,151 @@
     "sha": "",
     "children": [
       {
+        "name": "1_What_Is_CSharp.md",
+        "path": "CSharp/1_What_Is_CSharp.md",
+        "type": "file",
+        "sha": "",
+        "size": 2665
+      },
+      {
+        "name": "10_Classes_And_Objects.md",
+        "path": "CSharp/10_Classes_And_Objects.md",
+        "type": "file",
+        "sha": "",
+        "size": 2054
+      },
+      {
+        "name": "11_Inheritance_And_Polymorphism.md",
+        "path": "CSharp/11_Inheritance_And_Polymorphism.md",
+        "type": "file",
+        "sha": "",
+        "size": 2134
+      },
+      {
+        "name": "12_Interfaces_Structs_And_Enums.md",
+        "path": "CSharp/12_Interfaces_Structs_And_Enums.md",
+        "type": "file",
+        "sha": "",
+        "size": 2308
+      },
+      {
+        "name": "13_Exception_Handling.md",
+        "path": "CSharp/13_Exception_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 2146
+      },
+      {
+        "name": "14_File_IO.md",
+        "path": "CSharp/14_File_IO.md",
+        "type": "file",
+        "sha": "",
+        "size": 2281
+      },
+      {
+        "name": "15_Namespaces_And_Assemblies.md",
+        "path": "CSharp/15_Namespaces_And_Assemblies.md",
+        "type": "file",
+        "sha": "",
+        "size": 1934
+      },
+      {
+        "name": "16_Delegates_Events_And_Generics.md",
+        "path": "CSharp/16_Delegates_Events_And_Generics.md",
+        "type": "file",
+        "sha": "",
+        "size": 2592
+      },
+      {
+        "name": "17_LINQ_And_Async_Await.md",
+        "path": "CSharp/17_LINQ_And_Async_Await.md",
+        "type": "file",
+        "sha": "",
+        "size": 2442
+      },
+      {
+        "name": "18_NuGet_And_Testing.md",
+        "path": "CSharp/18_NuGet_And_Testing.md",
+        "type": "file",
+        "sha": "",
+        "size": 2163
+      },
+      {
+        "name": "19_Use_Cases_And_Applications.md",
+        "path": "CSharp/19_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 3508
+      },
+      {
+        "name": "2_Environment_Setup_And_DotNet_SDK.md",
+        "path": "CSharp/2_Environment_Setup_And_DotNet_SDK.md",
+        "type": "file",
+        "sha": "",
+        "size": 1727
+      },
+      {
+        "name": "20_Security_And_Best_Practices.md",
+        "path": "CSharp/20_Security_And_Best_Practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 2535
+      },
+      {
+        "name": "3_Program_Structure_And_Basic_Syntax.md",
+        "path": "CSharp/3_Program_Structure_And_Basic_Syntax.md",
+        "type": "file",
+        "sha": "",
+        "size": 2547
+      },
+      {
+        "name": "4_Data_Types_And_Type_Conversion.md",
+        "path": "CSharp/4_Data_Types_And_Type_Conversion.md",
+        "type": "file",
+        "sha": "",
+        "size": 2582
+      },
+      {
+        "name": "5_Variables_And_Constants.md",
+        "path": "CSharp/5_Variables_And_Constants.md",
+        "type": "file",
+        "sha": "",
+        "size": 1775
+      },
+      {
+        "name": "6_Operators.md",
+        "path": "CSharp/6_Operators.md",
+        "type": "file",
+        "sha": "",
+        "size": 2110
+      },
+      {
+        "name": "7_Control_Flow.md",
+        "path": "CSharp/7_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 2776
+      },
+      {
+        "name": "8_Methods.md",
+        "path": "CSharp/8_Methods.md",
+        "type": "file",
+        "sha": "",
+        "size": 2171
+      },
+      {
+        "name": "9_Arrays_And_Strings.md",
+        "path": "CSharp/9_Arrays_And_Strings.md",
+        "type": "file",
+        "sha": "",
+        "size": 3549
+      },
+      {
         "name": "README.md",
         "path": "CSharp/README.md",
         "type": "file",
         "sha": "",
-        "size": 910
+        "size": 4523
       }
     ]
   },
