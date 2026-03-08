@@ -45,7 +45,7 @@ Beyond security, assembly is central in **embedded systems** (microcontrollers, 
 
 ## Online compilers and IDEs
 
-You can **write and run assembly in the browser** without installing NASM or a linker locally. TutorialsPoint’s CodeGround, for example, offers:
+You can **write and run assembly in the browser** without installing NASM or a linker locally. Several online compilers offer:
 
 - **Online Assembly (NASM) compiler** — Write, run, and debug NASM assembly; examples include Hello World, variables, constants, math, strings, conditions, loops, arrays, recursion. Useful for quick experiments and learning.
 - **Online Yasm compiler** — YASM is NASM-compatible; same syntax and concepts. Another option to try assembly snippets (e.g. the classic Hello World with `sys_write` and `sys_exit`).

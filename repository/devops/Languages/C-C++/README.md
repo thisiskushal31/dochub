@@ -12,8 +12,6 @@
 
 **Format:** Each concept is explained in **text first**, then illustrated with a **code block** so you can write and reason about C in an easy, readable way. Content is standalone and descriptive; see **Further reading** in each topic and below.
 
-**Coverage:** This section aligns with the **GeeksforGeeks C++** syllabus: C++ Basics (intro, data types, variables, operators, I/O, control flow, loops, functions, arrays) are covered in C topics 2–8 and in topic 14 (C++ I/O, new/delete, STL, etc.). Core concepts (pointers/references, new/delete, templates, structs/unions/enums, exceptions, file handling, multithreading, namespace), OOP (topic 13), STL (containers, iterators, algorithms in topic 14), and practice (interview questions, examples) are linked in **Further reading** in topic 14.
-
 ---
 
 ## Topics
@@ -41,7 +39,7 @@
 
 ## Further reading
 
-- [C Programming Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/cprogramming/index.htm) — Full C course; all chapter links merged into topics 1–12.
+- [C Programming Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/cprogramming/index.htm) — C language tutorial.
 - [C++ Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/cplusplus/index.htm) — C++ overview and OOP.
 - [C reference (cppreference)](https://en.cppreference.com/w/c) — C standard library and language reference.
 - [C++ reference (cppreference)](https://en.cppreference.com/) — C++ reference.

@@ -13,7 +13,7 @@ For every concept we use:
 1. **Text first** — What we are doing and why (goal, concept, or rule).
 2. **Then a code block or visual** — Concrete assembly (or disassembly) that shows the idea so you can see structure, syntax, and flow.
 
-Case studies below are full, runnable (or analyzable) examples aligned with the TutorialsPoint Assembly course and common references.
+Case studies below are full, runnable (or analyzable) examples. See **Further reading** for more.
 
 ---
 

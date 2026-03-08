@@ -487,7 +487,7 @@ int main() {
 
 ## Further reading
 
-**GeeksforGeeks C++ (full syllabus):**
+**C++ (additional topics and practice):**
 - [C++ Tutorial (GeeksforGeeks)](https://www.geeksforgeeks.org/cpp/c-plus-plus/) — Main index.
 - [Introduction to C++](https://www.geeksforgeeks.org/cpp/cpp-programming-intro/) · [Data Types](https://www.geeksforgeeks.org/cpp/cpp-data-types/) · [Variables](https://www.geeksforgeeks.org/cpp/cpp-variables/) · [Operators](https://www.geeksforgeeks.org/cpp/operators-in-cpp/) · [Basic I/O](https://www.geeksforgeeks.org/cpp/basic-input-output-c/) · [Loops](https://www.geeksforgeeks.org/cpp/cpp-loops/) · [Functions](https://www.geeksforgeeks.org/cpp/functions-in-cpp/) · [Arrays](https://www.geeksforgeeks.org/cpp/cpp-arrays/).
 - [Pointers and References in C++](https://www.geeksforgeeks.org/cpp/pointers-and-references-in-c/) · [new and delete](https://www.geeksforgeeks.org/cpp/new-and-delete-operators-in-cpp-for-dynamic-memory/) · [Templates](https://www.geeksforgeeks.org/cpp/templates-cpp/) · [Structures, Unions and Enumerations](https://www.geeksforgeeks.org/cpp/structures-unions-and-enumerations-in-cpp/) · [Exception Handling](https://www.geeksforgeeks.org/cpp/exception-handling-c/) · [File Handling](https://www.geeksforgeeks.org/cpp/file-handling-c-classes/) · [Multithreading](https://www.geeksforgeeks.org/cpp/multithreading-in-cpp/) · [Namespace](https://www.geeksforgeeks.org/cpp/namespace-in-c/).

@@ -54,11 +54,11 @@ All of these benefit from C’s **efficiency**, **portability**, and **direct ha
 
 ---
 
-## C++ interview questions (from GeeksforGeeks)
+## C++ interview questions
 
-C++ is one of the most common languages in technical interviews. Interviewers often ask about **basics**, **OOP**, **memory (new/delete, smart pointers, shallow vs deep copy)**, **STL**, **exceptions**, **templates**, and **design patterns**. Below are topic-wise links and a selection of representative Q&As with short answers and code.
+C++ is one of the most common languages in technical interviews. Interviewers often ask about **basics**, **OOP**, **memory (new/delete, smart pointers, shallow vs deep copy)**, **STL**, **exceptions**, **templates**, and **design patterns**. Below are topic-wise categories and a selection of representative Q&As with short answers and code.
 
-### Topic-wise interview question sets (GFG)
+### Topic-wise interview question sets
 
 | Topic | Coverage |
 | --- | --- |
@@ -105,11 +105,11 @@ Incrementing or decrementing a pointer outside the bounds of the array it points
 
 ---
 
-## C++ programming examples and use cases (from GeeksforGeeks)
+## C++ programming examples and use cases
 
-Writing and reading C++ programs is a common way to learn and to prepare for interviews. GeeksforGeeks groups **C++ programming examples** by use case: from basic I/O and arithmetic to control flow, patterns, functions, arrays, strings, OOP, STL, file handling, and exceptions. These double as **practice use cases** and as a **curriculum** for self-study.
+Writing and reading C++ programs is a common way to learn and to prepare for interviews. **C++ programming examples** are often grouped by use case: from basic I/O and arithmetic to control flow, patterns, functions, arrays, strings, OOP, STL, file handling, and exceptions. These double as **practice use cases** and as a **curriculum** for self-study.
 
-### Example categories (GFG)
+### Example categories
 
 | Category | Use case / what you practice |
 | --- | --- |

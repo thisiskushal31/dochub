@@ -151,14 +151,14 @@
         "path": "Assembly/12_Use_Cases_Ecosystem_And_Online_Tools.md",
         "type": "file",
         "sha": "",
-        "size": 7894
+        "size": 7874
       },
       {
         "name": "13_Case_Studies.md",
         "path": "Assembly/13_Case_Studies.md",
         "type": "file",
         "sha": "",
-        "size": 7767
+        "size": 7731
       },
       {
         "name": "2_Reading_Disassembly_And_Calling_Conventions.md",
@@ -271,21 +271,21 @@
         "path": "C-C++/14_C++_Templates_STL_Exceptions_And_More.md",
         "type": "file",
         "sha": "",
-        "size": 17979
+        "size": 17982
       },
       {
         "name": "15_Use_Cases_Cybersecurity_And_Engineering.md",
         "path": "C-C++/15_Use_Cases_Cybersecurity_And_Engineering.md",
         "type": "file",
         "sha": "",
-        "size": 11717
+        "size": 11665
       },
       {
         "name": "16_Case_Studies.md",
         "path": "C-C++/16_Case_Studies.md",
         "type": "file",
         "sha": "",
-        "size": 4113
+        "size": 4112
       },
       {
         "name": "2_Environment_And_First_Program.md",
@@ -348,7 +348,7 @@
         "path": "C-C++/README.md",
         "type": "file",
         "sha": "",
-        "size": 5196
+        "size": 4606
       }
     ]
   },

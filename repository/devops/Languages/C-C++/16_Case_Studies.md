@@ -150,5 +150,5 @@ These examples are building blocks for larger programs. The same patterns (funct
 
 ## Further reading
 
-- [C Programming Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/cprogramming/index.htm) — Full course.
+- [C Programming Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/cprogramming/index.htm) — C tutorial.
 - [C/C++ README](./README.md) — Topic index.
