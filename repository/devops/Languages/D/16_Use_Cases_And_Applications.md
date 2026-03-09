@@ -2,7 +2,7 @@
 
 [← D README](./README.md)
 
-By this point you have covered **basics** (modules, types, expressions, arrays, structs, classes), **advanced** (templates, contracts, traits, errors, GC, interop), and **portability** topics. This section is **where you implement**: it ties those concepts to real use cases. D is used in systems tooling, game development, scripting, and native libraries where performance and control matter.
+By this point you have covered **very basic** (modules, types, expressions) through **advanced** (templates, contracts, traits, errors, GC, interop) to **implementation**. This topic ties those concepts to real use cases from **all sides of engineering**: software, DevOps, security, systems, and research. D is used in systems tooling, game development, scripting, and native libraries where performance and control matter.
 
 ---
 
@@ -16,6 +16,22 @@ By this point you have covered **basics** (modules, types, expressions, arrays, 
 | **DevOps and automation** | Build tools, custom agents | Compile to native, no runtime dependency (with Better C) |
 | **Security and analysis** | Binary analysis, tooling | Direct memory, inline asm, interfacing to C |
 | **Legacy and niche** | Existing D codebases, research | Mature language, long-standing projects |
+
+---
+
+## By engineering perspective
+
+Use cases and implementation focus depend on your role. The following maps **what to do** and **which topics support it**.
+
+**Software / application engineer:** Ship native apps, libraries, or scripts. Focus on Topics 2 (dub, build), 5–9 (expressions, arrays, structs, classes, functions), 10 (templates), 12 (unit tests). Implement: CLI tools, shared libraries with **extern(C)** API, or dub packages consumed by other D or C/C++ projects.
+
+**DevOps / SRE:** Integrate D into pipelines, operate tooling, deploy binaries. Focus on Topics 2 (dub build, dmd flags), 11 (conditional compilation for platform), 14 (interop for scripting or glue), 16–17. Implement: CI steps that run **dub test** and **dub build**, artifact publishing, or small automation binaries (e.g. Better C) with no runtime dependency.
+
+**Security / cybersecurity engineer:** Audit D codebases, analyze native binaries, harden supply chain. Focus on Topics 4 (types, qualifiers), 11 (contracts), 12 (traits, tests), 15 (memory safety, @safe), 17. Implement: Review for @safe boundaries and raw pointer use; audit **dub.json** dependencies; use contracts and unit tests as assurance evidence.
+
+**Systems / low-level engineer:** Compilers, kernels, drivers, or high-performance libraries. Focus on Topics 13 (GC vs manual memory, floating point), 14 (C/C++ interop), 15 (inline asm, ABI, Better C, vector extensions). Implement: D libraries callable from C, or Better C components with minimal runtime; use **version** and **static if** for platform-specific paths.
+
+**Research / prototyping:** Experiments, performance studies, or metaprogramming. Focus on Topics 10 (templates, mixins), 11 (contracts), 12 (traits), 13–15. Implement: Compile-time code generation, numeric or SIMD experiments, or D as a scripting front end to C libraries.
 
 ---
 
@@ -39,6 +55,7 @@ Start with **dub.json**/ **dub.sdl** for project layout and dependencies. Entry 
 | Native library | 7 (classes), 10 (templates), 14 (interop), 15 (ABI) |
 | Safe / auditable code | 4 (types), 11 (contracts), 12 (traits, tests), 15 (memory safety) |
 | Reading / analysis | 1–5, 7, 10, 12 |
+| By role | See “By engineering perspective” above; each role has a focused topic set and implementation angle. |
 
 For security, dependency hygiene, and safe deployment when working with D, see **[Topic 17 — Security and best practices](./17_Security_And_Best_Practices.md)**.
 

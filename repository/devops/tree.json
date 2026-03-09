@@ -1673,7 +1673,7 @@
             "path": "Languages/D/1_What_Is_D.md",
             "type": "file",
             "sha": "",
-            "size": 2992
+            "size": 3147
           },
           {
             "name": "10_Templates_And_Mixins.md",
@@ -1722,14 +1722,14 @@
             "path": "Languages/D/16_Use_Cases_And_Applications.md",
             "type": "file",
             "sha": "",
-            "size": 2679
+            "size": 4679
           },
           {
             "name": "17_Security_And_Best_Practices.md",
             "path": "Languages/D/17_Security_And_Best_Practices.md",
             "type": "file",
             "sha": "",
-            "size": 2697
+            "size": 2868
           },
           {
             "name": "2_Environment_And_Build.md",
@@ -1792,7 +1792,7 @@
             "path": "Languages/D/README.md",
             "type": "file",
             "sha": "",
-            "size": 4795
+            "size": 5758
           }
         ]
       },
@@ -1803,11 +1803,179 @@
         "sha": "",
         "children": [
           {
+            "name": "1_What_Is_Dart.md",
+            "path": "Languages/Dart/1_What_Is_Dart.md",
+            "type": "file",
+            "sha": "",
+            "size": 6252
+          },
+          {
+            "name": "10_Classes_And_Constructors.md",
+            "path": "Languages/Dart/10_Classes_And_Constructors.md",
+            "type": "file",
+            "sha": "",
+            "size": 2835
+          },
+          {
+            "name": "11_Methods_Inheritance_And_Mixins.md",
+            "path": "Languages/Dart/11_Methods_Inheritance_And_Mixins.md",
+            "type": "file",
+            "sha": "",
+            "size": 3120
+          },
+          {
+            "name": "12_Enums_Extensions_And_Extension_Types.md",
+            "path": "Languages/Dart/12_Enums_Extensions_And_Extension_Types.md",
+            "type": "file",
+            "sha": "",
+            "size": 2535
+          },
+          {
+            "name": "13_Patterns_And_Metadata.md",
+            "path": "Languages/Dart/13_Patterns_And_Metadata.md",
+            "type": "file",
+            "sha": "",
+            "size": 2448
+          },
+          {
+            "name": "14_Concurrency.md",
+            "path": "Languages/Dart/14_Concurrency.md",
+            "type": "file",
+            "sha": "",
+            "size": 7048
+          },
+          {
+            "name": "15_Null_Safety_In_Depth.md",
+            "path": "Languages/Dart/15_Null_Safety_In_Depth.md",
+            "type": "file",
+            "sha": "",
+            "size": 2986
+          },
+          {
+            "name": "16_Effective_Dart.md",
+            "path": "Languages/Dart/16_Effective_Dart.md",
+            "type": "file",
+            "sha": "",
+            "size": 3014
+          },
+          {
+            "name": "17_Core_Libraries.md",
+            "path": "Languages/Dart/17_Core_Libraries.md",
+            "type": "file",
+            "sha": "",
+            "size": 3664
+          },
+          {
+            "name": "18_Packages_And_Pub.md",
+            "path": "Languages/Dart/18_Packages_And_Pub.md",
+            "type": "file",
+            "sha": "",
+            "size": 2962
+          },
+          {
+            "name": "19_SDK_And_Command_Line_Tools.md",
+            "path": "Languages/Dart/19_SDK_And_Command_Line_Tools.md",
+            "type": "file",
+            "sha": "",
+            "size": 3105
+          },
+          {
+            "name": "2_Environment_And_SDK.md",
+            "path": "Languages/Dart/2_Environment_And_SDK.md",
+            "type": "file",
+            "sha": "",
+            "size": 6468
+          },
+          {
+            "name": "20_Server_And_Command_Line_Apps.md",
+            "path": "Languages/Dart/20_Server_And_Command_Line_Apps.md",
+            "type": "file",
+            "sha": "",
+            "size": 2815
+          },
+          {
+            "name": "21_Web_Apps_And_Deployment.md",
+            "path": "Languages/Dart/21_Web_Apps_And_Deployment.md",
+            "type": "file",
+            "sha": "",
+            "size": 2604
+          },
+          {
+            "name": "22_Interoperability.md",
+            "path": "Languages/Dart/22_Interoperability.md",
+            "type": "file",
+            "sha": "",
+            "size": 3058
+          },
+          {
+            "name": "23_Use_Cases_And_Applications.md",
+            "path": "Languages/Dart/23_Use_Cases_And_Applications.md",
+            "type": "file",
+            "sha": "",
+            "size": 8957
+          },
+          {
+            "name": "24_Security_And_Best_Practices.md",
+            "path": "Languages/Dart/24_Security_And_Best_Practices.md",
+            "type": "file",
+            "sha": "",
+            "size": 8795
+          },
+          {
+            "name": "3_Program_Structure_And_Basic_Syntax.md",
+            "path": "Languages/Dart/3_Program_Structure_And_Basic_Syntax.md",
+            "type": "file",
+            "sha": "",
+            "size": 6854
+          },
+          {
+            "name": "4_Variables_And_Null_Safety.md",
+            "path": "Languages/Dart/4_Variables_And_Null_Safety.md",
+            "type": "file",
+            "sha": "",
+            "size": 7804
+          },
+          {
+            "name": "5_Types.md",
+            "path": "Languages/Dart/5_Types.md",
+            "type": "file",
+            "sha": "",
+            "size": 6176
+          },
+          {
+            "name": "6_Operators.md",
+            "path": "Languages/Dart/6_Operators.md",
+            "type": "file",
+            "sha": "",
+            "size": 3243
+          },
+          {
+            "name": "7_Control_Flow.md",
+            "path": "Languages/Dart/7_Control_Flow.md",
+            "type": "file",
+            "sha": "",
+            "size": 5504
+          },
+          {
+            "name": "8_Functions.md",
+            "path": "Languages/Dart/8_Functions.md",
+            "type": "file",
+            "sha": "",
+            "size": 4184
+          },
+          {
+            "name": "9_Libraries_And_Imports.md",
+            "path": "Languages/Dart/9_Libraries_And_Imports.md",
+            "type": "file",
+            "sha": "",
+            "size": 2194
+          },
+          {
             "name": "README.md",
             "path": "Languages/Dart/README.md",
             "type": "file",
             "sha": "",
-            "size": 764
+            "size": 8331
           }
         ]
       },

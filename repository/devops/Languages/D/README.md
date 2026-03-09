@@ -2,9 +2,9 @@
 
 [← Back to Languages](../README.md)
 
-**What this language does and why it's here:** **D** is a general-purpose **systems programming language** with C-like syntax that compiles to native code. It is statically typed and supports both **garbage-collected** and **manual memory management**. In DevOps and security contexts you may encounter D in tooling, native binaries, or legacy/niche code; knowing the language and its artifacts helps with recognition and analysis. This section takes you from **basics** (lexical, modules, types, expressions) through **advanced** (templates, contracts, traits, interfacing to C/C++) to **where you implement** (use cases and security).
+**What this language does and why it's here:** **D** is a general-purpose **systems programming language** with C-like syntax that compiles to native code. It is statically typed and supports both **garbage-collected** and **manual memory management**. This section is a **deep dive**: it goes from **very basic** (what D is, build, modules, types) through **advanced** (templates, contracts, traits, interop, memory) to **implementation and use cases** from **all sides of engineering**—software, DevOps, security, systems, and research. Whether you ship D services, operate or audit native tooling, or analyze binaries, the topics and use cases below map to your role.
 
-**How this section is organized:** (1) **Very basic** — Topics 1–4: what D is, environment and build, lexical/modules/declarations, types and attributes. (2) **Core language** — Topics 5–9: expressions and statements, arrays, structs/classes/interfaces, enums and qualifiers, functions and operators. (3) **Advanced** — Topics 10–15: templates and mixins, contracts and conditional compilation, traits and error handling, memory and runtime, interfacing to C/C++, portability and advanced topics. (4) **Implementation** — Topics 16–17: use cases and security.
+**How this section is organized:** (1) **Very basic** — Topics 1–4: what D is, environment and build, lexical/modules/declarations, types and attributes. (2) **Core language** — Topics 5–9: expressions and statements, arrays, structs/classes/interfaces, enums and qualifiers, functions and operators. (3) **Advanced** — Topics 10–15: templates and mixins, contracts and conditional compilation, traits and error handling, memory and runtime, interfacing to C/C++, portability and advanced topics. (4) **Implementation and use cases** — Topics 16–17: use cases and applications (by engineering role) and security.
 
 ---
 
@@ -15,7 +15,7 @@
 | **Very basic** | 1 → 2 → 3 → 4 | Understand what D is, build with dub/dmd, and use modules, declarations, and types. |
 | **Core language** | 5 → 6 → 7 → 8 → 9 | Use expressions, statements, arrays, structs/classes/interfaces, enums, and functions. |
 | **Advanced** | 10 → 11 → 12 → 13 → 14 → 15 | Use templates, contracts, traits, error handling, GC, and C/C++ interop. |
-| **Implementation** | 16 → 17 | Apply D in tooling and native code and follow security best practices. |
+| **Implementation and use cases** | 16 → 17 | Apply D in tooling and native code from software, DevOps, security, systems, and research perspectives; follow security best practices. |
 
 ---
 
@@ -40,6 +40,18 @@
 | 15 | Portability, memory safety, and advanced topics | [15_Portability_Memory_Safety_And_Advanced.md](./15_Portability_Memory_Safety_And_Advanced.md) |
 | 16 | Use cases and applications | [16_Use_Cases_And_Applications.md](./16_Use_Cases_And_Applications.md) |
 | 17 | Security and best practices | [17_Security_And_Best_Practices.md](./17_Security_And_Best_Practices.md) |
+
+---
+
+## By engineering role
+
+| Role | Focus | Key topics |
+|------|--------|------------|
+| **Software / application** | Native apps, libraries, scripts | 2 (build), 5–9 (core), 10 (templates), 12 (testing), 16 |
+| **DevOps / SRE** | Build pipelines, tooling, automation, deployment | 2 (dub, dmd), 11 (conditional compilation), 14 (interop), 16, 17 |
+| **Security / cybersecurity** | Auditing, binary analysis, safe coding, supply chain | 4 (types), 11 (contracts), 12 (traits, tests), 15 (memory safety), 16, 17 |
+| **Systems / low-level** | Compilers, kernels, drivers, inline asm, ABI | 13 (GC, manual memory), 14 (C/C++), 15 (iasm, ABI, Better C), 16 |
+| **Research / prototyping** | Experiments, performance, metaprogramming | 10 (templates), 11 (contracts), 12 (traits), 13–15, 16 |
 
 ---
 

@@ -2,7 +2,7 @@
 
 [← D README](./README.md)
 
-When building and operating D applications, apply the same security and hygiene practices as for other systems languages: keep dependencies and the compiler up to date, validate input, avoid trusting user data, and follow least privilege. This topic summarizes practices that help keep D codebases and deployments safe.
+When building and operating D applications, apply the same security and hygiene practices as for other systems languages: keep dependencies and the compiler up to date, validate input, avoid trusting user data, and follow least privilege. These practices apply across **all engineering roles**—software, DevOps, security, and systems—whether you ship D services, run tooling in pipelines, or audit native binaries. This topic summarizes what helps keep D codebases and deployments safe.
 
 ---
 

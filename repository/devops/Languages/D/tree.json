@@ -4,7 +4,7 @@
     "path": "1_What_Is_D.md",
     "type": "file",
     "sha": "",
-    "size": 2992
+    "size": 3147
   },
   {
     "name": "10_Templates_And_Mixins.md",
@@ -53,14 +53,14 @@
     "path": "16_Use_Cases_And_Applications.md",
     "type": "file",
     "sha": "",
-    "size": 2679
+    "size": 4679
   },
   {
     "name": "17_Security_And_Best_Practices.md",
     "path": "17_Security_And_Best_Practices.md",
     "type": "file",
     "sha": "",
-    "size": 2697
+    "size": 2868
   },
   {
     "name": "2_Environment_And_Build.md",
@@ -123,6 +123,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 4795
+    "size": 5758
   }
 ]

@@ -8,7 +8,7 @@
 
 **What D does:** D is a **general-purpose systems programming language** with C-like syntax that compiles to **native code**. It is statically typed and supports both **automatic (garbage-collected)** and **manual memory management**. Programs are structured as **modules** that can be compiled separately and linked with external libraries to produce executables or native libraries.
 
-**Why it's in this handbook:** In DevOps and security you may encounter D in **tooling**, **native binaries**, or **legacy or niche** codebases. Knowing the language and its artifacts helps with recognition, analysis, and safe deployment. This section covers D from basics through advanced topics and implementation.
+**Why it's in this handbook:** This section is a **deep dive**: it goes from **very basic** (syntax, modules, types) through **advanced** (templates, contracts, interop) to **implementation and use cases** from **all sides of engineering**—software, DevOps, security, systems, and research. You may encounter D in tooling, native binaries, or legacy code; knowing the language and its artifacts helps with recognition, analysis, and safe deployment no matter your role.
 
 ---
 
