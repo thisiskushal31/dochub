@@ -1493,11 +1493,95 @@
     "sha": "",
     "children": [
       {
+        "name": "1_What_Is_Delphi.md",
+        "path": "Delphi/1_What_Is_Delphi.md",
+        "type": "file",
+        "sha": "",
+        "size": 8464
+      },
+      {
+        "name": "10_Building_And_Deployment.md",
+        "path": "Delphi/10_Building_And_Deployment.md",
+        "type": "file",
+        "sha": "",
+        "size": 4797
+      },
+      {
+        "name": "11_Use_Cases_And_Applications.md",
+        "path": "Delphi/11_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 3501
+      },
+      {
+        "name": "12_Security_Recognition_And_Artifacts.md",
+        "path": "Delphi/12_Security_Recognition_And_Artifacts.md",
+        "type": "file",
+        "sha": "",
+        "size": 6640
+      },
+      {
+        "name": "2_Environment_And_Tooling.md",
+        "path": "Delphi/2_Environment_And_Tooling.md",
+        "type": "file",
+        "sha": "",
+        "size": 8934
+      },
+      {
+        "name": "3_Program_Structure_And_Basic_Syntax.md",
+        "path": "Delphi/3_Program_Structure_And_Basic_Syntax.md",
+        "type": "file",
+        "sha": "",
+        "size": 8426
+      },
+      {
+        "name": "4_Data_Types_Variables_And_Constants.md",
+        "path": "Delphi/4_Data_Types_Variables_And_Constants.md",
+        "type": "file",
+        "sha": "",
+        "size": 9840
+      },
+      {
+        "name": "5_Procedures_And_Functions.md",
+        "path": "Delphi/5_Procedures_And_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 5034
+      },
+      {
+        "name": "6_Control_Flow.md",
+        "path": "Delphi/6_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 4722
+      },
+      {
+        "name": "7_Classes_And_Objects.md",
+        "path": "Delphi/7_Classes_And_Objects.md",
+        "type": "file",
+        "sha": "",
+        "size": 5301
+      },
+      {
+        "name": "8_Units_RTL_And_Libraries.md",
+        "path": "Delphi/8_Units_RTL_And_Libraries.md",
+        "type": "file",
+        "sha": "",
+        "size": 4982
+      },
+      {
+        "name": "9_Exception_Handling_And_Threading.md",
+        "path": "Delphi/9_Exception_Handling_And_Threading.md",
+        "type": "file",
+        "sha": "",
+        "size": 4848
+      },
+      {
         "name": "README.md",
         "path": "Delphi/README.md",
         "type": "file",
         "sha": "",
-        "size": 813
+        "size": 5750
       }
     ]
   },
