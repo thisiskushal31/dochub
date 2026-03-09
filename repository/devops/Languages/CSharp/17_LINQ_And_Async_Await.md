@@ -23,7 +23,7 @@ var sum = numbers.Sum();
 
 ## async and await
 
-Mark a method **async** and return **Task** or **Task&lt;T&gt;** (or **ValueTask**). **await** an asynchronous operation; the method pauses until the operation completes and then continues. Use **async** only when the method contains at least one **await** (or returns a task for consistency).
+Mark a method **async** and return **Task** or `Task<T>` (or **ValueTask**). **await** an asynchronous operation; the method pauses until the operation completes and then continues. Use **async** only when the method contains at least one **await** (or returns a task for consistency).
 
 ```csharp
 async Task<string> FetchAsync()

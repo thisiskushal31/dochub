@@ -1060,7 +1060,7 @@
         "path": "CSharp/14_File_IO.md",
         "type": "file",
         "sha": "",
-        "size": 2281
+        "size": 2280
       },
       {
         "name": "15_Namespaces_And_Assemblies.md",
@@ -1074,14 +1074,14 @@
         "path": "CSharp/16_Delegates_Events_And_Generics.md",
         "type": "file",
         "sha": "",
-        "size": 2592
+        "size": 2576
       },
       {
         "name": "17_LINQ_And_Async_Await.md",
         "path": "CSharp/17_LINQ_And_Async_Await.md",
         "type": "file",
         "sha": "",
-        "size": 2442
+        "size": 2434
       },
       {
         "name": "18_NuGet_And_Testing.md",

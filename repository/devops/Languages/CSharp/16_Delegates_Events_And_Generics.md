@@ -10,7 +10,7 @@
 
 ## Delegates
 
-Declare a **delegate** type with a signature; then create instances that refer to methods matching that signature. Invoke the delegate like a method. **Func&lt;T&gt;** and **Action** are built-in delegate types for common signatures.
+Declare a **delegate** type with a signature; then create instances that refer to methods matching that signature. Invoke the delegate like a method. `Func<T>` and **Action** are built-in delegate types for common signatures.
 
 ```csharp
 delegate int BinaryOp(int a, int b);
@@ -26,7 +26,7 @@ Func<int, int, int> add = Add;
 
 ## Events
 
-An **event** is declared with **event** and a delegate type. Only the declaring type can raise the event (invoke the delegate); others can add or remove handlers with **+=** and **-=**. Use **EventHandler** or **EventHandler&lt;TEventArgs&gt;** for the standard pattern.
+An **event** is declared with **event** and a delegate type. Only the declaring type can raise the event (invoke the delegate); others can add or remove handlers with **+=** and **-=**. Use **EventHandler** or `EventHandler<TEventArgs>` for the standard pattern.
 
 ```csharp
 class Publisher

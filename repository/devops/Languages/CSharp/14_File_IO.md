@@ -4,7 +4,7 @@
 
 File I/O is done through **System.IO**: **File**, **FileInfo**, **Directory**, **StreamReader**/**StreamWriter**, and **FileStream**. **File** provides static methods for reading and writing entire files or lines; streams allow incremental read/write. Paths are handled with **Path** and **Directory** for directory operations. Always use **using** or **try/finally** to dispose streams and avoid leaving handles open.
 
-**Why File and streams?** **File** is convenient for small files or one-shot read/write. **StreamReader**/ **StreamWriter** and **FileStream** give control over buffering, encoding, and large files. **Path** and **Directory** keep path and directory logic correct across platforms.
+**Why File and streams?** **File** is convenient for small files or one-shot read/write. **StreamReader**/**StreamWriter** and **FileStream** give control over buffering, encoding, and large files. **Path** and **Directory** keep path and directory logic correct across platforms.
 
 ---
 
