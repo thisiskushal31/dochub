@@ -1,9 +1,128 @@
 [
   {
+    "name": "1_What_Is_D.md",
+    "path": "1_What_Is_D.md",
+    "type": "file",
+    "sha": "",
+    "size": 2992
+  },
+  {
+    "name": "10_Templates_And_Mixins.md",
+    "path": "10_Templates_And_Mixins.md",
+    "type": "file",
+    "sha": "",
+    "size": 1907
+  },
+  {
+    "name": "11_Contracts_And_Conditional_Compilation.md",
+    "path": "11_Contracts_And_Conditional_Compilation.md",
+    "type": "file",
+    "sha": "",
+    "size": 2108
+  },
+  {
+    "name": "12_Traits_Error_Handling_And_Testing.md",
+    "path": "12_Traits_Error_Handling_And_Testing.md",
+    "type": "file",
+    "sha": "",
+    "size": 2226
+  },
+  {
+    "name": "13_Memory_And_Runtime.md",
+    "path": "13_Memory_And_Runtime.md",
+    "type": "file",
+    "sha": "",
+    "size": 1937
+  },
+  {
+    "name": "14_Interfacing_To_C_And_Cpp.md",
+    "path": "14_Interfacing_To_C_And_Cpp.md",
+    "type": "file",
+    "sha": "",
+    "size": 1978
+  },
+  {
+    "name": "15_Portability_Memory_Safety_And_Advanced.md",
+    "path": "15_Portability_Memory_Safety_And_Advanced.md",
+    "type": "file",
+    "sha": "",
+    "size": 3652
+  },
+  {
+    "name": "16_Use_Cases_And_Applications.md",
+    "path": "16_Use_Cases_And_Applications.md",
+    "type": "file",
+    "sha": "",
+    "size": 2679
+  },
+  {
+    "name": "17_Security_And_Best_Practices.md",
+    "path": "17_Security_And_Best_Practices.md",
+    "type": "file",
+    "sha": "",
+    "size": 2697
+  },
+  {
+    "name": "2_Environment_And_Build.md",
+    "path": "2_Environment_And_Build.md",
+    "type": "file",
+    "sha": "",
+    "size": 1781
+  },
+  {
+    "name": "3_Lexical_Modules_And_Declarations.md",
+    "path": "3_Lexical_Modules_And_Declarations.md",
+    "type": "file",
+    "sha": "",
+    "size": 2752
+  },
+  {
+    "name": "4_Types_Properties_And_Attributes.md",
+    "path": "4_Types_Properties_And_Attributes.md",
+    "type": "file",
+    "sha": "",
+    "size": 2407
+  },
+  {
+    "name": "5_Expressions_And_Statements.md",
+    "path": "5_Expressions_And_Statements.md",
+    "type": "file",
+    "sha": "",
+    "size": 1896
+  },
+  {
+    "name": "6_Arrays_And_Associative_Arrays.md",
+    "path": "6_Arrays_And_Associative_Arrays.md",
+    "type": "file",
+    "sha": "",
+    "size": 2298
+  },
+  {
+    "name": "7_Structs_Classes_And_Interfaces.md",
+    "path": "7_Structs_Classes_And_Interfaces.md",
+    "type": "file",
+    "sha": "",
+    "size": 2268
+  },
+  {
+    "name": "8_Enums_And_Type_Qualifiers.md",
+    "path": "8_Enums_And_Type_Qualifiers.md",
+    "type": "file",
+    "sha": "",
+    "size": 1733
+  },
+  {
+    "name": "9_Functions_And_Operator_Overloading.md",
+    "path": "9_Functions_And_Operator_Overloading.md",
+    "type": "file",
+    "sha": "",
+    "size": 2175
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 728
+    "size": 4795
   }
 ]
