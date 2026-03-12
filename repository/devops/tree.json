@@ -2261,11 +2261,144 @@
         "sha": "",
         "children": [
           {
+            "name": "1_What_Is_Erlang.md",
+            "path": "Languages/Erlang/1_What_Is_Erlang.md",
+            "type": "file",
+            "sha": "",
+            "size": 5214
+          },
+          {
+            "name": "10_Recursion_And_Higher_Order_Functions.md",
+            "path": "Languages/Erlang/10_Recursion_And_Higher_Order_Functions.md",
+            "type": "file",
+            "sha": "",
+            "size": 4317
+          },
+          {
+            "name": "11_List_Comprehensions.md",
+            "path": "Languages/Erlang/11_List_Comprehensions.md",
+            "type": "file",
+            "sha": "",
+            "size": 3208
+          },
+          {
+            "name": "12_Error_Handling.md",
+            "path": "Languages/Erlang/12_Error_Handling.md",
+            "type": "file",
+            "sha": "",
+            "size": 3619
+          },
+          {
+            "name": "13_Processes_And_Message_Passing.md",
+            "path": "Languages/Erlang/13_Processes_And_Message_Passing.md",
+            "type": "file",
+            "sha": "",
+            "size": 5435
+          },
+          {
+            "name": "14_Registered_Processes_And_Distribution.md",
+            "path": "Languages/Erlang/14_Registered_Processes_And_Distribution.md",
+            "type": "file",
+            "sha": "",
+            "size": 5052
+          },
+          {
+            "name": "15_IO_And_The_File_System.md",
+            "path": "Languages/Erlang/15_IO_And_The_File_System.md",
+            "type": "file",
+            "sha": "",
+            "size": 3521
+          },
+          {
+            "name": "16_Rebar3_And_Projects.md",
+            "path": "Languages/Erlang/16_Rebar3_And_Projects.md",
+            "type": "file",
+            "sha": "",
+            "size": 2318
+          },
+          {
+            "name": "17_OTP_GenServer_Supervision_Applications.md",
+            "path": "Languages/Erlang/17_OTP_GenServer_Supervision_Applications.md",
+            "type": "file",
+            "sha": "",
+            "size": 4708
+          },
+          {
+            "name": "18_Use_Cases_And_Applications.md",
+            "path": "Languages/Erlang/18_Use_Cases_And_Applications.md",
+            "type": "file",
+            "sha": "",
+            "size": 4606
+          },
+          {
+            "name": "19_Security_And_DevOps.md",
+            "path": "Languages/Erlang/19_Security_And_DevOps.md",
+            "type": "file",
+            "sha": "",
+            "size": 4140
+          },
+          {
+            "name": "2_Environment_And_Installation.md",
+            "path": "Languages/Erlang/2_Environment_And_Installation.md",
+            "type": "file",
+            "sha": "",
+            "size": 3738
+          },
+          {
+            "name": "3_Basic_Types.md",
+            "path": "Languages/Erlang/3_Basic_Types.md",
+            "type": "file",
+            "sha": "",
+            "size": 6085
+          },
+          {
+            "name": "4_Tuples_And_Lists.md",
+            "path": "Languages/Erlang/4_Tuples_And_Lists.md",
+            "type": "file",
+            "sha": "",
+            "size": 4870
+          },
+          {
+            "name": "5_Pattern_Matching_And_Guards.md",
+            "path": "Languages/Erlang/5_Pattern_Matching_And_Guards.md",
+            "type": "file",
+            "sha": "",
+            "size": 5117
+          },
+          {
+            "name": "6_Modules_And_Functions.md",
+            "path": "Languages/Erlang/6_Modules_And_Functions.md",
+            "type": "file",
+            "sha": "",
+            "size": 3948
+          },
+          {
+            "name": "7_Control_Flow_Case_And_If.md",
+            "path": "Languages/Erlang/7_Control_Flow_Case_And_If.md",
+            "type": "file",
+            "sha": "",
+            "size": 3194
+          },
+          {
+            "name": "8_Maps_And_Records.md",
+            "path": "Languages/Erlang/8_Maps_And_Records.md",
+            "type": "file",
+            "sha": "",
+            "size": 2275
+          },
+          {
+            "name": "9_Binaries_And_Strings.md",
+            "path": "Languages/Erlang/9_Binaries_And_Strings.md",
+            "type": "file",
+            "sha": "",
+            "size": 3063
+          },
+          {
             "name": "README.md",
             "path": "Languages/Erlang/README.md",
             "type": "file",
             "sha": "",
-            "size": 843
+            "size": 10013
           }
         ]
       },
