@@ -2085,11 +2085,172 @@
         "sha": "",
         "children": [
           {
+            "name": "1_What_Is_Elixir.md",
+            "path": "Languages/Elixir/1_What_Is_Elixir.md",
+            "type": "file",
+            "sha": "",
+            "size": 6296
+          },
+          {
+            "name": "10_Modules_And_Functions.md",
+            "path": "Languages/Elixir/10_Modules_And_Functions.md",
+            "type": "file",
+            "sha": "",
+            "size": 4201
+          },
+          {
+            "name": "11_Structs.md",
+            "path": "Languages/Elixir/11_Structs.md",
+            "type": "file",
+            "sha": "",
+            "size": 3344
+          },
+          {
+            "name": "12_Recursion_And_Enumerables.md",
+            "path": "Languages/Elixir/12_Recursion_And_Enumerables.md",
+            "type": "file",
+            "sha": "",
+            "size": 3360
+          },
+          {
+            "name": "13_Comprehensions_And_Streams.md",
+            "path": "Languages/Elixir/13_Comprehensions_And_Streams.md",
+            "type": "file",
+            "sha": "",
+            "size": 3213
+          },
+          {
+            "name": "14_Protocols.md",
+            "path": "Languages/Elixir/14_Protocols.md",
+            "type": "file",
+            "sha": "",
+            "size": 2898
+          },
+          {
+            "name": "15_Sigils.md",
+            "path": "Languages/Elixir/15_Sigils.md",
+            "type": "file",
+            "sha": "",
+            "size": 2419
+          },
+          {
+            "name": "16_Try_Catch_And_Rescue.md",
+            "path": "Languages/Elixir/16_Try_Catch_And_Rescue.md",
+            "type": "file",
+            "sha": "",
+            "size": 3365
+          },
+          {
+            "name": "17_Processes.md",
+            "path": "Languages/Elixir/17_Processes.md",
+            "type": "file",
+            "sha": "",
+            "size": 4494
+          },
+          {
+            "name": "18_IO_And_The_File_System.md",
+            "path": "Languages/Elixir/18_IO_And_The_File_System.md",
+            "type": "file",
+            "sha": "",
+            "size": 3402
+          },
+          {
+            "name": "19_Mix_And_Projects.md",
+            "path": "Languages/Elixir/19_Mix_And_Projects.md",
+            "type": "file",
+            "sha": "",
+            "size": 3958
+          },
+          {
+            "name": "2_Environment_And_Installation.md",
+            "path": "Languages/Elixir/2_Environment_And_Installation.md",
+            "type": "file",
+            "sha": "",
+            "size": 3875
+          },
+          {
+            "name": "20_OTP_Agents_GenServer_And_Supervision.md",
+            "path": "Languages/Elixir/20_OTP_Agents_GenServer_And_Supervision.md",
+            "type": "file",
+            "sha": "",
+            "size": 4363
+          },
+          {
+            "name": "21_Use_Cases_And_Applications.md",
+            "path": "Languages/Elixir/21_Use_Cases_And_Applications.md",
+            "type": "file",
+            "sha": "",
+            "size": 4094
+          },
+          {
+            "name": "22_Security_And_DevOps.md",
+            "path": "Languages/Elixir/22_Security_And_DevOps.md",
+            "type": "file",
+            "sha": "",
+            "size": 4388
+          },
+          {
+            "name": "23_Standard_Library_Modules_Reference.md",
+            "path": "Languages/Elixir/23_Standard_Library_Modules_Reference.md",
+            "type": "file",
+            "sha": "",
+            "size": 18149
+          },
+          {
+            "name": "3_Basic_Types.md",
+            "path": "Languages/Elixir/3_Basic_Types.md",
+            "type": "file",
+            "sha": "",
+            "size": 5552
+          },
+          {
+            "name": "4_Lists_And_Tuples.md",
+            "path": "Languages/Elixir/4_Lists_And_Tuples.md",
+            "type": "file",
+            "sha": "",
+            "size": 4122
+          },
+          {
+            "name": "5_Pattern_Matching.md",
+            "path": "Languages/Elixir/5_Pattern_Matching.md",
+            "type": "file",
+            "sha": "",
+            "size": 3909
+          },
+          {
+            "name": "6_Case_Cond_And_If.md",
+            "path": "Languages/Elixir/6_Case_Cond_And_If.md",
+            "type": "file",
+            "sha": "",
+            "size": 3256
+          },
+          {
+            "name": "7_Anonymous_Functions.md",
+            "path": "Languages/Elixir/7_Anonymous_Functions.md",
+            "type": "file",
+            "sha": "",
+            "size": 2931
+          },
+          {
+            "name": "8_Binaries_Strings_And_Charlists.md",
+            "path": "Languages/Elixir/8_Binaries_Strings_And_Charlists.md",
+            "type": "file",
+            "sha": "",
+            "size": 2739
+          },
+          {
+            "name": "9_Keyword_Lists_And_Maps.md",
+            "path": "Languages/Elixir/9_Keyword_Lists_And_Maps.md",
+            "type": "file",
+            "sha": "",
+            "size": 2861
+          },
+          {
             "name": "README.md",
             "path": "Languages/Elixir/README.md",
             "type": "file",
             "sha": "",
-            "size": 1813
+            "size": 6530
           }
         ]
       },
