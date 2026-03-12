@@ -2177,11 +2177,144 @@
     "sha": "",
     "children": [
       {
+        "name": "1_What_Is_Go.md",
+        "path": "Go/1_What_Is_Go.md",
+        "type": "file",
+        "sha": "",
+        "size": 4950
+      },
+      {
+        "name": "10_Structs_And_Pointers.md",
+        "path": "Go/10_Structs_And_Pointers.md",
+        "type": "file",
+        "sha": "",
+        "size": 4531
+      },
+      {
+        "name": "11_Maps.md",
+        "path": "Go/11_Maps.md",
+        "type": "file",
+        "sha": "",
+        "size": 3526
+      },
+      {
+        "name": "12_Methods_And_Interfaces.md",
+        "path": "Go/12_Methods_And_Interfaces.md",
+        "type": "file",
+        "sha": "",
+        "size": 4390
+      },
+      {
+        "name": "13_Goroutines_And_Channels.md",
+        "path": "Go/13_Goroutines_And_Channels.md",
+        "type": "file",
+        "sha": "",
+        "size": 4453
+      },
+      {
+        "name": "14_Select_And_Concurrent_Patterns.md",
+        "path": "Go/14_Select_And_Concurrent_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 3591
+      },
+      {
+        "name": "15_Error_Handling.md",
+        "path": "Go/15_Error_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 3429
+      },
+      {
+        "name": "16_Defer_Panic_And_Recover.md",
+        "path": "Go/16_Defer_Panic_And_Recover.md",
+        "type": "file",
+        "sha": "",
+        "size": 3648
+      },
+      {
+        "name": "17_Packages_And_Imports.md",
+        "path": "Go/17_Packages_And_Imports.md",
+        "type": "file",
+        "sha": "",
+        "size": 5042
+      },
+      {
+        "name": "18_Build_Modules_And_Tooling.md",
+        "path": "Go/18_Build_Modules_And_Tooling.md",
+        "type": "file",
+        "sha": "",
+        "size": 4598
+      },
+      {
+        "name": "19_Use_Cases_And_Applications.md",
+        "path": "Go/19_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 3588
+      },
+      {
+        "name": "2_Environment_And_Setup.md",
+        "path": "Go/2_Environment_And_Setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 3523
+      },
+      {
+        "name": "20_Security_And_DevOps.md",
+        "path": "Go/20_Security_And_DevOps.md",
+        "type": "file",
+        "sha": "",
+        "size": 4311
+      },
+      {
+        "name": "3_Packages_And_Source_Structure.md",
+        "path": "Go/3_Packages_And_Source_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 18882
+      },
+      {
+        "name": "4_Types_Constants_And_Variables.md",
+        "path": "Go/4_Types_Constants_And_Variables.md",
+        "type": "file",
+        "sha": "",
+        "size": 23232
+      },
+      {
+        "name": "5_Operators_And_Expressions.md",
+        "path": "Go/5_Operators_And_Expressions.md",
+        "type": "file",
+        "sha": "",
+        "size": 26996
+      },
+      {
+        "name": "6_Control_Flow.md",
+        "path": "Go/6_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 8701
+      },
+      {
+        "name": "7_Functions.md",
+        "path": "Go/7_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 5237
+      },
+      {
+        "name": "9_Arrays_And_Slices.md",
+        "path": "Go/9_Arrays_And_Slices.md",
+        "type": "file",
+        "sha": "",
+        "size": 4551
+      },
+      {
         "name": "README.md",
         "path": "Go/README.md",
         "type": "file",
         "sha": "",
-        "size": 737
+        "size": 8017
       }
     ]
   },
