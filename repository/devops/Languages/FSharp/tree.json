@@ -1,9 +1,121 @@
 [
   {
+    "name": "1_What_Is_FSharp.md",
+    "path": "1_What_Is_FSharp.md",
+    "type": "file",
+    "sha": "",
+    "size": 4271
+  },
+  {
+    "name": "10_Modules_And_Namespaces.md",
+    "path": "10_Modules_And_Namespaces.md",
+    "type": "file",
+    "sha": "",
+    "size": 5204
+  },
+  {
+    "name": "11_Exception_Handling_And_Resources.md",
+    "path": "11_Exception_Handling_And_Resources.md",
+    "type": "file",
+    "sha": "",
+    "size": 3524
+  },
+  {
+    "name": "12_Object_Programming.md",
+    "path": "12_Object_Programming.md",
+    "type": "file",
+    "sha": "",
+    "size": 2795
+  },
+  {
+    "name": "13_Async_And_Computation_Expressions.md",
+    "path": "13_Async_And_Computation_Expressions.md",
+    "type": "file",
+    "sha": "",
+    "size": 4292
+  },
+  {
+    "name": "14_Build_And_Tooling.md",
+    "path": "14_Build_And_Tooling.md",
+    "type": "file",
+    "sha": "",
+    "size": 2963
+  },
+  {
+    "name": "15_Use_Cases_And_Applications.md",
+    "path": "15_Use_Cases_And_Applications.md",
+    "type": "file",
+    "sha": "",
+    "size": 3617
+  },
+  {
+    "name": "16_Security_And_DevOps.md",
+    "path": "16_Security_And_DevOps.md",
+    "type": "file",
+    "sha": "",
+    "size": 2831
+  },
+  {
+    "name": "2_Environment_And_Setup.md",
+    "path": "2_Environment_And_Setup.md",
+    "type": "file",
+    "sha": "",
+    "size": 3108
+  },
+  {
+    "name": "3_Values_And_Functions.md",
+    "path": "3_Values_And_Functions.md",
+    "type": "file",
+    "sha": "",
+    "size": 6830
+  },
+  {
+    "name": "4_Types_And_Type_Inference.md",
+    "path": "4_Types_And_Type_Inference.md",
+    "type": "file",
+    "sha": "",
+    "size": 4845
+  },
+  {
+    "name": "5_Tuples_And_Collections.md",
+    "path": "5_Tuples_And_Collections.md",
+    "type": "file",
+    "sha": "",
+    "size": 5392
+  },
+  {
+    "name": "6_Records_And_Discriminated_Unions.md",
+    "path": "6_Records_And_Discriminated_Unions.md",
+    "type": "file",
+    "sha": "",
+    "size": 6123
+  },
+  {
+    "name": "7_Pattern_Matching.md",
+    "path": "7_Pattern_Matching.md",
+    "type": "file",
+    "sha": "",
+    "size": 5459
+  },
+  {
+    "name": "8_Options_And_Error_Handling.md",
+    "path": "8_Options_And_Error_Handling.md",
+    "type": "file",
+    "sha": "",
+    "size": 4506
+  },
+  {
+    "name": "9_Conditionals_And_Loops.md",
+    "path": "9_Conditionals_And_Loops.md",
+    "type": "file",
+    "sha": "",
+    "size": 3674
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 732
+    "size": 6084
   }
 ]
