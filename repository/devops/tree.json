@@ -2818,11 +2818,116 @@
         "sha": "",
         "children": [
           {
+            "name": "1_What_Is_Groovy.md",
+            "path": "Languages/Groovy/1_What_Is_Groovy.md",
+            "type": "file",
+            "sha": "",
+            "size": 3063
+          },
+          {
+            "name": "10_GDK_And_Style.md",
+            "path": "Languages/Groovy/10_GDK_And_Style.md",
+            "type": "file",
+            "sha": "",
+            "size": 5361
+          },
+          {
+            "name": "11_Tools_Grape_And_IDE.md",
+            "path": "Languages/Groovy/11_Tools_Grape_And_IDE.md",
+            "type": "file",
+            "sha": "",
+            "size": 5314
+          },
+          {
+            "name": "12_Testing_DSLs_And_Integration.md",
+            "path": "Languages/Groovy/12_Testing_DSLs_And_Integration.md",
+            "type": "file",
+            "sha": "",
+            "size": 5283
+          },
+          {
+            "name": "13_Metaprogramming_And_Data_APIs.md",
+            "path": "Languages/Groovy/13_Metaprogramming_And_Data_APIs.md",
+            "type": "file",
+            "sha": "",
+            "size": 4652
+          },
+          {
+            "name": "14_DevOps_Jenkins_And_Gradle.md",
+            "path": "Languages/Groovy/14_DevOps_Jenkins_And_Gradle.md",
+            "type": "file",
+            "sha": "",
+            "size": 5876
+          },
+          {
+            "name": "15_Security_And_Use_Cases.md",
+            "path": "Languages/Groovy/15_Security_And_Use_Cases.md",
+            "type": "file",
+            "sha": "",
+            "size": 5226
+          },
+          {
+            "name": "2_Environment_And_Setup.md",
+            "path": "Languages/Groovy/2_Environment_And_Setup.md",
+            "type": "file",
+            "sha": "",
+            "size": 2533
+          },
+          {
+            "name": "3_Syntax_And_Structure.md",
+            "path": "Languages/Groovy/3_Syntax_And_Structure.md",
+            "type": "file",
+            "sha": "",
+            "size": 8068
+          },
+          {
+            "name": "4_Types_Strings_And_Collections.md",
+            "path": "Languages/Groovy/4_Types_Strings_And_Collections.md",
+            "type": "file",
+            "sha": "",
+            "size": 9040
+          },
+          {
+            "name": "5_Closures.md",
+            "path": "Languages/Groovy/5_Closures.md",
+            "type": "file",
+            "sha": "",
+            "size": 8575
+          },
+          {
+            "name": "6_Operators_And_Control_Flow.md",
+            "path": "Languages/Groovy/6_Operators_And_Control_Flow.md",
+            "type": "file",
+            "sha": "",
+            "size": 5629
+          },
+          {
+            "name": "7_Scripts_And_Classes.md",
+            "path": "Languages/Groovy/7_Scripts_And_Classes.md",
+            "type": "file",
+            "sha": "",
+            "size": 6503
+          },
+          {
+            "name": "8_Differences_With_Java.md",
+            "path": "Languages/Groovy/8_Differences_With_Java.md",
+            "type": "file",
+            "sha": "",
+            "size": 5635
+          },
+          {
+            "name": "9_Object_Orientation.md",
+            "path": "Languages/Groovy/9_Object_Orientation.md",
+            "type": "file",
+            "sha": "",
+            "size": 3443
+          },
+          {
             "name": "README.md",
             "path": "Languages/Groovy/README.md",
             "type": "file",
             "sha": "",
-            "size": 937
+            "size": 7162
           }
         ]
       },
