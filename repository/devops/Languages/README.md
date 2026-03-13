@@ -1,6 +1,6 @@
 # Languages
 
-Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-purpose, query/config (HCL, JSON, YAML), niche/security (Assembly, Nim, VBA, R, Erlang, Zig, Delphi, COBOL, OCaml, F#, Ada, Julia, Dart, D, Haskell, Clojure, Crystal, VB.NET, Tcl, Fortran, Objective-C), **Web3** (Solidity, Vyper, Move, Cairo), and **LaTeX** for PDF generation. This section gives enough syntax, tooling, and patterns so you can read and write scripts, automation, and tooling; for deep language reference, use official docs or a dedicated language repo. **Shell** content lives in [Operating-Systems](../Operating-Systems/README.md); **HCL** (Terraform) content lives in [IAC](../IAC/README.md); those folders signpost there. **Database query languages** (SQL, PromQL, Cypher, etc.) are covered in [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) alongside each engine — see [Database query and config languages](#database-query-and-config-languages) below.
+Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-purpose, query/config (HCL, JSON, YAML), niche/security (Assembly, Nim, VBA, R, Erlang, Zig, Delphi, COBOL, OCaml, F#, Ada, Julia, Dart, D, Haskell, Clojure, Crystal, VB.NET, Tcl, Fortran, Objective-C), **Web3** (Solidity, Vyper, Move, Cairo), and **LaTeX** for PDF generation. This section gives enough syntax, tooling, and patterns so you can read and write scripts, automation, and tooling; for deep language reference, use official docs or a dedicated language repo. **Shell** content lives in [Operating-Systems](../Operating-Systems/README.md); **HCL** has a deep-dive in [Languages/HCL](./HCL/README.md) (the language); Terraform use cases (providers, state, modules, pipelines) are in [IAC](../IAC/README.md) and [Terraform](../IAC/Terraform/README.md). **Database query languages** (SQL, PromQL, Cypher, etc.) are covered in [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) alongside each engine — see [Database query and config languages](#database-query-and-config-languages) below.
 
 ---
 
@@ -52,7 +52,7 @@ Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-p
 | **Move**    | Aptos, Sui smart contracts; resource-oriented; Web3. |
 | **Cairo**   | StarkNet, STARK provable programs; Web3. |
 | **Shell**  | Day-to-day scripting on Linux/Unix (Bash, zsh) and Windows (PowerShell); **covered in Operating-Systems**; this folder points there. |
-| **HCL**     | Terraform (and Packer) config; **covered in IAC/Terraform**; this folder points there. |
+| **HCL**     | HashiCorp Configuration Language: syntax, expressions, types; Terraform, Packer, Vault, Nomad, Consul use it; **Terraform use cases** (providers, state, modules, pipelines) in IAC/Terraform. |
 | **JSON**    | Config and APIs; used across CiCd, IAC, Cloud-Native, JavaScript; this folder signposts. |
 | **YAML**    | K8s, CI pipelines, Ansible; used across Cloud-Native, CiCd, IAC; this folder signposts. |
 
@@ -121,7 +121,7 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | 42 | [**Move**](./Move/README.md) | Move: Aptos, Sui smart contracts; Web3. |
 | 43 | [**Cairo**](./Cairo/README.md) | Cairo: StarkNet, STARK; Web3. |
 | 44 | [**Shell**](./Shell/README.md) | Shell (Bash, PowerShell): **covered in Operating-Systems**; this folder signposts to Linux/Unix/Windows shell docs. |
-| 45 | [**HCL**](./HCL/README.md) | HCL (Terraform, Packer): **covered in IAC/Terraform**; this folder signposts to IAC. |
+| 45 | [**HCL**](./HCL/README.md) | HCL language deep-dive (syntax, expressions, types); Terraform/Packer/Vault/Nomad/Consul; Terraform use cases → IAC/Terraform. |
 | 46 | [**JSON**](./JSON/README.md) | JSON: config and APIs; **used across CiCd, IAC, Cloud-Native**; this folder signposts. |
 | 47 | [**YAML**](./YAML/README.md) | YAML: K8s, CI, Ansible; **used across Cloud-Native, CiCd, IAC**; this folder signposts. |
 

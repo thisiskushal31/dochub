@@ -2445,11 +2445,95 @@
     "sha": "",
     "children": [
       {
+        "name": "1_What_Is_Haskell.md",
+        "path": "Haskell/1_What_Is_Haskell.md",
+        "type": "file",
+        "sha": "",
+        "size": 3597
+      },
+      {
+        "name": "10_Testing_And_Tooling.md",
+        "path": "Haskell/10_Testing_And_Tooling.md",
+        "type": "file",
+        "sha": "",
+        "size": 4283
+      },
+      {
+        "name": "11_DevOps_Security_Formal_Methods.md",
+        "path": "Haskell/11_DevOps_Security_Formal_Methods.md",
+        "type": "file",
+        "sha": "",
+        "size": 3686
+      },
+      {
+        "name": "12_Use_Cases_By_Role.md",
+        "path": "Haskell/12_Use_Cases_By_Role.md",
+        "type": "file",
+        "sha": "",
+        "size": 3690
+      },
+      {
+        "name": "2_Environment_And_Setup.md",
+        "path": "Haskell/2_Environment_And_Setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 3797
+      },
+      {
+        "name": "3_Syntax_And_Structure.md",
+        "path": "Haskell/3_Syntax_And_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 7318
+      },
+      {
+        "name": "4_Types_And_Type_System.md",
+        "path": "Haskell/4_Types_And_Type_System.md",
+        "type": "file",
+        "sha": "",
+        "size": 6184
+      },
+      {
+        "name": "5_Functions_And_Purity.md",
+        "path": "Haskell/5_Functions_And_Purity.md",
+        "type": "file",
+        "sha": "",
+        "size": 4913
+      },
+      {
+        "name": "6_Modules_And_Programs.md",
+        "path": "Haskell/6_Modules_And_Programs.md",
+        "type": "file",
+        "sha": "",
+        "size": 4538
+      },
+      {
+        "name": "7_Type_Classes.md",
+        "path": "Haskell/7_Type_Classes.md",
+        "type": "file",
+        "sha": "",
+        "size": 4813
+      },
+      {
+        "name": "8_IO_And_Effects.md",
+        "path": "Haskell/8_IO_And_Effects.md",
+        "type": "file",
+        "sha": "",
+        "size": 4639
+      },
+      {
+        "name": "9_Build_And_Packages.md",
+        "path": "Haskell/9_Build_And_Packages.md",
+        "type": "file",
+        "sha": "",
+        "size": 4307
+      },
+      {
         "name": "README.md",
         "path": "Haskell/README.md",
         "type": "file",
         "sha": "",
-        "size": 848
+        "size": 5812
       }
     ]
   },
@@ -2460,11 +2544,46 @@
     "sha": "",
     "children": [
       {
+        "name": "1_What_Is_HCL.md",
+        "path": "HCL/1_What_Is_HCL.md",
+        "type": "file",
+        "sha": "",
+        "size": 3814
+      },
+      {
+        "name": "2_Syntax_And_Structure.md",
+        "path": "HCL/2_Syntax_And_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 4058
+      },
+      {
+        "name": "3_Expressions_And_Types.md",
+        "path": "HCL/3_Expressions_And_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 6287
+      },
+      {
+        "name": "4_Where_HCL_Is_Used_And_Use_Cases.md",
+        "path": "HCL/4_Where_HCL_Is_Used_And_Use_Cases.md",
+        "type": "file",
+        "sha": "",
+        "size": 4742
+      },
+      {
+        "name": "5_How_HCL_Works_In_Each_Tool_SRE.md",
+        "path": "HCL/5_How_HCL_Works_In_Each_Tool_SRE.md",
+        "type": "file",
+        "sha": "",
+        "size": 10482
+      },
+      {
         "name": "README.md",
         "path": "HCL/README.md",
         "type": "file",
         "sha": "",
-        "size": 1328
+        "size": 4464
       }
     ]
   },
@@ -2704,7 +2823,7 @@
         "path": "Ruby/README.md",
         "type": "file",
         "sha": "",
-        "size": 807
+        "size": 1266
       }
     ]
   },
@@ -2893,6 +3012,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 17421
+    "size": 17688
   }
 ]

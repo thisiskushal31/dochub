@@ -1,9 +1,44 @@
 [
   {
+    "name": "1_What_Is_HCL.md",
+    "path": "1_What_Is_HCL.md",
+    "type": "file",
+    "sha": "",
+    "size": 3814
+  },
+  {
+    "name": "2_Syntax_And_Structure.md",
+    "path": "2_Syntax_And_Structure.md",
+    "type": "file",
+    "sha": "",
+    "size": 4058
+  },
+  {
+    "name": "3_Expressions_And_Types.md",
+    "path": "3_Expressions_And_Types.md",
+    "type": "file",
+    "sha": "",
+    "size": 6287
+  },
+  {
+    "name": "4_Where_HCL_Is_Used_And_Use_Cases.md",
+    "path": "4_Where_HCL_Is_Used_And_Use_Cases.md",
+    "type": "file",
+    "sha": "",
+    "size": 4742
+  },
+  {
+    "name": "5_How_HCL_Works_In_Each_Tool_SRE.md",
+    "path": "5_How_HCL_Works_In_Each_Tool_SRE.md",
+    "type": "file",
+    "sha": "",
+    "size": 10482
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1328
+    "size": 4464
   }
 ]
