@@ -32,11 +32,11 @@ A typical system is layered:
   +------------------------------------------+
   |  Applications (user programs)            |
   +------------------------------------------+
-  |  System libraries / runtime (user mode)   |
+  |  System libraries / runtime (user mode)  |
   +------------------------------------------+
-  |  Kernel (privileged)                      |  ← process, memory, I/O, system calls
+  |  Kernel (privileged)                     |  ← process, memory, I/O, system calls
   +------------------------------------------+
-  |  Hardware (CPU, memory, devices)          |
+  |  Hardware (CPU, memory, devices)         |
   +------------------------------------------+
 ```
 
