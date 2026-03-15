@@ -1,9 +1,58 @@
 [
   {
+    "name": "1_What_Is_JavaScript.md",
+    "path": "1_What_Is_JavaScript.md",
+    "type": "file",
+    "sha": "",
+    "size": 10486
+  },
+  {
+    "name": "2_Environment_And_Where_To_Run.md",
+    "path": "2_Environment_And_Where_To_Run.md",
+    "type": "file",
+    "sha": "",
+    "size": 8746
+  },
+  {
+    "name": "3_Syntax_And_Structure.md",
+    "path": "3_Syntax_And_Structure.md",
+    "type": "file",
+    "sha": "",
+    "size": 13167
+  },
+  {
+    "name": "4_Variables_Types_Operators.md",
+    "path": "4_Variables_Types_Operators.md",
+    "type": "file",
+    "sha": "",
+    "size": 12691
+  },
+  {
+    "name": "5_Control_Flow_And_Loops.md",
+    "path": "5_Control_Flow_And_Loops.md",
+    "type": "file",
+    "sha": "",
+    "size": 9306
+  },
+  {
+    "name": "6_Functions.md",
+    "path": "6_Functions.md",
+    "type": "file",
+    "sha": "",
+    "size": 8524
+  },
+  {
+    "name": "7_Objects_And_Classes.md",
+    "path": "7_Objects_And_Classes.md",
+    "type": "file",
+    "sha": "",
+    "size": 8042
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 766
+    "size": 7334
   }
 ]
