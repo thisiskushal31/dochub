@@ -7,32 +7,74 @@
     "size": 10486
   },
   {
-    "name": "10_DOM_And_Events.md",
-    "path": "10_DOM_And_Events.md",
+    "name": "10_Code_Quality_And_Testing.md",
+    "path": "10_Code_Quality_And_Testing.md",
+    "type": "file",
+    "sha": "",
+    "size": 4436
+  },
+  {
+    "name": "11_Data_Types_Arrays_Iterables_JSON.md",
+    "path": "11_Data_Types_Arrays_Iterables_JSON.md",
+    "type": "file",
+    "sha": "",
+    "size": 5256
+  },
+  {
+    "name": "12_Advanced_Functions.md",
+    "path": "12_Advanced_Functions.md",
+    "type": "file",
+    "sha": "",
+    "size": 5748
+  },
+  {
+    "name": "13_Property_Descriptors_Prototypes.md",
+    "path": "13_Property_Descriptors_Prototypes.md",
+    "type": "file",
+    "sha": "",
+    "size": 5249
+  },
+  {
+    "name": "14_Classes_Generators.md",
+    "path": "14_Classes_Generators.md",
+    "type": "file",
+    "sha": "",
+    "size": 5047
+  },
+  {
+    "name": "15_Proxy_Reflect_Eval_Misc.md",
+    "path": "15_Proxy_Reflect_Eval_Misc.md",
+    "type": "file",
+    "sha": "",
+    "size": 5075
+  },
+  {
+    "name": "16_DOM_And_Events.md",
+    "path": "16_DOM_And_Events.md",
     "type": "file",
     "sha": "",
     "size": 8900
   },
   {
-    "name": "11_Node_NPM_And_Tooling.md",
-    "path": "11_Node_NPM_And_Tooling.md",
+    "name": "17_DOM_Deep_Dive.md",
+    "path": "17_DOM_Deep_Dive.md",
+    "type": "file",
+    "sha": "",
+    "size": 5280
+  },
+  {
+    "name": "18_UI_Events_Forms_Loading.md",
+    "path": "18_UI_Events_Forms_Loading.md",
+    "type": "file",
+    "sha": "",
+    "size": 6452
+  },
+  {
+    "name": "19_Node_NPM_And_Tooling.md",
+    "path": "19_Node_NPM_And_Tooling.md",
     "type": "file",
     "sha": "",
     "size": 6968
-  },
-  {
-    "name": "12_DevOps_Automation_And_Security.md",
-    "path": "12_DevOps_Automation_And_Security.md",
-    "type": "file",
-    "sha": "",
-    "size": 6531
-  },
-  {
-    "name": "13_Use_Cases_By_Role.md",
-    "path": "13_Use_Cases_By_Role.md",
-    "type": "file",
-    "sha": "",
-    "size": 4655
   },
   {
     "name": "2_Environment_And_Where_To_Run.md",
@@ -40,6 +82,41 @@
     "type": "file",
     "sha": "",
     "size": 8746
+  },
+  {
+    "name": "20_Use_Cases_By_Role.md",
+    "path": "20_Use_Cases_By_Role.md",
+    "type": "file",
+    "sha": "",
+    "size": 4894
+  },
+  {
+    "name": "21_DevOps_Automation_And_Security.md",
+    "path": "21_DevOps_Automation_And_Security.md",
+    "type": "file",
+    "sha": "",
+    "size": 6531
+  },
+  {
+    "name": "22_Frames_Windows_Storage.md",
+    "path": "22_Frames_Windows_Storage.md",
+    "type": "file",
+    "sha": "",
+    "size": 5669
+  },
+  {
+    "name": "23_Binary_Network.md",
+    "path": "23_Binary_Network.md",
+    "type": "file",
+    "sha": "",
+    "size": 6288
+  },
+  {
+    "name": "24_Animation_WebComponents_Regex.md",
+    "path": "24_Animation_WebComponents_Regex.md",
+    "type": "file",
+    "sha": "",
+    "size": 6488
   },
   {
     "name": "3_Syntax_And_Structure.md",
@@ -95,6 +172,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 7325
+    "size": 8816
   }
 ]

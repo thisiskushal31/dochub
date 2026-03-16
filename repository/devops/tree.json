@@ -3200,32 +3200,74 @@
             "size": 10486
           },
           {
-            "name": "10_DOM_And_Events.md",
-            "path": "Languages/JavaScript/10_DOM_And_Events.md",
+            "name": "10_Code_Quality_And_Testing.md",
+            "path": "Languages/JavaScript/10_Code_Quality_And_Testing.md",
+            "type": "file",
+            "sha": "",
+            "size": 4436
+          },
+          {
+            "name": "11_Data_Types_Arrays_Iterables_JSON.md",
+            "path": "Languages/JavaScript/11_Data_Types_Arrays_Iterables_JSON.md",
+            "type": "file",
+            "sha": "",
+            "size": 5256
+          },
+          {
+            "name": "12_Advanced_Functions.md",
+            "path": "Languages/JavaScript/12_Advanced_Functions.md",
+            "type": "file",
+            "sha": "",
+            "size": 5748
+          },
+          {
+            "name": "13_Property_Descriptors_Prototypes.md",
+            "path": "Languages/JavaScript/13_Property_Descriptors_Prototypes.md",
+            "type": "file",
+            "sha": "",
+            "size": 5249
+          },
+          {
+            "name": "14_Classes_Generators.md",
+            "path": "Languages/JavaScript/14_Classes_Generators.md",
+            "type": "file",
+            "sha": "",
+            "size": 5047
+          },
+          {
+            "name": "15_Proxy_Reflect_Eval_Misc.md",
+            "path": "Languages/JavaScript/15_Proxy_Reflect_Eval_Misc.md",
+            "type": "file",
+            "sha": "",
+            "size": 5075
+          },
+          {
+            "name": "16_DOM_And_Events.md",
+            "path": "Languages/JavaScript/16_DOM_And_Events.md",
             "type": "file",
             "sha": "",
             "size": 8900
           },
           {
-            "name": "11_Node_NPM_And_Tooling.md",
-            "path": "Languages/JavaScript/11_Node_NPM_And_Tooling.md",
+            "name": "17_DOM_Deep_Dive.md",
+            "path": "Languages/JavaScript/17_DOM_Deep_Dive.md",
+            "type": "file",
+            "sha": "",
+            "size": 5280
+          },
+          {
+            "name": "18_UI_Events_Forms_Loading.md",
+            "path": "Languages/JavaScript/18_UI_Events_Forms_Loading.md",
+            "type": "file",
+            "sha": "",
+            "size": 6452
+          },
+          {
+            "name": "19_Node_NPM_And_Tooling.md",
+            "path": "Languages/JavaScript/19_Node_NPM_And_Tooling.md",
             "type": "file",
             "sha": "",
             "size": 6968
-          },
-          {
-            "name": "12_DevOps_Automation_And_Security.md",
-            "path": "Languages/JavaScript/12_DevOps_Automation_And_Security.md",
-            "type": "file",
-            "sha": "",
-            "size": 6531
-          },
-          {
-            "name": "13_Use_Cases_By_Role.md",
-            "path": "Languages/JavaScript/13_Use_Cases_By_Role.md",
-            "type": "file",
-            "sha": "",
-            "size": 4655
           },
           {
             "name": "2_Environment_And_Where_To_Run.md",
@@ -3233,6 +3275,41 @@
             "type": "file",
             "sha": "",
             "size": 8746
+          },
+          {
+            "name": "20_Use_Cases_By_Role.md",
+            "path": "Languages/JavaScript/20_Use_Cases_By_Role.md",
+            "type": "file",
+            "sha": "",
+            "size": 4894
+          },
+          {
+            "name": "21_DevOps_Automation_And_Security.md",
+            "path": "Languages/JavaScript/21_DevOps_Automation_And_Security.md",
+            "type": "file",
+            "sha": "",
+            "size": 6531
+          },
+          {
+            "name": "22_Frames_Windows_Storage.md",
+            "path": "Languages/JavaScript/22_Frames_Windows_Storage.md",
+            "type": "file",
+            "sha": "",
+            "size": 5669
+          },
+          {
+            "name": "23_Binary_Network.md",
+            "path": "Languages/JavaScript/23_Binary_Network.md",
+            "type": "file",
+            "sha": "",
+            "size": 6288
+          },
+          {
+            "name": "24_Animation_WebComponents_Regex.md",
+            "path": "Languages/JavaScript/24_Animation_WebComponents_Regex.md",
+            "type": "file",
+            "sha": "",
+            "size": 6488
           },
           {
             "name": "3_Syntax_And_Structure.md",
@@ -3288,7 +3365,7 @@
             "path": "Languages/JavaScript/README.md",
             "type": "file",
             "sha": "",
-            "size": 7325
+            "size": 8816
           }
         ]
       },
