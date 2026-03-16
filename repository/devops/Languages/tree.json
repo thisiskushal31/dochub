@@ -2707,6 +2707,34 @@
         "size": 10486
       },
       {
+        "name": "10_DOM_And_Events.md",
+        "path": "JavaScript/10_DOM_And_Events.md",
+        "type": "file",
+        "sha": "",
+        "size": 8900
+      },
+      {
+        "name": "11_Node_NPM_And_Tooling.md",
+        "path": "JavaScript/11_Node_NPM_And_Tooling.md",
+        "type": "file",
+        "sha": "",
+        "size": 6968
+      },
+      {
+        "name": "12_DevOps_Automation_And_Security.md",
+        "path": "JavaScript/12_DevOps_Automation_And_Security.md",
+        "type": "file",
+        "sha": "",
+        "size": 6531
+      },
+      {
+        "name": "13_Use_Cases_By_Role.md",
+        "path": "JavaScript/13_Use_Cases_By_Role.md",
+        "type": "file",
+        "sha": "",
+        "size": 4655
+      },
+      {
         "name": "2_Environment_And_Where_To_Run.md",
         "path": "JavaScript/2_Environment_And_Where_To_Run.md",
         "type": "file",
@@ -2739,21 +2767,35 @@
         "path": "JavaScript/6_Functions.md",
         "type": "file",
         "sha": "",
-        "size": 8524
+        "size": 10248
       },
       {
         "name": "7_Objects_And_Classes.md",
         "path": "JavaScript/7_Objects_And_Classes.md",
         "type": "file",
         "sha": "",
-        "size": 8042
+        "size": 9205
+      },
+      {
+        "name": "8_ES6_Syntax_And_Modules.md",
+        "path": "JavaScript/8_ES6_Syntax_And_Modules.md",
+        "type": "file",
+        "sha": "",
+        "size": 6914
+      },
+      {
+        "name": "9_Async_Promise_AsyncAwait.md",
+        "path": "JavaScript/9_Async_Promise_AsyncAwait.md",
+        "type": "file",
+        "sha": "",
+        "size": 6995
       },
       {
         "name": "README.md",
         "path": "JavaScript/README.md",
         "type": "file",
         "sha": "",
-        "size": 7334
+        "size": 7325
       }
     ]
   },

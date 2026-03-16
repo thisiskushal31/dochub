@@ -20,7 +20,7 @@ let key = "age";
 console.log(user[key]);           // 30
 ```
 
-Reading a non-existent property returns `undefined`. Assigning to a new key adds the property; **delete** `obj.prop` removes it.
+Reading a non-existent property returns `undefined`. Assigning to a new key adds the property; **delete** `obj.prop` removes it. Objects are passed and assigned by **reference**: copying an object with `let b = a` does not copy the contents; both variables point to the same object. To create a shallow copy, use **spread** `{ ...obj }` or **Object.assign({}, obj)**; nested objects are still shared. Deep cloning requires a recursive approach or a utility; JSON.parse(JSON.stringify(obj)) works only for JSON-serializable data and loses functions and special types.
 
 ---
 
@@ -52,7 +52,7 @@ console.log("test" in obj);   // true
 
 ## for...in loop
 
-The **for...in** loop iterates over the **enumerable** property keys of an object (including inherited enumerable properties, unless filtered). Use `for (let key in obj) { ... }` to get each key; use `obj[key]` to get the value. Order: integer-like string keys are sorted numerically; other string keys appear in creation order. Do not rely on order for arbitrary keys across engines if compatibility with very old environments matters. For arrays, prefer `for`, `for...of`, or array methods; `for...in` iterates over indices as strings and can include inherited or non-index properties.
+The **for...in** loop iterates over the **enumerable** property keys of an object (including inherited enumerable properties, unless filtered). Use `for (let key in obj) { ... }` to get each key; use `obj[key]` to get the value. Order: integer-like string keys are sorted numerically; other string keys appear in creation order. Do not rely on order for arbitrary keys across engines if compatibility with very old environments matters. For arrays, prefer `for`, `for...of`, or array methods; `for...in` iterates over indices as strings and can include inherited or non-index properties. To iterate only own enumerable properties, use `Object.keys(obj)` or check `Object.prototype.hasOwnProperty.call(obj, key)` inside the loop. **Object.keys**, **Object.values**, and **Object.entries** return arrays of keys, values, or [key, value] pairs for own enumerable properties; they are often more predictable than `for...in` when you do not want inherited properties.
 
 ```javascript
 let user = { name: "John", age: 30 };
@@ -128,7 +128,7 @@ Using an arrow function as a class field (e.g. `click = () => ...`) creates a pe
 
 ## Class expressions and static
 
-Classes can be used as expressions: `let User = class { ... }` or `let User = class Named { ... }` (Named is visible only inside the class). **Static** properties and methods belong to the class itself, not instances: `static method() { ... }` and `static prop = value`. They are called as `ClassName.method()` or `ClassName.prop`. Inheritance with **extends** and **super** is covered in the ES6+ topic.
+Classes can be used as expressions: `let User = class { ... }` or `let User = class Named { ... }` (Named is visible only inside the class). **Static** properties and methods belong to the class itself, not instances: `static method() { ... }` and `static prop = value`. They are called as `ClassName.method()` or `ClassName.prop`. **Inheritance** uses `class Child extends Parent { ... }` and `super` to call the parent constructor and methods; see the ES6+ topic. **Private fields** (e.g. `#name`) are a newer feature: properties prefixed with `#` are private to the class and not accessible from outside. Avoid relying on `__proto__` for prototype access; use `Object.getPrototypeOf` and `Object.create` when you need to work with prototypes directly.
 
 ---
 

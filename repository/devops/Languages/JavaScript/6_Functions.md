@@ -22,7 +22,7 @@ Function declarations are **hoisted**: the engine processes them before running 
 
 ## Parameters and arguments
 
-**Parameters** are the names listed in the function definition; **arguments** are the values passed when the function is called. Arguments are assigned to parameters in order. If you pass fewer arguments than parameters, the extra parameters get the value `undefined`. If you pass more, the extra arguments are not assigned to any parameter (but they are available via the `arguments` object in non-arrow functions; in modern code, rest parameters are preferred). Parameters are effectively local variables; reassigning a parameter does not change the value in the caller, but if the value is an object, mutating its properties does affect the original object (reference semantics).
+**Parameters** are the names listed in the function definition; **arguments** are the values passed when the function is called. Arguments are assigned to parameters in order. If you pass fewer arguments than parameters, the extra parameters get the value `undefined`. If you pass more, the extra arguments are not assigned to any parameter (but they are available via the `arguments` object in non-arrow functions; in modern code, rest parameters are preferred). Parameters are effectively local variables; reassigning a parameter does not change the value in the caller, but if the value is an object, mutating its properties does affect the original object (reference semantics). The **arguments** object (in non-arrow functions) is an array-like object that holds all arguments passed to the function; it has a `length` property and is iterable but does not support array methods like `push` or `map`. Prefer **rest parameters** (`...rest`) in new code when you need a real array of “all remaining arguments.” Arrow functions do not have their own `arguments`; they use the `arguments` of the enclosing function.
 
 ```javascript
 function log(a, b) {
@@ -31,6 +31,12 @@ function log(a, b) {
 log(1);       // 1 undefined
 log(1, 2, 3); // 1 2 (3 is not assigned to a parameter)
 ```
+
+---
+
+## Rest parameters
+
+**Rest parameters** use the `...` syntax to collect the “rest” of the arguments into a single array. The rest parameter must be the last parameter. This gives you a real array (e.g. for `forEach`, `map`, or spreading) and makes the function’s signature clear. Example: `function sum(first, ...rest) { return first + rest.reduce((a, b) => a + b, 0); }`. Rest parameters and default parameters are covered in more detail in the ES6+ topic.
 
 ---
 
@@ -110,6 +116,12 @@ const add = (a, b) => {
 ```
 
 Arrow functions have no own `this` (they inherit `this` from the enclosing scope); they also have no `arguments` object. They are covered in more depth in the ES6+ and Objects topics (e.g. use as methods and `this` binding).
+
+---
+
+## Closures and scope (brief)
+
+A function “closes over” the variables of the scope where it was defined. When the function runs, it sees the current value of those variables at the time it is **called** (for variables that can change), not necessarily the value at the time the function was created. That is why creating callbacks inside a loop can be tricky: if the callback uses the loop variable and runs later, it may see the final value of that variable. Use `let` in a `for` loop so each iteration gets its own binding, or pass the value as a parameter to the callback. An **IIFE** (immediately invoked function expression) `(function() { ... })()` creates a new scope so you can encapsulate variables without polluting the outer scope; modern code often uses block scope with `let`/`const` instead.
 
 ---
 

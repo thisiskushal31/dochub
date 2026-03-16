@@ -51,7 +51,7 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 
 ## Topics
 
-**Structure:** Very basic → Core language → Functions and objects → ES6+ and modern → DOM and Node → Use cases.
+**Structure:** Very basic → Core language → Functions and objects → ES6+ and modern → DOM and Node → Use cases. All 13 topics are complete; deepen any topic using the file links and Further reading.
 
 | # | Topic | File |
 |---|--------|------|
@@ -66,14 +66,14 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 | 6 | Functions | [6_Functions.md](./6_Functions.md) |
 | 7 | Objects and ES6 classes | [7_Objects_And_Classes.md](./7_Objects_And_Classes.md) |
 | **ES6+ and modern** |
-| 8 | ES6+ syntax and modules | [8_ES6_Syntax_And_Modules.md](./8_ES6_Syntax_And_Modules.md) *(to be added)* |
-| 9 | Async: Promise and async/await | [9_Async_Promise_AsyncAwait.md](./9_Async_Promise_AsyncAwait.md) *(to be added)* |
+| 8 | ES6+ syntax and modules | [8_ES6_Syntax_And_Modules.md](./8_ES6_Syntax_And_Modules.md) |
+| 9 | Async: Promise and async/await | [9_Async_Promise_AsyncAwait.md](./9_Async_Promise_AsyncAwait.md) |
 | **DOM and Node** |
-| 10 | DOM and events | [10_DOM_And_Events.md](./10_DOM_And_Events.md) *(to be added)* |
-| 11 | Node.js, npm, and tooling | [11_Node_NPM_And_Tooling.md](./11_Node_NPM_And_Tooling.md) *(to be added)* |
+| 10 | DOM and events | [10_DOM_And_Events.md](./10_DOM_And_Events.md) |
+| 11 | Node.js, npm, and tooling | [11_Node_NPM_And_Tooling.md](./11_Node_NPM_And_Tooling.md) |
 | **Use cases** |
-| 12 | DevOps, automation, and security | [12_DevOps_Automation_And_Security.md](./12_DevOps_Automation_And_Security.md) *(to be added)* |
-| 13 | Use cases by role | [13_Use_Cases_By_Role.md](./13_Use_Cases_By_Role.md) *(to be added)* |
+| 12 | DevOps, automation, and security | [12_DevOps_Automation_And_Security.md](./12_DevOps_Automation_And_Security.md) |
+| 13 | Use cases by role | [13_Use_Cases_By_Role.md](./13_Use_Cases_By_Role.md) |
 
 ---
 
