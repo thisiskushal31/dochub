@@ -3433,11 +3433,53 @@
         "sha": "",
         "children": [
           {
+            "name": "1_What_Is_Julia.md",
+            "path": "Languages/Julia/1_What_Is_Julia.md",
+            "type": "file",
+            "sha": "",
+            "size": 9262
+          },
+          {
+            "name": "2_Syntax_And_REPL.md",
+            "path": "Languages/Julia/2_Syntax_And_REPL.md",
+            "type": "file",
+            "sha": "",
+            "size": 23458
+          },
+          {
+            "name": "3_Advanced_Concepts.md",
+            "path": "Languages/Julia/3_Advanced_Concepts.md",
+            "type": "file",
+            "sha": "",
+            "size": 15728
+          },
+          {
+            "name": "4_Packages_And_Environments.md",
+            "path": "Languages/Julia/4_Packages_And_Environments.md",
+            "type": "file",
+            "sha": "",
+            "size": 7219
+          },
+          {
+            "name": "5_Use_Data_Pipelines_HPC_Research.md",
+            "path": "Languages/Julia/5_Use_Data_Pipelines_HPC_Research.md",
+            "type": "file",
+            "sha": "",
+            "size": 12553
+          },
+          {
+            "name": "6_Deployment_And_Ops.md",
+            "path": "Languages/Julia/6_Deployment_And_Ops.md",
+            "type": "file",
+            "sha": "",
+            "size": 8382
+          },
+          {
             "name": "README.md",
             "path": "Languages/Julia/README.md",
             "type": "file",
             "sha": "",
-            "size": 802
+            "size": 8060
           }
         ]
       },
