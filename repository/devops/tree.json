@@ -3673,11 +3673,81 @@
         "sha": "",
         "children": [
           {
+            "name": "1_What_Is_LaTeX.md",
+            "path": "Languages/LaTeX/1_What_Is_LaTeX.md",
+            "type": "file",
+            "sha": "",
+            "size": 5098
+          },
+          {
+            "name": "10_Use_Cases_And_Engineering_Perspective.md",
+            "path": "Languages/LaTeX/10_Use_Cases_And_Engineering_Perspective.md",
+            "type": "file",
+            "sha": "",
+            "size": 6348
+          },
+          {
+            "name": "2_Environment_And_Setup.md",
+            "path": "Languages/LaTeX/2_Environment_And_Setup.md",
+            "type": "file",
+            "sha": "",
+            "size": 4991
+          },
+          {
+            "name": "3_Document_Structure_And_Basics.md",
+            "path": "Languages/LaTeX/3_Document_Structure_And_Basics.md",
+            "type": "file",
+            "sha": "",
+            "size": 7516
+          },
+          {
+            "name": "4_Commands_Environments_And_Packages.md",
+            "path": "Languages/LaTeX/4_Commands_Environments_And_Packages.md",
+            "type": "file",
+            "sha": "",
+            "size": 8044
+          },
+          {
+            "name": "5_Mathematics.md",
+            "path": "Languages/LaTeX/5_Mathematics.md",
+            "type": "file",
+            "sha": "",
+            "size": 7417
+          },
+          {
+            "name": "6_Tables_And_Figures.md",
+            "path": "Languages/LaTeX/6_Tables_And_Figures.md",
+            "type": "file",
+            "sha": "",
+            "size": 7947
+          },
+          {
+            "name": "7_Cross_References_And_Bibliography.md",
+            "path": "Languages/LaTeX/7_Cross_References_And_Bibliography.md",
+            "type": "file",
+            "sha": "",
+            "size": 6245
+          },
+          {
+            "name": "8_Compilation_And_Toolchains.md",
+            "path": "Languages/LaTeX/8_Compilation_And_Toolchains.md",
+            "type": "file",
+            "sha": "",
+            "size": 4067
+          },
+          {
+            "name": "9_CI_Automation_And_Templated_PDFs.md",
+            "path": "Languages/LaTeX/9_CI_Automation_And_Templated_PDFs.md",
+            "type": "file",
+            "sha": "",
+            "size": 4713
+          },
+          {
             "name": "README.md",
             "path": "Languages/LaTeX/README.md",
             "type": "file",
             "sha": "",
-            "size": 1271
+            "size": 5619
           }
         ]
       },
