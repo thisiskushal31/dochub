@@ -1,9 +1,205 @@
 [
   {
+    "name": "1_What_Is_Move.md",
+    "path": "1_What_Is_Move.md",
+    "type": "file",
+    "sha": "",
+    "size": 5381
+  },
+  {
+    "name": "10_Move_VM_And_Bytecode.md",
+    "path": "10_Move_VM_And_Bytecode.md",
+    "type": "file",
+    "sha": "",
+    "size": 334
+  },
+  {
+    "name": "11_Security_And_Audit_Patterns.md",
+    "path": "11_Security_And_Audit_Patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 371
+  },
+  {
+    "name": "12_Use_Cases_And_Engineering_Perspectives.md",
+    "path": "12_Use_Cases_And_Engineering_Perspectives.md",
+    "type": "file",
+    "sha": "",
+    "size": 552
+  },
+  {
+    "name": "13_Move_On_Aptos_Overview.md",
+    "path": "13_Move_On_Aptos_Overview.md",
+    "type": "file",
+    "sha": "",
+    "size": 379
+  },
+  {
+    "name": "14_Aptos_Account_Model_And_Storage.md",
+    "path": "14_Aptos_Account_Model_And_Storage.md",
+    "type": "file",
+    "sha": "",
+    "size": 407
+  },
+  {
+    "name": "15_Aptos_Toolchain.md",
+    "path": "15_Aptos_Toolchain.md",
+    "type": "file",
+    "sha": "",
+    "size": 334
+  },
+  {
+    "name": "16_Aptos_Block_STM_And_Parallel_Execution.md",
+    "path": "16_Aptos_Block_STM_And_Parallel_Execution.md",
+    "type": "file",
+    "sha": "",
+    "size": 311
+  },
+  {
+    "name": "17_Aptos_Framework_And_Standard_Library.md",
+    "path": "17_Aptos_Framework_And_Standard_Library.md",
+    "type": "file",
+    "sha": "",
+    "size": 396
+  },
+  {
+    "name": "18_Aptos_Security_And_Formal_Verification.md",
+    "path": "18_Aptos_Security_And_Formal_Verification.md",
+    "type": "file",
+    "sha": "",
+    "size": 376
+  },
+  {
+    "name": "19_Aptos_Use_Cases_And_Patterns.md",
+    "path": "19_Aptos_Use_Cases_And_Patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 254
+  },
+  {
+    "name": "2_Environment_And_Toolchains.md",
+    "path": "2_Environment_And_Toolchains.md",
+    "type": "file",
+    "sha": "",
+    "size": 5879
+  },
+  {
+    "name": "20_Move_On_Sui_Overview.md",
+    "path": "20_Move_On_Sui_Overview.md",
+    "type": "file",
+    "sha": "",
+    "size": 357
+  },
+  {
+    "name": "21_Sui_Object_Model.md",
+    "path": "21_Sui_Object_Model.md",
+    "type": "file",
+    "sha": "",
+    "size": 422
+  },
+  {
+    "name": "22_Sui_Toolchain.md",
+    "path": "22_Sui_Toolchain.md",
+    "type": "file",
+    "sha": "",
+    "size": 330
+  },
+  {
+    "name": "23_Sui_Programmable_Transaction_Blocks.md",
+    "path": "23_Sui_Programmable_Transaction_Blocks.md",
+    "type": "file",
+    "sha": "",
+    "size": 357
+  },
+  {
+    "name": "24_Sui_Dynamic_Fields_And_Collections.md",
+    "path": "24_Sui_Dynamic_Fields_And_Collections.md",
+    "type": "file",
+    "sha": "",
+    "size": 370
+  },
+  {
+    "name": "25_Sui_Entry_Functions_And_Module_Initializers.md",
+    "path": "25_Sui_Entry_Functions_And_Module_Initializers.md",
+    "type": "file",
+    "sha": "",
+    "size": 449
+  },
+  {
+    "name": "26_Sui_Security_And_Gas_Model.md",
+    "path": "26_Sui_Security_And_Gas_Model.md",
+    "type": "file",
+    "sha": "",
+    "size": 286
+  },
+  {
+    "name": "27_Sui_Use_Cases_And_Patterns.md",
+    "path": "27_Sui_Use_Cases_And_Patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 257
+  },
+  {
+    "name": "28_Comparison_And_Choosing_A_Platform.md",
+    "path": "28_Comparison_And_Choosing_A_Platform.md",
+    "type": "file",
+    "sha": "",
+    "size": 493
+  },
+  {
+    "name": "3_Modules_And_Scripts.md",
+    "path": "3_Modules_And_Scripts.md",
+    "type": "file",
+    "sha": "",
+    "size": 5189
+  },
+  {
+    "name": "4_Structs_And_Resources.md",
+    "path": "4_Structs_And_Resources.md",
+    "type": "file",
+    "sha": "",
+    "size": 5704
+  },
+  {
+    "name": "5_Abilities.md",
+    "path": "5_Abilities.md",
+    "type": "file",
+    "sha": "",
+    "size": 5695
+  },
+  {
+    "name": "6_Global_Storage.md",
+    "path": "6_Global_Storage.md",
+    "type": "file",
+    "sha": "",
+    "size": 454
+  },
+  {
+    "name": "7_References_And_Ownership.md",
+    "path": "7_References_And_Ownership.md",
+    "type": "file",
+    "sha": "",
+    "size": 376
+  },
+  {
+    "name": "8_Functions_And_Visibility.md",
+    "path": "8_Functions_And_Visibility.md",
+    "type": "file",
+    "sha": "",
+    "size": 476
+  },
+  {
+    "name": "9_Generics_And_Type_System.md",
+    "path": "9_Generics_And_Type_System.md",
+    "type": "file",
+    "sha": "",
+    "size": 315
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 830
+    "size": 7391
   }
 ]

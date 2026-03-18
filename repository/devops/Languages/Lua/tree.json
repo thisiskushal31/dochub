@@ -1,9 +1,121 @@
 [
   {
+    "name": "1_What_Is_Lua.md",
+    "path": "1_What_Is_Lua.md",
+    "type": "file",
+    "sha": "",
+    "size": 4086
+  },
+  {
+    "name": "10_Metatables_And_Metamethods.md",
+    "path": "10_Metatables_And_Metamethods.md",
+    "type": "file",
+    "sha": "",
+    "size": 3693
+  },
+  {
+    "name": "11_Garbage_Collection_And_Weak_Tables.md",
+    "path": "11_Garbage_Collection_And_Weak_Tables.md",
+    "type": "file",
+    "sha": "",
+    "size": 3398
+  },
+  {
+    "name": "12_Coroutines.md",
+    "path": "12_Coroutines.md",
+    "type": "file",
+    "sha": "",
+    "size": 2910
+  },
+  {
+    "name": "13_Standard_Libraries.md",
+    "path": "13_Standard_Libraries.md",
+    "type": "file",
+    "sha": "",
+    "size": 8094
+  },
+  {
+    "name": "14_Modules.md",
+    "path": "14_Modules.md",
+    "type": "file",
+    "sha": "",
+    "size": 4241
+  },
+  {
+    "name": "15_C_API_And_Embedding.md",
+    "path": "15_C_API_And_Embedding.md",
+    "type": "file",
+    "sha": "",
+    "size": 6519
+  },
+  {
+    "name": "16_Use_Cases_And_DevOps.md",
+    "path": "16_Use_Cases_And_DevOps.md",
+    "type": "file",
+    "sha": "",
+    "size": 5878
+  },
+  {
+    "name": "2_Environment_And_Setup.md",
+    "path": "2_Environment_And_Setup.md",
+    "type": "file",
+    "sha": "",
+    "size": 4851
+  },
+  {
+    "name": "3_Values_And_Types.md",
+    "path": "3_Values_And_Types.md",
+    "type": "file",
+    "sha": "",
+    "size": 3944
+  },
+  {
+    "name": "4_Variables_Scopes_And_Environments.md",
+    "path": "4_Variables_Scopes_And_Environments.md",
+    "type": "file",
+    "sha": "",
+    "size": 3674
+  },
+  {
+    "name": "5_Lexical_Conventions_Blocks_And_Chunks.md",
+    "path": "5_Lexical_Conventions_Blocks_And_Chunks.md",
+    "type": "file",
+    "sha": "",
+    "size": 3971
+  },
+  {
+    "name": "6_Statements.md",
+    "path": "6_Statements.md",
+    "type": "file",
+    "sha": "",
+    "size": 4784
+  },
+  {
+    "name": "7_Expressions_And_Operators.md",
+    "path": "7_Expressions_And_Operators.md",
+    "type": "file",
+    "sha": "",
+    "size": 4048
+  },
+  {
+    "name": "8_Functions_Calls_And_Definitions.md",
+    "path": "8_Functions_Calls_And_Definitions.md",
+    "type": "file",
+    "sha": "",
+    "size": 3650
+  },
+  {
+    "name": "9_Error_Handling.md",
+    "path": "9_Error_Handling.md",
+    "type": "file",
+    "sha": "",
+    "size": 2310
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1734
+    "size": 4850
   }
 ]
