@@ -38,6 +38,8 @@ public fun mint<T: drop>(to: address, amount: u64, _witness: T) acquires Balance
 
 Only modules that can obtain a **`T`** value (often impossible outside the defining module) can call **`mint`**.
 
+**Naming and readability:** Consistent naming helps auditors and tooling: for example, error constants often use a single letter prefix (e.g. **E** for errors) and descriptive names for non-error constants. Module and function names in lower snake case keep the surface easy to scan.
+
 **Surface area:** List every **`public`** and **`entry`** function. For each, ask: what can an arbitrary caller do?
 
 **Friends:** **`public(friend)`** should be minimal; friends are trusted as much as the module itself.

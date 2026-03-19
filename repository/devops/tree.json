@@ -3904,7 +3904,7 @@
             "path": "Languages/Move/1_What_Is_Move.md",
             "type": "file",
             "sha": "",
-            "size": 6085
+            "size": 6870
           },
           {
             "name": "10_Move_VM_And_Bytecode.md",
@@ -3918,7 +3918,7 @@
             "path": "Languages/Move/11_Security_And_Audit_Patterns.md",
             "type": "file",
             "sha": "",
-            "size": 3723
+            "size": 4008
           },
           {
             "name": "12_Use_Cases_And_Engineering_Perspectives.md",
@@ -3932,49 +3932,49 @@
             "path": "Languages/Move/13_Move_On_Aptos_Overview.md",
             "type": "file",
             "sha": "",
-            "size": 379
+            "size": 4859
           },
           {
             "name": "14_Aptos_Account_Model_And_Storage.md",
             "path": "Languages/Move/14_Aptos_Account_Model_And_Storage.md",
             "type": "file",
             "sha": "",
-            "size": 407
+            "size": 4925
           },
           {
             "name": "15_Aptos_Toolchain.md",
             "path": "Languages/Move/15_Aptos_Toolchain.md",
             "type": "file",
             "sha": "",
-            "size": 334
+            "size": 4205
           },
           {
             "name": "16_Aptos_Block_STM_And_Parallel_Execution.md",
             "path": "Languages/Move/16_Aptos_Block_STM_And_Parallel_Execution.md",
             "type": "file",
             "sha": "",
-            "size": 311
+            "size": 4010
           },
           {
             "name": "17_Aptos_Framework_And_Standard_Library.md",
             "path": "Languages/Move/17_Aptos_Framework_And_Standard_Library.md",
             "type": "file",
             "sha": "",
-            "size": 396
+            "size": 3842
           },
           {
             "name": "18_Aptos_Security_And_Formal_Verification.md",
             "path": "Languages/Move/18_Aptos_Security_And_Formal_Verification.md",
             "type": "file",
             "sha": "",
-            "size": 376
+            "size": 3620
           },
           {
             "name": "19_Aptos_Use_Cases_And_Patterns.md",
             "path": "Languages/Move/19_Aptos_Use_Cases_And_Patterns.md",
             "type": "file",
             "sha": "",
-            "size": 254
+            "size": 3484
           },
           {
             "name": "2_Environment_And_Toolchains.md",
@@ -3988,70 +3988,70 @@
             "path": "Languages/Move/20_Move_On_Sui_Overview.md",
             "type": "file",
             "sha": "",
-            "size": 357
+            "size": 4267
           },
           {
             "name": "21_Sui_Object_Model.md",
             "path": "Languages/Move/21_Sui_Object_Model.md",
             "type": "file",
             "sha": "",
-            "size": 422
+            "size": 4277
           },
           {
             "name": "22_Sui_Toolchain.md",
             "path": "Languages/Move/22_Sui_Toolchain.md",
             "type": "file",
             "sha": "",
-            "size": 330
+            "size": 3420
           },
           {
             "name": "23_Sui_Programmable_Transaction_Blocks.md",
             "path": "Languages/Move/23_Sui_Programmable_Transaction_Blocks.md",
             "type": "file",
             "sha": "",
-            "size": 357
+            "size": 3230
           },
           {
             "name": "24_Sui_Dynamic_Fields_And_Collections.md",
             "path": "Languages/Move/24_Sui_Dynamic_Fields_And_Collections.md",
             "type": "file",
             "sha": "",
-            "size": 370
+            "size": 2809
           },
           {
             "name": "25_Sui_Entry_Functions_And_Module_Initializers.md",
             "path": "Languages/Move/25_Sui_Entry_Functions_And_Module_Initializers.md",
             "type": "file",
             "sha": "",
-            "size": 449
+            "size": 3091
           },
           {
             "name": "26_Sui_Security_And_Gas_Model.md",
             "path": "Languages/Move/26_Sui_Security_And_Gas_Model.md",
             "type": "file",
             "sha": "",
-            "size": 286
+            "size": 3043
           },
           {
             "name": "27_Sui_Use_Cases_And_Patterns.md",
             "path": "Languages/Move/27_Sui_Use_Cases_And_Patterns.md",
             "type": "file",
             "sha": "",
-            "size": 257
+            "size": 3259
           },
           {
             "name": "28_Comparison_And_Choosing_A_Platform.md",
             "path": "Languages/Move/28_Comparison_And_Choosing_A_Platform.md",
             "type": "file",
             "sha": "",
-            "size": 493
+            "size": 11188
           },
           {
             "name": "3_Modules_And_Scripts.md",
             "path": "Languages/Move/3_Modules_And_Scripts.md",
             "type": "file",
             "sha": "",
-            "size": 2800
+            "size": 3152
           },
           {
             "name": "4_Structs_And_Resources.md",
@@ -4086,7 +4086,7 @@
             "path": "Languages/Move/8_Functions_And_Visibility.md",
             "type": "file",
             "sha": "",
-            "size": 6176
+            "size": 6632
           },
           {
             "name": "9_Generics_And_Type_System.md",

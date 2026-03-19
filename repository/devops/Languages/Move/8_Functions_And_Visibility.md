@@ -21,7 +21,7 @@ Variable names start with **`_`** or lowercase **`a`–`z`** (not uppercase—th
 
 ## Equality
 
-**`==`** and **`!=`** apply to comparable types. **`assert!(cond, code)`** aborts with **`code`** if **`cond`** is false—common for preconditions.
+**`==`** and **`!=`** require both operands to have the **same type**. For **structs**, the type must have **copy** (so values can be compared by content). **References** can be compared: **`&T`** and **`&mut T`** of the same underlying type are comparable (the referent value is compared). **`assert!(cond, code)`** aborts with **`code`** if **`cond`** is false—common for preconditions.
 
 ```move
 assert!(from != to, 1);
@@ -29,7 +29,7 @@ assert!(from != to, 1);
 
 ## Conditionals and loops
 
-**`if (e) { ... } else { ... }`**. **`while (cond) { ... }`**; **`loop { ... }`** with **`break`** and **`continue`**.
+**`if (e) { ... } else { ... }`**. The **if** expression can **produce a value** when both branches do: **`let x = if (cond) a else b;`**—the two branches must have the **same type**. If you omit **else**, the false branch is implicitly **`()`**. **`while (cond) { ... }`**; **`loop { ... }`** with **`break`** and **`continue`**.
 
 ```move
 fun smallest_factor(n: u64): u64 {

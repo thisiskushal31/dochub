@@ -10,16 +10,17 @@ Move is used today mainly on **Aptos** and **Sui**. Both inherit the same core i
 
 ## What built-in types should you know first?
 
-**Integers:** unsigned **`u8`** through **`u128`** everywhere; **`u256`** where the toolchain supports it. **Booleans** **`bool`**. **Addresses** **`@0x…`** identify accounts or (on some chains) objects. **`vector<T>`** is the growable sequence; element abilities flow from **`T`**.
+**Integers:** unsigned **`u8`** through **`u128`** everywhere; **`u256`** where the toolchain supports it. Literals use an optional suffix (**`1u8`**, **`2u64`**), hex (**`0xFF`**), or underscores (**`1_000_000`**); when the type is not specified, inference often assumes **`u64`**. **Booleans** **`bool`**. **Addresses** identify accounts or (on some chains) objects; in **expression** context you write **`@0x…`** or **`@named_addr`**—the **`@`** is required there. Named addresses are fixed at compile time (from the manifest), not at runtime. **`vector<T>`** is the growable sequence; you can write **`vector[]`** or **`vector[e1, e2, ...]`** (type inferred or explicit). For **`vector<u8>`**, byte strings **`b"hello"`** and hex strings **`x"48656C6C6F"`** are shorthand. Element abilities flow from **`T`**.
 
 ```move
-let n: u64 = 100;
-let ok = true;
+let n = 100u64;
+let hex = 0xCAFEu16;
+let bytes = b"move";
 let who = @0x1;
-// vector::empty<u64>(), vector::push_back, etc. — see std::vector
+let xs = vector[1u64, 2u64];
 ```
 
-**`signer`** represents an authenticated actor. Values are **only** created by the VM (e.g. as the transaction sender); you never construct a **`signer`** in source—only accept **`&signer`**. [Global storage](./6_Global_Storage.md) and [Security](./11_Security_And_Audit_Patterns.md) rely on this.
+**`signer`** represents an authenticated actor. Values are **only** created by the VM (e.g. as the transaction sender); you never construct a **`signer`** in source—only accept **`&signer`**. Use **`signer::address_of(&s)`** to get that signer’s address. In scripts, **multiple signers** are allowed as long as they form a **prefix** of the main function’s parameters (e.g. `main(s1: signer, s2: signer, amount: u64)`), which supports multi-signer flows. [Global storage](./6_Global_Storage.md) and [Security](./11_Security_And_Audit_Patterns.md) rely on this.
 
 **Tuples** like **`(u64, bool)`** and the unit type **`()`** show up in multi-return and control flow; [Functions and visibility](./8_Functions_And_Visibility.md) ties this together with **`let`** and branching.
 

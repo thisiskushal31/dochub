@@ -45,7 +45,7 @@ script {
 }
 ```
 
-The transaction supplies **`&signer`**; the script forwards it into module functions that require it.
+The transaction supplies **`&signer`**; the script forwards it into module functions that require it. A script’s **main** can take **multiple signers** as long as all **signer** parameters come **first** (e.g. `main(s1: signer, s2: signer, x: u64)`); the VM injects one signer per transaction signer. That pattern supports **multi-signer** scripts (e.g. atomic swaps or governance). Use **`signer::address_of(&s)`** to obtain an address from a signer.
 
 On **Aptos**, scripts remain common for composing several module calls in one tx. On **Sui**, the same composition happens at the **PTB** layer calling **public entry** functions.
 
