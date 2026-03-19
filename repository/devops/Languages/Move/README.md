@@ -6,7 +6,7 @@ This section is a **deep dive** into **Move**: factually correct, standalone, an
 
 | Block | Topics | What it covers |
 |-------|--------|----------------|
-| **Core** | **1–12** | Language-agnostic concepts (modules, structs, abilities, storage, references, functions, generics, VM, security, engineering perspectives). Grounded in **legacy Move** (the original `move-language/move` spec—archived but still the reference for core syntax and semantics). Where behavior differs, **Aptos** (account + global storage, scripts) vs **Sui** (objects, entry functions, PTBs) is called out—especially in storage (6), modules/scripts (3), and functions (8). |
+| **Core** | **1–12** | Language-agnostic concepts (modules, structs, abilities, storage, references, functions, generics, VM, security, engineering perspectives). Core syntax and semantics follow the **original Move language specification** (legacy reference); where chains differ, **Aptos** (account + global storage, scripts) vs **Sui** (objects, entry functions, PTBs) is called out—especially in storage (6), modules/scripts (3), and functions (8). |
 | **Move on Aptos** | **13–19** | Active Aptos stack: overview, account model, toolchain, Block-STM, framework, verification, use cases. |
 | **Move on Sui** | **20–27** | Active Sui stack: overview, object model, toolchain, PTBs, dynamic fields, entry/init, gas/security, use cases. |
 | **Wrap-up** | **28** | Aptos vs Sui and how to choose a platform. |
@@ -19,7 +19,7 @@ This section is a **deep dive** into **Move**: factually correct, standalone, an
 
 Read in **number order** for a single path: **basics first**, then **language core**, then **advanced and implementation**, then **Aptos and Sui in depth**, then **comparison**.
 
-- **Core (1–12):** What Move is, environment and toolchains, modules and scripts, structs and resources, abilities, global storage, references and ownership, functions and visibility, generics, Move VM and bytecode, security and audit patterns, use cases overview.
+- **Core (1–12):** What Move is (including built-in types), environment packages and **unit tests**, modules and scripts, structs and resources, abilities, global storage, references and tuples, **control flow and functions** (variables, loops, abort, visibility, `use`, constants), generics, VM and bytecode, security patterns, use cases and stdlib orientation.
 - **Move on Aptos (13–19):** Overview and when to use, account model and storage, toolchain, Block-STM and parallel execution, framework and stdlib, security and formal verification, Aptos use cases and patterns.
 - **Move on Sui (20–27):** Overview and when to use, object model, toolchain, Programmable Transaction Blocks, dynamic fields, entry functions and module initializers, security and gas model, Sui use cases and patterns.
 - **Wrap-up (28):** Comparison and choosing a platform.

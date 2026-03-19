@@ -2,89 +2,59 @@
 
 [← Back to Move](./README.md)
 
-Move programs are built from two kinds of units: **modules** and **scripts**. Both can appear in the same source file, but publishing a module and executing a script are separate operations. Understanding them is the first step from "what is Move?" to "how do I structure code?"
+## What are modules and scripts?
 
-## Modules
+**Modules** are the durable unit of on-chain code: they define **structs** and **functions** and are **published** under an address. **Scripts** (where supported) are **not** stored on chain; they are sent as **transaction payload** and run once, typically calling into published modules. Together they answer “where does my logic live?” vs “how do I trigger a one-off flow?”
 
-A **module** is a named collection of types (structs) and functions that operate on those types. The structs describe the shape of stored data; the functions define how that data can be created, updated, or moved. In environments that use global storage (the original Move and Move on Aptos), modules and the data they define live under account addresses in that storage. On Sui, modules are published on chain and their types describe objects and how they are used; storage is object-centric rather than a single global store.
+On **Sui**, there is no separate script workflow for normal apps: **modules** plus **entry functions** and **programmable transaction blocks** replace scripts.
 
-A module is declared with an address and a name. The address identifies where the module lives (or will live) in storage; the name is the module identifier. The body contains uses of other modules, optional friend declarations, struct types, constants, and functions. Members can appear in any order.
+## Why separate modules from scripts?
 
-Syntax:
+Modules encapsulate **invariants**: only the defining module can pack and unpack its structs, so asset rules stay centralized. Scripts stay thin—**orchestration** without new types—so each transaction’s attack surface stays bounded. Security reviews often start by listing **published modules** and **script entrypoints** (or **entry** functions on Sui).
+
+## How are they structured?
+
+A **module** is tied to an address and a name. Inside: imports, optional friends, types, constants, functions.
 
 ```text
-module <address>::<identifier> {
-    (<use> | <friend> | <type> | <function> | <constant>)*
+module <address>::<name> {
+    (use | friend | struct | const | fun)*
 }
 ```
 
-The address can be a literal (e.g. `0x42`) or a named address (e.g. `my_addr`) that is set at compile time in the package manifest. Named addresses make packages reusable across deployments. At bytecode level, named addresses are replaced by their concrete values.
-
-Example: a minimal module that defines a struct and a function.
+Example of a tiny published module (illustrates address, name, and visibility hook):
 
 ```move
-module 0x42::test {
-    struct Example has copy, drop { i: u64 }
+module 0x42::counter {
+    struct State has key { n: u64 }
+    public fun placeholder() {}
+}
+```
 
-    use std::debug;
+Named addresses from the package manifest replace literals in real projects.
 
-    const ONE: u64 = 1;
+A **script** wraps a single function with no type parameters, unit return, and no direct global storage in the script itself—it calls module APIs.
 
-    public fun print(x: u64) {
-        let sum = x + ONE;
-        let example = Example { i: sum };
-        debug::print(&sum)
+```move
+script {
+    use 0x42::counter;
+
+    fun main(account: &signer) {
+        counter::bump(account);
     }
 }
 ```
 
-The module `test` is published under the address `0x42`. It defines a struct `Example`, a constant `ONE`, and a function `print` that takes a value, adds the constant, and constructs an `Example`. Visibility (`public`, `public(friend)`, etc.) and the role of `friend` are covered in the topic on functions and visibility.
+The transaction supplies **`&signer`**; the script forwards it into module functions that require it.
 
-Module names start with a letter (lowercase or uppercase) and can then use letters, digits, and underscores. By convention they are lowercase and the source file is named after the module (e.g. `my_module.move` for module `my_module`).
+On **Aptos**, scripts remain common for composing several module calls in one tx. On **Sui**, the same composition happens at the **PTB** layer calling **public entry** functions.
 
-## Scripts (core Move and Move on Aptos)
+## What are the engineering angles?
 
-A **script** is a single entry point that can call into published modules. It is not stored on chain; it is submitted and executed as a transaction. Scripts are the traditional way to trigger moves and updates in core Move and on Aptos: you compile the script and the VM runs its main function, which in turn calls module functions that may read or write global storage.
-
-A script block contains only use declarations, optional constants, and one main function. That function can have any name, any number of arguments, and must not return a value. Scripts cannot declare new struct types, friends, or access global storage directly; they orchestrate by calling module functions.
-
-Syntax:
-
-```text
-script {
-    <use>*
-    <constants>*
-    fun <identifier>( [identifier: type]* ) <function_body>
-}
-```
-
-Example:
-
-```move
-script {
-    use std::debug;
-
-    const ONE: u64 = 1;
-
-    fun main(x: u64) {
-        let sum = x + ONE;
-        debug::print(&sum)
-    }
-}
-```
-
-Here the script has one function that takes a `u64`, adds a constant, and calls a standard-library function. In a real flow you would typically call your own module’s functions to move resources or update storage.
-
-## Move on Sui: modules and entry points
-
-On Sui there are no standalone scripts in the same sense. Programs are organized as **modules** published on chain. Execution is triggered by **entry functions** (functions marked `entry`) and by **programmable transaction blocks** (PTBs) that call those functions. So the mental model is: modules define types and logic; entry functions and PTBs are the way users and clients invoke that logic. The Sui Move book and the topics on Sui (entry functions, PTBs) cover this in detail.
-
-## Why this matters across engineering
-
-- **Application:** Modules are the unit of design for contracts and dapps; scripts (or entry + PTBs on Sui) are how you trigger behavior in a transaction.
-- **Systems:** The VM loads and executes module bytecode; scripts (or PTBs) are the transaction payload. Understanding modules and scripts clarifies how code is stored vs executed.
-- **Security:** Module boundaries and visibility control who can call which functions; scripts have no persistent state of their own and cannot declare types, which limits the attack surface of a single transaction.
-- **Operations:** Building and publishing modules, and running scripts or PTBs, are the core operations for deployment and on-chain interaction.
+- **Application:** Modules are your contracts; scripts or PTBs are how users run them.
+- **Systems:** The VM loads module bytecode once per cache lifetime; scripts/PTBs are per-transaction input.
+- **Security:** Visibility (`public`, `public(friend)`, internal) and module boundaries limit who can touch state.
+- **Operations:** Publish modules once; scripts or client-built PTBs change frequently without republishing.
 
 ---
 

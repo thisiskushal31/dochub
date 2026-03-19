@@ -2,89 +2,93 @@
 
 [← Back to Move](./README.md)
 
-To build, test, and run Move code you use the **Move package system** plus a chain-specific CLI when targeting Aptos or Sui. This topic covers package layout, the shared Move CLI, and how Aptos and Sui toolchains fit in.
+## What is the “environment”?
 
-## Move packages (shared across Move flavors)
+The Move **environment** is everything around the source: the **package** layout, the **manifest** (`Move.toml`), compiler and **CLI** versions, target **network** (devnet, testnet, mainnet), and how **dependencies** are resolved. Move does not run as an interactive REPL against live chain state by default; the loop is **edit sources → build → test → publish or submit transactions**. Operators and security teams care about **reproducible builds** (pinned toolchains), **secret handling** (keys for publish), and **which bytecode** actually landed on chain.
 
-A Move **package** is a directory that contains Move source files and a manifest. The same idea is used by the original Move tooling, Move on Aptos, and Move on Sui, with small differences per platform.
+## Why does toolchain choice matter?
+
+Wrong CLI or compiler version can produce bytecode that **differs** from what auditors reviewed or what CI emitted. Dependencies pulled from moving Git branches can change behavior under you without a code edit in your repo. For **cybersecurity**, pinned revisions and checksums reduce supply-chain risk; for **operations**, aligned CLI and node/API versions reduce mysterious publish or simulation failures.
+
+## How can I use it?
 
 ### Package layout
 
-A typical package has this structure:
+A package is a directory rooted at a manifest. Sources live under predictable paths; build output is generated and should usually be ignored in version control.
 
 ```
 a_move_package
-├── Move.toml      (required) — package manifest
-├── sources        (required) — Move modules (and, for core/Aptos, scripts)
-├── examples       (optional) — used in dev/test mode
-├── scripts        (optional) — transaction scripts (core/Aptos; separate from modules)
-├── tests          (optional) — included in test mode
-└── build          (generated) — compilation artifacts (bytecode, source maps, etc.)
+├── Move.toml          # name, version, addresses, dependencies
+├── sources/           # modules (.move)
+├── scripts/           # optional — Aptos / core-style transaction scripts
+├── tests/             # optional — #[test] modules
+├── examples/          # optional
+└── build/             # generated — bytecode, metadata
 ```
 
-- **Move.toml** defines the package name, version, named addresses, and dependencies (local or git). Named addresses are declared here (e.g. `std = "0x1"`) and can be left as `"_"` for the root package to be parameterized by the importer.
-- **sources** holds `.move` files: modules and, on Aptos, script blocks. Sui packages put modules in `sources` and use entry functions and PTBs instead of standalone scripts.
-- **scripts** (if present) is where transaction scripts can live on core/Aptos; they are compiled with the package.
-- **tests** and **examples** are only included when building in test or dev mode.
+**Move.toml** declares the package name, optional edition, **named addresses** (filled for production or overridden under `[dev-addresses]` for local work only), and **dependencies** (Git URL + branch or revision, or local path). Every named address used in code must resolve in the build you ship.
 
-Artifacts under **build** usually include bytecode modules (`.mv`), source maps, and optionally ABIs and generated docs. Exact layout varies slightly between the Move CLI, Aptos, and Sui.
+Example skeleton (names vary by stack; **Aptos** and **Sui** both use this general shape):
 
-### Building and testing (conceptually)
+```toml
+[package]
+name = "MyApp"
+version = "1.0.0"
 
-- **Build:** Resolve dependencies and named addresses from `Move.toml`, compile all modules (and scripts if applicable), and write artifacts to `build/`.
-- **Test:** Build in test mode (including `tests` and test-only dependencies), run Move unit tests (e.g. `#[test]` functions).
-- **Run a script:** On core/Aptos, you execute a compiled script with the Move VM or via the chain CLI; on Sui you submit transactions that call entry functions or PTBs.
+[addresses]
+my_app = "_"
 
-Named addresses must all resolve to concrete values for a successful build; uninstantiated addresses can be set in `[dev-addresses]` for dev/test.
+[dependencies]
+# Git dependency with pinned revision recommended for production builds
+```
 
-## Move CLI (language-agnostic)
+Local-only address overrides often live under **`[dev-addresses]`** so tests compile without committing real publisher addresses.
 
-The **Move CLI** (`move`) comes from the move-language repos (move, move-on-aptos, move-sui). It provides package-oriented commands such as:
+### Build, test, publish
 
-- `move build` — compile the package in the current directory.
-- `move test` — build in test mode and run unit tests.
-- `move publish` / chain-specific publish — depends on the flavor (Aptos/Sui use their own publish flows).
+**Build** type-checks and compiles modules (and scripts where applicable) into bytecode under **build/**. **Test** compiles with test hooks and runs unit tests in Move. **Publish** sends artifacts to a chain: **Aptos CLI** and **Sui CLI** each have their own commands, gas semantics, and package IDs. Simulation and dry-run flows exist on both stacks before spending real fees.
 
-Unless you use a chain-specific wrapper, the CLI works on the shared package format and produces bytecode that may then be used by a chain’s VM or SDK. Run `move --help` (or the chain’s move subcommand) for the full list of commands and flags.
+### Dependencies
 
-## Aptos toolchain
+Prefer **pinned revisions** for Git dependencies. Review transitive packages the same way you review npm or Cargo deps: who maintains them, what types they define, whether they could change under the same version tag.
 
-For **Move on Aptos** you use the **Aptos CLI** and Aptos-specific Move tooling:
+### Aptos vs Sui commands
 
-- **Aptos CLI** — create accounts, fund addresses, compile and publish Move packages, run tests, and interact with local or remote Aptos networks.
-- **Move compiler/VM** — the Aptos build uses the Move-on-Aptos compiler and VM (account-based storage, global storage operators, Block-STM).
+- **Aptos:** account creation, `aptos move build`, `aptos move test`, publish to chosen network; workflow assumes **account global storage** and scripts where used.
+- **Sui:** `sui move build`, `sui move test`, publish; workflow assumes **objects** and **entry** / **PTB**-driven calls.
 
-Setup typically involves installing the Aptos CLI, initializing a project (or using an existing package with `Move.toml`), and building with `aptos move build` and testing with `aptos move test`. Publishing and deployment are done through the Aptos CLI to devnet, testnet, or mainnet.
+Pick one stack for a given product; mixing artifacts in one package without discipline causes confusion.
 
-## Sui toolchain
+### Unit tests
 
-For **Move on Sui** you use the **Sui CLI** and Sui Move:
+The compiler exposes a **test** mode: **`#[test]`** marks functions the harness runs; **`#[test_only]`** keeps helpers out of production bytecode; **`#[expected_failure]`** asserts that a test aborts (optionally with a given code). Tests usually live under **`tests/`** or in **`#[test_only]`** modules.
 
-- **Sui CLI** — manage keys, gas, and packages; build and publish Sui Move packages; run tests and interact with Sui networks.
-- **Sui Move** — object-centric; no traditional global storage; packages use `Move.toml` and may include a **Move.lock** and Sui-specific manifest fields (e.g. `published-at`).
+```move
+#[test]
+fun two_plus_two() {
+    assert!(2u64 + 2u64 == 4u64, 0);
+}
+```
 
-Commands are typically under `sui move` (e.g. `sui move build`, `sui move test`). Entry functions and Programmable Transaction Blocks (PTBs) replace the older script-based flow. Dependencies often point to the Sui framework and Move stdlib from the Sui repo.
+**`signer`**-bearing tests use **`#[test(arg = @0xC0FFEE)]`**-style annotations so the harness injects addresses. Run via **`aptos move test`**, **`sui move test`**, or the legacy Move CLI **`move test`** depending on the stack.
 
-## Choosing a toolchain
+### Standard library
 
-- **Learning core Move:** Use the Move Book and, if desired, the Move CLI with the move-repo or move-on-aptos-repo layout (scripts + modules) to run examples and tests.
-- **Building for Aptos:** Use Aptos CLI and Move on Aptos; follow Aptos docs for init, build, test, and deploy.
-- **Building for Sui:** Use Sui CLI and Move on Sui; follow Sui docs for package layout, build, test, and publish.
+Core Move ships **modules** such as **`vector`**, **`option`**, **`string`**, **`signer`**, **`bcs`**, and math helpers. Chains publish **additional** framework modules on-chain. You **`use`** std modules by name; exact paths differ slightly between Aptos and Sui editions—follow your stack’s prelude and framework docs.
 
-All three rely on the same package concept and `Move.toml`; the main differences are in storage model (global storage vs objects), execution (Block-STM vs Sui’s object parallelism), and CLI commands for deploy and run.
+## What are the use cases?
 
-## Where to go next
-
-- [Modules and scripts](./3_Modules_And_Scripts.md) — structure of Move programs (modules and, where applicable, scripts).
-- [Packages](https://move-language.github.io/move/packages.html) (Move Book) — full package and manifest reference.
-- Aptos: [Build](https://aptos.dev/build) and [Move on Aptos](https://aptos.dev/move/move-on-aptos).
-- Sui: [Build with Move](https://docs.sui.io/build/move).
+- **Software engineering:** local development, IDE integration, shared Make/CI jobs that run `move test` on every push.
+- **Security:** reviewing `Move.toml` and lockfiles, auditing dependency repos, ensuring production builds use the same compiler as audit.
+- **Operations:** release pipelines that promote bytecode from CI to staging to mainnet, key management for publish transactions, network selection and RPC health.
 
 ---
 
 ## Further reading
 
 - [Move Book — Packages](https://move-language.github.io/move/packages.html)
-- [Move Book — Creating Coins (tutorial)](https://move-language.github.io/move/creating-coins.html)
+- [Move Book — Unit tests](https://move-language.github.io/move/unit-testing.html)
+- [Move Book — Standard library](https://move-language.github.io/move/standard-library.html)
+- [Move Book — Creating coins (tutorial)](https://move-language.github.io/move/creating-coins.html)
 - [Aptos — Build](https://aptos.dev/build)
 - [Sui — Build with Move](https://docs.sui.io/build/move)

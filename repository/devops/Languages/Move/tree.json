@@ -4,28 +4,28 @@
     "path": "1_What_Is_Move.md",
     "type": "file",
     "sha": "",
-    "size": 5381
+    "size": 6085
   },
   {
     "name": "10_Move_VM_And_Bytecode.md",
     "path": "10_Move_VM_And_Bytecode.md",
     "type": "file",
     "sha": "",
-    "size": 334
+    "size": 2938
   },
   {
     "name": "11_Security_And_Audit_Patterns.md",
     "path": "11_Security_And_Audit_Patterns.md",
     "type": "file",
     "sha": "",
-    "size": 371
+    "size": 3723
   },
   {
     "name": "12_Use_Cases_And_Engineering_Perspectives.md",
     "path": "12_Use_Cases_And_Engineering_Perspectives.md",
     "type": "file",
     "sha": "",
-    "size": 552
+    "size": 3380
   },
   {
     "name": "13_Move_On_Aptos_Overview.md",
@@ -81,7 +81,7 @@
     "path": "2_Environment_And_Toolchains.md",
     "type": "file",
     "sha": "",
-    "size": 5879
+    "size": 5385
   },
   {
     "name": "20_Move_On_Sui_Overview.md",
@@ -151,55 +151,55 @@
     "path": "3_Modules_And_Scripts.md",
     "type": "file",
     "sha": "",
-    "size": 5189
+    "size": 2800
   },
   {
     "name": "4_Structs_And_Resources.md",
     "path": "4_Structs_And_Resources.md",
     "type": "file",
     "sha": "",
-    "size": 5704
+    "size": 3074
   },
   {
     "name": "5_Abilities.md",
     "path": "5_Abilities.md",
     "type": "file",
     "sha": "",
-    "size": 5695
+    "size": 2477
   },
   {
     "name": "6_Global_Storage.md",
     "path": "6_Global_Storage.md",
     "type": "file",
     "sha": "",
-    "size": 454
+    "size": 3516
   },
   {
     "name": "7_References_And_Ownership.md",
     "path": "7_References_And_Ownership.md",
     "type": "file",
     "sha": "",
-    "size": 376
+    "size": 2668
   },
   {
     "name": "8_Functions_And_Visibility.md",
     "path": "8_Functions_And_Visibility.md",
     "type": "file",
     "sha": "",
-    "size": 476
+    "size": 6176
   },
   {
     "name": "9_Generics_And_Type_System.md",
     "path": "9_Generics_And_Type_System.md",
     "type": "file",
     "sha": "",
-    "size": 315
+    "size": 2343
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 7391
+    "size": 7449
   }
 ]
