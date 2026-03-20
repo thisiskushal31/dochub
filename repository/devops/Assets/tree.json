@@ -25,6 +25,21 @@
             "size": 463
           }
         ]
+      },
+      {
+        "name": "Nim",
+        "path": "Languages/Nim",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Languages/Nim/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 354
+          }
+        ]
       }
     ]
   },
