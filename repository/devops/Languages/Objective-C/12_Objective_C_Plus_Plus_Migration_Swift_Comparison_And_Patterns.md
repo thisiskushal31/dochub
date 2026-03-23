@@ -71,6 +71,20 @@ Prevents C++ name mangling mismatches when linking C static libraries.
 
 ---
 
+## Advanced use cases and implementation
+
+**Where `.mm` is used:** Game engines, audio DSP, computer vision, and cross-platform C++ stacks exposed to UIKit usually use **Objective-C++**—thin `.mm` adapters around C++ with exceptions stopped at boundaries and mapped to **`NSError`**.
+
+**XPC services (macOS):** Privileged work (install helpers, network filters) runs out-of-process behind a narrow protocol. **`NSXPCConnection`** Objective-C plumbing must validate every message; type names in headers are not authentication.
+
+**App extensions:** Share, Today, Notification Service, and Intents extensions are separate binaries with tight RAM and lifecycle rules. Shared Objective-C code must avoid app-wide singleton assumptions; legacy Objective-C often lingers here after the main app moves to Swift.
+
+**Migration sequencing (strangler):** (1) Facades and tests. (2) Swift behind feature flags. (3) Migrate leaf modules first (models, parsing). (4) Defer heavy UIKit paths until boundaries stabilize. (5) Measure crash-free sessions and latency per cohort.
+
+**Static vs dynamic libraries:** Static archives resolve symbols at link time; dynamic frameworks trade load time and signing surface for flexibility. The **`-ObjC`** linker flag forces-load Objective-C categories from static archives when they would otherwise be dead-stripped.
+
+---
+
 ## References
 
 ### Primary

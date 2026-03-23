@@ -62,6 +62,20 @@ Code signing covers the bundle tree according to your distribution channel.
 
 ---
 
+## Advanced use cases and implementation
+
+**`install_name` and post-link fixes:** **`install_name_tool`** changes **dylib** **IDs** and **`rpath`** in a built binary when **packaging** **plugins** or **relocating** **frameworks**. Wrong **paths** → **load** failures at **launch** or **dlopen**—catch with **`otool -l`** and **test** on a **clean** machine.
+
+**Verification:** **`codesign --verify --deep --strict`** on **`.app`** bundles catches **tampered** **resources** before **distribution**. CI should **fail** the **pipeline** if **signing** **identity** or **entitlements** drift from **expected** **profiles**.
+
+**Fat binaries and slices:** **Universal** Mach-O files bundle **arm64**, **x86_64**, etc. **CI** must **archive** the **slice** that matches **crash** **reports** when **symbolicating**; **wrong** **architecture** in **dSYM** → **failed** **symbolication**.
+
+**Stripping and privacy:** **Strip** **debug** **symbols** in **release** but **keep** **dSYM** **off**-machine. **Aggressive** **strip** of **Objective-C** **metadata** is rare in **apps** (breaks **some** **runtime** **features**); **security** tools may **strip** more in **hardened** **utilities**.
+
+**XCFrameworks:** Vendor **SDKs** ship **multi-platform** **frameworks** with **headers** and **slices**—consume them with **consistent** **deployment** **targets** and **link** **flags** documented by the **vendor**.
+
+---
+
 ## References
 
 ### Primary

@@ -116,6 +116,16 @@ That pattern expands **what** arbitrary code can invoke. Prefer typed methods, *
 
 ---
 
+## Advanced use cases and implementation
+
+**`@dynamic`:** Declares that accessors are **not** synthesized by the compiler—they will exist at runtime (e.g. **Core Data** **NSManagedObject** properties, or runtime-generated methods). Misuse produces **unrecognized selector** crashes at first access if nothing supplies the implementation.
+
+**Dispatch and ABI edges:** Small returns go through **`objc_msgSend`**; some **struct** return types historically used different entry points (family of **`objc_msgSend*_stret`** on older ABIs). When reading **assembly** or **crash** traces, “which stub” explains frame layout—rare in day-to-day app code, common in **performance** and **reverse-engineering** work.
+
+**Typed APIs at boundaries:** Replace **`performSelector:`** / **`NSInvocation`** in public surfaces with **blocks**, **protocols**, or **explicit** methods so **refactoring** and **Swift** import stay safe. Reserve **fully dynamic** dispatch for **plug-in** architectures with a **versioned** protocol and **allowlisted** selectors.
+
+---
+
 ## References
 
 ### Primary

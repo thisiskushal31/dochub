@@ -69,6 +69,18 @@ Correlate logs with crash reports using **build version** and **binary UUID**.
 
 ---
 
+## Advanced use cases and implementation
+
+**Instruments (typical workflows):** **Time Profiler** finds **hot** **Objective-C** **methods** and **objc_msgSend** overhead; **Allocations** / **Leaks** track **retain** **cycles** and **heap** growth; **System Trace** correlates **CPU** with **threads**. Use **same** **build** **configuration** as **production** when **optimizing**—**Debug** **inlines** and **asserts** skew results.
+
+**Crash triage workflow:** (1) **Symbolicate** with **matching** **dSYM** **UUID**. (2) Classify: **signal** (SIGSEGV, etc.) vs **Objective-C** **exception** vs **abort**. (3) For **`objc_msgSend`**, read **next** frames for **real** **callee**. (4) Check **thread** **sanitizer** / **Zombie** **repro** if **heap** **corruption** suspected. (5) **Bisect** **releases** with **metadata** from chapter **1** / **9**.
+
+**MetricKit and power:** **MXMetricManager** (Swift-first API; **Objective-C** **projects** call it from **mixed** targets) exposes **battery** and **performance** **histograms**—useful to tie **code** changes to **field** **regressions**.
+
+**Stress and soak:** Long-running **UI** tests and **soak** **runs** expose **autorelease** **pool** **pressure**, **GCD** **queue** **depth**, and **memory** **warnings** that **unit** tests miss.
+
+---
+
 ## References
 
 ### Primary
@@ -77,6 +89,7 @@ Correlate logs with crash reports using **build version** and **binary UUID**.
 - [Debugging with Xcode](https://developer.apple.com/documentation/xcode/debugging) (Apple Developer)
 - [Instruments User Guide](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/Introduction/Introduction.html) (Apple Archive)
 - [Improving your app’s performance](https://developer.apple.com/documentation/xcode/improving-your-app-s-performance) (Apple Developer)
+- [MetricKit](https://developer.apple.com/documentation/metrickit) (Apple Developer)
 
 ### Supplemental tutorial
 

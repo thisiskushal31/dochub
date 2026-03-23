@@ -55,6 +55,18 @@ Pin **`SWIFT_VERSION`** and generated header settings in projects checked into V
 
 ---
 
+## Advanced use cases and implementation
+
+**API naming for Swift:** **`NS_SWIFT_NAME`**, **`NS_REFINED_FOR_SWIFT`**, and related **attributes** on **Objective-C** declarations reshape **Swift** spellings and **overload** sets without renaming **C** symbols—use when a **legacy** name is misleading in Swift.
+
+**Mixed CocoaPods / SPM / frameworks:** A single app may pull Objective-C static libraries, dynamic **xcframeworks**, and Swift packages. Duplicate symbols, linker order, and **`-ObjC`** (force-load Objective-C categories from static archives) surface as unrecognized selectors or duplicate-class failures at runtime—fix the build graph (chapter **9**), not with ad hoc **`force_load`**.
+
+**Testing the boundary:** **Unit** tests that touch **both** languages need the same **module** and **bridging** setup as the app target. **Flaky** tests often come from **stale** **`*-Swift.h`** or **different** **`SWIFT_ACTIVE_COMPILATION_CONDITIONS`**.
+
+**App extensions:** **Extensions** are separate **binaries** with **stricter** **memory** and **API** rules; **shared** **Objective-C** code must avoid **singletons** that assume a **full** app **lifecycle**. Prefer **lightweight** **frameworks** with **explicit** **context** parameters.
+
+---
+
 ## References
 
 ### Primary

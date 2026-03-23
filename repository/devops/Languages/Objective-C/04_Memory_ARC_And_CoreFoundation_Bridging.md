@@ -102,6 +102,18 @@ Older code still uses explicit **`retain`**, **`release`**, **`autorelease`**, a
 
 ---
 
+## Advanced use cases and implementation
+
+**Weak and non-retaining collections:** **`NSMapTable`**, **`NSHashTable`**, and **`NSPointerArray`** model **weak** keys/values or **C** pointers—useful for **caches**, **observers**, and **delegate** maps where **`NSArray`** / **`NSDictionary`** would retain too strongly. Wrong options → **leaks** or **use-after-free** when the storage outlives referents.
+
+**`__unsafe_unretained`:** Faster than **`__weak`** but **not** zeroed on deallocation—use only when you can **prove** lifetime (e.g. parent always outlives child). Security-sensitive code avoids this unless benchmarks demand it and invariants are documented.
+
+**Toll-free bridging:** Many **Foundation** classes interchange with **Core Foundation** types (**`NSString`** / **`CFStringRef`**, **`NSArray`** / **`CFArray`**) without copying in common cases—still get bridging casts right at **boundaries** (chapter sections above); wrong ownership at a **CF** API boundary is a classic **double free**.
+
+**ARC and multithreading:** ARC is **not** a substitute for **thread-safe** data structures. Concurrent mutation of **`NSMutableArray`** without external synchronization is undefined behavior—use **serial queues**, **locks**, or **immutable snapshots** (chapter **7**).
+
+---
+
 ## References
 
 ### Primary

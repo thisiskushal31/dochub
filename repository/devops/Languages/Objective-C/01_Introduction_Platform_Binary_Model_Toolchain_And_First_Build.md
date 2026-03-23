@@ -89,6 +89,16 @@ Store **metadata next to artifacts**: Xcode version, SDK name, git commit, and b
 
 ---
 
+## Advanced use cases and implementation
+
+**Where Objective-C still dominates in shipping software:** **System extensions**, **XPC helpers**, **Safari / content blockers**, **Notification Service** extensions, **watchOS** companion paths, **vendor analytics / ads SDKs**, **game and audio middleware** (often **Objective-C++**), and **large legacy** apps where rewrites are phased. You will still **read** Objective-C in **CocoaPods** / **Carthage** dependencies even when your app is mostly Swift.
+
+**Operations and triage:** When a crash or hang report lacks symbols, **`nm`**, **`otool -L`**, **`strings`**, and **`codesign -dv`** on the Mach-O (or the **dSYM** UUID match) tell you which image and build you are looking at. Objective-C **class and selector names** in a binary often survive stripping better than C++—useful for mapping a crash to a third-party **framework** version.
+
+**Implementation habit:** Treat **deployment target**, **SDK**, and **Xcode** version as **release metadata** stored next to every artifact (chapter **9** links this to linking and **dSYM**). That is how you answer “is this crash from the build we think it is?” in **SRE** or **IR** time.
+
+---
+
 ## References
 
 ### Primary

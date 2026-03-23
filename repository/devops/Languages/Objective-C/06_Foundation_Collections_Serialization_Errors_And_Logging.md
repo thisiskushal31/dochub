@@ -90,12 +90,25 @@ Use **public** / **private** markers correctly—never log raw tokens or secrets
 
 ---
 
+## Advanced use cases and implementation
+
+**`NSSecureCoding` and archives:** **`NSKeyedArchiver`** / **`NSKeyedUnarchiver`** persist object graphs. **Secure** coding requires **`supportsSecureCoding`**, **class** allowlists, and **validation** after decode—otherwise **malicious** or **corrupted** archives become **arbitrary object** injection (classic **appsec** finding). Prefer **explicit** DTOs and **versioned** schema for persisted blobs.
+
+**Large JSON:** **`NSJSONSerialization`** typically materializes the whole graph in memory. For very large payloads, use a **streaming** or **incremental** parser (or process chunks at a lower layer) so peak RSS stays bounded—especially in **app extensions**, which have strict memory limits.
+
+**Property lists and config:** **`NSPropertyListSerialization`** handles **binary** and **XML** plists—common for **defaults**, **entitlements**-adjacent data, and **legacy** configs. Validate **types** the same way as JSON; **do not** trust plist contents for **authorization** without **signing** or **server** policy.
+
+**Internationalization:** **`NSString`**, **`NSLocale`**, and **format** strings drive **correct** sorting and **display**—bugs here show up as **compliance** and **support** issues, not just “wrong string.”
+
+---
+
 ## References
 
 ### Primary
 
 - [Programming with Objective-C](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
 - [Foundation](https://developer.apple.com/documentation/foundation) (Apple Developer)
+- [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding) (Apple Developer)
 - [Error Handling Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ErrorHandlingCocoa/ErrorHandling/ErrorHandling.html) (Apple Archive)
 
 ### Supplemental tutorial

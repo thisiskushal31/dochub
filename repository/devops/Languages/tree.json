@@ -3734,91 +3734,91 @@
         "path": "Objective-C/01_Introduction_Platform_Binary_Model_Toolchain_And_First_Build.md",
         "type": "file",
         "sha": "",
-        "size": 5233
+        "size": 6423
       },
       {
         "name": "02_Messaging_Selectors_Types_And_Objective_C_Grammar.md",
         "path": "Objective-C/02_Messaging_Selectors_Types_And_Objective_C_Grammar.md",
         "type": "file",
         "sha": "",
-        "size": 4089
+        "size": 5144
       },
       {
         "name": "03_Classes_Properties_Protocols_Categories_And_Oop.md",
         "path": "Objective-C/03_Classes_Properties_Protocols_Categories_And_Oop.md",
         "type": "file",
         "sha": "",
-        "size": 4143
+        "size": 5350
       },
       {
         "name": "04_Memory_ARC_And_CoreFoundation_Bridging.md",
         "path": "Objective-C/04_Memory_ARC_And_CoreFoundation_Bridging.md",
         "type": "file",
         "sha": "",
-        "size": 3667
+        "size": 4959
       },
       {
         "name": "05_Runtime_Dispatch_Forwarding_And_Dynamic_Features.md",
         "path": "Objective-C/05_Runtime_Dispatch_Forwarding_And_Dynamic_Features.md",
         "type": "file",
         "sha": "",
-        "size": 3366
+        "size": 4889
       },
       {
         "name": "06_Foundation_Collections_Serialization_Errors_And_Logging.md",
         "path": "Objective-C/06_Foundation_Collections_Serialization_Errors_And_Logging.md",
         "type": "file",
         "sha": "",
-        "size": 3316
+        "size": 4711
       },
       {
         "name": "07_Blocks_GCD_And_Concurrency.md",
         "path": "Objective-C/07_Blocks_GCD_And_Concurrency.md",
         "type": "file",
         "sha": "",
-        "size": 2755
+        "size": 4653
       },
       {
         "name": "08_Swift_Interop_Bridging_And_Mixed_Targets.md",
         "path": "Objective-C/08_Swift_Interop_Bridging_And_Mixed_Targets.md",
         "type": "file",
         "sha": "",
-        "size": 2544
+        "size": 3798
       },
       {
         "name": "09_Build_Clang_Linking_And_Release_Artifacts.md",
         "path": "Objective-C/09_Build_Clang_Linking_And_Release_Artifacts.md",
         "type": "file",
         "sha": "",
-        "size": 2807
+        "size": 4225
       },
       {
         "name": "10_Testing_Debugging_Sanitizers_And_Observability.md",
         "path": "Objective-C/10_Testing_Debugging_Sanitizers_And_Observability.md",
         "type": "file",
         "sha": "",
-        "size": 2607
+        "size": 3991
       },
       {
         "name": "11_Security_Signing_Sandbox_Hardening_And_Re.md",
         "path": "Objective-C/11_Security_Signing_Sandbox_Hardening_And_Re.md",
         "type": "file",
         "sha": "",
-        "size": 2758
+        "size": 4047
       },
       {
         "name": "12_Objective_C_Plus_Plus_Migration_Swift_Comparison_And_Patterns.md",
         "path": "Objective-C/12_Objective_C_Plus_Plus_Migration_Swift_Comparison_And_Patterns.md",
         "type": "file",
         "sha": "",
-        "size": 3135
+        "size": 4483
       },
       {
         "name": "README.md",
         "path": "Objective-C/README.md",
         "type": "file",
         "sha": "",
-        "size": 5905
+        "size": 6489
       }
     ]
   },

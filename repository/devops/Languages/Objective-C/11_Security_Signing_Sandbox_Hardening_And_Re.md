@@ -34,6 +34,18 @@ Binaries are signed with identities tied to teams and provisioning. **Developer 
 
 ---
 
+## Advanced use cases and implementation
+
+**Entitlements in review:** Treat **each** **entitlement** as **attack** **surface**: **keychain** **access** **groups**, **network** **client** / **server**, **file** **bookmarks**, **sandbox** **exceptions**. **Over-scoped** **profiles** are a **recurring** **finding** in **App Store** and **enterprise** audits—justify **every** **capability** in **threat** **model** **terms**.
+
+**Library validation and dylib loading:** Hardened runtime and library validation reduce unsigned code injection; malware and pentests still probe plugin paths, **`DYLD_INSERT_LIBRARIES`** (where applicable), and misconfigured **`rpath`**. Developer machines are softer than customer installs—reproduce production hardening in staging.
+
+**IR and malware:** **Objective-C** **metadata** speeds **labeling** **behaviors** in **samples** (**URL** **handlers**, **swizzled** **methods**, **dynamic** **loading**). **SRE** / **IR** uses the same **symbols** to map **telemetry** to **vendor** **SDK** **versions**.
+
+**SIP and system policy:** **System Integrity Protection** and **MDM** **profiles** constrain **what** **even** **root** can **modify**—relevant when **debugging** **system** **extensions** or **custom** **agents** on **managed** **Macs**.
+
+---
+
 ## References
 
 ### Primary

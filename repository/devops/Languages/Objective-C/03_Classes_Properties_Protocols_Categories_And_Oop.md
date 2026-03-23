@@ -106,6 +106,16 @@ Extensions in the **`.m`** file hide implementation detail from public headers. 
 
 ---
 
+## Advanced use cases and implementation
+
+**KVC / KVO in real code:** **Key–value coding** powers **bindings**, **Core Data**, and **IB**–driven paths; **key–value observing** wires model changes to UI. Advanced pitfalls: **dependent keys** (`+keyPathsForValuesAffectingValueForKey:`), **observation** lifetime (remove observers before deallocation), and **KVC** on **collections** (mutations must trigger the right notifications). Treat KVO-heavy objects as **hard to reason about** in concurrent code—prefer explicit callbacks or **Combine** on Swift side when migrating.
+
+**Facade and coordinator patterns:** Large Objective-C apps often isolate **UIKit** / **AppKit** from **network** and **persistence** with **facade** objects and **coordinators** (explicit **protocols**, **dependency injection** via initializers). That is where you enforce **authorization** and **thread** rules before they touch **Foundation** collections shared with Swift.
+
+**Subclass hooks:** **`NS_REQUIRES_SUPER`** documents methods where subclasses must call **`super`**—common in **view** and **controller** lifecycles. Missing **`super`** calls are a frequent source of “works on one OS version” bugs.
+
+---
+
 ## References
 
 ### Primary

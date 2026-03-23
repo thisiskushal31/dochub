@@ -76,6 +76,20 @@ Swizzling affects the **whole class**; order relative to other libraries and **r
 
 ---
 
+## Advanced use cases and implementation
+
+**Tagged pointers and small objects:** The runtime may pack certain **small** **`NSNumber`**, **`NSString`**, or **`NSDate`** values **inline** in the pointer (no heap object). **Debugging** and **swizzling** assumptions that “every **id** is a heap object” can fail—use **`objc_msgSend`** and **ivar** access patterns that respect the platform model.
+
+**`imp_implementationWithBlock`:** Builds an **IMP** from a **block**—useful for **dynamic** method attachment and **testing** doubles. Treat like any dynamic **IMP**: ownership, **reentrancy**, and **exceptions** must be explicit.
+
+**Where swizzling appears in the wild:** **A/B** and **analytics** SDKs, **method profiling** hooks, and **legacy** bug workarounds. **Supply-chain** review asks: *which* classes are swapped, at **what** load order, and can two vendors fight over the same **selector**? Prefer **explicit** instrumentation APIs for **security**-sensitive binaries.
+
+**`+load` ordering:** **Categories** and **classes** in different **dylibs** run **`+load`** in **image** load order—**not** your source file order. Anything that **depends** on another class being “ready” in **`+load`** is fragile; move to **`+initialize`** or **lazy** singletons with **locks**.
+
+**Forwarding in proxies:** **Core Data** fault objects and some **network** layers use **forwarding** to stand in for real implementations—understand **memory** and **threading** of the **real** target after the fault fires.
+
+---
+
 ## References
 
 ### Primary

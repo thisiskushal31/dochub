@@ -10,6 +10,10 @@ Objective-C extends **C** with **Smalltalk-style messaging**: you send **message
 
 **Where it fits:** Maintaining **legacy** apps, reading **SDKs**, **debugging** production, **hardening** or **reviewing** Apple-platform software, and **migrating** toward **Swift** without breaking **release trains**.
 
+### Advanced depth, use cases, and implementation
+
+Basics are not the whole story. Each chapter ends with material aimed at **production**: **where** the idea appears (extensions, daemons, SDKs, CI, incident response), **advanced** mechanics (runtime edges, secure coding, linking and signing), and **implementation** notes you would enforce in review or design. Look for the section **Advanced use cases and implementation** (or the chapter’s own “advanced” heading) before **References**—read the chapter’s numbered sections first; advanced sections assume that context.
+
 ---
 
 ## Chapters
