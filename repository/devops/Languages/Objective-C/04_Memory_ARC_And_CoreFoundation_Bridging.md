@@ -127,4 +127,3 @@ Older code still uses explicit **`retain`**, **`release`**, **`autorelease`**, a
 - [Blocks](https://www.tutorialspoint.com/objective_c/objective_c_blocks.htm)
 - [Type Casting](https://www.tutorialspoint.com/objective_c/objective_c_type_casting.htm)
 
-**Optional:** [README — References hub](./README.md#references-hub) — bookmark entry points only; this chapter's **References** are authoritative for this topic.

@@ -62,4 +62,3 @@ Binaries are signed with identities tied to teams and provisioning. **Developer 
 - [Categories](https://www.tutorialspoint.com/objective_c/objective_c_categories.htm)
 - [Dynamic Binding](https://www.tutorialspoint.com/objective_c/objective_c_dynamic_binding.htm)
 
-**Optional:** [README — References hub](./README.md#references-hub) — bookmark entry points only; this chapter's **References** are authoritative for this topic.

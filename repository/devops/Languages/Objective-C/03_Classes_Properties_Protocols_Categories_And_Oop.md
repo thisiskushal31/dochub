@@ -129,4 +129,3 @@ Extensions in the **`.m`** file hide implementation detail from public headers. 
 - [Protocols](https://www.tutorialspoint.com/objective_c/objective_c_protocols.htm)
 - [Categories](https://www.tutorialspoint.com/objective_c/objective_c_categories.htm)
 
-**Optional:** [README — References hub](./README.md#references-hub) — bookmark entry points only; this chapter's **References** are authoritative for this topic.

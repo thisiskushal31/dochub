@@ -114,4 +114,3 @@ Store **metadata next to artifacts**: Xcode version, SDK name, git commit, and b
 - [Overview](https://www.tutorialspoint.com/objective_c/objective_c_overview.htm)
 - [Environment Setup](https://www.tutorialspoint.com/objective_c/objective_c_environment_setup.htm)
 
-**Optional:** [README — References hub](./README.md#references-hub) — bookmark entry points only; this chapter's **References** are authoritative for this topic.

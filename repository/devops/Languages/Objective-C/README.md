@@ -33,13 +33,13 @@ Basics are not the whole story. Each chapter ends with material aimed at **produ
 | 11 | Security: signing, sandbox, hardened runtime, RE lens | [11_Security_Signing_Sandbox_Hardening_And_Re.md](./11_Security_Signing_Sandbox_Hardening_And_Re.md) |
 | 12 | Objective-C++, migration, Swift comparison, patterns | [12_Objective_C_Plus_Plus_Migration_Swift_Comparison_And_Patterns.md](./12_Objective_C_Plus_Plus_Migration_Swift_Comparison_And_Patterns.md) |
 
-Read **1 → 12** in order unless you are jumping to a specific topic. **Authoritative links for each topic are at the end of that chapter** (`References`). The README does **not** repeat them—you only need the sections below if you want a few **bookmarks** (Apple/Clang front doors, tutorial series index) in one place.
+Read **1 → 12** in order unless you are jumping to a specific topic. **Everything you need to follow up in documentation is in each chapter’s `References` section**—no need to open anything else to read the handbook.
 
 ---
 
-## References hub
+## References hub (optional)
 
-**Why this exists (briefly):** Chapters already list **primary** and **supplemental** URLs per topic. Duplicating every link here was noisy and easy to drift out of sync. This hub keeps **entry points** only—use it for bookmarks or when you want the external tutorial **table of contents** as a single URL.
+**Optional convenience only:** A short list of Apple/Clang entry points and the external tutorial index for bookmarking. It does **not** replace per-chapter **References**; chapter files do **not** point here.
 
 - **Apple (language & runtime):** [Programming with Objective-C](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html) · [Objective-C Runtime Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Introduction/Introduction.html) · [Objective-C](https://developer.apple.com/documentation/objectivec)
 - **Clang / ARC:** [Clang documentation](https://clang.llvm.org/docs/) · [Automatic Reference Counting](https://clang.llvm.org/docs/AutomaticReferenceCounting.html)

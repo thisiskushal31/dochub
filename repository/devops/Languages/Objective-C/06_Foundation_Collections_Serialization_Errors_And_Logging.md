@@ -117,4 +117,3 @@ Use **public** / **private** markers correctly—never log raw tokens or secrets
 - [Error Handling](https://www.tutorialspoint.com/objective_c/objective_c_error_handling.htm)
 - [Log Handling](https://www.tutorialspoint.com/objective_c/objective_c_log_handling.htm)
 
-**Optional:** [README — References hub](./README.md#references-hub) — bookmark entry points only; this chapter's **References** are authoritative for this topic.

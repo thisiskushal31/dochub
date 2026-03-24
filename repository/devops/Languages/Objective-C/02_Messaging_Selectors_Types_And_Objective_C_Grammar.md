@@ -140,4 +140,3 @@ That pattern expands **what** arbitrary code can invoke. Prefer typed methods, *
 - [Data Types](https://www.tutorialspoint.com/objective_c/objective_c_data_types.htm)
 - [Dynamic Binding](https://www.tutorialspoint.com/objective_c/objective_c_dynamic_binding.htm)
 
-**Optional:** [README — References hub](./README.md#references-hub) — bookmark entry points only; this chapter's **References** are authoritative for this topic.

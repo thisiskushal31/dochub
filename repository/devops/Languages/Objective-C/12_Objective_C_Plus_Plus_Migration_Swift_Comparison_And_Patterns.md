@@ -99,4 +99,3 @@ Prevents C++ name mangling mismatches when linking C static libraries.
 - [Pointers](https://www.tutorialspoint.com/objective_c/objective_c_pointers.htm)
 - [Structures](https://www.tutorialspoint.com/objective_c/objective_c_structures.htm)
 
-**Optional:** [README — References hub](./README.md#references-hub) — bookmark entry points only; this chapter's **References** are authoritative for this topic.

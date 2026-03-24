@@ -103,4 +103,3 @@ Cancellation must be observed inside long-running **`NSOperation`** bodies.
 - [Blocks](https://www.tutorialspoint.com/objective_c/objective_c_blocks.htm)
 - [Fast Enumeration](https://www.tutorialspoint.com/objective_c/objective_c_fast_enumeration.htm)
 
-**Optional:** [README — References hub](./README.md#references-hub) — bookmark entry points only; this chapter's **References** are authoritative for this topic.

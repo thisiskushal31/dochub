@@ -80,4 +80,3 @@ Pin **`SWIFT_VERSION`** and generated header settings in projects checked into V
 - [Protocols](https://www.tutorialspoint.com/objective_c/objective_c_protocols.htm)
 - [Extensions](https://www.tutorialspoint.com/objective_c/objective_c_extensions.htm)
 
-**Optional:** [README — References hub](./README.md#references-hub) — bookmark entry points only; this chapter's **References** are authoritative for this topic.

@@ -89,4 +89,3 @@ Code signing covers the bundle tree according to your distribution channel.
 
 - [Preprocessors](https://www.tutorialspoint.com/objective_c/objective_c_preprocessors.htm)
 
-**Optional:** [README — References hub](./README.md#references-hub) — bookmark entry points only; this chapter's **References** are authoritative for this topic.
