@@ -3829,11 +3829,95 @@
     "sha": "",
     "children": [
       {
+        "name": "01_Introduction_Platform_And_First_Program.md",
+        "path": "OCaml/01_Introduction_Platform_And_First_Program.md",
+        "type": "file",
+        "sha": "",
+        "size": 7252
+      },
+      {
+        "name": "02_Core_Syntax_Types_And_Pattern_Matching.md",
+        "path": "OCaml/02_Core_Syntax_Types_And_Pattern_Matching.md",
+        "type": "file",
+        "sha": "",
+        "size": 10880
+      },
+      {
+        "name": "03_Modules_Signatures_Functors_And_Encapsulation.md",
+        "path": "OCaml/03_Modules_Signatures_Functors_And_Encapsulation.md",
+        "type": "file",
+        "sha": "",
+        "size": 6603
+      },
+      {
+        "name": "04_Opam_Dune_Reproducible_Builds_And_CI.md",
+        "path": "OCaml/04_Opam_Dune_Reproducible_Builds_And_CI.md",
+        "type": "file",
+        "sha": "",
+        "size": 7637
+      },
+      {
+        "name": "05_Memory_Gc_Mutability_And_FFI_Edges.md",
+        "path": "OCaml/05_Memory_Gc_Mutability_And_FFI_Edges.md",
+        "type": "file",
+        "sha": "",
+        "size": 4211
+      },
+      {
+        "name": "06_Concurrency_Domains_Effects_And_Async.md",
+        "path": "OCaml/06_Concurrency_Domains_Effects_And_Async.md",
+        "type": "file",
+        "sha": "",
+        "size": 3869
+      },
+      {
+        "name": "07_C_Interop_Ctypes_Stubs_And_Linking.md",
+        "path": "OCaml/07_C_Interop_Ctypes_Stubs_And_Linking.md",
+        "type": "file",
+        "sha": "",
+        "size": 3882
+      },
+      {
+        "name": "08_Testing_Debugging_And_Observability.md",
+        "path": "OCaml/08_Testing_Debugging_And_Observability.md",
+        "type": "file",
+        "sha": "",
+        "size": 3641
+      },
+      {
+        "name": "09_Security_Supply_Chain_Binaries_And_Assurance.md",
+        "path": "OCaml/09_Security_Supply_Chain_Binaries_And_Assurance.md",
+        "type": "file",
+        "sha": "",
+        "size": 2972
+      },
+      {
+        "name": "10_Use_Cases_Mirage_Compilers_Verification.md",
+        "path": "OCaml/10_Use_Cases_Mirage_Compilers_Verification.md",
+        "type": "file",
+        "sha": "",
+        "size": 2543
+      },
+      {
+        "name": "11_Standard_Library_Data_Structures_And_Idioms.md",
+        "path": "OCaml/11_Standard_Library_Data_Structures_And_Idioms.md",
+        "type": "file",
+        "sha": "",
+        "size": 5448
+      },
+      {
+        "name": "12_Metaprogramming_Operators_Objects_And_Compiler.md",
+        "path": "OCaml/12_Metaprogramming_Operators_Objects_And_Compiler.md",
+        "type": "file",
+        "sha": "",
+        "size": 3194
+      },
+      {
         "name": "README.md",
         "path": "OCaml/README.md",
         "type": "file",
         "sha": "",
-        "size": 773
+        "size": 7384
       }
     ]
   },
