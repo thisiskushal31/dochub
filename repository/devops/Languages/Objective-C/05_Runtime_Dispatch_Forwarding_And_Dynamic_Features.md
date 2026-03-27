@@ -6,6 +6,12 @@
 
 **What:** How message dispatch, **dynamic method resolution**, **forwarding**, and **swizzling** work, and when **`+load`** vs **`+initialize`** run. **Why:** These mechanisms explain crash stacks, **SDK** hooks, and why third-party code can change **global** behavior—central for security review and **SRE** triage. **How:** Use the patterns below sparingly; prefer explicit APIs in hardened binaries.
 
+```objc
+#import <objc/runtime.h>
+#import <objc/message.h>
+/* objc_msgSend(receiver, _cmd, …) — see Apple libobjc */
+```
+
 ---
 
 ## 1. Dispatch path (conceptual)
@@ -15,6 +21,11 @@
 3. Still missing → **dynamic resolution**, then **forwarding**, then **`doesNotRecognizeSelector:`** / exception path.
 
 Stacks often show **`objc_msgSend`** at the top; the **next** frames show the real work. Treat **`objc_msgSend`** as context, not automatic proof of a “messaging performance” bug.
+
+```objc
+NSString *obj = @"hi";
+id r = ((id (*)(id, SEL))objc_msgSend)(obj, @selector(description));
+```
 
 ---
 
@@ -74,6 +85,11 @@ Swizzling affects the **whole class**; order relative to other libraries and **r
 - **`+load`** runs during image load (per class and category), before **`main`**—order is not fully under your control; avoid heavy work and fragile dependencies.
 - **`+initialize`** runs lazily before the first message to the class—better for one-time setup when you control side effects.
 
+```objc
++ (void)load { /* runs at image load — keep minimal */ }
++ (void)initialize { /* first use of class — prefer for setup */ }
+```
+
 ---
 
 ## Advanced use cases and implementation
@@ -87,6 +103,12 @@ Swizzling affects the **whole class**; order relative to other libraries and **r
 **`+load` ordering:** **Categories** and **classes** in different **dylibs** run **`+load`** in **image** load order—**not** your source file order. Anything that **depends** on another class being “ready” in **`+load`** is fragile; move to **`+initialize`** or **lazy** singletons with **locks**.
 
 **Forwarding in proxies:** **Core Data** fault objects and some **network** layers use **forwarding** to stand in for real implementations—understand **memory** and **threading** of the **real** target after the fault fires.
+
+```objc
+IMP imp = imp_implementationWithBlock(^id(id self, SEL _cmd) {
+  return @42;
+});
+```
 
 ---
 

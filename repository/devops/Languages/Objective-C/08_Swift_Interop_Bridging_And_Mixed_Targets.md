@@ -6,6 +6,11 @@
 
 **What:** How **Swift** imports **Objective-C**, **bridging headers**, generated **`*-Swift.h`** headers, and **nullability** / **generics** on Objective-C APIs. **Why:** Boundary mistakes create optionality bugs, stale generated headers break CI, and public headers are long-lived API. **How:** Keep bridging headers small, annotate headers for Swift, and pin toolchain settings in version control.
 
+```objc
+/* MyApp-Bridging-Header.h — keep tiny; every #import expands Swift’s view */
+#import <Foundation/Foundation.h>
+```
+
 ---
 
 ## 1. Bridging header (Swift consumes Objective-C)
@@ -45,6 +50,12 @@ Swift types need **`@objc`** or **`@objcMembers`** where appropriate, and Object
 
 Pin **`SWIFT_VERSION`** and generated header settings in projects checked into VCS.
 
+```swift
+@objc public class Exported: NSObject {
+  @objc public func ping() -> String { "ok" }
+}
+```
+
 ---
 
 ## 4. CI checklist for mixed targets
@@ -52,6 +63,11 @@ Pin **`SWIFT_VERSION`** and generated header settings in projects checked into V
 - Clean **DerivedData** when generated headers look wrong.
 - Same **Xcode** major on developer laptops and CI.
 - Archive **dSYM** and Swift metadata with release artifacts.
+
+```bash
+rm -rf ~/Library/Developer/Xcode/DerivedData/MyApp-*
+xcodebuild -scheme MyApp -destination 'platform=iOS Simulator,name=iPhone 16' clean build
+```
 
 ---
 
@@ -64,6 +80,15 @@ Pin **`SWIFT_VERSION`** and generated header settings in projects checked into V
 **Testing the boundary:** **Unit** tests that touch **both** languages need the same **module** and **bridging** setup as the app target. **Flaky** tests often come from **stale** **`*-Swift.h`** or **different** **`SWIFT_ACTIVE_COMPILATION_CONDITIONS`**.
 
 **App extensions:** **Extensions** are separate **binaries** with **stricter** **memory** and **API** rules; **shared** **Objective-C** code must avoid **singletons** that assume a **full** app **lifecycle**. Prefer **lightweight** **frameworks** with **explicit** **context** parameters.
+
+```objc
+@interface LegacyAuth : NSObject
+- (BOOL)loginWithUser:(NSString *)user
+               password:(NSString *)pass
+                  error:(NSError * _Nullable * _Nullable)error
+    NS_SWIFT_NAME(login(user:password:));
+@end
+```
 
 ---
 

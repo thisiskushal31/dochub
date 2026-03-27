@@ -6,6 +6,11 @@
 
 **ARC** ownership rules, **retain cycles**, **`@autoreleasepool`**, **`__bridge`** casts for **Core Foundation**, **associated objects**, and enough **manual retain/release** vocabulary to read legacy code. **Use-after-free** and **leaks** in long-lived graphs are **security** concerns when they touch secrets or trust boundaries.
 
+```objc
+NSString *s = @"owned";
+/* ARC inserts retain/release; compiler flag: -fobjc-arc */
+```
+
 ---
 
 ## 1. ARC in practice
@@ -111,6 +116,11 @@ Older code still uses explicit **`retain`**, **`release`**, **`autorelease`**, a
 **Toll-free bridging:** Many **Foundation** classes interchange with **Core Foundation** types (**`NSString`** / **`CFStringRef`**, **`NSArray`** / **`CFArray`**) without copying in common cases—still get bridging casts right at **boundaries** (chapter sections above); wrong ownership at a **CF** API boundary is a classic **double free**.
 
 **ARC and multithreading:** ARC is **not** a substitute for **thread-safe** data structures. Concurrent mutation of **`NSMutableArray`** without external synchronization is undefined behavior—use **serial queues**, **locks**, or **immutable snapshots** (chapter **7**).
+
+```objc
+dispatch_queue_t q = dispatch_queue_create("com.example.arr", DISPATCH_QUEUE_SERIAL);
+dispatch_async(q, ^{ [mutableArray addObject:@"x"]; });
+```
 
 ---
 

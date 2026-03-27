@@ -4,90 +4,90 @@
     "path": "01_Introduction_Platform_Binary_Model_Toolchain_And_First_Build.md",
     "type": "file",
     "sha": "",
-    "size": 6257
+    "size": 6887
   },
   {
     "name": "02_Messaging_Selectors_Types_And_Objective_C_Grammar.md",
     "path": "02_Messaging_Selectors_Types_And_Objective_C_Grammar.md",
     "type": "file",
     "sha": "",
-    "size": 4978
+    "size": 5225
   },
   {
     "name": "03_Classes_Properties_Protocols_Categories_And_Oop.md",
     "path": "03_Classes_Properties_Protocols_Categories_And_Oop.md",
     "type": "file",
     "sha": "",
-    "size": 5184
+    "size": 5573
   },
   {
     "name": "04_Memory_ARC_And_CoreFoundation_Bridging.md",
     "path": "04_Memory_ARC_And_CoreFoundation_Bridging.md",
     "type": "file",
     "sha": "",
-    "size": 4793
+    "size": 5045
   },
   {
     "name": "05_Runtime_Dispatch_Forwarding_And_Dynamic_Features.md",
     "path": "05_Runtime_Dispatch_Forwarding_And_Dynamic_Features.md",
     "type": "file",
     "sha": "",
-    "size": 4723
+    "size": 5188
   },
   {
     "name": "06_Foundation_Collections_Serialization_Errors_And_Logging.md",
     "path": "06_Foundation_Collections_Serialization_Errors_And_Logging.md",
     "type": "file",
     "sha": "",
-    "size": 4545
+    "size": 4685
   },
   {
     "name": "07_Blocks_GCD_And_Concurrency.md",
     "path": "07_Blocks_GCD_And_Concurrency.md",
     "type": "file",
     "sha": "",
-    "size": 4487
+    "size": 4625
   },
   {
     "name": "08_Swift_Interop_Bridging_And_Mixed_Targets.md",
     "path": "08_Swift_Interop_Bridging_And_Mixed_Targets.md",
     "type": "file",
     "sha": "",
-    "size": 3632
+    "size": 4255
   },
   {
     "name": "09_Build_Clang_Linking_And_Release_Artifacts.md",
     "path": "09_Build_Clang_Linking_And_Release_Artifacts.md",
     "type": "file",
     "sha": "",
-    "size": 4059
+    "size": 4524
   },
   {
     "name": "10_Testing_Debugging_Sanitizers_And_Observability.md",
     "path": "10_Testing_Debugging_Sanitizers_And_Observability.md",
     "type": "file",
     "sha": "",
-    "size": 3825
+    "size": 4210
   },
   {
     "name": "11_Security_Signing_Sandbox_Hardening_And_Re.md",
     "path": "11_Security_Signing_Sandbox_Hardening_And_Re.md",
     "type": "file",
     "sha": "",
-    "size": 3881
+    "size": 4368
   },
   {
     "name": "12_Objective_C_Plus_Plus_Migration_Swift_Comparison_And_Patterns.md",
     "path": "12_Objective_C_Plus_Plus_Migration_Swift_Comparison_And_Patterns.md",
     "type": "file",
     "sha": "",
-    "size": 4317
+    "size": 4895
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 6301
+    "size": 6519
   }
 ]

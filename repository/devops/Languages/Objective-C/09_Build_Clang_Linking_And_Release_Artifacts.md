@@ -6,6 +6,11 @@
 
 **What:** **clang** flags, **modules**, dynamic linking, **`@rpath`**, **`install_name`**, embedding frameworks, **dSYM**, and release artifacts. **Why:** CI/CD and security audits depend on reproducible binaries, correct load paths, and symbolication; misconfigured **`rpath`** and ad hoc **`DYLD_*`** use are classic injection surfaces on developer machines (see chapter **11** for hardened runtime). **How:** Prefer **`@import`**, verify **`otool -L`**, and ship **dSYM** UUIDs with crashes.
 
+```bash
+otool -L ./MyTool
+otool -l ./MyTool | rg -n 'LC_RPATH|path'
+```
+
 ---
 
 ## 1. Modules vs textual includes
@@ -30,6 +35,11 @@ Dynamic libraries resolve at load time via **dyld**. Runpath entries tell the lo
 
 Misconfigured **rpath** plus **`DYLD_*`** variables (where allowed) increase injection risk on dev machines; production targets use hardened runtime constraints.
 
+```bash
+otool -l ./MyTool | rg LC_RPATH
+install_name_tool -add_rpath @executable_path/../Frameworks ./MyTool
+```
+
 ---
 
 ## 3. Example link line (illustrative)
@@ -45,6 +55,12 @@ Inspect install names with **`otool -L`** on built binaries.
 ## 4. dSYM and symbolication
 
 Release builds should emit **dSYM** bundles with UUIDs matching the executable. Crash pipelines map addresses to source lines using **atos** or hosted symbolication.
+
+```bash
+dwarfdump --uuid MyApp.app/MyApp
+dwarfdump --uuid MyApp.app.dSYM
+atos -o MyApp.app/MyApp -l 0x100000000 0x100012340
+```
 
 ---
 
@@ -73,6 +89,13 @@ Code signing covers the bundle tree according to your distribution channel.
 **Stripping and privacy:** **Strip** **debug** **symbols** in **release** but **keep** **dSYM** **off**-machine. **Aggressive** **strip** of **Objective-C** **metadata** is rare in **apps** (breaks **some** **runtime** **features**); **security** tools may **strip** more in **hardened** **utilities**.
 
 **XCFrameworks:** Vendor **SDKs** ship **multi-platform** **frameworks** with **headers** and **slices**—consume them with **consistent** **deployment** **targets** and **link** **flags** documented by the **vendor**.
+
+```bash
+xcodebuild -create-xcframework \
+  -framework build/ios/My.framework \
+  -framework build/macos/My.framework \
+  -output My.xcframework
+```
 
 ---
 

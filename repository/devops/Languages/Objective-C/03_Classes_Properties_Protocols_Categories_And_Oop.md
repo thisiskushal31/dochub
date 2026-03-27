@@ -6,6 +6,12 @@
 
 **What:** How interfaces and implementations map to runtime behavior, how **`@property`** changes ownership and threading semantics, and how **protocols**, **categories**, and **extensions** shape APIs. **Why:** Wrong **delegate** ownership, **category** collisions, and unclear **init** contracts cause production bugs and widen review surface for security. **How:** Patterns below are what you enforce in code review and tests.
 
+```objc
+@interface Example : NSObject
+@property (copy) NSString *title;
+@end
+```
+
 ---
 
 ## 1. Interface and implementation
@@ -60,6 +66,14 @@ NS_ASSUME_NONNULL_END
 
 Dot syntax calls accessors; direct ivar access bypasses **KVO** unless you coordinate manually.
 
+```objc
+@interface Book : NSObject
+@property (nonatomic, copy) NSString *title;
+@property (copy) NSString *isbn;
+@property (weak) id<NSObject> delegate;
+@end
+```
+
 ---
 
 ## 3. Protocols
@@ -104,6 +118,10 @@ Extensions in the **`.m`** file hide implementation detail from public headers. 
 
 **Posing** (substituting one class for another globally) is obsolete for new design. Know the term when reading old libraries or incident write-ups.
 
+```objc
+/* +[NSObject poseAsClass:] — removed long ago; do not use in new code */
+```
+
 ---
 
 ## Advanced use cases and implementation
@@ -113,6 +131,10 @@ Extensions in the **`.m`** file hide implementation detail from public headers. 
 **Facade and coordinator patterns:** Large Objective-C apps often isolate **UIKit** / **AppKit** from **network** and **persistence** with **facade** objects and **coordinators** (explicit **protocols**, **dependency injection** via initializers). That is where you enforce **authorization** and **thread** rules before they touch **Foundation** collections shared with Swift.
 
 **Subclass hooks:** **`NS_REQUIRES_SUPER`** documents methods where subclasses must call **`super`**—common in **view** and **controller** lifecycles. Missing **`super`** calls are a frequent source of “works on one OS version” bugs.
+
+```objc
+- (void)layoutSubviews NS_REQUIRES_SUPER;
+```
 
 ---
 

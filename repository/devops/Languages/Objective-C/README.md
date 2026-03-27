@@ -4,7 +4,7 @@
 
 Objective-C extends **C** with **Smalltalk-style messaging**: you send **messages** to objects, and the **runtime** resolves which implementation runs. It was the dominant application language for **macOS** and **iOS** before **Swift**; major bodies of **framework**, **enterprise**, **plugin**, and **tooling** code still use it. Binaries link **libobjc** and **system frameworks**; builds use **clang** and **Xcode** like other native Apple stacks.
 
-**What this section is for:** A path from **no prior Objective-C** through **advanced** material and **whole-engineering** practice: language concepts, **memory** and **runtime**, **concurrency**, **interop** with **Swift** and **C/C++**, **build and release**, **testing and observability**, **security** (signing, sandbox, hardening, analysis), and **migration**. Each chapter covers **what** the topic is, **why** it matters (including **operations** and **security**), and **how** to apply it. Prose is **standalone**—no “this comes from…” phrasing. Explanations are **text first**; **code** appears only where it clarifies behavior or tooling. Optional diagrams go under **`../../Assets/Languages/Objective-C/`** (see handbook **`Assets/README.md`**).
+**What this section is for:** A path from **no prior Objective-C** through **advanced** material and **whole-engineering** practice: language concepts, **memory** and **runtime**, **concurrency**, **interop** with **Swift** and **C/C++**, **build and release**, **testing and observability**, **security** (signing, sandbox, hardening, analysis), and **migration**. Each chapter covers **what** the topic is, **why** it matters (including **operations** and **security**), and **how** to apply it. Prose is **standalone**—no “this comes from…” phrasing. Every numbered section and **Advanced** block includes at least one **illustrative** fenced example (Objective-C, Swift, shell, or plist/XML as appropriate). Optional diagrams go under **`../../Assets/Languages/Objective-C/`** (see handbook **`Assets/README.md`**).
 
 **Why it matters:** Apple **CI/CD** revolves around **Xcode**, **codesigning**, **notarization**, and **distribution**. **Incident response** and **application security** constantly encounter Objective-C in **stack traces**, **frameworks**, and **binary analysis**. Dependencies written in Objective-C are part of what you **compile**, **sign**, and **ship**—same supply-chain discipline as any native code.
 
@@ -34,6 +34,15 @@ Basics are not the whole story. Each chapter ends with material aimed at **produ
 | 12 | Objective-C++, migration, Swift comparison, patterns | [12_Objective_C_Plus_Plus_Migration_Swift_Comparison_And_Patterns.md](./12_Objective_C_Plus_Plus_Migration_Swift_Comparison_And_Patterns.md) |
 
 Read **1 → 12** in order unless you are jumping to a specific topic. **Everything you need to follow up in documentation is in each chapter’s `References` section**—no need to open anything else to read the handbook.
+
+```bash
+# Toolchain sanity before following any chapter’s build examples
+xcodebuild -version && xcrun --find clang
+```
+
+```objc
+@import Foundation;
+```
 
 ---
 

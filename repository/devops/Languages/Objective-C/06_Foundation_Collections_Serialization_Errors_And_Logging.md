@@ -6,6 +6,10 @@
 
 **What:** **`NSString`** and mutability, **Foundation** collections, **JSON** and **plist** parsing, **`NSError`**, **`os_log`**, and **fast enumeration**. **Why:** Unvalidated parsed graphs and sloppy error handling are common **appsec** failure modes; logging mistakes leak secrets into analytics. **How:** Validate types after **`NSJSONSerialization`**, branch on **domain** and **code**, and keep production logs structured and privacy-aware.
 
+```objc
+#import <Foundation/Foundation.h>
+```
+
 ---
 
 ## 1. Strings and mutability
@@ -99,6 +103,10 @@ Use **public** / **private** markers correctly—never log raw tokens or secrets
 **Property lists and config:** **`NSPropertyListSerialization`** handles **binary** and **XML** plists—common for **defaults**, **entitlements**-adjacent data, and **legacy** configs. Validate **types** the same way as JSON; **do not** trust plist contents for **authorization** without **signing** or **server** policy.
 
 **Internationalization:** **`NSString`**, **`NSLocale`**, and **format** strings drive **correct** sorting and **display**—bugs here show up as **compliance** and **support** issues, not just “wrong string.”
+
+```objc
+NSString *s = [NSString localizedStringWithFormat:@"%lld items", (long long)n];
+```
 
 ---
 

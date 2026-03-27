@@ -85,26 +85,39 @@ The list below mirrors the tutorial layout on the OCaml documentation site. Use 
 
 Later chapters include **where** OCaml appears in production (**unikernels**, **compilers**, **verification**), **advanced** tooling (**FFI**, **domains**), and **implementation** notes for **review** and **pipelines**. Read chapters **1 → 12** in order unless you jump to a topic.
 
+### Deep-study workflow (body-first)
+
+Use this sequence for a deep pass without relying on external links:
+
+1. Read each chapter body once for concepts and terminology.
+2. Re-read and extract invariants, failure modes, and operational constraints.
+3. Cross-link chapters: syntax -> modules -> build -> runtime -> concurrency -> security.
+4. Only then use references for edge cases, API details, or version-specific checks.
+
+This keeps the handbook itself as the primary source while preserving references as optional validation.
+
 ---
 
 ## Chapters
 
-| # | Topic | File |
-|---|--------|------|
-| 1 | Introduction: platform, artifacts, toolchain, first program | [01_Introduction_Platform_And_First_Program.md](./01_Introduction_Platform_And_First_Program.md) |
-| 2 | Core syntax: expressions, types, pattern matching, control flow | [02_Core_Syntax_Types_And_Pattern_Matching.md](./02_Core_Syntax_Types_And_Pattern_Matching.md) |
-| 3 | Modules, signatures, functors, first-class modules, Dune libraries | [03_Modules_Signatures_Functors_And_Encapsulation.md](./03_Modules_Signatures_Functors_And_Encapsulation.md) |
-| 4 | opam, dune, reproducible builds, and CI | [04_Opam_Dune_Reproducible_Builds_And_CI.md](./04_Opam_Dune_Reproducible_Builds_And_CI.md) |
-| 5 | Memory: GC, representation, mutability, FFI edges | [05_Memory_Gc_Mutability_And_FFI_Edges.md](./05_Memory_Gc_Mutability_And_FFI_Edges.md) |
-| 6 | Concurrency: domains, effects, and async libraries | [06_Concurrency_Domains_Effects_And_Async.md](./06_Concurrency_Domains_Effects_And_Async.md) |
-| 7 | C interop: Ctypes, stubs, and linking | [07_C_Interop_Ctypes_Stubs_And_Linking.md](./07_C_Interop_Ctypes_Stubs_And_Linking.md) |
-| 8 | Testing, debugging, profiling, and observability | [08_Testing_Debugging_And_Observability.md](./08_Testing_Debugging_And_Observability.md) |
-| 9 | Security: supply chain, binaries, and assurance context | [09_Security_Supply_Chain_Binaries_And_Assurance.md](./09_Security_Supply_Chain_Binaries_And_Assurance.md) |
-| 10 | Use cases: MirageOS, compilers, verification, ecosystem | [10_Use_Cases_Mirage_Compilers_Verification.md](./10_Use_Cases_Mirage_Compilers_Verification.md) |
-| 11 | Standard library data structures and idioms | [11_Standard_Library_Data_Structures_And_Idioms.md](./11_Standard_Library_Data_Structures_And_Idioms.md) |
-| 12 | Metaprogramming, operators, objects, compiler pipeline | [12_Metaprogramming_Operators_Objects_And_Compiler.md](./12_Metaprogramming_Operators_Objects_And_Compiler.md) |
+Each row lists where the **supplementary docs index** (blocks under [ocaml.org/docs](https://ocaml.org/docs)) and the OCaml **5.4 manual** language reference (starting from [core language](https://ocaml.org/manual/5.4/coreexamples.html)) are covered in the chapter body—not as separate tables elsewhere.
 
-Each chapter ends with a **References** section for manuals and tutorials. The index above collects the same links in one place for bookmarking.
+| # | Topic | File | Docs index (supplementary) | Manual 5.4 (language reference) |
+|---|--------|------|---------------------------|--------------------------------|
+| 1 | Introduction: platform, artifacts, toolchain, first program | [01_Introduction_Platform_And_First_Program.md](./01_Introduction_Platform_And_First_Program.md) | First steps, tooling, resources (install, editor, toplevel, switches, Windows, M1, playground) | Core language (basics, batch programs, `Sys.argv`); entry point for the manual tutorial thread |
+| 2 | Core syntax: expressions, types, pattern matching, control flow | [02_Core_Syntax_Types_And_Pattern_Matching.md](./02_Core_Syntax_Types_And_Pattern_Matching.md) | Language introduction (values through mutability); error handling | Core language: labels, polymorphic variants, polymorphism limits, GADTs |
+| 3 | Modules, signatures, functors, first-class modules, Dune libraries | [03_Modules_Signatures_Functors_And_Encapsulation.md](./03_Modules_Signatures_Functors_And_Encapsulation.md) | Module system | Module system; advanced classes and modules (with ch.12) |
+| 4 | opam, dune, reproducible builds, and CI | [04_Opam_Dune_Reproducible_Builds_And_CI.md](./04_Opam_Dune_Reproducible_Builds_And_CI.md) | First steps, tooling, platform guides (deps, bootstrap, compiler version) | Module system (libraries, build layout); ties to installing OCaml |
+| 5 | Memory: GC, representation, mutability, FFI edges | [05_Memory_Gc_Mutability_And_FFI_Edges.md](./05_Memory_Gc_Mutability_And_FFI_Edges.md) | Runtime and compiler (memory, GC) | Memory representation, GC, **memory model (hard bits)** |
+| 6 | Concurrency: domains, effects, and async libraries | [06_Concurrency_Domains_Effects_And_Async.md](./06_Concurrency_Domains_Effects_And_Async.md) | (Engineering track; not in tutorial index alone) | **Parallel programming**; **memory model** with domains |
+| 7 | C interop: Ctypes, stubs, and linking | [07_C_Interop_Ctypes_Stubs_And_Linking.md](./07_C_Interop_Ctypes_Stubs_And_Linking.md) | — | Interop (manual elsewhere); complements ch.5 |
+| 8 | Testing, debugging, profiling, and observability | [08_Testing_Debugging_And_Observability.md](./08_Testing_Debugging_And_Observability.md) | Platform guides (debugging, profiling, errors, formatting) | Pretty-printing, `Printf`; operational debugging |
+| 9 | Security: supply chain, binaries, and assurance context | [09_Security_Supply_Chain_Binaries_And_Assurance.md](./09_Security_Supply_Chain_Binaries_And_Assurance.md) | — | Assurance posture (not a manual tutorial chapter) |
+| 10 | Use cases: MirageOS, compilers, verification, ecosystem | [10_Use_Cases_Mirage_Compilers_Verification.md](./10_Use_Cases_Mirage_Compilers_Verification.md) | — | Industrial context (not a manual tutorial chapter) |
+| 11 | Standard library data structures and idioms | [11_Standard_Library_Data_Structures_And_Idioms.md](./11_Standard_Library_Data_Structures_And_Idioms.md) | Data structures, monads | Containers and idioms (manual stdlib) |
+| 12 | Metaprogramming, operators, objects, compiler pipeline | [12_Metaprogramming_Operators_Objects_And_Compiler.md](./12_Metaprogramming_Operators_Objects_And_Compiler.md) | Advanced language (PPX, operators, objects); runtime and compiler (front/back) | **Objects in OCaml**; compiler front/back; with ch.3 for classes+modules |
+
+Each chapter ends with a **References** section. The supplementary link list earlier in this README is for bookmarking only; the **Coverage** columns above are the canonical map to chapter bodies.
 
 ---
 

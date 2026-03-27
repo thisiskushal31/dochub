@@ -3734,91 +3734,91 @@
         "path": "Objective-C/01_Introduction_Platform_Binary_Model_Toolchain_And_First_Build.md",
         "type": "file",
         "sha": "",
-        "size": 6257
+        "size": 6887
       },
       {
         "name": "02_Messaging_Selectors_Types_And_Objective_C_Grammar.md",
         "path": "Objective-C/02_Messaging_Selectors_Types_And_Objective_C_Grammar.md",
         "type": "file",
         "sha": "",
-        "size": 4978
+        "size": 5225
       },
       {
         "name": "03_Classes_Properties_Protocols_Categories_And_Oop.md",
         "path": "Objective-C/03_Classes_Properties_Protocols_Categories_And_Oop.md",
         "type": "file",
         "sha": "",
-        "size": 5184
+        "size": 5573
       },
       {
         "name": "04_Memory_ARC_And_CoreFoundation_Bridging.md",
         "path": "Objective-C/04_Memory_ARC_And_CoreFoundation_Bridging.md",
         "type": "file",
         "sha": "",
-        "size": 4793
+        "size": 5045
       },
       {
         "name": "05_Runtime_Dispatch_Forwarding_And_Dynamic_Features.md",
         "path": "Objective-C/05_Runtime_Dispatch_Forwarding_And_Dynamic_Features.md",
         "type": "file",
         "sha": "",
-        "size": 4723
+        "size": 5188
       },
       {
         "name": "06_Foundation_Collections_Serialization_Errors_And_Logging.md",
         "path": "Objective-C/06_Foundation_Collections_Serialization_Errors_And_Logging.md",
         "type": "file",
         "sha": "",
-        "size": 4545
+        "size": 4685
       },
       {
         "name": "07_Blocks_GCD_And_Concurrency.md",
         "path": "Objective-C/07_Blocks_GCD_And_Concurrency.md",
         "type": "file",
         "sha": "",
-        "size": 4487
+        "size": 4625
       },
       {
         "name": "08_Swift_Interop_Bridging_And_Mixed_Targets.md",
         "path": "Objective-C/08_Swift_Interop_Bridging_And_Mixed_Targets.md",
         "type": "file",
         "sha": "",
-        "size": 3632
+        "size": 4255
       },
       {
         "name": "09_Build_Clang_Linking_And_Release_Artifacts.md",
         "path": "Objective-C/09_Build_Clang_Linking_And_Release_Artifacts.md",
         "type": "file",
         "sha": "",
-        "size": 4059
+        "size": 4524
       },
       {
         "name": "10_Testing_Debugging_Sanitizers_And_Observability.md",
         "path": "Objective-C/10_Testing_Debugging_Sanitizers_And_Observability.md",
         "type": "file",
         "sha": "",
-        "size": 3825
+        "size": 4210
       },
       {
         "name": "11_Security_Signing_Sandbox_Hardening_And_Re.md",
         "path": "Objective-C/11_Security_Signing_Sandbox_Hardening_And_Re.md",
         "type": "file",
         "sha": "",
-        "size": 3881
+        "size": 4368
       },
       {
         "name": "12_Objective_C_Plus_Plus_Migration_Swift_Comparison_And_Patterns.md",
         "path": "Objective-C/12_Objective_C_Plus_Plus_Migration_Swift_Comparison_And_Patterns.md",
         "type": "file",
         "sha": "",
-        "size": 4317
+        "size": 4895
       },
       {
         "name": "README.md",
         "path": "Objective-C/README.md",
         "type": "file",
         "sha": "",
-        "size": 6301
+        "size": 6519
       }
     ]
   },
@@ -3833,91 +3833,91 @@
         "path": "OCaml/01_Introduction_Platform_And_First_Program.md",
         "type": "file",
         "sha": "",
-        "size": 7252
+        "size": 11310
       },
       {
         "name": "02_Core_Syntax_Types_And_Pattern_Matching.md",
         "path": "OCaml/02_Core_Syntax_Types_And_Pattern_Matching.md",
         "type": "file",
         "sha": "",
-        "size": 10880
+        "size": 20438
       },
       {
         "name": "03_Modules_Signatures_Functors_And_Encapsulation.md",
         "path": "OCaml/03_Modules_Signatures_Functors_And_Encapsulation.md",
         "type": "file",
         "sha": "",
-        "size": 6603
+        "size": 10824
       },
       {
         "name": "04_Opam_Dune_Reproducible_Builds_And_CI.md",
         "path": "OCaml/04_Opam_Dune_Reproducible_Builds_And_CI.md",
         "type": "file",
         "sha": "",
-        "size": 7637
+        "size": 10660
       },
       {
         "name": "05_Memory_Gc_Mutability_And_FFI_Edges.md",
         "path": "OCaml/05_Memory_Gc_Mutability_And_FFI_Edges.md",
         "type": "file",
         "sha": "",
-        "size": 4211
+        "size": 9275
       },
       {
         "name": "06_Concurrency_Domains_Effects_And_Async.md",
         "path": "OCaml/06_Concurrency_Domains_Effects_And_Async.md",
         "type": "file",
         "sha": "",
-        "size": 3869
+        "size": 8151
       },
       {
         "name": "07_C_Interop_Ctypes_Stubs_And_Linking.md",
         "path": "OCaml/07_C_Interop_Ctypes_Stubs_And_Linking.md",
         "type": "file",
         "sha": "",
-        "size": 3882
+        "size": 6337
       },
       {
         "name": "08_Testing_Debugging_And_Observability.md",
         "path": "OCaml/08_Testing_Debugging_And_Observability.md",
         "type": "file",
         "sha": "",
-        "size": 3641
+        "size": 8640
       },
       {
         "name": "09_Security_Supply_Chain_Binaries_And_Assurance.md",
         "path": "OCaml/09_Security_Supply_Chain_Binaries_And_Assurance.md",
         "type": "file",
         "sha": "",
-        "size": 2972
+        "size": 5009
       },
       {
         "name": "10_Use_Cases_Mirage_Compilers_Verification.md",
         "path": "OCaml/10_Use_Cases_Mirage_Compilers_Verification.md",
         "type": "file",
         "sha": "",
-        "size": 2543
+        "size": 4823
       },
       {
         "name": "11_Standard_Library_Data_Structures_And_Idioms.md",
         "path": "OCaml/11_Standard_Library_Data_Structures_And_Idioms.md",
         "type": "file",
         "sha": "",
-        "size": 5448
+        "size": 8799
       },
       {
         "name": "12_Metaprogramming_Operators_Objects_And_Compiler.md",
         "path": "OCaml/12_Metaprogramming_Operators_Objects_And_Compiler.md",
         "type": "file",
         "sha": "",
-        "size": 3194
+        "size": 7062
       },
       {
         "name": "README.md",
         "path": "OCaml/README.md",
         "type": "file",
         "sha": "",
-        "size": 7384
+        "size": 9659
       }
     ]
   },

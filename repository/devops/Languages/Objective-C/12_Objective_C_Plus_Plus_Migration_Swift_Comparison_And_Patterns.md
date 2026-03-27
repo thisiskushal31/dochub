@@ -6,6 +6,11 @@
 
 **What:** **Objective-C++** (`.mm`), **C** / **C++** interop, incremental migration, **Swift** vs **Objective-C** tradeoffs, and production patterns (XPC splits, plugins, SDK wrappers). **Why:** Mixed runtimes need clear exception and destructor boundaries; migration without telemetry repeats old failure modes. **How:** Use **strangler** facades, tighten headers before large Swift moves, and prefer explicit APIs over global runtime mutation in hardened code.
 
+```objc
+#import <Foundation/Foundation.h>
+// File extension .mm = Objective-C++ translation unit
+```
+
 ---
 
 ## 1. Objective-C++ translation unit
@@ -48,6 +53,13 @@ Prevents C++ name mangling mismatches when linking C static libraries.
 
 **Mechanical wins before large Swift adoption:** ARC everywhere, nullability and lightweight generics on headers, replace unbounded **`performSelector:`** with typed APIs or blocks.
 
+```objc
+@interface LegacyFacade : NSObject
+- (void)doWorkWithCompletion:(void (^)(NSError * _Nullable))done;
+@end
+/* New Swift module calls this facade until the leaf migrates */
+```
+
 ---
 
 ## 4. Swift vs Objective-C
@@ -61,6 +73,11 @@ Prevents C++ name mangling mismatches when linking C static libraries.
 
 **Rule of thumb:** Swift for new features where constraints allow; Objective-C literacy remains mandatory for maintenance, debugging, and incident response.
 
+```objc
+id obj = @"dynamic";
+NSArray<NSString *> *xs = @[ @"typed", @"collection" ];
+```
+
 ---
 
 ## 5. Production patterns
@@ -68,6 +85,13 @@ Prevents C++ name mangling mismatches when linking C static libraries.
 - **XPC** to split UI from privileged workers.
 - **Plugin bundles** with pinned versions and integrity checks.
 - **SDK wrappers** that validate untrusted input before building Foundation graphs.
+
+```objc
+@interface Worker : NSObject
+- (void)runPrivilegedWork:(NSData *)payload;
+@end
+/* Actual work in XPC service or helper tool — not in the sandboxed app */
+```
 
 ---
 
@@ -82,6 +106,10 @@ Prevents C++ name mangling mismatches when linking C static libraries.
 **Migration sequencing (strangler):** (1) Facades and tests. (2) Swift behind feature flags. (3) Migrate leaf modules first (models, parsing). (4) Defer heavy UIKit paths until boundaries stabilize. (5) Measure crash-free sessions and latency per cohort.
 
 **Static vs dynamic libraries:** Static archives resolve symbols at link time; dynamic frameworks trade load time and signing surface for flexibility. The **`-ObjC`** linker flag forces-load Objective-C categories from static archives when they would otherwise be dead-stripped.
+
+```bash
+OTHER_LDFLAGS=-ObjC
+```
 
 ---
 

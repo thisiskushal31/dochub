@@ -6,6 +6,11 @@
 
 If you are new to Objective-C, start here. This chapter answers: **what** the language is on disk and in the toolchain, **why** that matters for debugging and security work, and **how** to run a minimal build you can repeat in CI. Later chapters assume you understand **Mach-O**, **libobjc**, and the roles of **clang** and **Xcode**.
 
+```objc
+#import <Foundation/Foundation.h>
+// Thin object layer on C — messages resolved by libobjc (see §1–3)
+```
+
 ---
 
 ## 1. What Objective-C is (in one stack)
@@ -13,6 +18,11 @@ If you are new to Objective-C, start here. This chapter answers: **what** the la
 Objective-C is a thin object layer on **C**. Lexically and syntactically it still looks like C in many places; **objects** live on the heap, and behavior is invoked by **sending messages**. The **Objective-C runtime** (`libobjc`) implements dynamic dispatch: at runtime it maps **receiver + selector → implementation**, with caching so steady-state performance is predictable.
 
 **Swift** is the usual choice for new application code, but Objective-C remains embedded in **system frameworks**, **vendor SDKs**, **plugins**, and long-lived codebases. Operations and security work still see Objective-C **symbols** every day—in crashes, malware samples, and dependency audits.
+
+```objc
+NSString *s = @"demo";
+NSUInteger n = [s length]; /* objc_msgSend → implementation at runtime */
+```
 
 ---
 
@@ -24,6 +34,11 @@ On Apple operating systems, your code typically becomes a **Mach-O** executable,
 - Linked **libobjc** plus frameworks such as **Foundation**, **UIKit**, or **AppKit**.
 
 That layout is where **symbolication**, **binary diffing**, and **reverse engineering** start. Stack traces often show **`objc_msgSend`** near the top when dispatch is hot—that frames **how** work runs, not automatically **why** something failed; always read the next frames for the real callee.
+
+```bash
+nm -gU ./MyBinary 2>/dev/null | head
+strings ./MyBinary | rg -i 'objc|Foundation' | head
+```
 
 ---
 
@@ -37,6 +52,11 @@ That layout is where **symbolication**, **binary diffing**, and **reverse engine
 | **ld** / **dyld** | Link-time and load-time resolution of dynamic libraries and **`@rpath`** (chapter **9** goes deeper). |
 
 Pin **Xcode major**, **SDK**, and **deployment target** across laptops and CI. Drift shows up as API availability failures, linker errors, and binaries that no longer match what security or compliance reviews expect.
+
+```bash
+xcrun --find clang
+xcodebuild -version
+```
 
 ---
 
@@ -87,6 +107,11 @@ Store **metadata next to artifacts**: Xcode version, SDK name, git commit, and b
 - Do not commit **signing identities**, **API keys**, or **secrets** in the repo; inject them in CI.
 - **Reproducible** builds reduce ambiguity when you must decide whether a binary diff is expected or suspicious.
 
+```bash
+# Never commit secrets — inject via CI environment / Xcode Cloud
+# export API_KEY="$(security find-generic-password -s MyApp -w)"  # local dev only
+```
+
 ---
 
 ## Advanced use cases and implementation
@@ -96,6 +121,11 @@ Store **metadata next to artifacts**: Xcode version, SDK name, git commit, and b
 **Operations and triage:** When a crash or hang report lacks symbols, **`nm`**, **`otool -L`**, **`strings`**, and **`codesign -dv`** on the Mach-O (or the **dSYM** UUID match) tell you which image and build you are looking at. Objective-C **class and selector names** in a binary often survive stripping better than C++—useful for mapping a crash to a third-party **framework** version.
 
 **Implementation habit:** Treat **deployment target**, **SDK**, and **Xcode** version as **release metadata** stored next to every artifact (chapter **9** links this to linking and **dSYM**). That is how you answer “is this crash from the build we think it is?” in **SRE** or **IR** time.
+
+```bash
+dwarfdump --uuid MyApp.app/MyApp
+codesign -dv --verbose=4 MyApp.app
+```
 
 ---
 

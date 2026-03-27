@@ -6,6 +6,11 @@
 
 **XCTest** patterns, **lldb** recipes, **Address Sanitizer** / **Zombies** / **Thread Sanitizer**, **`os_log`**, and crash pipelines (**UUID**, **`dSYM`**, symbolication). Goal: reproducible triage in development and defensible telemetry in production.
 
+```bash
+xcodebuild test -scheme MyApp -destination 'platform=iOS Simulator,name=iPhone 16' \
+  -enableAddressSanitizer YES
+```
+
 ---
 
 ## 1. XCTest skeleton
@@ -55,6 +60,12 @@ Never paste production secrets into **lldb** expressions in shared screen shares
 
 ASan adds overhead—run on nightly or dedicated schemes if PR time budgets are tight.
 
+```bash
+# Other schemes: -enableThreadSanitizer YES, -enableUndefinedBehaviorSanitizer YES
+xcodebuild -scheme MyApp -destination 'platform=macOS' \
+  -enableThreadSanitizer YES build
+```
+
 ---
 
 ## 4. Production logging
@@ -78,6 +89,10 @@ Correlate logs with crash reports using **build version** and **binary UUID**.
 **MetricKit and power:** **MXMetricManager** (Swift-first API; **Objective-C** **projects** call it from **mixed** targets) exposes **battery** and **performance** **histograms**—useful to tie **code** changes to **field** **regressions**.
 
 **Stress and soak:** Long-running **UI** tests and **soak** **runs** expose **autorelease** **pool** **pressure**, **GCD** **queue** **depth**, and **memory** **warnings** that **unit** tests miss.
+
+```bash
+instruments -t "Time Profiler" -D trace.trace MyApp.app
+```
 
 ---
 

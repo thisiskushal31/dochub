@@ -6,6 +6,10 @@
 
 **What:** **Blocks** as async units, **Grand Central Dispatch**, **barriers**, **QoS**, and **`NSOperationQueue`**. **Why:** Deadlocks, races, and main-thread stalls show up in crash analytics and security reviews when ownership and queue discipline are wrong. **How:** Prefer explicit queues, weak **`self`** when appropriate, and cancellation checks in long work.
 
+```objc
+#import <dispatch/dispatch.h>
+```
+
 ---
 
 ## 1. Block typedefs
@@ -88,6 +92,12 @@ Cancellation must be observed inside long-running **`NSOperation`** bodies.
 **`@synchronized` and locks:** **`@synchronized`** is convenient but **coarse** and **order**-sensitive; **`NSLock`**, **`NSRecursiveLock`**, and **`os_unfair_lock`** give clearer **invariants**. **`OSSpinLock`** is **deprecated** for general use—prefer **unfair** locks or **queues**.
 
 **UI and main thread:** **UIKit** / **AppKit** are **main-thread**–affine for most **mutation**. **Background** work that touches **views** must **`dispatch_async`** to **`dispatch_get_main_queue()`** (or **equivalent**). **Instruments** “Main Thread Checker” catches many violations early.
+
+```objc
+dispatch_async(dispatch_get_main_queue(), ^{
+  /* UIKit / AppKit mutations */
+});
+```
 
 ---
 

@@ -6,6 +6,11 @@
 
 How **message** sends work, the roles of **`id`**, **`Class`**, and **`SEL`**, **dot** syntax, messaging **`nil`**, **literals**, **`@encode`**, and safe patterns around **dynamic** dispatch (for example **`NSSelectorFromString`** on untrusted input). This is the mechanical core you step through in **lldb** and review during security work.
 
+```objc
+id o = @"x";
+[o description]; /* always a message send, never a direct C call */
+```
+
 ---
 
 ## 1. Messages are not C function calls
@@ -123,6 +128,11 @@ That pattern expands **what** arbitrary code can invoke. Prefer typed methods, *
 **Dispatch and ABI edges:** Small returns go through **`objc_msgSend`**; some **struct** return types historically used different entry points (family of **`objc_msgSend*_stret`** on older ABIs). When reading **assembly** or **crash** traces, “which stub” explains frame layout—rare in day-to-day app code, common in **performance** and **reverse-engineering** work.
 
 **Typed APIs at boundaries:** Replace **`performSelector:`** / **`NSInvocation`** in public surfaces with **blocks**, **protocols**, or **explicit** methods so **refactoring** and **Swift** import stay safe. Reserve **fully dynamic** dispatch for **plug-in** architectures with a **versioned** protocol and **allowlisted** selectors.
+
+```objc
+@property (nonatomic, copy) void (^onComplete)(BOOL ok);
+/* Prefer blocks + protocols at boundaries; reserve performSelector for plugins */
+```
 
 ---
 
