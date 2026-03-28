@@ -82,8 +82,8 @@ Avoid embedding long-lived secrets in source. Prefer vault-injected credentials,
 
 - **Bioinformatics and batch science:** **Stable** **CPAN** + **long** **pipelines**—often **why** Perl **survives**; **pin** **BioPerl**-era stacks like any **service** dependency.
 - **Mail, reporting, and ETL:** **High-throughput** **text**—**ops** focus is **encoding**, **disk**, and **downstream** **queue** **backpressure**, not **micro**-optimizations.
-- **Strangler migrations:** **Interface**-first **rewrites** (see **§3. Migration strategy** above) with **parity** **metrics**—**dual-write** phases need **explicit** **owners** and **rollback**.
-- **Compliance audits:** **SBOM** + **`perl -V`** **artifact** per **release**; **PAUSE**/typosquat **review** when **dependencies** **change** (concepts §2).
+- **Strangler migrations:** **Interface**-first **rewrites** (see **Migration strategy without big-bang rewrites** under **Concepts** above) with **parity** **metrics**—**dual-write** phases need **explicit** **owners** and **rollback**.
+- **Compliance audits:** **SBOM** + **`perl -V`** **artifact** per **release**; **PAUSE**/typosquat **review** when **dependencies** **change** (see **Supply-chain posture for Perl services** under **Concepts** above).
 
 ---
 

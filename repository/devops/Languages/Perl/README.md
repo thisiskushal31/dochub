@@ -136,7 +136,7 @@ The second line prints a compact version line useful for logs and support ticket
 
 ### Deep-study workflow (body-first)
 
-1. Within each chapter, read **§1 Concepts**, then **§2 Advanced concepts**, then **§3 Applications and use cases**—that order matches how the body is written.
+1. Within each chapter, read in order: **`## 1. Concepts`**, then **`## 2. Advanced concepts`**, then **`## 3. Applications and use cases`** (same headings as in the files).
 2. Re-read and extract invariants, failure modes, and operational constraints (context, `@INC`, encoding, subprocess boundaries).
 3. Cross-link chapters: syntax and data → modules and CPAN → I/O and security → testing and operations → supply chain → **HTTP/TLS** (13) → **DBI** (14) → **web** process models (15) → **XS/C** when debugging native code (16).
 4. Only then use Perldoc and MetaCPAN for exhaustive tables, edge cases, and **release-specific** behavior; pick the **same** Perl version in the browser as in production.

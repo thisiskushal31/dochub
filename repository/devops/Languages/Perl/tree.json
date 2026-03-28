@@ -81,7 +81,7 @@
     "path": "12_Use_Cases_Supply_Chain_And_Migration.md",
     "type": "file",
     "sha": "",
-    "size": 4894
+    "size": 4993
   },
   {
     "name": "13_Networking_TLS_HTTP_And_Clients.md",
@@ -116,6 +116,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 20139
+    "size": 20148
   }
 ]
