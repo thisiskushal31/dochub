@@ -8,7 +8,13 @@ What Perl is as a **language** and **runtime**, how the **interpreter** turns so
 
 ---
 
-## 1. What Perl is (for a new reader)
+---
+
+Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
+
+## 1. Concepts
+
+### 1. What Perl is (for a new reader)
 
 Perl is a **high-level, interpreted** language in typical deployment: you ship **source** (or a generated bundle), and a `perl` binary executes it. Internally, the implementation does **lexing**, **parsing**, **optimization** of an op tree, then **execution**—so “interpreted” does not mean “no compilation,” only that the compilation step is **inside** the `perl` process and usually **per run** unless you use persistent frameworks (e.g. FastCGi, embedded interpreters).
 
@@ -18,7 +24,7 @@ For **engineering**, expect decades of **idioms** and **CPAN** modules: not ever
 
 ---
 
-## 2. Compilation model (what actually runs)
+### 2. Compilation model (what actually runs)
 
 When you run `perl script.pl`, the interpreter roughly:
 
@@ -37,7 +43,7 @@ perl -MO=Concise -e 'print 2+2' 2>/dev/null | head
 
 ---
 
-## 3. Where it runs
+### 3. Where it runs
 
 The runtime is the **`perl`** executable plus **core libraries** on disk. **Unix** systems often ship a system Perl; **containers** and **CI** images may install a **specific** minor release via the OS package manager or a **per-user** tool (**perlbrew**, **plenv**). **Windows** commonly uses **Strawberry Perl** or **ActiveState**-style distributions; paths and **DLL** loading differ from ELF + `LD_LIBRARY_PATH` models.
 
@@ -58,7 +64,7 @@ perl -V
 
 ---
 
-## 4. `@INC` and module loading (preview)
+### 4. `@INC` and module loading (preview)
 
 `@INC` is an array of **directory roots** searched when a `use` or `require` loads a **`.pm`** file. Order matters: **earlier** directories win. **Shadowing** (accidentally loading the wrong `Foo::Bar` because a local `lib/` appears first) is a real incident class.
 
@@ -72,7 +78,7 @@ Chapter 5 expands **packages** and **`use`/`require`**; chapter 6 covers **repro
 
 ---
 
-## 5. Toolchain pieces
+### 5. Toolchain pieces
 
 | Piece | Role |
 |-------|------|
@@ -88,7 +94,7 @@ Nothing in core forces an IDE. **Version pinning** is non-optional for productio
 
 ---
 
-## 6. `use strict`, `use warnings`, and modern baseline
+### 6. `use strict`, `use warnings`, and modern baseline
 
 `use strict` turns on **strict vars**, **strict refs**, and **strict subs** (see the `strict` pragma). In practice it stops **bareword** filehandles from being silently created, catches **undeclared** globals in many cases, and forces **lexical** variables (`my`) where you intend them.
 
@@ -108,7 +114,7 @@ Omitting `my` under `strict` for a new variable is a **compile-time** failure—
 
 ---
 
-## 7. First script
+### 7. First script
 
 A minimal script prints a line and exits **0**:
 
@@ -131,7 +137,7 @@ perl -E 'say "ok"'
 
 ---
 
-## 8. Shebang, permissions, invocation
+### 8. Shebang, permissions, invocation
 
 On Unix, the **shebang** line selects the interpreter. **`#!/usr/bin/env perl`** uses the first `perl` on **`PATH`**—good for developer laptops and many CI images. **Pinned** containers sometimes use a **fixed** path (`#!/opt/perl/bin/perl`) so behavior cannot drift with `PATH`.
 
@@ -141,7 +147,7 @@ Invoking as **`perl script.pl`** avoids relying on the execute bit and documents
 
 ---
 
-## 9. Selected `perl` switches (operations cheat sheet)
+### 9. Selected `perl` switches (operations cheat sheet)
 
 | Switch | Meaning |
 |--------|---------|
@@ -155,17 +161,21 @@ Full tables live in **`perlrun`**; the **`-T`** flag interacts with **`PERL5LIB`
 
 ---
 
-## Advanced use cases and implementation
+## 2. Advanced concepts
 
 **Long-running daemons:** **Preforking** servers, **AnyEvent**/**POE**-style async stacks, and **embedded** `libperl` all share concerns: **memory** leaks in **XS**, **signal** handling, **graceful** worker restart, and **file descriptor** inheritance. Perl syntax is rarely the bottleneck; **I/O**, **locking**, and **external** services are.
 
-**CGI / legacy web:** Older **CGI** scripts spawn a **new** `perl` per request unless a **persistent** layer sits in front. Operations focus is **process** churn and **cold start**, not regex speed.
+**CGI / legacy web (mechanics):** Older **CGI** scripts spawn a **new** `perl` per request unless a **persistent** layer sits in front—**cold start** and **module** load dominate **latency** compared with micro-optimizing regex.
 
-**Containers:** Build images with a **single** Perl version, **frozen** CPAN tree, and **documented** **XS** prerequisites (compiler, `-dev` packages). Mismatch between **glibc** in the image and **XS** blobs built elsewhere is a common **load failure** at runtime.
+---
 
-**Incident response:** **`~/.bash_history`**, **cron** spools, and **configuration management** repos often contain Perl **one-liners**. Attackers use them too—correlate with **file** timestamps and **network** logs, not only the language.
+## 3. Applications and use cases
 
-**Environment variables that show up in ops tickets:** **`PERL_UNICODE`** changes default I/O semantics in some setups—pair with explicit **`binmode`** / **`Encode`** in anything that crosses a trust boundary (see chapter 4). **`PERL5OPT`** injects flags into **every** `perl` invocation on a host—powerful for debugging, catastrophic if it enables **`Devel::`** hooks or alters **`@INC`** in production without change control.
+- **CI and release engineering:** Pin **`perl`**, capture **`perl -V`** in build logs, and run **`prove`** on the same **Carton**/**snapshot** tree you ship; use **`perl -c`** knowing **`BEGIN`** still runs (chapter 1 concepts).
+- **Cron and minimal environments:** Failures from missing **`PATH`**, **`PERL5LIB`**, or **cwd** are the default **ops** class for Perl glue—fix with **absolute** paths and documented **wrappers** (chapter 11).
+- **Containers:** One **Perl** minor per image, **frozen** CPAN, **XS** built **inside** the image against that **glibc**—avoid copying **`.so`** artifacts across distro versions (chapter 16).
+- **Incident response and audit:** **`~/.bash_history`**, **cron** spools, and **config-management** repos hold Perl **one-liners**—attackers use them too; correlate **timestamps** and **egress**, not only “it’s Perl.”
+- **Fleet-wide footguns:** **`PERL5OPT`** and **`PERL_UNICODE`** change **every** invocation or **I/O** semantics—treat changes like **kernel** parameters: **change control** and **rollback**.
 
 ---
 

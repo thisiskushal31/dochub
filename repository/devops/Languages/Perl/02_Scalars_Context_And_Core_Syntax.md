@@ -8,7 +8,13 @@
 
 ---
 
-## 1. Sigils and names
+---
+
+Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
+
+## 1. Concepts
+
+### 1. Sigils and names
 
 - **`$name`** — a **scalar**: single value (number, string reference, object reference, `undef`).
 - **`@name`** — an **array**: ordered list of scalars, indexed by integer.
@@ -24,7 +30,7 @@ my %price = ( apple => 120, banana => 90 );
 
 ---
 
-## 2. Scalar vs list context (the central rule)
+### 2. Scalar vs list context (the central rule)
 
 **Context** is not “type coercion” in the Java sense; it is **which value shape** the language expects at that point in the program.
 
@@ -49,7 +55,7 @@ my @parts  = localtime $epoch;          # list of fields
 
 ---
 
-## 3. `undef`, truth, and comparison
+### 3. `undef`, truth, and comparison
 
 **`undef`** is the “no value” scalar. Uninitialized scalars are **`undef`**. Warnings often catch **use of uninitialized value**—keep **`use warnings`** on.
 
@@ -74,7 +80,7 @@ Mixing them silently **coerces** types in ways that confuse audits—pick the ri
 
 ---
 
-## 4. Operators (overview)
+### 4. Operators (overview)
 
 **Arithmetic:** `+`, `-`, `*`, `/`, `%`, `**`. **String:** `.` concatenation, `x` repetition.
 
@@ -88,7 +94,7 @@ Exhaustive tables and precedence rules live in **`perlop`**; for handbook work, 
 
 ---
 
-## 5. Quoting and interpolation
+### 5. Quoting and interpolation
 
 **Single quotes** `'...'` — **no** interpolation, **few** escapes.
 
@@ -106,7 +112,7 @@ my @toks = qw{ one two three };
 
 ---
 
-## 6. Lexical scope with `my`
+### 6. Lexical scope with `my`
 
 **`my`** declares **lexical** variables visible from the declaration to the end of the enclosing **block**, **file**, or **`eval`**. They are **not** package globals—this is what you want for almost all new code.
 
@@ -123,7 +129,7 @@ my @toks = qw{ one two three };
 
 ---
 
-## 7. Prototypes (read carefully)
+### 7. Prototypes (read carefully)
 
 **Subroutine prototypes** (`sub foo ($$) { ... }`) exist mainly for **compile-time** argument checking and **optional** syntactic sugar. They **do not** validate **types** like a static language; they interact badly with **references** and **&sub** calling conventions.
 
@@ -131,7 +137,7 @@ my @toks = qw{ one two three };
 
 ---
 
-## Advanced use cases and implementation
+## 2. Advanced concepts
 
 **Unicode and bytes:** Source file **encoding**, **`use utf8`**, and **`binmode`** on handles are separate concerns. **Security** reviews for web and IPC code should verify **normalization** and **byte** vs **character** boundaries—**length** in bytes ≠ **length** in graphemes. **`utf8::upgrade`** / internal UTF-8 flags are easy to misuse; prefer **`Encode`** at boundaries and document encoding in APIs (chapter 4).
 
@@ -140,6 +146,15 @@ my @toks = qw{ one two three };
 **Embedding:** When **`perl`** is embedded, **`@INC`** and **`%ENV`** may be locked down; **XS** loading paths are a **sandbox** escape surface if untrusted code can write to those directories.
 
 **Tooling:** **`Perl::Critic`** and **`perltidy`** enforce house style; wire them in **CI** for repos large enough to justify **bike-shed** automation.
+
+---
+
+## 3. Applications and use cases
+
+- **Log and metrics glue:** **Context** bugs (`return @arr` in **scalar** context) show up in **parsers** and **exporters**—catch with **`use warnings`** and **code review** on **sub** returns.
+- **API and config layers:** **`//`** vs **`||`**, **`eq`** vs **`==`**, and **Unicode** boundaries matter for **identifiers**, **sort keys**, and **auth** comparisons—pair with chapter 4 for **encoding**.
+- **Generated YAML/JSON/K8s:** **Here-doc** terminators break **templated** deploys; **lint** generated Perl or avoid heredocs for **short** payloads.
+- **Legacy interop:** **`our`** and **prototypes** appear in **old** CPAN-style code—know enough to **refactor** toward **`my`** and **explicit** APIs without breaking **callers**.
 
 ---
 

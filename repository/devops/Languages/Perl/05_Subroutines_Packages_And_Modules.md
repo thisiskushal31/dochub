@@ -8,7 +8,13 @@
 
 ---
 
-## 1. Subroutines
+---
+
+Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
+
+## 1. Concepts
+
+### 1. Subroutines
 
 **Definition:**
 
@@ -34,7 +40,7 @@ Use **`return scalar @items`** or **`return 0+@items`** when you mean “number 
 
 ---
 
-## 2. Packages and namespaces
+### 2. Packages and namespaces
 
 **`package Name;`** switches the **default** namespace for **unqualified** globals and **`sub`** names until the next **`package`** or end of scope (block/file).
 
@@ -54,7 +60,7 @@ sub trim {
 
 ---
 
-## 3. `use` vs `require`
+### 3. `use` vs `require`
 
 **`use Module LIST`** is **`BEGIN { require Module; Module->import(LIST); }`** at compile time—**fails fast** if missing.
 
@@ -70,7 +76,7 @@ sub trim {
 
 ---
 
-## 4. `@INC` and shadowing
+### 4. `@INC` and shadowing
 
 `@INC` lists **roots**; **`Module::Name`** maps to **`Module/Name.pm`** under one of those roots **in order**.
 
@@ -80,7 +86,7 @@ sub trim {
 
 ---
 
-## 5. Exporter pattern
+### 5. Exporter pattern
 
 Many modules **`use base 'Exporter'`** or **`use Exporter 'import'`** and define **`@EXPORT`** / **`@EXPORT_OK`**. Callers get **symbols** in their namespace.
 
@@ -92,7 +98,7 @@ use List::Util qw( shuffle min max );
 
 ---
 
-## 6. `__END__`, `__DATA__`, and POD
+### 6. `__END__`, `__DATA__`, and POD
 
 **`__END__`** and **`__DATA__`** terminate compilation of the main program; lines after **`__DATA__`** are readable via the **`DATA`** filehandle—useful for **small** bundled fixtures, risky when the embedded blob grows without **versioning**. **`__END__`** applies to the whole file after it appears.
 
@@ -100,7 +106,7 @@ use List::Util qw( shuffle min max );
 
 ---
 
-## Advanced use cases and implementation
+## 2. Advanced concepts
 
 **Dynamic loading:** **`Module::Load::Conditional`**, **`require` with variable**—powerful for **plugins**; **dangerous** if the **module name** comes from **network** input without an **allowlist**.
 
@@ -109,6 +115,15 @@ use List::Util qw( shuffle min max );
 **Circular `use`:** Design **layers** so **low-level** modules never **`use`** **high-level** ones; **dependency cycles** break **initialization** in painful ways.
 
 **Constants:** **`use constant NAME => value`** inlines at compile time—good for **frozen** config; avoid for values that must change at **runtime** without restarting.
+
+---
+
+## 3. Applications and use cases
+
+- **Project `lib/` trees:** **`use lib`** and **`@INC`** order determine which **`JSON`** or **`YAML`** you load—**shadowing** is a **supply-chain** incident when **`./lib`** is **world-writable**.
+- **Plugin and extension hosts:** **`require $pkg`** from **config** demands an **allowlist**—common in **CI** **plugins** and **legacy** **CMS** extensions.
+- **Startup and containers:** **`use`** at **compile** time fails the **whole** process—**missing** **XS** **`.so`** in **slim** images shows up as **exit 255** before **`main`**.
+- **Releases and pinning:** **`use Foo 1.23`** encodes **minimum** **CPAN** versions—keep it aligned with **Carton**/**snapshot** (chapter 6).
 
 ---
 

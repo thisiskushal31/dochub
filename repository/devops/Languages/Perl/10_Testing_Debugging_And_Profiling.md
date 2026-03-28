@@ -8,7 +8,13 @@ Core Perl testing workflows (TAP, `Test::More`, `prove`), debugging (`perl -d`),
 
 ---
 
-## 1. Unit testing with `Test::More`
+---
+
+Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
+
+## 1. Concepts
+
+### 1. Unit testing with `Test::More`
 
 Basic tests are small assertions with readable intent:
 
@@ -29,7 +35,7 @@ Use deterministic inputs and avoid hidden network dependencies in unit tests.
 
 ---
 
-## 2. Running suites with `prove`
+### 2. Running suites with `prove`
 
 `prove` executes TAP tests and aggregates results:
 
@@ -45,7 +51,7 @@ CI should pin Perl and dependency versions so test outcomes are stable across en
 
 ---
 
-## 3. Debugging with `perl -d`
+### 3. Debugging with `perl -d`
 
 The built-in debugger supports breakpoints, stepping, and variable inspection:
 
@@ -57,13 +63,13 @@ For production issues, reproduce locally with the same Perl version, same module
 
 ---
 
-## 4. Coverage and quality gates
+### 4. Coverage and quality gates
 
 Coverage tools (for example `Devel::Cover`) can track lines/branches/subroutines and enforce baseline thresholds for critical paths. Coverage is a signal, not a guarantee; pair it with behavior-oriented tests and edge-case fixtures.
 
 ---
 
-## 5. Profiling hot paths
+### 5. Profiling hot paths
 
 `Devel::NYTProf` is the common profiler for statement-level timing and call costs. Profile release-like builds and realistic workloads; debug-mode assumptions can mislead optimization work.
 
@@ -71,7 +77,7 @@ Coverage tools (for example `Devel::Cover`) can track lines/branches/subroutines
 
 ---
 
-## Advanced use cases and implementation
+## 2. Advanced concepts
 
 **Snapshot testing:** useful for CLI/report output, but normalize locale/time/path differences to prevent flaky diffs.
 
@@ -80,6 +86,15 @@ Coverage tools (for example `Devel::Cover`) can track lines/branches/subroutines
 **Security tests:** include explicit tests for command injection, path traversal, and unsafe deserialization boundaries.
 
 **`$SIG{__DIE__}` / `$SIG{__WARN__}`:** Global handlers change **every** **`die`** / **`warn`** in the process—including inside **`eval`**, **destructors**, and **CPAN** code. They are hard to reason about under **concurrency** and often break **exception** frameworks—prefer **explicit** logging wrappers and **`Carp`** over process-wide magic except in tightly controlled **one-shot** scripts.
+
+---
+
+## 3. Applications and use cases
+
+- **CI gates:** **`prove -lr`** + **`Devel::Cover`** thresholds on **critical** **modules**—**block** merges when **regression** tests for **injection** paths are missing (advanced above).
+- **Production triage:** **`perl -d`** on a **repro** **container** with **same** **`perl -V`** as **prod**—**NYTProf** on **release** builds only, not **DEBUG** **`-DDEBUGGING`** **perl**.
+- **Flaky test hygiene:** **Parallel** **`prove -j`** requires **isolated** **temp** dirs and **no** shared **`$ENV`** **mutation**—classic **CI** **race**.
+- **Release confidence:** **Snapshot** tests for **CLI** **output**—**normalize** **locale**/paths so **pipelines** stay **green**.
 
 ---
 

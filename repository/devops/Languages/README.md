@@ -88,7 +88,7 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | 9 | [**Groovy**](./Groovy/README.md) | Groovy: Jenkinsfile, Gradle build scripts; CI/CD and JVM builds. |
 | 10 | [**CSharp**](./CSharp/README.md) | C#: Azure, .NET, PowerShell, Azure DevOps; Windows-centric DevOps. |
 | 11 | [**Scala**](./Scala/README.md) | Scala: JVM, Spark, Kafka, sbt; data pipelines and streaming. |
-| 12 | [**Perl**](./Perl/README.md) | Perl: legacy sysadmin, cron, Unix automation. |
+| 12 | [**Perl**](./Perl/README.md) | Perl 5: language + CPAN + HTTP/DBI/web/XS integration (16 chapters). |
 | 13 | [**Kotlin**](./Kotlin/README.md) | Kotlin: Gradle DSL, Android, JVM; build scripts and services. |
 | 14 | [**PHP**](./PHP/README.md) | PHP: web apps (WordPress, Laravel), Composer; deploy and operate. |
 | 15 | [**Lua**](./Lua/README.md) | Lua: Nginx/OpenResty, Redis, HAProxy; config and scripting. |

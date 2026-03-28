@@ -4500,91 +4500,119 @@
             "path": "Languages/Perl/01_Introduction_Platform_Toolchain_And_First_Script.md",
             "type": "file",
             "sha": "",
-            "size": 10900
+            "size": 11273
           },
           {
             "name": "02_Scalars_Context_And_Core_Syntax.md",
             "path": "Languages/Perl/02_Scalars_Context_And_Core_Syntax.md",
             "type": "file",
             "sha": "",
-            "size": 7226
+            "size": 8186
           },
           {
             "name": "03_Arrays_Hashes_Lists_And_Control_Flow.md",
             "path": "Languages/Perl/03_Arrays_Hashes_Lists_And_Control_Flow.md",
             "type": "file",
             "sha": "",
-            "size": 6033
+            "size": 6970
           },
           {
             "name": "04_Regular_Expressions_And_Text_Processing.md",
             "path": "Languages/Perl/04_Regular_Expressions_And_Text_Processing.md",
             "type": "file",
             "sha": "",
-            "size": 5913
+            "size": 6820
           },
           {
             "name": "05_Subroutines_Packages_And_Modules.md",
             "path": "Languages/Perl/05_Subroutines_Packages_And_Modules.md",
             "type": "file",
             "sha": "",
-            "size": 6143
+            "size": 7051
           },
           {
             "name": "06_CPAN_Installers_And_Reproducible_Environments.md",
             "path": "Languages/Perl/06_CPAN_Installers_And_Reproducible_Environments.md",
             "type": "file",
             "sha": "",
-            "size": 5000
+            "size": 5895
           },
           {
             "name": "07_References_And_Complex_Data.md",
             "path": "Languages/Perl/07_References_And_Complex_Data.md",
             "type": "file",
             "sha": "",
-            "size": 4018
+            "size": 4892
           },
           {
             "name": "08_Object_Oriented_Perl_And_Design.md",
             "path": "Languages/Perl/08_Object_Oriented_Perl_And_Design.md",
             "type": "file",
             "sha": "",
-            "size": 5288
+            "size": 6185
           },
           {
             "name": "09_Processes_IO_And_Security_Boundaries.md",
             "path": "Languages/Perl/09_Processes_IO_And_Security_Boundaries.md",
             "type": "file",
             "sha": "",
-            "size": 5117
+            "size": 6005
           },
           {
             "name": "10_Testing_Debugging_And_Profiling.md",
             "path": "Languages/Perl/10_Testing_Debugging_And_Profiling.md",
             "type": "file",
             "sha": "",
-            "size": 3894
+            "size": 4790
           },
           {
             "name": "11_CI_Deployment_Cron_And_Operations.md",
             "path": "Languages/Perl/11_CI_Deployment_Cron_And_Operations.md",
             "type": "file",
             "sha": "",
-            "size": 3933
+            "size": 4835
           },
           {
             "name": "12_Use_Cases_Supply_Chain_And_Migration.md",
             "path": "Languages/Perl/12_Use_Cases_Supply_Chain_And_Migration.md",
             "type": "file",
             "sha": "",
-            "size": 3809
+            "size": 4894
+          },
+          {
+            "name": "13_Networking_TLS_HTTP_And_Clients.md",
+            "path": "Languages/Perl/13_Networking_TLS_HTTP_And_Clients.md",
+            "type": "file",
+            "sha": "",
+            "size": 6771
+          },
+          {
+            "name": "14_Databases_DBI_And_SQL_Boundaries.md",
+            "path": "Languages/Perl/14_Databases_DBI_And_SQL_Boundaries.md",
+            "type": "file",
+            "sha": "",
+            "size": 5719
+          },
+          {
+            "name": "15_Web_PSGI_Plack_CGI_And_Frameworks.md",
+            "path": "Languages/Perl/15_Web_PSGI_Plack_CGI_And_Frameworks.md",
+            "type": "file",
+            "sha": "",
+            "size": 6768
+          },
+          {
+            "name": "16_XS_Embedding_And_C_Boundary.md",
+            "path": "Languages/Perl/16_XS_Embedding_And_C_Boundary.md",
+            "type": "file",
+            "sha": "",
+            "size": 5502
           },
           {
             "name": "README.md",
             "path": "Languages/Perl/README.md",
             "type": "file",
             "sha": "",
-            "size": 17681
+            "size": 20139
           }
         ]
       },
@@ -4833,7 +4861,7 @@
         "path": "Languages/README.md",
         "type": "file",
         "sha": "",
-        "size": 17688
+        "size": 17711
       }
     ]
   },

@@ -8,7 +8,13 @@ Opening files and sockets, pipes, `system`, `exec`, `qx//`, `open` modes, taint 
 
 ---
 
-## 1. `open`: two-argument vs three-argument
+---
+
+Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
+
+## 1. Concepts
+
+### 1. `open`: two-argument vs three-argument
 
 **Three-argument** `open` keeps mode and path separate — preferred when paths are influenced by users or configuration:
 
@@ -30,7 +36,7 @@ open my $pipe, '-|', 'grep', '^ERROR', $logfile or die $!;
 
 ---
 
-## 2. `system`, `exec`, and backticks
+### 2. `system`, `exec`, and backticks
 
 `system LIST` with multiple arguments avoids the shell. `system STRING` runs through the shell — only use when you fully control and escape the string.
 
@@ -45,19 +51,19 @@ system( "mv $src $dst" );    # shell injection if tainted
 
 ---
 
-## 3. Taint mode (`-T`)
+### 3. Taint mode (`-T`)
 
 `perl -T` tracks “tainted” data from outside the program and restricts operations that affect the outside world until values are validated. Relevant for setuid wrappers and strict dataflow policies; see **perlsec** for interaction with `PERL5LIB`, `PATH`, and `%ENV`.
 
 ---
 
-## 4. Signals and `%SIG`
+### 4. Signals and `%SIG`
 
 Install small handlers for `TERM`, `INT`, or `PIPE` for graceful shutdown. Keep handlers minimal — set a flag and exit the main loop elsewhere — because signals can interrupt XS code and `eval` in subtle ways.
 
 ---
 
-## 5. `eval`, string code, and sandboxes
+### 5. `eval`, string code, and sandboxes
 
 **`eval { ... }`** (a **block**) compiles the block once and runs it with **exception** capture into **`$@`**—normal control flow when used carefully.
 
@@ -67,7 +73,7 @@ Install small handlers for `TERM`, `INT`, or `PIPE` for graceful shutdown. Keep 
 
 ---
 
-## Advanced use cases and implementation
+## 2. Advanced concepts
 
 **FD leaks:** After `fork`, close unused pipe ends or connections to avoid hangs and descriptor exhaustion.
 
@@ -78,6 +84,15 @@ Install small handlers for `TERM`, `INT`, or `PIPE` for graceful shutdown. Keep 
 **Temporary files:** **`File::Temp`** avoids predictable **`/tmp`** names and handles **template** permissions—still mind **TOCTOU** if another user can write the same directory (shared **`/tmp`** on multi-tenant hosts). For **sensitive** data, use **`tempfile`** with **`UNLINK => 1`** and appropriate **`chmod`**.
 
 **`sysopen`:** Low-level **`O_CREAT`**, **`O_EXCL`**, **`O_NOFOLLOW`** patterns appear in **hardened** file creation—use when **`open`**’s conveniences hide the flags you need (see **perlfunc** / **perlopentut**).
+
+---
+
+## 3. Applications and use cases
+
+- **Setuid and legacy wrappers:** **`-T`** **taint** and **perlsec** rules still appear in **old** **wrappers**—know **`PERL5LIB`** and **`PATH`** interactions before **changing** **infra**.
+- **Cron and batch jobs:** **List-form** **`system`** and **three-arg** **`open`** for **paths** from **config**—**shell** **injection** is the top **Perl** **finding** in **glue** scripts.
+- **Secret injection:** **Vault** → **fd** or **env** scoped to **process**—**argv** and **`ps`** leak **tokens** (advanced above).
+- **Subprocess orchestration:** **`IPC::Open3`** + **timeouts** for **health** **checks** and **CI** **steps** that must not **hang** **workers**.
 
 ---
 

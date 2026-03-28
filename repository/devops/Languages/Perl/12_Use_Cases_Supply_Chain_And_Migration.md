@@ -8,7 +8,11 @@ Where Perl remains a strong engineering choice, how to evaluate CPAN supply-chai
 
 ---
 
-## 1. High-value use cases today
+Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
+
+## 1. Concepts
+
+### 1. High-value use cases today
 
 Perl continues to be effective for:
 
@@ -19,9 +23,11 @@ Perl continues to be effective for:
 
 Use Perl when delivery speed and ecosystem fit outweigh language-fashion concerns.
 
+For **integration** depth—**HTTP/TLS clients**, **DBI**, **PSGI/web** stacks, and **XS/C**—continue with **chapters 13–16** after this one.
+
 ---
 
-## 2. Supply-chain posture for Perl services
+### 2. Supply-chain posture for Perl services
 
 Key controls:
 
@@ -38,7 +44,7 @@ The same SBOM/provenance discipline used for other stacks applies to Perl.
 
 ---
 
-## 3. Migration strategy without big-bang rewrites
+### 3. Migration strategy without big-bang rewrites
 
 Practical migration path:
 
@@ -52,7 +58,7 @@ This reduces risk from dual-write bugs, silent behavior drift, and incident-resp
 
 ---
 
-## 4. Security operations perspective
+### 4. Security operations perspective
 
 Incident playbooks should include Perl one-liner detection in shell history, cron entries, and config-management repos. Attackers and responders both use scripting surfaces heavily.
 
@@ -60,7 +66,7 @@ Avoid embedding long-lived secrets in source. Prefer vault-injected credentials,
 
 ---
 
-## Advanced use cases and implementation
+## 2. Advanced concepts
 
 **Regulated environments:** maintain explicit runtime/module inventories and artifact attestation per release.
 
@@ -69,6 +75,15 @@ Avoid embedding long-lived secrets in source. Prefer vault-injected credentials,
 **Typosquatting hygiene:** In **`cpanfile`** / **`Makefile.PL`**, spell **distribution** names exactly; CI **diff** review for dependency adds should include **author** and **freshness** signals from **MetaCPAN**.
 
 **YAML and config parsers:** Prefer **JSON** or **strict** YAML loaders with **no** arbitrary **bless** / **tag** expansion for **config** that originated outside the trust zone (see chapter 7). Legacy **`Load`/`Dump`**-style one-liners in **ops** repos deserve the same **review** bar as application code.
+
+---
+
+## 3. Applications and use cases
+
+- **Bioinformatics and batch science:** **Stable** **CPAN** + **long** **pipelines**—often **why** Perl **survives**; **pin** **BioPerl**-era stacks like any **service** dependency.
+- **Mail, reporting, and ETL:** **High-throughput** **text**—**ops** focus is **encoding**, **disk**, and **downstream** **queue** **backpressure**, not **micro**-optimizations.
+- **Strangler migrations:** **Interface**-first **rewrites** (see **§3. Migration strategy** above) with **parity** **metrics**—**dual-write** phases need **explicit** **owners** and **rollback**.
+- **Compliance audits:** **SBOM** + **`perl -V`** **artifact** per **release**; **PAUSE**/typosquat **review** when **dependencies** **change** (concepts §2).
 
 ---
 

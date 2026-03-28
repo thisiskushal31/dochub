@@ -8,7 +8,13 @@
 
 ---
 
-## 1. Matching and substitution
+---
+
+Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
+
+## 1. Concepts
+
+### 1. Matching and substitution
 
 **Match:** `m/pattern/` or `/pattern/` when delimiters are clear.
 
@@ -23,7 +29,7 @@ $s =~ s/foo/baz/g;
 
 ---
 
-## 2. Capture groups and context
+### 2. Capture groups and context
 
 **Parentheses** capture; **`$1`**, **`$2`**, … refer to the **last successful** match in the **dynamic** scope—reset carefully in loops.
 
@@ -39,7 +45,7 @@ if ( $line =~ /^(\S+)\s+(\S+)/ ) {
 
 ---
 
-## 3. Line processing: `<>`, `ARGV`, `$.`
+### 3. Line processing: `<>`, `ARGV`, `$.`
 
 **Diamond operator** **`<>`** reads **lines** from **files** named in **`@ARGV`**, or **STDIN** if empty—**classic** Unix filter idiom.
 
@@ -57,7 +63,7 @@ perl -ne 'print if /error/' /var/log/app.log
 
 ---
 
-## 4. Unicode and encoding
+### 4. Unicode and encoding
 
 **Bytes vs characters:** **`length`** on a string counts **characters** according to Perl’s internal **UTF-8** model when the **UTF-8 flag** is set; **raw bytes** from a socket need **`Encode::decode`** before treating as text.
 
@@ -71,7 +77,7 @@ Mishandling encoding produces **mojibake** and **security** issues when **normal
 
 ---
 
-## 5. When **not** to use regex
+### 5. When **not** to use regex
 
 - **HTML/XML:** use **proper** parsers (**HTML::Parser**, **XML::LibXML**) for anything **mutating** structure or **security**-relevant **filtering**.
 - **JSON:** use **`JSON::PP`** or **Cpanel::JSON::XS**—**never** **`eval`** JSON text.
@@ -79,13 +85,22 @@ Mishandling encoding produces **mojibake** and **security** issues when **normal
 
 ---
 
-## Advanced use cases and implementation
+## 2. Advanced concepts
 
 **ReDoS:** **Catastrophic** backtracking can **CPU**-starve a service on **pathological** inputs. **Mitigations:** possessive quantifiers where supported, **atomic** groups, **timeouts** on regex engines (module-dependent), or **avoid** user-controlled **full** regex on **server** hot paths. If users supply patterns, treat them like code: **allowlist** constructs, **length** limits, and **offline** fuzzing.
 
 **Binary protocols:** **`pack`/`unpack`** often beat regex for **fixed** layouts—pair with **`substr`** and **length** checks. See **perlpacktut** for worked examples.
 
 **Parallelism:** **Perl** threads and **fork**-based workers complicate **global** **`$_`** and **regex** state—isolate **workers** or use **MCE**-style pools with clear **IPC**.
+
+---
+
+## 3. Applications and use cases
+
+- **One-liners and filters:** **`perl -ne` / `-pe`** for **ad hoc** **log** slicing—standard in **IR** and **SRE** playbooks; **redact** samples before **paste** to tickets.
+- **SIEM and parsing pipelines:** **ReDoS** is a **production** **DoS** when **regex** sits on **hot** paths—**fuzz** **user** patterns or **denylist** features.
+- **Structured data:** **Do not** “parse” **JSON/HTML** with **regex** for **security** decisions—use **decode_json** / **proper** parsers (chapter 7, 15).
+- **Internationalized apps:** **Normalization** and **encoding** at **ingress** prevent **account** and **search** bugs—apply **Unicode::Normalize** for comparisons (concepts above).
 
 ---
 

@@ -8,7 +8,13 @@ Perl OO fundamentals (`bless`, method dispatch, `UNIVERSAL`), inheritance and me
 
 ---
 
-## 1. `bless` and object identity
+---
+
+Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
+
+## 1. Concepts
+
+### 1. `bless` and object identity
 
 Perl objects are usually references **blessed** into a package (conventionally a hash reference; arrays and other referents are possible but less common).
 
@@ -27,7 +33,7 @@ A method call `$obj->x` dispatches to a subroutine in the object’s class (or a
 
 ---
 
-## 2. `UNIVERSAL`, inheritance, and `SUPER`
+### 2. `UNIVERSAL`, inheritance, and `SUPER`
 
 All classes inherit from **`UNIVERSAL`**: **`$obj->can('method')`**, **`$obj->isa('Some::Class')`**, and **`$obj->DOES('SomeRole')`** (roles when provided by the OO framework) support reflection and guards in tests.
 
@@ -37,7 +43,7 @@ Inheritance uses **`@ISA`**; method lookup walks ancestors according to the effe
 
 ---
 
-## 3. Dynamic hooks: `AUTOLOAD`, `DESTROY`
+### 3. Dynamic hooks: `AUTOLOAD`, `DESTROY`
 
 **`AUTOLOAD`** intercepts calls to undefined methods. Powerful for proxies and adapters; **dangerous** for security review because the callable surface is implicit—pair with **`can`** checks in tests and document allowed method names.
 
@@ -45,13 +51,13 @@ Inheritance uses **`@ISA`**; method lookup walks ancestors according to the effe
 
 ---
 
-## 4. The `class` keyword (Perl 5.38+)
+### 4. The `class` keyword (Perl 5.38+)
 
 Recent Perls ship an experimental/opt-in **class** syntax documented in **perlclass**: fields, **`ADJUST`**, **`FIELD`**, and **`:param`**-style patterns reduce hand-maintained hash keys for **new** code. Treat it like any **perlexperiment** feature: enable only on Perl versions your **CI and production** both support, read **perldelta** for your release, and avoid mixing ad hoc **`bless`** hashes with **`class`** instances in one object graph without a clear boundary.
 
 ---
 
-## 5. Moo, Moose, and Class::Tiny
+### 5. Moo, Moose, and Class::Tiny
 
 - **Moose** — full metaprogramming (attributes, types, roles), higher startup cost; common in large applications.
 - **Moo** — subset of Moose ideas, faster load; typical for services and CLIs.
@@ -61,7 +67,7 @@ Use **one** ecosystem per repository when possible; mixing Moose metaclasses wit
 
 ---
 
-## 6. Design guidance for maintainable Perl OO
+### 6. Design guidance for maintainable Perl OO
 
 - Prefer **composition** and **roles** over deep **`@ISA`** trees for shared behavior.
 - Keep constructors explicit; validate input at object boundaries (config files, RPC payloads).
@@ -71,13 +77,22 @@ Use **one** ecosystem per repository when possible; mixing Moose metaclasses wit
 
 ---
 
-## Advanced use cases and implementation
+## 2. Advanced concepts
 
 **Plugin systems:** **`require $module`** or **`Module::Load`** with a module name from the network requires an **allowlist**—dynamic **`AUTOLOAD`** plus dynamic loading is a high-risk combination.
 
 **Performance:** Method dispatch is rarely the bottleneck next to **I/O**, **regex**, and **XS** boundaries; profile before micro-optimizing call paths.
 
 **Threads:** Perl **ithreads** clone interpreters; sharing **Moose** objects across threads is uncommon and fragile—prefer **processes** or external workers for concurrency.
+
+---
+
+## 3. Applications and use cases
+
+- **CPAN services and CLIs:** **Moo**/**Moose** **attrs** and **roles** dominate **maintainable** **internals**—**standardize** one stack per **repo** for **onboarding**.
+- **Web apps:** **Mojolicious**/**Dancer2** **controllers** are **OO**—**narrow** **public** **methods** and **avoid** **`AUTOLOAD`** on **request** paths you **audit**.
+- **Serialization boundaries:** **API** **JSON** must not **bless** into **arbitrary** classes—**thaw**/**YAML** **tags** are **object-injection** class (chapters 7, 12).
+- **`class` keyword (new Perls):** Pilot **only** when **CI** and **prod** **Perl** versions match—**perldelta** + **perlexperiment** in **release** notes.
 
 ---
 

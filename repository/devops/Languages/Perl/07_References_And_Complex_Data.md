@@ -8,7 +8,13 @@
 
 ---
 
-## 1. Taking references
+---
+
+Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
+
+## 1. Concepts
+
+### 1. Taking references
 
 The **backslash** operator creates a **reference** to an existing scalar, array, or hash.
 
@@ -27,7 +33,7 @@ my $hr = { a => 1, b => 2 };
 
 ---
 
-## 2. Dereferencing
+### 2. Dereferencing
 
 **Syntax** options exist—pick one style per codebase for **readability**:
 
@@ -47,7 +53,7 @@ $ar->[0] = 7;
 
 ---
 
-## 3. Nested structures
+### 3. Nested structures
 
 **Array of arrays** (tables), **hash of hashes** (configs), **mixed** trees—**references** are the **glue**.
 
@@ -62,7 +68,7 @@ my $rows = [
 
 ---
 
-## 4. Copying vs aliasing
+### 4. Copying vs aliasing
 
 **Slices** and **`@_`** **alias**—**subtle** **mutation** bugs when passing **hash**/**array** **elements**.
 
@@ -72,7 +78,7 @@ my $rows = [
 
 ---
 
-## Advanced use cases and implementation
+## 2. Advanced concepts
 
 **JSON/YAML:** **`decode_json`** returns **nested** **refs**—**validate** **types** before **dereferencing** in **security** paths. Prefer **`JSON::PP`** (core) or **`Cpanel::JSON::XS`** where performance matters; never **`eval`** JSON.
 
@@ -83,6 +89,15 @@ my $rows = [
 **Cycles:** **Circular** **references** prevent **refcount** **GC** from freeing—**weaken** with **`Scalar::Util::weaken`** in **cache** graphs.
 
 **Typeglobs** `*foo` — **symbol table** entries bundling **SCALAR**, **ARRAY**, **HASH**, **CODE**—**legacy** **OO** and **`local *foo`** tricks; **read** **old** code, **avoid** writing new **glob** magic without **strong** reason.
+
+---
+
+## 3. Applications and use cases
+
+- **REST/JSON APIs:** **`decode_json`** → **nested** **refs**—**validate** **`ref`** and **structure** before **dereferencing** in **auth** and **payment** paths.
+- **Config and feature flags:** **Autovivification** from **untrusted** keys is **DoS-by-memory**—use **`exists`** / **`no autovivification`** (advanced above) for **optional** subtrees.
+- **Shared caches:** **`weaken`** **cycles** in **in-process** **graphs**; **Storable** **thaw** only **trusted** **blobs** in **Redis**/**memcached** **values**.
+- **Observability:** **`Data::Dumper`** in **debug** logs—**redact** **secrets**; never **round-trip** **Dumper** output as **data**.
 
 ---
 

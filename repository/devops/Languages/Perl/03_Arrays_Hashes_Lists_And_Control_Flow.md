@@ -8,7 +8,13 @@
 
 ---
 
-## 1. Lists and arrays
+---
+
+Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
+
+## 1. Concepts
+
+### 1. Lists and arrays
 
 A **list** is a sequence of scalars written in parentheses; an **array** is a named container of scalars in order.
 
@@ -28,7 +34,7 @@ my $n = @nums;
 
 ---
 
-## 2. Hashes (associative arrays)
+### 2. Hashes (associative arrays)
 
 A **hash** maps string keys to scalars (values can be references). **Fat comma** `=>` is often used for readability; it quotes bareword keys on the left.
 
@@ -49,7 +55,7 @@ exists $cfg{ssl} or $cfg{ssl} = 1;
 
 ---
 
-## 3. Slices
+### 3. Slices
 
 **Array slice** — multiple indices from one array:
 
@@ -67,7 +73,7 @@ Slices return **lists**; context rules still apply when you assign into scalars 
 
 ---
 
-## 4. Control flow
+### 4. Control flow
 
 **`if` / `unless` / `else`**, **`elsif`** (note spelling). **Postfix** forms save lines but hurt **coverage** readability—pick team style.
 
@@ -83,7 +89,7 @@ do_something() if $ready;
 
 ---
 
-## 5. `map` and `grep`
+### 5. `map` and `grep`
 
 **`grep`** filters a list; **`map`** transforms it. Both set **`$_`** in the block—lexical **`my`** inside blocks avoids accidental outer **`$_`** clobbering in nested code.
 
@@ -99,7 +105,7 @@ my @lens = map { length $_ } @lines;
 
 ---
 
-## 6. `sort`
+### 6. `sort`
 
 **`sort`** defaults to **string** sort. **Numeric** sort requires an explicit block or **`sort { $a <=> $b }`**.
 
@@ -111,7 +117,7 @@ my @n = sort { $a <=> $b } ( 10, 2, 30 );
 
 ---
 
-## 7. `die`, `exit`, `warn`, and `Carp`
+### 7. `die`, `exit`, `warn`, and `Carp`
 
 **`die`** throws an exception (unless trapped); in a **main script** it usually exits **non-zero**—pair with a clear **`$!`** or **`$@`** message for **ops** (chapter 11). **`exit N`** is explicit; document **N** in runbooks when not **0** or **1**.
 
@@ -121,13 +127,22 @@ my @n = sort { $a <=> $b } ( 10, 2, 30 );
 
 ---
 
-## Advanced use cases and implementation
+## 2. Advanced concepts
 
 **Shared mutable state:** **Global** arrays and hashes in **persistent** processes (daemons, **FCGI**) are **concurrency** hazards unless access is **serialized**—use **locks**, **job queues**, or **process** pools with **one** writer.
 
 **Storable / serialization:** **`freeze`/`thaw`**-style modules appear in **cache** layers—**never** **`eval`** thawed blobs from **untrusted** sources (remote code execution class).
 
 **Algorithm audits:** **`map`/`grep`** chains are clear to **Perl** natives and opaque to some **static** tools—document intent in **security**-sensitive paths.
+
+---
+
+## 3. Applications and use cases
+
+- **ETL and log aggregation:** **`map`/`grep`/`sort`** on **in-memory** lists—watch **RAM** on large files; **stream** with **`while (<>)`** (chapter 4) for **multi-GB** logs.
+- **CLI tools:** **`shift @ARGV`**, **`Getopt::Long`**-style patterns, and **`die`/`Carp`** (this chapter) for **user-facing** errors in **ops** scripts.
+- **Persistent workers:** **FCGI**/**Plack** workers (chapter 15) must not share **mutable** **global** hashes without **locking**—**race** bugs look like “random” **corruption**.
+- **Caching and serialization:** **`Storable`**/**thaw** in **cache** layers—**never** thaw **untrusted** blobs (chapter 7); **`eval` string** on **user-built** list code is **RCE** (chapter 9).
 
 ---
 

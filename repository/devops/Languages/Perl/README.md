@@ -10,6 +10,16 @@ People still use Perl where **legacy** and **throughput of text** matter: cron a
 
 This handbook is written to stand alone: each chapter explains **what** a topic is, **why** it matters in practice, and **how** to apply it, from first ideas through advanced mechanics and whole-engineering angles (software engineering, operations, reliability, security). Explanations are **text first**; **Perl** appears in fenced blocks only where syntax or behavior needs a concrete anchor. Optional figures live under `../../Assets/Languages/Perl/` when they add more than text alone.
 
+### Chapter structure
+
+Every numbered chapter file **`01`–`16`** uses the same **three-part body** (before **`## References`**):
+
+1. **Concepts** — definitions, syntax, and mechanics you need to read code and docs (`###` subsections under **`## 1. Concepts`**).
+2. **Advanced concepts** — edge cases, interactions with other layers (XS, locale, concurrency), and deeper implementation notes (**`## 2. Advanced concepts`**).
+3. **Applications and use cases** — **DevOps**, **security**, **CI/cron**, **incident response**, and **migration** scenarios where the chapter’s ideas show up in real work (**`## 3. Applications and use cases`**).
+
+**References** stay last: upstream **Perldoc** / **MetaCPAN** only, so goals and guardrails remain in the narrative.
+
 ### Where official documentation lives
 
 Core language and standard-library **POD** (plain old documentation) is distributed with the interpreter. You can read it three ways: the **`perldoc`** command (and **`man`** on many Unix installs), the **[Perldoc Browser](https://perldoc.perl.org/)** (HTML, search, and a **release menu** so you can match production’s Perl), and **`perldoc -f`** / **`perldoc -v`** for built-in functions and variables. **Third-party CPAN modules** are indexed on **[MetaCPAN](https://metacpan.org/)**; the browser and `perldoc` are authoritative for **core** pods bundled with your `perl` binary.
@@ -34,6 +44,7 @@ Four ideas unlock most reading:
 - **Why** teams still depend on it and which **risks** (supply chain, injection, legacy patterns) show up in review.
 - **How** to write, test, and ship scripts with predictable behavior in **cron**, **CI**, and **containers**.
 - **Where** Perl appears in real engineering (automation, parsing, glue, legacy services) and what **security** and **operations** reviews should check: **`system`/`exec`**, **`open`**, **`eval`**, **`$ENV`**, **`@INC`**, **XS**, and **file** permissions.
+- **How** Perl sits in **full-stack** and **integration** roles: **TLS/HTTP clients**, **DBI** and **SQL** boundaries, **PSGI/Plack** and **web frameworks**, and the **XS/C** boundary when things **segfault** or **ABI**-drift.
 
 ### Supplementary Perldoc index ([perldoc.perl.org](https://perldoc.perl.org/))
 
@@ -65,7 +76,8 @@ The lists below mirror the **table of contents** inside [perl](https://perldoc.p
 
 - [perlre](https://perldoc.perl.org/perlre), [perlrebackslash](https://perldoc.perl.org/perlrebackslash), [perlrecharclass](https://perldoc.perl.org/perlrecharclass), [perlreref](https://perldoc.perl.org/perlreref).
 - [perluniintro](https://perldoc.perl.org/perluniintro), [perlunicode](https://perldoc.perl.org/perlunicode), [perlunicook](https://perldoc.perl.org/perlunicook), [perlunitut](https://perldoc.perl.org/perlunitut), [perlunifaq](https://perldoc.perl.org/perlunifaq).
-- [perlopentut](https://perldoc.perl.org/perlopentut), [perlipc](https://perldoc.perl.org/perlipc), [perlfork](https://perldoc.perl.org/perlfork), [perlthrtut](https://perldoc.perl.org/perlthrtut).
+- [perlopentut](https://perldoc.perl.org/perlopentut), [perlipc](https://perldoc.perl.org/perlipc), [perlfork](https://perldoc.perl.org/perlfork), [perlthrtut](https://perldoc.perl.org/perlthrtut) — **ithreads** tutorial; prefer **fork** + **IPC** or **event** loops for many **ops** designs.
+- [Parallel::ForkManager](https://metacpan.org/pod/Parallel::ForkManager) — **fork**-pool **workers** for **batch** jobs (MetaCPAN).
 
 **Reference manual — modules, POD, objects**
 
@@ -90,7 +102,7 @@ The lists below mirror the **table of contents** inside [perl](https://perldoc.p
 
 **Platform- and language-specific pods** — Listed under [Platform-Specific](https://perldoc.perl.org/perl#Platform-Specific) and [Language-Specific](https://perldoc.perl.org/perl#Language-Specific) in [perl](https://perldoc.perl.org/perl) (e.g. [perlwin32](https://perldoc.perl.org/perlwin32), [perllinux](https://perldoc.perl.org/perllinux)).
 
-Read chapters **1 → 12** in order unless you already know the basics and jump to a topic.
+Read chapters **1 → 12** for the **core language** track, then **13 → 16** for **networking, databases, web serving, and XS/C**—or jump by topic if you already know the basics.
 
 ```bash
 perl -v
@@ -117,21 +129,25 @@ The second line prints a compact version line useful for logs and support ticket
 | 10 | [Testing, debugging, and profiling](./10_Testing_Debugging_And_Profiling.md) | Run **`prove`**, write **`Test::More`** tests, profile hot paths in production-like builds. |
 | 11 | [CI, deployment, cron, and operations](./11_CI_Deployment_Cron_And_Operations.md) | Make scripts **cron-safe**, container-safe, and observable (exit codes, logging, locking). |
 | 12 | [Use cases, supply chain, and migration](./12_Use_Cases_Supply_Chain_And_Migration.md) | Place Perl in a **modern** stack, plan **migration**, and review **SBOM**-style dependency risk. |
+| 13 | [Networking, TLS, HTTP clients, and outbound glue](./13_Networking_TLS_HTTP_And_Clients.md) | Use **sockets**, **TLS**, and **HTTP** clients with correct **verification**, **timeouts**, and **SSRF** awareness. |
+| 14 | [Databases, DBI, and SQL boundaries](./14_Databases_DBI_And_SQL_Boundaries.md) | Use **DBI** safely (**placeholders**, **transactions**, **errors**), tune **connections**, and avoid **injection**. |
+| 15 | [Web serving: PSGI, Plack, CGI, FastCGI, `mod_perl`, and frameworks](./15_Web_PSGI_Plack_CGI_And_Frameworks.md) | Choose and operate **CGI** vs **PSGI**, deploy **Plack** apps, and review **Mojolicious** / **Dancer2** in production. |
+| 16 | [XS, embedding, `FFI::Platypus`, and the C boundary](./16_XS_Embedding_And_C_Boundary.md) | Reason about **XS** **ABI**, **embedding**, **crashes**, and **FFI** vs hand-written **glue**. |
 
 ### Deep-study workflow (body-first)
 
-1. Read each chapter body once for concepts and terminology.
+1. Within each chapter, read **§1 Concepts**, then **§2 Advanced concepts**, then **§3 Applications and use cases**—that order matches how the body is written.
 2. Re-read and extract invariants, failure modes, and operational constraints (context, `@INC`, encoding, subprocess boundaries).
-3. Cross-link chapters: syntax and data → modules and CPAN → I/O and security → testing and operations → supply chain.
+3. Cross-link chapters: syntax and data → modules and CPAN → I/O and security → testing and operations → supply chain → **HTTP/TLS** (13) → **DBI** (14) → **web** process models (15) → **XS/C** when debugging native code (16).
 4. Only then use Perldoc and MetaCPAN for exhaustive tables, edge cases, and **release-specific** behavior; pick the **same** Perl version in the browser as in production.
 
 This keeps the handbook as the primary source while references stay optional validation.
 
-### Scope note (what this track is not)
+### Part II — integration depth (chapters 13–16)
 
-- **Perl 5 only** — **[Raku](https://www.raku.org/)** (historically “Perl 6”) is a different language and toolchain; it is out of scope here.
-- **XS and the C API** — covered only as **risk** (ABI, supply chain, crashes); authoring extensions belongs in **perlxstut** / **perlxs** / **perlguts**.
-- **Embedded runtimes** (**`mod_perl`**, **`perlembed`**, custom **`libperl`**) — mentioned where they affect **ops** (lifetime, `@INC`); not a full embedding guide.
+Chapters **13–16** are the **deep dive** into how Perl is used as **network client**, **database client**, **HTTP application**, and **C extension** host. They follow the same **prose-first** rule: narrative and guardrails in the chapter body, **References** for upstream POD and MetaCPAN.
+
+**Explicitly not covered here:** **[Raku](https://www.raku.org/)** (a different language and toolchain). For **SQL dialects** and engine operations beyond **DBI** usage, use your engine docs and companion database material.
 
 ---
 

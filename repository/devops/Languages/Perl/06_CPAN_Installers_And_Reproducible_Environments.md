@@ -8,7 +8,13 @@ How CPAN distributions are published and resolved, practical installer workflows
 
 ---
 
-## 1. What CPAN actually ships
+---
+
+Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
+
+## 1. Concepts
+
+### 1. What CPAN actually ships
 
 CPAN publishes **distributions** (`.tar.gz`) rather than single modules. A distribution usually contains:
 
@@ -21,7 +27,7 @@ One distribution can contain many modules, and names do not always map 1:1 with 
 
 ---
 
-## 2. Installer choices
+### 2. Installer choices
 
 | Tool | Typical use |
 |------|-------------|
@@ -35,7 +41,7 @@ In regulated or air-gapped setups, installers should target internal mirrors, no
 
 ---
 
-## 3. Local dependency roots (`local::lib`)
+### 3. Local dependency roots (`local::lib`)
 
 `local::lib` lets non-root users install modules into an isolated tree and prepend it to module lookup.
 
@@ -48,7 +54,7 @@ This is standard for shared CI workers and user-space development shells.
 
 ---
 
-## 4. Reproducibility patterns
+### 4. Reproducibility patterns
 
 For repeatable builds, pin exact dependency versions:
 
@@ -64,7 +70,7 @@ The same lock input should drive local, CI, and release builds to prevent “wor
 
 ---
 
-## 5. XS vs pure-Perl implications
+### 5. XS vs pure-Perl implications
 
 Pure-Perl modules are source-only and broadly portable. XS modules compile native code against Perl headers and platform libraries, so:
 
@@ -74,7 +80,7 @@ Pure-Perl modules are source-only and broadly portable. XS modules compile nativ
 
 ---
 
-## Advanced use cases and implementation
+## 2. Advanced concepts
 
 **Private CPAN (DarkPAN):** internal module publishing with authenticated mirror endpoints and review gates.
 
@@ -83,6 +89,15 @@ Pure-Perl modules are source-only and broadly portable. XS modules compile nativ
 **Immutable runtime:** never run ad hoc `cpan install` on production hosts; build dependencies into deploy artifacts.
 
 **Vulnerability scanning:** Track **native** libraries linked by **XS** (OpenSSL, libxml2, etc.) the same way you track the Perl layer—**`META.json`** / **`MYMETA`** record some deps; **SBOM** tools and **distro** security feeds complement **`cpan-outdated`**-style workflows.
+
+---
+
+## 3. Applications and use cases
+
+- **CI images:** **`cpanm`** + **`local::lib`** or **Carton** **snapshot** in **Docker** **build** stages—**fail** the build on **`make test`** failures, not **`--notest`** in **prod** paths.
+- **Air-gapped and regulated orgs:** **Pinto** / **DarkPAN** + **internal** **TLS** trust (chapter 13)—no **surprise** **`HTTP_PROXY`** to the **public** index.
+- **Distro vs CPAN mixing:** **`apt install libfoo-perl`** plus **`cpanm`** into **`/usr/local`** creates **dual** installs—**scanner** false positives and **runtime** **shadowing**.
+- **Upgrade windows:** **Perl** **minor** bumps require **XS** **rebuild**—schedule **maintenance** with **chapter 16** checklist.
 
 ---
 
