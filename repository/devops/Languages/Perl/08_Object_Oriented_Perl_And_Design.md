@@ -1,16 +1,16 @@
-# Object-oriented Perl and larger design
+# Object-oriented Perl and design
 
 [← Back to Perl](./README.md)
 
 ## What this chapter covers
 
-Perl OO fundamentals (`bless`, method dispatch, inheritance), practical object design in production code, and modern object systems (Moo/Moose). It also covers risky dynamic hooks (`AUTOLOAD`, `DESTROY`) from a maintenance and security perspective.
+Perl OO fundamentals (`bless`, method dispatch, `UNIVERSAL`), inheritance and method resolution, dynamic hooks (`AUTOLOAD`, `DESTROY`), and modern systems (**Moo**, **Moose**, **Class::Tiny**). It also covers the **`class` / field** syntax in recent Perl (see **perlclass**) as an optional, core-backed alternative to hand-rolled hashes. Design emphasis: composition and shallow hierarchies. Security emphasis: hidden dispatch surfaces, destructor ordering, and deserializing untrusted data.
 
 ---
 
 ## 1. `bless` and object identity
 
-Perl objects are usually references blessed into a package:
+Perl objects are usually references **blessed** into a package (conventionally a hash reference; arrays and other referents are possible but less common).
 
 ```perl
 package Point;
@@ -23,120 +23,69 @@ sub new {
 sub x { $_[0]->{x} }
 ```
 
-A method call `$obj->x` dispatches to a subroutine in the object’s class (or parents) with `$obj` as the first argument.
+A method call `$obj->x` dispatches to a subroutine in the object’s class (or ancestors) with the invocant as the first argument. **`__PACKAGE__`** is useful when logging or when the constructor receives a subclass name as `$class`.
 
 ---
 
-## 2. Inheritance, `@ISA`, and `SUPER`
+## 2. `UNIVERSAL`, inheritance, and `SUPER`
 
-Inheritance uses `@ISA`; method lookup walks ancestors according to method resolution rules.
+All classes inherit from **`UNIVERSAL`**: **`$obj->can('method')`**, **`$obj->isa('Some::Class')`**, and **`$obj->DOES('SomeRole')`** (roles when provided by the OO framework) support reflection and guards in tests.
 
-`$self->SUPER::method(...)` calls the parent implementation directly. Keep inheritance shallow and behavior explicit; deep trees are difficult to reason about under change.
+Inheritance uses **`@ISA`**; method lookup walks ancestors according to the effective **method resolution order** (historically depth-first; **`use mro 'c3'`** changes resolution for multiple inheritance—prefer **composition** or **roles** in new code to avoid MRO surprises).
+
+**`$self->SUPER::method(...)`** calls the next implementation in the parent chain. Keep inheritance **shallow**; deep trees are hard to change under pressure.
 
 ---
 
 ## 3. Dynamic hooks: `AUTOLOAD`, `DESTROY`
 
-`AUTOLOAD` can intercept unknown methods and implement late-bound APIs. It is useful for adapters and proxies, but it also hides call surfaces from readers and security reviewers.
+**`AUTOLOAD`** intercepts calls to undefined methods. Powerful for proxies and adapters; **dangerous** for security review because the callable surface is implicit—pair with **`can`** checks in tests and document allowed method names.
 
-`DESTROY` runs at object teardown. Keep it minimal and side-effect-light; global destruction order is not deterministic enough for complex cleanup logic.
-
----
-
-## 4. Moo, Moose, and class tooling
-
-- **Moose**: rich metaprogramming, roles, types, bigger startup cost.
-- **Moo**: lighter, faster startup, common for CLI/services.
-- **Class::Tiny**: minimal attribute boilerplate.
-
-Use one object ecosystem per repository when possible; mixed paradigms create onboarding and debugging friction.
+**`DESTROY`** runs when the last reference to an object is reclaimed. Keep it minimal: no heavy I/O, no assumptions about other objects still being alive during **global destruction** (order is not reliable). Exceptions in **`DESTROY`** are especially painful—log and swallow or rethrow only with great care.
 
 ---
 
-## 5. Design guidance for maintainable Perl OO
+## 4. The `class` keyword (Perl 5.38+)
 
-- Prefer composition/roles over inheritance for shared behavior.
-- Keep constructors explicit; validate input near object boundaries.
-- Avoid magic globals in methods; pass dependencies (logger, config, clients) explicitly.
-- Expose narrow public methods and keep internal state private by convention.
+Recent Perls ship an experimental/opt-in **class** syntax documented in **perlclass**: fields, **`ADJUST`**, **`FIELD`**, and **`:param`**-style patterns reduce hand-maintained hash keys for **new** code. Treat it like any **perlexperiment** feature: enable only on Perl versions your **CI and production** both support, read **perldelta** for your release, and avoid mixing ad hoc **`bless`** hashes with **`class`** instances in one object graph without a clear boundary.
 
 ---
 
-## Advanced use cases and implementation
+## 5. Moo, Moose, and Class::Tiny
 
-**Serialization safety:** never deserialize untrusted object payloads into executable class contexts without strict class allowlists.
+- **Moose** — full metaprogramming (attributes, types, roles), higher startup cost; common in large applications.
+- **Moo** — subset of Moose ideas, faster load; typical for services and CLIs.
+- **Class::Tiny** — minimal attribute generator for small objects.
 
-**Plugin systems:** dynamic loading plus OO can work well, but module names must come from validated allowlists, not raw user input.
-
-**Performance:** method calls are cheap enough for most service code; optimize data structures and I/O first.
-
----
-
-## References
-
-- [perlobj](https://perldoc.perl.org/perlobj)
-- [perlboot](https://perldoc.perl.org/perlboot)
-- [modules](https://perldoc.perl.org/modules)
-# Object-oriented Perl and larger design
-
-[← Back to Perl](./README.md)
-
-## What this chapter covers
-
-Blessing references, basic OO patterns, `DESTROY`, `UNIVERSAL`, and CPAN object systems (Moo, Moose, Class::Tiny). Design emphasis: composition over deep inheritance. Security emphasis: `AUTOLOAD`, destructor side effects, and deserializing untrusted data.
+Use **one** ecosystem per repository when possible; mixing Moose metaclasses with raw **`bless`** in the same layer confuses readers and static tooling.
 
 ---
 
-## 1. Blessing and method dispatch
+## 6. Design guidance for maintainable Perl OO
 
-`bless` ties a reference (usually a hash) to a package name. Methods are subroutines in that package, conventionally invoked as `$obj->method` with `$self` as the first argument.
-
-```perl
-package Point;
-
-sub new {
-    my ($class, $x, $y) = @_;
-    bless { x => $x, y => $y }, $class;
-}
-
-sub x { $_[0]->{x} }
-```
-
-`$obj->method()` resolves through `@ISA` (inheritance) and `UNIVERSAL`.
-
----
-
-## 2. Inheritance and `SUPER`
-
-`@ISA` lists parent packages; method lookup walks the tree. `$self->SUPER::method` calls the parent implementation. Method resolution order (MRO) matters when using multiple inheritance — prefer roles or composition in new designs.
-
----
-
-## 3. `DESTROY` and `AUTOLOAD`
-
-`DESTROY` runs when the last reference to an object goes away. Exceptions inside `DESTROY` are hazardous; keep destructors minimal. During global destruction, object teardown order is not fully predictable — avoid relying on peer objects still existing.
-
-`AUTOLOAD` catches missing method names — flexible for lazy APIs, difficult for security review if arbitrary names can trigger behavior.
-
----
-
-## 4. Moo, Moose, and Class::Tiny
-
-Moose provides a full metaobject protocol (attributes, types, roles) with heavier startup cost. Moo is a lighter subset, common for CLIs. Class::Tiny offers minimal attribute generators. Pick one ecosystem per codebase; mixing Moose with hand-rolled `bless` in one object graph confuses maintainers.
+- Prefer **composition** and **roles** over deep **`@ISA`** trees for shared behavior.
+- Keep constructors explicit; validate input at object boundaries (config files, RPC payloads).
+- Avoid magic globals in methods; inject **logger**, **clients**, and **clock** abstractions for testability.
+- Expose a **narrow** public method set; keep instance state **private by convention** (hash keys or lexical fields).
+- Serialization (**JSON**, **Sereal**, **Storable**): never **`eval`** thawed blobs from untrusted sources; validate type tags and schema versions.
 
 ---
 
 ## Advanced use cases and implementation
 
-**Roles vs inheritance:** Prefer `with 'SomeRole'` composition over deep `@ISA` trees to reduce fragile base-class coupling.
+**Plugin systems:** **`require $module`** or **`Module::Load`** with a module name from the network requires an **allowlist**—dynamic **`AUTOLOAD`** plus dynamic loading is a high-risk combination.
 
-**Serialization:** Storable, Sereal, JSON — never `eval` serialized blobs from untrusted sources; validate type tags and versions before thawing.
+**Performance:** Method dispatch is rarely the bottleneck next to **I/O**, **regex**, and **XS** boundaries; profile before micro-optimizing call paths.
 
-**Threads:** Moose immutability helps read-only shared data, but Perl threads are uncommon; most concurrent designs use processes or external workers.
+**Threads:** Perl **ithreads** clone interpreters; sharing **Moose** objects across threads is uncommon and fragile—prefer **processes** or external workers for concurrency.
 
 ---
 
 ## References
 
-- [perlobj](https://perldoc.perl.org/perlobj)
-- [perlboot](https://perldoc.perl.org/perlboot)
+- [perlobj](https://perldoc.perl.org/perlobj) — objects, classes, methods.
+- [perlootut](https://perldoc.perl.org/perlootut) — OO tutorial (supersedes the old **perlboot** stub).
+- [perlclass](https://perldoc.perl.org/perlclass) — `class` syntax and fields (version-gated).
+- [perlexperiment](https://perldoc.perl.org/perlexperiment) — experimental features.
+- [UNIVERSAL](https://perldoc.perl.org/UNIVERSAL) — `isa`, `can`, `DOES`.
+- [Moo](https://metacpan.org/pod/Moo), [Moose](https://metacpan.org/pod/Moose), [Class::Tiny](https://metacpan.org/pod/Class::Tiny) — popular CPAN OO layers (module POD on MetaCPAN).

@@ -4,7 +4,7 @@
 
 ## What this chapter covers
 
-**Arrays** (`@foo`), **hashes** (`%bar`), **list assignment**, **slices**, **`foreach`**, **`while`**, **`map`**, **`grep`**, **`sort`**, and control-flow idioms used in production scripts. Engineering focus: **memory** and **algorithm** choices on large files; **security** focus: never **`eval`** a list built from untrusted input.
+**Arrays** (`@foo`), **hashes** (`%bar`), **list assignment**, **slices**, **`foreach`**, **`while`**, **`map`**, **`grep`**, **`sort`**, control-flow idioms, and **failure reporting** (`die`, **`Carp`**, basic **`eval { }`** patterns). Engineering focus: **memory** and **algorithm** choices on large files; **security** focus: never **`eval`** a **string** built from untrusted input (chapter 9).
 
 ---
 
@@ -43,7 +43,9 @@ exists $cfg{ssl} or $cfg{ssl} = 1;
 
 **Iteration** order was historically undefined for hashes; modern Perls have **insertion-ordered** keys for standard hashes—**do not** rely on order for **security** decisions unless you document the Perl **version** floor.
 
-**`keys`**, **`values`**, and **`each`** (deprecated style in new code—prefer explicit iteration) walk the hash.
+**`keys`**, **`values`**, and **`each`** walk the hash. For **new** code, prefer **`keys %hash`** in an explicit loop—**`each`** in **`while`** has had edge cases across versions, and mixing **`each`** with **`delete`** while iterating is a classic footgun.
+
+**`delete` / `exists`:** **`delete $hash{key}`** removes the entry; **`exists`** tests key presence without creating **autovivified** structures—important before assigning into nested configs built from **untrusted** keys (chapter 7).
 
 ---
 
@@ -93,6 +95,8 @@ my @lens = map { length $_ } @lines;
 
 **Performance:** multiple passes over huge **arrays** cost **RAM** if you materialize everything—**stream** with **`while (<>)`** when files are large (chapter 4).
 
+**List::Util** (core) supplies **`first`**, **`any`**, **`all`**, **`pairgrep`**, **`shuffle`**, etc.—prefer these over hand-rolled **`grep`** / **`for`** when the intent is a single element or a boolean, so reviews see standard names.
+
 ---
 
 ## 6. `sort`
@@ -104,6 +108,16 @@ my @n = sort { $a <=> $b } ( 10, 2, 30 );
 ```
 
 **Locale**-aware sorting uses **`sort` with `use locale`**—be explicit when **compliance** requires language rules.
+
+---
+
+## 7. `die`, `exit`, `warn`, and `Carp`
+
+**`die`** throws an exception (unless trapped); in a **main script** it usually exits **non-zero**—pair with a clear **`$!`** or **`$@`** message for **ops** (chapter 11). **`exit N`** is explicit; document **N** in runbooks when not **0** or **1**.
+
+**`Carp`** (**`croak`**, **`confess`**, **`cluck`**) reports failures from a **library’s caller** perspective—prefer **`croak`** over bare **`die`** in reusable modules so stack traces point at the **call site**, not deep internals.
+
+**Exception patterns:** **`eval { ... }`** (block form) catches **`die`** into **`$@`**—idiomatic but easy to get wrong (localize **`$@`**, rethrow after cleanup). CPAN stacks often standardize on **[Try::Tiny](https://metacpan.org/pod/Try::Tiny)** or, on very new Perls, core **`try`/`catch`** where enabled—pick **one** style per repo for reviews.
 
 ---
 
@@ -121,5 +135,8 @@ my @n = sort { $a <=> $b } ( 10, 2, 30 );
 
 - [perldata](https://perldoc.perl.org/perldata)
 - [perlsyn](https://perldoc.perl.org/perlsyn)
-- [perllol](https://perldoc.perl.org/perllol) — lists of lists
-- [perlfunc](https://perldoc.perl.org/perlfunc) — `map`, `grep`, `sort`
+- [perllol](https://perldoc.perl.org/perllol) — lists of lists.
+- [perlfunc](https://perldoc.perl.org/perlfunc) — `map`, `grep`, `sort`, `keys`, `each`.
+- [List::Util](https://perldoc.perl.org/List::Util) — `first`, `any`, `all`, `shuffle`, etc.
+- [Carp](https://perldoc.perl.org/Carp) — `croak`, `confess`, caller-aware errors.
+- [Try::Tiny](https://metacpan.org/pod/Try::Tiny) — small exception helper (optional; MetaCPAN).

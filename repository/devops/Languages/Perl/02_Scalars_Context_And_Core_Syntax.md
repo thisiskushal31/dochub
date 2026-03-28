@@ -68,6 +68,10 @@ if ( $a eq $b ) { }   # string
 
 Mixing them silently **coerces** types in ways that confuse audits—pick the right family explicitly.
 
+**`defined` and `//`:** Use **`defined $x`** when **`0`** or **`''`** are legitimate values; **`$x // $default`** (defined-or) avoids the classic **`||`** bug where **`0`** is treated as missing.
+
+**`chomp`:** Removes trailing record separators from **`$_`** or a named scalar—almost always call it on **input lines** before parsing so comparisons and hashes behave predictably.
+
 ---
 
 ## 4. Operators (overview)
@@ -129,7 +133,9 @@ my @toks = qw{ one two three };
 
 ## Advanced use cases and implementation
 
-**Unicode and bytes:** Source file **encoding**, **`use utf8`**, and **`binmode`** on handles are separate concerns. **Security** reviews for web and IPC code should verify **normalization** and **byte** vs **character** boundaries—**length** in bytes ≠ **length** in graphemes.
+**Unicode and bytes:** Source file **encoding**, **`use utf8`**, and **`binmode`** on handles are separate concerns. **Security** reviews for web and IPC code should verify **normalization** and **byte** vs **character** boundaries—**length** in bytes ≠ **length** in graphemes. **`utf8::upgrade`** / internal UTF-8 flags are easy to misuse; prefer **`Encode`** at boundaries and document encoding in APIs (chapter 4).
+
+**Here-documents in generated configs:** A terminator line that is not **exactly** alone (trailing spaces, wrong indent) fails at compile time or silently includes garbage—common in templated **Kubernetes** manifests and **CI** snippets. Prefer **`<<~EOF`** (indented heredocs on supported Perls) or **`qq{...}`** for short multiline strings to keep reviews readable.
 
 **Embedding:** When **`perl`** is embedded, **`@INC`** and **`%ENV`** may be locked down; **XS** loading paths are a **sandbox** escape surface if untrusted code can write to those directories.
 
@@ -142,4 +148,6 @@ my @toks = qw{ one two three };
 - [perldata](https://perldoc.perl.org/perldata)
 - [perlsyn](https://perldoc.perl.org/perlsyn)
 - [perlop](https://perldoc.perl.org/perlop)
-- [perlsub](https://perldoc.perl.org/perlsub) — subroutines and prototypes
+- [perlsub](https://perldoc.perl.org/perlsub) — subroutines and prototypes.
+- [feature](https://perldoc.perl.org/feature) — `state`, `say`, and version bundles.
+- [perlunicook](https://perldoc.perl.org/perlunicook) — recipes at the Unicode/text boundary (with chapter 4).

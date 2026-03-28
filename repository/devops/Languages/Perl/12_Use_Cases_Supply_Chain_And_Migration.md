@@ -32,6 +32,10 @@ Key controls:
 
 The same SBOM/provenance discipline used for other stacks applies to Perl.
 
+**PAUSE and namespace:** CPAN **modules** are published via **[PAUSE](https://pause.perl.org/pause/query)** accounts; **ownership** of **`Foo::Bar`** on CPAN is a **supply-chain** control (typosquatting and **namespace** squatting happen). **`MetaCPAN`** shows **authorized** uploaders and **reverse dependencies**—use it when evaluating whether a maintainer change is benign.
+
+**Private indexes:** **[Pinto](https://metacpan.org/pod/Pinto)** and **DarkPAN** mirrors pin **internal** distributions the same way **Carton** pins public ones—document how **CI** authenticates to the mirror.
+
 ---
 
 ## 3. Migration strategy without big-bang rewrites
@@ -62,11 +66,16 @@ Avoid embedding long-lived secrets in source. Prefer vault-injected credentials,
 
 **Sunset governance:** freeze feature work on retiring Perl services, tighten static analysis policy, and route only break/fix updates until decommission.
 
+**Typosquatting hygiene:** In **`cpanfile`** / **`Makefile.PL`**, spell **distribution** names exactly; CI **diff** review for dependency adds should include **author** and **freshness** signals from **MetaCPAN**.
+
+**YAML and config parsers:** Prefer **JSON** or **strict** YAML loaders with **no** arbitrary **bless** / **tag** expansion for **config** that originated outside the trust zone (see chapter 7). Legacy **`Load`/`Dump`**-style one-liners in **ops** repos deserve the same **review** bar as application code.
+
 ---
 
 ## References
 
-- [perlfaq](https://perldoc.perl.org/perlfaq)
-- [perlcommunity](https://perldoc.perl.org/perlcommunity)
-- [perldelta](https://perldoc.perl.org/perldelta)
-- [CPAN](https://www.cpan.org/)
+- [perlfaq](https://perldoc.perl.org/perlfaq), [perlcommunity](https://perldoc.perl.org/perlcommunity)
+- [perldelta](https://perldoc.perl.org/perldelta) — what changed in your **pinned** Perl release.
+- [perlsecpolicy](https://perldoc.perl.org/perlsecpolicy) — how core Perl handles security reports.
+- [CPAN](https://www.cpan.org/), [MetaCPAN](https://metacpan.org/), [PAUSE](https://pause.perl.org/pause/query)
+- [Pinto](https://metacpan.org/pod/Pinto) — private CPAN stacks (MetaCPAN).

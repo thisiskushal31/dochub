@@ -4,7 +4,7 @@
 
 ## What this chapter covers
 
-Opening files and sockets, pipes, `system`, `exec`, `qx//`, `open` modes, and taint mode (`-T`). The emphasis is defensive: shell injection, safe `open` patterns, and least privilege. Operations topics include blocking I/O, timeouts, and signal handling in long-running scripts.
+Opening files and sockets, pipes, `system`, `exec`, `qx//`, `open` modes, taint mode (`-T`), and **`eval`** (block vs **string**). The emphasis is defensive: shell injection, safe `open` patterns, and least privilege. Operations topics include blocking I/O, timeouts, and signal handling in long-running scripts.
 
 ---
 
@@ -24,6 +24,10 @@ open my $fh, '<', $path or die "open: $!";
 open my $pipe, '-|', 'grep', '^ERROR', $logfile or die $!;
 ```
 
+**`open` to a process:** **`open my $fh, '|-', $prog, @args`** passes **`$prog`** and **`@args`** without the shell—build **`@args`** from validated data and prefer this over string **`qx//`** when inputs are not fully trusted.
+
+**`readpipe` / backticks:** **`readpipe EXPR`** is the functional form of **`` ` ``**—still **shell** on Unix when the expression is a single string; use **`open`**-list or **`IPC::Open3`** instead.
+
 ---
 
 ## 2. `system`, `exec`, and backticks
@@ -36,6 +40,8 @@ system( "mv $src $dst" );    # shell injection if tainted
 ```
 
 `qx//` and backticks invoke the shell on Unix — treat as high risk with untrusted data. `exec` replaces the current process; use when handing off to another binary under a supervisor.
+
+**`IPC::Open3`:** Captures **stdout** and **stderr** separately while feeding **stdin**—use when you must **log** errors without merging streams or when the child is **chatty** on stderr. Pair with **non-blocking** **`select`** or **timeouts** (`alarm`, **`IPC::Run`**, or event loops) so a stuck child cannot hang your **worker** forever.
 
 ---
 
@@ -51,6 +57,16 @@ Install small handlers for `TERM`, `INT`, or `PIPE` for graceful shutdown. Keep 
 
 ---
 
+## 5. `eval`, string code, and sandboxes
+
+**`eval { ... }`** (a **block**) compiles the block once and runs it with **exception** capture into **`$@`**—normal control flow when used carefully.
+
+**`eval EXPR`** where **`EXPR`** is a **string** compiles and runs **arbitrary Perl** at **runtime**—equivalent to shipping a **`perl -e`** inside your program. **Never** feed string **`eval`** untrusted text (templates, **JSON**, **YAML**, **HTTP** bodies). This is a **primary RCE** class in Perl audits alongside **shell** metacharacters.
+
+**`Safe`** and **`Opcode`** compartments are **legacy** defense-in-depth; they have had **escapes** over the years and are **not** a substitute for **OS-level** isolation (**containers**, **seccomp**, separate **UID**). Prefer **not** executing untrusted Perl at all.
+
+---
+
 ## Advanced use cases and implementation
 
 **FD leaks:** After `fork`, close unused pipe ends or connections to avoid hangs and descriptor exhaustion.
@@ -59,10 +75,18 @@ Install small handlers for `TERM`, `INT`, or `PIPE` for graceful shutdown. Keep 
 
 **Secrets:** Arguments and environment are visible in `ps` — pass secrets via file descriptors, memory-only APIs, or secret stores, not argv.
 
+**Temporary files:** **`File::Temp`** avoids predictable **`/tmp`** names and handles **template** permissions—still mind **TOCTOU** if another user can write the same directory (shared **`/tmp`** on multi-tenant hosts). For **sensitive** data, use **`tempfile`** with **`UNLINK => 1`** and appropriate **`chmod`**.
+
+**`sysopen`:** Low-level **`O_CREAT`**, **`O_EXCL`**, **`O_NOFOLLOW`** patterns appear in **hardened** file creation—use when **`open`**’s conveniences hide the flags you need (see **perlfunc** / **perlopentut**).
+
 ---
 
 ## References
 
 - [perlipc](https://perldoc.perl.org/perlipc)
 - [perlsec](https://perldoc.perl.org/perlsec)
-- [perlfunc](https://perldoc.perl.org/perlfunc)
+- [perlopentut](https://perldoc.perl.org/perlopentut)
+- [perlfunc](https://perldoc.perl.org/perlfunc) — `open`, `pipe`, `readpipe`, `sysopen`, and [`eval`](https://perldoc.perl.org/perlfunc#eval-EXPR) (block vs string).
+- [IPC::Open3](https://perldoc.perl.org/IPC::Open3)
+- [File::Temp](https://perldoc.perl.org/File::Temp)
+- [Safe](https://perldoc.perl.org/Safe) — compartment (legacy; read **perlsec** before relying on it).

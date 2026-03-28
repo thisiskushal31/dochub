@@ -3932,91 +3932,91 @@
         "path": "Perl/01_Introduction_Platform_Toolchain_And_First_Script.md",
         "type": "file",
         "sha": "",
-        "size": 9535
+        "size": 10900
       },
       {
         "name": "02_Scalars_Context_And_Core_Syntax.md",
         "path": "Perl/02_Scalars_Context_And_Core_Syntax.md",
         "type": "file",
         "sha": "",
-        "size": 6132
+        "size": 7226
       },
       {
         "name": "03_Arrays_Hashes_Lists_And_Control_Flow.md",
         "path": "Perl/03_Arrays_Hashes_Lists_And_Control_Flow.md",
         "type": "file",
         "sha": "",
-        "size": 4157
+        "size": 6033
       },
       {
         "name": "04_Regular_Expressions_And_Text_Processing.md",
         "path": "Perl/04_Regular_Expressions_And_Text_Processing.md",
         "type": "file",
         "sha": "",
-        "size": 3608
+        "size": 5913
       },
       {
         "name": "05_Subroutines_Packages_And_Modules.md",
         "path": "Perl/05_Subroutines_Packages_And_Modules.md",
         "type": "file",
         "sha": "",
-        "size": 3719
+        "size": 6143
       },
       {
         "name": "06_CPAN_Installers_And_Reproducible_Environments.md",
         "path": "Perl/06_CPAN_Installers_And_Reproducible_Environments.md",
         "type": "file",
         "sha": "",
-        "size": 2829
+        "size": 5000
       },
       {
         "name": "07_References_And_Complex_Data.md",
         "path": "Perl/07_References_And_Complex_Data.md",
         "type": "file",
         "sha": "",
-        "size": 2341
+        "size": 4018
       },
       {
         "name": "08_Object_Oriented_Perl_And_Design.md",
         "path": "Perl/08_Object_Oriented_Perl_And_Design.md",
         "type": "file",
         "sha": "",
-        "size": 5121
+        "size": 5288
       },
       {
         "name": "09_Processes_IO_And_Security_Boundaries.md",
         "path": "Perl/09_Processes_IO_And_Security_Boundaries.md",
         "type": "file",
         "sha": "",
-        "size": 2571
+        "size": 5117
       },
       {
         "name": "10_Testing_Debugging_And_Profiling.md",
         "path": "Perl/10_Testing_Debugging_And_Profiling.md",
         "type": "file",
         "sha": "",
-        "size": 2353
+        "size": 3894
       },
       {
         "name": "11_CI_Deployment_Cron_And_Operations.md",
         "path": "Perl/11_CI_Deployment_Cron_And_Operations.md",
         "type": "file",
         "sha": "",
-        "size": 2247
+        "size": 3933
       },
       {
         "name": "12_Use_Cases_Supply_Chain_And_Migration.md",
         "path": "Perl/12_Use_Cases_Supply_Chain_And_Migration.md",
         "type": "file",
         "sha": "",
-        "size": 2384
+        "size": 3809
       },
       {
         "name": "README.md",
         "path": "Perl/README.md",
         "type": "file",
         "sha": "",
-        "size": 8322
+        "size": 17681
       }
     ]
   },

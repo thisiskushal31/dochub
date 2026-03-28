@@ -10,9 +10,15 @@ People still use Perl where **legacy** and **throughput of text** matter: cron a
 
 This handbook is written to stand alone: each chapter explains **what** a topic is, **why** it matters in practice, and **how** to apply it, from first ideas through advanced mechanics and whole-engineering angles (software engineering, operations, reliability, security). Explanations are **text first**; **Perl** appears in fenced blocks only where syntax or behavior needs a concrete anchor. Optional figures live under `../../Assets/Languages/Perl/` when they add more than text alone.
 
+### Where official documentation lives
+
+Core language and standard-library **POD** (plain old documentation) is distributed with the interpreter. You can read it three ways: the **`perldoc`** command (and **`man`** on many Unix installs), the **[Perldoc Browser](https://perldoc.perl.org/)** (HTML, search, and a **release menu** so you can match production’s Perl), and **`perldoc -f`** / **`perldoc -v`** for built-in functions and variables. **Third-party CPAN modules** are indexed on **[MetaCPAN](https://metacpan.org/)**; the browser and `perldoc` are authoritative for **core** pods bundled with your `perl` binary.
+
+Versioned browser URLs follow `https://perldoc.perl.org/<major.minor.patch>/<page>` (for example `https://perldoc.perl.org/5.40.0/perl`). If a behavior change matters, compare **[perldelta](https://perldoc.perl.org/perldelta)** for your selected release with the delta pages for older versions listed under **History** in [perl](https://perldoc.perl.org/perl).
+
 ### Semantic model (why Perl feels different)
 
-Three ideas unlock most reading:
+Four ideas unlock most reading:
 
 1. **Context** — Many expressions produce different results in **scalar** context (one value) vs **list** context (zero or more values). Assignment, subroutines, and builtins dispatch on context. Misreading context is the most common “bug” when porting mental models from Python or JavaScript.
 
@@ -20,12 +26,69 @@ Three ideas unlock most reading:
 
 3. **Practical defaults** — The language historically favored **DWIM** (“do what I mean”). That helps one-liners; it hurts when strictness is required. Modern style uses **`use strict`**, **`use warnings`**, and explicit **encoding** discipline for anything that leaves a toy script.
 
+4. **Compile time vs runtime** — `use`, `BEGIN`, and some pragmas run during a **compile** phase before the main program runs. That matters when debugging “it fails before line 1,” ordering of `@INC` changes, and why a typo in a `use` can abort the whole script before any `print`.
+
 ### What you can take away
 
 - **What** Perl is, how the interpreter runs code, and how modules load.
 - **Why** teams still depend on it and which **risks** (supply chain, injection, legacy patterns) show up in review.
 - **How** to write, test, and ship scripts with predictable behavior in **cron**, **CI**, and **containers**.
 - **Where** Perl appears in real engineering (automation, parsing, glue, legacy services) and what **security** and **operations** reviews should check: **`system`/`exec`**, **`open`**, **`eval`**, **`$ENV`**, **`@INC`**, **XS**, and **file** permissions.
+
+### Supplementary Perldoc index ([perldoc.perl.org](https://perldoc.perl.org/))
+
+The lists below mirror the **table of contents** inside [perl](https://perldoc.perl.org/perl) (GETTING HELP → Overview / Tutorials / Reference Manual / …). Use them for a second pass, deep tables, or release-specific wording; they are **not** required to follow the handbook chapters. Pod names match what you pass to `perldoc <name>`.
+
+**Overview**
+
+- [perl](https://perldoc.perl.org/perl) — top-level manual and full outline (this page is the spine of the rest).
+- [perlintro](https://perldoc.perl.org/perlintro) — short intro for newcomers.
+- [perlrun](https://perldoc.perl.org/perlrun) — interpreter switches, environment, execution model.
+- [perltoc](https://perldoc.perl.org/perltoc) — long table of contents as its own page.
+
+**Tutorials**
+
+- [perlreftut](https://perldoc.perl.org/perlreftut), [perldsc](https://perldoc.perl.org/perldsc), [perllol](https://perldoc.perl.org/perllol) — references and data structures.
+- [perlrequick](https://perldoc.perl.org/perlrequick), [perlretut](https://perldoc.perl.org/perlretut) — regular expressions.
+- [perlootut](https://perldoc.perl.org/perlootut) — object-oriented Perl (replaces the old **perlboot** tutorial, which is now a stub pointing here).
+- [perlperf](https://perldoc.perl.org/perlperf), [perlstyle](https://perldoc.perl.org/perlstyle), [perlcheat](https://perldoc.perl.org/perlcheat), [perltrap](https://perldoc.perl.org/perltrap), [perldebtut](https://perldoc.perl.org/perldebtut) — performance, style, pitfalls, debugging.
+- [perlfaq](https://perldoc.perl.org/perlfaq) — FAQ hub; detail in [perlfaq1](https://perldoc.perl.org/perlfaq1) … [perlfaq9](https://perldoc.perl.org/perlfaq9).
+
+**Reference manual — language core**
+
+- [perlsyn](https://perldoc.perl.org/perlsyn), [perldata](https://perldoc.perl.org/perldata), [perlop](https://perldoc.perl.org/perlop) — syntax, data, operators.
+- [perlsub](https://perldoc.perl.org/perlsub), [perlfunc](https://perldoc.perl.org/perlfunc) — subroutines and built-in functions (see also the aggregated [Functions](https://perldoc.perl.org/functions) index in the browser).
+- [perlvar](https://perldoc.perl.org/perlvar), [perldiag](https://perldoc.perl.org/perldiag), [perllexwarn](https://perldoc.perl.org/perllexwarn) — variables, diagnostics, warnings.
+- [perldeprecation](https://perldoc.perl.org/perldeprecation), [perlexperiment](https://perldoc.perl.org/perlexperiment) — what is being removed or is still experimental.
+
+**Reference manual — regex, Unicode, I/O**
+
+- [perlre](https://perldoc.perl.org/perlre), [perlrebackslash](https://perldoc.perl.org/perlrebackslash), [perlrecharclass](https://perldoc.perl.org/perlrecharclass), [perlreref](https://perldoc.perl.org/perlreref).
+- [perluniintro](https://perldoc.perl.org/perluniintro), [perlunicode](https://perldoc.perl.org/perlunicode), [perlunicook](https://perldoc.perl.org/perlunicook), [perlunitut](https://perldoc.perl.org/perlunitut), [perlunifaq](https://perldoc.perl.org/perlunifaq).
+- [perlopentut](https://perldoc.perl.org/perlopentut), [perlipc](https://perldoc.perl.org/perlipc), [perlfork](https://perldoc.perl.org/perlfork), [perlthrtut](https://perldoc.perl.org/perlthrtut).
+
+**Reference manual — modules, POD, objects**
+
+- [perlmod](https://perldoc.perl.org/perlmod), [perlmodlib](https://perldoc.perl.org/perlmodlib), [perlmodstyle](https://perldoc.perl.org/perlmodstyle), [perlmodinstall](https://perldoc.perl.org/perlmodinstall), [perlnewmod](https://perldoc.perl.org/perlnewmod), [perlpragma](https://perldoc.perl.org/perlpragma).
+- [perlpod](https://perldoc.perl.org/perlpod), [perlpodspec](https://perldoc.perl.org/perlpodspec), [perlpodstyle](https://perldoc.perl.org/perlpodstyle), [perldocstyle](https://perldoc.perl.org/perldocstyle).
+- [perlobj](https://perldoc.perl.org/perlobj), [perltie](https://perldoc.perl.org/perltie), [perlclass](https://perldoc.perl.org/perlclass).
+
+**Reference manual — security, portability, tooling**
+
+- [perlsec](https://perldoc.perl.org/perlsec), [perlsecpolicy](https://perldoc.perl.org/perlsecpolicy).
+- [perlport](https://perldoc.perl.org/perlport), [perllocale](https://perldoc.perl.org/perllocale).
+- [perldebug](https://perldoc.perl.org/perldebug), [perlutil](https://perldoc.perl.org/perlutil).
+
+**Internals and C / XS (selected)**
+
+- [perlembed](https://perldoc.perl.org/perlembed), [perlxstut](https://perldoc.perl.org/perlxstut), [perlxs](https://perldoc.perl.org/perlxs), [perlguts](https://perldoc.perl.org/perlguts), [perlapi](https://perldoc.perl.org/perlapi).
+
+**History, misc, community**
+
+- [perldelta](https://perldoc.perl.org/perldelta) and version-specific `perlNNNNNdelta` pages listed under [History in perl](https://perldoc.perl.org/perl#History).
+- [perlhist](https://perldoc.perl.org/perlhist), [perlcommunity](https://perldoc.perl.org/perlcommunity), [perlbook](https://perldoc.perl.org/perlbook), [perldoc](https://perldoc.perl.org/perldoc).
+
+**Platform- and language-specific pods** — Listed under [Platform-Specific](https://perldoc.perl.org/perl#Platform-Specific) and [Language-Specific](https://perldoc.perl.org/perl#Language-Specific) in [perl](https://perldoc.perl.org/perl) (e.g. [perlwin32](https://perldoc.perl.org/perlwin32), [perllinux](https://perldoc.perl.org/perllinux)).
 
 Read chapters **1 → 12** in order unless you already know the basics and jump to a topic.
 
@@ -57,46 +120,83 @@ The second line prints a compact version line useful for logs and support ticket
 
 ### Deep-study workflow (body-first)
 
-1. Read the chapter narrative and run the examples locally with the **same** Perl major/minor you use in production.
-2. Only then open the **References** links for edge cases and exhaustive tables (operators, functions).
-3. For security-sensitive code paths, cross-check **perlsec** and your org’s scripting policy after you understand the mechanics here.
+1. Read each chapter body once for concepts and terminology.
+2. Re-read and extract invariants, failure modes, and operational constraints (context, `@INC`, encoding, subprocess boundaries).
+3. Cross-link chapters: syntax and data → modules and CPAN → I/O and security → testing and operations → supply chain.
+4. Only then use Perldoc and MetaCPAN for exhaustive tables, edge cases, and **release-specific** behavior; pick the **same** Perl version in the browser as in production.
+
+This keeps the handbook as the primary source while references stay optional validation.
+
+### Scope note (what this track is not)
+
+- **Perl 5 only** — **[Raku](https://www.raku.org/)** (historically “Perl 6”) is a different language and toolchain; it is out of scope here.
+- **XS and the C API** — covered only as **risk** (ABI, supply chain, crashes); authoring extensions belongs in **perlxstut** / **perlxs** / **perlguts**.
+- **Embedded runtimes** (**`mod_perl`**, **`perlembed`**, custom **`libperl`**) — mentioned where they affect **ops** (lifetime, `@INC`); not a full embedding guide.
 
 ---
 
 ## References
 
-### Perldoc browser (Perl 5.x)
+Goals, guardrails, and narrative live in the chapters above. Everything below is **upstream** documentation and ecosystem links.
 
-- [Perldoc Browser](https://perldoc.perl.org/) — versioned HTML manual; pick a Perl release from the site menu when pinning behavior.
-- [perl](https://perldoc.perl.org/perl) — main manual, table of contents (Overview, Tutorials, Reference Manual, Internals, History, Miscellaneous, language- and platform-specific material).
-- [perlintro](https://perldoc.perl.org/perlintro) — short introduction for newcomers.
-- [perldoc](https://perldoc.perl.org/perldoc) — the `perldoc` utility itself.
+### Perldoc Browser (Perl 5.x)
 
-### Reference lists
+- [Perldoc Browser](https://perldoc.perl.org/) — HTML manual with **search** and a **release selector** (match the interpreter you ship or debug).
+- [perl](https://perldoc.perl.org/perl) — main manual; use its **GETTING HELP** outline as the map of all core pods.
+- [perlintro](https://perldoc.perl.org/perlintro) — beginner orientation.
+- [perldoc](https://perldoc.perl.org/perldoc) — the `perldoc` program (`-f`, `-v`, `-q`, module names, etc.).
 
-- [perlop](https://perldoc.perl.org/perlop) — operators.
-- [Functions](https://perldoc.perl.org/functions) — built-in functions.
-- [Variables](https://perldoc.perl.org/variables) — special and global variables.
-- [Modules](https://perldoc.perl.org/modules) — pragmata and modules.
-- [perlutil](https://perldoc.perl.org/perlutil) — installed utilities.
+### CLI quick reference
 
-### Tutorials (selected)
+```bash
+perldoc perl           # main manual
+perldoc perlintro      # intro
+perldoc -f open        # built-in function
+perldoc -v '$/'       # predefined variable
+perldoc -q 'password'  # FAQ keyword search
+perldoc Moose          # installed module (if present on @INC)
+```
 
-- [perlre](https://perldoc.perl.org/perlre), [perlretut](https://perldoc.perl.org/perlretut) — regular expressions.
-- [perlboot](https://perldoc.perl.org/perlboot) — OO tutorial (introductory).
+### Manual table of contents (anchors on `perl`)
 
-### Release and community
+Fragment IDs match the live page (verified on the Perldoc Browser HTML for `perl`).
 
-- [perldelta](https://perldoc.perl.org/perldelta) — changes for the selected release.
-- [perlcommunity](https://perldoc.perl.org/perlcommunity) — where to ask for help.
-- [perlfaq](https://perldoc.perl.org/perlfaq) — frequently asked questions.
+| Section | Link |
+|--------|------|
+| GETTING HELP | [perl#GETTING-HELP](https://perldoc.perl.org/perl#GETTING-HELP) |
+| Overview | [perl#Overview](https://perldoc.perl.org/perl#Overview) |
+| Tutorials | [perl#Tutorials](https://perldoc.perl.org/perl#Tutorials) |
+| Reference Manual | [perl#Reference-Manual](https://perldoc.perl.org/perl#Reference-Manual) |
+| Internals and C Language Interface | [perl#Internals-and-C-Language-Interface](https://perldoc.perl.org/perl#Internals-and-C-Language-Interface) |
+| History | [perl#History](https://perldoc.perl.org/perl#History) |
+| Miscellaneous | [perl#Miscellaneous](https://perldoc.perl.org/perl#Miscellaneous) |
+| Language-Specific | [perl#Language-Specific](https://perldoc.perl.org/perl#Language-Specific) |
+| Platform-Specific | [perl#Platform-Specific](https://perldoc.perl.org/perl#Platform-Specific) |
+| Stubs for Deleted Documents | [perl#Stubs-for-Deleted-Documents](https://perldoc.perl.org/perl#Stubs-for-Deleted-Documents) |
 
-### Security and platform
+### Aggregated indexes (browser)
 
-- [perlsec](https://perldoc.perl.org/perlsec) — security considerations.
-- [perlrun](https://perldoc.perl.org/perlrun) — command-line switches.
+These pages collect many pods in one place for scanning (they complement [perlfunc](https://perldoc.perl.org/perlfunc) and the rest of the reference manual).
+
+- [perlop](https://perldoc.perl.org/perlop) — operators and precedence.
+- [Functions](https://perldoc.perl.org/functions) — built-in functions (browser index).
+- [Variables](https://perldoc.perl.org/variables) — specials and globals (browser index).
+- [Modules](https://perldoc.perl.org/modules) — pragmata and core modules (browser index).
+- [perlutil](https://perldoc.perl.org/perlutil) — utilities shipped with Perl.
+
+### Frequently needed single pages
+
+- [perlrun](https://perldoc.perl.org/perlrun) — command-line switches (`-0`, `-n`, `-p`, `-E`, taint `-T`, etc.).
+- [perlsec](https://perldoc.perl.org/perlsec) — security model, tainting, unsafe constructs.
+- [strict](https://perldoc.perl.org/strict), [warnings](https://perldoc.perl.org/warnings) — baseline pragmas for maintainable code.
 
 ### Ecosystem
 
-- [CPAN](https://www.cpan.org/) — Comprehensive Perl Archive Network.
+- [CPAN](https://www.cpan.org/) — archive and mirror network.
+- [MetaCPAN](https://metacpan.org/) — search, author pages, and dependency metadata for CPAN distributions.
 - [perl.org](https://www.perl.org/) — language hub.
+- [Perl Mongers (pm.org)](https://www.pm.org/) — local groups.
+
+### Perldoc Browser maintenance
+
+Site issues (search, rendering): [perldoc-browser issues](https://github.com/Grinnz/perldoc-browser/issues). Documentation content: [Perl/perl5 issues](https://github.com/Perl/perl5/issues) and the [perl5-porters](https://lists.perl.org/list/perl5-porters.html) list (as described in [perl](https://perldoc.perl.org/perl#NOTES)).

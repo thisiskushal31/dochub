@@ -84,6 +84,8 @@ Chapter 5 expands **packages** and **`use`/`require`**; chapter 6 covers **repro
 
 Nothing in core forces an IDE. **Version pinning** is non-optional for production: language deprecations, **XS** ABIs, and **regex** engine details evolve between **5.x** minors.
 
+**User-local interpreters:** **[perlbrew](https://metacpan.org/pod/App::perlbrew)** and **[plenv](https://metacpan.org/release/App-plenv)** (see **App::plenv** on MetaCPAN) install parallel **Perl 5** trees and shim **`perl`** per shell—document which tool (or **container** image tag) a repo expects so **CI** and laptops do not drift.
+
 ---
 
 ## 6. `use strict`, `use warnings`, and modern baseline
@@ -100,7 +102,9 @@ my $x = 1;
 print $x, "\n";
 ```
 
-Omitting `my` under `strict` for a new variable is a **compile-time** failure—this is preferable to silently using a **package global**.
+Omitting `my` under `strict` for a new variable is a **compile-time** failure—this is preferable to silently using a **package global`.
+
+**`use v5.xx` (or `use 5.036;` style):** Declaring a **minimum Perl version** documents what you test in CI and can enable a **feature bundle** for that release (for example `say` and other syntax on supported versions). It does **not** replace pinning the interpreter in **images** and **cron**—the declaration and the deployed binary must match.
 
 ---
 
@@ -141,7 +145,7 @@ Invoking as **`perl script.pl`** avoids relying on the execute bit and documents
 
 | Switch | Meaning |
 |--------|---------|
-| **`-c`** | Syntax check only (does not run `BEGIN` blocks fully the same way as execution—know the limits). |
+| **`-c`** | Syntax check; still executes **`BEGIN`** / **`UNITCHECK`** / **`CHECK`** blocks while compiling—do not assume “no side effects.” |
 | **`-w`** | Enable many warnings (older style; `use warnings` preferred in files). |
 | **`-T`** | **Taint** mode: stricter dataflow rules; legacy defense-in-depth for setuid-ish designs. |
 | **`-e 'code'`** | Run code string. |
@@ -161,6 +165,8 @@ Full tables live in **`perlrun`**; the **`-T`** flag interacts with **`PERL5LIB`
 
 **Incident response:** **`~/.bash_history`**, **cron** spools, and **configuration management** repos often contain Perl **one-liners**. Attackers use them too—correlate with **file** timestamps and **network** logs, not only the language.
 
+**Environment variables that show up in ops tickets:** **`PERL_UNICODE`** changes default I/O semantics in some setups—pair with explicit **`binmode`** / **`Encode`** in anything that crosses a trust boundary (see chapter 4). **`PERL5OPT`** injects flags into **every** `perl` invocation on a host—powerful for debugging, catastrophic if it enables **`Devel::`** hooks or alters **`@INC`** in production without change control.
+
 ---
 
 ## References
@@ -173,6 +179,8 @@ Full tables live in **`perlrun`**; the **`-T`** flag interacts with **`PERL5LIB`
 - [perlrun](https://perldoc.perl.org/perlrun)
 - [strict](https://perldoc.perl.org/strict)
 - [warnings](https://perldoc.perl.org/warnings)
+- [feature](https://perldoc.perl.org/feature) — feature bundles and `use v5.xx` interaction.
+- [perlvar](https://perldoc.perl.org/perlvar) — **`@INC`**, **`%ENV`**, and other globals referenced in ops.
 
 ### Internals (selected)
 

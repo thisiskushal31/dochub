@@ -15,12 +15,15 @@ Cron jobs inherit a **minimal** environment:
 - **`PATH`** is short — use **absolute paths** to `perl` and any helper binaries.
 - **`PERL5LIB`** may be unset — bake `use lib` or image paths into the wrapper.
 - **Working directory** is often `/` — `cd` in the wrapper or use absolute paths in the script.
+- **`umask`** — cron and **systemd** services inherit a **umask** from the **daemon** or **unit** defaults; scripts that **`open`** new files with **world-readable** bits often do so because **umask** was **`0002`** vs **`0022`**. Set **`umask`** explicitly in the **wrapper** when **secrets** or **PII** land on disk.
 
 ```cron
 12 * * * * /opt/app/bin/run-report.pl >>/var/log/report.log 2>&1
 ```
 
 Always capture **stderr**; Perl **warnings** often land there while the script still exits 0.
+
+**`MAILTO`, timezone, locale:** **`cron`** emails **stderr** when **`MAILTO`** is set—many teams disable mail and rely on **logs** instead; ensure your **log shipper** still sees **stderr**. **`TZ`** may differ from **interactive** shells—set **`TZ=UTC`** (or your canonical zone) in the **wrapper** for reproducible timestamps. **`LC_*`** affects **`sort`**, **`sprintf`** of numbers, and some **regex** classes—pin locale in **CI** to match **production** when comparisons matter (see **perllocale**).
 
 ---
 
@@ -48,8 +51,14 @@ Ship one **Perl** minor per image; record **`perl -V`** in build logs. Prefer re
 
 **Observability:** Emit **structured** logs (JSON lines) with request or job IDs; **`Log::Any`** with a backend adapter integrates with common aggregators. Correlate with traces via propagated environment variables.
 
+**systemd units:** **`Environment=`** and **`EnvironmentFile=`** replace **cron’s** spartan environment—still document **`PATH`**, **`PERL5LIB`**, and **`umask`** (inheritance from **`User=`** matters). **`TimeoutStartSec=`** / **`TimeoutStopSec=`** prevent hung **`Type=simple`** services from living forever; pair with **chapter 9** signal handling for **SIGTERM**-graceful exits.
+
+**Resource limits:** **`LimitNOFILE`**, **`MemoryMax=`**, and **cgroup** settings apply to **`perl`** the same as any binary—raise **fd** limits when scripts open many **sockets** or **temp** files.
+
 ---
 
 ## References
 
-- [perlrun](https://perldoc.perl.org/perlrun)
+- [perlrun](https://perldoc.perl.org/perlrun) — switches for one-liners and embedded runs.
+- [perllocale](https://perldoc.perl.org/perllocale) — locale effects on sorting and formatting.
+- [perlport](https://perldoc.perl.org/perlport) — portability when the same script targets Linux and Windows images.
