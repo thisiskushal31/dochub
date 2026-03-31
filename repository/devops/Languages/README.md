@@ -90,7 +90,7 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | 11 | [**Scala**](./Scala/README.md) | Scala: JVM, Spark, Kafka, sbt; data pipelines and streaming. |
 | 12 | [**Perl**](./Perl/README.md) | Perl 5: language + CPAN + HTTP/DBI/web/XS integration (16 chapters). |
 | 13 | [**Kotlin**](./Kotlin/README.md) | Kotlin: Gradle DSL, Android, JVM; build scripts and services. |
-| 14 | [**PHP**](./PHP/README.md) | PHP: web apps (WordPress, Laravel), Composer; deploy and operate. |
+| 14 | [**PHP**](./PHP/README.md) | PHP: runtime, FPM, Composer, domains, CMS + framework landscape. |
 | 15 | [**Lua**](./Lua/README.md) | Lua: Nginx/OpenResty, Redis, HAProxy; config and scripting. |
 | 16 | [**Swift**](./Swift/README.md) | Swift: Apple (iOS, macOS); tooling and CI. |
 | 17 | [**Elixir**](./Elixir/README.md) | Elixir: Phoenix, BEAM/OTP, Nerves; deploy and operate. |

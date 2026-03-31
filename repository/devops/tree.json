@@ -91,6 +91,21 @@
                 "size": 359
               }
             ]
+          },
+          {
+            "name": "PHP",
+            "path": "Assets/Languages/PHP",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "README.md",
+                "path": "Assets/Languages/PHP/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 310
+              }
+            ]
           }
         ]
       },
@@ -4623,11 +4638,158 @@
         "sha": "",
         "children": [
           {
+            "name": "01_Introduction_PHP_Runtime_SAPIs_Toolchain_And_First_Script.md",
+            "path": "Languages/PHP/01_Introduction_PHP_Runtime_SAPIs_Toolchain_And_First_Script.md",
+            "type": "file",
+            "sha": "",
+            "size": 13935
+          },
+          {
+            "name": "02_Types_Coercion_Operators_And_Expressions.md",
+            "path": "Languages/PHP/02_Types_Coercion_Operators_And_Expressions.md",
+            "type": "file",
+            "sha": "",
+            "size": 10691
+          },
+          {
+            "name": "03_Control_Flow_Functions_Namespaces_And_Autoloading.md",
+            "path": "Languages/PHP/03_Control_Flow_Functions_Namespaces_And_Autoloading.md",
+            "type": "file",
+            "sha": "",
+            "size": 7231
+          },
+          {
+            "name": "04_Arrays_Strings_Encoding_And_Serialization.md",
+            "path": "Languages/PHP/04_Arrays_Strings_Encoding_And_Serialization.md",
+            "type": "file",
+            "sha": "",
+            "size": 7603
+          },
+          {
+            "name": "05_Classes_Objects_OOP_And_Modern_Features.md",
+            "path": "Languages/PHP/05_Classes_Objects_OOP_And_Modern_Features.md",
+            "type": "file",
+            "sha": "",
+            "size": 5720
+          },
+          {
+            "name": "06_Errors_Exceptions_And_Production_Logging.md",
+            "path": "Languages/PHP/06_Errors_Exceptions_And_Production_Logging.md",
+            "type": "file",
+            "sha": "",
+            "size": 5819
+          },
+          {
+            "name": "07_Composer_Dependencies_And_Reproducible_Builds.md",
+            "path": "Languages/PHP/07_Composer_Dependencies_And_Reproducible_Builds.md",
+            "type": "file",
+            "sha": "",
+            "size": 6232
+          },
+          {
+            "name": "08_Files_Streams_Processes_And_Security_Boundaries.md",
+            "path": "Languages/PHP/08_Files_Streams_Processes_And_Security_Boundaries.md",
+            "type": "file",
+            "sha": "",
+            "size": 4453
+          },
+          {
+            "name": "09_Web_Request_Lifecycle_Sessions_And_Input_Handling.md",
+            "path": "Languages/PHP/09_Web_Request_Lifecycle_Sessions_And_Input_Handling.md",
+            "type": "file",
+            "sha": "",
+            "size": 8530
+          },
+          {
+            "name": "10_Databases_PDO_SQL_And_Connection_Management.md",
+            "path": "Languages/PHP/10_Databases_PDO_SQL_And_Connection_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 4456
+          },
+          {
+            "name": "11_PHP_FPM_Web_Servers_OpCache_And_Performance.md",
+            "path": "Languages/PHP/11_PHP_FPM_Web_Servers_OpCache_And_Performance.md",
+            "type": "file",
+            "sha": "",
+            "size": 6514
+          },
+          {
+            "name": "12_Testing_Debugging_And_Profiling.md",
+            "path": "Languages/PHP/12_Testing_Debugging_And_Profiling.md",
+            "type": "file",
+            "sha": "",
+            "size": 4091
+          },
+          {
+            "name": "13_CI_Deployment_Environments_And_Operations.md",
+            "path": "Languages/PHP/13_CI_Deployment_Environments_And_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 4731
+          },
+          {
+            "name": "14_Security_Hardening_Supply_Chain_And_Threat_Model.md",
+            "path": "Languages/PHP/14_Security_Hardening_Supply_Chain_And_Threat_Model.md",
+            "type": "file",
+            "sha": "",
+            "size": 5068
+          },
+          {
+            "name": "15_Concurrency_Queues_And_Long_Running_Workloads.md",
+            "path": "Languages/PHP/15_Concurrency_Queues_And_Long_Running_Workloads.md",
+            "type": "file",
+            "sha": "",
+            "size": 4321
+          },
+          {
+            "name": "16_Frameworks_Ecosystem_Version_Migration_And_Use_Cases.md",
+            "path": "Languages/PHP/16_Frameworks_Ecosystem_Version_Migration_And_Use_Cases.md",
+            "type": "file",
+            "sha": "",
+            "size": 8322
+          },
+          {
+            "name": "17_Pre_Framework_Competency_Domains_And_Active_Ecosystem.md",
+            "path": "Languages/PHP/17_Pre_Framework_Competency_Domains_And_Active_Ecosystem.md",
+            "type": "file",
+            "sha": "",
+            "size": 10914
+          },
+          {
+            "name": "18_Generators_Iterators_Fibers_And_Execution_Patterns.md",
+            "path": "Languages/PHP/18_Generators_Iterators_Fibers_And_Execution_Patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 3806
+          },
+          {
+            "name": "19_Predefined_Variables_Interfaces_Classes_And_Reflection.md",
+            "path": "Languages/PHP/19_Predefined_Variables_Interfaces_Classes_And_Reflection.md",
+            "type": "file",
+            "sha": "",
+            "size": 3603
+          },
+          {
+            "name": "20_Protocols_Wrappers_Context_Options_And_Stream_Integration.md",
+            "path": "Languages/PHP/20_Protocols_Wrappers_Context_Options_And_Stream_Integration.md",
+            "type": "file",
+            "sha": "",
+            "size": 3587
+          },
+          {
+            "name": "21_Extension_Landscape_Interoperability_And_Production_Selection.md",
+            "path": "Languages/PHP/21_Extension_Landscape_Interoperability_And_Production_Selection.md",
+            "type": "file",
+            "sha": "",
+            "size": 3358
+          },
+          {
             "name": "README.md",
             "path": "Languages/PHP/README.md",
             "type": "file",
             "sha": "",
-            "size": 1595
+            "size": 13212
           }
         ]
       },
@@ -4861,7 +5023,7 @@
         "path": "Languages/README.md",
         "type": "file",
         "sha": "",
-        "size": 17711
+        "size": 17710
       }
     ]
   },
