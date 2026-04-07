@@ -21,7 +21,7 @@ Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-p
 | **Scala**  | JVM; Apache Spark, Kafka, data pipelines, sbt builds; data engineering and streaming. |
 | **Perl**   | Legacy sysadmin scripts, CI/cron, Unix automation; maintaining existing environments. |
 | **Kotlin** | Gradle build scripts (build.gradle.kts), Android, JVM services; Gradle and JVM stacks. |
-| **PHP**    | Web apps (WordPress, Laravel) that DevOps deploys and operates; Composer, PHP-FPM. |
+| **PHP**    | Web/CMS/API PHP: language through architecture, data, security, quality, and operations; Composer, FPM. |
 | **Lua**    | Nginx/OpenResty, Redis scripting, HAProxy; config and embedded scripting in infra. |
 | **Swift**  | Apple ecosystem (iOS, macOS); Apple-centric DevOps and tooling. |
 | **Elixir**  | Phoenix apps, BEAM/OTP, Nerves (embedded); deploy and operate Elixir services. |
@@ -90,7 +90,7 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | 11 | [**Scala**](./Scala/README.md) | Scala: JVM, Spark, Kafka, sbt; data pipelines and streaming. |
 | 12 | [**Perl**](./Perl/README.md) | Perl 5: language + CPAN + HTTP/DBI/web/XS integration (16 chapters). |
 | 13 | [**Kotlin**](./Kotlin/README.md) | Kotlin: Gradle DSL, Android, JVM; build scripts and services. |
-| 14 | [**PHP**](./PHP/README.md) | PHP: runtime, FPM, Composer, domains, CMS + framework landscape. |
+| 14 | [**PHP**](./PHP/README.md) | PHP: whole-engineering track—language, web/data, testing, security, delivery, ops; CMS + frameworks (22 chapters). |
 | 15 | [**Lua**](./Lua/README.md) | Lua: Nginx/OpenResty, Redis, HAProxy; config and scripting. |
 | 16 | [**Swift**](./Swift/README.md) | Swift: Apple (iOS, macOS); tooling and CI. |
 | 17 | [**Elixir**](./Elixir/README.md) | Elixir: Phoenix, BEAM/OTP, Nerves; deploy and operate. |

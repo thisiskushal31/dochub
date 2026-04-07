@@ -4,19 +4,21 @@
 
 PHP is a **general-purpose** language that dominates **server-side web** programming: request handling, HTML generation, JSON APIs, and glue around databases and caches. The runtime most teams mean today is **PHP 8.x**: a **Zend Engine**–based VM with **JIT** (where enabled), **extensions** loaded as shared objects, and multiple **SAPIs** (CLI, built-in server, **FPM**, Apache module) that change how code starts, how long it lives, and what globals mean.
 
-In **DevOps** and **platform** work you rarely author large PHP applications; you **ship**, **configure**, and **defend** them. That means **PHP-FPM** pools, **Opcache**, **Composer** lockfiles and private registries, **`php.ini`** hardening, **extension** matrices across OS images, and **observability** (slow logs, FPM status, application traces). In **security** and **application security**, PHP appears in **injection** classes (SQL, command, deserialization), **session** fixation and **cookie** policy, **file upload** abuse, and **supply-chain** risk through **Packagist** dependencies.
+This section treats PHP as a **whole-engineering** subject: not only **shipping and running** code (build, deploy, observability, capacity) but also **designing and owning** it—**requirements and APIs**, **maintainability** and **refactoring**, **data modeling** and **integration boundaries**, **quality** (testing, static analysis, reviews), **security and privacy** engineering, **reliability** (failure modes, incident response), and **ecosystem** choices (frameworks, CMSs, commerce platforms). **DevOps** and **platform** roles still matter heavily: you often **configure** and **defend** PHP without writing every line—**PHP-FPM** pools, **Opcache**, **Composer** lockfiles, **`php.ini`** hardening, **extension** matrices, and **traces** tie directly to production behavior. The same runtime surfaces appear when **application engineers** debug sessions and PDO, when **security** reviews injection and uploads, and when **staff engineers** arbitrate framework defaults versus platform constraints.
 
-This handbook is **standalone prose**: each chapter explains **what** a topic is, **why** it behaves that way in production, and **how** to apply it, from first ideas through advanced mechanics and whole-engineering angles (software engineering, reliability, security, operations). Narrative is **text first**; **PHP**, **ini**, **nginx**, or **shell** snippets appear in fenced blocks only where behavior needs a concrete anchor. Optional figures live under `../../Assets/Languages/PHP/` when they add more than text alone.
+**Engineering domains this track touches:** language semantics and API design; **architecture** (layering, modules, long-lived vs request-scoped state); **web and HTTP** semantics; **data access** and transactions; **performance** and cost; **testing and verification**; **supply chain** and dependency risk; **operations** and **SRE**-style runbooks; **migration** and technical debt; and **product-shaped** stacks (plugins, themes, multi-tenant CMS) where “PHP” is half **code** and half **platform contract**.
+
+This handbook is **standalone prose**: each chapter explains **what** a topic is, **why** it behaves that way in real systems, and **how** to apply it, from first ideas through advanced mechanics across those domains. Narrative is **text first**; **PHP**, **ini**, **nginx**, or **shell** snippets appear in fenced blocks only where behavior needs a concrete anchor. Optional figures live under `../../Assets/Languages/PHP/` when they add more than text alone.
 
 **Staff / platform engineers:** PHP is still **actively** deployed at massive scale (CMS, commerce, APIs, batch workers). Framework docs assume you already understand **SAPI lifetime**, **extensions vs Composer**, **FPM/Opcache**, and **HTTP/session mechanics**. Read **[chapter 17](./17_Pre_Framework_Competency_Domains_And_Active_Ecosystem.md)** early for a **domain map**, **pre-framework competency checklist**, and **ecosystem orientation** (Composer apps vs plugin CMSs, survey context)—then chapters **01–11** before leaning on Laravel/Symfony/WordPress manuals alone.
 
 ### Chapter structure
 
-Every numbered chapter **`01`–`21`** uses the same **three-part body** (before **`## References`**):
+Every numbered chapter **`01`–`22`** uses the same **three-part body** (before **`## References`**):
 
 1. **Concepts** — definitions, syntax, and mechanics you need to read code and configs (`###` subsections under **`## 1. Concepts`**).
 2. **Advanced concepts** — VM details, SAPI differences, extension ABI, concurrency limits, and interactions with the web server or database layer (**`## 2. Advanced concepts`**).
-3. **Applications and use cases** — **DevOps**, **security**, **CI/CD**, **incident response**, and **migration** scenarios where the chapter’s ideas show up in real work (**`## 3. Applications and use cases`**).
+3. **Applications and use cases** — scenarios across **software engineering** (design, reviews, refactors), **security**, **data and integration**, **quality and delivery**, **operations** and **incident response**, and **migration**—where the chapter’s ideas show up in real work (**`## 3. Applications and use cases`**).
 
 Chapters are written for **depth**: opcode caching and JIT policy, INI changeability modes, FPM pool mathematics, PDO and persistent connection failure modes, Composer supply-chain mechanics, and concrete failure-mode checklists—not a syntax tutorial alone.
 
@@ -44,11 +46,11 @@ Four ideas unlock most reading and most production incidents:
 ### What you can take away
 
 - **What** PHP is as a language and runtime, and **which SAPI** you are debugging.
-- **Why** teams standardize on **FPM + Opcache + Composer** and which **knobs** change security and performance.
-- **How** to read **`composer.json` / `composer.lock`**, reproduce installs in **CI**, and audit **extensions** on images.
-- **Where** PHP shows up in engineering: **CMS** and **framework** stacks, **APIs**, **batch** workers, and **legacy** glue—and what **reviews** should check: **superglobals**, **subprocess** calls, **upload** paths, **sessions**, and **dependency** graphs.
+- **Why** teams standardize on **FPM + Opcache + Composer** and which **knobs** change security, performance, and **operational cost**.
+- **How** to read **`composer.json` / `composer.lock`**, reproduce installs in **CI**, and audit **extensions** on images—so **builds** match **design intent** and **supply-chain** policy.
+- **Where** PHP shows up across engineering: **CMS** and **framework** stacks, **HTTP APIs**, **batch** workers, **commerce** and **plugin** economies, and **legacy** glue—and what **design reviews** and **threat models** should cover: **superglobals**, **subprocess** calls, **upload** paths, **sessions**, **data boundaries**, and **dependency** graphs—not only deploy mechanics.
 
-Suggested order: **17** (domains + ecosystem + checklist) → **1 → 12** (language, packaging, web, DB, performance) → **18 → 21** (completeness tracks: generators/reflection/wrappers/extensions) → **13 → 16** (CI, security, concurrency, frameworks/migration).
+Suggested order: **17** (domains + ecosystem + checklist) → **1 → 12** (language, packaging, web, DB, performance) → **18 → 21** (completeness tracks: generators/reflection/wrappers/extensions) → **13 → 16** (CI, security, concurrency, frameworks/migration) → **22** (PSR/Composer security/async/OTEL/intl/FPM edge cases—capstone before shipping opinions to the next stack).
 
 ```bash
 php -v
@@ -89,7 +91,7 @@ The second command shows which **`php.ini`** files are loaded for that binary—
 
 1. Read each chapter in order: **`## 1. Concepts`**, **`## 2. Advanced concepts`**, **`## 3. Applications and use cases`**.
 2. Extract invariants and failure modes: **SAPI**, **worker** reuse, **strict_types** boundaries, **extension** presence, **session** storage, **SQL** parameterization.
-3. Cross-link: types and OOP → Composer autoload → web input → PDO → FPM/Opcache → CI → security → workers → migration (chapter **17** maps these to roles).
+3. Cross-link: types and OOP → Composer autoload → web input → PDO → FPM/Opcache → CI → security → workers → migration (chapter **17** maps these to roles). Finish with **22** for PSR/OTEL/ICU/FPM edge cases that appear in reviews and incidents.
 4. Use the reference lists only when you need version-specific wording or exhaustive function tables; match the **PHP minor** you ship.
 
 ---
@@ -98,6 +100,8 @@ The second command shows which **`php.ini`** files are loaded for that binary—
 
 - [PHP Manual (English)](https://www.php.net/manual/en/index.php)
 - [Composer documentation](https://getcomposer.org/doc/)
+- [PHP-FIG — PSR index](https://www.php-fig.org/psr/)
+- [OpenTelemetry — PHP](https://opentelemetry.io/docs/languages/php/)
 - [W3Techs — PHP usage context](https://w3techs.com/technologies/details/pl-php)
 - [W3Techs — server-side language overview](https://w3techs.com/technologies/overview/programming_language/all)
 

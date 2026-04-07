@@ -147,10 +147,17 @@
     "size": 3358
   },
   {
+    "name": "22_Interoperability_Edge_Cases_And_Production_Pitfalls.md",
+    "path": "22_Interoperability_Edge_Cases_And_Production_Pitfalls.md",
+    "type": "file",
+    "sha": "",
+    "size": 11091
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 13212
+    "size": 14747
   }
 ]
