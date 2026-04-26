@@ -1,9 +1,135 @@
 [
   {
+    "name": "01_Introduction_Python_CPython_Interpreter_And_First_Steps.md",
+    "path": "01_Introduction_Python_CPython_Interpreter_And_First_Steps.md",
+    "type": "file",
+    "sha": "",
+    "size": 8265
+  },
+  {
+    "name": "02_Numbers_Text_Bytes_Unicode_And_Core_Semantics.md",
+    "path": "02_Numbers_Text_Bytes_Unicode_And_Core_Semantics.md",
+    "type": "file",
+    "sha": "",
+    "size": 5502
+  },
+  {
+    "name": "03_Control_Flow_Functions_Match_Parameters_And_Style.md",
+    "path": "03_Control_Flow_Functions_Match_Parameters_And_Style.md",
+    "type": "file",
+    "sha": "",
+    "size": 6023
+  },
+  {
+    "name": "04_Data_Structures_Comprehensions_And_Algorithmic_Idioms.md",
+    "path": "04_Data_Structures_Comprehensions_And_Algorithmic_Idioms.md",
+    "type": "file",
+    "sha": "",
+    "size": 5082
+  },
+  {
+    "name": "05_Modules_Packages_Import_System_And_Main.md",
+    "path": "05_Modules_Packages_Import_System_And_Main.md",
+    "type": "file",
+    "sha": "",
+    "size": 4640
+  },
+  {
+    "name": "06_IO_Formatting_Files_Encodings_And_JSON.md",
+    "path": "06_IO_Formatting_Files_Encodings_And_JSON.md",
+    "type": "file",
+    "sha": "",
+    "size": 4308
+  },
+  {
+    "name": "07_Errors_Exceptions_Context_Managers_And_Cleanup.md",
+    "path": "07_Errors_Exceptions_Context_Managers_And_Cleanup.md",
+    "type": "file",
+    "sha": "",
+    "size": 4631
+  },
+  {
+    "name": "08_Classes_Protocols_Iterators_And_Generators.md",
+    "path": "08_Classes_Protocols_Iterators_And_Generators.md",
+    "type": "file",
+    "sha": "",
+    "size": 4505
+  },
+  {
+    "name": "09_Standard_Library_Part_I_OS_CLI_Text_Time_Net_Quality.md",
+    "path": "09_Standard_Library_Part_I_OS_CLI_Text_Time_Net_Quality.md",
+    "type": "file",
+    "sha": "",
+    "size": 5298
+  },
+  {
+    "name": "10_Standard_Library_Part_II_Formatting_Threading_Logging_Decimal.md",
+    "path": "10_Standard_Library_Part_II_Formatting_Threading_Logging_Decimal.md",
+    "type": "file",
+    "sha": "",
+    "size": 4213
+  },
+  {
+    "name": "11_Virtual_Environments_Pip_And_Reproducible_Dependencies.md",
+    "path": "11_Virtual_Environments_Pip_And_Reproducible_Dependencies.md",
+    "type": "file",
+    "sha": "",
+    "size": 3292
+  },
+  {
+    "name": "12_Floating_Point_Limitations_And_Decimal_Arithmetic.md",
+    "path": "12_Floating_Point_Limitations_And_Decimal_Arithmetic.md",
+    "type": "file",
+    "sha": "",
+    "size": 2713
+  },
+  {
+    "name": "13_Type_Hints_Protocols_And_Static_Analysis.md",
+    "path": "13_Type_Hints_Protocols_And_Static_Analysis.md",
+    "type": "file",
+    "sha": "",
+    "size": 3325
+  },
+  {
+    "name": "14_Concurrency_GIL_Threading_Asyncio_And_Multiprocessing.md",
+    "path": "14_Concurrency_GIL_Threading_Asyncio_And_Multiprocessing.md",
+    "type": "file",
+    "sha": "",
+    "size": 3644
+  },
+  {
+    "name": "15_Security_Unsafe_Patterns_And_Supply_Chain.md",
+    "path": "15_Security_Unsafe_Patterns_And_Supply_Chain.md",
+    "type": "file",
+    "sha": "",
+    "size": 3367
+  },
+  {
+    "name": "16_Testing_Debugging_And_Profiling.md",
+    "path": "16_Testing_Debugging_And_Profiling.md",
+    "type": "file",
+    "sha": "",
+    "size": 2762
+  },
+  {
+    "name": "17_Packaging_CI_Containers_And_Operations.md",
+    "path": "17_Packaging_CI_Containers_And_Operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 3045
+  },
+  {
+    "name": "18_Ecosystem_Domains_And_Competency_Map.md",
+    "path": "18_Ecosystem_Domains_And_Competency_Map.md",
+    "type": "file",
+    "sha": "",
+    "size": 3450
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 724
+    "size": 11903
   }
 ]

@@ -9,7 +9,7 @@ Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-p
 | Language   | DevOps relevance |
 |-----------|-------------------|
 | **C/C++** | Systems programming, kernel/driver context, performance-critical tooling; many infra tools are C/C++. |
-| **Python** | Automation, scripting, CI/CD scripts, Ansible, ML/data pipelines, APIs; de facto for many DevOps tasks. |
+| **Python** | Whole-engineering track: language, stdlib, typing, concurrency, security, packaging; automation, APIs, data/ML glue. |
 | **Go**     | Docker, Kubernetes, Terraform, Prometheus, many cloud-native tools; single binary, fast builds, concurrency. |
 | **Java**   | Jenkins, enterprise CI/CD, Maven/Gradle builds, Spring Boot microservices; JVM-based tooling and plugins. |
 | **JavaScript** | Node.js tooling, front-end for dashboards (Grafana, custom UIs), serverless (Lambda, Cloud Functions). |
@@ -78,7 +78,7 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | # | Folder | Description |
 |---|--------|-------------|
 | 1 | [**C-C++**](./C-C++/README.md) | C and C++: basics, build (make, CMake), where they show up in DevOps (system libs, tooling). |
-| 2 | [**Python**](./Python/README.md) | Python: syntax, venv/pip, scripting, automation, and use in Ansible, CI, and data pipelines. |
+| 2 | [**Python**](./Python/README.md) | Python: CPython, stdlib, venv/pip, typing, GIL/async, security, packaging, ops—18 chapters. |
 | 3 | [**Go**](./Go/README.md) | Go: syntax, modules, concurrency, and use in Docker, K8s, Terraform, and CLI tooling. |
 | 4 | [**Java**](./Java/README.md) | Java: syntax, Maven/Gradle, Jenkins and CI/CD, microservices; JVM tooling. |
 | 5 | [**JavaScript**](./JavaScript/README.md) | JavaScript (Node.js): runtime, npm, scripting, and use in tooling and serverless. |
