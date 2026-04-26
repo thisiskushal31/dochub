@@ -78,7 +78,7 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | # | Folder | Description |
 |---|--------|-------------|
 | 1 | [**C-C++**](./C-C++/README.md) | C and C++: basics, build (make, CMake), where they show up in DevOps (system libs, tooling). |
-| 2 | [**Python**](./Python/README.md) | Python: CPython, stdlib, venv/pip, typing, GIL/async, security, packaging, ops—18 chapters. |
+| 2 | [**Python**](./Python/README.md) | Python: CPython, stdlib, venv/pip, typing, GIL/async, security, packaging, ops—19 chapters. |
 | 3 | [**Go**](./Go/README.md) | Go: syntax, modules, concurrency, and use in Docker, K8s, Terraform, and CLI tooling. |
 | 4 | [**Java**](./Java/README.md) | Java: syntax, Maven/Gradle, Jenkins and CI/CD, microservices; JVM tooling. |
 | 5 | [**JavaScript**](./JavaScript/README.md) | JavaScript (Node.js): runtime, npm, scripting, and use in tooling and serverless. |

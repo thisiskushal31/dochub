@@ -18,7 +18,7 @@ The handbook is **standalone prose**: each chapter explains **what** a topic is,
 
 ### Chapter structure
 
-Every numbered chapter **`01`–`18`** uses the same **three-part body** (before **`## References`**):
+Every numbered chapter **`01`–`19`** uses the same **three-part body** (before **`## References`**):
 
 1. **Concepts** — definitions and mechanics (`## 1. Concepts`).
 2. **Advanced concepts** — interactions with the runtime, performance, or security model (`## 2. Advanced concepts`).
@@ -41,8 +41,9 @@ Every numbered chapter **`01`–`18`** uses the same **three-part body** (before
 | Libraries & packaging | 09–12 | Navigate stdlib for ops and app tasks; own venv/pip; handle float/decimal correctly. |
 | Engineering & production | 13–17 | Typing, concurrency, security, testing, CI/packaging. |
 | Ecosystem & roles | 18 | Map frameworks and domains to language competencies. |
+| Runtime edge cases | 19 | Handle free-threading, subinterpreters, C-ABI boundaries, and observability integration in production. |
 
-Suggested order: **01 → 12** (language + stdlib + environments + numeric correctness) → **13 → 17** (typing, concurrency, security, testing, delivery) → **18**. Revisit **14** when profiling shows CPU-bound vs I/O-bound bottlenecks.
+Suggested order: **01 → 12** (language + stdlib + environments + numeric correctness) → **13 → 17** (typing, concurrency, security, testing, delivery) → **18** (ecosystem choices) → **19** (runtime edge cases and platform operations). Revisit **14** when profiling shows CPU-bound vs I/O-bound bottlenecks.
 
 ### Alignment with the official tutorial (topics 1–16)
 
@@ -79,6 +80,7 @@ The second line confirms **which interpreter** runs when multiple Python install
 | 16 | [Testing, debugging, and profiling](./16_Testing_Debugging_And_Profiling.md) | Structure **pytest**-style tests, debug effectively, profile CPU and memory. |
 | 17 | [Packaging, CI, containers, and operations](./17_Packaging_CI_Containers_And_Operations.md) | Use **pyproject.toml**, ship containers, wire **health** checks and config. |
 | 18 | [Ecosystem, domains, and competency map](./18_Ecosystem_Domains_And_Competency_Map.md) | Place **Django/FastAPI/Flask**, **data tools**, and **automation** in a single competency frame. |
+| 19 | [Runtime edge cases, interop, and observability](./19_Runtime_Edge_Cases_Interop_And_Observability.md) | Govern runtime/version strategy, native-extension compatibility, and trace/log/metric integration at scale. |
 
 ### Deep-study workflow
 
