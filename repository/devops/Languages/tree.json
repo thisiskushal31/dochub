@@ -4372,11 +4372,123 @@
     "sha": "",
     "children": [
       {
+        "name": "01_Introduction_Runtime_And_First_Scripts.md",
+        "path": "R/01_Introduction_Runtime_And_First_Scripts.md",
+        "type": "file",
+        "sha": "",
+        "size": 8048
+      },
+      {
+        "name": "02_Syntax_Types_Vectors_And_Coercion.md",
+        "path": "R/02_Syntax_Types_Vectors_And_Coercion.md",
+        "type": "file",
+        "sha": "",
+        "size": 6232
+      },
+      {
+        "name": "03_Control_Flow_Functions_Environments_And_Scoping.md",
+        "path": "R/03_Control_Flow_Functions_Environments_And_Scoping.md",
+        "type": "file",
+        "sha": "",
+        "size": 4849
+      },
+      {
+        "name": "04_Core_Data_Structures.md",
+        "path": "R/04_Core_Data_Structures.md",
+        "type": "file",
+        "sha": "",
+        "size": 4647
+      },
+      {
+        "name": "05_Packages_Namespaces_And_Project_Structure.md",
+        "path": "R/05_Packages_Namespaces_And_Project_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 4696
+      },
+      {
+        "name": "06_Data_IO_CSV_Excel_JSON_XML_Databases.md",
+        "path": "R/06_Data_IO_CSV_Excel_JSON_XML_Databases.md",
+        "type": "file",
+        "sha": "",
+        "size": 4850
+      },
+      {
+        "name": "07_Data_Transformation_And_Reshaping.md",
+        "path": "R/07_Data_Transformation_And_Reshaping.md",
+        "type": "file",
+        "sha": "",
+        "size": 4070
+      },
+      {
+        "name": "08_Visualization_Engineering.md",
+        "path": "R/08_Visualization_Engineering.md",
+        "type": "file",
+        "sha": "",
+        "size": 3598
+      },
+      {
+        "name": "09_Statistical_Modeling_Fundamentals.md",
+        "path": "R/09_Statistical_Modeling_Fundamentals.md",
+        "type": "file",
+        "sha": "",
+        "size": 3852
+      },
+      {
+        "name": "10_Time_Series_And_Advanced_Modeling.md",
+        "path": "R/10_Time_Series_And_Advanced_Modeling.md",
+        "type": "file",
+        "sha": "",
+        "size": 3508
+      },
+      {
+        "name": "11_Reproducibility_Environments_And_Dependency_Locking.md",
+        "path": "R/11_Reproducibility_Environments_And_Dependency_Locking.md",
+        "type": "file",
+        "sha": "",
+        "size": 3325
+      },
+      {
+        "name": "12_Performance_Memory_And_Profiling.md",
+        "path": "R/12_Performance_Memory_And_Profiling.md",
+        "type": "file",
+        "sha": "",
+        "size": 3431
+      },
+      {
+        "name": "13_Testing_Quality_And_Code_Review.md",
+        "path": "R/13_Testing_Quality_And_Code_Review.md",
+        "type": "file",
+        "sha": "",
+        "size": 3657
+      },
+      {
+        "name": "14_Security_And_Supply_Chain.md",
+        "path": "R/14_Security_And_Supply_Chain.md",
+        "type": "file",
+        "sha": "",
+        "size": 3589
+      },
+      {
+        "name": "15_Automation_CI_CD_And_Operations.md",
+        "path": "R/15_Automation_CI_CD_And_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 3440
+      },
+      {
+        "name": "16_Ecosystem_Use_Cases_And_Competency_Map.md",
+        "path": "R/16_Ecosystem_Use_Cases_And_Competency_Map.md",
+        "type": "file",
+        "sha": "",
+        "size": 3949
+      },
+      {
         "name": "README.md",
         "path": "R/README.md",
         "type": "file",
         "sha": "",
-        "size": 1131
+        "size": 6743
       }
     ]
   },
@@ -4580,6 +4692,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 17797
+    "size": 17857
   }
 ]

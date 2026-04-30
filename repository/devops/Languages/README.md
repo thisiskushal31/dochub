@@ -28,7 +28,7 @@ Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-p
 | **Assembly** | Reverse engineering, malware analysis, exploit dev; x86/x64, ARM; reading disassembly. |
 | **Nim**     | Used in malware and security tooling; cross-platform, compiles to C; recognition and analysis. |
 | **VBA**     | VBA and VBScript: macro malware (Office), Windows scripting; deobfuscation and analysis. |
-| **R**       | Forensics, threat intel, security analytics; statistics, visualization, and reporting. |
+| **R**       | Whole-engineering R track: language, data, modeling, reproducibility, security, and operations. |
 | **LaTeX**   | PDF generation; reports, documentation, threat/audit deliverables; templated and automated PDFs. |
 | **Erlang**  | BEAM VM, RabbitMQ, distributed systems; Elixir’s parent; protocol and infra. |
 | **Zig**     | Systems language (C alternative); Bun, tooling; emerging in security/low-level. |
@@ -97,7 +97,7 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | 18 | [**Assembly**](./Assembly/README.md) | Assembly: RE, malware analysis, exploit dev; x86/x64, ARM. |
 | 19 | [**Nim**](./Nim/README.md) | Nim: malware and security tooling; recognition and analysis. |
 | 20 | [**VBA**](./VBA/README.md) | VBA and VBScript: macro malware, Windows scripting; analysis. |
-| 21 | [**R**](./R/README.md) | R: forensics, threat intel, security analytics. |
+| 21 | [**R**](./R/README.md) | R: beginner-to-advanced language, data modeling, reproducibility, security, and ops (16 chapters). |
 | 22 | [**LaTeX**](./LaTeX/README.md) | LaTeX: PDF generation; reports, docs, automated/templated PDFs. |
 | 23 | [**Erlang**](./Erlang/README.md) | Erlang: BEAM, RabbitMQ, distributed systems; Elixir’s parent. |
 | 24 | [**Zig**](./Zig/README.md) | Zig: systems language; Bun, tooling; C alternative. |
