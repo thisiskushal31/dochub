@@ -4499,11 +4499,165 @@
     "sha": "",
     "children": [
       {
+        "name": "01_Introduction_MRI_Runtime_And_First_Scripts.md",
+        "path": "Ruby/01_Introduction_MRI_Runtime_And_First_Scripts.md",
+        "type": "file",
+        "sha": "",
+        "size": 12512
+      },
+      {
+        "name": "02_Syntax_Literals_Operators_And_Precedence.md",
+        "path": "Ruby/02_Syntax_Literals_Operators_And_Precedence.md",
+        "type": "file",
+        "sha": "",
+        "size": 10589
+      },
+      {
+        "name": "03_Control_Flow_Blocks_Procs_And_Methods.md",
+        "path": "Ruby/03_Control_Flow_Blocks_Procs_And_Methods.md",
+        "type": "file",
+        "sha": "",
+        "size": 11154
+      },
+      {
+        "name": "04_Classes_Modules_And_Object_Model.md",
+        "path": "Ruby/04_Classes_Modules_And_Object_Model.md",
+        "type": "file",
+        "sha": "",
+        "size": 9862
+      },
+      {
+        "name": "05_Core_Types_Strings_Collections_And_Time.md",
+        "path": "Ruby/05_Core_Types_Strings_Collections_And_Time.md",
+        "type": "file",
+        "sha": "",
+        "size": 9551
+      },
+      {
+        "name": "06_Enumerable_Iteration_And_Pattern_Matching.md",
+        "path": "Ruby/06_Enumerable_Iteration_And_Pattern_Matching.md",
+        "type": "file",
+        "sha": "",
+        "size": 7195
+      },
+      {
+        "name": "07_Exceptions_Fibers_Threading_And_GVL.md",
+        "path": "Ruby/07_Exceptions_Fibers_Threading_And_GVL.md",
+        "type": "file",
+        "sha": "",
+        "size": 8873
+      },
+      {
+        "name": "08_Metaprogramming_And_DSL_Patterns.md",
+        "path": "Ruby/08_Metaprogramming_And_DSL_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 7640
+      },
+      {
+        "name": "09_Load_Path_Require_Gems_And_Packaging.md",
+        "path": "Ruby/09_Load_Path_Require_Gems_And_Packaging.md",
+        "type": "file",
+        "sha": "",
+        "size": 7364
+      },
+      {
+        "name": "10_Files_Processes_IO_And_Networking.md",
+        "path": "Ruby/10_Files_Processes_IO_And_Networking.md",
+        "type": "file",
+        "sha": "",
+        "size": 8094
+      },
+      {
+        "name": "11_Standard_Library_Part_I_Data_CLI_Logging.md",
+        "path": "Ruby/11_Standard_Library_Part_I_Data_CLI_Logging.md",
+        "type": "file",
+        "sha": "",
+        "size": 7043
+      },
+      {
+        "name": "12_Standard_Library_Part_II_Net_Crypto_And_Ops.md",
+        "path": "Ruby/12_Standard_Library_Part_II_Net_Crypto_And_Ops.md",
+        "type": "file",
+        "sha": "",
+        "size": 6066
+      },
+      {
+        "name": "13_RubyGems_Bundler_And_Reproducible_Dependencies.md",
+        "path": "Ruby/13_RubyGems_Bundler_And_Reproducible_Dependencies.md",
+        "type": "file",
+        "sha": "",
+        "size": 7563
+      },
+      {
+        "name": "14_GC_Memory_Profiling_And_Performance.md",
+        "path": "Ruby/14_GC_Memory_Profiling_And_Performance.md",
+        "type": "file",
+        "sha": "",
+        "size": 7612
+      },
+      {
+        "name": "15_YJIT_Native_Extensions_And_Runtime_Internals.md",
+        "path": "Ruby/15_YJIT_Native_Extensions_And_Runtime_Internals.md",
+        "type": "file",
+        "sha": "",
+        "size": 7410
+      },
+      {
+        "name": "16_JRuby_JVM_Threads_And_Deployment.md",
+        "path": "Ruby/16_JRuby_JVM_Threads_And_Deployment.md",
+        "type": "file",
+        "sha": "",
+        "size": 4874
+      },
+      {
+        "name": "17_TruffleRuby_And_GraalVM.md",
+        "path": "Ruby/17_TruffleRuby_And_GraalVM.md",
+        "type": "file",
+        "sha": "",
+        "size": 4350
+      },
+      {
+        "name": "18_Alternate_Implementations_And_Embedded_Ruby.md",
+        "path": "Ruby/18_Alternate_Implementations_And_Embedded_Ruby.md",
+        "type": "file",
+        "sha": "",
+        "size": 5286
+      },
+      {
+        "name": "19_Testing_Debugging_And_Quality.md",
+        "path": "Ruby/19_Testing_Debugging_And_Quality.md",
+        "type": "file",
+        "sha": "",
+        "size": 7078
+      },
+      {
+        "name": "20_Security_Unsafe_Patterns_And_Supply_Chain.md",
+        "path": "Ruby/20_Security_Unsafe_Patterns_And_Supply_Chain.md",
+        "type": "file",
+        "sha": "",
+        "size": 7180
+      },
+      {
+        "name": "21_CI_Containers_And_Operations.md",
+        "path": "Ruby/21_CI_Containers_And_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 7335
+      },
+      {
+        "name": "22_Ecosystem_DevOps_Tools_And_Competency_Map.md",
+        "path": "Ruby/22_Ecosystem_DevOps_Tools_And_Competency_Map.md",
+        "type": "file",
+        "sha": "",
+        "size": 6384
+      },
+      {
         "name": "README.md",
         "path": "Ruby/README.md",
         "type": "file",
         "sha": "",
-        "size": 1266
+        "size": 8838
       }
     ]
   },
@@ -4692,6 +4846,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 17857
+    "size": 17922
   }
 ]
