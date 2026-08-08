@@ -24,7 +24,7 @@ ruby -e 'puts RUBY_VERSION; puts RUBY_DESCRIPTION'
 which ruby
 ```
 
-Authoring link inventories live under **`DevOps-Handbook-Source`**; learners do not need internal scrape folders.
+Authoring material lives in **`DevOps-Handbook-Source/Languages/scraped/ruby/`**: link inventories, **`raw/inventory_full/`** (full-text scrape of every URL in those inventories, ~98% success rate), and **`sources/ruby_scrape_coverage_report.md`** for the authoritative fetch status. Learners use these chapters only; they do not need the scrape tree.
 
 ---
 

@@ -68,7 +68,11 @@ Useful for firewall rule generators and allowlist validation.
 
 **`Socket`**, **`TCPSocket`**, **`UDPSocket`** for protocols HTTP does not cover (custom agents, syslog-like UDP). Prefer higher libraries when available.
 
-### 6. `OpenSSL::HMAC` — message authentication
+### 6. `Resolv` and `Addrinfo` in security-sensitive clients
+
+For internal tools that call **APIs by hostname**, DNS is part of your **threat surface**: poisoned or dragged-out lookups become DoS; unexpected IPv6 paths bypass naive IP allowlists. Use **`Addrinfo`** when you must verify **all** resolved addresses against a policy before connect, and **`Resolv`** when you need **Ruby-level** timeouts instead of blocking libc calls (still catch `SocketError` / `ResolvError` and classify as transient vs fatal).
+
+### 7. `OpenSSL::HMAC` — message authentication
 
 HMAC proves integrity + shared secret. Compare digests safely:
 
@@ -78,7 +82,7 @@ OpenSSL.fixed_length_secure_compare(a, b)
 
 Not raw `==` on MACs when timing attacks are in scope.
 
-### 7. Randomness
+### 8. Randomness
 
 Use **`SecureRandom`** (stdlib, often `require 'securerandom'`) for tokens:
 
@@ -172,6 +176,7 @@ end
 - HTTP timeouts and retry limits defined.
 - User-supplied URLs validated against SSRF policy.
 - Checksums use strong algorithms (SHA-256+), not MD5 for security.
+- Hostname clients record DNS failure mode (timeout vs NXDOMAIN) in structured logs.
 
 ---
 
@@ -183,5 +188,7 @@ end
 - [class Net::HTTP](https://docs.ruby-lang.org/en/3.4/Net/HTTP.html)
 - [class IPAddr](https://docs.ruby-lang.org/en/3.4/IPAddr.html)
 - [class Socket](https://docs.ruby-lang.org/en/3.4/Socket.html)
+- [class Addrinfo](https://docs.ruby-lang.org/en/3.4/Addrinfo.html)
+- [class Resolv](https://docs.ruby-lang.org/en/3.4/Resolv.html)
 - [class URI](https://docs.ruby-lang.org/en/3.4/URI.html)
 - [class SecureRandom](https://docs.ruby-lang.org/en/3.4/SecureRandom.html)

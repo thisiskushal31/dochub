@@ -157,6 +157,16 @@ Sidekiq uses **threads** in one process to run multiple jobs. CPU-heavy jobs con
 
 Ruby 3+ allows registering schedulers for non-blocking I/O (async gems). Ecosystem is not universal—default Rails remains threaded blocking I/O. Evaluate explicitly; do not assume async Rails without architecture review.
 
+### 11. Ractors: bounded parallelism on MRI
+
+**`Ractor`** is MRI’s **actor-model** API: each ractor runs Ruby with its **own GVL**, so **multiple ractors can execute Ruby in parallel** on CRuby—unlike threads, which share one GVL for Ruby code. This is not “free parallelism”: ractors **cannot read each other’s objects by default**; you pass data with **`send` / `receive`**, **`yield` / `take`**, or arguments to **`Ractor.new`**. Closures that capture outer variables are rejected (`ArgumentError` isolation) unless you pass values explicitly.
+
+**Shareable vs unshareable:** Most mutable objects are unshareable. **`Ractor.shareable?`** and **`Ractor.make_shareable`** (deep-freeze) matter at boundaries. Sending unshareable objects **copies** by default (deep clone—**can be slow or fail**); **`move: true`** transfers ownership and leaves a **`Ractor::MovedObject`** shell in the sender—design APIs so moved objects are not touched again.
+
+**Why teams rarely run production Rack on ractors (today):** ecosystems (Rails, most gems) assume **shared mutable process state** and thread-local patterns. Ractors fit **CPU pipelines** (image/video transforms, batch parsing) where you can **isolate** work units—not typical request/response without careful architecture.
+
+**Staff checks:** profile clone cost; forbid `move` then accidental reuse; cap ractor count like any worker pool; treat ractor errors like thread errors (supervision, logging). See official docs for **constants** and **class/module instance variables** restrictions in non-main ractors.
+
 ---
 
 ## 3. Applications and use cases
@@ -209,6 +219,7 @@ Document thread model in runbooks: “Puma workers = processes; threads per work
 - Thread pools sized for I/O vs CPU realistically on MRI.
 - Timeouts applied at I/O boundaries, not only `Timeout.timeout`.
 - Background thread errors are observed (join, handler, or monitoring).
+- If **Ractor** is used: message boundaries are explicit; no reuse after `move: true`; clone cost measured under production-sized payloads.
 
 ---
 
@@ -220,5 +231,6 @@ Document thread model in runbooks: “Puma workers = processes; threads per work
 - [class Fiber](https://docs.ruby-lang.org/en/3.4/Fiber.html)
 - [class Thread::Mutex](https://docs.ruby-lang.org/en/3.4/Thread/Mutex.html)
 - [class Thread::Queue](https://docs.ruby-lang.org/en/3.4/Thread/Queue.html)
+- [class Ractor](https://docs.ruby-lang.org/en/3.4/Ractor.html)
 - [Syntax: Exceptions](https://docs.ruby-lang.org/en/3.4/syntax/exceptions_rdoc.html)
 - [class Timeout](https://docs.ruby-lang.org/en/3.4/Timeout.html)

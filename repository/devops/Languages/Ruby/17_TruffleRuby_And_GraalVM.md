@@ -47,6 +47,21 @@ Use Bundler like other Rubies; lockfile must be resolved on TruffleRuby in CI.
 
 GraalVM **Native Image** can ahead-of-time compile to a standalone binary with faster startup and different constraints (closed-world assumption, reflection config). TruffleRuby Native Image is a specialized deploy path—not default for Rails apps.
 
+### 8. How Truffle performance differs from MRI + YJIT (engineering picture)
+
+TruffleRuby is built on a **JIT that speculates** (assuming types and paths stay stable), then **deoptimizes** back to a slower path when reality disagrees. **Warm-up** is not cosmetic—it is the phase where hot loops get inlined and specialized. Micro-benchmarks that exit in milliseconds often **lie** compared to steady-state HTTP + ORM workloads.
+
+| Question you must answer in evaluation | Why it matters |
+|----------------------------------------|----------------|
+| What fraction of CPU time is in **Ruby** vs **native** gems / JNI / regex engines | Truffle wins most when Ruby-level hot loops dominate |
+| How often do workloads change **shape** (schema migrations, rarely-hit code paths) | Frequent deoptimization can flatten peak wins |
+| Is **pause sensitivity** driven by JVM GC or app-level locking | JVM tuning can dominate perceived latency |
+| Can you afford **larger containers** during build + runtime | Graal distributions and JDKs add image weight |
+
+### 9. MRI YJIT vs TruffleRuby (decision shorthand)
+
+Both chase **Ruby-level speed**. **YJIT** stays inside **MRI**: fewer moving parts for teams already expert in CRuby, exceptional for **latency-outlier reduction** in monoliths when enabled and tuned. **TruffleRuby** needs **JDK fluency** and validated **gem/porting** work—payoff tends to appear in **sustained CPU-heavy** workloads after warm-up. **Proof is always your traffic + your gem graph**, not a synthetic loop.
+
 ---
 
 ## 2. Advanced concepts
@@ -73,6 +88,13 @@ Official container tags exist for GraalVM + TruffleRuby—pin digests. Build sta
 
 CRuby invests in **YJIT** for in-process speedups without JVM. TruffleRuby competes on peak throughput and research; choose with benchmarks, not blog posts.
 
+### 6. Benchmarking methodology that survives staff review
+
+- **Phase A — cold:** process start → first N requests (container scale-out realism).
+- **Phase B — warm:** sustained RPS until variance of p99 stabilizes (often 5–30 minutes depending on GC and code paths).
+- **Phase C — regression:** deploy a change that alters a hot path (feature flag), repeat Phase B—**deoptimization storms** show here first.
+- Always record **JDK version**, **container CPU cap**, **CFS throttling**, and **DB latency**—Ruby JIT cannot fix poisoned dependencies.
+
 ---
 
 ## 3. Applications and use cases
@@ -98,6 +120,7 @@ Most infrastructure Ruby (Chef, Vagrant, small glue) stays **MRI**. TruffleRuby 
 - Gem compatibility matrix signed for top 20 dependencies.
 - Load tests include cold start and warm steady state.
 - Rollback path to MRI documented if experiment fails.
+- Dashboards distinguish **JVM GC** pauses from **Ruby** time; on-call runbooks mention Graal logging flags alongside app logs.
 
 ---
 

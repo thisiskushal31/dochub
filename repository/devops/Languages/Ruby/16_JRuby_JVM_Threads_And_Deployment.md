@@ -70,6 +70,17 @@ java.lang.System.getProperty('java.version')
 
 Import Java packages, implement Java interfaces in Ruby for callbacks. Classpath is controlled by JVM (`CLASSPATH`, container image).
 
+### 9. JVM vs Ruby heap mental model
+
+On JRuby, **object storage** is primarily **managed by the JVM heap** (young/old generations if you use generational collectors). Ruby’s own introspection (`ObjectSpace`, `GC.stat`-style stats) may not match what operations teams learn on MRI—**treat JVM metrics as primary**: heap after full GC, GC pause times, **metaspace** (class metadata), and **direct / mapped buffers** if you use NIO or native interop.
+
+| Signal | Typical JRuby ops action |
+|--------|---------------------------|
+| Rising **old-gen** heap with flat traffic | Leak hunt (connections, caches, Java object graphs); not “just increase `-Xmx`” |
+| **Metaspace** growth | Classloader churn (hot redeploy without `ClassLoader` cleanup, dynamic codegen) |
+| Long **pause** times (G1, Parallel old) | Tune pause goal, region size, or evaluate **ZGC** / **Shenandoah** for low-latency estates |
+| High **thread** count | JVM native thread stack memory + context switching; align with DB pool and pool detect |
+
 ---
 
 ## 2. Advanced concepts
@@ -90,7 +101,43 @@ JRuby does not support Unix `fork` the same way MRI does for prefork servers. De
 
 **`jruby --backtrace`**, JVM tools (**jstack**, **VisualVM**), and Java logging integrate with enterprise APM. Ruby-level `debugger` gems may differ—verify toolchain.
 
-### 5. Migration checklist from MRI
+### 5. Parallel threads and still-real bottlenecks
+
+JRuby removes MRI’s **Ruby** GVL, but **your process is not magically linearly scalable**:
+
+- **Global locks** in gems, monitors, or incorrect DB transaction scope still serialize work.
+- **JDBC** connection pools and pool sizing behave like **ActiveRecord** pools—threads waiting on `checkout` look like “Ruby slowness” in flame graphs.
+- **CPU saturation** on a single JVM may be better solved with **multiple JVM processes** and load balancing than unbounded thread counts.
+
+Document target **max concurrent DB checkouts** and **max JRuby threads** together in a single table in the service README.
+
+### 6. Common MRI → JRuby dependency swaps (illustrative)
+
+Exact choices depend on versions; plan a **compatibility spike** before promising dates.
+
+| MRI pattern | JRuby direction |
+|-------------|-----------------|
+| `pg` gem | **JDBC** Postgres driver, `sequel` JDBC, or JRuby-specific adapters |
+| `mysql2` | JDBC MySQL driver |
+| `nio4r` / some C loops | Pure-Ruby or Java NIO replacements where available |
+| `oj` JSON | Often **stdlib JSON** or Jackson-backed paths |
+| Native **OpenSSL** in gem | JVM **JSSE** trust store; align TLS protocols with corp policy |
+
+**Lockfile discipline:** `Gemfile.lock` **resolved on JRuby** in CI is the contract—MRI-resolved locks are hints only.
+
+### 7. Servlet / WAR deployment notes
+
+**WAR**-style deploys integrate with **Java application servers** (Tomcat, etc.). Operational concerns include:
+
+- **Classloader** boundaries: gems and Java deps must not conflict across shared server classpaths.
+- **Graceful shutdown** hooks line up with server lifecycle events, not only `SIGTERM` from MRI habits.
+- **Session affinity** and **sticky sessions** if you temporarily store server-side state—prefer stateless services.
+
+### 8. JDK selection and security
+
+Standardize on a **vendor-supported JDK** (Corretto, Temurin, vendor Oracle build) with a **patch SLA** tied to your security program. **JRuby release notes** often mention minimum Java versions—pin **both** JRuby and JDK in the image manifest.
+
+### 9. Migration checklist from MRI
 
 - Run test suite on JRuby in CI.
 - Replace C-extension gems.
@@ -128,8 +175,9 @@ Monitor JVM GC logs, not only Ruby logs.
 
 - CI runs on JRuby if production does.
 - Gem native extension policy documented.
-- Heap and thread pool sizes justified with load tests.
-- Java interop boundaries reviewed for classloader leaks.
+- Heap and thread pool sizes justified with load tests; JVM GC logs baseline captured.
+- Java interop boundaries reviewed for classloader leaks and JNI lifecycle.
+- **Observability** includes JVM tabs (heap, threads, GC) alongside Ruby request metrics.
 
 ---
 

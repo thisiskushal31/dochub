@@ -95,6 +95,14 @@ Set **timeouts**, **SSL options**, and validate certificates in production—not
 
 **`URI.parse`** and **`URI.join`** build request targets. Do not trust user-provided URLs without scheme/host allowlists (SSRF risk).
 
+### 12. DNS and addressing: `Resolv`, `Addrinfo`
+
+**`Resolv`** (stdlib) performs DNS lookups with explicit control over timeouts and resolvers—useful when agents must not block on flaky **`/etc/resolv.conf`** behavior during rolling cluster changes.
+
+**`Addrinfo`** wraps **`getaddrinfo`**-style results: IPv4/IPv6, canonical names, and socket endpoint hints. Prefer it when binding servers to specific interfaces (**dual-stack** hosts, cgroup network namespaces) or when you need the **full candidate list** before opening a socket—ordering can change with Happy Eyeballs / OS policy.
+
+Operational pitfall: DNS answers **change** during failovers; cache TTLs at app level only when you understand stale-read risk. Pair with connect **timeouts** from chapter 12—slow DNS looks like “Ruby hung” in logs.
+
 ---
 
 ## 2. Advanced concepts
@@ -205,5 +213,7 @@ abort "unhealthy #{res.code}" unless res.is_a?(Net::HTTPSuccess)
 - [class Socket](https://docs.ruby-lang.org/en/3.4/Socket.html)
 - [class Net::HTTP](https://docs.ruby-lang.org/en/3.4/Net/HTTP.html)
 - [class URI](https://docs.ruby-lang.org/en/3.4/URI.html)
+- [class Addrinfo](https://docs.ruby-lang.org/en/3.4/Addrinfo.html)
+- [class Resolv](https://docs.ruby-lang.org/en/3.4/Resolv.html)
 - [class ENV](https://docs.ruby-lang.org/en/3.4/ENV.html)
 - [module Etc](https://docs.ruby-lang.org/en/3.4/Etc.html)

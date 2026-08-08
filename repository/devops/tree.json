@@ -5173,7 +5173,7 @@
             "path": "Languages/Ruby/07_Exceptions_Fibers_Threading_And_GVL.md",
             "type": "file",
             "sha": "",
-            "size": 8873
+            "size": 10651
           },
           {
             "name": "08_Metaprogramming_And_DSL_Patterns.md",
@@ -5194,7 +5194,7 @@
             "path": "Languages/Ruby/10_Files_Processes_IO_And_Networking.md",
             "type": "file",
             "sha": "",
-            "size": 8094
+            "size": 9040
           },
           {
             "name": "11_Standard_Library_Part_I_Data_CLI_Logging.md",
@@ -5208,7 +5208,7 @@
             "path": "Languages/Ruby/12_Standard_Library_Part_II_Net_Crypto_And_Ops.md",
             "type": "file",
             "sha": "",
-            "size": 6066
+            "size": 6797
           },
           {
             "name": "13_RubyGems_Bundler_And_Reproducible_Dependencies.md",
@@ -5229,28 +5229,28 @@
             "path": "Languages/Ruby/15_YJIT_Native_Extensions_And_Runtime_Internals.md",
             "type": "file",
             "sha": "",
-            "size": 7410
+            "size": 8176
           },
           {
             "name": "16_JRuby_JVM_Threads_And_Deployment.md",
             "path": "Languages/Ruby/16_JRuby_JVM_Threads_And_Deployment.md",
             "type": "file",
             "sha": "",
-            "size": 4874
+            "size": 8153
           },
           {
             "name": "17_TruffleRuby_And_GraalVM.md",
             "path": "Languages/Ruby/17_TruffleRuby_And_GraalVM.md",
             "type": "file",
             "sha": "",
-            "size": 4350
+            "size": 6569
           },
           {
             "name": "18_Alternate_Implementations_And_Embedded_Ruby.md",
             "path": "Languages/Ruby/18_Alternate_Implementations_And_Embedded_Ruby.md",
             "type": "file",
             "sha": "",
-            "size": 5286
+            "size": 8506
           },
           {
             "name": "19_Testing_Debugging_And_Quality.md",
@@ -5285,7 +5285,7 @@
             "path": "Languages/Ruby/README.md",
             "type": "file",
             "sha": "",
-            "size": 8838
+            "size": 9076
           }
         ]
       },

@@ -131,6 +131,12 @@ Native extensions compiled for `3.4.1` usually work on `3.4.2`; minor bump may b
 
 Products embedding `ruby_init` + `ruby_run` carry VM lifecycle complexity—unload/reload is hard. Most teams consume Ruby via CLI or separate service, not embed.
 
+### 11. Peeking at YARV: `RubyVM::InstructionSequence`
+
+**`RubyVM::InstructionSequence.compile` / `.compile_file`** produce objects representing **YARV bytecode** for a snippet or file. This is not day-to-day operations—but when validating **optimizer-sensitive** code (ensuring a hot path is not accidentally dominated by `defined?` edges), or building internal **lints** that must match MRI’s parse/compile, disassembly is the source of truth.
+
+Treat this API as **CRuby-specific**; JRuby/TruffleRuby will not reproduce the same instruction stream. Use in CI sparingly (compile cost); never depend on exact insn names across Ruby minors without pinning.
+
 ---
 
 ## 3. Applications and use cases
@@ -174,6 +180,7 @@ Chef ships vendored Ruby and many compiled deps—do not assume your laptop’s 
 ## References
 
 - [module RubyVM::YJIT](https://docs.ruby-lang.org/en/3.4/RubyVM/YJIT.html)
+- [class RubyVM::InstructionSequence](https://docs.ruby-lang.org/en/3.4/RubyVM/InstructionSequence.html)
 - [module RubyVM](https://docs.ruby-lang.org/en/3.4/RubyVM.html)
 - [C extension guide (Ruby 3.4)](https://docs.ruby-lang.org/en/3.4/extension_rdoc.html)
 - [Creating Extension Libraries](https://docs.ruby-lang.org/en/3.4/extension_rdoc.html#label-Creating+Extension+Libraries)
