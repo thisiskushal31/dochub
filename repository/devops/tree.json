@@ -5285,7 +5285,7 @@
             "path": "Languages/Ruby/README.md",
             "type": "file",
             "sha": "",
-            "size": 9076
+            "size": 7230
           }
         ]
       },
@@ -5296,11 +5296,151 @@
         "sha": "",
         "children": [
           {
+            "name": "01_What_Is_Rust_And_Why_Teams_Use_It.md",
+            "path": "Languages/Rust/01_What_Is_Rust_And_Why_Teams_Use_It.md",
+            "type": "file",
+            "sha": "",
+            "size": 14390
+          },
+          {
+            "name": "02_Toolchain_Rustup_Rustc_Cargo_And_Editions.md",
+            "path": "Languages/Rust/02_Toolchain_Rustup_Rustc_Cargo_And_Editions.md",
+            "type": "file",
+            "sha": "",
+            "size": 11702
+          },
+          {
+            "name": "03_Cargo_Projects_Crates_And_Workspaces.md",
+            "path": "Languages/Rust/03_Cargo_Projects_Crates_And_Workspaces.md",
+            "type": "file",
+            "sha": "",
+            "size": 11885
+          },
+          {
+            "name": "04_Syntax_Types_And_Ownership_Basics.md",
+            "path": "Languages/Rust/04_Syntax_Types_And_Ownership_Basics.md",
+            "type": "file",
+            "sha": "",
+            "size": 10936
+          },
+          {
+            "name": "05_Ownership_Borrowing_And_Lifetimes.md",
+            "path": "Languages/Rust/05_Ownership_Borrowing_And_Lifetimes.md",
+            "type": "file",
+            "sha": "",
+            "size": 13156
+          },
+          {
+            "name": "06_Structs_Enums_And_Pattern_Matching.md",
+            "path": "Languages/Rust/06_Structs_Enums_And_Pattern_Matching.md",
+            "type": "file",
+            "sha": "",
+            "size": 11579
+          },
+          {
+            "name": "07_Error_Handling_Result_Option_And_Panic.md",
+            "path": "Languages/Rust/07_Error_Handling_Result_Option_And_Panic.md",
+            "type": "file",
+            "sha": "",
+            "size": 10282
+          },
+          {
+            "name": "08_Traits_Generics_And_Advanced_Lifetimes.md",
+            "path": "Languages/Rust/08_Traits_Generics_And_Advanced_Lifetimes.md",
+            "type": "file",
+            "sha": "",
+            "size": 10383
+          },
+          {
+            "name": "09_Collections_Iterators_And_Closures.md",
+            "path": "Languages/Rust/09_Collections_Iterators_And_Closures.md",
+            "type": "file",
+            "sha": "",
+            "size": 9312
+          },
+          {
+            "name": "10_Packages_Modules_And_Visibility.md",
+            "path": "Languages/Rust/10_Packages_Modules_And_Visibility.md",
+            "type": "file",
+            "sha": "",
+            "size": 10102
+          },
+          {
+            "name": "11_Std_For_Operations_Fs_Process_Env_Net.md",
+            "path": "Languages/Rust/11_Std_For_Operations_Fs_Process_Env_Net.md",
+            "type": "file",
+            "sha": "",
+            "size": 9968
+          },
+          {
+            "name": "12_Concurrency_Threads_Sync_Send_Sync.md",
+            "path": "Languages/Rust/12_Concurrency_Threads_Sync_Send_Sync.md",
+            "type": "file",
+            "sha": "",
+            "size": 9717
+          },
+          {
+            "name": "13_Async_Rust_Runtimes_And_Pitfalls.md",
+            "path": "Languages/Rust/13_Async_Rust_Runtimes_And_Pitfalls.md",
+            "type": "file",
+            "sha": "",
+            "size": 9585
+          },
+          {
+            "name": "14_Unsafe_FFI_And_Boundaries.md",
+            "path": "Languages/Rust/14_Unsafe_FFI_And_Boundaries.md",
+            "type": "file",
+            "sha": "",
+            "size": 9285
+          },
+          {
+            "name": "15_Testing_Clippy_Rustfmt_And_Docs.md",
+            "path": "Languages/Rust/15_Testing_Clippy_Rustfmt_And_Docs.md",
+            "type": "file",
+            "sha": "",
+            "size": 8838
+          },
+          {
+            "name": "16_Cross_Compile_Targets_And_Release_Builds.md",
+            "path": "Languages/Rust/16_Cross_Compile_Targets_And_Release_Builds.md",
+            "type": "file",
+            "sha": "",
+            "size": 8214
+          },
+          {
+            "name": "17_Security_And_Supply_Chain.md",
+            "path": "Languages/Rust/17_Security_And_Supply_Chain.md",
+            "type": "file",
+            "sha": "",
+            "size": 8230
+          },
+          {
+            "name": "18_Use_Cases_CLI_Agents_Infra_Embedded.md",
+            "path": "Languages/Rust/18_Use_Cases_CLI_Agents_Infra_Embedded.md",
+            "type": "file",
+            "sha": "",
+            "size": 7821
+          },
+          {
+            "name": "19_Production_CI_Containers_And_Observability.md",
+            "path": "Languages/Rust/19_Production_CI_Containers_And_Observability.md",
+            "type": "file",
+            "sha": "",
+            "size": 7418
+          },
+          {
+            "name": "20_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+            "path": "Languages/Rust/20_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+            "type": "file",
+            "sha": "",
+            "size": 7749
+          },
+          {
             "name": "README.md",
             "path": "Languages/Rust/README.md",
             "type": "file",
             "sha": "",
-            "size": 761
+            "size": 7333
           }
         ]
       },
@@ -5474,7 +5614,7 @@
         "path": "Languages/README.md",
         "type": "file",
         "sha": "",
-        "size": 17922
+        "size": 17943
       }
     ]
   },
