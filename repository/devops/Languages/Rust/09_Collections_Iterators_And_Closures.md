@@ -116,6 +116,19 @@ Each closure has a unique anonymous type. You cannot write two different closure
 
 Text protocols use `String`/`&str`. Opaque payloads and hashes stay bytes. Converting lossily between them is a source of bugs—be explicit at the edge (`from_utf8`, `from_utf8_lossy`) and handle `Result`.
 
+### 8. Other `std` collections you will meet
+
+Beyond `Vec` / `String` / `HashMap`, staff-readable code often uses:
+
+| Type | Role |
+|------|------|
+| **`HashSet<T>`** | Membership tests; dedupe when order does not matter |
+| **`BTreeMap` / `BTreeSet`** | Sorted keys; range queries; deterministic iteration order |
+| **`VecDeque<T>`** | Efficient push/pop at both ends (queues, ring buffers) |
+| **`BinaryHeap<T>`** | Priority queues |
+
+Pick by **access pattern**, not habit. Sorting a `Vec` repeatedly is not a substitute for a `BTreeMap` when you need ordered keys continuously. Document why a non-`Vec` collection appears in a hot path.
+
 ---
 
 ## 3. Applications and use cases
@@ -173,6 +186,7 @@ Text protocols use `String`/`&str`. Opaque payloads and hashes stay bytes. Conve
 - [std::vec::Vec](https://doc.rust-lang.org/stable/std/vec/struct.Vec.html)
 - [std::string::String](https://doc.rust-lang.org/stable/std/string/struct.String.html)
 - [std::collections::HashMap](https://doc.rust-lang.org/stable/std/collections/struct.HashMap.html)
+- [std::collections — HashSet, BTreeMap, VecDeque, BinaryHeap](https://doc.rust-lang.org/stable/std/collections/index.html)
 - [std::iter::Iterator](https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html)
 - [std::ops::Fn](https://doc.rust-lang.org/stable/std/ops/trait.Fn.html)
 - [std::ops::FnMut](https://doc.rust-lang.org/stable/std/ops/trait.FnMut.html)

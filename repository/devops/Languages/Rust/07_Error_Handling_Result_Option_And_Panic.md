@@ -113,11 +113,76 @@ A library error enum typically:
 - Implements `From` for lower-level errors you want to bubble with `?`.
 - Avoids holding non-`'static` borrows in errors that must outlive the call (prefer owned `String` / `PathBuf` in error payloads).
 
-### 5. Panics in tests and examples
+### 5. Implementing `std::error::Error` without derive crates
+
+You can ship typed errors with only `std`. Minimal pattern:
+
+```rust
+use std::fmt;
+
+#[derive(Debug)]
+pub enum ConfigError {
+    MissingKey(&'static str),
+    Io(std::io::Error),
+}
+
+impl fmt::Display for ConfigError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            ConfigError::MissingKey(k) => write!(f, "missing config key: {k}"),
+            ConfigError::Io(e) => write!(f, "config io error: {e}"),
+        }
+    }
+}
+
+impl std::error::Error for ConfigError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            ConfigError::Io(e) => Some(e),
+            ConfigError::MissingKey(_) => None,
+        }
+    }
+}
+
+impl From<std::io::Error> for ConfigError {
+    fn from(e: std::io::Error) -> Self {
+        ConfigError::Io(e)
+    }
+}
+```
+
+`Display` is the operator-facing message; `Debug` is for developers. Implementing **`Error::source`** chains causes for logs and `Error::sources` iteration. `From` enables `?`. Optional: `Error::provide` (newer stable APIs) for typed context—use when you need structured extraction beyond `source`.
+
+### 6. Ecosystem practice: typed library errors vs erased app context
+
+Two common crate *roles* (names you will see on crates.io; pick versions deliberately):
+
+| Role | Typical crates (class) | Fit |
+|------|------------------------|-----|
+| **Library typed errors** | `thiserror`-class derives | Generate `Display` / `Error` / `From` for enums you want callers to **match** |
+| **Application erased context** | `anyhow`-class / similar | One error type with **context** strings for binaries and internal apps; callers rarely match variants |
+
+Staff rule of thumb: **libraries** expose concrete (or `non_exhaustive`) error enums so dependents can branch; **binaries and glue** may erase to a single contextual error at the rim. Mixing them is fine—map library enums into app errors at the boundary. Do not force every library onto an erased error type; do not force every CLI to hand-write boilerplate `Display` if a derive helper is already a team standard.
+
+### 7. `dyn Error` and downcasting awareness
+
+`Box<dyn std::error::Error + Send + Sync>` (and trait-object returns) is convenient at binary edges and in heterogeneous `?` stacks. Trade-offs:
+
+- Callers see a trait object, not your enum—**matching variants requires downcasting** (`error.downcast_ref::<MyError>()` on `Box` / `anyhow`-style wrappers, or walking `source()`).
+- Downcasting fails if intermediate layers wrapped or stringified the error away.
+- Prefer concrete `E` in **public library** signatures when callers need stable matching; reserve `dyn Error` for app-level aggregation or plugin boundaries.
+
+If you only need to log and exit, downcasting is unnecessary—print/`source` chain is enough.
+
+### 8. Panic hooks (where they live)
+
+Installing `std::panic::set_hook` for structured panic logs, backtraces, and metrics belongs with **production observability** (chapter 19), not as a substitute for `Result` in APIs. Here: panics remain for bugs; hooks observe them when the process is about to die or unwind.
+
+### 9. Panics in tests and examples
 
 Tests use `unwrap`/`expect` freely when failure should fail the test. Doc examples often unwrap for brevity; production library paths should still show `?` or proper handling in non-example code.
 
-### 6. `todo!`, `unimplemented!`, `unreachable!`
+### 10. `todo!`, `unimplemented!`, `unreachable!`
 
 These panic with intent signals. `todo!` / `unimplemented!` mark incomplete code. `unreachable!` documents arms the author believes cannot run—if they do, you have a bug. Prefer exhaustive matches that make `unreachable!` unnecessary when the type system can prove coverage.
 
@@ -144,8 +209,8 @@ These panic with intent signals. `todo!` / `unimplemented!` mark incomplete code
 
 ### Reliability and operations
 
-- Metrics: count `Err` variants and panic hooks separately.
-- Set a panic hook in services to log backtraces before abort/unwind ends the thread.
+- Metrics: count `Err` variants and panic outcomes separately.
+- Panic hook installation and structured panic telemetry: chapter 19.
 - Retries belong around `Result` errors classified as transient—not around panics.
 
 ### Performance
@@ -158,9 +223,11 @@ These panic with intent signals. `todo!` / `unimplemented!` mark incomplete code
 - Public library APIs do not use panic for expected errors.
 - `unwrap`/`expect` in non-test code justified (invariant or fatal binary startup only).
 - `?` used with intentional `From` conversions; context preserved where operators need it.
-- Error types implement `Display` / `Error` when exposed across crates.
+- Error types implement `Display` / `Error` (and useful `source`) when exposed across crates; derive helpers optional, pattern understood without them.
+- Libraries keep matchable typed errors; apps may erase with context at the rim—policy is explicit.
+- `dyn Error` / downcast used only where heterogeneity is required; not the default library surface.
 - No bare swallowing of `Err` (`let _ = ...`) without logging or metric.
-- Panic strategy (`unwind` vs `abort`) known for the shipped artifact.
+- Panic strategy (`unwind` vs `abort`) known for the shipped artifact; hooks deferred to chapter 19.
 - User-facing error strings reviewed for information disclosure.
 
 ---
@@ -176,6 +243,10 @@ These panic with intent signals. `todo!` / `unimplemented!` mark incomplete code
 - [std::result::Result](https://doc.rust-lang.org/stable/std/result/enum.Result.html)
 - [std::option::Option](https://doc.rust-lang.org/stable/std/option/enum.Option.html)
 - [std::error::Error](https://doc.rust-lang.org/stable/std/error/trait.Error.html)
+- [std::error::Error::source](https://doc.rust-lang.org/stable/std/error/trait.Error.html#method.source)
+- [Box::downcast](https://doc.rust-lang.org/stable/std/boxed/struct.Box.html#method.downcast)
 - [std::panic](https://doc.rust-lang.org/stable/std/panic/index.html)
 - [Cargo Book: The panic profile setting](https://doc.rust-lang.org/stable/cargo/reference/profiles.html#panic)
 - [Edition Guide: Question mark operator](https://doc.rust-lang.org/edition-guide/rust-2018/error-handling-and-panics/the-question-mark-operator-for-easier-error-handling.html)
+- [crates.io — thiserror](https://crates.io/crates/thiserror)
+- [crates.io — anyhow](https://crates.io/crates/anyhow)

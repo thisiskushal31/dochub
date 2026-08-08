@@ -55,19 +55,26 @@ Unattended `cargo update` on the whole graph can surprise you with transitive br
 
 Authors can **yank** a version on crates.io: new resolves will not select it, but existing lockfiles that already pin that version continue to download it. Yank is a signal (“do not use for new resolves”), not a delete. After a yank for security reasons, bump your lockfile deliberately and redeploy.
 
-### 6. Advisory awareness (practice-first)
+### 6. Policy tools: cargo-audit and cargo-deny (practices)
 
-The ecosystem maintains security advisory databases (commonly discussed under the **RUSTSEC** name) and tooling such as **cargo-audit** that check your lockfile against known advisories. Staff practice matters more than any single tool name:
+The **RustSec** advisory database tracks known issues in crates.io packages. Two widely used CLI practices (install from crates.io; pin the tool in CI—do not hard-require a specific version in this handbook):
 
-- Scan the lockfile in CI on a fixed schedule and on dependency PRs.
-- Triage: affected crate, fixed version, whether you are reachable, workaround.
-- Do not equate “no advisory hit” with “safe”—novel or logic issues will not appear yet.
+| Tool | Capability (high level) |
+|------|-------------------------|
+| **cargo-audit** | Audits `Cargo.lock` against the advisory database (vulnerabilities and related RustSec records). |
+| **cargo-deny** | Broader policy lint over the graph: **advisories**, **licenses** (allow/deny SPDX policy), **bans** (denied crates/features/multiple versions), and **sources** (which registries/git sources are allowed). |
 
-You may install audit tooling via Cargo from crates.io; pin the tool version in CI the same way you pin other build tools.
+Staff practice matters more than brand names:
 
-### 7. Secrets never belong in crates
+- Run advisory (and, if adopted, deny) checks in CI on a schedule and on dependency PRs.
+- Triage: affected crate, fixed version, reachability, workaround; record ignores with owners and expiry.
+- Use deny-class **bans** to stop known-bad crates or duplicate versions from creeping back after a cleanup.
+- Use **sources** policy so only crates.io (and explicitly approved git/registries) can appear in the graph.
+- “No advisory hit” ≠ “safe”—logic bugs and zero-days will not appear yet.
 
-Do not embed API keys, private keys, or customer data in published crates, examples, or test fixtures that ship in the package. Registry tarballs are public. Use environment variables, secret managers, and CI secret stores. Review `include_str!` / `include_bytes!` and large `#[cfg(test)]` assets before publish.
+### 7. Secrets: never in git; inject at runtime
+
+Do not embed API keys, private keys, or customer data in published crates, examples, test fixtures, `include_str!` / `include_bytes!`, or committed `.env` files. Registry tarballs and git history are hostile. Prefer secret managers and **runtime** injection (process environment or mounted files provided by the platform). CI secrets belong in the CI secret store, not in Dockerfile `ENV` layers that persist in image history. Rotate anything that ever appeared in a public log or published crate.
 
 ### 8. Least privilege for builds
 
@@ -77,29 +84,51 @@ Compile and test as a non-root CI user. Limit network egress during builds when 
 
 ## 2. Advanced concepts
 
-### 1. Feature flags and optional deps
+### 1. `build.rs` threat patterns
+
+Build scripts run as ordinary code on the developer or CI machine with that user’s privileges. Review new or surprising `build.rs` (and `[build-dependencies]`) for:
+
+- **Network fetch** at build time (downloading toolchains, C sources, or “helpers”)—prefer vendored inputs and offline-friendly builds.
+- **Writes outside `OUT_DIR`** — Cargo intends generated artifacts under the output directory; writing into the source tree, home directory, or global caches is a smell and a persistence risk.
+- **Reading secrets from the environment** — build scripts that require cloud credentials or API tokens expand the blast radius of every compile; prefer pre-fetched inputs.
+- **Executing downloaded or generated code** — treat as installing software mid-build; high assurance teams forbid this class entirely.
+
+Same scrutiny applies to crates whose build scripts compile C via the `cc` crate: you inherit that C toolchain’s trust model.
+
+### 2. Procedural macro trust
+
+**Proc-macros** expand at compile time by running code on the host (developer laptop and CI). They are not “just types”—they are a trust decision equal to adding a build plugin. Prefer well-known, maintained macros; review updates that touch macro crates carefully; avoid obscure macros that pull large graphs. Edition choice does not sandbox them.
+
+### 3. Feature flags and optional deps
 
 Cargo **features** can pull optional dependencies and enable code paths you did not review. Audit `Cargo.toml` features enabled in your workspace and in CI (`--all-features` vs default features). Document the feature set you ship.
 
-### 2. Git and path dependencies
+### 4. Git and path dependencies
 
-`dependency = { git = "…" }` and path deps bypass crates.io versioning. Lock commits (`rev`) and treat them as first-class supply-chain risk. Prefer crates.io releases for production graphs unless you have a documented fork policy.
+`dependency = { git = "…" }` and path deps bypass crates.io versioning. Lock commits (`rev`) and treat them as first-class supply-chain risk. Prefer crates.io releases for production graphs unless you have a documented fork policy. Source allow-lists in cargo-deny-style policies catch accidental git deps.
 
-### 3. `[patch]` and `[replace]`
+### 5. `[patch]` and `[replace]`
 
 Workspace patches redirect resolves. They are powerful for hotfixes and dangerous when undocumented. Require review for any patch that changes provenance of a security-sensitive crate.
 
-### 4. Unsafe inventory
+### 6. Unsafe inventory
 
 Staff-level review maintains a short inventory: crates that contain `unsafe`, FFI, or ambient capabilities (filesystem, network, process). Edition (`2018` vs `2024`) does not change the need for that inventory.
 
-### 5. Ambiguous package names and typosquatting
+### 7. Typosquatting and reviewing new dependencies
 
-Registry names are global. Confirm crate identity (owners, repository link on the crates.io page, download patterns) before adding a look-alike name. Pin versions in the lockfile so a later malicious higher version is not picked without an update PR.
+Registry names are global. Before adding a **new** direct dependency:
 
-### 6. Legacy notes
+1. Confirm crate identity on crates.io (owners, repository link, recent activity)—not only the name spelling.
+2. Skim `cargo tree` growth, `unsafe`/FFI/`build.rs`/proc-macro surface, and license.
+3. Prefer established crates over look-alikes that differ by one character.
+4. Land new deps via PR with lockfile diff; never “just cargo add” on main without review.
 
-Older Cargo workflows sometimes omitted lockfiles for apps or relied on `cargo +nightly` in production. Modern practice: **stable** toolchain for release, lockfile for apps, advisory check in CI. Brownfield `edition = "2018"` crates need the same supply-chain controls as Edition 2024.
+Pinning via `Cargo.lock` means a later malicious higher version still requires an update PR—keep that process gated.
+
+### 8. Legacy notes
+
+Older Cargo workflows sometimes omitted lockfiles for apps or relied on `cargo +nightly` in production. Modern practice: **stable** toolchain for release, lockfile for apps, advisory/deny checks in CI. Brownfield `edition = "2018"` crates need the same supply-chain controls as Edition 2024.
 
 ---
 
@@ -112,7 +141,7 @@ Older Cargo workflows sometimes omitted lockfiles for apps or relied on `cargo +
 
 ### Security
 
-- Threat-model `unsafe`, FFI, and build scripts separately from “safe Rust” marketing claims.
+- Threat-model `unsafe`, FFI, **build scripts**, and **proc-macros** separately from “safe Rust” marketing claims.
 - Rotate credentials if they ever appeared in a published crate or public CI log.
 
 ### Reliability
@@ -130,9 +159,11 @@ Older Cargo workflows sometimes omitted lockfiles for apps or relied on `cargo +
 - [ ] Safe vs `unsafe`/FFI boundaries are documented for the product.
 - [ ] Applications commit `Cargo.lock`; CI builds with `--locked` (or equivalent) for releases.
 - [ ] Dependency updates are reviewed; `cargo tree` understood for critical paths.
-- [ ] Advisory scanning runs in CI; triage owners exist.
-- [ ] No secrets in crate sources or published packages.
-- [ ] Build agents run least privilege; build-script risk acknowledged.
+- [ ] **cargo-audit** and/or **cargo-deny** (or equivalent) runs in CI; triage owners exist.
+- [ ] License/ban/source policy exists if the org requires it (deny-class tooling).
+- [ ] New deps reviewed for typosquatting and build-time code execution surface.
+- [ ] No secrets in git, crate sources, or published packages; runtime injection only.
+- [ ] Build agents run least privilege; `build.rs` / proc-macro risk acknowledged.
 - [ ] Git/path/`[patch]` exceptions are inventoried.
 - [ ] Yank/CVE response playbook exists (lockfile bump + redeploy).
 
@@ -144,7 +175,11 @@ Older Cargo workflows sometimes omitted lockfiles for apps or relied on `cargo +
 - [The Cargo Book — Cargo.lock](https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html)
 - [The Cargo Book — Yanking](https://doc.rust-lang.org/cargo/commands/cargo-yank.html)
 - [The Cargo Book — Features](https://doc.rust-lang.org/cargo/reference/features.html)
+- [The Cargo Book — Build Scripts](https://doc.rust-lang.org/cargo/reference/build-scripts.html)
 - [The Rustonomicon (unsafe)](https://doc.rust-lang.org/nomicon/)
 - [The Rust Reference — Unsafety](https://doc.rust-lang.org/reference/unsafety.html)
+- [RustSec Advisory Database](https://rustsec.org/)
+- [cargo-deny on crates.io](https://crates.io/crates/cargo-deny)
+- [cargo-audit on crates.io](https://crates.io/crates/cargo-audit)
 - [crates.io policies](https://crates.io/policies)
 - [crates.io](https://crates.io/)

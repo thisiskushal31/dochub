@@ -70,14 +70,24 @@ Roughly: `T: Sync` if `&T: Send`. Most owned values are `Send` unless they conta
 
 You rarely implement `Send`/`Sync` manually; they are auto-implemented when fields allow. Incorrect `unsafe impl` is a serious soundness bug.
 
-### 6. Interior mutability: `Cell` and `RefCell`
+### 6. Interior mutability: `Cell` / `RefCell` versus `Mutex`
 
-**Interior mutability** lets you mutate through a shared reference when the type enforces rules itself:
+**Interior mutability** lets you mutate through a shared reference when the type enforces rules itself. Choose by **thread model**, not by habit:
 
-- **`Cell<T>`** — `Copy` or replace-style mutation; single-threaded; no runtime borrow flag
-- **`RefCell<T>`** — dynamic borrow checking; panics on conflicting borrows at runtime; single-threaded
+| Tool | Threading | Enforcement | Typical use |
+|------|-----------|-------------|-------------|
+| **`Cell<T>`** | Single-threaded | Compile-time (no borrow flag); get/set/replace | Small `Copy` flags/counters behind `&self` |
+| **`RefCell<T>`** | Single-threaded | Runtime borrow flags; panics on conflicting borrows | Graphs, caches, UI-like trees on one thread |
+| **`Mutex<T>`** / **`RwLock<T>`** | Multi-threaded | OS/userspace lock; poison on panic-while-locked | Shared state across `spawn` / thread pools |
 
-These are tools for single-threaded APIs (graphs, caches) that need mutation behind `&self`. They are **not** substitutes for `Mutex` across threads. Cross-thread interior mutability uses atomics, `Mutex`, lock-free structures, or channels.
+Decision guide:
+
+- Same thread, need `&self` mutation → `Cell` or `RefCell` (prefer `Cell` when replace/`Copy` suffices).
+- Multiple threads share mutable state → `Arc<Mutex<T>>` (or `RwLock` / channels), **not** `RefCell`.
+- `RefCell` is **not** `Sync`; putting it in `Arc` without a mutex will not compile—that rejection is the feature.
+- Holding a `Mutex` across slow I/O recreates contention; `RefCell` panics are still logic bugs—neither replaces clear ownership.
+
+Cross-thread interior mutability without a full mutex is the domain of **atomics** (simple flags/counters) or channels (move ownership). Ecosystem lock crates exist; this handbook sticks to **`std`** primitives unless a codebase already standardized otherwise (see advanced notes).
 
 ### 7. Data race prevention in safe Rust
 
@@ -89,6 +99,25 @@ Safe Rust does **not** prevent:
 - Race conditions on program logic (check-then-act on wrong abstraction)
 - Lost updates at the business level
 - Starvation, livelock, or priority inversion
+
+### 8. One-time init: `OnceLock` and `LazyLock`
+
+Prefer **`std::sync::OnceLock`** and **`std::sync::LazyLock`** for process-wide one-time initialization instead of **`static mut`** or ad hoc double-checked locking.
+
+- **`OnceLock<T>`** — write once (via `get_or_init` / `set`), then shared immutable access; safe and `Sync` when `T: Send`.
+- **`LazyLock<T>`** — lazy static initialized on first use with a closure; good for expensive read-only tables and clients constructed once.
+
+```rust
+use std::sync::OnceLock;
+
+static CONFIG: OnceLock<String> = OnceLock::new();
+
+fn config() -> &'static str {
+    CONFIG.get_or_init(|| std::env::var("APP_MODE").unwrap_or_else(|_| "default".into()))
+}
+```
+
+These types encode “initialize at most once” in the type system. **`static mut`** requires `unsafe` on every access, races easily under concurrency, and is almost never the right teaching default. If initialization can fail, surface `Result` from an explicit init function rather than panicking inside a hidden lazy path without a policy.
 
 ---
 
@@ -102,25 +131,62 @@ Safe Rust does **not** prevent:
 
 **`thread::Builder`** sets name, stack size, and spawn error handling—useful for ops agents with many threads. **`park`/`unpark`** and **`yield_now`** are low-level; prefer channels and condition variables (`Condvar`) for readable wakeups.
 
-### 3. Atomics (high level)
+### 3. Atomics and `Ordering` intuition
 
-**`std::sync::atomic`** provides lock-free flags and counters (`AtomicBool`, `AtomicUsize`, …) with explicit **memory orderings**. Easy to misuse; reach for atomics when profiling shows lock contention on simple flags/counters, not as a first design choice for complex invariants.
+**`std::sync::atomic`** provides lock-free flags and counters—commonly **`AtomicBool`**, **`AtomicUsize`**, and related integer atomics—with an explicit **`Ordering`** on every load/store/RMW. Intuition (not a formal model tutorial):
 
-### 4. `Arc` cycles and leaks
+| Ordering | Rough role |
+|----------|------------|
+| **`Relaxed`** | Atomicity of that location only; no cross-variable happens-before story. Fine for independent counters/metrics. |
+| **`Acquire`** (load) / **`Release`** (store) | Pair for “publish a flag/pointer, then see the writes that preceded the release.” Classic handoff pattern. |
+| **`AcqRel`** | Combined acquire+release on read-modify-write ops that both publish and observe. |
+| **`SeqCst`** | Strongest; total order across SeqCst ops. Default instinct when unsure—but still not a substitute for a clear invariant. |
+
+**When not to invent lock-free algorithms:** if the invariant spans multiple locations, needs waiting, or you cannot state the memory-ordering proof in review, use **`Mutex` / channels**. Wrong `Ordering` is silent UB-class thinking even when the type system accepts the call. Prefer atomics for simple flags, once-set shut-down bits, and contended counters after measurement—not as a first design for complex state machines.
+
+### 4. `thread_local!` for per-thread state
+
+**`thread_local!`** defines storage unique to each OS thread (initialized on first access in that thread). Use it for per-thread caches, scratch buffers, or metrics that must not be shared—without paying for `Mutex` on every hit.
+
+Caveats:
+
+- Values are **not** `Send` across threads by construction; do not try to “share” them.
+- Destructors run when the thread exits (with platform/runtime subtleties)—do not stash process-wide resources that outlive the thread without a clear policy.
+- Prefer `thread_local!` over `static mut` for thread-scoped mutable state.
+
+### 5. `Condvar` with `Mutex`
+
+**`std::sync::Condvar`** waits for a condition while releasing a **`Mutex`**, then re-acquires on wake. Pattern: lock → check predicate in a **loop** (spurious wakes) → `wait` / `notify_one` / `notify_all`. Prefer this (or channels) over busy-spinning on a flag. Keep the predicate and the data it observes under the same mutex; documenting “what we wait for” is part of the API.
+
+### 6. Deadlock patterns (lock order)
+
+Safe Rust prevents data races; it does **not** prevent deadlocks. Classic failure modes:
+
+- **Lock-order inversion:** thread A holds `M1` waits for `M2`; thread B holds `M2` waits for `M1`. Fix: a **global lock order** (always acquire in the same sequence), or collapse to one lock / channels.
+- **Self-deadlock:** same thread tries to lock a non-reentrant `Mutex` it already holds (including via helper calls).
+- **Hold across join/channel:** waiting on a thread/channel that needs the lock you still hold.
+
+Staff practice: document ordered lock sets for multi-mutex modules; keep critical sections short; prefer channels when ownership transfer avoids nested locks.
+
+### 7. `Arc` cycles and leaks
 
 `Arc` cycles leak memory unless you break them with **`Weak`**. Less common than in GC graphs, but long-lived graphs of services/handlers can create cycles—know the escape hatch.
 
-### 5. Mixing threads and async
+### 8. Mixing threads and async
 
 Blocking `mutex` or `recv` on an async runtime’s worker thread stalls other tasks. Thread-pool concurrency and async concurrency are different schedulers; chapter 13 covers the async pitfalls. Staff review asks which model owns each wait.
 
-### 6. Edition notes
+### 9. Edition notes
 
 Thread and sync APIs are stable across editions. Prefer `thread::scope` when available on your MSRV instead of `'static` + `Arc` boilerplate for short parallel sections. Channel APIs in `std::sync::mpsc` remain the teaching default; ecosystems also offer alternate channel crates—choose one model per codebase.
 
-### 7. Panic across threads
+### 10. Panic across threads
 
 An uncaught panic in a spawned thread does not unwind the parent. `join` surfaces it as `Err`. Define a policy: abort the process, restart the worker, or escalate. Silent dropped `JoinHandle`s can hide failures.
+
+### 11. Stick to `std` sync; ecosystem locks are optional
+
+Third-party lock crates (for example **parking_lot**-class libraries) exist in the ecosystem and sometimes appear in high-contention codebases. They are **not required** to write correct concurrent Rust. Prefer **`std::sync::{Mutex, RwLock, Condvar, OnceLock, LazyLock}`** and channels unless your team has already measured a need and standardized on an alternative. Mixing multiple lock implementations in one process without a reason increases review surface. This track teaches the standard library model first.
 
 ---
 
@@ -156,8 +222,13 @@ An uncaught panic in a spawned thread does not unwind the parent. `join` surface
 - Lock guards have clear, short scopes; no await/blocking I/O while held (especially if async appears later).
 - `Send`/`Sync` bounds on public APIs match the concurrency story.
 - `RefCell`/`Cell` appear only in single-threaded contexts; `Mutex`/`RwLock` for multi-threaded mutation.
+- One-time globals use `OnceLock`/`LazyLock`, not `static mut`.
+- Atomics have a stated invariant and `Ordering` rationale; no home-grown lock-free protocols without review.
+- Multi-mutex code documents **lock order**; no lock held across blocking waits that need the same locks.
+- `thread_local!` used only for true per-thread state—not as hidden global sharing.
 - Poison, panic-on-worker, and queue bounds have explicit policies.
 - Data-race freedom is not confused with deadlock freedom.
+- Sync primitives default to `std` unless a documented, measured exception exists.
 
 ---
 
@@ -168,6 +239,11 @@ An uncaught panic in a spawned thread does not unwind the parent. `join` surface
 - [`std::sync::RwLock`](https://doc.rust-lang.org/stable/std/sync/struct.RwLock.html)
 - [`std::sync::Arc`](https://doc.rust-lang.org/stable/std/sync/struct.Arc.html)
 - [`std::sync::mpsc`](https://doc.rust-lang.org/stable/std/sync/mpsc/)
+- [`std::sync::OnceLock`](https://doc.rust-lang.org/stable/std/sync/struct.OnceLock.html)
+- [`std::sync::LazyLock`](https://doc.rust-lang.org/stable/std/sync/struct.LazyLock.html)
+- [`std::sync::atomic`](https://doc.rust-lang.org/stable/std/sync/atomic/)
+- [`std::sync::Condvar`](https://doc.rust-lang.org/stable/std/sync/struct.Condvar.html)
+- [`std::thread_local`](https://doc.rust-lang.org/stable/std/macro.thread_local.html)
 - [`std::marker::Send`](https://doc.rust-lang.org/stable/std/marker/trait.Send.html)
 - [`std::marker::Sync`](https://doc.rust-lang.org/stable/std/marker/trait.Sync.html)
 - [`std::cell::Cell`](https://doc.rust-lang.org/stable/std/cell/struct.Cell.html)
@@ -176,3 +252,4 @@ An uncaught panic in a spawned thread does not unwind the parent. `join` surface
 - [The Book — Shared-State Concurrency](https://doc.rust-lang.org/stable/book/ch16-03-shared-state.html)
 - [The Book — Sync and Send](https://doc.rust-lang.org/stable/book/ch16-04-extensible-concurrency-sync-and-send.html)
 - [Rust Standard Library — sync](https://doc.rust-lang.org/stable/std/sync/)
+- [Rust By Example — Threads](https://doc.rust-lang.org/stable/rust-by-example/std_misc/threads.html)

@@ -168,6 +168,27 @@ Enums with no variants (`enum Void {}`) are uninhabited and appear in advanced t
 
 Older code sometimes writes explicit `ref` / `ref mut` everywhere. Modern editions rely more on **match ergonomics** (binding modes). Both compile; when reading legacy crates, treat verbose `ref` as style of its time, not a different language feature.
 
+### 8. `let else` for early exit
+
+**`let else`** (stable since modern Rust; widely used from the 1.65 era onward) binds variables when a **refutable** pattern matches, or runs a **diverging** `else` block when it does not—ideal for early return / continue / break without nested `if let`:
+
+```rust
+let Some(user) = find_user(id) else {
+    return Err(Error::NotFound);
+};
+// `user` in scope here
+```
+
+The bindings from the successful pattern are in scope for the rest of the block (unlike `if let`, which scopes bindings inside the then-branch only). The `else` block must diverge: `return`, `continue`, `break`, `panic!`, or a diverging macro. Prefer `let else` when the happy path should stay left-aligned and the failure path is short. Prefer full `match` when several variants need distinct non-diverging handling. Toolchains that predate stabilization still use `if let` / `match` for the same control flow; those forms remain valid on every edition.
+
+### 9. Edition 2024: match ergonomics reservations (awareness)
+
+Edition **2024** tightens patterns that mix **match ergonomics** with explicit `mut` / `ref` / `ref mut` or with `&` / `&mut` reference patterns when the default binding mode is no longer `move`. Patterns that were accepted on **2021** may need to become **fully explicit** (spell out the references in the pattern) so binding modes stay unsurprising. Typical migration rewrites look like turning ergonomic `let [x, mut y] = &[(), ()];` into an explicit `let &[ref x, mut y] = …` form—`cargo fix --edition` applies the `rust_2024_incompatible_pat` fixes in the compatibility group. Review the resulting patterns in hot match sites; the rewrite is semantics-preserving when accepted carefully. Crates that stay on edition 2021 keep compiling with the older pattern rules on modern rustc—edition is still opt-in.
+
+### 10. Edition 2024: `if let` temporary scope (awareness)
+
+In Edition **2024**, temporaries created while evaluating an **`if let` scrutinee** are dropped **before** control enters the `else` branch (shorter scope than in 2021). That can change borrow lifetimes—especially around mutex/rwlock guards, `RefCell` borrows, and other values with meaningful `Drop`. Code that accidentally relied on a temporary living through `else` may fail to compile or change drop order at runtime. Related: **tail-expression** temporary drop order also changed in 2024 (borrow checker and drop timing at the end of blocks/functions). If you need the longer 2021-style `if let` scrutinee temporary, rewriting as **`match`** preserves the older temporary extent. Run tests after edition bumps; do not assume pattern-only migrations are borrow-neutral. Details live in the Edition Guide entries listed under References.
+
 ---
 
 ## 3. Applications and use cases
@@ -225,3 +246,8 @@ Older code sometimes writes explicit `ref` / `ref mut` everywhere. Modern editio
 - [The Reference: Items — Structures](https://doc.rust-lang.org/stable/reference/items/structs.html)
 - [The Reference: Items — Enumerations](https://doc.rust-lang.org/stable/reference/items/enumerations.html)
 - [The Reference: Patterns](https://doc.rust-lang.org/stable/reference/patterns.html)
+- [Rust By Example: let-else](https://doc.rust-lang.org/stable/rust-by-example/flow_control/let_else.html)
+- [Edition Guide — Match ergonomics reservations](https://doc.rust-lang.org/edition-guide/rust-2024/match-ergonomics.html)
+- [Edition Guide — if let temporary scope](https://doc.rust-lang.org/edition-guide/rust-2024/temporary-if-let-scope.html)
+- [Edition Guide — Tail expression temporary scope](https://doc.rust-lang.org/edition-guide/rust-2024/temporary-tail-expr-scope.html)
+- [Edition Guide — Rust 2024](https://doc.rust-lang.org/edition-guide/rust-2024/index.html)

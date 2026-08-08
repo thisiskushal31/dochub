@@ -12,7 +12,7 @@ This track teaches Rust as **systems work**: language and type system, software 
 
 Rust releases on a **six-week train**: **stable**, **beta**, and **nightly** channels, managed with **rustup**. Language and library behavior are tied to the **stable** toolchain you pin in CI and production.
 
-Separately, Rust uses **editions** (`2015`, `2018`, `2021`, `2024`) declared in `Cargo.toml`. An edition is a **compatibility epoch** for syntax and some idioms—not a different language. **Modern `rustc` still compiles older editions.** Brownfield crates on `edition = "2018"` or `"2021"` remain valid; you upgrade editions when you want newer defaults and syntax, not because the old edition stopped working. When a construct is edition-specific or was superseded (for example the old `try!` macro versus `?`), chapters say so.
+Separately, Rust uses **editions** (`2015`, `2018`, `2021`, `2024`) declared in `Cargo.toml`. An edition is a **compatibility epoch** for syntax and some idioms—not a different language. **Modern `rustc` still compiles older editions.** Brownfield crates on `edition = "2018"` or `"2021"` remain valid; you upgrade editions when you want newer defaults and syntax, not because the old edition stopped working. **Edition 2024** (with the 1.85 stable train) changes several staff-visible defaults—Cargo **resolver 3** (rust-version-aware), `unsafe extern` blocks, `#[unsafe(no_mangle)]`-style attributes, tighter `unsafe fn` body rules, and some temporary/borrow scopes. Chapters call these out where they affect review; older editions keep working until you migrate.
 
 **Practical policy:** pin the toolchain (for example via `rust-toolchain.toml` or CI image); record `rustc --version` in release artifacts; keep a **Cargo.lock** for applications and a **container digest** (or base-image pin) for the system layer.
 
@@ -51,12 +51,12 @@ Links live in each chapter’s **References** section.
 
 | Phase | Chapters | Outcome |
 |--------|----------|---------|
-| Foundations | 01–07 | Install toolchain; ownership literacy; structs/enums; `Result`/`Option`. |
-| Abstraction and libraries | 08–11 | Traits, iterators, modules, operational `std` surfaces. |
-| Runtime and systems | 12–14 | Threads, async, `unsafe`/FFI boundaries. |
-| Production engineering | 15–20 | Quality tooling, targets/releases, security, use cases, CI/ops, competency map. |
+| Foundations | 01–07 | Install toolchain; ownership, `Drop`/smart pointers; structs/enums/`let else`; `Result`/`Error`; macros/`const`. |
+| Abstraction and libraries | 08–11 | Traits/`Deref`/`AsRef`, RPIT capture, iterators, modules/semver, `std` ops + serde/secrets. |
+| Runtime and systems | 12–14 | Atomics/threads, async Pin/cancel/JoinSet, `unsafe`/FFI/`repr(C)`/Edition 2024 extern rules. |
+| Production engineering | 15–20 | Tests/Miri/fuzz, release tiers/linkers, supply chain, domain/`no_std`/WASM, tracing/CI/SBOM, competency map. |
 
-Suggested order: **01 → 07**, then **08 → 11**, then **12 → 14**, then **15 → 20**. Revisit **05** for borrow-checker incidents; **07** before designing APIs; **13** before adopting an async runtime in production; **17** before any untrusted dependency or network-facing binary.
+Suggested order: **01 → 07**, then **08 → 11**, then **12 → 14**, then **15 → 20**. Revisit **05** for borrow-checker and `Drop` incidents; **07** before designing APIs; **13** before adopting an async runtime; **17** before untrusted deps or network-facing binaries; **19** before shipping service logging/metrics.
 
 ---
 
@@ -67,22 +67,22 @@ Suggested order: **01 → 07**, then **08 → 11**, then **12 → 14**, then **1
 | 1 | What is Rust and why teams use it | [01](./01_What_Is_Rust_And_Why_Teams_Use_It.md) |
 | 2 | Toolchain: rustup, rustc, Cargo, and editions | [02](./02_Toolchain_Rustup_Rustc_Cargo_And_Editions.md) |
 | 3 | Cargo projects, crates.io, and workspaces | [03](./03_Cargo_Projects_Crates_And_Workspaces.md) |
-| 4 | Syntax, types, and ownership basics | [04](./04_Syntax_Types_And_Ownership_Basics.md) |
-| 5 | Ownership, borrowing, and lifetimes | [05](./05_Ownership_Borrowing_And_Lifetimes.md) |
+| 4 | Syntax, types, `const`/`const fn`, and `macro_rules!` | [04](./04_Syntax_Types_And_Ownership_Basics.md) |
+| 5 | Ownership, borrowing, lifetimes, `Drop`, smart pointers | [05](./05_Ownership_Borrowing_And_Lifetimes.md) |
 | 6 | Structs, enums, and pattern matching | [06](./06_Structs_Enums_And_Pattern_Matching.md) |
 | 7 | Error handling: `Result`, `Option`, and panic | [07](./07_Error_Handling_Result_Option_And_Panic.md) |
-| 8 | Traits, generics, and advanced lifetimes | [08](./08_Traits_Generics_And_Advanced_Lifetimes.md) |
+| 8 | Traits, generics, const generics, advanced lifetimes | [08](./08_Traits_Generics_And_Advanced_Lifetimes.md) |
 | 9 | Collections, iterators, and closures | [09](./09_Collections_Iterators_And_Closures.md) |
 | 10 | Packages, modules, and visibility | [10](./10_Packages_Modules_And_Visibility.md) |
-| 11 | `std` for operations: fs, process, env, net | [11](./11_Std_For_Operations_Fs_Process_Env_Net.md) |
-| 12 | Concurrency: threads, sync, `Send`/`Sync` | [12](./12_Concurrency_Threads_Sync_Send_Sync.md) |
-| 13 | Async Rust: runtimes and pitfalls | [13](./13_Async_Rust_Runtimes_And_Pitfalls.md) |
-| 14 | Unsafe, FFI, and boundaries | [14](./14_Unsafe_FFI_And_Boundaries.md) |
-| 15 | Testing, Clippy, rustfmt, and docs | [15](./15_Testing_Clippy_Rustfmt_And_Docs.md) |
-| 16 | Cross-compile, targets, and release builds | [16](./16_Cross_Compile_Targets_And_Release_Builds.md) |
-| 17 | Security and supply chain | [17](./17_Security_And_Supply_Chain.md) |
-| 18 | Use cases: CLI, agents, infra, embedded | [18](./18_Use_Cases_CLI_Agents_Infra_Embedded.md) |
-| 19 | Production: CI, containers, and observability | [19](./19_Production_CI_Containers_And_Observability.md) |
+| 11 | `std` ops + serde/config, secrets, platform quirks | [11](./11_Std_For_Operations_Fs_Process_Env_Net.md) |
+| 12 | Concurrency: threads, sync, `OnceLock`, `Send`/`Sync` | [12](./12_Concurrency_Threads_Sync_Send_Sync.md) |
+| 13 | Async Rust: runtimes, cancel-safety, pitfalls | [13](./13_Async_Rust_Runtimes_And_Pitfalls.md) |
+| 14 | Unsafe, FFI, `cdylib`/`staticlib` | [14](./14_Unsafe_FFI_And_Boundaries.md) |
+| 15 | Testing, Clippy, rustfmt, docs, benches | [15](./15_Testing_Clippy_Rustfmt_And_Docs.md) |
+| 16 | Cross-compile, targets, release/`panic` profiles | [16](./16_Cross_Compile_Targets_And_Release_Builds.md) |
+| 17 | Security, supply chain, audit/deny, `build.rs` | [17](./17_Security_And_Supply_Chain.md) |
+| 18 | Use cases: CLI, agents, infra, `no_std`, WASM | [18](./18_Use_Cases_CLI_Agents_Infra_Embedded.md) |
+| 19 | Production: CI, containers, tracing/metrics | [19](./19_Production_CI_Containers_And_Observability.md) |
 | 20 | Whole-engineering wrap and staff checklist | [20](./20_Whole_Engineering_Wrap_And_Staff_Checklist.md) |
 
 ---

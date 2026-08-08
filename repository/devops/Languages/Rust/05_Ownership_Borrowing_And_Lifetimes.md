@@ -192,6 +192,47 @@ Crates on older editions still compile on modern rustc; ownership errors mean th
 
 Fighting the borrow checker with `unsafe` to “win” is almost always the wrong staff-level outcome.
 
+### 7. `Drop`, RAII, and drop order
+
+**RAII** in Rust means: owning a value ties resource lifetime to scope. When the owner goes out of scope, Rust runs **`Drop::drop`** (if implemented) and then releases the value’s memory. File handles, locks, sockets, and heap buffers all rely on this—`MutexGuard` unlocking on drop is the classic example.
+
+**Drop order** (safe mental model for structs and locals):
+
+- Local variables in a function are dropped in **reverse declaration order** at the end of their scope.
+- Struct and tuple fields are dropped in **declaration order** (first field first), then the outer value finishes dropping.
+- Moving a value out of a variable means that variable will not drop it later—the new owner will.
+
+Custom `Drop` impls must not assume other fields or sibling locals still exist in unusual orders if you have been moving pieces around; keep destructors simple and panic-safe. Prefer composing types that already implement `Drop` over hand-rolled cleanup unless you own a raw resource.
+
+### 8. `mem::forget`, leaks, and `ManuallyDrop`
+
+Rust’s safety story is **not** “nothing can leak.” It is “safe code does not cause undefined behavior.” **Leaking** memory or skipping destructors is allowed in that sense—but it is usually a bug or a deliberate tradeoff.
+
+| Tool | Meaning |
+|------|---------|
+| **`std::mem::forget(x)`** | Disposes of `x` **without running** its destructor. Ownership ends; `Drop` side effects (unlock, close, free via drop glue) do not run. |
+| **Leak policy** | Libraries may leak under memory pressure or for `'static` promotion (`Box::leak`); document it. Accidental forget of a guard is a correctness bug (for example mutex left locked). |
+| **`ManuallyDrop<T>`** | Wrapper that **suppresses** automatic drop of `T` until you explicitly `drop` / `take` it. Used when drop order must be controlled or when building `unsafe` abstractions. |
+
+Staff rule: never `forget` a lock guard, file, or other RAII token to “fix” the borrow checker. Use `ManuallyDrop` only with a clear ownership protocol. Prefer redesign (owned values, scopes, `Option::take`) in safe application code.
+
+### 9. Smart pointers: choosing `Box`, `Rc`, `Arc`, and `Cow`
+
+| Type | Ownership model | Typical use |
+|------|-----------------|-------------|
+| **`Box<T>`** | Unique owned heap value | Large values, recursive types, trait objects (`Box<dyn Trait>`), stable addresses |
+| **`Rc<T>`** | Single-threaded **reference-counted** shared ownership | Graphs/trees with shared nodes inside one thread; not `Send` |
+| **`Arc<T>`** | Thread-safe reference-counted shared ownership | Shared immutable (or interior-mutable) state across threads—see concurrency chapter |
+| **`Cow<'_, T>`** / **`Cow<'_, str>`** | **Clone-on-write** borrow-or-own | APIs that usually borrow (`&str`) but sometimes need to allocate an owned `String` |
+
+Prefer **`&T` / `&mut T`** when a caller already owns the data. Use **`Box`** when you need heap indirection with one owner. Use **`Rc`/`Arc`** only when multiple owners must keep the value alive and lifetimes cannot express a single owner. Use **`Cow`** at boundaries that normalize input without forcing every caller to allocate.
+
+### 10. Cloning `Arc`: cheap handle versus deep `Clone`
+
+**`Arc::clone(&arc)`** (or `arc.clone()`) increments the reference count and produces another handle to the **same** allocation—cheap pointer-sized work, not a deep copy of `T`. Dropping a handle decrements; the inner value drops when the last strong reference is gone (`Weak` does not keep it alive).
+
+By contrast, cloning the **inner** value (`(*arc).clone()` when `T: Clone`, or cloning a `Vec`/`String` you extracted) duplicates the payload and can allocate. Review habit: in hot paths, ask whether you needed another **handle** (`Arc::clone`) or another **copy of the data**. Shared immutable config behind `Arc` is a common agent pattern; deep-cloning large structures per request usually is not.
+
 ---
 
 ## 3. Applications and use cases
@@ -244,8 +285,16 @@ Fighting the borrow checker with `unsafe` to “win” is almost always the wron
 - [The Rust Programming Language — References and Borrowing](https://doc.rust-lang.org/stable/book/ch04-02-references-and-borrowing.html)
 - [The Rust Programming Language — The Slice Type](https://doc.rust-lang.org/stable/book/ch04-03-slices.html)
 - [The Rust Programming Language — Validating References with Lifetimes](https://doc.rust-lang.org/stable/book/ch10-03-lifetime-syntax.html)
+- [The Rust Programming Language — Smart Pointers](https://doc.rust-lang.org/stable/book/ch15-00-smart-pointers.html)
 - [The Rustonomicon — Lifetimes](https://doc.rust-lang.org/nomicon/lifetimes.html)
-- [The Rust Reference — Ownership](https://doc.rust-lang.org/stable/reference/destructors.html)
+- [The Rust Reference — Destructors](https://doc.rust-lang.org/stable/reference/destructors.html)
+- [`Drop`](https://doc.rust-lang.org/stable/std/ops/trait.Drop.html)
+- [`std::mem::forget`](https://doc.rust-lang.org/stable/std/mem/fn.forget.html)
+- [`ManuallyDrop`](https://doc.rust-lang.org/stable/std/mem/struct.ManuallyDrop.html)
+- [`Box`](https://doc.rust-lang.org/stable/std/boxed/struct.Box.html)
+- [`Rc`](https://doc.rust-lang.org/stable/std/rc/struct.Rc.html)
+- [`Arc`](https://doc.rust-lang.org/stable/std/sync/struct.Arc.html)
+- [`Cow`](https://doc.rust-lang.org/stable/std/borrow/enum.Cow.html)
 - [Rust Standard Library](https://doc.rust-lang.org/stable/std/)
 - [Edition Guide](https://doc.rust-lang.org/edition-guide/)
 - [Rust Documentation hub](https://doc.rust-lang.org/stable/)

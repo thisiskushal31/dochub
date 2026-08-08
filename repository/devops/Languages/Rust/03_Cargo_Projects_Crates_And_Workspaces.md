@@ -119,7 +119,29 @@ Path and git dependencies are common inside companies and during development. Pu
 
 Failure mode: **feature unification** — Cargo unifies features for a crate compiled once in a graph, so enabling a feature in one binary can turn it on for everyone using that version. Design features to be additive; document defaults; test with `--no-default-features` / `--all-features` when you maintain a library.
 
-### 8. Workspaces
+### 8. Optional dependencies
+
+An optional dependency is declared with `optional = true`. Cargo does **not** compile it into dependents until a **feature** enables it—usually by naming the dependency as a feature value (Cargo treats that as “enable this optional dep”):
+
+```toml
+[dependencies]
+serde = { version = "1", optional = true }
+
+[features]
+default = []
+serde = ["dep:serde"]   # modern explicit form; older manifests used serde = ["serde"]
+```
+
+Team rules of thumb:
+
+- Keep **default** features minimal for libraries; put heavy or niche deps behind named features.
+- Name features after the capability (`json`, `tls`), not only after the crate, when several crates collaborate behind one flag.
+- Document which features production binaries enable; CI should exercise the feature matrix you claim to support (`--no-default-features`, key combinations, `--all-features` for libraries).
+- Remember unification: one workspace binary enabling `serde` can pull that feature into every crate that shares the same `serde` package node.
+
+Optional deps are how mature crates stay lean for embedded or CLI-default builds without forking the repo.
+
+### 9. Workspaces
 
 A **workspace** is a set of packages sharing a **`Cargo.lock`** and output directory, declared in a root `Cargo.toml`:
 
@@ -133,7 +155,27 @@ Benefits: one lockfile, unified dependency versions, `cargo test --workspace`, s
 
 Virtual workspaces (root has no `[package]`, only `[workspace]`) are common in monorepos.
 
-### 9. Everyday cargo commands
+### 10. `[workspace.dependencies]` and inheritance
+
+Workspaces scale poorly when every member repeats the same `serde = "1"` line with slightly different versions. **`[workspace.dependencies]`** declares shared dependency specs once at the root; members **inherit** them:
+
+```toml
+# root Cargo.toml
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+anyhow = "1"
+
+# member Cargo.toml
+[dependencies]
+serde = { workspace = true }
+anyhow = { workspace = true }
+```
+
+`dependency.workspace = true` (equivalently `serde = { workspace = true }`) pulls version, default features, and other fields from the workspace table. Members can still override or add features locally when needed, but the **version pin** stays centralized—fewer “why does CI resolve differently in crate B?” incidents.
+
+Staff practice: put the dependency set the monorepo actually standardizes on in `[workspace.dependencies]`; leave truly crate-specific deps local. Combine with a single `Cargo.lock` so inheritance and resolution tell one story.
+
+### 11. Everyday cargo commands
 
 | Command | Purpose |
 |---------|---------|
@@ -163,21 +205,45 @@ Profiles (`dev`, `release`, custom) live under `[profile.*]` in manifests or wor
 
 Cargo also builds **examples** (`examples/`), **tests** (`tests/`), and **benches** (`benches/`) as separate crates. `[[bin]]` sections customize binary names and paths when conventions are not enough. Integration tests link your library as an external crate—useful for public API tests.
 
-### 2. build.rs
+### 2. build.rs in depth
 
-A **build script** (`build.rs`) runs at compile time to probe the system, generate code, or emit `cargo:` instructions. Powerful and dangerous: it executes on developer and CI machines with the builder’s privileges. Prefer declarative feature flags and existing crates over custom build scripts when possible; review build.rs like production code.
+A **build script** is a separate Rust binary Cargo compiles and runs **on the build host** before compiling the package’s lib/bin. It is not your target’s `main`; cross-compiling still executes `build.rs` with the host toolchain unless you carefully arrange otherwise. Treat it as privileged CI code: it can read the filesystem, run tools, and—if misconfigured—touch the network.
 
-### 3. Resolver versions
+**When teams use it:** compile C/C++/asm via `cc`, generate protobuf/FlatBuffers bindings, emit platform `cfg` flags after probing, embed version metadata, or locate system libraries. Prefer existing crates (`cc`, `bindgen` with policy, `prost-build`, etc.) over one-off shell-outs.
 
-`resolver = "2"` (default for edition 2021+ packages) improves feature unification behavior versus the older resolver. Workspaces should set the resolver explicitly at the workspace root when mixing older packages. Surprising “why is this feature on?” bugs often trace to unification + old resolver assumptions.
+**`cargo:` instructions** are how the script talks back to Cargo (printed to stdout). Common patterns:
+
+| Instruction | Role |
+|-------------|------|
+| `cargo:rerun-if-changed=PATH` | Rebuild the script’s outputs only when `PATH` changes (files or dirs you care about) |
+| `cargo:rerun-if-env-changed=VAR` | Rerun when an env var changes |
+| `cargo:rustc-cfg=…` | Enable custom `cfg` for the package |
+| `cargo:rustc-link-lib=…` / `cargo:rustc-link-search=…` | Native link flags |
+| `cargo:warning=…` | Surface warnings in build output |
+
+Without precise `rerun-if-*` lines, Cargo may rerun the script too often (slow CI) or too rarely (stale generated code). Review new `build.rs` for: host vs target confusion, undocumented env requirements, and whether a **feature flag** would have avoided the script.
+
+### 3. Resolver versions (1 / 2 / 3) and edition defaults
+
+Cargo’s **resolver** builds the dependency graph and decides feature unification. Set it once for the whole workspace (top-level package or `[workspace]` in a virtual manifest); values on path/registry dependencies are ignored.
+
+| Resolver | Typical default | What staff should remember |
+|----------|-----------------|----------------------------|
+| **`"1"`** | Pre-2021 / explicit legacy | Broad **feature unification**: enabling a feature anywhere can turn it on for that package everywhere it appears in the graph |
+| **`"2"`** | **`edition = "2021"`** default | Narrower unification (build-deps / dev-deps / targets less likely to leak features into normal deps)—fewer “why is `serde` suddenly on?” surprises |
+| **`"3"`** | **`edition = "2024"`** default (top-level) | Same feature story as 2, plus **rust-version-aware** selection: prefer dependency versions compatible with your MSRV/`rust-version` story (`incompatible-rust-versions` default becomes `fallback`) |
+
+**Feature unification intuition:** when two crates depend on the same version of `foo`, Cargo builds **one** `foo` and unions the features requested. Design library features to be **additive**; test libraries with `--no-default-features` and important combinations. Virtual workspaces must set `resolver` explicitly—there is no root `edition` to infer `"2"` or `"3"` from.
 
 ### 4. Patch, replace, and `[patch.crates-io]`
 
 `[patch]` lets you override a crates.io dependency with a path or git fork temporarily—useful for bisecting and hotfixing. Do not leave untracked patches in production lockfiles without process; they complicate supply-chain review.
 
-### 5. Publishing and yanking
+### 5. Publishing, yanking, and registry permanence
 
-`cargo publish` uploads a package version to the registry. **Yank** marks a version as undesireable for new resolves without deleting it (existing lockfiles may still use it). Semver mistakes on crates.io are forever in spirit—yank and publish a fix; you cannot truly erase a yanked-but-cached artifact from the ecosystem.
+`cargo publish` uploads a **specific version** of a package to the registry (crates.io or an alternate). Treat it as a release: clean tree, tests green, docs and license metadata correct, API reviewed for semver. Yanking (`cargo yank`) marks a version as **undesirable for new resolves** without deleting the artifact—existing `Cargo.lock` files may keep using it. You cannot truly erase a published version from the ecosystem’s caches and mirrors.
+
+Staff habits: prefer **yank + publish a fixed version** over hoping consumers will notice a yanked-only story; never reuse a version number; document breaking changes in release notes; for private registries, still treat yanked versions as “still fetchable if locked.” Dry-run with `cargo publish --dry-run` before the real upload when the package is new or the API surface moved.
 
 ### 6. Workspaces versus single crate
 
@@ -195,6 +261,70 @@ A **build script** (`build.rs`) runs at compile time to probe the system, genera
 ### 8. Edition field is per package
 
 Each workspace member has its own `edition`. Migrating the workspace is a per-crate effort. The workspace root does not force one edition on all members unless you set each manifest.
+
+### 9. Procedural macro crates (consuming side)
+
+A **procedural macro** crate is a library compiled for the **host** that runs at compile time to transform tokens (`#[derive(…)]`, attribute macros, function-like macros). In the manifest:
+
+```toml
+[lib]
+proc-macro = true
+```
+
+**Consumers** depend on it like any other crate and invoke the macros in source; they do not link the proc-macro crate into the runtime binary the way a normal `rlib` dependency is linked. Implications for teams:
+
+- Proc-macro dependencies add **compile-time** cost and supply-chain surface (code execution during build)—review them with the same seriousness as `build.rs`.
+- The macro crate’s own dependencies are build-host concerns; version conflicts there fail the build, not your process at runtime.
+- Prefer well-known derive ecosystems (`serde`, `thiserror`, …) over bespoke macros unless the abstraction clearly pays for the complexity.
+- Debugging expands to `cargo expand` (external tool) or reading the macro crate’s docs—call sites stay small by design.
+
+Deeper authoring of proc macros is out of scope here; staff should know they are a distinct crate type with host execution semantics.
+
+### 10. `[workspace.lints]` and package lint inheritance
+
+Cargo can store lint policy in the manifest instead of scattering `#![deny(…)]` / `#![warn(…)]` only in crate roots. A package-level table looks like:
+
+```toml
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+enum_glob_use = "deny"
+```
+
+In a workspace, put shared policy under **`[workspace.lints]`** (and nested tool tables such as `workspace.lints.rust`) and let members inherit with:
+
+```toml
+[lints]
+workspace = true
+```
+
+Inheritance keeps Clippy and rustc levels consistent across crates; members can still override individual lints when a crate legitimately needs a different bar. Lints configured this way apply to the **current package** under development—not as a hammer on all registry dependencies (Cargo caps dependency lints). Prefer manifest lints for team defaults; keep rare, local exceptions documented in review.
+
+### 11. `cargo tree` for dependency graphs
+
+`cargo tree` prints the resolved graph: who pulled which crate, at which version, and often **why features** appear. Use it when a lockfile churns, when duplicate major versions of the same crate show up, or when binary size / compile time jumps after a dependency bump.
+
+```bash
+cargo tree
+cargo tree -i serde          # invert: what depends on this crate
+cargo tree -e features       # feature edges (when diagnosing unification)
+cargo tree --duplicates      # same package name at multiple versions
+```
+
+Staff practice: attach a `cargo tree` (or `--duplicates`) excerpt to PRs that add heavy deps or change workspace resolver/edition. Pair with `cargo metadata` for machine-readable audits when tooling needs JSON.
+
+### 12. Semver intuition for published Rust crates
+
+Cargo and crates.io assume **SemVer**. Rough API intuition for **libraries**:
+
+| Change | Usual bump |
+|--------|------------|
+| Break existing downstream code (remove/rename public item, tighten a public type, change a trait’s required methods without a default) | **major** (`1.x` → `2.0`) |
+| Add API in a compatible way (new functions, new optional fields behind builders, new trait defaults) | **minor** |
+| Bugfix / docs / non-API internals with no public contract change | **patch** |
+
+Rust-specific traps: **adding a public enum variant** is a **breaking** change for downstream exhaustive `match`es—unless the enum is **`#[non_exhaustive]`** (downstream must use `_`). Adding a public struct field is likewise breaking for literal construction outside the crate unless the struct is `non_exhaustive` or construction stays behind constructors. Changing the type of a public field, making a safe function `unsafe`, or removing a feature flag that dependents relied on are major. Applications that are never published can still use SemVer for release tags; the hard ecosystem rules apply once others depend on your crate versions.
 
 ---
 
@@ -240,8 +370,21 @@ Each workspace member has its own `edition`. Migrating the workspace is a per-cr
 - [The Cargo Book](https://doc.rust-lang.org/stable/cargo/)
 - [Cargo.toml reference](https://doc.rust-lang.org/stable/cargo/reference/manifest.html)
 - [Workspaces](https://doc.rust-lang.org/stable/cargo/reference/workspaces.html)
+- [Workspace dependencies](https://doc.rust-lang.org/stable/cargo/reference/workspaces.html#the-dependencies-table)
 - [Features](https://doc.rust-lang.org/stable/cargo/reference/features.html)
+- [Optional dependencies](https://doc.rust-lang.org/stable/cargo/reference/features.html#optional-dependencies)
+- [Build scripts](https://doc.rust-lang.org/stable/cargo/reference/build-scripts.html)
+- [Procedural macros (Reference)](https://doc.rust-lang.org/stable/reference/procedural-macros.html)
+- [The Rust Programming Language — Macros](https://doc.rust-lang.org/stable/book/ch20-05-macros.html)
 - [crates.io](https://crates.io/)
 - [The Rust Programming Language — Hello, Cargo!](https://doc.rust-lang.org/stable/book/ch01-03-hello-cargo.html)
 - [Edition Guide](https://doc.rust-lang.org/edition-guide/)
+- [Edition Guide — Cargo: Rust-version aware resolver](https://doc.rust-lang.org/edition-guide/rust-2024/cargo-resolver.html)
+- [The Cargo Book — Dependency Resolution](https://doc.rust-lang.org/cargo/reference/resolver.html)
+- [The Cargo Book — SemVer Compatibility](https://doc.rust-lang.org/cargo/reference/semver.html)
+- [The Cargo Book — Specifying Lints](https://doc.rust-lang.org/cargo/reference/manifest.html#the-lints-section)
+- [The Cargo Book — Workspaces (lints table)](https://doc.rust-lang.org/cargo/reference/workspaces.html#the-lints-table)
+- [cargo tree](https://doc.rust-lang.org/cargo/commands/cargo-tree.html)
+- [cargo publish](https://doc.rust-lang.org/cargo/commands/cargo-publish.html)
+- [cargo yank](https://doc.rust-lang.org/cargo/commands/cargo-yank.html)
 - [Rust Documentation hub](https://doc.rust-lang.org/stable/)

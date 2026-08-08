@@ -104,7 +104,7 @@ Rust leans on **RAII**: locks unlock when guards drop; files close when handles 
 
 ### 3. Editions are not language forks
 
-Code written for **edition 2015**, **2018**, **2021**, or **2024** still compiles on a modern **stable** `rustc` when the crate declares that edition. Teams upgrade editions for new idioms and defaults, not because old editions stop working. A brownfield estate with mixed editions in one workspace is normal; see the toolchain chapter for the `edition` field and migration posture.
+Code written for **edition 2015**, **2018**, **2021**, or **2024** still compiles on a modern **stable** `rustc` when the crate declares that edition. Teams upgrade editions for new idioms and defaults, not because old editions stop working. A brownfield estate with mixed editions in one workspace is normal; see the toolchain chapter for the `edition` field and migration posture. **Edition 2024** is the current new-crate default for many templates: it tightens FFI/`unsafe` syntax, Cargo’s dependency resolver defaults, and some temporary scopes—details live in chapters **02**, **03**, and **14**. Older editions remain supported until you deliberately migrate.
 
 ### 4. Panic versus unrecoverable failure
 

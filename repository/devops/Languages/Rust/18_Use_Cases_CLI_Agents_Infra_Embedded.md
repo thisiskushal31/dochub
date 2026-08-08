@@ -29,6 +29,12 @@ Rust is a strong fit for developer and operator CLIs: argument parsing, structur
 - Clear `Result` error surfaces to users (human messages) vs logs (detail).
 - Feature flags for optional backends.
 
+**Ecosystem pattern — clap-class parsing:** most production CLIs use a derive-or-builder argument parser in the clap family (or a thin wrapper). Staff expectation is not that you memorize every attribute—know that flags, subcommands, env-backed options, and help text live in one structured definition, and that breaking CLI flags is a semver/product decision. Pair with:
+
+- **Exit codes** — `0` on success; non-zero for user error vs unexpected failure (document the convention operators can script against).
+- **`--version` / `-V`** — ship build identity (crate version; often git SHA via build-time env) so fleet support can answer “which binary is this?”
+- Human-readable errors on stderr; machine output (`--json`) on stdout when both exist.
+
 You will meet Rust CLIs as replacements for shell/Python glue when startup time, correctness, or distribution as one file matters.
 
 ### 3. Observability and security agents
@@ -37,10 +43,10 @@ Agents run on customer or fleet hosts with **high privilege** and **strict resou
 
 Engineering constraints that dominate:
 
-- Backpressure when sinks are slow.
-- Config reload without data loss.
+- **Privilege drop** — bind or open privileged resources, then drop to an unprivileged user/capabilities before handling untrusted input; never keep root for the steady state without a written exception.
+- **Config reload** — SIGHUP or watched files that swap config atomically; in-flight work should finish on the old config or fail closed—document which.
+- **Backpressure** — when sinks (HTTP, Kafka, disk) are slow, bound queues and shed or block upstream deliberately; unbounded channels are a memory DoS against yourself.
 - Minimal allocations on hot paths where required.
-- Clear privilege separation (what runs as root vs workers).
 
 Supply-chain discipline (chapter 17) is non-negotiable: agents are high-value targets.
 
@@ -53,16 +59,31 @@ Patterns:
 - gRPC/HTTP APIs with explicit timeouts and deadlines.
 - Health and readiness endpoints for orchestrators.
 - Graceful shutdown (chapter 19).
+- Same **privilege drop / reload / backpressure** disciplines as agents when the sidecar touches the host network or secrets.
 
-### 5. Embedded and `no_std`
+### 5. Embedded: `no_std`, `alloc`, and HALs
 
-On microcontrollers and constrained environments, crates may use **`#![no_std]`**, replacing parts of `std` with `core` / `alloc` as available. Targets, linker scripts, and flashing toolchains dominate the workflow more than Cargo features alone. `unsafe` appears more often for registers and DMA—review culture from chapter 14 applies.
+On microcontrollers and bare metal, crates often use **`#![no_std]`**: link **`core`** (language primitives, no OS) instead of full **`std`** (files, threads, networking, heap by default). Mental model:
 
-Edition still matters for syntax, but **target and HAL choice** dominate day-to-day work.
+| Layer | Role |
+|-------|------|
+| **`core`** | Always available in `no_std`; no allocator assumed |
+| **`alloc`** | Optional heap (`Vec`, `String`, `Box`, …) **if** you provide a global allocator |
+| **`std`** | Hosted environments with an OS-like runtime—usually absent on bare metal |
+
+A **HAL** (hardware abstraction layer) crate exposes peripherals (GPIO, UART, SPI, timers) for a chip family; board support crates wire pins and clocks. Day-to-day work is dominated by **target triples** (for example `thumbv7em-none-eabihf`), linker scripts, `probe`/flash tools, and interrupt safety—not by Cargo editions. `unsafe` appears for registers and DMA; review culture from chapter 14 applies. Prefer proven HAL stacks for your MCU over bespoke register poking unless you own that risk.
+
+Edition still matters for syntax, but **target + HAL + allocator policy** dominate.
 
 ### 6. WebAssembly (optional lane)
 
-Rust can compile to **wasm32** targets for plugins, edge filters, or in-browser components. Treat WASM as an **optional** deployment shape: ABI, host capabilities, and size tooling differ from native Linux binaries. Do not assume every crate is WASM-ready (`std` and OS APIs may be unavailable or stubbed).
+Rust can target **`wasm32-*`** (commonly `wasm32-unknown-unknown` for sandboxed modules, plus WASI-oriented targets when you need a capability-oriented system interface). Treat WASM as an **optional** deployment shape.
+
+- **Size** — download and instantiate cost dominate; audit dependencies, panic/format paths, and release profile size opts (chapter 16).
+- **Host sandbox assumptions** — the module only gets capabilities the **host** injects (imported functions, WASI rights, memory limits). Do not assume filesystem or network access exists.
+- **When NOT to use WASM** — you need full POSIX/`std` OS APIs; you depend on crates that are not WASM-ready; you need shared-nothing multi-threading models the host does not provide; or a native sidecar/CLI already meets the threat model with less toolchain friction.
+
+Do not assume every crate is WASM-portable. Prove the target in CI before promising it.
 
 ### 7. Reading others’ Rust
 
@@ -112,6 +133,16 @@ Much production infra still uses **`edition = "2018"`** or **`2021`**. That code
 
 If the work is glue scripts, one-off data transforms, or a team with no systems appetite, Rust’s compile/iterate cost may dominate. Prefer the language that matches **change rate** and **failure cost**.
 
+### 6. Domain decision cheatsheet
+
+| Signal | Lean toward |
+|--------|-------------|
+| Single binary CLI, strict exit codes, rare deps | Rust CLI |
+| Privileged host agent, backpressure, long uptime | Rust agent (with chapter 17 rigor) |
+| Tiny MCU, no OS, HAL already chosen | `no_std` + HAL |
+| Plugin in a host sandbox, size budget, limited APIs | WASM—only if host model fits |
+| CRUD API, hiring pool is Go/Java, soft latency | Often not Rust |
+
 ---
 
 ## 3. Applications and use cases + staff checklist
@@ -120,38 +151,45 @@ If the work is glue scripts, one-off data transforms, or a team with no systems 
 
 - Keep CLI core logic in a library for unit tests; keep `main` thin.
 - For agents, define resource budgets (CPU, RSS, file descriptors) as product requirements.
+- Treat clap-class CLI definitions as a stable external API: changelog flag removals.
 
 ### Security
 
-- Agents and sidecars: threat-model local attack surface, config injection, and dependency graph.
+- Agents and sidecars: threat-model local attack surface, config injection, privilege drop gaps, and dependency graph.
 - Embedded: physical access and update authenticity matter as much as memory safety.
+- WASM: assume the host may be hostile or buggy—validate all imports/exports.
 
 ### Data and integration
 
 - Prefer versioned wire formats; avoid ad-hoc byte protocols without schemas.
-- Document filesystem and network capabilities the binary expects.
+- Document filesystem and network capabilities the binary expects (native) or host-provided capabilities (WASM).
 
 ### Reliability and operations
 
-- Ship `--version`, structured logs, and health checks for anything fleet-wide.
+- Ship `--version`, documented exit codes, structured logs, and health checks for anything fleet-wide.
 - Provide a supported-targets matrix for each released artifact.
+- Agents/sidecars: runbooks for privilege model, reload, and backpressure/saturation.
 
 ### Staff checklist
 
 - [ ] Domain fit is explicit (CLI / agent / sidecar / embedded / WASM)—not “rewrite everything in Rust.”
 - [ ] Runtime model (sync vs async) is documented and consistent.
+- [ ] CLI: clap-class parsing pattern, exit codes, and `--version` are intentional.
+- [ ] Agents/sidecars: privilege drop, config reload, and backpressure are designed—not afterthoughts.
+- [ ] Embedded: `no_std` / `alloc` / HAL boundaries documented; allocator policy explicit.
 - [ ] `unsafe`/FFI and `build.rs` inventoried for infra-facing binaries.
-- [ ] Supported OS/arch matrix tested in CI.
+- [ ] Supported OS/arch (and MCU/WASM targets if any) tested in CI.
 - [ ] Brownfield edition noted; MSRV noted if declared.
 - [ ] Interop with Go/C is process- or ABI-documented.
-- [ ] Operators have runbooks for config reload, shutdown, and resource exhaustion.
-- [ ] WASM (if any) is scoped; native crates are not assumed portable without evidence.
+- [ ] WASM (if any) is scoped with size and host-capability assumptions; native crates are not assumed portable without evidence.
 
 ---
 
 ## References
 
 - [The Rust Programming Language (the Book)](https://doc.rust-lang.org/stable/book/)
+- [The Embedded Rust Book](https://doc.rust-lang.org/stable/embedded-book/)
+- [The Embedded Rust Book — `no_std`](https://doc.rust-lang.org/stable/embedded-book/intro/no-std.html)
 - [The rustc Book — Platform Support](https://doc.rust-lang.org/rustc/platform-support.html)
 - [The rustc Book — Targets](https://doc.rust-lang.org/rustc/targets/index.html)
 - [The Cargo Book — Workspaces](https://doc.rust-lang.org/cargo/reference/workspaces.html)

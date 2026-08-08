@@ -93,25 +93,81 @@ Async shines when **many concurrent waits** (connections, timers, fan-out) must 
 
 Multi-threaded executors often require spawned tasks to be **`Send`** so they can move across threads. Capturing `Rc`, `RefCell`, or other non-`Send` types inside a spawned task fails to compile. That error is teaching you about the runtime’s threading model—not an arbitrary annoyance.
 
-### 2. Structured concurrency habits
+### 2. Deeper `Pin` / `Unpin`: self-referential futures
 
-Unbounded `spawn` without tracking join handles creates detached work that outlives requests. Prefer scoped join patterns, join sets, or explicit task budgets so shutdown drains or cancels work predictably.
+`async` state machines often become **self-referential**: a future holds a reference into its own fields (for example a borrow into a buffer stored in an earlier state). Moving that future in memory would invalidate the internal pointer—hence **`Pin`**: “this value will not move again.”
 
-### 3. Timers and time sources
+- **`poll` takes `Pin<&mut Self>`** so generated futures stay sound once pinned.
+- **`Unpin`** means “moving is fine.” Most ordinary types are `Unpin`; the compiler-generated futures from `async` often are **`!Unpin`** until completed.
+- Application code usually **awaits** and never pins by hand. You care when writing manual `Future` impls, self-referential structs, or APIs that take `impl Future` and might move them after polling starts.
+- Staff rule: do not `mem::swap` / move a future after it has been polled unless you understand `Pin`—prefer boxing (`Pin<Box<…>>`) patterns from the Async Book when type erasure is required.
+
+### 3. `select!`-style racing and cancellation of losers
+
+Ecosystem **`select!`**-style macros (runtime/utility crates) race multiple futures and proceed with the first that completes. **Losing branches are dropped**—that is cancellation. Consequences:
+
+- Partial side effects on a loser path must be safe to abandon (`Drop` cleanup or idempotent design).
+- Biased vs fair select variants (when offered) change starvation under load—read the macro’s docs for your runtime.
+- Prefer explicit timeout futures over ad-hoc “sleep then win” races without cancel-safety review.
+
+Treat every race as: one winner continues; losers run destructors now.
+
+### 4. JoinSet / structured task groups
+
+Unbounded `spawn` without tracking join handles creates detached work that outlives requests. Prefer **structured** patterns:
+
+- Track child tasks in a **join set** / task group (runtime APIs in the ecosystem—names vary): spawn into the set, await join or shutdown, surface the first error, cancel the rest on failure policy.
+- Bound concurrency (semaphores, fixed worker counts) so fan-out cannot OOM the process.
+- On graceful shutdown, **drain or cancel** the set with a deadline (chapter 19).
+
+The pattern matters more than the exact type name: no orphan tasks without an owner.
+
+### 5. Async traits (language history → modern practice)
+
+Historically, **`async fn` in traits** was awkward on stable (manual `Future` associated types, boxing, or helper crates). Modern **stable** Rust has improved support for async functions in traits; teams still hit bounds (`Send`, lifetimes) and may **box** futures in public APIs for object-safety or simpler signatures.
+
+Staff guidance (do not overclaim nightly):
+
+- Prefer **stable** toolchain features documented for your MSRV; do not require nightly async trait experiments in production services.
+- Ecosystem helper crates remain common in older codebases—treat them as dependency choices with the same review as any runtime-adjacent crate.
+- Public async trait methods should document `Send` requirements implied by multi-threaded executors.
+
+### 6. Streams and AsyncRead / AsyncWrite (ecosystem traits)
+
+`std` defines **`Future`** and **`Read`/`Write`** (sync). **Async byte I/O** and **async streams** of values are primarily **ecosystem traits** (for example AsyncRead/AsyncWrite and Stream-shaped APIs in the futures/runtime ecosystem)—not APIs this handbook invents.
+
+- Use the traits your **chosen runtime** documents for TCP/files/timers.
+- “Stream” means pull-based sequences of async items (backpressure via poll); do not confuse with OS stdin.
+- Keep domain logic on sync iterators when possible; push async traits to the I/O edge.
+
+### 7. Timers and time sources
 
 Async timeouts depend on the runtime’s timer driver. Testing with paused/auto-advancing time (where the runtime supports it) prevents flaky sleep-based tests. Wall-clock jumps still affect `SystemTime`-based logic even in async apps.
 
-### 4. Compatibility and ecosystem choice
+### 8. Compatibility and ecosystem choice
 
 Libraries often commit to a runtime’s I/O types (`TcpStream` from that ecosystem, not `std::net`). Abstracting behind traits helps tests but has cost. Document the chosen runtime and MSRV/feature flags in the crate README for operators.
 
-### 5. Edition and language notes
+### 9. Edition and language notes
 
 `async`/`await` is stable across modern editions; Edition **2018** introduced the syntax widely used today. Newer editions refine other language defaults; async semantics remain “future + executor.” Nightly-only experiments are out of scope for production handbooks—pin **stable** for services.
 
-### 6. Observability pitfalls
+### 10. Observability pitfalls
 
-Task dumps, blocked-runtime metrics, and “async stack” tooling are runtime-specific. Plan the same SRE questions as for thread pools: who is waiting, on what, and is the executor saturated?
+Task dumps, blocked-runtime metrics, and “async stack” tooling are runtime-specific. Plan the same SRE questions as for thread pools: who is waiting, on what, and is the executor saturated? Prefer structured logging/`tracing` spans around await points for latency attribution (chapter 19)—not ad-hoc `println!` in hot paths.
+
+### 11. Cancel-safety (worked intuition)
+
+Suppose a handler does: read header → mutate shared state → read body → commit. If the future is cancelled between mutate and commit (client disconnect, timeout in `select!`), shared state may be half-updated unless you designed for it.
+
+Patterns that survive review:
+
+- Keep **mutation + commit** in a short critical section that does not `.await` in the middle, or use a transaction that rolls back on `Drop`.
+- Prefer **idempotent** commits (same request ID can be retried safely).
+- Treat “select on timeout vs work” as cancel: the losing branch is dropped.
+- Document whether your library’s futures are **cancel-safe** (safe to drop at any await) or require completion.
+
+Cancellation is not an error variant you always see—often it is simply **Drop**.
 
 ---
 
@@ -144,7 +200,10 @@ Task dumps, blocked-runtime metrics, and “async stack” tooling are runtime-s
 
 - A named **runtime** is chosen and consistent across the binary; mixing is justified or absent.
 - No blocking `std` I/O or long `std::sync::Mutex` waits on async workers without offload.
-- Spawned tasks are tracked for shutdown; fire-and-forget is intentional and bounded.
+- Spawned tasks are tracked (join set / group pattern); fire-and-forget is intentional and bounded.
+- `select!`-style races treat losers as cancelled; cancel-safety is reviewed for multi-step writes.
+- `Pin`/`Unpin` only appears in justified manual-future or boxing code—not cargo-culted.
+- Async trait / Stream / AsyncRead-Write choices match the runtime and MSRV (stable-first).
 - Timeouts exist on external I/O; cancellation behavior for multi-step writes is defined.
 - `Send` bounds match the executor; non-`Send` data stays on single-threaded paths.
 - CPU-heavy work is not disguised as async without await/offload strategy.
@@ -159,8 +218,12 @@ Task dumps, blocked-runtime metrics, and “async stack” tooling are runtime-s
 - [Async Book — Getting Started](https://rust-lang.github.io/async-book/01_getting_started/01_chapter.html)
 - [`std::future::Future`](https://doc.rust-lang.org/stable/std/future/trait.Future.html)
 - [`std::pin`](https://doc.rust-lang.org/stable/std/pin/)
+- [`std::pin::Pin`](https://doc.rust-lang.org/stable/std/pin/struct.Pin.html)
+- [`std::marker::Unpin`](https://doc.rust-lang.org/stable/std/marker/trait.Unpin.html)
 - [`std::task`](https://doc.rust-lang.org/stable/std/task/)
+- [Async Book — Pinning](https://rust-lang.github.io/async-book/04_pinning/01_chapter.html)
 - [The Rust Reference — Await expressions](https://doc.rust-lang.org/stable/reference/expressions/await-expr.html)
+- [The Rust Reference — Asynchronous functions](https://doc.rust-lang.org/stable/reference/items/functions.html#asynchronous-functions)
 - [Tokio crate (registry entry — ecosystem choice illustration)](https://crates.io/crates/tokio)
 - [crates.io — registry overview](https://crates.io/)
 - [Rust Standard Library](https://doc.rust-lang.org/stable/std/)

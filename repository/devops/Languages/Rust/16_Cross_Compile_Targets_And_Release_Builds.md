@@ -83,13 +83,49 @@ Targets like `x86_64-unknown-linux-musl` are often chosen for **static** or most
 
 **Thin LTO** often gives most of the win with shorter link times; **fat LTO** can improve size/speed further at the cost of long links—painful in CI matrices. Enable LTO for release artifacts you ship to users; keep day-to-day developer builds on the default profile.
 
-### 3. Strip vs debuginfo
+### 3. `panic = "abort"` versus unwind
 
-- **Strip** reduces binary size and removes symbols useful to reverse engineers—and to your own crash triage.
-- Shipping **separate debuginfo** (or retaining `debug = 1` / line tables) lets you symbolicate production panics without leaving full DWARF in every customer binary.
-- For CLIs distributed widely, prefer: optimized release + strip on the public binary + archived debuginfo in your release pipeline.
+Under `[profile.release]` (Cargo profiles):
 
-### 4. Reproducible builds concerns
+| Strategy | Behavior | Why teams choose it |
+|----------|----------|---------------------|
+| **`"unwind"`** (default on most targets) | Unwind the stack; run `Drop` destructors along the way | Prefer when you need cleanup on panic, catch_unwind-style boundaries, or libraries that assume unwind |
+| **`"abort"`** | Terminate the process on panic | Smaller binaries (less unwind machinery), simpler FFI story when C/other languages must not see Rust unwinding across the ABI, and a hard “panic = process death” ops model |
+
+```toml
+[profile.release]
+panic = "abort"
+```
+
+Staff notes:
+
+- Tests, benchmarks, build scripts, and proc-macros **ignore** the profile `panic` setting and still need unwind for the test harness (Cargo documents this explicitly).
+- Abort is a **product policy**, not a free lunch—you trade away stack-unwinding `Drop` cleanup on the panic path.
+- Document the choice next to strip/LTO decisions.
+- For **FFI**, prefer aborting or translating panics at the boundary so foreign code never observes an undefined Rust unwind across the ABI.
+- Libraries intended for embedding in larger processes are often left on unwind unless the whole artifact standardizes on abort.
+
+### 4. Strip, debuginfo, and split-debuginfo
+
+- **`strip`** (`"none"` / `"debuginfo"` / `"symbols"`, or bool forms) reduces what remains in the shipped binary.
+- **`debug` / debuginfo** levels control how much DWARF (or equivalent) is generated—from none, through line tables useful for backtraces, up to full info.
+- **`split-debuginfo`** (profile setting → rustc `-C split-debuginfo`) controls whether that info lives **in** the executable or **beside** it (platform-specific defaults; macOS often defaults differently). High-level goal: keep the public artifact small while retaining symbolication data in your release pipeline or symbol store.
+
+Operational pattern for widely distributed CLIs: optimized release → strip symbols on the customer binary → archive split or side-car debuginfo with the release. Never ship “fully stripped, nowhere to symbolicate” without accepting longer incident MTTR.
+
+### 5. Linker configuration in `.cargo/config.toml`
+
+`rustup target add` installs the Rust std for a triple; it does not always provide the **system linker**. Point Cargo at a cross-linker per triple:
+
+```toml
+# .cargo/config.toml (concept — paths/names are host-specific)
+[target.aarch64-unknown-linux-gnu]
+linker = "aarch64-linux-gnu-gcc"
+```
+
+Commit a documented template when the team shares one cross setup; keep machine-local overrides out of the repo if linker paths differ. Native `build.rs` / `cc` crates still need a matching C cross-toolchain. Prefer distro packages or pinned container images over ad-hoc downloaded linkers (supply chain).
+
+### 6. Reproducible builds concerns
 
 Bit-identical rebuilds are hard. Paths embedded in debuginfo, timestamps, mapfile order, and different linker versions all perturb hashes. Practices that help:
 
@@ -100,7 +136,41 @@ Bit-identical rebuilds are hard. Paths embedded in debuginfo, timestamps, mapfil
 
 Exact byte-identical releases need an explicit project policy; “same lockfile + same toolchain” is the minimum operational bar.
 
-### 5. Legacy and edition notes
+### 7. WASM target size (brief)
+
+`wasm32-*` artifacts are size-sensitive: every dependency and panic/formatting path shows up in download and cold-start cost. Prefer size-oriented `opt-level` (`"s"` / `"z"`), be deliberate about `panic` strategy, and avoid pulling OS-heavy crates into the WASM graph. Host **sandbox assumptions** and when not to use WASM at all belong with chapter 18; here the release concern is: measure `.wasm` size in CI the same way you track native binary size. Cross-ref chapter 18 for target choice and host capabilities; do not treat a green native `--release` build as proof the WASM artifact is shippable.
+
+### 8. Tier 1 / 2 / 3 platform support
+
+The rustc book’s **platform support** page classifies targets roughly:
+
+| Tier | Expectation (intuition) |
+|------|-------------------------|
+| **Tier 1** | Built and tested extensively; expected to work. |
+| **Tier 2** | Guaranteed to build; tests may be less complete. |
+| **Tier 3** | Community / best-effort; may lack full std or CI. |
+
+Staff implication: advertise only triples you **build and smoke-test**. A Tier 3 triple in a README without CI is a support lie. Check host tools vs target std availability before promising “we support X.”
+
+### 9. Host tools versus target std
+
+- **`rustup target add <triple>`** installs the **standard library** (and related target libs) for compiling *to* that triple—it does not install a full second compiler toolchain for every case.
+- **Host tools** (rustc, cargo, clippy, rustfmt running on the build machine) come from the **host** toolchain. Cross builds still run host rustc; they emit target code and need a target linker/C toolchain as described above.
+- Some components or build scripts assume they run on the host OS—do not confuse “stdlib for `aarch64-linux`” with “CI runner is aarch64.”
+
+### 10. Incremental compilation and CI clean builds
+
+Locally, **incremental** compilation speeds rebuilds. In CI:
+
+- Cached `target/` with incremental artifacts can reproduce rare “ghost” errors after toolchain or flag changes—key caches on toolchain + lockfile, and document **`cargo clean`** recovery.
+- **Release** and ship jobs should prefer **clean** (or reliably equivalent) builds so artifacts do not depend on stale incremental state.
+- Developer laptops keep incremental on; release pipelines optimize for correctness and reproducibility over minute-level compile savings.
+
+### 11. Faster linkers (optional local productivity)
+
+Link time often dominates large Rust binaries. **mold**, **lld**, and similar faster linkers can be configured per target in `.cargo/config.toml` for **local** or optional CI speedups. They are **not required** for correct Rust builds—do not make an exotic linker a hard merge dependency unless the team standardizes and pins it in images. Prefer documenting an optional `[target.'cfg(…)'] linker = …` over forcing every contributor’s machine.
+
+### 12. Legacy and edition notes
 
 Older projects may document only host builds. Cross-compile support has been first-class for years; if a brownfield `edition = "2018"` crate fails only on cross, suspect `build.rs`, `cc` crate flags, or hard-coded host paths—not the edition itself.
 
@@ -111,7 +181,7 @@ Older projects may document only host builds. Cross-compile support has been fir
 ### Software engineering
 
 - Declare **supported targets** in README/CI; do not discover linker needs on release day.
-- Keep release profile overrides in version control next to `Cargo.toml`.
+- Keep release profile overrides (`panic`, `strip`, `lto`, `opt-level`) in version control next to `Cargo.toml`.
 - Separate “developer laptop build” from “release artifact build” jobs.
 
 ### Security
@@ -127,26 +197,31 @@ Older projects may document only host builds. Cross-compile support has been fir
 ### Performance
 
 - Measure before raising `opt-level` to `"z"` or enabling fat LTO—compile time and debuggability suffer.
-- For size-sensitive embedded or WASM-adjacent artifacts, prefer explicit size opts and verify functionality.
+- For size-sensitive embedded or WASM artifacts, prefer explicit size opts and verify functionality.
 
 ### Staff checklist
 
-- [ ] Host and each release target triple are documented.
-- [ ] `rustup target add` is automated in CI/bootstrap docs; linker packages are listed.
-- [ ] `cargo build --release --target …` succeeds in a clean environment.
+- [ ] Host and each release target triple are documented; **tier** expectations match CI reality.
+- [ ] `rustup target add` (target std) is automated; host tools vs cross-linker/`build.rs` C toolchain needs are listed.
+- [ ] `cargo build --release --target …` succeeds in a **clean** environment; incremental cache policy documented.
+- [ ] Faster linkers (mold/lld), if used, are optional/pinned—not an undocumented laptop-only requirement.
 - [ ] musl/static claims are verified with linkage inspection + runtime smoke test.
-- [ ] Strip/debuginfo policy exists (what ships vs what is archived).
+- [ ] Release **`panic`** strategy (`unwind` vs `abort`) is chosen and documented.
+- [ ] Strip / debuginfo / split-debuginfo policy exists (what ships vs what is archived).
 - [ ] Toolchain and `Cargo.lock` are pinned for release builds.
-- [ ] Profile overrides (`lto`, `opt-level`) are intentional and reviewed for CI cost.
+- [ ] Profile overrides (`lto`, `opt-level`, `panic`) are intentional and reviewed for CI cost.
+- [ ] WASM (if shipped) has a size budget and CI check.
 
 ---
 
 ## References
 
-- [rustup book — Targets](https://rust-lang.github.io/rustup/cross-compilation.html)
-- [The Cargo Book — Specifying a target](https://doc.rust-lang.org/cargo/reference/config.html#buildtarget)
+- [rustup book — Cross-compilation](https://rust-lang.github.io/rustup/cross-compilation.html)
+- [The Cargo Book — Configuration (`target.<triple>.linker`)](https://doc.rust-lang.org/cargo/reference/config.html)
 - [The Cargo Book — Profiles](https://doc.rust-lang.org/cargo/reference/profiles.html)
 - [The rustc Book — Targets and Target Triples](https://doc.rust-lang.org/rustc/targets/index.html)
 - [The rustc Book — Codegen options](https://doc.rust-lang.org/rustc/codegen-options/index.html)
 - [Platform Support (tier list)](https://doc.rust-lang.org/rustc/platform-support.html)
+- [rustup book — Components](https://rust-lang.github.io/rustup/concepts/components.html)
+- [The Cargo Book — Incremental compilation (profiles / config context)](https://doc.rust-lang.org/cargo/reference/profiles.html)
 - [crates.io](https://crates.io/)

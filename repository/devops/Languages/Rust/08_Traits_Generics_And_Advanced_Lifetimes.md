@@ -157,6 +157,75 @@ Returning a reference created inside a function without tying it to an input is 
 
 Modern Rust requires the `dyn` keyword for trait objects (`&dyn Trait`). Very old code may omit it (`&Trait`). New code always writes `dyn`.
 
+### 9. Const generics
+
+**Const generics** parameterize types and functions over **constant values**, not only types. Arrays are the everyday example: `[T; N]` is a different type for each length `N`.
+
+```rust
+fn sum_u8s<const N: usize>(xs: &[u8; N]) -> u32 {
+    xs.iter().map(|&b| u32::from(b)).sum()
+}
+```
+
+APIs use const generics for fixed-size buffers, cryptographic block sizes, small matrices, and “this handle is N bytes” without runtime `len` checks. Bounds on const parameters exist for some use cases but are narrower than type-trait bounds—keep const parameters simple (`usize` lengths are the common case).
+
+Monomorphization applies: each distinct `N` can generate specialized code. That is desirable for small fixed `N` and costly if you instantiate huge families of lengths without need.
+
+### 10. Associated constants
+
+Traits and impls may declare **associated constants** alongside associated types and methods:
+
+```rust
+trait Packet {
+    const MAX_LEN: usize;
+}
+```
+
+Implementors supply `const MAX_LEN: usize = …;`. Associated consts document type-level facts (limits, discriminants, default capacities) that callers can use in generics and array sizes when the value is usable in a const context. Prefer them over magic numbers scattered across impls when every implementor must advertise the same kind of constant.
+
+### 11. Conversion traits: `From`, `Into`, `TryFrom`
+
+These `std::convert` traits are the idiomatic conversion surface:
+
+| Trait | Role |
+|-------|------|
+| **`From<T> for U`** | Infallible `U::from(t)`; implement this for your conversions |
+| **`Into<U> for T`** | Blanket-implemented via `From`; callers often prefer `.into()` |
+| **`TryFrom<T> for U`** | Fallible conversion → `Result<U, E>` (parsing, range checks) |
+| **`TryInto`** | Fallible counterpart callers use; prefer implementing `TryFrom` |
+
+Team habits: implement **`From`** (or **`TryFrom`**) at crate boundaries instead of ad-hoc `to_foo()` methods for every direction; use **`TryFrom`** when the conversion can fail (bytes → typed id, `i64` → `u32`). Error types for `TryFrom` should be small and meaningful. Infallible `From` must not hide lossy casts—those belong in `TryFrom` or explicit methods named for the loss.
+
+### 12. `Deref` / `DerefMut`: smart-pointer ergonomics (not inheritance)
+
+**`Deref`** and **`DerefMut`** let a type present a “view” of an inner value so method calls and coercions can reach the target (`Box<T>`, `Rc<T>`, `Arc<T>`, `String`→`str`, `Vec<T>`→`[T]`). The compiler applies **deref coercion** in argument position and method resolution so you can pass `&String` where `&str` is expected, or call `str` methods on a `String`.
+
+This is **not** classical inheritance: you do not get a subtype lattice, and implementing `Deref` does not make your wrapper a substitute for every API that names the inner type. Staff rule: implement `Deref` for true smart-pointer / newtype-to-inner ergonomics; do **not** use it to fake OO hierarchies or to hide costly conversions. Document whether `DerefMut` is offered (exclusive access to the inner value). Multiple layers of `Deref` are possible but hard to reason about in reviews—prefer a shallow, obvious target type.
+
+### 13. `AsRef` / `AsMut` / `Borrow` / `ToOwned` at API boundaries
+
+These conversion traits show up constantly at library edges:
+
+| Trait | Role |
+|-------|------|
+| **`AsRef<T>`** / **`AsMut<T>`** | Cheap reference conversion (`Path`, `str`, `[u8]`, …)—accept `impl AsRef<Path>` so callers may pass `Path`, `PathBuf`, `str`, `String` |
+| **`Borrow<T>`** | Hash-map key flexibility: owned keys with borrowed lookup (`String` keys, `&str` gets) under consistent `Hash`/`Eq` |
+| **`ToOwned`** | Opposite direction of `Borrow`: clone-like to an owned form (`str` → `String`) |
+
+Prefer **`AsRef`** for read-only “accept several path-like / bytes-like inputs.” Prefer **`Borrow`/`ToOwned`** when designing map/set key types. Do not implement these traits with surprising cost or with equality/hash that disagrees with the borrowed form—`HashMap` correctness depends on that contract. At public boundaries, choosing `AsRef`/`Borrow` carefully reduces forced allocations without pretending every type is interchangeable.
+
+### 14. RPIT, Edition 2024 lifetime capture, and `use<…>`
+
+**Return-position `impl Trait` (RPIT)** hides a concrete return type behind a trait bound (`fn items(&self) -> impl Iterator<Item = u32>`). Callers get static dispatch without naming the iterator type.
+
+**Edition 2024 capture change (library-author awareness):** when no precise-capturing bound is written, Edition **2024** implicitly captures **in-scope lifetime parameters** in RPIT more aggressively than **2021** (aligned with `async fn` and several associated-RPIT cases). That can make an opaque type “see” a lifetime it did not capture before—tightening what callers may do with the return value (for example, whether the return can be treated as `'static`). Older editions still compile with their previous implicit rules on modern rustc.
+
+**Precise capturing** with **`use<…>`** (available on recent stables in all editions) names exactly which generics/lifetimes the opaque captures, for example `impl Trait + use<'a, T>` or `impl Trait + use<>` to capture none. Migration via `cargo fix --edition` often inserts `use<…>` to preserve 2021 semantics (`impl_trait_overcaptures`). Prefer explicit `use<…>` on public RPIT when lifetime capture is part of the API contract; omit it in 2024 only when capturing everything in scope is intentional. Legacy `Captures<…>` / “outlives trick” patterns still work but are superseded for new APIs—prefer `use<…>` when touching those signatures.
+
+### 15. `Display` versus `Debug` (brief)
+
+**`Debug`** (`{:?}`) is for programmers—derive it on almost all data types used in logs and error reporting. **`Display`** (`{}`) is for end-user or stable textual forms; implement by hand and treat the string as part of the UX/API. Do not rely on `Debug` formatting as a public contract (it may change). Errors often implement both: `Display` for messages, `Debug` for diagnostics.
+
 ---
 
 ## 3. Applications and use cases
@@ -205,12 +274,24 @@ Modern Rust requires the `dyn` keyword for trait objects (`&dyn Trait`). Very ol
 - [The Book: Traits](https://doc.rust-lang.org/stable/book/ch10-02-traits.html)
 - [The Book: Validating References with Lifetimes](https://doc.rust-lang.org/stable/book/ch10-03-lifetime-syntax.html)
 - [The Book: Trait Objects](https://doc.rust-lang.org/stable/book/ch17-02-trait-objects.html)
+- [The Book: Advanced Traits](https://doc.rust-lang.org/stable/book/ch20-02-advanced-traits.html)
 - [Rust By Example: Traits](https://doc.rust-lang.org/stable/rust-by-example/trait.html)
 - [Rust By Example: Generics](https://doc.rust-lang.org/stable/rust-by-example/generics.html)
+- [The Reference: Generics (const parameters)](https://doc.rust-lang.org/stable/reference/items/generics.html#const-generics)
 - [std::fmt::Debug](https://doc.rust-lang.org/stable/std/fmt/trait.Debug.html)
 - [std::fmt::Display](https://doc.rust-lang.org/stable/std/fmt/trait.Display.html)
 - [std::clone::Clone](https://doc.rust-lang.org/stable/std/clone/trait.Clone.html)
 - [std::convert::From](https://doc.rust-lang.org/stable/std/convert/trait.From.html)
+- [std::convert::Into](https://doc.rust-lang.org/stable/std/convert/trait.Into.html)
+- [std::convert::TryFrom](https://doc.rust-lang.org/stable/std/convert/trait.TryFrom.html)
 - [std::iter::Iterator](https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html)
 - [The Reference: Trait and lifetime bounds](https://doc.rust-lang.org/stable/reference/trait-bounds.html)
 - [Edition Guide: dyn Trait for trait objects](https://doc.rust-lang.org/edition-guide/rust-2018/trait-system/dyn-trait-for-trait-objects.html)
+- [Edition Guide — RPIT lifetime capture rules](https://doc.rust-lang.org/edition-guide/rust-2024/rpit-lifetime-capture.html)
+- [Edition Guide — Rust 2024](https://doc.rust-lang.org/edition-guide/rust-2024/index.html)
+- [std::ops::Deref](https://doc.rust-lang.org/stable/std/ops/trait.Deref.html)
+- [std::ops::DerefMut](https://doc.rust-lang.org/stable/std/ops/trait.DerefMut.html)
+- [std::convert::AsRef](https://doc.rust-lang.org/stable/std/convert/trait.AsRef.html)
+- [std::borrow::Borrow](https://doc.rust-lang.org/stable/std/borrow/trait.Borrow.html)
+- [std::borrow::ToOwned](https://doc.rust-lang.org/stable/std/borrow/trait.ToOwned.html)
+- [The Reference: impl Trait](https://doc.rust-lang.org/stable/reference/types/impl-trait.html)

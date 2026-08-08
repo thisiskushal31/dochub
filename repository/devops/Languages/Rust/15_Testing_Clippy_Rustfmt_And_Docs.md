@@ -44,7 +44,25 @@ Filters: `cargo test name_substring`. Options control threads, output capture, a
 
 Common macros: **`assert!`**, **`assert_eq!`**, **`assert_ne!`**, **`panic!`**. For `Result`-heavy code, return `Result` from tests (`fn t() -> Result<(), E>`) and use `?`, or use dedicated assertion helpers. Prefer precise failures over opaque `unwrap` dumps when diagnosing CI flakes.
 
-### 4. Clippy via rustup
+### 4. `#[should_panic]` expectations
+
+Some tests assert that code **panics** (invariant violations, intentional abort paths in test-only helpers):
+
+```rust
+#[test]
+#[should_panic(expected = "index out of bounds")]
+fn rejects_bad_index() {
+    let v = vec![1];
+    let _ = v[99];
+}
+```
+
+- **`#[should_panic]`** — passes only if the test body panics.
+- **`#[should_panic(expected = "...")]`** — passes only if the panic message contains the substring; tighter and preferred when messages are stable.
+- Prefer testing **`Result`/`Option` error paths** over panics for production APIs; reserve `should_panic` for documented panic contracts or internal debug assertions.
+- Panic text can change across Rust versions or refactors—keep `expected` strings short and owned by your crate’s messages when possible.
+
+### 5. Clippy via rustup
 
 **Clippy** is the official linter, installed as a rustup component:
 
@@ -57,7 +75,7 @@ Clippy encodes idioms and correctness nits beyond `rustc` warnings. In CI, deny 
 
 Not every lint is sacred forever—teams may `#[allow(clippy::…)]` with a comment, or configure `clippy.toml`. Allowlists should be rare and reviewed.
 
-### 5. rustfmt / `cargo fmt`
+### 6. rustfmt / `cargo fmt`
 
 **rustfmt** enforces a common layout:
 
@@ -69,13 +87,13 @@ cargo fmt --all              # local: rewrite
 
 Formatting is not a design debate in review—run fmt before push. Commit `rustfmt.toml` only when you intentionally diverge from defaults; prefer defaults for ecosystem consistency.
 
-### 6. rustdoc / `cargo doc`
+### 7. rustdoc / `cargo doc`
 
 **`cargo doc`** builds HTML docs from `///` (item) and `//!` (module/crate) comments. **`cargo doc --no-deps --open`** is the local loop. Public API documentation is part of the product for libraries; for binaries, document modules operators must configure.
 
 Doc comments support Markdown. Link to other items with rustdoc’s intra-doc links so renames break CI via doctests or doc link checking when enabled.
 
-### 7. Doctests
+### 8. Doctests
 
 Examples in docs are compiled (and usually executed) by `cargo test`:
 
@@ -90,7 +108,20 @@ pub fn add_one(x: i32) -> i32 { x + 1 }
 
 Marks: `ignore`, `no_run`, `should_panic`, `compile_fail` (for reference material). Doctests keep README-level examples from rotting—treat failures as real regressions.
 
-### 8. CI quality gates (minimum bar)
+### 9. `cargo test --doc` versus the unit/integration matrix
+
+`cargo test` runs a **matrix** of targets; knowing which knob you turned avoids false confidence:
+
+| Command / focus | What runs |
+|-----------------|-----------|
+| `cargo test` (default) | Unit tests, integration tests under `tests/`, and **doctests** for the package |
+| `cargo test --doc` | **Documentation tests only** |
+| `cargo test --lib` / `--bins` / `--tests` | Narrow to library unit tests, binary tests, or integration targets |
+| `cargo test --all-features` (+ explicit matrices) | Feature combinations you actually ship |
+
+Use `--doc` when iterating on rustdoc examples without paying for a full suite. In CI, still run the **full** default (or an explicit matrix) so unit, integration, and doctests cannot drift independently. Binary-only packages without a library target have limited integration/doctest surface—split a `lib` when API contracts matter.
+
+### 10. CI quality gates (minimum bar)
 
 A typical merge gate for Rust crates:
 
@@ -133,6 +164,54 @@ rustfmt and Clippy track the active toolchain. Edition upgrades can change idiom
 
 Keep unit tests fast and deterministic. Push network, filesystem, and subprocess checks to integration tests with tempdirs and timeouts (chapter 11 patterns). Flakes usually come from ambient environment, not from `assert_eq!`.
 
+### 8. Property testing as a practice (ecosystem)
+
+**Property-based testing** generates many inputs and checks invariants (“for all lists, sort is ordered”; “parse ∘ print is identity on a domain”). In Rust this is an **ecosystem** practice (proptest-class crates and similar), not a `std` or Cargo built-in. Adopt it for parsers, codecs, config round-trips, and pure functions with large input spaces where example tests only hit happy paths.
+
+Staff rules:
+
+- Pin property-testing crate **versions** in `Cargo.lock` / CI the same way you pin other test dependencies.
+- Bound generation (size, recursive depth) so CI cannot run unbounded; fail fast with a seed for reproduction.
+- Keep properties next to unit tests; do not replace targeted regression tests for known bugs.
+- Treat flaky generators as defects—shrink and fix, or tighten the domain.
+
+### 9. Benchmarks: `benches/` and Criterion-class tools
+
+Microbenchmarks live under **`benches/`** and are wired as Cargo benchmark targets. Stable Cargo’s built-in bench harness is limited; many teams use **Criterion-class** ecosystem harnesses for statistics and comparison. Treat benches as **optional** engineering tools:
+
+- Prefer **release-mode profiling** of real workloads for production decisions; microbenches lie about caches, I/O, and allocator behavior.
+- Running noisy benches on every PR creates **CI noise** and false regressions—schedule them nightly or on demand, pin hardware where possible, and gate merges on correctness (test/clippy/fmt) first.
+- Document how to run benches locally; do not require exotic nightly features for the default quality bar unless the team explicitly opts in.
+
+### 10. Miri for undefined behavior in unsafe tests
+
+**Miri** is an interpreter (rustup component, typically used with a nightly toolchain channel that provides it) that detects many classes of **undefined behavior** in unsafe code: invalid pointers, misalignment, borrow-model violations, and more. Pattern:
+
+```bash
+rustup component add miri
+cargo miri test
+```
+
+**When to run:** crates that own `unsafe`, FFI shims, custom collections, or niche layout tricks—on PR for touched unsafe modules and/or on a scheduled job. Miri is slower than native tests and does not replace sanitizers or real-target runs; it is a **soundness** aid. Pure-safe application crates rarely need it on every merge.
+
+### 11. Sanitizers awareness (ASan / TSan)
+
+**AddressSanitizer** and **ThreadSanitizer** (and related) can be enabled via **rustc/cargo flags** (`-Z sanitizer=…` on toolchains that support them—often nightly, platform-limited). Use as an **optional CI or local** check for unsafe-heavy or FFI-heavy code; expect:
+
+- Not all targets/OS combinations support every sanitizer.
+- Higher memory/CPU cost; usually not the default merge gate for every crate.
+- Complements Miri (different bug classes and fidelity)—neither is complete alone.
+
+Document which sanitizers your org runs and on which OS images.
+
+### 12. Fuzzing practice (cargo-fuzz class)
+
+**Coverage-guided fuzzing** (cargo-fuzz and similar ecosystem tooling, typically libFuzzer-class under the hood) is the right practice for **untrusted parsers**, decoders, and config loaders. Treat fuzz targets as long-lived regression assets: pin toolchain/deps, corpus in CI artifacts or storage, and run fuzzing on a schedule or after parser changes—not only as a one-off demo. Fuzzing is ecosystem practice, not a `std` feature; still part of whole-engineering for hostile-input surfaces (pair with chapter 17 supply-chain discipline for fuzz deps).
+
+### 13. Code coverage as practice
+
+Measure **which tests exercise which lines/regions** with coverage tooling integrated with `cargo` (llvm-cov-class and similar ecosystem workflows). Goals: find untested error paths and unsafe modules—not a vanity percentage or a specific SaaS vendor. Fail CI on coverage only if the team owns a realistic policy (critical modules, not “100% or bust”). Store reports as build artifacts; keep the practice portable across forges.
+
 ---
 
 ## 3. Applications and use cases
@@ -159,6 +238,7 @@ Keep unit tests fast and deterministic. Push network, filesystem, and subprocess
 
 - Avoid unbounded `cargo test` parallelism on tiny CI runners if jobs thrash; tune jobs explicitly.
 - Compile times dominate large workspaces—cache builds, but never skip Clippy on changed crates without a documented exception.
+- Keep microbenches out of the default merge gate; profile release builds for capacity decisions.
 
 ### Staff-level review checklist
 
@@ -166,6 +246,11 @@ Keep unit tests fast and deterministic. Push network, filesystem, and subprocess
 - New public API has docs; examples that claim behavior are doctested or explicitly `no_run` with reason.
 - `#[cfg(test)]` helpers do not leak into release artifacts.
 - Feature combinations you ship are covered; `--all-features` conflicts are understood.
+- `#[should_panic(expected = …)]` used only for true panic contracts; error paths prefer `Result` assertions.
+- Doc, unit, and integration coverage are not confused—`--doc` alone is not a full gate.
+- Property-test and bench dependencies (ecosystem) are version-pinned; benches are optional and not noisy merge blockers.
+- Unsafe-heavy crates run **Miri** (and optionally sanitizers) on a defined cadence; platform limits documented.
+- Untrusted parsers have fuzz targets; coverage used to find gaps—not as SaaS lock-in or vanity gates.
 - `#[allow(clippy::…)]` has a justification comment; no repo-wide allow of broad groups without ADR.
 - Flaky tests are fixed or quarantined with owners—not silently ignored.
 - Contributors can run the same three commands locally before push.
@@ -177,11 +262,16 @@ Keep unit tests fast and deterministic. Push network, filesystem, and subprocess
 - [The Book — Writing Automated Tests](https://doc.rust-lang.org/stable/book/ch11-00-testing.html)
 - [The Book — Test Organization](https://doc.rust-lang.org/stable/book/ch11-03-test-organization.html)
 - [Cargo Book — `cargo test`](https://doc.rust-lang.org/stable/cargo/commands/cargo-test.html)
+- [Cargo Book — `cargo bench`](https://doc.rust-lang.org/stable/cargo/commands/cargo-bench.html)
 - [Cargo Book — `cargo fmt`](https://doc.rust-lang.org/stable/cargo/commands/cargo-fmt.html)
 - [Cargo Book — `cargo clippy`](https://doc.rust-lang.org/stable/cargo/commands/cargo-clippy.html)
 - [Cargo Book — `cargo doc`](https://doc.rust-lang.org/stable/cargo/commands/cargo-doc.html)
+- [rustdoc Book — Doctests](https://doc.rust-lang.org/stable/rustdoc/write-documentation/documentation-tests.html)
 - [Clippy documentation](https://doc.rust-lang.org/stable/clippy/)
 - [rustfmt documentation](https://doc.rust-lang.org/stable/rustfmt/)
 - [The rustdoc Book](https://doc.rust-lang.org/stable/rustdoc/)
 - [rustup book — components](https://rust-lang.github.io/rustup/concepts/components.html)
+- [Miri (rust-lang/miri)](https://github.com/rust-lang/miri)
+- [The rustc Book — Sanitizers](https://doc.rust-lang.org/rustc/sanitizer.html)
+- [Rust Fuzz Book](https://rust-fuzz.github.io/book/)
 - [crates.io — registry overview](https://crates.io/)
