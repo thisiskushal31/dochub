@@ -5451,11 +5451,158 @@
         "sha": "",
         "children": [
           {
+            "name": "01_What_Is_Scala_And_Why_JVM_Teams_Use_It.md",
+            "path": "Languages/Scala/01_What_Is_Scala_And_Why_JVM_Teams_Use_It.md",
+            "type": "file",
+            "sha": "",
+            "size": 16491
+          },
+          {
+            "name": "02_Toolchain_JDK_Scala3_Sbt_And_Versions.md",
+            "path": "Languages/Scala/02_Toolchain_JDK_Scala3_Sbt_And_Versions.md",
+            "type": "file",
+            "sha": "",
+            "size": 14770
+          },
+          {
+            "name": "03_Syntax_Expressions_Vals_And_Vars.md",
+            "path": "Languages/Scala/03_Syntax_Expressions_Vals_And_Vars.md",
+            "type": "file",
+            "sha": "",
+            "size": 13910
+          },
+          {
+            "name": "04_Types_Hierarchy_And_Null_Safety.md",
+            "path": "Languages/Scala/04_Types_Hierarchy_And_Null_Safety.md",
+            "type": "file",
+            "sha": "",
+            "size": 13648
+          },
+          {
+            "name": "05_Control_Flow_And_Expressions.md",
+            "path": "Languages/Scala/05_Control_Flow_And_Expressions.md",
+            "type": "file",
+            "sha": "",
+            "size": 12610
+          },
+          {
+            "name": "06_Functions_Methods_And_Higher_Order.md",
+            "path": "Languages/Scala/06_Functions_Methods_And_Higher_Order.md",
+            "type": "file",
+            "sha": "",
+            "size": 13834
+          },
+          {
+            "name": "07_Classes_Objects_Traits_And_Case_Classes.md",
+            "path": "Languages/Scala/07_Classes_Objects_Traits_And_Case_Classes.md",
+            "type": "file",
+            "sha": "",
+            "size": 13559
+          },
+          {
+            "name": "08_Collections_Option_Either_And_Try.md",
+            "path": "Languages/Scala/08_Collections_Option_Either_And_Try.md",
+            "type": "file",
+            "sha": "",
+            "size": 12662
+          },
+          {
+            "name": "09_Pattern_Matching_And_Algebraic_Data.md",
+            "path": "Languages/Scala/09_Pattern_Matching_And_Algebraic_Data.md",
+            "type": "file",
+            "sha": "",
+            "size": 11997
+          },
+          {
+            "name": "10_Packages_Imports_And_Visibility.md",
+            "path": "Languages/Scala/10_Packages_Imports_And_Visibility.md",
+            "type": "file",
+            "sha": "",
+            "size": 11523
+          },
+          {
+            "name": "11_Sbt_Projects_Dependencies_And_Packaging.md",
+            "path": "Languages/Scala/11_Sbt_Projects_Dependencies_And_Packaging.md",
+            "type": "file",
+            "sha": "",
+            "size": 15633
+          },
+          {
+            "name": "12_Java_Interop_And_The_JVM.md",
+            "path": "Languages/Scala/12_Java_Interop_And_The_JVM.md",
+            "type": "file",
+            "sha": "",
+            "size": 17169
+          },
+          {
+            "name": "13_Concurrency_Futures_And_Effects_Literacy.md",
+            "path": "Languages/Scala/13_Concurrency_Futures_And_Effects_Literacy.md",
+            "type": "file",
+            "sha": "",
+            "size": 22360
+          },
+          {
+            "name": "14_Testing_Style_And_Scaladoc.md",
+            "path": "Languages/Scala/14_Testing_Style_And_Scaladoc.md",
+            "type": "file",
+            "sha": "",
+            "size": 19005
+          },
+          {
+            "name": "15_Security_And_Supply_Chain.md",
+            "path": "Languages/Scala/15_Security_And_Supply_Chain.md",
+            "type": "file",
+            "sha": "",
+            "size": 26373
+          },
+          {
+            "name": "16_Build_Containers_And_JVM_Operations.md",
+            "path": "Languages/Scala/16_Build_Containers_And_JVM_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 18218
+          },
+          {
+            "name": "17_Use_Cases_Services_Spark_And_Kafka.md",
+            "path": "Languages/Scala/17_Use_Cases_Services_Spark_And_Kafka.md",
+            "type": "file",
+            "sha": "",
+            "size": 15311
+          },
+          {
+            "name": "18_Spark_Data_Engineering_And_Architecture.md",
+            "path": "Languages/Scala/18_Spark_Data_Engineering_And_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 26922
+          },
+          {
+            "name": "19_Kafka_Streaming_And_Pipeline_Architecture.md",
+            "path": "Languages/Scala/19_Kafka_Streaming_And_Pipeline_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 29244
+          },
+          {
+            "name": "20_DevSecOps_Threat_Modeling_And_Hardening.md",
+            "path": "Languages/Scala/20_DevSecOps_Threat_Modeling_And_Hardening.md",
+            "type": "file",
+            "sha": "",
+            "size": 24926
+          },
+          {
+            "name": "21_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+            "path": "Languages/Scala/21_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+            "type": "file",
+            "sha": "",
+            "size": 17544
+          },
+          {
             "name": "README.md",
             "path": "Languages/Scala/README.md",
             "type": "file",
             "sha": "",
-            "size": 944
+            "size": 7429
           }
         ]
       },
@@ -5614,7 +5761,7 @@
         "path": "Languages/README.md",
         "type": "file",
         "sha": "",
-        "size": 17943
+        "size": 17983
       }
     ]
   },

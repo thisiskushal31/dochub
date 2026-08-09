@@ -87,7 +87,7 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | 8 | [**Ruby**](./Ruby/README.md) | Whole-engineering Ruby track: MRI language, stdlib, gems/Bundler, implementations, security, and ops; Chef/Vagrant context. |
 | 9 | [**Groovy**](./Groovy/README.md) | Groovy: Jenkinsfile, Gradle build scripts; CI/CD and JVM builds. |
 | 10 | [**CSharp**](./CSharp/README.md) | C#: Azure, .NET, PowerShell, Azure DevOps; Windows-centric DevOps. |
-| 11 | [**Scala**](./Scala/README.md) | Scala: JVM, Spark, Kafka, sbt; data pipelines and streaming. |
+| 11 | [**Scala**](./Scala/README.md) | Scala whole-engineering track: JVM/sbt, services, Spark/Kafka architecture, DevSecOps (21 chapters). |
 | 12 | [**Perl**](./Perl/README.md) | Perl 5: language + CPAN + HTTP/DBI/web/XS integration (16 chapters). |
 | 13 | [**Kotlin**](./Kotlin/README.md) | Kotlin: Gradle DSL, Android, JVM; build scripts and services. |
 | 14 | [**PHP**](./PHP/README.md) | PHP: whole-engineering track—language, web/data, testing, security, delivery, ops; CMS + frameworks (22 chapters). |
