@@ -278,9 +278,32 @@ proc-macro = true
 - Prefer well-known derive ecosystems (`serde`, `thiserror`, …) over bespoke macros unless the abstraction clearly pays for the complexity.
 - Debugging expands to `cargo expand` (external tool) or reading the macro crate’s docs—call sites stay small by design.
 
-Deeper authoring of proc macros is out of scope here; staff should know they are a distinct crate type with host execution semantics.
+### 10. What writing a procedural macro is
 
-### 10. `[workspace.lints]` and package lint inheritance
+You already *use* macros (`#[derive(Debug)]`, `println!`). **Writing** a procedural macro means you ship a small program that runs **while the project compiles** and turns one piece of source into another. The compiler hands your macro the caller’s code as tokens; your macro returns new tokens; rustc then type-checks that generated code. It is not part of your running service—it is a compile-time helper, more like a tiny compiler plugin than a library function.
+
+There are three shapes people write:
+
+| Kind | What it looks like | What it is for |
+|------|--------------------|----------------|
+| **Derive** | `#[derive(MyTrait)]` on a type | “Look at this struct/enum and generate the boring `impl` for me.” |
+| **Attribute** | `#[my_attr]` on a function or type | “Rewrite or wrap this item before compile continues.” |
+| **Function-like** | `my_macro!(…)` | “Expand this mini-language at the call site.” |
+
+In Cargo this lives in its **own crate** with `proc-macro = true`. Authors usually parse tokens with ecosystem helpers (commonly `syn`) and emit Rust with helpers like `quote`. You do **not** need to write one to be productive in Rust—most teams only consume macros written by others (`serde`, `thiserror`, and friends).
+
+Write your own only when a normal function, trait, or simple `macro_rules!` (chapter 04) cannot remove real, repeated boilerplate. Ask first:
+
+1. Will many call sites benefit, or only one or two?
+2. Who will debug cryptic expand errors when it breaks?
+3. Is the extra build time and build-host dependency risk worth it (chapter 17)?
+4. Will error messages point at the **caller’s** code, not a wall of generated text?
+5. Can you test good expansions and expected compile failures?
+6. If you change what the macro emits, will you treat that as a **breaking** library change?
+
+Knowing the tools is not a reason to invent macros. Prefer deleting a custom macro crate when the need shrinks.
+
+### 11. `[workspace.lints]` and package lint inheritance
 
 Cargo can store lint policy in the manifest instead of scattering `#![deny(…)]` / `#![warn(…)]` only in crate roots. A package-level table looks like:
 
@@ -301,7 +324,7 @@ workspace = true
 
 Inheritance keeps Clippy and rustc levels consistent across crates; members can still override individual lints when a crate legitimately needs a different bar. Lints configured this way apply to the **current package** under development—not as a hammer on all registry dependencies (Cargo caps dependency lints). Prefer manifest lints for team defaults; keep rare, local exceptions documented in review.
 
-### 11. `cargo tree` for dependency graphs
+### 12. `cargo tree` for dependency graphs
 
 `cargo tree` prints the resolved graph: who pulled which crate, at which version, and often **why features** appear. Use it when a lockfile churns, when duplicate major versions of the same crate show up, or when binary size / compile time jumps after a dependency bump.
 
@@ -314,7 +337,7 @@ cargo tree --duplicates      # same package name at multiple versions
 
 Staff practice: attach a `cargo tree` (or `--duplicates`) excerpt to PRs that add heavy deps or change workspace resolver/edition. Pair with `cargo metadata` for machine-readable audits when tooling needs JSON.
 
-### 12. Semver intuition for published Rust crates
+### 13. Semver intuition for published Rust crates
 
 Cargo and crates.io assume **SemVer**. Rough API intuition for **libraries**:
 
@@ -341,6 +364,7 @@ Rust-specific traps: **adding a public enum variant** is a **breaking** change f
 - Prefer **versioned crates.io** (or internal registry) over floating git `main` in production apps.
 - Commit application **lockfiles**; verify checksums in CI; review sudden authorship or maintainer changes on critical deps.
 - Treat **build.rs** and **proc-macro** crates as code execution at build time—limit network and credentials on builders.
+- New custom proc-macros are rare on purpose: someone owns them, tests what they expand to, and preferred a normal function first (section 10).
 
 ### Reliability
 
@@ -362,6 +386,7 @@ Rust-specific traps: **adding a public enum variant** is a **breaking** change f
 - **Features** enabled in production are listed; accidental `--all-features` in release is intentional or forbidden.
 - No unexplained **git/path** deps in release tags; `[patch]` is temporary and tracked.
 - `cargo test` and docs build are green on the pinned toolchain; `cargo tree` reviewed for duplicate or unexpected crates on major changes.
+- Custom proc-macro crates (if any) have justified scope, expansion tests, and supply-chain review equal to `build.rs`.
 
 ---
 

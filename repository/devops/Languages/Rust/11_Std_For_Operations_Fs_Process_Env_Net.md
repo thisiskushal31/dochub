@@ -256,6 +256,34 @@ Prefer `CString`/`CStr` over hand-rolled `Vec` + push `0` unless you own a docum
 
 Staff rule: timeouts from config are parsed, bounded, and applied via `Instant`, not via hope that wall clock stays still.
 
+### 15. What the standard library is (a map, not a memorization test)
+
+**`std`** is Rust’s standard library: the built-in toolbox that ships with the language for everyday work—strings, files, processes, sockets, threads, time, and more. You are not expected to memorize every page. You *are* expected to know **which corner of the toolbox** to open for a given job, then read that module’s official docs.
+
+Think of it as a street map:
+
+| If you need… | Open `std::…` | Plain idea |
+|--------------|---------------|------------|
+| Owned text or growable buffers | `string`, `vec`, `collections` | Own the data (`String`/`Vec`); slices (`str`/`[T]`) borrow it |
+| Maps, sets, queues | `collections` | In-memory data structures (chapter 09) |
+| Files and directories | `fs`, `path` | Talk to the filesystem (this chapter) |
+| Environment variables, args, cwd | `env` | How this process was started and configured |
+| Run another program | `process` | Start children with a real argument list, not a shell string |
+| Read/write bytes in a uniform way | `io` | Shared traits for files, pipes, and sockets |
+| TCP/UDP (blocking style) | `net` | Network endpoints; timeouts are your design problem |
+| Threads, channels, locks | `thread`, `sync` | Classic concurrency (chapter 12) |
+| Lock-free shared numbers/flags | `sync::atomic` | Atomics—use with care |
+| Clocks and durations | `time` | “How long?” (`Instant`) vs “what time is it?” (`SystemTime`) |
+| Async building blocks | `future`, `pin`, `task` | Language pieces; the **runtime** that drives them is usually a crate (chapter 13) |
+| Talk to C / OS strings | `ffi` | Nul-terminated and OS-native strings |
+| Raw memory helpers | `mem`, `ptr`, `alloc` | Layout and pointers (chapter 14) |
+| Printing and formatting | `fmt` (and `println!`) | How values become text |
+| Error types | `error`, `io::Error` | Failure as values (chapter 07) |
+| What happens on panic | `panic` | Hooks and abort vs unwind (chapter 19) |
+| Smaller embedded subset | `core` / `alloc` docs | Same ideas without a full OS (chapters 14, 18) |
+
+Use the map to find the door, then return to the handbook chapter for the *engineering* rules (timeouts, cancellation, FFI ownership). Prefer what `std` already gives you over inventing a second filesystem or process API.
+
 ---
 
 ## 3. Applications and use cases
@@ -300,6 +328,7 @@ Staff rule: timeouts from config are parsed, bounded, and applied via `Instant`,
 - Child processes that must not see secrets use cleared or curated environments.
 - Config loading via serde (ecosystem) has size limits and an explicit unknown-field policy for untrusted input.
 - Control-loop timeouts use **`Instant` + `Duration`**; wall clock is for logs/mtime only; FFI string edges use **`CString`/`CStr`** with lifetime-clear pointers.
+- Authors can point to the right corner of `std` for a job (section 15 map) without pretending they memorized the whole library.
 
 ---
 

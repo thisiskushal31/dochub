@@ -52,11 +52,11 @@ Links live in each chapter’s **References** section.
 | Phase | Chapters | Outcome |
 |--------|----------|---------|
 | Foundations | 01–07 | Install toolchain; ownership, `Drop`/smart pointers; structs/enums/`let else`; typestate/builder instincts for configs; `Result`/`Error`; macros/`const`. |
-| Abstraction and libraries | 08–11 | Traits/`Deref`/`AsRef` (API Guidelines literacy), RPIT capture, iterators, modules/semver, `std` ops (`Instant`/`SystemTime`) + serde/secrets. |
-| Runtime and systems | 12–14 | Atomics/threads/`Weak` cycles, async Pin/cancel/JoinSet, `unsafe`/FFI strings/`repr(C)`/Edition 2024 extern rules. |
-| Production engineering | 15–20 | Tests/Miri/fuzz/snapshots, release tiers/portable CPU flags, supply chain, domain/`no_std`/`alloc`/WASM, tracing/diagnostics/`RUST_BACKTRACE`, competency map. |
+| Abstraction and libraries | 08–11 | Traits/`Deref`/`AsRef` (API Guidelines literacy), RPIT capture, iterators, modules/semver, `std` ops map (`Instant`/`SystemTime`) + serde/secrets. |
+| Runtime and systems | 12–14 | Atomics/threads/`Weak` cycles; async Pin/cancel/JoinSet and what a runtime *is*; `unsafe`/FFI and what soundness promises mean; `repr(C)`/Edition 2024 extern rules; when writing proc-macros makes sense (ch 03). |
+| Production engineering | 15–20 | Tests/Miri/fuzz/snapshots, release tiers/portable CPU flags, supply chain, where Rust fits (CLI→embedded→WASM) and what frameworks are, tracing/diagnostics/`RUST_BACKTRACE`, competency map. |
 
-Suggested order: **01 → 07**, then **08 → 11**, then **12 → 14**, then **15 → 20**. Revisit **05** for borrow-checker and `Drop` incidents; **07** before designing APIs; **13** before adopting an async runtime; **17** before untrusted deps or network-facing binaries; **19** before shipping service logging/metrics.
+Suggested order: **01 → 07**, then **08 → 11**, then **12 → 14**, then **15 → 20**. Revisit **05** for borrow-checker and `Drop` incidents; **07** before designing APIs; **03/04** before inventing macros; **13** before adopting an async runtime or HTTP framework; **14** before owning `unsafe`/FFI; **17** before untrusted deps or network-facing binaries; **18** before `no_std`/WASM bets; **19** before shipping service logging/metrics.
 
 ---
 
@@ -66,7 +66,7 @@ Suggested order: **01 → 07**, then **08 → 11**, then **12 → 14**, then **1
 |---|--------|------|
 | 1 | What is Rust and why teams use it | [01](./01_What_Is_Rust_And_Why_Teams_Use_It.md) |
 | 2 | Toolchain: rustup, rustc, Cargo, and editions | [02](./02_Toolchain_Rustup_Rustc_Cargo_And_Editions.md) |
-| 3 | Cargo projects, crates.io, and workspaces | [03](./03_Cargo_Projects_Crates_And_Workspaces.md) |
+| 3 | Cargo projects, workspaces, proc-macro crates | [03](./03_Cargo_Projects_Crates_And_Workspaces.md) |
 | 4 | Syntax, types, `const`/`const fn`, and `macro_rules!` | [04](./04_Syntax_Types_And_Ownership_Basics.md) |
 | 5 | Ownership, borrowing, lifetimes, `Drop`, smart pointers | [05](./05_Ownership_Borrowing_And_Lifetimes.md) |
 | 6 | Structs, enums, and pattern matching | [06](./06_Structs_Enums_And_Pattern_Matching.md) |
@@ -74,14 +74,14 @@ Suggested order: **01 → 07**, then **08 → 11**, then **12 → 14**, then **1
 | 8 | Traits, generics, const generics, advanced lifetimes | [08](./08_Traits_Generics_And_Advanced_Lifetimes.md) |
 | 9 | Collections, iterators, and closures | [09](./09_Collections_Iterators_And_Closures.md) |
 | 10 | Packages, modules, and visibility | [10](./10_Packages_Modules_And_Visibility.md) |
-| 11 | `std` ops + serde/config, secrets, platform quirks | [11](./11_Std_For_Operations_Fs_Process_Env_Net.md) |
+| 11 | `std` ops map + serde/config, secrets, platform quirks | [11](./11_Std_For_Operations_Fs_Process_Env_Net.md) |
 | 12 | Concurrency: threads, sync, `OnceLock`, `Send`/`Sync` | [12](./12_Concurrency_Threads_Sync_Send_Sync.md) |
-| 13 | Async Rust: runtimes, cancel-safety, pitfalls | [13](./13_Async_Rust_Runtimes_And_Pitfalls.md) |
-| 14 | Unsafe, FFI, `cdylib`/`staticlib` | [14](./14_Unsafe_FFI_And_Boundaries.md) |
+| 13 | Async Rust: runtimes, internals literacy, pitfalls | [13](./13_Async_Rust_Runtimes_And_Pitfalls.md) |
+| 14 | Unsafe, FFI, Nomicon validity, `cdylib`/`staticlib` | [14](./14_Unsafe_FFI_And_Boundaries.md) |
 | 15 | Testing, Clippy, rustfmt, docs, benches | [15](./15_Testing_Clippy_Rustfmt_And_Docs.md) |
 | 16 | Cross-compile, targets, release/`panic` profiles | [16](./16_Cross_Compile_Targets_And_Release_Builds.md) |
 | 17 | Security, supply chain, audit/deny, `build.rs` | [17](./17_Security_And_Supply_Chain.md) |
-| 18 | Use cases: CLI, agents, infra, `no_std`, WASM | [18](./18_Use_Cases_CLI_Agents_Infra_Embedded.md) |
+| 18 | Use cases: CLI, agents, infra, embedded stack, WASM | [18](./18_Use_Cases_CLI_Agents_Infra_Embedded.md) |
 | 19 | Production: CI, containers, tracing/metrics | [19](./19_Production_CI_Containers_And_Observability.md) |
 | 20 | Whole-engineering wrap and staff checklist | [20](./20_Whole_Engineering_Wrap_And_Staff_Checklist.md) |
 
@@ -104,6 +104,9 @@ Suggested order: **01 → 07**, then **08 → 11**, then **12 → 14**, then **1
 - [The Cargo Book](https://doc.rust-lang.org/stable/cargo/)
 - [Edition Guide](https://doc.rust-lang.org/edition-guide/)
 - [The Rust Reference](https://doc.rust-lang.org/stable/reference/)
+- [Asynchronous Programming in Rust (Async Book)](https://rust-lang.github.io/async-book/)
+- [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
+- [The Embedded Rust Book](https://doc.rust-lang.org/stable/embedded-book/)
 
 ---
 

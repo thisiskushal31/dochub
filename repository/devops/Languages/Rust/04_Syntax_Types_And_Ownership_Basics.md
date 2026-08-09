@@ -272,6 +272,8 @@ When functions (or generics) are better:
 
 Staff bar: new `macro_rules!` in application code needs a one-line justification; libraries may export macros, but functions remain the default API.
 
+If you outgrow `macro_rules!`—for example you need `#[derive(…)]` on many types, or attributes that rewrite whole items—the next step is a **procedural macro**: a separate crate that runs on the machine that compiles your code and generates Rust for you. Chapter 03 explains what that is and when it is worth it. Learn ordinary functions and declarative macros first; only then take on that compile-time cost, with a clear owner and tests for what the macro expands to.
+
 ### 10. Common failure modes at this stage
 
 | Symptom | Likely cause |

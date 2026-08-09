@@ -203,6 +203,37 @@ Patterns that survive review:
 
 Cancellation is not an error variant you always see—often it is simply **Drop**.
 
+### 15. What an async runtime is (executor, reactor, waker)
+
+`async` / `.await` alone do not move your program forward. A **runtime** is the engine that keeps waking work and driving it to completion. Most runtimes are three ideas working together:
+
+| Piece | What it is | Everyday analogy |
+|-------|------------|------------------|
+| **Executor** | The scheduler: it keeps a list of tasks and repeatedly asks each one “any progress?” | A manager walking the floor and checking who can take the next step |
+| **Reactor / I/O driver** | The part that watches the OS for sockets, timers, and similar events | A receptionist who notices “the network packet arrived” or “the timer fired” |
+| **Waker** | A callback handle a waiting task leaves behind so someone can say “try me again” | A pager: when the receptionist has news, they page the right worker |
+
+Under the hood, each `.await` is a polite pause: the task says **Pending** (“not ready—call me later”) or **Ready** (“here is the result”). You almost never write that loop by hand; the runtime does. If a task **blocks** a worker thread (heavy CPU, sync disk I/O, sitting on a lock), other tasks on that thread cannot be polled—that is why people offload blocking work and avoid holding locks across `.await`.
+
+Runtimes come in flavors: **many worker threads** (tasks often must be `Send` so they can move between threads) or **one thread** (can keep non-`Send` state, but no free multi-core parallelism). Mixing “I assumed one thread” with a multi-thread runtime is a classic surprise.
+
+You do not need to build a runtime to use one. You *do* need this picture when a service looks “stuck,” when you pick timers and shutdown hooks, or when a web framework quietly ties you to one engine’s types. For more depth, use the Async Book and your runtime’s own docs; keep application code on their public APIs.
+
+### 16. What a framework is (and what this track is not)
+
+A **framework** (HTTP stack, game engine, GUI toolkit) is a large product built *on top of* Rust—and often on top of one async runtime. It is not “more Rust”; it is a chosen way to structure apps (routing, scenes, windows) with its own docs, release train, and failure modes.
+
+This handbook teaches the language and delivery habits. It does not walk through Axum, Actix, Bevy, or similar step by step. Before you adopt one, get a clear idea of:
+
+1. Does it lock you to one runtime?
+2. Does it force a newer Rust than your team pins?
+3. How do requests drain on shutdown, and what happens if work is cancelled?
+4. How much `unsafe` / native code does it pull in?
+5. Can you plug in the logging and metrics you already use?
+6. Who on your team will own upgrades and security notes?
+
+Learn Rust here first; learn the framework from its official book second—the same order you would use for any other language’s web or UI stack.
+
 ---
 
 ## 3. Applications and use cases
@@ -243,6 +274,8 @@ Cancellation is not an error variant you always see—often it is simply **Drop*
 - `Send` bounds match the executor; non-`Send` data stays on single-threaded paths.
 - CPU-heavy work is not disguised as async without await/offload strategy.
 - Sync remains an option for CLIs and simple agents—async is not a style tax.
+- Someone can explain, in plain terms, what the runtime’s scheduler, I/O watcher, and wakers are when a service looks stuck (section 15).
+- Framework picks follow the “what is a framework?” questions in section 16—not “we installed a crate, so we know Rust.”
 
 ---
 

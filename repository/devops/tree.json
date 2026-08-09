@@ -5314,14 +5314,14 @@
             "path": "Languages/Rust/03_Cargo_Projects_Crates_And_Workspaces.md",
             "type": "file",
             "sha": "",
-            "size": 22198
+            "size": 24317
           },
           {
             "name": "04_Syntax_Types_And_Ownership_Basics.md",
             "path": "Languages/Rust/04_Syntax_Types_And_Ownership_Basics.md",
             "type": "file",
             "sha": "",
-            "size": 22548
+            "size": 23025
           },
           {
             "name": "05_Ownership_Borrowing_And_Lifetimes.md",
@@ -5370,7 +5370,7 @@
             "path": "Languages/Rust/11_Std_For_Operations_Fs_Process_Env_Net.md",
             "type": "file",
             "sha": "",
-            "size": 23737
+            "size": 26180
           },
           {
             "name": "12_Concurrency_Threads_Sync_Send_Sync.md",
@@ -5384,14 +5384,14 @@
             "path": "Languages/Rust/13_Async_Rust_Runtimes_And_Pitfalls.md",
             "type": "file",
             "sha": "",
-            "size": 17600
+            "size": 20766
           },
           {
             "name": "14_Unsafe_FFI_And_Boundaries.md",
             "path": "Languages/Rust/14_Unsafe_FFI_And_Boundaries.md",
             "type": "file",
             "sha": "",
-            "size": 21221
+            "size": 23462
           },
           {
             "name": "15_Testing_Clippy_Rustfmt_And_Docs.md",
@@ -5419,7 +5419,7 @@
             "path": "Languages/Rust/18_Use_Cases_CLI_Agents_Infra_Embedded.md",
             "type": "file",
             "sha": "",
-            "size": 13680
+            "size": 15109
           },
           {
             "name": "19_Production_CI_Containers_And_Observability.md",
@@ -5433,14 +5433,14 @@
             "path": "Languages/Rust/20_Whole_Engineering_Wrap_And_Staff_Checklist.md",
             "type": "file",
             "sha": "",
-            "size": 13321
+            "size": 14057
           },
           {
             "name": "README.md",
             "path": "Languages/Rust/README.md",
             "type": "file",
             "sha": "",
-            "size": 8229
+            "size": 8747
           }
         ]
       },

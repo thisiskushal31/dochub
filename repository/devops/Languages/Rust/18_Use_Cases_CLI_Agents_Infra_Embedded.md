@@ -71,26 +71,35 @@ On microcontrollers and bare metal, crates often use **`#![no_std]`**: link **`c
 | **`alloc`** | Optional heap (`Vec`, `String`, `Box`, …) **if** you provide a global allocator |
 | **`std`** | Hosted environments with an OS-like runtime—usually absent on bare metal |
 
-**`alloc` without full `std`:** when you have a heap (global allocator wired for the target) but no OS filesystem/threads/net, depend on the **`alloc`** crate (and keep `#![no_std]`) so collections and owned strings work without pulling hosted APIs you do not have. Document who provides the allocator and what happens on OOM. A **HAL** (hardware abstraction layer) crate exposes peripherals (GPIO, UART, SPI, timers) for a chip family; board support crates wire pins and clocks. Day-to-day work is dominated by **target triples** (for example `thumbv7em-none-eabihf`), linker scripts, `probe`/flash tools, and interrupt safety—not by Cargo editions. `unsafe` appears for registers and DMA; review culture from chapter 14 applies. Prefer proven HAL stacks for your MCU over bespoke register poking unless you own that risk.
+**`alloc` without full `std`:** sometimes the chip has a heap (you plug in a global allocator) but still has no real OS files, threads, or network. Then you keep `#![no_std]` and add the **`alloc`** crate so `Vec` and `String` exist without pretending you have Linux. Say who provides the allocator and what happens if allocation fails. Day-to-day work is flashing boards, linker scripts, and interrupt safety—not debating editions. Prefer a mature HAL for your chip over poking raw registers unless that risk is yours on purpose (chapter 14 still applies wherever `unsafe` appears).
 
-Edition still matters for syntax, but **target + HAL + allocator policy** dominate.
+**How embedded crates are usually layered**—each name is just “how close to the metal”:
 
-### 6. WebAssembly (optional lane): `wasm32` targets and WASI-class hosts
+| Layer | What it is |
+|-------|------------|
+| **PAC** (peripheral access) | The lowest Rust view of the chip: generated register access. Thin, chip-specific, often `unsafe` at the edge. |
+| **HAL** (hardware abstraction) | Friendlier drivers for GPIO, UART, SPI, timers, and so on—built on the PAC so app code is less raw. |
+| **BSP** (board support) | Glue for *your board*: which pin is which LED, how clocks are wired, onboard sensors. |
+| **RTOS / small executor (optional)** | Something that schedules work on the MCU—a simple loop, a cooperative async executor, or a real-time OS. That choice is about latency, power, and product needs—not a Cargo default. |
 
-Rust can emit **`wasm32-*`** artifacts. Target **names evolve** across toolchains—prefer stating the idea over memorizing one triple forever:
+Know which layer you own, and write down who owns interrupts and DMA. Edition still matters for syntax; **target, HAL, allocator, and how work is scheduled** matter more for shipping.
 
-| Shape (concept) | Typical use |
-|-----------------|-------------|
-| **`wasm32-unknown-unknown`-class** | Sandboxed modules talking to a **host** via imported/exported functions (JS engines, custom embedders). Little or no POSIX-like std surface unless the host provides it. |
-| **WASI-class `wasm32` targets** | Modules expecting a **capability-oriented system interface** (files, clocks, args, …) supplied by a **WASI-class runtime**/host—not by assuming a full Linux userspace. |
+### 6. What WebAssembly is in a Rust project (optional)
 
-Treat WASM as an **optional** deployment shape.
+**WebAssembly (WASM)** is a portable binary format: Rust can compile to a small module that runs inside a **host** (a browser, a WASM runtime, or your own embedder)—not as a normal native OS process. Target triple names change over time; remember the *idea*, not one string forever:
 
-- **Size** — download and instantiate cost dominate; audit dependencies, panic/format paths, and release profile size opts (chapter 16).
-- **Host sandbox assumptions** — the module only gets capabilities the **host** injects (imports, WASI rights, memory limits). Do not assume filesystem or network access exists.
-- **When NOT to use WASM** — you need full POSIX/`std` OS APIs; you depend on crates that are not WASM-ready; you need threading models the host does not provide; or a native sidecar/CLI already meets the threat model with less toolchain friction.
+| Shape | Plain idea |
+|-------|------------|
+| **“Unknown” wasm32-style targets** | A sandboxed module that only talks to the world through functions the **host** imports/exports (for example a JS engine). No automatic Linux filesystem. |
+| **WASI-style targets** | The module expects a small, capability-based “system” API (files, clocks, args, …) that a **WASI-capable host** provides—still not a full desktop OS. |
 
-Do not assume every crate is WASM-portable. Prove the chosen `wasm32` target + host runtime in CI before promising it; re-check triples when upgrading toolchains because WASI target naming has shifted historically.
+Treat WASM as an **optional** shape, not the default for every service.
+
+- **Size matters** — download and startup cost dominate; watch dependencies and release size (chapter 16).
+- **The host is the sandbox** — the module only gets what the host allows. Do not assume disk or network exist.
+- **Skip WASM when** you need full POSIX/`std`, your crates are not WASM-ready, you need threading the host does not offer, or a normal CLI/sidecar is simpler for the same threat model.
+
+A WASM file alone does nothing. Something must **load** it, set memory/fuel limits, grant capabilities, and decide trust (“untrusted plugin” vs “our own module in our process”). Version that guest/host contract when either side upgrades. Prove the exact target + host in CI; re-check when the toolchain moves. Deeper WASI platform detail lives in host docs via References.
 
 ### 7. Reading others’ Rust
 
@@ -151,9 +160,13 @@ If the work is glue scripts, one-off data transforms, or a team with no systems 
 | Plugin in a host sandbox, size budget, limited APIs | `wasm32` + host (WASI-class only if you need that interface) |
 | CRUD API, hiring pool is Go/Java, soft latency | Often not Rust |
 
-### 7. Agent privilege: capabilities after bind (Unix-focused)
+### 8. Agent privilege: capabilities after bind (Unix-focused)
 
 Reiterate for staff review: the steady-state agent loop should not run as root “because setup needed it.” Pattern: open privileged sockets/files → **drop** UID/GID and surplus capabilities → only then parse untrusted configs or network payloads. Exact APIs differ by OS and whether you use libc helpers or platform crates; the invariant is product-level. On non-Unix, map to the local least-privilege model (service accounts, restricted tokens)—do not pretend Linux caps are universal.
+
+### 9. Where frameworks fit
+
+If you ship an HTTP API, a game, or a desktop UI, you will likely pick a **framework**—a ready-made structure for that kind of app. That choice sits *above* the language track: this chapter helps you decide whether Rust fits the domain (CLI, agent, sidecar, chip, WASM); chapter 13’s short list helps you judge a framework before you marry it. Write the choice down in the product README, and keep your core logic testable without booting the whole stack. Learn the framework from its own official book.
 
 ---
 
@@ -188,12 +201,13 @@ Reiterate for staff review: the steady-state agent loop should not run as root �
 - [ ] Runtime model (sync vs async) is documented and consistent.
 - [ ] CLI: clap-class parsing pattern, exit codes, and `--version` are intentional.
 - [ ] Agents/sidecars: privilege drop (Unix capabilities where applicable), config reload, and backpressure are designed—not afterthoughts.
-- [ ] Embedded: `no_std` / `alloc` / HAL boundaries documented; allocator and OOM policy explicit when using heap without `std`.
+- [ ] Embedded: `no_std` / `alloc` / **PAC–HAL–BSP** (and optional RTOS/executor) boundaries documented; allocator and OOM policy explicit when using heap without `std`.
 - [ ] `unsafe`/FFI and `build.rs` inventoried for infra-facing binaries.
 - [ ] Supported OS/arch (and MCU/`wasm32` targets if any) tested in CI against the real host runtime.
 - [ ] Brownfield edition noted; MSRV noted if declared.
 - [ ] Interop with Go/C is process- or ABI-documented.
-- [ ] WASM (if any) distinguishes unknown-host vs WASI-class needs; size and capabilities documented; triples re-verified on toolchain bumps.
+- [ ] WASM (if any) distinguishes unknown-host vs WASI-class needs; **host** limits/capabilities documented; triples re-verified on toolchain bumps.
+- [ ] Web/game/GUI framework (if any) chosen with an explicit rubric—not as a stand-in for language competence.
 
 ---
 

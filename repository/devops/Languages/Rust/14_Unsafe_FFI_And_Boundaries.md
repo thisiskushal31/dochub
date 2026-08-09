@@ -235,6 +235,23 @@ Rust allows replacing the global allocator (`#[global_allocator]`, `GlobalAlloc`
 
 Staff review asks for the measurement that justified the change and for FFI free-compatibility notes.
 
+### 15. What `unsafe` is really asking of you
+
+In safe Rust, the compiler refuses code that might break memory rules. The `unsafe` keyword means: **“I am taking responsibility for those rules myself.”** It does not mean the rules went away. If you break them, the program has **undefined behavior**—the compiler may assume impossible things, and failures can be silent or catastrophic.
+
+Here is the idea of each rule, in plain language:
+
+| Idea | What it means |
+|------|----------------|
+| **Validity** | Values must look like what their type claims. A `bool` is only true/false bits; a reference points at a real, correctly aligned object that is still alive; text in a `str` is real UTF-8. Fake bit patterns are not “clever”—they are broken. |
+| **Aliasing** | You do not get to treat the same memory as uniquely mutable and shared at once. Either one writer, or many readers—not both. Tools like **Miri** check a precise version of this story. |
+| **Provenance** | A pointer is not just a number. It “comes from” some allocation. Inventing addresses, or using one buffer’s pointer as if it belonged to another, can be wrong even when the numeric address looks plausible. Prefer the `ptr` APIs the docs describe. |
+| **Initialization** | Do not read memory you have not written yet. `MaybeUninit` exists so you can build values carefully; claiming “it’s ready” before it is ready is undefined. |
+| **Lifetimes you promised** | In unsafe code, a lifetime annotation is a promise *you* keep. Using a buffer after it was freed is the classic mistake. |
+| **Panics across language borders** | A Rust panic unwinding into C (or the reverse) without an agreed boundary is undefined. Plan the edge (`catch_unwind`, the right `extern` ABI)—do not hope. |
+
+Practical habit: every `unsafe` block says *why* it is sound; tests that hit that path run under **Miri** when you own the unsafe (chapter 15). “It did not crash in release” is not a proof. For the full deep dive, read the **Rustonomicon** via References—this section is only so you know what kind of promises you are making.
+
 ---
 
 ## 3. Applications and use cases
@@ -278,6 +295,7 @@ Staff review asks for the measurement that justified the change and for FFI free
 - No casual `unsafe impl Send/Sync`.
 - `forbid(unsafe_code)` applied where the crate should stay pure; inventory exists where not.
 - Reviewers treat new `unsafe` like a security change, not a style nit.
+- Safety comments say, in plain language, which rules from section 15 this block is upholding—not “trust me, it’s fine.”
 
 ---
 

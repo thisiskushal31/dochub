@@ -15,9 +15,9 @@ A **competency map** that ties chapters **01–19** into staff-level expectation
 | Block | Chapters | You can… |
 |-------|----------|----------|
 | Foundations | 01–07 | Install toolchain; explain ownership/borrowing; model data with structs/enums; use `Result`/`Option` without panic-driven control flow; explain **Drop/RAII** and common smart pointers (`Box`, `Rc`/`Arc`, `RefCell`/`Mutex` at the literacy level); prefer **typestate/builder** shapes for dangerous configs over boolean soup. |
-| Abstraction & libraries | 08–11 | Design traits and modules per **API Guidelines** literacy (naming, conversions, predictable builders); use iterators idiomatically; perform operational I/O via `std` (**`Instant` vs `SystemTime`**); keep **serde** (or equivalent) at trust boundaries for wire/config formats. |
-| Runtime & systems | 12–14 | Reason about threads/`Send`/`Sync`, **`Weak` cycles**, and **atomics discipline**; choose or refuse async deliberately (**Pin**/cancellation); bound `unsafe` and FFI including **string/ABI edges** (Edition **2024** `unsafe extern` / unsafe attributes awareness); **consume** macros safely and know when **writing** macros/proc-macros is unjustified cost. |
-| Production engineering | 15–19 | Test and lint (**Miri** when owning unsafe; snapshots/contracts where useful); cross-compile and release (**panic** profile, strip/debuginfo, **portable vs `target-cpu=native`**); manage supply chain (**audit/deny**, optional vet/crev, semver for libs); place Rust in CLI/agent/infra contexts; adopt **`no_std`/`alloc`/WASM only when needed**; ship with CI, containers, SBOM/provenance, **tracing/`log` bridge**, staging **`RUST_BACKTRACE`**, and health-probe semantics. |
+| Abstraction & libraries | 08–11 | Design traits and modules with **API Guidelines** habits; use iterators well; know which part of **`std`** handles ops I/O (**`Instant` vs `SystemTime`**); keep **serde** (or equivalent) at trust boundaries. |
+| Runtime & systems | 12–14 | Reason about threads/`Send`/`Sync`, **`Weak` cycles**, and careful atomics; choose or refuse async on purpose (including a clear picture of what a **runtime** does); keep `unsafe`/FFI bounded and sound; know Edition **2024** extern/attribute forms; use macros safely and only **write** proc-macros when justified (ch 03). |
+| Production engineering | 15–19 | Test and lint (**Miri** when you own unsafe); cross-compile and release carefully; manage supply chain; place Rust in the right domains (CLI/agent/`no_std`/WASM); treat frameworks as products on top of the language; ship with CI, containers, tracing, and health probes. |
 
 Suggested mastery order remains **01→07 → 08→11 → 12→14 → 15→20**, with revisits to **05** (borrow checker), **07** (errors), **13** (async), and **17** (deps) under incident pressure.
 
@@ -25,11 +25,11 @@ Suggested mastery order remains **01→07 → 08→11 → 12→14 → 15→20**,
 
 | Role | Must be solid on | Can defer initially |
 |------|------------------|---------------------|
-| Application / backend | 04–11, 07, 13, 15, 19 (logging/tracing, serde boundaries, API Guidelines builders/typestate) | Deep embedded/`no_std`, writing proc-macros |
-| DevOps / SRE | 02–03, 11, 15–17, 19 (CI cache keys, portable CPU flags, audit/deny, metrics, `RUST_BACKTRACE` staging) | Advanced trait HRTB |
-| Security | 05, 07, 14, 17 (`build.rs`, proc-macros, deny policies, FFI strings, zeroization) | Async runtime internals |
-| Platform / infra | 01–07, 11–13, 16, 18–19 (panic profile, agents/sidecars, privilege drop) | Proc-macro authorship; WASM unless required |
-| Embedded / systems | 02, 05, 14, 16, 18 (`no_std`/`alloc`/HAL) | Large async web stacks |
+| Application / backend | 04–11, 07, 13, 15, 19 (logging/tracing, serde boundaries, API Guidelines builders/typestate; framework rubric if shipping HTTP) | Deep PAC/BSP/`no_std` product ownership |
+| DevOps / SRE | 02–03, 11, 15–17, 19 (CI cache keys, portable CPU flags, audit/deny, metrics, `RUST_BACKTRACE` staging) | Advanced trait HRTB; writing proc-macros |
+| Security | 05, 07, 14, 17 (`build.rs`, proc-macros, deny policies, FFI strings, Nomicon validity, zeroization) | Full RTOS/HAL catalogs |
+| Platform / infra | 01–07, 11–13, 16, 18–19 (panic profile, agents/sidecars, privilege drop; runtime internals literacy) | Authoring proc-macros; WASM host product unless required |
+| Embedded / systems | 02, 05, 14, 16, 18 (`no_std`/`alloc`/PAC–HAL–BSP/RTOS choice) | Large async web stacks |
 
 ### 3. Whole-engineering domains (not “just DevOps”)
 
@@ -96,6 +96,8 @@ Keep a living note per product: edition, MSRV/`rust-version`, toolchain pin, fea
 | Memory unsafety reports | 14, 17 |
 | Unusable production logs | 19 (tracing/logging policy) |
 | Accidental `no_std`/WASM complexity | 18 |
+| Proc-macro / `build.rs` supply-chain or compile blowups | 03, 17 |
+| Framework chosen without runtime/shutdown ownership | 13, 18 |
 
 ### 4. Legacy toolchain myths
 
@@ -116,16 +118,16 @@ Keep a living note per product: edition, MSRV/`rust-version`, toolchain pin, fea
 - [ ] **Typestate / builder** patterns used for dangerous configs so illegal states are hard to construct (not a boolean soup of half-init options).
 - [ ] **`Deref` / `AsRef` API hygiene** (API Guidelines literacy): conversions are intentional and documented—no surprising deref coercion or “stringly” `AsRef` surfaces that hide allocation/ownership costs.
 - [ ] Time APIs: **`Instant`** for intervals/deadlines; **`SystemTime`** for wall clock—never confuse the two in probes or timeouts.
-- [ ] Macros literacy: team can **consume** macros safely; **writing** macros/proc-macros is justified and reviewed.
+- [ ] Macros literacy: team can **consume** macros safely; **writing** `macro_rules!` / **proc-macros** is justified, owned, and tested (ch 03/04).
 - [ ] Serde (or equivalent) used at trust boundaries for config/wire formats—not ad-hoc parsers for hostile input.
-- [ ] Module visibility matches threat and API surface.
-- [ ] Async/sync model is intentional and documented (**Pin**/cancellation; no unbounded spawn).
+- [ ] Module visibility matches threat and API surface; **`std` map** used to find the right module before inventing wrappers.
+- [ ] Async/sync model is intentional and documented (**Pin**/cancellation; executor/reactor/waker literacy; no unbounded spawn).
 - [ ] **Atomics discipline**: `Ordering` justified; no invented lock-free protocols for multi-location invariants.
 - [ ] **Edition 2024 migration awareness** when bumping editions (especially `unsafe extern` and unsafe mangling attributes).
 
 **Security & supply chain**
 
-- [ ] `unsafe`/FFI inventory exists and is reviewed; **FFI strings** (`CStr`/`CString`/nul and encoding obligations) documented at each boundary; **Miri** (and sanitizers if adopted) for unsafe-owning crates.
+- [ ] `unsafe`/FFI inventory exists and is reviewed; **FFI strings** and **validity/aliasing/provenance** obligations documented; **Miri** (and sanitizers if adopted) for unsafe-owning crates.
 - [ ] Apps build with committed lockfile (`--locked` in CI).
 - [ ] Libraries follow **semver** (and crate compatibility) discipline for public API changes—not “just bump major when tired.”
 - [ ] **cargo-audit** / **cargo-deny** (or equivalent) and update discipline are owned; optional vet/crev-class review only if org policy says so.
@@ -151,20 +153,20 @@ Keep a living note per product: edition, MSRV/`rust-version`, toolchain pin, fea
 **Portfolio fit**
 
 - [ ] Rust chosen for the right domain reasons (chapter 18)—or exit criteria defined for a rewrite.
-- [ ] **`no_std` / `alloc` / WASM (`wasm32` + host)** adopted only when the domain requires them—not as default complexity.
+- [ ] **`no_std` / `alloc` / PAC–HAL–BSP / WASM (`wasm32` + host)** adopted only when the domain requires them—not as default complexity.
+- [ ] Product frameworks (HTTP/game/GUI), if used, pass the evaluation rubric and have a named owner.
 
 ### Use as a hiring / promotion rubric
 
 - **Read/patch:** chapters 01–07 in practice.
 - **Own a service:** through 15 and 19.
-- **Staff:** can teach 05/14/17 tradeoffs and sign the consolidated checklist without hand-waving.
+- **Staff:** can teach 05/14/17 tradeoffs, explain runtime/unsafe literacy (13/14), and sign the consolidated checklist without hand-waving.
 
-### What this track does not replace
+### What this track gives you vs what it leaves to product docs
 
-- Framework manuals (web, game, GUI) after language foundation.
-- Kubernetes/Terraform product docs for orchestration.
-- Formal verification or org-specific secure-coding standards.
-- Exhaustive `std` and crates.io catalogs—use official docs via References.
+**Inside this track you should leave with a clear idea of what these things *are*:** writing a compile-time (procedural) macro; what an async runtime’s executor/reactor/waker do; what `unsafe` is promising; how to find your way around `std`; how embedded code is layered (PAC → HAL → board → optional RTOS); what WASM needs from a host; and how to *choose* a web/game/UI framework without confusing it for “learning Rust.”
+
+**This track does not replace:** step-by-step framework courses; full chip/RTOS catalogs; every page of `std`; Kubernetes/Terraform product manuals; formal verification; or your org’s own secure-coding rules. Those stay in their official docs once you know what you are looking for.
 
 ---
 
