@@ -31,7 +31,7 @@ A **`Future`** represents a value that may not be ready yet. The core operation 
 
 Writing `async fn` does **not** spawn OS threads and does **not** parallelize CPU work. A future runs only when an **executor** polls it. A single-threaded executor can interleave many futures on one thread (concurrency of waits). Multi-threaded executors can poll futures on a pool of threads (parallelism of ready tasks)—that is a **runtime** property, not an automatic consequence of the `async` keyword.
 
-CPU-bound loops inside `async fn` without await points starve other tasks on that worker. Use blocking thread pools, `spawn_blocking`-style APIs, or ordinary threads for heavy compute.
+CPU-bound loops inside `async fn` without await points starve other tasks on that worker. Use blocking thread pools, **`spawn_blocking`-style** APIs (runtime-provided), or ordinary threads for heavy compute—see Advanced concepts.
 
 ### 4. You need a runtime
 
@@ -112,17 +112,51 @@ Ecosystem **`select!`**-style macros (runtime/utility crates) race multiple futu
 
 Treat every race as: one winner continues; losers run destructors now.
 
-### 4. JoinSet / structured task groups
+### 4. JoinSet / structured task groups (structured concurrency reminder)
 
-Unbounded `spawn` without tracking join handles creates detached work that outlives requests. Prefer **structured** patterns:
+Unbounded `spawn` without tracking join handles creates detached work that outlives requests. Prefer **structured concurrency**: every child task has an **owner** that joins, cancels, or drains it before the parent scope ends.
 
 - Track child tasks in a **join set** / task group (runtime APIs in the ecosystem—names vary): spawn into the set, await join or shutdown, surface the first error, cancel the rest on failure policy.
 - Bound concurrency (semaphores, fixed worker counts) so fan-out cannot OOM the process.
 - On graceful shutdown, **drain or cancel** the set with a deadline (chapter 19).
+- Fire-and-forget `spawn` is an explicit exception with a supervisor story—not the default for request-scoped work.
 
 The pattern matters more than the exact type name: no orphan tasks without an owner.
 
-### 5. Async traits (language history → modern practice)
+### 5. `async move` closures: ownership into tasks
+
+Spawning work usually takes a future built from an **`async move { ... }`** block or an `async move` closure so captured values are **moved** into the task for its lifetime (same ownership idea as `thread::spawn(move || …)`).
+
+- Without `move`, the future may try to borrow the parent stack; that fails when the task outlives the frame (common with `'static` spawn bounds).
+- Clone **`Arc`** handles (or send owned messages) into the task instead of sharing bare `&` across spawn.
+- Capture only what the task needs—large accidental moves show up as clones or ownership fights at the spawn site.
+
+Staff review: every `spawn` shows a clear ownership story for captured state.
+
+### 6. `block_on` at the sync/async boundary
+
+**`block_on`** (runtime-provided; name varies) runs a future to completion on the **calling thread**, bridging sync code into async. Legitimate uses: `main`/`#[test]` entry, a sync library edge that must call async once, tooling.
+
+Pitfalls:
+
+- **Do not nest carelessly:** calling `block_on` from a context that is already on a runtime worker (or from inside another `block_on`) can **deadlock** or panic depending on the runtime—workers waiting for themselves.
+- Prefer **`await`** inside async code; use `block_on` only at the **outer** sync boundary.
+- Holding locks or other non-reentrant resources across `block_on` recreates classic deadlock shapes.
+
+Document where the process enters the runtime; keep a single obvious bridge, not scattered nested `block_on` calls.
+
+### 7. `spawn_blocking` for CPU / blocking work
+
+Runtimes commonly expose a **blocking pool** pattern—often named **`spawn_blocking`**—to run closures that would stall async workers: sync `std::fs`, compression, crypto, legacy sync clients, CPU-heavy loops.
+
+- Async tasks stay responsive; the blocking work runs on dedicated threads.
+- Still **bound** the pool and the queue; unbounded blocking spawn under load is another OOM/latency class.
+- Do not call `spawn_blocking` for every tiny op—overhead matters; do call it when work can block for milliseconds or more on a worker.
+- Return values/`Result` back to async via the join handle the runtime gives you.
+
+This is a **pattern name** and runtime feature, not a language keyword—use the API your chosen runtime documents.
+
+### 8. Async traits (language history → modern practice)
 
 Historically, **`async fn` in traits** was awkward on stable (manual `Future` associated types, boxing, or helper crates). Modern **stable** Rust has improved support for async functions in traits; teams still hit bounds (`Send`, lifetimes) and may **box** futures in public APIs for object-safety or simpler signatures.
 
@@ -132,7 +166,7 @@ Staff guidance (do not overclaim nightly):
 - Ecosystem helper crates remain common in older codebases—treat them as dependency choices with the same review as any runtime-adjacent crate.
 - Public async trait methods should document `Send` requirements implied by multi-threaded executors.
 
-### 6. Streams and AsyncRead / AsyncWrite (ecosystem traits)
+### 9. Streams and AsyncRead / AsyncWrite (ecosystem traits)
 
 `std` defines **`Future`** and **`Read`/`Write`** (sync). **Async byte I/O** and **async streams** of values are primarily **ecosystem traits** (for example AsyncRead/AsyncWrite and Stream-shaped APIs in the futures/runtime ecosystem)—not APIs this handbook invents.
 
@@ -140,23 +174,23 @@ Staff guidance (do not overclaim nightly):
 - “Stream” means pull-based sequences of async items (backpressure via poll); do not confuse with OS stdin.
 - Keep domain logic on sync iterators when possible; push async traits to the I/O edge.
 
-### 7. Timers and time sources
+### 10. Timers and time sources
 
 Async timeouts depend on the runtime’s timer driver. Testing with paused/auto-advancing time (where the runtime supports it) prevents flaky sleep-based tests. Wall-clock jumps still affect `SystemTime`-based logic even in async apps.
 
-### 8. Compatibility and ecosystem choice
+### 11. Compatibility and ecosystem choice
 
 Libraries often commit to a runtime’s I/O types (`TcpStream` from that ecosystem, not `std::net`). Abstracting behind traits helps tests but has cost. Document the chosen runtime and MSRV/feature flags in the crate README for operators.
 
-### 9. Edition and language notes
+### 12. Edition and language notes
 
 `async`/`await` is stable across modern editions; Edition **2018** introduced the syntax widely used today. Newer editions refine other language defaults; async semantics remain “future + executor.” Nightly-only experiments are out of scope for production handbooks—pin **stable** for services.
 
-### 10. Observability pitfalls
+### 13. Observability pitfalls
 
 Task dumps, blocked-runtime metrics, and “async stack” tooling are runtime-specific. Plan the same SRE questions as for thread pools: who is waiting, on what, and is the executor saturated? Prefer structured logging/`tracing` spans around await points for latency attribution (chapter 19)—not ad-hoc `println!` in hot paths.
 
-### 11. Cancel-safety (worked intuition)
+### 14. Cancel-safety (worked intuition)
 
 Suppose a handler does: read header → mutate shared state → read body → commit. If the future is cancelled between mutate and commit (client disconnect, timeout in `select!`), shared state may be half-updated unless you designed for it.
 
@@ -199,8 +233,9 @@ Cancellation is not an error variant you always see—often it is simply **Drop*
 ### Staff-level review checklist
 
 - A named **runtime** is chosen and consistent across the binary; mixing is justified or absent.
-- No blocking `std` I/O or long `std::sync::Mutex` waits on async workers without offload.
-- Spawned tasks are tracked (join set / group pattern); fire-and-forget is intentional and bounded.
+- No blocking `std` I/O or long `std::sync::Mutex` waits on async workers without offload (`spawn_blocking` or equivalent).
+- Spawned tasks use **`async move`** (or equivalent ownership) and are tracked (join set / group); fire-and-forget is intentional and bounded.
+- **`block_on`** appears only at the outer sync/async bridge—not nested on workers.
 - `select!`-style races treat losers as cancelled; cancel-safety is reviewed for multi-step writes.
 - `Pin`/`Unpin` only appears in justified manual-future or boxing code—not cargo-culted.
 - Async trait / Stream / AsyncRead-Write choices match the runtime and MSRV (stable-first).
@@ -216,6 +251,7 @@ Cancellation is not an error variant you always see—often it is simply **Drop*
 - [The Book](https://doc.rust-lang.org/stable/book/)
 - [Asynchronous Programming in Rust (Async Book)](https://rust-lang.github.io/async-book/)
 - [Async Book — Getting Started](https://rust-lang.github.io/async-book/01_getting_started/01_chapter.html)
+- [Async Book — Applied: Async in Depth](https://rust-lang.github.io/async-book/07_async_in_depth/01_chapter.html)
 - [`std::future::Future`](https://doc.rust-lang.org/stable/std/future/trait.Future.html)
 - [`std::pin`](https://doc.rust-lang.org/stable/std/pin/)
 - [`std::pin::Pin`](https://doc.rust-lang.org/stable/std/pin/struct.Pin.html)

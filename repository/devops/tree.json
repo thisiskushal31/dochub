@@ -5321,35 +5321,35 @@
             "path": "Languages/Rust/04_Syntax_Types_And_Ownership_Basics.md",
             "type": "file",
             "sha": "",
-            "size": 18642
+            "size": 22548
           },
           {
             "name": "05_Ownership_Borrowing_And_Lifetimes.md",
             "path": "Languages/Rust/05_Ownership_Borrowing_And_Lifetimes.md",
             "type": "file",
             "sha": "",
-            "size": 17761
+            "size": 20788
           },
           {
             "name": "06_Structs_Enums_And_Pattern_Matching.md",
             "path": "Languages/Rust/06_Structs_Enums_And_Pattern_Matching.md",
             "type": "file",
             "sha": "",
-            "size": 14910
+            "size": 17934
           },
           {
             "name": "07_Error_Handling_Result_Option_And_Panic.md",
             "path": "Languages/Rust/07_Error_Handling_Result_Option_And_Panic.md",
             "type": "file",
             "sha": "",
-            "size": 14094
+            "size": 16878
           },
           {
             "name": "08_Traits_Generics_And_Advanced_Lifetimes.md",
             "path": "Languages/Rust/08_Traits_Generics_And_Advanced_Lifetimes.md",
             "type": "file",
             "sha": "",
-            "size": 17674
+            "size": 21722
           },
           {
             "name": "09_Collections_Iterators_And_Closures.md",
@@ -5363,84 +5363,84 @@
             "path": "Languages/Rust/10_Packages_Modules_And_Visibility.md",
             "type": "file",
             "sha": "",
-            "size": 13615
+            "size": 17151
           },
           {
             "name": "11_Std_For_Operations_Fs_Process_Env_Net.md",
             "path": "Languages/Rust/11_Std_For_Operations_Fs_Process_Env_Net.md",
             "type": "file",
             "sha": "",
-            "size": 18994
+            "size": 23737
           },
           {
             "name": "12_Concurrency_Threads_Sync_Send_Sync.md",
             "path": "Languages/Rust/12_Concurrency_Threads_Sync_Send_Sync.md",
             "type": "file",
             "sha": "",
-            "size": 15939
+            "size": 18179
           },
           {
             "name": "13_Async_Rust_Runtimes_And_Pitfalls.md",
             "path": "Languages/Rust/13_Async_Rust_Runtimes_And_Pitfalls.md",
             "type": "file",
             "sha": "",
-            "size": 14680
+            "size": 17600
           },
           {
             "name": "14_Unsafe_FFI_And_Boundaries.md",
             "path": "Languages/Rust/14_Unsafe_FFI_And_Boundaries.md",
             "type": "file",
             "sha": "",
-            "size": 17387
+            "size": 21221
           },
           {
             "name": "15_Testing_Clippy_Rustfmt_And_Docs.md",
             "path": "Languages/Rust/15_Testing_Clippy_Rustfmt_And_Docs.md",
             "type": "file",
             "sha": "",
-            "size": 15694
+            "size": 19311
           },
           {
             "name": "16_Cross_Compile_Targets_And_Release_Builds.md",
             "path": "Languages/Rust/16_Cross_Compile_Targets_And_Release_Builds.md",
             "type": "file",
             "sha": "",
-            "size": 14227
+            "size": 16820
           },
           {
             "name": "17_Security_And_Supply_Chain.md",
             "path": "Languages/Rust/17_Security_And_Supply_Chain.md",
             "type": "file",
             "sha": "",
-            "size": 11310
+            "size": 14501
           },
           {
             "name": "18_Use_Cases_CLI_Agents_Infra_Embedded.md",
             "path": "Languages/Rust/18_Use_Cases_CLI_Agents_Infra_Embedded.md",
             "type": "file",
             "sha": "",
-            "size": 11619
+            "size": 13680
           },
           {
             "name": "19_Production_CI_Containers_And_Observability.md",
             "path": "Languages/Rust/19_Production_CI_Containers_And_Observability.md",
             "type": "file",
             "sha": "",
-            "size": 13957
+            "size": 16991
           },
           {
             "name": "20_Whole_Engineering_Wrap_And_Staff_Checklist.md",
             "path": "Languages/Rust/20_Whole_Engineering_Wrap_And_Staff_Checklist.md",
             "type": "file",
             "sha": "",
-            "size": 11794
+            "size": 13321
           },
           {
             "name": "README.md",
             "path": "Languages/Rust/README.md",
             "type": "file",
             "sha": "",
-            "size": 7889
+            "size": 8229
           }
         ]
       },

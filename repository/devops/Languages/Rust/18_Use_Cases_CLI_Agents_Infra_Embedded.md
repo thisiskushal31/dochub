@@ -43,7 +43,7 @@ Agents run on customer or fleet hosts with **high privilege** and **strict resou
 
 Engineering constraints that dominate:
 
-- **Privilege drop** — bind or open privileged resources, then drop to an unprivileged user/capabilities before handling untrusted input; never keep root for the steady state without a written exception.
+- **Privilege drop** — bind or open privileged resources, then drop to an unprivileged user/capabilities before handling untrusted input; never keep root for the steady state without a written exception. On **Unix-class** hosts, prefer dropping ambient **capabilities** (and switching UID/GID) after the privileged setup step when the OS allows—keep only the caps the steady-state path needs; document platform gaps (Windows service models differ). Awareness, not a portability tutorial.
 - **Config reload** — SIGHUP or watched files that swap config atomically; in-flight work should finish on the old config or fail closed—document which.
 - **Backpressure** — when sinks (HTTP, Kafka, disk) are slow, bound queues and shed or block upstream deliberately; unbounded channels are a memory DoS against yourself.
 - Minimal allocations on hot paths where required.
@@ -71,19 +71,26 @@ On microcontrollers and bare metal, crates often use **`#![no_std]`**: link **`c
 | **`alloc`** | Optional heap (`Vec`, `String`, `Box`, …) **if** you provide a global allocator |
 | **`std`** | Hosted environments with an OS-like runtime—usually absent on bare metal |
 
-A **HAL** (hardware abstraction layer) crate exposes peripherals (GPIO, UART, SPI, timers) for a chip family; board support crates wire pins and clocks. Day-to-day work is dominated by **target triples** (for example `thumbv7em-none-eabihf`), linker scripts, `probe`/flash tools, and interrupt safety—not by Cargo editions. `unsafe` appears for registers and DMA; review culture from chapter 14 applies. Prefer proven HAL stacks for your MCU over bespoke register poking unless you own that risk.
+**`alloc` without full `std`:** when you have a heap (global allocator wired for the target) but no OS filesystem/threads/net, depend on the **`alloc`** crate (and keep `#![no_std]`) so collections and owned strings work without pulling hosted APIs you do not have. Document who provides the allocator and what happens on OOM. A **HAL** (hardware abstraction layer) crate exposes peripherals (GPIO, UART, SPI, timers) for a chip family; board support crates wire pins and clocks. Day-to-day work is dominated by **target triples** (for example `thumbv7em-none-eabihf`), linker scripts, `probe`/flash tools, and interrupt safety—not by Cargo editions. `unsafe` appears for registers and DMA; review culture from chapter 14 applies. Prefer proven HAL stacks for your MCU over bespoke register poking unless you own that risk.
 
 Edition still matters for syntax, but **target + HAL + allocator policy** dominate.
 
-### 6. WebAssembly (optional lane)
+### 6. WebAssembly (optional lane): `wasm32` targets and WASI-class hosts
 
-Rust can target **`wasm32-*`** (commonly `wasm32-unknown-unknown` for sandboxed modules, plus WASI-oriented targets when you need a capability-oriented system interface). Treat WASM as an **optional** deployment shape.
+Rust can emit **`wasm32-*`** artifacts. Target **names evolve** across toolchains—prefer stating the idea over memorizing one triple forever:
+
+| Shape (concept) | Typical use |
+|-----------------|-------------|
+| **`wasm32-unknown-unknown`-class** | Sandboxed modules talking to a **host** via imported/exported functions (JS engines, custom embedders). Little or no POSIX-like std surface unless the host provides it. |
+| **WASI-class `wasm32` targets** | Modules expecting a **capability-oriented system interface** (files, clocks, args, …) supplied by a **WASI-class runtime**/host—not by assuming a full Linux userspace. |
+
+Treat WASM as an **optional** deployment shape.
 
 - **Size** — download and instantiate cost dominate; audit dependencies, panic/format paths, and release profile size opts (chapter 16).
-- **Host sandbox assumptions** — the module only gets capabilities the **host** injects (imported functions, WASI rights, memory limits). Do not assume filesystem or network access exists.
-- **When NOT to use WASM** — you need full POSIX/`std` OS APIs; you depend on crates that are not WASM-ready; you need shared-nothing multi-threading models the host does not provide; or a native sidecar/CLI already meets the threat model with less toolchain friction.
+- **Host sandbox assumptions** — the module only gets capabilities the **host** injects (imports, WASI rights, memory limits). Do not assume filesystem or network access exists.
+- **When NOT to use WASM** — you need full POSIX/`std` OS APIs; you depend on crates that are not WASM-ready; you need threading models the host does not provide; or a native sidecar/CLI already meets the threat model with less toolchain friction.
 
-Do not assume every crate is WASM-portable. Prove the target in CI before promising it.
+Do not assume every crate is WASM-portable. Prove the chosen `wasm32` target + host runtime in CI before promising it; re-check triples when upgrading toolchains because WASI target naming has shifted historically.
 
 ### 7. Reading others’ Rust
 
@@ -140,8 +147,13 @@ If the work is glue scripts, one-off data transforms, or a team with no systems 
 | Single binary CLI, strict exit codes, rare deps | Rust CLI |
 | Privileged host agent, backpressure, long uptime | Rust agent (with chapter 17 rigor) |
 | Tiny MCU, no OS, HAL already chosen | `no_std` + HAL |
-| Plugin in a host sandbox, size budget, limited APIs | WASM—only if host model fits |
+| Heap but no full OS APIs | `no_std` + **`alloc`** + explicit global allocator |
+| Plugin in a host sandbox, size budget, limited APIs | `wasm32` + host (WASI-class only if you need that interface) |
 | CRUD API, hiring pool is Go/Java, soft latency | Often not Rust |
+
+### 7. Agent privilege: capabilities after bind (Unix-focused)
+
+Reiterate for staff review: the steady-state agent loop should not run as root “because setup needed it.” Pattern: open privileged sockets/files → **drop** UID/GID and surplus capabilities → only then parse untrusted configs or network payloads. Exact APIs differ by OS and whether you use libc helpers or platform crates; the invariant is product-level. On non-Unix, map to the local least-privilege model (service accounts, restricted tokens)—do not pretend Linux caps are universal.
 
 ---
 
@@ -175,13 +187,13 @@ If the work is glue scripts, one-off data transforms, or a team with no systems 
 - [ ] Domain fit is explicit (CLI / agent / sidecar / embedded / WASM)—not “rewrite everything in Rust.”
 - [ ] Runtime model (sync vs async) is documented and consistent.
 - [ ] CLI: clap-class parsing pattern, exit codes, and `--version` are intentional.
-- [ ] Agents/sidecars: privilege drop, config reload, and backpressure are designed—not afterthoughts.
-- [ ] Embedded: `no_std` / `alloc` / HAL boundaries documented; allocator policy explicit.
+- [ ] Agents/sidecars: privilege drop (Unix capabilities where applicable), config reload, and backpressure are designed—not afterthoughts.
+- [ ] Embedded: `no_std` / `alloc` / HAL boundaries documented; allocator and OOM policy explicit when using heap without `std`.
 - [ ] `unsafe`/FFI and `build.rs` inventoried for infra-facing binaries.
-- [ ] Supported OS/arch (and MCU/WASM targets if any) tested in CI.
+- [ ] Supported OS/arch (and MCU/`wasm32` targets if any) tested in CI against the real host runtime.
 - [ ] Brownfield edition noted; MSRV noted if declared.
 - [ ] Interop with Go/C is process- or ABI-documented.
-- [ ] WASM (if any) is scoped with size and host-capability assumptions; native crates are not assumed portable without evidence.
+- [ ] WASM (if any) distinguishes unknown-host vs WASI-class needs; size and capabilities documented; triples re-verified on toolchain bumps.
 
 ---
 
@@ -190,6 +202,7 @@ If the work is glue scripts, one-off data transforms, or a team with no systems 
 - [The Rust Programming Language (the Book)](https://doc.rust-lang.org/stable/book/)
 - [The Embedded Rust Book](https://doc.rust-lang.org/stable/embedded-book/)
 - [The Embedded Rust Book — `no_std`](https://doc.rust-lang.org/stable/embedded-book/intro/no-std.html)
+- [alloc crate](https://doc.rust-lang.org/stable/alloc/)
 - [The rustc Book — Platform Support](https://doc.rust-lang.org/rustc/platform-support.html)
 - [The rustc Book — Targets](https://doc.rust-lang.org/rustc/targets/index.html)
 - [The Cargo Book — Workspaces](https://doc.rust-lang.org/cargo/reference/workspaces.html)

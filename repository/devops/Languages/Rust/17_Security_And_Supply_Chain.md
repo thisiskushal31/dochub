@@ -130,6 +130,39 @@ Pinning via `Cargo.lock` means a later malicious higher version still requires a
 
 Older Cargo workflows sometimes omitted lockfiles for apps or relied on `cargo +nightly` in production. Modern practice: **stable** toolchain for release, lockfile for apps, advisory/deny checks in CI. Brownfield `edition = "2018"` crates need the same supply-chain controls as Edition 2024.
 
+### 9. Secret material in memory (zeroization practice)
+
+Keeping secrets out of git is necessary but not sufficient: API tokens, private keys, and decrypted payloads often linger in `String`/`Vec` buffers, core dumps, and allocator reuse. **Zeroization** practice overwrites secret bytes when a value is dropped (or explicitly cleared) so residual copies are less likely to remain readable in process memory. Ecosystem crates in the **zeroize** class provide `Zeroize`/`ZeroizeOnDrop`-style helpers; they are not magic—copies via `Clone`, logs, swap, and compiler moves can still duplicate material. Staff expectations:
+
+- Prefer dedicated secret types over bare `String` for long-lived credentials in memory.
+- Avoid logging or including secrets in `Debug`/`Display`.
+- Accept that zeroization reduces residual risk; it does not replace OS keystores, short-lived tokens, or minimizing how long secrets are held.
+- Pin any zeroize-class dependency like other security-sensitive crates (crates.io links in References).
+
+### 10. Supply-chain review ecosystems (cargo-vet / cargo-crev)—optional practice
+
+Beyond advisory databases, some organizations adopt **human review** ecosystems:
+
+| Practice | Idea (high level) |
+|----------|-------------------|
+| **cargo-vet**-class | Record and require *audits* (or trusted third-party audits) for crates in the graph before they are accepted in CI. |
+| **cargo-crev**-class | Distributed code-review web: reviewers publish signed reviews others may import. |
+
+Treat these as **optional** supply-chain maturity tools—not a handbook mandate. They complement cargo-audit/cargo-deny; they do not replace lockfiles, least-privilege builds, or reading `unsafe`/`build.rs` yourself. If adopted, pin the tool versions, define who may import foreign audit criteria, and document the policy next to advisory triage.
+
+### 11. Dependency review checklist for new crates
+
+Before adding a **new** direct dependency (extends §2.7 typosquatting checks):
+
+1. **Maintainer and provenance** — owners, repository link, release cadence, response to issues; a GitHub star count alone is not a review.
+2. **Download count is not enough** — popularity helps signal, but popular crates can still ship `unsafe`, heavy `build.rs`, or license surprises.
+3. **Audit `unsafe` / FFI / build scripts / proc-macros** — skim for ambient authority; prefer safe, narrow APIs.
+4. **License** — SPDX identity fits org policy (deny-class allowlists when you use them).
+5. **Graph cost** — `cargo tree` growth, duplicate versions, and feature creep from defaults.
+6. **Alternatives** — can `std` or an already-approved crate cover the need?
+
+Land via PR with lockfile diff; require the same checklist for “tiny” utilities—they often pull surprising transitive graphs.
+
 ---
 
 ## 3. Applications and use cases + staff checklist
@@ -161,9 +194,10 @@ Older Cargo workflows sometimes omitted lockfiles for apps or relied on `cargo +
 - [ ] Dependency updates are reviewed; `cargo tree` understood for critical paths.
 - [ ] **cargo-audit** and/or **cargo-deny** (or equivalent) runs in CI; triage owners exist.
 - [ ] License/ban/source policy exists if the org requires it (deny-class tooling).
-- [ ] New deps reviewed for typosquatting and build-time code execution surface.
-- [ ] No secrets in git, crate sources, or published packages; runtime injection only.
+- [ ] New deps reviewed with the checklist (maintainer, unsafe/build surface, license, graph)—not download count alone.
+- [ ] No secrets in git, crate sources, or published packages; runtime injection only; in-memory zeroization considered for long-lived credentials.
 - [ ] Build agents run least privilege; `build.rs` / proc-macro risk acknowledged.
+- [ ] Optional cargo-vet/crev-class review policy, if any, is documented—not assumed from this handbook.
 - [ ] Git/path/`[patch]` exceptions are inventoried.
 - [ ] Yank/CVE response playbook exists (lockfile bump + redeploy).
 
@@ -181,5 +215,8 @@ Older Cargo workflows sometimes omitted lockfiles for apps or relied on `cargo +
 - [RustSec Advisory Database](https://rustsec.org/)
 - [cargo-deny on crates.io](https://crates.io/crates/cargo-deny)
 - [cargo-audit on crates.io](https://crates.io/crates/cargo-audit)
+- [zeroize on crates.io](https://crates.io/crates/zeroize)
+- [cargo-vet on crates.io](https://crates.io/crates/cargo-vet)
+- [cargo-crev on crates.io](https://crates.io/crates/cargo-crev)
 - [crates.io policies](https://crates.io/policies)
 - [crates.io](https://crates.io/)

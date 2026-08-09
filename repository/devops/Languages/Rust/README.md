@@ -12,7 +12,7 @@ This track teaches Rust as **systems work**: language and type system, software 
 
 Rust releases on a **six-week train**: **stable**, **beta**, and **nightly** channels, managed with **rustup**. Language and library behavior are tied to the **stable** toolchain you pin in CI and production.
 
-Separately, Rust uses **editions** (`2015`, `2018`, `2021`, `2024`) declared in `Cargo.toml`. An edition is a **compatibility epoch** for syntax and some idioms—not a different language. **Modern `rustc` still compiles older editions.** Brownfield crates on `edition = "2018"` or `"2021"` remain valid; you upgrade editions when you want newer defaults and syntax, not because the old edition stopped working. **Edition 2024** (with the 1.85 stable train) changes several staff-visible defaults—Cargo **resolver 3** (rust-version-aware), `unsafe extern` blocks, `#[unsafe(no_mangle)]`-style attributes, tighter `unsafe fn` body rules, and some temporary/borrow scopes. Chapters call these out where they affect review; older editions keep working until you migrate.
+Separately, Rust uses **editions** (`2015`, `2018`, `2021`, `2024`) declared in `Cargo.toml`. An edition is a **compatibility epoch** for syntax and some idioms—not a different language. **Modern `rustc` still compiles older editions.** Brownfield crates on `edition = "2018"` or `"2021"` remain valid; you upgrade editions when you want newer defaults and syntax, not because the old edition stopped working. **Edition 2024** (with the 1.85 stable train) changes several staff-visible defaults—Cargo **resolver 3** (rust-version-aware), `unsafe extern` blocks, `#[unsafe(no_mangle)]`-style attributes, tighter `unsafe fn` body rules, and some temporary/borrow scopes. Chapters call these out where they affect review; older editions keep working until you migrate. This track includes those Edition 2024 staff notes plus **API-design patterns** (builder and typestate for safe configuration surfaces) without becoming a web/framework guide.
 
 **Practical policy:** pin the toolchain (for example via `rust-toolchain.toml` or CI image); record `rustc --version` in release artifacts; keep a **Cargo.lock** for applications and a **container digest** (or base-image pin) for the system layer.
 
@@ -51,10 +51,10 @@ Links live in each chapter’s **References** section.
 
 | Phase | Chapters | Outcome |
 |--------|----------|---------|
-| Foundations | 01–07 | Install toolchain; ownership, `Drop`/smart pointers; structs/enums/`let else`; `Result`/`Error`; macros/`const`. |
-| Abstraction and libraries | 08–11 | Traits/`Deref`/`AsRef`, RPIT capture, iterators, modules/semver, `std` ops + serde/secrets. |
-| Runtime and systems | 12–14 | Atomics/threads, async Pin/cancel/JoinSet, `unsafe`/FFI/`repr(C)`/Edition 2024 extern rules. |
-| Production engineering | 15–20 | Tests/Miri/fuzz, release tiers/linkers, supply chain, domain/`no_std`/WASM, tracing/CI/SBOM, competency map. |
+| Foundations | 01–07 | Install toolchain; ownership, `Drop`/smart pointers; structs/enums/`let else`; typestate/builder instincts for configs; `Result`/`Error`; macros/`const`. |
+| Abstraction and libraries | 08–11 | Traits/`Deref`/`AsRef` (API Guidelines literacy), RPIT capture, iterators, modules/semver, `std` ops (`Instant`/`SystemTime`) + serde/secrets. |
+| Runtime and systems | 12–14 | Atomics/threads/`Weak` cycles, async Pin/cancel/JoinSet, `unsafe`/FFI strings/`repr(C)`/Edition 2024 extern rules. |
+| Production engineering | 15–20 | Tests/Miri/fuzz/snapshots, release tiers/portable CPU flags, supply chain, domain/`no_std`/`alloc`/WASM, tracing/diagnostics/`RUST_BACKTRACE`, competency map. |
 
 Suggested order: **01 → 07**, then **08 → 11**, then **12 → 14**, then **15 → 20**. Revisit **05** for borrow-checker and `Drop` incidents; **07** before designing APIs; **13** before adopting an async runtime; **17** before untrusted deps or network-facing binaries; **19** before shipping service logging/metrics.
 

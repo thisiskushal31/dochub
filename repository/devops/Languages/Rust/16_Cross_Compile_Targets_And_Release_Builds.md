@@ -39,21 +39,22 @@ cargo build --release --target aarch64-unknown-linux-gnu
 
 Artifacts land under `target/<triple>/<profile>/` (for example `target/aarch64-unknown-linux-gnu/release/`). Native host builds use `target/debug/` or `target/release/` without the triple directory segment on some layouts; prefer inspecting the path Cargo prints.
 
-### 4. Release profile basics
+### 4. Release profile basics (knobs table)
 
 `cargo build --release` (or `--profile release`) enables the **release** profile: optimizations on, debug assertions typically off, overflow checks off by default unless you re-enable them. Debug builds favor compile speed and richer panics; release builds favor runtime speed and smaller code.
 
-Key knobs in `Cargo.toml` under `[profile.release]` (high level):
+Key knobs in `Cargo.toml` under `[profile.release]` (consolidate decisions here—do not scatter undocumented overrides):
 
-| Setting | Role |
-|---------|------|
-| `opt-level` | `0`–`3`, `"s"`, `"z"` — speed vs size |
-| `lto` | Link-time optimization across crates (`false`, `true`/`"fat"`, `"thin"`) |
-| `codegen-units` | Parallelism vs optimization quality |
-| `strip` | Strip symbols from the binary |
-| `debug` / `debuginfo` | Retain debug info for backtraces and profilers |
+| Setting | Typical roles |
+|---------|----------------|
+| `opt-level` | `0`–`3` for speed; `"s"` / `"z"` for size-sensitive (embedded/WASM/CLI download) |
+| `lto` | `false` (default), `"thin"` (common ship win), `true`/`"fat"` (max opt, long links) |
+| `codegen-units` | Higher → faster parallel compiles, weaker opts; `1` with LTO for max quality |
+| `strip` | `"none"` / `"debuginfo"` / `"symbols"` (or bool forms)—what remains in the customer binary |
+| `panic` | `"unwind"` (default on most targets) vs `"abort"` (smaller; process death on panic)—see §2.3 |
+| `debug` / `debuginfo` | Line tables vs full info for backtraces/profilers; pair with strip/split-debuginfo policy |
 
-Defaults change slowly across Rust releases; pin toolchain and document profile overrides in the repo.
+Defaults change slowly across Rust releases; pin toolchain and document profile overrides in the repo. LTO and panic subsections below expand tradeoffs—the table is the staff checklist surface.
 
 ### 5. Why cross-compile needs more than rustup
 
@@ -174,6 +175,24 @@ Link time often dominates large Rust binaries. **mold**, **lld**, and similar fa
 
 Older projects may document only host builds. Cross-compile support has been first-class for years; if a brownfield `edition = "2018"` crate fails only on cross, suspect `build.rs`, `cc` crate flags, or hard-coded host paths—not the edition itself.
 
+### 13. `RUSTFLAGS` and `target-cpu=native`: local vs portable CI
+
+**`-C target-cpu=native`** (often via `RUSTFLAGS`) tells rustc to optimize for the **build machine’s** CPU features. That can win microbenchmarks on a developer laptop or a homogeneous fleet image. It is wrong for **portable** release artifacts meant to run on older or varied CPUs: the binary may illegal-instruction crash elsewhere.
+
+Staff split:
+
+| Context | Practice |
+|---------|----------|
+| Local profiling / same-SKU fleet builds | `native` (or an explicit CPU family) may be intentional—document it |
+| CI artifacts, public downloads, multi-cloud images | Prefer the target’s **baseline** CPU; do not inherit a developer’s `RUSTFLAGS` from the environment |
+| Matrix builds | Set flags explicitly in the job; clear ambient `RUSTFLAGS` on shared runners |
+
+Same caution as chapter 15: global `RUSTFLAGS` apply broadly—prefer Cargo profile/`[target.'cfg(…)']` rustflags when you need something durable and reviewed.
+
+### 14. Debug vs release for benchmarks (`black_box` / Criterion-class)
+
+Microbenchmarks that run under the **dev/debug** profile measure the wrong binary: inlining, LLVM opts, and panic/`debug_assertions` differ from what you ship. Run Criterion-class (or Cargo bench) harnesses in **release** (Cargo’s bench profile is release-like by default—verify your setup). Use **`std::hint::black_box`** (or the harness equivalent) so the optimizer cannot delete the work under measurement. Still treat microbenches as optional signals (chapter 15): noisy CI, cache effects, and I/O-bound paths lie; prefer release profiling of real workloads for capacity calls.
+
 ---
 
 ## 3. Applications and use cases + staff checklist
@@ -209,7 +228,9 @@ Older projects may document only host builds. Cross-compile support has been fir
 - [ ] Release **`panic`** strategy (`unwind` vs `abort`) is chosen and documented.
 - [ ] Strip / debuginfo / split-debuginfo policy exists (what ships vs what is archived).
 - [ ] Toolchain and `Cargo.lock` are pinned for release builds.
-- [ ] Profile overrides (`lto`, `opt-level`, `panic`) are intentional and reviewed for CI cost.
+- [ ] Profile overrides (`lto`, `codegen-units`, `strip`, `opt-level`, `panic`) are intentional and reviewed for CI cost.
+- [ ] Portable release CI does **not** bake `target-cpu=native` (or ambient laptop `RUSTFLAGS`) into public artifacts.
+- [ ] Benchmarks run release-like profiles with `black_box`/harness discipline; not used as noisy merge blockers.
 - [ ] WASM (if shipped) has a size budget and CI check.
 
 ---
@@ -221,6 +242,8 @@ Older projects may document only host builds. Cross-compile support has been fir
 - [The Cargo Book — Profiles](https://doc.rust-lang.org/cargo/reference/profiles.html)
 - [The rustc Book — Targets and Target Triples](https://doc.rust-lang.org/rustc/targets/index.html)
 - [The rustc Book — Codegen options](https://doc.rust-lang.org/rustc/codegen-options/index.html)
+- [std::hint::black_box](https://doc.rust-lang.org/std/hint/fn.black_box.html)
+- [Cargo Book — `cargo bench`](https://doc.rust-lang.org/stable/cargo/commands/cargo-bench.html)
 - [Platform Support (tier list)](https://doc.rust-lang.org/rustc/platform-support.html)
 - [rustup book — Components](https://rust-lang.github.io/rustup/concepts/components.html)
 - [The Cargo Book — Incremental compilation (profiles / config context)](https://doc.rust-lang.org/cargo/reference/profiles.html)

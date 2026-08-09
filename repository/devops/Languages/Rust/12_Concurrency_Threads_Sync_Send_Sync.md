@@ -40,7 +40,7 @@ Rust’s borrowing rules forbid simultaneous mutable aliasing. Two threads canno
 
 **`RwLock<T>`** allows many readers or one writer. Readers can starve writers (or the reverse) depending on implementation and load—measure under contention; do not assume “read-heavy” automatically means `RwLock` wins.
 
-Poisoning: if a thread panics while holding a `Mutex`, subsequent `lock()` returns **`PoisonError`**. Decide whether to recover with `into_inner()` or treat poison as fatal.
+Poisoning: if a thread panics while holding a `Mutex`, subsequent `lock()` returns **`PoisonError`**. Recovery policy is spelled out in Advanced concepts below—do not ignore `Err` with a silent `.unwrap()` without a documented stance.
 
 ### 4. Message passing: `mpsc`
 
@@ -129,7 +129,9 @@ These types encode “initialize at most once” in the type system. **`static m
 
 ### 2. Parking, yielding, and builder options
 
-**`thread::Builder`** sets name, stack size, and spawn error handling—useful for ops agents with many threads. **`park`/`unpark`** and **`yield_now`** are low-level; prefer channels and condition variables (`Condvar`) for readable wakeups.
+**`thread::Builder`** sets name, stack size, and spawn error handling—useful for ops agents with many threads. **`yield_now`** hints the scheduler; use sparingly in spin-adjacent code.
+
+**`park` / `unpark` awareness:** each thread has a park token. **`thread::park`** blocks until an **`unpark`** (or a spurious wake—always re-check your condition). **`unpark`** is directed at a specific `Thread` handle. This is a low-level primitive underneath some sync types; application code that hand-rolls park/unpark protocols is easy to get wrong (lost wakeups, wrong thread). Prefer **`mpsc` channels** or **`Condvar`** for “wait until state changes.” Know park/unpark exists so stack traces and runtime internals are not mysterious—not as a default concurrency API.
 
 ### 3. Atomics and `Ordering` intuition
 
@@ -188,6 +190,20 @@ An uncaught panic in a spawned thread does not unwind the parent. `join` surface
 
 Third-party lock crates (for example **parking_lot**-class libraries) exist in the ecosystem and sometimes appear in high-contention codebases. They are **not required** to write correct concurrent Rust. Prefer **`std::sync::{Mutex, RwLock, Condvar, OnceLock, LazyLock}`** and channels unless your team has already measured a need and standardized on an alternative. Mixing multiple lock implementations in one process without a reason increases review surface. This track teaches the standard library model first.
 
+### 12. Poisoned mutex recovery policy (`lock()` `Err`)
+
+If a thread **panics while holding** a `Mutex` (or `RwLock` write guard), Rust **poisons** the lock: the shared data may be inconsistent. Later **`lock()`** / **`read()`** / **`write()`** returns **`Err(PoisonError<_>)`** instead of a plain guard.
+
+Staff policy choices (pick one per subsystem and document it):
+
+| Stance | When |
+|--------|------|
+| **Fatal** | Treat poison as process-level failure: log, metrics, abort or restart the worker/process. Default for agents where invariants matter more than uptime of a corrupted cache. |
+| **Recover with eyes open** | Call **`into_inner()`** (or `into_inner` on the `PoisonError`) to take the guard anyway, then **validate or reset** the protected state before continuing. |
+| **Clear poison** | Some APIs expose ways to clear poisoning after repair—only after you know the data is consistent again. |
+
+Do **not** habitually `.unwrap()` poison as “it will never happen,” and do not silently `into_inner()` without repair. Poison is a signal that a concurrent panic already violated an invariant; recovery without validation is hoping. Pair poison policy with the panic-across-threads policy in §10.
+
 ---
 
 ## 3. Applications and use cases
@@ -226,7 +242,8 @@ Third-party lock crates (for example **parking_lot**-class libraries) exist in t
 - Atomics have a stated invariant and `Ordering` rationale; no home-grown lock-free protocols without review.
 - Multi-mutex code documents **lock order**; no lock held across blocking waits that need the same locks.
 - `thread_local!` used only for true per-thread state—not as hidden global sharing.
-- Poison, panic-on-worker, and queue bounds have explicit policies.
+- Poison, panic-on-worker, and queue bounds have explicit policies (`Fatal` vs validate-then-`into_inner`).
+- Application code does not hand-roll **`park`/`unpark`** protocols when channels or `Condvar` suffice.
 - Data-race freedom is not confused with deadlock freedom.
 - Sync primitives default to `std` unless a documented, measured exception exists.
 
@@ -235,7 +252,10 @@ Third-party lock crates (for example **parking_lot**-class libraries) exist in t
 ## References
 
 - [`std::thread`](https://doc.rust-lang.org/stable/std/thread/)
+- [`std::thread::park`](https://doc.rust-lang.org/stable/std/thread/fn.park.html)
+- [`std::thread::Thread::unpark`](https://doc.rust-lang.org/stable/std/thread/struct.Thread.html#method.unpark)
 - [`std::sync::Mutex`](https://doc.rust-lang.org/stable/std/sync/struct.Mutex.html)
+- [`std::sync::PoisonError`](https://doc.rust-lang.org/stable/std/sync/struct.PoisonError.html)
 - [`std::sync::RwLock`](https://doc.rust-lang.org/stable/std/sync/struct.RwLock.html)
 - [`std::sync::Arc`](https://doc.rust-lang.org/stable/std/sync/struct.Arc.html)
 - [`std::sync::mpsc`](https://doc.rust-lang.org/stable/std/sync/mpsc/)

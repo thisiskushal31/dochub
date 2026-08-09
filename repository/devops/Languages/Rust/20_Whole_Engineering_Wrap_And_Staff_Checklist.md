@@ -14,10 +14,10 @@ A **competency map** that ties chapters **01–19** into staff-level expectation
 
 | Block | Chapters | You can… |
 |-------|----------|----------|
-| Foundations | 01–07 | Install toolchain; explain ownership/borrowing; model data with structs/enums; use `Result`/`Option` without panic-driven control flow; explain **Drop/RAII** and common smart pointers (`Box`, `Rc`/`Arc`, `RefCell`/`Mutex` at the literacy level). |
-| Abstraction & libraries | 08–11 | Design traits and modules; use iterators idiomatically; perform operational I/O via `std`; keep **serde** (or equivalent) at trust boundaries for wire/config formats. |
-| Runtime & systems | 12–14 | Reason about threads/`Send`/`Sync` and **atomics discipline**; choose or refuse async deliberately (**Pin**/cancellation); bound `unsafe` and FFI (Edition **2024** `unsafe extern` / unsafe attributes awareness); **consume** macros safely and know when **writing** macros/proc-macros is unjustified cost. |
-| Production engineering | 15–19 | Test and lint (**Miri** when owning unsafe); cross-compile and release (**panic** profile choice, strip/debuginfo, platform tiers); manage supply chain (**audit/deny**, semver for libs); place Rust in CLI/agent/infra contexts; adopt **`no_std`/WASM only when the domain needs them**; ship with CI, containers, SBOM/provenance awareness, and a **tracing/logging** policy. |
+| Foundations | 01–07 | Install toolchain; explain ownership/borrowing; model data with structs/enums; use `Result`/`Option` without panic-driven control flow; explain **Drop/RAII** and common smart pointers (`Box`, `Rc`/`Arc`, `RefCell`/`Mutex` at the literacy level); prefer **typestate/builder** shapes for dangerous configs over boolean soup. |
+| Abstraction & libraries | 08–11 | Design traits and modules per **API Guidelines** literacy (naming, conversions, predictable builders); use iterators idiomatically; perform operational I/O via `std` (**`Instant` vs `SystemTime`**); keep **serde** (or equivalent) at trust boundaries for wire/config formats. |
+| Runtime & systems | 12–14 | Reason about threads/`Send`/`Sync`, **`Weak` cycles**, and **atomics discipline**; choose or refuse async deliberately (**Pin**/cancellation); bound `unsafe` and FFI including **string/ABI edges** (Edition **2024** `unsafe extern` / unsafe attributes awareness); **consume** macros safely and know when **writing** macros/proc-macros is unjustified cost. |
+| Production engineering | 15–19 | Test and lint (**Miri** when owning unsafe; snapshots/contracts where useful); cross-compile and release (**panic** profile, strip/debuginfo, **portable vs `target-cpu=native`**); manage supply chain (**audit/deny**, optional vet/crev, semver for libs); place Rust in CLI/agent/infra contexts; adopt **`no_std`/`alloc`/WASM only when needed**; ship with CI, containers, SBOM/provenance, **tracing/`log` bridge**, staging **`RUST_BACKTRACE`**, and health-probe semantics. |
 
 Suggested mastery order remains **01→07 → 08→11 → 12→14 → 15→20**, with revisits to **05** (borrow checker), **07** (errors), **13** (async), and **17** (deps) under incident pressure.
 
@@ -25,10 +25,10 @@ Suggested mastery order remains **01→07 → 08→11 → 12→14 → 15→20**,
 
 | Role | Must be solid on | Can defer initially |
 |------|------------------|---------------------|
-| Application / backend | 04–11, 07, 13, 15, 19 (logging/tracing, serde boundaries) | Deep embedded/`no_std`, writing proc-macros |
-| DevOps / SRE | 02–03, 11, 15–17, 19 (CI cache keys, audit/deny, metrics) | Advanced trait HRTB |
-| Security | 05, 07, 14, 17 (`build.rs`, proc-macros, deny policies) | Async runtime internals |
-| Platform / infra | 01–07, 11–13, 16, 18–19 (panic profile, agents/sidecars) | Proc-macro authorship; WASM unless required |
+| Application / backend | 04–11, 07, 13, 15, 19 (logging/tracing, serde boundaries, API Guidelines builders/typestate) | Deep embedded/`no_std`, writing proc-macros |
+| DevOps / SRE | 02–03, 11, 15–17, 19 (CI cache keys, portable CPU flags, audit/deny, metrics, `RUST_BACKTRACE` staging) | Advanced trait HRTB |
+| Security | 05, 07, 14, 17 (`build.rs`, proc-macros, deny policies, FFI strings, zeroization) | Async runtime internals |
+| Platform / infra | 01–07, 11–13, 16, 18–19 (panic profile, agents/sidecars, privilege drop) | Proc-macro authorship; WASM unless required |
 | Embedded / systems | 02, 05, 14, 16, 18 (`no_std`/`alloc`/HAL) | Large async web stacks |
 
 ### 3. Whole-engineering domains (not “just DevOps”)
@@ -82,7 +82,7 @@ Edition 2018/2021 crates remain first-class on modern stable rustc. Treat editio
 
 ### 2. Invariants notebook (staff habit)
 
-Keep a living note per product: edition, MSRV/`rust-version`, toolchain pin, feature matrix, unsafe inventory, async runtime, release targets, **panic** profile, strip/debuginfo policy, tracing/logging subscriber choice, advisory/deny triage owner, and whether `no_std` or WASM is in scope. This notebook is the difference between a hero rewrite and operable ownership.
+Keep a living note per product: edition, MSRV/`rust-version`, toolchain pin, feature matrix, unsafe/FFI-string inventory, async runtime, release targets, **panic** profile, strip/debuginfo policy, portable vs native CPU flags, tracing/logging subscriber (+ `log` bridge) choice, staging `RUST_BACKTRACE` policy, advisory/deny triage owner, and whether `no_std`/`alloc` or WASM is in scope. This notebook is the difference between a hero rewrite and operable ownership.
 
 ### 3. Failure modes that span chapters
 
@@ -112,8 +112,10 @@ Keep a living note per product: edition, MSRV/`rust-version`, toolchain pin, fea
 **Language & design**
 
 - [ ] Ownership/`Result` conventions are consistent at crate boundaries.
-- [ ] Drop/RAII and smart-pointer choices are understood at API edges (no accidental `Rc` cycles or interior-mutability sprawl).
-- [ ] **`Deref` / `AsRef` API hygiene**: conversions are intentional and documented—no surprising deref coercion or “stringly” `AsRef` surfaces that hide allocation/ownership costs.
+- [ ] Drop/RAII and smart-pointer choices are understood at API edges; **`Weak`** (or redesign) breaks `Rc`/`Arc` cycles—no accidental leaks or interior-mutability sprawl.
+- [ ] **Typestate / builder** patterns used for dangerous configs so illegal states are hard to construct (not a boolean soup of half-init options).
+- [ ] **`Deref` / `AsRef` API hygiene** (API Guidelines literacy): conversions are intentional and documented—no surprising deref coercion or “stringly” `AsRef` surfaces that hide allocation/ownership costs.
+- [ ] Time APIs: **`Instant`** for intervals/deadlines; **`SystemTime`** for wall clock—never confuse the two in probes or timeouts.
 - [ ] Macros literacy: team can **consume** macros safely; **writing** macros/proc-macros is justified and reviewed.
 - [ ] Serde (or equivalent) used at trust boundaries for config/wire formats—not ad-hoc parsers for hostile input.
 - [ ] Module visibility matches threat and API surface.
@@ -123,31 +125,33 @@ Keep a living note per product: edition, MSRV/`rust-version`, toolchain pin, fea
 
 **Security & supply chain**
 
-- [ ] `unsafe`/FFI inventory exists and is reviewed; **Miri** (and sanitizers if adopted) for unsafe-owning crates.
+- [ ] `unsafe`/FFI inventory exists and is reviewed; **FFI strings** (`CStr`/`CString`/nul and encoding obligations) documented at each boundary; **Miri** (and sanitizers if adopted) for unsafe-owning crates.
 - [ ] Apps build with committed lockfile (`--locked` in CI).
 - [ ] Libraries follow **semver** (and crate compatibility) discipline for public API changes—not “just bump major when tired.”
-- [ ] **cargo-audit** / **cargo-deny** (or equivalent) and update discipline are owned.
-- [ ] `build.rs` / proc-macro trust reviewed for new deps.
-- [ ] Secrets never in git; runtime injection only; never ship in crates or images.
+- [ ] **cargo-audit** / **cargo-deny** (or equivalent) and update discipline are owned; optional vet/crev-class review only if org policy says so.
+- [ ] `build.rs` / proc-macro trust reviewed for new deps; new crates pass maintainer/`unsafe`/license checklist—not download count alone.
+- [ ] Secrets never in git; runtime injection only; never ship in crates or images; in-memory zeroization considered for long-lived credentials.
 
 **Quality**
 
-- [ ] Tests, rustfmt, and Clippy gates match repo policy.
+- [ ] Tests, rustfmt, and Clippy gates match repo policy; contract/snapshot tests where CLI/config surfaces need them.
 - [ ] Public APIs have docs appropriate to consumers; fuzz/coverage practices for hostile parsers where relevant.
 
 **Delivery & operations**
 
 - [ ] Stable (and MSRV/`rust-version` if declared) CI matrix is green; toolchain pin distinct from advertised MSRV when both exist.
 - [ ] Release targets verified (tier-aware); musl/static claims checked; **panic** profile (`unwind` vs `abort`) chosen deliberately.
+- [ ] **Portable vs native CPU flags**: public/CI artifacts do not bake `target-cpu=native` or ambient laptop `RUSTFLAGS`.
 - [ ] Containers multi-stage, non-root, pinned bases; SBOM/provenance per org policy.
-- [ ] Tracing/logging policy (`log` facade vs `tracing` spans/subscribers); correlation IDs; redaction.
-- [ ] Metrics, health (readiness vs liveness), graceful shutdown in place.
+- [ ] Tracing/logging policy (`log` facade vs `tracing` spans/subscribers + bridge); correlation IDs; redaction; OTel export optional.
+- [ ] Metrics, health (readiness vs liveness—behavior over path names), graceful shutdown in place.
+- [ ] **`RUST_BACKTRACE`** enabled in staging (prod policy documented); panic hooks structured.
 - [ ] CI caches key on lockfile **and** rust-toolchain; advisory/deny job present.
 
 **Portfolio fit**
 
 - [ ] Rust chosen for the right domain reasons (chapter 18)—or exit criteria defined for a rewrite.
-- [ ] **`no_std` / WASM** adopted only when the domain requires them—not as default complexity.
+- [ ] **`no_std` / `alloc` / WASM (`wasm32` + host)** adopted only when the domain requires them—not as default complexity.
 
 ### Use as a hiring / promotion rubric
 
@@ -173,7 +177,7 @@ Keep a living note per product: edition, MSRV/`rust-version`, toolchain pin, fea
 - [The Cargo Book — Profiles](https://doc.rust-lang.org/cargo/reference/profiles.html)
 - [The Cargo Book — rust-version](https://doc.rust-lang.org/cargo/reference/rust-version.html)
 - [The Cargo Book — SemVer compatibility](https://doc.rust-lang.org/cargo/reference/semver.html)
-- [API Guidelines — Naming / conversions (`AsRef`, `Deref` context)](https://rust-lang.github.io/api-guidelines/)
+- [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
 - [The Embedded Rust Book](https://doc.rust-lang.org/stable/embedded-book/)
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
 - [Rust Standard Library](https://doc.rust-lang.org/stable/std/)

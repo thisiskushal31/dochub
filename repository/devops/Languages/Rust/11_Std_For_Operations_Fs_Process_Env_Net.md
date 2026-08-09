@@ -101,7 +101,7 @@ for conn in listener.incoming() {
 
 ### 8. `std::time` — clocks and durations
 
-**`Duration`** is a span. **`Instant`** is monotonic (elapsed time, timeouts, deadlines). **`SystemTime`** is wall clock (logs, mtime comparison)—it can jump. Prefer **`Instant`** for measuring intervals and implementing deadline loops; use **`SystemTime`** when you must talk to humans or filesystems about calendar time.
+**`Duration`** is a span. **`Instant`** is monotonic (elapsed time, timeouts, deadlines). **`SystemTime`** is wall clock (logs, mtime comparison)—it can jump. Prefer **`Instant`** for measuring intervals and implementing deadline loops; use **`SystemTime`** when you must talk to humans or filesystems about calendar time. Deeper clock and `Duration` pitfalls are in Advanced concepts below.
 
 ### 9. Secrets: environment versus files and mounts
 
@@ -128,9 +128,19 @@ Many `std` I/O calls **block indefinitely**. `TcpStream` offers **`set_read_time
 
 Write temp file in the same directory → optionally `sync_all` → **`rename`** over the target so readers see old or new content, not a torn write. Critical for config and checkpoint files. Know that durability guarantees differ across OS and mount options.
 
-### 3. Path encoding and `OsString`
+### 3. Path encoding and `OsString` / `OsStr` (deeper)
 
-Not every path is valid Unicode. Cross-platform tools use **`OsStr`/`OsString`** at the edges and convert to `String` only when the domain requires UTF-8 (error if not). Logging paths with lossy conversion is acceptable; hashing or comparing security boundaries with lossy conversion is not.
+Not every path or env value is valid Unicode. **`OsString`** owns platform string data; **`OsStr`** borrows it—the same owned/borrowed split as `String`/`str`, but without a UTF-8 guarantee.
+
+| Concern | Practice |
+|---------|----------|
+| **Sources** | `env::args_os`, `env::var_os`, `Path`/`PathBuf` components, some `Command` outputs |
+| **To Rust text** | `to_str()` → `Option<&str>` (fail closed); `to_string_lossy()` for display only |
+| **Security** | Never use lossy conversion for allowlists, signatures, or equality of roots—lossy maps distinct OS strings to the same display |
+| **Windows** | Wide/WTF-8-ish realities: invalid UTF-16 sequences can appear; do not assume every `OsStr` round-trips through `String` |
+| **Interop** | Prefer keeping `OsString` through the pipeline until a UTF-8 boundary (JSON, HTTP headers) forces a checked conversion |
+
+Cross-platform agents should type path and env edges as `OsStr`/`OsString`/`Path`/`PathBuf` and convert inward only with an explicit error policy.
 
 ### 4. `remove_dir_all` and destructive APIs
 
@@ -214,6 +224,38 @@ Staff-level pattern:
 
 `std` still owns reading bytes from disk or env; serde owns turning bytes into typed values.
 
+### 13. `CString` / `CStr` at FFI string boundaries
+
+When operational code touches C APIs (or crates that surface them), **nul-terminated** strings are the usual contract. **`std::ffi::CString`** owns a byte buffer with a trailing `0`; **`CStr`** borrows one. Rules that matter:
+
+- **No interior nuls:** `CString::new` rejects embedded `0` bytes—Rust `&str`/`String` can contain them; C string APIs cannot.
+- **Trailing nul is not part of the logical text** when converting back; use `to_str` / `to_bytes` carefully.
+- Pass **`as_ptr()`** (`*const c_char`) only while the `CString` (or other owner) lives; do not return a dangling pointer from a temporary.
+- Who frees what across the language boundary is an FFI ownership question (chapter 14)—`CString` dropping frees the Rust allocation; foreign-allocated strings need the foreign free.
+
+Prefer `CString`/`CStr` over hand-rolled `Vec` + push `0` unless you own a documented buffer protocol.
+
+### 14. `Instant` versus `SystemTime` (monotonic vs wall clock)
+
+| Type | Clock class | Use for | Do not use for |
+|------|-------------|---------|----------------|
+| **`Instant`** | Monotonic (steady for elapsed measurement on the platform’s clock) | Timeouts, deadlines, latency, “wait N ms,” probe intervals | Human-readable timestamps, mtime, certificates |
+| **`SystemTime`** | Wall clock (calendar / UNIX-time family) | Logs, file mtime, “not before” calendar checks | Measuring elapsed intervals under clock skew |
+
+**NTP and admin steps can jump `SystemTime` forward or backward.** A deadline computed as `SystemTime::now() + duration` can fire immediately or stretch oddly after a step. Prefer **`Instant::now()` + `Duration`** (or `Instant` deadlines) for control loops; record wall time separately when operators need a clock reading. Converting between the two is lossy in meaning—do not treat them as interchangeable.
+
+### 15. `Duration` construction pitfalls
+
+**`Duration`** is a non-negative span (`secs` + `nanos`). Pitfalls:
+
+- **Overflow / saturating APIs:** `Duration::new` and arithmetic can panic or saturate depending on API (`checked_*`, `saturating_*`)—prefer checked math at untrusted boundaries (config timeouts).
+- **From floats:** `from_secs_f64` / similar need finite, non-negative inputs; NaN/negative are errors or panics by API—validate config before conversion.
+- **Resolution:** sub-nanosecond wishes are fiction; round consciously when translating from millis/micros in JSON.
+- **Zero vs “disabled”:** `Duration::ZERO` is a valid span (spin/immediate timeout)—do not overload it as “no timeout” without an `Option<Duration>` or sentinel policy.
+- **Sleep and join:** `thread::sleep(dur)` and similar take `Duration`; passing huge values from unbounded config is a hang class—cap operator-facing timeouts.
+
+Staff rule: timeouts from config are parsed, bounded, and applied via `Instant`, not via hope that wall clock stays still.
+
 ---
 
 ## 3. Applications and use cases
@@ -234,7 +276,8 @@ Staff-level pattern:
 ### Reliability and operations
 
 - Every network and subprocess call needs timeout, status check, and structured error logging.
-- Prefer `Instant`-based deadlines for probes; record wall time separately for humans.
+- Prefer `Instant`-based deadlines for probes; record wall time separately for humans; never key control-loop deadlines on `SystemTime` alone.
+- Bound and validate `Duration` values from config (`Option` for “no timeout,” caps for max wait).
 - Drain or redirect child stdio deliberately; hanging on a full pipe looks like a “stuck deploy.”
 - Retry only idempotent ops on `Interrupted` / carefully budgeted `TimedOut` / readiness-driven `WouldBlock`; treat `AlreadyExists` as a state question, not a blind retry.
 
@@ -250,12 +293,13 @@ Staff-level pattern:
 - Subprocess uses argv list, not interpolated shell, unless a documented exception exists.
 - Destructive fs APIs operate only on validated roots; symlink/`canonicalize` behavior considered.
 - Sockets and long waits have timeouts or an explicit “block forever” justification.
-- Path handling accounts for non-UTF-8 where the OS allows it.
+- Path handling accounts for non-UTF-8 where the OS allows it; security comparisons do not use lossy `OsStr` conversion.
 - Temp → rename (and sync if required) for config/checkpoint writes; temp cleanup and permissions reviewed.
 - Error kinds drive retries; Display strings do not.
 - Cross-platform env/path/signal assumptions are documented; Unix-only signal code is `cfg`-gated.
 - Child processes that must not see secrets use cleared or curated environments.
 - Config loading via serde (ecosystem) has size limits and an explicit unknown-field policy for untrusted input.
+- Control-loop timeouts use **`Instant` + `Duration`**; wall clock is for logs/mtime only; FFI string edges use **`CString`/`CStr`** with lifetime-clear pointers.
 
 ---
 
@@ -265,6 +309,10 @@ Staff-level pattern:
 - [`std::fs::canonicalize`](https://doc.rust-lang.org/stable/std/fs/fn.canonicalize.html)
 - [`std::fs::symlink_metadata`](https://doc.rust-lang.org/stable/std/fs/fn.symlink_metadata.html)
 - [`std::path`](https://doc.rust-lang.org/stable/std/path/)
+- [`std::ffi::OsString`](https://doc.rust-lang.org/stable/std/ffi/struct.OsString.html)
+- [`std::ffi::OsStr`](https://doc.rust-lang.org/stable/std/ffi/struct.OsStr.html)
+- [`std::ffi::CString`](https://doc.rust-lang.org/stable/std/ffi/struct.CString.html)
+- [`std::ffi::CStr`](https://doc.rust-lang.org/stable/std/ffi/struct.CStr.html)
 - [`std::env`](https://doc.rust-lang.org/stable/std/env/)
 - [`std::env::temp_dir`](https://doc.rust-lang.org/stable/std/env/fn.temp_dir.html)
 - [`std::process::Command`](https://doc.rust-lang.org/stable/std/process/struct.Command.html)
@@ -276,6 +324,9 @@ Staff-level pattern:
 - [`std::net::TcpStream`](https://doc.rust-lang.org/stable/std/net/struct.TcpStream.html)
 - [`std::net::UdpSocket`](https://doc.rust-lang.org/stable/std/net/struct.UdpSocket.html)
 - [`std::time`](https://doc.rust-lang.org/stable/std/time/)
+- [`std::time::Instant`](https://doc.rust-lang.org/stable/std/time/struct.Instant.html)
+- [`std::time::SystemTime`](https://doc.rust-lang.org/stable/std/time/struct.SystemTime.html)
+- [`std::time::Duration`](https://doc.rust-lang.org/stable/std/time/struct.Duration.html)
 - [The Book — Input and Output](https://doc.rust-lang.org/stable/book/ch12-00-an-io-project.html)
 - [The Book — Fearless Concurrency (processes context)](https://doc.rust-lang.org/stable/book/ch16-00-concurrency.html)
 - [Rust By Example — Child processes](https://doc.rust-lang.org/stable/rust-by-example/std_misc/process.html)

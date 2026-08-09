@@ -226,6 +226,41 @@ Prefer **`AsRef`** for read-only “accept several path-like / bytes-like inputs
 
 **`Debug`** (`{:?}`) is for programmers—derive it on almost all data types used in logs and error reporting. **`Display`** (`{}`) is for end-user or stable textual forms; implement by hand and treat the string as part of the UX/API. Do not rely on `Debug` formatting as a public contract (it may change). Errors often implement both: `Display` for messages, `Debug` for diagnostics.
 
+### 16. `#[must_use]` on `Result` and custom types
+
+**`#[must_use]`** asks the compiler to warn when a value is produced and immediately discarded. `Result` in `std` is marked this way so ignoring an `Err` is noisy—callers must `?`, `match`, or explicitly acknowledge with `let _ = …` (and a reason).
+
+Apply `#[must_use]` (optionally with a message) to:
+
+- Custom result-like wrappers and builder `build()` returns that are dangerous to ignore.
+- Handles whose construction has side effects that only complete when the value is used (less common—document clearly).
+
+Do not sprinkle it on every type; reserve it for “discarding this is almost certainly a bug.” Pair with Clippy’s unused-result lints in CI. Returning `Result` already inherits the std attribute on that enum; your job is mainly not to defeat it (for example by converting to `()` too early without handling).
+
+### 17. Marker traits overview: `Send`, `Sync`, `Copy`, `Clone`, `Sized`
+
+These traits mostly carry **compile-time meaning** rather than large method suites. Tie them together when reviewing APIs:
+
+| Trait | Role (short) |
+|-------|----------------|
+| **`Sized`** | Type has a known size at compile time; default bound on most generics (`T: Sized`). Unsized types (`str`, `[T]`, `dyn Trait`) appear behind pointers (`&`, `Box`). Opt out with `T: ?Sized` when you intentionally accept unsized `T`. |
+| **`Copy`** | Value may be duplicated by bitwise copy; implies cheap, no resource ownership. Assignment does not move-from. Requires `Clone`. |
+| **`Clone`** | Explicit `.clone()`; may be deep/expensive. Not every `Clone` type is `Copy`. |
+| **`Send`** | Safe to transfer ownership to another thread (auto trait; chapter 12). |
+| **`Sync`** | Safe to share references (`&T`) across threads (auto trait; `&T` is `Send` if `T` is `Sync`). |
+
+Staff intuition: `Sized` shapes whether APIs take `T` or `Box<T>` / `&T`; `Copy`/`Clone` shape ownership ergonomics; `Send`/`Sync` shape concurrency bounds on generics (`T: Send + 'static` in spawn APIs). Do not invent manual impls of `Send`/`Sync` without `unsafe` and a concurrency review—auto traits are derived from fields.
+
+### 18. Orphan rules in API design (reminder)
+
+You may implement a trait for a type only if **your crate** defines the trait **or** the type (the **orphan rules** / coherence). Practical consequences:
+
+- To add behavior to a foreign type under a foreign trait, wrap it in a **local newtype** and impl there (same pattern as chapter 06 newtypes and Advanced §5).
+- Designing a **public trait** others will impl: keep it local to your crate so downstream can impl it for their types; sealing (private supertrait) blocks unwanted external impls when you need that.
+- Avoid “utility traits” that exist only so you can impl them for `String`/`Vec`—coherence will refuse foreign-for-foreign.
+
+Thin rule for reviews: if the compiler cites orphan/coherence, the fix is almost always a newtype or moving the trait—not `unsafe` or a dependency hack.
+
 ---
 
 ## 3. Applications and use cases
@@ -235,12 +270,15 @@ Prefer **`AsRef`** for read-only “accept several path-like / bytes-like inputs
 - Accept `impl Read` / `impl AsRef<Path>` for flexible callers; return concrete types or `impl Trait` when hiding iterators.
 - Bound generics with the smallest trait set that still expresses the contract.
 - Prefer `From` impls at crate boundaries for conversions rather than ad-hoc inherent methods named `to_*` everywhere.
+- Mark discard-dangerous returns with `#[must_use]`; never silently ignore `Result` in library paths.
 
 ### Library design
 
 - Public traits are semver-heavy: adding a required method without a default is breaking.
 - Seal traits (private supertrait or private method) when you do not want downstream impls.
 - Document ownership: whether implementors should be cheap to clone, `Send`, etc.
+- State `Send`/`Sync`/`Clone` expectations in docs when thread or ownership contracts matter.
+- Respect orphan rules: newtypes for foreign-trait-on-foreign-type; do not promise impls coherence forbids.
 
 ### Performance
 
@@ -264,6 +302,8 @@ Prefer **`AsRef`** for read-only “accept several path-like / bytes-like inputs
 - `From`/`Display`/`Debug` present where types cross crate or log boundaries.
 - Bounds are minimal; no unnecessary `Clone + 'static` “to make it compile.”
 - Orphan-rule workarounds use newtypes, not brittle hacks.
+- `#[must_use]` applied where discarding a return is a bug; `Result` not ignored at call sites.
+- `Sized` / `?Sized`, `Copy` vs `Clone`, and `Send`/`Sync` bounds match the API’s real constraints.
 - Derived traits match domain semantics (`Eq` only when total equality holds).
 
 ---
@@ -281,11 +321,16 @@ Prefer **`AsRef`** for read-only “accept several path-like / bytes-like inputs
 - [std::fmt::Debug](https://doc.rust-lang.org/stable/std/fmt/trait.Debug.html)
 - [std::fmt::Display](https://doc.rust-lang.org/stable/std/fmt/trait.Display.html)
 - [std::clone::Clone](https://doc.rust-lang.org/stable/std/clone/trait.Clone.html)
+- [std::marker::Copy](https://doc.rust-lang.org/stable/std/marker/trait.Copy.html)
+- [std::marker::Send](https://doc.rust-lang.org/stable/std/marker/trait.Send.html)
+- [std::marker::Sync](https://doc.rust-lang.org/stable/std/marker/trait.Sync.html)
+- [std::marker::Sized](https://doc.rust-lang.org/stable/std/marker/trait.Sized.html)
 - [std::convert::From](https://doc.rust-lang.org/stable/std/convert/trait.From.html)
 - [std::convert::Into](https://doc.rust-lang.org/stable/std/convert/trait.Into.html)
 - [std::convert::TryFrom](https://doc.rust-lang.org/stable/std/convert/trait.TryFrom.html)
 - [std::iter::Iterator](https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html)
 - [The Reference: Trait and lifetime bounds](https://doc.rust-lang.org/stable/reference/trait-bounds.html)
+- [The Reference: Attribute `must_use`](https://doc.rust-lang.org/stable/reference/attributes/diagnostics.html#the-must_use-attribute)
 - [Edition Guide: dyn Trait for trait objects](https://doc.rust-lang.org/edition-guide/rust-2018/trait-system/dyn-trait-for-trait-objects.html)
 - [Edition Guide — RPIT lifetime capture rules](https://doc.rust-lang.org/edition-guide/rust-2024/rpit-lifetime-capture.html)
 - [Edition Guide — Rust 2024](https://doc.rust-lang.org/edition-guide/rust-2024/index.html)
@@ -295,3 +340,4 @@ Prefer **`AsRef`** for read-only “accept several path-like / bytes-like inputs
 - [std::borrow::Borrow](https://doc.rust-lang.org/stable/std/borrow/trait.Borrow.html)
 - [std::borrow::ToOwned](https://doc.rust-lang.org/stable/std/borrow/trait.ToOwned.html)
 - [The Reference: impl Trait](https://doc.rust-lang.org/stable/reference/types/impl-trait.html)
+- [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)

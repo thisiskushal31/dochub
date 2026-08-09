@@ -72,6 +72,8 @@ Run the process as an unprivileged UID. Bind privileged ports only via sidecars 
 
 Orchestrators need **liveness** (process stuck?) and **readiness** (safe to send traffic?). Expose cheap endpoints or exec probes that do not stampede dependencies. Distinguish “process up” from “dependency up” so a down database does not induce crash loops if your policy is to stay up and fail requests.
 
+Path names such as **`/healthz`**, **`/livez`**, **`/ready`**, or **`/readyz`** are **conventions**—orchestrators care about **probe behavior** (what each check asserts, timeouts, failure thresholds), not the string. Pick stable paths, document which probe is liveness vs readiness, and keep the semantics from the table below; renaming without matching kube/probe config is an outage class.
+
 Deeper examples:
 
 | Situation | Liveness | Readiness |
@@ -181,7 +183,19 @@ Choose from the verified linkage model: a glibc binary in `scratch` will not run
 
 ### 10. Readiness vs liveness (ops failure modes)
 
-If readiness incorrectly tracks “DB ping,” a brief dependency blip flaps pods out of service meshes and can cause thundering herds on recovery. If liveness tracks the same deep check, Kubernetes (or equivalent) **kills** healthy-enough processes during dependency outages—turning a partial outage into a restart loop. Codify the table in §1.5 in the runbook; load-test drain + probe behavior when changing either probe.
+If readiness incorrectly tracks “DB ping,” a brief dependency blip flaps pods out of service meshes and can cause thundering herds on recovery. If liveness tracks the same deep check, Kubernetes (or equivalent) **kills** healthy-enough processes during dependency outages—turning a partial outage into a restart loop. Codify the table in §1.5 in the runbook; load-test drain + probe behavior when changing either probe. Remember: `/healthz` vs `/ready` naming is secondary to those semantics.
+
+### 11. `tracing-subscriber` / `log` bridge (wiring pattern)
+
+Libraries that emit via the **`log`** facade and binaries that standardize on **`tracing`** need a **bridge** so one subscriber/logger configuration sees both. Ecosystem pattern: initialize a **`tracing-subscriber`**-class stack in `main` (filters, JSON/fmt layer), and enable a **`log` ↔ `tracing` bridge** so dependency crates using `log` macros still appear in the same stream. Inverse bridges exist when the binary is `log`-centric. Staff rule from §1.7 still holds: **libraries** stay facade-friendly; **binaries** own wiring. Pin subscriber/bridge crate versions; do not leave double-initialized global loggers.
+
+### 12. OpenTelemetry as an optional export path
+
+**OpenTelemetry** is a vendor-neutral API/SDK model for exporting **traces** (and often metrics/logs) to collectors your platform already runs. Treat it as an **optional** export path behind your `tracing`/metrics layer—not a requirement to adopt a specific SaaS. Concepts to own: spans align with `tracing` spans; resource attributes identify service/version; exporters push or are scraped per org standard. If you do not need cross-service distributed traces, structured logs + local metrics may suffice. When enabling OTel, keep redaction and sampling policy next to correlation IDs (chapter 17/§1.8)—export pipelines amplify accidental secret leakage.
+
+### 13. `RUST_BACKTRACE=1` in staging
+
+**`RUST_BACKTRACE=1`** (or `full`) asks the runtime to capture stack traces on panic. Enable it in **staging** (and local debug) so panic hooks and incident reviews get actionable frames. Production policy is a tradeoff: richer dumps vs cost, PII in frames, and noise—many teams keep full backtraces in staging/canary and a tighter policy in prod, with **debuginfo** available for symbolication (chapter 16). Document the env var in runbooks; do not rely on backtraces alone—structured panic hooks (§1.10) still matter.
 
 ---
 
@@ -218,12 +232,13 @@ If readiness incorrectly tracks “DB ping,” a brief dependency blip flaps pod
 - [ ] Advisory / deny CI job present and owned.
 - [ ] `target/` and registry caches keyed by lockfile **and** rust-toolchain (and OS/triple as needed).
 - [ ] Multi-stage image; final stage non-root; pinned base; distroless/scratch tradeoffs match linkage (glibc vs musl).
-- [ ] Liveness/readiness defined with migration and dependency-down examples; probes do not stampede deps.
+- [ ] Liveness/readiness defined with migration and dependency-down examples; path names (`/healthz` vs `/ready`) documented but behavior is authoritative; probes do not stampede deps.
 - [ ] SBOM / provenance artifacts follow org policy and match `--locked` release builds.
-- [ ] Structured logging policy (`println!`/`dbg!` not the service path); `log`/`tracing` roles clear.
+- [ ] Structured logging policy (`println!`/`dbg!` not the service path); `log`/`tracing` roles clear; binary owns `tracing-subscriber` (+ `log` bridge if needed).
+- [ ] OpenTelemetry (if used) is an export option with sampling/redaction—not a mandated vendor stack.
 - [ ] Correlation IDs + redaction policy.
 - [ ] Metrics (counters/histograms) for golden signals; scrape vs push documented.
-- [ ] Panic policy documented; graceful shutdown tested under SIGTERM.
+- [ ] Panic policy documented; `RUST_BACKTRACE` enabled in staging; graceful shutdown tested under SIGTERM.
 - [ ] No secrets in image layers or compile-time env baked into the binary.
 
 ---
@@ -237,6 +252,10 @@ If readiness incorrectly tracks “DB ping,” a brief dependency blip flaps pod
 - [rustup book — Overrides / toolchain files](https://rust-lang.github.io/rustup/overrides.html)
 - [RustSec](https://rustsec.org/)
 - [std::panic](https://doc.rust-lang.org/std/panic/index.html)
+- [Environment variables affecting the runtime (`RUST_BACKTRACE`)](https://doc.rust-lang.org/stable/std/backtrace/index.html)
 - [The Rust Programming Language — Fearless Concurrency](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
 - [Cargo Book — Workspaces / lockfile discipline (delivery context)](https://doc.rust-lang.org/cargo/reference/workspaces.html)
+- [tracing-subscriber on crates.io](https://crates.io/crates/tracing-subscriber)
+- [tracing-log on crates.io](https://crates.io/crates/tracing-log)
+- [OpenTelemetry](https://opentelemetry.io/docs/)
 - [crates.io](https://crates.io/)

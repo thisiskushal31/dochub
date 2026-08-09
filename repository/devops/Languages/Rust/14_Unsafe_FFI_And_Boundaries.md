@@ -199,6 +199,42 @@ Older editions can use the new forms on recent rustc; Edition 2024 makes them ma
 
 Your crate may be safe while a dependency’s `unsafe` is unsound. Audits and `cargo` tooling (later security chapter) treat transitive unsafe as part of your risk budget.
 
+### 12. Passing strings across FFI (`CString` → `*const c_char`)
+
+C APIs almost always want **nul-terminated** bytes (`*const c_char` / `*mut c_char`). Rust side:
+
+1. Build **`CString`** from text (`CString::new` fails on interior `0` bytes—handle that `Result`).
+2. Pass **`cstring.as_ptr()`** (or `into_raw` when transferring ownership) **only while** the owner lives, or after a documented handoff.
+3. Document **who frees**:
+   - Rust-owned buffer borrowed into C for the call → keep the `CString` alive across the call; do **not** let C `free` it.
+   - Ownership transferred to C → use the foreign free API C documents (often not Rust’s allocator); pair with `CString::from_raw` only when you reclaimed a pointer you previously `into_raw`’d under the same allocator.
+   - C returns a string → free with the C API (or wrap immediately into owned Rust data and free once).
+
+Never pass `String::as_ptr()` as a C string (no guaranteed trailing nul; not the FFI type). Prefer chapter 11’s `CString`/`CStr` rules at the ops edge; this section is the ownership contract reviewers must see next to every export/import.
+
+### 13. `core` / `alloc` / `std` layering (`no_std` + allocator awareness)
+
+Rust’s library stack is layered:
+
+| Crate | Provides | Typical consumers |
+|-------|----------|-------------------|
+| **`core`** | Language primitives, slices, `Option`/`Result`, no allocator assumption | `#![no_std]` firmware, kernels |
+| **`alloc`** | Heap types (`Vec`, `String`, `Box`) when an allocator exists | `no_std` + allocator, some embedded |
+| **`std`** | OS / threads / fs / net / env on top of `alloc`+`core` | Hosted CLIs, agents, servers |
+
+`std` re-exports much of `core`/`alloc`. FFI and embedded work often targets **`no_std`** plus an explicit global allocator story. Awareness for staff: linking a `cdylib` into a foreign process may share or conflict with **that process’s allocator**; do not assume every heap pointer can be `free`d with the other language’s default free. Document allocator assumptions in the FFI crate README when you ship native artifacts (see also chapter 18 for `no_std` product shapes).
+
+### 14. Custom global allocators (advanced opt-in)
+
+Rust allows replacing the global allocator (`#[global_allocator]`, `GlobalAlloc` trait) with alternate implementations (jemalloc-/mimalloc-class crates in the ecosystem, or platform-specific ones). This is an **advanced, measured opt-in**:
+
+- Change only with **benchmarks and production metrics** (RSS, fragmentation, latency tails)—not because a blog post named an allocator.
+- Allocator choice interacts with FFI (who allocated a buffer), embedded constraints, and some sanitizer/tooling setups.
+- Default system allocator is the correct starting point for most services; custom allocators are a capacity/latency experiment with a rollback plan.
+- Do not cargo-cult a global allocator into every binary “for performance.”
+
+Staff review asks for the measurement that justified the change and for FFI free-compatibility notes.
+
 ---
 
 ## 3. Applications and use cases
@@ -230,13 +266,15 @@ Your crate may be safe while a dependency’s `unsafe` is unsound. Audits and `c
 
 - Every `unsafe` block has a **Safety** justification tied to checked preconditions nearby.
 - Public API is safe by default; `unsafe fn` is rare and documented.
-- FFI ownership (alloc/free), nullability, alignment, and threading are written down.
+- FFI ownership (alloc/free), nullability, alignment, and threading are written down—including **string** buffers (`CString` lifetime vs `into_raw` / foreign free).
 - Panic strategy across FFI is defined (catch, abort, or proven non-unwind) and tested.
 - `cdylib` / `staticlib` / `rlib` choice matches the consumer; exports use `extern "C"` + mangling attributes with `repr(C)` where needed.
 - Edition 2024 crates use `unsafe extern` and `#[unsafe(no_mangle)]` (etc.) with SAFETY notes; migration reviewed against real headers.
 - Layout claims backed by `size_of` / `align_of` / `offset_of` tests on ship targets; packed/align hazards documented.
 - `PhantomData` / `NonNull` choices match ownership and nullability stories.
 - `MaybeUninit` and raw slices are initialized before reads.
+- `no_std` / `alloc` / `std` layering and allocator handoff across FFI are documented when relevant.
+- Custom **`#[global_allocator]`** changes cite measurements—not fashion.
 - No casual `unsafe impl Send/Sync`.
 - `forbid(unsafe_code)` applied where the crate should stay pure; inventory exists where not.
 - Reviewers treat new `unsafe` like a security change, not a style nit.
@@ -248,6 +286,7 @@ Your crate may be safe while a dependency’s `unsafe` is unsound. Audits and `c
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
 - [The Rustonomicon — FFI](https://doc.rust-lang.org/nomicon/ffi.html)
 - [The Book — Unsafe Rust](https://doc.rust-lang.org/stable/book/ch19-01-unsafe-rust.html)
+- [Embedded Rust Book — A `no_std` Rust Environment](https://docs.rust-embedded.org/book/intro/no-std.html)
 - [The Rust Reference — Unsafety](https://doc.rust-lang.org/stable/reference/unsafety.html)
 - [The Rust Reference — External blocks](https://doc.rust-lang.org/stable/reference/items/external-blocks.html)
 - [The Rust Reference — Function ABI](https://doc.rust-lang.org/stable/reference/items/functions.html#extern-function-qualifier)
@@ -260,6 +299,12 @@ Your crate may be safe while a dependency’s `unsafe` is unsound. Audits and `c
 - [`std::marker::PhantomData`](https://doc.rust-lang.org/stable/std/marker/struct.PhantomData.html)
 - [`std::panic::catch_unwind`](https://doc.rust-lang.org/stable/std/panic/fn.catch_unwind.html)
 - [`std::ffi`](https://doc.rust-lang.org/stable/std/ffi/)
+- [`std::ffi::CString`](https://doc.rust-lang.org/stable/std/ffi/struct.CString.html)
+- [`std::ffi::CStr`](https://doc.rust-lang.org/stable/std/ffi/struct.CStr.html)
+- [`std::alloc`](https://doc.rust-lang.org/stable/std/alloc/)
+- [`std::alloc::GlobalAlloc`](https://doc.rust-lang.org/stable/std/alloc/trait.GlobalAlloc.html)
+- [`core`](https://doc.rust-lang.org/stable/core/)
+- [`alloc`](https://doc.rust-lang.org/stable/alloc/)
 - [`extern` keyword](https://doc.rust-lang.org/stable/std/keyword.extern.html)
 - [The Rust Reference — Type layout / `repr`](https://doc.rust-lang.org/stable/reference/type-layout.html)
 - [Edition Guide](https://doc.rust-lang.org/edition-guide/)

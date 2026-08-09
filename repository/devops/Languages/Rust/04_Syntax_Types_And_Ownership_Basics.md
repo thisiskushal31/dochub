@@ -284,6 +284,33 @@ Staff bar: new `macro_rules!` in application code needs a one-line justification
 | “type annotations needed” | Inference failed at a boundary or unused generic |
 | `break` value type mismatch | Arms of `break expr` disagree, or used on `while`/`for` expecting `()` |
 
+### 11. Integer overflow: debug panic vs release wrap
+
+For the ordinary arithmetic operators (`+`, `-`, `*`, and friends) on signed and unsigned integers, **debug** builds check overflow and **panic** when a result does not fit the type. **Release** builds typically **wrap** in two’s complement (the same family of wrapping as `wrapping_*`). That profile split is intentional for performance, but it means a bug that panics in CI debug can silently wrap in production if you never test release semantics.
+
+When overflow is part of the contract—lengths from the network, counters near type maxima, money-like integer units—do **not** rely on “debug will catch it.” Choose an explicit method family:
+
+| Family | Behavior on overflow |
+|--------|----------------------|
+| **`checked_*`** | Returns `Option` (`None` if overflow) |
+| **`saturating_*`** | Clamps to `MIN`/`MAX` of the type |
+| **`wrapping_*`** | Wraps modulo the type’s range (always defined) |
+| **`overflowing_*`** | Returns `(result, bool)` — wrapped value plus whether overflow occurred |
+
+Pick by domain: protocol lengths usually want `checked_*` (reject); counters that must never panic may want `saturating_*`; cryptography and bit-twiddling often want `wrapping_*` deliberately. Document the choice at API boundaries.
+
+### 12. Floats: NaN and equality
+
+`f32` and `f64` follow IEEE-754. **NaN** compares unequal to everything, including itself: `nan == nan` is `false`. Partial ordering means `PartialEq`/`PartialOrd` apply; there is no total `Eq`/`Ord` for floats in `std` for that reason.
+
+Do **not** use raw `==` on floats for money, identifiers, map keys, or “exact” config matches. Prefer integers (fixed-point cents, scaled units), decimal crates when the domain demands them, or explicit tolerances for scientific comparisons. Hashing floats as keys is a design smell—NaN and signed-zero edge cases surprise callers.
+
+### 13. `char`, Unicode scalars, and UTF-8 indexing cost
+
+A Rust **`char`** is a Unicode **scalar value** (roughly: a code point excluding surrogates), always four bytes in memory—not a C `char` and not a grapheme cluster users see on screen.
+
+`str` / `String` store **UTF-8 bytes**. `len()` is a **byte** count. Indexing by “character number” is not O(1): finding the *n*th scalar requires walking UTF-8 (or using iterators like `chars()`). Byte slicing (`get`, ranges) is only valid on **char boundaries**; mid-code-unit slices panic or return `None` depending on the API. Grapheme clusters (emoji with modifiers, combining marks) need Unicode-segmentation logic beyond `chars()`—know that “one user-perceived character” ≠ one `char` ≠ one byte.
+
 ---
 
 ## 3. Applications and use cases
@@ -294,12 +321,19 @@ Staff bar: new `macro_rules!` in application code needs a one-line justification
 - Use `loop` + `break value` for search/retry that yields a result; use `for` for iterator walks.
 - Use shadowing for staged parsing (`raw` → `trimmed` → `parsed`) when it improves clarity; otherwise name intermediates.
 - Default to immutable bindings; justify every `mut` in review.
+- Prefer integer or newtyped IDs over floats for anything that must round-trip or key a map.
+
+### Numeric and text boundaries
+
+- Decide overflow policy (`checked` / `saturating` / `wrapping`) at the module that accepts untrusted sizes; fuzz or property-test the release path when wrap would be security-relevant.
+- Treat string length in protocols as **bytes** unless you explicitly document Unicode scalar or grapheme rules; never assume `s[i]` works like in languages with UTF-16 or code-unit indexing.
 
 ### Security
 
 - Be explicit about integer widths for lengths and sizes from the network; check overflows.
 - Do not treat `unwrap()` on parse results as acceptable at untrusted boundaries—progress to `Result` in the error-handling chapter.
 - Remember UTF-8: validating text protocols needs encoding awareness, not C-string assumptions.
+- Do not trust debug-only overflow panics as a production security control.
 
 ### Reliability
 
@@ -314,7 +348,9 @@ Staff bar: new `macro_rules!` in application code needs a one-line justification
 ### Staff-level review checklist
 
 - Public functions have clear parameter/return types; no surprise `mut` on arguments without need.
-- No silent reliance on debug-only overflow panics for security checks.
+- No silent reliance on debug-only overflow panics for security checks; security-relevant math uses `checked_*` / `saturating_*` / explicit policy.
+- Floats are not used for money or identity; NaN/`==` pitfalls acknowledged.
+- String APIs treat `len` as bytes; no assumptions of O(1) “character” indexing.
 - Moves of owned buffers (`String`, `Vec`) are intentional; accidental use-after-move is fixed by borrow/redesign, not by sprinkling `.clone()` everywhere without thought.
 - New code avoids obsolete `try!` and 2015-only module noise unless maintaining that edition.
 - Team agrees on formatting (`rustfmt`) so expression-vs-statement style stays consistent.
@@ -324,6 +360,7 @@ Staff bar: new `macro_rules!` in application code needs a one-line justification
 ## References
 
 - [The Rust Programming Language — Common Programming Concepts](https://doc.rust-lang.org/stable/book/ch03-00-common-programming-concepts.html)
+- [The Rust Programming Language — Data Types](https://doc.rust-lang.org/stable/book/ch03-02-data-types.html)
 - [The Rust Programming Language — Variables and Mutability](https://doc.rust-lang.org/stable/book/ch03-01-variables-and-mutability.html)
 - [The Rust Programming Language — Control Flow](https://doc.rust-lang.org/stable/book/ch03-05-control-flow.html)
 - [The Rust Programming Language — Understanding Ownership](https://doc.rust-lang.org/stable/book/ch04-00-understanding-ownership.html)
@@ -334,6 +371,9 @@ Staff bar: new `macro_rules!` in application code needs a one-line justification
 - [The Rust Reference — Macros by example](https://doc.rust-lang.org/stable/reference/macros-by-example.html)
 - [The Rust Reference — Never type](https://doc.rust-lang.org/stable/reference/types/never.html)
 - [Primitive Type `str`](https://doc.rust-lang.org/stable/std/primitive.str.html)
+- [Primitive Type `char`](https://doc.rust-lang.org/stable/std/primitive.char.html)
+- [Primitive Type `f64`](https://doc.rust-lang.org/stable/std/primitive.f64.html)
+- [Primitive Type `u32` (checked / wrapping / saturating / overflowing)](https://doc.rust-lang.org/stable/std/primitive.u32.html)
 - [Primitive Type `!` (never)](https://doc.rust-lang.org/stable/std/primitive.never.html)
 - [Struct `String`](https://doc.rust-lang.org/stable/std/string/struct.String.html)
 - [The Rust Reference — Types](https://doc.rust-lang.org/stable/reference/types.html)

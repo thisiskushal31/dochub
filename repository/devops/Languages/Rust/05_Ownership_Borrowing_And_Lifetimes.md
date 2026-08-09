@@ -233,6 +233,28 @@ Prefer **`&T` / `&mut T`** when a caller already owns the data. Use **`Box`** wh
 
 By contrast, cloning the **inner** value (`(*arc).clone()` when `T: Clone`, or cloning a `Vec`/`String` you extracted) duplicates the payload and can allocate. Review habit: in hot paths, ask whether you needed another **handle** (`Arc::clone`) or another **copy of the data**. Shared immutable config behind `Arc` is a common agent pattern; deep-cloning large structures per request usually is not.
 
+### 11. `Weak<T>`: breaking `Rc` / `Arc` cycles
+
+**Strong** references (`Rc` / `Arc`) keep the allocation alive. If A owns B and B owns A through strong counts, neither count reaches zero—the cycle **leaks**. **`Weak<T>`** (from `std::rc` or `std::sync`) is a non-owning handle: it does not keep the value alive. Upgrade with **`upgrade()`** → `Option<Rc<T>>` / `Option<Arc<T>>` (None if already dropped).
+
+Typical pattern: parent holds `Rc`/`Arc` children; child holds **`Weak`** back to parent (or cache → owner). Staff rule: any long-lived graph with back-edges should name which edges are weak. Prefer clear single-owner trees when you can; reach for `Weak` when shared ownership is real and cycles would otherwise form.
+
+### 12. Interior mutability (reminder → chapter 12)
+
+Ownership and borrowing assume **aliasability XOR mutability** through ordinary references. When you need mutation behind a shared `&` (or shared ownership), that is **interior mutability**: `Cell` / `RefCell` (single-threaded), `Mutex` / `RwLock` / atomics (multi-threaded). Those types enforce rules at runtime or with hardware atomics; they do not erase the ownership model—they localize where exclusivity is checked later. Details, failure modes (`RefCell` panic, mutex poison), and `Send`/`Sync` choice live in **chapter 12**. Do not invent ad hoc `unsafe` mutation to dodge the borrow checker.
+
+### 13. Lifetime bounds on trait objects (`dyn Trait + 'a`)
+
+A trait object carries not only the trait but often a **lifetime bound**: `dyn Trait + 'a` means every borrow inside the erased concrete type outlives `'a`. Common forms:
+
+| Form | Intuition |
+|------|-----------|
+| **`dyn Trait + 'static`** | No short borrows; owned or `'static` data (typical for spawned tasks and many error objects) |
+| **`dyn Trait + 'a`** | May borrow data tied to `'a` (borrowed trait objects, short-lived adapters) |
+| **`Box<dyn Trait>`** | Often elides to `+ 'static` in practice for owned boxes—spell `'a` when the object borrows |
+
+You write the bound when storing or returning trait objects that borrow. If the compiler demands `'static`, it is asking for owned data (or a longer borrow), not for a lifetime annotation ritual. Prefer owned `Box<dyn Trait>` at process-long boundaries; use `dyn Trait + 'a` when zero-copy adapters genuinely borrow caller buffers.
+
 ---
 
 ## 3. Applications and use cases
@@ -276,6 +298,8 @@ By contrast, cloning the **inner** value (`(*arc).clone()` when `T: Clone`, or c
 - `.clone()` in tight loops is justified with a comment or replaced by borrowing.
 - Concurrent access patterns name the lock/ownership strategy; shared mutation is not “we'll add mutex later.”
 - Tests or examples demonstrate non-dangling use of any returned references.
+- Graphs with `Rc`/`Arc` back-edges use **`Weak`** (or a single-owner redesign); cycles are an explicit leak class.
+- Trait objects that borrow spell **`dyn Trait + 'a`**; process-long objects are `'static` or owned.
 
 ---
 
@@ -286,6 +310,8 @@ By contrast, cloning the **inner** value (`(*arc).clone()` when `T: Clone`, or c
 - [The Rust Programming Language — The Slice Type](https://doc.rust-lang.org/stable/book/ch04-03-slices.html)
 - [The Rust Programming Language — Validating References with Lifetimes](https://doc.rust-lang.org/stable/book/ch10-03-lifetime-syntax.html)
 - [The Rust Programming Language — Smart Pointers](https://doc.rust-lang.org/stable/book/ch15-00-smart-pointers.html)
+- [The Rust Programming Language — `Rc<T>` and the `Weak<T>` type](https://doc.rust-lang.org/stable/book/ch15-06-reference-cycles.html)
+- [The Rust Programming Language — Using Trait Objects That Allow for Values of Different Types](https://doc.rust-lang.org/stable/book/ch17-02-trait-objects.html)
 - [The Rustonomicon — Lifetimes](https://doc.rust-lang.org/nomicon/lifetimes.html)
 - [The Rust Reference — Destructors](https://doc.rust-lang.org/stable/reference/destructors.html)
 - [`Drop`](https://doc.rust-lang.org/stable/std/ops/trait.Drop.html)
@@ -293,7 +319,9 @@ By contrast, cloning the **inner** value (`(*arc).clone()` when `T: Clone`, or c
 - [`ManuallyDrop`](https://doc.rust-lang.org/stable/std/mem/struct.ManuallyDrop.html)
 - [`Box`](https://doc.rust-lang.org/stable/std/boxed/struct.Box.html)
 - [`Rc`](https://doc.rust-lang.org/stable/std/rc/struct.Rc.html)
+- [`std::rc::Weak`](https://doc.rust-lang.org/stable/std/rc/struct.Weak.html)
 - [`Arc`](https://doc.rust-lang.org/stable/std/sync/struct.Arc.html)
+- [`std::sync::Weak`](https://doc.rust-lang.org/stable/std/sync/struct.Weak.html)
 - [`Cow`](https://doc.rust-lang.org/stable/std/borrow/enum.Cow.html)
 - [Rust Standard Library](https://doc.rust-lang.org/stable/std/)
 - [Edition Guide](https://doc.rust-lang.org/edition-guide/)

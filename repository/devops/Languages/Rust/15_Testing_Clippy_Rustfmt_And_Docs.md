@@ -212,6 +212,34 @@ Document which sanitizers your org runs and on which OS images.
 
 Measure **which tests exercise which lines/regions** with coverage tooling integrated with `cargo` (llvm-cov-class and similar ecosystem workflows). Goals: find untested error paths and unsafe modules—not a vanity percentage or a specific SaaS vendor. Fail CI on coverage only if the team owns a realistic policy (critical modules, not “100% or bust”). Store reports as build artifacts; keep the practice portable across forges.
 
+### 14. Snapshot / golden testing (insta-class practice)
+
+**Snapshot** (golden-file) tests assert that a rendered artifact—CLI help text, pretty-printed config, serialized diagnostics—matches a checked-in expected blob. Ecosystem crates in the **insta** class automate store/update/review of those blobs. Useful when:
+
+- Output is large or formatting-sensitive and hand-written `assert_eq!` strings rot.
+- You care that operator-facing text or config dumps stay stable across refactors.
+- Reviewers want a diff of the golden file as the change surface.
+
+Staff rules: commit goldens deliberately; require review when they change; keep snapshots **deterministic** (no timestamps, absolute paths, or host-dependent noise); prefer targeted unit assertions for small invariants and snapshots for whole surfaces. Snapshot testing is ecosystem practice, not a Cargo built-in—pin versions like any other test dependency.
+
+### 15. Contract tests at I/O boundaries
+
+Beyond in-process unit tests, **contract tests** lock the shape of data crossing a trust or process boundary: CLI stdout/stderr and exit codes, config file parse/print round-trips, HTTP request/response schemas you own, or subprocess argv conventions. Place them under `tests/` (or a dedicated crate) so they exercise the **public** surface the way operators and peers will. Fail closed on schema drift; keep fixtures sanitized (no live secrets). Pair with chapter 11 I/O patterns: tempdirs, timeouts, and explicit env—ambient home directories make contract suites flake.
+
+### 16. `RUSTFLAGS` in CI (deny warnings—without overprescribing)
+
+**`RUSTFLAGS`** (and Cargo’s `[build] rustflags` / target-specific config) pass extra flags to `rustc`. Teams sometimes set deny-warnings style flags in CI so new compiler warnings cannot accumulate. Prefer the **Clippy** `-D warnings` gate (and rustc’s own deny where you already use it) as the primary policy; reach for workspace-wide `RUSTFLAGS` only when you have a documented need (for example forcing a lint group the team owns).
+
+Caution:
+
+- Global `RUSTFLAGS` affect every crate in the graph build, including dependencies—surprises and slower builds are common.
+- Do not copy laptop-only flags (for example CPU-specific codegen) into portable CI (chapter 16).
+- Document the flag set next to the toolchain pin; changing `RUSTFLAGS` invalidates incremental/cache assumptions.
+
+### 17. rust-analyzer / IDE (navigation, not a tutorial)
+
+For day-to-day reading and review, install **rust-analyzer** (the official LSP implementation distributed via rustup/editor extensions) so jump-to-definition, find-references, and inline diagnostics match the pinned toolchain. Treat the IDE as a navigation aid: Cargo/`rustc`/Clippy in CI remain the source of truth. This handbook does not teach editor setup—use the rust-analyzer manual when wiring a new machine.
+
 ---
 
 ## 3. Applications and use cases
@@ -219,8 +247,8 @@ Measure **which tests exercise which lines/regions** with coverage tooling integ
 ### Software engineering
 
 - Put policy in CI, not in tribal “remember to fmt.”
-- Use unit tests for invariants and edge cases; integration tests for CLI/contract behavior.
-- Keep examples in rustdoc executable whenever feasible.
+- Use unit tests for invariants and edge cases; integration and **contract** tests for CLI/I/O boundary behavior; snapshots for large stable surfaces.
+- Keep examples in rustdoc executable whenever feasible; use rust-analyzer for navigation, CI for truth.
 
 ### Security
 
@@ -251,9 +279,12 @@ Measure **which tests exercise which lines/regions** with coverage tooling integ
 - Property-test and bench dependencies (ecosystem) are version-pinned; benches are optional and not noisy merge blockers.
 - Unsafe-heavy crates run **Miri** (and optionally sanitizers) on a defined cadence; platform limits documented.
 - Untrusted parsers have fuzz targets; coverage used to find gaps—not as SaaS lock-in or vanity gates.
+- Snapshot/golden tests (insta-class) used only for stable operator-facing surfaces; goldens reviewed on change.
+- Contract tests cover CLI/config/I/O boundaries you own; fixtures have no secrets.
+- CI `RUSTFLAGS` (if any) are documented and not over-applied to the whole dependency graph.
 - `#[allow(clippy::…)]` has a justification comment; no repo-wide allow of broad groups without ADR.
 - Flaky tests are fixed or quarantined with owners—not silently ignored.
-- Contributors can run the same three commands locally before push.
+- Contributors can run the same three commands locally before push; rust-analyzer recommended for navigation.
 
 ---
 
@@ -274,4 +305,7 @@ Measure **which tests exercise which lines/regions** with coverage tooling integ
 - [Miri (rust-lang/miri)](https://github.com/rust-lang/miri)
 - [The rustc Book — Sanitizers](https://doc.rust-lang.org/rustc/sanitizer.html)
 - [Rust Fuzz Book](https://rust-fuzz.github.io/book/)
+- [The rustc Book — Codegen options (context for `RUSTFLAGS`)](https://doc.rust-lang.org/rustc/codegen-options/index.html)
+- [The Cargo Book — Configuration (`build.rustflags`)](https://doc.rust-lang.org/cargo/reference/config.html)
+- [rust-analyzer manual](https://rust-analyzer.github.io/manual.html)
 - [crates.io — registry overview](https://crates.io/)

@@ -165,6 +165,33 @@ Module privacy is a **maintainability and API** boundary, not a sandbox. Unsafe 
 
 `mod tests { ... }` inside a file (with `#[cfg(test)]`) keeps unit tests next to code. Inline private `mod` blocks are fine for small sealed helpers; grow into files when navigation suffers.
 
+### 11. Rust API Guidelines as a staff checklist for public crates
+
+Before you treat a library crate as publishable, run the public surface against the **Rust API Guidelines**—naming, conversions (`From`/`AsRef`), error types, documentation, and semver-minded design. Use it as a **review checklist**, not a citation dump inside module docs: the guidelines live under References. Pair them with this chapter’s visibility rules (`pub` reachability, re-exports, `non_exhaustive`) so “compiles and is exported” is not mistaken for “is a good crate API.”
+
+### 12. Crate-level docs and README for crates.io consumers
+
+Publishable crates need a **consumer-facing** story beyond private module comments:
+
+- **Crate-level rustdoc** (`//!` on `lib.rs`, or `#![doc = include_str!("…")]`) — what the crate is for, feature flags, MSRV if you promise one, and a short example.
+- **README** — often rendered on crates.io and as the first human landing page; keep it aligned with rustdoc (same crate name, same features, one working example).
+- **Module docs on `pub` items** — every public type/trait/function should say role, ownership, panic/error conditions, and whether it is cheap to clone or `Send`.
+
+Internal workspace crates that are never published can be thinner, but anything on the default members path to crates.io should meet the same bar you would accept as a dependent.
+
+### 13. Workspace vs publishable crate boundaries
+
+A **Cargo workspace** is a development and CI grouping; **publishability** is per-crate:
+
+| Concern | Workspace | Publishable crate |
+|---------|-----------|-------------------|
+| Visibility | Members may depend on each other via path; still only via each crate’s `pub` API | Downstream crates.io users see only what you publish |
+| Versioning | Path deps and `[workspace.package]` ease local churn | Semver and yanked versions matter; path deps must become version deps for publish |
+| Surface | Fine to have `*-internal` / unpublished members | Only crates with a deliberate public API and docs should be published |
+| Features | Can coordinate across members in CI | Feature flags become part of the published contract |
+
+Staff rule: do not publish a crate just because it sits in the workspace. Keep glue binaries, scratch pads, and tightly coupled internals **unpublished** (`publish = false` in `Cargo.toml` when needed). Publish the stable library façades; keep workspace edges for compile-time separation, not as an excuse to expose every member.
+
 ---
 
 ## 3. Applications and use cases
@@ -174,6 +201,7 @@ Module privacy is a **maintainability and API** boundary, not a sandbox. Unsafe 
 - Design the **public module tree** as a product: shallow, stable names; private `internal` / `detail` modules for churn.
 - Document the intended entrypoints in `lib.rs` (and crate-level docs).
 - Match filesystem layout to cognitive layout—one major domain area per top-level module.
+- For crates you ship publicly, walk the Rust API Guidelines checklist before the first publish and on major bumps.
 
 ### API and semver
 
@@ -181,16 +209,19 @@ Module privacy is a **maintainability and API** boundary, not a sandbox. Unsafe 
 - Changing a type from re-exported path A to B is breaking if you drop the old `pub use`.
 - `pub(crate)` helpers freely; promote to `pub` only with docs and tests.
 - Use `#[doc(hidden)]` for macro/compat internals—not as a substitute for true privacy.
+- Keep README + crate-level rustdoc in sync with features and examples consumers will copy.
 
 ### Large codebases and workspaces
 
 - Split crates when compile times or ownership boundaries demand it; use a workspace (chapter 03).
 - Integration tests in `tests/` exercise the public crate surface—the same surface external users see.
+- Mark non-publishable members explicitly; do not blur “workspace member” with “public product.”
 
 ### Delivery and ops tooling
 
 - CLI packages: `lib.rs` for logic + tests; `main.rs` / `src/bin` for entrypoints; features for optional backends.
 - Avoid circular crate dependencies in workspaces—extract a small shared crate instead.
+- Publish only the libraries other orgs should depend on; ship CLIs as binaries/releases without forcing every helper crate onto crates.io.
 
 ### Reliability and reviewability
 
@@ -208,6 +239,8 @@ Module privacy is a **maintainability and API** boundary, not a sandbox. Unsafe 
 - Feature-gated modules documented in README/`Cargo.toml` and crate docs; docs builds enable advertised features.
 - `#[doc(hidden)]` justified; no “hidden but load-bearing” public API without a comment.
 - Workspace crates depend on public APIs only; invariants do not rely on sibling `pub(crate)`.
+- Publishable crates reviewed against Rust API Guidelines; README and crate-level rustdoc present and aligned.
+- Non-publishable workspace members marked; publish boundary intentional.
 
 ---
 
@@ -224,8 +257,13 @@ Module privacy is a **maintainability and API** boundary, not a sandbox. Unsafe 
 - [Cargo Book: Package Layout](https://doc.rust-lang.org/stable/cargo/guide/project-layout.html)
 - [Cargo Book: SemVer Compatibility](https://doc.rust-lang.org/stable/cargo/reference/semver.html)
 - [Cargo Book: Features](https://doc.rust-lang.org/stable/cargo/reference/features.html)
+- [Cargo Book: Publishing on crates.io](https://doc.rust-lang.org/stable/cargo/reference/publishing.html)
+- [Cargo Book: Workspaces](https://doc.rust-lang.org/stable/cargo/reference/workspaces.html)
 - [The Reference: Visibility and Privacy](https://doc.rust-lang.org/stable/reference/visibility-and-privacy.html)
 - [The Reference: Items — Modules](https://doc.rust-lang.org/stable/reference/items/modules.html)
 - [rustdoc: `#[doc(hidden)]`](https://doc.rust-lang.org/stable/rustdoc/write-documentation/the-doc-attribute.html)
+- [rustdoc: What is rustdoc?](https://doc.rust-lang.org/stable/rustdoc/what-is-rustdoc.html)
 - [Edition Guide: Path and module system changes](https://doc.rust-lang.org/edition-guide/rust-2018/module-system/path-clarity.html)
 - [std prelude](https://doc.rust-lang.org/stable/std/prelude/index.html)
+- [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
+- [crates.io](https://crates.io/)

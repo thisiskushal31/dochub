@@ -189,6 +189,47 @@ Edition **2024** tightens patterns that mix **match ergonomics** with explicit `
 
 In Edition **2024**, temporaries created while evaluating an **`if let` scrutinee** are dropped **before** control enters the `else` branch (shorter scope than in 2021). That can change borrow lifetimes—especially around mutex/rwlock guards, `RefCell` borrows, and other values with meaningful `Drop`. Code that accidentally relied on a temporary living through `else` may fail to compile or change drop order at runtime. Related: **tail-expression** temporary drop order also changed in 2024 (borrow checker and drop timing at the end of blocks/functions). If you need the longer 2021-style `if let` scrutinee temporary, rewriting as **`match`** preserves the older temporary extent. Run tests after edition bumps; do not assume pattern-only migrations are borrow-neutral. Details live in the Edition Guide entries listed under References.
 
+### 11. Builder pattern: consuming vs non-consuming
+
+For complex configuration (many optional fields, validation that only makes sense at the end), a **builder** keeps the finished type’s fields private and accumulates settings on a separate type—often ending in `build() -> Result<Config, Error>`.
+
+Two common ownership styles:
+
+| Style | Typical methods | When |
+|-------|-----------------|------|
+| **Consuming** | `fn host(self, …) -> Self` | Fluent chains; each step takes ownership of the builder and returns it—natural when builders are not reused mid-chain |
+| **Non-consuming** | `fn host(&mut self, …) -> &mut Self` | Callers set fields across conditionals/loops without rebinding; `build` may take `&self` (clone) or `self` (consume) |
+
+Either style pairs with **newtypes** already in this chapter (`Port(u16)`, typed IDs): the builder accepts or produces newtypes so illegal bare integers never enter the finished struct. Prefer builders when `Config { … }` literals would force public fields or a combinatorial explosion of constructors; prefer a simple `new` + setters when only a few fields exist.
+
+### 12. Typestate pattern (illegal states as types)
+
+**Typestate** encodes protocol or lifecycle stages in the **type** so illegal transitions fail to compile. Instead of `struct Conn { connected: bool }` (where methods must runtime-check), you use distinct types—or a generic marker—for “unconnected” vs “connected,” and only the connected type exposes `send`.
+
+A high-level sketch with a marker and **`PhantomData`** (zero-sized; tells the compiler the type parameter is intentional):
+
+```rust
+use std::marker::PhantomData;
+
+struct Unconnected;
+struct Connected;
+
+struct Client<S> {
+    // real fields omitted
+    _state: PhantomData<S>,
+}
+
+impl Client<Unconnected> {
+    fn connect(self) -> Client<Connected> { /* … */ Client { _state: PhantomData } }
+}
+
+impl Client<Connected> {
+    fn send(&self, _msg: &[u8]) { /* … */ }
+}
+```
+
+Callers cannot call `send` until `connect` has produced `Client<Connected>`. Combine with newtypes for IDs/handles carried across states. Cost: more types and `impl` blocks; payoff: invariants enforced without scattered `if !ready` checks. Prefer enums with exhaustive `match` when states are data-carrying variants handled in one place; prefer typestate when **methods themselves** must disappear in illegal phases.
+
 ---
 
 ## 3. Applications and use cases
@@ -198,6 +239,8 @@ In Edition **2024**, temporaries created while evaluating an **`if let` scrutine
 - Model domain states as enums (`Connection::Connected { .. } | Connecting | Closed`) instead of booleans that allow impossible combinations.
 - Keep structs small and focused; nest types rather than one mega-struct with twenty optional fields that are only valid in some modes.
 - Put invariants in constructors (`Config::new` validates port ranges) and keep fields private.
+- Use builders for multi-field config with end-of-build validation; use typestate when method availability must track lifecycle.
+- Newtypes (`Port`, `UserId`) remain the first line of defense against mixed integers; builders and typestate layer on top, not instead.
 
 ### API and library boundaries
 
@@ -228,6 +271,8 @@ In Edition **2024**, temporaries created while evaluating an **`if let` scrutine
 - Matches on internal enums avoid silent `_` without justification.
 - Methods take `&self` / `&mut self` / `self` appropriately; no unnecessary clones to satisfy the borrow checker.
 - Newtypes used for units and IDs that cross API boundaries.
+- Builders: consuming vs `&mut self` style chosen deliberately; `build` validates invariants.
+- Typestate used only where illegal method calls are a real risk—not ceremony for simple CRUD types.
 - `Option`/`Result` shapes used instead of sentinels at module edges.
 
 ---
@@ -243,6 +288,7 @@ In Edition **2024**, temporaries created while evaluating an **`if let` scrutine
 - [Rust By Example: if let](https://doc.rust-lang.org/stable/rust-by-example/flow_control/if_let.html)
 - [std::option::Option](https://doc.rust-lang.org/stable/std/option/enum.Option.html)
 - [std::result::Result](https://doc.rust-lang.org/stable/std/result/enum.Result.html)
+- [std::marker::PhantomData](https://doc.rust-lang.org/stable/std/marker/struct.PhantomData.html)
 - [The Reference: Items — Structures](https://doc.rust-lang.org/stable/reference/items/structs.html)
 - [The Reference: Items — Enumerations](https://doc.rust-lang.org/stable/reference/items/enumerations.html)
 - [The Reference: Patterns](https://doc.rust-lang.org/stable/reference/patterns.html)
@@ -251,3 +297,4 @@ In Edition **2024**, temporaries created while evaluating an **`if let` scrutine
 - [Edition Guide — if let temporary scope](https://doc.rust-lang.org/edition-guide/rust-2024/temporary-if-let-scope.html)
 - [Edition Guide — Tail expression temporary scope](https://doc.rust-lang.org/edition-guide/rust-2024/temporary-tail-expr-scope.html)
 - [Edition Guide — Rust 2024](https://doc.rust-lang.org/edition-guide/rust-2024/index.html)
+- [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)

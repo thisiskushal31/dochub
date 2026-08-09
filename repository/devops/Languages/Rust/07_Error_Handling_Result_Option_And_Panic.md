@@ -186,6 +186,26 @@ Tests use `unwrap`/`expect` freely when failure should fail the test. Doc exampl
 
 These panic with intent signals. `todo!` / `unimplemented!` mark incomplete code. `unreachable!` documents arms the author believes cannot run—if they do, you have a bug. Prefer exhaustive matches that make `unreachable!` unnecessary when the type system can prove coverage.
 
+### 11. `RUST_BACKTRACE` and panic backtraces (ops debugging)
+
+When a thread panics under the default unwind runtime, Rust can capture a **backtrace** to show where the panic originated. Operators and developers enable this with the environment variable **`RUST_BACKTRACE`**:
+
+- `RUST_BACKTRACE=1` (or `true`) — request a backtrace on panic.
+- `RUST_BACKTRACE=full` — fuller / less-filtered frames when the platform supports it.
+
+Backtraces require debuginfo (or equivalent frame info) in the binary to be readable; stripped release builds may show addresses only. Capturing has a cost—leave backtraces **off** by default in latency-sensitive production unless you deliberately enable them for an incident window. Custom **`std::panic::set_hook`** handlers (chapter 19) can log panics into your telemetry pipeline; they complement, not replace, fixing the bug that panicked. `Result` errors do **not** automatically carry panic-style backtraces unless you add context libraries or explicit capture—do not expect `Err` to look like a panic dump.
+
+### 12. Error payloads: human context vs machine codes
+
+Design `E` for both operators and programs:
+
+| Audience | Prefer | Examples |
+|----------|--------|----------|
+| **Humans / ops** | Contextual messages and `source` chains | Path that failed, “while loading config”, nested I/O cause via `Error::source` |
+| **Machines / APIs** | Stable codes or typed variants | Enum discriminants, gRPC/HTTP status mapping, `kind: NotFound` fields clients match on |
+
+Staff practice: **library** error enums expose **matchable variants** (or stable codes) so callers can branch; attach **Display** text and optional context for logs. **Application** layers may wrap with extra context strings for humans while preserving a machine-readable root (`source` or an inner typed error). Avoid inventing a new string format as the only API (“parse our English message”); avoid opaque numeric codes with no documented mapping. Secrets and internal paths belong in logs under redaction policy—not in client-facing `Display` (see Security below).
+
 ---
 
 ## 3. Applications and use cases
@@ -195,11 +215,13 @@ These panic with intent signals. `todo!` / `unimplemented!` mark incomplete code
 - Put `Result` in signatures early; do not “unwrap now, fix later” on shared modules.
 - Keep error enums stable or `non_exhaustive` under semver.
 - Separate validation errors (caller fixable) from internal faults (bugs).
+- Expose stable variants or codes for programmatic handling; keep prose in `Display` / context layers.
 
 ### Library vs binary policy
 
 - **Libraries:** expected failures → `Result`; document any panic-on-misuse.
 - **Binaries/CLIs:** translate `Err` to exit codes, stderr messages, and structured logs at the rim; do not sprinkle `unwrap` through business logic.
+- Document whether operators should set `RUST_BACKTRACE` in runbooks for crash triage; do not require it for normal `Result` failure paths.
 
 ### Security and privacy
 
@@ -212,6 +234,7 @@ These panic with intent signals. `todo!` / `unimplemented!` mark incomplete code
 - Metrics: count `Err` variants and panic outcomes separately.
 - Panic hook installation and structured panic telemetry: chapter 19.
 - Retries belong around `Result` errors classified as transient—not around panics.
+- For panic incidents: enable backtraces in a controlled environment, capture the dump, then fix the invariant—do not paper over panics with retries.
 
 ### Performance
 
@@ -228,6 +251,8 @@ These panic with intent signals. `todo!` / `unimplemented!` mark incomplete code
 - `dyn Error` / downcast used only where heterogeneity is required; not the default library surface.
 - No bare swallowing of `Err` (`let _ = ...`) without logging or metric.
 - Panic strategy (`unwind` vs `abort`) known for the shipped artifact; hooks deferred to chapter 19.
+- `RUST_BACKTRACE` / debuginfo expectations documented for on-call triage of panics.
+- Errors carry matchable kinds/codes for machines and contextual `Display`/`source` for humans—neither alone.
 - User-facing error strings reviewed for information disclosure.
 
 ---
@@ -246,6 +271,7 @@ These panic with intent signals. `todo!` / `unimplemented!` mark incomplete code
 - [std::error::Error::source](https://doc.rust-lang.org/stable/std/error/trait.Error.html#method.source)
 - [Box::downcast](https://doc.rust-lang.org/stable/std/boxed/struct.Box.html#method.downcast)
 - [std::panic](https://doc.rust-lang.org/stable/std/panic/index.html)
+- [std::backtrace::Backtrace](https://doc.rust-lang.org/stable/std/backtrace/struct.Backtrace.html)
 - [Cargo Book: The panic profile setting](https://doc.rust-lang.org/stable/cargo/reference/profiles.html#panic)
 - [Edition Guide: Question mark operator](https://doc.rust-lang.org/edition-guide/rust-2018/error-handling-and-panics/the-question-mark-operator-for-easier-error-handling.html)
 - [crates.io — thiserror](https://crates.io/crates/thiserror)
