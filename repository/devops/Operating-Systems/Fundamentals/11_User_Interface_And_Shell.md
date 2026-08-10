@@ -4,6 +4,8 @@
 
 The **user interface** is how humans (and scripts) interact with the OS. The **shell** is a program that reads user input, interprets it as commands, and invokes the kernel (via system calls) or other programs to do the work. This topic is **OS-agnostic**: the role of the shell, the boundary between user space and kernel, and why the CLI matters for automation.
 
+**Deep scripting curriculum:** [Languages/Shell](../../Languages/Shell/README.md) — Bash/POSIX/zsh, PowerShell, cmd, versions, and cross-OS command depth.
+
 ---
 
 ## Kernel vs user interface

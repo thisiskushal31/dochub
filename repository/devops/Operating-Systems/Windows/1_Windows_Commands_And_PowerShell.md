@@ -4,6 +4,8 @@
 
 Windows offers two main command-line environments: **Command Prompt (cmd)** and **PowerShell**. For automation and DevOps (scripts, CI agents, configuration), PowerShell is the standard. This topic covers essential commands in both, then focuses on PowerShell basics and scripting. For how Windows is structured beneath the shell (kernel, file system, boot, registry), see [Windows architecture and structure](./0_Windows_Architecture_And_Structure.md).
 
+**Deep scripting curriculum (all OS):** [Languages/Shell](../../Languages/Shell/README.md) — PowerShell language depth, cmd/batch, and cross-OS contrasts with Bash.
+
 ---
 
 ## Command Prompt (cmd) vs PowerShell

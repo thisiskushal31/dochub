@@ -24,7 +24,7 @@
         "path": "Fundamentals/11_User_Interface_And_Shell.md",
         "type": "file",
         "sha": "",
-        "size": 7436
+        "size": 7594
       },
       {
         "name": "12_Sockets_And_Network_IO.md",
@@ -327,7 +327,7 @@
         "path": "Linux/9_Shell_And_Scripting.md",
         "type": "file",
         "sha": "",
-        "size": 30355
+        "size": 30645
       },
       {
         "name": "README.md",
@@ -426,7 +426,7 @@
         "path": "MacOS/9_Shell_And_Scripting.md",
         "type": "file",
         "sha": "",
-        "size": 3140
+        "size": 3284
       },
       {
         "name": "README.md",
@@ -554,7 +554,7 @@
         "path": "Unix/9_Shell_And_Scripting.md",
         "type": "file",
         "sha": "",
-        "size": 1861
+        "size": 1954
       },
       {
         "name": "README.md",
@@ -583,7 +583,7 @@
         "path": "Windows/1_Windows_Commands_And_PowerShell.md",
         "type": "file",
         "sha": "",
-        "size": 7312
+        "size": 7480
       },
       {
         "name": "2_Services_And_Networking.md",

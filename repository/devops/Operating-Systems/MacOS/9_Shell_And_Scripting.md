@@ -4,6 +4,8 @@
 
 **Prerequisite:** [Fundamentals: User interface and shell](../Fundamentals/11_User_Interface_And_Shell.md). Here: **default shell** (**zsh**), **scripting** with sh/bash/zsh, and **where scripts run** (Terminal, launchd, cron).
 
+**Deep scripting curriculum (all OS):** [Languages/Shell](../../Languages/Shell/README.md) — especially zsh/macOS and Bash 3.2 version pins.
+
 ---
 
 ## Default shell: zsh

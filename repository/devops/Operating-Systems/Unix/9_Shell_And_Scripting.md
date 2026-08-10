@@ -4,6 +4,8 @@
 
 **Prerequisite:** [Fundamentals: User interface and the shell](../Fundamentals/11_User_Interface_And_Shell.md). Here: **shells** on Unix — **sh**, **ksh**, **csh**, **bash** — and scripting for DevOps.
 
+**Deep scripting curriculum (all OS):** [Languages/Shell](../../Languages/Shell/README.md).
+
 ---
 
 ## Shells on Unix

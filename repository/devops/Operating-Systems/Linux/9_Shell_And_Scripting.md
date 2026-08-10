@@ -4,6 +4,8 @@
 
 **Prerequisite:** [Fundamentals: User interface and the shell](../Fundamentals/11_User_Interface_And_Shell.md). Here: **Linux** shells (Bash, sh), **commands** (files, processes, text, networking), redirection and pipes, and **scripting** (Bash) for DevOps.
 
+**Deep scripting curriculum (all OS):** [Languages/Shell](../../Languages/Shell/README.md) — Bash/POSIX/zsh, PowerShell, cmd, version pins, and cross-OS command depth. Use this Linux chapter for Linux-context commands and ops; use Languages/Shell when you need the full scripting track.
+
 ---
 
 ## What is the shell?

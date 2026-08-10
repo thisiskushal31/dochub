@@ -5613,11 +5613,242 @@
         "sha": "",
         "children": [
           {
+            "name": "00_First_Steps_In_The_Terminal.md",
+            "path": "Languages/Shell/00_First_Steps_In_The_Terminal.md",
+            "type": "file",
+            "sha": "",
+            "size": 17471
+          },
+          {
+            "name": "01_What_Is_A_Shell_Bash_POSIX_And_The_Family.md",
+            "path": "Languages/Shell/01_What_Is_A_Shell_Bash_POSIX_And_The_Family.md",
+            "type": "file",
+            "sha": "",
+            "size": 24741
+          },
+          {
+            "name": "02_Versions_Legacy_Pins_And_Compatibility.md",
+            "path": "Languages/Shell/02_Versions_Legacy_Pins_And_Compatibility.md",
+            "type": "file",
+            "sha": "",
+            "size": 21935
+          },
+          {
+            "name": "03_Toolchain_Shebangs_And_Environments.md",
+            "path": "Languages/Shell/03_Toolchain_Shebangs_And_Environments.md",
+            "type": "file",
+            "sha": "",
+            "size": 12310
+          },
+          {
+            "name": "04_Words_Quoting_And_Expansion_Order.md",
+            "path": "Languages/Shell/04_Words_Quoting_And_Expansion_Order.md",
+            "type": "file",
+            "sha": "",
+            "size": 11430
+          },
+          {
+            "name": "05_Variables_Parameters_And_Special_Parameters.md",
+            "path": "Languages/Shell/05_Variables_Parameters_And_Special_Parameters.md",
+            "type": "file",
+            "sha": "",
+            "size": 10933
+          },
+          {
+            "name": "06_Control_Flow_And_Exit_Status.md",
+            "path": "Languages/Shell/06_Control_Flow_And_Exit_Status.md",
+            "type": "file",
+            "sha": "",
+            "size": 10843
+          },
+          {
+            "name": "07_Functions_And_Script_Structure.md",
+            "path": "Languages/Shell/07_Functions_And_Script_Structure.md",
+            "type": "file",
+            "sha": "",
+            "size": 10671
+          },
+          {
+            "name": "08_Redirection_Pipelines_And_Job_Control.md",
+            "path": "Languages/Shell/08_Redirection_Pipelines_And_Job_Control.md",
+            "type": "file",
+            "sha": "",
+            "size": 13975
+          },
+          {
+            "name": "09_Bash_Extensions_In_Depth.md",
+            "path": "Languages/Shell/09_Bash_Extensions_In_Depth.md",
+            "type": "file",
+            "sha": "",
+            "size": 11948
+          },
+          {
+            "name": "10_Portable_POSIX_Sh_Scripting.md",
+            "path": "Languages/Shell/10_Portable_POSIX_Sh_Scripting.md",
+            "type": "file",
+            "sha": "",
+            "size": 11325
+          },
+          {
+            "name": "11_Zsh_And_MacOS_Scripting.md",
+            "path": "Languages/Shell/11_Zsh_And_MacOS_Scripting.md",
+            "type": "file",
+            "sha": "",
+            "size": 21015
+          },
+          {
+            "name": "12_PowerShell_As_A_Scripting_Language.md",
+            "path": "Languages/Shell/12_PowerShell_As_A_Scripting_Language.md",
+            "type": "file",
+            "sha": "",
+            "size": 11895
+          },
+          {
+            "name": "13_Cmd_And_Batch_Scripting.md",
+            "path": "Languages/Shell/13_Cmd_And_Batch_Scripting.md",
+            "type": "file",
+            "sha": "",
+            "size": 11365
+          },
+          {
+            "name": "14_Commands_Files_Paths_And_Processes.md",
+            "path": "Languages/Shell/14_Commands_Files_Paths_And_Processes.md",
+            "type": "file",
+            "sha": "",
+            "size": 27413
+          },
+          {
+            "name": "15_Commands_Text_Search_And_Data_Shaping.md",
+            "path": "Languages/Shell/15_Commands_Text_Search_And_Data_Shaping.md",
+            "type": "file",
+            "sha": "",
+            "size": 23818
+          },
+          {
+            "name": "16_Robust_Scripts_Errors_Traps_And_Idioms.md",
+            "path": "Languages/Shell/16_Robust_Scripts_Errors_Traps_And_Idioms.md",
+            "type": "file",
+            "sha": "",
+            "size": 11386
+          },
+          {
+            "name": "17_Testing_ShellCheck_And_PS_Analysis.md",
+            "path": "Languages/Shell/17_Testing_ShellCheck_And_PS_Analysis.md",
+            "type": "file",
+            "sha": "",
+            "size": 13132
+          },
+          {
+            "name": "18_Security_Injection_Secrets_And_Trust.md",
+            "path": "Languages/Shell/18_Security_Injection_Secrets_And_Trust.md",
+            "type": "file",
+            "sha": "",
+            "size": 20985
+          },
+          {
+            "name": "19_Use_Cases_CI_Ops_And_Cross_OS.md",
+            "path": "Languages/Shell/19_Use_Cases_CI_Ops_And_Cross_OS.md",
+            "type": "file",
+            "sha": "",
+            "size": 12536
+          },
+          {
+            "name": "20_Linux_Distros_Sh_And_Userland_Differences.md",
+            "path": "Languages/Shell/20_Linux_Distros_Sh_And_Userland_Differences.md",
+            "type": "file",
+            "sha": "",
+            "size": 22766
+          },
+          {
+            "name": "21_Legacy_Timelines_And_Security_Engineering.md",
+            "path": "Languages/Shell/21_Legacy_Timelines_And_Security_Engineering.md",
+            "type": "file",
+            "sha": "",
+            "size": 24183
+          },
+          {
+            "name": "22_Shell_Subsets_In_Extreme_Depth.md",
+            "path": "Languages/Shell/22_Shell_Subsets_In_Extreme_Depth.md",
+            "type": "file",
+            "sha": "",
+            "size": 29890
+          },
+          {
+            "name": "23_How_To_Read_Any_Command_Flags_Letter_By_Letter.md",
+            "path": "Languages/Shell/23_How_To_Read_Any_Command_Flags_Letter_By_Letter.md",
+            "type": "file",
+            "sha": "",
+            "size": 13788
+          },
+          {
+            "name": "24_Jq_And_Structured_Data_In_Scripts.md",
+            "path": "Languages/Shell/24_Jq_And_Structured_Data_In_Scripts.md",
+            "type": "file",
+            "sha": "",
+            "size": 15798
+          },
+          {
+            "name": "25_Network_Process_Recon_Commands_For_Ops_And_Security.md",
+            "path": "Languages/Shell/25_Network_Process_Recon_Commands_For_Ops_And_Security.md",
+            "type": "file",
+            "sha": "",
+            "size": 16252
+          },
+          {
+            "name": "26_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+            "path": "Languages/Shell/26_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+            "type": "file",
+            "sha": "",
+            "size": 20489
+          },
+          {
+            "name": "27_Command_Atlas_Complete_Shell_Command_Surface.md",
+            "path": "Languages/Shell/27_Command_Atlas_Complete_Shell_Command_Surface.md",
+            "type": "file",
+            "sha": "",
+            "size": 28611
+          },
+          {
+            "name": "28_Bash_And_POSIX_Builtins_In_Extreme_Depth.md",
+            "path": "Languages/Shell/28_Bash_And_POSIX_Builtins_In_Extreme_Depth.md",
+            "type": "file",
+            "sha": "",
+            "size": 19484
+          },
+          {
+            "name": "29_Commands_Identity_Time_Env_Disks_And_System.md",
+            "path": "Languages/Shell/29_Commands_Identity_Time_Env_Disks_And_System.md",
+            "type": "file",
+            "sha": "",
+            "size": 12637
+          },
+          {
+            "name": "30_Commands_Archives_Checksums_And_Transfer.md",
+            "path": "Languages/Shell/30_Commands_Archives_Checksums_And_Transfer.md",
+            "type": "file",
+            "sha": "",
+            "size": 12251
+          },
+          {
+            "name": "31_PowerShell_Cmdlet_Atlas_And_Cmd_Builtins.md",
+            "path": "Languages/Shell/31_PowerShell_Cmdlet_Atlas_And_Cmd_Builtins.md",
+            "type": "file",
+            "sha": "",
+            "size": 14487
+          },
+          {
+            "name": "32_Terminal_TTY_And_Command_Eras_Across_OS.md",
+            "path": "Languages/Shell/32_Terminal_TTY_And_Command_Eras_Across_OS.md",
+            "type": "file",
+            "sha": "",
+            "size": 23711
+          },
+          {
             "name": "README.md",
             "path": "Languages/Shell/README.md",
             "type": "file",
             "sha": "",
-            "size": 1731
+            "size": 11539
           }
         ]
       },
@@ -5761,7 +5992,7 @@
         "path": "Languages/README.md",
         "type": "file",
         "sha": "",
-        "size": 17983
+        "size": 18114
       }
     ]
   },
@@ -5958,7 +6189,7 @@
             "path": "Operating-Systems/Fundamentals/11_User_Interface_And_Shell.md",
             "type": "file",
             "sha": "",
-            "size": 7436
+            "size": 7594
           },
           {
             "name": "12_Sockets_And_Network_IO.md",
@@ -6261,7 +6492,7 @@
             "path": "Operating-Systems/Linux/9_Shell_And_Scripting.md",
             "type": "file",
             "sha": "",
-            "size": 30355
+            "size": 30645
           },
           {
             "name": "README.md",
@@ -6360,7 +6591,7 @@
             "path": "Operating-Systems/MacOS/9_Shell_And_Scripting.md",
             "type": "file",
             "sha": "",
-            "size": 3140
+            "size": 3284
           },
           {
             "name": "README.md",
@@ -6488,7 +6719,7 @@
             "path": "Operating-Systems/Unix/9_Shell_And_Scripting.md",
             "type": "file",
             "sha": "",
-            "size": 1861
+            "size": 1954
           },
           {
             "name": "README.md",
@@ -6517,7 +6748,7 @@
             "path": "Operating-Systems/Windows/1_Windows_Commands_And_PowerShell.md",
             "type": "file",
             "sha": "",
-            "size": 7312
+            "size": 7480
           },
           {
             "name": "2_Services_And_Networking.md",
