@@ -1,6 +1,6 @@
 # Languages
 
-Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-purpose, query/config (HCL, JSON, YAML), niche/security (Assembly, Nim, VBA, R, Erlang, Zig, Delphi, COBOL, OCaml, F#, Ada, Julia, Dart, D, Haskell, Clojure, Crystal, VB.NET, Tcl, Fortran, Objective-C), **Web3** (Solidity, Vyper, Move, Cairo), and **LaTeX** for PDF generation. This section gives enough syntax, tooling, and patterns so you can read and write scripts, automation, and tooling; for deep language reference, use official docs or a dedicated language repo. **Shell** has a full cross-OS scripting track under [Languages/Shell](./Shell/README.md) (Bash/POSIX/zsh, PowerShell, cmd); Operating-Systems chapters keep OS-context companions. **HCL** has a deep-dive in [Languages/HCL](./HCL/README.md) (the language); Terraform use cases (providers, state, modules, pipelines) are in [IAC](../IAC/README.md) and [Terraform](../IAC/Terraform/README.md). **Database query languages** (SQL, PromQL, Cypher, etc.) are covered in [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) alongside each engine — see [Database query and config languages](#database-query-and-config-languages) below.
+Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-purpose, query/config (HCL, JSON, YAML), niche/security (Assembly, Nim, VBA, R, Erlang, Zig, Delphi, COBOL, OCaml, F#, Ada, Julia, Dart, D, Haskell, Clojure, Crystal, VB.NET, Tcl, Fortran, Objective-C), **Web3** (Solidity, Vyper, Move, Cairo), and **LaTeX** for PDF generation. This section gives enough syntax, tooling, and patterns so you can read and write scripts, automation, and tooling; for deep language reference, use official docs or a dedicated language repo. **Shell** has a full cross-OS scripting track under [Languages/Shell](./Shell/README.md) (Bash/POSIX/zsh, PowerShell, cmd); Operating-Systems chapters keep OS-context companions. **Solidity** has a full EVM-contract track under [Languages/Solidity](./Solidity/README.md) (0.8.x language, Foundry/Hardhat, security review, delivery). **HCL** has a deep-dive in [Languages/HCL](./HCL/README.md) (the language); Terraform use cases (providers, state, modules, pipelines) are in [IAC](../IAC/README.md) and [Terraform](../IAC/Terraform/README.md). **Database query languages** (SQL, PromQL, Cypher, etc.) are covered in [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) alongside each engine — see [Database query and config languages](#database-query-and-config-languages) below.
 
 ---
 
@@ -36,7 +36,7 @@ Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-p
 | **COBOL**   | Mainframes, banking, government; legacy systems and compliance. |
 | **Objective-C** | macOS/iOS legacy; Apple frameworks and interop with Swift. |
 | **OCaml**   | Compilers, MirageOS, formal/security tooling; high-assurance. |
-| **Solidity** | Ethereum smart contracts; Web3 DevOps and smart-contract security. |
+| **Solidity** | Whole-engineering EVM-contract track: Solidity 0.8.x, solc/Remix/Foundry/Hardhat, ABI/storage, tests, security review, CI/verify/keys. |
 | **F#**      | .NET functional; Azure, data, scripting; Microsoft ecosystem. |
 | **Ada**     | Safety-critical (avionics, defense); regulated and high-assurance. |
 | **Julia**   | Scientific/numerical, HPC, data pipelines; research infra. |
@@ -105,7 +105,7 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | 26 | [**COBOL**](./COBOL/README.md) | COBOL: mainframes, banking, government; legacy and compliance. |
 | 27 | [**Objective-C**](./Objective-C/README.md) | Objective-C: macOS/iOS legacy; Apple frameworks. |
 | 28 | [**OCaml**](./OCaml/README.md) | OCaml: compilers, MirageOS, formal/security tooling. |
-| 29 | [**Solidity**](./Solidity/README.md) | Solidity: Ethereum smart contracts; Web3 and security. |
+| 29 | [**Solidity**](./Solidity/README.md) | Solidity whole-engineering track: baby steps→staff; 0.8.x, Foundry/Hardhat, ABI/security/ops (00–23). |
 | 30 | [**FSharp**](./FSharp/README.md) | F#: .NET functional; Azure, data, scripting. |
 | 31 | [**Ada**](./Ada/README.md) | Ada: safety-critical; avionics, defense, regulated. |
 | 32 | [**Julia**](./Julia/README.md) | Julia: scientific, HPC, data pipelines. |

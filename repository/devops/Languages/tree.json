@@ -5231,11 +5231,179 @@
     "sha": "",
     "children": [
       {
+        "name": "00_First_Steps_On_The_EVM.md",
+        "path": "Solidity/00_First_Steps_On_The_EVM.md",
+        "type": "file",
+        "sha": "",
+        "size": 14401
+      },
+      {
+        "name": "01_What_Is_Solidity_And_The_EVM.md",
+        "path": "Solidity/01_What_Is_Solidity_And_The_EVM.md",
+        "type": "file",
+        "sha": "",
+        "size": 11073
+      },
+      {
+        "name": "02_Versions_Pragmas_And_Breaking_Changes.md",
+        "path": "Solidity/02_Versions_Pragmas_And_Breaking_Changes.md",
+        "type": "file",
+        "sha": "",
+        "size": 9702
+      },
+      {
+        "name": "03_Toolchain_Solc_Remix_Foundry_Hardhat.md",
+        "path": "Solidity/03_Toolchain_Solc_Remix_Foundry_Hardhat.md",
+        "type": "file",
+        "sha": "",
+        "size": 9204
+      },
+      {
+        "name": "04_Source_Files_SPDX_Pragma_And_Imports.md",
+        "path": "Solidity/04_Source_Files_SPDX_Pragma_And_Imports.md",
+        "type": "file",
+        "sha": "",
+        "size": 6810
+      },
+      {
+        "name": "05_Structure_Of_A_Contract.md",
+        "path": "Solidity/05_Structure_Of_A_Contract.md",
+        "type": "file",
+        "sha": "",
+        "size": 9050
+      },
+      {
+        "name": "06_Types_Value_Reference_And_Conversions.md",
+        "path": "Solidity/06_Types_Value_Reference_And_Conversions.md",
+        "type": "file",
+        "sha": "",
+        "size": 9190
+      },
+      {
+        "name": "07_Units_Globals_And_Blockchain_Context.md",
+        "path": "Solidity/07_Units_Globals_And_Blockchain_Context.md",
+        "type": "file",
+        "sha": "",
+        "size": 9899
+      },
+      {
+        "name": "08_Functions_Visibility_Modifiers_And_Payable.md",
+        "path": "Solidity/08_Functions_Visibility_Modifiers_And_Payable.md",
+        "type": "file",
+        "sha": "",
+        "size": 9262
+      },
+      {
+        "name": "09_Control_Flow_Errors_And_Checked_Math.md",
+        "path": "Solidity/09_Control_Flow_Errors_And_Checked_Math.md",
+        "type": "file",
+        "sha": "",
+        "size": 9836
+      },
+      {
+        "name": "10_Events_Custom_Errors_And_NatSpec.md",
+        "path": "Solidity/10_Events_Custom_Errors_And_NatSpec.md",
+        "type": "file",
+        "sha": "",
+        "size": 8349
+      },
+      {
+        "name": "11_Data_Locations_Storage_Memory_Calldata_Transient.md",
+        "path": "Solidity/11_Data_Locations_Storage_Memory_Calldata_Transient.md",
+        "type": "file",
+        "sha": "",
+        "size": 9022
+      },
+      {
+        "name": "12_Mappings_Arrays_Structs_And_Enums.md",
+        "path": "Solidity/12_Mappings_Arrays_Structs_And_Enums.md",
+        "type": "file",
+        "sha": "",
+        "size": 8434
+      },
+      {
+        "name": "13_Inheritance_Interfaces_And_Libraries.md",
+        "path": "Solidity/13_Inheritance_Interfaces_And_Libraries.md",
+        "type": "file",
+        "sha": "",
+        "size": 9313
+      },
+      {
+        "name": "14_ABI_Selectors_And_Encoding.md",
+        "path": "Solidity/14_ABI_Selectors_And_Encoding.md",
+        "type": "file",
+        "sha": "",
+        "size": 8430
+      },
+      {
+        "name": "15_Calls_Value_Transfer_And_Creating_Contracts.md",
+        "path": "Solidity/15_Calls_Value_Transfer_And_Creating_Contracts.md",
+        "type": "file",
+        "sha": "",
+        "size": 10027
+      },
+      {
+        "name": "16_Gas_Optimizer_ViaIR_And_Metadata.md",
+        "path": "Solidity/16_Gas_Optimizer_ViaIR_And_Metadata.md",
+        "type": "file",
+        "sha": "",
+        "size": 7671
+      },
+      {
+        "name": "17_Testing_With_Foundry_And_Hardhat.md",
+        "path": "Solidity/17_Testing_With_Foundry_And_Hardhat.md",
+        "type": "file",
+        "sha": "",
+        "size": 7832
+      },
+      {
+        "name": "18_Security_Review_Reentrancy_Access_And_Trust.md",
+        "path": "Solidity/18_Security_Review_Reentrancy_Access_And_Trust.md",
+        "type": "file",
+        "sha": "",
+        "size": 9904
+      },
+      {
+        "name": "19_Static_Analysis_SMTChecker_And_Audits.md",
+        "path": "Solidity/19_Static_Analysis_SMTChecker_And_Audits.md",
+        "type": "file",
+        "sha": "",
+        "size": 6837
+      },
+      {
+        "name": "20_DevOps_CI_Verify_Keys_And_Upgrades.md",
+        "path": "Solidity/20_DevOps_CI_Verify_Keys_And_Upgrades.md",
+        "type": "file",
+        "sha": "",
+        "size": 8316
+      },
+      {
+        "name": "21_Yul_Assembly_And_EVM_Internals_Literacy.md",
+        "path": "Solidity/21_Yul_Assembly_And_EVM_Internals_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 7727
+      },
+      {
+        "name": "22_Use_Cases_Tokens_Apps_And_Whole_Engineering.md",
+        "path": "Solidity/22_Use_Cases_Tokens_Apps_And_Whole_Engineering.md",
+        "type": "file",
+        "sha": "",
+        "size": 9188
+      },
+      {
+        "name": "23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "path": "Solidity/23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "type": "file",
+        "sha": "",
+        "size": 6548
+      },
+      {
         "name": "README.md",
         "path": "Solidity/README.md",
         "type": "file",
         "sha": "",
-        "size": 990
+        "size": 10527
       }
     ]
   },
@@ -5364,6 +5532,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 18114
+    "size": 18387
   }
 ]
