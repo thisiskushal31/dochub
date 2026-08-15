@@ -8,7 +8,7 @@ If you have written a web API, you already know half the story: a caller sends a
 
 People reach for Solidity when mutually distrusting parties need **one rule set** they can all execute—not when they need a normal app with logins and a database. This track teaches the **language + the machine + the job around it**: how to read a contract, how `solc` / Remix / Foundry / Hardhat fit together, how calls and storage actually work, how to test, how to review, and how to ship without losing the keys.
 
-It is **not** an L2 encyclopedia, a DeFi product manual, or a wallet UI course. Client libraries (**ethers.js**, **viem**) live with [JavaScript](../JavaScript/README.md) / [TypeScript](../TypeScript/README.md). [Vyper](../Vyper/README.md) is a sibling EVM language, not a Solidity dialect.
+It is **not** an L2 encyclopedia, a DeFi product manual, or a wallet UI course. Client libraries (**ethers.js**, **viem**) live with [JavaScript](../JavaScript/README.md) / [TypeScript](../TypeScript/README.md). [Vyper](../Vyper/README.md) is a sibling EVM language, not a Solidity dialect. Chapter **24** is the **compass**: what this track owns, what it hands off, and **where Solidity + the EVM are moving** (forks, account abstraction, compiler direction) so finishing here still *directs* you.
 
 Start at chapter **00**. The first goal is not “become an auditor.” It is: compile a tiny contract, change a number, and *feel* the difference between a read and a write.
 
@@ -53,7 +53,7 @@ Links live in each chapter’s **References** (official hubs only).
 
 ## How to read a chapter
 
-Each chapter talks first, then shows a small program. Comments in the code are part of the lesson—read them. After a snippet, look for **what just happened** (a short walkthrough). Then **Advanced** is the machine-level pass: slot formulas, ABI head/tail, opcodes, gas schedules, C3, CREATE2 — still in the same voice, not a second book. Then where this shows up at work, then a checklist.
+Each chapter talks first, then shows a small program. Comments in the code are part of the lesson—read them. After a snippet, look for **what just happened** (a short walkthrough). Then **Advanced** is the machine-level pass: slot formulas, ABI head/tail (including nested dynamics), opcodes, gas schedules, C3, CREATE2, dispatcher shape, EIP-712 digests — still in the same voice, not a second book. Then where this shows up at work, then a checklist.
 
 You do not need to memorize the EVM. You need a picture you can hold:
 
@@ -80,8 +80,9 @@ You do not need to memorize the EVM. You need a picture you can hold:
 | Internals | **21** | Yul/assembly/storage packing — when it is justified |
 | Placement | **22** | Token/standard literacy + whole-engineering use cases |
 | Wrap | **23** | Competency map and staff sign-off |
+| Compass | **24** | What this track owns, handoffs, and where Solidity/EVM are moving |
 
-Suggested order: **00 → 07**, then **08 → 13**, then **14 → 16**, then **17 → 20**, then **21 → 23**. Revisit **02** before pinning CI; **11** before any storage layout debate; **15**/**18** before shipping value transfer; **17** before claiming “tested”; **20** before a mainnet key ever exists.
+Suggested order: **00 → 07**, then **08 → 13**, then **14 → 16**, then **17 → 20**, then **21 → 23**, then **24** (or skim **24** after **01** so you know the bullseye). Revisit **02** before pinning CI; **11** before any storage layout debate; **15**/**18** before shipping value transfer; **17** before claiming “tested”; **20** before a mainnet key ever exists; **24** on every hard-fork or “we’re going to L2 / AA” conversation.
 
 ---
 
@@ -113,6 +114,23 @@ Suggested order: **00 → 07**, then **08 → 13**, then **14 → 16**, then **1
 | 21 | Yul, assembly, and EVM internals literacy | [21](./21_Yul_Assembly_And_EVM_Internals_Literacy.md) |
 | 22 | Use cases: tokens, apps, and whole engineering | [22](./22_Use_Cases_Tokens_Apps_And_Whole_Engineering.md) |
 | 23 | Whole-engineering wrap and staff checklist | [23](./23_Whole_Engineering_Wrap_And_Staff_Checklist.md) |
+| 24 | Where this is going and how to stay oriented | [24](./24_Where_This_Is_Going_And_How_To_Stay_Oriented.md) |
+
+---
+
+## What this track is the all-in-one for
+
+| Owned here | Directed elsewhere (on purpose) |
+|------------|----------------------------------|
+| Solidity 0.8 + EVM machine model (deep) | L2 sequencers / fraud proofs — chain docs |
+| Foundry/Hardhat/Remix + solc pins | Wallet UI — JS/TS tracks |
+| ABI, storage, calls, gas, Yul literacy | Consensus / staking — ethereum.org |
+| Tests, security *review*, CI/verify/keys | Full AA wallet ops — ERC-4337 + vendors |
+| ERC interface + weird-token threat model | DeFi product / MEV manuals — out of scope |
+| Compass for forks, 7702/AA, compiler direction (**24**) | Sibling languages — Vyper / Move / Cairo tracks |
+| Brief intros + exact doors for UI, L2, AA, DeFi, consensus (**24** §2.7) | Full manuals for those topics — linked hubs, not duplicated here |
+
+Detail and the “how to stay current” ritual: chapter **24**.
 
 ---
 
@@ -124,6 +142,7 @@ Suggested order: **00 → 07**, then **08 → 13**, then **14 → 16**, then **1
 4. After **14–16**, decode a calldata blob with `cast` (or Hardhat console) and record gas for one write path.
 5. After **17–19**, put unit + fuzz tests and one analyzer in CI; triage findings instead of silencing them.
 6. After **20–23**, verify a testnet deploy, inventory keys, and sign the wrap checklist—including “we did not need a proxy.”
+7. Read **24** and write down your target chain’s current **`evmVersion`**, whether **7702/AA** affects your auth assumptions, and which topics you will *not* pretend this repo covers.
 
 ---
 
@@ -142,6 +161,8 @@ Suggested order: **00 → 07**, then **08 → 13**, then **14 → 16**, then **1
 - [Remix IDE documentation](https://remix-ide.readthedocs.io/)
 - [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts)
 - [Solidity compiler security policy](https://github.com/argotorg/solidity/security/policy)
+- [Ethereum roadmap](https://ethereum.org/roadmap/)
+- [Pectra / EIP-7702 (orientation)](./24_Where_This_Is_Going_And_How_To_Stay_Oriented.md)
 
 ---
 

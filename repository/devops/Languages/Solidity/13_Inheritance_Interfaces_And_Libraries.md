@@ -174,6 +174,12 @@ super.f() from D starts at C.f, then B.f, then A.f
 
 If C3 cannot linearize (inconsistent `is` lists), **compile error**. Keep graphs boring enough to draw on a slide. `override(B, C)` is required when two parents expose the same `virtual` function.
 
+### 1b. C3 in one paragraph (so you can re-derive it)
+
+Merge the linearizations of the parents and the parent list itself, left-to-right, never picking a class that still appears in another list’s tail. Solidity’s `is` list is **most base-ward last** in source for the *parents you write*, and the right-most parent is the most derived among siblings — matching Python’s MRO idea. Storage walks **most base-ward first** along that MRO. When two bases both declare `uint64 x` and `uint64 y` that would pack, they can share a slot across the inheritance boundary — layout tests must use the *derived* contract’s linearized order, not “file order.”
+
+`solc --storage-layout` / `forge inspect Contract storageLayout` is the ground truth. Argue with the JSON, not with intuition.
+
 ### 2. Shadowing state
 
 A child declaring `address public owner` when a parent already has `owner` is a **different slot** (or a compile error, depending on version/visibility). You then have two owners. Do not redeclare parent state “for clarity.”

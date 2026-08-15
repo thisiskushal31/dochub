@@ -126,6 +126,38 @@ selector
 
 That is why `abi.decode` of the wrong type yields garbage or reverts, and why a **return bomb** (chapter **15**) is “a huge dynamic `bytes` you try to copy.”
 
+### 1b. Nested dynamic encoding (the one people fail in interviews)
+
+`bar(string[])` with `["hi","yo"]` — head has one offset; the tail is an array whose *elements* are themselves dynamic:
+
+```text
+selector
+000…020              // offset to string[] tail (= 32)
+—— string[] at +0x20 ——
+000…002              // length = 2
+000…040              // offset to s[0] relative to start of this array block
+000…080              // offset to s[1]
+000…002 6869000…     // s[0] = "hi"
+000…002 796f000…     // s[1] = "yo"
+```
+
+Offsets for dynamic *components* are relative to the start of the enclosing dynamic tuple/array — not always relative to the whole calldata. Misreading that relative base is the classic off-by-0x20 bug in hand parsers.
+
+**Structs:** a static struct is just concatenated static fields in the head. A struct with a `string` becomes dynamic: the head holds an offset to a tuple encoding of its fields.
+
+**Fixed `T[k]` of static `T`:** `k` consecutive words (or packed? — **no**, ABI does not pack; each `uint8` still occupies a full 32-byte word in the ABI). Storage packing ≠ ABI packing.
+
+### 1c. Non-standard packed mode (`abi.encodePacked`)
+
+Packed encoding (from the ABI spec’s non-standard packed mode):
+
+- types shorter than 32 bytes are concatenated **without** left-padding to 32,
+- `bytes` / `string` contribute **raw contents only** (no length field),
+- that is why `encodePacked("ab","c")` equals `encodePacked("a","bc")`,
+- nested dynamic structures are not a safe packed scheme — do not invent one.
+
+For anything hashed across a trust boundary: **`abi.encode` or EIP-712**, never naive packed strings.
+
 ### 2. Coder v1 vs v2
 
 0.8 defaults to **v2** (structs, nested arrays). Pre-0.8 needed `pragma abicoder v2`. v1 cannot express some types and encodes some edge cases differently. Do not mix assumptions when talking to very old contracts. `via-IR` still emits v2-shaped calldata for the public ABI.
@@ -164,6 +196,20 @@ You still must handle `ok` and decode `ret`. High-level `IFoo(addr).bar(1, true)
 ### 7. Metadata is not the ABI
 
 Compiler **metadata** (CBOR tail on bytecode, chapter **16**) helps explorers match source. The ABI is the call convention. Verification needs both stories.
+
+### 8. Events vs errors vs functions (signature strings)
+
+| Kind | Signature string | On the wire |
+|------|------------------|-------------|
+| Function | `transfer(address,uint256)` | first 4 bytes of keccak as selector |
+| Error | `TooMuch(uint256,uint256)` | first 4 bytes as revert selector |
+| Event | `Transfer(address,address,uint256)` | **full 32-byte** keccak as topic0 |
+
+Indexed event params do **not** appear in the signature string’s “indexed” spelling — the signature ignores `indexed`. `anonymous` events have no topic0. Decoding tools need the ABI JSON; the chain only has topics + data.
+
+### 9. Strict encoding and dirty bits
+
+Decoders may reject non-canonical encodings (oversized offsets, dirty high bits in a `bool` word that is not 0/1, etc.) depending on client. Solidity’s ABI decoder cleans / validates many cases and **reverts** on garbage. When you `abi.decode` returndata from an untrusted contract, a malicious encoding can force reverts (DoS) or, in sloppy hand parsers, mis-reads. Prefer high-level calls when the ABI is known.
 
 ---
 

@@ -189,6 +189,56 @@ Every node must get the same answer. Therefore: no filesystem, no `fetch`, no �
 
 Same bytecode ideas; different **gas schedules**, **precompiles**, and **hard-fork opcodes** (`PUSH0`, `TSTORE`, blobs). `solc --evm-version` must match the chain you deploy to (chapters **02**, **16**, **20**).
 
+### 8. Execution context (what every opcode can see)
+
+While code runs, the EVM exposes a fixed context. Solidity globals are thin wrappers over it:
+
+| Context | Solidity | Notes |
+|---------|----------|-------|
+| Caller | `msg.sender` | Immediate caller; unchanged under `DELEGATECALL` |
+| Call value | `msg.value` | Wei attached to *this* frame |
+| Calldata | `msg.data` | Immutable input tape |
+| Code | — | This account’s code (`DELEGATECALL`: *other* account’s code) |
+| Storage | — | This account’s map (`DELEGATECALL`: *caller’s* map) |
+| Gas remaining | `gasleft()` | After EIP-150, callees never get 100% |
+| Returndata | — | Buffer from the last call; `returndatasize` / `returndatacopy` |
+| Block / tx | `block.*` / `tx.*` | Chapter **07** |
+
+There is no “thread local” beyond this frame. Nested calls push a new frame; revert pops it and undoes its journal.
+
+### 9. Precompiles (the blessed native table)
+
+Precompiles are special addresses with protocol-defined behavior. Common L1 set (addresses as decimal / hex):
+
+| Addr | Name | Typical use |
+|------|------|-------------|
+| `0x01` | ecrecover | Recover signer from `(hash, v, r, s)` |
+| `0x02` | SHA-256 | Bitcoin-style hash |
+| `0x03` | RIPEMD-160 | |
+| `0x04` | identity | Memcpy |
+| `0x05` | modexp | Modular exponentiation |
+| `0x06`–`0x08` | bn256 / pairing | ZK / pairing checks |
+| `0x09` | blake2f | |
+| `0x0a` | point evaluation | KZG / blobs (Cancun) |
+
+Calling a precompile is still a `CALL` with calldata. Gas is schedule-specific. Chains that claim “EVM compatible” sometimes **omit or alter** precompiles — that is a delivery pin, not a slogan.
+
+### 10. Dispatcher shape (why selectors matter)
+
+Runtime bytecode usually starts with a **function dispatcher**:
+
+```text
+load first 4 bytes of calldata → compare to known selectors → JUMP to body
+no match → fallback / revert
+empty calldata → receive (if payable + empty) path
+```
+
+Every public/external function (and public getter) costs dispatcher comparisons. That is why “one giant contract with 80 external functions” is both an ABI and a **gas** problem. Internal functions are `JUMP`s inside a body — no selector.
+
+### 11. Journal and refunds (mental model)
+
+Successful writes and logs are journaled. On `REVERT`, the journal for that frame is discarded. On success, some schedules **refund** gas for clearing storage (nonzero→zero), capped (historically ≤ gas_used/2, then EIP-3529 tightened). Refunds are not income; they only reduce the gas you pay for *this* tx. Do not design “clear slots to mint ETH.”
+
 ---
 
 ## 3. Applications and use cases
@@ -202,6 +252,8 @@ Same bytecode ideas; different **gas schedules**, **precompiles**, and **hard-fo
 | Infra | Deploy, verify, monitor | A geth internals book |
 
 If the problem is “our service should do X for logged-in users,” you want a server. If the problem is “we do not share an operator, but we must share a rule,” you are in this track.
+
+For **what this track deliberately does not become** (L2 encyclopedias, wallet UI, consensus) and **where the EVM/compiler are moving** (forks, EIP-7702, AA, EOF’s removal), see chapter **24** — the compass after you have the machine model.
 
 ---
 
@@ -222,6 +274,7 @@ If the problem is “our service should do X for logged-in users,” you want a 
 - [Ethereum: smart contracts](https://ethereum.org/developers/docs/smart-contracts/)
 - [Ethereum: EVM](https://ethereum.org/developers/docs/evm/)
 - [Ethereum: accounts](https://ethereum.org/developers/docs/accounts/)
+- [Ethereum: EVM opcodes](https://ethereum.org/developers/docs/evm/opcodes/)
 - [Ethereum: gas](https://ethereum.org/developers/docs/gas/)
 - [Ethereum: blocks](https://ethereum.org/developers/docs/blocks/)
 - [Layout in storage (incl. transient)](https://docs.soliditylang.org/en/v0.8.36/internals/layout_in_storage.html)

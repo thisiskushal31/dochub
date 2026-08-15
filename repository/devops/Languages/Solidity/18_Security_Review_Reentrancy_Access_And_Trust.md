@@ -122,6 +122,16 @@ Reentrancy is “callee runs *your* `external`/`public` function again before th
 
 A lock that is applied to `withdraw` but not to `transfer` / `sweep` is a finding. A lock on a `view` is usually useless (and `view` + lock that writes is not `view`).
 
+### 1b. CEI as a state machine (why “effects first” is not optional)
+
+```text
+checks:   require auth, amounts, pause
+effects:  balances[x] = …; total = …;   // storage is the truth
+interact: token.transfer / call{value}  // someone else’s code may run
+```
+
+Any storage read that a callee can observe (including via a `view` you expose) must already be consistent after `effects`. If you update `reserve0` then call a hook before updating `reserve1`, a read-only reentrant caller sees a torn pair. Fix patterns: lock around the whole update, or update all related slots before the external call, or make mid-update views revert (`require(!locked)`).
+
 ### 2. `delegatecall` and proxies
 
 Untrusted `delegatecall` = untrusted storage writes. Recurring incident class: **implementation** left uninitialized so anyone can call `initialize` and become owner, then `upgradeTo` / `selfdestruct` (brownfield) the logic. If you use proxies you own: layout freeze, initializer access (`_disableInitializers` on the impl), admin key, and an upgrade runbook (chapter **20**). Default new systems to **non-upgradeable**.
@@ -135,7 +145,17 @@ A useful signed message binds **all** of:
 - **nonce** (or bitmap) so it cannot be replayed,
 - **deadline**.
 
-`ecrecover` on a raw `keccak256(abi.encodePacked(to, amt))` binds none of that. Check `signer != address(0)`. Reject high-`s` malleability if you are not using a library that already does. `permit` / `permit2` are the same review with token-shaped fields.
+Digest construction (literacy):
+
+```text
+domainSeparator = keccak256(abi.encode(
+  TYPEHASH_DOMAIN, nameHash, versionHash, chainId, verifyingContract))
+structHash      = keccak256(abi.encode(TYPEHASH_ACTION, …fields…))
+digest          = keccak256(abi.encodePacked("\x19\x01", domainSeparator, structHash))
+signer          = ecrecover(digest, v, r, s)  // check ≠ 0
+```
+
+`ecrecover` on a raw `keccak256(abi.encodePacked(to, amt))` binds none of that. Reject high-`s` malleability if you are not using a library that already does. `permit` / `permit2` are the same review with token-shaped fields.
 
 ### 4. Approval hazards (tokens)
 
@@ -148,6 +168,20 @@ Transactions are ordered by the producer/builder. “I check the price then swap
 ### 6. Denial of service / liveness
 
 Unbounded loops, a single `owner` who must call a function for everyone else to proceed, push-payments to a reverting receiver, and a token blacklist that bricks `transfer` inside your `withdraw` all halt systems. Review **liveness** as well as theft.
+
+### 6b. Auth patterns that fail closed
+
+| Pattern | Failure mode |
+|---------|----------------|
+| `tx.origin == owner` | Phishable via intermediate contract |
+| `msg.sender == tx.origin` | Breaks legitimate contract wallets / account abstraction |
+| Uninitialized `owner == 0` | First claimer wins — or nobody can call |
+| Single EOA admin | Laptop compromise = protocol compromise |
+| `onlyOwner` on `initialize` missing | Proxy impl takeover |
+
+Prefer explicit roles (`AccessControl`), multisig/timelock for admin, and tests that `prank` a stranger on every privileged path.
+
+Account abstraction (ERC-4337) and EIP-7702 (EOAs that can delegate code) make “caller is a simple EOA” a rotting assumption — chapter **24**. Your contracts should keep treating `msg.sender` as “the account that called,” period.
 
 ### 7. Compiler and dependency versions
 

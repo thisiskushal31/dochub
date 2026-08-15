@@ -11,14 +11,14 @@
     "path": "01_What_Is_Solidity_And_The_EVM.md",
     "type": "file",
     "sha": "",
-    "size": 11073
+    "size": 13986
   },
   {
     "name": "02_Versions_Pragmas_And_Breaking_Changes.md",
     "path": "02_Versions_Pragmas_And_Breaking_Changes.md",
     "type": "file",
     "sha": "",
-    "size": 9702
+    "size": 10354
   },
   {
     "name": "03_Toolchain_Solc_Remix_Foundry_Hardhat.md",
@@ -46,77 +46,77 @@
     "path": "06_Types_Value_Reference_And_Conversions.md",
     "type": "file",
     "sha": "",
-    "size": 9190
+    "size": 9649
   },
   {
     "name": "07_Units_Globals_And_Blockchain_Context.md",
     "path": "07_Units_Globals_And_Blockchain_Context.md",
     "type": "file",
     "sha": "",
-    "size": 9899
+    "size": 11656
   },
   {
     "name": "08_Functions_Visibility_Modifiers_And_Payable.md",
     "path": "08_Functions_Visibility_Modifiers_And_Payable.md",
     "type": "file",
     "sha": "",
-    "size": 9262
+    "size": 11210
   },
   {
     "name": "09_Control_Flow_Errors_And_Checked_Math.md",
     "path": "09_Control_Flow_Errors_And_Checked_Math.md",
     "type": "file",
     "sha": "",
-    "size": 9836
+    "size": 11043
   },
   {
     "name": "10_Events_Custom_Errors_And_NatSpec.md",
     "path": "10_Events_Custom_Errors_And_NatSpec.md",
     "type": "file",
     "sha": "",
-    "size": 8349
+    "size": 8750
   },
   {
     "name": "11_Data_Locations_Storage_Memory_Calldata_Transient.md",
     "path": "11_Data_Locations_Storage_Memory_Calldata_Transient.md",
     "type": "file",
     "sha": "",
-    "size": 9022
+    "size": 10561
   },
   {
     "name": "12_Mappings_Arrays_Structs_And_Enums.md",
     "path": "12_Mappings_Arrays_Structs_And_Enums.md",
     "type": "file",
     "sha": "",
-    "size": 8434
+    "size": 10149
   },
   {
     "name": "13_Inheritance_Interfaces_And_Libraries.md",
     "path": "13_Inheritance_Interfaces_And_Libraries.md",
     "type": "file",
     "sha": "",
-    "size": 9313
+    "size": 10104
   },
   {
     "name": "14_ABI_Selectors_And_Encoding.md",
     "path": "14_ABI_Selectors_And_Encoding.md",
     "type": "file",
     "sha": "",
-    "size": 8430
+    "size": 11163
   },
   {
     "name": "15_Calls_Value_Transfer_And_Creating_Contracts.md",
     "path": "15_Calls_Value_Transfer_And_Creating_Contracts.md",
     "type": "file",
     "sha": "",
-    "size": 10027
+    "size": 12349
   },
   {
     "name": "16_Gas_Optimizer_ViaIR_And_Metadata.md",
     "path": "16_Gas_Optimizer_ViaIR_And_Metadata.md",
     "type": "file",
     "sha": "",
-    "size": 7671
+    "size": 10179
   },
   {
     "name": "17_Testing_With_Foundry_And_Hardhat.md",
@@ -130,7 +130,7 @@
     "path": "18_Security_Review_Reentrancy_Access_And_Trust.md",
     "type": "file",
     "sha": "",
-    "size": 9904
+    "size": 11731
   },
   {
     "name": "19_Static_Analysis_SMTChecker_And_Audits.md",
@@ -144,14 +144,14 @@
     "path": "20_DevOps_CI_Verify_Keys_And_Upgrades.md",
     "type": "file",
     "sha": "",
-    "size": 8316
+    "size": 9848
   },
   {
     "name": "21_Yul_Assembly_And_EVM_Internals_Literacy.md",
     "path": "21_Yul_Assembly_And_EVM_Internals_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 7727
+    "size": 10022
   },
   {
     "name": "22_Use_Cases_Tokens_Apps_And_Whole_Engineering.md",
@@ -165,13 +165,20 @@
     "path": "23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
     "type": "file",
     "sha": "",
-    "size": 6548
+    "size": 7273
+  },
+  {
+    "name": "24_Where_This_Is_Going_And_How_To_Stay_Oriented.md",
+    "path": "24_Where_This_Is_Going_And_How_To_Stay_Oriented.md",
+    "type": "file",
+    "sha": "",
+    "size": 17661
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 10527
+    "size": 12364
   }
 ]

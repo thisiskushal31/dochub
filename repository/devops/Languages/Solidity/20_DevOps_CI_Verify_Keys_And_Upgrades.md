@@ -126,6 +126,25 @@ Explorer “partial match” is almost always metadata CBOR (chapter **16**) or 
 
 If you cannot point at the implementation slot and the initializer lock in the repo, you are not ready to deploy a proxy. Default new systems to **no proxy**.
 
+### 2b. Storage layout JSON is a release artifact
+
+```bash
+forge inspect MyVault storageLayout
+# or solc --storage-layout via Standard JSON outputSelection
+```
+
+For upgrades: every existing slot’s **type and meaning** must remain compatible. Appending new vars at the end of the linearized layout is the usual safe path; inserting/reordering/shrinking is a migration. ERC-7201 namespaces isolate modules so one facet’s new field does not collide with another’s slot `0`. Commit the layout JSON next to the release tag and diff it in CI on upgrade PRs.
+
+### 2c. Initializer vs constructor (the exact rule)
+
+| | Normal contract | Proxy + implementation |
+|--|-----------------|------------------------|
+| Constructor | runs once on CREATE; can set `immutable` | runs on **impl** deploy only — not on proxy |
+| `initialize` | usually absent | runs via `delegatecall` into proxy storage |
+| `immutable` | baked into *that* bytecode | baked into **implementation** bytecode — shared by all proxies using it |
+
+An `immutable` owner on the implementation is the same for every proxy — usually wrong. Put per-proxy config in storage via `initialize`.
+
 ### 3. Partial deploys
 
 Scripts that deploy five contracts can fail on the third. Make them **idempotent** (skip if address already has code) or abort and run a recovery procedure. Record addresses as you go. CREATE2 factories make “retry the same salt” a designed path — or a footgun if init code changed.
@@ -141,6 +160,10 @@ A `pause` switch is an operational control and a centralization flag. Who can pa
 ### 6. CREATE2 / factory ops
 
 Record: factory address, salt, init-code hash, resulting address. A “we redeployed with a comment change” is a different init-code hash and a different address (or a failed CREATE2). Verification must use the **creation** bytecode that was actually submitted, not a later recompile.
+
+### 7. What “verified” must mean
+
+Explorer verification is not a vibe. It means: given Standard JSON (or equivalent), `solc` reproduces **runtime bytecode** matching `eth_getCode` (metadata policy agreed). Constructor args used at deploy are recorded and match. Linked library addresses match. If any of those drift, you have a “verified” badge on the wrong program.
 
 ---
 

@@ -209,6 +209,39 @@ function pair() external pure returns (uint256 a, uint256 b) {
 
 Unassigned named returns are **zero**. Forgetting to set them is a silent `return (0, 0)`. The ABI encodes the tuple as consecutive words (or head/tail if dynamic).
 
+### 7. What the dispatcher actually does (bytecode literacy)
+
+For a contract with `foo()`, `bar()`, and a `receive`:
+
+```text
+PC 0:  PUSH1 0x80 PUSH1 0x40 MSTORE          // free-memory pointer init
+       CALLVALUE  …                           // often: if value && !payable path → revert
+       CALLDATASIZE ISZERO  …                 // empty → receive / fallback
+       PUSH1 0x04 CALLDATASIZE LT …           // < 4 bytes → fallback
+       CALLDATALOAD(0) → shr 224 → selector
+       DUP1 PUSH4 <sel_foo> EQ  → JUMPI body_foo
+       DUP1 PUSH4 <sel_bar> EQ  → JUMPI body_bar
+       … fallback …
+```
+
+Bodies end with `RETURN` of ABI-encoded outputs (or just stop). `JUMPDEST` marks valid jump targets — you cannot jump into the middle of a `PUSH` immediate. That is why hand-rolled bytecode and “optimized” assembly that corrupts jump targets is catastrophic.
+
+**Payable check:** non-`payable` functions typically `CALLVALUE` + `ISZERO` + revert if value ≠ 0. Sending ETH to a non-payable selector reverts *before* your Solidity body runs.
+
+### 8. Selector sorting and collisions
+
+`solc` may order dispatcher comparisons for gas (common selectors earlier). Two different signatures that share the first 4 keccak bytes are a **selector collision** — compile error on one contract’s ABI. Across *different* contracts, collision is possible but rare (2³² space); interfaces still beat stringly selectors.
+
+### 9. `public` vs `external` at the machine level
+
+| | `external` | `public` |
+|--|------------|----------|
+| Called from outside | calldata args | calldata args |
+| Called from inside | only via `this.f()` (CALL) | direct JUMP possible |
+| Dynamic args | can stay in calldata | internal path may need memory copy |
+
+Prefer `external` for the API surface when you never need an internal JUMP to that exact function. Prefer `public` when both paths matter (or use `external` + a thin `internal` helper).
+
 ---
 
 ## 3. Applications and use cases

@@ -94,9 +94,26 @@ bytes32 constant IMPL = bytes32(uint256(keccak256("eip1967.proxy.implementation"
 
 That is the same formula as chapter **12**. If your test’s `vm.load(addr, s)` does not match `balances(a)`, your encoding of `h(key)` is wrong — not the chain.
 
+### 2b. Packed field extract / update (the assembly you will see)
+
+```yul
+// slot holds uint128 a (low) | uint128 b (high)
+let word := sload(0)
+let a := and(word, 0xffffffffffffffffffffffffffffffff)
+let b := shr(128, word)
+
+// write newA, keep b
+let newWord := or(shl(128, b), and(newA, 0xffffffffffffffffffffffffffffffff))
+sstore(0, newWord)
+```
+
+Missing the mask on `newA` is how you clobber `b`. The compiler emits this pattern for packed state; copy-paste only with tests that read *both* fields after a write.
+
 ### 3. Variable cleanup
 
 Narrow types (`uint128`, `bool`) may have dirty high bits after `calldataload` / `sload` of a packed slot. The compiler **cleans** before using them as values (mask / compare). Your assembly may not. A dirty `bool` that is `0x02` can break `iszero` vs `eq(..., 1)` inconsistently. Read the variable-cleanup notes before shipping.
+
+Cleanup is type-dependent: `uint160`/`address` mask to 160 bits; `bytes2` may need right-alignment awareness; boolean compare is not always `iszero`. When in doubt, use high-level Solidity for the compare and only assemble the hot arithmetic.
 
 ### 4. The free-memory pointer is a contract
 
@@ -134,6 +151,36 @@ Easy to get **offset/length** wrong (wrong revert data, wallets show garbage). P
 | Compiler cannot express a needed opcode | Bypassing checked math “for speed” on user balances |
 
 Prefer importing a **maintained** library over writing a new one.
+
+### 7b. Opcode vocabulary (read, do not memorize)
+
+| Family | Examples | Literacy |
+|--------|----------|----------|
+| Stack | `DUP1`…`DUP16`, `SWAP1`…`SWAP16`, `POP` | Stack-too-deep starts here |
+| Arithmetic | `ADD` `SUB` `MUL` `DIV` `SDIV` `MOD` `ADDMOD` `MULMOD` `EXP` | All wrap; checked math is Solidity’s wrapper |
+| Comparison | `LT` `GT` `SLT` `EQ` `ISZERO` | |
+| Bit | `AND` `OR` `XOR` `NOT` `SHL` `SHR` `SAR` `BYTE` | Packing masks |
+| Env | `ADDRESS` `BALANCE` `CALLER` `CALLVALUE` `CALLDATALOAD` `CODESIZE` … | Globals |
+| Storage | `SLOAD` `SSTORE` `TLOAD` `TSTORE` | Persistent vs transient |
+| Memory | `MLOAD` `MSTORE` `MSTORE8` `MCOPY` | Free pointer discipline |
+| Flow | `JUMP` `JUMPI` `JUMPDEST` `RETURN` `REVERT` `STOP` `INVALID` | |
+| Call | `CALL` `STATICCALL` `DELEGATECALL` `CREATE` `CREATE2` | Chapter **15** |
+| Log | `LOG0`…`LOG4` | Events |
+| Hash | `KECCAK256` | Selectors, slots, EIP-712 |
+
+Yul names these in lowercase (`add`, `sload`, `call`). Inline assembly may reference Solidity variables; the compiler decides whether they live on stack or in memory.
+
+### 7c. A minimal `call` in Yul (so traces make sense)
+
+```yul
+let ok := call(gas(), addr, 0, add(data, 0x20), mload(data), 0, 0)
+if iszero(ok) {
+    returndatacopy(0, 0, returndatasize())
+    revert(0, returndatasize())
+}
+```
+
+That is “bubble the revert.” Swallowing `ok` without looking at returndata is how silent failures ship. Prefer high-level Solidity unless you are in a reviewed library that already standardized this.
 
 ### 8. EOF / experimental backends
 

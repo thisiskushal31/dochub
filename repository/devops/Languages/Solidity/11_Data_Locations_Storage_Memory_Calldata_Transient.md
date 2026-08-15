@@ -136,9 +136,26 @@ uint128 b; // slot 0, bytes 16–31  — packed
 uint256 c; // slot 1               — does not fit remainder
 ```
 
+**Worked word (lower-order aligned):** if `a = 0x11…1` (16 bytes of `0x11`) and `b = 0x22…2`, slot 0 reads as:
+
+```text
+0x2222222222222222222222222222222211111111111111111111111111111111
+   \_______________ b (high 16) ______________/\_________ a (low 16) _________/
+```
+
+To write only `a` without clobbering `b`, the compiler (or your assembly) must `SLOAD`, mask, `OR`, `SSTORE`. That is why packing **helps** when fields change together and **hurts** when one packed field is written alone in a hot loop.
+
+```solidity
+struct S { uint128 x; uint64 y; uint64 z; } // one slot if alone
+// vs
+struct T { uint128 x; uint256 y; uint128 z; } // three slots — y breaks the pack
+```
+
+Official guidance: order members `uint128, uint128, uint256` not `uint128, uint256, uint128`.
+
 Changing declaration **order** changes layout. That breaks proxies and `cast storage` notes. Freeze layout once you ship.
 
-`constant` is not a slot. `immutable` is not a slot (baked into bytecode). `transient` uses the **same numbering rules** on a *separate* map — a `uint256 transient x` does not occupy persistent slot 0.
+`constant` is not a slot. `immutable` is not a slot (baked into bytecode). `transient` uses the **same numbering rules** on a *separate* map — a `uint256 transient x` does not occupy persistent slot 0. Mappings and dynamic arrays each reserve a full slot for their base `p` even though the slot’s *contents* are empty (mappings) or a length (arrays) — they never share that slot with a neighbor.
 
 ### 3. Transient semantics (EIP-1153)
 
@@ -163,6 +180,12 @@ Solidity memory is a byte array. Conventionally:
 | `0x80` onward | Allocated objects |
 
 Dynamic arrays / `bytes` / `string` in memory are typically `length` at `p`, data at `p+0x20`. Allocating without updating `mload(0x40)` is how assembly corrupts the next `abi.encode` (chapter **21**). Memory expansion is gas: you pay for the highest word touched.
+
+### 4b. Calldata layout (external args)
+
+For an `external` function, Solidity often leaves dynamic arguments in **calldata** (no copy). Offsets in the ABI head are relative to the start of the *arguments* region (after the 4-byte selector). Reading `calldataload(4)` is the first head word. Assembly that parses calldata must match chapter **14** or it will read the wrong word — especially for nested dynamics (`string[]`, tuples).
+
+`calldata` slices (`bytes calldata b`) are `(offset, length)` pairs into the input tape — cheap to pass around, immutable.
 
 ### 5. `delete` and gas
 

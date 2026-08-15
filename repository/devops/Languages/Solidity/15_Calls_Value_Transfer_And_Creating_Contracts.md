@@ -147,13 +147,32 @@ Solidity’s `{value: v, gas: g}` options map onto EVM call opcodes. Literacy, n
 
 **63/64 rule (EIP-150):** a call can forward at most `gas - floor(gas/64)` of remaining gas. The caller always keeps ≥ 1/64 to finish. This is why “out of gas in the callee” does not always OOG the caller, and why `gasleft()` is not an access-control tool.
 
+### 1b. `CALL` stack layout (what assembly is pushing)
+
+`CALL` pops (top of stack first in the usual diagram):
+
+```text
+gas | addr | value | argsOffset | argsSize | retOffset | retSize
+→ pushes success (0 or 1)
+```
+
+`STATICCALL` omits `value`. `DELEGATECALL` omits `value` and uses the caller’s storage/`msg.sender`/`msg.value`. Solidity’s `addr.call{value: v, gas: g}(data)` fills these from the `bytes memory data` pointer (`mload(data)` = length, data at `data+0x20`) and a returndata scratch region.
+
+After the call:
+
+- `returndatasize` = bytes returned (even on failure — revert data lives here too),
+- `returndatacopy(dest, 0, size)` copies into memory,
+- high-level Solidity on failure **bubbles** (reverts you) unless you used low-level `call` / `try`.
+
+On **success**, returndata is the ABI encoding of returns. On **failure**, returndata is often `Error(string)`, `Panic(uint256)`, or a custom error — or empty.
+
 ### 2. The 2300 stipend
 
 `transfer` / `send` do `CALL` with **2300 gas**. That used to be enough for a log and not much else. Gas schedules change; some recipients need more than 2300 just to receive; stipend-as-reentrancy-defense is **not** a strategy. New code: `call` + check `ok` + CEI (+ lock if you accept callbacks).
 
 ### 3. Forced ETH
 
-`selfdestruct` (deprecated; effects changing) and coinbase payments can put ETH on an address **without** running `receive`. Do not assume `address(this).balance == accounted`. Account with your own mappings. A `require(address(this).balance == x)` invariant is usually wrong.
+`selfdestruct` (deprecated; **EIP-6780** in Cancun: only burns code/sends value if same-tx as creation) and coinbase payments can put ETH on an address **without** running `receive`. Do not assume `address(this).balance == accounted`. Account with your own mappings. A `require(address(this).balance == x)` invariant is usually wrong.
 
 ### 4. CREATE vs CREATE2
 
@@ -162,9 +181,15 @@ CREATE  address = last20(keccak256(rlp([sender, nonce])))
 CREATE2 address = last20(keccak256(0xff . sender . salt . keccak256(init_code)))
 ```
 
-`new Child(arg)` → CREATE. `new Child{salt: s}(arg)` → CREATE2. **Init code** includes constructor args encoding; change the constructor or the args and the CREATE2 address changes. Same salt + same init code + same deployer = same address. After a successful create, that address has code; a second CREATE2 with the same triple fails.
+`new Child(arg)` → CREATE. `new Child{salt: s}(arg)` → CREATE2. **Init code** includes constructor args encoding; change the constructor or the args and the CREATE2 address changes. Same salt + same init code + same deployer = same address. After a successful create, that address has code; a second CREATE2 with the same triple fails (account already has code).
 
-Nonce of a contract increments on each CREATE from it (not on calls). Address prediction for CREATE needs the current nonce.
+**Init code return rule:** the constructor’s execution must end by leaving the **runtime bytecode** as the return data of the init execution (Solidity does this for you). If init returns empty, you get an empty-code account (still an address). If init OOGs or reverts, no account is created (CREATE2: address stays empty, salt reusable).
+
+Nonce of a contract increments on each CREATE from it (not on calls). Address prediction for CREATE needs the current nonce. Contract nonce starts at **1** on Ethereum (not 0) after creation — check the fork rules when predicting.
+
+### 4b. EIP-1167 minimal proxy (clone)
+
+A common “clone” is ~45 bytes of runtime that `DELEGATECALL`s a fixed implementation address baked into the bytecode. Cheap to `CREATE2` many instances; each has its own storage. Same layout/initializer rules as a full proxy (chapter **20**). The implementation address is in the clone’s *code*, not ERC-1967 storage — upgrading means new clones or a beacon pattern.
 
 ### 5. `delegatecall` storage collision
 
@@ -174,13 +199,21 @@ If implementation slot 0 is `owner` and proxy slot 0 is `implementation`, the fi
 
 A callee can return megabytes. `abi.decode` / high-level calls copy returndata into memory (expansion gas). Against untrusted contracts, bound what you copy (`returndatasize` + a cap in a reviewed helper). Know the hazard; do not invent a half-copy decoder in an incident.
 
+### 6b. Gas griefing without a bomb
+
+A callee can `CALL` you back (reentrancy) or simply burn almost all forwarded gas and return success with empty data. Always:
+
+1. check `ok`,
+2. check returndata shape if you expected a `bool` / struct,
+3. keep CEI so a callback cannot drain state.
+
 ### 7. Token `transfer` that returns nothing
 
 Some old tokens omit `returns (bool)`. High-level `IERC20.transfer` may revert on empty returndata depending on the wrapper. Use a well-tested helper (OZ `SafeERC20`) rather than inventing one.
 
 ### 8. `selfdestruct`
 
-Scheduled for severe restriction / removal of its useful effects. Do not design new systems around it. Treat remaining uses as brownfield.
+Scheduled for severe restriction / removal of its useful effects. Cancun (EIP-6780) already neutered same-tx-only destruction for most uses. Do not design new systems around it. Treat remaining uses as brownfield.
 
 ---
 
@@ -218,3 +251,4 @@ Scheduled for severe restriction / removal of its useful effects. Do not design 
 - [EIP-150 (63/64 gas)](https://eips.ethereum.org/EIPS/eip-150)
 - [EIP-1014 (CREATE2)](https://eips.ethereum.org/EIPS/eip-1014)
 - [EIP-1167 (minimal proxy)](https://eips.ethereum.org/EIPS/eip-1167)
+- [EIP-6780 (SELFDESTRUCT same-tx)](https://eips.ethereum.org/EIPS/eip-6780)

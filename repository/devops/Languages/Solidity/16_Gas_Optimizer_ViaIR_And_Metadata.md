@@ -86,13 +86,43 @@ Gas is a schedule that **changes every hard fork**. Numbers below are order-of-m
 
 **Calldata vs storage:** putting a 32-byte word in calldata for a rollup is a different economy than L1 `SSTORE`. Measure on the chain you ship to.
 
+### 1b. Memory expansion (the quadratic you feel)
+
+Memory is free until you touch it. Cost depends on the **highest** address accessed (rounded up to words), roughly:
+
+```text
+words = ceil(highest_byte / 32)
+cost  ≈ 3 * words + words² / 512
+```
+
+Jumping `mstore` to `0x100000` once is expensive even if you only write one word. Return bombs and huge `abi.encode` payloads hurt here. Allocating carefully (bump `0x40` by what you need) is both correctness and gas.
+
+### 1c. `SSTORE` net-gas intuition (Berlin / London era)
+
+Exact numbers move; the *decision tree* stays:
+
+1. Is the slot **cold**? Pay cold access surcharge once per slot per tx (EIP-2929).
+2. Is this a **no-op** (new value == current)? Cheap.
+3. **0 → nonzero:** most expensive (creates storage).
+4. **nonzero → nonzero:** cheaper update.
+5. **nonzero → 0:** may earn a **refund** (EIP-3529 capped refunds hard).
+
+Packed slots: writing one `uint128` in a shared slot is still a full `SLOAD`+mask+`SSTORE` of the 32-byte word — so packing wins when you **read/write several fields together**, and loses when you thrash one field alone (official docs warn about this).
+
 ### 2. Cold vs warm (EIP-2929) and access lists (EIP-2930)
 
 First access to an **address** or **slot** in a transaction is cold; later accesses are warm. `tx.accessList` (type-1 / type-2 txs) can pre-warm. Locks that “touch the slot first” are real; measure before you micro-optimize.
 
 ### 3. `PUSH0` and evmVersion
 
-Shanghai introduced `PUSH0` (1 gas, push 0). Compiling for `shanghai` and deploying on a pre-Shanghai fork **invalid-opcodes** the contract. Cancun adds `TSTORE`/`TLOAD`/`MCOPY`/blob opcodes. Chapter **02**’s pin is a **codegen** pin, not just a language pin.
+Shanghai introduced `PUSH0` (1 gas, push 0). Compiling for `shanghai` and deploying on a pre-Shanghai fork **invalid-opcodes** the contract. Cancun adds `TSTORE`/`TLOAD`/`MCOPY`/blob opcodes. Prague / later forks add more. Chapter **02**’s pin is a **codegen** pin, not just a language pin.
+
+| `evmVersion` (examples) | Notable opcodes you may emit |
+|-------------------------|------------------------------|
+| `paris` | pre-Shanghai (no `PUSH0`) |
+| `shanghai` | `PUSH0` |
+| `cancun` | `TSTORE`/`TLOAD`/`MCOPY`/`BLOBHASH`/… |
+| `prague` | further (verify against your `solc` + chain) |
 
 ### 4. Optimizer + via-IR (what the flags mean)
 
@@ -103,15 +133,17 @@ Shanghai introduced `PUSH0` (1 gas, push 0). Compiling for `shanghai` and deploy
 
 Rare optimizer bugs exist — pin `solc`, read the known-bugs list on a version jump, fuzz (chapter **17**).
 
+**Stack-too-deep:** the EVM stack is 16 for accessible slots in a frame’s working set (compiler constraint). via-IR often spills to memory and compiles where the legacy pipeline fails. That is a reason to flip via-IR — still a pin you must verify with.
+
 ### 5. Metadata CBOR (why two “identical” compiles differ)
 
 Bytecode ends with a CBOR blob + 2-byte length:
 
 ```text
-… <runtime> a2646970667358… <cbor> <len>
+… <runtime> a2646970667358… <cbor> <len_hi><len_lo>
 ```
 
-Typical keys: `ipfs` (or `bzzr1`) hash of the **metadata JSON**, `solc` version. The metadata JSON includes sources, hashes, compiler settings. **Any** comment, path, or settings change → different IPFS hash → different bytecode tail → explorer “partial match.”
+The last two bytes are the CBOR length. Typical keys: `ipfs` (or `bzzr1`) hash of the **metadata JSON**, `solc` version. The metadata JSON includes sources, hashes, compiler settings (`optimizer`, `evmVersion`, …). **Any** comment, path, or settings change → different IPFS hash → different bytecode tail → explorer “partial match.”
 
 `bytecodeHash`: `ipfs` (default) | `bzzr1` | `none`. `cbor_metadata` / `appendCBOR` can strip the tail. Pick a policy and use it in **CI and verify**.
 
@@ -122,6 +154,18 @@ Typical keys: `ipfs` (or `bzzr1`) hash of the **metadata JSON**, `solc` version.
 ### 7. Experimental codegen (0.8.35–0.8.36 literacy)
 
 Recent compilers experimented with SSA / stack-to-memory paths; the EOF backend was **removed** when EOF did not land as assumed. Do not flip experimental codegen on a production pin because a release note sounded exciting.
+
+### 8. Intrinsic gas (tx floor)
+
+Before your bytecode runs, the protocol charges roughly:
+
+- **21000** base (simple transfer),
+- **calldata:** 4 gas/zero byte, 16 gas/nonzero byte (Istanbul+),
+- **create** surcharge if deploying,
+- **access list** costs if present,
+- **blob** gas is separate (EIP-4844) — not paid from the execution gas meter the same way.
+
+A “failed” tx that reverts still pays intrinsic + execution gas used. Empty revert data does not refund the call.
 
 ---
 
@@ -156,3 +200,6 @@ Recent compilers experimented with SSA / stack-to-memory paths; the EOF backend 
 - [Source mappings](https://docs.soliditylang.org/en/v0.8.36/internals/source_mappings.html)
 - [Ethereum: gas](https://ethereum.org/developers/docs/gas/)
 - [Foundry: gas reports](https://book.getfoundry.sh/forge/gas-reports)
+- [EIP-2929 (gas access lists / cold-warm)](https://eips.ethereum.org/EIPS/eip-2929)
+- [EIP-3529 (refunds)](https://eips.ethereum.org/EIPS/eip-3529)
+- [EIP-3855 (PUSH0)](https://eips.ethereum.org/EIPS/eip-3855)

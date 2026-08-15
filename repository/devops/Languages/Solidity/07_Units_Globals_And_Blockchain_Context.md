@@ -156,6 +156,15 @@ Removed / renamed: `now` (= timestamp), `block.difficulty` (use `prevrandao` pos
 
 **`msg.value` in a non-`payable` function is 0** at the Solidity level (the compiler rejects value on non-payable external functions). Internal functions can still see a leftover `msg.value` from an outer payable call — that is how people accidentally treat an internal helper as if it received new ETH.
 
+### 1b. Type-3 blob transactions (Cancun literacy)
+
+EIP-4844 introduces **blob-carrying** txs. Execution still sees:
+
+- `blobhash(i)` — versioned hash of blob `i` (or zero),
+- `block.blobbasefee` — blob fee market,
+
+but **not** the blob data itself inside the EVM. Contracts that “verify a blob” use the point-evaluation precompile (`0x0a`) with commitments — they do not `SLOAD` blob bytes. If your product story is “store data in blobs,” the data availability is consensus-side; the contract only sees proofs/hashes.
+
 ### 2. `msg.sender` under `delegatecall`
 
 Code runs in the *caller’s* storage; **`msg.sender` and `msg.value` stay the original call’s**. The implementation does **not** see the proxy as `msg.sender`. “I check `msg.sender == owner` in implementation code” is checking the *proxy’s* caller — correct for a proxy, disastrous if you thought `msg.sender` was the proxy.
@@ -174,13 +183,31 @@ Producers can nudge timestamps within protocol bounds. Do not implement “first
 
 Precompile at `0x01`. Input: `hash || v || r || s` (32+32+32+32). Returns `address(0)` on failure — **check that**. It does not understand EIP-712; you hash the digest first. Malleable `s` values and missing domain separation are chapter **18**. Here: **never treat a raw `ecrecover` as login.**
 
+**`v` trivia:** historically `27`/`28`; some pipelines use `0`/`1` and add `27` in contract. Wrong `v` → `address(0)`. Homestead+ rejects high-`s` signatures in tx validation, but **`ecrecover` itself still accepts malleable `s`** unless you check `s <= secp256k1n/2` (or use a library that does).
+
 ### 6. `gasleft()` is not a security boundary
 
 Do not branch on “if lots of gas remain, do extra work” as a safety check. Callers choose gas. EIP-150 63/64 forwarding (chapter **15** / **16**) is not an access-control tool.
 
+### 6b. `address(this).balance` vs `msg.value`
+
+`address(this).balance` is the account’s wei **including** the current call’s `msg.value` (already credited before your code runs). Patterns like `require(msg.value == address(this).balance)` are almost always wrong for anything that already held ETH. Accounting belongs in your mappings (chapter **15**).
+
 ### 7. Units are just multipliers
 
 `1 ether == 1e18`, `1 gwei == 1e9`, `1 days == 86400`. They do not convert ETH↔USD and they do not know your token’s decimals. `1 hours` after a leap-second debate is still 3600. Use them as literals, not as a price oracle.
+
+### 8. Cryptographic helpers on `abi` / globals
+
+| Helper | Role |
+|--------|------|
+| `keccak256` | General hash; selectors; storage slots; EIP-712 pieces |
+| `sha256` / `ripemd160` | Precompile wrappers — different domains than keccak |
+| `ecrecover` | See above |
+| `addmod` / `mulmod` | Modular math with 512-bit intermediate |
+| `abi.encode*` | Chapter **14** |
+
+`keccak256` of empty bytes is a fixed constant (`c5d2…`); people accidentally use it as a “null” sentinel — document if you do.
 
 ---
 
@@ -213,4 +240,5 @@ Do not branch on “if lots of gas remain, do extra work” as a safety check. C
 - [Cheatsheet](https://docs.soliditylang.org/en/v0.8.36/cheatsheet.html)
 - [Security considerations](https://docs.soliditylang.org/en/v0.8.36/security-considerations.html)
 - [Ethereum: blocks](https://ethereum.org/developers/docs/blocks/)
-- [Ethereum: gas](https://ethereum.org/developers/docs/gas/)
+- [EIP-712](https://eips.ethereum.org/EIPS/eip-712)
+- [EIP-4844 (blob txs)](https://eips.ethereum.org/EIPS/eip-4844)

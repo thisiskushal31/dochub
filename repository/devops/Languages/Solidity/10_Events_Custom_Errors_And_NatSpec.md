@@ -163,7 +163,9 @@ Rules that bite:
 
 ### 3. Gas of `emit`
 
-`LOG` costs: base + per topic + per byte of data. Logging inside a hot loop is a gas weapon. Batch with a summary event if the per-item log is not required for accounting.
+`LOG0`…`LOG4` cost roughly: base + per topic + per byte of data (schedule-dependent). More indexed fields → higher topic count → higher gas, but cheaper / faster **filters** for indexers. Logging inside a hot loop is a gas weapon. Batch with a summary event if the per-item log is not required for accounting.
+
+`emit` is not a storage write: logs are not accessible to contracts in later calls (no `SLOAD` of logs). Only off-chain consumers see them. That is why “emit then expect another contract to react in the same tx” does not work without an actual `CALL`.
 
 ### 4. Sensitive data in logs
 

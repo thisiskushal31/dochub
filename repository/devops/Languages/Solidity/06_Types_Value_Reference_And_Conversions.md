@@ -128,6 +128,10 @@ function add(Wad a, Wad b) internal pure returns (Wad) {
 
 `wrap` / `unwrap` make accidental `Wad + rawUint` fail to compile. Use them for IDs and decimal conventions.
 
+### 8. Fixed-point is a convention, not a type
+
+Solidity has no `float`. “18 decimals” means: store `amount * 10**18` as `uint256` (or a `Wad` UDT). Multiplication of two wads needs a scale divide (`mulWad` / `mulDiv`) or you overflow / mis-scale. Division truncates — specify rounding. Libraries (OZ `Math.mulDiv`, solmate-style `FixedPointMathLib`) exist so you do not invent 512-bit intermediates wrong. Document the scale next to every money type.
+
 ---
 
 ## 2. Advanced concepts

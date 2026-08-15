@@ -43,15 +43,20 @@ You will also meet upgradeable systems. Literacy (layout, initializer, admin) is
 ```text
 selector          = first4(keccak256("transfer(address,uint256)"))
 mapping slot      = keccak256(h(key) . p)
-array element i   = keccak256(p) + i
+array element i   = keccak256(p) + i          // then pack if narrow T
 CREATE            = last20(keccak256(rlp([sender, nonce])))
 CREATE2           = last20(keccak256(0xff . sender . salt . keccak256(init_code)))
 ERC-1967 impl     = keccak256("eip1967.proxy.implementation") - 1
+EIP-712 digest    = keccak256("\x19\x01" || domainSeparator || structHash)
 Panic(uint256)    = 0x4e487b71 || code     (0x11 overflow, 0x32 OOB, …)
 Error(string)     = 0x08c379a0 || ABI string
+memory cost       ≈ 3*words + words²/512   (words = ceil(max_byte/32))
+forward gas       ≤ gas - floor(gas/64)    (EIP-150)
 ```
 
-If you cannot derive those, re-read **11–16**, **20**, and **21** — not another token tutorial.
+**Also say out loud:** ABI does not pack (a `uint8` is still a 32-byte word on the wire); storage does. Memory structs do not pack like storage structs. `delegatecall` keeps `msg.sender` and uses the caller’s storage.
+
+If you cannot derive those, re-read **11–16**, **18**, **20**, and **21** — not another token tutorial.
 
 ### Brownfield opcode / API fossils
 
@@ -124,7 +129,7 @@ Deep-study leftovers from the README: if you skipped the labs, do them before si
 - [ ] Token work uses maintained implementations + a threat model for weird tokens.
 - [ ] Assembly (if any) is justified, tested, and extra-reviewed.
 
-When the boxes that apply to *your* system are checked, the track has done its job. Revisit **02** on every compiler bump, **18** on every value-moving PR, and **20** on every mainnet push.
+When the boxes that apply to *your* system are checked, the track has done its job for **shipping contracts**. For **where the platform is moving** and what to hand off next, sign chapter **24** as well. Revisit **02** on every compiler bump, **18** on every value-moving PR, **20** on every mainnet push, and **24** on every hard-fork or L2/AA decision.
 
 ---
 
@@ -138,3 +143,4 @@ When the boxes that apply to *your* system are checked, the track has done its j
 - [Hardhat documentation](https://hardhat.org/docs)
 - [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts)
 - [Track README](./README.md)
+- [Where this is going — chapter 24](./24_Where_This_Is_Going_And_How_To_Stay_Oriented.md)

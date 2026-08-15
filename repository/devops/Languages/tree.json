@@ -5242,14 +5242,14 @@
         "path": "Solidity/01_What_Is_Solidity_And_The_EVM.md",
         "type": "file",
         "sha": "",
-        "size": 11073
+        "size": 13986
       },
       {
         "name": "02_Versions_Pragmas_And_Breaking_Changes.md",
         "path": "Solidity/02_Versions_Pragmas_And_Breaking_Changes.md",
         "type": "file",
         "sha": "",
-        "size": 9702
+        "size": 10354
       },
       {
         "name": "03_Toolchain_Solc_Remix_Foundry_Hardhat.md",
@@ -5277,77 +5277,77 @@
         "path": "Solidity/06_Types_Value_Reference_And_Conversions.md",
         "type": "file",
         "sha": "",
-        "size": 9190
+        "size": 9649
       },
       {
         "name": "07_Units_Globals_And_Blockchain_Context.md",
         "path": "Solidity/07_Units_Globals_And_Blockchain_Context.md",
         "type": "file",
         "sha": "",
-        "size": 9899
+        "size": 11656
       },
       {
         "name": "08_Functions_Visibility_Modifiers_And_Payable.md",
         "path": "Solidity/08_Functions_Visibility_Modifiers_And_Payable.md",
         "type": "file",
         "sha": "",
-        "size": 9262
+        "size": 11210
       },
       {
         "name": "09_Control_Flow_Errors_And_Checked_Math.md",
         "path": "Solidity/09_Control_Flow_Errors_And_Checked_Math.md",
         "type": "file",
         "sha": "",
-        "size": 9836
+        "size": 11043
       },
       {
         "name": "10_Events_Custom_Errors_And_NatSpec.md",
         "path": "Solidity/10_Events_Custom_Errors_And_NatSpec.md",
         "type": "file",
         "sha": "",
-        "size": 8349
+        "size": 8750
       },
       {
         "name": "11_Data_Locations_Storage_Memory_Calldata_Transient.md",
         "path": "Solidity/11_Data_Locations_Storage_Memory_Calldata_Transient.md",
         "type": "file",
         "sha": "",
-        "size": 9022
+        "size": 10561
       },
       {
         "name": "12_Mappings_Arrays_Structs_And_Enums.md",
         "path": "Solidity/12_Mappings_Arrays_Structs_And_Enums.md",
         "type": "file",
         "sha": "",
-        "size": 8434
+        "size": 10149
       },
       {
         "name": "13_Inheritance_Interfaces_And_Libraries.md",
         "path": "Solidity/13_Inheritance_Interfaces_And_Libraries.md",
         "type": "file",
         "sha": "",
-        "size": 9313
+        "size": 10104
       },
       {
         "name": "14_ABI_Selectors_And_Encoding.md",
         "path": "Solidity/14_ABI_Selectors_And_Encoding.md",
         "type": "file",
         "sha": "",
-        "size": 8430
+        "size": 11163
       },
       {
         "name": "15_Calls_Value_Transfer_And_Creating_Contracts.md",
         "path": "Solidity/15_Calls_Value_Transfer_And_Creating_Contracts.md",
         "type": "file",
         "sha": "",
-        "size": 10027
+        "size": 12349
       },
       {
         "name": "16_Gas_Optimizer_ViaIR_And_Metadata.md",
         "path": "Solidity/16_Gas_Optimizer_ViaIR_And_Metadata.md",
         "type": "file",
         "sha": "",
-        "size": 7671
+        "size": 10179
       },
       {
         "name": "17_Testing_With_Foundry_And_Hardhat.md",
@@ -5361,7 +5361,7 @@
         "path": "Solidity/18_Security_Review_Reentrancy_Access_And_Trust.md",
         "type": "file",
         "sha": "",
-        "size": 9904
+        "size": 11731
       },
       {
         "name": "19_Static_Analysis_SMTChecker_And_Audits.md",
@@ -5375,14 +5375,14 @@
         "path": "Solidity/20_DevOps_CI_Verify_Keys_And_Upgrades.md",
         "type": "file",
         "sha": "",
-        "size": 8316
+        "size": 9848
       },
       {
         "name": "21_Yul_Assembly_And_EVM_Internals_Literacy.md",
         "path": "Solidity/21_Yul_Assembly_And_EVM_Internals_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 7727
+        "size": 10022
       },
       {
         "name": "22_Use_Cases_Tokens_Apps_And_Whole_Engineering.md",
@@ -5396,14 +5396,21 @@
         "path": "Solidity/23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
         "type": "file",
         "sha": "",
-        "size": 6548
+        "size": 7273
+      },
+      {
+        "name": "24_Where_This_Is_Going_And_How_To_Stay_Oriented.md",
+        "path": "Solidity/24_Where_This_Is_Going_And_How_To_Stay_Oriented.md",
+        "type": "file",
+        "sha": "",
+        "size": 17661
       },
       {
         "name": "README.md",
         "path": "Solidity/README.md",
         "type": "file",
         "sha": "",
-        "size": 10527
+        "size": 12364
       }
     ]
   },
@@ -5414,11 +5421,186 @@
     "sha": "",
     "children": [
       {
+        "name": "00_First_Steps_Toolchain_And_Hello.md",
+        "path": "Swift/00_First_Steps_Toolchain_And_Hello.md",
+        "type": "file",
+        "sha": "",
+        "size": 14750
+      },
+      {
+        "name": "01_What_Is_Swift.md",
+        "path": "Swift/01_What_Is_Swift.md",
+        "type": "file",
+        "sha": "",
+        "size": 13505
+      },
+      {
+        "name": "02_Versions_Language_Modes_And_Swift_6.md",
+        "path": "Swift/02_Versions_Language_Modes_And_Swift_6.md",
+        "type": "file",
+        "sha": "",
+        "size": 16482
+      },
+      {
+        "name": "03_Toolchains_Swift_Org_Xcode_Linux_Windows.md",
+        "path": "Swift/03_Toolchains_Swift_Org_Xcode_Linux_Windows.md",
+        "type": "file",
+        "sha": "",
+        "size": 12211
+      },
+      {
+        "name": "04_Syntax_Bindings_Types_Optionals.md",
+        "path": "Swift/04_Syntax_Bindings_Types_Optionals.md",
+        "type": "file",
+        "sha": "",
+        "size": 13019
+      },
+      {
+        "name": "05_Control_Flow_Functions_Closures.md",
+        "path": "Swift/05_Control_Flow_Functions_Closures.md",
+        "type": "file",
+        "sha": "",
+        "size": 11699
+      },
+      {
+        "name": "06_Structs_Classes_Enums_Value_And_Reference.md",
+        "path": "Swift/06_Structs_Classes_Enums_Value_And_Reference.md",
+        "type": "file",
+        "sha": "",
+        "size": 10911
+      },
+      {
+        "name": "07_Properties_Methods_Init_Deinit.md",
+        "path": "Swift/07_Properties_Methods_Init_Deinit.md",
+        "type": "file",
+        "sha": "",
+        "size": 11267
+      },
+      {
+        "name": "08_Protocols_Extensions_Generics_Opaque_Types.md",
+        "path": "Swift/08_Protocols_Extensions_Generics_Opaque_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 13061
+      },
+      {
+        "name": "09_Error_Handling.md",
+        "path": "Swift/09_Error_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 12133
+      },
+      {
+        "name": "10_Concurrency_Async_Await_Tasks_Actors.md",
+        "path": "Swift/10_Concurrency_Async_Await_Tasks_Actors.md",
+        "type": "file",
+        "sha": "",
+        "size": 15041
+      },
+      {
+        "name": "11_ARC_Memory_Safety_Access_Control.md",
+        "path": "Swift/11_ARC_Memory_Safety_Access_Control.md",
+        "type": "file",
+        "sha": "",
+        "size": 12775
+      },
+      {
+        "name": "12_Standard_Library_Literacy.md",
+        "path": "Swift/12_Standard_Library_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 12225
+      },
+      {
+        "name": "13_Foundation_And_Core_Libraries.md",
+        "path": "Swift/13_Foundation_And_Core_Libraries.md",
+        "type": "file",
+        "sha": "",
+        "size": 12480
+      },
+      {
+        "name": "14_Swift_Package_Manager.md",
+        "path": "Swift/14_Swift_Package_Manager.md",
+        "type": "file",
+        "sha": "",
+        "size": 13023
+      },
+      {
+        "name": "15_Modules_Imports_And_Interop.md",
+        "path": "Swift/15_Modules_Imports_And_Interop.md",
+        "type": "file",
+        "sha": "",
+        "size": 11553
+      },
+      {
+        "name": "16_Testing_Swift_Testing_And_XCTest.md",
+        "path": "Swift/16_Testing_Swift_Testing_And_XCTest.md",
+        "type": "file",
+        "sha": "",
+        "size": 10741
+      },
+      {
+        "name": "17_DocC_And_API_Design_Guidelines.md",
+        "path": "Swift/17_DocC_And_API_Design_Guidelines.md",
+        "type": "file",
+        "sha": "",
+        "size": 11168
+      },
+      {
+        "name": "18_Xcode_Projects_Schemes_Build_Settings.md",
+        "path": "Swift/18_Xcode_Projects_Schemes_Build_Settings.md",
+        "type": "file",
+        "sha": "",
+        "size": 11557
+      },
+      {
+        "name": "19_SwiftUI_UIKit_AppKit_Surface_Literacy.md",
+        "path": "Swift/19_SwiftUI_UIKit_AppKit_Surface_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 12423
+      },
+      {
+        "name": "20_Security_Privacy_Signing_And_Secrets.md",
+        "path": "Swift/20_Security_Privacy_Signing_And_Secrets.md",
+        "type": "file",
+        "sha": "",
+        "size": 11643
+      },
+      {
+        "name": "21_CI_CD_Xcode_Cloud_Fastlane_Mac_Runners.md",
+        "path": "Swift/21_CI_CD_Xcode_Cloud_Fastlane_Mac_Runners.md",
+        "type": "file",
+        "sha": "",
+        "size": 11358
+      },
+      {
+        "name": "22_Use_Cases_Scripts_Packages_Apps_Server_Glance.md",
+        "path": "Swift/22_Use_Cases_Scripts_Packages_Apps_Server_Glance.md",
+        "type": "file",
+        "sha": "",
+        "size": 9169
+      },
+      {
+        "name": "23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "path": "Swift/23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "type": "file",
+        "sha": "",
+        "size": 11006
+      },
+      {
+        "name": "24_Where_Swift_Is_Going_And_Adjacent_Doors.md",
+        "path": "Swift/24_Where_Swift_Is_Going_And_Adjacent_Doors.md",
+        "type": "file",
+        "sha": "",
+        "size": 14535
+      },
+      {
         "name": "README.md",
         "path": "Swift/README.md",
         "type": "file",
         "sha": "",
-        "size": 797
+        "size": 11801
       }
     ]
   },
@@ -5532,6 +5714,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 18387
+    "size": 18553
   }
 ]

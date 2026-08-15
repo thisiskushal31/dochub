@@ -196,11 +196,24 @@ try token.transfer(to, amt) returns (bool ok) {
 
 `try` only wraps **external** calls and `new`. It does not catch your own internal `revert`. The `returns (...)` clause decodes **success** return data; a token that returns nothing may fail this decode.
 
+### 2b. What each `catch` clause matches
+
+| Clause | Matches when returndata… |
+|--------|---------------------------|
+| `catch Error(string memory r)` | starts with `Error(string)` selector `0x08c379a0` |
+| `catch Panic(uint256 c)` | starts with `Panic(uint256)` `0x4e487b71` |
+| `catch (bytes memory lowLevel)` | anything else (custom error, empty, corrupt) |
+| `catch { }` | any failure; no data bound |
+
+Order matters: put specific clauses before the generic. An empty revert hits the low-level / bare `catch`, not `Error(string)`. Custom errors are **not** `Error(string)` — decode them from `lowLevel` with `abi.decode` after slicing the selector, or re-revert.
+
 ### 3. Division, modulo, and rounding
 
 Integer division **truncates toward zero**. `type(int256).min / -1` overflows (panic). `a / 0` panics. Protocols must specify **who keeps the dust** (round down for the user vs the protocol) in NatSpec *and* a test.
 
 `addmod` / `mulmod` are wrapping modular ops on 512-bit intermediates — useful in crypto math, not a replacement for checked `+` on balances.
+
+**Signed vs unsigned:** `SDIV` / `SLT` exist at the EVM layer; Solidity’s `/` on `int` uses signed division. Mixing `int` and `uint` without an explicit cast is mostly gone in 0.8 — when you cast, you own the reinterpretation.
 
 ### 4. `unchecked` is a proof obligation
 
@@ -212,6 +225,13 @@ for (uint256 i = 0; i < xs.length; ) {
 ```
 
 `unchecked { balances[a] -= x; }` on a **user balance** is pre-0.8 underflow. Reviewers treat that as a finding unless a comment proves `balances[a] >= x` already.
+
+### 4b. What `unchecked` does *not* disable
+
+- User `require` / `revert` / custom errors still fire.
+- Array bounds checks still panic (`0x32`) unless you are in assembly.
+- Division by zero still panics.
+- Only the **overflow/underflow checks** on `+ - *` (and related) are skipped inside the block.
 
 ### 5. Failed low-level `call` does not revert you
 

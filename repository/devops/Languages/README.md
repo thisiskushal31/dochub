@@ -23,7 +23,7 @@ Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-p
 | **Kotlin** | Gradle build scripts (build.gradle.kts), Android, JVM services; Gradle and JVM stacks. |
 | **PHP**    | Web/CMS/API PHP: language through architecture, data, security, quality, and operations; Composer, FPM. |
 | **Lua**    | Nginx/OpenResty, Redis scripting, HAProxy; config and embedded scripting in infra. |
-| **Swift**  | Apple ecosystem (iOS, macOS); Apple-centric DevOps and tooling. |
+| **Swift**  | Language + SPM + Apple ship literacy (Swift 6.x): toolchain, concurrency, testing, signing/CI; Evolution compass. |
 | **Elixir**  | Phoenix apps, BEAM/OTP, Nerves (embedded); deploy and operate Elixir services. |
 | **Assembly** | Reverse engineering, malware analysis, exploit dev; x86/x64, ARM; reading disassembly. |
 | **Nim**     | Used in malware and security tooling; cross-platform, compiles to C; recognition and analysis. |
@@ -36,7 +36,7 @@ Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-p
 | **COBOL**   | Mainframes, banking, government; legacy systems and compliance. |
 | **Objective-C** | macOS/iOS legacy; Apple frameworks and interop with Swift. |
 | **OCaml**   | Compilers, MirageOS, formal/security tooling; high-assurance. |
-| **Solidity** | Whole-engineering EVM-contract track: Solidity 0.8.x, solc/Remix/Foundry/Hardhat, ABI/storage, tests, security review, CI/verify/keys. |
+| **Solidity** | Whole-engineering EVM-contract track: Solidity 0.8.x, solc/Remix/Foundry/Hardhat, ABI/storage, tests, security review, CI/verify/keys, plus orientation for forks/AA/L2 pins. |
 | **F#**      | .NET functional; Azure, data, scripting; Microsoft ecosystem. |
 | **Ada**     | Safety-critical (avionics, defense); regulated and high-assurance. |
 | **Julia**   | Scientific/numerical, HPC, data pipelines; research infra. |
@@ -92,7 +92,7 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | 13 | [**Kotlin**](./Kotlin/README.md) | Kotlin: Gradle DSL, Android, JVM; build scripts and services. |
 | 14 | [**PHP**](./PHP/README.md) | PHP: whole-engineering track—language, web/data, testing, security, delivery, ops; CMS + frameworks (22 chapters). |
 | 15 | [**Lua**](./Lua/README.md) | Lua: Nginx/OpenResty, Redis, HAProxy; config and scripting. |
-| 16 | [**Swift**](./Swift/README.md) | Swift: Apple (iOS, macOS); tooling and CI. |
+| 16 | [**Swift**](./Swift/README.md) | Swift: whole-engineering track—language, SPM, concurrency, testing, Apple CI/signing (00–24). |
 | 17 | [**Elixir**](./Elixir/README.md) | Elixir: Phoenix, BEAM/OTP, Nerves; deploy and operate. |
 | 18 | [**Assembly**](./Assembly/README.md) | Assembly: RE, malware analysis, exploit dev; x86/x64, ARM. |
 | 19 | [**Nim**](./Nim/README.md) | Nim: malware and security tooling; recognition and analysis. |
@@ -105,7 +105,7 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | 26 | [**COBOL**](./COBOL/README.md) | COBOL: mainframes, banking, government; legacy and compliance. |
 | 27 | [**Objective-C**](./Objective-C/README.md) | Objective-C: macOS/iOS legacy; Apple frameworks. |
 | 28 | [**OCaml**](./OCaml/README.md) | OCaml: compilers, MirageOS, formal/security tooling. |
-| 29 | [**Solidity**](./Solidity/README.md) | Solidity whole-engineering track: baby steps→staff; 0.8.x, Foundry/Hardhat, ABI/security/ops (00–23). |
+| 29 | [**Solidity**](./Solidity/README.md) | Solidity whole-engineering track: baby steps→staff; 0.8.x, Foundry/Hardhat, ABI/security/ops, compass for forks/AA (00–24). |
 | 30 | [**FSharp**](./FSharp/README.md) | F#: .NET functional; Azure, data, scripting. |
 | 31 | [**Ada**](./Ada/README.md) | Ada: safety-critical; avionics, defense, regulated. |
 | 32 | [**Julia**](./Julia/README.md) | Julia: scientific, HPC, data pipelines. |

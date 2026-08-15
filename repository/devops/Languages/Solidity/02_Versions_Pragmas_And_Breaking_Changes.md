@@ -150,6 +150,15 @@ Hardhat can compile different files with different versions (legacy dependency +
 
 You do not memorize every changelog row. You know **0.8.0 math** and **custom errors** are not optional literacy.
 
+### 4b. Language version ≠ EVM version (two dials)
+
+| You set | Controls | Wrong match failure |
+|---------|----------|---------------------|
+| `pragma` / `solc` 0.8.z | Syntax, checked math, which language features exist | Won’t compile / different semantics |
+| `evmVersion` | Which opcodes `solc` may emit | Deploy succeeds, runtime **invalid opcode** on older forks |
+
+Examples: `transient` keyword needs a new enough **language** *and* `cancun`+ **evmVersion** *and* a Cancun chain. `PUSH0` needs `shanghai`+ evmVersion. You can compile 0.8.36 with `evmVersion = paris` to target an older fork — then you must not use Cancun-only features.
+
 ### 5. Pre-0.8 review hazards (not templates)
 
 When you open an old file:

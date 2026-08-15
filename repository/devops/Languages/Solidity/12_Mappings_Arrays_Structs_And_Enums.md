@@ -159,6 +159,24 @@ nested mapping(K1 => mapping(K2 => V)):
 
 `h(key)` is the 32-byte ABI-style encoding of the key (`address` left-padded, `bytes`/`string` hashed first — see the layout-in-storage spec). Off-chain: `cast index address <key> <p>`. You hand-roll this for slot tests and assembly (chapter **21**).
 
+**Key encoding (`h(k)`) — be exact:**
+
+| Key type | `h(k)` |
+|----------|--------|
+| `uint*` / `int*` / `bytesN` / `address` / `bool` | padded to 32 bytes like ABI |
+| `string` / `bytes` | `keccak256(raw content)` — **not** ABI-encoded with length |
+| contract type | as `address` |
+
+Worked sketch: `mapping(address => uint256) bal` at slot `0`, key `0xA11CE…`:
+
+```text
+mstore(0x00, left_pad_32(0xA11CE…))
+mstore(0x20, 0x00…00)                 // slot p = 0
+slot = keccak256(0x00..0x3f)
+```
+
+Then `sload(slot)` is the balance. If `cast storage` disagrees with `bal(addr)`, your padding or endianness is wrong.
+
 ### 2. Dynamic array slots
 
 A `T[]` at slot `p` stores **length** at `p`. Element `i` starts at:
@@ -169,11 +187,34 @@ slot(elem i) = keccak256(p) + i     // then pack if T is smaller than 32 bytes
 
 Fixed-size `T[k]` is just `k` consecutive packed items starting at `p` — no keccak, no length word.
 
+**Packed dynamic arrays:** for `uint24[]` at slot `p`, element `j` is not always `keccak256(p)+j`. Elements share slots: `floor(256/24) = 10` values per slot. Official formula idea:
+
+```text
+base = keccak256(p)
+slot = base + floor(j / 10)
+shift = (j % 10) * 24 bits
+value = (sload(slot) >> shift) & mask24
+```
+
+Nested `uint24[][]`: apply keccak again for the outer index, then the packed rule for the inner. If you are writing slot tests for packed arrays, prefer `forge inspect` / storage layout JSON over hand arithmetic until you have a golden fixture.
+
+**`push` / `pop`:** `push` increments length at `p` and writes the new element slot(s). `pop` decrements length and zeros the removed element’s bits (important for packed arrays — do not leave dirty bits). Out-of-bounds `pop` → Panic `0x31`.
+
 ### 3. Short `bytes` / `string` (the dirty-slot trick)
 
 If `data.length < 32`, Solidity stores `length * 2` in the **low byte** of slot `p` and the bytes in the higher part of the same slot. If `length >= 32`, slot `p` stores `length * 2 + 1` and the data lives at `keccak256(p)` like a `bytes` array.
 
 The low bit of the slot is therefore a **flag**: even = short, odd = long. Assembly that treats every `string` slot as a pointer is wrong. `0x22` Panic = “this storage byte array encoding is corrupt.”
+
+Worked short string `"hi"` (length 2) in slot `p`:
+
+```text
+// low byte = 2 * 2 = 4 (even → short)
+// data sits in the high bytes of the same word
+slot_p ≈ 0x6869000…0004
+```
+
+Long string: low bit set, length encoded as `2*len+1`, payload at `keccak256(p)`, `keccak256(p)+1`, …
 
 ### 4. Nested mappings and allowances
 
