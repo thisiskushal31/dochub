@@ -6,7 +6,7 @@ If you have shipped a script, a library, or an iOS build, you already know half 
 
 You write clear, typed code. The compiler (`swift` / Xcode) checks optionals, errors, and—under **Swift 6** language mode—data races harder than early Swift ever did. On Apple platforms you also inherit **signing, privacy manifests, and Mac CI** as part of “done,” not as a separate hobby.
 
-This track teaches the **language + toolchain + Package Manager + Apple ship literacy**: how to read Swift, how SPM and Xcode fit together, how concurrency and memory actually behave, how to test and document, and how to review CI that produces a signed artifact. It is **not** a UI/UX design course, an App Store marketing guide, a WWDC video dump, or a full server-framework encyclopedia. Chapter **24** is the **compass** for Evolution and adjacent doors (server, Wasm, Android SDK) so finishing here still *directs* you.
+This track teaches the **language + toolchain + Package Manager + Apple ship literacy**: how to read Swift, how SPM and Xcode fit together, how concurrency and memory actually behave, how to test and document, and how to review CI that produces a signed artifact. It is **not** a UI/UX design course, an App Store marketing guide, a WWDC video dump, or a full server-framework encyclopedia. Chapter **24** is the **compass** for Evolution and adjacent doors (server, Wasm, Android SDK, Embedded, C++ interop, ownership) so finishing here still *directs* you.
 
 Start at chapter **00**. The first goal is not “ship to the App Store.” It is: know which `swift` is on your PATH, run a hello, and feel the difference between a script, a package, and an app target.
 
@@ -58,11 +58,41 @@ You do not need to memorize every stdlib method. You need a picture you can hold
 ## Semantic model (the ideas that make Swift click)
 
 - **Language + toolchain family.** The same ideas ship via swift.org toolchains, Xcode, or Linux/Windows installs—**which binary** you invoked is part of the truth.
-- **Value vs reference.** Structs and enums are values; classes are shared identity. Collections often use copy-on-write. Accidental sharing is a common bug class.
+- **Value vs reference (and ownership).** Structs and enums are values; classes are shared identity. Collections often use copy-on-write. Accidental sharing is a common bug class. Advanced APIs increasingly expose **ownership** controls (`~Copyable`, borrow/consume, Span-style views)—optional sixth idea for systems work; most app code stays with ordinary values + ARC (chapters **06**, **11**, **24**).
 - **Optionals and errors are explicit.** `nil` and `throws` are in the type story—force-unwrap and force-try are review smells, not shortcuts.
 - **Concurrency is increasingly checked.** `async`/`await`, tasks, and actors are the modern model; Swift 6 makes data races a compiler concern when you opt into the language mode.
 - **Macros and Observation are part of the modern surface.** Macros generate boilerplate at compile time (see TSPL); **Observation** (`@Observable`) is the modern model-observation path for UI and shared state—prefer it over legacy-only `ObservableObject`/`@Published` for new work when deployment allows (chapters **08**, **10**, **19**).
 - **Ship is part of the job on Apple.** Schemes, signing, privacy manifests, and CI image pins are not “ops extras” bolted on after “real” Swift.
+
+**Depth topics** this track treats as first-class literacy (not keynote tourism): **macros** (roles, expand-in-Xcode), **Observation** (`@Observable` vs Combine-era models), and **ownership** direction (`~Copyable` / Span as doors). Deep craft still lives in TSPL + official framework docs; chapters teach review-ready mental models.
+
+### How the six ideas show up at work
+
+| Idea | Review smell if missing | Home chapters |
+|------|-------------------------|---------------|
+| Toolchain family | “Works on my Mac” with unknown `swift` | **00**, **03**, **21** |
+| Value / reference / ownership | Accidental shared mutation; cargo-cult `~Copyable` | **06**, **11**, **24** |
+| Optionals / errors | Force-unwrap culture; empty `catch` | **04**, **09** |
+| Checked concurrency | UI updates off isolation; unbounded `Task {}` | **10**, **19** |
+| Macros / Observation | Silent Combine-only new models; unexpanded macro mystery | **08**, **10**, **19** |
+| Ship literacy | Personal schemes; secrets in git; unpinned Xcode | **17–21** |
+
+### Suggested first week (new hire)
+
+1. Run chapter **00** hellos on the team’s pinned toolchain.
+2. Print `SWIFT_VERSION` for the app’s Release config (ch **18**).
+3. Find the shared scheme and the CI command that invokes it (ch **21**).
+4. Skim Observation vs `ObservableObject` (ch **19**) on one real screen.
+5. Confirm where ASC / signing secrets live—and that they are **not** in git (ch **20**).
+6. Read this README’s semantic model aloud once; keep chapter **24** as the compass, not a detour.
+
+### What “done” means in this track
+
+Finishing **00–23** means you can ship scripts, packages, and Apple-platform apps with staff-review habits. Finishing **24** means you can **name the door** for Embedded, Wasm, Android SDK, server NIO, C++ interop, and ownership/`~Copyable` without expanding this folder into those encyclopedias.
+
+Official Further reading below stays the hub list—TSPL, Observation, Macros, SPM, DocC, signing, Xcode Cloud—not tutorial blogs.
+
+Pin the **Swift 6.3.x** patch your CI actually runs; the chapter text is literacy, not a substitute for `swift --version`.
 
 ---
 
@@ -77,7 +107,7 @@ You do not need to memorize every stdlib method. You need a picture you can hold
 | Engineering surface | **14–17** | SPM; interop; Swift Testing / XCTest; DocC & API guidelines |
 | Apple ship lane | **18–21** | Xcode projects; UI surface literacy; security/privacy; CI/CD |
 | Applications + wrap | **22–23** | Use-case gallery; whole-engineering master checklist |
-| Compass | **24** | Evolution + adjacent doors (server, Wasm, Android SDK, …) |
+| Compass | **24** | Evolution + adjacent doors (server, Wasm, Android SDK, Embedded, ownership, …) |
 
 ---
 

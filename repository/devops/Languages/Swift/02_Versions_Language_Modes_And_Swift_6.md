@@ -4,7 +4,7 @@
 
 ## What this chapter covers
 
-How Swift **versions** evolved from **1.0 (2014)** through the **Swift 3** source break, **Swift 5 ABI stability**, **async/await**, and **Swift 6** complete concurrency checking—plus what a **language mode** is, how migration actually works, how to read **Swift Evolution** without drowning, and how to read deprecated syntax without shipping it again. Handbook default: write and review as **Swift 6.3.x** in modern language mode unless a module is explicitly brownfield.
+How Swift **versions** evolved from **1.0 (2014)** through the **Swift 3** source break, **Swift 5 ABI stability**, **async/await**, and **Swift 6** complete concurrency checking—plus what a **language mode** is, how migration actually works, how to read **Swift Evolution** without drowning, **`#available` / `@available` literacy**, and how to read deprecated syntax without shipping it again. Handbook default: write and review as **Swift 6.3.x** in modern language mode unless a module is explicitly brownfield.
 
 **Legacy = literacy for brownfield maintenance. Legacy is not a template for new work.**
 
@@ -159,17 +159,37 @@ Swift 3 applied the **API Design Guidelines** broadly across the SDK surface. Ca
 // func user(id: String) async throws -> User
 ```
 
-#### `String` redesign literacy
+#### `String` indexing redesign literacy (museum + modern)
 
-`String` moved from “feels like a random-access array of characters” toward a **Unicode-correct** model: indices are not integers; slicing and indexing follow `String.Index`. Brownfield code that does `str[i]` with `Int` is a fossil smell.
+Early Swift taught people to treat strings like random-access arrays. The redesign made **Unicode correctness** the default: indices are `String.Index`, not `Int`; grapheme clusters are not bytes; slicing yields `Substring` views that borrow storage.
 
 ```swift
-// Current literacy — indices are not Int
+// Fossil smell — “fix” Unicode with Int subscripts (does not compile on modern String)
+// let s = "café"
+// let c = s[0]
+```
+
+```swift
+// Current (Swift 6.x) literacy — indices are not Int
 let s = "café"
 let idx = s.startIndex
-let first = s[idx]                    // Character
-let rest = s[s.index(after: idx)...]  // Substring view — know when you need String(rest)
+let first = s[idx]                    // Character (extended grapheme cluster)
+let rest = s[s.index(after: idx)...]  // Substring — often convert with String(rest) when you need ownership
+
+// Walking by Character offset is O(n); that cost is intentional honesty
+if let i = s.index(s.startIndex, offsetBy: 1, limitedBy: s.endIndex) {
+    print(s[i])
+}
 ```
+
+**How to read this as an SE-shaped change**
+
+| Question | Answer for String redesign |
+|----------|----------------------------|
+| What hurt? | Crashes and wrong lengths with emoji / combining marks |
+| What shipped? | Index-based APIs, views (`utf8`, `unicodeScalars`, …) |
+| What broke? | Intuition from C/`NSString` UTF-16 indexing habits |
+| What do you do in review? | Reject `Int` subscripts; ask for Character vs UTF-8 intent |
 
 Deep string mechanics: chapter **04**. Here: *do not “fix” Unicode by pretending characters are `UInt8` indices.*
 
@@ -200,6 +220,18 @@ func loadTitle() async throws -> String {
 
 Completion handlers still appear in Apple SDKs and brownfield modules. New code you own should prefer async when the ecosystem allows. Deep concurrency: chapter **10**.
 
+#### Soft-removed / reshaped surface (quick museum cards)
+
+| Old habit | Modern posture |
+|-----------|----------------|
+| `++` / `--` | `+= 1` / `-= 1` |
+| C-style `for` | `for-in`, ranges, `enumerated()` |
+| Tuple splat into args | Explicit arguments or a struct |
+| `String` as random-access `Int` | `String.Index` + Unicode views |
+| Implicit existential `P` spelling | Prefer explicit `any P` / generics / `some` |
+| IUO everywhere (`Type!`) | `Type?` + binding; IUO only with a framework reason |
+| Handler-only new APIs | `async throws` when you own both sides |
+
 ### 6. What “Swift 6” means day to day
 
 **Swift 6 language mode** turns complete concurrency checking into hard errors for that module: data races are treated as compile-time problems via isolation and `Sendable` rules.
@@ -213,9 +245,9 @@ Migration shape successful teams use:
 
 Official migration reading: [Swift 6 concurrency migration guide](https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/) and [Adopting Swift 6](https://developer.apple.com/documentation/swift/adoptingswift6).
 
-### 7. Swift Evolution literacy — how to read without drowning
+### 7. Swift Evolution literacy — how to read an SE without drowning
 
-You do not need to follow every SE proposal. You need a **triage habit**:
+You do not need to follow every SE proposal. You need a **triage habit**—the same habit that keeps String-redesign fossils out of new PRs:
 
 | Step | Do this |
 |------|---------|
@@ -223,7 +255,8 @@ You do not need to follow every SE proposal. You need a **triage habit**:
 | 2 | Read **proposed solution** examples — can you picture a call site? |
 | 3 | Check **status** (pitch / review / accepted / implemented) — do not design against a pitch |
 | 4 | Note **toolchain version** where it shipped — pin before celebrating |
-| 5 | Ignore rabbit holes (huge bikesheds) until a release note says it landed |
+| 5 | Skim **source compatibility** notes — what breaks, what is deprecated |
+| 6 | Ignore rabbit holes (huge bikesheds) until a release note says it landed |
 
 ```text
 Good staff use of Evolution:
@@ -233,7 +266,57 @@ Bad use:
   “I saw a pitch on the forums; I rewrote production APIs this afternoon.”
 ```
 
+**Mini-lab — read one SE like a staff engineer**
+
+Pick any accepted proposal that touched your stack (concurrency, `any`, macros, …) and fill:
+
+```text
+SE number / title: ____________________
+Status + ship toolchain: ______________
+Motivation in one sentence: ___________
+Call-site before → after: _____________
+What we will NOT do yet: ______________
+```
+
 Hub: [Swift Evolution](https://www.swift.org/swift-evolution/). Blog: [Swift.org blog](https://www.swift.org/blog/). Chapter **24** revisits process as compass.
+
+### 8. `#available` / `@available` literacy
+
+Language mode is not the same as **API availability**. You can be on Swift 6.3.x and still need to run on an older OS that lacks a symbol.
+
+| Tool | Where it lives | Job |
+|------|----------------|-----|
+| **`@available`** | On declarations you write or import | Marks introduced / deprecated / obsolete platforms |
+| **`#available`** | In control flow at runtime | Branches so older OSes do not call new symbols |
+| **`#unavailable`** | Inverse checks (modern spelling) | Cleaner “only on older OS” branches when useful |
+| **Deployment target** | Xcode / package platforms | The oldest OS you claim to support |
+
+```swift
+// Declaration-side — tell clients what you require
+@available(iOS 17, macOS 14, *)
+func modernFeature() { /* … */ }
+
+@available(*, deprecated, renamed: "modernFeature()")
+func legacyFeature() { /* … */ }
+
+// Call-site — stay alive on older OS while using new APIs where present
+func paint() {
+    if #available(iOS 17, *) {
+        modernFeature()
+    } else {
+        // Fallback path that exists on your deployment target
+        legacyFeature()
+    }
+}
+```
+
+**What just happened**
+
+- `@available` is a **contract on a declaration**; `#available` is a **runtime gate** in your code.
+- Shipping “Swift 6” does not erase the need for availability checks against **OS SDK** symbols.
+- Deprecation attributes are how you migrate callers without a silent break—pair them with a renamed modern API.
+
+Staff rule: availability bugs are “works on my phone, crashes on last year’s phone.” Test the deployment target you claim.
 
 ---
 
@@ -247,7 +330,34 @@ Swift 3 taught the industry that “Apple languages can still break your weekend
 
 **Swift 5 ABI stability** (Apple platforms) improved binary distribution and ecosystem durability. It did **not** freeze source language design. Async/await and Swift 6 concurrency prove the point: the binary story and the source/concurrency story evolve on different clocks.
 
-### 3. Per-module migration is a feature
+### 3. Language-mode migration war story (shape, not folklore)
+
+Successful migrations look boring in the postmortem. Failed ones look like this:
+
+```text
+Week 0  — Keynote: “Swift 6!” Slack lights up. Someone flips the app target to mode 6 on Friday.
+Week 1  — 4,000 concurrency errors. CI red. Feature train stops. Revert. Morale tax.
+Week 2  — Quiet plan: toolchain already 6.3.x; enable complete checking as *warnings* on one library.
+Week 4  — Library green under warnings; flip that library to language mode 6; leave UI target on 5.
+Week 8  — Feature modules follow; actor boundaries appear at network and DB seams.
+Week 12 — App target flips; remaining handler APIs wrapped once at the edge.
+```
+
+| Move that works | Move that burns weekends |
+|-----------------|--------------------------|
+| Library-first burn-down | Global flip of the app target |
+| Warnings → errors deliberately | “We’ll fix it in the PR that flips the switch” |
+| Wrap ObjC/handler edges once | Sprinkle `@unchecked Sendable` to silence |
+| Pin CI image to the same compiler | Laptop on newest Xcode, CI on last year |
+| Track error counts in the ticket | Argue about SE pitches instead of fixing isolation |
+
+**What just happened**
+
+- Mode 6 is a **destination**, not a weekend.
+- The war story shape is always: *rehearse → fix boundaries → flip modules → then the app*.
+- Unchecked suppressions are debt with interest—treat them like `// Legacy` comments.
+
+### 4. Per-module migration is a feature
 
 Large apps should not flip one global switch blindly. Migrate packages and targets intentionally:
 
@@ -257,7 +367,7 @@ Large apps should not flip one global switch blindly. Migrate packages and targe
 | Feature modules next | Isolate pain; keep ship train moving |
 | App target last | UI frameworks and legacy callbacks often dominate noise |
 
-### 4. CI must pin both dials
+### 5. CI must pin both dials
 
 Wrong mode / silent drift failure mode:
 
@@ -267,7 +377,7 @@ Wrong mode / silent drift failure mode:
 
 Pin **Xcode or toolchain image**, and encode **language mode** in project settings that are reviewed like code.
 
-### 5. Forward pointer: handlers → async
+### 6. Forward pointer: handlers → async
 
 ```swift
 // Legacy style you will still read — literacy, not a goal for new modules you control
@@ -286,7 +396,7 @@ func load() async throws -> String {
 
 Treat remaining completion-handler APIs as bridges. Wrap at the boundary; do not proliferate new handler-only surfaces without a reason.
 
-### 6. Lab — museum scavenger hunt
+### 7. Lab — museum scavenger hunt
 
 In a brownfield repo (or an old sample), find and label **one** of each if present:
 
@@ -294,9 +404,10 @@ In a brownfield repo (or an old sample), find and label **one** of each if prese
 2. a pre-guidelines verbose API name,
 3. `String` indexing that assumes `Int`,
 4. a completion-handler pyramid,
-5. a target still on language mode 5 while CI claims “Swift 6.”
+5. a target still on language mode 5 while CI claims “Swift 6,”
+6. a missing `#available` around a new OS API (crash-on-old-device risk).
 
-Write the modern alternative in the PR description—even if you are not fixing all five today. Literacy is the deliverable; a reckless rewrite is not.
+Write the modern alternative in the PR description—even if you are not fixing all six today. Literacy is the deliverable; a reckless rewrite is not.
 
 ---
 
@@ -304,11 +415,11 @@ Write the modern alternative in the PR description—even if you are not fixing 
 
 | Lens | Practice |
 |------|----------|
-| **Application** | Migrate feature modules to mode 6 before the monolithic app target; keep UI responsive with async entry points |
+| **Application** | Migrate feature modules to mode 6 before the monolithic app target; keep UI responsive with async entry points; gate new OS APIs with `#available` |
 | **Systems** | Linux CI packages should declare tools version and language mode explicitly in repo config |
 | **Security** | Concurrency bugs are exploit-adjacent in parsers and network stacks—treat mode 6 checking as a control, not fashion |
-| **Operations** | Image tags include Swift/Xcode version; changelog entries for language-mode flips |
-| **Software engineering** | Deprecation tables in the team wiki: removed syntax → replacement; ban `++` “for clarity” in review |
+| **Operations** | Image tags include Swift/Xcode version; changelog entries for language-mode flips; availability matrices for supported OS versions |
+| **Software engineering** | Deprecation tables in the team wiki: removed syntax → replacement; ban `++` “for clarity” in review; SE triage checklist in onboarding |
 
 ---
 
@@ -323,6 +434,8 @@ Write the modern alternative in the PR description—even if you are not fixing 
 - [ ] Someone can explain **1.0 → 3 break → 5 ABI → 5.5 async → 6 checking** in one minute.
 - [ ] Evolution proposals are triaged (status + ship toolchain)—not cargo-culted from pitches.
 - [ ] `String` / Unicode indexing fossils are recognized; not “fixed” with unsafe `Int` subscripts.
+- [ ] `@available` / `#available` used correctly for OS API gates; deployment target matches claims.
+- [ ] Migration follows library-first burn-down—not a Friday global flip with `@unchecked` wallpaper.
 
 ---
 
@@ -331,8 +444,10 @@ Write the modern alternative in the PR description—even if you are not fixing 
 - [Swift.org blog (releases)](https://www.swift.org/blog/)
 - [Swift Evolution](https://www.swift.org/swift-evolution/)
 - [The Swift Programming Language](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/)
+- [Attributes — availability (TSPL)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/attributes/)
 - [API Design Guidelines](https://www.swift.org/documentation/api-design-guidelines/)
 - [Swift 6 concurrency migration guide](https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/)
 - [Adopting Swift 6](https://developer.apple.com/documentation/swift/adoptingswift6)
 - [Downloads / toolchains](https://www.swift.org/download/)
 - [Macros (TSPL)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/macros/)
+- [Strings and Characters (TSPL)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/stringsandcharacters/)

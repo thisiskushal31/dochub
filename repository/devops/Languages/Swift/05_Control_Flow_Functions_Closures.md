@@ -4,7 +4,7 @@
 
 ## What this chapter covers
 
-`if` / `switch` / `guard`, loops (including **labeled** `break` / `continue`), **`defer`**, deep **pattern matching** and **`where`**, **functions** (`inout`, function types), and **closures** — trailing syntax, **`@autoclosure`**, capture lists, **`@escaping`**, and **`@Sendable`**. Default is **Swift 6.3.x** / Swift 6 language mode. Legacy literacy: C-style `for`, `++` / `--`.
+`if` / `switch` / `guard`, loops (including **labeled** `break` / `continue`), **`defer`**, deep **pattern matching** and **`where`**, **functions** (`inout`, function types, **`borrowing` / `consuming`** parameter ownership intro, **`consume` operator** literacy), and **closures** — trailing syntax, **`@autoclosure`** with a real API shape, capture lists, **`@escaping`**, and **`@Sendable`**. Default is **Swift 6.3.x** / Swift 6 language mode. Legacy literacy: C-style `for`, `++` / `--`. Ownership depth continues in chapters **06** (`~Copyable`) and **11** (ARC / exclusivity).
 
 Control flow shapes how failure exits early; functions and closures shape how work is named and passed around. Closures that capture `self` are a primary source of retain cycles in Apple app trees — treat them as a review concern, not sugar.
 
@@ -68,7 +68,55 @@ func describe(point: (Int, Int)) -> String {
 - Tuple patterns bind parts; `_` ignores what you do not need.
 - Exhaustiveness on enums (chapter **06**) is a compiler-backed checklist—do not hide unfinished cases behind a lazy `default` when the enum is yours.
 
-### 3. Loops and labeled breaks
+### 3. Lab — more pattern matching (enums, bindings, `where`)
+
+```swift
+enum Route {
+    case home
+    case profile(userID: String, tab: Int)
+    case search(query: String)
+}
+
+func title(for route: Route) -> String {
+    switch route {
+    case .home:
+        return "Home"
+    case .profile(let id, tab: 0):
+        return "Profile \(id) (overview)"
+    case .profile(let id, let tab) where tab > 0:
+        return "Profile \(id) tab \(tab)"
+    case .search(let q) where q.count >= 3:
+        return "Search: \(q)"
+    case .search:
+        return "Search (too short)"
+    }
+}
+
+// Pattern matching in `if case` / `guard case` — short peeks without a full switch
+func isHome(_ route: Route) -> Bool {
+    if case .home = route { return true }
+    return false
+}
+
+func requireUserID(_ route: Route) -> String? {
+    guard case .profile(let id, _) = route else { return nil }
+    return id
+}
+
+// `for case` — filter while iterating
+let routes: [Route] = [.home, .search(query: "ada"), .profile(userID: "42", tab: 1)]
+for case .search(let q) in routes {
+    print("query:", q)
+}
+```
+
+**What just happened**
+
+- Associated values bind with `let` inside the pattern; refine with `where`.
+- `if case` / `guard case` / `for case` keep matching local when a full `switch` would be noise.
+- Prefer exhaustive `switch` on your own enums; use `if case` for one-branch peeks.
+
+### 4. Loops and labeled breaks
 
 ```swift
 for name in ["a", "b"] {
@@ -97,7 +145,7 @@ repeat {
 
 Labels are for nested control that would otherwise need flags. Prefer flattening when you can; use labels when the algorithm is truly nested.
 
-### 4. `defer` — cleanup that always runs
+### 5. `defer` — cleanup that always runs
 
 `defer` schedules work for when the **current scope** exits — success, `return`, or `throw`. Multiple `defer`s run in reverse order (stack discipline).
 
@@ -116,7 +164,7 @@ func stacked() {
 
 Pair `defer` with locks, file handles, and “restore previous state” (chapter **09** for throwing paths).
 
-### 5. Functions: labels, `inout`, and function types
+### 6. Functions: labels, `inout`, and function types
 
 Argument labels are part of the API. `_` hides the external label. Default values and variadics exist. **`inout`** passes a mutable binding that the callee can write back.
 
@@ -146,7 +194,7 @@ let cmp: (Int, Int) -> Bool = chooseSorter(ascending: true)
 - `inout` is not “pass by reference forever”—it copies in/out for value types; exclusivity rules still apply (chapter **11**).
 - The type `(Int, Int) -> Bool` is a function type you can name in APIs.
 
-### 6. Closures and trailing syntax
+### 7. Closures and trailing syntax
 
 A closure is an unnamed function value. Trailing-closure syntax is idiomatic when the last parameter is a closure.
 
@@ -176,7 +224,76 @@ load(from: "https://example.com") {
 
 ## 2. Advanced concepts
 
-### 1. Escaping vs non-escaping
+### 1. Ownership intro — `borrowing` / `consuming` parameters
+
+Ordinary Copyable values can be passed freely. As Swift grows **noncopyable** / move-only types (chapter **06**), function parameters need an explicit **ownership** story: does the callee *borrow* the value for the duration of the call, or *consume* it (take it over so the caller cannot use it again)?
+
+| Spelling | Mental model | Pair with |
+|----------|--------------|-----------|
+| *(default for Copyable)* | Callee may use a copy / shared access per normal rules | Everyday app models |
+| **`borrowing`** | Callee uses the value **without taking ownership**; caller keeps it | Read-only access to unique resources |
+| **`consuming`** | Callee **takes** the value; caller’s binding is ended (moved) | Hand-off of file handles, tokens, unique wrappers |
+| **`inout`** | Temporary exclusive mutation; returned to caller | Update-in-place of Copyable (and some advanced cases) |
+
+```swift
+// Literacy sketch — signatures you will see as ~Copyable spreads (Swift 6.x)
+// Exact types often appear in systems APIs; app models should stay Copyable when they can.
+
+struct Token: ~Copyable {
+    let id: Int
+    // noncopyable: cannot be casually assigned twice — chapter 06
+}
+
+func inspect(_ token: borrowing Token) {
+    // May read token for the call; does not take it away from the caller.
+    print(token.id)
+}
+
+func retire(_ token: consuming Token) {
+    // Takes ownership; caller must not use token afterward.
+    print("retiring", token.id)
+}
+
+// Usage shape (illustrative):
+// var t = Token(id: 1)
+// inspect(t)          // borrow — t still usable
+// retire(t)           // consume — t is gone (moved)
+```
+
+**What just happened**
+
+- **Borrow** = “look, don’t take.” **Consume** = “this is yours now.”
+- Most application DTOs should remain ordinary **Copyable** structs—do not sprinkle ownership keywords for fashion.
+- When you see these on APIs that wrap OS resources, read them as **lifetime contracts**. Full noncopyable story: chapter **06**; exclusivity / ARC: chapter **11**.
+
+### 2. `consume` operator literacy
+
+The **`consume`** operator explicitly ends the lifetime of a binding by moving its value—useful with noncopyable types and sometimes with Copyable values when you want the compiler to enforce “do not use after hand-off.”
+
+```swift
+struct Box: ~Copyable {
+    var label: String
+    init(_ label: String) { self.label = label }
+}
+
+func take(_ box: consuming Box) {
+    print("took", box.label)
+}
+
+func handOff() {
+    let box = Box("letters")
+    take(consume box)          // Explicit move into the callee
+    // print(box.label)        // Error — box was consumed
+}
+```
+
+**What just happened**
+
+- `consume` makes the move **visible at the call site**—good for review.
+- Prefer explicit `consume` when ownership transfer is the point of the line.
+- Do not “consume” ordinary Copyable models just to look advanced; you will only confuse readers.
+
+### 3. Escaping vs non-escaping
 
 By default, function parameters that are closures are **non-escaping**: they must be called before the function returns. Mark **`@escaping`** when the closure is stored or called later (completion handlers, Dispatch, Task wrappers).
 
@@ -194,7 +311,7 @@ func immediately(_ body: () -> Void) {
 
 Escaping closures cannot capture `inout` parameters. They are also the ones that most often capture `self` and extend object lifetime.
 
-### 2. Lab — capture lists (`weak` / `unowned` / value capture)
+### 4. Lab — capture lists (`weak` / `unowned` / value capture)
 
 Closures capture enclosing bindings. For classes, capturing `self` strongly can create a **retain cycle** (object → closure → object).
 
@@ -237,23 +354,57 @@ final class Loader {
 
 Prefer `weak` unless the relationship is strictly shorter-lived and documented. Chapter **11** deepens ARC; chapter **10** deepens concurrency.
 
-### 3. `@autoclosure` literacy
+### 5. `@autoclosure` — real API shape (not just a toy)
 
-`@autoclosure` lets callers write an expression that becomes a closure automatically—handy for lazy arguments (`assert`, `??`-shaped helpers).
+`@autoclosure` lets callers write an expression that becomes a closure automatically—handy for lazy arguments (`assert`, precondition helpers, logging).
 
 ```swift
-func logIfDebug(_ message: @autoclosure () -> String) {
-    #if DEBUG
-    print(message())          // Evaluated only if we call it
-    #endif
+// Real shape: short-circuiting debug / assert helpers
+func require(
+    _ condition: @autoclosure () -> Bool,
+    _ message: @autoclosure () -> String = "requirement failed",
+    file: StaticString = #fileID,
+    line: UInt = #line
+) {
+    if !condition() {
+        // message() runs only on failure — expensive interpolation stays cheap on success
+        fatalError(message(), file: file, line: line)
+    }
 }
 
-logIfDebug("expensive \(heavyWork())")  // heavyWork runs only in DEBUG when logged
+func heavyDescription() -> String {
+    // Pretend this walks a big graph
+    "state dump…"
+}
+
+let ready = true
+require(ready, "not ready: \(heavyDescription())")
+// When ready == true, heavyDescription() never runs.
+
+// Stdlib-shaped cousin you already use:
+// assert(ready, "not ready: \(heavyDescription())")
 ```
 
-Do not sprinkle `@autoclosure` on every parameter—it hides evaluation order. Use it when laziness is the point (assertions, short-circuiting diagnostics).
+```swift
+// Another real shape: lazy default in a tiny config helper
+func value(
+    _ preferred: String?,
+    fallback: @autoclosure () -> String
+) -> String {
+    preferred ?? fallback()
+}
 
-### 4. `@Sendable` — why it exists
+let host = value(nil, fallback: ProcessInfo.processInfo.hostName)
+// fallback closure runs only when preferred is nil
+```
+
+**What just happened**
+
+- `@autoclosure` turns `expr` into `{ expr }` at the call site—callers stay readable.
+- Laziness is the point: **do not evaluate expensive messages until needed**.
+- Do not sprinkle `@autoclosure` on every parameter—it hides evaluation order and surprises reviewers. Keep it for assert/log/default shapes.
+
+### 6. `@Sendable` — why it exists
 
 Under Swift 6 complete concurrency checking, closures that cross isolation domains often need to be **`@Sendable`**: safe to call from another concurrency domain without data races. You will see `@Sendable` on completion-style APIs and on `Task` / actor boundaries.
 
@@ -269,7 +420,7 @@ func runLater(_ work: @escaping @Sendable () -> Void) {
 
 **Why:** Sendable means “no unprotected shared mutable state.” Do not “fix Sendable” by force-casting. Treat warnings as design signals.
 
-### 5. Legacy literacy: C-style `for` and `++`
+### 7. Legacy literacy: C-style `for` and `++`
 
 ```swift
 // Legacy (Swift 2 era C-style for / increment operators) — do not use in new code.
@@ -282,7 +433,7 @@ i += 1   // not i++
 
 C-style `for (;;)` and `++` / `--` were removed in **Swift 3**. Brownfield diffs still show them; rewrite on touch.
 
-### 6. `rethrows` tease
+### 8. `rethrows` tease
 
 Functions that only throw when a closure argument throws use `rethrows`—common in `map`-shaped helpers. Full error story in chapter **09**.
 
@@ -299,11 +450,11 @@ func twice(_ body: () throws -> Void) rethrows {
 
 | Lens | Habit |
 |------|--------|
-| **Application** | `guard` at API edges; trailing closures for UI/event handlers with explicit capture lists; labeled breaks only when nested UI loops need them |
-| **Systems** | Prefer `for-in` over manual indices; avoid unbounded loops over user-controlled collections without a bound; `defer` for fd/lock cleanup |
-| **Security** | Do not use force paths (`try!`, force unwrap) to “simplify” control flow around auth or crypto; keep `@autoclosure` off secret-bearing expressions that might evaluate unexpectedly |
+| **Application** | `guard` at API edges; trailing closures for UI/event handlers with explicit capture lists; pattern-match screen routes with enums; labeled breaks only when nested UI loops need them |
+| **Systems** | Prefer `for-in` over manual indices; `defer` for fd/lock cleanup; `borrowing`/`consuming` on unique resource APIs; avoid unbounded loops over user-controlled collections without a bound |
+| **Security** | Do not use force paths (`try!`, force unwrap) to “simplify” control flow around auth or crypto; keep `@autoclosure` off secret-bearing expressions that might evaluate unexpectedly; do not consume tokens without a clear retire path |
 | **Operations** | CLI tools: `guard` + `return` / `throw` for missing flags; clear exit paths; `defer` restores terminal state |
-| **Software engineering** | Named functions for reusable logic; closures for short adapters; document escaping callbacks and Sendable requirements |
+| **Software engineering** | Named functions for reusable logic; closures for short adapters; document escaping callbacks, Sendable, and ownership requirements |
 
 Callbacks and completion handlers remain common in older Apple APIs. New code prefers `async`/`await` (chapter **10**); still read closures fluently to review and migrate.
 
@@ -313,10 +464,12 @@ Callbacks and completion handlers remain common in older Apple APIs. New code pr
 
 - [ ] `guard` used for preconditions; deep nested `if let` pyramids are flattened.
 - [ ] `switch` is exhaustive on enums; `default` is not hiding unfinished cases.
+- [ ] Pattern matching (`if case` / `for case` / `where`) used where it clarifies—not as cleverness.
 - [ ] `defer` covers cleanup on throw/return paths; order of multiple defers is understood.
 - [ ] Escaping closures that capture class `self` use an explicit capture list when needed.
 - [ ] `inout` call sites use `&`; exclusivity / overlapping access is not ignored.
-- [ ] `@autoclosure` laziness is intentional, not decorative.
+- [ ] `borrowing` / `consuming` / `consume` appear only with a real ownership story (usually noncopyable resources).
+- [ ] `@autoclosure` laziness is intentional (assert/log/default shapes), not decorative.
 - [ ] No new `++` / C-style `for`; brownfield occurrences are migrated when the file is touched.
 - [ ] `@Sendable` / concurrency warnings are not silenced without an ownership story.
 - [ ] Closure-heavy APIs have a clear “who owns the callback?” answer.
@@ -330,4 +483,6 @@ Callbacks and completion handlers remain common in older Apple APIs. New code pr
 - [Closures (TSPL)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/closures/)
 - [The Basics (TSPL)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/thebasics/)
 - [Memory Safety (TSPL)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/memorysafety/) (exclusivity / `inout`)
+- [Consuming and Nonconsuming Methods (TSPL / ownership)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/)
 - [Swift 6 concurrency migration guide](https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/)
+- [Ownership manifesto / evolution hub](https://www.swift.org/swift-evolution/)

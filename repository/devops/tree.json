@@ -6053,182 +6053,182 @@
             "path": "Languages/Swift/00_First_Steps_Toolchain_And_Hello.md",
             "type": "file",
             "sha": "",
-            "size": 14750
+            "size": 21790
           },
           {
             "name": "01_What_Is_Swift.md",
             "path": "Languages/Swift/01_What_Is_Swift.md",
             "type": "file",
             "sha": "",
-            "size": 13505
+            "size": 24105
           },
           {
             "name": "02_Versions_Language_Modes_And_Swift_6.md",
             "path": "Languages/Swift/02_Versions_Language_Modes_And_Swift_6.md",
             "type": "file",
             "sha": "",
-            "size": 16482
+            "size": 22197
           },
           {
             "name": "03_Toolchains_Swift_Org_Xcode_Linux_Windows.md",
             "path": "Languages/Swift/03_Toolchains_Swift_Org_Xcode_Linux_Windows.md",
             "type": "file",
             "sha": "",
-            "size": 12211
+            "size": 21418
           },
           {
             "name": "04_Syntax_Bindings_Types_Optionals.md",
             "path": "Languages/Swift/04_Syntax_Bindings_Types_Optionals.md",
             "type": "file",
             "sha": "",
-            "size": 13019
+            "size": 18826
           },
           {
             "name": "05_Control_Flow_Functions_Closures.md",
             "path": "Languages/Swift/05_Control_Flow_Functions_Closures.md",
             "type": "file",
             "sha": "",
-            "size": 11699
+            "size": 17890
           },
           {
             "name": "06_Structs_Classes_Enums_Value_And_Reference.md",
             "path": "Languages/Swift/06_Structs_Classes_Enums_Value_And_Reference.md",
             "type": "file",
             "sha": "",
-            "size": 10911
+            "size": 20345
           },
           {
             "name": "07_Properties_Methods_Init_Deinit.md",
             "path": "Languages/Swift/07_Properties_Methods_Init_Deinit.md",
             "type": "file",
             "sha": "",
-            "size": 11267
+            "size": 17821
           },
           {
             "name": "08_Protocols_Extensions_Generics_Opaque_Types.md",
             "path": "Languages/Swift/08_Protocols_Extensions_Generics_Opaque_Types.md",
             "type": "file",
             "sha": "",
-            "size": 13061
+            "size": 21696
           },
           {
             "name": "09_Error_Handling.md",
             "path": "Languages/Swift/09_Error_Handling.md",
             "type": "file",
             "sha": "",
-            "size": 12133
+            "size": 17914
           },
           {
             "name": "10_Concurrency_Async_Await_Tasks_Actors.md",
             "path": "Languages/Swift/10_Concurrency_Async_Await_Tasks_Actors.md",
             "type": "file",
             "sha": "",
-            "size": 15041
+            "size": 21885
           },
           {
             "name": "11_ARC_Memory_Safety_Access_Control.md",
             "path": "Languages/Swift/11_ARC_Memory_Safety_Access_Control.md",
             "type": "file",
             "sha": "",
-            "size": 12775
+            "size": 21813
           },
           {
             "name": "12_Standard_Library_Literacy.md",
             "path": "Languages/Swift/12_Standard_Library_Literacy.md",
             "type": "file",
             "sha": "",
-            "size": 12225
+            "size": 16998
           },
           {
             "name": "13_Foundation_And_Core_Libraries.md",
             "path": "Languages/Swift/13_Foundation_And_Core_Libraries.md",
             "type": "file",
             "sha": "",
-            "size": 12480
+            "size": 19191
           },
           {
             "name": "14_Swift_Package_Manager.md",
             "path": "Languages/Swift/14_Swift_Package_Manager.md",
             "type": "file",
             "sha": "",
-            "size": 13023
+            "size": 19075
           },
           {
             "name": "15_Modules_Imports_And_Interop.md",
             "path": "Languages/Swift/15_Modules_Imports_And_Interop.md",
             "type": "file",
             "sha": "",
-            "size": 11553
+            "size": 18917
           },
           {
             "name": "16_Testing_Swift_Testing_And_XCTest.md",
             "path": "Languages/Swift/16_Testing_Swift_Testing_And_XCTest.md",
             "type": "file",
             "sha": "",
-            "size": 10741
+            "size": 15390
           },
           {
             "name": "17_DocC_And_API_Design_Guidelines.md",
             "path": "Languages/Swift/17_DocC_And_API_Design_Guidelines.md",
             "type": "file",
             "sha": "",
-            "size": 11168
+            "size": 19392
           },
           {
             "name": "18_Xcode_Projects_Schemes_Build_Settings.md",
             "path": "Languages/Swift/18_Xcode_Projects_Schemes_Build_Settings.md",
             "type": "file",
             "sha": "",
-            "size": 11557
+            "size": 18256
           },
           {
             "name": "19_SwiftUI_UIKit_AppKit_Surface_Literacy.md",
             "path": "Languages/Swift/19_SwiftUI_UIKit_AppKit_Surface_Literacy.md",
             "type": "file",
             "sha": "",
-            "size": 12423
+            "size": 18255
           },
           {
             "name": "20_Security_Privacy_Signing_And_Secrets.md",
             "path": "Languages/Swift/20_Security_Privacy_Signing_And_Secrets.md",
             "type": "file",
             "sha": "",
-            "size": 11643
+            "size": 42813
           },
           {
             "name": "21_CI_CD_Xcode_Cloud_Fastlane_Mac_Runners.md",
             "path": "Languages/Swift/21_CI_CD_Xcode_Cloud_Fastlane_Mac_Runners.md",
             "type": "file",
             "sha": "",
-            "size": 11358
+            "size": 28481
           },
           {
             "name": "22_Use_Cases_Scripts_Packages_Apps_Server_Glance.md",
             "path": "Languages/Swift/22_Use_Cases_Scripts_Packages_Apps_Server_Glance.md",
             "type": "file",
             "sha": "",
-            "size": 9169
+            "size": 15496
           },
           {
             "name": "23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
             "path": "Languages/Swift/23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
             "type": "file",
             "sha": "",
-            "size": 11006
+            "size": 19637
           },
           {
             "name": "24_Where_Swift_Is_Going_And_Adjacent_Doors.md",
             "path": "Languages/Swift/24_Where_Swift_Is_Going_And_Adjacent_Doors.md",
             "type": "file",
             "sha": "",
-            "size": 14535
+            "size": 20661
           },
           {
             "name": "README.md",
             "path": "Languages/Swift/README.md",
             "type": "file",
             "sha": "",
-            "size": 11801
+            "size": 14248
           }
         ]
       },

@@ -109,6 +109,71 @@ func printAll(_ items: [any Describable]) {
 
 **Staff rule:** use generics or `some` when you can preserve type identity; use `any` when you truly need a heterogeneous bag. Protocols with `Self` or associated types often cannot be plain `any P` without primary associated types or type erasers.
 
+### 6. Lab — `some` vs `any` pain (feel the compile errors)
+
+This lab is intentionally annoying. Type it, break it, read the diagnostics—do not only skim the table above.
+
+```swift
+protocol Animal {
+    associatedtype Food
+    func eat(_ food: Food)
+    func speak() -> String
+}
+
+struct Dog: Animal {
+    func eat(_ food: String) { _ = food }
+    func speak() -> String { "woof" }
+}
+
+struct Cat: Animal {
+    func eat(_ food: Int) { _ = food }
+    func speak() -> String { "meow" }
+}
+
+// --- A) Opaque return: one concrete type, hidden from the caller ---
+func makePet() -> some Animal {
+    Dog()
+    // Uncommenting the next line fails: opaque result must be *one* type per return site
+    // if Bool.random() { return Cat() } else { return Dog() }
+}
+
+// --- B) Existential: heterogeneous bag — but PATs bite ---
+func parade(_ pets: [any Animal]) {
+    for pet in pets {
+        print(pet.speak())
+        // pet.eat(...)  // Often unavailable / awkward — Food differs per concrete type
+    }
+}
+
+// --- C) Generics: preserve the caller's type ---
+func echoSpeak<A: Animal>(_ pet: A) -> String {
+    pet.speak()
+}
+
+// --- D) Pain: assigning opaque to existential and back ---
+func painLab() {
+    let opaque = makePet()                 // some Animal (actually Dog)
+    let boxed: any Animal = opaque         // OK — box it
+    // let back: some Animal = boxed       // No — cannot reopen the box into `some`
+    print(echoSpeak(Dog()))                // Generic path stays precise
+    parade([Dog(), Cat()])                 // Heterogeneous — existential earns its keep
+}
+```
+
+| Move | Compiles? | Lesson |
+|------|-----------|--------|
+| `-> some Animal` returning only `Dog` | Yes | Opaque = one type |
+| `-> some Animal` returning `Dog` or `Cat` randomly | No | Need `any` or a type eraser |
+| `[any Animal]` of Dog + Cat | Yes (with limits) | Heterogeneous collection |
+| Call `eat` on `any Animal` | Pain / no | Associated type `Food` is not uniform |
+| Generic `<A: Animal>` | Yes | Best when one type flows through |
+
+**What just happened**
+
+- `some` hides a **fixed** concrete type; `any` erases to a **box** that can vary.
+- Associated types are why “just write `any Animal`” often fails the moment you need the interesting API.
+- Prefer generics at boundaries you control; reach for `any` when the domain truly is mixed; use `some` when you want to hide an implementation type without paying existential soup on every call.
+
 ---
 
 ## 2. Advanced concepts
@@ -228,37 +293,176 @@ let text = manifesto {
 - SwiftUI connection: `var body: some View` often uses `@ViewBuilder` so you can write `if` / `ForEach` inside a view body without manual `TupleView` wiring (chapter **19**).
 - In review: expand “builder sugar” to the `build*` calls—do not treat the block as ordinary imperative code with side effects everywhere.
 
-### 6. Macros literacy (Swift 5.9+) — freestanding vs attached
+#### Deep lab — more `build*` hooks (if / else / loops / availability)
+
+Result builders grow power from optional static methods. Sketch a tiny “checklist DSL” that supports conditionals and arrays:
+
+```swift
+@resultBuilder
+enum ChecklistBuilder {
+    static func buildExpression(_ expression: String) -> [String] {
+        [expression]
+    }
+
+    static func buildBlock(_ parts: [String]...) -> [String] {
+        parts.flatMap { $0 }
+    }
+
+    static func buildOptional(_ component: [String]?) -> [String] {
+        component ?? []
+    }
+
+    static func buildEither(first component: [String]) -> [String] { component }
+    static func buildEither(second component: [String]) -> [String] { component }
+
+    static func buildArray(_ components: [[String]]) -> [String] {
+        components.flatMap { $0 }            // Supports `for` loops in the block
+    }
+
+    static func buildLimitedAvailability(_ component: [String]) -> [String] {
+        component                            // Supports `if #available` shapes
+    }
+}
+
+func checklist(@ChecklistBuilder _ body: () -> [String]) -> [String] {
+    body()
+}
+
+let items = checklist {
+    "Clone repo"
+    if true {
+        "Install toolchain"
+    } else {
+        "Skip install"
+    }
+    for step in ["Build", "Test"] {
+        step
+    }
+    "Open PR"
+}
+
+print(items.joined(separator: " → "))
+// Clone repo → Install toolchain → Build → Test → Open PR
+```
+
+**What just happened**
+
+| Builder method | Enables in the block |
+|----------------|----------------------|
+| `buildBlock` | Multiple statements → one value |
+| `buildExpression` | Per-expression wrapping |
+| `buildOptional` | `if` without `else` |
+| `buildEither` | `if` / `else` |
+| `buildArray` | `for`…in loops |
+| `buildLimitedAvailability` | `if #available` |
+
+- SwiftUI’s `@ViewBuilder` is this machinery at industrial scale—same mental model.
+- Side effects inside builder bodies are a smell: builders construct **values**, they are not general-purpose scripts.
+- When a builder diagnostic is inscrutable, reduce the block to one expression and re-add control flow until it breaks—same as Expand Macro discipline.
+
+### 6. Macros literacy (Swift 5.9+) — freestanding vs attached roles
 
 Macros generate code at compile time. You **use** them long before you **author** a macro plugin.
 
 | Role | Spelling shape | Job (review-level) | Examples you will see |
 |------|----------------|--------------------|------------------------|
-| **Freestanding** | `#name(...)` or `#name` | Produce an expression/declaration at the use site | `#expect(...)` (Swift Testing), `#stringify` samples |
-| **Attached** | `@Name` on a decl | Peer / member / accessor / extension / conforming generation | `@Observable`, `@Previewable`, memberwise helpers |
+| **Freestanding expression** | `#name(...)` | Produce an expression at the use site | `#expect(...)` (Swift Testing), `#stringify` samples |
+| **Freestanding declaration** | `#name(...)` at decl context | Produce declarations | Codegen helpers in packages |
+| **Attached — peer** | `@Name` on a decl | Add sibling decls next to the annotated item | Helper types / functions beside a marked decl |
+| **Attached — member** | `@Name` on a type | Add members inside the type | Synthesized methods/properties |
+| **Attached — memberAttribute** | `@Name` on a type | Attach attributes to members | Propagating annotations |
+| **Attached — accessor** | `@Name` on a property | Generate `get`/`set` accessors | Storage sugar |
+| **Attached — extension** | `@Name` on a type | Add an extension (often conformances) | Protocol synthesis |
+| **Attached — body** | `@Name` on a function/closure body | Replace or wrap the **function body** | Instrumentation, cancellation wrappers, boilerplate bodies |
 
 ```swift
 // Freestanding — reads like a function call but expands to generated code
 // #expect(score == 10)   // Swift Testing (chapter 16) — assertion sugar
 
-// Attached — annotates a type/property; peers/members may appear after expansion
+// Attached member / observation-shaped — annotates a type; members may appear after expansion
 // @Observable
 // final class Model { var title = "" }
+
+// Attached body role — literacy only (shape you will see in tooling / libraries):
+// @Traced
+// func load() async throws {
+//     // Macro may wrap this body with enter/exit tracing while keeping your statements
+// }
 ```
+
+**Attached `body` role — why staff care**
+
+- Peer/member macros add *nearby* code you can often spot after Expand.
+- **Body** macros rewrite the *implementation* of a function. Behavior changes may be invisible in the source you wrote.
+- Review rule: any `@Macro` on a function that claims “just sugar” must be **Expanded** before merge if the macro is new to the codebase.
+
+#### Lab — Expand Macro in Xcode (do this once per new macro family)
+
+1. Open a file that uses a macro (`@Observable`, `#expect`, or a package macro your app already depends on).
+2. Place the cursor on the macro name (`Observable`, `expect`, …).
+3. Use **Editor → Expand Macro** (or the contextual menu **Expand Macro**).
+4. Read the generated peers/members/accessors/body wrapper.
+5. Collapse when done; paste a short note in the PR: “Expanded `@Foo` — adds X, Y; no surprise network/IO.”
+
+```text
+Expand Macro review card
+Macro: @________ / #________
+Attached role(s) you observed: peer / member / accessor / extension / body / …
+Generated artifacts (one line each):
+  - ________________________________
+  - ________________________________
+Trust notes: version pin ____ ; source audited? [ ] yes [ ] no
+Ship decision: [ ] keep  [ ] remove  [ ] replace with handwritten code
+```
+
+**What just happened**
+
+- Expand Macro turns mysticism into a diff you can review.
+- Body-role macros especially need this—your eyes see a short function; the compiler sees a wrapped one.
+- CI cannot replace human Expand for the first adoption of a macro family; afterward, pins and changelogs matter.
 
 **What they are (and are not):**
 
 - They are **compiler plugins** that rewrite syntax trees—not runtime reflection magic.
-- Expanding in Xcode: place the cursor on the macro, use **Expand Macro** (Editor / contextual menu) to see generated code before you trust behavior.
 - Writing a full macro package (SwiftSyntax, `Macro` protocols, peer macros) is out of scope here; treat authoring as an advanced toolchain topic (chapter **14** / Evolution).
 
 **Trust / supply-chain note:** third-party macros execute at **compile time** with the privileges of your build. Pin macro package versions, prefer source you can audit, review Expanded output in PRs that adopt new macros, and treat unknown macros like unknown build plugins—not like innocent attributes.
+
+| Do | Don’t |
+|----|-------|
+| Expand on first adoption | Merge `@Magic` because a sample compiled |
+| Pin macro deps in `Package.resolved` | Float macro versions across CI images |
+| Prefer macros that generate readable code | Prefer macros that obscure control flow for minor DRY |
+| Document body-role macros in the module README | Assume reviewers notice body rewrites unaided |
 
 ### 7. Protocol evolution and over-abstraction
 
 Protocol requirements can be marked optional only in `@objc` protocols. For pure Swift, provide default implementations in a protocol extension. Adding a new requirement to a public protocol is a breaking change unless you ship a default (and even then, semantics may surprise conformers).
 
 Prefer: concrete types → generics with light constraints → protocols when you have **two or more** real conformers or a deliberate test seam. Premature `any Service` layers cost readability without buying flexibility.
+
+### 8. Type erasers (when `any` / PAT limits force a box)
+
+Sometimes you need a single named type that can hold many conformers while exposing only a subset of the API:
+
+```swift
+struct AnySpeaker: Describable {
+    private let _summary: () -> String
+    var summary: String { _summary() }
+
+    init<S: Describable>(_ base: S) {
+        _summary = { base.summary }
+    }
+}
+
+let mixed: [AnySpeaker] = [AnySpeaker(Job(id: "1")), AnySpeaker(Job(id: "2"))]
+```
+
+**What just happened**
+
+- Hand-written erasers are deliberate API design—not a first resort.
+- Prefer primary associated types / generics / `some` before inventing `AnyFoo`.
+- Stdlib historical erasers (`AnyHashable`, older `AnyView`-shaped ideas) exist because the problem is real; copy the *pattern* sparingly.
 
 ---
 
@@ -286,6 +490,10 @@ SPM module boundaries often expose protocols as the stable API and keep structs 
 - [ ] Result-builder blocks are reviewed as data construction, not arbitrary side-effect scripts.
 - [ ] Macros in the tree are understood (role + Expanded output); third-party macros are version-pinned and trusted.
 - [ ] Performance-sensitive paths prefer generics over existentials unless measured otherwise.
+- [ ] Engineers have run the **`some` vs `any` pain lab** once and can explain PAT limits.
+- [ ] Result-builder `buildOptional` / `buildEither` / `buildArray` literacy exists for anyone writing DSLs or reviewing SwiftUI bodies.
+- [ ] New macros are **Expanded** on first adoption; attached **body** role macros get explicit review notes.
+- [ ] Macro dependency pins and supply-chain trust are documented for third-party macros.
 
 ---
 
@@ -302,3 +510,4 @@ SPM module boundaries often expose protocols as the stable API and keep structs 
 - [API Design Guidelines](https://www.swift.org/documentation/api-design-guidelines/)
 - [Observation (Apple)](https://developer.apple.com/documentation/observation) (`@Observable` literacy)
 - [Swift Testing — Expectations](https://developer.apple.com/documentation/testing/expectations) (`#expect` literacy)
+- [Swift Evolution](https://www.swift.org/swift-evolution/)

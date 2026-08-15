@@ -108,6 +108,64 @@ let byAge = sortedBy(people, \.age)
 - Many stdlib APIs accept key paths; they read like columns in a table.
 - Prefer key paths over stringly-typed `"name"` selectors—typos become compile errors.
 
+#### Key path composition (chains you can build)
+
+Key paths **compose**: append a path to dig deeper without writing nested closures.
+
+```swift
+struct Address {
+    var city: String
+    var zip: String
+}
+
+struct Employee {
+    var name: String
+    var address: Address
+}
+
+let employees = [
+    Employee(name: "Ada", address: Address(city: "London", zip: "E1")),
+    Employee(name: "Grace", address: Address(city: "NYC", zip: "10001"))
+]
+
+let cityPath = \Employee.address.city          // Written as a chain
+let cities = employees.map(\.address.city)     // Same idea via map
+
+// Compose from pieces — useful when a library hands you a partial path
+let toAddress = \Employee.address
+let toCity = toAddress.appending(path: \.city) // KeyPath<Employee, String>
+print(employees[0][keyPath: toCity])           // "London"
+
+// Writable: mutate through a key path
+var first = employees[0]
+let writableCity: WritableKeyPath<Employee, String> = \.address.city
+first[keyPath: writableCity] = "Cambridge"
+print(first.address.city)                      // "Cambridge"
+```
+
+| Type (literacy) | Meaning |
+|-----------------|---------|
+| `KeyPath<Root, Value>` | Read-only path |
+| `WritableKeyPath<Root, Value>` | Read/write on value types / stored vars |
+| `ReferenceWritableKeyPath<Root, Value>` | Read/write through a class reference root |
+
+```swift
+final class Box {
+    var label: String
+    init(_ label: String) { self.label = label }
+}
+
+let labelPath: ReferenceWritableKeyPath<Box, String> = \.label
+let box = Box("a")
+box[keyPath: labelPath] = "b"                  // Mutates shared object
+```
+
+**What just happened**
+
+- `\A.b.c` is composition sugar; `appending(path:)` builds the same idea from parts.
+- Writable vs reference-writable matters when the root is a class—you are mutating shared identity.
+- Use composition for form/table layers (“all rows, this nested field”) instead of ad-hoc closures that drift.
+
 ### 5. Initialization basics
 
 Initializers ensure every stored property has a value before the instance is used. Structs get a memberwise initializer when rules allow.
@@ -169,7 +227,25 @@ final class FileWatch {
 }
 ```
 
-`deinit` runs when the last strong reference goes away. It cannot take parameters and is not called manually. Do not do heavy async work in `deinit`; cancel tasks and release resources. Structs and enums have no `deinit`.
+`deinit` runs when the last strong reference goes away. It cannot take parameters and is not called manually. Do not do heavy async work in `deinit`; cancel tasks and release resources. Structs and enums have no `deinit` **unless** they are noncopyable (`~Copyable`)—those can run cleanup when the unique owner ends (chapter **06**). Same *cleanup* idea; different *identity* story.
+
+```swift
+// Class deinit — last strong ref
+final class SocketBox {
+    deinit { print("socket box gone") }
+}
+
+// Noncopyable deinit — unique owner (sketch; see ch 06)
+struct UniqueToken: ~Copyable {
+    deinit { print("token retired") }
+}
+```
+
+**What just happened**
+
+- Class `deinit` pairs with ARC and possible cycles (chapter **11**).
+- Noncopyable `deinit` pairs with move-only ownership—no reference graph, one owner.
+- Prefer explicit `close()` / `cancel()` APIs; treat `deinit` as the safety net.
 
 ---
 
@@ -235,6 +311,57 @@ print(s.$volume)      // 0...100 — projectedValue
 - `projectedValue` is what `$volume` means—SwiftUI’s `$binding` uses the same mechanism (chapter **19**).
 - Read wrappers as **policies** in review; expand them mentally to “extra stored property of wrapper type.”
 
+#### Property wrappers — composition and review depth
+
+Wrappers can stack. Outer wrappers see the inner wrapper’s `wrappedValue` as *their* storage surface—order matters.
+
+```swift
+@propertyWrapper
+struct Logged<Value> {
+    private var value: Value
+    var wrappedValue: Value {
+        get { value }
+        set {
+            print("set \(newValue)")
+            value = newValue
+        }
+    }
+    init(wrappedValue: Value) { self.value = wrappedValue }
+}
+
+@propertyWrapper
+struct NonEmpty {
+    private var value: String
+    var wrappedValue: String {
+        get { value }
+        set { value = newValue.isEmpty ? value : newValue }
+    }
+    var projectedValue: Bool { value.isEmpty }  // $name → is emptiness?
+    init(wrappedValue: String) {
+        self.value = wrappedValue.isEmpty ? "(unset)" : wrappedValue
+    }
+}
+
+struct Form {
+    // Order: outermost wrapper is written first (literacy — verify with Expand when unsure)
+    @Logged @NonEmpty var title = "Draft"
+}
+
+var form = Form()
+form.title = ""                  // NonEmpty rejects empty; Logged still observes attempts
+form.title = "Ship"
+print(form.title)                // "Ship"
+print(form.$title)               // projectedValue from the outermost wrapper that exposes one
+```
+
+**What just happened**
+
+- Stacking is powerful and easy to over-clever—prefer one clear policy per property in app code.
+- `$property` means **projectedValue**—read the wrapper type; do not guess from SwiftUI muscle memory alone.
+- In PR review: ask “what storage exists after desugaring?” If nobody can answer, expand or reject the mysticism.
+
+Wrappers that touch global process state (`UserDefaults`, singletons) hide I/O in property syntax. Fine for tiny tools; dangerous in libraries and tests unless injectable. Prefer explicit methods when the side effect is the point.
+
 ### 3. Convenience vs designated (classes)
 
 Designated initializers fully initialize the instance. Convenience initializers call another initializer on `self` (`self.init(...)`). Subclass rules enforce that initialization cannot skip a layer.
@@ -282,6 +409,49 @@ Prefer fewer designated paths; convenience wrappers for defaults.
 
 `static` (and `class` for overridable class properties) store or compute per-type state. Global mutable type properties are shared state — treat them like singletons in review.
 
+### 6. Init rules that bite in review
+
+| Rule | Why it matters |
+|------|----------------|
+| All stored props set before use | No half-built instances |
+| Class: call `super.init` after own props, before using `self` freely | Two-phase init |
+| Observers often skip init assignments | Do not rely on `didSet` for construction |
+| Failable `init?` vs `throws` | Prefer clear failure channels over traps |
+| Memberwise vs custom `init` on structs | Custom init can suppress memberwise—provide what callers need |
+
+```swift
+struct Config {
+    var host: String
+    var port: Int
+
+    // Custom init — memberwise may no longer be synthesized the way you expect
+    init?(host: String, port: Int) {
+        guard !host.isEmpty, (1...65535).contains(port) else { return nil }
+        self.host = host
+        self.port = port
+    }
+}
+```
+
+**What just happened**
+
+- Validation belongs in `init?` / `throws`, not in a later “hope someone called configure().”
+- When you add a custom struct `init`, check call sites still have a ergonomic construction path.
+
+### 7. Subscripts beyond grids
+
+Named subscript parameters keep call sites readable—document trap-vs-optional behavior the same way you would for a method:
+
+```swift
+struct HeaderMap {
+    private var storage: [String: String] = [:]
+    subscript(header name: String) -> String? {
+        get { storage[name.lowercased()] }
+        set { storage[name.lowercased()] = newValue }
+    }
+}
+```
+
 ---
 
 ## 3. Applications and use cases
@@ -308,6 +478,11 @@ Resource ownership: if a class opens a handle in `init`, close it in `deinit` *o
 - [ ] Key paths preferred over stringly property names where they fit.
 - [ ] Class initializer chains are minimal; convenience vs designated is correct; no careless overridable calls from `init`.
 - [ ] `deinit` is light; no async fire-and-forget as the cleanup strategy.
+- [ ] Key path **composition** (`appending` / nested `\a.b.c`) is used where it clarifies tables/forms.
+- [ ] Writable vs reference-writable key paths match the root’s value/reference semantics.
+- [ ] Stacked property wrappers are justified; reviewers can state wrapped vs projected meaning.
+- [ ] Wrappers that touch globals (`UserDefaults`, singletons) are treated as hidden I/O.
+- [ ] Class vs noncopyable `deinit` stories are not confused (chapter **06**).
 
 ---
 
@@ -320,3 +495,5 @@ Resource ownership: if a class opens a handle in `init`, close it in `deinit` *o
 - [Deinitialization (TSPL)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/deinitialization/)
 - [Key-Path Expressions (TSPL)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/expressions#Key-Path-Expression)
 - [Swift standard library — KeyPath](https://developer.apple.com/documentation/swift/keypath)
+- [Swift standard library — WritableKeyPath](https://developer.apple.com/documentation/swift/writablekeypath)
+- [API Design Guidelines](https://www.swift.org/documentation/api-design-guidelines/)

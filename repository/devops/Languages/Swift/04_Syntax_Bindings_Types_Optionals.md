@@ -4,7 +4,7 @@
 
 ## What this chapter covers
 
-Everyday Swift surface area: **`let` / `var`**, type annotations vs **type inference**, **Strings & Characters** (Unicode and why `string[i]` with an `Int` fails), **optionals** (binding, chaining, nil-coalescing), **tuples** and **typealiases**, **type casting** (`as` / `as?` / `as!`), and why **implicitly unwrapped optionals** (`Type!`) are brownfield literacy—not a modern default. Examples assume **Swift 6.3.x** / modern Swift 6 language mode habits.
+Everyday Swift surface area: **`let` / `var`**, type annotations vs **type inference**, **Strings & Characters** (Unicode, **Character vs Unicode scalar**, **multiline** and **raw** strings, **Substring vs String ownership**), **optionals** (binding, chaining, nil-coalescing), **tuples** and **typealiases**, **type casting** (`as` / `as?` / `as!`), and why **implicitly unwrapped optionals** (`Type!`) are brownfield literacy—not a modern default. Examples assume **Swift 6.3.x** / modern Swift 6 language mode habits.
 
 If chapter **00** got you printing hello, this chapter makes the next hundred lines readable—and makes `nil` feel like a type, not a crash waiting to happen.
 
@@ -104,7 +104,119 @@ for (offset, ch) in greeting.enumerated() {
 - Indexing needs `String.Index` because advancing past combining marks and emoji ZWJ sequences is not constant-time with an `Int`.
 - For wire formats and hashing, use `.utf8` / `.utf16` / `Data` deliberately—do not pretend `String` is C’s `char*`.
 
-### 5. Optionals: absence is a type
+### 5. Character vs Unicode scalar (see both)
+
+Humans think in **Characters** (extended grapheme clusters). Unicode itself is built from **scalars**. Swift exposes both—pick the view that matches the problem.
+
+```swift
+let family = "👨‍👩‍👧‍👦"           // One Character to most UIs
+print(family.count)                    // 1 — grapheme cluster
+print(family.unicodeScalars.count)     // Many scalars joined with ZWJ
+
+let eAcute: Character = "é"            // May be one precomposed scalar *or* e + combining accent
+for scalar in eAcute.unicodeScalars {
+    print(scalar, String(scalar.value, radix: 16))
+}
+
+// When you need scalar-level work (normalization, parsers, protocols):
+let scalars = "café".unicodeScalars
+print(scalars.count)
+
+// When you need human-facing length / iteration:
+for ch in "café" {
+    print(ch)                          // Character walk
+}
+```
+
+| View | Type you iterate | Use when |
+|------|------------------|----------|
+| Default `String` / `Character` | Grapheme clusters | UI text, “user-perceived” length |
+| `unicodeScalars` | `Unicode.Scalar` | Protocol-level Unicode processing |
+| `utf8` / `utf16` | Code units | Wire formats, C interop, hashing bytes |
+
+**What just happened**
+
+- “How long is this string?” is an incomplete question—**which view?**
+- Emoji families and flags are the teaching tools that break Int-index intuition forever.
+- Staff review smell: mixing Character counts with UTF-8 buffer sizes without naming the unit.
+
+### 6. Multiline strings and raw strings
+
+```swift
+// Multiline — leading indentation stripped to the closing quotes’ column
+let manifesto = """
+    Title: Swift handbook
+    Pin: 6.3.x
+    Rule: playground ≠ CI
+    """
+
+print(manifesto)
+// Lines keep internal newlines; common indent before content is removed.
+
+// Interpolation still works inside multiline
+let tool = "swift"
+let hint = """
+    Run `\(tool) --version` before debugging the language.
+    """
+
+// Raw strings — backslashes are literal unless you add extra # delimiters for interpolation
+let regexIsh = #"\d+\.\d+\.\d+"#          // Backslash is real, not an escape
+let pathy = #"C:\temp\swift"#             // Windows-path teaching example — prefer APIs in real code
+
+// Raw + interpolation: close the rawness around the interpolating parens
+let version = "6.3.0"
+let pattern = #"^Swift \#(version)$"#     // \#(…) interpolates inside raw strings
+```
+
+**What just happened**
+
+- `"""` is for readable multi-line content (JSON fixtures, help text, SQL)—indent relative to the closing `"""`.
+- `#"…"#` (and more `#` if needed) disables escape processing so regexes and Windows paths stop looking like noise.
+- Prefer `FilePath` / URL types for real paths (chapter **13**); raw strings are literacy for literals, not a path API.
+
+### 7. Lab — Substring vs String ownership pitfalls
+
+Slicing a `String` yields a **`Substring`**: a view that shares storage with the original. That is fast—and a footgun if you stash substrings longer than the parent string’s useful lifetime.
+
+```swift
+func firstWord(in text: String) -> Substring {
+    if let space = text.firstIndex(of: " ") {
+        return text[..<space]              // Substring — borrows text’s storage
+    }
+    return text[...]
+}
+
+func firstWordOwned(in text: String) -> String {
+    String(firstWord(in: text))            // Copy into a new String — independent ownership
+}
+
+var source = "Ada Lovelace"
+let borrowed = firstWord(in: source)       // Substring tied to source
+let owned = firstWordOwned(in: source)     // String you can keep safely
+
+source = "Grace Hopper"                    // Mutating/reassigning source can invalidate assumptions
+print(owned)                               // Still "Ada" — owned is independent
+// print(borrowed)                         // Do not casually keep Substring across mutations / long storage
+
+// API boundary habit: accept String, return String unless you are in a tight hot loop
+func normalize(_ word: String) -> String {
+    word.lowercased()
+}
+print(normalize(String(borrowed)))
+```
+
+| Type | Ownership | Prefer when |
+|------|-----------|-------------|
+| `String` | Owns its storage (value semantics) | Properties, async boundaries, long-lived model fields |
+| `Substring` | View into a base `String` | Local parsing loops; convert with `String(...)` before storing |
+
+**What just happened**
+
+- Slicing is cheap because it **shares**; storing slices in structs can extend the lifetime of huge base strings (memory “leak” shape).
+- Crossing APIs, tasks, or stored properties: **promote to `String`**.
+- Review smell: `var cache: [Substring]` on a long-lived type.
+
+### 8. Optionals: absence is a type
 
 An optional either holds a wrapped value or `nil`.
 
@@ -116,7 +228,7 @@ username = nil                // Absence again — still a valid state
 
 You do **not** call methods on a `String?` as if it were a `String`. You unwrap safely first.
 
-### 6. Lab — optional binding, chaining, and nil-coalescing
+### 9. Lab — optional binding, chaining, and nil-coalescing
 
 ```swift
 struct Profile {
@@ -157,7 +269,7 @@ let forced = username!            // Crashes if nil — only when you can prove 
 - `??` supplies defaults at boundaries (config, UI placeholders).
 - `!` is a conscious hazard, not a typing convenience.
 
-### 7. Tuples and typealiases
+### 10. Tuples and typealiases
 
 Tuples bundle a few values without inventing a named type. Typealiases give readable names to existing types.
 
@@ -180,7 +292,7 @@ let (ok, name) = lookup(user: "grace")  // Destructure
 
 Prefer a `struct` once the tuple grows labels you care about across APIs, needs methods, or appears in many signatures. Tuples shine for short returns and temporary grouping.
 
-### 8. Type casting: `as`, `as?`, `as!`
+### 11. Type casting: `as`, `as?`, `as!`
 
 | Operator | Meaning |
 |----------|---------|
@@ -293,17 +405,36 @@ let label = number.map { "port \($0)" } // Int? → String?
 
 `map` transforms a present value; `flatMap` flattens one layer of optionality when the transform itself returns an optional. Prefer this over nested `if let` pyramids for short pipelines—use `guard` when the failure path needs a named exit.
 
+### 7. Lab — string views checklist (wire vs UI)
+
+```swift
+let payload = "café🎉"
+print("characters:", payload.count)
+print("utf8 bytes:", payload.utf8.count)
+print("utf16 units:", payload.utf16.count)
+print("scalars:", payload.unicodeScalars.count)
+
+// Persist / send: be explicit about encoding
+let bytes = Array(payload.utf8)
+let roundTrip = String(bytes: bytes, encoding: .utf8)
+```
+
+**What just happened**
+
+- Four numbers, four meanings—pick the one your protocol documents.
+- Round-tripping through UTF-8 is the common network habit; Character count is not a wire length.
+
 ---
 
 ## 3. Applications and use cases
 
 | Lens | Practice |
 |------|----------|
-| **Application** | View state: distinguish “loading / missing / value” with optionals or enums—not sentinel empty strings alone; keep display strings Unicode-safe |
-| **Systems** | CLI flags and env vars: parse to non-optional structs early; fail fast on required missing values; treat path strings as UTF-8 deliberately |
+| **Application** | View state: distinguish “loading / missing / value” with optionals or enums—not sentinel empty strings alone; keep display strings Unicode-safe; store `String` not `Substring` in models |
+| **Systems** | CLI flags and env vars: parse to non-optional structs early; fail fast on required missing values; treat path strings as UTF-8 deliberately; raw strings for regex fixtures |
 | **Security** | Secrets and tokens as `String?` until validated; never log force-unwrapped credential paths that crash into noisy dumps |
-| **Operations** | Config DTOs: required vs optional fields documented; `??` defaults explicitly chosen, not accidental; status codes as named tuples or typealiases until a struct earns its keep |
-| **Software engineering** | Ban casual `!` and `as!` in style guides; allowlist IUO for known UIKit outlet patterns only; prefer `as?` at `Any` boundaries |
+| **Operations** | Config DTOs: required vs optional fields documented; `??` defaults explicitly chosen, not accidental; multiline help text in `"""` |
+| **Software engineering** | Ban casual `!` and `as!` in style guides; allowlist IUO for known UIKit outlet patterns only; prefer `as?` at `Any` boundaries; Substring stays local |
 
 ---
 
@@ -313,6 +444,9 @@ let label = number.map { "port \($0)" } // Int? → String?
 - [ ] Optionals are unwrapped with `if let` / `guard let` / `??` / `?.`—not a culture of `!`.
 - [ ] `Type!` appears only with a brownfield or framework reason, not as a typing shortcut.
 - [ ] String indexing uses `String.Index` / views (`utf8`, …)—no `Int`-subscript myths from other languages.
+- [ ] Character vs scalar vs UTF-8 units are named correctly for the problem.
+- [ ] Stored properties and async boundaries use `String`, not lingering `Substring`.
+- [ ] Multiline / raw strings used where they clarify literals—not as a path API substitute.
 - [ ] Casts at runtime boundaries use `as?`; `as!` has a crash rationale.
 - [ ] Empty collections and `nil` sites have enough annotation to be unambiguous.
 - [ ] Parsed configs expose non-optional fields for required data.
@@ -329,4 +463,6 @@ let label = number.map { "port \($0)" } // Int? → String?
 - [Strings and Characters (TSPL)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/stringsandcharacters)
 - [Type Casting (TSPL)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/typecasting)
 - [The Swift Programming Language](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/)
+- [String (Swift stdlib)](https://developer.apple.com/documentation/swift/string)
+- [Substring (Swift stdlib)](https://developer.apple.com/documentation/swift/substring)
 - [API Design Guidelines](https://www.swift.org/documentation/api-design-guidelines/)

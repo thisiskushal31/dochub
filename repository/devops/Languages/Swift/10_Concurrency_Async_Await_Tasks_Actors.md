@@ -4,7 +4,7 @@
 
 ## What this chapter covers
 
-**`async` / `await`**, **`Task` / `TaskGroup`**, **actors**, **`@MainActor`**, **`nonisolated`**, **`Sendable`**, **cancellation**, **AsyncSequence**, **clocks**, **Observation** literacy, and **Swift 6 complete checking** migration. Default is **Swift 6.3.x** / Swift 6 language mode.
+**`async` / `await`**, **`Task` / `TaskGroup`**, **actors**, **executor / isolation regions**, **`@MainActor`**, **`nonisolated`**, **`Sendable`**, **reentrancy**, **Task priority**, **`TaskLocal`**, **cancellation + clocks**, **AsyncSequence**, **Observation** (`@Observable` / `Observations`), and **Swift 6 diagnostic families**. Default is **Swift 6.3.x** / Swift 6 language mode.
 
 Picture a restaurant kitchen with one pass window. `async` is a cook who may step away from the stove while the oven finishes. `await` is “I am willing to suspend here.” An **actor** is a locked pantry: only one cook at a time may rearrange the jars. **`@MainActor`** is the front-of-house counter where the UI lives — you hop there to talk to customers. Concurrency is not “run everything in parallel.” It is a model for *when* work suspends, *who* owns mutable state, and *how* failures and cancellation propagate.
 
@@ -175,18 +175,21 @@ func timedWork() async throws {
 }
 ```
 
-**Lab — cancel a sleeper**
+**Lab — clock sleep cancel**
 
 ```swift
 let handle = Task {
-    try await Task.sleep(for: .seconds(30))
+    try await Task.sleep(for: .seconds(30), clock: ContinuousClock())
     return "done"
 }
 handle.cancel()
 let outcome = await handle.result   // failure: CancellationError
+
+// Contrast — a busy loop that never checks cancellation will ignore cancel:
+// while true { }  // hang — review smell
 ```
 
-**What just happened.** Parent cancellation cascades to children in structured concurrency. Unstructured tasks you spawn must be cancelled or awaited when the owner goes away. Sleep that ignores cancellation is a hang waiting for a review comment.
+**What just happened.** Parent cancellation cascades to children in structured concurrency. Unstructured tasks you spawn must be cancelled or awaited when the owner goes away. Sleep that ignores cancellation is a hang waiting for a review comment. Prefer `Task.sleep(for:clock:)` / `ContinuousClock` over legacy `DispatchQueue` sleeps for cancellable waits.
 
 ### 8. AsyncSequence and `for await`
 
@@ -254,7 +257,79 @@ func load() async throws -> String {
 
 **What just happened.** Continuations wrap callback APIs once. Prefer official `async` overloads when they exist. Never resume a continuation twice; never leak it without resuming. `withChecked…` traps misuse in debug; `withUnsafe…` is for experts who already proved the contract.
 
-### 3. `nonisolated` — stepping outside the actor
+### 3. Executor and isolation regions (deeper)
+
+Isolation answers: **which executor serializes this state?** Mental regions:
+
+| Region | Typical home | Cross with |
+|--------|--------------|------------|
+| **MainActor** | UI models, views | `await` hop off for IO, back for mutation |
+| **Custom actor** | Services, caches, ledgers | `await` into the actor |
+| **Nonisolated / synchronous** | Pure functions, value transforms | No hop if truly sync and Sendable |
+| **Task executor preference** | Where a task prefers to run | Inherited unless detached / specified |
+
+```swift
+@MainActor
+func paint(_ title: String) {
+    // Must run on the main actor's executor
+    _ = title
+}
+
+actor Vault {
+    private var secret = "x"
+    func read() -> String { secret }
+}
+
+func demoHops(_ vault: Vault) async {
+    let s = await vault.read()     // hop into Vault's isolation
+    await paint(s)                 // hop to MainActor
+}
+```
+
+**What just happened.** After `await`, you re-enter an isolation region — possibly a different one than before the suspension. Code between awaits on an actor is exclusive; code across an await is **not** a critical section that excludes reentrancy (next lab). Global actors (`@MainActor`) and instance actors are both isolation domains; treating them as “threads” will mislead you.
+
+### 4. Lab — actor reentrancy (await, then state changed)
+
+Actors serialize *synchronous* work, but **`await` inside an actor method suspends and may let other work on that actor run**.
+
+```swift
+actor Bank {
+    private var balance = 100
+    private(set) var log: [String] = []
+
+    func withdraw(_ amount: Int) async -> Bool {
+        let snapshot = balance
+        log.append("begin \(amount) saw \(snapshot)")
+
+        // Suspending point — another call may interleave on this actor!
+        try? await Task.sleep(for: .milliseconds(10))
+
+        // balance may have changed since snapshot
+        guard balance >= amount else {
+            log.append("fail \(amount) now \(balance)")
+            return false
+        }
+        balance -= amount
+        log.append("ok \(amount) left \(balance)")
+        return true
+    }
+}
+
+func reentrancyDemo() async {
+    let bank = Bank()
+    async let a = bank.withdraw(80)
+    async let b = bank.withdraw(80)
+    let (okA, okB) = await (a, b)
+    print(okA, okB, await bank.log)
+    // One should fail if both try to take 80 from 100 —
+    // *if* you re-check balance after await. A naive use of `snapshot`
+    // alone would double-spend.
+}
+```
+
+**What just happened.** Reentrancy is not a data race (the actor still serializes), but it **is** a logic race if you cache actor state across `await` and assume it is still true. Habit: after every `await` inside an actor, re-read state you depend on, or structure the method so mutations finish before the first suspension. This lab is the staff interview question for “actors make everything safe.”
+
+### 5. `nonisolated` — stepping outside the actor
 
 Sometimes a method on an actor (or `@MainActor` type) does not touch isolated state and should be callable without `await`.
 
@@ -278,13 +353,51 @@ func printName(_ v: Vault) {
 
 **What just happened.** `nonisolated` is a promise: this member does not read or write isolated mutable state. Lying about that (touching isolated storage from `nonisolated`) is what complete checking exists to catch.
 
-### 4. Isolation domains and priorities
+### 6. Task priority literacy
 
-Isolation answers “who may touch this state?” Main-actor UI state, custom actors, and global/executor isolation are different domains. Tasks inherit priority and actor context unless detached. Raise priority only with cause (user-initiated work). Do not use priority as a substitute for correct isolation.
+Tasks carry a **priority** (`high`, `medium`, `low`, `background`, …). Child tasks inherit priority unless you say otherwise. Priority is a **scheduler hint**, not a correctness tool.
 
-### 5. Observation literacy (`@Observable` + `Observations`)
+```swift
+Task(priority: .high) {
+    // user-initiated path — keep short awaits
+    _ = try? await fetchToken()
+}
 
-The Observation library lets you mark model classes with the **`@Observable`** macro so UI (and other consumers) can track property access. As a consumer, you usually *read* properties in a tracking context (SwiftUI does this for you) — you do not hand-roll willSet observers.
+Task(priority: .utility) {
+    // housekeeping — do not starve interactive work with huge CPU here either
+}
+
+// Escalation literacy: awaiting a higher-priority child can boost the waiter.
+// Do not spam .high to “fix” latency from wrong isolation or blocking work.
+```
+
+**What just happened.** Raise priority for truly interactive work. Detached tasks do **not** inherit actor context or priority the same way — another reason they need a written justification. Priority will not fix a main-actor bottleneck or a missing `Sendable` boundary.
+
+### 7. `TaskLocal` literacy
+
+`TaskLocal` values propagate down a task tree — request IDs, trace context, test fixtures — without threading every parameter.
+
+```swift
+enum RequestContext {
+    @TaskLocal static var requestID: String?
+}
+
+func handle() async {
+    await RequestContext.$requestID.withValue("req-42") {
+        await nested()
+    }
+}
+
+func nested() async {
+    print(RequestContext.requestID ?? "none")  // "req-42" in this task tree
+}
+```
+
+**What just happened.** Locals are for **ambient context**, not for smuggling huge mutable objects past isolation. Values should be `Sendable`. Detached tasks may **not** see the same locals — check docs for inheritance rules when you `Task.detached`. Prefer explicit parameters when the dependency is part of the API contract.
+
+### 8. Observation literacy (`@Observable` + `Observations`)
+
+The Observation library lets you mark model classes with the **`@Observable`** macro so UI (and other consumers) can track property access.
 
 ```swift
 import Observation
@@ -296,7 +409,7 @@ final class Player {
 }
 ```
 
-**Swift 6.2+ literacy — `Observations` as `AsyncSequence`.** You can stream consistent snapshots of observable state:
+**Lab — `Observations` as `AsyncSequence` (Swift 6.2+ literacy)**
 
 ```swift
 import Observation
@@ -316,17 +429,56 @@ func watch(_ player: Player) async {
         if player.score > 10 { break }
     }
 }
+
+func bumpAndWatch() async {
+    let player = Player()
+    let watcher = Task { await watch(player) }
+    player.score = 1
+    player.item = "shield"
+    player.score = 11          // transactional collapse of sync bursts
+    watcher.cancel()
+}
 ```
 
-**What just happened.** The closure *computes* the value you want; Observation tracks which `@Observable` properties were read. Updates are **transactional**: synchronous bursts of property changes collapse into one consistent emission (transaction ends at the next suspending `await`). Treat this as concurrency-native observation — not a second Combine. Availability is tied to recent OS / toolchain pins; verify before promising it in a deployment target older than your handbook’s 6.2+ literacy note.
+**What just happened.** The closure *computes* the value you want; Observation tracks which `@Observable` properties were read. Updates are **transactional**: synchronous bursts of property changes collapse into one consistent emission (transaction ends at the next suspending `await`). Treat this as concurrency-native observation — not a second Combine. Verify OS / toolchain availability before promising it on older deployment targets.
 
 `ObservableObject` + `@Published` + Combine remains **legacy literacy** for brownfield SwiftUI (chapter **19**). New models prefer `@Observable`.
 
-### 6. Data races vs logic races
+### 9. Data races vs logic races
 
-Complete checking targets **data races** (unsynchronized mutable sharing). Logic races (ordering bugs, stale UI) still need tests and clear ownership. Actors serialize; they do not invent correct product behavior.
+Complete checking targets **data races** (unsynchronized mutable sharing). Logic races (ordering bugs, stale UI, actor reentrancy mistakes) still need tests and clear ownership. Actors serialize; they do not invent correct product behavior.
 
-### 7. Swift 6 complete checking — migration steps
+### 10. Common Swift 6 diagnostic families — and how to fix
+
+| Family (read the diagnostic text) | Typical cause | Fix direction |
+|-----------------------------------|---------------|---------------|
+| **Sendable / crossing isolation** | Class or mutable state captured in `@Sendable` / Task | Value types, actors, isolate the class, or defended `@unchecked` with a story |
+| **Actor-isolated property access** | Touching actor/`@MainActor` state from outside without `await` | `await` the hop; or mark truly safe members `nonisolated` |
+| **Main actor isolation** | UI update or model off the main actor | Annotate type/`Task { @MainActor in }`; move heavy work off, mutate on-main |
+| **Passing non-Sendable across actors** | Sharing a reference type between domains | Copy values; wrap in actor; make immutable `final` + `Sendable` if justified |
+| **Capture of mutable `var` in concurrent code** | Loop variable / local mutated across tasks | Snapshot with `let` before spawn; structured concurrency |
+| **Global shared mutable state** | `nonisolated(unsafe)` globals, classic singletons | Actor, main actor, or remove the global |
+
+```swift
+// Smell → fix sketch
+final class Cache {
+    var items: [String] = []
+}
+
+// Bad under complete checking: Task { cache.items.append("x") }
+
+actor SafeCache {
+    private var items: [String] = []
+    func append(_ s: String) { items.append(s) }
+}
+
+let cache = SafeCache()
+Task { await cache.append("x") }
+```
+
+**What just happened.** Most Swift 6 concurrency errors are the compiler asking “who owns this mutation?” Fix isolation first; `@unchecked Sendable` last. Migration guide in References walks module-by-module enablement.
+
+### 11. Swift 6 complete checking — migration steps
 
 1. **Inventory** targets still on Swift 5 language mode / minimal checking.
 2. **Enable warnings** as errors for concurrency diagnostics on one module at a time.
@@ -344,11 +496,11 @@ See the concurrency migration guide in References.
 
 | Lens | Habit |
 |------|--------|
-| **Application** | UI models on `@MainActor`; network/IO as `async throws`; Observation for modern UI state |
-| **Systems** | CLI/server: structured `TaskGroup` fan-out; cancel on shutdown; clocks not `Date()` sprinkles |
+| **Application** | UI models on `@MainActor`; network/IO as `async throws`; Observation for modern UI state; re-check actor state after `await` |
+| **Systems** | CLI/server: structured `TaskGroup` fan-out; cancel on shutdown; clocks not `Date()` sprinkles; TaskLocal for request IDs |
 | **Security** | Do not pass secrets through unconstrained `@Sendable` closures logged elsewhere; cancel abandoned auth flows |
-| **Operations** | Timeouts via racing `Task` + cancellation; measure hangs after await, not only CPU |
-| **Software engineering** | Public APIs prefer `async` over completion handlers; document isolation; migrate to complete checking module-by-module |
+| **Operations** | Timeouts via racing `Task` + cancellation; measure hangs after await, not only CPU; priority for interactive paths only |
+| **Software engineering** | Public APIs prefer `async` over completion handlers; document isolation; migrate diagnostics family-by-family, module-by-module |
 
 ---
 
@@ -357,21 +509,26 @@ See the concurrency migration guide in References.
 - [ ] New async work uses `async`/`await`; completion handlers appear only as bridges or legacy.
 - [ ] Shared mutable state has an isolation story (actor / main actor / immutable values).
 - [ ] Structured concurrency preferred; unstructured `Task` / `Task.detached` ownership and cancellation are explicit.
+- [ ] Actor methods that `await` re-validate state (reentrancy lab understood).
 - [ ] No casual `@unchecked Sendable` or force-casts to silence Swift 6 checking.
-- [ ] Cancellation is cooperative on long loops, sleeps, and IO wrappers.
+- [ ] Cancellation is cooperative on long loops, sleeps, and IO wrappers; clock sleeps cancel cleanly.
 - [ ] Continuations resume exactly once; prefer native async APIs when available.
 - [ ] `nonisolated` members do not touch isolated mutable state.
+- [ ] Task priority and TaskLocal use are intentional — not hidden global mutable state.
 - [ ] `@Observable` / `Observations` used with availability literacy; not mixed carelessly with Combine `@Published` for new code.
+- [ ] Swift 6 diagnostic families addressed by isolation design, not suppression.
 - [ ] Language mode / checking level for the target is intentional and pinned in CI.
 
 ---
 
 ## References
 
-- [Concurrency](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/)
+- [Concurrency (TSPL)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/)
 - [Swift 6 concurrency migration guide](https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/)
 - [Adopting Swift 6](https://developer.apple.com/documentation/swift/adoptingswift6)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [MainActor](https://developer.apple.com/documentation/swift/mainactor)
+- [TaskLocal](https://developer.apple.com/documentation/swift/tasklocal)
 - [Observation](https://developer.apple.com/documentation/observation)
 - [TaskGroup](https://developer.apple.com/documentation/swift/taskgroup)
+- [Clock](https://developer.apple.com/documentation/swift/clock)
