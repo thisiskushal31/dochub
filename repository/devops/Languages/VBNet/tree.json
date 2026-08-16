@@ -1,9 +1,142 @@
 [
   {
+    "name": "00_First_Steps_SDK_DotNet_And_Hello.md",
+    "path": "00_First_Steps_SDK_DotNet_And_Hello.md",
+    "type": "file",
+    "sha": "",
+    "size": 11312
+  },
+  {
+    "name": "01_What_VBNet_Is_And_Is_Not.md",
+    "path": "01_What_VBNet_Is_And_Is_Not.md",
+    "type": "file",
+    "sha": "",
+    "size": 9801
+  },
+  {
+    "name": "02_Projects_Modules_Namespaces_And_Entry_Points.md",
+    "path": "02_Projects_Modules_Namespaces_And_Entry_Points.md",
+    "type": "file",
+    "sha": "",
+    "size": 9249
+  },
+  {
+    "name": "03_Types_Variables_And_Option_Directives.md",
+    "path": "03_Types_Variables_And_Option_Directives.md",
+    "type": "file",
+    "sha": "",
+    "size": 9820
+  },
+  {
+    "name": "04_Operators_Control_Flow_And_Loops.md",
+    "path": "04_Operators_Control_Flow_And_Loops.md",
+    "type": "file",
+    "sha": "",
+    "size": 9242
+  },
+  {
+    "name": "05_Procedures_Parameters_Properties_And_Overloads.md",
+    "path": "05_Procedures_Parameters_Properties_And_Overloads.md",
+    "type": "file",
+    "sha": "",
+    "size": 8616
+  },
+  {
+    "name": "06_Strings_Arrays_And_Collections.md",
+    "path": "06_Strings_Arrays_And_Collections.md",
+    "type": "file",
+    "sha": "",
+    "size": 8621
+  },
+  {
+    "name": "07_Classes_Structures_Inheritance_And_Interfaces.md",
+    "path": "07_Classes_Structures_Inheritance_And_Interfaces.md",
+    "type": "file",
+    "sha": "",
+    "size": 9793
+  },
+  {
+    "name": "08_Exceptions_And_Error_Handling.md",
+    "path": "08_Exceptions_And_Error_Handling.md",
+    "type": "file",
+    "sha": "",
+    "size": 8735
+  },
+  {
+    "name": "09_Generics_Delegates_Events_And_Lambdas.md",
+    "path": "09_Generics_Delegates_Events_And_Lambdas.md",
+    "type": "file",
+    "sha": "",
+    "size": 8835
+  },
+  {
+    "name": "10_LINQ_And_Query_Expressions.md",
+    "path": "10_LINQ_And_Query_Expressions.md",
+    "type": "file",
+    "sha": "",
+    "size": 9092
+  },
+  {
+    "name": "11_Async_And_Task_Literacy.md",
+    "path": "11_Async_And_Task_Literacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 8565
+  },
+  {
+    "name": "12_File_IO_Streams_And_My.md",
+    "path": "12_File_IO_Streams_And_My.md",
+    "type": "file",
+    "sha": "",
+    "size": 8659
+  },
+  {
+    "name": "13_Assemblies_References_And_NuGet.md",
+    "path": "13_Assemblies_References_And_NuGet.md",
+    "type": "file",
+    "sha": "",
+    "size": 10369
+  },
+  {
+    "name": "14_COM_Interop_And_PInvoke_Literacy.md",
+    "path": "14_COM_Interop_And_PInvoke_Literacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 8260
+  },
+  {
+    "name": "15_WinForms_And_Windows_Services_Doors.md",
+    "path": "15_WinForms_And_Windows_Services_Doors.md",
+    "type": "file",
+    "sha": "",
+    "size": 8466
+  },
+  {
+    "name": "16_Security_And_Best_Practices.md",
+    "path": "16_Security_And_Best_Practices.md",
+    "type": "file",
+    "sha": "",
+    "size": 8082
+  },
+  {
+    "name": "17_Use_Cases_And_Engineering_Perspectives.md",
+    "path": "17_Use_Cases_And_Engineering_Perspectives.md",
+    "type": "file",
+    "sha": "",
+    "size": 7529
+  },
+  {
+    "name": "18_Where_VBNet_Is_Going_And_Adjacent_Doors.md",
+    "path": "18_Where_VBNet_Is_Going_And_Adjacent_Doors.md",
+    "type": "file",
+    "sha": "",
+    "size": 10783
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 796
+    "size": 10800
   }
 ]
