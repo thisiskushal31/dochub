@@ -157,8 +157,27 @@ New iOS/macOS/visionOS SDKs arrive with Xcode. Contract authors mostly feel API 
 | UIKit→SwiftUI big-bang rewrite as default | Incremental hosting — ch **19** |
 | Unpinned CI Xcode | Incident factory — ch **21** |
 | Treating Server/Wasm/Android/Embedded as “already covered” | Use doors below |
+| Ignoring Distributed actors / SwiftData when the ticket needs them | Name the door + official docs; do not invent here |
 
 ### 8. Richer doors we do not deep-dive
+
+#### Distributed actors
+
+**What it is:** Actor isolation across process/network boundaries (`Distributed` module).
+
+**Door literacy:** local actors first (ch **10**); Distributed only with an explicit multi-node design and official docs. Not a free RPC layer.
+
+#### SwiftData
+
+**What it is:** Macro-friendly Apple persistence beside SwiftUI (`@Model`).
+
+**Door literacy:** ch **19** points here; Core Data remains common brownfield. Require migration/backup/test story when adopting.
+
+#### Mutex / Synchronization
+
+**What it is:** Synchronous mutual exclusion that coexists with Swift Concurrency (ch **10**).
+
+**Door literacy:** prefer actors for async services; use `Mutex` for short sync critical sections — never block the cooperative pool with semaphores.
 
 #### Embedded Swift — constraints
 

@@ -297,6 +297,19 @@ UI frameworks expect UI work on the **main actor**. Under Swift 6 checking, cros
 - Animation choreography and custom layout engines.
 - Full accessibility audits (beyond Dynamic Type / label glance).
 - App Store screenshot and ASO playbooks.
+- Full **SwiftData** / Core Data modeling courses (door only — next section).
+
+### 4b. SwiftData — door (persistence adjacent to SwiftUI)
+
+**SwiftData** is Apple’s modern persistence stack that pairs naturally with SwiftUI and macros (`@Model`). Staff literacy:
+
+| Know | Do not pretend |
+|------|----------------|
+| It exists as the modern Apple persistence path next to SwiftUI | This chapter is a SwiftData book |
+| Migration from Core Data is a project | “We use SwiftUI” implies SwiftData |
+| Models and CloudKit sync have their own review surface | Persistence secrets belong in ch **20**/backend |
+
+When a PR introduces SwiftData, require Apple’s SwiftData docs, a migration/backup story, and test strategy — not a UI-only review. Core Data remains brownfield literacy in many codebases.
 
 ### 5. Enough to wire CI
 
@@ -372,6 +385,7 @@ CI proof:      [ ] xcodebuild test on pinned sim  [ ] preview only (insufficient
 
 - [SwiftUI](https://developer.apple.com/documentation/swiftui)
 - [Observation](https://developer.apple.com/documentation/observation)
+- [SwiftData](https://developer.apple.com/documentation/swiftdata)
 - [UIKit](https://developer.apple.com/documentation/uikit)
 - [AppKit](https://developer.apple.com/documentation/appkit)
 - [Migrating to the SwiftUI life cycle](https://developer.apple.com/documentation/swiftui/migrating-to-the-swiftui-life-cycle)

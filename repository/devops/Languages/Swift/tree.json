@@ -60,7 +60,7 @@
     "path": "08_Protocols_Extensions_Generics_Opaque_Types.md",
     "type": "file",
     "sha": "",
-    "size": 21696
+    "size": 23166
   },
   {
     "name": "09_Error_Handling.md",
@@ -74,7 +74,7 @@
     "path": "10_Concurrency_Async_Await_Tasks_Actors.md",
     "type": "file",
     "sha": "",
-    "size": 21885
+    "size": 25150
   },
   {
     "name": "11_ARC_Memory_Safety_Access_Control.md",
@@ -137,7 +137,7 @@
     "path": "19_SwiftUI_UIKit_AppKit_Surface_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 18255
+    "size": 19131
   },
   {
     "name": "20_Security_Privacy_Signing_And_Secrets.md",
@@ -172,7 +172,7 @@
     "path": "24_Where_Swift_Is_Going_And_Adjacent_Doors.md",
     "type": "file",
     "sha": "",
-    "size": 20661
+    "size": 21548
   },
   {
     "name": "README.md",

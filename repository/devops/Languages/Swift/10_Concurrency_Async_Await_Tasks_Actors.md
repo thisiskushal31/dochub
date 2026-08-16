@@ -490,6 +490,46 @@ Task { await cache.append("x") }
 
 See the concurrency migration guide in References.
 
+### 12. `AsyncStream` — turn callbacks into `for await`
+
+When an API yields **many** values over time (not one completion), wrap it as an `AsyncStream` / `AsyncThrowingStream` and consume with `for await`.
+
+```swift
+func ticks(every nanoseconds: UInt64) -> AsyncStream<Int> {
+    AsyncStream { continuation in
+        let task = Task {
+            var n = 0
+            while !Task.isCancelled {
+                try? await Task.sleep(nanoseconds: nanoseconds)
+                continuation.yield(n)
+                n += 1
+            }
+            continuation.finish()
+        }
+        continuation.onTermination = { _ in task.cancel() }
+    }
+}
+```
+
+Prefer official `AsyncSequence` APIs when the platform already provides them. Finish/cancel cleanly — leaked continuations are review smells (same rule as single-shot `withCheckedContinuation`).
+
+### 13. `DiscardingTaskGroup` — fire-and-forget fan-out
+
+Ordinary `TaskGroup` **collects** child results (memory grows with outstanding children). For long-running “accept forever / spawn workers” shapes where you do **not** need each result, use **`withDiscardingTaskGroup`** / throwing variant (Swift 5.9+). Staff habit: pick the group type that matches whether results matter; do not accumulate unused `Void` results forever.
+
+### 14. Actors vs `Mutex` (Synchronization) — pick deliberately
+
+| Tool | Shape | Prefer when… |
+|------|-------|----------------|
+| **Actor** | Async isolation; hop with `await` | Shared mutable service fits async model |
+| **`Mutex`** (Synchronization framework) | Synchronous critical section | You need **immediate** sync access without suspension; protecting a non-Sendable value briefly |
+
+Do **not** block async tasks with old `DispatchSemaphore` “wait on the cooperative pool” patterns — deadlock risk. Prefer actors first; reach for `Mutex` when the sync requirement is real and scoped. Availability depends on platform/SDK — gate with `#available` when needed.
+
+### 15. Distributed actors — door only
+
+**Distributed actors** (`Distributed` module) model actor-like isolation **across** process or network boundaries. This track’s job: know the door exists for multi-node / multi-process designs; do not invent an RPC framework here. Prefer local actors + explicit network APIs unless the team adopts Distributed deliberately with official docs.
+
 ---
 
 ## 3. Applications and use cases
@@ -507,12 +547,18 @@ See the concurrency migration guide in References.
 ## 4. Staff-level review checklist
 
 - [ ] New async work uses `async`/`await`; completion handlers appear only as bridges or legacy.
+- [ ] Continuations / `AsyncStream` bridges resume exactly once and cancel cleanly.
+- [ ] Task groups chosen deliberately (`TaskGroup` vs discarding) for result lifetime.
+- [ ] Shared mutable state uses actors (or scoped `Mutex`) — not ad-hoc locks on the cooperative pool.
 - [ ] Shared mutable state has an isolation story (actor / main actor / immutable values).
 - [ ] Structured concurrency preferred; unstructured `Task` / `Task.detached` ownership and cancellation are explicit.
 - [ ] Actor methods that `await` re-validate state (reentrancy lab understood).
 - [ ] No casual `@unchecked Sendable` or force-casts to silence Swift 6 checking.
 - [ ] Cancellation is cooperative on long loops, sleeps, and IO wrappers; clock sleeps cancel cleanly.
 - [ ] Continuations resume exactly once; prefer native async APIs when available.
+- [ ] `AsyncStream` / discarding task groups chosen deliberately for multi-value and fire-and-forget fan-out.
+- [ ] Shared mutable state uses actors (or scoped `Mutex`) — not ad-hoc locks on the cooperative pool.
+- [ ] Distributed actors treated as a door with official docs — not accidental RPC.
 - [ ] `nonisolated` members do not touch isolated mutable state.
 - [ ] Task priority and TaskLocal use are intentional — not hidden global mutable state.
 - [ ] `@Observable` / `Observations` used with availability literacy; not mixed carelessly with Combine `@Published` for new code.
@@ -531,4 +577,8 @@ See the concurrency migration guide in References.
 - [TaskLocal](https://developer.apple.com/documentation/swift/tasklocal)
 - [Observation](https://developer.apple.com/documentation/observation)
 - [TaskGroup](https://developer.apple.com/documentation/swift/taskgroup)
+- [DiscardingTaskGroup](https://developer.apple.com/documentation/swift/discardingtaskgroup)
+- [AsyncStream](https://developer.apple.com/documentation/swift/asyncstream)
+- [Synchronization / Mutex](https://developer.apple.com/documentation/synchronization)
+- [Distributed](https://developer.apple.com/documentation/distributed)
 - [Clock](https://developer.apple.com/documentation/swift/clock)

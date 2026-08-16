@@ -464,6 +464,35 @@ let mixed: [AnySpeaker] = [AnySpeaker(Job(id: "1")), AnySpeaker(Job(id: "2"))]
 - Prefer primary associated types / generics / `some` before inventing `AnyFoo`.
 - Stdlib historical erasers (`AnyHashable`, older `AnyView`-shaped ideas) exist because the problem is real; copy the *pattern* sparingly.
 
+### 9. `@dynamicMemberLookup` / `@dynamicCallable` — literacy only
+
+These attributes forward **dot access** or **call syntax** to custom implementations (JSON bags, scripting bridges, DSLs).
+
+| Attribute | Feel | Staff habit |
+|-----------|------|-------------|
+| `@dynamicMemberLookup` | `obj.foo` → `subscript(dynamicMember:)` | Document the key space; typos often compile |
+| `@dynamicCallable` | `obj(x)` / `obj(label:)` via `dynamicallyCall` | Intentional DSLs only — not ordinary models |
+
+```swift
+@dynamicMemberLookup
+struct JSONBag {
+    private var storage: [String: String] = [:]
+    subscript(dynamicMember key: String) -> String? {
+        get { storage[key] }
+        set { storage[key] = newValue }
+    }
+}
+
+var bag = JSONBag()
+bag.host = "api.example.com"  // looks like a property; is a string key
+```
+
+**What just happened:** the compiler rewrote `bag.host` into a dynamic member lookup. Prefer real properties and protocols for staff-owned domain types.
+
+### 10. `Mirror` / reflection — last resort
+
+`Mirror` can inspect a value’s children at runtime (debugging, niche tooling). It is **not** a substitute for `Codable` or a stable public API. Prefer explicit properties; treat reflection as a diagnostic tool, not architecture.
+
 ---
 
 ## 3. Applications and use cases
@@ -494,6 +523,8 @@ SPM module boundaries often expose protocols as the stable API and keep structs 
 - [ ] Result-builder `buildOptional` / `buildEither` / `buildArray` literacy exists for anyone writing DSLs or reviewing SwiftUI bodies.
 - [ ] New macros are **Expanded** on first adoption; attached **body** role macros get explicit review notes.
 - [ ] Macro dependency pins and supply-chain trust are documented for third-party macros.
+- [ ] `@dynamicMemberLookup` / `@dynamicCallable` justified as DSLs — not accidental magic on domain models.
+- [ ] `Mirror`/reflection not used as a public architecture substitute for `Codable`/explicit APIs.
 
 ---
 
