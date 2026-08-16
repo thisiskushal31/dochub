@@ -17,6 +17,8 @@ Comprehensive DevOps handbook covering methodologies, best practices, tooling gu
 - `Languages/` — General-purpose, config/query, **niche/security** (Assembly, Nim, VBA, R, Erlang, Zig, Delphi, COBOL, Objective-C, OCaml, F#, Ada, Julia, Dart, D, Haskell, Clojure, Crystal, VB.NET, Tcl, Fortran), and **Web3** (Solidity, Vyper, Move, Cairo): C/C++, Python, Go, Java, JavaScript, Rust, TypeScript, Ruby, Groovy, C#, Scala, Perl, Kotlin, PHP, Lua, Swift, Elixir, LaTeX, Shell, HCL, JSON, YAML; Shell in Operating-Systems, HCL in IAC, JSON/YAML across CiCd/IAC/Cloud-Native; database query languages (e.g. SQL, PromQL) in Databases-Deep-Dive; one folder per language; add topic files as needed
 - `Assets/` — Images and diagrams (with credit in the topic files). See [Assets/README.md](Assets/README.md) for structure and where to store images per section.
 
+**Next (planned, not started):** CNCF starter pack; frameworks; branching; **full DevOps delivery path (test → deploy → verify → feedback)**; ChatOps/Slack-Teams notifications; **CI/CD security gates (SAST, DAST, SCA, …, WAF)** — see [PLAN_DevOps_Concepts_Beyond_Languages.md](./PLAN_DevOps_Concepts_Beyond_Languages.md).
+
 ## Visual guides and images
 
 We use **diagrams and images** where they help (stored under `Assets/<Section>/` and credited in each topic). For extra visual learning alongside the handbook:

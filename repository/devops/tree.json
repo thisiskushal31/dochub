@@ -8182,10 +8182,17 @@
     ]
   },
   {
+    "name": "PLAN_DevOps_Concepts_Beyond_Languages.md",
+    "path": "PLAN_DevOps_Concepts_Beyond_Languages.md",
+    "type": "file",
+    "sha": "",
+    "size": 15107
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 7220
+    "size": 7553
   }
 ]
