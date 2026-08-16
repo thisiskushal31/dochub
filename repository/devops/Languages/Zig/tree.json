@@ -1,9 +1,149 @@
 [
   {
+    "name": "00_First_Steps_Install_And_Hello.md",
+    "path": "00_First_Steps_Install_And_Hello.md",
+    "type": "file",
+    "sha": "",
+    "size": 7180
+  },
+  {
+    "name": "01_What_Zig_Is_And_Is_Not.md",
+    "path": "01_What_Zig_Is_And_Is_Not.md",
+    "type": "file",
+    "sha": "",
+    "size": 9511
+  },
+  {
+    "name": "02_Toolchain_Build_Modes_And_Targets.md",
+    "path": "02_Toolchain_Build_Modes_And_Targets.md",
+    "type": "file",
+    "sha": "",
+    "size": 6531
+  },
+  {
+    "name": "03_Syntax_Values_And_Primitives.md",
+    "path": "03_Syntax_Values_And_Primitives.md",
+    "type": "file",
+    "sha": "",
+    "size": 6006
+  },
+  {
+    "name": "04_Variables_Const_And_Undefined.md",
+    "path": "04_Variables_Const_And_Undefined.md",
+    "type": "file",
+    "sha": "",
+    "size": 5243
+  },
+  {
+    "name": "05_Control_Flow_Defer_And_Unreachable.md",
+    "path": "05_Control_Flow_Defer_And_Unreachable.md",
+    "type": "file",
+    "sha": "",
+    "size": 5002
+  },
+  {
+    "name": "06_Structs_Enums_Unions_And_Optionals.md",
+    "path": "06_Structs_Enums_Unions_And_Optionals.md",
+    "type": "file",
+    "sha": "",
+    "size": 5797
+  },
+  {
+    "name": "07_Error_Sets_And_Error_Handling.md",
+    "path": "07_Error_Sets_And_Error_Handling.md",
+    "type": "file",
+    "sha": "",
+    "size": 5098
+  },
+  {
+    "name": "08_Pointers_Slices_And_Arrays.md",
+    "path": "08_Pointers_Slices_And_Arrays.md",
+    "type": "file",
+    "sha": "",
+    "size": 4708
+  },
+  {
+    "name": "09_Memory_And_Allocators.md",
+    "path": "09_Memory_And_Allocators.md",
+    "type": "file",
+    "sha": "",
+    "size": 5329
+  },
+  {
+    "name": "10_Comptime.md",
+    "path": "10_Comptime.md",
+    "type": "file",
+    "sha": "",
+    "size": 4404
+  },
+  {
+    "name": "11_Functions_Packages_And_Modules.md",
+    "path": "11_Functions_Packages_And_Modules.md",
+    "type": "file",
+    "sha": "",
+    "size": 8022
+  },
+  {
+    "name": "12_Build_System.md",
+    "path": "12_Build_System.md",
+    "type": "file",
+    "sha": "",
+    "size": 6716
+  },
+  {
+    "name": "13_Testing.md",
+    "path": "13_Testing.md",
+    "type": "file",
+    "sha": "",
+    "size": 4290
+  },
+  {
+    "name": "14_C_Interop.md",
+    "path": "14_C_Interop.md",
+    "type": "file",
+    "sha": "",
+    "size": 6464
+  },
+  {
+    "name": "15_Safety_UB_And_Security_Review.md",
+    "path": "15_Safety_UB_And_Security_Review.md",
+    "type": "file",
+    "sha": "",
+    "size": 5043
+  },
+  {
+    "name": "16_Use_Cases_And_Engineering_Perspectives.md",
+    "path": "16_Use_Cases_And_Engineering_Perspectives.md",
+    "type": "file",
+    "sha": "",
+    "size": 5115
+  },
+  {
+    "name": "17_Where_Zig_Is_Going_And_Adjacent_Doors.md",
+    "path": "17_Where_Zig_Is_Going_And_Adjacent_Doors.md",
+    "type": "file",
+    "sha": "",
+    "size": 5693
+  },
+  {
+    "name": "18_Builtins_Casting_And_Compile_Variables.md",
+    "path": "18_Builtins_Casting_And_Compile_Variables.md",
+    "type": "file",
+    "sha": "",
+    "size": 5092
+  },
+  {
+    "name": "19_Atomics_Assembly_Wasm_And_Async_Door.md",
+    "path": "19_Atomics_Assembly_Wasm_And_Async_Door.md",
+    "type": "file",
+    "sha": "",
+    "size": 5794
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 800
+    "size": 10132
   }
 ]

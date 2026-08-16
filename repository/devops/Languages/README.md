@@ -31,7 +31,7 @@ Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-p
 | **R**       | Whole-engineering R track: language, data, modeling, reproducibility, security, and operations. |
 | **LaTeX**   | PDF generation; reports, documentation, threat/audit deliverables; templated and automated PDFs. |
 | **Erlang**  | BEAM VM, RabbitMQ, distributed systems; Elixir’s parent; protocol and infra. |
-| **Zig**     | Systems language (C alternative); Bun, tooling; emerging in security/low-level. |
+| **Zig**     | Systems language (C alternative): allocators, comptime, C interop, build modes; track 00–19. |
 | **Delphi**  | Pascal-derived, Windows; legacy enterprise and malware; recognition and analysis. |
 | **COBOL**   | Mainframes, banking, government; legacy systems and compliance. |
 | **Objective-C** | macOS/iOS legacy; Apple frameworks and interop with Swift. |
@@ -100,7 +100,7 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | 21 | [**R**](./R/README.md) | R: beginner-to-advanced language, data modeling, reproducibility, security, and ops (16 chapters). |
 | 22 | [**LaTeX**](./LaTeX/README.md) | LaTeX: PDF generation; reports, docs, automated/templated PDFs. |
 | 23 | [**Erlang**](./Erlang/README.md) | Erlang: BEAM, RabbitMQ, distributed systems; Elixir’s parent. |
-| 24 | [**Zig**](./Zig/README.md) | Zig: systems language; Bun, tooling; C alternative. |
+| 24 | [**Zig**](./Zig/README.md) | Zig systems track (00–19): language, allocators, comptime, `build.zig`, C interop, safety, builtins, atomics/Wasm; pin **0.16.x**. |
 | 25 | [**Delphi**](./Delphi/README.md) | Delphi: Pascal/Windows; legacy and malware; analysis. |
 | 26 | [**COBOL**](./COBOL/README.md) | COBOL: mainframes, banking, government; legacy and compliance. |
 | 27 | [**Objective-C**](./Objective-C/README.md) | Objective-C: macOS/iOS legacy; Apple frameworks. |
