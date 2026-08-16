@@ -462,17 +462,17 @@ Callbacks and completion handlers remain common in older Apple APIs. New code pr
 
 ## 4. Staff-level review checklist
 
-- [ ] `guard` used for preconditions; deep nested `if let` pyramids are flattened.
-- [ ] `switch` is exhaustive on enums; `default` is not hiding unfinished cases.
-- [ ] Pattern matching (`if case` / `for case` / `where`) used where it clarifies—not as cleverness.
-- [ ] `defer` covers cleanup on throw/return paths; order of multiple defers is understood.
-- [ ] Escaping closures that capture class `self` use an explicit capture list when needed.
-- [ ] `inout` call sites use `&`; exclusivity / overlapping access is not ignored.
-- [ ] `borrowing` / `consuming` / `consume` appear only with a real ownership story (usually noncopyable resources).
-- [ ] `@autoclosure` laziness is intentional (assert/log/default shapes), not decorative.
-- [ ] No new `++` / C-style `for`; brownfield occurrences are migrated when the file is touched.
-- [ ] `@Sendable` / concurrency warnings are not silenced without an ownership story.
-- [ ] Closure-heavy APIs have a clear “who owns the callback?” answer.
+- `guard` used for preconditions; deep nested `if let` pyramids are flattened.
+- `switch` is exhaustive on enums; `default` is not hiding unfinished cases.
+- Pattern matching (`if case` / `for case` / `where`) used where it clarifies—not as cleverness.
+- `defer` covers cleanup on throw/return paths; order of multiple defers is understood.
+- Escaping closures that capture class `self` use an explicit capture list when needed.
+- `inout` call sites use `&`; exclusivity / overlapping access is not ignored.
+- `borrowing` / `consuming` / `consume` appear only with a real ownership story (usually noncopyable resources).
+- `@autoclosure` laziness is intentional (assert/log/default shapes), not decorative.
+- No new `++` / C-style `for`; brownfield occurrences are migrated when the file is touched.
+- `@Sendable` / concurrency warnings are not silenced without an ownership story.
+- Closure-heavy APIs have a clear “who owns the callback?” answer.
 
 ---
 

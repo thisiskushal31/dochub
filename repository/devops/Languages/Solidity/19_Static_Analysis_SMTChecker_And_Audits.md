@@ -129,12 +129,12 @@ Pin Slither and Solhint versions. A random `pip install` on a developer laptop i
 
 ## 4. Staff-level review checklist
 
-- [ ] CI runs tests **and** at least one static analyzer on the contracts path.
-- [ ] High/medium findings are fixed or waived with a **reason** in-repo.
-- [ ] SMTChecker, if enabled, has a known config (not a one-off laptop flag).
-- [ ] Audit scope matches the **commit being deployed**.
-- [ ] Tool versions are pinned.
-- [ ] No culture of `--exclude-informational` as a way to hide everything.
+- CI runs tests **and** at least one static analyzer on the contracts path.
+- High/medium findings are fixed or waived with a **reason** in-repo.
+- SMTChecker, if enabled, has a known config (not a one-off laptop flag).
+- Audit scope matches the **commit being deployed**.
+- Tool versions are pinned.
+- No culture of `--exclude-informational` as a way to hide everything.
 
 ---
 

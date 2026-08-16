@@ -232,11 +232,11 @@ cast calldata "transfer(address,uint256)" 0x... 1ether
 
 ## 4. Staff-level review checklist
 
-- [ ] External calls use **interfaces** or `encodeCall`, not stringly selectors, unless justified.
-- [ ] Hashes of multi-field data use `abi.encode` (or EIP-712), not naive `encodePacked` of strings.
-- [ ] ABI JSON is an artifact of the **same** `solc` pin as bytecode.
-- [ ] Overloads on the public ABI are rare and named clearly.
-- [ ] Error and event signatures are covered by the same ABI discipline.
+- External calls use **interfaces** or `encodeCall`, not stringly selectors, unless justified.
+- Hashes of multi-field data use `abi.encode` (or EIP-712), not naive `encodePacked` of strings.
+- ABI JSON is an artifact of the **same** `solc` pin as bytecode.
+- Overloads on the public ABI are rare and named clearly.
+- Error and event signatures are covered by the same ABI discipline.
 
 ---
 

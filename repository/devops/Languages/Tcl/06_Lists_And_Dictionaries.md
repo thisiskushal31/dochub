@@ -331,13 +331,13 @@ Lists protect boundaries only if you **built** them correctly. Converting untrus
 
 ## Staff-level review checklist
 
-- [ ] Lists built with `list`/`lappend`/`lmap`, not `"$a $b"` concatenation, when elements may contain whitespace.
-- [ ] `eval` of command lines replaced with `{*}` where possible.
-- [ ] New code prefers **dict** for record-like data; arrays justified when needed.
-- [ ] Nested data uses multi-index list ops or nested dicts—not ad-hoc delimiter encodings.
-- [ ] Comparisons of dicts/lists use structured operations, not brittle string equality.
-- [ ] `split`/`join` call sites note delimiter limitations, empty-field behavior, and path/`argv` keep-as-list rules.
-- [ ] Empty-list cases (`glob`, searches) handled explicitly on Tcl 9.
+- Lists built with `list`/`lappend`/`lmap`, not `"$a $b"` concatenation, when elements may contain whitespace.
+- `eval` of command lines replaced with `{*}` where possible.
+- New code prefers **dict** for record-like data; arrays justified when needed.
+- Nested data uses multi-index list ops or nested dicts—not ad-hoc delimiter encodings.
+- Comparisons of dicts/lists use structured operations, not brittle string equality.
+- `split`/`join` call sites note delimiter limitations, empty-field behavior, and path/`argv` keep-as-list rules.
+- Empty-list cases (`glob`, searches) handled explicitly on Tcl 9.
 
 ---
 

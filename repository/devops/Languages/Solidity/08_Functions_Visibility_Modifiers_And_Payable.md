@@ -258,12 +258,12 @@ Prefer `external` for the API surface when you never need an internal JUMP to th
 
 ## 4. Staff-level review checklist
 
-- [ ] Every function has explicit visibility and the right mutability.
-- [ ] Public/external surface is intentional (no leftover `public` debug setters).
-- [ ] `payable` / `receive` / `fallback` match the ETH policy.
-- [ ] Modifiers do not hide external calls or state writes that belong in the body for CEI (chapter **18**).
-- [ ] No `tx.origin` in modifiers.
-- [ ] Overloads on the ABI are named clearly or removed.
+- Every function has explicit visibility and the right mutability.
+- Public/external surface is intentional (no leftover `public` debug setters).
+- `payable` / `receive` / `fallback` match the ETH policy.
+- Modifiers do not hide external calls or state writes that belong in the body for CEI (chapter **18**).
+- No `tx.origin` in modifiers.
+- Overloads on the ABI are named clearly or removed.
 
 ---
 

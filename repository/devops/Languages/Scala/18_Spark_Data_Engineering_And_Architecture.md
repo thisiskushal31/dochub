@@ -445,23 +445,23 @@ Hybrid portfolio sketch:
 
 ### Staff-level review checklist
 
-- [ ] Scala binary line **matches the cluster’s Spark distribution** (historically 2.12/2.13—verify platform docs).
-- [ ] Spark libraries are `provided` (or equivalent) consistent with packaging policy; fat jar does not duplicate Spark core incorrectly.
-- [ ] Transformations vs actions are clear; no accidental `collect` of large data to the driver.
-- [ ] Shuffle boundaries and partition strategy are intentional; skew risk named for hot keys.
-- [ ] Write mode + idempotency story documented (path, partitions, retries).
-- [ ] Streaming: micro-batch vs continuous chosen deliberately; checkpoint location durable and exclusive.
-- [ ] Delivery semantics stated accurately (micro-batch exactly-once *with* checkpoint/WAL assumptions; continuous at-least-once; sink caveats).
-- [ ] Output mode matches query shape; sink duplicate behavior acknowledged.
-- [ ] UDFs justified; built-ins preferred; UDF jars reviewed as executable code.
-- [ ] Orchestration (Airflow/etc.) schedules jars—it does not own business logic.
-- [ ] Medallion/bronze–silver–gold used as placement with owners—not cargo-cult layers.
-- [ ] Spark UI / History Server not publicly exposed; access audited.
-- [ ] PII redaction for logs, plans, and sample rows; secrets not in configs committed to VCS.
-- [ ] Job identity least privilege on storage and catalogs; submission treated as RCE capability.
-- [ ] Metrics: duration, failure, shuffle, streaming trigger health, cost owner named.
-- [ ] Test pyramid includes pure Scala + version-pinned Spark CI; staging covers auth.
-- [ ] Config changes cite hypothesis and rollback; no unexplained “tuning dumps.”
+- Scala binary line **matches the cluster’s Spark distribution** (historically 2.12/2.13—verify platform docs).
+- Spark libraries are `provided` (or equivalent) consistent with packaging policy; fat jar does not duplicate Spark core incorrectly.
+- Transformations vs actions are clear; no accidental `collect` of large data to the driver.
+- Shuffle boundaries and partition strategy are intentional; skew risk named for hot keys.
+- Write mode + idempotency story documented (path, partitions, retries).
+- Streaming: micro-batch vs continuous chosen deliberately; checkpoint location durable and exclusive.
+- Delivery semantics stated accurately (micro-batch exactly-once *with* checkpoint/WAL assumptions; continuous at-least-once; sink caveats).
+- Output mode matches query shape; sink duplicate behavior acknowledged.
+- UDFs justified; built-ins preferred; UDF jars reviewed as executable code.
+- Orchestration (Airflow/etc.) schedules jars—it does not own business logic.
+- Medallion/bronze–silver–gold used as placement with owners—not cargo-cult layers.
+- Spark UI / History Server not publicly exposed; access audited.
+- PII redaction for logs, plans, and sample rows; secrets not in configs committed to VCS.
+- Job identity least privilege on storage and catalogs; submission treated as RCE capability.
+- Metrics: duration, failure, shuffle, streaming trigger health, cost owner named.
+- Test pyramid includes pure Scala + version-pinned Spark CI; staging covers auth.
+- Config changes cite hypothesis and rollback; no unexplained “tuning dumps.”
 
 ---
 

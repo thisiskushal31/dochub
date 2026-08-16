@@ -388,40 +388,40 @@ Use this in design reviews, production readiness, and incident follow-ups.
 
 ### Threat model artifact
 
-- [ ] Diagram names trust boundaries (edge, data stores, Spark UI/submission, Kafka, CI/registry).
-- [ ] Assets and adversaries are specific to this system, not generic slogans.
-- [ ] STRIDE (or equivalent) mapped to concrete Scala/JVM and platform surfaces.
-- [ ] Mitigations have owners and verification evidence (test, config review, CI gate).
-- [ ] Model updates when architecture, tenants, or data classification changes.
+- Diagram names trust boundaries (edge, data stores, Spark UI/submission, Kafka, CI/registry).
+- Assets and adversaries are specific to this system, not generic slogans.
+- STRIDE (or equivalent) mapped to concrete Scala/JVM and platform surfaces.
+- Mitigations have owners and verification evidence (test, config review, CI gate).
+- Model updates when architecture, tenants, or data classification changes.
 
 ### Service hardening
 
-- [ ] Authn on external interfaces; object-level authz on reads/writes.
-- [ ] Codecs are schema-explicit; size/depth limits enforced; no Java deserialization of untrusted input.
-- [ ] Secrets injected at runtime; redaction on logs/metrics paths.
-- [ ] TLS for in-transit paths that leave a trust zone; error bodies do not leak secrets.
+- Authn on external interfaces; object-level authz on reads/writes.
+- Codecs are schema-explicit; size/depth limits enforced; no Java deserialization of untrusted input.
+- Secrets injected at runtime; redaction on logs/metrics paths.
+- TLS for in-transit paths that leave a trust zone; error bodies do not leak secrets.
 
 ### Data platform hardening
 
-- [ ] Spark UIs/history/submission isolated from public/untrusted networks; authn/authz enabled per platform standard.
-- [ ] Job and consumer identities are least privilege (paths, topics, datasets).
-- [ ] Jars and ML models come from promoted, integrity-checked locations; model load treated as code execution.
-- [ ] Spark/Kafka versions pinned; security config re-verified for that pin on upgrade (no remembered cipher folklore).
-- [ ] Kafka ACLs and schema-registry rights reviewed; deserializers allowlisted.
+- Spark UIs/history/submission isolated from public/untrusted networks; authn/authz enabled per platform standard.
+- Job and consumer identities are least privilege (paths, topics, datasets).
+- Jars and ML models come from promoted, integrity-checked locations; model load treated as code execution.
+- Spark/Kafka versions pinned; security config re-verified for that pin on upgrade (no remembered cipher folklore).
+- Kafka ACLs and schema-registry rights reviewed; deserializers allowlisted.
 
 ### Supply chain and CI
 
-- [ ] Exact dependency versions in apps; org-approved resolvers; confusion-resistant internal coordinates.
-- [ ] sbt plugins pinned and reviewed as build-time code execution.
-- [ ] CI runs dependency scan, secret scan, and (where required) signing/provenance before promotion.
-- [ ] SBOM or equivalent inventory available for production artifacts.
-- [ ] CVE/advisory triage owned; critical internet-facing findings have SLAs.
+- Exact dependency versions in apps; org-approved resolvers; confusion-resistant internal coordinates.
+- sbt plugins pinned and reviewed as build-time code execution.
+- CI runs dependency scan, secret scan, and (where required) signing/provenance before promotion.
+- SBOM or equivalent inventory available for production artifacts.
+- CVE/advisory triage owned; critical internet-facing findings have SLAs.
 
 ### Operability under attack
 
-- [ ] Audit logs for admin and authz failures retained per policy.
-- [ ] Runbooks cover credential rotation, poisoned artifact revocation, and cluster isolation.
-- [ ] On-call can answer: what version/SHA is running, which identity it uses, which data it can touch.
+- Audit logs for admin and authz failures retained per policy.
+- Runbooks cover credential rotation, poisoned artifact revocation, and cluster isolation.
+- On-call can answer: what version/SHA is running, which identity it uses, which data it can touch.
 
 ---
 

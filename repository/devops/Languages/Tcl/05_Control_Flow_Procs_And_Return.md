@@ -356,15 +356,15 @@ Contrast: `return [handle ready {*}$args]` from `init` also works for this tiny 
 
 ## Staff-level review checklist
 
-- [ ] Conditions and loop headers use braced expressions.
-- [ ] `switch` includes `--` when the subject string may start with `-`.
-- [ ] No legacy `case` command in Tcl 9 trees.
-- [ ] Failure paths use error codes (or documented `catch` contracts), not silent empty returns, unless intentional.
-- [ ] `return -code break/continue` and `-level` are rare, justified, and tested.
-- [ ] Public procs live in namespaces; names collide less than global `proc do {}`.
-- [ ] `apply` used for local callbacks—not as an obfuscation layer.
-- [ ] `expr` call sites are **braced**; mathop (`::tcl::mathop`) used deliberately when chosen over `expr`.
-- [ ] `tailcall` is rare, commented, and actually in tail position (no “code after” illusions).
+- Conditions and loop headers use braced expressions.
+- `switch` includes `--` when the subject string may start with `-`.
+- No legacy `case` command in Tcl 9 trees.
+- Failure paths use error codes (or documented `catch` contracts), not silent empty returns, unless intentional.
+- `return -code break/continue` and `-level` are rare, justified, and tested.
+- Public procs live in namespaces; names collide less than global `proc do {}`.
+- `apply` used for local callbacks—not as an obfuscation layer.
+- `expr` call sites are **braced**; mathop (`::tcl::mathop`) used deliberately when chosen over `expr`.
+- `tailcall` is rare, commented, and actually in tail position (no “code after” illusions).
 
 ---
 

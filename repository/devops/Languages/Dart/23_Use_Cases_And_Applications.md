@@ -99,11 +99,11 @@ This topic ties the **whole handbook** to **real work**: what you actually do wi
 
 ## Implementation checklist (cross-role)
 
-- [ ] **SDK and env:** Correct Dart/Flutter version in CI and local; **dart --version** / **flutter --version** match **pubspec**.
-- [ ] **Dependencies:** **dart pub get** in CI; lockfile committed (or reproducible); **dart pub outdated** and advisories reviewed.
-- [ ] **Quality:** **dart analyze** and **dart test** (or Flutter equivalents) in CI; fix or document lint exceptions.
-- [ ] **Secrets:** No secrets in repo; use env or secret managers; Topic 24.
-- [ ] **Build/deploy:** Build artifact (exe, web, or Flutter build) produced and deployed with a clear, repeatable process; Topic 20–21, 24.
+- **SDK and env:** Correct Dart/Flutter version in CI and local; **dart --version** / **flutter --version** match **pubspec**.
+- **Dependencies:** **dart pub get** in CI; lockfile committed (or reproducible); **dart pub outdated** and advisories reviewed.
+- **Quality:** **dart analyze** and **dart test** (or Flutter equivalents) in CI; fix or document lint exceptions.
+- **Secrets:** No secrets in repo; use env or secret managers; Topic 24.
+- **Build/deploy:** Build artifact (exe, web, or Flutter build) produced and deployed with a clear, repeatable process; Topic 20–21, 24.
 
 ---
 

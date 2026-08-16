@@ -219,14 +219,14 @@ Expect (ch **15**) historically interacts with the event loop; combining Expect,
 
 ## Staff-level review checklist
 
-- [ ] Coroutines: lifecycle clear (create/resume/finalize); `fileevent` handlers cleared; errors handled at resume points.
-- [ ] No nested `vwait` maze where a coroutine would clarify control flow.
-- [ ] Child interps: aliases are capabilities, not thin wrappers around dangerous parent commands with child-controlled args.
-- [ ] Safe interps: documented allowlist; `load`/filesystem/`exec` policy explicit.
-- [ ] Channels have a single owning interp at a time after share/transfer.
-- [ ] Thread use justified; messaging API used; no assumed shared Tcl vars across threads.
-- [ ] `bgerror` / error paths defined for workers and children.
-- [ ] Build ships the Thread package only if code `package require`s it—CI verifies presence/absence.
+- Coroutines: lifecycle clear (create/resume/finalize); `fileevent` handlers cleared; errors handled at resume points.
+- No nested `vwait` maze where a coroutine would clarify control flow.
+- Child interps: aliases are capabilities, not thin wrappers around dangerous parent commands with child-controlled args.
+- Safe interps: documented allowlist; `load`/filesystem/`exec` policy explicit.
+- Channels have a single owning interp at a time after share/transfer.
+- Thread use justified; messaging API used; no assumed shared Tcl vars across threads.
+- `bgerror` / error paths defined for workers and children.
+- Build ships the Thread package only if code `package require`s it—CI verifies presence/absence.
 
 ---
 

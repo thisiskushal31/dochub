@@ -406,24 +406,24 @@ Edge checklist by surface (same chapter, different blast radius):
 
 ### Staff-level review checklist
 
-- [ ] No secrets in git, jars, images, or Scaladoc examples; runtime injection only.
-- [ ] Untrusted input does not use Java serialization (`ObjectInputStream`) or reflective “execute this config” paths; cast-after-read is not accepted as mitigation.
-- [ ] Codecs validate and fail closed on hostile or oversized input; schema formats preferred for untrusted exchange.
-- [ ] SQL / shell / LDAP paths use parameterized or escaped APIs—not string interpolation of untrusted fields.
-- [ ] Outbound HTTP / `URL.openStream` / Spark UDF fetches cannot target arbitrary caller-controlled URLs (SSRF allowlist or ban).
-- [ ] Token/secret compares on auth paths use constant-time utilities; sensitive buffers cleared where the stack allows—no home-rolled crypto.
-- [ ] `SecureRandom` (or org wrapper) for security tokens; no hand-rolled JWT/cipher; JDK/TLS posture re-checked on upgrade.
-- [ ] New Maven/Scala dependencies justified; graph reviewed; versions pinned for applications (no ranges).
-- [ ] Dependency confusion considered: private vs public coords, resolver order, internal groupId policy.
-- [ ] `libraryDependencies` hygiene: exact versions, correct `%`/`%%`, scopes, centralized version vals.
-- [ ] Scaladex/Maven discovery never mistaken for security approval.
-- [ ] sbt plugins pinned and treated as trusted build-time code execution.
-- [ ] Extra resolvers are org-approved only.
-- [ ] Logs redact tokens, nested secrets, and credential-bearing URIs by default in production configs.
-- [ ] Spark deployments treat job submission and ML model load as code execution; UIs/submission not internet-exposed; advisories tracked for the pinned Spark line.
-- [ ] Kafka deployments have named owners for ACLs, jar/deserializer choice, and schema-registry rights.
-- [ ] Service vs Spark UDF vs Kafka consumer edges reviewed with the injection/SSRF table above.
-- [ ] CVE triage has an owner; ignores expire.
+- No secrets in git, jars, images, or Scaladoc examples; runtime injection only.
+- Untrusted input does not use Java serialization (`ObjectInputStream`) or reflective “execute this config” paths; cast-after-read is not accepted as mitigation.
+- Codecs validate and fail closed on hostile or oversized input; schema formats preferred for untrusted exchange.
+- SQL / shell / LDAP paths use parameterized or escaped APIs—not string interpolation of untrusted fields.
+- Outbound HTTP / `URL.openStream` / Spark UDF fetches cannot target arbitrary caller-controlled URLs (SSRF allowlist or ban).
+- Token/secret compares on auth paths use constant-time utilities; sensitive buffers cleared where the stack allows—no home-rolled crypto.
+- `SecureRandom` (or org wrapper) for security tokens; no hand-rolled JWT/cipher; JDK/TLS posture re-checked on upgrade.
+- New Maven/Scala dependencies justified; graph reviewed; versions pinned for applications (no ranges).
+- Dependency confusion considered: private vs public coords, resolver order, internal groupId policy.
+- `libraryDependencies` hygiene: exact versions, correct `%`/`%%`, scopes, centralized version vals.
+- Scaladex/Maven discovery never mistaken for security approval.
+- sbt plugins pinned and treated as trusted build-time code execution.
+- Extra resolvers are org-approved only.
+- Logs redact tokens, nested secrets, and credential-bearing URIs by default in production configs.
+- Spark deployments treat job submission and ML model load as code execution; UIs/submission not internet-exposed; advisories tracked for the pinned Spark line.
+- Kafka deployments have named owners for ACLs, jar/deserializer choice, and schema-registry rights.
+- Service vs Spark UDF vs Kafka consumer edges reviewed with the injection/SSRF table above.
+- CVE triage has an owner; ignores expire.
 
 ---
 

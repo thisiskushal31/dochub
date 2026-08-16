@@ -257,11 +257,11 @@ Lots of hashes? `bytes32[]` or a mapping. One blob? `bytes`. A `string` you neve
 
 ## 4. Staff-level review checklist
 
-- [ ] No code assumes it can list mapping keys without an auxiliary structure.
-- [ ] User-grown arrays are not processed in one unbounded loop.
-- [ ] Removal semantics (swap-and-pop vs gap) are documented and tested.
-- [ ] Enum transitions are explicit; invalid raw casts cannot be forced.
-- [ ] Packing in structs is intentional (names + comment or a layout test).
+- No code assumes it can list mapping keys without an auxiliary structure.
+- User-grown arrays are not processed in one unbounded loop.
+- Removal semantics (swap-and-pop vs gap) are documented and tested.
+- Enum transitions are explicit; invalid raw casts cannot be forced.
+- Packing in structs is intentional (names + comment or a layout test).
 
 ---
 

@@ -335,16 +335,16 @@ When you adopt a new package or TIP-driven feature:
 
 ## Staff-level review checklist
 
-- [ ] Team agrees this change stays in-bullseye or explicitly opens a named door (OO, Thread, TDBC, deep Tk, deep C).
-- [ ] Tcl pin stated (**9.0.x** default vs **8.6** brownfield) and matched to extensions/Expect.
-- [ ] TIP citations, if any, are implemented in the pinned release—not draft wishful thinking.
-- [ ] Migration landmines checked for 8→9 (scripts **and** C).
-- [ ] Adjacent package choice justified (TclOO vs Itcl; Thread vs event loop; TDBC vs not; msgcat/zipfs/registry only when needed).
-- [ ] Security posture rechecked when adding loadable packages, zipfs mounts, or plugin eval.
-- [ ] Docs point to official man pages / TIP / Expect / DejaGnu—not random tutorials.
-- [ ] Compass updated in the repo README when a door becomes a real dependency.
-- [ ] No attempt to make this PR a full Tk or OO textbook.
-- [ ] Owner knows where to go next after merge (which official index).
+- Team agrees this change stays in-bullseye or explicitly opens a named door (OO, Thread, TDBC, deep Tk, deep C).
+- Tcl pin stated (**9.0.x** default vs **8.6** brownfield) and matched to extensions/Expect.
+- TIP citations, if any, are implemented in the pinned release—not draft wishful thinking.
+- Migration landmines checked for 8→9 (scripts **and** C).
+- Adjacent package choice justified (TclOO vs Itcl; Thread vs event loop; TDBC vs not; msgcat/zipfs/registry only when needed).
+- Security posture rechecked when adding loadable packages, zipfs mounts, or plugin eval.
+- Docs point to official man pages / TIP / Expect / DejaGnu—not random tutorials.
+- Compass updated in the repo README when a door becomes a real dependency.
+- No attempt to make this PR a full Tk or OO textbook.
+- Owner knows where to go next after merge (which official index).
 
 ---
 

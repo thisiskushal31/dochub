@@ -399,18 +399,18 @@ Coverage numbers highlight *untested paths*; they do not prove correctness. Chas
 
 ## 4. Staff-level review checklist
 
-- [ ] New unit tests default to Swift Testing when the toolchain supports it.
-- [ ] Suites use `#expect` vs `#require` intentionally; parameterized tests + traits stay readable.
-- [ ] Async events use async tests / confirmation — not ad-hoc sleeps.
-- [ ] Attachments are log-safe and useful for failures.
-- [ ] Traits/gates match real runtime conditions — not permanent skips without tickets.
-- [ ] XCTest remains for legacy/UI without forcing a big-bang rewrite; assertion styles not mixed inside one test.
-- [ ] Parallel-safe isolation; `.serialized` only where justified.
-- [ ] CI command/scheme/test plan/`swift test --filter` is documented and pinned to a toolchain.
-- [ ] Fixtures contain no secrets; failure messages are log-safe.
-- [ ] Flaky tests follow quarantine policy (ticket, owner, expiry) — not ignored.
-- [ ] Snapshot testing treated as a deliberate door with env pins — not a default for every change.
-- [ ] Coverage used as a signal for gaps, not a merge gate vanity metric.
+- New unit tests default to Swift Testing when the toolchain supports it.
+- Suites use `#expect` vs `#require` intentionally; parameterized tests + traits stay readable.
+- Async events use async tests / confirmation — not ad-hoc sleeps.
+- Attachments are log-safe and useful for failures.
+- Traits/gates match real runtime conditions — not permanent skips without tickets.
+- XCTest remains for legacy/UI without forcing a big-bang rewrite; assertion styles not mixed inside one test.
+- Parallel-safe isolation; `.serialized` only where justified.
+- CI command/scheme/test plan/`swift test --filter` is documented and pinned to a toolchain.
+- Fixtures contain no secrets; failure messages are log-safe.
+- Flaky tests follow quarantine policy (ticket, owner, expiry) — not ignored.
+- Snapshot testing treated as a deliberate door with env pins — not a default for every change.
+- Coverage used as a signal for gaps, not a merge gate vanity metric.
 
 ---
 

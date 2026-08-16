@@ -437,18 +437,18 @@ DocC link from article?         [ ] yes  [ ] n/a  [ ] add
 
 ## 4. Staff-level review checklist
 
-- [ ] New `public`/`open` symbols include meaningful `///` documentation.
-- [ ] Call-site clarity matches API Design Guidelines (labels, Boolean names, `sort`/`sorted`) — at least one before/after naming check in the PR when API is new.
-- [ ] Deprecations use `@available` with rename/message before breaking removals.
-- [ ] DocC catalog (if present) has a **full layout**: landing, articles, symbol backbone; Topics are curated.
-- [ ] Symbol links (``Type/member``) resolve; articles use `<doc:…>` where appropriate.
-- [ ] Docs **build in CI** via `swift package generate-documentation` (or Xcode doc build) — preview alone is insufficient.
-- [ ] Documentation coverage policy is known: silent new public API fails review (waiver needs an issue).
-- [ ] Isolation/`async`/`throws` behavior is documented where non-obvious.
-- [ ] No unnecessary `public` surface — prefer `internal`/`package` when possible.
-- [ ] Examples in docs are realistic and log-safe.
-- [ ] SPM DocC plugin (if used) is **pinned** and discoverable via `swift package plugin --list`.
-- [ ] “Docs later” waivers have owners and issues — not vibes.
+- New `public`/`open` symbols include meaningful `///` documentation.
+- Call-site clarity matches API Design Guidelines (labels, Boolean names, `sort`/`sorted`) — at least one before/after naming check in the PR when API is new.
+- Deprecations use `@available` with rename/message before breaking removals.
+- DocC catalog (if present) has a **full layout**: landing, articles, symbol backbone; Topics are curated.
+- Symbol links (``Type/member``) resolve; articles use `<doc:…>` where appropriate.
+- Docs **build in CI** via `swift package generate-documentation` (or Xcode doc build) — preview alone is insufficient.
+- Documentation coverage policy is known: silent new public API fails review (waiver needs an issue).
+- Isolation/`async`/`throws` behavior is documented where non-obvious.
+- No unnecessary `public` surface — prefer `internal`/`package` when possible.
+- Examples in docs are realistic and log-safe.
+- SPM DocC plugin (if used) is **pinned** and discoverable via `swift package plugin --list`.
+- “Docs later” waivers have owners and issues — not vibes.
 
 ---
 

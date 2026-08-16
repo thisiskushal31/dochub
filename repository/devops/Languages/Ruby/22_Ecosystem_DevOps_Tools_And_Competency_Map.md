@@ -51,12 +51,12 @@ Learn this track **01–13** before Rails guides. Security (mass assignment, SQL
 
 Before leaning on Rails or Chef docs alone, you should:
 
-- [ ] Explain `self`, blocks, and `require` vs `Bundler.setup`
-- [ ] Read stack traces and `method_missing` chains
-- [ ] Use `bundle exec`, read lockfile diffs, run tests locally
-- [ ] Parse JSON/YAML safely at boundaries
-- [ ] Describe MRI GVL impact on threading design
-- [ ] Name why `Marshal.load` on params would be catastrophic
+- Explain `self`, blocks, and `require` vs `Bundler.setup`
+- Read stack traces and `method_missing` chains
+- Use `bundle exec`, read lockfile diffs, run tests locally
+- Parse JSON/YAML safely at boundaries
+- Describe MRI GVL impact on threading design
+- Name why `Marshal.load` on params would be catastrophic
 
 ### 6. Competency levels
 

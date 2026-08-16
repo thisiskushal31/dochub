@@ -356,8 +356,8 @@ For each headline, write: **status of claim**, **pin you would demand**, **door 
 - Ownership/Span APIs touched: … (SE links)
 
 ## Experimental targets
-- [ ] none
-- [ ] server / Wasm / Android / Embedded / C++ — owner: … — pin: …
+- none
+- server / Wasm / Android / Embedded / C++ — owner: … — pin: …
 ```
 
 Use §2.8–2.9 as the **directory** when a teammate names an adjacent topic: one short paragraph of meaning, then the path. Door intake forms in §2.11 stop “science projects” from silently boarding the iOS release train.
@@ -366,17 +366,17 @@ Use §2.8–2.9 as the **directory** when a teammate names an adjacent topic: on
 
 ## 4. Staff-level review checklist
 
-- [ ] Team can state what this track **owns** vs **hands off**, and can point to §2.9 for each handoff.
-- [ ] Production pins include **Swift language mode + Xcode/SDK** (and Linux toolchain if used).
-- [ ] No production dependency on **unpinned snapshot** toolchains without an explicit experiment label.
-- [ ] Concurrency migration is planned for targets still stuck on forever-Swift-5 mode.
-- [ ] Macros / Observation adoption is intentional (deployment + review), not copy-paste from keynotes.
-- [ ] Ownership / `~Copyable` / Span usage (if any) cites SE/release-note literacy — not random attrs.
-- [ ] Embedded / Wasm / Android / server NIO / C++ tickets name **constraints**, owners, and docs links.
-- [ ] Someone can triage an SE: status → motivation → examples → ship toolchain.
-- [ ] Someone is assigned to read **swift.org blog + Apple release notes** on bumps.
-- [ ] Chapter **23** checklist is signed for the system you actually ship; this chapter is the **compass**, not a substitute.
-- [ ] Adjacent work (deep SwiftUI design, server product, Shell-heavy CI, other Languages tracks) has a named owner and a door from §2.9.
+- Team can state what this track **owns** vs **hands off**, and can point to §2.9 for each handoff.
+- Production pins include **Swift language mode + Xcode/SDK** (and Linux toolchain if used).
+- No production dependency on **unpinned snapshot** toolchains without an explicit experiment label.
+- Concurrency migration is planned for targets still stuck on forever-Swift-5 mode.
+- Macros / Observation adoption is intentional (deployment + review), not copy-paste from keynotes.
+- Ownership / `~Copyable` / Span usage (if any) cites SE/release-note literacy — not random attrs.
+- Embedded / Wasm / Android / server NIO / C++ tickets name **constraints**, owners, and docs links.
+- Someone can triage an SE: status → motivation → examples → ship toolchain.
+- Someone is assigned to read **swift.org blog + Apple release notes** on bumps.
+- Chapter **23** checklist is signed for the system you actually ship; this chapter is the **compass**, not a substitute.
+- Adjacent work (deep SwiftUI design, server product, Shell-heavy CI, other Languages tracks) has a named owner and a door from §2.9.
 
 ---
 

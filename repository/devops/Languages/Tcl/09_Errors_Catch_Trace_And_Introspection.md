@@ -305,16 +305,16 @@ Embedded hosts often surface Tcl errors to a parent C API—stable `errorCode` l
 
 ## Staff-level review checklist
 
-- [ ] Failures use `return -code error` / `error` with stable `-errorcode` lists where machines care.
-- [ ] `catch`/`try` handlers log and either recover **or** re-raise with `-options` preserved.
-- [ ] No empty `catch` that swallows bugs; no catch wrapping `break`/`continue` unintentionally.
-- [ ] Resource cleanup in `finally` or equivalent; channels/files closed on error paths.
-- [ ] Event-driven apps define `bgerror` behavior.
-- [ ] Traces are not used as invisible business logic.
-- [ ] Error messages exclude secrets and raw credentials (ch **16**).
-- [ ] Brownfield scripts that only set `errorInfo` scraping still work under `try` migration.
-- [ ] Hot-path claims in PRs include a `time` comparison (or a clear reason I/O/`exec` dominates).
-- [ ] No production logic depends on interactive `history` / `!!` shortcuts.
+- Failures use `return -code error` / `error` with stable `-errorcode` lists where machines care.
+- `catch`/`try` handlers log and either recover **or** re-raise with `-options` preserved.
+- No empty `catch` that swallows bugs; no catch wrapping `break`/`continue` unintentionally.
+- Resource cleanup in `finally` or equivalent; channels/files closed on error paths.
+- Event-driven apps define `bgerror` behavior.
+- Traces are not used as invisible business logic.
+- Error messages exclude secrets and raw credentials (ch **16**).
+- Brownfield scripts that only set `errorInfo` scraping still work under `try` migration.
+- Hot-path claims in PRs include a `time` comparison (or a clear reason I/O/`exec` dominates).
+- No production logic depends on interactive `history` / `!!` shortcuts.
 
 ---
 

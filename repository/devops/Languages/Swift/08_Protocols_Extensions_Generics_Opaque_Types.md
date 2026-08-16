@@ -511,20 +511,20 @@ SPM module boundaries often expose protocols as the stable API and keep structs 
 
 ## 4. Staff-level review checklist
 
-- [ ] New protocols have at least one real second conformer (or a deliberate test seam) — not speculation.
-- [ ] `some` vs `any` vs generics is intentional; new code does not omit `any` on existentials.
-- [ ] PATs are used with generics / constraints; bare existential use was reviewed against associated-type limits.
-- [ ] Public protocol additions include defaults or are treated as breaking.
-- [ ] Extensions declare access control consciously; they are not a junk drawer.
-- [ ] Result-builder blocks are reviewed as data construction, not arbitrary side-effect scripts.
-- [ ] Macros in the tree are understood (role + Expanded output); third-party macros are version-pinned and trusted.
-- [ ] Performance-sensitive paths prefer generics over existentials unless measured otherwise.
-- [ ] Engineers have run the **`some` vs `any` pain lab** once and can explain PAT limits.
-- [ ] Result-builder `buildOptional` / `buildEither` / `buildArray` literacy exists for anyone writing DSLs or reviewing SwiftUI bodies.
-- [ ] New macros are **Expanded** on first adoption; attached **body** role macros get explicit review notes.
-- [ ] Macro dependency pins and supply-chain trust are documented for third-party macros.
-- [ ] `@dynamicMemberLookup` / `@dynamicCallable` justified as DSLs — not accidental magic on domain models.
-- [ ] `Mirror`/reflection not used as a public architecture substitute for `Codable`/explicit APIs.
+- New protocols have at least one real second conformer (or a deliberate test seam) — not speculation.
+- `some` vs `any` vs generics is intentional; new code does not omit `any` on existentials.
+- PATs are used with generics / constraints; bare existential use was reviewed against associated-type limits.
+- Public protocol additions include defaults or are treated as breaking.
+- Extensions declare access control consciously; they are not a junk drawer.
+- Result-builder blocks are reviewed as data construction, not arbitrary side-effect scripts.
+- Macros in the tree are understood (role + Expanded output); third-party macros are version-pinned and trusted.
+- Performance-sensitive paths prefer generics over existentials unless measured otherwise.
+- Engineers have run the **`some` vs `any` pain lab** once and can explain PAT limits.
+- Result-builder `buildOptional` / `buildEither` / `buildArray` literacy exists for anyone writing DSLs or reviewing SwiftUI bodies.
+- New macros are **Expanded** on first adoption; attached **body** role macros get explicit review notes.
+- Macro dependency pins and supply-chain trust are documented for third-party macros.
+- `@dynamicMemberLookup` / `@dynamicCallable` justified as DSLs — not accidental magic on domain models.
+- `Mirror`/reflection not used as a public architecture substitute for `Codable`/explicit APIs.
 
 ---
 

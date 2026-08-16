@@ -428,21 +428,21 @@ A green `swift:6.3` compile does not prove Darwin-identical Foundation behavior.
 
 ## 4. Staff-level review checklist
 
-- [ ] Every CI job logs `swift --version` (and `xcodebuild -version` on Mac app jobs).
-- [ ] The README names the **channel** (Xcode / Swiftly / swift.org / Docker / Windows) per workflow.
-- [ ] Container tags are **pinned**; `latest` is not a strategy.
-- [ ] Xcode↔Swift compatibility card exists and matches job logs.
-- [ ] Snapshots are labeled experimental and kept out of release pipelines.
-- [ ] VS Code/LSP users resolve the **same** toolchain family as CI for package work.
-- [ ] Windows/Linux path and case-sensitivity issues are acknowledged for portable packages.
-- [ ] Someone on-call can answer: **which `swift` is on PATH in CI?** in one sentence with evidence.
-- [ ] Forensic lab commands are known (or linked) for toolchain incidents.
-- [ ] Engineers can diagnose `which` vs `xcrun --find` / `type -a` split brain without guessing.
-- [ ] Docker `swift:` lab (`pull`, `run --version`, mount + `swift test`) has been run at least once by the team.
-- [ ] CI **fails** on toolchain mismatch (allow-list), not only logs the version.
-- [ ] `DEVELOPER_DIR` / `TOOLCHAINS` / PATH steerers are documented for Mac jobs.
-- [ ] Multi-Xcode / beta usage is labeled; release jobs cannot silently pick beta.
-- [ ] SourceKit-LSP users know how to restart/rebind after `swiftly use` or Xcode switches.
+- Every CI job logs `swift --version` (and `xcodebuild -version` on Mac app jobs).
+- The README names the **channel** (Xcode / Swiftly / swift.org / Docker / Windows) per workflow.
+- Container tags are **pinned**; `latest` is not a strategy.
+- Xcode↔Swift compatibility card exists and matches job logs.
+- Snapshots are labeled experimental and kept out of release pipelines.
+- VS Code/LSP users resolve the **same** toolchain family as CI for package work.
+- Windows/Linux path and case-sensitivity issues are acknowledged for portable packages.
+- Someone on-call can answer: **which `swift` is on PATH in CI?** in one sentence with evidence.
+- Forensic lab commands are known (or linked) for toolchain incidents.
+- Engineers can diagnose `which` vs `xcrun --find` / `type -a` split brain without guessing.
+- Docker `swift:` lab (`pull`, `run --version`, mount + `swift test`) has been run at least once by the team.
+- CI **fails** on toolchain mismatch (allow-list), not only logs the version.
+- `DEVELOPER_DIR` / `TOOLCHAINS` / PATH steerers are documented for Mac jobs.
+- Multi-Xcode / beta usage is labeled; release jobs cannot silently pick beta.
+- SourceKit-LSP users know how to restart/rebind after `swiftly use` or Xcode switches.
 
 ---
 

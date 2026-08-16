@@ -374,21 +374,21 @@ One failing security regression should block merge the same way a broken money i
 
 ### Staff-level review checklist
 
-- [ ] Repo has **one** primary test framework story per module; new styles need an ADR.
-- [ ] `sbt test` (or documented equivalent) is required in CI on the pinned JDK/Scala.
-- [ ] Critical domain invariants have example tests; high-cardinality domains consider property tests.
-- [ ] Codec / authz / money properties exercise empty, Unicode, and overflow (or near-overflow) inputs.
-- [ ] Async tests use timeouts and deterministic scheduling—not hope and sleep.
-- [ ] Spark changes follow the pyramid (pure unit → pinned local Spark → staging), not cluster-in-every-PR.
-- [ ] Kafka/API schema or contract tests gate CI for owned boundaries.
-- [ ] Published Scala libraries run MiMa (or equivalent) binary-compat checks before release.
-- [ ] Security regressions cover reject paths, redaction, and poison/DLQ routing.
-- [ ] Style follows the official guide plus repo automation; review comments are enforceable.
-- [ ] Public APIs have Scaladoc appropriate to consumers (`@param` / throws where non-obvious).
-- [ ] Flaky tests have owners; quarantines expire.
-- [ ] Snapshots/goldens cannot silently rewrite in CI.
-- [ ] Test fixtures contain no real secrets or production PII.
-- [ ] Local developers can run the same gate commands CI runs.
+- Repo has **one** primary test framework story per module; new styles need an ADR.
+- `sbt test` (or documented equivalent) is required in CI on the pinned JDK/Scala.
+- Critical domain invariants have example tests; high-cardinality domains consider property tests.
+- Codec / authz / money properties exercise empty, Unicode, and overflow (or near-overflow) inputs.
+- Async tests use timeouts and deterministic scheduling—not hope and sleep.
+- Spark changes follow the pyramid (pure unit → pinned local Spark → staging), not cluster-in-every-PR.
+- Kafka/API schema or contract tests gate CI for owned boundaries.
+- Published Scala libraries run MiMa (or equivalent) binary-compat checks before release.
+- Security regressions cover reject paths, redaction, and poison/DLQ routing.
+- Style follows the official guide plus repo automation; review comments are enforceable.
+- Public APIs have Scaladoc appropriate to consumers (`@param` / throws where non-obvious).
+- Flaky tests have owners; quarantines expire.
+- Snapshots/goldens cannot silently rewrite in CI.
+- Test fixtures contain no real secrets or production PII.
+- Local developers can run the same gate commands CI runs.
 
 ---
 

@@ -189,17 +189,17 @@ Land via PR with lockfile diff; require the same checklist for “tiny” utilit
 
 ### Staff checklist
 
-- [ ] Safe vs `unsafe`/FFI boundaries are documented for the product.
-- [ ] Applications commit `Cargo.lock`; CI builds with `--locked` (or equivalent) for releases.
-- [ ] Dependency updates are reviewed; `cargo tree` understood for critical paths.
-- [ ] **cargo-audit** and/or **cargo-deny** (or equivalent) runs in CI; triage owners exist.
-- [ ] License/ban/source policy exists if the org requires it (deny-class tooling).
-- [ ] New deps reviewed with the checklist (maintainer, unsafe/build surface, license, graph)—not download count alone.
-- [ ] No secrets in git, crate sources, or published packages; runtime injection only; in-memory zeroization considered for long-lived credentials.
-- [ ] Build agents run least privilege; `build.rs` / proc-macro risk acknowledged.
-- [ ] Optional cargo-vet/crev-class review policy, if any, is documented—not assumed from this handbook.
-- [ ] Git/path/`[patch]` exceptions are inventoried.
-- [ ] Yank/CVE response playbook exists (lockfile bump + redeploy).
+- Safe vs `unsafe`/FFI boundaries are documented for the product.
+- Applications commit `Cargo.lock`; CI builds with `--locked` (or equivalent) for releases.
+- Dependency updates are reviewed; `cargo tree` understood for critical paths.
+- **cargo-audit** and/or **cargo-deny** (or equivalent) runs in CI; triage owners exist.
+- License/ban/source policy exists if the org requires it (deny-class tooling).
+- New deps reviewed with the checklist (maintainer, unsafe/build surface, license, graph)—not download count alone.
+- No secrets in git, crate sources, or published packages; runtime injection only; in-memory zeroization considered for long-lived credentials.
+- Build agents run least privilege; `build.rs` / proc-macro risk acknowledged.
+- Optional cargo-vet/crev-class review policy, if any, is documented—not assumed from this handbook.
+- Git/path/`[patch]` exceptions are inventoried.
+- Yank/CVE response playbook exists (lockfile bump + redeploy).
 
 ---
 

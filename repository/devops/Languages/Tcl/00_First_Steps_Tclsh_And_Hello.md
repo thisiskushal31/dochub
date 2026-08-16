@@ -380,15 +380,15 @@ Always use absolute paths or a known `PATH` export in unit files—and still log
 
 ## Staff-level review checklist
 
-- [ ] Runbook states **full `info patchlevel`** (and binary path) per host class.
-- [ ] CI prints patchlevel before sourcing project scripts.
-- [ ] New scripts use `#!/usr/bin/env tclsh` (or documented absolute path) and **UTF-8**.
-- [ ] Tk scripts use `wish` (or load Tk explicitly)—not accidental GUI in headless jobs.
-- [ ] Onboarding shows `command -v` / `type -a` / optional `ldd`.
-- [ ] Brownfield **8.6** hosts are labeled—not tested only on a laptop’s Tcl 9.
-- [ ] Newcomers have read chapter **01**’s Linux + command-lifecycle picture.
-- [ ] CLI scripts document how they read **`argv0` / `argc` / `argv`** (and treat `argv` as a list).
-- [ ] Onboarding lab runs a script with multi-word args (`"two words"`) so newcomers see list quoting in `argv`.
+- Runbook states **full `info patchlevel`** (and binary path) per host class.
+- CI prints patchlevel before sourcing project scripts.
+- New scripts use `#!/usr/bin/env tclsh` (or documented absolute path) and **UTF-8**.
+- Tk scripts use `wish` (or load Tk explicitly)—not accidental GUI in headless jobs.
+- Onboarding shows `command -v` / `type -a` / optional `ldd`.
+- Brownfield **8.6** hosts are labeled—not tested only on a laptop’s Tcl 9.
+- Newcomers have read chapter **01**’s Linux + command-lifecycle picture.
+- CLI scripts document how they read **`argv0` / `argc` / `argv`** (and treat `argv` as a list).
+- Onboarding lab runs a script with multi-word args (`"two words"`) so newcomers see list quoting in `argv`.
 
 ---
 

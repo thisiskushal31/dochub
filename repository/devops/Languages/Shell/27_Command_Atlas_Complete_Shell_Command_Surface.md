@@ -509,13 +509,13 @@ Already covered in family tables above: primary file/text/identity tools. These 
 
 ### Staff-level review checklist
 
-- [ ] Engineers know atlas **27** is the command index; depth is in **14–15**, **28–31**, **23–25**; eras/terminal ladder in **32**.
-- [ ] Absolute beginners complete the Stage 0–2 progressive list before advanced chapters.
-- [ ] CI images’ BusyBox/GNU/dash mix is proven for listed commands (**20**, **32**).
-- [ ] PowerShell aliases are not confused with Unix binaries.
-- [ ] cmd builtins are used only for legacy batch; new Windows work prefers `pwsh` (**31**).
-- [ ] No automation depends on interactive-only builtins (`bind`, completion) without fallback.
-- [ ] Brownfield estates have legacy networking/service command fallbacks documented.
+- Engineers know atlas **27** is the command index; depth is in **14–15**, **28–31**, **23–25**; eras/terminal ladder in **32**.
+- Absolute beginners complete the Stage 0–2 progressive list before advanced chapters.
+- CI images’ BusyBox/GNU/dash mix is proven for listed commands (**20**, **32**).
+- PowerShell aliases are not confused with Unix binaries.
+- cmd builtins are used only for legacy batch; new Windows work prefers `pwsh` (**31**).
+- No automation depends on interactive-only builtins (`bind`, completion) without fallback.
+- Brownfield estates have legacy networking/service command fallbacks documented.
 
 ---
 

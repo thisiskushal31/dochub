@@ -402,21 +402,21 @@ def handle(req: Request)(using ExecutionContext): Future[Response] =
 
 ### Staff-level review checklist
 
-- [ ] Every async subsystem documents its **`ExecutionContext`** (or equivalent scheduler)—no silent global default in production paths.
-- [ ] Blocking I/O is isolated; request/CPU pools are not used for unbounded blocking.
-- [ ] Failures are recovered or surfaced on purpose—no empty catch-all that returns a success sentinel.
-- [ ] Domain errors vs faults have a team convention (`Either` in success vs failed `Future`).
-- [ ] Timeouts exist on awaits and outbound calls; budgets are documented.
-- [ ] Shared mutable state across futures is justified and synchronized (or removed).
-- [ ] Authz is **re-checked at write/disclose**, not only at request entry (TOCTOU-safe across futures).
-- [ ] MDC/`ThreadLocal` context is cleared or explicitly propagated—no cross-request leakage on pools.
-- [ ] Fan-out (`sequence` / traverse) is **bounded**; queue/pool limits treated as DoS controls.
-- [ ] Session/authz caches have **TTL** and a named **invalidation** owner (logout/revoke paths tested).
-- [ ] JDK virtual threads, if used, are an intentional placement with one scheduler story—not a silent second pool.
-- [ ] No new private actor/effect framework without an ADR and staffing plan.
-- [ ] Actor or effect libraries, if present, are the **one** concurrency story for that service—not layered ad hoc on raw futures everywhere.
-- [ ] `Await` appears only at intentional sync boundaries.
-- [ ] Correlation IDs (or equivalent) cross async boundaries for traces/logs.
+- Every async subsystem documents its **`ExecutionContext`** (or equivalent scheduler)—no silent global default in production paths.
+- Blocking I/O is isolated; request/CPU pools are not used for unbounded blocking.
+- Failures are recovered or surfaced on purpose—no empty catch-all that returns a success sentinel.
+- Domain errors vs faults have a team convention (`Either` in success vs failed `Future`).
+- Timeouts exist on awaits and outbound calls; budgets are documented.
+- Shared mutable state across futures is justified and synchronized (or removed).
+- Authz is **re-checked at write/disclose**, not only at request entry (TOCTOU-safe across futures).
+- MDC/`ThreadLocal` context is cleared or explicitly propagated—no cross-request leakage on pools.
+- Fan-out (`sequence` / traverse) is **bounded**; queue/pool limits treated as DoS controls.
+- Session/authz caches have **TTL** and a named **invalidation** owner (logout/revoke paths tested).
+- JDK virtual threads, if used, are an intentional placement with one scheduler story—not a silent second pool.
+- No new private actor/effect framework without an ADR and staffing plan.
+- Actor or effect libraries, if present, are the **one** concurrency story for that service—not layered ad hoc on raw futures everywhere.
+- `Await` appears only at intentional sync boundaries.
+- Correlation IDs (or equivalent) cross async boundaries for traces/logs.
 
 ---
 

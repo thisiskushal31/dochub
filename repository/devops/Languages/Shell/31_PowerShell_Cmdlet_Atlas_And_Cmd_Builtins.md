@@ -421,15 +421,15 @@ Get-Command Get-ChildItem, Invoke-WebRequest, Get-FileHash |
 
 ### Staff-level review checklist
 
-- [ ] Scripts use full cmdlet names; aliases banned in committed code.
-- [ ] `-LiteralPath` used for untrusted/odd paths.
-- [ ] `-WhatIf` considered for destructive `Remove-Item` reviews.
-- [ ] `Invoke-Expression` absent or threat-modeled.
-- [ ] `$PSVersionTable` pinned for 5.1 vs 7 divergence.
-- [ ] `curl`/`ls` disambiguated on Windows agents.
-- [ ] New batch is thin; logic lives in `pwsh`.
-- [ ] `FOR`/`IF ERRORLEVEL` quirks reviewed in legacy bats.
-- [ ] Full Windows commands hub not mistaken for missing handbook gaps.
+- Scripts use full cmdlet names; aliases banned in committed code.
+- `-LiteralPath` used for untrusted/odd paths.
+- `-WhatIf` considered for destructive `Remove-Item` reviews.
+- `Invoke-Expression` absent or threat-modeled.
+- `$PSVersionTable` pinned for 5.1 vs 7 divergence.
+- `curl`/`ls` disambiguated on Windows agents.
+- New batch is thin; logic lives in `pwsh`.
+- `FOR`/`IF ERRORLEVEL` quirks reviewed in legacy bats.
+- Full Windows commands hub not mistaken for missing handbook gaps.
 
 ---
 

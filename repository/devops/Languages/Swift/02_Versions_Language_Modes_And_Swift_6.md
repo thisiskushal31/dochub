@@ -425,17 +425,17 @@ Write the modern alternative in the PR description—even if you are not fixing 
 
 ## 4. Staff-level review checklist
 
-- [ ] New modules target **Swift 6 language mode** on a **6.3.x** toolchain unless a written waiver exists.
-- [ ] PRs that only bump Xcode without stating language-mode impact get a question, not a rubber stamp.
-- [ ] Brownfield files with `++`, C-style `for`, tuple splat habits, or string selectors are labeled for migration—not copied into new targets.
-- [ ] Engineers can explain **tools version vs compiler vs language mode vs Xcode** in one minute.
-- [ ] Completion-handler APIs at boundaries have an async wrapper plan (or a justified exception).
-- [ ] CI image version and `SWIFT_VERSION` / equivalent are discoverable in-repo.
-- [ ] Someone can explain **1.0 → 3 break → 5 ABI → 5.5 async → 6 checking** in one minute.
-- [ ] Evolution proposals are triaged (status + ship toolchain)—not cargo-culted from pitches.
-- [ ] `String` / Unicode indexing fossils are recognized; not “fixed” with unsafe `Int` subscripts.
-- [ ] `@available` / `#available` used correctly for OS API gates; deployment target matches claims.
-- [ ] Migration follows library-first burn-down—not a Friday global flip with `@unchecked` wallpaper.
+- New modules target **Swift 6 language mode** on a **6.3.x** toolchain unless a written waiver exists.
+- PRs that only bump Xcode without stating language-mode impact get a question, not a rubber stamp.
+- Brownfield files with `++`, C-style `for`, tuple splat habits, or string selectors are labeled for migration—not copied into new targets.
+- Engineers can explain **tools version vs compiler vs language mode vs Xcode** in one minute.
+- Completion-handler APIs at boundaries have an async wrapper plan (or a justified exception).
+- CI image version and `SWIFT_VERSION` / equivalent are discoverable in-repo.
+- Someone can explain **1.0 → 3 break → 5 ABI → 5.5 async → 6 checking** in one minute.
+- Evolution proposals are triaged (status + ship toolchain)—not cargo-culted from pitches.
+- `String` / Unicode indexing fossils are recognized; not “fixed” with unsafe `Int` subscripts.
+- `@available` / `#available` used correctly for OS API gates; deployment target matches claims.
+- Migration follows library-first burn-down—not a Friday global flip with `@unchecked` wallpaper.
 
 ---
 

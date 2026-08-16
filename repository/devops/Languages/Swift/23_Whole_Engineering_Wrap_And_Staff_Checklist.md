@@ -82,46 +82,46 @@ Work top to bottom. Skip rows that do not apply to *your* artifact class (pure L
 
 #### Doorway and orientation (**00–03**)
 
-- [ ] Three hellos reproducible (REPL/script/package) on the target OS — ch **00**.
-- [ ] Team distinguishes language / toolchain / SDK / product — ch **01**.
-- [ ] Language mode vs compiler vs tools version vs Xcode explained — ch **02**.
-- [ ] CI can answer “which `swift` is on PATH?” with evidence — ch **03**.
-- [ ] Swiftly / Docker / Windows channels named when the team uses them — ch **03**.
+- Three hellos reproducible (REPL/script/package) on the target OS — ch **00**.
+- Team distinguishes language / toolchain / SDK / product — ch **01**.
+- Language mode vs compiler vs tools version vs Xcode explained — ch **02**.
+- CI can answer “which `swift` is on PATH?” with evidence — ch **03**.
+- Swiftly / Docker / Windows channels named when the team uses them — ch **03**.
 
 #### Language core (**04–09**)
 
-- [ ] Bindings, optionals, control flow, functions/closures reviewed without folklore — ch **04–05**.
-- [ ] Value vs reference choices intentional; enums/structs preferred for data — ch **06**.
-- [ ] Properties, init, access control understood at PR depth — ch **07**, **11**.
-- [ ] Protocols, generics, opaque types, **macros literacy** — ch **08**.
-- [ ] Errors: `throws` / typed throws literacy; empty `catch` justified — ch **09**.
+- Bindings, optionals, control flow, functions/closures reviewed without folklore — ch **04–05**.
+- Value vs reference choices intentional; enums/structs preferred for data — ch **06**.
+- Properties, init, access control understood at PR depth — ch **07**, **11**.
+- Protocols, generics, opaque types, **macros literacy** — ch **08**.
+- Errors: `throws` / typed throws literacy; empty `catch` justified — ch **09**.
 
 #### Systems Swift (**10–13**)
 
-- [ ] async/await, tasks, actors, isolation, Sendable — ch **10**.
-- [ ] Observation literacy linked to UI models — ch **10**, **19**.
-- [ ] ARC, exclusivity, weak/unowned capture reviewed — ch **11**.
-- [ ] Stdlib / Foundation use with portability caution — ch **12–13**.
+- async/await, tasks, actors, isolation, Sendable — ch **10**.
+- Observation literacy linked to UI models — ch **10**, **19**.
+- ARC, exclusivity, weak/unowned capture reviewed — ch **11**.
+- Stdlib / Foundation use with portability caution — ch **12–13**.
 
 #### Engineering surface (**14–17**)
 
-- [ ] SPM products/targets/pins; plugins/binary targets as trust boundaries — ch **14**.
-- [ ] Modules/imports/interop (ObjC/C/C++ doors) — ch **15**.
-- [ ] New tests prefer Swift Testing; XCTest coexistence — ch **16**.
-- [ ] Public API: Guidelines naming + DocC build in CI — ch **17**.
+- SPM products/targets/pins; plugins/binary targets as trust boundaries — ch **14**.
+- Modules/imports/interop (ObjC/C/C++ doors) — ch **15**.
+- New tests prefer Swift Testing; XCTest coexistence — ch **16**.
+- Public API: Guidelines naming + DocC build in CI — ch **17**.
 
 #### Apple ship lane (**18–21**)
 
-- [ ] Shared scheme + xcconfig tree + `SWIFT_VERSION` / concurrency settings — ch **18**.
-- [ ] UI PRs: framework named, state map, NavigationStack, hosting, previews≠CI — ch **19**.
-- [ ] Signing, entitlements, Keychain groups, privacy manifests, ATS, secrets matrix — ch **20**.
-- [ ] Xcode Cloud stages and/or Mac runners + fastlane; TestFlight groups; triage order — ch **21**.
+- Shared scheme + xcconfig tree + `SWIFT_VERSION` / concurrency settings — ch **18**.
+- UI PRs: framework named, state map, NavigationStack, hosting, previews≠CI — ch **19**.
+- Signing, entitlements, Keychain groups, privacy manifests, ATS, secrets matrix — ch **20**.
+- Xcode Cloud stages and/or Mac runners + fastlane; TestFlight groups; triage order — ch **21**.
 
 #### Gallery, wrap, compass (**22–24**)
 
-- [ ] Use-case shape chosen with pins/risks — ch **22**.
-- [ ] This wrap checklist signed for *your* system — ch **23**.
-- [ ] Adjacent doors named without fake coverage — ch **24**.
+- Use-case shape chosen with pins/risks — ch **22**.
+- This wrap checklist signed for *your* system — ch **23**.
+- Adjacent doors named without fake coverage — ch **24**.
 
 ### 5. Common false-confidence traps
 
@@ -215,14 +215,14 @@ Paste (or adapt) into your org’s PR template:
 
 ```markdown
 ## Swift DoD
-- [ ] Shape named (script / package / app / CI lane)
-- [ ] Language mode / SWIFT_VERSION matches team pin (or waiver linked)
-- [ ] Tests updated; new suites prefer Swift Testing
-- [ ] New public API: /// + Guidelines naming; DocC builds if catalog exists
-- [ ] UI (if any): state owner + navigation owner; CI test not preview-only
-- [ ] Secrets / entitlements / PrivacyInfo / ATS touched? reviewed per ch 20
-- [ ] CI green on pinned Xcode / runner image
-- [ ] Release path (if shipping): archive + TestFlight group / notarize as required
+- Shape named (script / package / app / CI lane)
+- Language mode / SWIFT_VERSION matches team pin (or waiver linked)
+- Tests updated; new suites prefer Swift Testing
+- New public API: /// + Guidelines naming; DocC builds if catalog exists
+- UI (if any): state owner + navigation owner; CI test not preview-only
+- Secrets / entitlements / PrivacyInfo / ATS touched? reviewed per ch 20
+- CI green on pinned Xcode / runner image
+- Release path (if shipping): archive + TestFlight group / notarize as required
 ```
 
 ### 10. Capstone lab — walk one change end-to-end
@@ -283,26 +283,26 @@ Use §2.4 as the detailed arc list. This section is the **sign-off rollup**:
 
 ### Rollup
 
-- [ ] Doorway (**00–03**) pins and hellos are real on the team’s machines/CI.
-- [ ] Language + systems (**04–13**) review bar is reachable without guessing.
-- [ ] Packages, tests, DocC (**14–17**) exist for shared modules.
-- [ ] Apple ship (**18–21**) scheme/signing/CI/TestFlight story is documented.
-- [ ] Use cases (**22**) match how the team actually builds.
-- [ ] False-confidence traps (§2.5) are discussed in onboarding—not only after incidents.
-- [ ] Hire/interview bar (§2.7) uses shared nouns from this track.
-- [ ] **Definition of done** (§2.8–2.9) is linked from the PR template or team handbook.
-- [ ] Capstone lab (§2.10) completed once per engineer (or equivalent mentorship walkthrough).
-- [ ] Adjacent doors point at chapter **24**, not fake coverage.
-- [ ] Shell/CI YAML depth defers to the Shell track except Swift-on-runner specifics.
-- [ ] This repo is not pretending to be a full SwiftUI design course or Server Swift encyclopedia.
+- Doorway (**00–03**) pins and hellos are real on the team’s machines/CI.
+- Language + systems (**04–13**) review bar is reachable without guessing.
+- Packages, tests, DocC (**14–17**) exist for shared modules.
+- Apple ship (**18–21**) scheme/signing/CI/TestFlight story is documented.
+- Use cases (**22**) match how the team actually builds.
+- False-confidence traps (§2.5) are discussed in onboarding—not only after incidents.
+- Hire/interview bar (§2.7) uses shared nouns from this track.
+- **Definition of done** (§2.8–2.9) is linked from the PR template or team handbook.
+- Capstone lab (§2.10) completed once per engineer (or equivalent mentorship walkthrough).
+- Adjacent doors point at chapter **24**, not fake coverage.
+- Shell/CI YAML depth defers to the Shell track except Swift-on-runner specifics.
+- This repo is not pretending to be a full SwiftUI design course or Server Swift encyclopedia.
 
 ### Quick “are we lying to ourselves?” probes
 
-- [ ] Can a new hire find the **exact** CI `xcodebuild` / fastlane command in README without Slack?
-- [ ] Does `xcodebuild -showBuildSettings` for Release print the `SWIFT_VERSION` we claim?
-- [ ] Is there at least one public module with DocC that **builds in CI**?
-- [ ] Has anyone rotated an ASC API key using the written runbook (not tribal memory)?
-- [ ] Do we still say “we’re on Swift 6” while targets remain in language mode 5?
+- Can a new hire find the **exact** CI `xcodebuild` / fastlane command in README without Slack?
+- Does `xcodebuild -showBuildSettings` for Release print the `SWIFT_VERSION` we claim?
+- Is there at least one public module with DocC that **builds in CI**?
+- Has anyone rotated an ASC API key using the written runbook (not tribal memory)?
+- Do we still say “we’re on Swift 6” while targets remain in language mode 5?
 
 ### Org adoption notes
 

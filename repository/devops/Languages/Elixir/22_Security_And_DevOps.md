@@ -38,13 +38,13 @@ Build **releases** with **mix release** and deploy the release artifact (not sou
 
 ## Checklist (quick reference)
 
-- [ ] No secrets in source or committed config; use env or secrets manager.
-- [ ] Dependencies audited and updated; **mix.lock** in version control.
-- [ ] Input validated at boundaries; invalid data rejected or sanitized.
-- [ ] Logging does not expose secrets or PII; Logger level and metadata set for prod.
-- [ ] Releases built in CI; production runs from release, not mix.
-- [ ] Runtime config (releases.exs) documents required env vars; app fails fast if missing.
-- [ ] Distributed cookie and node names configured securely when using distribution.
+- No secrets in source or committed config; use env or secrets manager.
+- Dependencies audited and updated; **mix.lock** in version control.
+- Input validated at boundaries; invalid data rejected or sanitized.
+- Logging does not expose secrets or PII; Logger level and metadata set for prod.
+- Releases built in CI; production runs from release, not mix.
+- Runtime config (releases.exs) documents required env vars; app fails fast if missing.
+- Distributed cookie and node names configured securely when using distribution.
 
 ---
 

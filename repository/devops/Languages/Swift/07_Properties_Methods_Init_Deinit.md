@@ -470,19 +470,19 @@ Resource ownership: if a class opens a handle in `init`, close it in `deinit` *o
 
 ## 4. Staff-level review checklist
 
-- [ ] Every stored property is initialized on all paths; no half-built instances escape.
-- [ ] Failable/throwing inits used for invalid input; no trapping “assert inits” in library APIs.
-- [ ] `willSet`/`didSet` stay light; no hidden network/disk work in observers.
-- [ ] `lazy` side effects are intentional and concurrency-safe.
-- [ ] Property wrappers are understood (wrapped vs projected); not cargo-culted.
-- [ ] Key paths preferred over stringly property names where they fit.
-- [ ] Class initializer chains are minimal; convenience vs designated is correct; no careless overridable calls from `init`.
-- [ ] `deinit` is light; no async fire-and-forget as the cleanup strategy.
-- [ ] Key path **composition** (`appending` / nested `\a.b.c`) is used where it clarifies tables/forms.
-- [ ] Writable vs reference-writable key paths match the root’s value/reference semantics.
-- [ ] Stacked property wrappers are justified; reviewers can state wrapped vs projected meaning.
-- [ ] Wrappers that touch globals (`UserDefaults`, singletons) are treated as hidden I/O.
-- [ ] Class vs noncopyable `deinit` stories are not confused (chapter **06**).
+- Every stored property is initialized on all paths; no half-built instances escape.
+- Failable/throwing inits used for invalid input; no trapping “assert inits” in library APIs.
+- `willSet`/`didSet` stay light; no hidden network/disk work in observers.
+- `lazy` side effects are intentional and concurrency-safe.
+- Property wrappers are understood (wrapped vs projected); not cargo-culted.
+- Key paths preferred over stringly property names where they fit.
+- Class initializer chains are minimal; convenience vs designated is correct; no careless overridable calls from `init`.
+- `deinit` is light; no async fire-and-forget as the cleanup strategy.
+- Key path **composition** (`appending` / nested `\a.b.c`) is used where it clarifies tables/forms.
+- Writable vs reference-writable key paths match the root’s value/reference semantics.
+- Stacked property wrappers are justified; reviewers can state wrapped vs projected meaning.
+- Wrappers that touch globals (`UserDefaults`, singletons) are treated as hidden I/O.
+- Class vs noncopyable `deinit` stories are not confused (chapter **06**).
 
 ---
 

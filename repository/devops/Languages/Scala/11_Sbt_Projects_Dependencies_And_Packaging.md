@@ -326,16 +326,16 @@ sbt -batch -Dsbt.supershell=false clean test package
 
 ### Staff-level review checklist
 
-- [ ] `project/build.properties` pins sbt; `scalaVersion` pinned in `ThisBuild` or each module.
-- [ ] `%%` vs `%` correct; test-only deps scoped `% Test`.
-- [ ] No unexplained version ranges in apps; exact versions (and lockfile when adopted) committed deliberately.
-- [ ] Eviction / conflict policy enforced in CI (fail or explicit reviewed override); graph report available on dependency PRs.
-- [ ] CI cache keys include lockfile (or equivalent resolve hash), not only `build.sbt` text.
-- [ ] Multi-project `dependsOn` / `aggregate` edges clear and acyclic; publish vs aggregate chosen for shared libs across Scala lines.
-- [ ] Packaging path chosen deliberately (thin jar, assembly, native-packager)—`assemblyMergeStrategy` reviewed for `META-INF/services` and shadowed classes.
-- [ ] Resolvers approved; credentials never in repo (`~/.sbt` locally, CI secrets in pipeline).
-- [ ] `Provided` runtime assumptions match deployment environment.
-- [ ] Common CI commands use pinned sbt/JDK; `dependencyTree` / `evicted` available for incidents.
+- `project/build.properties` pins sbt; `scalaVersion` pinned in `ThisBuild` or each module.
+- `%%` vs `%` correct; test-only deps scoped `% Test`.
+- No unexplained version ranges in apps; exact versions (and lockfile when adopted) committed deliberately.
+- Eviction / conflict policy enforced in CI (fail or explicit reviewed override); graph report available on dependency PRs.
+- CI cache keys include lockfile (or equivalent resolve hash), not only `build.sbt` text.
+- Multi-project `dependsOn` / `aggregate` edges clear and acyclic; publish vs aggregate chosen for shared libs across Scala lines.
+- Packaging path chosen deliberately (thin jar, assembly, native-packager)—`assemblyMergeStrategy` reviewed for `META-INF/services` and shadowed classes.
+- Resolvers approved; credentials never in repo (`~/.sbt` locally, CI secrets in pipeline).
+- `Provided` runtime assumptions match deployment environment.
+- Common CI commands use pinned sbt/JDK; `dependencyTree` / `evicted` available for incidents.
 
 ---
 

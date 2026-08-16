@@ -481,20 +481,20 @@ In concurrent code, value types composed of `Sendable` pieces cross task boundar
 
 ## 4. Staff-level review checklist
 
-- [ ] New model types default to `struct` or `enum` unless identity/inheritance is required.
-- [ ] Shared mutable class state is intentional, documented, and concurrency-safe (or isolated).
-- [ ] Mutually exclusive states use enums, not parallel optionals/flags.
-- [ ] `===` is not confused with `==`; `Equatable`/`Hashable` synthesis or custom impl is coherent.
-- [ ] Inheritance uses `override` / `final` deliberately; `required init` is understood when present.
-- [ ] Large “god classes” are split; `final` is used when subclassing is not part of the API.
-- [ ] No accidental sharing: assigning a class reference was not mistaken for a defensive copy.
-- [ ] Nested types stay shallow and documented.
-- [ ] `~Copyable` appears only for unique resources; app DTOs stay Copyable.
-- [ ] Borrow vs consume at call sites is reviewed; no use-after-consume.
-- [ ] Noncopyable `deinit` / cleanup is understood vs class `deinit` (chapter **07**).
-- [ ] `consume` / consuming methods are used deliberately; no use-after-move.
-- [ ] `===` vs `==` is correct at call sites; Hashable/`==` pairs stay coherent.
-- [ ] Recursive enums use `indirect` when needed; inheritance depth stays shallow.
+- New model types default to `struct` or `enum` unless identity/inheritance is required.
+- Shared mutable class state is intentional, documented, and concurrency-safe (or isolated).
+- Mutually exclusive states use enums, not parallel optionals/flags.
+- `===` is not confused with `==`; `Equatable`/`Hashable` synthesis or custom impl is coherent.
+- Inheritance uses `override` / `final` deliberately; `required init` is understood when present.
+- Large “god classes” are split; `final` is used when subclassing is not part of the API.
+- No accidental sharing: assigning a class reference was not mistaken for a defensive copy.
+- Nested types stay shallow and documented.
+- `~Copyable` appears only for unique resources; app DTOs stay Copyable.
+- Borrow vs consume at call sites is reviewed; no use-after-consume.
+- Noncopyable `deinit` / cleanup is understood vs class `deinit` (chapter **07**).
+- `consume` / consuming methods are used deliberately; no use-after-move.
+- `===` vs `==` is correct at call sites; Hashable/`==` pairs stay coherent.
+- Recursive enums use `indirect` when needed; inheritance depth stays shallow.
 
 ---
 

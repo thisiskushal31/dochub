@@ -168,12 +168,12 @@ Interfaces in their own files, OZ version pinned, tests for the **policy** (who 
 
 ## 4. Staff-level review checklist
 
-- [ ] Token integrations name the **standard** and the **weirdness** they assume away (or handle).
-- [ ] OZ (or equivalent) version is pinned; no hand-rolled ERC-20 without a reason.
-- [ ] Hooks treated as untrusted external calls.
-- [ ] Off-chain data is not faked as on-chain truth.
-- [ ] JS/TS client work is linked, not duplicated here.
-- [ ] “Use case” PRs still passed chapters **17**–**20**, not only a demo UI.
+- Token integrations name the **standard** and the **weirdness** they assume away (or handle).
+- OZ (or equivalent) version is pinned; no hand-rolled ERC-20 without a reason.
+- Hooks treated as untrusted external calls.
+- Off-chain data is not faked as on-chain truth.
+- JS/TS client work is linked, not duplicated here.
+- “Use case” PRs still passed chapters **17**–**20**, not only a demo UI.
 
 ---
 

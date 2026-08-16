@@ -183,11 +183,11 @@ A “failed” tx that reverts still pays intrinsic + execution gas used. Empty 
 
 ## 4. Staff-level review checklist
 
-- [ ] `foundry.toml` / Hardhat `solidity` settings name **optimizer, runs, viaIR, evmVersion**.
-- [ ] Verify pipeline uses the **same** settings.
-- [ ] Gas-sensitive changes include a **before/after** report.
-- [ ] No experimental codegen on the release pin.
-- [ ] Metadata policy is explicit (on and reproducible).
+- `foundry.toml` / Hardhat `solidity` settings name **optimizer, runs, viaIR, evmVersion**.
+- Verify pipeline uses the **same** settings.
+- Gas-sensitive changes include a **before/after** report.
+- No experimental codegen on the release pin.
+- Metadata policy is explicit (on and reproducible).
 
 ---
 

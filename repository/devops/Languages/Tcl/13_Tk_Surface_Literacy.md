@@ -235,16 +235,16 @@ That seven-step pass is enough for most staff reviews without becoming a Tk desi
 
 ## Staff-level review checklist
 
-- [ ] Change is intentional Tk work—not “drive-by” GUI added to a headless service.
-- [ ] Launch story is clear: `wish` vs `tclsh` + `package require Tk`.
-- [ ] Patchlevel / Tk version pinned for new work (**9.0.x** default) or explicitly marked brownfield **8.6**.
-- [ ] Widget paths are readable; destroy/lifetime behavior is understood.
-- [ ] One geometry manager strategy per parent; resize behavior sanity-checked.
-- [ ] Callbacks (`-command` / `bind`) do not build scripts from untrusted strings.
-- [ ] Long work does not block the event loop without a stated design (or moves off-UI).
-- [ ] CI/runtime display requirements documented when GUI is mandatory.
-- [ ] Logic under widgets is testable without opening a window where practical.
-- [ ] No expectation that this PR teaches full Tk layout craft—links to official TkCmd if reviewers need depth.
+- Change is intentional Tk work—not “drive-by” GUI added to a headless service.
+- Launch story is clear: `wish` vs `tclsh` + `package require Tk`.
+- Patchlevel / Tk version pinned for new work (**9.0.x** default) or explicitly marked brownfield **8.6**.
+- Widget paths are readable; destroy/lifetime behavior is understood.
+- One geometry manager strategy per parent; resize behavior sanity-checked.
+- Callbacks (`-command` / `bind`) do not build scripts from untrusted strings.
+- Long work does not block the event loop without a stated design (or moves off-UI).
+- CI/runtime display requirements documented when GUI is mandatory.
+- Logic under widgets is testable without opening a window where practical.
+- No expectation that this PR teaches full Tk layout craft—links to official TkCmd if reviewers need depth.
 
 ---
 

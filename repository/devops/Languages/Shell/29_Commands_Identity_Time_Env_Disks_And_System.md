@@ -472,12 +472,12 @@ du -x -h --max-depth=1 /var 2>/dev/null | sort -h
 
 ### Staff-level review checklist
 
-- [ ] Scripts that format dates are GNU/BSD branched or use UTC epoch math carefully.
-- [ ] `timeout`/`nproc` not assumed on stock macOS agents without pins.
-- [ ] CI does not print full environment.
-- [ ] Disk checks consider **inodes** (`df -i`) on Linux builders.
-- [ ] Container user (`id`) matches volume permissions story.
-- [ ] `sleep` in CI is intentional (flaky retries reviewed).
+- Scripts that format dates are GNU/BSD branched or use UTC epoch math carefully.
+- `timeout`/`nproc` not assumed on stock macOS agents without pins.
+- CI does not print full environment.
+- Disk checks consider **inodes** (`df -i`) on Linux builders.
+- Container user (`id`) matches volume permissions story.
+- `sleep` in CI is intentional (flaky retries reviewed).
 
 ---
 

@@ -317,15 +317,15 @@ Concrete patterns:
 
 ## Staff-level review checklist
 
-- [ ] Patterns for `regexp`/`regsub` are **braced** (or otherwise safe from substitution).
-- [ ] Character vs byte boundaries are explicit (`encoding` / `binary` / channel `-encoding`).
-- [ ] No assumption that `string length` equals on-disk byte length for UTF-8 protocols.
-- [ ] `string is … -strict` used where empty must not validate.
-- [ ] Untrusted input does not supply regex patterns on hot or network-facing paths.
-- [ ] HTML/JSON/XML not “parsed” with regex when structure matters.
-- [ ] Tcl 8.6 brownfield paths document encoding assumptions; new code targets Tcl 9 Unicode indexing.
-- [ ] Secret scrubbing uses explicit maps/regexes reviewed for false negatives (ch **16**).
-- [ ] `format`/`scan` used for **text** layouts; `binary format`/`binary scan` reserved for **byte** layouts—call sites do not blur the two.
+- Patterns for `regexp`/`regsub` are **braced** (or otherwise safe from substitution).
+- Character vs byte boundaries are explicit (`encoding` / `binary` / channel `-encoding`).
+- No assumption that `string length` equals on-disk byte length for UTF-8 protocols.
+- `string is … -strict` used where empty must not validate.
+- Untrusted input does not supply regex patterns on hot or network-facing paths.
+- HTML/JSON/XML not “parsed” with regex when structure matters.
+- Tcl 8.6 brownfield paths document encoding assumptions; new code targets Tcl 9 Unicode indexing.
+- Secret scrubbing uses explicit maps/regexes reviewed for false negatives (ch **16**).
+- `format`/`scan` used for **text** layouts; `binary format`/`binary scan` reserved for **byte** layouts—call sites do not blur the two.
 
 ---
 

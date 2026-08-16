@@ -242,16 +242,16 @@ The mistake is pretending these are one stack. The staff move is **four pins, fo
 
 ## Staff-level review checklist
 
-- [ ] Domain and role for the change are named (ops dialogue vs embed vs test vs Tk).
-- [ ] Production Tcl/Expect/Tk pin documented (**9.0.x** vs brownfield **8.6**).
-- [ ] Ownership of scripts, secrets, and images is clear.
-- [ ] Prefer non-interactive APIs; Expect justified when used.
-- [ ] Packaging/namespaces used for anything beyond a one-off.
-- [ ] Tests exist at the right layer (pure vs lab).
-- [ ] Security checklist from chapter **16** applied when automation is privileged.
-- [ ] Embedding/C extensions considered if `load` or host eval is involved.
-- [ ] Exit criteria include operator runbook updates, not only code merge.
-- [ ] No vendor-manual dump—links point to official Tcl/Expect/DejaGnu hubs when depth is needed.
+- Domain and role for the change are named (ops dialogue vs embed vs test vs Tk).
+- Production Tcl/Expect/Tk pin documented (**9.0.x** vs brownfield **8.6**).
+- Ownership of scripts, secrets, and images is clear.
+- Prefer non-interactive APIs; Expect justified when used.
+- Packaging/namespaces used for anything beyond a one-off.
+- Tests exist at the right layer (pure vs lab).
+- Security checklist from chapter **16** applied when automation is privileged.
+- Embedding/C extensions considered if `load` or host eval is involved.
+- Exit criteria include operator runbook updates, not only code merge.
+- No vendor-manual dump—links point to official Tcl/Expect/DejaGnu hubs when depth is needed.
 
 ---
 

@@ -231,12 +231,12 @@ Scheduled for severe restriction / removal of its useful effects. Cancun (EIP-67
 
 ## 4. Staff-level review checklist
 
-- [ ] ETH out uses `call` + success check + CEI (or a reviewed library), not stipend folklore.
-- [ ] Withdrawals are **pull** if recipients can be contracts.
-- [ ] No `delegatecall` to an address the user chooses.
-- [ ] High-level calls preferred; low-level `call` always inspects `ok`.
-- [ ] Accounting does not assume `balance == sum(credits)`.
-- [ ] CREATE2 salts and init code are under change control.
+- ETH out uses `call` + success check + CEI (or a reviewed library), not stipend folklore.
+- Withdrawals are **pull** if recipients can be contracts.
+- No `delegatecall` to an address the user chooses.
+- High-level calls preferred; low-level `call` always inspects `ok`.
+- Accounting does not assume `balance == sum(credits)`.
+- CREATE2 salts and init code are under change control.
 
 ---
 

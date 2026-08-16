@@ -109,35 +109,35 @@
     "path": "16_Cross_Compile_Targets_And_Release_Builds.md",
     "type": "file",
     "sha": "",
-    "size": 16820
+    "size": 16772
   },
   {
     "name": "17_Security_And_Supply_Chain.md",
     "path": "17_Security_And_Supply_Chain.md",
     "type": "file",
     "sha": "",
-    "size": 14501
+    "size": 14457
   },
   {
     "name": "18_Use_Cases_CLI_Agents_Infra_Embedded.md",
     "path": "18_Use_Cases_CLI_Agents_Infra_Embedded.md",
     "type": "file",
     "sha": "",
-    "size": 15109
+    "size": 15065
   },
   {
     "name": "19_Production_CI_Containers_And_Observability.md",
     "path": "19_Production_CI_Containers_And_Observability.md",
     "type": "file",
     "sha": "",
-    "size": 16991
+    "size": 16935
   },
   {
     "name": "20_Whole_Engineering_Wrap_And_Staff_Checklist.md",
     "path": "20_Whole_Engineering_Wrap_And_Staff_Checklist.md",
     "type": "file",
     "sha": "",
-    "size": 14057
+    "size": 13937
   },
   {
     "name": "README.md",

@@ -143,11 +143,11 @@ Older files may show `pragma experimental ABIEncoderV2;` or SMT pragmas. On 0.8,
 
 ## 4. Staff-level review checklist
 
-- [ ] Every shipped `.sol` has **SPDX** and a **0.8.x pragma**.
-- [ ] Application pragma and CI `solc` pin **agree** (chapter **02**).
-- [ ] Remappings resolve to **vendored / locked** directories.
-- [ ] Public types used across packages live in **interface files**, not hidden inside a fat contract file.
-- [ ] No file relies on Remix “auto import” that CI cannot see.
+- Every shipped `.sol` has **SPDX** and a **0.8.x pragma**.
+- Application pragma and CI `solc` pin **agree** (chapter **02**).
+- Remappings resolve to **vendored / locked** directories.
+- Public types used across packages live in **interface files**, not hidden inside a fat contract file.
+- No file relies on Remix “auto import” that CI cannot see.
 
 ---
 

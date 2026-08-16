@@ -322,18 +322,18 @@ A change-automation Expect job is acceptable when:
 
 ## Staff-level review checklist
 
-- [ ] Expect is justified—no adequate non-interactive API.
-- [ ] Tcl/Expect/OS versions pinned; brownfield **8.6** called out when relevant.
-- [ ] Dialogue steps use `expect` with explicit **`timeout`** and **`eof`** handling.
-- [ ] `exp_continue` only for bounded interim patterns; `expect_before`/`expect_after` stay small and reviewed.
-- [ ] Patterns are stable and specific; not brittle whitespace junk *or* overly greedy regexes.
-- [ ] No hard-coded production secrets in the script or repo history.
-- [ ] CI/ops logs redact credentials and tokens from `send` / buffers; `log_file` / `log_user` choices match audience.
-- [ ] Unattended jobs do not require `interact`.
-- [ ] Success criteria include verification beyond “matched final prompt” when changes are mutating.
-- [ ] Retries are bounded; failures surface actionable buffers.
-- [ ] No credential-stuffing or unauthorized access patterns—authorized automation only.
-- [ ] DejaGnu/tool-farm changes link to official DejaGnu docs when framework-specific.
+- Expect is justified—no adequate non-interactive API.
+- Tcl/Expect/OS versions pinned; brownfield **8.6** called out when relevant.
+- Dialogue steps use `expect` with explicit **`timeout`** and **`eof`** handling.
+- `exp_continue` only for bounded interim patterns; `expect_before`/`expect_after` stay small and reviewed.
+- Patterns are stable and specific; not brittle whitespace junk *or* overly greedy regexes.
+- No hard-coded production secrets in the script or repo history.
+- CI/ops logs redact credentials and tokens from `send` / buffers; `log_file` / `log_user` choices match audience.
+- Unattended jobs do not require `interact`.
+- Success criteria include verification beyond “matched final prompt” when changes are mutating.
+- Retries are bounded; failures surface actionable buffers.
+- No credential-stuffing or unauthorized access patterns—authorized automation only.
+- DejaGnu/tool-farm changes link to official DejaGnu docs when framework-specific.
 
 ---
 

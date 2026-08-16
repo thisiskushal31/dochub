@@ -546,24 +546,24 @@ Do **not** block async tasks with old `DispatchSemaphore` “wait on the coopera
 
 ## 4. Staff-level review checklist
 
-- [ ] New async work uses `async`/`await`; completion handlers appear only as bridges or legacy.
-- [ ] Continuations / `AsyncStream` bridges resume exactly once and cancel cleanly.
-- [ ] Task groups chosen deliberately (`TaskGroup` vs discarding) for result lifetime.
-- [ ] Shared mutable state uses actors (or scoped `Mutex`) — not ad-hoc locks on the cooperative pool.
-- [ ] Shared mutable state has an isolation story (actor / main actor / immutable values).
-- [ ] Structured concurrency preferred; unstructured `Task` / `Task.detached` ownership and cancellation are explicit.
-- [ ] Actor methods that `await` re-validate state (reentrancy lab understood).
-- [ ] No casual `@unchecked Sendable` or force-casts to silence Swift 6 checking.
-- [ ] Cancellation is cooperative on long loops, sleeps, and IO wrappers; clock sleeps cancel cleanly.
-- [ ] Continuations resume exactly once; prefer native async APIs when available.
-- [ ] `AsyncStream` / discarding task groups chosen deliberately for multi-value and fire-and-forget fan-out.
-- [ ] Shared mutable state uses actors (or scoped `Mutex`) — not ad-hoc locks on the cooperative pool.
-- [ ] Distributed actors treated as a door with official docs — not accidental RPC.
-- [ ] `nonisolated` members do not touch isolated mutable state.
-- [ ] Task priority and TaskLocal use are intentional — not hidden global mutable state.
-- [ ] `@Observable` / `Observations` used with availability literacy; not mixed carelessly with Combine `@Published` for new code.
-- [ ] Swift 6 diagnostic families addressed by isolation design, not suppression.
-- [ ] Language mode / checking level for the target is intentional and pinned in CI.
+- New async work uses `async`/`await`; completion handlers appear only as bridges or legacy.
+- Continuations / `AsyncStream` bridges resume exactly once and cancel cleanly.
+- Task groups chosen deliberately (`TaskGroup` vs discarding) for result lifetime.
+- Shared mutable state uses actors (or scoped `Mutex`) — not ad-hoc locks on the cooperative pool.
+- Shared mutable state has an isolation story (actor / main actor / immutable values).
+- Structured concurrency preferred; unstructured `Task` / `Task.detached` ownership and cancellation are explicit.
+- Actor methods that `await` re-validate state (reentrancy lab understood).
+- No casual `@unchecked Sendable` or force-casts to silence Swift 6 checking.
+- Cancellation is cooperative on long loops, sleeps, and IO wrappers; clock sleeps cancel cleanly.
+- Continuations resume exactly once; prefer native async APIs when available.
+- `AsyncStream` / discarding task groups chosen deliberately for multi-value and fire-and-forget fan-out.
+- Shared mutable state uses actors (or scoped `Mutex`) — not ad-hoc locks on the cooperative pool.
+- Distributed actors treated as a door with official docs — not accidental RPC.
+- `nonisolated` members do not touch isolated mutable state.
+- Task priority and TaskLocal use are intentional — not hidden global mutable state.
+- `@Observable` / `Observations` used with availability literacy; not mixed carelessly with Combine `@Published` for new code.
+- Swift 6 diagnostic families addressed by isolation design, not suppression.
+- Language mode / checking level for the target is intentional and pinned in CI.
 
 ---
 

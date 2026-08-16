@@ -280,15 +280,15 @@ EDA tools and network equipment CLIs often expose Tcl with socket/event hooks—
 
 ## Staff-level review checklist
 
-- [ ] Callbacks built with `list` / bracing so arguments are correct at fire time.
-- [ ] Channels used with `fileevent` are nonblocking; handlers handle partial I/O and EOF.
-- [ ] Every timeout path cancels timers and abandons closed channels safely.
-- [ ] No nested `vwait` spaghetti without a state machine diagram in the PR.
-- [ ] Long blocking work does not run inside handlers.
-- [ ] Sockets bind/listen intentionally (interface, port, backlog); production binds are documented.
-- [ ] `http` tokens cleaned up; timeouts and size limits set for untrusted endpoints.
-- [ ] HTTP body encoding/binary intent reviewed; cookiejar only enabled deliberately (Tcl 9).
-- [ ] Shutdown wakes `vwait` and closes listeners.
+- Callbacks built with `list` / bracing so arguments are correct at fire time.
+- Channels used with `fileevent` are nonblocking; handlers handle partial I/O and EOF.
+- Every timeout path cancels timers and abandons closed channels safely.
+- No nested `vwait` spaghetti without a state machine diagram in the PR.
+- Long blocking work does not run inside handlers.
+- Sockets bind/listen intentionally (interface, port, backlog); production binds are documented.
+- `http` tokens cleaned up; timeouts and size limits set for untrusted endpoints.
+- HTTP body encoding/binary intent reviewed; cookiejar only enabled deliberately (Tcl 9).
+- Shutdown wakes `vwait` and closes listeners.
 
 ---
 

@@ -259,11 +259,11 @@ For **what this track deliberately does not become** (L2 encyclopedias, wallet U
 
 ## 4. Staff-level review checklist
 
-- [ ] Design docs name **language vs EVM vs chain vs account** without treating them as synonyms.
-- [ ] The project can answer “why must this be a contract?” in one paragraph.
-- [ ] Off-chain inputs (prices, randomness, identity) are listed as **trust assumptions**.
-- [ ] Sibling languages (Vyper) and client stacks (JS/TS) are not pretended to be in scope here.
-- [ ] New work targets **0.8.x**, not a pre-0.8 tutorial estate, unless the repo is explicitly brownfield.
+- Design docs name **language vs EVM vs chain vs account** without treating them as synonyms.
+- The project can answer “why must this be a contract?” in one paragraph.
+- Off-chain inputs (prices, randomness, identity) are listed as **trust assumptions**.
+- Sibling languages (Vyper) and client stacks (JS/TS) are not pretended to be in scope here.
+- New work targets **0.8.x**, not a pre-0.8 tutorial estate, unless the repo is explicitly brownfield.
 
 ---
 

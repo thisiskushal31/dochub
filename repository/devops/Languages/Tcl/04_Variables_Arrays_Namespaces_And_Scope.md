@@ -245,12 +245,12 @@ Deeper introspection is chapter **09**.
 
 ## Staff-level review checklist
 
-- [ ] Procs that need globals use `global` / `variable` / `namespace upvar`—not accidental locals.
-- [ ] Tcl 9 targets fully qualify or link `env` / platform arrays inside namespaces.
-- [ ] New structured data prefers **dict** unless arrays are required; no new public APIs that force array-only without reason.
-- [ ] `upvar` levels documented or tested; no magic `uplevel` strings built with `$` interpolation.
-- [ ] Namespace names are stable and prefixed (`::org::project::…`) for anything shared.
-- [ ] `unset` cleanup paths considered for long-running embeds/event loops.
+- Procs that need globals use `global` / `variable` / `namespace upvar`—not accidental locals.
+- Tcl 9 targets fully qualify or link `env` / platform arrays inside namespaces.
+- New structured data prefers **dict** unless arrays are required; no new public APIs that force array-only without reason.
+- `upvar` levels documented or tested; no magic `uplevel` strings built with `$` interpolation.
+- Namespace names are stable and prefixed (`::org::project::…`) for anything shared.
+- `unset` cleanup paths considered for long-running embeds/event loops.
 
 ---
 

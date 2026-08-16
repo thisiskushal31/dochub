@@ -101,36 +101,36 @@ Treat each item as pass/fail for “I can own production PHP.”
 
 **Runtime**
 
-- [ ] Explain FPM worker reuse vs CLI one-shot.
-- [ ] Show `php --ini` for both CLI and FPM binaries and reconcile differences.
-- [ ] Describe Opcache with `validate_timestamps=0` deploy workflow.
+- Explain FPM worker reuse vs CLI one-shot.
+- Show `php --ini` for both CLI and FPM binaries and reconcile differences.
+- Describe Opcache with `validate_timestamps=0` deploy workflow.
 
 **Language**
 
-- [ ] Trace a request parameter from string to validated int/bool without `==` traps.
-- [ ] State when `strict_types` applies to a call into vendor code.
-- [ ] Identify where `unserialize` or stream wrappers create gadget/SSRF risk.
+- Trace a request parameter from string to validated int/bool without `==` traps.
+- State when `strict_types` applies to a call into vendor code.
+- Identify where `unserialize` or stream wrappers create gadget/SSRF risk.
 
 **Web**
 
-- [ ] List which superglobal feeds which threat class (XSS, CSRF, IDOR, upload).
-- [ ] Configure cookie flags for session ID transport.
-- [ ] Align `post_max_size`, `upload_max_filesize`, and reverse proxy body limits.
+- List which superglobal feeds which threat class (XSS, CSRF, IDOR, upload).
+- Configure cookie flags for session ID transport.
+- Align `post_max_size`, `upload_max_filesize`, and reverse proxy body limits.
 
 **Data**
 
-- [ ] Write PDO code with placeholders only for values; explain identifier risk.
-- [ ] Explain why persistent PDO + FPM can exhaust DB `max_connections`.
+- Write PDO code with placeholders only for values; explain identifier risk.
+- Explain why persistent PDO + FPM can exhaust DB `max_connections`.
 
 **Ops**
 
-- [ ] Derive a first-pass `pm.max_children` bound from measured worker RSS.
-- [ ] Describe a zero-downtime deploy with opcode cache disabled for mtime checks.
+- Derive a first-pass `pm.max_children` bound from measured worker RSS.
+- Describe a zero-downtime deploy with opcode cache disabled for mtime checks.
 
 **Supply chain**
 
-- [ ] Diff `composer.lock` between releases; interpret `composer audit` output.
-- [ ] Name three non-Composer packages that still need CVE tracking (OS `php-*` extensions, nginx, glibc, etc.).
+- Diff `composer.lock` between releases; interpret `composer audit` output.
+- Name three non-Composer packages that still need CVE tracking (OS `php-*` extensions, nginx, glibc, etc.).
 
 ---
 

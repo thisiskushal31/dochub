@@ -398,20 +398,20 @@ Wrong mirror config → wrong bytes with a familiar version string
 
 ## 4. Staff-level review checklist
 
-- [ ] `swift-tools-version` matches required manifest APIs; CI uses a compatible toolchain.
-- [ ] Manifest includes intended library / executable / test layout; products expose only intended modules.
-- [ ] Dependencies use semver ranges/`from:`; `exact:` and revisions have a written reason; branches only with exception.
-- [ ] Resolution conflicts are fixed by aligning contracts — not by deleting locks blindly.
-- [ ] `Package.resolved` policy is clear and followed (especially for apps); diffs reviewed.
-- [ ] Binary targets carry checksums verified with `swift package compute-checksum`.
-- [ ] Plugins / macros are justified, pinned, and reviewed like executable supply chain.
-- [ ] Traits (if used) are additive; CI covers meaningful trait combinations.
-- [ ] Mirrors/registries have owners and do not replace checksum/review habits.
-- [ ] Platforms declared in the manifest match what you actually test.
-- [ ] Xcode and CLI builds share an intentional toolchain pin.
-- [ ] No unexplained `unsafeFlags` on library products.
-- [ ] Plugin/macro trust questions answered before merge.
-- [ ] Consumer trait requirements documented and covered in CI.
+- `swift-tools-version` matches required manifest APIs; CI uses a compatible toolchain.
+- Manifest includes intended library / executable / test layout; products expose only intended modules.
+- Dependencies use semver ranges/`from:`; `exact:` and revisions have a written reason; branches only with exception.
+- Resolution conflicts are fixed by aligning contracts — not by deleting locks blindly.
+- `Package.resolved` policy is clear and followed (especially for apps); diffs reviewed.
+- Binary targets carry checksums verified with `swift package compute-checksum`.
+- Plugins / macros are justified, pinned, and reviewed like executable supply chain.
+- Traits (if used) are additive; CI covers meaningful trait combinations.
+- Mirrors/registries have owners and do not replace checksum/review habits.
+- Platforms declared in the manifest match what you actually test.
+- Xcode and CLI builds share an intentional toolchain pin.
+- No unexplained `unsafeFlags` on library products.
+- Plugin/macro trust questions answered before merge.
+- Consumer trait requirements documented and covered in CI.
 
 ---
 

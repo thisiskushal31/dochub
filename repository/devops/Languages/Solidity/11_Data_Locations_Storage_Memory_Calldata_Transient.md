@@ -211,12 +211,12 @@ For an `external` function, Solidity often leaves dynamic arguments in **calldat
 
 ## 4. Staff-level review checklist
 
-- [ ] Dynamic `external` params use `calldata` unless a write/resize is required.
-- [ ] Storage references are intentional aliases, not accidents.
-- [ ] Transient features gated on **evmVersion + chain** support.
-- [ ] Layout order is stable if proxies or slot tooling exist.
-- [ ] Comments never claim `private` storage is confidential.
-- [ ] Reentrancy locks are storage or transient — not a memory bool.
+- Dynamic `external` params use `calldata` unless a write/resize is required.
+- Storage references are intentional aliases, not accidents.
+- Transient features gated on **evmVersion + chain** support.
+- Layout order is stable if proxies or slot tooling exist.
+- Comments never claim `private` storage is confidential.
+- Reentrancy locks are storage or transient — not a memory bool.
 
 ---
 

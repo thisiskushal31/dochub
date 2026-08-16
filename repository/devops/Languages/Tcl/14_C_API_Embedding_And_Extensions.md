@@ -242,16 +242,16 @@ If any answer is “unknown,” the PR is not ready.
 
 ## Staff-level review checklist
 
-- [ ] PR role is clear: embedder, extension, or packaging-only.
-- [ ] Interp create/init/eval/delete lifetime is matched; no use-after-delete.
-- [ ] Eval return codes checked; errors surfaced to operators/logs appropriately.
-- [ ] New C commands validate arguments; no unbounded trust of script inputs.
-- [ ] Stubs / `tclConfig.sh` / TEA (or equivalent) pins match target Tcl **9.0.x** (or stated 8.6 brownfield).
-- [ ] Tcl 9 migrations address **`Tcl_Size`** / API signature changes—not only script edits.
-- [ ] Extensions rebuilt in CI for the ship interpreter—not copied from mismatched hosts.
-- [ ] Threading model documented if Tcl is touched outside a single owner thread.
-- [ ] Untrusted script paths use restricted interps / command hiding (see ch **16**).
-- [ ] Encoding assumptions at C↔Tcl boundary stated for binary and file data.
+- PR role is clear: embedder, extension, or packaging-only.
+- Interp create/init/eval/delete lifetime is matched; no use-after-delete.
+- Eval return codes checked; errors surfaced to operators/logs appropriately.
+- New C commands validate arguments; no unbounded trust of script inputs.
+- Stubs / `tclConfig.sh` / TEA (or equivalent) pins match target Tcl **9.0.x** (or stated 8.6 brownfield).
+- Tcl 9 migrations address **`Tcl_Size`** / API signature changes—not only script edits.
+- Extensions rebuilt in CI for the ship interpreter—not copied from mismatched hosts.
+- Threading model documented if Tcl is touched outside a single owner thread.
+- Untrusted script paths use restricted interps / command hiding (see ch **16**).
+- Encoding assumptions at C↔Tcl boundary stated for binary and file data.
 
 ---
 

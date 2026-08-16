@@ -203,12 +203,12 @@ Wallets that only know `Error(string)` show a hex blob for custom errors unless 
 
 ## 4. Staff-level review checklist
 
-- [ ] State changes that matter off-chain have **events**.
-- [ ] `indexed` fields match filter needs (addresses/IDs).
-- [ ] Custom errors are stable and documented.
-- [ ] `external`/`public` functions have `@notice` at minimum.
-- [ ] No PII or secrets in events.
-- [ ] Tests assert events (`expectEmit`) on critical paths.
+- State changes that matter off-chain have **events**.
+- `indexed` fields match filter needs (addresses/IDs).
+- Custom errors are stable and documented.
+- `external`/`public` functions have `@notice` at minimum.
+- No PII or secrets in events.
+- Tests assert events (`expectEmit`) on critical paths.
 
 ---
 

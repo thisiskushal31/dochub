@@ -375,18 +375,18 @@ public struct ExampleKitView { /* … */ }  // unambiguous name
 
 ## 4. Staff-level review checklist
 
-- [ ] Dependency and import graph matches intended modules; no cycles.
-- [ ] Team can explain module vs target vs product for the package under review.
-- [ ] Symbols crossing modules are deliberately `public`/`open`/`package`.
-- [ ] `@testable import` confined to test targets.
-- [ ] `@_exported import` is intentional umbrella design — not convenience.
-- [ ] Name collisions use `Module::Name` on Swift 6.3+ when dotted qualification fails; libraries do not force `::` as API design.
-- [ ] Bridging headers are curated allowlists; prefer module maps for reusable C/ObjC surfaces.
-- [ ] ObjC nullability audited at edges.
-- [ ] `@objc` / `NSObject` / dynamic ObjC dispatch only where a runtime feature or ObjC caller requires it.
-- [ ] C/C++ unsafe surfaces wrapped; ownership documented; expanded checklist applied; move-only C++ treated as unique.
-- [ ] Linux CI does not assume Darwin/ObjC-only modules without guards.
-- [ ] C++ interop enablement is explicit and version-pinned.
+- Dependency and import graph matches intended modules; no cycles.
+- Team can explain module vs target vs product for the package under review.
+- Symbols crossing modules are deliberately `public`/`open`/`package`.
+- `@testable import` confined to test targets.
+- `@_exported import` is intentional umbrella design — not convenience.
+- Name collisions use `Module::Name` on Swift 6.3+ when dotted qualification fails; libraries do not force `::` as API design.
+- Bridging headers are curated allowlists; prefer module maps for reusable C/ObjC surfaces.
+- ObjC nullability audited at edges.
+- `@objc` / `NSObject` / dynamic ObjC dispatch only where a runtime feature or ObjC caller requires it.
+- C/C++ unsafe surfaces wrapped; ownership documented; expanded checklist applied; move-only C++ treated as unique.
+- Linux CI does not assume Darwin/ObjC-only modules without guards.
+- C++ interop enablement is explicit and version-pinned.
 
 ---
 

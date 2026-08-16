@@ -529,25 +529,25 @@ Know these as **subset recognition** tasks:
 
 ## 4. Staff engineer checklist
 
-- [ ] Team can list **invocation modes** (interactive / non-interactive / login / restricted / `-c`) and knows CI is non-interactive.
-- [ ] Dialect is named on every automation surface (Bash vs `sh` vs zsh vs `pwsh` vs cmd).
-- [ ] Builtin / alias / function / external resolution is understood (`type` / `Get-Command`).
-- [ ] Aliases and prompt plugins are forbidden as automation dependencies.
-- [ ] Execute vs `source` / dot-source is an explicit design choice for libraries.
-- [ ] Subshell vs group side effects are considered for pipelines and loops.
-- [ ] Startup files are never load-bearing for containers, cron, or CI.
-- [ ] Restricted shell (`rbash`) is understood as a partial control, not a sandbox myth.
-- [ ] ksh/csh/fish appearances are handled as literacy/brownfield—not silent new standards.
-- [ ] Completion/readline/ZLE/PSReadLine are classified interactive-only.
-- [ ] Hosting context (SSH, container, CI, scheduler, embed, WSL/Git Bash) is identified in incident writeups.
-- [ ] Embedded shell from other languages is minimized and threat-modeled (chapter **18**).
-- [ ] `$SHELL` / account login shell is not confused with the interpreter of the current script.
-- [ ] `BASH_ENV` / `ENV` are not load-bearing in CI or production images.
-- [ ] Terminal emulator / tmux / sshd are not mislabeled as “the shell dialect.”
-- [ ] Shebang (or `pwsh -File` / cmd association) is recognized as the first dialect-subset gate.
-- [ ] Version pins select the correct Bash/PowerShell feature subset (chapters **02**, **09**, **12**).
-- [ ] Distro `/bin/sh` provider is proven for portable scripts (chapter **20**).
-- [ ] Security reviews speak in subset names (“interactive login over SSH”) not “the shell did a thing.”
+- Team can list **invocation modes** (interactive / non-interactive / login / restricted / `-c`) and knows CI is non-interactive.
+- Dialect is named on every automation surface (Bash vs `sh` vs zsh vs `pwsh` vs cmd).
+- Builtin / alias / function / external resolution is understood (`type` / `Get-Command`).
+- Aliases and prompt plugins are forbidden as automation dependencies.
+- Execute vs `source` / dot-source is an explicit design choice for libraries.
+- Subshell vs group side effects are considered for pipelines and loops.
+- Startup files are never load-bearing for containers, cron, or CI.
+- Restricted shell (`rbash`) is understood as a partial control, not a sandbox myth.
+- ksh/csh/fish appearances are handled as literacy/brownfield—not silent new standards.
+- Completion/readline/ZLE/PSReadLine are classified interactive-only.
+- Hosting context (SSH, container, CI, scheduler, embed, WSL/Git Bash) is identified in incident writeups.
+- Embedded shell from other languages is minimized and threat-modeled (chapter **18**).
+- `$SHELL` / account login shell is not confused with the interpreter of the current script.
+- `BASH_ENV` / `ENV` are not load-bearing in CI or production images.
+- Terminal emulator / tmux / sshd are not mislabeled as “the shell dialect.”
+- Shebang (or `pwsh -File` / cmd association) is recognized as the first dialect-subset gate.
+- Version pins select the correct Bash/PowerShell feature subset (chapters **02**, **09**, **12**).
+- Distro `/bin/sh` provider is proven for portable scripts (chapter **20**).
+- Security reviews speak in subset names (“interactive login over SSH”) not “the shell did a thing.”
 
 ---
 

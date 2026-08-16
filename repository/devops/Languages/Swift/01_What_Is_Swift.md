@@ -388,19 +388,19 @@ Practice saying this out loud until it is boring:
 
 ## 4. Staff-level review checklist
 
-- [ ] Docs and diagrams distinguish **Swift language**, **toolchain**, **Apple SDK**, and **app target**.
-- [ ] New shared logic defaults to a **package** boundary, not “dump in the app target.”
-- [ ] Platform claims are accurate (Linux package ≠ iOS framework availability).
-- [ ] Interop with Objective-C/C/C++ is treated as a **boundary**, not invisible magic.
-- [ ] Team default narrative matches handbook pin: **Swift 6.3.x** for new modules unless waived.
-- [ ] “We write Swift” is never used as a substitute for naming CI image, language mode, and SDK.
-- [ ] Engineers can state what this track **owns** vs **hands off** (see §1.10 / chapter **24**).
-- [ ] Kotlin/Android or server ambitions are named as **doors**, not assumed covered by iOS experience.
-- [ ] Value vs reference / ARC story is common vocabulary—not “the compiler just handles memory.”
-- [ ] Interview rubrics test operational literacy (pins, optionals, concurrency mode), not SE trivia alone.
-- [ ] Engineers can separate **compiler version** from **language mode** on a real target with evidence.
-- [ ] At least one teammate has filled an Evolution reading card this quarter (habit, not trivia).
-- [ ] Architecture talk uses the layer table (language / SDK / product)—not “Swift” as a single noun.
+- Docs and diagrams distinguish **Swift language**, **toolchain**, **Apple SDK**, and **app target**.
+- New shared logic defaults to a **package** boundary, not “dump in the app target.”
+- Platform claims are accurate (Linux package ≠ iOS framework availability).
+- Interop with Objective-C/C/C++ is treated as a **boundary**, not invisible magic.
+- Team default narrative matches handbook pin: **Swift 6.3.x** for new modules unless waived.
+- “We write Swift” is never used as a substitute for naming CI image, language mode, and SDK.
+- Engineers can state what this track **owns** vs **hands off** (see §1.10 / chapter **24**).
+- Kotlin/Android or server ambitions are named as **doors**, not assumed covered by iOS experience.
+- Value vs reference / ARC story is common vocabulary—not “the compiler just handles memory.”
+- Interview rubrics test operational literacy (pins, optionals, concurrency mode), not SE trivia alone.
+- Engineers can separate **compiler version** from **language mode** on a real target with evidence.
+- At least one teammate has filled an Evolution reading card this quarter (habit, not trivia).
+- Architecture talk uses the layer table (language / SDK / product)—not “Swift” as a single noun.
 
 ---
 

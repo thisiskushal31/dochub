@@ -393,13 +393,13 @@ Prefer `.zip` via PowerShell on Windows agents; `.tar.gz` on Linux; document bot
 
 ### Staff-level review checklist
 
-- [ ] Every downloaded artifact has checksum verification in automation.
-- [ ] `curl -fsSL` (or equivalent fail modes) used—not silent success on HTTP 404.
-- [ ] No `curl \| sh` / `iex (iwr …)` install patterns in production docs.
-- [ ] `tar` extract uses dedicated directory; untrusted archives threat-modeled.
-- [ ] Windows agents disambiguate `curl` alias vs `curl.exe`.
-- [ ] `rsync --delete` requires explicit review.
-- [ ] SSH CI uses keys + `BatchMode`; host key policy documented.
+- Every downloaded artifact has checksum verification in automation.
+- `curl -fsSL` (or equivalent fail modes) used—not silent success on HTTP 404.
+- No `curl \| sh` / `iex (iwr …)` install patterns in production docs.
+- `tar` extract uses dedicated directory; untrusted archives threat-modeled.
+- Windows agents disambiguate `curl` alias vs `curl.exe`.
+- `rsync --delete` requires explicit review.
+- SSH CI uses keys + `BatchMode`; host key policy documented.
 
 ---
 

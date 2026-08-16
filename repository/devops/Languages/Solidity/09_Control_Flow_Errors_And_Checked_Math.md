@@ -259,12 +259,12 @@ If you ignore `ok`, their state (if any) may have reverted while yours did not. 
 
 ## 4. Staff-level review checklist
 
-- [ ] User-facing failures use **custom errors** (or short requires), not `assert`.
-- [ ] Every `unchecked` block has a one-line **why**.
-- [ ] Loops over storage collections are **bounded** or pulled per-user.
-- [ ] `try/catch` does not swallow failures that should abort the tx.
-- [ ] Tests use `expectRevert` with the **specific** error.
-- [ ] Brownfield 0.7 files are not copied forward with silent wrap.
+- User-facing failures use **custom errors** (or short requires), not `assert`.
+- Every `unchecked` block has a one-line **why**.
+- Loops over storage collections are **bounded** or pulled per-user.
+- `try/catch` does not swallow failures that should abort the tx.
+- Tests use `expectRevert` with the **specific** error.
+- Brownfield 0.7 files are not copied forward with silent wrap.
 
 ---
 

@@ -485,18 +485,18 @@ func flow() {
 
 ## 4. Staff-level review checklist
 
-- [ ] Class graphs have a clear owner; cycles broken with `weak`/`unowned` or redesign.
-- [ ] Escaping closures that capture class `self` use explicit capture lists when needed.
-- [ ] `unowned` appears only with a stated lifetime proof; `unowned(unsafe)` is absent or extraordinary.
-- [ ] Exclusivity diagnostics are fixed by redrawing borrows — not silenced (overlapping access lab).
-- [ ] `~Copyable` / borrow / consume used for true unique resources — not cargo-culted onto ordinary models.
-- [ ] Unsafe pointer / buffer / `withUnsafeBytes` blocks are localized, scoped, and reviewed.
-- [ ] `assumingMemoryBound` carries a written layout/lifetime invariant.
-- [ ] Span preferred over escaping unsafe buffers when the pin supports the API you need.
-- [ ] Autorelease pools appear only with a bridge/peak rationale.
-- [ ] Library APIs mark `public`/`open`/`package` intentionally; default stay `internal`.
-- [ ] `open` subclassing surface is deliberate; prefer `public final` otherwise.
-- [ ] SPM targets use `package` for cross-target helpers instead of accidental `public`.
+- Class graphs have a clear owner; cycles broken with `weak`/`unowned` or redesign.
+- Escaping closures that capture class `self` use explicit capture lists when needed.
+- `unowned` appears only with a stated lifetime proof; `unowned(unsafe)` is absent or extraordinary.
+- Exclusivity diagnostics are fixed by redrawing borrows — not silenced (overlapping access lab).
+- `~Copyable` / borrow / consume used for true unique resources — not cargo-culted onto ordinary models.
+- Unsafe pointer / buffer / `withUnsafeBytes` blocks are localized, scoped, and reviewed.
+- `assumingMemoryBound` carries a written layout/lifetime invariant.
+- Span preferred over escaping unsafe buffers when the pin supports the API you need.
+- Autorelease pools appear only with a bridge/peak rationale.
+- Library APIs mark `public`/`open`/`package` intentionally; default stay `internal`.
+- `open` subclassing surface is deliberate; prefer `public final` otherwise.
+- SPM targets use `package` for cross-target helpers instead of accidental `public`.
 
 ---
 

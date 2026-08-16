@@ -91,43 +91,43 @@ Deep-study leftovers from the README: if you skipped the labs, do them before si
 
 ### Language and compiler
 
-- [ ] New code is **0.8.x** with SPDX and a pragma that matches CI’s **exact** `solc`.
-- [ ] `evmVersion`, optimizer `runs`, and via-IR are **named** and used at verify time.
-- [ ] Pre-0.8 habits are not introduced in new files.
-- [ ] Latest compiler security-fix policy is understood (do not freeze abandoned `solc` silently).
+- New code is **0.8.x** with SPDX and a pragma that matches CI’s **exact** `solc`.
+- `evmVersion`, optimizer `runs`, and via-IR are **named** and used at verify time.
+- Pre-0.8 habits are not introduced in new files.
+- Latest compiler security-fix policy is understood (do not freeze abandoned `solc` silently).
 
 ### Toolchain
 
-- [ ] README has **one** compile/test command that CI runs.
-- [ ] Remix is not the release compiler of record.
-- [ ] Foundry and Hardhat (if both exist) have distinct jobs.
+- README has **one** compile/test command that CI runs.
+- Remix is not the release compiler of record.
+- Foundry and Hardhat (if both exist) have distinct jobs.
 
 ### Contract quality
 
-- [ ] Visibility and mutability are explicit; payable surface is intentional.
-- [ ] Custom errors + events on value-moving paths; NatSpec on `external` functions.
-- [ ] `calldata`/`memory`/`storage`/`transient` used on purpose.
-- [ ] No unbounded loops over user-grown arrays in a single user tx.
-- [ ] Inheritance/layout is drawable (C3 order); libraries are `internal` unless linked on purpose.
-- [ ] Storage packing / mapping-slot / short-`bytes` rules are understood if anyone reads slots raw.
+- Visibility and mutability are explicit; payable surface is intentional.
+- Custom errors + events on value-moving paths; NatSpec on `external` functions.
+- `calldata`/`memory`/`storage`/`transient` used on purpose.
+- No unbounded loops over user-grown arrays in a single user tx.
+- Inheritance/layout is drawable (C3 order); libraries are `internal` unless linked on purpose.
+- Storage packing / mapping-slot / short-`bytes` rules are understood if anyone reads slots raw.
 
 ### Safety and delivery
 
-- [ ] `msg.sender` auth; no `tx.origin`; no untrusted `delegatecall`.
-- [ ] CEI (and locks where needed); pull payments when recipients are open.
-- [ ] Signatures (if any) are domain-separated; no DIY packed-string hashes for money.
-- [ ] Tests cover success, auth failure, and failed external calls; fuzz/invariants on accounting.
-- [ ] Analyzer findings triaged; audits (if any) match the **deployed commit**.
-- [ ] Keys: no raw mainnet secrets in git; admin custody named.
-- [ ] Explorer **verification** succeeded.
-- [ ] Upgradeability is either **absent** or fully specified (ERC-1967/7201 slots, initializer lock, timelock).
-- [ ] ABI artifacts match the same Standard JSON as bytecode (optimizer, viaIR, evmVersion, metadata).
+- `msg.sender` auth; no `tx.origin`; no untrusted `delegatecall`.
+- CEI (and locks where needed); pull payments when recipients are open.
+- Signatures (if any) are domain-separated; no DIY packed-string hashes for money.
+- Tests cover success, auth failure, and failed external calls; fuzz/invariants on accounting.
+- Analyzer findings triaged; audits (if any) match the **deployed commit**.
+- Keys: no raw mainnet secrets in git; admin custody named.
+- Explorer **verification** succeeded.
+- Upgradeability is either **absent** or fully specified (ERC-1967/7201 slots, initializer lock, timelock).
+- ABI artifacts match the same Standard JSON as bytecode (optimizer, viaIR, evmVersion, metadata).
 
 ### Scope honesty
 
-- [ ] This repo is not pretending to be an L2 or DeFi encyclopedia.
-- [ ] Token work uses maintained implementations + a threat model for weird tokens.
-- [ ] Assembly (if any) is justified, tested, and extra-reviewed.
+- This repo is not pretending to be an L2 or DeFi encyclopedia.
+- Token work uses maintained implementations + a threat model for weird tokens.
+- Assembly (if any) is justified, tested, and extra-reviewed.
 
 When the boxes that apply to *your* system are checked, the track has done its job for **shipping contracts**. For **where the platform is moving** and what to hand off next, sign chapter **24** as well. Revisit **02** on every compiler bump, **18** on every value-moving PR, **20** on every mainnet push, and **24** on every hard-fork or L2/AA decision.
 

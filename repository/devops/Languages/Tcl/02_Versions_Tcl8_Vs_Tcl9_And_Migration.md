@@ -197,15 +197,15 @@ Keep migration tickets in engineering language (encoding, paths, Unicode, extens
 
 ## Staff-level review checklist
 
-- [ ] Change names the **target patchlevel(s)**; “Tcl 8” or “Tcl 9” alone is too vague for binaries.
-- [ ] New files are UTF-8; legacy `source -encoding` is explicit and justified.
-- [ ] No new reliance on implicit `~` expansion; uses `file home` / `file tildeexpand` on Tcl 9.
-- [ ] I/O on untrusted bytes sets an intentional **encoding profile** (prefer `strict` or `replace`, not silent `tcl8`).
-- [ ] String index/length logic retested for non-BMP text on Tcl 9.
-- [ ] `glob` callers handle **empty list**.
-- [ ] Namespace code uses `::` / `variable` / `global` correctly under Tcl 9 resolution rules.
-- [ ] Binary packages rebuilt for Tcl 9; `pkgIndex.tcl` dual-path reviewed if supporting both majors.
-- [ ] Rollback plan exists for appliance/embed cutovers.
+- Change names the **target patchlevel(s)**; “Tcl 8” or “Tcl 9” alone is too vague for binaries.
+- New files are UTF-8; legacy `source -encoding` is explicit and justified.
+- No new reliance on implicit `~` expansion; uses `file home` / `file tildeexpand` on Tcl 9.
+- I/O on untrusted bytes sets an intentional **encoding profile** (prefer `strict` or `replace`, not silent `tcl8`).
+- String index/length logic retested for non-BMP text on Tcl 9.
+- `glob` callers handle **empty list**.
+- Namespace code uses `::` / `variable` / `global` correctly under Tcl 9 resolution rules.
+- Binary packages rebuilt for Tcl 9; `pkgIndex.tcl` dual-path reviewed if supporting both majors.
+- Rollback plan exists for appliance/embed cutovers.
 
 ---
 

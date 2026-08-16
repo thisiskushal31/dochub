@@ -367,18 +367,18 @@ Expect (ch **15**) builds on channels and process control—this chapter is the 
 
 ## Staff-level review checklist
 
-- [ ] Paths built with `file join` / inspected with `file` tests; no naive string concat across OSes.
-- [ ] User-influenced path components checked for `..` / absolute escapes per policy.
-- [ ] Channels set `-encoding` / `-translation` intentionally (especially UTF-8 text vs binary).
-- [ ] Binary transfers use binary channel config; bulk copies prefer `chan copy` / `fcopy` over giant `read`s where appropriate.
-- [ ] `seek`/`tell` only on channels that support position; protocol offsets verified under binary mode.
-- [ ] Background `chan copy` has cleanup callbacks; no conflicting `fileevent` on the same direction mid-copy.
-- [ ] Files closed on all paths (or use patterns that guarantee close); temps deleted.
-- [ ] CLI tools validate `argc`/`argv`; forward extras with `{*}$argv` (or a sliced list)—never `eval`/`sh -c` on raw argv.
-- [ ] `exec` uses separate arguments; no untrusted string passed to a shell.
-- [ ] `cd` avoided in library code; cwd mutations documented if required.
-- [ ] `env` mutations scoped and restored when touching `PATH` / locale.
-- [ ] Tcl 9 `file home` / tilde migration considered for 8.6 ports.
+- Paths built with `file join` / inspected with `file` tests; no naive string concat across OSes.
+- User-influenced path components checked for `..` / absolute escapes per policy.
+- Channels set `-encoding` / `-translation` intentionally (especially UTF-8 text vs binary).
+- Binary transfers use binary channel config; bulk copies prefer `chan copy` / `fcopy` over giant `read`s where appropriate.
+- `seek`/`tell` only on channels that support position; protocol offsets verified under binary mode.
+- Background `chan copy` has cleanup callbacks; no conflicting `fileevent` on the same direction mid-copy.
+- Files closed on all paths (or use patterns that guarantee close); temps deleted.
+- CLI tools validate `argc`/`argv`; forward extras with `{*}$argv` (or a sliced list)—never `eval`/`sh -c` on raw argv.
+- `exec` uses separate arguments; no untrusted string passed to a shell.
+- `cd` avoided in library code; cwd mutations documented if required.
+- `env` mutations scoped and restored when touching `PATH` / locale.
+- Tcl 9 `file home` / tilde migration considered for 8.6 ports.
 
 ---
 

@@ -51,14 +51,14 @@ A **scheme** names:
 
 **Shared schemes checklist (print this):**
 
-- [ ] Scheme file lives under `xcshareddata/xcschemes/` and is committed.
-- [ ] **Build** action includes the app (+ any required extensions).
-- [ ] **Test** action includes unit (and UI, if you claim UI coverage) targets.
-- [ ] **Run** uses Debug (or a documented Dev config).
-- [ ] **Archive** uses Release (or AppStore/Beta config)—not Debug.
-- [ ] Test plan name (if any) matches README / CI YAML.
-- [ ] No dependence on personal env vars that only exist on one laptop.
-- [ ] `xcodebuild -list` shows this scheme on a clean checkout.
+- Scheme file lives under `xcshareddata/xcschemes/` and is committed.
+- **Build** action includes the app (+ any required extensions).
+- **Test** action includes unit (and UI, if you claim UI coverage) targets.
+- **Run** uses Debug (or a documented Dev config).
+- **Archive** uses Release (or AppStore/Beta config)—not Debug.
+- Test plan name (if any) matches README / CI YAML.
+- No dependence on personal env vars that only exist on one laptop.
+- `xcodebuild -list` shows this scheme on a clean checkout.
 
 ```bash
 xcodebuild -list -project MyApp.xcodeproj
@@ -345,18 +345,18 @@ If Staging only exists on one engineer’s scheme, it does not exist.
 
 ## 4. Staff-level review checklist
 
-- [ ] CI invokes a **shared** scheme (checked in), not a personal scheme — shared schemes checklist above is green.
-- [ ] `xcodebuild -list` output matches what README / pipeline claims.
-- [ ] Configurations for **test** vs **archive** are named and intentional; Debug vs Release behavioral differences are understood.
-- [ ] Critical settings live in **xcconfig** with a clear `#include` **inheritance tree**, not only UI folklore.
-- [ ] `SWIFT_VERSION` and `SWIFT_STRICT_CONCURRENCY` match the handbook pin story (**Swift 6.3.x** / complete checking direction for new work).
-- [ ] Destinations are **pinned** (device + OS), not “whatever the agent had yesterday.”
-- [ ] SPM packages in the workspace have a reviewed `Package.resolved` story for clean CI; open **workspace** when required.
-- [ ] DerivedData tips are troubleshooting, not the release procedure; clean vs incremental myths are not policy.
-- [ ] Reviewers can read a **build timeline** enough to spot wide invalidation vs expected incremental work.
-- [ ] Workspace vs project choice matches how SPM / CocoaPods are actually wired.
-- [ ] Nobody ships from a scheme that skips the test action “to save time” without a documented waiver.
-- [ ] `#if DEBUG` / compilation conditions are not hiding security-critical checks.
+- CI invokes a **shared** scheme (checked in), not a personal scheme — shared schemes checklist above is green.
+- `xcodebuild -list` output matches what README / pipeline claims.
+- Configurations for **test** vs **archive** are named and intentional; Debug vs Release behavioral differences are understood.
+- Critical settings live in **xcconfig** with a clear `#include` **inheritance tree**, not only UI folklore.
+- `SWIFT_VERSION` and `SWIFT_STRICT_CONCURRENCY` match the handbook pin story (**Swift 6.3.x** / complete checking direction for new work).
+- Destinations are **pinned** (device + OS), not “whatever the agent had yesterday.”
+- SPM packages in the workspace have a reviewed `Package.resolved` story for clean CI; open **workspace** when required.
+- DerivedData tips are troubleshooting, not the release procedure; clean vs incremental myths are not policy.
+- Reviewers can read a **build timeline** enough to spot wide invalidation vs expected incremental work.
+- Workspace vs project choice matches how SPM / CocoaPods are actually wired.
+- Nobody ships from a scheme that skips the test action “to save time” without a documented waiver.
+- `#if DEBUG` / compilation conditions are not hiding security-critical checks.
 
 ---
 

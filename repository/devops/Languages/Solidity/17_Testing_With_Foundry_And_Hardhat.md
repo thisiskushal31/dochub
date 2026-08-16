@@ -179,12 +179,12 @@ When Foundry prints a failing seed, add a **unit** test with that input. Do not 
 
 ## 4. Staff-level review checklist
 
-- [ ] Every external function has a success test and at least one **revert** test.
-- [ ] Auth is tested with `prank`, not only as the deployer.
-- [ ] Math/accounting has **fuzz** or invariant coverage.
-- [ ] Fork tests (if any) pin a block and do not need mainnet keys.
-- [ ] CI runs the same commands as the README.
-- [ ] Foundry vs Hardhat responsibilities are written down if both exist.
+- Every external function has a success test and at least one **revert** test.
+- Auth is tested with `prank`, not only as the deployer.
+- Math/accounting has **fuzz** or invariant coverage.
+- Fork tests (if any) pin a block and do not need mainnet keys.
+- CI runs the same commands as the README.
+- Foundry vs Hardhat responsibilities are written down if both exist.
 
 ---
 

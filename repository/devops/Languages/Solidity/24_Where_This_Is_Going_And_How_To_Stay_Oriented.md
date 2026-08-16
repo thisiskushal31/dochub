@@ -209,14 +209,14 @@ Use §2.7 as the **directory** when a teammate names an adjacent topic: one shor
 
 ## 4. Staff-level review checklist
 
-- [ ] Team can state in one paragraph what this track **owns** vs **hands off**, and can point to §2.7 for each handoff.
-- [ ] Deploy pins include **`solc` + `evmVersion` + via-IR** for the *current* target fork (Cancun / Prague / …).
-- [ ] No production dependency on **EOF** or other **experimental** codegen.
-- [ ] Auth paths do **not** assume callers are simple EOAs (`tx.origin` banned; AA/7702 named in the threat model if relevant).
-- [ ] “We’re going to L2” tickets include chain id, pin, verify, and signature-domain updates — not a rewrite of Solidity.
-- [ ] Someone is assigned to read **Solidity blog + chain fork notes** on bumps (not “whoever noticed Twitter”).
-- [ ] Chapter **23** checklist is signed for the system you actually ship; this chapter is the **compass**, not a substitute.
-- [ ] Adjacent work (UI, L2 ops, AA wallet, DeFi product) has a named owner and a link from §2.7 — not a pretend Solidity chapter.
+- Team can state in one paragraph what this track **owns** vs **hands off**, and can point to §2.7 for each handoff.
+- Deploy pins include **`solc` + `evmVersion` + via-IR** for the *current* target fork (Cancun / Prague / …).
+- No production dependency on **EOF** or other **experimental** codegen.
+- Auth paths do **not** assume callers are simple EOAs (`tx.origin` banned; AA/7702 named in the threat model if relevant).
+- “We’re going to L2” tickets include chain id, pin, verify, and signature-domain updates — not a rewrite of Solidity.
+- Someone is assigned to read **Solidity blog + chain fork notes** on bumps (not “whoever noticed Twitter”).
+- Chapter **23** checklist is signed for the system you actually ship; this chapter is the **compass**, not a substitute.
+- Adjacent work (UI, L2 ops, AA wallet, DeFi product) has a named owner and a link from §2.7 — not a pretend Solidity chapter.
 
 ---
 

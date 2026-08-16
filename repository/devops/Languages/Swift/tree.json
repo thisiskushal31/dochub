@@ -4,175 +4,175 @@
     "path": "00_First_Steps_Toolchain_And_Hello.md",
     "type": "file",
     "sha": "",
-    "size": 21790
+    "size": 21746
   },
   {
     "name": "01_What_Is_Swift.md",
     "path": "01_What_Is_Swift.md",
     "type": "file",
     "sha": "",
-    "size": 24105
+    "size": 24053
   },
   {
     "name": "02_Versions_Language_Modes_And_Swift_6.md",
     "path": "02_Versions_Language_Modes_And_Swift_6.md",
     "type": "file",
     "sha": "",
-    "size": 22197
+    "size": 22153
   },
   {
     "name": "03_Toolchains_Swift_Org_Xcode_Linux_Windows.md",
     "path": "03_Toolchains_Swift_Org_Xcode_Linux_Windows.md",
     "type": "file",
     "sha": "",
-    "size": 21418
+    "size": 21358
   },
   {
     "name": "04_Syntax_Bindings_Types_Optionals.md",
     "path": "04_Syntax_Bindings_Types_Optionals.md",
     "type": "file",
     "sha": "",
-    "size": 18826
+    "size": 18782
   },
   {
     "name": "05_Control_Flow_Functions_Closures.md",
     "path": "05_Control_Flow_Functions_Closures.md",
     "type": "file",
     "sha": "",
-    "size": 17890
+    "size": 17846
   },
   {
     "name": "06_Structs_Classes_Enums_Value_And_Reference.md",
     "path": "06_Structs_Classes_Enums_Value_And_Reference.md",
     "type": "file",
     "sha": "",
-    "size": 20345
+    "size": 20289
   },
   {
     "name": "07_Properties_Methods_Init_Deinit.md",
     "path": "07_Properties_Methods_Init_Deinit.md",
     "type": "file",
     "sha": "",
-    "size": 17821
+    "size": 17769
   },
   {
     "name": "08_Protocols_Extensions_Generics_Opaque_Types.md",
     "path": "08_Protocols_Extensions_Generics_Opaque_Types.md",
     "type": "file",
     "sha": "",
-    "size": 23166
+    "size": 23110
   },
   {
     "name": "09_Error_Handling.md",
     "path": "09_Error_Handling.md",
     "type": "file",
     "sha": "",
-    "size": 17914
+    "size": 17870
   },
   {
     "name": "10_Concurrency_Async_Await_Tasks_Actors.md",
     "path": "10_Concurrency_Async_Await_Tasks_Actors.md",
     "type": "file",
     "sha": "",
-    "size": 25150
+    "size": 25078
   },
   {
     "name": "11_ARC_Memory_Safety_Access_Control.md",
     "path": "11_ARC_Memory_Safety_Access_Control.md",
     "type": "file",
     "sha": "",
-    "size": 21813
+    "size": 21765
   },
   {
     "name": "12_Standard_Library_Literacy.md",
     "path": "12_Standard_Library_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 16998
+    "size": 16950
   },
   {
     "name": "13_Foundation_And_Core_Libraries.md",
     "path": "13_Foundation_And_Core_Libraries.md",
     "type": "file",
     "sha": "",
-    "size": 19191
+    "size": 19147
   },
   {
     "name": "14_Swift_Package_Manager.md",
     "path": "14_Swift_Package_Manager.md",
     "type": "file",
     "sha": "",
-    "size": 19075
+    "size": 19019
   },
   {
     "name": "15_Modules_Imports_And_Interop.md",
     "path": "15_Modules_Imports_And_Interop.md",
     "type": "file",
     "sha": "",
-    "size": 18917
+    "size": 18869
   },
   {
     "name": "16_Testing_Swift_Testing_And_XCTest.md",
     "path": "16_Testing_Swift_Testing_And_XCTest.md",
     "type": "file",
     "sha": "",
-    "size": 15390
+    "size": 15342
   },
   {
     "name": "17_DocC_And_API_Design_Guidelines.md",
     "path": "17_DocC_And_API_Design_Guidelines.md",
     "type": "file",
     "sha": "",
-    "size": 19392
+    "size": 19344
   },
   {
     "name": "18_Xcode_Projects_Schemes_Build_Settings.md",
     "path": "18_Xcode_Projects_Schemes_Build_Settings.md",
     "type": "file",
     "sha": "",
-    "size": 18256
+    "size": 18176
   },
   {
     "name": "19_SwiftUI_UIKit_AppKit_Surface_Literacy.md",
     "path": "19_SwiftUI_UIKit_AppKit_Surface_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 19131
+    "size": 19039
   },
   {
     "name": "20_Security_Privacy_Signing_And_Secrets.md",
     "path": "20_Security_Privacy_Signing_And_Secrets.md",
     "type": "file",
     "sha": "",
-    "size": 42813
+    "size": 42737
   },
   {
     "name": "21_CI_CD_Xcode_Cloud_Fastlane_Mac_Runners.md",
     "path": "21_CI_CD_Xcode_Cloud_Fastlane_Mac_Runners.md",
     "type": "file",
     "sha": "",
-    "size": 28481
+    "size": 28417
   },
   {
     "name": "22_Use_Cases_Scripts_Packages_Apps_Server_Glance.md",
     "path": "22_Use_Cases_Scripts_Packages_Apps_Server_Glance.md",
     "type": "file",
     "sha": "",
-    "size": 15496
+    "size": 15444
   },
   {
     "name": "23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
     "path": "23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
     "type": "file",
     "sha": "",
-    "size": 19637
+    "size": 19437
   },
   {
     "name": "24_Where_Swift_Is_Going_And_Adjacent_Doors.md",
     "path": "24_Where_Swift_Is_Going_And_Adjacent_Doors.md",
     "type": "file",
     "sha": "",
-    "size": 21548
+    "size": 21496
   },
   {
     "name": "README.md",

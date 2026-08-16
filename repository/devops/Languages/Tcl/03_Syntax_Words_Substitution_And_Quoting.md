@@ -301,12 +301,12 @@ Stricter `${…}` nesting and array-index escaping can break old generated code 
 
 ## Staff-level review checklist
 
-- [ ] `expr`, `if`, `while`, `for`, `proc` bodies use **braces** unless there is a documented reason not to.
-- [ ] No `eval` of concatenated strings where `{*}` + `list` would work.
-- [ ] User-controlled data is never fed to `eval` / `subst` / `uplevel` without a hard guarantee it is not a script.
-- [ ] `{*}` is used when splicing argv/flag lists; reviewers confirm the spliced value is a **proper list**.
-- [ ] Comments after commands use `;#` (or a real newline), not a bare mid-command `#` expecting comment semantics.
-- [ ] Reviewers can explain why `"$x"` vs `$x` vs `{ $x }` was chosen at each call site that matters.
+- `expr`, `if`, `while`, `for`, `proc` bodies use **braces** unless there is a documented reason not to.
+- No `eval` of concatenated strings where `{*}` + `list` would work.
+- User-controlled data is never fed to `eval` / `subst` / `uplevel` without a hard guarantee it is not a script.
+- `{*}` is used when splicing argv/flag lists; reviewers confirm the spliced value is a **proper list**.
+- Comments after commands use `;#` (or a real newline), not a bare mid-command `#` expecting comment semantics.
+- Reviewers can explain why `"$x"` vs `$x` vs `{ $x }` was chosen at each call site that matters.
 
 ---
 

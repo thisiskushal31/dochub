@@ -181,13 +181,13 @@ Explorer verification is not a vibe. It means: given Standard JSON (or equivalen
 
 ## 4. Staff-level review checklist
 
-- [ ] CI pins `solc`, runs tests, and fails on warnings you claim to ban.
-- [ ] Deploy is a **reviewed script** with recorded constructor args.
-- [ ] Explorer verification succeeds for every production address.
-- [ ] No raw mainnet keys in CI logs or repo.
-- [ ] Admin is multisig/hardware (or accepted risk is written).
-- [ ] If a proxy exists: layout tests, initializer lockdown, timelock.
-- [ ] If no proxy: README does not claim “we can just upgrade.”
+- CI pins `solc`, runs tests, and fails on warnings you claim to ban.
+- Deploy is a **reviewed script** with recorded constructor args.
+- Explorer verification succeeds for every production address.
+- No raw mainnet keys in CI logs or repo.
+- Admin is multisig/hardware (or accepted risk is written).
+- If a proxy exists: layout tests, initializer lockdown, timelock.
+- If no proxy: README does not claim “we can just upgrade.”
 
 ---
 

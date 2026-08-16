@@ -440,17 +440,17 @@ let roundTrip = String(bytes: bytes, encoding: .utf8)
 
 ## 4. Staff-level review checklist
 
-- [ ] New code prefers `let` unless mutation is required.
-- [ ] Optionals are unwrapped with `if let` / `guard let` / `??` / `?.`—not a culture of `!`.
-- [ ] `Type!` appears only with a brownfield or framework reason, not as a typing shortcut.
-- [ ] String indexing uses `String.Index` / views (`utf8`, …)—no `Int`-subscript myths from other languages.
-- [ ] Character vs scalar vs UTF-8 units are named correctly for the problem.
-- [ ] Stored properties and async boundaries use `String`, not lingering `Substring`.
-- [ ] Multiline / raw strings used where they clarify literals—not as a path API substitute.
-- [ ] Casts at runtime boundaries use `as?`; `as!` has a crash rationale.
-- [ ] Empty collections and `nil` sites have enough annotation to be unambiguous.
-- [ ] Parsed configs expose non-optional fields for required data.
-- [ ] No revived Swift 2-era `++` / C-style `for` in new contributions.
+- New code prefers `let` unless mutation is required.
+- Optionals are unwrapped with `if let` / `guard let` / `??` / `?.`—not a culture of `!`.
+- `Type!` appears only with a brownfield or framework reason, not as a typing shortcut.
+- String indexing uses `String.Index` / views (`utf8`, …)—no `Int`-subscript myths from other languages.
+- Character vs scalar vs UTF-8 units are named correctly for the problem.
+- Stored properties and async boundaries use `String`, not lingering `Substring`.
+- Multiline / raw strings used where they clarify literals—not as a path API substitute.
+- Casts at runtime boundaries use `as?`; `as!` has a crash rationale.
+- Empty collections and `nil` sites have enough annotation to be unambiguous.
+- Parsed configs expose non-optional fields for required data.
+- No revived Swift 2-era `++` / C-style `for` in new contributions.
 
 ---
 

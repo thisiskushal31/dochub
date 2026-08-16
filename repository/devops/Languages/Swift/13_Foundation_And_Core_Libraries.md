@@ -429,17 +429,17 @@ Collapsing all three into one `Error` string is how support tickets become archa
 
 ## 4. Staff-level review checklist
 
-- [ ] New concurrency uses async Foundation APIs, not fresh GCD pyramids.
-- [ ] Upload/download APIs match payload size (memory vs file).
-- [ ] Decode pipelines separate transport, HTTP status, and decode errors.
-- [ ] JSON date/key strategies are explicit and tested.
-- [ ] Calendar/timezone/locale behavior is documented; horror-story cases covered in tests.
-- [ ] Linux/Windows support claims match corelibs reality for used APIs.
-- [ ] Paths built with `URL` / `FileManager` / `FilePath`, not ad-hoc string joins.
-- [ ] Combine appears as brownfield or forced API — not the default for new work (even if Apple samples show it).
-- [ ] NotificationCenter is not the app-wide event bus without a clear reason.
-- [ ] `AttributedString` used only when rich text is required.
-- [ ] Formatters/locale behavior documented at API edges.
+- New concurrency uses async Foundation APIs, not fresh GCD pyramids.
+- Upload/download APIs match payload size (memory vs file).
+- Decode pipelines separate transport, HTTP status, and decode errors.
+- JSON date/key strategies are explicit and tested.
+- Calendar/timezone/locale behavior is documented; horror-story cases covered in tests.
+- Linux/Windows support claims match corelibs reality for used APIs.
+- Paths built with `URL` / `FileManager` / `FilePath`, not ad-hoc string joins.
+- Combine appears as brownfield or forced API — not the default for new work (even if Apple samples show it).
+- NotificationCenter is not the app-wide event bus without a clear reason.
+- `AttributedString` used only when rich text is required.
+- Formatters/locale behavior documented at API edges.
 
 ---
 

@@ -563,22 +563,22 @@ bundle exec fastlane pr
 
 ## 4. Staff-level review checklist
 
-- [ ] Primary pipeline documented: Xcode Cloud, Actions+`xcodebuild`, and/or fastlane — not folklore.
-- [ ] Xcode Cloud (if used): workflow stages named; **`ci_scripts`** and required env vars documented; fail closed on missing secrets.
-- [ ] Xcode version printed and **pinned** on every Apple job; runner image label intentional (`macos-14` / `macos-15`, not accidental latest).
-- [ ] Shared scheme + configuration match chapter **18** contract; `ExportOptions.plist` reviewed when exporting without the Organizer.
-- [ ] Secrets injected from a secret store; ASC API key preferred; nothing signing-related committed.
-- [ ] fastlane: `setup_ci` on bots; `app_store_connect_api_key`; `match` **readonly** on CI; build numbers monotonic.
-- [ ] Test **plan** named in CI; parallel testing intentional; unique `-resultBundlePath` / DerivedData per job; `.xcresult` retained on failure.
-- [ ] Actions: `concurrency` cancel for PR noise; `workflow_dispatch` or tags for distribute; UTF-8 locale; Bundler-pinned fastlane when used.
-- [ ] Build vs upload jobs separated when blast radius matters.
-- [ ] PR / main / release / TestFlight gates are distinct; TestFlight **groups** + changelog intentional.
-- [ ] dSYMs / symbols uploaded with the release binary when a crash reporter is in play.
-- [ ] Archive dry-run exists if PRs only simulator-test.
-- [ ] SPM / DerivedData cache keys include Xcode + dependency lock hashes.
-- [ ] macOS outside-store shipping has a **notarization + staple** story when required (or Xcode Cloud notarize post-action documented).
-- [ ] Failure triage order is known to on-call (pins before product archaeology).
-- [ ] Package-only projects are not wasting macOS minutes without reason.
+- Primary pipeline documented: Xcode Cloud, Actions+`xcodebuild`, and/or fastlane — not folklore.
+- Xcode Cloud (if used): workflow stages named; **`ci_scripts`** and required env vars documented; fail closed on missing secrets.
+- Xcode version printed and **pinned** on every Apple job; runner image label intentional (`macos-14` / `macos-15`, not accidental latest).
+- Shared scheme + configuration match chapter **18** contract; `ExportOptions.plist` reviewed when exporting without the Organizer.
+- Secrets injected from a secret store; ASC API key preferred; nothing signing-related committed.
+- fastlane: `setup_ci` on bots; `app_store_connect_api_key`; `match` **readonly** on CI; build numbers monotonic.
+- Test **plan** named in CI; parallel testing intentional; unique `-resultBundlePath` / DerivedData per job; `.xcresult` retained on failure.
+- Actions: `concurrency` cancel for PR noise; `workflow_dispatch` or tags for distribute; UTF-8 locale; Bundler-pinned fastlane when used.
+- Build vs upload jobs separated when blast radius matters.
+- PR / main / release / TestFlight gates are distinct; TestFlight **groups** + changelog intentional.
+- dSYMs / symbols uploaded with the release binary when a crash reporter is in play.
+- Archive dry-run exists if PRs only simulator-test.
+- SPM / DerivedData cache keys include Xcode + dependency lock hashes.
+- macOS outside-store shipping has a **notarization + staple** story when required (or Xcode Cloud notarize post-action documented).
+- Failure triage order is known to on-call (pins before product archaeology).
+- Package-only projects are not wasting macOS minutes without reason.
 
 ---
 

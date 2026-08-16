@@ -202,11 +202,11 @@ EOF did not land as some compiler experiments assumed; later 0.8.x **removed** t
 
 ## 4. Staff-level review checklist
 
-- [ ] Each `assembly` block has a **written reason** and a test.
-- [ ] No assembly on user-balance arithmetic unless it is a known, tested math primitive.
-- [ ] Memory-safe annotations are true or absent.
-- [ ] Storage packing / proxy slots have a layout test.
-- [ ] New hires are not told “real Solidity is assembly.”
+- Each `assembly` block has a **written reason** and a test.
+- No assembly on user-balance arithmetic unless it is a known, tested math primitive.
+- Memory-safe annotations are true or absent.
+- Storage packing / proxy slots have a layout test.
+- New hires are not told “real Solidity is assembly.”
 
 ---
 

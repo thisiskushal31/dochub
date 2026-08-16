@@ -197,17 +197,17 @@ If you ship an HTTP API, a game, or a desktop UI, you will likely pick a **frame
 
 ### Staff checklist
 
-- [ ] Domain fit is explicit (CLI / agent / sidecar / embedded / WASM)—not “rewrite everything in Rust.”
-- [ ] Runtime model (sync vs async) is documented and consistent.
-- [ ] CLI: clap-class parsing pattern, exit codes, and `--version` are intentional.
-- [ ] Agents/sidecars: privilege drop (Unix capabilities where applicable), config reload, and backpressure are designed—not afterthoughts.
-- [ ] Embedded: `no_std` / `alloc` / **PAC–HAL–BSP** (and optional RTOS/executor) boundaries documented; allocator and OOM policy explicit when using heap without `std`.
-- [ ] `unsafe`/FFI and `build.rs` inventoried for infra-facing binaries.
-- [ ] Supported OS/arch (and MCU/`wasm32` targets if any) tested in CI against the real host runtime.
-- [ ] Brownfield edition noted; MSRV noted if declared.
-- [ ] Interop with Go/C is process- or ABI-documented.
-- [ ] WASM (if any) distinguishes unknown-host vs WASI-class needs; **host** limits/capabilities documented; triples re-verified on toolchain bumps.
-- [ ] Web/game/GUI framework (if any) chosen with an explicit rubric—not as a stand-in for language competence.
+- Domain fit is explicit (CLI / agent / sidecar / embedded / WASM)—not “rewrite everything in Rust.”
+- Runtime model (sync vs async) is documented and consistent.
+- CLI: clap-class parsing pattern, exit codes, and `--version` are intentional.
+- Agents/sidecars: privilege drop (Unix capabilities where applicable), config reload, and backpressure are designed—not afterthoughts.
+- Embedded: `no_std` / `alloc` / **PAC–HAL–BSP** (and optional RTOS/executor) boundaries documented; allocator and OOM policy explicit when using heap without `std`.
+- `unsafe`/FFI and `build.rs` inventoried for infra-facing binaries.
+- Supported OS/arch (and MCU/`wasm32` targets if any) tested in CI against the real host runtime.
+- Brownfield edition noted; MSRV noted if declared.
+- Interop with Go/C is process- or ABI-documented.
+- WASM (if any) distinguishes unknown-host vs WASI-class needs; **host** limits/capabilities documented; triples re-verified on toolchain bumps.
+- Web/game/GUI framework (if any) chosen with an explicit rubric—not as a stand-in for language competence.
 
 ---
 

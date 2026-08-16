@@ -292,11 +292,11 @@ Stay here for a lab counter or a greeting. Payroll, tokens, and wallets wait unt
 
 ## 4. Staff-level review checklist
 
-- [ ] Newcomers can explain **EOA vs contract**, **call vs transaction**, and **why gas exists** without slogans.
-- [ ] First contract has **SPDX**, a **0.8.x pragma**, and a **view** read path separate from a write path.
-- [ ] Learning deploys stay on **Remix VM** or a **local node**, not a funded mainnet wallet.
-- [ ] Someone recorded **which solc** compiled the hello (Remix and/or Foundry).
-- [ ] No seed phrases, private keys, or “approve this random token” steps appear in onboarding notes.
+- Newcomers can explain **EOA vs contract**, **call vs transaction**, and **why gas exists** without slogans.
+- First contract has **SPDX**, a **0.8.x pragma**, and a **view** read path separate from a write path.
+- Learning deploys stay on **Remix VM** or a **local node**, not a funded mainnet wallet.
+- Someone recorded **which solc** compiled the hello (Remix and/or Foundry).
+- No seed phrases, private keys, or “approve this random token” steps appear in onboarding notes.
 
 ---
 

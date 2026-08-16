@@ -199,11 +199,11 @@ Enums encode as `uint8` unless they need more (ABI). Out-of-range `enum` convers
 
 ## 4. Staff-level review checklist
 
-- [ ] No unexplained downcasts (`uint256` → `uint8` / `uint128`).
-- [ ] Money and IDs are not mixed as raw `uint256` if the team has wrapper types.
-- [ ] `string` in storage is justified, not copied from a tutorial.
-- [ ] `address(0)` checked where an address is configuration.
-- [ ] Interface types used at call sites instead of everything being `address`.
+- No unexplained downcasts (`uint256` → `uint8` / `uint128`).
+- Money and IDs are not mixed as raw `uint256` if the team has wrapper types.
+- `string` in storage is justified, not copied from a tutorial.
+- `address(0)` checked where an address is configuration.
+- Interface types used at call sites instead of everything being `address`.
 
 ---
 

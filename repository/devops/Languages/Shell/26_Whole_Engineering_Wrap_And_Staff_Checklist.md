@@ -187,86 +187,86 @@ Use this section for hiring bars, promotion conversations, and release readiness
 
 **Shell subsets (chapter 22)**
 
-- [ ] Incidents name mode + dialect + host (not “the shell failed”).
-- [ ] Scripting is treated as one subset; interactive/login/restricted/config/host subsets are not collapsed into it.
-- [ ] Aliases/completions/prompt plugins are interactive-only; automation is self-contained.
-- [ ] Execute vs `source` / dot-source is an explicit library contract.
-- [ ] `$SHELL` / account login shell is not used as the script interpreter identity.
-- [ ] `BASH_ENV` / `ENV` are not load-bearing in CI images.
-- [ ] Restricted shell (`rbash`) is not mistaken for a complete sandbox.
-- [ ] Terminal emulator / tmux / sshd are not confused with dialect choice.
+- Incidents name mode + dialect + host (not “the shell failed”).
+- Scripting is treated as one subset; interactive/login/restricted/config/host subsets are not collapsed into it.
+- Aliases/completions/prompt plugins are interactive-only; automation is self-contained.
+- Execute vs `source` / dot-source is an explicit library contract.
+- `$SHELL` / account login shell is not used as the script interpreter identity.
+- `BASH_ENV` / `ENV` are not load-bearing in CI images.
+- Restricted shell (`rbash`) is not mistaken for a complete sandbox.
+- Terminal emulator / tmux / sshd are not confused with dialect choice.
 
 **Command catalog (chapters 27–32)**
 
-- [ ] Engineers can open atlas **27** and find any DevOps shell command by name.
-- [ ] Builtin vs external vs cmdlet resolution is deliberate (`type` / `Get-Command`) — chapter **28**/**31**.
-- [ ] Identity/time/env/disk commands are OS-gated where GNU≠BSD (**29**).
-- [ ] Downloads use fail-modes + checksums; no `curl|sh` / `iex` installers (**30**, **18**).
-- [ ] PowerShell scripts use full cmdlet names; cmd is thin legacy (**31**).
-- [ ] Specialty tools (`jq`, `ss`) are not mistaken for the whole command surface.
-- [ ] Beginners can climb Stage 0→10 on **32**; tickets name emulator vs shell vs command vs OS.
-- [ ] Estate inventory includes Debian dash, RHEL Bash-as-`sh`, Alpine BusyBox, macOS BSD, Windows PS edition, and legacy net-tools/systemd fallbacks where needed.
+- Engineers can open atlas **27** and find any DevOps shell command by name.
+- Builtin vs external vs cmdlet resolution is deliberate (`type` / `Get-Command`) — chapter **28**/**31**.
+- Identity/time/env/disk commands are OS-gated where GNU≠BSD (**29**).
+- Downloads use fail-modes + checksums; no `curl|sh` / `iex` installers (**30**, **18**).
+- PowerShell scripts use full cmdlet names; cmd is thin legacy (**31**).
+- Specialty tools (`jq`, `ss`) are not mistaken for the whole command surface.
+- Beginners can climb Stage 0→10 on **32**; tickets name emulator vs shell vs command vs OS.
+- Estate inventory includes Debian dash, RHEL Bash-as-`sh`, Alpine BusyBox, macOS BSD, Windows PS edition, and legacy net-tools/systemd fallbacks where needed.
 
 **Dialect & pins**
 
-- [ ] Shebang / workflow `shell:` matches dialect actually used.
-- [ ] Bash 3.2 / 5.x and PS 5.1 / 7.x constraints documented for each supported agent.
-- [ ] PowerShell **2.0** (if found) treated as legacy estate risk—not a supported dialect for new work.
-- [ ] POSIX `sh` scripts free of Bashisms **or** shebang corrected.
-- [ ] BusyBox/Alpine in scope ⇒ runtime evidence, not only Ubuntu CI.
-- [ ] Distro `/bin/sh` provider recorded (dash / Bash-as-sh / BusyBox) for each Linux class claimed (chapter **20**).
-- [ ] macOS BSD vs GNU flag differences handled for shipped scripts.
-- [ ] zsh interactive config not load-bearing for automation.
-- [ ] macOS era noted (pre-Catalina Bash interactive vs Catalina+ zsh) when personal configs or IR matter (chapter **21**).
-- [ ] Legacy fleet inventory exists: interpreter majors, scheduled-task absolute paths, installer shebangs.
+- Shebang / workflow `shell:` matches dialect actually used.
+- Bash 3.2 / 5.x and PS 5.1 / 7.x constraints documented for each supported agent.
+- PowerShell **2.0** (if found) treated as legacy estate risk—not a supported dialect for new work.
+- POSIX `sh` scripts free of Bashisms **or** shebang corrected.
+- BusyBox/Alpine in scope ⇒ runtime evidence, not only Ubuntu CI.
+- Distro `/bin/sh` provider recorded (dash / Bash-as-sh / BusyBox) for each Linux class claimed (chapter **20**).
+- macOS BSD vs GNU flag differences handled for shipped scripts.
+- zsh interactive config not load-bearing for automation.
+- macOS era noted (pre-Catalina Bash interactive vs Catalina+ zsh) when personal configs or IR matter (chapter **21**).
+- Legacy fleet inventory exists: interpreter majors, scheduled-task absolute paths, installer shebangs.
 
 **Language & robustness**
 
-- [ ] Quoting correct; `--` / `-LiteralPath` used where needed.
-- [ ] Bash production scripts use `set -euo pipefail` (or documented exception); `pipefail` not claimed under `dash`.
-- [ ] Traps/`finally` clean temps and preserve status.
-- [ ] PowerShell sets `$ErrorActionPreference` intentionally; checks `$LASTEXITCODE` after natives.
-- [ ] Background processes have wait/kill policy when used.
+- Quoting correct; `--` / `-LiteralPath` used where needed.
+- Bash production scripts use `set -euo pipefail` (or documented exception); `pipefail` not claimed under `dash`.
+- Traps/`finally` clean temps and preserve status.
+- PowerShell sets `$ErrorActionPreference` intentionally; checks `$LASTEXITCODE` after natives.
+- Background processes have wait/kill policy when used.
 
 **Commands & data**
 
-- [ ] No `ls`-parsing; portable `find`/`stat`/`sed` strategies (or OS-gated).
-- [ ] JSON via `jq` / `ConvertFrom-Json`, not brittle `sed`.
-- [ ] PATH/Coreutils/Git Bash/WSL identity known on Windows agents.
-- [ ] Destructive paths validated (`${VAR:?}`) before `rm`/`Remove-Item -Recurse`.
+- No `ls`-parsing; portable `find`/`stat`/`sed` strategies (or OS-gated).
+- JSON via `jq` / `ConvertFrom-Json`, not brittle `sed`.
+- PATH/Coreutils/Git Bash/WSL identity known on Windows agents.
+- Destructive paths validated (`${VAR:?}`) before `rm`/`Remove-Item -Recurse`.
 
 **Quality**
 
-- [ ] ShellCheck CI gate on shell scripts; disables rare and justified.
-- [ ] PSScriptAnalyzer on PowerShell trees when present.
-- [ ] Smoke tests for entrypoints; destructive tests use temps.
-- [ ] Negative-path coverage for allowlists/required env.
+- ShellCheck CI gate on shell scripts; disables rare and justified.
+- PSScriptAnalyzer on PowerShell trees when present.
+- Smoke tests for entrypoints; destructive tests use temps.
+- Negative-path coverage for allowlists/required env.
 
 **Security**
 
-- [ ] No `eval`/`Invoke-Expression` on untrusted/remote strings.
-- [ ] No unverified `curl | sh` / `irm | iex` in supported paths.
-- [ ] Secrets not on argv; not logged; CI masking on.
-- [ ] Allowlists for env/region-like inputs; path traversal rejected.
-- [ ] CLM/application-control tested where Windows fleet requires it.
-- [ ] Execution Policy not treated as a security boundary.
-- [ ] Webhook/chatops cannot pass free-form shell.
-- [ ] Engagement / AppSec notes record interpreter version and `/bin/sh` provider per OS class.
-- [ ] Legacy trees reviewed for unquoted expansion density—not only new PRs.
-- [ ] Persistence hypotheses consider macOS Bash vs zsh rc by era and Linux `/etc/profile.d`.
-- [ ] Living-off-the-land dialects present on the estate (Bash/`sh`, PowerShell, cmd) named for logging/controls.
+- No `eval`/`Invoke-Expression` on untrusted/remote strings.
+- No unverified `curl | sh` / `irm | iex` in supported paths.
+- Secrets not on argv; not logged; CI masking on.
+- Allowlists for env/region-like inputs; path traversal rejected.
+- CLM/application-control tested where Windows fleet requires it.
+- Execution Policy not treated as a security boundary.
+- Webhook/chatops cannot pass free-form shell.
+- Engagement / AppSec notes record interpreter version and `/bin/sh` provider per OS class.
+- Legacy trees reviewed for unquoted expansion density—not only new PRs.
+- Persistence hypotheses consider macOS Bash vs zsh rc by era and Linux `/etc/profile.d`.
+- Living-off-the-land dialects present on the estate (Bash/`sh`, PowerShell, cmd) named for logging/controls.
 
 **Delivery & placement**
 
-- [ ] CI workflows thin; logic in reviewed scripts.
-- [ ] Bash vs `pwsh` vs WSL choice matches chapter 19 table.
-- [ ] OS matrix matches README claims.
-- [ ] New batch/cmd logic rejected unless hard dependency documented.
-- [ ] Graduation criteria exist when glue outgrows shell.
-- [ ] Invariants notebook updated for the product.
-- [ ] OS companion chapters consulted when host policy (TCC, ACL, systemd) matters.
-- [ ] Beginner onboarding starts at chapter **00** (not mid-track at 01).
-- [ ] Flag-decode, jq, and recon specialty (**23–25**) covered for security/ops owners before wrap **26** sign-off.
+- CI workflows thin; logic in reviewed scripts.
+- Bash vs `pwsh` vs WSL choice matches chapter 19 table.
+- OS matrix matches README claims.
+- New batch/cmd logic rejected unless hard dependency documented.
+- Graduation criteria exist when glue outgrows shell.
+- Invariants notebook updated for the product.
+- OS companion chapters consulted when host policy (TCC, ACL, systemd) matters.
+- Beginner onboarding starts at chapter **00** (not mid-track at 01).
+- Flag-decode, jq, and recon specialty (**23–25**) covered for security/ops owners before wrap **26** sign-off.
 
 ### Use as a hiring / promotion rubric
 

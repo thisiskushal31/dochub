@@ -220,18 +220,18 @@ Microbenchmarks that run under the **dev/debug** profile measure the wrong binar
 
 ### Staff checklist
 
-- [ ] Host and each release target triple are documented; **tier** expectations match CI reality.
-- [ ] `rustup target add` (target std) is automated; host tools vs cross-linker/`build.rs` C toolchain needs are listed.
-- [ ] `cargo build --release --target …` succeeds in a **clean** environment; incremental cache policy documented.
-- [ ] Faster linkers (mold/lld), if used, are optional/pinned—not an undocumented laptop-only requirement.
-- [ ] musl/static claims are verified with linkage inspection + runtime smoke test.
-- [ ] Release **`panic`** strategy (`unwind` vs `abort`) is chosen and documented.
-- [ ] Strip / debuginfo / split-debuginfo policy exists (what ships vs what is archived).
-- [ ] Toolchain and `Cargo.lock` are pinned for release builds.
-- [ ] Profile overrides (`lto`, `codegen-units`, `strip`, `opt-level`, `panic`) are intentional and reviewed for CI cost.
-- [ ] Portable release CI does **not** bake `target-cpu=native` (or ambient laptop `RUSTFLAGS`) into public artifacts.
-- [ ] Benchmarks run release-like profiles with `black_box`/harness discipline; not used as noisy merge blockers.
-- [ ] WASM (if shipped) has a size budget and CI check.
+- Host and each release target triple are documented; **tier** expectations match CI reality.
+- `rustup target add` (target std) is automated; host tools vs cross-linker/`build.rs` C toolchain needs are listed.
+- `cargo build --release --target …` succeeds in a **clean** environment; incremental cache policy documented.
+- Faster linkers (mold/lld), if used, are optional/pinned—not an undocumented laptop-only requirement.
+- musl/static claims are verified with linkage inspection + runtime smoke test.
+- Release **`panic`** strategy (`unwind` vs `abort`) is chosen and documented.
+- Strip / debuginfo / split-debuginfo policy exists (what ships vs what is archived).
+- Toolchain and `Cargo.lock` are pinned for release builds.
+- Profile overrides (`lto`, `codegen-units`, `strip`, `opt-level`, `panic`) are intentional and reviewed for CI cost.
+- Portable release CI does **not** bake `target-cpu=native` (or ambient laptop `RUSTFLAGS`) into public artifacts.
+- Benchmarks run release-like profiles with `black_box`/harness discipline; not used as noisy merge blockers.
+- WASM (if shipped) has a size budget and CI check.
 
 ---
 

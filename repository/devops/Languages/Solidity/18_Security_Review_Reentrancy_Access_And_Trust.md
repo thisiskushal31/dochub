@@ -207,15 +207,15 @@ Step-by-step “how to drain X,” copy-paste attacker contracts aimed at live a
 
 ## 4. Staff-level review checklist
 
-- [ ] No `tx.origin` authentication.
-- [ ] External calls occur **after** state updates, or a lock is present and justified.
-- [ ] ETH/token out is pull-style when recipients are unconstrained.
-- [ ] Roles are split or the single-admin risk is accepted **in writing**.
-- [ ] Signatures are EIP-712 (or equivalent) with nonce + chain id.
-- [ ] No funds depend on `prevrandao` / `blockhash` as randomness.
-- [ ] Oracle/admin/upgrade trust is explicit.
-- [ ] No untrusted `delegatecall`.
-- [ ] Tests cover unauthorized callers and failed external calls.
+- No `tx.origin` authentication.
+- External calls occur **after** state updates, or a lock is present and justified.
+- ETH/token out is pull-style when recipients are unconstrained.
+- Roles are split or the single-admin risk is accepted **in writing**.
+- Signatures are EIP-712 (or equivalent) with nonce + chain id.
+- No funds depend on `prevrandao` / `blockhash` as randomness.
+- Oracle/admin/upgrade trust is explicit.
+- No untrusted `delegatecall`.
+- Tests cover unauthorized callers and failed external calls.
 
 ---
 

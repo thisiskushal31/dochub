@@ -520,25 +520,25 @@ Portfolio sketch:
 
 ### Staff-level review checklist
 
-- [ ] Topics, partition keys, and ordering domains are documented.
-- [ ] Delivery semantics named as a **system property** (at-most / at-least / exactly-once scope)—not a Scala flag.
-- [ ] Idempotent producer / transactional API / `read_committed` used only where the design requires—and reviewed for prerequisites.
-- [ ] Consumer commit strategy matches the stated semantic; auto-commit justified or disabled.
-- [ ] Schema format + evolution/compatibility policy agreed; registry placement documented if used.
-- [ ] Spark vs Scala service consumer choice justified (volume, latency, side effects).
-- [ ] If Spark Kafka **sink**: duplicates expected unless dedupe strategy exists (at-least-once sink contract).
-- [ ] Lag SLO, rebalance behavior, and shutdown story exist.
-- [ ] Poison-pill / DLQ policy written and metered.
-- [ ] TLS, SASL/auth, and ACLs least privilege; no public anonymous produce/consume.
-- [ ] No secrets in headers/payloads/logs; PII handling for retained topics defined.
-- [ ] Retention vs lag SLO coherent; compaction chosen only for changelog-shaped topics.
-- [ ] Compaction/tombstone behavior documented for changelog topics; erasure/PII obligations cover sinks and DLQs—not topic config alone.
-- [ ] Schema registry: named owners for register/delete/compat; break-compat CI gate on producer changes.
-- [ ] PII topics use separate produce vs consume principals (least privilege each).
-- [ ] Offset reset / replay requires approval and audit; runbook covers sink idempotency and exfil risk.
-- [ ] Client and (if Spark) connector versions pinned to platform-approved lines.
-- [ ] Runbooks: replay, stuck partition, DLQ drain, credential rotation.
-- [ ] Produce authorization treated as a trust boundary for downstream consumers.
+- Topics, partition keys, and ordering domains are documented.
+- Delivery semantics named as a **system property** (at-most / at-least / exactly-once scope)—not a Scala flag.
+- Idempotent producer / transactional API / `read_committed` used only where the design requires—and reviewed for prerequisites.
+- Consumer commit strategy matches the stated semantic; auto-commit justified or disabled.
+- Schema format + evolution/compatibility policy agreed; registry placement documented if used.
+- Spark vs Scala service consumer choice justified (volume, latency, side effects).
+- If Spark Kafka **sink**: duplicates expected unless dedupe strategy exists (at-least-once sink contract).
+- Lag SLO, rebalance behavior, and shutdown story exist.
+- Poison-pill / DLQ policy written and metered.
+- TLS, SASL/auth, and ACLs least privilege; no public anonymous produce/consume.
+- No secrets in headers/payloads/logs; PII handling for retained topics defined.
+- Retention vs lag SLO coherent; compaction chosen only for changelog-shaped topics.
+- Compaction/tombstone behavior documented for changelog topics; erasure/PII obligations cover sinks and DLQs—not topic config alone.
+- Schema registry: named owners for register/delete/compat; break-compat CI gate on producer changes.
+- PII topics use separate produce vs consume principals (least privilege each).
+- Offset reset / replay requires approval and audit; runbook covers sink idempotency and exfil risk.
+- Client and (if Spark) connector versions pinned to platform-approved lines.
+- Runbooks: replay, stuck partition, DLQ drain, credential rotation.
+- Produce authorization treated as a trust boundary for downstream consumers.
 
 ---
 

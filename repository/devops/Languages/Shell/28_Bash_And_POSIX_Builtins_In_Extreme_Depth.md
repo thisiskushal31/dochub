@@ -687,17 +687,17 @@ Any `eval` / `iex` requires threat model (chapter **18**).
 
 ### Staff-level review checklist
 
-- [ ] Scripts do not rely on aliases or completion builtins.
-- [ ] `command -v` used for discovery; `type -a` in debugging.
-- [ ] `cd`/`export`/`read` understood as current-shell effects.
-- [ ] `[[` / `declare -A` / `mapfile` gated to Bash 4+/5 shebangs.
-- [ ] `set -euo pipefail` not claimed under dash.
-- [ ] `trap` cleanup on EXIT for temps.
-- [ ] `eval` absent or justified.
-- [ ] Sourced libs use `return`, not casual `exit`.
-- [ ] Job-control builtins not used as CI orchestration.
-- [ ] Scripts tested under the estate’s real `/bin/sh` (dash vs Bash vs ash)—chapter **20**/**32**.
-- [ ] Bash 3.2 estates inventoried before using Bash 4+ builtins.
+- Scripts do not rely on aliases or completion builtins.
+- `command -v` used for discovery; `type -a` in debugging.
+- `cd`/`export`/`read` understood as current-shell effects.
+- `[[` / `declare -A` / `mapfile` gated to Bash 4+/5 shebangs.
+- `set -euo pipefail` not claimed under dash.
+- `trap` cleanup on EXIT for temps.
+- `eval` absent or justified.
+- Sourced libs use `return`, not casual `exit`.
+- Job-control builtins not used as CI orchestration.
+- Scripts tested under the estate’s real `/bin/sh` (dash vs Bash vs ash)—chapter **20**/**32**.
+- Bash 3.2 estates inventoried before using Bash 4+ builtins.
 
 ---
 

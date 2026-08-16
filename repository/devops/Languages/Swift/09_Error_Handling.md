@@ -462,17 +462,17 @@ Completion-handler APIs often surface `(Value?, Error?)`. Prefer migrating to `a
 
 ## 4. Staff-level review checklist
 
-- [ ] Failures propagate with `throws` or `Result`; not silently ignored.
-- [ ] No `try!` on IO/network/decode without documented crash rationale.
-- [ ] Labs’ alternatives used instead of force-try culture.
-- [ ] Domain vs transport vs decode failures distinguishable at façades.
-- [ ] `catch` blocks do something useful; empty `catch` justified rarely.
-- [ ] Error payloads are log-safe (no secrets).
-- [ ] Typed throws match a stable closed set — erasure/reify at edges is deliberate.
-- [ ] Bridged `NSError` not re-exposed as out-parameters in new Swift.
-- [ ] Cancellation rethrown or mapped to an explicit cancel case (see chapter **10**).
-- [ ] `fatalError` / `Never` for true impossibilities; user/input failures use `throw`.
-- [ ] `defer` cleans up on throwing paths.
+- Failures propagate with `throws` or `Result`; not silently ignored.
+- No `try!` on IO/network/decode without documented crash rationale.
+- Labs’ alternatives used instead of force-try culture.
+- Domain vs transport vs decode failures distinguishable at façades.
+- `catch` blocks do something useful; empty `catch` justified rarely.
+- Error payloads are log-safe (no secrets).
+- Typed throws match a stable closed set — erasure/reify at edges is deliberate.
+- Bridged `NSError` not re-exposed as out-parameters in new Swift.
+- Cancellation rethrown or mapped to an explicit cancel case (see chapter **10**).
+- `fatalError` / `Never` for true impossibilities; user/input failures use `throw`.
+- `defer` cleans up on throwing paths.
 
 ---
 

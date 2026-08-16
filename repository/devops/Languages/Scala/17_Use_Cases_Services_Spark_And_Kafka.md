@@ -274,19 +274,19 @@ def handleRecord(raw: String): HandleResult =
 
 ### Staff-level review checklist
 
-- [ ] Workload type is explicit: service vs Spark job vs Kafka-adjacent tool—not a blur.
-- [ ] Scala version matches the **platform** that will run the code.
-- [ ] Frameworks (HTTP, streams) have owners and shutdown/timeout stories.
-- [ ] Spark jobs document delivery semantics, jar provenance, and driver/executor memory.
-- [ ] Pure transforms are unit-tested outside the cluster when feasible.
-- [ ] Kafka clients document serializer, consumer group, and ACL needs.
-- [ ] Poison / DLQ policy is written, not improvised in logs.
-- [ ] Cross-lane shared libs use a version story that survives Scala 2/3 splits.
-- [ ] Local-mode demos are not the only proof; staging resembles prod topology.
-- [ ] Decision against Java/Kotlin/SQL-only is written when Scala is chosen for greenfield.
-- [ ] Cost/capacity owners exist for shuffle-heavy jobs and high-retention topics.
-- [ ] Runbooks name which team owns service SLOs vs job failures vs consumer lag.
-- [ ] Readers who own the data plane continue to chapters **18–19**; security owners continue to **20**.
+- Workload type is explicit: service vs Spark job vs Kafka-adjacent tool—not a blur.
+- Scala version matches the **platform** that will run the code.
+- Frameworks (HTTP, streams) have owners and shutdown/timeout stories.
+- Spark jobs document delivery semantics, jar provenance, and driver/executor memory.
+- Pure transforms are unit-tested outside the cluster when feasible.
+- Kafka clients document serializer, consumer group, and ACL needs.
+- Poison / DLQ policy is written, not improvised in logs.
+- Cross-lane shared libs use a version story that survives Scala 2/3 splits.
+- Local-mode demos are not the only proof; staging resembles prod topology.
+- Decision against Java/Kotlin/SQL-only is written when Scala is chosen for greenfield.
+- Cost/capacity owners exist for shuffle-heavy jobs and high-retention topics.
+- Runbooks name which team owns service SLOs vs job failures vs consumer lag.
+- Readers who own the data plane continue to chapters **18–19**; security owners continue to **20**.
 
 ---
 

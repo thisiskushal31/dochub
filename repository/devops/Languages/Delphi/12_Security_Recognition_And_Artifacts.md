@@ -56,11 +56,11 @@ If you **maintain** or **deploy** Delphi applications:
 
 ## Hardening checklist (defensive)
 
-- [ ] Use **Release** build; strip or restrict debug info and symbols in production.
-- [ ] Keep **RTL**, **VCL**, and third-party **packages** updated; track CVEs and advisories.
-- [ ] Validate and sanitize all **inputs** (files, network, user input); avoid **hardcoded** secrets.
-- [ ] Run with **least privilege** (no admin unless required); set **requestedExecutionLevel** in manifest appropriately.
-- [ ] Sign binaries and protect **deployment** (installer, updates) from tampering.
+- Use **Release** build; strip or restrict debug info and symbols in production.
+- Keep **RTL**, **VCL**, and third-party **packages** updated; track CVEs and advisories.
+- Validate and sanitize all **inputs** (files, network, user input); avoid **hardcoded** secrets.
+- Run with **least privilege** (no admin unless required); set **requestedExecutionLevel** in manifest appropriately.
+- Sign binaries and protect **deployment** (installer, updates) from tampering.
 
 ---
 

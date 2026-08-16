@@ -313,19 +313,19 @@ Do not treat these as the only correct answers—treat them as **shared nouns**:
 
 ## 4. Staff-level review checklist
 
-- [ ] New work picked **script / package / app / tool lane** on purpose.
-- [ ] Worked sketch (or equivalent) names **pins** and **risks**, not only a folder tree.
-- [ ] Shared logic lives in a package when a second consumer exists (or clearly will).
-- [ ] App PRs do not grow unbounded business rules inside views.
-- [ ] Portable packages are not silently Apple-only without declaring it.
-- [ ] Server Swift work has an explicit handoff owner and pin story — not pretend coverage from this chapter.
-- [ ] NIO/Vapor mentions are treated as **doors**, not invented deep dives here.
-- [ ] Linux CI package jobs stay separate from Mac app jobs when both exist.
-- [ ] Brownfield ObjC mixes have a boundary plan (nullability, modules)—not random `@objc` sprinkles.
-- [ ] macOS utilities distributed outside MAS have signing/notarize literacy when required.
-- [ ] CI shape matches the artifact (Linux vs Mac) — chapter **21**.
-- [ ] Security-sensitive use cases cite signing/privacy habits from chapter **20**.
-- [ ] Team can explain why *this* ticket was not a Bash one-liner — or admit it should have been Shell track work.
+- New work picked **script / package / app / tool lane** on purpose.
+- Worked sketch (or equivalent) names **pins** and **risks**, not only a folder tree.
+- Shared logic lives in a package when a second consumer exists (or clearly will).
+- App PRs do not grow unbounded business rules inside views.
+- Portable packages are not silently Apple-only without declaring it.
+- Server Swift work has an explicit handoff owner and pin story — not pretend coverage from this chapter.
+- NIO/Vapor mentions are treated as **doors**, not invented deep dives here.
+- Linux CI package jobs stay separate from Mac app jobs when both exist.
+- Brownfield ObjC mixes have a boundary plan (nullability, modules)—not random `@objc` sprinkles.
+- macOS utilities distributed outside MAS have signing/notarize literacy when required.
+- CI shape matches the artifact (Linux vs Mac) — chapter **21**.
+- Security-sensitive use cases cite signing/privacy habits from chapter **20**.
+- Team can explain why *this* ticket was not a Bash one-liner — or admit it should have been Shell track work.
 
 ---
 

@@ -324,17 +324,17 @@ Use this as a PR template section:
 
 ```text
 ## SwiftUI review
-- [ ] Framework named (SwiftUI / UIKit / AppKit / bridge)
-- [ ] Source of truth: one owner; table role identified (@State / @Observable / Binding / …)
-- [ ] New models prefer @Observable when deployment allows
-- [ ] Navigation: single stack owner; path typed or NavigationPath justified
-- [ ] Hosting bridges: model lifetime + no double nav bars
-- [ ] @MainActor / isolation clear under team Swift 6 posture
-- [ ] No domain logic that belongs in a package trapped in `body`
-- [ ] Dynamic Type / text style: no obvious clip at large sizes (glance)
-- [ ] Accessibility label on new icon-only controls
-- [ ] CI: xcodebuild test on pinned sim — not “preview looks fine”
-- [ ] Secrets/tokens not in view literals
+- Framework named (SwiftUI / UIKit / AppKit / bridge)
+- Source of truth: one owner; table role identified (@State / @Observable / Binding / …)
+- New models prefer @Observable when deployment allows
+- Navigation: single stack owner; path typed or NavigationPath justified
+- Hosting bridges: model lifetime + no double nav bars
+- @MainActor / isolation clear under team Swift 6 posture
+- No domain logic that belongs in a package trapped in `body`
+- Dynamic Type / text style: no obvious clip at large sizes (glance)
+- Accessibility label on new icon-only controls
+- CI: xcodebuild test on pinned sim — not “preview looks fine”
+- Secrets/tokens not in view literals
 ```
 
 ### 7. Lab — state ownership review card
@@ -366,18 +366,18 @@ CI proof:      [ ] xcodebuild test on pinned sim  [ ] preview only (insufficient
 
 ## 4. Staff-level review checklist
 
-- [ ] Reviewers can name whether the change is **SwiftUI**, **UIKit**, **AppKit**, or a **bridge**.
-- [ ] State ownership map is applied: singular source of truth; wrappers match Observation vs Combine era.
-- [ ] New work prefers **`@Observable`** when deployment allows; `ObservableObject` treated as brownfield literacy with a step-by-step migration path when touched.
-- [ ] `NavigationStack` path typing is intentional; navigation ownership is clear—no double stacks.
-- [ ] UIKit↔SwiftUI hosting boundaries are intentional (host or representable), not accidental framework soup.
-- [ ] New shared logic did **not** land only inside a view file if another target needs it.
-- [ ] UI updates are main-actor-safe under the team’s Swift 6 checking posture.
-- [ ] CI runs real test actions on a **pinned** simulator — previews alone are insufficient.
-- [ ] Dynamic Type glance done for layout-touching PRs; icon-only controls have labels.
-- [ ] “How to review a SwiftUI PR” checklist is used (or an org equivalent).
-- [ ] Nobody treats this handbook chapter as a substitute for Apple’s SwiftUI/UIKit design docs.
-- [ ] Brownfield UIKit is improved at the edges — not big-bang rewritten without a migration plan.
+- Reviewers can name whether the change is **SwiftUI**, **UIKit**, **AppKit**, or a **bridge**.
+- State ownership map is applied: singular source of truth; wrappers match Observation vs Combine era.
+- New work prefers **`@Observable`** when deployment allows; `ObservableObject` treated as brownfield literacy with a step-by-step migration path when touched.
+- `NavigationStack` path typing is intentional; navigation ownership is clear—no double stacks.
+- UIKit↔SwiftUI hosting boundaries are intentional (host or representable), not accidental framework soup.
+- New shared logic did **not** land only inside a view file if another target needs it.
+- UI updates are main-actor-safe under the team’s Swift 6 checking posture.
+- CI runs real test actions on a **pinned** simulator — previews alone are insufficient.
+- Dynamic Type glance done for layout-touching PRs; icon-only controls have labels.
+- “How to review a SwiftUI PR” checklist is used (or an org equivalent).
+- Nobody treats this handbook chapter as a substitute for Apple’s SwiftUI/UIKit design docs.
+- Brownfield UIKit is improved at the edges — not big-bang rewritten without a migration plan.
 
 ---
 

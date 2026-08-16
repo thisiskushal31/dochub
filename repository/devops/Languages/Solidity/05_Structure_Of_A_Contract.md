@@ -177,12 +177,12 @@ Same “declared on the contract” feeling as storage, different location (chap
 
 ## 4. Staff-level review checklist
 
-- [ ] State that never changes after deploy is `constant` or `immutable`, not a writable slot.
-- [ ] Constructor arguments are **documented** and **tested** (wrong admin address is a class of incident).
-- [ ] Visibility is explicit on every function.
-- [ ] Inheritance list is short enough to draw on a whiteboard, including storage order.
-- [ ] ETH-acceptance policy is intentional (`receive`/`fallback` present or absent on purpose).
-- [ ] No initializer-without-constructor unless an upgrade pattern is an explicit project choice.
+- State that never changes after deploy is `constant` or `immutable`, not a writable slot.
+- Constructor arguments are **documented** and **tested** (wrong admin address is a class of incident).
+- Visibility is explicit on every function.
+- Inheritance list is short enough to draw on a whiteboard, including storage order.
+- ETH-acceptance policy is intentional (`receive`/`fallback` present or absent on purpose).
+- No initializer-without-constructor unless an upgrade pattern is an explicit project choice.
 
 ---
 

@@ -74,77 +74,77 @@
     "path": "11_Sbt_Projects_Dependencies_And_Packaging.md",
     "type": "file",
     "sha": "",
-    "size": 15633
+    "size": 15593
   },
   {
     "name": "12_Java_Interop_And_The_JVM.md",
     "path": "12_Java_Interop_And_The_JVM.md",
     "type": "file",
     "sha": "",
-    "size": 17169
+    "size": 17121
   },
   {
     "name": "13_Concurrency_Futures_And_Effects_Literacy.md",
     "path": "13_Concurrency_Futures_And_Effects_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 22360
+    "size": 22300
   },
   {
     "name": "14_Testing_Style_And_Scaladoc.md",
     "path": "14_Testing_Style_And_Scaladoc.md",
     "type": "file",
     "sha": "",
-    "size": 19005
+    "size": 18945
   },
   {
     "name": "15_Security_And_Supply_Chain.md",
     "path": "15_Security_And_Supply_Chain.md",
     "type": "file",
     "sha": "",
-    "size": 26373
+    "size": 26301
   },
   {
     "name": "16_Build_Containers_And_JVM_Operations.md",
     "path": "16_Build_Containers_And_JVM_Operations.md",
     "type": "file",
     "sha": "",
-    "size": 18218
+    "size": 18158
   },
   {
     "name": "17_Use_Cases_Services_Spark_And_Kafka.md",
     "path": "17_Use_Cases_Services_Spark_And_Kafka.md",
     "type": "file",
     "sha": "",
-    "size": 15311
+    "size": 15259
   },
   {
     "name": "18_Spark_Data_Engineering_And_Architecture.md",
     "path": "18_Spark_Data_Engineering_And_Architecture.md",
     "type": "file",
     "sha": "",
-    "size": 26922
+    "size": 26854
   },
   {
     "name": "19_Kafka_Streaming_And_Pipeline_Architecture.md",
     "path": "19_Kafka_Streaming_And_Pipeline_Architecture.md",
     "type": "file",
     "sha": "",
-    "size": 29244
+    "size": 29168
   },
   {
     "name": "20_DevSecOps_Threat_Modeling_And_Hardening.md",
     "path": "20_DevSecOps_Threat_Modeling_And_Hardening.md",
     "type": "file",
     "sha": "",
-    "size": 24926
+    "size": 24838
   },
   {
     "name": "21_Whole_Engineering_Wrap_And_Staff_Checklist.md",
     "path": "21_Whole_Engineering_Wrap_And_Staff_Checklist.md",
     "type": "file",
     "sha": "",
-    "size": 17544
+    "size": 17416
   },
   {
     "name": "README.md",

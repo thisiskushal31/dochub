@@ -455,17 +455,17 @@ Date: _______________  Hire: _______________  Buddy: _______________
 
 ## 4. Staff-level review checklist
 
-- [ ] A new engineer can reproduce **four hellos** (REPL/one-liner, script, executable package, library package) with documented commands on the **target OS** (Mac and/or Linux).
-- [ ] `swift --version` (and `xcodebuild -version` on Apple CI) is recorded for the environment.
-- [ ] The team can say whether the thing under review is a **playground**, **package**, or **app target**.
-- [ ] Library vs executable product choice matches the job (import vs run).
-- [ ] Swiftly / swift.org / Xcode / Docker channel is **named** per workflow—not “whatever is on PATH.”
-- [ ] Scripts used in CI are checked in, pinned, and reviewed—not copied from chat.
-- [ ] New work assumes **Swift 6.3.x** narrative; old syntax in samples is labeled legacy, not cargo-culted.
-- [ ] Nobody confuses “compiler installed” with “language mode is 6.”
-- [ ] Onboarding includes `which swift` / `type -a swift` / `xcrun --find swift` so PATH ghosts are visible.
-- [ ] Playground success is never accepted as a CI substitute.
-- [ ] New hire Mac checklist exists and has been run at least once this quarter.
+- A new engineer can reproduce **four hellos** (REPL/one-liner, script, executable package, library package) with documented commands on the **target OS** (Mac and/or Linux).
+- `swift --version` (and `xcodebuild -version` on Apple CI) is recorded for the environment.
+- The team can say whether the thing under review is a **playground**, **package**, or **app target**.
+- Library vs executable product choice matches the job (import vs run).
+- Swiftly / swift.org / Xcode / Docker channel is **named** per workflow—not “whatever is on PATH.”
+- Scripts used in CI are checked in, pinned, and reviewed—not copied from chat.
+- New work assumes **Swift 6.3.x** narrative; old syntax in samples is labeled legacy, not cargo-culted.
+- Nobody confuses “compiler installed” with “language mode is 6.”
+- Onboarding includes `which swift` / `type -a swift` / `xcrun --find swift` so PATH ghosts are visible.
+- Playground success is never accepted as a CI substitute.
+- New hire Mac checklist exists and has been run at least once this quarter.
 
 ---
 

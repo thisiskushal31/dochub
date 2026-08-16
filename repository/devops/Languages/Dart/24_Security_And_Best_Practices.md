@@ -125,14 +125,14 @@ Security and maintainability for Dart and Flutter span **language use**, **depen
 
 ## Checklist (quick reference)
 
-- [ ] **Types and null safety:** No unnecessary **dynamic** or **!**; use promotion and **?** correctly.
-- [ ] **Analysis:** **dart analyze** clean (or documented exceptions); recommended lints enabled; CI fails on errors.
-- [ ] **Dependencies:** From pub (verified when possible); no known advisories; lockfile and SDK pinned; **dart pub get** in CI.
-- [ ] **Secrets:** Not in repo or logs; use env or secret manager; access restricted.
-- [ ] **Network:** Validate input; use HTTPS and timeouts; handle errors.
-- [ ] **Interop:** Validate at boundary; prefer typed interop; document responsibilities.
-- [ ] **Platform:** Minimum permissions; ProGuard/R8 (Android); entitlements and ATS (iOS); CSP and HTTPS (web).
-- [ ] **Build/deploy:** Reproducible build; analyze and test in CI; sign with protected keys; document versions.
+- **Types and null safety:** No unnecessary **dynamic** or **!**; use promotion and **?** correctly.
+- **Analysis:** **dart analyze** clean (or documented exceptions); recommended lints enabled; CI fails on errors.
+- **Dependencies:** From pub (verified when possible); no known advisories; lockfile and SDK pinned; **dart pub get** in CI.
+- **Secrets:** Not in repo or logs; use env or secret manager; access restricted.
+- **Network:** Validate input; use HTTPS and timeouts; handle errors.
+- **Interop:** Validate at boundary; prefer typed interop; document responsibilities.
+- **Platform:** Minimum permissions; ProGuard/R8 (Android); entitlements and ATS (iOS); CSP and HTTPS (web).
+- **Build/deploy:** Reproducible build; analyze and test in CI; sign with protected keys; document versions.
 
 ---
 

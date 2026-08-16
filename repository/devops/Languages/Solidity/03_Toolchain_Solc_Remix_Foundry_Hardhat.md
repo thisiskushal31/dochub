@@ -209,12 +209,12 @@ Those commands are how you connect chapters **12** / **14** / **21** to a live a
 
 ## 4. Staff-level review checklist
 
-- [ ] Repo documents **how to compile and test in one page** (Foundry, Hardhat, or both).
-- [ ] `solc` version is in **config**, not only in tribal Slack.
-- [ ] Remix is not the release compiler of record.
-- [ ] Install instructions for CI do not depend on an unpinned nightly or a raw pipe-to-shell on shared runners.
-- [ ] If both Foundry and Hardhat exist, **each** has a stated job (fuzz vs TS integration)—not two drifting sources of truth.
-- [ ] Remappings / npm lockfile are reviewed like application code.
+- Repo documents **how to compile and test in one page** (Foundry, Hardhat, or both).
+- `solc` version is in **config**, not only in tribal Slack.
+- Remix is not the release compiler of record.
+- Install instructions for CI do not depend on an unpinned nightly or a raw pipe-to-shell on shared runners.
+- If both Foundry and Hardhat exist, **each** has a stated job (fuzz vs TS integration)—not two drifting sources of truth.
+- Remappings / npm lockfile are reviewed like application code.
 
 ---
 

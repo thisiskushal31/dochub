@@ -426,13 +426,13 @@ strace -e trace=openat,write,execve -f tclsh hello.tcl 2>&1 | head -n 40
 
 ## Staff-level review checklist
 
-- [ ] Newcomers can explain Tcl in one minute: **embeddable command language**, **strings**, **substitute then dispatch**.
-- [ ] Team can name whether a script is **standalone**, **Expect**, **embedded**, or **wish**.
-- [ ] Runbooks record **binary path + `info patchlevel`** per environment.
-- [ ] Reviews ask what **OS resources** a change touches (files, FDs, child processes, network)—not only “does the Tcl parse.”
-- [ ] Nobody confuses “invalid command name” in laptop `tclsh` with a language bug when the command is **host-specific**.
-- [ ] History literacy is enough to explain **why Expect/Tk exist** and **why 8.6 still appears**.
-- [ ] Newcomers can map common verbs (`puts`, `open`/`gets`, `exec`, `socket`, `cd`, `glob`/`file`, Expect `spawn`) to **write / open+read / fork+execve / socket / chdir / stat+readdir / pty**—at least one level deep.
+- Newcomers can explain Tcl in one minute: **embeddable command language**, **strings**, **substitute then dispatch**.
+- Team can name whether a script is **standalone**, **Expect**, **embedded**, or **wish**.
+- Runbooks record **binary path + `info patchlevel`** per environment.
+- Reviews ask what **OS resources** a change touches (files, FDs, child processes, network)—not only “does the Tcl parse.”
+- Nobody confuses “invalid command name” in laptop `tclsh` with a language bug when the command is **host-specific**.
+- History literacy is enough to explain **why Expect/Tk exist** and **why 8.6 still appears**.
+- Newcomers can map common verbs (`puts`, `open`/`gets`, `exec`, `socket`, `cd`, `glob`/`file`, Expect `spawn`) to **write / open+read / fork+execve / socket / chdir / stat+readdir / pty**—at least one level deep.
 
 ---
 

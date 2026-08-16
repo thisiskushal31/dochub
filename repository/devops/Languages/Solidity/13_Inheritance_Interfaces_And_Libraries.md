@@ -228,12 +228,12 @@ Import **Ownable**, **ReentrancyGuard**, **ERC20** when you need those exact sem
 
 ## 4. Staff-level review checklist
 
-- [ ] Inheritance graph fits on one slide; linearization is understood.
-- [ ] No accidental state shadowing.
-- [ ] External calls go through **interfaces**, not mystery `address.call`.
-- [ ] Libraries are `internal` unless a link reason is written down.
-- [ ] OZ (or similar) version is **pinned** and matches tests.
-- [ ] `super` usage matches C3, not “the class I see above in the file.”
+- Inheritance graph fits on one slide; linearization is understood.
+- No accidental state shadowing.
+- External calls go through **interfaces**, not mystery `address.call`.
+- Libraries are `internal` unless a link reason is written down.
+- OZ (or similar) version is **pinned** and matches tests.
+- `super` usage matches C3, not “the class I see above in the file.”
 
 ---
 

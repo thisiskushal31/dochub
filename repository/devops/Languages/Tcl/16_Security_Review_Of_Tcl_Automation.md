@@ -261,16 +261,16 @@ Use severity to drive conversation; still require fixes for block-level issues.
 
 ## Staff-level review checklist
 
-- [ ] Untrusted input never reaches `eval` / `subst` / dynamic `source` without a proven validator.
-- [ ] `exec` / `open |` use fixed programs and discrete arguments; no shell-ish concatenation from tickets/users.
-- [ ] File paths for `source` / packages are controlled; `auto_path` is intentional.
-- [ ] Expect secrets come from a vault/CI secret mechanism; not committed; logs redacted.
-- [ ] Timeouts exist on interactive waits; failure paths do not dump secrets.
-- [ ] `package require` / `load` sources are pinned and trusted for the environment.
-- [ ] Untrusted script evaluation uses restricted/safe interps **and** OS-level isolation where threat requires it.
-- [ ] Privileged automation runs on least-privilege accounts with audited access to modify scripts.
-- [ ] Tcl 9 vs 8.6 differences considered for encoding/path validation on brownfield hosts.
-- [ ] No “test credentials” left in examples that match production patterns.
+- Untrusted input never reaches `eval` / `subst` / dynamic `source` without a proven validator.
+- `exec` / `open |` use fixed programs and discrete arguments; no shell-ish concatenation from tickets/users.
+- File paths for `source` / packages are controlled; `auto_path` is intentional.
+- Expect secrets come from a vault/CI secret mechanism; not committed; logs redacted.
+- Timeouts exist on interactive waits; failure paths do not dump secrets.
+- `package require` / `load` sources are pinned and trusted for the environment.
+- Untrusted script evaluation uses restricted/safe interps **and** OS-level isolation where threat requires it.
+- Privileged automation runs on least-privilege accounts with audited access to modify scripts.
+- Tcl 9 vs 8.6 differences considered for encoding/path validation on brownfield hosts.
+- No “test credentials” left in examples that match production patterns.
 
 ---
 

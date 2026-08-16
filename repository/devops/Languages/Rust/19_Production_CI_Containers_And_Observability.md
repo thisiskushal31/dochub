@@ -226,20 +226,20 @@ Libraries that emit via the **`log`** facade and binaries that standardize on **
 
 ### Staff checklist
 
-- [ ] Stable toolchain pinned; MSRV job exists if MSRV is declared.
-- [ ] `cargo test` / fmt / Clippy (as adopted) gate merges.
-- [ ] `--locked` (or equivalent) on release and main CI builds.
-- [ ] Advisory / deny CI job present and owned.
-- [ ] `target/` and registry caches keyed by lockfile **and** rust-toolchain (and OS/triple as needed).
-- [ ] Multi-stage image; final stage non-root; pinned base; distroless/scratch tradeoffs match linkage (glibc vs musl).
-- [ ] Liveness/readiness defined with migration and dependency-down examples; path names (`/healthz` vs `/ready`) documented but behavior is authoritative; probes do not stampede deps.
-- [ ] SBOM / provenance artifacts follow org policy and match `--locked` release builds.
-- [ ] Structured logging policy (`println!`/`dbg!` not the service path); `log`/`tracing` roles clear; binary owns `tracing-subscriber` (+ `log` bridge if needed).
-- [ ] OpenTelemetry (if used) is an export option with sampling/redaction—not a mandated vendor stack.
-- [ ] Correlation IDs + redaction policy.
-- [ ] Metrics (counters/histograms) for golden signals; scrape vs push documented.
-- [ ] Panic policy documented; `RUST_BACKTRACE` enabled in staging; graceful shutdown tested under SIGTERM.
-- [ ] No secrets in image layers or compile-time env baked into the binary.
+- Stable toolchain pinned; MSRV job exists if MSRV is declared.
+- `cargo test` / fmt / Clippy (as adopted) gate merges.
+- `--locked` (or equivalent) on release and main CI builds.
+- Advisory / deny CI job present and owned.
+- `target/` and registry caches keyed by lockfile **and** rust-toolchain (and OS/triple as needed).
+- Multi-stage image; final stage non-root; pinned base; distroless/scratch tradeoffs match linkage (glibc vs musl).
+- Liveness/readiness defined with migration and dependency-down examples; path names (`/healthz` vs `/ready`) documented but behavior is authoritative; probes do not stampede deps.
+- SBOM / provenance artifacts follow org policy and match `--locked` release builds.
+- Structured logging policy (`println!`/`dbg!` not the service path); `log`/`tracing` roles clear; binary owns `tracing-subscriber` (+ `log` bridge if needed).
+- OpenTelemetry (if used) is an export option with sampling/redaction—not a mandated vendor stack.
+- Correlation IDs + redaction policy.
+- Metrics (counters/histograms) for golden signals; scrape vs push documented.
+- Panic policy documented; `RUST_BACKTRACE` enabled in staging; graceful shutdown tested under SIGTERM.
+- No secrets in image layers or compile-time env baked into the binary.
 
 ---
 

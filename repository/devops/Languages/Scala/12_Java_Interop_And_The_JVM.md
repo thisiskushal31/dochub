@@ -342,18 +342,18 @@ def safeMessage(t: Throwable): String =
 
 ### Staff-level review checklist
 
-- [ ] Nulls converted at Java boundaries; no `null` in core Scala domain types.
-- [ ] Collections converted intentionally; no long-lived shared mutable Java lists in domain code.
-- [ ] SAM/lambda targets clear for Java APIs.
-- [ ] **Facade ownership** named for each Java-facing or Java-backed edge (who maintains signatures and null contracts).
-- [ ] Classpath: Scala binary version, **evictions**, and `Provided` runtimes reviewed against the deploy image—not only `sbt run`.
-- [ ] Build JDK, `--release`/target, and runtime JDK documented and aligned.
-- [ ] Java-facing APIs avoid exposing hard-to-call Scala encodings without a facade.
-- [ ] Framework **annotations placed on the members the framework actually reads** (field vs accessor vs constructor)—verified, not assumed.
-- [ ] HashMap/get nulls wrapped with `Option(...)` before domain use.
-- [ ] No untrusted reflective load/`setAccessible` shortcuts; SPI/`META-INF/services` and plugin jars have owners.
-- [ ] Case classes at serializer boundaries use owned codecs; no untrusted Java deserialization (chapter 15).
-- [ ] Logs/metrics do not exfiltrate `getMessage` / Java-client detail that may hold secrets or PII.
+- Nulls converted at Java boundaries; no `null` in core Scala domain types.
+- Collections converted intentionally; no long-lived shared mutable Java lists in domain code.
+- SAM/lambda targets clear for Java APIs.
+- **Facade ownership** named for each Java-facing or Java-backed edge (who maintains signatures and null contracts).
+- Classpath: Scala binary version, **evictions**, and `Provided` runtimes reviewed against the deploy image—not only `sbt run`.
+- Build JDK, `--release`/target, and runtime JDK documented and aligned.
+- Java-facing APIs avoid exposing hard-to-call Scala encodings without a facade.
+- Framework **annotations placed on the members the framework actually reads** (field vs accessor vs constructor)—verified, not assumed.
+- HashMap/get nulls wrapped with `Option(...)` before domain use.
+- No untrusted reflective load/`setAccessible` shortcuts; SPI/`META-INF/services` and plugin jars have owners.
+- Case classes at serializer boundaries use owned codecs; no untrusted Java deserialization (chapter 15).
+- Logs/metrics do not exfiltrate `getMessage` / Java-client detail that may hold secrets or PII.
 
 ---
 

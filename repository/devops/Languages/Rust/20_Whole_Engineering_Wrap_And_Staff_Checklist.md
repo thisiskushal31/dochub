@@ -113,48 +113,48 @@ Keep a living note per product: edition, MSRV/`rust-version`, toolchain pin, fea
 
 **Language & design**
 
-- [ ] Ownership/`Result` conventions are consistent at crate boundaries.
-- [ ] Drop/RAII and smart-pointer choices are understood at API edges; **`Weak`** (or redesign) breaks `Rc`/`Arc` cycles—no accidental leaks or interior-mutability sprawl.
-- [ ] **Typestate / builder** patterns used for dangerous configs so illegal states are hard to construct (not a boolean soup of half-init options).
-- [ ] **`Deref` / `AsRef` API hygiene** (API Guidelines literacy): conversions are intentional and documented—no surprising deref coercion or “stringly” `AsRef` surfaces that hide allocation/ownership costs.
-- [ ] Time APIs: **`Instant`** for intervals/deadlines; **`SystemTime`** for wall clock—never confuse the two in probes or timeouts.
-- [ ] Macros literacy: team can **consume** macros safely; **writing** `macro_rules!` / **proc-macros** is justified, owned, and tested (ch 03/04).
-- [ ] Serde (or equivalent) used at trust boundaries for config/wire formats—not ad-hoc parsers for hostile input.
-- [ ] Module visibility matches threat and API surface; **`std` map** used to find the right module before inventing wrappers.
-- [ ] Async/sync model is intentional and documented (**Pin**/cancellation; executor/reactor/waker literacy; no unbounded spawn).
-- [ ] **Atomics discipline**: `Ordering` justified; no invented lock-free protocols for multi-location invariants.
-- [ ] **Edition 2024 migration awareness** when bumping editions (especially `unsafe extern` and unsafe mangling attributes).
+- Ownership/`Result` conventions are consistent at crate boundaries.
+- Drop/RAII and smart-pointer choices are understood at API edges; **`Weak`** (or redesign) breaks `Rc`/`Arc` cycles—no accidental leaks or interior-mutability sprawl.
+- **Typestate / builder** patterns used for dangerous configs so illegal states are hard to construct (not a boolean soup of half-init options).
+- **`Deref` / `AsRef` API hygiene** (API Guidelines literacy): conversions are intentional and documented—no surprising deref coercion or “stringly” `AsRef` surfaces that hide allocation/ownership costs.
+- Time APIs: **`Instant`** for intervals/deadlines; **`SystemTime`** for wall clock—never confuse the two in probes or timeouts.
+- Macros literacy: team can **consume** macros safely; **writing** `macro_rules!` / **proc-macros** is justified, owned, and tested (ch 03/04).
+- Serde (or equivalent) used at trust boundaries for config/wire formats—not ad-hoc parsers for hostile input.
+- Module visibility matches threat and API surface; **`std` map** used to find the right module before inventing wrappers.
+- Async/sync model is intentional and documented (**Pin**/cancellation; executor/reactor/waker literacy; no unbounded spawn).
+- **Atomics discipline**: `Ordering` justified; no invented lock-free protocols for multi-location invariants.
+- **Edition 2024 migration awareness** when bumping editions (especially `unsafe extern` and unsafe mangling attributes).
 
 **Security & supply chain**
 
-- [ ] `unsafe`/FFI inventory exists and is reviewed; **FFI strings** and **validity/aliasing/provenance** obligations documented; **Miri** (and sanitizers if adopted) for unsafe-owning crates.
-- [ ] Apps build with committed lockfile (`--locked` in CI).
-- [ ] Libraries follow **semver** (and crate compatibility) discipline for public API changes—not “just bump major when tired.”
-- [ ] **cargo-audit** / **cargo-deny** (or equivalent) and update discipline are owned; optional vet/crev-class review only if org policy says so.
-- [ ] `build.rs` / proc-macro trust reviewed for new deps; new crates pass maintainer/`unsafe`/license checklist—not download count alone.
-- [ ] Secrets never in git; runtime injection only; never ship in crates or images; in-memory zeroization considered for long-lived credentials.
+- `unsafe`/FFI inventory exists and is reviewed; **FFI strings** and **validity/aliasing/provenance** obligations documented; **Miri** (and sanitizers if adopted) for unsafe-owning crates.
+- Apps build with committed lockfile (`--locked` in CI).
+- Libraries follow **semver** (and crate compatibility) discipline for public API changes—not “just bump major when tired.”
+- **cargo-audit** / **cargo-deny** (or equivalent) and update discipline are owned; optional vet/crev-class review only if org policy says so.
+- `build.rs` / proc-macro trust reviewed for new deps; new crates pass maintainer/`unsafe`/license checklist—not download count alone.
+- Secrets never in git; runtime injection only; never ship in crates or images; in-memory zeroization considered for long-lived credentials.
 
 **Quality**
 
-- [ ] Tests, rustfmt, and Clippy gates match repo policy; contract/snapshot tests where CLI/config surfaces need them.
-- [ ] Public APIs have docs appropriate to consumers; fuzz/coverage practices for hostile parsers where relevant.
+- Tests, rustfmt, and Clippy gates match repo policy; contract/snapshot tests where CLI/config surfaces need them.
+- Public APIs have docs appropriate to consumers; fuzz/coverage practices for hostile parsers where relevant.
 
 **Delivery & operations**
 
-- [ ] Stable (and MSRV/`rust-version` if declared) CI matrix is green; toolchain pin distinct from advertised MSRV when both exist.
-- [ ] Release targets verified (tier-aware); musl/static claims checked; **panic** profile (`unwind` vs `abort`) chosen deliberately.
-- [ ] **Portable vs native CPU flags**: public/CI artifacts do not bake `target-cpu=native` or ambient laptop `RUSTFLAGS`.
-- [ ] Containers multi-stage, non-root, pinned bases; SBOM/provenance per org policy.
-- [ ] Tracing/logging policy (`log` facade vs `tracing` spans/subscribers + bridge); correlation IDs; redaction; OTel export optional.
-- [ ] Metrics, health (readiness vs liveness—behavior over path names), graceful shutdown in place.
-- [ ] **`RUST_BACKTRACE`** enabled in staging (prod policy documented); panic hooks structured.
-- [ ] CI caches key on lockfile **and** rust-toolchain; advisory/deny job present.
+- Stable (and MSRV/`rust-version` if declared) CI matrix is green; toolchain pin distinct from advertised MSRV when both exist.
+- Release targets verified (tier-aware); musl/static claims checked; **panic** profile (`unwind` vs `abort`) chosen deliberately.
+- **Portable vs native CPU flags**: public/CI artifacts do not bake `target-cpu=native` or ambient laptop `RUSTFLAGS`.
+- Containers multi-stage, non-root, pinned bases; SBOM/provenance per org policy.
+- Tracing/logging policy (`log` facade vs `tracing` spans/subscribers + bridge); correlation IDs; redaction; OTel export optional.
+- Metrics, health (readiness vs liveness—behavior over path names), graceful shutdown in place.
+- **`RUST_BACKTRACE`** enabled in staging (prod policy documented); panic hooks structured.
+- CI caches key on lockfile **and** rust-toolchain; advisory/deny job present.
 
 **Portfolio fit**
 
-- [ ] Rust chosen for the right domain reasons (chapter 18)—or exit criteria defined for a rewrite.
-- [ ] **`no_std` / `alloc` / PAC–HAL–BSP / WASM (`wasm32` + host)** adopted only when the domain requires them—not as default complexity.
-- [ ] Product frameworks (HTTP/game/GUI), if used, pass the evaluation rubric and have a named owner.
+- Rust chosen for the right domain reasons (chapter 18)—or exit criteria defined for a rewrite.
+- **`no_std` / `alloc` / PAC–HAL–BSP / WASM (`wasm32` + host)** adopted only when the domain requires them—not as default complexity.
+- Product frameworks (HTTP/game/GUI), if used, pass the evaluation rubric and have a named owner.
 
 ### Use as a hiring / promotion rubric
 

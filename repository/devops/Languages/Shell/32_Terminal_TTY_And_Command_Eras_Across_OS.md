@@ -475,14 +475,14 @@ ps -ef 2>/dev/null | head -n 5 || ps aux | head -n 5
 
 ### Staff-level review checklist
 
-- [ ] Team curriculum follows Stage 0→10 (or documented equivalent).
-- [ ] Tickets name layer: emulator vs shell vs command vs OS.
-- [ ] Distro matrix includes Debian dash, RHEL Bash-as-`sh`, Alpine BusyBox, macOS BSD, Windows PS edition.
-- [ ] Brownfield runbooks include legacy fallbacks (`netstat`/`ifconfig`/`service`) where estates require them.
-- [ ] Containers are proven as their own “distro class,” not assumed equal to Ubuntu laptops.
-- [ ] Windows Terminal / WSL not confused with “knowing PowerShell.”
-- [ ] Progressive labs exist for absolute beginners—not only staff checklists.
-- [ ] Teaching snippets use **commented code** and letter/parameter breakdowns (this chapter’s pattern).
+- Team curriculum follows Stage 0→10 (or documented equivalent).
+- Tickets name layer: emulator vs shell vs command vs OS.
+- Distro matrix includes Debian dash, RHEL Bash-as-`sh`, Alpine BusyBox, macOS BSD, Windows PS edition.
+- Brownfield runbooks include legacy fallbacks (`netstat`/`ifconfig`/`service`) where estates require them.
+- Containers are proven as their own “distro class,” not assumed equal to Ubuntu laptops.
+- Windows Terminal / WSL not confused with “knowing PowerShell.”
+- Progressive labs exist for absolute beginners—not only staff checklists.
+- Teaching snippets use **commented code** and letter/parameter breakdowns (this chapter’s pattern).
 
 ---
 

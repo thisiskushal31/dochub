@@ -337,21 +337,21 @@ def onSigterm(ready: HealthState, consumer: Consumer[String, Array[Byte]]): Unit
 
 ### Staff-level review checklist
 
-- [ ] CI pins sbt, Scala, and JDK; release artifacts embed build identity.
-- [ ] CI command list includes clean compile, test, and the owned package/publish task.
-- [ ] Tests gate packaging; main stays green.
-- [ ] Container images use agreed JDK major; multi-stage; non-root when possible; bases **digest-pinned** per policy.
-- [ ] Runtime hardening: read-only rootfs where feasible; capabilities dropped; no secrets in layers/build args.
-- [ ] Promote path verifies image SBOM/attestation for the digest being shipped (aligned with chapter 15).
-- [ ] Fat vs thin (or layered) packaging is intentional and documented.
-- [ ] Spark submits separate driver/executor memory; **provided** vs fat-jar conflicts are owned.
-- [ ] Memory/GC flags match container limits; headroom for non-heap use is considered.
-- [ ] Liveness vs readiness semantics are correct; probes are not self-DoS.
-- [ ] Metrics include JVM and application SLIs needed for on-call.
-- [ ] Graceful shutdown drains traffic and closes clients within a deadline.
-- [ ] Kafka consumers commit (as required) and `close` under SIGTERM within the grace period.
-- [ ] Heap dumps, JFR, and `jcmd` artifacts have a privacy, access, and retention policy.
-- [ ] Spark/Kafka deploy paths follow platform packaging rules—not only local `java -jar` habits.
+- CI pins sbt, Scala, and JDK; release artifacts embed build identity.
+- CI command list includes clean compile, test, and the owned package/publish task.
+- Tests gate packaging; main stays green.
+- Container images use agreed JDK major; multi-stage; non-root when possible; bases **digest-pinned** per policy.
+- Runtime hardening: read-only rootfs where feasible; capabilities dropped; no secrets in layers/build args.
+- Promote path verifies image SBOM/attestation for the digest being shipped (aligned with chapter 15).
+- Fat vs thin (or layered) packaging is intentional and documented.
+- Spark submits separate driver/executor memory; **provided** vs fat-jar conflicts are owned.
+- Memory/GC flags match container limits; headroom for non-heap use is considered.
+- Liveness vs readiness semantics are correct; probes are not self-DoS.
+- Metrics include JVM and application SLIs needed for on-call.
+- Graceful shutdown drains traffic and closes clients within a deadline.
+- Kafka consumers commit (as required) and `close` under SIGTERM within the grace period.
+- Heap dumps, JFR, and `jcmd` artifacts have a privacy, access, and retention policy.
+- Spark/Kafka deploy paths follow platform packaging rules—not only local `java -jar` habits.
 
 ---
 

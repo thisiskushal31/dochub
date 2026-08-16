@@ -401,18 +401,18 @@ for (i, value) in xs.enumerated() { print(i, value) }
 
 ## 4. Staff-level review checklist
 
-- [ ] Collection choice matches access pattern (array vs dictionary vs set).
-- [ ] Generic APIs require the weakest protocol that still works.
-- [ ] Custom collections claim only the capabilities they can uphold (no fake `RandomAccess`).
-- [ ] Chains that only need one pass consider `lazy` or a single loop when profiling shows pressure; lazy side effects avoided.
-- [ ] Slices / substrings are not treated as independent storage without copying when lifetime or mutation follows.
-- [ ] Indices are not mixed across collection values.
-- [ ] `Hashable`/`Equatable`/`Comparable` agree; no mutable fields that change hash while in a `Set`.
-- [ ] Codable wire names use `CodingKeys` **or** an explicit decoder strategy — not both fighting.
-- [ ] Regex use is readable and reviewed; Foundation regex only when bridging demands it.
-- [ ] FilePath assumptions match the toolchain pin (System package vs future stdlib); apps often stay on `URL`.
-- [ ] String work respects Unicode; byte counts use `utf8` when talking wire size.
-- [ ] No C-style index loops or `++` resurrected from old snippets.
+- Collection choice matches access pattern (array vs dictionary vs set).
+- Generic APIs require the weakest protocol that still works.
+- Custom collections claim only the capabilities they can uphold (no fake `RandomAccess`).
+- Chains that only need one pass consider `lazy` or a single loop when profiling shows pressure; lazy side effects avoided.
+- Slices / substrings are not treated as independent storage without copying when lifetime or mutation follows.
+- Indices are not mixed across collection values.
+- `Hashable`/`Equatable`/`Comparable` agree; no mutable fields that change hash while in a `Set`.
+- Codable wire names use `CodingKeys` **or** an explicit decoder strategy — not both fighting.
+- Regex use is readable and reviewed; Foundation regex only when bridging demands it.
+- FilePath assumptions match the toolchain pin (System package vs future stdlib); apps often stay on `URL`.
+- String work respects Unicode; byte counts use `utf8` when talking wire size.
+- No C-style index loops or `++` resurrected from old snippets.
 
 ---
 

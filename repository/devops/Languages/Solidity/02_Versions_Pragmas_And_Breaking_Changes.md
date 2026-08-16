@@ -193,12 +193,12 @@ Remix may offer “latest” while `foundry.toml` says `0.8.24`. Bytecode will d
 
 ## 4. Staff-level review checklist
 
-- [ ] Application sources use a **0.8.x** pragma; CI installs an **exact** `solc`.
-- [ ] `evmVersion` and via-IR are **named** in config, not left as tribal knowledge.
-- [ ] Remix (if used) is set to the **same** compiler family as CI.
-- [ ] Pre-0.8 files are labeled brownfield; new modules are not added in 0.7 style.
-- [ ] A compiler bump is a reviewable change (lockfile / config diff), not a silent Remix click.
-- [ ] Someone can answer “which known-bug list applies to our pin?”
+- Application sources use a **0.8.x** pragma; CI installs an **exact** `solc`.
+- `evmVersion` and via-IR are **named** in config, not left as tribal knowledge.
+- Remix (if used) is set to the **same** compiler family as CI.
+- Pre-0.8 files are labeled brownfield; new modules are not added in 0.7 style.
+- A compiler bump is a reviewable change (lockfile / config diff), not a silent Remix click.
+- Someone can answer “which known-bug list applies to our pin?”
 
 ---
 

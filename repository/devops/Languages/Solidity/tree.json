@@ -4,175 +4,175 @@
     "path": "00_First_Steps_On_The_EVM.md",
     "type": "file",
     "sha": "",
-    "size": 14401
+    "size": 14381
   },
   {
     "name": "01_What_Is_Solidity_And_The_EVM.md",
     "path": "01_What_Is_Solidity_And_The_EVM.md",
     "type": "file",
     "sha": "",
-    "size": 13986
+    "size": 13966
   },
   {
     "name": "02_Versions_Pragmas_And_Breaking_Changes.md",
     "path": "02_Versions_Pragmas_And_Breaking_Changes.md",
     "type": "file",
     "sha": "",
-    "size": 10354
+    "size": 10330
   },
   {
     "name": "03_Toolchain_Solc_Remix_Foundry_Hardhat.md",
     "path": "03_Toolchain_Solc_Remix_Foundry_Hardhat.md",
     "type": "file",
     "sha": "",
-    "size": 9204
+    "size": 9180
   },
   {
     "name": "04_Source_Files_SPDX_Pragma_And_Imports.md",
     "path": "04_Source_Files_SPDX_Pragma_And_Imports.md",
     "type": "file",
     "sha": "",
-    "size": 6810
+    "size": 6790
   },
   {
     "name": "05_Structure_Of_A_Contract.md",
     "path": "05_Structure_Of_A_Contract.md",
     "type": "file",
     "sha": "",
-    "size": 9050
+    "size": 9026
   },
   {
     "name": "06_Types_Value_Reference_And_Conversions.md",
     "path": "06_Types_Value_Reference_And_Conversions.md",
     "type": "file",
     "sha": "",
-    "size": 9649
+    "size": 9629
   },
   {
     "name": "07_Units_Globals_And_Blockchain_Context.md",
     "path": "07_Units_Globals_And_Blockchain_Context.md",
     "type": "file",
     "sha": "",
-    "size": 11656
+    "size": 11632
   },
   {
     "name": "08_Functions_Visibility_Modifiers_And_Payable.md",
     "path": "08_Functions_Visibility_Modifiers_And_Payable.md",
     "type": "file",
     "sha": "",
-    "size": 11210
+    "size": 11186
   },
   {
     "name": "09_Control_Flow_Errors_And_Checked_Math.md",
     "path": "09_Control_Flow_Errors_And_Checked_Math.md",
     "type": "file",
     "sha": "",
-    "size": 11043
+    "size": 11019
   },
   {
     "name": "10_Events_Custom_Errors_And_NatSpec.md",
     "path": "10_Events_Custom_Errors_And_NatSpec.md",
     "type": "file",
     "sha": "",
-    "size": 8750
+    "size": 8726
   },
   {
     "name": "11_Data_Locations_Storage_Memory_Calldata_Transient.md",
     "path": "11_Data_Locations_Storage_Memory_Calldata_Transient.md",
     "type": "file",
     "sha": "",
-    "size": 10561
+    "size": 10537
   },
   {
     "name": "12_Mappings_Arrays_Structs_And_Enums.md",
     "path": "12_Mappings_Arrays_Structs_And_Enums.md",
     "type": "file",
     "sha": "",
-    "size": 10149
+    "size": 10129
   },
   {
     "name": "13_Inheritance_Interfaces_And_Libraries.md",
     "path": "13_Inheritance_Interfaces_And_Libraries.md",
     "type": "file",
     "sha": "",
-    "size": 10104
+    "size": 10080
   },
   {
     "name": "14_ABI_Selectors_And_Encoding.md",
     "path": "14_ABI_Selectors_And_Encoding.md",
     "type": "file",
     "sha": "",
-    "size": 11163
+    "size": 11143
   },
   {
     "name": "15_Calls_Value_Transfer_And_Creating_Contracts.md",
     "path": "15_Calls_Value_Transfer_And_Creating_Contracts.md",
     "type": "file",
     "sha": "",
-    "size": 12349
+    "size": 12325
   },
   {
     "name": "16_Gas_Optimizer_ViaIR_And_Metadata.md",
     "path": "16_Gas_Optimizer_ViaIR_And_Metadata.md",
     "type": "file",
     "sha": "",
-    "size": 10179
+    "size": 10159
   },
   {
     "name": "17_Testing_With_Foundry_And_Hardhat.md",
     "path": "17_Testing_With_Foundry_And_Hardhat.md",
     "type": "file",
     "sha": "",
-    "size": 7832
+    "size": 7808
   },
   {
     "name": "18_Security_Review_Reentrancy_Access_And_Trust.md",
     "path": "18_Security_Review_Reentrancy_Access_And_Trust.md",
     "type": "file",
     "sha": "",
-    "size": 11731
+    "size": 11695
   },
   {
     "name": "19_Static_Analysis_SMTChecker_And_Audits.md",
     "path": "19_Static_Analysis_SMTChecker_And_Audits.md",
     "type": "file",
     "sha": "",
-    "size": 6837
+    "size": 6813
   },
   {
     "name": "20_DevOps_CI_Verify_Keys_And_Upgrades.md",
     "path": "20_DevOps_CI_Verify_Keys_And_Upgrades.md",
     "type": "file",
     "sha": "",
-    "size": 9848
+    "size": 9820
   },
   {
     "name": "21_Yul_Assembly_And_EVM_Internals_Literacy.md",
     "path": "21_Yul_Assembly_And_EVM_Internals_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 10022
+    "size": 10002
   },
   {
     "name": "22_Use_Cases_Tokens_Apps_And_Whole_Engineering.md",
     "path": "22_Use_Cases_Tokens_Apps_And_Whole_Engineering.md",
     "type": "file",
     "sha": "",
-    "size": 9188
+    "size": 9164
   },
   {
     "name": "23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
     "path": "23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
     "type": "file",
     "sha": "",
-    "size": 7273
+    "size": 7173
   },
   {
     "name": "24_Where_This_Is_Going_And_How_To_Stay_Oriented.md",
     "path": "24_Where_This_Is_Going_And_How_To_Stay_Oriented.md",
     "type": "file",
     "sha": "",
-    "size": 17661
+    "size": 17629
   },
   {
     "name": "README.md",

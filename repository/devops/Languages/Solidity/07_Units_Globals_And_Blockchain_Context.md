@@ -225,12 +225,12 @@ Do not branch on “if lots of gas remain, do extra work” as a safety check. C
 
 ## 4. Staff-level review checklist
 
-- [ ] No `tx.origin` in authorization.
-- [ ] No funds depend on `block.prevrandao` / `blockhash` as randomness.
-- [ ] Time-based logic is coarse enough for producer timestamp wiggle.
-- [ ] Signatures include **chain id** (or equivalent domain).
-- [ ] `msg.value` only on functions that are intentionally `payable`.
-- [ ] New code uses `block.prevrandao`, not `block.difficulty` / `now`.
+- No `tx.origin` in authorization.
+- No funds depend on `block.prevrandao` / `blockhash` as randomness.
+- Time-based logic is coarse enough for producer timestamp wiggle.
+- Signatures include **chain id** (or equivalent domain).
+- `msg.value` only on functions that are intentionally `payable`.
+- New code uses `block.prevrandao`, not `block.difficulty` / `now`.
 
 ---
 

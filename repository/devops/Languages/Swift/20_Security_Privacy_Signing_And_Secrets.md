@@ -732,25 +732,25 @@ Jailbreak-detection theater avoided: [ ] yes
 
 ## 4. Staff-level review checklist
 
-- [ ] Reviewer can narrate the **provisioning chain** (team → App ID → cert → profile → entitlements → codesign → TCC).
-- [ ] **Certificate class** matches destination (Development / Distribution / Developer ID Application|Installer).
-- [ ] CI artifact inspected with `codesign -vvv --deep --strict` and entitlements dump when signing is in doubt.
-- [ ] Profiles decoded when entitlement allowance is disputed.
-- [ ] No API keys, ASC keys, private certs, or match passphrases in git history of paths you ship.
-- [ ] Entitlement / App Group / Keychain group additions justified and mirrored in the portal; extensions included.
-- [ ] Keychain usage has clear **class / accessibility / access control** + logout deletion; tokens not in `UserDefaults`.
-- [ ] LocalAuthentication / biometry choices documented (including `.biometryCurrentSet` UX impact).
-- [ ] CryptoKit / Secure Enclave used thoughtfully; recovery policy written; no home-rolled protocols.
-- [ ] Privacy manifests updated for SDKs / required-reason APIs; reason codes **honest**; App Privacy answers consistent.
-- [ ] Third-party SDKs checked for manifest (and signature when required); pins reviewed; privacy report read.
-- [ ] ATS exceptions are documented waivers; pinning (if any) has a rotation runbook.
-- [ ] Permission usage descriptions match real features.
-- [ ] Mac Developer ID path: Hardened Runtime, notarization, staple considered and verified.
-- [ ] Secrets matrix is real: local / CI / ASC homes named; rotation + break-glass owners named.
-- [ ] Logging / analytics / crash / pasteboard risks reviewed for secrets.
-- [ ] Export compliance / encryption questions have a named non-engineering owner when needed.
-- [ ] App Attest / DeviceCheck (if present) have server failure policy—not folklore; no jailbreak-detection theater as a “control.”
-- [ ] On-call knows who can rotate signing secrets at 2 a.m.
+- Reviewer can narrate the **provisioning chain** (team → App ID → cert → profile → entitlements → codesign → TCC).
+- **Certificate class** matches destination (Development / Distribution / Developer ID Application|Installer).
+- CI artifact inspected with `codesign -vvv --deep --strict` and entitlements dump when signing is in doubt.
+- Profiles decoded when entitlement allowance is disputed.
+- No API keys, ASC keys, private certs, or match passphrases in git history of paths you ship.
+- Entitlement / App Group / Keychain group additions justified and mirrored in the portal; extensions included.
+- Keychain usage has clear **class / accessibility / access control** + logout deletion; tokens not in `UserDefaults`.
+- LocalAuthentication / biometry choices documented (including `.biometryCurrentSet` UX impact).
+- CryptoKit / Secure Enclave used thoughtfully; recovery policy written; no home-rolled protocols.
+- Privacy manifests updated for SDKs / required-reason APIs; reason codes **honest**; App Privacy answers consistent.
+- Third-party SDKs checked for manifest (and signature when required); pins reviewed; privacy report read.
+- ATS exceptions are documented waivers; pinning (if any) has a rotation runbook.
+- Permission usage descriptions match real features.
+- Mac Developer ID path: Hardened Runtime, notarization, staple considered and verified.
+- Secrets matrix is real: local / CI / ASC homes named; rotation + break-glass owners named.
+- Logging / analytics / crash / pasteboard risks reviewed for secrets.
+- Export compliance / encryption questions have a named non-engineering owner when needed.
+- App Attest / DeviceCheck (if present) have server failure policy—not folklore; no jailbreak-detection theater as a “control.”
+- On-call knows who can rotate signing secrets at 2 a.m.
 
 ---
 

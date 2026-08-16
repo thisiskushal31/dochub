@@ -219,53 +219,53 @@ Use this section as the track’s sign-off surface: hiring bars, promotion conve
 
 **Language & design**
 
-- [ ] Scala 3 idioms used in new modules unless platform forces 2.13; version recorded.
-- [ ] `Option`/`Either`/`Try` conventions consistent at boundaries; null contained at Java edges.
-- [ ] ADTs and pattern matching preferred over boolean/flag soup for domain states.
-- [ ] Packages/visibility match API and threat surface.
-- [ ] Java interop conversions explicit; no accidental collection/null leaks.
-- [ ] `implicit` / `given` usage is intentional and searchable—no wildcard conversion imports in app code.
+- Scala 3 idioms used in new modules unless platform forces 2.13; version recorded.
+- `Option`/`Either`/`Try` conventions consistent at boundaries; null contained at Java edges.
+- ADTs and pattern matching preferred over boolean/flag soup for domain states.
+- Packages/visibility match API and threat surface.
+- Java interop conversions explicit; no accidental collection/null leaks.
+- `implicit` / `given` usage is intentional and searchable—no wildcard conversion imports in app code.
 
 **Concurrency**
 
-- [ ] `ExecutionContext` (or platform scheduler) ownership is documented.
-- [ ] Blocking I/O isolated; timeouts on awaits and outbound calls.
-- [ ] Single concurrency story per service (futures **or** actors **or** effects)—no accidental stack of all three.
-- [ ] Graceful shutdown drains work and closes clients.
+- `ExecutionContext` (or platform scheduler) ownership is documented.
+- Blocking I/O isolated; timeouts on awaits and outbound calls.
+- Single concurrency story per service (futures **or** actors **or** effects)—no accidental stack of all three.
+- Graceful shutdown drains work and closes clients.
 
 **Quality**
 
-- [ ] One primary test framework story; `sbt test` required in CI.
-- [ ] Style guide + automation enforced; Scaladoc on public APIs.
-- [ ] Flakes owned; snapshots cannot silently rewrite.
+- One primary test framework story; `sbt test` required in CI.
+- Style guide + automation enforced; Scaladoc on public APIs.
+- Flakes owned; snapshots cannot silently rewrite.
 
 **Security & supply chain**
 
-- [ ] Secrets runtime-injected; never in git/jars/images.
-- [ ] Codecs safe; no untrusted Java serialization paths.
-- [ ] Dependencies and sbt plugins pinned; resolvers org-approved; triage owned.
-- [ ] Production logs redact tokens and sensitive fields.
+- Secrets runtime-injected; never in git/jars/images.
+- Codecs safe; no untrusted Java serialization paths.
+- Dependencies and sbt plugins pinned; resolvers org-approved; triage owned.
+- Production logs redact tokens and sensitive fields.
 
 **Delivery & operations**
 
-- [ ] CI pins sbt/Scala/JDK; artifacts embed build identity.
-- [ ] Container JDK matches CI; non-root when possible; fat vs thin intentional.
-- [ ] Heap/GC aligned to cgroup limits; liveness vs readiness correct; JVM metrics available.
-- [ ] Heap dumps and diagnostics have privacy policy.
+- CI pins sbt/Scala/JDK; artifacts embed build identity.
+- Container JDK matches CI; non-root when possible; fat vs thin intentional.
+- Heap/GC aligned to cgroup limits; liveness vs readiness correct; JVM metrics available.
+- Heap dumps and diagnostics have privacy policy.
 
 **Portfolio fit**
 
-- [ ] Service vs Spark vs Kafka placement matches chapter 17 cheatsheet—or exit criteria defined.
-- [ ] Spark jobs (chapter 18): Scala line matches cluster; shuffle/partition story; streaming mode and checkpoint/sink semantics named accurately.
-- [ ] Kafka/pipelines (chapter 19): consumer groups, commit strategy, lag SLOs, and delivery scope documented; DLQ policy written.
-- [ ] DevSecOps (chapter 20): threat model covers HTTP and/or data-plane trust boundaries; no untrusted `ObjectInputStream`; UIs/submission not internet-exposed.
-- [ ] Threat-model evidence exists (diagram, STRIDE/mitigations, owners)—not a slide that never blocked a merge.
-- [ ] SBOM / provenance available for production artifacts; promoted digests answer “what SHA/jar is running?”
-- [ ] Spark UI / history / submission isolated from public and untrusted networks; authn/authz enabled per platform standard.
-- [ ] Kafka ACL (and schema-registry rights) owners named; PII topics use separate produce vs consume principals.
-- [ ] Shared libs survive Scala line splits via clear contracts.
-- [ ] Framework/platform manuals owned separately; language track expectations met first.
-- [ ] Scala 2→3 or Java→Scala migration smells reviewed against the Advanced table above.
+- Service vs Spark vs Kafka placement matches chapter 17 cheatsheet—or exit criteria defined.
+- Spark jobs (chapter 18): Scala line matches cluster; shuffle/partition story; streaming mode and checkpoint/sink semantics named accurately.
+- Kafka/pipelines (chapter 19): consumer groups, commit strategy, lag SLOs, and delivery scope documented; DLQ policy written.
+- DevSecOps (chapter 20): threat model covers HTTP and/or data-plane trust boundaries; no untrusted `ObjectInputStream`; UIs/submission not internet-exposed.
+- Threat-model evidence exists (diagram, STRIDE/mitigations, owners)—not a slide that never blocked a merge.
+- SBOM / provenance available for production artifacts; promoted digests answer “what SHA/jar is running?”
+- Spark UI / history / submission isolated from public and untrusted networks; authn/authz enabled per platform standard.
+- Kafka ACL (and schema-registry rights) owners named; PII topics use separate produce vs consume principals.
+- Shared libs survive Scala line splits via clear contracts.
+- Framework/platform manuals owned separately; language track expectations met first.
+- Scala 2→3 or Java→Scala migration smells reviewed against the Advanced table above.
 
 ### Use as a hiring / promotion rubric
 

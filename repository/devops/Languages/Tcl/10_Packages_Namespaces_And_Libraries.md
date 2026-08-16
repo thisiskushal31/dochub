@@ -371,18 +371,18 @@ Startup checklist many teams encode once:
 
 ## Staff-level review checklist
 
-- [ ] Dependencies declared with `package require` and useful version constraints.
-- [ ] Libraries `package provide` matching index versions.
-- [ ] Commands live under a namespace; globals not used as API.
-- [ ] `auto_path` / install layout documented for 8.6 vs 9 where both ship.
-- [ ] Binary `load` artifacts match interpreter major/ABI.
-- [ ] Package directories are not writable by untrusted users.
-- [ ] Index generation is part of build/install, not a tribal manual step.
-- [ ] Startup fails fast if required packages are missing.
-- [ ] Ensemble / namespace export surface is intentional; no `eval` of user strings into ensemble roots.
-- [ ] `.tm` modules vs `pkgIndex.tcl` discovery documented; module paths treated as trust roots.
-- [ ] zipfs mounts (if any) verified/hashed; no secrets relying on zip password “encryption.”
-- [ ] Custom `unknown` / auto-load behavior reviewed; critical paths use explicit `package require`.
+- Dependencies declared with `package require` and useful version constraints.
+- Libraries `package provide` matching index versions.
+- Commands live under a namespace; globals not used as API.
+- `auto_path` / install layout documented for 8.6 vs 9 where both ship.
+- Binary `load` artifacts match interpreter major/ABI.
+- Package directories are not writable by untrusted users.
+- Index generation is part of build/install, not a tribal manual step.
+- Startup fails fast if required packages are missing.
+- Ensemble / namespace export surface is intentional; no `eval` of user strings into ensemble roots.
+- `.tm` modules vs `pkgIndex.tcl` discovery documented; module paths treated as trust roots.
+- zipfs mounts (if any) verified/hashed; no secrets relying on zip password “encryption.”
+- Custom `unknown` / auto-load behavior reviewed; critical paths use explicit `package require`.
 
 ---
 
