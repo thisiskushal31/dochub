@@ -6,7 +6,7 @@
 
 How **VB.NET projects** become **assemblies**, how **project references** and **PackageReference** pull in other code, and how **NuGet restore** fits everyday build and CI literacy. Default narrative: **modern .NET SDK-style** `.vbproj` files. Brownfield **.NET Framework** projects still show up in Windows estates—treat their reference model as the same ideas with older tooling.
 
-Deep NuGet workflows, vulnerability scanning habits, and test-project patterns live primarily in the [C# NuGet and testing](../CSharp/18_NuGet_And_Testing.md) chapter. SDK install and `dotnet` CLI basics: [C# environment setup](../CSharp/2_Environment_Setup_And_DotNet_SDK.md). This chapter is the **VB-facing assembly and dependency map**.
+Broader NuGet workflows, vulnerability scanning habits, and test-project patterns live primarily in the [C# NuGet and testing](../CSharp/18_NuGet_And_Testing.md) chapter. SDK install and `dotnet` CLI basics: [C# environment setup](../CSharp/2_Environment_Setup_And_DotNet_SDK.md). This chapter is the **VB-facing assembly and dependency map**.
 
 ---
 

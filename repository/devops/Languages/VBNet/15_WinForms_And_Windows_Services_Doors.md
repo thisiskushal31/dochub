@@ -99,7 +99,7 @@ When modernizing, ask whether the workload still needs a **Windows Service**:
 - Assemblies and packages: ch **13**, [C# NuGet](../CSharp/18_NuGet_And_Testing.md)
 - COM/P/Invoke in desktop helpers: ch **14**
 - Security hygiene: ch **16**
-- Role map and modernization compass: chs **17–18**
+- Role map and what to learn next: chapters **17–18**
 
 ### 6. What “door literacy” is enough to claim
 

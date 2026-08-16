@@ -6178,7 +6178,7 @@
         "path": "VBNet/13_Assemblies_References_And_NuGet.md",
         "type": "file",
         "sha": "",
-        "size": 10369
+        "size": 10372
       },
       {
         "name": "14_COM_Interop_And_PInvoke_Literacy.md",
@@ -6192,7 +6192,7 @@
         "path": "VBNet/15_WinForms_And_Windows_Services_Doors.md",
         "type": "file",
         "sha": "",
-        "size": 8466
+        "size": 8468
       },
       {
         "name": "16_Security_And_Best_Practices.md",
@@ -6206,21 +6206,21 @@
         "path": "VBNet/17_Use_Cases_And_Engineering_Perspectives.md",
         "type": "file",
         "sha": "",
-        "size": 7529
+        "size": 7530
       },
       {
         "name": "18_Where_VBNet_Is_Going_And_Adjacent_Doors.md",
         "path": "VBNet/18_Where_VBNet_Is_Going_And_Adjacent_Doors.md",
         "type": "file",
         "sha": "",
-        "size": 10783
+        "size": 16764
       },
       {
         "name": "README.md",
         "path": "VBNet/README.md",
         "type": "file",
         "sha": "",
-        "size": 10800
+        "size": 11532
       }
     ]
   },

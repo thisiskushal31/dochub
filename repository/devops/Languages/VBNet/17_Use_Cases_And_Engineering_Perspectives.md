@@ -74,7 +74,7 @@ Greenfield web APIs and cloud workers more often choose **C#** (or another moder
 
 - Strangler plan: extract domain library first (language-agnostic IL).
 - UI and COM called out as cost centers (**14–15**).
-- Decision recorded: keep VB, mix with C#, or rewrite—compass in **18**.
+- Decision recorded: keep VB, mix with C#, or rewrite—see chapter **18**.
 
 ### 8. When VB.NET is the wrong hammer
 

@@ -6,7 +6,7 @@
 
 It still shows up in **legacy Windows and enterprise** apps, internal tools, and Windows services. Staff who operate, secure, maintain, or modernize those estates need to **read and reason about** VB—not only recite C#.
 
-This track teaches **VB language + the .NET project/runtime surface you need for VB work**: Options and types, procedures and OOP, LINQ and async, files and assemblies, COM/P/Invoke literacy, Windows LOB doors, and security review habits. It is **not** Office VBA (see [VBA](../VBA/README.md)), **not** a full WinForms/WPF designer course, and **not** an ASP.NET web encyclopedia. Chapter **18** is the **compass** for those doors. For sibling C# depth on the same platform, use the [C#](../CSharp/README.md) track.
+This track teaches **VB language + the .NET project/runtime surface you need for VB work**: Options and types, procedures and OOP, LINQ and async, files and assemblies, COM/P/Invoke literacy, Windows LOB doors, and security review habits. It is **not** Office VBA (see [VBA](../VBA/README.md)), **not** a full WinForms/WPF designer course, and **not** an ASP.NET web encyclopedia. Chapter **18** covers where VB.NET is headed and what to learn next. For sibling C# material on the same platform, use the [C#](../CSharp/README.md) track.
 
 Staff hire VB.NET fluency for four practical pillars:
 
@@ -28,26 +28,34 @@ Staff hire VB.NET fluency for four practical pillars:
 | A **file/config helper** without path/secrets disasters | `System.IO` habits; no secret-in-code | **12**, **16** |
 | A **package and assembly review** | PackageReference inventory; restore understood | **13**, **16** |
 | A **COM / P/Invoke review conversation** | Surfaces named; late binding risk understood | **14** |
-| A **modernization / keep-or-migrate** decision | Windows doors + compass used honestly | **15**, **17–18** |
+| A **modernization / keep-or-migrate** decision | Windows doors + chapter **18** used honestly | **15**, **17–18** |
 
 ---
 
 ## What to learn next (complement paths)
 
-VB.NET usually lands in **Windows LOB** (WinForms/services), **shared libraries**, and **brownfield Framework** estates. After this track, pick the next skill by the *host* you need—not by “more VB syntax.”
+VB.NET usually lands in **Windows LOB** (WinForms/services), **shared libraries**, and **brownfield Framework** estates. After this track, pick the next skill by the *host* and *role*—not by “more VB syntax.” Chapter **[18](./18_Where_VBNet_Is_Going_And_Adjacent_Doors.md)** covers where the language is headed and how to choose what follows.
 
-| If your goal is… | Learn next | Bring from this track |
-|------------------|------------|------------------------|
-| Deeper shared .NET SDK / NuGet / testing | [C#](../CSharp/README.md) track (esp. SDK + NuGet/testing topics) | VB project literacy; same runtime; `dotnet test` door (**13**) |
-| Functional .NET | [F#](../FSharp/README.md) when present + official F# docs | CLR / NuGet habits |
-| Office macros | [VBA](../VBA/README.md) | Syntax familiarity only—**different runtime** |
-| Replace Windows scripting glue | [PowerShell](https://learn.microsoft.com/en-us/powershell/) | Ops habits; not a VB substitute for LOB UI |
-| Greenfield web/API on .NET | ASP.NET docs + [C#](../CSharp/README.md) (chapter **18**) | Async, secrets, packages—when keeping VB is the wrong fight |
-| Other Windows UI (WPF / WinUI) | Official WPF / WinUI docs (chapter **18**) | TFM and UI-thread habits from **11** / **15** |
-| LOB data access depth | EF / ADO.NET docs + this track **10** / **16** | Parameterized access; secret connection strings |
+| If your goal is… | Learn next | Start with |
+|------------------|------------|------------|
+| Same runtime, richest samples / greenfield | [C#](../CSharp/README.md) (SDK → NuGet/testing → use cases) | Map one VB type to C#; build a console on the org SDK |
+| HTTP APIs / web on .NET | ASP.NET docs + [C#](../CSharp/README.md) | One minimal API/Web API without secrets in source |
+| Other Windows UI | Official WPF / WinUI docs | Classify WinForms vs WPF vs WinUI by project/TFM |
+| LOB data access | EF / ADO.NET docs (+ **10**, **16**) | One parameterized path; connection string from config/vault |
+| Tests that unlock modernization | [C# NuGet and testing](../CSharp/18_NuGet_And_Testing.md) (+ **13**) | Green `dotnet test` on extracted logic |
+| Windows ops glue | [PowerShell](https://learn.microsoft.com/en-us/powershell/) | Health/config script—not a new admin WinForms |
+| Office macros | [VBA](../VBA/README.md) | **01** + macro security—different runtime |
+| Functional .NET | [F#](../FSharp/README.md) / F# docs | Small F# library spike, not a big-bang rewrite |
+| Cloud hosting for .NET | [Azure for .NET](https://learn.microsoft.com/en-us/dotnet/azure/) + [C# use cases](../CSharp/19_Use_Cases_And_Applications.md) | Name host + identity; one official quickstart |
 
-**Suggested order for a maintainer:** **01 → 00 → 02–08 → 13 → 16**.  
-**Suggested order for a security reviewer:** **01 → 03** (`Option Strict`) → **12–14** → **16**.
+**Suggested order by role**
+
+| Role | After this track |
+|------|------------------|
+| **Maintainer** | **01 → 00 → 02–08 → 13 → 16** → C# SDK + testing → extract one testable library |
+| **Security reviewer** | **01 → 03 → 12–14 → 16** → [C# security](../CSharp/20_Security_And_Best_Practices.md); VBA only for Office |
+| **Ops** | **00 → 13 → 15 → 16** → PowerShell → publish/runtime baselines |
+| **Modernizer** | **14–18** → strangler plan → C# for new edges |
 
 ---
 
