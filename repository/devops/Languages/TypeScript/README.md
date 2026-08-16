@@ -54,6 +54,8 @@ TypeScript is the **typed JS layer**. Product UIs and frameworks sit **on top**�
 
 **Suggested order for a web engineer:** this TypeScript track → chapter **19** literacy → **react.dev** → your meta-framework (Next, etc.) → keep returning here when `tsc`, modules, or errors hurt.
 
+**Track status (2026-08-16):** **Complete** for the in-scope staff curriculum on pin **TypeScript 5.9.x** + `strict`. A final internet coverage pass against the official Handbook / TSConfig / 5.8–5.9 notes found nothing further required; React/Next stay **complement doors**, not missing chapters. Revisit only on a new major pin or an explicit new audit.
+
 ---
 
 ## Versions and brownfield (default narrative)
