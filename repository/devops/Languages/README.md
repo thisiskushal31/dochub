@@ -54,7 +54,7 @@ Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-p
 | **Shell**  | Cross-OS scripting track: Bash/POSIX/`zsh`, PowerShell, cmd; deep-dive under [Languages/Shell](./Shell/README.md); OS chapters keep OS context. |
 | **HCL**     | HashiCorp Configuration Language: syntax, expressions, types; Terraform, Packer, Vault, Nomad, Consul use it; **Terraform use cases** (providers, state, modules, pipelines) in IAC/Terraform. |
 | **JSON**    | Config and APIs; used across CiCd, IAC, Cloud-Native, JavaScript; this folder signposts. |
-| **YAML**    | K8s, CI pipelines, Ansible; used across Cloud-Native, CiCd, IAC; this folder signposts. |
+| **YAML**    | Config/serialization format deep-dive (syntax, types, anchors, 1.2 vs 1.1, tooling, security); K8s/CI/Ansible hosts in Cloud-Native, CiCd, IAC. |
 
 ---
 
@@ -123,7 +123,7 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | 44 | [**Shell**](./Shell/README.md) | Shell whole-engineering track: baby steps→expert; Bash/POSIX/zsh, PowerShell, cmd, flags/jq/recon, distros, legacy/security (00–26). |
 | 45 | [**HCL**](./HCL/README.md) | HCL language deep-dive (syntax, expressions, types); Terraform/Packer/Vault/Nomad/Consul; Terraform use cases → IAC/Terraform. |
 | 46 | [**JSON**](./JSON/README.md) | JSON: config and APIs; **used across CiCd, IAC, Cloud-Native**; this folder signposts. |
-| 47 | [**YAML**](./YAML/README.md) | YAML: K8s, CI, Ansible; **used across Cloud-Native, CiCd, IAC**; this folder signposts. |
+| 47 | [**YAML**](./YAML/README.md) | YAML format track (01–12): syntax, types, anchors, schemas, tooling, security, **reading unfamiliar YAML**; hosts → Cloud-Native / CiCd / IAC. |
 
 ### Languages in the cybersecurity domain (spectrum)
 

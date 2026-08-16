@@ -1,9 +1,93 @@
 [
   {
+    "name": "01_What_YAML_Is_And_Is_Not.md",
+    "path": "01_What_YAML_Is_And_Is_Not.md",
+    "type": "file",
+    "sha": "",
+    "size": 7521
+  },
+  {
+    "name": "02_Syntax_And_Structure.md",
+    "path": "02_Syntax_And_Structure.md",
+    "type": "file",
+    "sha": "",
+    "size": 6975
+  },
+  {
+    "name": "03_Scalars_And_Multiline.md",
+    "path": "03_Scalars_And_Multiline.md",
+    "type": "file",
+    "sha": "",
+    "size": 6582
+  },
+  {
+    "name": "04_Collections_And_Nesting.md",
+    "path": "04_Collections_And_Nesting.md",
+    "type": "file",
+    "sha": "",
+    "size": 4334
+  },
+  {
+    "name": "05_Anchors_Aliases_And_Merge.md",
+    "path": "05_Anchors_Aliases_And_Merge.md",
+    "type": "file",
+    "sha": "",
+    "size": 5147
+  },
+  {
+    "name": "06_Documents_Directives_And_Versions.md",
+    "path": "06_Documents_Directives_And_Versions.md",
+    "type": "file",
+    "sha": "",
+    "size": 4659
+  },
+  {
+    "name": "07_Tags_Schemas_And_Typing.md",
+    "path": "07_Tags_Schemas_And_Typing.md",
+    "type": "file",
+    "sha": "",
+    "size": 6600
+  },
+  {
+    "name": "08_Tooling_Linting_And_Validation.md",
+    "path": "08_Tooling_Linting_And_Validation.md",
+    "type": "file",
+    "sha": "",
+    "size": 5015
+  },
+  {
+    "name": "09_Use_Cases_And_Engineering_Perspectives.md",
+    "path": "09_Use_Cases_And_Engineering_Perspectives.md",
+    "type": "file",
+    "sha": "",
+    "size": 4621
+  },
+  {
+    "name": "10_Security_Design_And_Review.md",
+    "path": "10_Security_Design_And_Review.md",
+    "type": "file",
+    "sha": "",
+    "size": 5157
+  },
+  {
+    "name": "11_Where_YAML_Is_Going_And_Adjacent_Doors.md",
+    "path": "11_Where_YAML_Is_Going_And_Adjacent_Doors.md",
+    "type": "file",
+    "sha": "",
+    "size": 5347
+  },
+  {
+    "name": "12_Reading_Unfamiliar_YAML.md",
+    "path": "12_Reading_Unfamiliar_YAML.md",
+    "type": "file",
+    "sha": "",
+    "size": 8130
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1543
+    "size": 9427
   }
 ]
