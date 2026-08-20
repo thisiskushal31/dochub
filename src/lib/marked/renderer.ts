@@ -107,12 +107,12 @@ export class Renderer {
       });
     }
 
-    // Images
+    // Wrap images so CSS can apply a white background behind transparent assets
     html = html.replace(/<img src="([^"]+)" alt="([^"]*)"(?: title="([^"]*)")?>/g, (match, src, alt, title) => {
       const titleAttr = title ? ` title="${title}"` : '';
       return `
         <div class="image-wrapper">
-          <img src="${src}" alt="${alt}"${titleAttr} class="max-w-full h-auto border border-border rounded-lg shadow-sm">
+          <img src="${src}" alt="${alt}"${titleAttr} class="max-w-full h-auto" loading="lazy">
         </div>
       `;
     });

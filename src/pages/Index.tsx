@@ -109,7 +109,10 @@ const Index: React.FC = () => {
               />
             </div>
             ) : (
-              <WelcomeView onOpenSearch={() => setSearchOpen(true)} />
+              <WelcomeView
+                onOpenSearch={() => setSearchOpen(true)}
+                onSelectRepo={handleSelectRepo}
+              />
             )}
         </main>
       </div>

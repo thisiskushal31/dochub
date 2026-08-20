@@ -13,7 +13,14 @@ export default {
       },
     },
     extend: {
-colors: {
+      fontFamily: {
+        sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+      },
+      colors: {
+        "surface-elevated": "hsl(var(--surface-elevated))",
+        "surface-hover": "hsl(var(--surface-hover))",
+        "text-dim": "hsl(var(--text-dim))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

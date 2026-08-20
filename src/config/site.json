@@ -44,8 +44,8 @@
     "description": "Documentation hub by Kushal Gupta - Browse and search documentation from multiple topics including Data Structures, Algorithms, Kubernetes, and more.",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#ffffff",
+    "background_color": "#0e1014",
+    "theme_color": "#2db89a",
     "lang": "en"
   },
   "features": {

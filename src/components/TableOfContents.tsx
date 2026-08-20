@@ -71,7 +71,9 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ content, className })
 
   return (
     <nav className={cn("space-y-1", className)}>
-      <h4 className="font-semibold text-sm mb-3">On this page</h4>
+      <h4 className="font-mono text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-3">
+        On this page
+      </h4>
       <div className="max-h-[calc(100vh-8rem)] overflow-y-auto pr-2">
       <ul className="space-y-1">
         {items.map((item, index) => (
@@ -79,7 +81,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ content, className })
             <button
               onClick={() => handleClick(item.id)}
               className={cn(
-                "text-sm w-full text-left py-1 transition-colors hover:text-foreground",
+                "text-xs w-full text-left py-1 transition-colors hover:text-foreground",
                 activeId === item.id
                   ? "text-primary font-medium"
                   : "text-muted-foreground",

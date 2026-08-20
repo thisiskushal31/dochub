@@ -215,86 +215,78 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
   }
 
   return (
-        <div className="flex gap-6 max-w-[98%] mx-auto">
-      <article className="flex-1 min-w-0 animate-fade-in">
+    <div className="flex gap-8 max-w-6xl mx-auto px-6 lg:px-8">
+      <article className="flex-1 min-w-0 max-w-3xl animate-fade-in">
         <div className="mb-6">
-          <Button onClick={onBack} variant="ghost" size="sm" className="mb-4">
-            <ArrowLeft className="h-4 w-4 mr-2" />
+          <Button onClick={onBack} variant="ghost" size="sm" className="mb-4 text-muted-foreground">
+            <ArrowLeft className="h-3.5 w-3.5 mr-1.5" />
             Back to files
           </Button>
-          
-          <div>
-            <h1 className="text-3xl font-bold text-primary mb-2">{displayName}</h1>
-            {repo && (
-              <div className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap mb-3">
-                {repo.icon ? (
-                  <i className={`${repo.icon} text-sm`}></i>
-                ) : null}
-                <span>{repo.name}</span>
-                <span>/</span>
-                <span className="break-words">{filePath}</span>
-              </div>
+
+          <h1 className="text-2xl font-bold text-foreground mb-2">{displayName}</h1>
+
+          {repo && (
+            <div className="flex items-center gap-2 text-xs text-muted-foreground flex-wrap mb-3">
+              {repo.icon ? <i className={`${repo.icon} text-xs`}></i> : null}
+              <span className="font-mono">{repo.name}</span>
+              <span>/</span>
+              <span className="font-mono break-words">{filePath}</span>
+            </div>
+          )}
+
+          <div className="flex items-center gap-2 flex-wrap">
+            {lastUpdated && (
+              <span className="text-xs text-muted-foreground">
+                Updated: {lastUpdated.toLocaleString()}
+              </span>
             )}
-            
-            <div className="flex items-center gap-3 flex-wrap">
-              {lastUpdated && (
-                <span className="text-xs text-muted-foreground">
-                  Updated: {lastUpdated.toLocaleString()}
-                </span>
+            {readingTime && (
+              <span className="text-xs text-muted-foreground">{readingTime} min read</span>
+            )}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleShare}
+              className="h-7 text-xs"
+              title="Copy link to share this document"
+            >
+              {linkCopied ? (
+                <>
+                  <Check className="h-3 w-3 mr-1" />
+                  Copied!
+                </>
+              ) : (
+                <>
+                  <Share2 className="h-3 w-3 mr-1" />
+                  Share
+                </>
               )}
-              {readingTime && (
-                <span className="text-xs text-muted-foreground">
-                  {readingTime} min read
-                </span>
-              )}
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleShare}
-                className="text-sm"
-                title="Copy link to share this document"
-              >
-                {linkCopied ? (
-                  <>
-                    <Check className="h-4 w-4 mr-2" />
-                    Copied!
-                  </>
-                ) : (
-                  <>
-                    <Share2 className="h-4 w-4 mr-2" />
-                    Share
-                  </>
-                )}
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleRefresh}
-                disabled={isLoading}
-                className="text-sm"
-                title="Refresh to get latest content from GitHub"
-              >
-                <RefreshCw className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
-                Refresh
-              </Button>
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleRefresh}
+              disabled={isLoading}
+              className="h-7 text-xs"
+              title="Refresh to get latest content from GitHub"
+            >
+              <RefreshCw className={`h-3 w-3 mr-1 ${isLoading ? 'animate-spin' : ''}`} />
+              Refresh
+            </Button>
             {repo && (
               <a
                 href={`https://github.com/${repo.owner}/${repo.repo}/blob/${repo.branch}/${filePath}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
               >
-                <span>Edit on GitHub</span>
-                <ExternalLink className="h-3 w-3" />
+                Edit on GitHub <ExternalLink className="h-3 w-3" />
               </a>
             )}
-            </div>
           </div>
         </div>
 
-        <div className="prose prose-lg max-w-none">
-          <MarkdownViewer content={content} />
-        </div>
+        <MarkdownViewer content={content} />
       </article>
 
       {/* Table of Contents - Desktop only, positioned on right */}
