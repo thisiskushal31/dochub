@@ -15,6 +15,8 @@
 | **SCA** | Software Composition Analysis — known vulns in **dependencies** / SBOMs (overlaps Snyk, Trivy, Dependabot/Renovate). |
 | **OWASP ZAP** | Zed Attack Proxy — open-source **DAST** scanner. **Not a WAF.** Complements SAST/Sonar and WAF. **In scope** for the CI/CD security track. |
 | **Slack / ChatOps** | Team chat (often Slack or Teams) wired to CI/CD: build fail/pass pings, deploy announcements, approve/promote from chat, on-call pages. “Slack dash” here = **chat + dashboards / notifications**, not a separate product you must buy. Grafana/CI dashboards stay under Observability / CiCd. |
+| **Web server / reverse proxy** | Process that terminates HTTP(S) and serves static files and/or proxies to an app (nginx, Apache httpd, Caddy, IIS, …). Distinct from the **app runtime** (Node, JVM, PHP-FPM, …) and from **K8s Ingress / Gateway**. |
+| **Server / host lifecycle** | Provision → harden → configure services → deploy app → patch → monitor → decommission. Runs on **Linux**, **Windows**, or other OS—handbook already has `Operating-Systems/`; this plan adds **how deploy lands on those hosts**. |
 
 ---
 
@@ -30,6 +32,9 @@ After Languages, expand the handbook so it also covers:
 6. **Full DevOps delivery path: test → deploy (and everything around it)** — environments, promotion, strategies, verify, rollback, feedback loops (see **DevOps delivery practices** section). **In scope.**
 7. **Collaboration & visibility** — Slack/Teams notifications, ChatOps, CI status, release dashboards (see below).
 8. **Branching practices** — trunk-based / GitHub Flow / GitFlow (or house default + comparisons).
+9. **Deploy onto real servers** — nginx, Apache httpd, and **other widely used** web servers / proxies worldwide; reverse proxy, TLS, static vs app upstream (see **Servers, web servers, and host deploy**). **In scope.**
+10. **Server / OS management in the lifecycle** — Linux (and other OS) as the place artifacts run: services (`systemd` / Windows Services), packages, users, firewall, logs—**wired to** existing `Operating-Systems/`, not a second OS encyclopedia.
+11. **Deploy automation** — Ansible/Chef/Puppet (already stubbed) and CI/CD that **pushes or pulls** config + app onto hosts; golden images / cloud-init literacy as needed.
 
 **Spirit of this plan:** You do not need to already know every practice by name. This file is the **map of practices to teach**—including ones you have not used yet—so the handbook becomes the place you (and readers) learn them.
 
@@ -49,6 +54,9 @@ Idea / ticket
   → build + unit/integration tests (CiCd)
   → security gates: secrets → SAST → SCA → IaC → image (CiCd + Security)
   → package artifact / image / SBOM (CiCd)
+  → provision / update host (IAC + Operating-Systems + Automation)
+  → configure web server / proxy / TLS (Servers / web-server track)
+  → deploy app upstream (systemd unit, container, or platform)
   → deploy to DEV / preview
   → more tests: e2e, smoke, DAST on a live URL (CiCd + Security)
   → promote to STAGING → (approvals) → PRODUCTION
@@ -57,6 +65,7 @@ Idea / ticket
   → notify team (Slack/Teams) + record release
   → if bad: rollback / forward-fix + incident habits (Methodologies)
   → learn: blameless notes, improve gates (feedback loop)
+  → ongoing: patch OS, rotate certs, tune nginx/Apache, capacity (Servers + OS)
 ```
 
 ### Practice catalog (in scope — teach even if new to you)
@@ -71,6 +80,10 @@ Idea / ticket
 | **Environments & promotion** | Local → CI → dev → staging → prod; env parity; config vs code; secrets per env | `CiCd/` + `Methodologies/` |
 | **Approvals & change control** | Manual gates, CODEOWNERS, CAB-lite vs continuous; who can promote | `CiCd/` + `Methodologies/` |
 | **Deployment strategies** | Rolling, blue-green, canary, recreate; feature flags; progressive delivery | `CiCd/3_…` (already stubbed) |
+| **Host / VM deploy** | Ship to a server: packages, artifacts, systemd/Windows services, healthchecks | **New `Servers/`** (or agreed name) + `CiCd/` |
+| **Web servers & reverse proxies** | nginx, Apache httpd, Caddy, Traefik, IIS, HAProxy, … — TLS, vhosts, upstreams | **New `Servers/`** tool folders |
+| **OS / server management** | Users, packages, firewall, logging, patching—**apply** OS track to deploy | `Operating-Systems/` (exists) ↔ Servers / Automation |
+| **Deploy automation** | Idempotent config of hosts + web servers + app units | `Automation/` (Ansible/Chef/Puppet stubs) + `IAC/` |
 | **Release / rollback** | Release notes, freeze windows, rollback vs roll-forward, hotfix path | `CiCd/` + `Methodologies/` |
 | **Verify after deploy** | Smoke tests, synthetic checks, SLO burn, error budgets (light touch → Observability) | `CiCd/` ↔ `Observability/` |
 | **ChatOps & notifications** | Slack/Teams: fail pings, deploy announcements, threaded release status; optional slash-approve | `Methodologies/` and/or `CiCd/` practice chapter; not a “Slack product manual” |
@@ -88,6 +101,85 @@ Idea / ticket
 | Not in scope as a full product track | Slack Enterprise admin, workspace design, marketing Slack |
 
 Same ideas apply if the org uses **Microsoft Teams**, Discord, or email—teach the **practice**, show Slack as the common example.
+
+---
+
+## Servers, web servers, OS, and deploy automation
+
+**Goal:** Cover how software actually **lands on a machine** people can SSH/RDP to—or on a VM/image that becomes that machine—not only “deploy to Kubernetes.” Classic production worldwide still runs **nginx / Apache / IIS** in front of apps; automation must configure that stack repeatably.
+
+### What already exists (reuse, don’t duplicate)
+
+| Area | Path | Use it for |
+|------|------|------------|
+| **OS theory + Linux/Windows/Unix/macOS** | `Operating-Systems/` | Processes, networking, firewall, users, storage, shell, systemd-era service thinking, Windows services |
+| **Config / deploy automation tools** | `Automation/` (Ansible, Chef, Puppet stubs) | Idempotent install/config of web servers + app units |
+| **Provision infra** | `IAC/` (Terraform, etc.) | Create VMs/networks/LBs; hand off to Automation for software config |
+| **Containers / K8s depth** | Cloud-Native + Containerization-Deep-Dive | When the “server” is a node or the edge is Ingress—not a substitute for VM/nginx literacy |
+| **PHP ↔ nginx/Apache** | Languages/PHP (FPM chapter) | Language-specific glue; general web-server track still needed |
+
+### New home (recommended when work starts)
+
+Add a top-level **`Servers/`** section (name can be `Servers/` or `Web-Servers-And-Edge/` at kickoff)—**one folder per product**, same pattern as CiCd/Security:
+
+| Layer | Topics | Notes |
+|-------|--------|-------|
+| **Concepts** | What a reverse proxy is; TLS termination; vhosts; upstreams; static vs dynamic; load balancing vs app server | Numbered overview MDs under `Servers/` |
+| **Linux host deploy** | Packages, `systemd` units, logs (`journalctl`), firewall ports, users, SELinux/AppArmor literacy doors | Cross-link `Operating-Systems/Linux/` |
+| **Windows host deploy** | IIS, Windows Services, WinRM, firewall | Cross-link `Operating-Systems/Windows/` |
+| **Other OS** | When brownfield is AIX/Solaris/BSD—**doors** to `Operating-Systems/Unix/`, not full mirrors | Recognition + where ops differs |
+| **Deploy automation** | Ansible roles for nginx/Apache/Caddy; CI job that runs playbooks; Chef/Puppet equivalents | `Automation/` + examples linked from Servers |
+| **Day-2 ops** | Cert renewal, log rotation, upgrades, backup of config, graceful reload vs restart | Servers concepts + OS |
+
+### Web servers / proxies to cover (international + common)
+
+**v1 must-have (everyone meets these):**
+
+| Product | Why |
+|---------|-----|
+| **nginx** | Default reverse proxy / static server in huge swaths of industry |
+| **Apache HTTP Server (httpd)** | Still dominant in many enterprises, shared hosting, `.htaccess` brownfield |
+| **IIS** | Windows / .NET estates internationally |
+
+**v1 strong add (widely used; pick order at kickoff):**
+
+| Product | Why |
+|---------|-----|
+| **Caddy** | Automatic HTTPS; growing simple-deploy default |
+| **Traefik** | Dynamic config; Docker/K8s-friendly proxy |
+| **HAProxy** | Classic L4/L7 load balancer in front of fleets |
+| **Envoy** | Cloud-native proxy; ties to mesh / Gateway API literacy |
+
+**Later / doors (don’t block v1):** lighttpd, OpenResty, Apache Tomcat (app server—not the same as httpd), Weblogic/WebSphere (enterprise Java doors), cloud LB products (ALB/NLB/GCP LB) as “managed edge” doors next to HAProxy/Envoy.
+
+**Not the same thing—teach the distinction:**
+
+| Thing | Role |
+|-------|------|
+| nginx / Apache / Caddy / IIS | Web server / reverse proxy on a host (or container) |
+| PHP-FPM / Gunicorn / Puma / Node | App process **upstream** of the proxy |
+| K8s Ingress / Gateway API | Cluster edge—often still nginx/Envoy/Traefik **under the hood** |
+| WAF | Security filter—may sit in front of or on the proxy |
+
+### Host lifecycle to teach (with automation)
+
+```text
+Provision VM/bare metal (IAC / cloud UI)
+  → baseline OS (users, SSH/WinRM, patch, firewall)     [Operating-Systems + Automation]
+  → install web server + TLS                            [Servers + Automation]
+  → install/run app (systemd / service / container)     [Servers + CiCd artifact]
+  → healthcheck + register with LB                      [CiCd / Servers]
+  → pipeline promotes new artifact → reload proxy       [CiCd + Automation]
+  → observe + patch + renew certs                       [Observability + Servers]
+```
+
+### Must-cover teaching points (when writing)
+
+- Config is **code**: nginx conf / Apache vhosts managed by Ansible (or equivalent), not “SSH and edit once.”  
+- **Reload vs restart**; zero-downtime habits on a single host vs multi-host LB.  
+- TLS: where certs live, renewal (e.g. ACME), secrets not in git.  
+- Same pipeline mental model for **VM + nginx** and **K8s + Ingress**—different machinery, same stages.  
+- OS choice changes commands and service model; **concepts transfer**, runbooks differ (use OS track).
 
 ---
 
@@ -144,6 +236,9 @@ Fill these—do **not** invent a parallel tree.
 | Cloud-native | `Cloud-Native/` | Architecture / K8s / platform eng; K8s, Helm, Istio, Linkerd — **scaffolded** |
 | Observability | `Observability/` | Prometheus, Grafana, OpenTelemetry, etc. — for **verify after deploy** |
 | Security tools | `Security/` | Vault, OPA, Checkov, Snyk, Trivy; WAF *mentioned* — **no SonarQube / ZAP / WAF tool folder yet** |
+| Operating systems | `Operating-Systems/` | **Exists and is deep** — Linux/Windows/Unix/macOS fundamentals; **not** yet wired as “deploy nginx onto this host” |
+| Automation | `Automation/` | Ansible/Chef/Puppet folders — **scaffolded**; use for **host + web-server deploy automation** |
+| IAC | `IAC/` | Provision machines/networks — pair with Automation for software on the box |
 | Containers depth | [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) | Deep runtime/orchestration outside handbook |
 
 ### B. Already a deliberate *door* from Languages
@@ -164,6 +259,9 @@ Fill these—do **not** invent a parallel tree.
 | Pipeline security gate chain | `CiCd/` new/expanded chapter | SAST/DAST/SCA/… |
 | ChatOps / Slack-Teams notifications | `Methodologies/` or `CiCd/` practice chapter | Literacy, not Slack admin |
 | SonarQube / ZAP / WAF / secret scan tools | `Security/` | Wire into CiCd story |
+| **Servers / web servers / host deploy** | **New `Servers/`** | nginx, Apache httpd, IIS, Caddy, Traefik, HAProxy, Envoy, … |
+| **OS applied to deploy** | Cross-link `Operating-Systems/` | systemd, firewall, patching—don’t rewrite OS track |
+| **Deploy automation on hosts** | `Automation/` deepen + Servers examples | Ansible (etc.) installs/configures proxy + app |
 | CNCF starter pack | `Cloud-Native/` | See below |
 | Frontend / backend frameworks | **New** `Frameworks/` | React, Next, Angular + backends |
 
@@ -175,11 +273,16 @@ Fill these—do **not** invent a parallel tree.
 
 1. **`Methodologies/`** — culture refresh + **branching** + PR/required checks + **notifications/ChatOps literacy** + link to incidents.  
 2. **`CiCd/`** — **full path** build → test → secure → artifact → deploy → verify; deepen **deployment strategies**; security gate chapter; one primary CI tool (e.g. GitHub Actions) showing the path.  
-3. **`Security/`** — SonarQube, ZAP, WAF; connect Snyk/Trivy/Checkov into the same path.  
-4. **`Frameworks/`** — thin v1.  
-5. **CNCF starter pack** + Observability as “verify after deploy.”
+3. **`Servers/` (new)** — nginx + Apache (+ IIS) first; reverse proxy/TLS/upstreams; Linux host deploy; wire **`Automation/`** (Ansible) so config is not manual-only; cross-link **`Operating-Systems/`**.  
+4. **`Security/`** — SonarQube, ZAP, WAF; connect Snyk/Trivy/Checkov into the same path.  
+5. **`Frameworks/`** — thin v1.  
+6. **CNCF starter pack** + Observability as “verify after deploy” (Ingress as the K8s-shaped cousin of nginx).
 
-Alternates: **Lane B** CNCF first · **Lane C** Frameworks first.
+Alternates:
+
+- **Lane B** — CNCF first (platform/K8s audience).  
+- **Lane C** — Frameworks first.  
+- **Lane D** — **Servers / classic host deploy first** (if your audience is still mostly VMs + nginx/Apache before K8s).
 
 ---
 
@@ -221,9 +324,12 @@ Alternates: **Lane B** CNCF first · **Lane C** Frameworks first.
 
 ## Kickoff checklist (when you return)
 
-- [ ] Confirm lane: **A** / B / C  
+- [ ] Confirm lane: **A** / B / C / **D (servers-first)**  
 - [ ] Confirm branching **house default**  
 - [ ] Confirm **full delivery path in scope** (test → deploy → verify → rollback/feedback)  
+- [ ] Confirm **host + web-server deploy in scope** (nginx, Apache, … + OS + Automation)  
+- [ ] Confirm `Servers/` section name + v1 web-server list (nginx/Apache/IIS + which of Caddy/Traefik/HAProxy/Envoy)  
+- [ ] Confirm deploy automation primary tool (Ansible vs Chef vs Puppet vs mix)  
 - [ ] Confirm **ChatOps / Slack-Teams notifications** in scope (literacy)  
 - [ ] Confirm deployment strategies chapter filled (rolling / blue-green / canary / flags)  
 - [ ] Confirm CI/CD security track: SAST + DAST + SCA + secrets + IaC + image + WAF  
@@ -232,8 +338,8 @@ Alternates: **Lane B** CNCF first · **Lane C** Frameworks first.
 - [ ] Confirm secret-scanning tool for v1  
 - [ ] Confirm CNCF starter list + Frameworks v1 list  
 - [ ] Add/expand CiCd chapters: pipeline path + security gates (+ ChatOps cross-link)  
-- [ ] Update root `README.md` when `Frameworks/` is created  
-- [ ] Keep Languages free of full React/Next/Angular curricula  
+- [ ] Update root `README.md` Structure when `Frameworks/` and/or `Servers/` are created  
+- [ ] Keep Languages free of full React/Next/Angular curricula; keep OS track as the OS deep dive  
 
 ---
 
@@ -242,7 +348,9 @@ Alternates: **Lane B** CNCF first · **Lane C** Frameworks first.
 - Writing the actual chapter bodies  
 - Scraping the entire CNCF landscape  
 - Folding frameworks into Languages  
+- Rewriting `Operating-Systems/` inside `Servers/` (cross-link instead)  
 - Full Slack/Teams administration courses  
+- Exhaustive coverage of every historical web server ever shipped  
 - Full commercial IAST / pen-test handbooks (doors unless expanded later)
 
 When you resume: open this file, tick the kickoff checklist, then start with the first unchecked step for your lane.
@@ -254,6 +362,9 @@ When you resume: open this file, tick the kickoff checklist, then start with the
 - [Handbook README](./README.md)  
 - [Methodologies](./Methodologies/README.md)  
 - [CiCd](./CiCd/README.md)  
+- [Automation](./Automation/README.md)  
+- [IAC](./IAC/README.md)  
+- [Operating-Systems](./Operating-Systems/README.md)  
 - [Cloud-Native](./Cloud-Native/README.md)  
 - [Security](./Security/README.md)  
 - [Observability](./Observability/README.md)  
