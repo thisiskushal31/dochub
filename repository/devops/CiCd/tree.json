@@ -109,7 +109,7 @@
     "path": "1_Pipelines_Build_Test_Deploy.md",
     "type": "file",
     "sha": "",
-    "size": 341
+    "size": 543
   },
   {
     "name": "2_CI_CD_Tools.md",
@@ -126,10 +126,38 @@
     "size": 248
   },
   {
+    "name": "4_Artifacts_And_Registries.md",
+    "path": "4_Artifacts_And_Registries.md",
+    "type": "file",
+    "sha": "",
+    "size": 929
+  },
+  {
+    "name": "5_Verify_Rollback_And_Synthetic_Tests.md",
+    "path": "5_Verify_Rollback_And_Synthetic_Tests.md",
+    "type": "file",
+    "sha": "",
+    "size": 858
+  },
+  {
+    "name": "6_Supply_Chain_And_Signing.md",
+    "path": "6_Supply_Chain_And_Signing.md",
+    "type": "file",
+    "sha": "",
+    "size": 802
+  },
+  {
+    "name": "7_DB_Migrations_In_Pipelines.md",
+    "path": "7_DB_Migrations_In_Pipelines.md",
+    "type": "file",
+    "sha": "",
+    "size": 846
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1560
+    "size": 1888
   }
 ]

@@ -15,6 +15,51 @@
     ]
   },
   {
+    "name": "CodeQL",
+    "path": "CodeQL",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "CodeQL/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 452
+      }
+    ]
+  },
+  {
+    "name": "Cosign",
+    "path": "Cosign",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Cosign/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 512
+      }
+    ]
+  },
+  {
+    "name": "Gitleaks",
+    "path": "Gitleaks",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Gitleaks/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 509
+      }
+    ]
+  },
+  {
     "name": "OPA",
     "path": "OPA",
     "type": "dir",
@@ -30,6 +75,21 @@
     ]
   },
   {
+    "name": "Semgrep",
+    "path": "Semgrep",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Semgrep/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 412
+      }
+    ]
+  },
+  {
     "name": "Snyk",
     "path": "Snyk",
     "type": "dir",
@@ -41,6 +101,21 @@
         "type": "file",
         "sha": "",
         "size": 242
+      }
+    ]
+  },
+  {
+    "name": "SonarQube",
+    "path": "SonarQube",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "SonarQube/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 471
       }
     ]
   },
@@ -75,6 +150,21 @@
     ]
   },
   {
+    "name": "ZAP",
+    "path": "ZAP",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "ZAP/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 680
+      }
+    ]
+  },
+  {
     "name": "1_Security_Practices_And_Secrets.md",
     "path": "1_Security_Practices_And_Secrets.md",
     "type": "file",
@@ -96,10 +186,24 @@
     "size": 745
   },
   {
+    "name": "4_Security_Gate_Chain.md",
+    "path": "4_Security_Gate_Chain.md",
+    "type": "file",
+    "sha": "",
+    "size": 1359
+  },
+  {
+    "name": "5_OIDC_CI_And_Least_Privilege.md",
+    "path": "5_OIDC_CI_And_Least_Privilege.md",
+    "type": "file",
+    "sha": "",
+    "size": 710
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1467
+    "size": 1993
   }
 ]

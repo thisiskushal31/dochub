@@ -8,4 +8,6 @@
 
 - SRE practices from a DevOps perspective
 - On-call rotations and incident response
-- Knowledge sharing and runbooks
+- **On-call tooling:** PagerDuty, Opsgenie, Grafana OnCall — routing, escalation, schedules (literacy, not vendor cert)
+- Knowledge sharing and runbooks — link [7_Docs_And_Runbooks.md](./7_Docs_And_Runbooks.md)
+- Post-incident: blameless postmortem — link [1_DevOps_Culture_And_Collaboration.md](./1_DevOps_Culture_And_Collaboration.md)

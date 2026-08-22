@@ -2,370 +2,371 @@
 
 [← Back to handbook](./README.md)
 
-**Status:** Planning only — no section content started from this note yet.  
-**Purpose:** Resume this work later without re-deriving the map. Use this file as the checklist / kickoff brief.
-
-**Clarifications from planning chat**
-
-| Term | Meaning |
-|------|---------|
-| **WAF** | Web Application Firewall — edge/runtime protection (blocks/filters HTTP attacks). Already *mentioned* under Security compliance topics; not a full tool track yet. |
-| **SAST** | Static Application Security Testing — analyze **source/bytecode** without running the app (e.g. SonarQube rules, Semgrep, CodeQL). |
-| **DAST** | Dynamic Application Security Testing — probe a **running** app over HTTP (e.g. OWASP ZAP, Burp in enterprise setups). |
-| **SCA** | Software Composition Analysis — known vulns in **dependencies** / SBOMs (overlaps Snyk, Trivy, Dependabot/Renovate). |
-| **OWASP ZAP** | Zed Attack Proxy — open-source **DAST** scanner. **Not a WAF.** Complements SAST/Sonar and WAF. **In scope** for the CI/CD security track. |
-| **Slack / ChatOps** | Team chat (often Slack or Teams) wired to CI/CD: build fail/pass pings, deploy announcements, approve/promote from chat, on-call pages. “Slack dash” here = **chat + dashboards / notifications**, not a separate product you must buy. Grafana/CI dashboards stay under Observability / CiCd. |
-| **Web server / reverse proxy** | Process that terminates HTTP(S) and serves static files and/or proxies to an app (nginx, Apache httpd, Caddy, IIS, …). Distinct from the **app runtime** (Node, JVM, PHP-FPM, …) and from **K8s Ingress / Gateway**. |
-| **Server / host lifecycle** | Provision → harden → configure services → deploy app → patch → monitor → decommission. Runs on **Linux**, **Windows**, or other OS—handbook already has `Operating-Systems/`; this plan adds **how deploy lands on those hosts**. |
+**Status:** Planning only — content bodies for the gaps below are **not** started yet.  
+**Purpose:** Resume later without re-deriving the map. This file is also the **completeness contract** for software engineers reading DevOps.
 
 ---
 
-## Intent (what you asked for)
+## Promise to software engineers (frontend / backend / fullstack / platform)
 
-After Languages, expand the handbook so it also covers:
+Anyone who ships software and wants to learn **DevOps** should be able to open **this handbook** and either:
 
-1. **CNCF / cloud-native basics** — tools people actually use day to day (not the whole landscape dump).
-2. **Frameworks** — frontend (React, Next.js, Angular, …) and common backend frameworks, at **literacy** depth—not full UI courses.
-3. **Quality / security tools** — e.g. **SonarQube**; **WAF** literacy; scanners already stubbed (Snyk, Trivy, …).
-4. **Full CI/CD practices** — not only “a Jenkinsfile exists,” but how modern delivery actually works end to end.
-5. **Full CI/CD security testing stack** — **SAST, DAST**, SCA, secrets, IaC/image gates, WAF (see below).
-6. **Full DevOps delivery path: test → deploy (and everything around it)** — environments, promotion, strategies, verify, rollback, feedback loops (see **DevOps delivery practices** section). **In scope.**
-7. **Collaboration & visibility** — Slack/Teams notifications, ChatOps, CI status, release dashboards (see below).
-8. **Branching practices** — trunk-based / GitHub Flow / GitFlow (or house default + comparisons).
-9. **Deploy onto real servers** — nginx, Apache httpd, and **other widely used** web servers / proxies worldwide; reverse proxy, TLS, static vs app upstream (see **Servers, web servers, and host deploy**). **In scope.**
-10. **Server / OS management in the lifecycle** — Linux (and other OS) as the place artifacts run: services (`systemd` / Windows Services), packages, users, firewall, logs—**wired to** existing `Operating-Systems/`, not a second OS encyclopedia.
-11. **Deploy automation** — Ansible/Chef/Puppet (already stubbed) and CI/CD that **pushes or pulls** config + app onto hosts; golden images / cloud-init literacy as needed.
+1. **Learn it here** (concepts + tools at DevOps depth), or  
+2. **See a clear entry here** (what it is, why DevOps cares, day-to-day use) **plus a link** to a sister deep-dive when depth lives elsewhere.
 
-**Spirit of this plan:** You do not need to already know every practice by name. This file is the **map of practices to teach**—including ones you have not used yet—so the handbook becomes the place you (and readers) learn them.
+They should **not** discover months later that “networking / Docker / databases / system design” were silently assumed and never pointed to.
+
+| Reader | What this plan guarantees |
+|--------|---------------------------|
+| **Backend / fullstack SE** | Delivery path, servers, CI/CD security, IaC/automation literacy, and links for data stores, queues, design |
+| **Frontend SE** | Frameworks literacy (planned), static/CDN/edge doors, CI for web apps, env/config, observability of UX-impacting failures |
+| **Platform / DevOps-leaning SE** | Full toolchain map below; OS + Cloud-Native + Observability + Security as first-class |
+| **Any SE new to ops** | Day-to-day practice catalog + “where do I go next?” links—no orphan topics |
+
+**Rule when writing later:** every major SE-facing DevOps topic gets either a **chapter/folder here** or an **entry chapter** (short) that links out. Prefer entry+link over duplicating a deep-dive.
+
+---
+
+## Sister deep-dives (already exist — link, don’t rebuild)
+
+Use **GitHub repo URLs** in public handbook content (same rule as root README).
+
+| Domain | Repository | SE should use it for |
+|--------|------------|----------------------|
+| **Networking** | [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive) | TCP/HTTP, DNS deep, routing, firewalls, cloud-native net, net security |
+| **Containers & orchestration depth** | [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) | Docker/Podman, Swarm, OpenShift, managed K8s (GKE/EKS/AKS) depth |
+| **Databases & object storage** | [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) | SQL/NoSQL/cache/search/vector; **S3/GCS-style object stores** |
+| **System design** | [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) | LB, CDN, API gateway, caching, messaging, HA/DR, patterns |
+| **Commands cheat sheets** | [Commands-and-Cheatsheets](https://github.com/thisiskushal31/Commands-and-Cheatsheets) | Quick command lookup (incl. DevOps-And-Cloud-Essentials) |
+| **DSA** | [Datastructures-and-Algorithms](https://github.com/thisiskushal31/Datastructures-and-Algorithms) | Interview/algos—**not** required for DevOps path; optional door only |
+
+---
+
+## Completeness map — day-to-day DevOps for SEs
+
+Status key:
+
+| Status | Meaning |
+|--------|---------|
+| **HERE-deep** | Handbook section exists or is the right deep home (may still be stub/TBD prose) |
+| **HERE-plan** | Explicitly committed in this plan (build when work resumes) |
+| **ENTRY+link** | Add/keep a **short DevOps entry** here; depth in sister repo or official docs |
+| **GAP** | Missing from plan until now — **must add** entry or folder so SEs aren’t blind |
+
+### A. Culture, process, collaboration
+
+| Topic | Day-to-day tools / ideas | Status | Home |
+|-------|--------------------------|--------|------|
+| DevOps culture, blameless, learning | Rituals, reviews | **HERE-deep** (thin) | `Methodologies/` |
+| Branching / PR / trunk vs GitFlow | GitHub/GitLab/Bitbucket | **HERE-plan** | `Methodologies/` |
+| Agile / shift-left | Ceremony vs delivery | **HERE-deep** (named in stubs) | `Methodologies/` |
+| ChatOps / Slack-Teams notifications | Slack, Teams | **HERE-plan** | `Methodologies/` / `CiCd/` |
+| Incident / on-call | PagerDuty, Opsgenie, Grafana OnCall | **HERE-deep** (SRE stub) + **GAP** tool literacy | `Methodologies/3` + optional `Observability/` or Security ops entry |
+| DORA / delivery metrics literacy | Deploy freq, lead time, CFR, MTTR | **HERE-plan** | `Methodologies/` |
+| Docs as code / runbooks | Markdown, Notion/Git | **ENTRY+link** | Short entry in Methodologies; don’t fork wiki products |
+
+### B. Source → build → test → release (CI/CD)
+
+| Topic | Day-to-day tools / ideas | Status | Home |
+|-------|--------------------------|--------|------|
+| CI platforms | GitHub Actions, GitLab CI, Jenkins, CircleCI, Tekton | **HERE-deep** (folders) | `CiCd/` |
+| Also-ran CI (entry) | Azure DevOps Pipelines, Bitbucket Pipelines, Buildkite | **GAP → ENTRY+link** | `CiCd/2` index expansion |
+| CD / GitOps | Argo CD, Flux | **HERE-deep** | `CiCd/` |
+| Progressive delivery | Argo Rollouts, flags | **HERE-plan** (strategies) | `CiCd/3` + entry for Rollouts |
+| Full path test→deploy→verify | Environments, promotion, approvals | **HERE-plan** | `CiCd/` + `Methodologies/` |
+| Artifact registries | GHCR, ECR, GCR/AR, Harbor, Artifactory, Nexus | **GAP → HERE-plan** (concepts + 1–2 tools) | New under `CiCd/` or `Servers/` adjacent — **artifact management chapter** |
+| Package registries | npm, PyPI, Maven, Go proxy | **ENTRY+link** | Languages tracks + short CiCd entry |
+| Supply chain (SBOM, sign, provenance) | Syft/Grype, cosign/Sigstore, SLSA literacy | **GAP → HERE-plan** | `CiCd/` + `Security/` |
+| Feature flags | LaunchDarkly, Unleash, OpenFeature, custom | **HERE-plan** (practice) + **GAP** tool entry | `CiCd/3` / Methodologies |
+
+### C. Pipeline security (AppSec in delivery)
+
+| Topic | Day-to-day tools / ideas | Status | Home |
+|-------|--------------------------|--------|------|
+| SAST / quality | SonarQube, Semgrep, CodeQL | **HERE-plan** | `Security/` + `CiCd/` gates |
+| SCA / deps | Snyk, Trivy, Dependabot/Renovate | **HERE-deep** / plan | `Security/` |
+| Secrets in git | gitleaks, platform secret scanning | **HERE-plan** | `Security/` + CiCd |
+| Secrets at rest | Vault | **HERE-deep** | `Security/Vault` |
+| IaC / policy scan | Checkov, OPA, Kyverno (K8s policy) | **HERE-deep** + **GAP** Kyverno entry | `Security/` / Cloud-Native |
+| Image scan | Trivy, Snyk Container | **HERE-deep** | `Security/` |
+| DAST | OWASP ZAP | **HERE-plan** | `Security/ZAP` |
+| WAF | Cloud/vendor WAF | **HERE-plan** | `Security/` |
+| IAM / least privilege (DevOps angle) | Cloud IAM, OIDC to cloud from CI | **HERE-deep** (stub) + **GAP** OIDC-CI entry | `Security/1` + CiCd |
+
+### D. Infrastructure, cloud, IaC, automation
+
+| Topic | Day-to-day tools / ideas | Status | Home |
+|-------|--------------------------|--------|------|
+| IaC | Terraform, Pulumi, CloudFormation, Crossplane | **HERE-deep** | `IAC/` |
+| OpenTofu | Terraform-compatible fork | **GAP → ENTRY+link** | Under `IAC/Terraform` or short entry |
+| Config management / deploy automation | Ansible, Chef, Puppet | **HERE-deep** (scaffold) | `Automation/` + `IAC/` |
+| Image baking | Packer | **GAP → ENTRY+link** | `IAC/` or `Servers/` |
+| Cloud providers (SE literacy) | AWS, GCP, Azure — regions, IAM, network, managed K8s | **GAP → HERE-plan** | New **`Cloud/`** entry track *or* strong entries under IAC/Cloud-Native — **not** full cloud cert dumps |
+| Cost / FinOps literacy | Rightsizing, idle resources, budgets | **GAP → ENTRY+link** | Methodologies or Cloud entry |
+| DNS / CDN / global edge | Route53/Cloud DNS, CloudFront/Cloudflare, Fastly | **ENTRY+link** | Handbook short entry → [System-Design fundamentals](https://github.com/thisiskushal31/System-Design-Concepts) (+ Networks for DNS depth) |
+| Load balancers | Cloud LB, HAProxy, nginx LB | **HERE-plan** (Servers) + **ENTRY+link** design | `Servers/` + System-Design |
+| API gateways | Kong, AWS API GW, Apigee, … | **ENTRY+link** | System-Design + short DevOps entry (when used in delivery) |
+
+### E. Servers, OS, web tier (classic deploy)
+
+| Topic | Day-to-day tools / ideas | Status | Home |
+|-------|--------------------------|--------|------|
+| Linux / Windows / Unix / macOS | systemd, services, firewall, users | **HERE-deep** | `Operating-Systems/` |
+| Host lifecycle + web servers | nginx, Apache httpd, IIS, Caddy, Traefik, HAProxy, Envoy | **HERE-plan** | **New `Servers/`** |
+| Deploy automation onto hosts | Ansible roles, CI→SSH/WinRM | **HERE-plan** | `Automation/` ↔ `Servers/` |
+| SSH / bastion / SSM | Access patterns | **ENTRY+link** | OS + Security practices |
+
+### F. Containers & Kubernetes
+
+| Topic | Day-to-day tools / ideas | Status | Home |
+|-------|--------------------------|--------|------|
+| Docker / Podman (operator literacy) | Build, run, compose | **ENTRY+link** (must be obvious from handbook) | Thin Cloud-Native or Servers entry → [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) |
+| Kubernetes (DevOps angle) | Workloads, services, deploys | **HERE-deep** (scaffold) | `Cloud-Native/Kubernetes` + Containerization for depth |
+| Helm | Charts | **HERE-deep** | `Cloud-Native/Helm` |
+| Service mesh | Istio, Linkerd | **HERE-deep** | `Cloud-Native/` |
+| Managed K8s | EKS/GKE/AKS | **ENTRY+link** | Containerization `managed-services` |
+| CNCF starter (cert-manager, ExternalDNS, Gateway) | Everyday cluster add-ons | **HERE-plan** | `Cloud-Native/` |
+
+### G. Observability & reliability
+
+| Topic | Day-to-day tools / ideas | Status | Home |
+|-------|--------------------------|--------|------|
+| Metrics | Prometheus, Grafana, Datadog, New Relic | **HERE-deep** | `Observability/` |
+| Logs | Elastic/ELK, Loki (entry if missing) | **HERE-deep** + **GAP** Loki entry if needed | `Observability/` |
+| Traces | OpenTelemetry, Jaeger/Tempo literacy | **HERE-deep** (OTel) + **ENTRY** Tempo/Jaeger | `Observability/` |
+| SLO/SLI/error budgets | SRE practices | **HERE-deep** (stubs) | Observability + Methodologies |
+| Synthetic / smoke after deploy | Scripts, k6, Playwright in CI | **GAP → HERE-plan** | `CiCd/` verify stage |
+
+### H. Data, messaging, caching (SE apps — DevOps must know enough)
+
+| Topic | Day-to-day tools / ideas | Status | Home |
+|-------|--------------------------|--------|------|
+| Datastores ops literacy | Backups, migrations, connection strings, managed DB | **ENTRY+link** | Handbook entry → [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) |
+| Object storage | S3/GCS/Azure Blob | **ENTRY+link** | Databases-Deep-Dive `blob-object` |
+| Cache / Redis | Session/cache in prod | **ENTRY+link** | Databases + System-Design caching |
+| Queues / streams | Kafka, SQS, RabbitMQ | **ENTRY+link** | System-Design messaging (+ lang tracks where relevant) |
+| Migrations in CI/CD | Flyway, Liquibase, Rails/Django migrate | **GAP → ENTRY+link** | CiCd + Databases |
+
+### I. Application frameworks (how SEs’ apps meet DevOps)
+
+| Topic | Day-to-day tools / ideas | Status | Home |
+|-------|--------------------------|--------|------|
+| Frontend | React, Next.js, Angular | **HERE-plan** | **New `Frameworks/`** |
+| Backend | Spring, Nest, Django, FastAPI, Rails, Laravel, … | **HERE-plan** | `Frameworks/` |
+| Language depth | Go, Python, TS, … | **HERE-deep** | `Languages/` (done / mature) |
+| Mobile / desktop | Flutter, RN, native | **ENTRY+link** | Languages doors + Frameworks later |
+
+### J. Platform engineering & developer experience
+
+| Topic | Day-to-day tools / ideas | Status | Home |
+|-------|--------------------------|--------|------|
+| IDP / paved road | Backstage, Port, custom portals | **HERE-deep** (platform stub) + **GAP** Backstage entry | `Cloud-Native/3` |
+| Internal templates | Cookiecutter, copier, org skeletons | **ENTRY+link** | Platform / Methodologies |
+| Local dev parity | Devcontainers, Tilt, Skaffold, compose | **GAP → ENTRY+link** | Cloud-Native / Containers entry |
+
+### K. Explicitly out of DevOps-handbook deep scope (door only)
+
+| Topic | Where instead |
+|-------|----------------|
+| LeetCode / DSA grind | Datastructures-and-Algorithms |
+| Full UI/UX design systems | Not DevOps |
+| Full cloud certification dumps | Thin Cloud literacy + vendor docs |
+| Product system-design case studies | System-Design-Concepts `cases/` |
+
+---
+
+## Gaps to schedule (so nothing is “forgotten”)
+
+When work resumes, treat these as **explicit backlog** (entry or folder—not optional fluff):
+
+1. **SE orientation page** in handbook root or Methodologies — “If you are an SE learning DevOps, start here” + matrix link to this plan’s map (or a reader-facing trimmed version).  
+2. **Artifact registries** chapter (promote immutable artifacts; don’t rebuild per env).  
+3. **Supply-chain literacy** (SBOM, signing/cosign, provenance).  
+4. **Cloud provider literacy** track (AWS/GCP/Azure — shared concepts, not three encyclopedias).  
+5. **Docker/Podman entry** in handbook that **must** link Containerization-Deep-Dive (today easy to miss).  
+6. **Data/messaging/cache DevOps entries** linking Databases + System-Design.  
+7. **DNS/CDN/LB/API gateway** short entries linking System-Design (+ Networks where deep).  
+8. **On-call tooling** literacy (PagerDuty/Opsgenie/Grafana OnCall).  
+9. **FinOps** short entry.  
+10. **OpenTofu / Packer / Kyverno / Loki / Backstage / Azure DevOps** as index entries.  
+11. **Synthetic/e2e in verify stage** (k6/Playwright-class).  
+12. **DB migrations in pipelines** entry.  
+13. **Local dev parity** (devcontainers/compose) entry.  
+14. Everything already listed earlier: **Frameworks/**, **Servers/**, **SAST/DAST chain**, branching, ChatOps, CNCF starter.
+
+---
+
+## Clarifications (terms)
+
+| Term | Meaning |
+|------|---------|
+| **WAF** | Web Application Firewall — runtime HTTP filter |
+| **SAST / DAST / SCA** | Static / dynamic / composition analysis in the delivery path |
+| **OWASP ZAP** | Primary open-source DAST example — **in scope** |
+| **ChatOps / Slack** | Notifications + optional approve-from-chat — practice literacy |
+| **Web server / reverse proxy** | nginx, Apache httpd, Caddy, IIS, Traefik, … |
+| **ENTRY+link** | Enough for an SE to act tomorrow + pointer to depth |
+
+---
+
+## Intent (build list — condensed)
+
+1. CNCF / cloud-native everyday tools  
+2. Frameworks (FE/BE literacy)  
+3. Quality & security tools (Sonar, WAF, existing scanners)  
+4. Full CI/CD practices + **security gate chain**  
+5. Full delivery path test→deploy→verify→feedback  
+6. ChatOps / visibility  
+7. Branching practices  
+8. **Servers / web servers / host deploy + OS applied + Automation**  
+9. **SE completeness:** entries for anything covered in sister repos; no silent gaps  
+10. **New gaps above** (artifacts, supply chain, cloud literacy, Docker entry, data/CDN doors, …)
 
 ---
 
 ## DevOps delivery practices (test → deploy and the full loop)
 
-**Goal:** Cover the **whole delivery story** people mean by “DevOps practices,” not only scanners or only K8s.
-
-Stub files already name pieces of this (`Methodologies/2_…`, `CiCd/1_…`, `CiCd/3_…`)—they are TBD. **This plan commits to filling that story.**
-
-### End-to-end path to teach
+**Goal:** Whole delivery story—not only scanners or only K8s.
 
 ```text
 Idea / ticket
   → branch / PR (Methodologies)
   → build + unit/integration tests (CiCd)
-  → security gates: secrets → SAST → SCA → IaC → image (CiCd + Security)
-  → package artifact / image / SBOM (CiCd)
-  → provision / update host (IAC + Operating-Systems + Automation)
-  → configure web server / proxy / TLS (Servers / web-server track)
-  → deploy app upstream (systemd unit, container, or platform)
-  → deploy to DEV / preview
-  → more tests: e2e, smoke, DAST on a live URL (CiCd + Security)
-  → promote to STAGING → (approvals) → PRODUCTION
-  → deploy strategy: rolling / blue-green / canary / feature flags (CiCd)
+  → security gates: secrets → SAST → SCA → IaC → image (+ sign/SBOM)
+  → publish immutable artifact (registry)
+  → provision / update host or cluster (IAC + OS + Automation / Cloud-Native)
+  → configure web server / Ingress / TLS (Servers / Cloud-Native)
+  → deploy app (systemd / container / K8s)
+  → DEV/preview → e2e/smoke/DAST
+  → promote → STAGING → (approvals) → PRODUCTION
+  → strategy: rolling / blue-green / canary / flags
   → verify: health, metrics, logs, traces (Observability)
-  → notify team (Slack/Teams) + record release
-  → if bad: rollback / forward-fix + incident habits (Methodologies)
-  → learn: blameless notes, improve gates (feedback loop)
-  → ongoing: patch OS, rotate certs, tune nginx/Apache, capacity (Servers + OS)
+  → notify (Slack/Teams) + record release
+  → bad path: rollback / forward-fix + incident
+  → day-2: patch OS, renew certs, cost/capacity, improve gates
 ```
 
-### Practice catalog (in scope — teach even if new to you)
+Practice catalog, SAST/DAST tables, and Servers/web-server v1 lists from prior revisions remain in force—see sections below for detail still needed at write time.
 
-| Practice area | What to cover | Primary home |
-|---------------|---------------|--------------|
-| **CI vs CD vs GitOps** | Continuous integration vs delivery vs deployment; push vs pull deploy | `CiCd/` + `Methodologies/` |
-| **Branching & PR** | Trunk-based, GitHub Flow, GitFlow; protected branches; required checks | `Methodologies/` |
-| **Testing in the pipeline** | Unit → integration → contract → e2e/smoke; what blocks merge vs what runs post-deploy | `CiCd/` |
-| **Security in the pipeline** | SAST/DAST/SCA/secrets/IaC/image/WAF — full section below | `CiCd/` + `Security/` |
-| **Artifacts & versioning** | SemVer / calver literacy; registries; immutability; provenance | `CiCd/` |
-| **Environments & promotion** | Local → CI → dev → staging → prod; env parity; config vs code; secrets per env | `CiCd/` + `Methodologies/` |
-| **Approvals & change control** | Manual gates, CODEOWNERS, CAB-lite vs continuous; who can promote | `CiCd/` + `Methodologies/` |
-| **Deployment strategies** | Rolling, blue-green, canary, recreate; feature flags; progressive delivery | `CiCd/3_…` (already stubbed) |
-| **Host / VM deploy** | Ship to a server: packages, artifacts, systemd/Windows services, healthchecks | **New `Servers/`** (or agreed name) + `CiCd/` |
-| **Web servers & reverse proxies** | nginx, Apache httpd, Caddy, Traefik, IIS, HAProxy, … — TLS, vhosts, upstreams | **New `Servers/`** tool folders |
-| **OS / server management** | Users, packages, firewall, logging, patching—**apply** OS track to deploy | `Operating-Systems/` (exists) ↔ Servers / Automation |
-| **Deploy automation** | Idempotent config of hosts + web servers + app units | `Automation/` (Ansible/Chef/Puppet stubs) + `IAC/` |
-| **Release / rollback** | Release notes, freeze windows, rollback vs roll-forward, hotfix path | `CiCd/` + `Methodologies/` |
-| **Verify after deploy** | Smoke tests, synthetic checks, SLO burn, error budgets (light touch → Observability) | `CiCd/` ↔ `Observability/` |
-| **ChatOps & notifications** | Slack/Teams: fail pings, deploy announcements, threaded release status; optional slash-approve | `Methodologies/` and/or `CiCd/` practice chapter; not a “Slack product manual” |
-| **Dashboards for delivery** | CI status, DORA-ish habits (lead time, deploy freq, CFR, MTTR) at literacy level; Grafana for runtime | `Methodologies/` + `Observability/` |
-| **On-call & incidents** | Handoff after bad deploy; already stubbed in Methodologies SRE topic — connect to deploy | `Methodologies/3_…` |
-| **Platform / self-service** | IDP, paved road pipeline — already named in Cloud-Native platform eng | `Cloud-Native/3_…` |
+### Practice catalog (primary homes)
 
-### Slack / chat / “dash” (explicitly in scope)
-
-| Topic | Cover as |
-|-------|----------|
-| Build/deploy **notifications** to Slack/Teams | Practice: what to alert on (fail, prod deploy), noise control |
-| **ChatOps** (optional depth) | Trigger or acknowledge deploys from chat—with audit trail |
-| **Status visibility** | Channel topics, release threads, links to pipeline + Grafana |
-| Not in scope as a full product track | Slack Enterprise admin, workspace design, marketing Slack |
-
-Same ideas apply if the org uses **Microsoft Teams**, Discord, or email—teach the **practice**, show Slack as the common example.
+| Practice area | Primary home |
+|---------------|--------------|
+| CI vs CD vs GitOps; testing in pipeline; artifacts; environments; approvals; strategies; rollback | `CiCd/` + `Methodologies/` |
+| Security gate chain | `CiCd/` + `Security/` |
+| Host / web-server deploy | **`Servers/`** + `Operating-Systems/` + `Automation/` |
+| ChatOps / DORA literacy / branching / incidents | `Methodologies/` |
+| Verify after deploy | `CiCd/` ↔ `Observability/` |
+| Platform / IDP | `Cloud-Native/3` |
 
 ---
 
-## Servers, web servers, OS, and deploy automation
+## CI/CD security testing (SAST, DAST, full gate chain)
 
-**Goal:** Cover how software actually **lands on a machine** people can SSH/RDP to—or on a VM/image that becomes that machine—not only “deploy to Kubernetes.” Classic production worldwide still runs **nginx / Apache / IIS** in front of apps; automation must configure that stack repeatably.
+| Stage | Examples | When |
+|-------|----------|------|
+| Secret scanning | gitleaks, platform scanners | PR / CI |
+| SAST / quality | SonarQube, Semgrep, CodeQL | PR / build |
+| SCA | Snyk, Trivy, Dependabot | PR / build |
+| IaC / policy | Checkov, OPA, Kyverno | PR / build |
+| Image scan | Trivy, Snyk Container | After image build |
+| Sign / SBOM | cosign, Syft | Before promote |
+| Quality gate | Sonar gate, coverage floors | PR / promote |
+| DAST | **OWASP ZAP** | After deploy to test/preview |
+| WAF | Vendor/cloud WAF | Continuous |
+| Pen test | Periodic door | Release / periodic |
 
-### What already exists (reuse, don’t duplicate)
-
-| Area | Path | Use it for |
-|------|------|------------|
-| **OS theory + Linux/Windows/Unix/macOS** | `Operating-Systems/` | Processes, networking, firewall, users, storage, shell, systemd-era service thinking, Windows services |
-| **Config / deploy automation tools** | `Automation/` (Ansible, Chef, Puppet stubs) | Idempotent install/config of web servers + app units |
-| **Provision infra** | `IAC/` (Terraform, etc.) | Create VMs/networks/LBs; hand off to Automation for software config |
-| **Containers / K8s depth** | Cloud-Native + Containerization-Deep-Dive | When the “server” is a node or the edge is Ingress—not a substitute for VM/nginx literacy |
-| **PHP ↔ nginx/Apache** | Languages/PHP (FPM chapter) | Language-specific glue; general web-server track still needed |
-
-### New home (recommended when work starts)
-
-Add a top-level **`Servers/`** section (name can be `Servers/` or `Web-Servers-And-Edge/` at kickoff)—**one folder per product**, same pattern as CiCd/Security:
-
-| Layer | Topics | Notes |
-|-------|--------|-------|
-| **Concepts** | What a reverse proxy is; TLS termination; vhosts; upstreams; static vs dynamic; load balancing vs app server | Numbered overview MDs under `Servers/` |
-| **Linux host deploy** | Packages, `systemd` units, logs (`journalctl`), firewall ports, users, SELinux/AppArmor literacy doors | Cross-link `Operating-Systems/Linux/` |
-| **Windows host deploy** | IIS, Windows Services, WinRM, firewall | Cross-link `Operating-Systems/Windows/` |
-| **Other OS** | When brownfield is AIX/Solaris/BSD—**doors** to `Operating-Systems/Unix/`, not full mirrors | Recognition + where ops differs |
-| **Deploy automation** | Ansible roles for nginx/Apache/Caddy; CI job that runs playbooks; Chef/Puppet equivalents | `Automation/` + examples linked from Servers |
-| **Day-2 ops** | Cert renewal, log rotation, upgrades, backup of config, graceful reload vs restart | Servers concepts + OS |
-
-### Web servers / proxies to cover (international + common)
-
-**v1 must-have (everyone meets these):**
-
-| Product | Why |
-|---------|-----|
-| **nginx** | Default reverse proxy / static server in huge swaths of industry |
-| **Apache HTTP Server (httpd)** | Still dominant in many enterprises, shared hosting, `.htaccess` brownfield |
-| **IIS** | Windows / .NET estates internationally |
-
-**v1 strong add (widely used; pick order at kickoff):**
-
-| Product | Why |
-|---------|-----|
-| **Caddy** | Automatic HTTPS; growing simple-deploy default |
-| **Traefik** | Dynamic config; Docker/K8s-friendly proxy |
-| **HAProxy** | Classic L4/L7 load balancer in front of fleets |
-| **Envoy** | Cloud-native proxy; ties to mesh / Gateway API literacy |
-
-**Later / doors (don’t block v1):** lighttpd, OpenResty, Apache Tomcat (app server—not the same as httpd), Weblogic/WebSphere (enterprise Java doors), cloud LB products (ALB/NLB/GCP LB) as “managed edge” doors next to HAProxy/Envoy.
-
-**Not the same thing—teach the distinction:**
-
-| Thing | Role |
-|-------|------|
-| nginx / Apache / Caddy / IIS | Web server / reverse proxy on a host (or container) |
-| PHP-FPM / Gunicorn / Puma / Node | App process **upstream** of the proxy |
-| K8s Ingress / Gateway API | Cluster edge—often still nginx/Envoy/Traefik **under the hood** |
-| WAF | Security filter—may sit in front of or on the proxy |
-
-### Host lifecycle to teach (with automation)
-
-```text
-Provision VM/bare metal (IAC / cloud UI)
-  → baseline OS (users, SSH/WinRM, patch, firewall)     [Operating-Systems + Automation]
-  → install web server + TLS                            [Servers + Automation]
-  → install/run app (systemd / service / container)     [Servers + CiCd artifact]
-  → healthcheck + register with LB                      [CiCd / Servers]
-  → pipeline promotes new artifact → reload proxy       [CiCd + Automation]
-  → observe + patch + renew certs                       [Observability + Servers]
-```
-
-### Must-cover teaching points (when writing)
-
-- Config is **code**: nginx conf / Apache vhosts managed by Ansible (or equivalent), not “SSH and edit once.”  
-- **Reload vs restart**; zero-downtime habits on a single host vs multi-host LB.  
-- TLS: where certs live, renewal (e.g. ACME), secrets not in git.  
-- Same pipeline mental model for **VM + nginx** and **K8s + Ingress**—different machinery, same stages.  
-- OS choice changes commands and service model; **concepts transfer**, runbooks differ (use OS track).
+**Rule:** Teach the **chain** in `CiCd/`; teach each **scanner** in `Security/`.
 
 ---
 
-## CI/CD security testing (SAST, DAST, and the full gate chain)
+## Servers, web servers, OS, deploy automation
 
-**Goal:** One clear handbook story: *where each control sits in the pipeline*, what it finds, what it does **not** find, and how it fails the build vs warns.
+**Reuse:** `Operating-Systems/` (deep), `Automation/` (Ansible/Chef/Puppet stubs), `IAC/` (provision), Containerization-Deep-Dive (containers).
 
-### Pipeline stages to cover (practices + tools)
+**New:** `Servers/` — one folder per product.
 
-| Stage | What it is | Example tools / homes | When it runs |
-|-------|------------|----------------------|--------------|
-| **Secret scanning** | Stop keys/tokens from landing in git/CI logs | gitleaks / trufflehog / native GHA-GitLab secret detection; Vault for *storage* | Pre-commit / PR / CI |
-| **SAST** | Vulns & insecure patterns in **your** code | SonarQube, Semgrep, CodeQL, language linters with security rules | PR / build |
-| **SCA / deps** | Known CVEs in libraries | Snyk, Trivy (fs), Dependabot/Renovate, npm/pip audit | PR / build |
-| **IaC / policy scan** | Misconfig in Terraform/K8s/Helm manifests | Checkov, OPA/Conftest, Trivy config | PR / build |
-| **Container / image scan** | OS & app vulns in images | Trivy, Snyk Container, registry scanners | After image build |
-| **Quality gate** | Block merge/deploy on threshold | Sonar quality gate, coverage floors, severity policy | PR / before promote |
-| **DAST** | Attack a **deployed** app (staging/ephemeral) | **OWASP ZAP**, other DAST | After deploy to test env (or preview) |
-| **IAST** (optional depth) | Instrumentation inside running app | Commercial IAST — literacy door unless you standardize one | Test env |
-| **WAF** | Runtime edge filter (prod/staging) | Cloud/vendor WAF — **not** a substitute for SAST/DAST | Continuous at edge |
-| **Pen test / red team** (door) | Human-led or scheduled deep assessment | Out of day-to-day CI; periodic control | Release / periodic |
+**v1 must-have:** nginx, Apache httpd, IIS  
+**v1 strong add:** Caddy, Traefik, HAProxy, Envoy  
 
-### Where security-in-CI content should live
-
-| Content | Home |
-|---------|------|
-| **Practices narrative** (gate order, fail-closed vs warn, staging DAST) | **`CiCd/`** — expand `1_Pipelines_…` and/or add `4_Pipeline_Security_SAST_DAST_And_Gates.md` |
-| **Tool how-tos** | **`Security/<Tool>/`** |
-| **Branch rules that enable gates** | **`Methodologies/`** + CiCd cross-link |
-
-**Rule:** Teach the **chain** in CiCd; teach each **scanner** in Security. Cross-link both ways.
-
-### Must-cover teaching points (when writing)
-
-- SAST ≠ DAST ≠ SCA ≠ WAF — different layers.  
-- DAST needs a **reachable environment**; it sits on the **test → deploy** path, not only on “lint PR.”  
-- Quality gates: severity, new-code vs overall, break-the-build policy.  
-- Suppressions need ownership.  
-- Artifacts: SARIF, SBOM, scan reports for audit.  
-- Shift-left vs runtime: CI finds early; WAF/observability catch what escapes.
+Distinguish: proxy vs app upstream vs K8s Ingress vs WAF.
 
 ---
 
-## Inventory: already planned vs scaffolded vs new
+## Inventory snapshot
 
-### A. Already in the handbook structure (scaffolded — mostly placeholders)
-
-Fill these—do **not** invent a parallel tree.
-
-| Area | Path | What’s there today |
-|------|------|--------------------|
-| Culture / workflows | `Methodologies/` | Culture; practices (GitOps, trunk-based, feature flags, canary *named*); SRE/incident — **thin TBD** |
-| Pipelines & CD | `CiCd/` | Build/test/deploy + deployment strategies stubs; tool folders — **scaffolded**; **full practice path + SAST/DAST chapter not written** |
-| Cloud-native | `Cloud-Native/` | Architecture / K8s / platform eng; K8s, Helm, Istio, Linkerd — **scaffolded** |
-| Observability | `Observability/` | Prometheus, Grafana, OpenTelemetry, etc. — for **verify after deploy** |
-| Security tools | `Security/` | Vault, OPA, Checkov, Snyk, Trivy; WAF *mentioned* — **no SonarQube / ZAP / WAF tool folder yet** |
-| Operating systems | `Operating-Systems/` | **Exists and is deep** — Linux/Windows/Unix/macOS fundamentals; **not** yet wired as “deploy nginx onto this host” |
-| Automation | `Automation/` | Ansible/Chef/Puppet folders — **scaffolded**; use for **host + web-server deploy automation** |
-| IAC | `IAC/` | Provision machines/networks — pair with Automation for software on the box |
-| Containers depth | [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) | Deep runtime/orchestration outside handbook |
-
-### B. Already a deliberate *door* from Languages
-
-| Topic | Current stance |
-|-------|----------------|
-| React / Next.js | TypeScript doors to official docs — not full framework chapters |
-| Rails / Laravel / Nest / Spring | Ecosystem doors inside language tracks |
-
-**Decision:** add **`Frameworks/`** so Languages stay languages.
-
-### C. New / explicit commitments when this work starts
-
-| Item | Suggested home | Notes |
-|------|----------------|-------|
-| Full delivery path (test → deploy → verify → feedback) | `CiCd/` + `Methodologies/` | **First-class**; catalog above |
-| Branching playbook | `Methodologies/` | Beyond one-liners |
-| Pipeline security gate chain | `CiCd/` new/expanded chapter | SAST/DAST/SCA/… |
-| ChatOps / Slack-Teams notifications | `Methodologies/` or `CiCd/` practice chapter | Literacy, not Slack admin |
-| SonarQube / ZAP / WAF / secret scan tools | `Security/` | Wire into CiCd story |
-| **Servers / web servers / host deploy** | **New `Servers/`** | nginx, Apache httpd, IIS, Caddy, Traefik, HAProxy, Envoy, … |
-| **OS applied to deploy** | Cross-link `Operating-Systems/` | systemd, firewall, patching—don’t rewrite OS track |
-| **Deploy automation on hosts** | `Automation/` deepen + Servers examples | Ansible (etc.) installs/configures proxy + app |
-| CNCF starter pack | `Cloud-Native/` | See below |
-| Frontend / backend frameworks | **New** `Frameworks/` | React, Next, Angular + backends |
+| Area | Today |
+|------|--------|
+| Methodologies / CiCd / IAC / Automation / Cloud-Native / Observability / Security | Scaffolded or partial — **fill** |
+| Operating-Systems / Languages | Strong — **cross-link** for deploy & SE paths |
+| Frameworks / Servers / Cloud literacy / artifact+supply-chain entries | **Planned / gaps** |
+| Sister deep-dives | **Link from SE entries** — do not duplicate |
 
 ---
 
-## Recommended delivery lane
+## Recommended lanes
 
-**Lane A — “Ship & collaborate”** (suggested default):
-
-1. **`Methodologies/`** — culture refresh + **branching** + PR/required checks + **notifications/ChatOps literacy** + link to incidents.  
-2. **`CiCd/`** — **full path** build → test → secure → artifact → deploy → verify; deepen **deployment strategies**; security gate chapter; one primary CI tool (e.g. GitHub Actions) showing the path.  
-3. **`Servers/` (new)** — nginx + Apache (+ IIS) first; reverse proxy/TLS/upstreams; Linux host deploy; wire **`Automation/`** (Ansible) so config is not manual-only; cross-link **`Operating-Systems/`**.  
-4. **`Security/`** — SonarQube, ZAP, WAF; connect Snyk/Trivy/Checkov into the same path.  
-5. **`Frameworks/`** — thin v1.  
-6. **CNCF starter pack** + Observability as “verify after deploy” (Ingress as the K8s-shaped cousin of nginx).
-
-Alternates:
-
-- **Lane B** — CNCF first (platform/K8s audience).  
-- **Lane C** — Frameworks first.  
-- **Lane D** — **Servers / classic host deploy first** (if your audience is still mostly VMs + nginx/Apache before K8s).
+| Lane | Focus |
+|------|--------|
+| **A — Ship & collaborate** (default) | Methodologies → CiCd (path + gates) → Servers+Automation → Security tools → Frameworks → CNCF → **SE gap entries** |
+| **B** | CNCF / K8s first |
+| **C** | Frameworks first |
+| **D** | Servers / classic host deploy first |
+| **E — SE on-ramp first** | Write SE orientation + ENTRY+link matrix into handbook, then A |
 
 ---
 
-## CNCF / everyday starter pack (v1 candidate)
+## CNCF starter (v1)
 
-| Tier | Tools | Handbook home |
-|------|-------|----------------|
-| **Core** | Kubernetes, Helm | `Cloud-Native/` |
-| **Delivery** | Argo CD *or* Flux | `CiCd/` |
-| **Observability** | Prometheus, Grafana, OpenTelemetry | `Observability/` |
-| **Next tier (pick 2–3)** | cert-manager, ExternalDNS, Ingress / Gateway API, Cilium | `Cloud-Native/` |
-
----
-
-## Frameworks v1 candidate (literacy only)
-
-**Frontend:** React, Next.js, Angular  
-
-**Backend (pick at kickoff):** e.g. Spring Boot, Nest/Express, Django, FastAPI, Rails, Laravel  
-
-**Lens:** what you see → what it is → what it’s for → where DevOps uses it.
+| Tier | Tools |
+|------|-------|
+| Core | Kubernetes, Helm |
+| Delivery | Argo CD and/or Flux |
+| Observability | Prometheus, Grafana, OpenTelemetry |
+| Next | cert-manager, ExternalDNS, Ingress/Gateway, Cilium (pick 2–3) |
 
 ---
 
-## Security tool map (aligned to CI/CD stages)
+## Frameworks v1
 
-| Layer | Example | Role |
-|-------|---------|------|
-| **Secrets** | gitleaks (+ Vault) | Fail PR if secrets committed |
-| **SAST / quality** | SonarQube, Semgrep, CodeQL | Gate on findings |
-| **SCA** | Snyk, Trivy, Dependabot | Critical deps |
-| **IaC / policy** | Checkov, OPA | Dangerous misconfig |
-| **Image** | Trivy, Snyk Container | Before push/deploy |
-| **DAST** | **OWASP ZAP** | After deploy to test/preview |
-| **Runtime edge** | **WAF** | Continuous |
-| **IAST / pen test** | Doors | Beyond default PR CI |
+**FE:** React, Next.js, Angular  
+**BE:** pick at kickoff (Spring, Nest, Django, FastAPI, Rails, Laravel, …)  
+**Lens:** what you see → what it is → what it’s for → what DevOps must configure/build/deploy/observe
 
 ---
 
-## Kickoff checklist (when you return)
+## Kickoff checklist
 
-- [ ] Confirm lane: **A** / B / C / **D (servers-first)**  
-- [ ] Confirm branching **house default**  
-- [ ] Confirm **full delivery path in scope** (test → deploy → verify → rollback/feedback)  
-- [ ] Confirm **host + web-server deploy in scope** (nginx, Apache, … + OS + Automation)  
-- [ ] Confirm `Servers/` section name + v1 web-server list (nginx/Apache/IIS + which of Caddy/Traefik/HAProxy/Envoy)  
-- [ ] Confirm deploy automation primary tool (Ansible vs Chef vs Puppet vs mix)  
-- [ ] Confirm **ChatOps / Slack-Teams notifications** in scope (literacy)  
-- [ ] Confirm deployment strategies chapter filled (rolling / blue-green / canary / flags)  
-- [ ] Confirm CI/CD security track: SAST + DAST + SCA + secrets + IaC + image + WAF  
-- [ ] Confirm SonarQube + OWASP ZAP as primary SAST/DAST examples  
-- [ ] Confirm WAF = concepts-first vs vendor folders  
-- [ ] Confirm secret-scanning tool for v1  
-- [ ] Confirm CNCF starter list + Frameworks v1 list  
-- [ ] Add/expand CiCd chapters: pipeline path + security gates (+ ChatOps cross-link)  
-- [ ] Update root `README.md` Structure when `Frameworks/` and/or `Servers/` are created  
-- [ ] Keep Languages free of full React/Next/Angular curricula; keep OS track as the OS deep dive  
+- [ ] Confirm lane: **A** / B / C / D / **E (SE on-ramp)**  
+- [ ] Publish reader-facing “SE learning DevOps — start here” that mirrors the completeness map  
+- [ ] Confirm every **GAP** row gets an owner (entry vs folder) before deep tool prose  
+- [ ] Confirm branching house default  
+- [ ] Confirm Servers v1 list + Automation primary (Ansible …)  
+- [ ] Confirm CI security track (SAST/DAST/SCA/secrets/IaC/image/WAF/sign-SBOM)  
+- [ ] Confirm SonarQube + ZAP as primary examples  
+- [ ] Confirm artifact registry + supply-chain chapters in CiCd/Security  
+- [ ] Confirm Cloud literacy approach (`Cloud/` vs entries under IAC)  
+- [ ] Confirm Docker/Podman handbook entry → Containerization-Deep-Dive  
+- [ ] Confirm data/messaging/CDN/LB entries → Databases + System-Design + Networks  
+- [ ] Update root `README.md` Structure when `Frameworks/`, `Servers/`, and/or `Cloud/` appear  
+- [ ] Keep Languages = languages; OS = OS; deep dives = deep dives  
 
 ---
 
 ## Out of scope for this plan file
 
-- Writing the actual chapter bodies  
-- Scraping the entire CNCF landscape  
-- Folding frameworks into Languages  
-- Rewriting `Operating-Systems/` inside `Servers/` (cross-link instead)  
-- Full Slack/Teams administration courses  
-- Exhaustive coverage of every historical web server ever shipped  
-- Full commercial IAST / pen-test handbooks (doors unless expanded later)
-
-When you resume: open this file, tick the kickoff checklist, then start with the first unchecked step for your lane.
+- Writing all chapter bodies now  
+- Duplicating Networks / Containers / Databases / System-Design inside this repo  
+- Full cloud certification curricula  
+- Exhaustive CNCF landscape dump  
+- DSA as a DevOps requirement  
 
 ---
 
-## Related handbook entry points
+## Related entry points
 
 - [Handbook README](./README.md)  
-- [Methodologies](./Methodologies/README.md)  
-- [CiCd](./CiCd/README.md)  
-- [Automation](./Automation/README.md)  
-- [IAC](./IAC/README.md)  
-- [Operating-Systems](./Operating-Systems/README.md)  
-- [Cloud-Native](./Cloud-Native/README.md)  
-- [Security](./Security/README.md)  
-- [Observability](./Observability/README.md)  
-- [Languages](./Languages/README.md) (frameworks remain doors until `Frameworks/` exists)
+- [Methodologies](./Methodologies/README.md) · [CiCd](./CiCd/README.md) · [IAC](./IAC/README.md) · [Automation](./Automation/README.md)  
+- [Cloud-Native](./Cloud-Native/README.md) · [Observability](./Observability/README.md) · [Security](./Security/README.md)  
+- [Operating-Systems](./Operating-Systems/README.md) · [Languages](./Languages/README.md)  
+- Sister repos: [Networks](https://github.com/thisiskushal31/Networks-Deep-Dive) · [Containers](https://github.com/thisiskushal31/Containerization-Deep-Dive) · [Databases](https://github.com/thisiskushal31/Databases-Deep-Dive) · [System Design](https://github.com/thisiskushal31/System-Design-Concepts) · [Commands](https://github.com/thisiskushal31/Commands-and-Cheatsheets)

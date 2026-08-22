@@ -1,0 +1,44 @@
+[
+  {
+    "name": "1_Shared_Cloud_Concepts.md",
+    "path": "1_Shared_Cloud_Concepts.md",
+    "type": "file",
+    "sha": "",
+    "size": 585
+  },
+  {
+    "name": "2_GCP_Literacy.md",
+    "path": "2_GCP_Literacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 749
+  },
+  {
+    "name": "3_AWS_Literacy.md",
+    "path": "3_AWS_Literacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 420
+  },
+  {
+    "name": "4_Azure_Literacy.md",
+    "path": "4_Azure_Literacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 390
+  },
+  {
+    "name": "5_Managed_Kubernetes_Entry.md",
+    "path": "5_Managed_Kubernetes_Entry.md",
+    "type": "file",
+    "sha": "",
+    "size": 575
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1137
+  }
+]

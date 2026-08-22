@@ -1,5 +1,12 @@
 [
   {
+    "name": "0_SE_Learning_DevOps_Start_Here.md",
+    "path": "0_SE_Learning_DevOps_Start_Here.md",
+    "type": "file",
+    "sha": "",
+    "size": 1524
+  },
+  {
     "name": "1_DevOps_Culture_And_Collaboration.md",
     "path": "1_DevOps_Culture_And_Collaboration.md",
     "type": "file",
@@ -18,13 +25,48 @@
     "path": "3_Team_Patterns_SRE_Incident.md",
     "type": "file",
     "sha": "",
-    "size": 317
+    "size": 627
+  },
+  {
+    "name": "4_Branching_And_PR_Practices.md",
+    "path": "4_Branching_And_PR_Practices.md",
+    "type": "file",
+    "sha": "",
+    "size": 915
+  },
+  {
+    "name": "5_DORA_And_Delivery_Metrics.md",
+    "path": "5_DORA_And_Delivery_Metrics.md",
+    "type": "file",
+    "sha": "",
+    "size": 890
+  },
+  {
+    "name": "6_ChatOps_And_Notifications.md",
+    "path": "6_ChatOps_And_Notifications.md",
+    "type": "file",
+    "sha": "",
+    "size": 781
+  },
+  {
+    "name": "7_Docs_And_Runbooks.md",
+    "path": "7_Docs_And_Runbooks.md",
+    "type": "file",
+    "sha": "",
+    "size": 835
+  },
+  {
+    "name": "8_FinOps_Literacy.md",
+    "path": "8_FinOps_Literacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 718
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 958
+    "size": 1383
   }
 ]

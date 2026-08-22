@@ -21,6 +21,10 @@ IAC concepts, patterns, and tools. **Each tool has its own folder**; add new too
 | [**Crossplane**](./Crossplane/README.md) | Cloud-native control plane, Kubernetes-native infra |
 | [**CloudFormation**](./CloudFormation/README.md) | AWS stacks, templates, drift |
 | [**Pulumi**](./Pulumi/README.md) | IaC in TypeScript, Python, Go |
+| [**OpenTofu**](./OpenTofu/README.md) | Terraform-compatible fork | stub |
+| [**Packer**](./Packer/README.md) | Machine image baking | stub |
+
+Cloud provider literacy (not full cert content): [Cloud/](../Cloud/README.md)
 
 To add a new tool: create a folder (e.g. `NewTool/README.md`) and add it to the table above. Community-maintained.
 

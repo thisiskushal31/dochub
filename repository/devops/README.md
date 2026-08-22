@@ -6,18 +6,26 @@ Comprehensive DevOps handbook covering methodologies, best practices, tooling gu
 
 ## Structure
 
-- `Methodologies/` — DevOps culture, practices, workflows, and team collaboration patterns
-- `CiCd/` — Continuous Integration and Continuous Delivery pipelines, practices, and tools
-- `IAC/` — Infrastructure as Code: Terraform, CloudFormation, Pulumi, and best practices
-- `Automation/` — Automation patterns, scripting, orchestration, and workflow automation
-- `Cloud-Native/` — Cloud-native architectures, patterns, and platform engineering
-- `Observability/` — Monitoring, logging, tracing, SLO/SLI; one folder per tool (Prometheus, Grafana, OpenTelemetry, etc.)
-- `Security/` — Security practices, compliance, secrets management, and threat mitigation
-- `Operating-Systems/` — **Fundamentals/** (OS-agnostic theory), **Linux/**, **Windows/**, **Unix/**, **MacOS/**: deep coverage of OS topics (process, memory, I/O, shell, services, storage, virtualization, etc.); add new topics as needed
-- `Languages/` — General-purpose, config/query, **niche/security** (Assembly, Nim, VBA, R, Erlang, Zig, Delphi, COBOL, Objective-C, OCaml, F#, Ada, Julia, Dart, D, Haskell, Clojure, Crystal, VB.NET, Tcl, Fortran), and **Web3** (Solidity, Vyper, Move, Cairo): C/C++, Python, Go, Java, JavaScript, Rust, TypeScript, Ruby, Groovy, C#, Scala, Perl, Kotlin, PHP, Lua, Swift, Elixir, LaTeX, Shell, HCL, JSON, YAML; Shell in Operating-Systems, HCL in IAC, JSON/YAML across CiCd/IAC/Cloud-Native; database query languages (e.g. SQL, PromQL) in Databases-Deep-Dive; one folder per language; add topic files as needed
-- `Assets/` — Images and diagrams (with credit in the topic files). See [Assets/README.md](Assets/README.md) for structure and where to store images per section.
+- **`Methodologies/`** — DevOps culture, practices, workflows, and team collaboration patterns — **start at [0_SE_Learning_DevOps_Start_Here.md](./Methodologies/0_SE_Learning_DevOps_Start_Here.md)**
+- **`CiCd/`** — Continuous Integration and Continuous Delivery pipelines, practices, and tools
+- **`IAC/`** — Infrastructure as Code: Terraform, CloudFormation, Pulumi, and best practices
+- **`Automation/`** — Automation patterns, scripting, orchestration, and workflow automation
+- **`Cloud/`** — **New:** AWS / GCP / Azure literacy (shared concepts, not cert dumps)
+- **`Cloud-Native/`** — Cloud-native architectures, patterns, and platform engineering
+- **`Servers/`** — **New:** Web servers, reverse proxies, host lifecycle (nginx, Apache, …)
+- **`Observability/`** — Monitoring, logging, tracing, SLO/SLI; one folder per tool (Prometheus, Grafana, OpenTelemetry, etc.)
+- **`Security/`** — Security practices, compliance, secrets management, and threat mitigation
+- **`Entry-Points/`** — **New:** Short doors to sister deep-dives (containers, data, cyber, frameworks, …)
+- **`Operating-Systems/`** — **Fundamentals/** (OS-agnostic theory), **Linux/**, **Windows/**, **Unix/**, **MacOS/**
+- **`Languages/`** — General-purpose and niche languages (mature content; syntax depth lives here)
+- **`Assets/`** — Images and diagrams (with credit in the topic files). See [Assets/README.md](Assets/README.md)
 
-**Next (planned, not started):** CNCF starter pack; frameworks; branching; **full DevOps delivery path (test → deploy → verify → feedback)**; **servers/web servers (nginx, Apache, IIS, Caddy, Traefik, …) + OS host lifecycle + deploy automation**; ChatOps/Slack-Teams; **CI/CD security gates (SAST, DAST, SCA, …, WAF)** — see [PLAN_DevOps_Concepts_Beyond_Languages.md](./PLAN_DevOps_Concepts_Beyond_Languages.md).
+**Content write order (stubs + plan):** [CONTENT_WRITE_ORDER.md](./CONTENT_WRITE_ORDER.md)  
+**Gap matrix / completeness contract:** [PLAN_DevOps_Concepts_Beyond_Languages.md](./PLAN_DevOps_Concepts_Beyond_Languages.md)
+
+**Application frameworks catalog** lives in [Tooling-and-Frameworks-Deep-Dive](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive) — see [Entry-Points/Application_Frameworks.md](./Entry-Points/Application_Frameworks.md). Do not duplicate as `Frameworks/` here.
+
+**Next (in progress):** Fill stubs in Methodologies → CiCd → Security → Servers → Cloud → Entry-Points per CONTENT_WRITE_ORDER.
 
 ## Visual guides and images
 
@@ -32,13 +40,14 @@ Images from these sources can be downloaded into the right `Assets/` subfolder a
 
 ## How to use
 
-1. Start with `Methodologies/` for DevOps culture and foundational practices
+1. Start with [**Methodologies/0 — SE learning DevOps**](./Methodologies/0_SE_Learning_DevOps_Start_Here.md) or `Methodologies/` for culture
 2. Use `Operating-Systems/` for OS fundamentals (theory first in **Fundamentals/**), then Linux, Windows, Unix, or macOS implementation and commands
 3. Use `Languages/` when you need to read or write code (Python for automation, Go for K8s/Terraform, etc.)
-4. Jump into `CiCd/` or `IAC/` based on your immediate needs
-5. Use `Automation/` for workflow and orchestration patterns
-6. Reference `Observability/` and `Security/` for production operations
-7. Keep checklists and commands handy for day-to-day operations
+4. Jump into `CiCd/` or `IAC/` based on your immediate needs; follow [CONTENT_WRITE_ORDER.md](./CONTENT_WRITE_ORDER.md) for stub fill order
+5. Use `Servers/` for web tier; `Cloud/` for provider literacy; `Entry-Points/` for sister deep-dives
+6. Use `Automation/` for workflow and orchestration patterns
+7. Reference `Observability/` and `Security/` for production operations
+8. Keep checklists and commands handy — [Commands-and-Cheatsheets](https://github.com/thisiskushal31/Commands-and-Cheatsheets)
 
 ## Where to go deeper
 
@@ -52,6 +61,10 @@ When a topic here touches another domain, we give enough context to continue in 
 | **System design** | [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) | Patterns, components, trade-offs; fundamentals, caching, messaging, case studies. |
 | **DSA** | [Datastructures-and-Algorithms](https://github.com/thisiskushal31/Datastructures-and-Algorithms) | Data structures and algorithms notes and solutions (GFG, Leetcode). |
 | **Commands** | [Commands-and-Cheatsheets](https://github.com/thisiskushal31/Commands-and-Cheatsheets) | Essential commands and cheatsheets (languages, DevOps & cloud, databases). |
+| **Data engineering** | [Data-Engineering-Deep-Dive](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive) | Pipelines, warehousing, orchestration — [entry](./Entry-Points/Data_Engineering_Entry.md). |
+| **Data science & AI** | [Data-Science-AI-Deep-Dive](https://github.com/thisiskushal31/Data-Science-AI-Deep-Dive) | ML/AI depth — [entry](./Entry-Points/Data_Science_AI_Entry.md). |
+| **Tooling & frameworks** | [Tooling-and-Frameworks-Deep-Dive](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive) | Framework/SDK catalog — [entry](./Entry-Points/Application_Frameworks.md). |
+| **Cybersecurity** | [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) | Full cyber program — [entry](./Entry-Points/Cybersecurity_Deep_Dive.md). Handbook `Security/` = delivery gates only. |
 
 ## Contributing — content guidelines
 

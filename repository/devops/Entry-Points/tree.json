@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Application_Frameworks.md",
+    "path": "Application_Frameworks.md",
+    "type": "file",
+    "sha": "",
+    "size": 757
+  },
+  {
+    "name": "Cybersecurity_Deep_Dive.md",
+    "path": "Cybersecurity_Deep_Dive.md",
+    "type": "file",
+    "sha": "",
+    "size": 782
+  },
+  {
+    "name": "Data_Engineering_Entry.md",
+    "path": "Data_Engineering_Entry.md",
+    "type": "file",
+    "sha": "",
+    "size": 529
+  },
+  {
+    "name": "Data_Messaging_And_Cache.md",
+    "path": "Data_Messaging_And_Cache.md",
+    "type": "file",
+    "sha": "",
+    "size": 756
+  },
+  {
+    "name": "Data_Science_AI_Entry.md",
+    "path": "Data_Science_AI_Entry.md",
+    "type": "file",
+    "sha": "",
+    "size": 509
+  },
+  {
+    "name": "DNS_CDN_And_Load_Balancers.md",
+    "path": "DNS_CDN_And_Load_Balancers.md",
+    "type": "file",
+    "sha": "",
+    "size": 831
+  },
+  {
+    "name": "Docker_And_Podman.md",
+    "path": "Docker_And_Podman.md",
+    "type": "file",
+    "sha": "",
+    "size": 596
+  },
+  {
+    "name": "Local_Dev_Parity.md",
+    "path": "Local_Dev_Parity.md",
+    "type": "file",
+    "sha": "",
+    "size": 582
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 2187
+  }
+]
