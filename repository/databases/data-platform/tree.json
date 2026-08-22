@@ -1,0 +1,30 @@
+[
+  {
+    "name": "1-backups-to-object-storage.md",
+    "path": "1-backups-to-object-storage.md",
+    "type": "file",
+    "sha": "",
+    "size": 468
+  },
+  {
+    "name": "2-cdc-and-replication-for-analytics.md",
+    "path": "2-cdc-and-replication-for-analytics.md",
+    "type": "file",
+    "sha": "",
+    "size": 410
+  },
+  {
+    "name": "3-schema-migrations-and-contracts.md",
+    "path": "3-schema-migrations-and-contracts.md",
+    "type": "file",
+    "sha": "",
+    "size": 438
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 910
+  }
+]

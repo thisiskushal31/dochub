@@ -1,9 +1,30 @@
 [
   {
+    "name": "1-overview-architecture.md",
+    "path": "1-overview-architecture.md",
+    "type": "file",
+    "sha": "",
+    "size": 319
+  },
+  {
+    "name": "2-indexing-and-queries.md",
+    "path": "2-indexing-and-queries.md",
+    "type": "file",
+    "sha": "",
+    "size": 315
+  },
+  {
+    "name": "3-operations.md",
+    "path": "3-operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 310
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 212
+    "size": 753
   }
 ]

@@ -1,9 +1,30 @@
 [
   {
+    "name": "1-overview.md",
+    "path": "1-overview.md",
+    "type": "file",
+    "sha": "",
+    "size": 324
+  },
+  {
+    "name": "2-data-and-queries.md",
+    "path": "2-data-and-queries.md",
+    "type": "file",
+    "sha": "",
+    "size": 333
+  },
+  {
+    "name": "3-operations.md",
+    "path": "3-operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 308
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 159
+    "size": 746
   }
 ]

@@ -111,7 +111,7 @@ Practice resources, interview questions, and exam preparation materials.
 
 - **[Database Concepts Overview](../README.md)**: Cross-cutting database concepts
 - **[MySQL Deep Dive](../../relational/1-mysql.md)**: MySQL-specific implementation
-- **[MongoDB Deep Dive](../../nosql/1-mongodb.md)**: NoSQL database concepts
+- **[MongoDB Deep Dive](../document/mongodb/README.md)**: NoSQL database concepts
 
 ## References
 

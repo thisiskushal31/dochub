@@ -1,9 +1,37 @@
 [
   {
+    "name": "1-overview-architecture.md",
+    "path": "1-overview-architecture.md",
+    "type": "file",
+    "sha": "",
+    "size": 342
+  },
+  {
+    "name": "2-queries-and-views.md",
+    "path": "2-queries-and-views.md",
+    "type": "file",
+    "sha": "",
+    "size": 340
+  },
+  {
+    "name": "3-replication.md",
+    "path": "3-replication.md",
+    "type": "file",
+    "sha": "",
+    "size": 340
+  },
+  {
+    "name": "4-operations.md",
+    "path": "4-operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 333
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 209
+    "size": 858
   }
 ]

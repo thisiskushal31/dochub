@@ -70,11 +70,32 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview.md",
+        "path": "meilisearch/1-overview.md",
+        "type": "file",
+        "sha": "",
+        "size": 319
+      },
+      {
+        "name": "2-indexing-and-search.md",
+        "path": "meilisearch/2-indexing-and-search.md",
+        "type": "file",
+        "sha": "",
+        "size": 323
+      },
+      {
+        "name": "3-operations.md",
+        "path": "meilisearch/3-operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 300
+      },
+      {
         "name": "README.md",
         "path": "meilisearch/README.md",
         "type": "file",
         "sha": "",
-        "size": 212
+        "size": 745
       }
     ]
   },
@@ -85,11 +106,32 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-architecture.md",
+        "path": "solr/1-overview-architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 319
+      },
+      {
+        "name": "2-indexing-and-queries.md",
+        "path": "solr/2-indexing-and-queries.md",
+        "type": "file",
+        "sha": "",
+        "size": 315
+      },
+      {
+        "name": "3-operations.md",
+        "path": "solr/3-operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 310
+      },
+      {
         "name": "README.md",
         "path": "solr/README.md",
         "type": "file",
         "sha": "",
-        "size": 212
+        "size": 753
       }
     ]
   },

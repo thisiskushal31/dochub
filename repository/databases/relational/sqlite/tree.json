@@ -1,9 +1,37 @@
 [
   {
+    "name": "1-overview-architecture.md",
+    "path": "1-overview-architecture.md",
+    "type": "file",
+    "sha": "",
+    "size": 390
+  },
+  {
+    "name": "2-sql-and-schema.md",
+    "path": "2-sql-and-schema.md",
+    "type": "file",
+    "sha": "",
+    "size": 368
+  },
+  {
+    "name": "3-performance-and-pragmas.md",
+    "path": "3-performance-and-pragmas.md",
+    "type": "file",
+    "sha": "",
+    "size": 368
+  },
+  {
+    "name": "4-backup-and-ops.md",
+    "path": "4-backup-and-ops.md",
+    "type": "file",
+    "sha": "",
+    "size": 365
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 199
+    "size": 947
   }
 ]

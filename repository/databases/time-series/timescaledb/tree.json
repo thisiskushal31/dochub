@@ -1,9 +1,30 @@
 [
   {
+    "name": "1-overview-hypertables.md",
+    "path": "1-overview-hypertables.md",
+    "type": "file",
+    "sha": "",
+    "size": 336
+  },
+  {
+    "name": "2-queries-and-compression.md",
+    "path": "2-queries-and-compression.md",
+    "type": "file",
+    "sha": "",
+    "size": 337
+  },
+  {
+    "name": "3-operations.md",
+    "path": "3-operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 311
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 166
+    "size": 790
   }
 ]

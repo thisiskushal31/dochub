@@ -1,9 +1,44 @@
 [
   {
+    "name": "1-overview-architecture.md",
+    "path": "1-overview-architecture.md",
+    "type": "file",
+    "sha": "",
+    "size": 350
+  },
+  {
+    "name": "2-sql-and-plsql.md",
+    "path": "2-sql-and-plsql.md",
+    "type": "file",
+    "sha": "",
+    "size": 338
+  },
+  {
+    "name": "3-performance-tuning.md",
+    "path": "3-performance-tuning.md",
+    "type": "file",
+    "sha": "",
+    "size": 343
+  },
+  {
+    "name": "4-ha-and-backup-rman.md",
+    "path": "4-ha-and-backup-rman.md",
+    "type": "file",
+    "sha": "",
+    "size": 350
+  },
+  {
+    "name": "5-security-and-ops.md",
+    "path": "5-security-and-ops.md",
+    "type": "file",
+    "sha": "",
+    "size": 328
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 180
+    "size": 958
   }
 ]

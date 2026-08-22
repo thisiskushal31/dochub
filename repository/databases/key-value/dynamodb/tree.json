@@ -1,9 +1,44 @@
 [
   {
+    "name": "1-overview-and-data-model.md",
+    "path": "1-overview-and-data-model.md",
+    "type": "file",
+    "sha": "",
+    "size": 360
+  },
+  {
+    "name": "2-capacity-and-throttling.md",
+    "path": "2-capacity-and-throttling.md",
+    "type": "file",
+    "sha": "",
+    "size": 351
+  },
+  {
+    "name": "3-patterns-and-access.md",
+    "path": "3-patterns-and-access.md",
+    "type": "file",
+    "sha": "",
+    "size": 345
+  },
+  {
+    "name": "4-backup-and-global.md",
+    "path": "4-backup-and-global.md",
+    "type": "file",
+    "sha": "",
+    "size": 340
+  },
+  {
+    "name": "5-operations-and-cost.md",
+    "path": "5-operations-and-cost.md",
+    "type": "file",
+    "sha": "",
+    "size": 326
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 205
+    "size": 1008
   }
 ]

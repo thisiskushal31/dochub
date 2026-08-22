@@ -70,11 +70,46 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-architecture.md",
+        "path": "oracle/1-overview-architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 350
+      },
+      {
+        "name": "2-sql-and-plsql.md",
+        "path": "oracle/2-sql-and-plsql.md",
+        "type": "file",
+        "sha": "",
+        "size": 338
+      },
+      {
+        "name": "3-performance-tuning.md",
+        "path": "oracle/3-performance-tuning.md",
+        "type": "file",
+        "sha": "",
+        "size": 343
+      },
+      {
+        "name": "4-ha-and-backup-rman.md",
+        "path": "oracle/4-ha-and-backup-rman.md",
+        "type": "file",
+        "sha": "",
+        "size": 350
+      },
+      {
+        "name": "5-security-and-ops.md",
+        "path": "oracle/5-security-and-ops.md",
+        "type": "file",
+        "sha": "",
+        "size": 328
+      },
+      {
         "name": "README.md",
         "path": "oracle/README.md",
         "type": "file",
         "sha": "",
-        "size": 180
+        "size": 958
       }
     ]
   },
@@ -170,11 +205,46 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-architecture.md",
+        "path": "sql-server/1-overview-architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 362
+      },
+      {
+        "name": "2-sql-and-t-sql.md",
+        "path": "sql-server/2-sql-and-t-sql.md",
+        "type": "file",
+        "sha": "",
+        "size": 367
+      },
+      {
+        "name": "3-indexing-and-performance.md",
+        "path": "sql-server/3-indexing-and-performance.md",
+        "type": "file",
+        "sha": "",
+        "size": 373
+      },
+      {
+        "name": "4-ha-and-backup.md",
+        "path": "sql-server/4-ha-and-backup.md",
+        "type": "file",
+        "sha": "",
+        "size": 347
+      },
+      {
+        "name": "5-security-and-ops.md",
+        "path": "sql-server/5-security-and-ops.md",
+        "type": "file",
+        "sha": "",
+        "size": 354
+      },
+      {
         "name": "README.md",
         "path": "sql-server/README.md",
         "type": "file",
         "sha": "",
-        "size": 184
+        "size": 1006
       }
     ]
   },
@@ -185,11 +255,39 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-architecture.md",
+        "path": "sqlite/1-overview-architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 390
+      },
+      {
+        "name": "2-sql-and-schema.md",
+        "path": "sqlite/2-sql-and-schema.md",
+        "type": "file",
+        "sha": "",
+        "size": 368
+      },
+      {
+        "name": "3-performance-and-pragmas.md",
+        "path": "sqlite/3-performance-and-pragmas.md",
+        "type": "file",
+        "sha": "",
+        "size": 368
+      },
+      {
+        "name": "4-backup-and-ops.md",
+        "path": "sqlite/4-backup-and-ops.md",
+        "type": "file",
+        "sha": "",
+        "size": 365
+      },
+      {
         "name": "README.md",
         "path": "sqlite/README.md",
         "type": "file",
         "sha": "",
-        "size": 199
+        "size": 947
       }
     ]
   },

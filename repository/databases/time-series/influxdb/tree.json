@@ -1,9 +1,30 @@
 [
   {
+    "name": "1-overview-and-model.md",
+    "path": "1-overview-and-model.md",
+    "type": "file",
+    "sha": "",
+    "size": 340
+  },
+  {
+    "name": "2-queries-and-retention.md",
+    "path": "2-queries-and-retention.md",
+    "type": "file",
+    "sha": "",
+    "size": 332
+  },
+  {
+    "name": "3-operations.md",
+    "path": "3-operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 308
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 163
+    "size": 789
   }
 ]

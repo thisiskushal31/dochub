@@ -1,9 +1,30 @@
 [
   {
+    "name": "1-overview-architecture.md",
+    "path": "1-overview-architecture.md",
+    "type": "file",
+    "sha": "",
+    "size": 327
+  },
+  {
+    "name": "2-promql-and-storage.md",
+    "path": "2-promql-and-storage.md",
+    "type": "file",
+    "sha": "",
+    "size": 342
+  },
+  {
+    "name": "3-operations.md",
+    "path": "3-operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 328
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 175
+    "size": 751
   }
 ]

@@ -6,11 +6,32 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-and-model.md",
+        "path": "influxdb/1-overview-and-model.md",
+        "type": "file",
+        "sha": "",
+        "size": 340
+      },
+      {
+        "name": "2-queries-and-retention.md",
+        "path": "influxdb/2-queries-and-retention.md",
+        "type": "file",
+        "sha": "",
+        "size": 332
+      },
+      {
+        "name": "3-operations.md",
+        "path": "influxdb/3-operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 308
+      },
+      {
         "name": "README.md",
         "path": "influxdb/README.md",
         "type": "file",
         "sha": "",
-        "size": 163
+        "size": 789
       }
     ]
   },
@@ -21,11 +42,32 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-architecture.md",
+        "path": "prometheus/1-overview-architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 327
+      },
+      {
+        "name": "2-promql-and-storage.md",
+        "path": "prometheus/2-promql-and-storage.md",
+        "type": "file",
+        "sha": "",
+        "size": 342
+      },
+      {
+        "name": "3-operations.md",
+        "path": "prometheus/3-operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 328
+      },
+      {
         "name": "README.md",
         "path": "prometheus/README.md",
         "type": "file",
         "sha": "",
-        "size": 175
+        "size": 751
       }
     ]
   },
@@ -36,11 +78,32 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-hypertables.md",
+        "path": "timescaledb/1-overview-hypertables.md",
+        "type": "file",
+        "sha": "",
+        "size": 336
+      },
+      {
+        "name": "2-queries-and-compression.md",
+        "path": "timescaledb/2-queries-and-compression.md",
+        "type": "file",
+        "sha": "",
+        "size": 337
+      },
+      {
+        "name": "3-operations.md",
+        "path": "timescaledb/3-operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 311
+      },
+      {
         "name": "README.md",
         "path": "timescaledb/README.md",
         "type": "file",
         "sha": "",
-        "size": 166
+        "size": 790
       }
     ]
   },

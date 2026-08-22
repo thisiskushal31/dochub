@@ -70,11 +70,46 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-and-data-model.md",
+        "path": "dynamodb/1-overview-and-data-model.md",
+        "type": "file",
+        "sha": "",
+        "size": 360
+      },
+      {
+        "name": "2-capacity-and-throttling.md",
+        "path": "dynamodb/2-capacity-and-throttling.md",
+        "type": "file",
+        "sha": "",
+        "size": 351
+      },
+      {
+        "name": "3-patterns-and-access.md",
+        "path": "dynamodb/3-patterns-and-access.md",
+        "type": "file",
+        "sha": "",
+        "size": 345
+      },
+      {
+        "name": "4-backup-and-global.md",
+        "path": "dynamodb/4-backup-and-global.md",
+        "type": "file",
+        "sha": "",
+        "size": 340
+      },
+      {
+        "name": "5-operations-and-cost.md",
+        "path": "dynamodb/5-operations-and-cost.md",
+        "type": "file",
+        "sha": "",
+        "size": 326
+      },
+      {
         "name": "README.md",
         "path": "dynamodb/README.md",
         "type": "file",
         "sha": "",
-        "size": 205
+        "size": 1008
       }
     ]
   },
@@ -85,11 +120,25 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-architecture.md",
+        "path": "memcached/1-overview-architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 333
+      },
+      {
+        "name": "2-operations-and-patterns.md",
+        "path": "memcached/2-operations-and-patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 353
+      },
+      {
         "name": "README.md",
         "path": "memcached/README.md",
         "type": "file",
         "sha": "",
-        "size": 206
+        "size": 715
       }
     ]
   },

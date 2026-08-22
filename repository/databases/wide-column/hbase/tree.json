@@ -1,9 +1,30 @@
 [
   {
+    "name": "1-overview-architecture.md",
+    "path": "1-overview-architecture.md",
+    "type": "file",
+    "sha": "",
+    "size": 332
+  },
+  {
+    "name": "2-data-model.md",
+    "path": "2-data-model.md",
+    "type": "file",
+    "sha": "",
+    "size": 319
+  },
+  {
+    "name": "3-operations.md",
+    "path": "3-operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 315
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 160
+    "size": 747
   }
 ]

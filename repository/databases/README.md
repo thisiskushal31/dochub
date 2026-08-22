@@ -2,6 +2,8 @@
 
 Comprehensive technical documentation for databases—relational, NoSQL, analytical, and cloud-managed services. This repository contains hands-on notes, design patterns, operational procedures, and troubleshooting checklists to help you master database concepts across different engines.
 
+**Start here:** [0_Start_Here.md](./0_Start_Here.md) · **Write order:** [CONTENT_WRITE_ORDER.md](./CONTENT_WRITE_ORDER.md) · **Track planned engines:** [PLANNED_ENGINES.md](./PLANNED_ENGINES.md)
+
 ## Overview
 
 This deep dive documentation provides detailed technical information for database administrators, engineers, and architects who need in-depth knowledge beyond high-level overviews. Each section includes configuration examples, operational procedures, performance tuning guides, and real-world best practices.
@@ -23,7 +25,7 @@ This repository is aligned around **10 database/storage types**. Each type has a
 | 7 | **Search Engine** | Full-text search, facets, log/search analytics | [search-engine/elasticsearch](./search-engine/elasticsearch/README.md) |
 | 8 | **In-Memory Cache** | Sub-ms latency, reduce DB load, sessions, counters | [cache/](./cache/README.md) → [key-value/redis](./key-value/redis/README.md) |
 | 9 | **Blob/Object Storage** | Files, media, backups, data lakes | [blob-object/](./blob-object/README.md) |
-| 10 | **Vector** | Similarity search, semantic search, RAG, AI retrieval | [vector/](./vector/README.md) |
+| 10 | **Vector** | Similarity search, semantic search, RAG, AI retrieval | [vector/](./vector/README.md) — **📁 stubs** (fill pgvector first) |
 
 #### Use cases by type (why you use each)
 
@@ -88,6 +90,12 @@ Fundamental concepts that apply across all database systems, regardless of type 
 - Backup & restore: full/incremental, PITR, validation, drills
 - Performance: connection management, caching, query planning, latency SLIs
 - Observability: logs, metrics, traces, slow-query analysis
+
+### [`data-platform/`](./data-platform/README.md) *(new — stubs)*
+Backups to object storage, CDC/replication for analytics, schema migrations — links [Data-Engineering-Deep-Dive](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive) without duplicating pipeline authoring.
+
+### [`Entry-Points/`](./Entry-Points/README.md) *(new — stubs)*
+Doors to DE, DS-AI, System Design, DevOps Handbook.
 
 ### [`cloud-managed/`](./cloud-managed/README.md)
 Guide to managed database services across major cloud providers, covering provisioning, operations, migrations, and cost optimization.
@@ -184,9 +192,9 @@ Detailed **use cases per database type** are in the [Use cases by type](#use-cas
 ## How to Use This Guide
 
 ### For Beginners
-1. Start with [`concepts/`](./concepts/README.md) to understand fundamental database concepts
-2. Choose [`relational/`](./relational/README.md) or [`nosql/`](./nosql/README.md) based on your use case
-3. Read the specific database guide (e.g., [`mysql/README.md`](./relational/mysql/README.md) or [`mongodb/README.md`](./nosql/mongodb/README.md))
+1. Start with [0_Start_Here](./0_Start_Here.md) and [`concepts/dbms-fundamentals/`](./concepts/dbms-fundamentals/README.md)
+2. Choose a type folder from the [10-type table](#database-types--use-cases) above
+3. For engines marked **📁** in [PLANNED_ENGINES.md](./PLANNED_ENGINES.md), follow topic stubs in that engine's README
 4. Refer to [`cloud-managed/`](./cloud-managed/README.md) if using managed services
 
 ### For Experienced Practitioners

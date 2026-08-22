@@ -1,9 +1,30 @@
 [
   {
+    "name": "1-overview-s3-compatible.md",
+    "path": "1-overview-s3-compatible.md",
+    "type": "file",
+    "sha": "",
+    "size": 326
+  },
+  {
+    "name": "2-deployment-and-security.md",
+    "path": "2-deployment-and-security.md",
+    "type": "file",
+    "sha": "",
+    "size": 321
+  },
+  {
+    "name": "3-operations.md",
+    "path": "3-operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 306
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 184
+    "size": 790
   }
 ]

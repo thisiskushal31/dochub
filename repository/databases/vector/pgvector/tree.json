@@ -1,9 +1,44 @@
 [
   {
+    "name": "1-overview-and-setup.md",
+    "path": "1-overview-and-setup.md",
+    "type": "file",
+    "sha": "",
+    "size": 339
+  },
+  {
+    "name": "2-indexes-and-distance.md",
+    "path": "2-indexes-and-distance.md",
+    "type": "file",
+    "sha": "",
+    "size": 334
+  },
+  {
+    "name": "3-query-patterns.md",
+    "path": "3-query-patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 326
+  },
+  {
+    "name": "4-rag-storage-patterns.md",
+    "path": "4-rag-storage-patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 339
+  },
+  {
+    "name": "5-operations.md",
+    "path": "5-operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 350
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 238
+    "size": 941
   }
 ]

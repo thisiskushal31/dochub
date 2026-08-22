@@ -1,9 +1,44 @@
 [
   {
+    "name": "1-overview-architecture.md",
+    "path": "1-overview-architecture.md",
+    "type": "file",
+    "sha": "",
+    "size": 362
+  },
+  {
+    "name": "2-sql-and-t-sql.md",
+    "path": "2-sql-and-t-sql.md",
+    "type": "file",
+    "sha": "",
+    "size": 367
+  },
+  {
+    "name": "3-indexing-and-performance.md",
+    "path": "3-indexing-and-performance.md",
+    "type": "file",
+    "sha": "",
+    "size": 373
+  },
+  {
+    "name": "4-ha-and-backup.md",
+    "path": "4-ha-and-backup.md",
+    "type": "file",
+    "sha": "",
+    "size": 347
+  },
+  {
+    "name": "5-security-and-ops.md",
+    "path": "5-security-and-ops.md",
+    "type": "file",
+    "sha": "",
+    "size": 354
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 184
+    "size": 1006
   }
 ]

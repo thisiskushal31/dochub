@@ -9,10 +9,10 @@ Fundamental database concepts that apply across all database systems, regardless
 ### Replication & Consistency
 
 **Database-Specific Guides:**
-- **[MySQL Deep Dive](../relational/1-mysql.md)**: Master-slave replication, Group Replication, consistency levels, replication lag monitoring
-- **[MongoDB Deep Dive](../nosql/1-mongodb.md)**: Replica sets, read preferences, write concerns, eventual consistency patterns
-- **[Redis Deep Dive](../nosql/2-redis.md)**: Master-replica replication, Redis Sentinel, Redis Cluster, persistence strategies
-- **[Aerospike Deep Dive](../nosql/4-aerospike.md)**: Cross-datacenter replication (XDR), strong consistency, rack awareness
+- **[MySQL Deep Dive](../relational/mysql/README.md)**: Master-slave replication, Group Replication, consistency levels, replication lag monitoring
+- **[MongoDB Deep Dive](../document/mongodb/README.md)**: Replica sets, read preferences, write concerns, eventual consistency patterns
+- **[Redis Deep Dive](../key-value/redis/README.md)**: Master-replica replication, Redis Sentinel, Redis Cluster, persistence strategies
+- **[Aerospike Deep Dive](../key-value/aerospike/README.md)**: Cross-datacenter replication (XDR), strong consistency, rack awareness
 
 **Key Concepts:**
 - **Quorum-Based Replication**: Read quorum (R), Write quorum (W), Replication factor (N) - R + W > N ensures strong consistency
@@ -24,10 +24,10 @@ Fundamental database concepts that apply across all database systems, regardless
 ### Sharding & Partitioning
 
 **Database-Specific Guides:**
-- **[MySQL Deep Dive](../relational/1-mysql.md)**: Horizontal partitioning, sharding strategies, partition management
-- **[MongoDB Deep Dive](../nosql/1-mongodb.md)**: Sharding architecture, shard key selection, chunk balancing, zone sharding
-- **[Aerospike Deep Dive](../nosql/4-aerospike.md)**: Data distribution, partition management, automatic rebalancing
-- **[Elasticsearch Deep Dive](../nosql/3-elasticsearch.md)**: Index sharding, replica shards, shard allocation, rebalancing
+- **[MySQL Deep Dive](../relational/mysql/README.md)**: Horizontal partitioning, sharding strategies, partition management
+- **[MongoDB Deep Dive](../document/mongodb/README.md)**: Sharding architecture, shard key selection, chunk balancing, zone sharding
+- **[Aerospike Deep Dive](../key-value/aerospike/README.md)**: Data distribution, partition management, automatic rebalancing
+- **[Elasticsearch Deep Dive](../search-engine/elasticsearch/README.md)**: Index sharding, replica shards, shard allocation, rebalancing
 
 **Key Concepts:**
 - **Range Sharding**: Partition by value ranges - efficient range queries, potential hotspots
@@ -39,10 +39,10 @@ Fundamental database concepts that apply across all database systems, regardless
 ### Transactions & Durability
 
 **Database-Specific Guides:**
-- **[MySQL Deep Dive](../relational/1-mysql.md)**: ACID transactions, isolation levels, WAL, redo logs, binlog
-- **[MongoDB Deep Dive](../nosql/1-mongodb.md)**: Multi-document transactions, write concerns, journaling
-- **[Redis Deep Dive](../nosql/2-redis.md)**: Transactions (MULTI/EXEC), persistence (RDB/AOF), durability guarantees
-- **[Aerospike Deep Dive](../nosql/4-aerospike.md)**: ACID transactions, strong consistency, durable deletes
+- **[MySQL Deep Dive](../relational/mysql/README.md)**: ACID transactions, isolation levels, WAL, redo logs, binlog
+- **[MongoDB Deep Dive](../document/mongodb/README.md)**: Multi-document transactions, write concerns, journaling
+- **[Redis Deep Dive](../key-value/redis/README.md)**: Transactions (MULTI/EXEC), persistence (RDB/AOF), durability guarantees
+- **[Aerospike Deep Dive](../key-value/aerospike/README.md)**: ACID transactions, strong consistency, durable deletes
 
 **Key Concepts:**
 - **WAL (Write-Ahead Log)**: Write to log before updating data for durability and crash recovery
@@ -53,11 +53,11 @@ Fundamental database concepts that apply across all database systems, regardless
 ### Storage & Indexing
 
 **Database-Specific Guides:**
-- **[MySQL Deep Dive](../relational/1-mysql.md)**: B-tree indexes, InnoDB storage engine, index types, query optimization
-- **[MongoDB Deep Dive](../nosql/1-mongodb.md)**: Index types, compound indexes, text indexes, geospatial indexes
-- **[Redis Deep Dive](../nosql/2-redis.md)**: In-memory storage, data structures, persistence options
-- **[Aerospike Deep Dive](../nosql/4-aerospike.md)**: Hybrid Memory Architecture (HMA), primary index, secondary indexes
-- **[Elasticsearch Deep Dive](../nosql/3-elasticsearch.md)**: Inverted indices, mapping, analysis, index templates
+- **[MySQL Deep Dive](../relational/mysql/README.md)**: B-tree indexes, InnoDB storage engine, index types, query optimization
+- **[MongoDB Deep Dive](../document/mongodb/README.md)**: Index types, compound indexes, text indexes, geospatial indexes
+- **[Redis Deep Dive](../key-value/redis/README.md)**: In-memory storage, data structures, persistence options
+- **[Aerospike Deep Dive](../key-value/aerospike/README.md)**: Hybrid Memory Architecture (HMA), primary index, secondary indexes
+- **[Elasticsearch Deep Dive](../search-engine/elasticsearch/README.md)**: Inverted indices, mapping, analysis, index templates
 
 **Key Concepts:**
 - **Row vs Columnar Storage**: Row-oriented for OLTP, columnar for OLAP workloads
@@ -67,11 +67,11 @@ Fundamental database concepts that apply across all database systems, regardless
 ### Performance & Optimization
 
 **Database-Specific Guides:**
-- **[MySQL Deep Dive](../relational/1-mysql.md)**: Query optimization, index tuning, connection pooling, caching
-- **[MongoDB Deep Dive](../nosql/1-mongodb.md)**: Query optimization, index strategies, aggregation pipeline optimization
-- **[Redis Deep Dive](../nosql/2-redis.md)**: Memory optimization, pipelining, connection pooling, eviction policies
-- **[Aerospike Deep Dive](../nosql/4-aerospike.md)**: HMA optimization, index configuration, service threads tuning
-- **[Elasticsearch Deep Dive](../nosql/3-elasticsearch.md)**: Query optimization, shard sizing, index optimization, caching
+- **[MySQL Deep Dive](../relational/mysql/README.md)**: Query optimization, index tuning, connection pooling, caching
+- **[MongoDB Deep Dive](../document/mongodb/README.md)**: Query optimization, index strategies, aggregation pipeline optimization
+- **[Redis Deep Dive](../key-value/redis/README.md)**: Memory optimization, pipelining, connection pooling, eviction policies
+- **[Aerospike Deep Dive](../key-value/aerospike/README.md)**: HMA optimization, index configuration, service threads tuning
+- **[Elasticsearch Deep Dive](../search-engine/elasticsearch/README.md)**: Query optimization, shard sizing, index optimization, caching
 
 **Key Concepts:**
 - **Connection Management**: Connection pooling, pool sizing, timeout settings
@@ -82,10 +82,10 @@ Fundamental database concepts that apply across all database systems, regardless
 ### Backup & Recovery
 
 **Database-Specific Guides:**
-- **[MySQL Deep Dive](../relational/1-mysql.md)**: mysqldump, binary logs, point-in-time recovery, backup strategies
-- **[MongoDB Deep Dive](../nosql/1-mongodb.md)**: mongodump/mongorestore, oplog replay, backup strategies
-- **[Redis Deep Dive](../nosql/2-redis.md)**: RDB snapshots, AOF persistence, backup and restore procedures
-- **[Aerospike Deep Dive](../nosql/4-aerospike.md)**: asbackup/asrestore, backup strategies, recovery procedures
+- **[MySQL Deep Dive](../relational/mysql/README.md)**: mysqldump, binary logs, point-in-time recovery, backup strategies
+- **[MongoDB Deep Dive](../document/mongodb/README.md)**: mongodump/mongorestore, oplog replay, backup strategies
+- **[Redis Deep Dive](../key-value/redis/README.md)**: RDB snapshots, AOF persistence, backup and restore procedures
+- **[Aerospike Deep Dive](../key-value/aerospike/README.md)**: asbackup/asrestore, backup strategies, recovery procedures
 
 **Key Concepts:**
 - **Backup Types**: Full backup, incremental backup, differential backup
@@ -95,11 +95,11 @@ Fundamental database concepts that apply across all database systems, regardless
 ### Observability
 
 **Database-Specific Guides:**
-- **[MySQL Deep Dive](../relational/1-mysql.md)**: Performance Schema, slow query log, monitoring tools
-- **[MongoDB Deep Dive](../nosql/1-mongodb.md)**: Profiling, explain plans, monitoring tools
-- **[Redis Deep Dive](../nosql/2-redis.md)**: INFO command, slow log, latency monitoring
-- **[Aerospike Deep Dive](../nosql/4-aerospike.md)**: asinfo, asadm, monitoring metrics
-- **[Elasticsearch Deep Dive](../nosql/3-elasticsearch.md)**: Cluster health API, query profiling, monitoring
+- **[MySQL Deep Dive](../relational/mysql/README.md)**: Performance Schema, slow query log, monitoring tools
+- **[MongoDB Deep Dive](../document/mongodb/README.md)**: Profiling, explain plans, monitoring tools
+- **[Redis Deep Dive](../key-value/redis/README.md)**: INFO command, slow log, latency monitoring
+- **[Aerospike Deep Dive](../key-value/aerospike/README.md)**: asinfo, asadm, monitoring metrics
+- **[Elasticsearch Deep Dive](../search-engine/elasticsearch/README.md)**: Cluster health API, query profiling, monitoring
 
 **Key Concepts:**
 - **Logging**: Query logs, slow query logs, error logs, audit logs
@@ -110,11 +110,11 @@ Fundamental database concepts that apply across all database systems, regardless
 ### Operational Patterns
 
 **Database-Specific Guides:**
-- **[MySQL Deep Dive](../relational/1-mysql.md)**: High availability, failover procedures, maintenance operations
-- **[MongoDB Deep Dive](../nosql/1-mongodb.md)**: Replica set management, shard management, maintenance windows
-- **[Redis Deep Dive](../nosql/2-redis.md)**: Sentinel configuration, cluster management, failover procedures
-- **[Aerospike Deep Dive](../nosql/4-aerospike.md)**: Cluster management, node maintenance, XDR configuration
-- **[Elasticsearch Deep Dive](../nosql/3-elasticsearch.md)**: Cluster management, index management, node operations
+- **[MySQL Deep Dive](../relational/mysql/README.md)**: High availability, failover procedures, maintenance operations
+- **[MongoDB Deep Dive](../document/mongodb/README.md)**: Replica set management, shard management, maintenance windows
+- **[Redis Deep Dive](../key-value/redis/README.md)**: Sentinel configuration, cluster management, failover procedures
+- **[Aerospike Deep Dive](../key-value/aerospike/README.md)**: Cluster management, node maintenance, XDR configuration
+- **[Elasticsearch Deep Dive](../search-engine/elasticsearch/README.md)**: Cluster management, index management, node operations
 
 **Key Concepts:**
 - **Blue-Green Deployments**: Two environments, instant switchover, easy rollback

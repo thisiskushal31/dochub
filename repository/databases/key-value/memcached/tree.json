@@ -1,9 +1,23 @@
 [
   {
+    "name": "1-overview-architecture.md",
+    "path": "1-overview-architecture.md",
+    "type": "file",
+    "sha": "",
+    "size": 333
+  },
+  {
+    "name": "2-operations-and-patterns.md",
+    "path": "2-operations-and-patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 353
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 206
+    "size": 715
   }
 ]

@@ -6,11 +6,32 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-architecture.md",
+        "path": "milvus/1-overview-architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 327
+      },
+      {
+        "name": "2-indexes-and-search.md",
+        "path": "milvus/2-indexes-and-search.md",
+        "type": "file",
+        "sha": "",
+        "size": 311
+      },
+      {
+        "name": "3-operations.md",
+        "path": "milvus/3-operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 322
+      },
+      {
         "name": "README.md",
         "path": "milvus/README.md",
         "type": "file",
         "sha": "",
-        "size": 151
+        "size": 742
       }
     ]
   },
@@ -21,11 +42,46 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-and-setup.md",
+        "path": "pgvector/1-overview-and-setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 339
+      },
+      {
+        "name": "2-indexes-and-distance.md",
+        "path": "pgvector/2-indexes-and-distance.md",
+        "type": "file",
+        "sha": "",
+        "size": 334
+      },
+      {
+        "name": "3-query-patterns.md",
+        "path": "pgvector/3-query-patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 326
+      },
+      {
+        "name": "4-rag-storage-patterns.md",
+        "path": "pgvector/4-rag-storage-patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 339
+      },
+      {
+        "name": "5-operations.md",
+        "path": "pgvector/5-operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 350
+      },
+      {
         "name": "README.md",
         "path": "pgvector/README.md",
         "type": "file",
         "sha": "",
-        "size": 238
+        "size": 941
       }
     ]
   },
@@ -36,11 +92,32 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-managed.md",
+        "path": "pinecone/1-overview-managed.md",
+        "type": "file",
+        "sha": "",
+        "size": 326
+      },
+      {
+        "name": "2-ingest-and-query.md",
+        "path": "pinecone/2-ingest-and-query.md",
+        "type": "file",
+        "sha": "",
+        "size": 318
+      },
+      {
+        "name": "3-operations-and-cost.md",
+        "path": "pinecone/3-operations-and-cost.md",
+        "type": "file",
+        "sha": "",
+        "size": 321
+      },
+      {
         "name": "README.md",
         "path": "pinecone/README.md",
         "type": "file",
         "sha": "",
-        "size": 153
+        "size": 772
       }
     ]
   },
@@ -51,11 +128,39 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-architecture.md",
+        "path": "weaviate/1-overview-architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 303
+      },
+      {
+        "name": "2-indexing-and-queries.md",
+        "path": "weaviate/2-indexing-and-queries.md",
+        "type": "file",
+        "sha": "",
+        "size": 319
+      },
+      {
+        "name": "3-rag-patterns.md",
+        "path": "weaviate/3-rag-patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 328
+      },
+      {
+        "name": "4-operations.md",
+        "path": "weaviate/4-operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 305
+      },
+      {
         "name": "README.md",
         "path": "weaviate/README.md",
         "type": "file",
         "sha": "",
-        "size": 153
+        "size": 816
       }
     ]
   },

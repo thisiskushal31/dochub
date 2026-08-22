@@ -6,11 +6,39 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-architecture.md",
+        "path": "couchdb/1-overview-architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 342
+      },
+      {
+        "name": "2-queries-and-views.md",
+        "path": "couchdb/2-queries-and-views.md",
+        "type": "file",
+        "sha": "",
+        "size": 340
+      },
+      {
+        "name": "3-replication.md",
+        "path": "couchdb/3-replication.md",
+        "type": "file",
+        "sha": "",
+        "size": 340
+      },
+      {
+        "name": "4-operations.md",
+        "path": "couchdb/4-operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 333
+      },
+      {
         "name": "README.md",
         "path": "couchdb/README.md",
         "type": "file",
         "sha": "",
-        "size": 209
+        "size": 858
       }
     ]
   },
@@ -21,11 +49,39 @@
     "sha": "",
     "children": [
       {
+        "name": "1-overview-and-data-model.md",
+        "path": "firestore/1-overview-and-data-model.md",
+        "type": "file",
+        "sha": "",
+        "size": 362
+      },
+      {
+        "name": "2-queries-and-indexes.md",
+        "path": "firestore/2-queries-and-indexes.md",
+        "type": "file",
+        "sha": "",
+        "size": 342
+      },
+      {
+        "name": "3-security-and-rules.md",
+        "path": "firestore/3-security-and-rules.md",
+        "type": "file",
+        "sha": "",
+        "size": 333
+      },
+      {
+        "name": "4-operations-and-pricing.md",
+        "path": "firestore/4-operations-and-pricing.md",
+        "type": "file",
+        "sha": "",
+        "size": 343
+      },
+      {
         "name": "README.md",
         "path": "firestore/README.md",
         "type": "file",
         "sha": "",
-        "size": 211
+        "size": 911
       }
     ]
   },

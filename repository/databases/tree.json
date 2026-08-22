@@ -32,11 +32,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview.md",
+            "path": "blob-object/azure-blob/1-overview.md",
+            "type": "file",
+            "sha": "",
+            "size": 341
+          },
+          {
+            "name": "2-tiers-and-lifecycle.md",
+            "path": "blob-object/azure-blob/2-tiers-and-lifecycle.md",
+            "type": "file",
+            "sha": "",
+            "size": 329
+          },
+          {
+            "name": "3-security-and-ops.md",
+            "path": "blob-object/azure-blob/3-security-and-ops.md",
+            "type": "file",
+            "sha": "",
+            "size": 321
+          },
+          {
             "name": "README.md",
             "path": "blob-object/azure-blob/README.md",
             "type": "file",
             "sha": "",
-            "size": 181
+            "size": 777
           }
         ]
       },
@@ -47,11 +68,39 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-and-concepts.md",
+            "path": "blob-object/gcs/1-overview-and-concepts.md",
+            "type": "file",
+            "sha": "",
+            "size": 347
+          },
+          {
+            "name": "2-storage-classes-and-lifecycle.md",
+            "path": "blob-object/gcs/2-storage-classes-and-lifecycle.md",
+            "type": "file",
+            "sha": "",
+            "size": 340
+          },
+          {
+            "name": "3-security-and-iam.md",
+            "path": "blob-object/gcs/3-security-and-iam.md",
+            "type": "file",
+            "sha": "",
+            "size": 326
+          },
+          {
+            "name": "4-operations-and-patterns.md",
+            "path": "blob-object/gcs/4-operations-and-patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 345
+          },
+          {
             "name": "README.md",
             "path": "blob-object/gcs/README.md",
             "type": "file",
             "sha": "",
-            "size": 183
+            "size": 877
           }
         ]
       },
@@ -62,11 +111,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-s3-compatible.md",
+            "path": "blob-object/minio/1-overview-s3-compatible.md",
+            "type": "file",
+            "sha": "",
+            "size": 326
+          },
+          {
+            "name": "2-deployment-and-security.md",
+            "path": "blob-object/minio/2-deployment-and-security.md",
+            "type": "file",
+            "sha": "",
+            "size": 321
+          },
+          {
+            "name": "3-operations.md",
+            "path": "blob-object/minio/3-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 306
+          },
+          {
             "name": "README.md",
             "path": "blob-object/minio/README.md",
             "type": "file",
             "sha": "",
-            "size": 184
+            "size": 790
           }
         ]
       },
@@ -77,11 +147,39 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-and-concepts.md",
+            "path": "blob-object/s3/1-overview-and-concepts.md",
+            "type": "file",
+            "sha": "",
+            "size": 347
+          },
+          {
+            "name": "2-storage-classes-and-lifecycle.md",
+            "path": "blob-object/s3/2-storage-classes-and-lifecycle.md",
+            "type": "file",
+            "sha": "",
+            "size": 335
+          },
+          {
+            "name": "3-security-and-iam.md",
+            "path": "blob-object/s3/3-security-and-iam.md",
+            "type": "file",
+            "sha": "",
+            "size": 344
+          },
+          {
+            "name": "4-operations-and-patterns.md",
+            "path": "blob-object/s3/4-operations-and-patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 341
+          },
+          {
             "name": "README.md",
             "path": "blob-object/s3/README.md",
             "type": "file",
             "sha": "",
-            "size": 172
+            "size": 914
           }
         ]
       },
@@ -107,11 +205,25 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview.md",
+            "path": "cache/hazelcast/1-overview.md",
+            "type": "file",
+            "sha": "",
+            "size": 322
+          },
+          {
+            "name": "2-patterns-and-ops.md",
+            "path": "cache/hazelcast/2-patterns-and-ops.md",
+            "type": "file",
+            "sha": "",
+            "size": 314
+          },
+          {
             "name": "README.md",
             "path": "cache/hazelcast/README.md",
             "type": "file",
             "sha": "",
-            "size": 174
+            "size": 665
           }
         ]
       },
@@ -122,11 +234,25 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview.md",
+            "path": "cache/memcached/1-overview.md",
+            "type": "file",
+            "sha": "",
+            "size": 313
+          },
+          {
+            "name": "2-patterns-and-ops.md",
+            "path": "cache/memcached/2-patterns-and-ops.md",
+            "type": "file",
+            "sha": "",
+            "size": 325
+          },
+          {
             "name": "README.md",
             "path": "cache/memcached/README.md",
             "type": "file",
             "sha": "",
-            "size": 242
+            "size": 677
           }
         ]
       },
@@ -150,7 +276,7 @@
         "path": "cloud-managed/README.md",
         "type": "file",
         "sha": "",
-        "size": 14908
+        "size": 14942
       }
     ]
   },
@@ -220,7 +346,7 @@
             "path": "concepts/dbms-fundamentals/README.md",
             "type": "file",
             "sha": "",
-            "size": 4161
+            "size": 4166
           }
         ]
       },
@@ -229,7 +355,43 @@
         "path": "concepts/README.md",
         "type": "file",
         "sha": "",
-        "size": 13274
+        "size": 13578
+      }
+    ]
+  },
+  {
+    "name": "data-platform",
+    "path": "data-platform",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-backups-to-object-storage.md",
+        "path": "data-platform/1-backups-to-object-storage.md",
+        "type": "file",
+        "sha": "",
+        "size": 468
+      },
+      {
+        "name": "2-cdc-and-replication-for-analytics.md",
+        "path": "data-platform/2-cdc-and-replication-for-analytics.md",
+        "type": "file",
+        "sha": "",
+        "size": 410
+      },
+      {
+        "name": "3-schema-migrations-and-contracts.md",
+        "path": "data-platform/3-schema-migrations-and-contracts.md",
+        "type": "file",
+        "sha": "",
+        "size": 438
+      },
+      {
+        "name": "README.md",
+        "path": "data-platform/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 910
       }
     ]
   },
@@ -246,11 +408,39 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-architecture.md",
+            "path": "document/couchdb/1-overview-architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 342
+          },
+          {
+            "name": "2-queries-and-views.md",
+            "path": "document/couchdb/2-queries-and-views.md",
+            "type": "file",
+            "sha": "",
+            "size": 340
+          },
+          {
+            "name": "3-replication.md",
+            "path": "document/couchdb/3-replication.md",
+            "type": "file",
+            "sha": "",
+            "size": 340
+          },
+          {
+            "name": "4-operations.md",
+            "path": "document/couchdb/4-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 333
+          },
+          {
             "name": "README.md",
             "path": "document/couchdb/README.md",
             "type": "file",
             "sha": "",
-            "size": 209
+            "size": 858
           }
         ]
       },
@@ -261,11 +451,39 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-and-data-model.md",
+            "path": "document/firestore/1-overview-and-data-model.md",
+            "type": "file",
+            "sha": "",
+            "size": 362
+          },
+          {
+            "name": "2-queries-and-indexes.md",
+            "path": "document/firestore/2-queries-and-indexes.md",
+            "type": "file",
+            "sha": "",
+            "size": 342
+          },
+          {
+            "name": "3-security-and-rules.md",
+            "path": "document/firestore/3-security-and-rules.md",
+            "type": "file",
+            "sha": "",
+            "size": 333
+          },
+          {
+            "name": "4-operations-and-pricing.md",
+            "path": "document/firestore/4-operations-and-pricing.md",
+            "type": "file",
+            "sha": "",
+            "size": 343
+          },
+          {
             "name": "README.md",
             "path": "document/firestore/README.md",
             "type": "file",
             "sha": "",
-            "size": 211
+            "size": 911
           }
         ]
       },
@@ -343,6 +561,49 @@
     ]
   },
   {
+    "name": "Entry-Points",
+    "path": "Entry-Points",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Data_Engineering.md",
+        "path": "Entry-Points/Data_Engineering.md",
+        "type": "file",
+        "sha": "",
+        "size": 815
+      },
+      {
+        "name": "Data_Science_AI.md",
+        "path": "Entry-Points/Data_Science_AI.md",
+        "type": "file",
+        "sha": "",
+        "size": 593
+      },
+      {
+        "name": "DevOps_Handbook.md",
+        "path": "Entry-Points/DevOps_Handbook.md",
+        "type": "file",
+        "sha": "",
+        "size": 557
+      },
+      {
+        "name": "README.md",
+        "path": "Entry-Points/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 832
+      },
+      {
+        "name": "System_Design.md",
+        "path": "Entry-Points/System_Design.md",
+        "type": "file",
+        "sha": "",
+        "size": 523
+      }
+    ]
+  },
+  {
     "name": "graph",
     "path": "graph",
     "type": "dir",
@@ -355,11 +616,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-multi-model.md",
+            "path": "graph/arangodb/1-overview-multi-model.md",
+            "type": "file",
+            "sha": "",
+            "size": 327
+          },
+          {
+            "name": "2-aql-and-graph.md",
+            "path": "graph/arangodb/2-aql-and-graph.md",
+            "type": "file",
+            "sha": "",
+            "size": 320
+          },
+          {
+            "name": "3-operations.md",
+            "path": "graph/arangodb/3-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 308
+          },
+          {
             "name": "README.md",
             "path": "graph/arangodb/README.md",
             "type": "file",
             "sha": "",
-            "size": 165
+            "size": 773
           }
         ]
       },
@@ -370,11 +652,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-and-model.md",
+            "path": "graph/neo4j/1-overview-and-model.md",
+            "type": "file",
+            "sha": "",
+            "size": 333
+          },
+          {
+            "name": "2-cypher-queries.md",
+            "path": "graph/neo4j/2-cypher-queries.md",
+            "type": "file",
+            "sha": "",
+            "size": 326
+          },
+          {
+            "name": "3-operations.md",
+            "path": "graph/neo4j/3-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 311
+          },
+          {
             "name": "README.md",
             "path": "graph/neo4j/README.md",
             "type": "file",
             "sha": "",
-            "size": 148
+            "size": 763
           }
         ]
       },
@@ -385,11 +688,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview.md",
+            "path": "graph/neptune/1-overview.md",
+            "type": "file",
+            "sha": "",
+            "size": 324
+          },
+          {
+            "name": "2-data-and-queries.md",
+            "path": "graph/neptune/2-data-and-queries.md",
+            "type": "file",
+            "sha": "",
+            "size": 333
+          },
+          {
+            "name": "3-operations.md",
+            "path": "graph/neptune/3-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 308
+          },
+          {
             "name": "README.md",
             "path": "graph/neptune/README.md",
             "type": "file",
             "sha": "",
-            "size": 159
+            "size": 746
           }
         ]
       },
@@ -479,11 +803,46 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-and-data-model.md",
+            "path": "key-value/dynamodb/1-overview-and-data-model.md",
+            "type": "file",
+            "sha": "",
+            "size": 360
+          },
+          {
+            "name": "2-capacity-and-throttling.md",
+            "path": "key-value/dynamodb/2-capacity-and-throttling.md",
+            "type": "file",
+            "sha": "",
+            "size": 351
+          },
+          {
+            "name": "3-patterns-and-access.md",
+            "path": "key-value/dynamodb/3-patterns-and-access.md",
+            "type": "file",
+            "sha": "",
+            "size": 345
+          },
+          {
+            "name": "4-backup-and-global.md",
+            "path": "key-value/dynamodb/4-backup-and-global.md",
+            "type": "file",
+            "sha": "",
+            "size": 340
+          },
+          {
+            "name": "5-operations-and-cost.md",
+            "path": "key-value/dynamodb/5-operations-and-cost.md",
+            "type": "file",
+            "sha": "",
+            "size": 326
+          },
+          {
             "name": "README.md",
             "path": "key-value/dynamodb/README.md",
             "type": "file",
             "sha": "",
-            "size": 205
+            "size": 1008
           }
         ]
       },
@@ -494,11 +853,25 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-architecture.md",
+            "path": "key-value/memcached/1-overview-architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 333
+          },
+          {
+            "name": "2-operations-and-patterns.md",
+            "path": "key-value/memcached/2-operations-and-patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 353
+          },
+          {
             "name": "README.md",
             "path": "key-value/memcached/README.md",
             "type": "file",
             "sha": "",
-            "size": 206
+            "size": 715
           }
         ]
       },
@@ -667,11 +1040,46 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-architecture.md",
+            "path": "relational/oracle/1-overview-architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 350
+          },
+          {
+            "name": "2-sql-and-plsql.md",
+            "path": "relational/oracle/2-sql-and-plsql.md",
+            "type": "file",
+            "sha": "",
+            "size": 338
+          },
+          {
+            "name": "3-performance-tuning.md",
+            "path": "relational/oracle/3-performance-tuning.md",
+            "type": "file",
+            "sha": "",
+            "size": 343
+          },
+          {
+            "name": "4-ha-and-backup-rman.md",
+            "path": "relational/oracle/4-ha-and-backup-rman.md",
+            "type": "file",
+            "sha": "",
+            "size": 350
+          },
+          {
+            "name": "5-security-and-ops.md",
+            "path": "relational/oracle/5-security-and-ops.md",
+            "type": "file",
+            "sha": "",
+            "size": 328
+          },
+          {
             "name": "README.md",
             "path": "relational/oracle/README.md",
             "type": "file",
             "sha": "",
-            "size": 180
+            "size": 958
           }
         ]
       },
@@ -767,11 +1175,46 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-architecture.md",
+            "path": "relational/sql-server/1-overview-architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 362
+          },
+          {
+            "name": "2-sql-and-t-sql.md",
+            "path": "relational/sql-server/2-sql-and-t-sql.md",
+            "type": "file",
+            "sha": "",
+            "size": 367
+          },
+          {
+            "name": "3-indexing-and-performance.md",
+            "path": "relational/sql-server/3-indexing-and-performance.md",
+            "type": "file",
+            "sha": "",
+            "size": 373
+          },
+          {
+            "name": "4-ha-and-backup.md",
+            "path": "relational/sql-server/4-ha-and-backup.md",
+            "type": "file",
+            "sha": "",
+            "size": 347
+          },
+          {
+            "name": "5-security-and-ops.md",
+            "path": "relational/sql-server/5-security-and-ops.md",
+            "type": "file",
+            "sha": "",
+            "size": 354
+          },
+          {
             "name": "README.md",
             "path": "relational/sql-server/README.md",
             "type": "file",
             "sha": "",
-            "size": 184
+            "size": 1006
           }
         ]
       },
@@ -782,11 +1225,39 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-architecture.md",
+            "path": "relational/sqlite/1-overview-architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 390
+          },
+          {
+            "name": "2-sql-and-schema.md",
+            "path": "relational/sqlite/2-sql-and-schema.md",
+            "type": "file",
+            "sha": "",
+            "size": 368
+          },
+          {
+            "name": "3-performance-and-pragmas.md",
+            "path": "relational/sqlite/3-performance-and-pragmas.md",
+            "type": "file",
+            "sha": "",
+            "size": 368
+          },
+          {
+            "name": "4-backup-and-ops.md",
+            "path": "relational/sqlite/4-backup-and-ops.md",
+            "type": "file",
+            "sha": "",
+            "size": 365
+          },
+          {
             "name": "README.md",
             "path": "relational/sqlite/README.md",
             "type": "file",
             "sha": "",
-            "size": 199
+            "size": 947
           }
         ]
       },
@@ -876,11 +1347,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview.md",
+            "path": "search-engine/meilisearch/1-overview.md",
+            "type": "file",
+            "sha": "",
+            "size": 319
+          },
+          {
+            "name": "2-indexing-and-search.md",
+            "path": "search-engine/meilisearch/2-indexing-and-search.md",
+            "type": "file",
+            "sha": "",
+            "size": 323
+          },
+          {
+            "name": "3-operations.md",
+            "path": "search-engine/meilisearch/3-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 300
+          },
+          {
             "name": "README.md",
             "path": "search-engine/meilisearch/README.md",
             "type": "file",
             "sha": "",
-            "size": 212
+            "size": 745
           }
         ]
       },
@@ -891,11 +1383,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-architecture.md",
+            "path": "search-engine/solr/1-overview-architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 319
+          },
+          {
+            "name": "2-indexing-and-queries.md",
+            "path": "search-engine/solr/2-indexing-and-queries.md",
+            "type": "file",
+            "sha": "",
+            "size": 315
+          },
+          {
+            "name": "3-operations.md",
+            "path": "search-engine/solr/3-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 310
+          },
+          {
             "name": "README.md",
             "path": "search-engine/solr/README.md",
             "type": "file",
             "sha": "",
-            "size": 212
+            "size": 753
           }
         ]
       },
@@ -921,11 +1434,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-and-model.md",
+            "path": "time-series/influxdb/1-overview-and-model.md",
+            "type": "file",
+            "sha": "",
+            "size": 340
+          },
+          {
+            "name": "2-queries-and-retention.md",
+            "path": "time-series/influxdb/2-queries-and-retention.md",
+            "type": "file",
+            "sha": "",
+            "size": 332
+          },
+          {
+            "name": "3-operations.md",
+            "path": "time-series/influxdb/3-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 308
+          },
+          {
             "name": "README.md",
             "path": "time-series/influxdb/README.md",
             "type": "file",
             "sha": "",
-            "size": 163
+            "size": 789
           }
         ]
       },
@@ -936,11 +1470,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-architecture.md",
+            "path": "time-series/prometheus/1-overview-architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 327
+          },
+          {
+            "name": "2-promql-and-storage.md",
+            "path": "time-series/prometheus/2-promql-and-storage.md",
+            "type": "file",
+            "sha": "",
+            "size": 342
+          },
+          {
+            "name": "3-operations.md",
+            "path": "time-series/prometheus/3-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 328
+          },
+          {
             "name": "README.md",
             "path": "time-series/prometheus/README.md",
             "type": "file",
             "sha": "",
-            "size": 175
+            "size": 751
           }
         ]
       },
@@ -951,11 +1506,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-hypertables.md",
+            "path": "time-series/timescaledb/1-overview-hypertables.md",
+            "type": "file",
+            "sha": "",
+            "size": 336
+          },
+          {
+            "name": "2-queries-and-compression.md",
+            "path": "time-series/timescaledb/2-queries-and-compression.md",
+            "type": "file",
+            "sha": "",
+            "size": 337
+          },
+          {
+            "name": "3-operations.md",
+            "path": "time-series/timescaledb/3-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 311
+          },
+          {
             "name": "README.md",
             "path": "time-series/timescaledb/README.md",
             "type": "file",
             "sha": "",
-            "size": 166
+            "size": 790
           }
         ]
       },
@@ -981,11 +1557,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-architecture.md",
+            "path": "vector/milvus/1-overview-architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 327
+          },
+          {
+            "name": "2-indexes-and-search.md",
+            "path": "vector/milvus/2-indexes-and-search.md",
+            "type": "file",
+            "sha": "",
+            "size": 311
+          },
+          {
+            "name": "3-operations.md",
+            "path": "vector/milvus/3-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 322
+          },
+          {
             "name": "README.md",
             "path": "vector/milvus/README.md",
             "type": "file",
             "sha": "",
-            "size": 151
+            "size": 742
           }
         ]
       },
@@ -996,11 +1593,46 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-and-setup.md",
+            "path": "vector/pgvector/1-overview-and-setup.md",
+            "type": "file",
+            "sha": "",
+            "size": 339
+          },
+          {
+            "name": "2-indexes-and-distance.md",
+            "path": "vector/pgvector/2-indexes-and-distance.md",
+            "type": "file",
+            "sha": "",
+            "size": 334
+          },
+          {
+            "name": "3-query-patterns.md",
+            "path": "vector/pgvector/3-query-patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 326
+          },
+          {
+            "name": "4-rag-storage-patterns.md",
+            "path": "vector/pgvector/4-rag-storage-patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 339
+          },
+          {
+            "name": "5-operations.md",
+            "path": "vector/pgvector/5-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 350
+          },
+          {
             "name": "README.md",
             "path": "vector/pgvector/README.md",
             "type": "file",
             "sha": "",
-            "size": 238
+            "size": 941
           }
         ]
       },
@@ -1011,11 +1643,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-managed.md",
+            "path": "vector/pinecone/1-overview-managed.md",
+            "type": "file",
+            "sha": "",
+            "size": 326
+          },
+          {
+            "name": "2-ingest-and-query.md",
+            "path": "vector/pinecone/2-ingest-and-query.md",
+            "type": "file",
+            "sha": "",
+            "size": 318
+          },
+          {
+            "name": "3-operations-and-cost.md",
+            "path": "vector/pinecone/3-operations-and-cost.md",
+            "type": "file",
+            "sha": "",
+            "size": 321
+          },
+          {
             "name": "README.md",
             "path": "vector/pinecone/README.md",
             "type": "file",
             "sha": "",
-            "size": 153
+            "size": 772
           }
         ]
       },
@@ -1026,11 +1679,39 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-architecture.md",
+            "path": "vector/weaviate/1-overview-architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 303
+          },
+          {
+            "name": "2-indexing-and-queries.md",
+            "path": "vector/weaviate/2-indexing-and-queries.md",
+            "type": "file",
+            "sha": "",
+            "size": 319
+          },
+          {
+            "name": "3-rag-patterns.md",
+            "path": "vector/weaviate/3-rag-patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 328
+          },
+          {
+            "name": "4-operations.md",
+            "path": "vector/weaviate/4-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 305
+          },
+          {
             "name": "README.md",
             "path": "vector/weaviate/README.md",
             "type": "file",
             "sha": "",
-            "size": 153
+            "size": 816
           }
         ]
       },
@@ -1056,11 +1737,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-architecture.md",
+            "path": "wide-column/bigtable/1-overview-architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 330
+          },
+          {
+            "name": "2-data-model.md",
+            "path": "wide-column/bigtable/2-data-model.md",
+            "type": "file",
+            "sha": "",
+            "size": 328
+          },
+          {
+            "name": "3-operations-and-pricing.md",
+            "path": "wide-column/bigtable/3-operations-and-pricing.md",
+            "type": "file",
+            "sha": "",
+            "size": 319
+          },
+          {
             "name": "README.md",
             "path": "wide-column/bigtable/README.md",
             "type": "file",
             "sha": "",
-            "size": 178
+            "size": 754
           }
         ]
       },
@@ -1071,11 +1773,39 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-architecture.md",
+            "path": "wide-column/cassandra/1-overview-architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 347
+          },
+          {
+            "name": "2-data-model-and-cql.md",
+            "path": "wide-column/cassandra/2-data-model-and-cql.md",
+            "type": "file",
+            "sha": "",
+            "size": 360
+          },
+          {
+            "name": "3-replication-and-tuning.md",
+            "path": "wide-column/cassandra/3-replication-and-tuning.md",
+            "type": "file",
+            "sha": "",
+            "size": 339
+          },
+          {
+            "name": "4-operations.md",
+            "path": "wide-column/cassandra/4-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 324
+          },
+          {
             "name": "README.md",
             "path": "wide-column/cassandra/README.md",
             "type": "file",
             "sha": "",
-            "size": 164
+            "size": 889
           }
         ]
       },
@@ -1086,11 +1816,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-architecture.md",
+            "path": "wide-column/hbase/1-overview-architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 332
+          },
+          {
+            "name": "2-data-model.md",
+            "path": "wide-column/hbase/2-data-model.md",
+            "type": "file",
+            "sha": "",
+            "size": 319
+          },
+          {
+            "name": "3-operations.md",
+            "path": "wide-column/hbase/3-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 315
+          },
+          {
             "name": "README.md",
             "path": "wide-column/hbase/README.md",
             "type": "file",
             "sha": "",
-            "size": 160
+            "size": 747
           }
         ]
       },
@@ -1101,11 +1852,32 @@
         "sha": "",
         "children": [
           {
+            "name": "1-overview-architecture.md",
+            "path": "wide-column/scylladb/1-overview-architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 324
+          },
+          {
+            "name": "2-data-model-and-cql.md",
+            "path": "wide-column/scylladb/2-data-model-and-cql.md",
+            "type": "file",
+            "sha": "",
+            "size": 336
+          },
+          {
+            "name": "3-operations.md",
+            "path": "wide-column/scylladb/3-operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 309
+          },
+          {
             "name": "README.md",
             "path": "wide-column/scylladb/README.md",
             "type": "file",
             "sha": "",
-            "size": 163
+            "size": 755
           }
         ]
       },
@@ -1119,10 +1891,31 @@
     ]
   },
   {
+    "name": "0_Start_Here.md",
+    "path": "0_Start_Here.md",
+    "type": "file",
+    "sha": "",
+    "size": 1125
+  },
+  {
+    "name": "CONTENT_WRITE_ORDER.md",
+    "path": "CONTENT_WRITE_ORDER.md",
+    "type": "file",
+    "sha": "",
+    "size": 3942
+  },
+  {
+    "name": "PLANNED_ENGINES.md",
+    "path": "PLANNED_ENGINES.md",
+    "type": "file",
+    "sha": "",
+    "size": 3182
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 17581
+    "size": 18207
   }
 ]

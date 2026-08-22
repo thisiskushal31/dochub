@@ -1,9 +1,30 @@
 [
   {
+    "name": "1-overview-and-model.md",
+    "path": "1-overview-and-model.md",
+    "type": "file",
+    "sha": "",
+    "size": 333
+  },
+  {
+    "name": "2-cypher-queries.md",
+    "path": "2-cypher-queries.md",
+    "type": "file",
+    "sha": "",
+    "size": 326
+  },
+  {
+    "name": "3-operations.md",
+    "path": "3-operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 311
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 148
+    "size": 763
   }
 ]

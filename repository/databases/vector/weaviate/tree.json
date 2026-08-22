@@ -1,9 +1,37 @@
 [
   {
+    "name": "1-overview-architecture.md",
+    "path": "1-overview-architecture.md",
+    "type": "file",
+    "sha": "",
+    "size": 303
+  },
+  {
+    "name": "2-indexing-and-queries.md",
+    "path": "2-indexing-and-queries.md",
+    "type": "file",
+    "sha": "",
+    "size": 319
+  },
+  {
+    "name": "3-rag-patterns.md",
+    "path": "3-rag-patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 328
+  },
+  {
+    "name": "4-operations.md",
+    "path": "4-operations.md",
+    "type": "file",
+    "sha": "",
+    "size": 305
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 153
+    "size": 816
   }
 ]
