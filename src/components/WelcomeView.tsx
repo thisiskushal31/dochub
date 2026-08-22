@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Container, Database, Network, LayoutDashboard, Terminal, Settings, ChevronRight } from 'lucide-react';
+import { BookOpen, Container, Database, Network, LayoutDashboard, Terminal, Settings, ChevronRight, Workflow, Brain, Shield, Wrench } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { repositories, type RepositoryConfig } from '@/config/repositories';
 import { PERSONAL_INFO, WEBSITE_LINKS } from '@/config/config';
@@ -10,13 +10,17 @@ interface WelcomeViewProps {
 }
 
 const TOPIC_ICONS: Record<string, LucideIcon> = {
-  dsa: BookOpen,
-  devops: Settings,
-  container: Container,
-  databases: Database,
-  networks: Network,
+  'dsa': BookOpen,
+  'devops': Settings,
+  'container': Container,
+  'databases': Database,
+  'networks': Network,
   'system-design': LayoutDashboard,
-  cheatsheets: Terminal,
+  'cheatsheets': Terminal,
+  'data-engineering': Workflow,
+  'data-science-ai': Brain,
+  'security': Shield,
+  'tooling-frameworks': Wrench,
 };
 
 const WelcomeView: React.FC<WelcomeViewProps> = ({ onSelectRepo }) => {

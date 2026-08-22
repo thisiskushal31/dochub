@@ -72,6 +72,42 @@ export const repositories: RepositoryConfig[] = [
     branch: 'main',
     description: 'Essential commands and cheatsheets',
     icon: 'fas fa-terminal'
+  },
+  {
+    id: 'data-engineering',
+    name: 'Data Engineering Deep Dive',
+    owner: 'thisiskushal31',
+    repo: 'Data-Engineering-Deep-Dive',
+    branch: 'main',
+    description: 'Data pipelines, warehousing, orchestration, and platform engineering',
+    icon: 'fas fa-stream'
+  },
+  {
+    id: 'data-science-ai',
+    name: 'Data Science & AI Deep Dive',
+    owner: 'thisiskushal31',
+    repo: 'Data-Science-AI-Deep-Dive',
+    branch: 'main',
+    description: 'Statistics, machine learning, deep learning, and applied AI',
+    icon: 'fas fa-brain'
+  },
+  {
+    id: 'security',
+    name: 'Security Deep Dive',
+    owner: 'thisiskushal31',
+    repo: 'Security-Deep-Dive',
+    branch: 'main',
+    description: 'Cybersecurity: AppSec, IAM, cloud posture, forensics, and defensive operations',
+    icon: 'fas fa-shield-alt'
+  },
+  {
+    id: 'tooling-frameworks',
+    name: 'Tooling & Frameworks Deep Dive',
+    owner: 'thisiskushal31',
+    repo: 'Tooling-and-Frameworks-Deep-Dive',
+    branch: 'main',
+    description: 'Frameworks, libraries, SDKs, platforms, and toolchains across engineering domains',
+    icon: 'fas fa-toolbox'
   }
 ];
 
