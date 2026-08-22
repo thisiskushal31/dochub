@@ -1,6 +1,8 @@
 # Containerization Deep Dive
 
-Hands-on notes and guides for containerization from zero to advanced: fundamentals, container runtimes (Docker, Podman), orchestration (Kubernetes, Swarm), and managed services (GKE, EKS, AKS, OpenShift). **Everything you need is written here**—concepts, commands, and step-by-step instructions. Read deeply in this repo first; use the links at the end of each topic only if you want more detail or the latest official wording.
+Hands-on notes and guides for containerization from zero to advanced: fundamentals, container runtimes (Docker, Podman, containerd), orchestration (Kubernetes, Swarm), managed services (GKE, EKS, AKS, OpenShift), **local dev clusters**, and **serverless containers**. **Everything you need is written here**—concepts, commands, and step-by-step instructions. Read deeply in this repo first; use the links at the end of each topic only if you want more detail or the latest official wording.
+
+**Start here:** [0_Start_Here.md](./0_Start_Here.md) · **Gap fill order:** [CONTENT_WRITE_ORDER.md](./CONTENT_WRITE_ORDER.md)
 
 The repo is **structured so new runtimes and orchestrators can be added** as separate sections without changing the overall layout.
 
@@ -57,19 +59,58 @@ Managed Kubernetes and container platforms. Full deep-dive topic files.
 - **AKS** (folder **aks/**) – Architecture and cluster modes, node pools and compute, networking (Azure CNI, overlay), identity and security (Entra ID, workload identity), operations and pricing
 - **OpenShift managed and turnkey** – ROSA, ARO; k3s, k0s, RKE2, MicroK8s, Minikube, Kind; certified K8s list
 
+### [**local-dev/**](./local-dev/README.md) *(new — stubs)*
+
+Deep guides for **kind**, **minikube**, **k3d**, Tilt/Skaffold, devcontainers — expands the short turnkey list above.
+
+### [**serverless-containers/**](./serverless-containers/README.md) *(new — stubs)*
+
+**Cloud Run**, **Fargate/ECS**, **Azure Container Apps** — run containers without managing clusters.
+
+### [**security-advanced/**](./security-advanced/README.md) *(new — stubs)*
+
+Admission policy, prod hardening checklist, image supply chain — beyond [basics](./containerization-basic/4-security-basics.md).
+
+### [**networking-advanced/**](./networking-advanced/README.md) *(new — stubs)*
+
+Cilium/eBPF, NetworkPolicy recipes, Ingress/Gateway/mesh entry.
+
+### [**gitops-packaging/**](./gitops-packaging/README.md) *(new — stubs)*
+
+Helm, Kustomize, GitOps — links [DevOps-Handbook CiCd](https://github.com/thisiskushal31/DevOps-Handbook/tree/main/CiCd) for Argo/Flux depth.
+
+### [**Entry-Points/**](./Entry-Points/README.md) *(new — stubs)*
+
+Doors to [DevOps-Handbook](https://github.com/thisiskushal31/DevOps-Handbook), [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive), [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive), [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts).
+
 ## Learning path (zero → advanced)
 
 1. **[Containerization basics](./containerization-basic/README.md)** – concepts, images, runtimes, registries
 2. **[Docker](./runtimes/docker/README.md)** – get Docker, first container, workshop (containerize → push → persist → Compose)
 3. **[Kubernetes](./orchestration/kubernetes/README.md)** – getting started, concepts, tasks, tutorials, production
 4. **[Managed services](./managed-services/README.md)** – Overview, GKE, EKS, AKS, OpenShift managed (ROSA/ARO), turnkey Kubernetes (k3s, k0s, etc.)
+5. **[Local dev clusters](./local-dev/README.md)** – kind, minikube, k3d (stubs to fill)
+6. **[Serverless containers](./serverless-containers/README.md)** – Cloud Run, Fargate, etc. (stubs to fill)
+7. **[Security advanced](./security-advanced/README.md)** + **[Networking advanced](./networking-advanced/README.md)** when operating prod clusters
 
-Optional: [Podman](./runtimes/podman/README.md) (daemonless, rootless Docker alternative), [OpenShift](./orchestration/openshift/README.md) (Kubernetes-based enterprise platform), [Swarm](./orchestration/swarm/README.md) (lightweight orchestration).
+Optional: [Podman](./runtimes/podman/README.md), [containerd](./runtimes/containerd/README.md), [OpenShift](./orchestration/openshift/README.md), [Swarm](./orchestration/swarm/README.md), [Nomad](./orchestration/nomad/README.md).
 
 ## How to use this guide
 
-- **Beginners:** Start with [containerization-basic](./containerization-basic/README.md), then [runtimes/docker](./runtimes/docker/README.md), then [orchestration/kubernetes](./orchestration/kubernetes/README.md). Use **References** at the end of each file only when you want more.
-- **Adding a new technology:** Add a new subfolder under [runtimes/](./runtimes/README.md) (e.g. another runtime) or [orchestration/](./orchestration/README.md) (e.g. another orchestrator) with its own README and topic files.
+- **Beginners:** Start with [0_Start_Here](./0_Start_Here.md) → [containerization-basic](./containerization-basic/README.md) → [runtimes/docker](./runtimes/docker/README.md) → [orchestration/kubernetes](./orchestration/kubernetes/README.md).
+- **Gap filling:** Follow [CONTENT_WRITE_ORDER.md](./CONTENT_WRITE_ORDER.md) — most core topics already written; new sections are stubs.
+- **Adding a new technology:** Add a subfolder under [runtimes/](./runtimes/README.md) or [orchestration/](./orchestration/README.md) with README + topic files.
+
+## Sister repositories
+
+| Topic | Repository |
+|-------|------------|
+| CI/CD, DevSecOps, IaC | [DevOps-Handbook](https://github.com/thisiskushal31/DevOps-Handbook) |
+| Networking depth | [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive) |
+| Cybersecurity program | [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) |
+| System design | [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) |
+
+Details: [Entry-Points/](./Entry-Points/README.md)
 
 ## Assets (images)
 

@@ -24,6 +24,10 @@ Building test networks (VirtualBox, OpenWRT); hands-on security labs (recon, blu
 
 Computer network cheat sheet, last-minute notes, interview questions (aligned to repo topics), practice and CTF.
 
+### Expanded walkthroughs *(new — stubs)*
+
+Step-by-step labs with validation → [labs-expanded/](../labs-expanded/README.md). Home lab build path → [home-lab/](../home-lab/README.md).
+
 ## Learning path
 
 1. After [Transport/](../Transport/README.md) basics: [Code examples](./1_Code_Examples.md) → [Packet capture](./2_Packet_Capture_Walkthroughs.md) → [Simulators & tools](./3_Operational_Simulators_Tools.md) → [VMs & security labs](./4_Labs_Vms.md) → [Reference & practice](./5_Reference_Practice.md)

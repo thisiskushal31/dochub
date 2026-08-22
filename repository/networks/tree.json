@@ -145,7 +145,50 @@
         "path": "Cloud-Native/README.md",
         "type": "file",
         "sha": "",
-        "size": 2184
+        "size": 2275
+      }
+    ]
+  },
+  {
+    "name": "Entry-Points",
+    "path": "Entry-Points",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Containerization_Deep_Dive.md",
+        "path": "Entry-Points/Containerization_Deep_Dive.md",
+        "type": "file",
+        "sha": "",
+        "size": 932
+      },
+      {
+        "name": "DevOps_Handbook.md",
+        "path": "Entry-Points/DevOps_Handbook.md",
+        "type": "file",
+        "sha": "",
+        "size": 874
+      },
+      {
+        "name": "README.md",
+        "path": "Entry-Points/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1424
+      },
+      {
+        "name": "Security_Deep_Dive.md",
+        "path": "Entry-Points/Security_Deep_Dive.md",
+        "type": "file",
+        "sha": "",
+        "size": 830
+      },
+      {
+        "name": "System_Design.md",
+        "path": "Entry-Points/System_Design.md",
+        "type": "file",
+        "sha": "",
+        "size": 920
       }
     ]
   },
@@ -200,6 +243,42 @@
     ]
   },
   {
+    "name": "home-lab",
+    "path": "home-lab",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-topology-and-addressing.md",
+        "path": "home-lab/1-topology-and-addressing.md",
+        "type": "file",
+        "sha": "",
+        "size": 947
+      },
+      {
+        "name": "2-virtualbox-and-openwrt.md",
+        "path": "home-lab/2-virtualbox-and-openwrt.md",
+        "type": "file",
+        "sha": "",
+        "size": 819
+      },
+      {
+        "name": "3-packet-tracer-cisco-basics.md",
+        "path": "home-lab/3-packet-tracer-cisco-basics.md",
+        "type": "file",
+        "sha": "",
+        "size": 877
+      },
+      {
+        "name": "README.md",
+        "path": "home-lab/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1269
+      }
+    ]
+  },
+  {
     "name": "Labs",
     "path": "Labs",
     "type": "dir",
@@ -245,7 +324,50 @@
         "path": "Labs/README.md",
         "type": "file",
         "sha": "",
-        "size": 2984
+        "size": 3174
+      }
+    ]
+  },
+  {
+    "name": "labs-expanded",
+    "path": "labs-expanded",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-tcp-handshake-capture.md",
+        "path": "labs-expanded/1-tcp-handshake-capture.md",
+        "type": "file",
+        "sha": "",
+        "size": 577
+      },
+      {
+        "name": "2-dns-resolution-lab.md",
+        "path": "labs-expanded/2-dns-resolution-lab.md",
+        "type": "file",
+        "sha": "",
+        "size": 528
+      },
+      {
+        "name": "3-k8s-cilium-hubble-lab.md",
+        "path": "labs-expanded/3-k8s-cilium-hubble-lab.md",
+        "type": "file",
+        "sha": "",
+        "size": 587
+      },
+      {
+        "name": "4-firewall-rule-validation.md",
+        "path": "labs-expanded/4-firewall-rule-validation.md",
+        "type": "file",
+        "sha": "",
+        "size": 671
+      },
+      {
+        "name": "README.md",
+        "path": "labs-expanded/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1016
       }
     ]
   },
@@ -442,6 +564,42 @@
     ]
   },
   {
+    "name": "service-mesh",
+    "path": "service-mesh",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-envoy-and-data-plane.md",
+        "path": "service-mesh/1-envoy-and-data-plane.md",
+        "type": "file",
+        "sha": "",
+        "size": 832
+      },
+      {
+        "name": "2-istio-or-linkerd-control-plane.md",
+        "path": "service-mesh/2-istio-or-linkerd-control-plane.md",
+        "type": "file",
+        "sha": "",
+        "size": 769
+      },
+      {
+        "name": "3-mtls-and-east-west-traffic.md",
+        "path": "service-mesh/3-mtls-and-east-west-traffic.md",
+        "type": "file",
+        "sha": "",
+        "size": 818
+      },
+      {
+        "name": "README.md",
+        "path": "service-mesh/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1131
+      }
+    ]
+  },
+  {
     "name": "Services",
     "path": "Services",
     "type": "dir",
@@ -570,10 +728,31 @@
     ]
   },
   {
+    "name": "0_Start_Here.md",
+    "path": "0_Start_Here.md",
+    "type": "file",
+    "sha": "",
+    "size": 1912
+  },
+  {
+    "name": "CONTENT_WRITE_ORDER.md",
+    "path": "CONTENT_WRITE_ORDER.md",
+    "type": "file",
+    "sha": "",
+    "size": 4836
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 4487
+    "size": 5485
+  },
+  {
+    "name": "THIN_TOPICS.md",
+    "path": "THIN_TOPICS.md",
+    "type": "file",
+    "sha": "",
+    "size": 1489
   }
 ]

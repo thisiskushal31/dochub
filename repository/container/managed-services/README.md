@@ -16,7 +16,9 @@ Content in this section is based on **official provider documentation**; each to
 
 **Learning path:** 1 → 2 or 3 or 4 (by cloud) → 5.
 
-**Related:** [Kubernetes](../orchestration/kubernetes/README.md) · [OpenShift](../orchestration/openshift/README.md) · [Containerization basics](../containerization-basic/README.md) · [Runtimes](../runtimes/README.md) · [Swarm](../orchestration/swarm/README.md).
+**Related:** [Kubernetes](../orchestration/kubernetes/README.md) · [OpenShift](../orchestration/openshift/README.md) · [Containerization basics](../containerization-basic/README.md) · [Runtimes](../runtimes/README.md) · [Swarm](../orchestration/swarm/README.md) · [Local dev](../local-dev/README.md) · [Serverless containers](../serverless-containers/README.md)
+
+**Turnkey index only:** [5-openshift-managed-and-turnkey.md](./5-openshift-managed-and-turnkey.md) — for **hands-on local clusters**, use [local-dev/](../local-dev/README.md).
 
 **References:** [GKE](https://cloud.google.com/kubernetes-engine/docs) · [EKS](https://docs.aws.amazon.com/eks/latest/userguide/) · [AKS](https://learn.microsoft.com/en-us/azure/aks/) · [ROSA](https://docs.openshift.com/rosa/) · [ARO](https://docs.openshift.com/aro/) · [Kubernetes turnkey](https://kubernetes.io/docs/setup/production-environment/turnkey-solutions/).
 

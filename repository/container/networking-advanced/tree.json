@@ -1,0 +1,30 @@
+[
+  {
+    "name": "1-cilium-and-ebpf.md",
+    "path": "1-cilium-and-ebpf.md",
+    "type": "file",
+    "sha": "",
+    "size": 629
+  },
+  {
+    "name": "2-network-policies-in-practice.md",
+    "path": "2-network-policies-in-practice.md",
+    "type": "file",
+    "sha": "",
+    "size": 518
+  },
+  {
+    "name": "3-ingress-gateway-service-mesh.md",
+    "path": "3-ingress-gateway-service-mesh.md",
+    "type": "file",
+    "sha": "",
+    "size": 434
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 740
+  }
+]

@@ -24,6 +24,7 @@ IoT networking (constrained devices, protocols), network slicing in 5G.
 
 1. [Cloud overview](./1_Cloud_Networking_Overview.md) → [Docker & Kubernetes](./2_Docker_Kubernetes.md) → [SDN & NFV](./3_Sdn_Nfv.md) → [IoT & 5G](./4_Iot_5g.md)
 2. Optional further reading: containerization fundamentals (images, runtimes, orchestration) in other deep-dive repos.
+3. Service mesh wire depth → [service-mesh/](../service-mesh/README.md) (after topic 2).
 
 ## Cross-references
 

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "1-tcp-handshake-capture.md",
+    "path": "1-tcp-handshake-capture.md",
+    "type": "file",
+    "sha": "",
+    "size": 577
+  },
+  {
+    "name": "2-dns-resolution-lab.md",
+    "path": "2-dns-resolution-lab.md",
+    "type": "file",
+    "sha": "",
+    "size": 528
+  },
+  {
+    "name": "3-k8s-cilium-hubble-lab.md",
+    "path": "3-k8s-cilium-hubble-lab.md",
+    "type": "file",
+    "sha": "",
+    "size": 587
+  },
+  {
+    "name": "4-firewall-rule-validation.md",
+    "path": "4-firewall-rule-validation.md",
+    "type": "file",
+    "sha": "",
+    "size": 671
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1016
+  }
+]

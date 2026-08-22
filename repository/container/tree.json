@@ -44,7 +44,129 @@
         "path": "containerization-basic/README.md",
         "type": "file",
         "sha": "",
-        "size": 1781
+        "size": 1987
+      }
+    ]
+  },
+  {
+    "name": "Entry-Points",
+    "path": "Entry-Points",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "DevOps_Handbook.md",
+        "path": "Entry-Points/DevOps_Handbook.md",
+        "type": "file",
+        "sha": "",
+        "size": 705
+      },
+      {
+        "name": "Networks_Deep_Dive.md",
+        "path": "Entry-Points/Networks_Deep_Dive.md",
+        "type": "file",
+        "sha": "",
+        "size": 758
+      },
+      {
+        "name": "README.md",
+        "path": "Entry-Points/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 966
+      },
+      {
+        "name": "Security_Deep_Dive.md",
+        "path": "Entry-Points/Security_Deep_Dive.md",
+        "type": "file",
+        "sha": "",
+        "size": 826
+      },
+      {
+        "name": "System_Design.md",
+        "path": "Entry-Points/System_Design.md",
+        "type": "file",
+        "sha": "",
+        "size": 553
+      }
+    ]
+  },
+  {
+    "name": "gitops-packaging",
+    "path": "gitops-packaging",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-helm-and-kustomize.md",
+        "path": "gitops-packaging/1-helm-and-kustomize.md",
+        "type": "file",
+        "sha": "",
+        "size": 448
+      },
+      {
+        "name": "2-gitops-entry.md",
+        "path": "gitops-packaging/2-gitops-entry.md",
+        "type": "file",
+        "sha": "",
+        "size": 584
+      },
+      {
+        "name": "README.md",
+        "path": "gitops-packaging/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 751
+      }
+    ]
+  },
+  {
+    "name": "local-dev",
+    "path": "local-dev",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-kind-kubernetes-in-docker.md",
+        "path": "local-dev/1-kind-kubernetes-in-docker.md",
+        "type": "file",
+        "sha": "",
+        "size": 472
+      },
+      {
+        "name": "2-minikube.md",
+        "path": "local-dev/2-minikube.md",
+        "type": "file",
+        "sha": "",
+        "size": 339
+      },
+      {
+        "name": "3-k3d-k3s-in-docker.md",
+        "path": "local-dev/3-k3d-k3s-in-docker.md",
+        "type": "file",
+        "sha": "",
+        "size": 323
+      },
+      {
+        "name": "4-tilt-and-skaffold.md",
+        "path": "local-dev/4-tilt-and-skaffold.md",
+        "type": "file",
+        "sha": "",
+        "size": 402
+      },
+      {
+        "name": "5-devcontainers-and-compose.md",
+        "path": "local-dev/5-devcontainers-and-compose.md",
+        "type": "file",
+        "sha": "",
+        "size": 445
+      },
+      {
+        "name": "README.md",
+        "path": "local-dev/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1057
       }
     ]
   },
@@ -223,7 +345,43 @@
         "path": "managed-services/README.md",
         "type": "file",
         "sha": "",
-        "size": 1728
+        "size": 2008
+      }
+    ]
+  },
+  {
+    "name": "networking-advanced",
+    "path": "networking-advanced",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-cilium-and-ebpf.md",
+        "path": "networking-advanced/1-cilium-and-ebpf.md",
+        "type": "file",
+        "sha": "",
+        "size": 629
+      },
+      {
+        "name": "2-network-policies-in-practice.md",
+        "path": "networking-advanced/2-network-policies-in-practice.md",
+        "type": "file",
+        "sha": "",
+        "size": 518
+      },
+      {
+        "name": "3-ingress-gateway-service-mesh.md",
+        "path": "networking-advanced/3-ingress-gateway-service-mesh.md",
+        "type": "file",
+        "sha": "",
+        "size": 434
+      },
+      {
+        "name": "README.md",
+        "path": "networking-advanced/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 740
       }
     ]
   },
@@ -280,6 +438,21 @@
             "type": "file",
             "sha": "",
             "size": 2772
+          }
+        ]
+      },
+      {
+        "name": "nomad",
+        "path": "orchestration/nomad",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "orchestration/nomad/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 498
           }
         ]
       },
@@ -430,7 +603,7 @@
         "path": "orchestration/README.md",
         "type": "file",
         "sha": "",
-        "size": 1523
+        "size": 1660
       }
     ]
   },
@@ -440,6 +613,65 @@
     "type": "dir",
     "sha": "",
     "children": [
+      {
+        "name": "buildah-skopeo",
+        "path": "runtimes/buildah-skopeo",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "runtimes/buildah-skopeo/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 445
+          }
+        ]
+      },
+      {
+        "name": "containerd",
+        "path": "runtimes/containerd",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1-cri-containerd-and-nerdctl.md",
+            "path": "runtimes/containerd/1-cri-containerd-and-nerdctl.md",
+            "type": "file",
+            "sha": "",
+            "size": 560
+          },
+          {
+            "name": "2-debugging-on-the-node.md",
+            "path": "runtimes/containerd/2-debugging-on-the-node.md",
+            "type": "file",
+            "sha": "",
+            "size": 412
+          },
+          {
+            "name": "README.md",
+            "path": "runtimes/containerd/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 695
+          }
+        ]
+      },
+      {
+        "name": "cri-o",
+        "path": "runtimes/cri-o",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "runtimes/cri-o/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 434
+          }
+        ]
+      },
       {
         "name": "docker",
         "path": "runtimes/docker",
@@ -545,15 +777,108 @@
         "path": "runtimes/README.md",
         "type": "file",
         "sha": "",
-        "size": 1157
+        "size": 1503
       }
     ]
+  },
+  {
+    "name": "security-advanced",
+    "path": "security-advanced",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-admission-and-policy.md",
+        "path": "security-advanced/1-admission-and-policy.md",
+        "type": "file",
+        "sha": "",
+        "size": 468
+      },
+      {
+        "name": "2-hardening-checklist-prod.md",
+        "path": "security-advanced/2-hardening-checklist-prod.md",
+        "type": "file",
+        "sha": "",
+        "size": 470
+      },
+      {
+        "name": "3-image-supply-chain.md",
+        "path": "security-advanced/3-image-supply-chain.md",
+        "type": "file",
+        "sha": "",
+        "size": 618
+      },
+      {
+        "name": "README.md",
+        "path": "security-advanced/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 883
+      }
+    ]
+  },
+  {
+    "name": "serverless-containers",
+    "path": "serverless-containers",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-overview-serverless-vs-k8s.md",
+        "path": "serverless-containers/1-overview-serverless-vs-k8s.md",
+        "type": "file",
+        "sha": "",
+        "size": 481
+      },
+      {
+        "name": "2-google-cloud-run.md",
+        "path": "serverless-containers/2-google-cloud-run.md",
+        "type": "file",
+        "sha": "",
+        "size": 619
+      },
+      {
+        "name": "3-aws-fargate-and-ecs.md",
+        "path": "serverless-containers/3-aws-fargate-and-ecs.md",
+        "type": "file",
+        "sha": "",
+        "size": 403
+      },
+      {
+        "name": "4-azure-container-apps.md",
+        "path": "serverless-containers/4-azure-container-apps.md",
+        "type": "file",
+        "sha": "",
+        "size": 398
+      },
+      {
+        "name": "README.md",
+        "path": "serverless-containers/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 808
+      }
+    ]
+  },
+  {
+    "name": "0_Start_Here.md",
+    "path": "0_Start_Here.md",
+    "type": "file",
+    "sha": "",
+    "size": 1183
+  },
+  {
+    "name": "CONTENT_WRITE_ORDER.md",
+    "path": "CONTENT_WRITE_ORDER.md",
+    "type": "file",
+    "sha": "",
+    "size": 4297
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 6233
+    "size": 8659
   }
 ]

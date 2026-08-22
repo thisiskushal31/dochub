@@ -1,0 +1,30 @@
+[
+  {
+    "name": "1-threat-modeling-at-design-time.md",
+    "path": "1-threat-modeling-at-design-time.md",
+    "type": "file",
+    "sha": "",
+    "size": 870
+  },
+  {
+    "name": "2-auth-design-vs-zero-trust.md",
+    "path": "2-auth-design-vs-zero-trust.md",
+    "type": "file",
+    "sha": "",
+    "size": 857
+  },
+  {
+    "name": "3-encryption-performance-and-key-rotation.md",
+    "path": "3-encryption-performance-and-key-rotation.md",
+    "type": "file",
+    "sha": "",
+    "size": 895
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1137
+  }
+]

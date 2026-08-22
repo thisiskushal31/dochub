@@ -23,6 +23,18 @@ Real-world and interview-style **product system design** cases: how major system
 | [YouTube / Netflix](5-youtube-netflix.md) | YouTube, Netflix | Video ingest, transcoding, CDN, streaming |
 | [URL shortener](6-url-shortener.md) | Bitly, Pastebin | Key generation, KV store, object store, caching |
 
+### Planned cases *(stubs — fill per [PLANNED_CASES.md](../PLANNED_CASES.md))*
+
+| Case | Product | Status |
+|------|---------|--------|
+| [Discord messaging](7-discord-messaging.md) | Discord | 📁 stub |
+| [Instagram feed](8-instagram-feed.md) | Instagram | 📁 stub |
+| [Stripe payments](9-stripe-payments.md) | Stripe | 📁 stub |
+| [Rate limiter](10-rate-limiter-design.md) | API GW pattern | 📁 stub |
+| [Slack realtime](11-slack-realtime.md) | Slack | 📁 stub |
+
+When writing any case, include **Failure modes** → link [failure-modes/](../failure-modes/README.md).
+
 ---
 
 ## How to use

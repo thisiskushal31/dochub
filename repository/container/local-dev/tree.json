@@ -1,0 +1,44 @@
+[
+  {
+    "name": "1-kind-kubernetes-in-docker.md",
+    "path": "1-kind-kubernetes-in-docker.md",
+    "type": "file",
+    "sha": "",
+    "size": 472
+  },
+  {
+    "name": "2-minikube.md",
+    "path": "2-minikube.md",
+    "type": "file",
+    "sha": "",
+    "size": 339
+  },
+  {
+    "name": "3-k3d-k3s-in-docker.md",
+    "path": "3-k3d-k3s-in-docker.md",
+    "type": "file",
+    "sha": "",
+    "size": 323
+  },
+  {
+    "name": "4-tilt-and-skaffold.md",
+    "path": "4-tilt-and-skaffold.md",
+    "type": "file",
+    "sha": "",
+    "size": 402
+  },
+  {
+    "name": "5-devcontainers-and-compose.md",
+    "path": "5-devcontainers-and-compose.md",
+    "type": "file",
+    "sha": "",
+    "size": 445
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1057
+  }
+]

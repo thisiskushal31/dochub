@@ -20,6 +20,8 @@ Publishing and exposing ports; bridge and user-defined networks; service discove
 
 Least privilege, minimal base images, image scanning; Kubernetes Pod Security Standards and access control; practical checklist.
 
+**Next level:** [security-advanced/](../security-advanced/README.md) (admission, hardening, supply chain) · [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) (full cyber program)
+
 ## Learning path
 
 1. [Containers vs VMs & runtimes](./1-containers-vms-runtimes.md)

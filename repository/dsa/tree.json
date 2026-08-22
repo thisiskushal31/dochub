@@ -336,6 +336,42 @@
     ]
   },
   {
+    "name": "Entry-Points",
+    "path": "Entry-Points",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Cheatsheets.md",
+        "path": "Entry-Points/Cheatsheets.md",
+        "type": "file",
+        "sha": "",
+        "size": 363
+      },
+      {
+        "name": "DevOps_Handbook.md",
+        "path": "Entry-Points/DevOps_Handbook.md",
+        "type": "file",
+        "sha": "",
+        "size": 324
+      },
+      {
+        "name": "README.md",
+        "path": "Entry-Points/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 652
+      },
+      {
+        "name": "System_Design.md",
+        "path": "Entry-Points/System_Design.md",
+        "type": "file",
+        "sha": "",
+        "size": 579
+      }
+    ]
+  },
+  {
     "name": "Foundation",
     "path": "Foundation",
     "type": "dir",
@@ -825,6 +861,77 @@
     ]
   },
   {
+    "name": "system-design-bridge",
+    "path": "system-design-bridge",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1-lru-cache.md",
+        "path": "system-design-bridge/1-lru-cache.md",
+        "type": "file",
+        "sha": "",
+        "size": 450
+      },
+      {
+        "name": "2-lfu-cache.md",
+        "path": "system-design-bridge/2-lfu-cache.md",
+        "type": "file",
+        "sha": "",
+        "size": 450
+      },
+      {
+        "name": "3-top-k-and-streaming.md",
+        "path": "system-design-bridge/3-top-k-and-streaming.md",
+        "type": "file",
+        "sha": "",
+        "size": 467
+      },
+      {
+        "name": "4-consistent-hashing-impl.md",
+        "path": "system-design-bridge/4-consistent-hashing-impl.md",
+        "type": "file",
+        "sha": "",
+        "size": 483
+      },
+      {
+        "name": "5-token-bucket-impl.md",
+        "path": "system-design-bridge/5-token-bucket-impl.md",
+        "type": "file",
+        "sha": "",
+        "size": 477
+      },
+      {
+        "name": "6-url-shortener-keys.md",
+        "path": "system-design-bridge/6-url-shortener-keys.md",
+        "type": "file",
+        "sha": "",
+        "size": 469
+      },
+      {
+        "name": "7-trie-prefix-search.md",
+        "path": "system-design-bridge/7-trie-prefix-search.md",
+        "type": "file",
+        "sha": "",
+        "size": 463
+      },
+      {
+        "name": "8-union-find-connectivity.md",
+        "path": "system-design-bridge/8-union-find-connectivity.md",
+        "type": "file",
+        "sha": "",
+        "size": 468
+      },
+      {
+        "name": "README.md",
+        "path": "system-design-bridge/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1760
+      }
+    ]
+  },
+  {
     "name": "Template",
     "path": "Template",
     "type": "dir",
@@ -938,10 +1045,31 @@
     ]
   },
   {
+    "name": "0_Start_Here.md",
+    "path": "0_Start_Here.md",
+    "type": "file",
+    "sha": "",
+    "size": 1879
+  },
+  {
+    "name": "CONTENT_WRITE_ORDER.md",
+    "path": "CONTENT_WRITE_ORDER.md",
+    "type": "file",
+    "sha": "",
+    "size": 3394
+  },
+  {
+    "name": "PLANNED_PROBLEMS.md",
+    "path": "PLANNED_PROBLEMS.md",
+    "type": "file",
+    "sha": "",
+    "size": 2691
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2622
+    "size": 3067
   }
 ]

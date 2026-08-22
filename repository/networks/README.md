@@ -7,6 +7,8 @@ with definitions, how-it-works, examples, failure modes, and operational
 checklists. Content is filled for real depth; placeholders (TBD) are where
 additional detail will go.
 
+**Start here:** [0_Start_Here.md](./0_Start_Here.md) · **Write order:** [CONTENT_WRITE_ORDER.md](./CONTENT_WRITE_ORDER.md) · **Deepen next:** [THIN_TOPICS.md](./THIN_TOPICS.md)
+
 ## Depth
 
 - **Not high-level:** Concepts are explained in depth with packet-level detail,
@@ -33,16 +35,22 @@ additional detail will go.
 | **[Observability/](Observability/README.md)** | Signals & performance, packet capture (tcpdump, SPAN/RSPAN/ERSPAN), Wireshark, QoS, security monitoring & threat hunting, network operations (monitoring, IP SLA, flow/NetFlow, NETCONF/YANG/gNMI, AI/ML, automation, inventory). |
 | **[Advanced/](Advanced/README.md)** | Replacing TCP for datacenters, resource limits & failure modes, TLS 0-RTT, on-premises & enterprise (Cisco, IOS, troubleshooting, Packet Tracer), wireless & special networks (incl. 6G emerging). |
 | **[Labs/](Labs/README.md)** | Code examples (UDP/TCP servers), packet capture walkthroughs, operational how-tos, simulators & tools, VMs & security labs, reference & practice. |
+| **[labs-expanded/](labs-expanded/README.md)** *(new — stubs)* | Step-by-step capture and validation labs (TCP, DNS, Cilium/Hubble, firewall matrix). |
+| **[home-lab/](home-lab/README.md)** *(new — stubs)* | Guided home/SOHO lab: topology, VirtualBox/OpenWRT, Packet Tracer basics. |
+| **[service-mesh/](service-mesh/README.md)** *(new — stubs)* | Envoy, Istio/Linkerd control plane, mTLS east–west — complements Cloud-Native/2. |
+| **[Entry-Points/](Entry-Points/README.md)** *(new — stubs)* | Doors to DevOps, Containerization, Security capstone, System Design. |
 
 ## How to use
 
-1. **Foundations** — Layer 1–3, IP, ICMP, ARP, routing basics.
-2. **Transport** — UDP/TCP internals, performance, kernel behavior.
-3. **Routing & switching** — Control-plane, failure handling, validation.
-4. **Services & security** — Application delivery and protection.
-5. **Cloud-native & observability** — Cloud workloads and visibility.
-6. **Advanced** — Edge cases and modern transport alternatives.
-7. **Labs** — Hands-on servers and packet captures.
+1. **New?** Open [0_Start_Here.md](./0_Start_Here.md) for checkbox learning path.
+2. **Foundations** — Layer 1–3, IP, ICMP, ARP, routing basics.
+3. **Transport** — UDP/TCP internals, performance, kernel behavior.
+4. **Routing & switching** — Control-plane, failure handling, validation.
+5. **Services & security** — Application delivery and protection.
+6. **Cloud-native & observability** — Cloud workloads and visibility.
+7. **Advanced** — Edge cases and modern transport alternatives.
+8. **Labs** — [Labs/](./Labs/README.md) + [labs-expanded/](./labs-expanded/README.md) + [home-lab/](./home-lab/README.md).
+9. **Thin topics** — Prioritize files listed in [THIN_TOPICS.md](./THIN_TOPICS.md).
 
 ## Contributing
 

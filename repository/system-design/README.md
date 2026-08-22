@@ -2,6 +2,8 @@
 
 Concise, use-case driven notes for system design: core principles, building blocks, and when to apply each technique. This repo is a self-contained reference. Topic files follow a consistent flow: What → Why → How → Details → Trade-offs → When to use; diagrams are Mermaid or ASCII so everything stays local.
 
+**Start here:** [0_Start_Here.md](./0_Start_Here.md) · **Write order:** [CONTENT_WRITE_ORDER.md](./CONTENT_WRITE_ORDER.md) · **Industry checklist:** [COVERAGE_MATRIX.md](./COVERAGE_MATRIX.md) · **Deepen next:** [THIN_TOPICS.md](./THIN_TOPICS.md) · **Cases tracker:** [PLANNED_CASES.md](./PLANNED_CASES.md)
+
 ---
 
 ## Structure
@@ -21,7 +23,11 @@ Topics are organized into these folders:
 | **`performance/`** | Antipatterns, rate limiting, latency/throughput, cost vs performance. |
 | **`security/`** | Authn/authz, federated identity, gatekeeper, valet key, backup/DR, SSL/TLS. |
 | **`observability/`** | Monitoring, health, availability, performance, security, usage, instrumentation, distributed tracing, visualization and alerts. |
-| **`cases/`** | **Product system design cases**: how major systems are built (Google Drive/Dropbox, WhatsApp, Twitter, Uber, YouTube/Netflix, URL shortener). Requirements, high-level design, and links to concept notes. |
+| **`cases/`** | **Product system design cases**: how major systems are built (Google Drive/Dropbox, WhatsApp, Twitter, Uber, YouTube/Netflix, URL shortener). Requirements, high-level design, and links to concept notes. **Planned:** Discord, Instagram, Stripe, rate limiter, Slack — [PLANNED_CASES.md](./PLANNED_CASES.md). |
+| **`failure-modes/`** *(new — stubs)* | Cache stampede, split brain, cascading failures, durability gaps — design-time failure analysis. |
+| **`security-tradeoffs/`** *(new — stubs)* | Threat modeling, auth vs zero trust, encryption trade-offs — extends `security/` toward Security-Deep-Dive. |
+| **`primer-gaps/`** *(new — stubs)* | Industry topics missing from repo: gossip, Bloom filters, 2PC/saga, search-at-scale, RAG/LLM gateway — see [COVERAGE_MATRIX.md](./COVERAGE_MATRIX.md). |
+| **`Entry-Points/`** *(new — stubs)* | Doors to Networks, Databases, DevOps, Security capstone, DSA, Containerization. |
 
 ---
 
@@ -50,3 +56,4 @@ Full status: [databases/README.md#status](databases/README.md#status).
 
 - **Context folder:** A sibling folder `system-design/` may hold gathered material (deep-dives, repo list, cloned repos). Use it only as **reference**; do not put final curated notes there.
 - **This repo:** All final notes, new files, and edits go **only here**. Keep content self-contained (no external image links; no dependency on roadmap numbering or external maps).
+- **Fill order:** [CONTENT_WRITE_ORDER.md](./CONTENT_WRITE_ORDER.md) — deepen [THIN_TOPICS.md](./THIN_TOPICS.md) before writing new case bodies.

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "1-overview-serverless-vs-k8s.md",
+    "path": "1-overview-serverless-vs-k8s.md",
+    "type": "file",
+    "sha": "",
+    "size": 481
+  },
+  {
+    "name": "2-google-cloud-run.md",
+    "path": "2-google-cloud-run.md",
+    "type": "file",
+    "sha": "",
+    "size": 619
+  },
+  {
+    "name": "3-aws-fargate-and-ecs.md",
+    "path": "3-aws-fargate-and-ecs.md",
+    "type": "file",
+    "sha": "",
+    "size": 403
+  },
+  {
+    "name": "4-azure-container-apps.md",
+    "path": "4-azure-container-apps.md",
+    "type": "file",
+    "sha": "",
+    "size": 398
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 808
+  }
+]

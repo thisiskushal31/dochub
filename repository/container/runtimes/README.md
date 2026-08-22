@@ -12,6 +12,18 @@ Docker Engine, Dockerfile, Docker Compose, and the Docker CLI. The most common w
 
 Daemonless, rootless container runtime with a Docker-compatible CLI. Use Podman when you want a Docker alternative that doesn’t require a daemon or root.
 
+### [containerd](./containerd/README.md) *(stub — fill next)*
+
+What Kubernetes nodes actually run: CRI, nerdctl, node debugging.
+
+### [CRI-O](./cri-o/README.md) *(stub)*
+
+Alternative CRI runtime (OpenShift/RHEL ecosystems).
+
+### [Buildah and Skopeo](./buildah-skopeo/README.md) *(stub)*
+
+Daemonless image build and registry copy/sign tooling.
+
 ## Adding more runtimes
 
 This section is structured so you can add more runtimes (e.g. other OCI-compatible runtimes or tooling) as separate subfolders with their own README and topic files.
