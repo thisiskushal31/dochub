@@ -6,10 +6,10 @@ Antipatterns, rate limiting, latency vs throughput, and cost vs performance.
 
 | Topic | File |
 |--------|------|
-| Performance antipatterns | [1-performance-antipatterns.md](1-performance-antipatterns.md) |
-| Rate limiting | [2-rate-limiting.md](2-rate-limiting.md) |
-| Latency and throughput | [3-latency-and-throughput.md](3-latency-and-throughput.md) |
-| Cost vs performance | [4-cost-vs-performance.md](4-cost-vs-performance.md) |
+| Performance antipatterns | [1_Performance_Antipatterns.md](1_Performance_Antipatterns.md) |
+| Rate limiting | [2_Rate_Limiting.md](2_Rate_Limiting.md) |
+| Latency and throughput | [3_Latency_and_Throughput.md](3_Latency_and_Throughput.md) |
+| Cost vs performance | [4_Cost_vs_Performance.md](4_Cost_vs_Performance.md) |
 
 ## Quick reference
 

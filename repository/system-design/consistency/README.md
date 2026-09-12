@@ -6,12 +6,12 @@ CAP, consistency patterns, idempotency, and consensus in distributed systems.
 
 | Topic | File |
 |--------|------|
-| Availability vs consistency trade-off | [1-availability-vs-consistency.md](1-availability-vs-consistency.md) |
-| CAP theorem (CP vs AP) | [2-cap-theorem.md](2-cap-theorem.md) |
-| Strong, eventual, and weak consistency | [3-consistency-patterns.md](3-consistency-patterns.md) |
-| Idempotent operations | [4-idempotency.md](4-idempotency.md) |
-| Consensus algorithms (Paxos, Raft) | [5-consensus-algorithms.md](5-consensus-algorithms.md) |
-| Compensating transactions (sagas) | [6-compensating-transactions.md](6-compensating-transactions.md) |
+| Availability vs consistency trade-off | [1_Availability_vs_Consistency.md](1_Availability_vs_Consistency.md) |
+| CAP theorem (CP vs AP) | [2_CAP_Theorem.md](2_CAP_Theorem.md) |
+| Strong, eventual, and weak consistency | [3_Consistency_Patterns.md](3_Consistency_Patterns.md) |
+| Idempotent operations | [4_Idempotency.md](4_Idempotency.md) |
+| Consensus algorithms (Paxos, Raft) | [5_Consensus_Algorithms.md](5_Consensus_Algorithms.md) |
+| Compensating transactions (sagas) | [6_Compensating_Transactions.md](6_Compensating_Transactions.md) |
 
 ## Quick reference
 

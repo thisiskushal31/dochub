@@ -1,84 +1,84 @@
 [
   {
-    "name": "1-database-design-overview.md",
-    "path": "1-database-design-overview.md",
+    "name": "1_Database_Design_Overview.md",
+    "path": "1_Database_Design_Overview.md",
     "type": "file",
     "sha": "",
     "size": 10084
   },
   {
-    "name": "10-denormalization.md",
-    "path": "10-denormalization.md",
+    "name": "10_Denormalization.md",
+    "path": "10_Denormalization.md",
     "type": "file",
     "sha": "",
     "size": 2124
   },
   {
-    "name": "11-federation.md",
-    "path": "11-federation.md",
+    "name": "11_Federation.md",
+    "path": "11_Federation.md",
     "type": "file",
     "sha": "",
     "size": 2020
   },
   {
-    "name": "12-sql-tuning.md",
-    "path": "12-sql-tuning.md",
+    "name": "12_SQL_Tuning.md",
+    "path": "12_SQL_Tuning.md",
     "type": "file",
     "sha": "",
     "size": 2217
   },
   {
-    "name": "2-sql-vs-nosql-selection.md",
-    "path": "2-sql-vs-nosql-selection.md",
+    "name": "2_SQL_vs_NoSQL_Selection.md",
+    "path": "2_SQL_vs_NoSQL_Selection.md",
     "type": "file",
     "sha": "",
     "size": 10770
   },
   {
-    "name": "3-storage-systems.md",
-    "path": "3-storage-systems.md",
+    "name": "3_Storage_Systems.md",
+    "path": "3_Storage_Systems.md",
     "type": "file",
     "sha": "",
     "size": 17240
   },
   {
-    "name": "4-database-sharding.md",
-    "path": "4-database-sharding.md",
+    "name": "4_Database_Sharding.md",
+    "path": "4_Database_Sharding.md",
     "type": "file",
     "sha": "",
     "size": 12777
   },
   {
-    "name": "5-database-replication.md",
-    "path": "5-database-replication.md",
+    "name": "5_Database_Replication.md",
+    "path": "5_Database_Replication.md",
     "type": "file",
     "sha": "",
     "size": 13676
   },
   {
-    "name": "6-cap-theorem.md",
-    "path": "6-cap-theorem.md",
+    "name": "6_CAP_Theorem.md",
+    "path": "6_CAP_Theorem.md",
     "type": "file",
     "sha": "",
     "size": 4869
   },
   {
-    "name": "7-database-selection-guide.md",
-    "path": "7-database-selection-guide.md",
+    "name": "7_Database_Selection_Guide.md",
+    "path": "7_Database_Selection_Guide.md",
     "type": "file",
     "sha": "",
     "size": 5253
   },
   {
-    "name": "8-common-challenges.md",
-    "path": "8-common-challenges.md",
+    "name": "8_Common_Challenges.md",
+    "path": "8_Common_Challenges.md",
     "type": "file",
     "sha": "",
     "size": 5018
   },
   {
-    "name": "9-best-practices.md",
-    "path": "9-best-practices.md",
+    "name": "9_Best_Practices.md",
+    "path": "9_Best_Practices.md",
     "type": "file",
     "sha": "",
     "size": 5712

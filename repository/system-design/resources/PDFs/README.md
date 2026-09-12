@@ -36,7 +36,7 @@ If you add a PDF to this folder:
 
 | File | Title | Author(s) / Source | Notes |
 |------|--------|--------------------|--------|
-| `system-design-interview-alex-xu-vol1.pdf` | System Design Interview – An Insider's Guide (Volume 1) | Alex Xu | Copied from `system-design/arkapg211002-System-Design-Preparation/BOOKS/`. Credit: Alex Xu and publisher. |
-| `system-design-interview-alex-xu-vol2.pdf` | System Design Interview – An Insider's Guide (Volume 2) | Alex Xu | Same source. Credit: Alex Xu and publisher. |
+| `System_Design_Interview_Alex_Xu_Vol1.pdf` | System Design Interview – An Insider's Guide (Volume 1) | Alex Xu | Copied from `system-design/arkapg211002-System-Design-Preparation/BOOKS/`. Credit: Alex Xu and publisher. |
+| `System_Design_Interview_Alex_Xu_Vol2.pdf` | System Design Interview – An Insider's Guide (Volume 2) | Alex Xu | Same source. Credit: Alex Xu and publisher. |
 
 Other system design books (e.g. Designing Data-Intensive Applications) may be linked from the `system-design/` context folder; add them here with credit if you place a copy in this folder.

@@ -8,7 +8,7 @@ Real-world and interview-style **product system design** cases: how major system
 
 ## Companies & products index
 
-**[Companies & products — system design resources](0-companies-and-products.md)** — One place for **many companies**: Amazon, Airbnb, Discord, Dropbox, Facebook, Instagram, Netflix, Slack, Stripe, Twitter, Uber, WhatsApp, YouTube, and more. Links to High Scalability, YouTube, Medium, and company blogs (e.g. Netflix Tech Blog, Uber Engineering, Dropbox Tech Blog).
+**[Companies & products — system design resources](0_Companies_and_Products.md)** — One place for **many companies**: Amazon, Airbnb, Discord, Dropbox, Facebook, Instagram, Netflix, Slack, Stripe, Twitter, Uber, WhatsApp, YouTube, and more. Links to High Scalability, YouTube, Medium, and company blogs (e.g. Netflix Tech Blog, Uber Engineering, Dropbox Tech Blog).
 
 ---
 
@@ -16,31 +16,31 @@ Real-world and interview-style **product system design** cases: how major system
 
 | Case | Product | Key concepts |
 |------|--------|--------------|
-| [Google Drive / file sync](1-google-drive-file-sync.md) | Google Drive, Dropbox | Object storage, block dedup, metadata DB, sync protocol |
-| [WhatsApp](2-whatsapp.md) | WhatsApp, Messenger, WeChat | Messaging, presence, media storage, CDN |
-| [Twitter](3-twitter.md) | Twitter, feed systems | Read-heavy, fan-out, timeline, search |
-| [Uber](4-uber.md) | Uber, Lyft | Geospatial (geohash, quadtree), real-time location, matching |
-| [YouTube / Netflix](5-youtube-netflix.md) | YouTube, Netflix | Video ingest, transcoding, CDN, streaming |
-| [URL shortener](6-url-shortener.md) | Bitly, Pastebin | Key generation, KV store, object store, caching |
+| [Google Drive / file sync](1_Google_Drive_File_Sync.md) | Google Drive, Dropbox | Object storage, block dedup, metadata DB, sync protocol |
+| [WhatsApp](2_Whatsapp.md) | WhatsApp, Messenger, WeChat | Messaging, presence, media storage, CDN |
+| [Twitter](3_Twitter.md) | Twitter, feed systems | Read-heavy, fan-out, timeline, search |
+| [Uber](4_Uber.md) | Uber, Lyft | Geospatial (geohash, quadtree), real-time location, matching |
+| [YouTube / Netflix](5_Youtube_Netflix.md) | YouTube, Netflix | Video ingest, transcoding, CDN, streaming |
+| [URL shortener](6_URL_Shortener.md) | Bitly, Pastebin | Key generation, KV store, object store, caching |
 
-### Planned cases *(stubs — fill per [PLANNED_CASES.md](../PLANNED_CASES.md))*
+### Planned cases *(stubs)*
 
 | Case | Product | Status |
 |------|---------|--------|
-| [Discord messaging](7-discord-messaging.md) | Discord | 📁 stub |
-| [Instagram feed](8-instagram-feed.md) | Instagram | 📁 stub |
-| [Stripe payments](9-stripe-payments.md) | Stripe | 📁 stub |
-| [Rate limiter](10-rate-limiter-design.md) | API GW pattern | 📁 stub |
-| [Slack realtime](11-slack-realtime.md) | Slack | 📁 stub |
+| [Discord messaging](7_Discord_Messaging.md) | Discord | 📁 stub |
+| [Instagram feed](8_Instagram_Feed.md) | Instagram | 📁 stub |
+| [Stripe payments](9_Stripe_Payments.md) | Stripe | 📁 stub |
+| [Rate limiter](10_Rate_Limiter_Design.md) | API GW pattern | 📁 stub |
+| [Slack realtime](11_Slack_Realtime.md) | Slack | 📁 stub |
 
-When writing any case, include **Failure modes** → link [failure-modes/](../failure-modes/README.md).
+When writing any case, include **Failure modes** → link [Failure-Modes/](../Failure-Modes/README.md).
 
 ---
 
 ## How to use
 
 1. **Read the case** — Requirements, scale, and high-level design.
-2. **Map to concepts** — Links in each file point to `../databases/`, `../caching/`, etc.
+2. **Map to concepts** — Links in each file point to `../Databases/`, `../Caching/`, etc.
 3. **Deep-dive** — Use the concept notes for details (e.g. sharding, replication, rate limiting).
 4. **Further reading** — Each case has a **Further reading** section with links to blog posts, videos, and in-repo solutions that explain in detail how each system works.
 

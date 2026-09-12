@@ -1,6 +1,6 @@
 # Failure modes at design time
 
-What breaks in production **before** you ship — complements [availability/](../availability/README.md) and [performance/](../performance/README.md). Each topic: symptom → root cause → design mitigation → validation.
+What breaks in production **before** you ship — complements [Availability/](../Availability/README.md) and [Performance/](../Performance/README.md). Each topic: symptom → root cause → design mitigation → validation.
 
 *(New section — stubs August 2026)*
 
@@ -8,20 +8,20 @@ What breaks in production **before** you ship — complements [availability/](..
 
 | # | File | Focus |
 |---|------|--------|
-| 1 | [Cache stampede and hot keys](./1-cache-stampede-and-hot-keys.md) | Thundering herd, single hot shard, mitigation |
-| 2 | [Split brain and partition](./2-split-brain-and-partition.md) | CAP in practice, quorum, fencing |
-| 3 | [Cascading failures and timeout storms](./3-cascading-failures-and-timeout-storms.md) | Bulkhead, circuit breaker, retry budgets |
-| 4 | [Data loss and durability gaps](./4-data-loss-and-durability-gaps.md) | WAL, async replication, backup RPO/RTO |
+| 1 | [Cache stampede and hot keys](./1_Cache_Stampede_and_Hot_Keys.md) | Thundering herd, single hot shard, mitigation |
+| 2 | [Split brain and partition](./2_Split_Brain_and_Partition.md) | CAP in practice, quorum, fencing |
+| 3 | [Cascading failures and timeout storms](./3_Cascading_Failures_and_Timeout_Storms.md) | Bulkhead, circuit breaker, retry budgets |
+| 4 | [Data loss and durability gaps](./4_Data_Loss_and_Durability_Gaps.md) | WAL, async replication, backup RPO/RTO |
 
 ## Learning path
 
-After [consistency/1-availability-vs-consistency.md](../consistency/1-availability-vs-consistency.md) and [patterns/4-circuit-breaker.md](../patterns/4-circuit-breaker.md): 1 → 2 → 3 → 4
+After [Consistency/1_Availability_vs_Consistency.md](../Consistency/1_Availability_vs_Consistency.md) and [Patterns/4_Circuit_Breaker.md](../Patterns/4_Circuit_Breaker.md): 1 → 2 → 3 → 4
 
 ## Use in case studies
 
-Add a **Failure modes** section in each [cases/](../cases/README.md) file linking relevant topics above.
+Add a **Failure modes** section in each [Cases/](../Cases/README.md) file linking relevant topics above.
 
 ## Cross-references
 
-- [DevOps-Handbook](../DevOps-Handbook/CONTENT_WRITE_ORDER.md) — incident response ops
-- [Networks-Deep-Dive](../Networks-Deep-Dive/failure-modes/) — *(future)* network-specific failures
+- [DevOps-Handbook](https://github.com/thisiskushal31/DevOps-Handbook) — incident response ops
+- [Networks-Deep-Dive](../Networks-Deep-Dive/Failure-Modes/) — *(future)* network-specific failures

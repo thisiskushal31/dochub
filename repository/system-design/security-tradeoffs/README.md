@@ -1,6 +1,6 @@
 # Security trade-offs at design time
 
-Architecture-level security decisions — extends [security/](../security/README.md). Full program depth → [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) via [Entry-Points/Security_Deep_Dive.md](../Entry-Points/Security_Deep_Dive.md).
+Architecture-level security decisions — extends [Security/](../Security/README.md). Full program depth → [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive).
 
 *(New section — stubs August 2026)*
 
@@ -8,13 +8,13 @@ Architecture-level security decisions — extends [security/](../security/README
 
 | # | File | Focus |
 |---|------|--------|
-| 1 | [Threat modeling at design time](./1-threat-modeling-at-design-time.md) | STRIDE-lite, trust boundaries in HLD |
-| 2 | [Auth design vs zero trust](./2-auth-design-vs-zero-trust.md) | Session vs JWT, mTLS, service identity |
-| 3 | [Encryption, performance, and key rotation](./3-encryption-performance-and-key-rotation.md) | TLS overhead, field-level encryption, KMS |
+| 1 | [Threat modeling at design time](./1_Threat_Modeling_At_Design_Time.md) | STRIDE-lite, trust boundaries in HLD |
+| 2 | [Auth design vs zero trust](./2_Auth_Design_vs_Zero_Trust.md) | Session vs JWT, mTLS, service identity |
+| 3 | [Encryption, performance, and key rotation](./3_Encryption_Performance_and_Key_Rotation.md) | TLS overhead, field-level encryption, KMS |
 
 ## Learning path
 
-After [security/1-security-overview.md](../security/1-security-overview.md): 1 → 2 → 3 → Security-Deep-Dive capstone
+After [Security/1_Security_Overview.md](../Security/1_Security_Overview.md): 1 → 2 → 3 → Security-Deep-Dive capstone
 
 ## Cross-references
 

@@ -6,15 +6,15 @@ High availability, failover, replication, fault tolerance, reliability, maintain
 
 | Topic | File |
 |--------|------|
-| Availability patterns (redundancy, fault tolerance) | [1-availability-patterns.md](1-availability-patterns.md) |
-| Failover (active-passive, active-active) | [2-failover.md](2-failover.md) |
-| Replication for availability (master-slave, master-master) | [3-replication.md](3-replication.md) |
-| Availability in numbers (nines, sequence vs parallel) | [4-availability-in-numbers.md](4-availability-in-numbers.md) |
-| Background jobs (event-driven, schedule-driven) | [5-background-jobs.md](5-background-jobs.md) |
-| Load balancing vs failover | [6-load-balancing-vs-failover.md](6-load-balancing-vs-failover.md) |
-| Fault tolerance in system design | [7-fault-tolerance.md](7-fault-tolerance.md) |
-| Reliability in system design | [8-reliability.md](8-reliability.md) |
-| Maintainability in system design | [9-maintainability.md](9-maintainability.md) |
+| Availability patterns (redundancy, fault tolerance) | [1_Availability_Patterns.md](1_Availability_Patterns.md) |
+| Failover (active-passive, active-active) | [2_Failover.md](2_Failover.md) |
+| Replication for availability (master-slave, master-master) | [3_Replication.md](3_Replication.md) |
+| Availability in numbers (nines, sequence vs parallel) | [4_Availability_in_Numbers.md](4_Availability_in_Numbers.md) |
+| Background jobs (event-driven, schedule-driven) | [5_Background_Jobs.md](5_Background_Jobs.md) |
+| Load balancing vs failover | [6_Load_Balancing_vs_Failover.md](6_Load_Balancing_vs_Failover.md) |
+| Fault tolerance in system design | [7_Fault_Tolerance.md](7_Fault_Tolerance.md) |
+| Reliability in system design | [8_Reliability.md](8_Reliability.md) |
+| Maintainability in system design | [9_Maintainability.md](9_Maintainability.md) |
 
 ## Quick reference
 

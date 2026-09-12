@@ -1,0 +1,37 @@
+[
+  {
+    "name": "1_Memory_And_Compute.md",
+    "path": "1_Memory_And_Compute.md",
+    "type": "file",
+    "sha": "",
+    "size": 352
+  },
+  {
+    "name": "2_Serving_Patterns.md",
+    "path": "2_Serving_Patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 375
+  },
+  {
+    "name": "3_Cost_And_Resources.md",
+    "path": "3_Cost_And_Resources.md",
+    "type": "file",
+    "sha": "",
+    "size": 451
+  },
+  {
+    "name": "4_Lifecycle_And_Registry.md",
+    "path": "4_Lifecycle_And_Registry.md",
+    "type": "file",
+    "sha": "",
+    "size": 429
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 724
+  }
+]

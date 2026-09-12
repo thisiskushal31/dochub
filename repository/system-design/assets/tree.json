@@ -39,8 +39,8 @@
     "sha": ""
   },
   {
-    "name": "messaging",
-    "path": "messaging",
+    "name": "Messaging",
+    "path": "Messaging",
     "type": "dir",
     "sha": ""
   },
@@ -51,8 +51,8 @@
     "sha": ""
   },
   {
-    "name": "performance",
-    "path": "performance",
+    "name": "Performance",
+    "path": "Performance",
     "type": "dir",
     "sha": ""
   },

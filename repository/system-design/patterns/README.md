@@ -6,14 +6,14 @@ Architectural and resilience patterns: CQRS, event sourcing, leader election, ci
 
 | Topic | File |
 |--------|------|
-| Event sourcing | [1-event-sourcing.md](1-event-sourcing.md) |
-| CQRS | [2-cqrs.md](2-cqrs.md) |
-| Leader election | [3-leader-election.md](3-leader-election.md) |
-| Circuit breaker | [4-circuit-breaker.md](4-circuit-breaker.md) |
-| Bulkhead and retry | [5-bulkhead-and-retry.md](5-bulkhead-and-retry.md) |
-| Event-driven architecture (EDA) | [6-event-driven-architecture.md](6-event-driven-architecture.md) |
-| Serverless architecture | [7-serverless.md](7-serverless.md) |
-| Event sourcing vs event streaming | [8-event-sourcing-vs-event-streaming.md](8-event-sourcing-vs-event-streaming.md) |
+| Event sourcing | [1_Event_Sourcing.md](1_Event_Sourcing.md) |
+| CQRS | [2_Cqrs.md](2_Cqrs.md) |
+| Leader election | [3_Leader_Election.md](3_Leader_Election.md) |
+| Circuit breaker | [4_Circuit_Breaker.md](4_Circuit_Breaker.md) |
+| Bulkhead and retry | [5_Bulkhead_and_Retry.md](5_Bulkhead_and_Retry.md) |
+| Event-driven architecture (EDA) | [6_Event_Driven_Architecture.md](6_Event_Driven_Architecture.md) |
+| Serverless architecture | [7_Serverless.md](7_Serverless.md) |
+| Event sourcing vs event streaming | [8_Event_Sourcing_vs_Event_Streaming.md](8_Event_Sourcing_vs_Event_Streaming.md) |
 
 ## Quick reference
 

@@ -6,15 +6,15 @@ Cache strategies, eviction, edge caching, cold/warm cache, and where to place ca
 
 | Topic | File |
 |--------|------|
-| Caching overview and strategies | [1-caching-overview.md](1-caching-overview.md) |
-| Cache-aside (lazy loading) | [2-cache-aside.md](2-cache-aside.md) |
-| Write-through | [3-write-through.md](3-write-through.md) |
-| Write-behind (write-back) | [4-write-behind.md](4-write-behind.md) |
-| Refresh-ahead | [5-refresh-ahead.md](5-refresh-ahead.md) |
-| Cache layers (client, CDN, web, app, DB) | [6-cache-layers.md](6-cache-layers.md) |
-| Cache eviction policies (LRU, LFU, TTL) | [7-cache-eviction-policies.md](7-cache-eviction-policies.md) |
-| Edge caching | [8-edge-caching.md](8-edge-caching.md) |
-| Cold and warm cache | [9-cold-and-warm-cache.md](9-cold-and-warm-cache.md) |
+| Caching overview and strategies | [1_Caching_Overview.md](1_Caching_Overview.md) |
+| Cache-aside (lazy loading) | [2_Cache_Aside.md](2_Cache_Aside.md) |
+| Write-through | [3_Write_Through.md](3_Write_Through.md) |
+| Write-behind (write-back) | [4_Write_Behind.md](4_Write_Behind.md) |
+| Refresh-ahead | [5_Refresh_Ahead.md](5_Refresh_Ahead.md) |
+| Cache layers (client, CDN, web, app, DB) | [6_Cache_Layers.md](6_Cache_Layers.md) |
+| Cache eviction policies (LRU, LFU, TTL) | [7_Cache_Eviction_Policies.md](7_Cache_Eviction_Policies.md) |
+| Edge caching | [8_Edge_Caching.md](8_Edge_Caching.md) |
+| Cold and warm cache | [9_Cold_and_Warm_Cache.md](9_Cold_and_Warm_Cache.md) |
 
 ## Quick reference
 

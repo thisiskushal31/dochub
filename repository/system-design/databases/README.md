@@ -70,7 +70,7 @@ Databases we have in mind under each category. **Not covered here** — this sec
 **Examples:** MongoDB, CouchDB, Firestore
 
 **Why you use it:** Flexible/evolving schemas, document-centric workloads, rapid iteration, horizontal scaling, semi-structured data.  
-**Deep dive:** [Databases Deep Dive – MongoDB](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/nosql/mongodb)
+**Deep dive:** [Databases Deep Dive – MongoDB](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/NoSQL/mongodb)
 
 ### 3. Key-Value Store
 
@@ -88,7 +88,7 @@ Databases we have in mind under each category. **Not covered here** — this sec
 **Examples:** **Cassandra**, HBase, ScyllaDB, Google Cloud Bigtable. *Deep dive: Cassandra / ScyllaDB planned.*
 
 **Why you use it:** Massive write throughput, very large partitions, multi-datacenter replication, sparse columns, no single point of failure.  
-**Deep dive:** [Databases Deep Dive – Wide-Column](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/nosql/wide-column)
+**Deep dive:** [Databases Deep Dive – Wide-Column](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/NoSQL/wide-column)
 
 ### 5. Graph Database
 
@@ -97,7 +97,7 @@ Databases we have in mind under each category. **Not covered here** — this sec
 **Examples:** **Neo4j**, Amazon Neptune, ArangoDB. *Deep dive: Neo4j / Neptune planned.*
 
 **Why you use it:** Relationship-heavy data, recommendations, fraud/identity, knowledge graphs, network/dependency analysis.  
-**Deep dive:** [Databases Deep Dive – Graph](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/nosql/graph)
+**Deep dive:** [Databases Deep Dive – Graph](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/NoSQL/graph)
 
 ### 6. Time-Series Database
 
@@ -106,7 +106,7 @@ Databases we have in mind under each category. **Not covered here** — this sec
 **Examples:** **InfluxDB**, **TimescaleDB**, Prometheus. *Deep dive: InfluxDB / TimescaleDB planned.*
 
 **Why you use it:** Metrics/monitoring, IoT/sensors, financial tick data, event streams, retention and aggregation.  
-**Deep dive:** [Databases Deep Dive – Time-Series](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/nosql/time-series)
+**Deep dive:** [Databases Deep Dive – Time-Series](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/NoSQL/time-series)
 
 ### 7. Search Engine
 
@@ -115,7 +115,7 @@ Databases we have in mind under each category. **Not covered here** — this sec
 **Examples:** Elasticsearch, Apache Solr, Meilisearch
 
 **Why you use it:** Full-text search, fuzzy/faceted search, log and security analytics, relevance tuning.  
-**Deep dive:** [Databases Deep Dive – Elasticsearch](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/nosql/elasticsearch)
+**Deep dive:** [Databases Deep Dive – Elasticsearch](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/NoSQL/elasticsearch)
 
 ### 8. In-Memory Cache
 
@@ -124,7 +124,7 @@ Databases we have in mind under each category. **Not covered here** — this sec
 **Examples:** Redis, Memcached, Hazelcast
 
 **Why you use it:** Reduce latency, lower load on primary store, session/state, rate limiting/counters, pub/sub and queues.  
-**Deep dive:** [Databases Deep Dive – Redis](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/nosql/redis)
+**Deep dive:** [Databases Deep Dive – Redis](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/NoSQL/redis)
 
 ### 9. Blob / Object Storage
 
@@ -133,7 +133,7 @@ Databases we have in mind under each category. **Not covered here** — this sec
 **Examples:** Amazon S3, Google Cloud Storage, Azure Blob Storage, MinIO
 
 **Why you use it:** Media/static assets, backups/archives, data lakes, durability and availability at scale.  
-**Deep dive:** [Databases Deep Dive – Blob/Object](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/nosql/blob-object)
+**Deep dive:** [Databases Deep Dive – Blob/Object](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/NoSQL/blob-object)
 
 ### 10. Vector Database
 
@@ -142,35 +142,35 @@ Databases we have in mind under each category. **Not covered here** — this sec
 **Examples:** Pinecone, Weaviate, Milvus, pgvector
 
 **Why you use it:** Semantic search, recommendations, RAG/AI, deduplication/clustering, image/audio similarity.  
-**Deep dive:** [Databases Deep Dive – Vector](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/nosql/vector)
+**Deep dive:** [Databases Deep Dive – Vector](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/NoSQL/vector)
 
 ---
 
 ## Learning Path
 
-1. **[Database Design Overview](1-database-design-overview.md)**: Start here to understand what databases are, their types, importance in system design, and common database patterns.
+1. **[Database Design Overview](1_Database_Design_Overview.md)**: Start here to understand what databases are, their types, importance in system design, and common database patterns.
 
-2. **[SQL vs NoSQL Selection](2-sql-vs-nosql-selection.md)**: Learn when to choose SQL vs NoSQL databases, their features, scalability approaches, and detailed comparison.
+2. **[SQL vs NoSQL Selection](2_SQL_vs_NoSQL_Selection.md)**: Learn when to choose SQL vs NoSQL databases, their features, scalability approaches, and detailed comparison.
 
-3. **[Storage Systems](3-storage-systems.md)**: Understand file-based vs database storage systems, and explore block, object, and file storage types.
+3. **[Storage Systems](3_Storage_Systems.md)**: Understand file-based vs database storage systems, and explore block, object, and file storage types.
 
-4. **[Database Sharding](4-database-sharding.md)**: Learn about horizontal scaling through sharding, different sharding methods, optimization strategies, and alternatives.
+4. **[Database Sharding](4_Database_Sharding.md)**: Learn about horizontal scaling through sharding, different sharding methods, optimization strategies, and alternatives.
 
-5. **[Database Replication](5-database-replication.md)**: Understand replication types, strategies, configurations, and how replication works in distributed systems.
+5. **[Database Replication](5_Database_Replication.md)**: Understand replication types, strategies, configurations, and how replication works in distributed systems.
 
-6. **[CAP Theorem](6-cap-theorem.md)**: Explore the CAP theorem, CP/AP/CA databases, and trade-offs in distributed database systems.
+6. **[CAP Theorem](6_CAP_Theorem.md)**: Explore the CAP theorem, CP/AP/CA databases, and trade-offs in distributed database systems.
 
-7. **[Database Selection Guide](7-database-selection-guide.md)**: Learn factors to consider when selecting a database, including data structure, scalability, consistency, and cost.
+7. **[Database Selection Guide](7_Database_Selection_Guide.md)**: Learn factors to consider when selecting a database, including data structure, scalability, consistency, and cost.
 
-8. **[Common Challenges](8-common-challenges.md)**: Understand common problems in database design and their solutions.
+8. **[Common Challenges](8_Common_Challenges.md)**: Understand common problems in database design and their solutions.
 
-9. **[Best Practices](9-best-practices.md)**: Learn best practices for database design, including normalization, indexing, security, and scalability planning.
+9. **[Best Practices](9_Best_Practices.md)**: Learn best practices for database design, including normalization, indexing, security, and scalability planning.
 
-10. **[Denormalization](10-denormalization.md)**: When and how to introduce redundancy for read performance; trade-offs with normalization.
+10. **[Denormalization](10_Denormalization.md)**: When and how to introduce redundancy for read performance; trade-offs with normalization.
 
-11. **[Federation](11-federation.md)**: Single logical interface over multiple databases; when to use and trade-offs.
+11. **[Federation](11_Federation.md)**: Single logical interface over multiple databases; when to use and trade-offs.
 
-12. **[SQL Tuning](12-sql-tuning.md)**: Query optimization, indexing, and tuning for performance.
+12. **[SQL Tuning](12_SQL_Tuning.md)**: Query optimization, indexing, and tuning for performance.
 
 ## Status
 
@@ -210,6 +210,6 @@ All content in this section is based on and adapted from the following GeeksforG
 ## Related Content
 
 - **[System Design Concepts](../README.md)**: Main index for all system design concepts
-- **[Storage Systems](../storage/README.md)**: General storage concepts and patterns
-- **[Consistency Patterns](../consistency/README.md)**: CAP theorem, consistency models
+- **[Storage Systems](../Storage/README.md)**: General storage concepts and patterns
+- **[Consistency Patterns](../Consistency/README.md)**: CAP theorem, consistency models
 - **[Databases Deep Dive](https://github.com/thisiskushal31/Databases-Deep-Dive)**: Technical deep dives for specific databases

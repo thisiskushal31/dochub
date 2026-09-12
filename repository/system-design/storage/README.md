@@ -6,11 +6,11 @@ Indexing, partitioning, durability, and OLTP vs OLAP.
 
 | Topic | File |
 |--------|------|
-| Indexing (dense, sparse, B-tree, secondary) | [1-indexing.md](1-indexing.md) |
-| Partitioning (horizontal, vertical) | [2-partitioning.md](2-partitioning.md) |
-| WAL and durability (checkpoints, backups, PITR) | [3-wal-and-durability.md](3-wal-and-durability.md) |
-| OLTP vs OLAP | [4-oltp-vs-olap.md](4-oltp-vs-olap.md) |
-| Materialized views | [5-materialized-views.md](5-materialized-views.md) |
+| Indexing (dense, sparse, B-tree, secondary) | [1_Indexing.md](1_Indexing.md) |
+| Partitioning (horizontal, vertical) | [2_Partitioning.md](2_Partitioning.md) |
+| WAL and durability (checkpoints, backups, PITR) | [3_WAL_and_Durability.md](3_WAL_and_Durability.md) |
+| OLTP vs OLAP | [4_OLTP_vs_OLAP.md](4_OLTP_vs_OLAP.md) |
+| Materialized views | [5_Materialized_Views.md](5_Materialized_Views.md) |
 
 ## Quick reference
 
