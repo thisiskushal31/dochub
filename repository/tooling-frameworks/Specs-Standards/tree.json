@@ -1,0 +1,163 @@
+[
+  {
+    "name": "GraphQL",
+    "path": "GraphQL",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_And_When.md",
+        "path": "GraphQL/1_What_And_When.md",
+        "type": "file",
+        "sha": "",
+        "size": 257
+      },
+      {
+        "name": "README.md",
+        "path": "GraphQL/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 314
+      }
+    ]
+  },
+  {
+    "name": "gRPC",
+    "path": "gRPC",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_And_When.md",
+        "path": "gRPC/1_What_And_When.md",
+        "type": "file",
+        "sha": "",
+        "size": 251
+      },
+      {
+        "name": "README.md",
+        "path": "gRPC/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 246
+      }
+    ]
+  },
+  {
+    "name": "MCP",
+    "path": "MCP",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_And_When.md",
+        "path": "MCP/1_What_And_When.md",
+        "type": "file",
+        "sha": "",
+        "size": 476
+      },
+      {
+        "name": "README.md",
+        "path": "MCP/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 265
+      }
+    ]
+  },
+  {
+    "name": "OAuth",
+    "path": "OAuth",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_And_When.md",
+        "path": "OAuth/1_What_And_When.md",
+        "type": "file",
+        "sha": "",
+        "size": 417
+      },
+      {
+        "name": "README.md",
+        "path": "OAuth/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 125
+      }
+    ]
+  },
+  {
+    "name": "OpenAPI",
+    "path": "OpenAPI",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_And_When.md",
+        "path": "OpenAPI/1_What_And_When.md",
+        "type": "file",
+        "sha": "",
+        "size": 412
+      },
+      {
+        "name": "README.md",
+        "path": "OpenAPI/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 127
+      }
+    ]
+  },
+  {
+    "name": "OpenTelemetry",
+    "path": "OpenTelemetry",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_And_When.md",
+        "path": "OpenTelemetry/1_What_And_When.md",
+        "type": "file",
+        "sha": "",
+        "size": 472
+      },
+      {
+        "name": "README.md",
+        "path": "OpenTelemetry/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 133
+      }
+    ]
+  },
+  {
+    "name": "SOAP",
+    "path": "SOAP",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_And_When.md",
+        "path": "SOAP/1_What_And_When.md",
+        "type": "file",
+        "sha": "",
+        "size": 460
+      },
+      {
+        "name": "README.md",
+        "path": "SOAP/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 228
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 524
+  }
+]
