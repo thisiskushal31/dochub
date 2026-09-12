@@ -1,13 +1,13 @@
 [
   {
-    "name": "buildah-skopeo",
-    "path": "buildah-skopeo",
+    "name": "Buildah-Skopeo",
+    "path": "Buildah-Skopeo",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "README.md",
-        "path": "buildah-skopeo/README.md",
+        "path": "Buildah-Skopeo/README.md",
         "type": "file",
         "sha": "",
         "size": 445
@@ -15,28 +15,28 @@
     ]
   },
   {
-    "name": "containerd",
-    "path": "containerd",
+    "name": "Containerd",
+    "path": "Containerd",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "1_CRI_Containerd_and_Nerdctl.md",
-        "path": "containerd/1_CRI_Containerd_and_Nerdctl.md",
+        "path": "Containerd/1_CRI_Containerd_and_Nerdctl.md",
         "type": "file",
         "sha": "",
         "size": 560
       },
       {
         "name": "2_Debugging_On_the_Node.md",
-        "path": "containerd/2_Debugging_On_the_Node.md",
+        "path": "Containerd/2_Debugging_On_the_Node.md",
         "type": "file",
         "sha": "",
         "size": 412
       },
       {
         "name": "README.md",
-        "path": "containerd/README.md",
+        "path": "Containerd/README.md",
         "type": "file",
         "sha": "",
         "size": 695
@@ -44,14 +44,14 @@
     ]
   },
   {
-    "name": "cri-o",
-    "path": "cri-o",
+    "name": "CRI-O",
+    "path": "CRI-O",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "README.md",
-        "path": "cri-o/README.md",
+        "path": "CRI-O/README.md",
         "type": "file",
         "sha": "",
         "size": 434
@@ -59,49 +59,49 @@
     ]
   },
   {
-    "name": "docker",
-    "path": "docker",
+    "name": "Docker",
+    "path": "Docker",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "1_Get_Docker_First_Steps.md",
-        "path": "docker/1_Get_Docker_First_Steps.md",
+        "path": "Docker/1_Get_Docker_First_Steps.md",
         "type": "file",
         "sha": "",
         "size": 5749
       },
       {
         "name": "2_Docker_Concepts.md",
-        "path": "docker/2_Docker_Concepts.md",
+        "path": "Docker/2_Docker_Concepts.md",
         "type": "file",
         "sha": "",
         "size": 6243
       },
       {
         "name": "3_Building_Images.md",
-        "path": "docker/3_Building_Images.md",
+        "path": "Docker/3_Building_Images.md",
         "type": "file",
         "sha": "",
         "size": 6937
       },
       {
         "name": "4_Running_Containers.md",
-        "path": "docker/4_Running_Containers.md",
+        "path": "Docker/4_Running_Containers.md",
         "type": "file",
         "sha": "",
         "size": 6081
       },
       {
         "name": "5_Docker_Workshop.md",
-        "path": "docker/5_Docker_Workshop.md",
+        "path": "Docker/5_Docker_Workshop.md",
         "type": "file",
         "sha": "",
         "size": 8105
       },
       {
         "name": "README.md",
-        "path": "docker/README.md",
+        "path": "Docker/README.md",
         "type": "file",
         "sha": "",
         "size": 2437
@@ -109,49 +109,49 @@
     ]
   },
   {
-    "name": "podman",
-    "path": "podman",
+    "name": "Podman",
+    "path": "Podman",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "1_Get_Podman_First_Steps.md",
-        "path": "podman/1_Get_Podman_First_Steps.md",
+        "path": "Podman/1_Get_Podman_First_Steps.md",
         "type": "file",
         "sha": "",
         "size": 3951
       },
       {
         "name": "2_Podman_Concepts.md",
-        "path": "podman/2_Podman_Concepts.md",
+        "path": "Podman/2_Podman_Concepts.md",
         "type": "file",
         "sha": "",
         "size": 1391
       },
       {
         "name": "3_Building_Images.md",
-        "path": "podman/3_Building_Images.md",
+        "path": "Podman/3_Building_Images.md",
         "type": "file",
         "sha": "",
         "size": 2053
       },
       {
         "name": "4_Running_Containers.md",
-        "path": "podman/4_Running_Containers.md",
+        "path": "Podman/4_Running_Containers.md",
         "type": "file",
         "sha": "",
         "size": 1798
       },
       {
         "name": "5_Pods_and_Rootless.md",
-        "path": "podman/5_Pods_and_Rootless.md",
+        "path": "Podman/5_Pods_and_Rootless.md",
         "type": "file",
         "sha": "",
         "size": 4512
       },
       {
         "name": "README.md",
-        "path": "podman/README.md",
+        "path": "Podman/README.md",
         "type": "file",
         "sha": "",
         "size": 2001

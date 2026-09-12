@@ -1,48 +1,48 @@
 [
   {
-    "name": "kubernetes",
-    "path": "kubernetes",
+    "name": "Kubernetes",
+    "path": "Kubernetes",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "1_Getting_Started_Install.md",
-        "path": "kubernetes/1_Getting_Started_Install.md",
+        "path": "Kubernetes/1_Getting_Started_Install.md",
         "type": "file",
         "sha": "",
         "size": 9155
       },
       {
         "name": "2_Concepts.md",
-        "path": "kubernetes/2_Concepts.md",
+        "path": "Kubernetes/2_Concepts.md",
         "type": "file",
         "sha": "",
         "size": 7725
       },
       {
         "name": "3_Tasks.md",
-        "path": "kubernetes/3_Tasks.md",
+        "path": "Kubernetes/3_Tasks.md",
         "type": "file",
         "sha": "",
         "size": 7599
       },
       {
         "name": "4_Tutorials.md",
-        "path": "kubernetes/4_Tutorials.md",
+        "path": "Kubernetes/4_Tutorials.md",
         "type": "file",
         "sha": "",
         "size": 6123
       },
       {
         "name": "5_Production_Operations.md",
-        "path": "kubernetes/5_Production_Operations.md",
+        "path": "Kubernetes/5_Production_Operations.md",
         "type": "file",
         "sha": "",
         "size": 8443
       },
       {
         "name": "README.md",
-        "path": "kubernetes/README.md",
+        "path": "Kubernetes/README.md",
         "type": "file",
         "sha": "",
         "size": 2772
@@ -50,14 +50,14 @@
     ]
   },
   {
-    "name": "nomad",
-    "path": "nomad",
+    "name": "Nomad",
+    "path": "Nomad",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "README.md",
-        "path": "nomad/README.md",
+        "path": "Nomad/README.md",
         "type": "file",
         "sha": "",
         "size": 498
@@ -65,84 +65,84 @@
     ]
   },
   {
-    "name": "openshift",
-    "path": "openshift",
+    "name": "OpenShift",
+    "path": "OpenShift",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "1_Overview_and_Concepts.md",
-        "path": "openshift/1_Overview_and_Concepts.md",
+        "path": "OpenShift/1_Overview_and_Concepts.md",
         "type": "file",
         "sha": "",
         "size": 16190
       },
       {
         "name": "10_Windows_Edge_AI_Hardware.md",
-        "path": "openshift/10_Windows_Edge_AI_Hardware.md",
+        "path": "OpenShift/10_Windows_Edge_AI_Hardware.md",
         "type": "file",
         "sha": "",
         "size": 11171
       },
       {
         "name": "2_Installation.md",
-        "path": "openshift/2_Installation.md",
+        "path": "OpenShift/2_Installation.md",
         "type": "file",
         "sha": "",
         "size": 16470
       },
       {
         "name": "3_Configure_and_Manage.md",
-        "path": "openshift/3_Configure_and_Manage.md",
+        "path": "OpenShift/3_Configure_and_Manage.md",
         "type": "file",
         "sha": "",
         "size": 12935
       },
       {
         "name": "4_Develop_and_Operators.md",
-        "path": "openshift/4_Develop_and_Operators.md",
+        "path": "OpenShift/4_Develop_and_Operators.md",
         "type": "file",
         "sha": "",
         "size": 13713
       },
       {
         "name": "5_Networking_Security_Observability.md",
-        "path": "openshift/5_Networking_Security_Observability.md",
+        "path": "OpenShift/5_Networking_Security_Observability.md",
         "type": "file",
         "sha": "",
         "size": 13940
       },
       {
         "name": "6_Service_Mesh.md",
-        "path": "openshift/6_Service_Mesh.md",
+        "path": "OpenShift/6_Service_Mesh.md",
         "type": "file",
         "sha": "",
         "size": 8203
       },
       {
         "name": "7_Virtualization.md",
-        "path": "openshift/7_Virtualization.md",
+        "path": "OpenShift/7_Virtualization.md",
         "type": "file",
         "sha": "",
         "size": 8922
       },
       {
         "name": "8_Etcd_Hosted_Control_Planes.md",
-        "path": "openshift/8_Etcd_Hosted_Control_Planes.md",
+        "path": "OpenShift/8_Etcd_Hosted_Control_Planes.md",
         "type": "file",
         "sha": "",
         "size": 9963
       },
       {
         "name": "9_Updating_Registry_API.md",
-        "path": "openshift/9_Updating_Registry_API.md",
+        "path": "OpenShift/9_Updating_Registry_API.md",
         "type": "file",
         "sha": "",
         "size": 10010
       },
       {
         "name": "README.md",
-        "path": "openshift/README.md",
+        "path": "OpenShift/README.md",
         "type": "file",
         "sha": "",
         "size": 6577
@@ -150,56 +150,56 @@
     ]
   },
   {
-    "name": "swarm",
-    "path": "swarm",
+    "name": "Swarm",
+    "path": "Swarm",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "1_Overview_and_Concepts.md",
-        "path": "swarm/1_Overview_and_Concepts.md",
+        "path": "Swarm/1_Overview_and_Concepts.md",
         "type": "file",
         "sha": "",
         "size": 4137
       },
       {
         "name": "2_Initialize_and_Nodes.md",
-        "path": "swarm/2_Initialize_and_Nodes.md",
+        "path": "Swarm/2_Initialize_and_Nodes.md",
         "type": "file",
         "sha": "",
         "size": 1512
       },
       {
         "name": "3_Services_and_Tasks.md",
-        "path": "swarm/3_Services_and_Tasks.md",
+        "path": "Swarm/3_Services_and_Tasks.md",
         "type": "file",
         "sha": "",
         "size": 3406
       },
       {
         "name": "4_Stacks_and_Compose.md",
-        "path": "swarm/4_Stacks_and_Compose.md",
+        "path": "Swarm/4_Stacks_and_Compose.md",
         "type": "file",
         "sha": "",
         "size": 1559
       },
       {
         "name": "5_Networking_Storage_Secrets.md",
-        "path": "swarm/5_Networking_Storage_Secrets.md",
+        "path": "Swarm/5_Networking_Storage_Secrets.md",
         "type": "file",
         "sha": "",
         "size": 1699
       },
       {
         "name": "6_Scaling_Updates_and_When_to_Use.md",
-        "path": "swarm/6_Scaling_Updates_and_When_to_Use.md",
+        "path": "Swarm/6_Scaling_Updates_and_When_to_Use.md",
         "type": "file",
         "sha": "",
         "size": 3297
       },
       {
         "name": "README.md",
-        "path": "swarm/README.md",
+        "path": "Swarm/README.md",
         "type": "file",
         "sha": "",
         "size": 2604
