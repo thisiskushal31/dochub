@@ -1,28 +1,28 @@
 [
   {
-    "name": "1-overview-and-concepts.md",
-    "path": "1-overview-and-concepts.md",
+    "name": "1_Overview_and_Concepts.md",
+    "path": "1_Overview_and_Concepts.md",
     "type": "file",
     "sha": "",
     "size": 347
   },
   {
-    "name": "2-storage-classes-and-lifecycle.md",
-    "path": "2-storage-classes-and-lifecycle.md",
+    "name": "2_Storage_Classes_and_Lifecycle.md",
+    "path": "2_Storage_Classes_and_Lifecycle.md",
     "type": "file",
     "sha": "",
     "size": 340
   },
   {
-    "name": "3-security-and-iam.md",
-    "path": "3-security-and-iam.md",
+    "name": "3_Security_and_IAM.md",
+    "path": "3_Security_and_IAM.md",
     "type": "file",
     "sha": "",
     "size": 326
   },
   {
-    "name": "4-operations-and-patterns.md",
-    "path": "4-operations-and-patterns.md",
+    "name": "4_Operations_and_Patterns.md",
+    "path": "4_Operations_and_Patterns.md",
     "type": "file",
     "sha": "",
     "size": 345
@@ -32,6 +32,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 877
+    "size": 782
   }
 ]

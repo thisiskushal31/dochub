@@ -2,7 +2,7 @@
 
 [← Relational folder](../README.md)
 
-*(Stub scaffold August 2026 — see [PLANNED_ENGINES.md](../../PLANNED_ENGINES.md) and [CONTENT_WRITE_ORDER.md](../../CONTENT_WRITE_ORDER.md))*
+*(Stub — fill this engine when you write it.)*
 
 ## Planned coverage (section summary)
 
@@ -15,10 +15,10 @@
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [Overview & embedded use cases](./1-overview-architecture.md) | stub |
-| 2 | [SQL, schema, and constraints](./2-sql-and-schema.md) | stub |
-| 3 | [Performance & PRAGMA tuning](./3-performance-and-pragmas.md) | stub |
-| 4 | [Backup, replication, ops](./4-backup-and-ops.md) | stub |
+| 1 | [Overview & embedded use cases](./1_Overview_Architecture.md) | stub |
+| 2 | [SQL, schema, and constraints](./2_SQL_and_Schema.md) | stub |
+| 3 | [Performance & PRAGMA tuning](./3_Performance_and_Pragmas.md) | stub |
+| 4 | [Backup, replication, ops](./4_Backup_and_Ops.md) | stub |
 
 ## Checklist before marking done (whole engine)
 

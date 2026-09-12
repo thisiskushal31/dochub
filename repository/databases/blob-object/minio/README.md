@@ -2,7 +2,7 @@
 
 [← Blob/Object folder](../README.md)
 
-*(Stub scaffold August 2026 — see [PLANNED_ENGINES.md](../../PLANNED_ENGINES.md) and [CONTENT_WRITE_ORDER.md](../../CONTENT_WRITE_ORDER.md))*
+*(Stub — fill this engine when you write it.)*
 
 ## Planned coverage (section summary)
 
@@ -14,9 +14,9 @@
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [Overview S3-compatible](./1-overview-s3-compatible.md) | stub |
-| 2 | [Deployment & security](./2-deployment-and-security.md) | stub |
-| 3 | [Operations](./3-operations.md) | stub |
+| 1 | [Overview S3-compatible](./1_Overview_S3_Compatible.md) | stub |
+| 2 | [Deployment & security](./2_Deployment_and_Security.md) | stub |
+| 3 | [Operations](./3_Operations.md) | stub |
 
 ## Checklist before marking done (whole engine)
 

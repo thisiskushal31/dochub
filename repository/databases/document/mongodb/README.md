@@ -10,7 +10,7 @@ This section provides detailed coverage of MongoDB organized into focused topics
 
 ## Topics
 
-### [1. Overview & Architecture](./1-overview-architecture.md)
+### [1. Overview & Architecture](./1_Overview_Architecture.md)
 
 Introduction to MongoDB, NoSQL concepts, architecture, and installation.
 
@@ -19,7 +19,7 @@ Introduction to MongoDB, NoSQL concepts, architecture, and installation.
 - Architecture (Components, Data Model)
 - Installation & Configuration
 
-### [2. Data Management](./2-data-management.md)
+### [2. Data Management](./2_Data_Management.md)
 
 Data types, schema design, and indexing strategies.
 
@@ -27,7 +27,7 @@ Data types, schema design, and indexing strategies.
 - Schema Design (Collections & Documents, Data Modeling Patterns)
 - Indexing (Index Types, Index Management, Analyzing Indexes)
 
-### [3. Operations](./3-operations.md)
+### [3. Operations](./3_Operations.md)
 
 Using MongoDB, querying data, and data manipulation.
 
@@ -38,13 +38,13 @@ Using MongoDB, querying data, and data manipulation.
 - Updates
 - Deletes
 
-### [4. Aggregation](./4-aggregation.md)
+### [4. Aggregation](./4_Aggregation.md)
 
 Aggregation pipeline for complex data processing.
 
 - Aggregation Pipeline (Pipeline Stages, Aggregation Operators)
 
-### [5. Advanced Features](./5-advanced-features.md)
+### [5. Advanced Features](./5_Advanced_Features.md)
 
 Advanced MongoDB features for specialized use cases.
 
@@ -54,7 +54,7 @@ Advanced MongoDB features for specialized use cases.
 - Replication
 - Sharding
 
-### [6. Performance & Security](./6-performance-security.md)
+### [6. Performance & Security](./6_Performance_Security.md)
 
 Performance optimization, backup, recovery, and security.
 
@@ -62,7 +62,7 @@ Performance optimization, backup, recovery, and security.
 - Backup & Recovery (mongodump, mongorestore)
 - Security (Authentication, Authorization)
 
-### [7. Best Practices](./7-best-practices.md)
+### [7. Best Practices](./7_Best_Practices.md)
 
 Advanced features, best practices, interview questions, and resources.
 
@@ -74,24 +74,24 @@ Advanced features, best practices, interview questions, and resources.
 ## Learning Path
 
 ### Beginner
-1. Start with [Overview & Architecture](./1-overview-architecture.md)
-2. Learn [Data Management](./2-data-management.md)
-3. Understand [Operations](./3-operations.md)
+1. Start with [Overview & Architecture](./1_Overview_Architecture.md)
+2. Learn [Data Management](./2_Data_Management.md)
+3. Understand [Operations](./3_Operations.md)
 
 ### Intermediate
-4. Study [Aggregation](./4-aggregation.md)
-5. Learn [Advanced Features](./5-advanced-features.md)
+4. Study [Aggregation](./4_Aggregation.md)
+5. Learn [Advanced Features](./5_Advanced_Features.md)
 
 ### Advanced
-6. Explore [Performance & Security](./6-performance-security.md)
-7. Master [Best Practices](./7-best-practices.md)
+6. Explore [Performance & Security](./6_Performance_Security.md)
+7. Master [Best Practices](./7_Best_Practices.md)
 
 ## Related Content
 
 - **[Databases Deep Dive (10 types)](../../README.md)**: Main index and database types
-- **[Redis Deep Dive](../../key-value/redis/README.md)**: Key-value & cache
-- **[Elasticsearch Deep Dive](../../search-engine/elasticsearch/README.md)**: Search engine
-- **[Aerospike Deep Dive](../../key-value/aerospike/README.md)**: Key-value
+- **[Redis Deep Dive](../../Key-Value/Redis/README.md)**: Key-value & cache
+- **[Elasticsearch Deep Dive](../../Search-Engine/Elasticsearch/README.md)**: Search engine
+- **[Aerospike Deep Dive](../../Key-Value/Aerospike/README.md)**: Key-value
 
 ## Resources
 

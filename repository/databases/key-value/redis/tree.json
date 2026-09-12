@@ -1,49 +1,49 @@
 [
   {
-    "name": "1-overview-architecture.md",
-    "path": "1-overview-architecture.md",
+    "name": "1_Overview_Architecture.md",
+    "path": "1_Overview_Architecture.md",
     "type": "file",
     "sha": "",
     "size": 5412
   },
   {
-    "name": "2-data-structures.md",
-    "path": "2-data-structures.md",
+    "name": "2_Data_Structures.md",
+    "path": "2_Data_Structures.md",
     "type": "file",
     "sha": "",
     "size": 12340
   },
   {
-    "name": "3-advanced-features.md",
-    "path": "3-advanced-features.md",
+    "name": "3_Advanced_Features.md",
+    "path": "3_Advanced_Features.md",
     "type": "file",
     "sha": "",
     "size": 5318
   },
   {
-    "name": "4-persistence-replication.md",
-    "path": "4-persistence-replication.md",
+    "name": "4_Persistence_Replication.md",
+    "path": "4_Persistence_Replication.md",
     "type": "file",
     "sha": "",
     "size": 6030
   },
   {
-    "name": "5-modules.md",
-    "path": "5-modules.md",
+    "name": "5_Modules.md",
+    "path": "5_Modules.md",
     "type": "file",
     "sha": "",
     "size": 3005
   },
   {
-    "name": "6-operations-management.md",
-    "path": "6-operations-management.md",
+    "name": "6_Operations_Management.md",
+    "path": "6_Operations_Management.md",
     "type": "file",
     "sha": "",
     "size": 5493
   },
   {
-    "name": "7-use-cases-best-practices.md",
-    "path": "7-use-cases-best-practices.md",
+    "name": "7_Use_Cases_Best_Practices.md",
+    "path": "7_Use_Cases_Best_Practices.md",
     "type": "file",
     "sha": "",
     "size": 7433

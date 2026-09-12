@@ -1,21 +1,21 @@
 [
   {
-    "name": "1-overview-architecture.md",
-    "path": "1-overview-architecture.md",
+    "name": "1_Overview_Architecture.md",
+    "path": "1_Overview_Architecture.md",
     "type": "file",
     "sha": "",
     "size": 327
   },
   {
-    "name": "2-indexes-and-search.md",
-    "path": "2-indexes-and-search.md",
+    "name": "2_Indexes_and_Search.md",
+    "path": "2_Indexes_and_Search.md",
     "type": "file",
     "sha": "",
     "size": 311
   },
   {
-    "name": "3-operations.md",
-    "path": "3-operations.md",
+    "name": "3_Operations.md",
+    "path": "3_Operations.md",
     "type": "file",
     "sha": "",
     "size": 322
@@ -25,6 +25,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 742
+    "size": 647
   }
 ]

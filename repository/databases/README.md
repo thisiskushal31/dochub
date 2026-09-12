@@ -2,7 +2,9 @@
 
 Comprehensive technical documentation for databases—relational, NoSQL, analytical, and cloud-managed services. This repository contains hands-on notes, design patterns, operational procedures, and troubleshooting checklists to help you master database concepts across different engines.
 
-**Start here:** [0_Start_Here.md](./0_Start_Here.md) · **Write order:** [CONTENT_WRITE_ORDER.md](./CONTENT_WRITE_ORDER.md) · **Track planned engines:** [PLANNED_ENGINES.md](./PLANNED_ENGINES.md)
+This repo is **data at rest** — store *types*, then engines under each type. Pipeline authoring lives in [Data-Engineering-Deep-Dive](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive). SQL vs NoSQL *selection* lives in [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts). Clients (`psql`, DBeaver, `bq`) live in [Tooling Database-Clients](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive/tree/main/Database-Clients).
+
+New to databases? Start at [Concepts/DBMS-Fundamentals](./Concepts/DBMS-Fundamentals/README.md).
 
 ## Overview
 
@@ -16,20 +18,20 @@ This repository is aligned around **10 database/storage types**. Each type has a
 
 | # | Type | Why you use it (use cases) | In this repo |
 |---|------|----------------------------|--------------|
-| 1 | **Relational** | Transactions, ACID, complex SQL, reporting, data integrity | [relational/](./relational/README.md) — MySQL, PostgreSQL |
-| 2 | **Document Store** | Flexible schema, document-centric data, rapid iteration | [document/mongodb](./document/mongodb/README.md) |
-| 3 | **Key-Value** | Fast lookups by key, high throughput, simple get/put | [key-value/redis](./key-value/redis/README.md), [key-value/aerospike](./key-value/aerospike/README.md) |
-| 4 | **Wide-Column** | Massive reads/writes, large partitions, scale-out | [wide-column/](./wide-column/README.md) |
-| 5 | **Graph** | Relationships, traversals, recommendations, fraud | [graph/](./graph/README.md) |
-| 6 | **Time-Series** | Timestamped data, metrics, IoT, retention/aggregation | [time-series/](./time-series/README.md) |
-| 7 | **Search Engine** | Full-text search, facets, log/search analytics | [search-engine/elasticsearch](./search-engine/elasticsearch/README.md) |
-| 8 | **In-Memory Cache** | Sub-ms latency, reduce DB load, sessions, counters | [cache/](./cache/README.md) → [key-value/redis](./key-value/redis/README.md) |
-| 9 | **Blob/Object Storage** | Files, media, backups, data lakes | [blob-object/](./blob-object/README.md) |
-| 10 | **Vector** | Similarity search, semantic search, RAG, AI retrieval | [vector/](./vector/README.md) — **📁 stubs** (fill pgvector first) |
+| 1 | **Relational** | Transactions, ACID, complex SQL, reporting, data integrity | [Relational/](./Relational/README.md) — MySQL, PostgreSQL, [DuckDB](./Relational/DuckDB/README.md) (embedded OLAP) |
+| 2 | **Document Store** | Flexible schema, document-centric data, rapid iteration | [Document/MongoDB](./Document/MongoDB/README.md) |
+| 3 | **Key-Value** | Fast lookups by key, high throughput, simple get/put | [Key-Value/Redis](./Key-Value/Redis/README.md), [Key-Value/Aerospike](./Key-Value/Aerospike/README.md) |
+| 4 | **Wide-Column** | Massive reads/writes, large partitions, scale-out | [Wide-Column/](./Wide-Column/README.md) |
+| 5 | **Graph** | Relationships, traversals, recommendations, fraud | [Graph/](./Graph/README.md) |
+| 6 | **Time-Series** | Timestamped data, metrics, IoT, retention/aggregation | [Time-Series/](./Time-Series/README.md) |
+| 7 | **Search Engine** | Full-text search, facets, log/search analytics | [Search-Engine/Elasticsearch](./Search-Engine/Elasticsearch/README.md) |
+| 8 | **In-Memory Cache** | Sub-ms latency, reduce DB load, sessions, counters | [Cache/](./Cache/README.md) → [Key-Value/Redis](./Key-Value/Redis/README.md) |
+| 9 | **Blob/Object Storage** | Files, media, backups, data lakes | [Blob-Object/](./Blob-Object/README.md) |
+| 10 | **Vector** | Similarity search, semantic search, RAG, AI retrieval | [Vector/](./Vector/README.md) — **📁 stubs** (fill pgvector first) |
 
 #### Use cases by type (why you use each)
 
-1. **Relational** — Transactional applications (banking, e-commerce, inventory); structured reporting and dashboards; complex queries with joins; data integrity and referential constraints; legacy/enterprise systems. *SQLite:* embedded, single-file, or local-first apps (mobile, edge).
+1. **Relational** — Transactional applications (banking, e-commerce, inventory); structured reporting and dashboards; complex queries with joins; data integrity and referential constraints; legacy/enterprise systems. *SQLite:* embedded, single-file, or local-first apps (mobile, edge). *DuckDB:* embedded **analytical** SQL (scan files / local OLAP), not the app’s OLTP store.
 2. **Document Store** — Flexible or evolving schemas; document-centric workloads (catalogs, content, configs); rapid iteration without migrations; horizontal scaling; semi-structured data (forms, API payloads).
 3. **Key-Value** — Fast lookups by key (sessions, preferences, feature flags); high throughput and simple get/put; leaderboards, counters, rate limiters; serverless/auto-scaling (e.g. DynamoDB).
 4. **Wide-Column** — Massive write throughput (events, IoT, clickstreams); very large partitions; multi-datacenter replication; sparse columns; no single point of failure, linear scale-out.
@@ -42,7 +44,7 @@ This repository is aligned around **10 database/storage types**. Each type has a
 
 ## Structure
 
-### [`relational/`](./relational/README.md)
+### [`Relational/`](./Relational/README.md)
 Comprehensive guide to relational database management systems (RDBMS), focusing on SQL fundamentals, schema design, performance optimization, and operational best practices.
 
 **Contents:**
@@ -56,9 +58,9 @@ Comprehensive guide to relational database management systems (RDBMS), focusing 
 - PostgreSQL-specific guide: Advanced features and optimization
 
 **Key Files:**
-- [`README.md`](./relational/README.md) - Relational database fundamentals
-- [`mysql/README.md`](./relational/mysql/README.md) - Complete MySQL technical deep dive (organized into focused topics)
-- [`postgresql/README.md`](./relational/postgresql/README.md) - Complete PostgreSQL technical deep dive (organized into focused topics)
+- [`README.md`](./Relational/README.md) - Relational database fundamentals
+- [`MySQL/README.md`](./Relational/MySQL/README.md) - Complete MySQL technical deep dive (organized into focused topics)
+- [`PostgreSQL/README.md`](./Relational/PostgreSQL/README.md) - Complete PostgreSQL technical deep dive (organized into focused topics)
 
 ### Folder layout (10-type bifurcation)
 
@@ -66,20 +68,20 @@ The repo is organized by the **10 database/storage types**. Each type has its ow
 
 | Type | Folder | Databases (folder each; ✅ covered, 📁 planned) |
 |------|--------|--------------------------------------------------|
-| 1. Relational | [`relational/`](./relational/README.md) | [mysql/](./relational/mysql/README.md) ✅, [postgresql/](./relational/postgresql/README.md) ✅, [oracle/](./relational/oracle/README.md), [sql-server/](./relational/sql-server/README.md), [sqlite/](./relational/sqlite/README.md) 📁 |
-| 2. Document Store | [`document/`](./document/README.md) | [mongodb/](./document/mongodb/README.md) ✅, [couchdb/](./document/couchdb/README.md), [firestore/](./document/firestore/README.md) 📁 |
-| 3. Key-Value | [`key-value/`](./key-value/README.md) | [redis/](./key-value/redis/README.md) ✅, [aerospike/](./key-value/aerospike/README.md) ✅, [dynamodb/](./key-value/dynamodb/README.md), [memcached/](./key-value/memcached/README.md) 📁 |
-| 4. Wide-Column | [`wide-column/`](./wide-column/README.md) | [cassandra/](./wide-column/cassandra/README.md), [hbase/](./wide-column/hbase/README.md), [scylladb/](./wide-column/scylladb/README.md), [bigtable/](./wide-column/bigtable/README.md) 📁 |
-| 5. Graph | [`graph/`](./graph/README.md) | [neo4j/](./graph/neo4j/README.md), [neptune/](./graph/neptune/README.md), [arangodb/](./graph/arangodb/README.md) 📁 |
-| 6. Time-Series | [`time-series/`](./time-series/README.md) | [influxdb/](./time-series/influxdb/README.md), [timescaledb/](./time-series/timescaledb/README.md), [prometheus/](./time-series/prometheus/README.md) 📁 |
-| 7. Search Engine | [`search-engine/`](./search-engine/README.md) | [elasticsearch/](./search-engine/elasticsearch/README.md) ✅, [solr/](./search-engine/solr/README.md), [meilisearch/](./search-engine/meilisearch/README.md) 📁 |
-| 8. In-Memory Cache | [`cache/`](./cache/README.md) | [redis](./key-value/redis/README.md) ✅, [memcached/](./cache/memcached/README.md), [hazelcast/](./cache/hazelcast/README.md) 📁 |
-| 9. Blob/Object | [`blob-object/`](./blob-object/README.md) | [s3/](./blob-object/s3/README.md), [gcs/](./blob-object/gcs/README.md), [azure-blob/](./blob-object/azure-blob/README.md), [minio/](./blob-object/minio/README.md) 📁 |
-| 10. Vector | [`vector/`](./vector/README.md) | [pinecone/](./vector/pinecone/README.md), [weaviate/](./vector/weaviate/README.md), [milvus/](./vector/milvus/README.md), [pgvector/](./vector/pgvector/README.md) 📁 |
+| 1. Relational | [`Relational/`](./Relational/README.md) | [MySQL/](./Relational/MySQL/README.md) ✅, [PostgreSQL/](./Relational/PostgreSQL/README.md) ✅, [DuckDB/](./Relational/DuckDB/README.md) ✅ (embedded OLAP), [Oracle/](./Relational/Oracle/README.md), [SQL-Server/](./Relational/SQL-Server/README.md), [SQLite/](./Relational/SQLite/README.md) 📁 |
+| 2. Document Store | [`Document/`](./Document/README.md) | [MongoDB/](./Document/MongoDB/README.md) ✅, [CouchDB/](./Document/CouchDB/README.md), [Firestore/](./Document/Firestore/README.md) 📁 |
+| 3. Key-Value | [`Key-Value/`](./Key-Value/README.md) | [Redis/](./Key-Value/Redis/README.md) ✅, [Aerospike/](./Key-Value/Aerospike/README.md) ✅, [DynamoDB/](./Key-Value/DynamoDB/README.md) 📁 |
+| 4. Wide-Column | [`Wide-Column/`](./Wide-Column/README.md) | [Cassandra/](./Wide-Column/Cassandra/README.md), [HBase/](./Wide-Column/HBase/README.md), [ScyllaDB/](./Wide-Column/ScyllaDB/README.md), [Bigtable/](./Wide-Column/Bigtable/README.md) 📁 |
+| 5. Graph | [`Graph/`](./Graph/README.md) | [Neo4j/](./Graph/Neo4j/README.md), [Neptune/](./Graph/Neptune/README.md), [ArangoDB/](./Graph/ArangoDB/README.md) 📁 |
+| 6. Time-Series | [`Time-Series/`](./Time-Series/README.md) | [InfluxDB/](./Time-Series/InfluxDB/README.md), [TimescaleDB/](./Time-Series/TimescaleDB/README.md), [Prometheus/](./Time-Series/Prometheus/README.md) 📁 |
+| 7. Search Engine | [`Search-Engine/`](./Search-Engine/README.md) | [Elasticsearch/](./Search-Engine/Elasticsearch/README.md) ✅, [Solr/](./Search-Engine/Solr/README.md), [Meilisearch/](./Search-Engine/Meilisearch/README.md) 📁 |
+| 8. In-Memory Cache | [`Cache/`](./Cache/README.md) | [Redis](./Key-Value/Redis/README.md) ✅ (engine lives in Key-Value), [Memcached/](./Cache/Memcached/README.md) 📁, [Hazelcast/](./Cache/Hazelcast/README.md) 📁 |
+| 9. Blob/Object | [`Blob-Object/`](./Blob-Object/README.md) | [S3/](./Blob-Object/S3/README.md), [GCS/](./Blob-Object/GCS/README.md), [Azure-Blob/](./Blob-Object/Azure-Blob/README.md), [MinIO/](./Blob-Object/MinIO/README.md) 📁 |
+| 10. Vector | [`Vector/`](./Vector/README.md) | [Pinecone/](./Vector/Pinecone/README.md), [Weaviate/](./Vector/Weaviate/README.md), [Milvus/](./Vector/Milvus/README.md), [Pgvector/](./Vector/Pgvector/README.md) 📁 |
 
-**Also:** [`nosql/README.md`](./nosql/README.md) — index and redirect to the type folders above.
+**Also:** [`NoSQL/README.md`](./NoSQL/README.md) — index and redirect to the type folders above.
 
-### [`concepts/`](./concepts/README.md)
+### [`Concepts/`](./Concepts/README.md)
 Fundamental concepts that apply across all database systems, regardless of type or vendor.
 
 **Contents:**
@@ -91,13 +93,12 @@ Fundamental concepts that apply across all database systems, regardless of type 
 - Performance: connection management, caching, query planning, latency SLIs
 - Observability: logs, metrics, traces, slow-query analysis
 
-### [`data-platform/`](./data-platform/README.md) *(new — stubs)*
+### [`Data-Platform/`](./Data-Platform/README.md) *(new — stubs)*
 Backups to object storage, CDC/replication for analytics, schema migrations — links [Data-Engineering-Deep-Dive](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive) without duplicating pipeline authoring.
 
-### [`Entry-Points/`](./Entry-Points/README.md) *(new — stubs)*
-Doors to DE, DS-AI, System Design, DevOps Handbook.
+Sister repos: [Data-Engineering-Deep-Dive](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive) · [Data-Science-AI-Deep-Dive](https://github.com/thisiskushal31/Data-Science-AI-Deep-Dive) · [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) · [DevOps-Handbook](https://github.com/thisiskushal31/DevOps-Handbook).
 
-### [`cloud-managed/`](./cloud-managed/README.md)
+### [`Cloud-Managed/`](./Cloud-Managed/README.md)
 Guide to managed database services across major cloud providers, covering provisioning, operations, migrations, and cost optimization.
 
 **Contents:**
@@ -115,63 +116,64 @@ Guide to managed database services across major cloud providers, covering provis
 ### 1. Relational Database
 *Use when: transactional data, ACID, complex queries, reporting, strict consistency.*
 
-**MySQL** — [Deep Dive](./relational/mysql/README.md) · [Blog Series](https://thisiskushal31.github.io/blog/#/blog/mysql-mastery-series)  
-**PostgreSQL** — [Deep Dive](./relational/postgresql/README.md)  
-**Also:** Oracle, SQL Server, **SQLite** (embedded, local; deep dive planned)
+**MySQL** — [Deep Dive](./Relational/MySQL/README.md) · [Blog Series](https://thisiskushal31.github.io/blog/#/blog/mysql-mastery-series)  
+**PostgreSQL** — [Deep Dive](./Relational/PostgreSQL/README.md)  
+**DuckDB** — [Deep Dive](./Relational/DuckDB/README.md) (in-process OLAP SQL; pipeline pointer → [DE Systems/DuckDB](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Systems/DuckDB))  
+**Also:** Oracle, SQL Server, **SQLite** (embedded OLTP; deep dive planned)
 
 ### 2. Document Store
 *Use when: flexible schema, document-centric data, rapid iteration, horizontal scaling.*
 
-**MongoDB** — [Deep Dive](./document/mongodb/README.md) · [Blog Series](https://thisiskushal31.github.io/blog/#/blog/mongodb-mastery-series)  
+**MongoDB** — [Deep Dive](./Document/MongoDB/README.md) · [Blog Series](https://thisiskushal31.github.io/blog/#/blog/mongodb-mastery-series)  
 **Also:** CouchDB, Firestore
 
 ### 3. Key-Value Store
 *Use when: fast lookups by key, high throughput, simple get/put, no complex queries.*
 
-**Redis** — [Deep Dive](./key-value/redis/README.md) · [Blog Series](https://thisiskushal31.github.io/blog/#/blog/redis-mastery-series)  
-**Aerospike** — [Deep Dive](./key-value/aerospike/README.md) · [Blog Series](https://thisiskushal31.github.io/blog/#/blog/aerospike-mastery-series)  
-**Also:** DynamoDB, Memcached
+**Redis** — [Deep Dive](./Key-Value/Redis/README.md) · [Blog Series](https://thisiskushal31.github.io/blog/#/blog/redis-mastery-series)  
+**Aerospike** — [Deep Dive](./Key-Value/Aerospike/README.md) · [Blog Series](https://thisiskushal31.github.io/blog/#/blog/aerospike-mastery-series)  
+**Also:** DynamoDB. Memcached → [Cache/memcached](./Cache/Memcached/README.md).
 
 ### 4. Wide-Column Store
 *Use when: massive-scale reads/writes, large partitions, multi-datacenter, sparse columns.*
 
-**Covered in:** [wide-column/](./wide-column/README.md)  
+**Covered in:** [Wide-Column/](./Wide-Column/README.md)  
 **Examples:** Cassandra, HBase, ScyllaDB, Bigtable
 
 ### 5. Graph Database
 *Use when: relationship-heavy data, traversals, recommendations, fraud, knowledge graphs.*
 
-**Covered in:** [graph/](./graph/README.md)  
+**Covered in:** [Graph/](./Graph/README.md)  
 **Examples:** Neo4j, Amazon Neptune, ArangoDB
 
 ### 6. Time-Series Database
 *Use when: timestamped data, metrics, IoT, retention, time-range queries.*
 
-**Covered in:** [time-series/](./time-series/README.md)  
+**Covered in:** [Time-Series/](./Time-Series/README.md)  
 **Examples:** InfluxDB, TimescaleDB, Prometheus
 
 ### 7. Search Engine
 *Use when: full-text search, facets, log/search analytics, relevance tuning.*
 
-**Elasticsearch** — [Deep Dive](./search-engine/elasticsearch/README.md) · [Blog Series](https://thisiskushal31.github.io/blog/#/blog/elasticsearch-deployment-guide)  
+**Elasticsearch** — [Deep Dive](./Search-Engine/Elasticsearch/README.md) · [Blog Series](https://thisiskushal31.github.io/blog/#/blog/elasticsearch-deployment-guide)  
 **Also:** Apache Solr, Meilisearch
 
 ### 8. In-Memory Cache
 *Use when: sub-millisecond latency, reduce DB load, sessions, rate limiting, pub/sub.*
 
-**Covered in:** [cache/](./cache/README.md) → [key-value/redis](./key-value/redis/README.md)  
+**Covered in:** [Cache/](./Cache/README.md) → [Key-Value/redis](./Key-Value/Redis/README.md)  
 **Also:** Memcached, Hazelcast
 
 ### 9. Blob / Object Storage
 *Use when: unstructured files, media, backups, data lakes, durability at scale.*
 
-**Covered in:** [blob-object/](./blob-object/README.md)  
+**Covered in:** [Blob-Object/](./Blob-Object/README.md)  
 **Examples:** Amazon S3, Google Cloud Storage, MinIO, Azure Blob
 
 ### 10. Vector Database
 *Use when: similarity search, semantic search, RAG, AI-powered retrieval.*
 
-**Covered in:** [vector/](./vector/README.md)  
+**Covered in:** [Vector/](./Vector/README.md)  
 **Examples:** Pinecone, Weaviate, Milvus, pgvector
 
 ## Quick Reference (use cases)
@@ -192,21 +194,21 @@ Detailed **use cases per database type** are in the [Use cases by type](#use-cas
 ## How to Use This Guide
 
 ### For Beginners
-1. Start with [0_Start_Here](./0_Start_Here.md) and [`concepts/dbms-fundamentals/`](./concepts/dbms-fundamentals/README.md)
+1. Start with [`Concepts/DBMS-Fundamentals/`](./Concepts/DBMS-Fundamentals/README.md)
 2. Choose a type folder from the [10-type table](#database-types--use-cases) above
-3. For engines marked **📁** in [PLANNED_ENGINES.md](./PLANNED_ENGINES.md), follow topic stubs in that engine's README
-4. Refer to [`cloud-managed/`](./cloud-managed/README.md) if using managed services
+3. Open that engine’s README — stubs are marked in the folder layout
+4. Refer to [`Cloud-Managed/`](./Cloud-Managed/README.md) if using managed services
 
 ### For Experienced Practitioners
 1. Jump directly to specific database guides for advanced topics
-2. Use [`concepts/`](./concepts/README.md) as a reference for cross-cutting concerns
-3. Refer to [`cloud-managed/`](./cloud-managed/README.md) for cloud-specific optimizations
+2. Use [`Concepts/`](./Concepts/README.md) as a reference for cross-cutting concerns
+3. Refer to [`Cloud-Managed/`](./Cloud-Managed/README.md) for cloud-specific optimizations
 4. Use operational checklists for day-to-day tasks
 
 ### For Architects
-1. Review [`concepts/`](./concepts/README.md) for architectural patterns
+1. Review [`Concepts/`](./Concepts/README.md) for architectural patterns
 2. Compare database options in respective sections
-3. Evaluate cloud-managed vs self-managed in [`cloud-managed/`](./cloud-managed/README.md)
+3. Evaluate cloud-managed vs self-managed in [`Cloud-Managed/`](./Cloud-Managed/README.md)
 4. Consider blog series for deployment strategies and decision frameworks
 
 ## Blog Series Integration
@@ -215,27 +217,27 @@ This deep dive documentation complements the comprehensive blog series:
 
 ### MySQL Mastery Series
 - **Hub:** [MySQL Mastery Series](https://thisiskushal31.github.io/blog/#/blog/mysql-mastery-series)
-- **Deep Dive:** [`relational/mysql/README.md`](./relational/mysql/README.md)
+- **Deep Dive:** [`Relational/MySQL/README.md`](./Relational/MySQL/README.md)
 - **Coverage:** Strategic decisions, cloud-managed, self-managed, Docker, Kubernetes, performance optimization
 
 ### MongoDB Mastery Series
 - **Hub:** [MongoDB Mastery Series](https://thisiskushal31.github.io/blog/#/blog/mongodb-mastery-series)
-- **Deep Dive:** [`document/mongodb/README.md`](./document/mongodb/README.md)
+- **Deep Dive:** [`Document/MongoDB/README.md`](./Document/MongoDB/README.md)
 - **Coverage:** Deployment strategies, optimization, operations
 
 ### Redis Mastery Series
 - **Hub:** [Redis Mastery Series](https://thisiskushal31.github.io/blog/#/blog/redis-mastery-series)
-- **Deep Dive:** [`key-value/redis/README.md`](./key-value/redis/README.md)
+- **Deep Dive:** [`Key-Value/Redis/README.md`](./Key-Value/Redis/README.md)
 - **Coverage:** Caching strategies, data structures, performance
 
 ### Aerospike Mastery Series
 - **Hub:** [Aerospike Mastery Series](https://thisiskushal31.github.io/blog/#/blog/aerospike-mastery-series)
-- **Deep Dive:** [`key-value/aerospike/README.md`](./key-value/aerospike/README.md)
+- **Deep Dive:** [`Key-Value/Aerospike/README.md`](./Key-Value/Aerospike/README.md)
 - **Coverage:** High-performance deployments, hybrid memory architecture
 
 ### Elasticsearch Deployment Guide
 - **Hub:** [Elasticsearch Deployment Guide](https://thisiskushal31.github.io/blog/#/blog/elasticsearch-deployment-guide)
-- **Deep Dive:** [`search-engine/elasticsearch/README.md`](./search-engine/elasticsearch/README.md)
+- **Deep Dive:** [`Search-Engine/Elasticsearch/README.md`](./Search-Engine/Elasticsearch/README.md)
 - **Coverage:** Complete deployment strategies from local to production
 
 ## Contributing

@@ -6,15 +6,15 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview.md",
-        "path": "hazelcast/1-overview.md",
+        "name": "1_Overview.md",
+        "path": "hazelcast/1_Overview.md",
         "type": "file",
         "sha": "",
         "size": 322
       },
       {
-        "name": "2-patterns-and-ops.md",
-        "path": "hazelcast/2-patterns-and-ops.md",
+        "name": "2_Patterns_and_Ops.md",
+        "path": "hazelcast/2_Patterns_and_Ops.md",
         "type": "file",
         "sha": "",
         "size": 314
@@ -24,7 +24,7 @@
         "path": "hazelcast/README.md",
         "type": "file",
         "sha": "",
-        "size": 665
+        "size": 570
       }
     ]
   },
@@ -35,15 +35,15 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview.md",
-        "path": "memcached/1-overview.md",
+        "name": "1_Overview.md",
+        "path": "memcached/1_Overview.md",
         "type": "file",
         "sha": "",
         "size": 313
       },
       {
-        "name": "2-patterns-and-ops.md",
-        "path": "memcached/2-patterns-and-ops.md",
+        "name": "2_Patterns_and_Ops.md",
+        "path": "memcached/2_Patterns_and_Ops.md",
         "type": "file",
         "sha": "",
         "size": 325
@@ -53,7 +53,7 @@
         "path": "memcached/README.md",
         "type": "file",
         "sha": "",
-        "size": 677
+        "size": 582
       }
     ]
   },

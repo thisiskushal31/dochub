@@ -1,28 +1,28 @@
 [
   {
-    "name": "1-overview-and-data-model.md",
-    "path": "1-overview-and-data-model.md",
+    "name": "1_Overview_and_Data_Model.md",
+    "path": "1_Overview_and_Data_Model.md",
     "type": "file",
     "sha": "",
     "size": 362
   },
   {
-    "name": "2-queries-and-indexes.md",
-    "path": "2-queries-and-indexes.md",
+    "name": "2_Queries_and_Indexes.md",
+    "path": "2_Queries_and_Indexes.md",
     "type": "file",
     "sha": "",
     "size": 342
   },
   {
-    "name": "3-security-and-rules.md",
-    "path": "3-security-and-rules.md",
+    "name": "3_Security_and_Rules.md",
+    "path": "3_Security_and_Rules.md",
     "type": "file",
     "sha": "",
     "size": 333
   },
   {
-    "name": "4-operations-and-pricing.md",
-    "path": "4-operations-and-pricing.md",
+    "name": "4_Operations_and_Pricing.md",
+    "path": "4_Operations_and_Pricing.md",
     "type": "file",
     "sha": "",
     "size": 343
@@ -32,6 +32,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 911
+    "size": 816
   }
 ]

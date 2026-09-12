@@ -6,50 +6,50 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview-getting-started.md",
-        "path": "elasticsearch/1-overview-getting-started.md",
+        "name": "1_Overview_Getting_Started.md",
+        "path": "elasticsearch/1_Overview_Getting_Started.md",
         "type": "file",
         "sha": "",
         "size": 20684
       },
       {
-        "name": "2-mapping-analysis.md",
-        "path": "elasticsearch/2-mapping-analysis.md",
+        "name": "2_Mapping_Analysis.md",
+        "path": "elasticsearch/2_Mapping_Analysis.md",
         "type": "file",
         "sha": "",
         "size": 30477
       },
       {
-        "name": "3-searching.md",
-        "path": "elasticsearch/3-searching.md",
+        "name": "3_Searching.md",
+        "path": "elasticsearch/3_Searching.md",
         "type": "file",
         "sha": "",
         "size": 22241
       },
       {
-        "name": "4-joining-queries.md",
-        "path": "elasticsearch/4-joining-queries.md",
+        "name": "4_Joining_Queries.md",
+        "path": "elasticsearch/4_Joining_Queries.md",
         "type": "file",
         "sha": "",
         "size": 12296
       },
       {
-        "name": "5-controlling-results.md",
-        "path": "elasticsearch/5-controlling-results.md",
+        "name": "5_Controlling_Results.md",
+        "path": "elasticsearch/5_Controlling_Results.md",
         "type": "file",
         "sha": "",
         "size": 5456
       },
       {
-        "name": "6-aggregations.md",
-        "path": "elasticsearch/6-aggregations.md",
+        "name": "6_Aggregations.md",
+        "path": "elasticsearch/6_Aggregations.md",
         "type": "file",
         "sha": "",
         "size": 19074
       },
       {
-        "name": "7-improving-results.md",
-        "path": "elasticsearch/7-improving-results.md",
+        "name": "7_Improving_Results.md",
+        "path": "elasticsearch/7_Improving_Results.md",
         "type": "file",
         "sha": "",
         "size": 8282
@@ -70,22 +70,22 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview.md",
-        "path": "meilisearch/1-overview.md",
+        "name": "1_Overview.md",
+        "path": "meilisearch/1_Overview.md",
         "type": "file",
         "sha": "",
         "size": 319
       },
       {
-        "name": "2-indexing-and-search.md",
-        "path": "meilisearch/2-indexing-and-search.md",
+        "name": "2_Indexing_and_Search.md",
+        "path": "meilisearch/2_Indexing_and_Search.md",
         "type": "file",
         "sha": "",
         "size": 323
       },
       {
-        "name": "3-operations.md",
-        "path": "meilisearch/3-operations.md",
+        "name": "3_Operations.md",
+        "path": "meilisearch/3_Operations.md",
         "type": "file",
         "sha": "",
         "size": 300
@@ -95,7 +95,7 @@
         "path": "meilisearch/README.md",
         "type": "file",
         "sha": "",
-        "size": 745
+        "size": 650
       }
     ]
   },
@@ -106,22 +106,22 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview-architecture.md",
-        "path": "solr/1-overview-architecture.md",
+        "name": "1_Overview_Architecture.md",
+        "path": "solr/1_Overview_Architecture.md",
         "type": "file",
         "sha": "",
         "size": 319
       },
       {
-        "name": "2-indexing-and-queries.md",
-        "path": "solr/2-indexing-and-queries.md",
+        "name": "2_Indexing_and_Queries.md",
+        "path": "solr/2_Indexing_and_Queries.md",
         "type": "file",
         "sha": "",
         "size": 315
       },
       {
-        "name": "3-operations.md",
-        "path": "solr/3-operations.md",
+        "name": "3_Operations.md",
+        "path": "solr/3_Operations.md",
         "type": "file",
         "sha": "",
         "size": 310
@@ -131,7 +131,7 @@
         "path": "solr/README.md",
         "type": "file",
         "sha": "",
-        "size": 753
+        "size": 658
       }
     ]
   },

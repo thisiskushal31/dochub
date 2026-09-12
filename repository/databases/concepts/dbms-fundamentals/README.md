@@ -10,13 +10,13 @@ This section provides detailed coverage of DBMS fundamentals organized into focu
 
 ### Database Design Lifecycle
 
-![Database Design Lifecycle](../../assets/dbms-fundamentals/db-design.png)
+![Database Design Lifecycle](../../Assets/DBMS-Fundamentals/Db_Design.png)
 
 *Image Source: [Database Design in DBMS - GeeksforGeeks](https://www.geeksforgeeks.org/dbms/database-design-in-dbms/)*
 
 ## Topics
 
-### [Basics of DBMS](./1-basics-of-dbms.md)
+### [Basics of DBMS](./1_Basics_of_DBMS.md)
 
 Fundamental concepts and introduction to Database Management Systems.
 
@@ -25,7 +25,7 @@ Fundamental concepts and introduction to Database Management Systems.
 - DBMS Architecture (1-level, 2-Level, 3-Level)
 - Difference between File System and DBMS
 
-### [ER & Relational Model](./2-er-relational-model.md)
+### [ER & Relational Model](./2_ER_Relational_Model.md)
 
 Entity-Relationship modeling and Relational Model concepts for database design.
 
@@ -37,7 +37,7 @@ Entity-Relationship modeling and Relational Model concepts for database design.
 - Mapping from ER Model to Relational Model
 - Strategies for Schema design
 
-### [Relational Algebra](./3-relational-algebra.md)
+### [Relational Algebra](./3_Relational_Algebra.md)
 
 Relational algebra operations for querying databases.
 
@@ -47,7 +47,7 @@ Relational algebra operations for querying databases.
 - Tuple Relational Calculus (TRC)
 - Domain Relational Calculus
 
-### [Functional Dependencies & Normalisation](./4-functional-dependencies-normalisation.md)
+### [Functional Dependencies & Normalisation](./4_Functional_Dependencies_Normalisation.md)
 
 Functional dependencies, normalization forms, and techniques to eliminate redundancy.
 
@@ -59,7 +59,7 @@ Functional dependencies, normalization forms, and techniques to eliminate redund
 - Lossless Join and Dependency Preserving Decomposition
 - Denormalization
 
-### [Transactions & Concurrency Control](./5-transactions-concurrency-control.md)
+### [Transactions & Concurrency Control](./5_Transactions_Concurrency_Control.md)
 
 ACID properties, transaction schedules, concurrency control protocols, and recovery techniques.
 
@@ -71,7 +71,7 @@ ACID properties, transaction schedules, concurrency control protocols, and recov
 - Database Recovery Techniques
 - Deadlock
 
-### [Advanced DBMS](./6-advanced-dbms.md)
+### [Advanced DBMS](./6_Advanced_DBMS.md)
 
 Advanced database concepts including indexing and file organization.
 
@@ -83,7 +83,7 @@ Advanced database concepts including indexing and file organization.
 - SQL Queries on Clustered and Non-Clustered Indexes
 - File Organization
 
-### [Practice Questions](./7-practice-questions.md)
+### [Practice Questions](./7_Practice_Questions.md)
 
 Practice resources, interview questions, and exam preparation materials.
 
@@ -95,23 +95,23 @@ Practice resources, interview questions, and exam preparation materials.
 ## Learning Path
 
 ### Beginner
-1. Start with [Basics of DBMS](./1-basics-of-dbms.md)
-2. Learn [ER & Relational Model](./2-er-relational-model.md)
-3. Understand [Relational Algebra](./3-relational-algebra.md)
+1. Start with [Basics of DBMS](./1_Basics_of_DBMS.md)
+2. Learn [ER & Relational Model](./2_ER_Relational_Model.md)
+3. Understand [Relational Algebra](./3_Relational_Algebra.md)
 
 ### Intermediate
-4. Study [Functional Dependencies & Normalisation](./4-functional-dependencies-normalisation.md)
-5. Learn [Transactions & Concurrency Control](./5-transactions-concurrency-control.md)
+4. Study [Functional Dependencies & Normalisation](./4_Functional_Dependencies_Normalisation.md)
+5. Learn [Transactions & Concurrency Control](./5_Transactions_Concurrency_Control.md)
 
 ### Advanced
-6. Explore [Advanced DBMS](./6-advanced-dbms.md)
-7. Practice with [Practice Questions](./7-practice-questions.md)
+6. Explore [Advanced DBMS](./6_Advanced_DBMS.md)
+7. Practice with [Practice Questions](./7_Practice_Questions.md)
 
 ## Related Content
 
 - **[Database Concepts Overview](../README.md)**: Cross-cutting database concepts
-- **[MySQL Deep Dive](../../relational/1-mysql.md)**: MySQL-specific implementation
-- **[MongoDB Deep Dive](../document/mongodb/README.md)**: NoSQL database concepts
+- **[MySQL Deep Dive](../../Relational/1-mysql.md)**: MySQL-specific implementation
+- **[MongoDB Deep Dive](../Document/MongoDB/README.md)**: NoSQL database concepts
 
 ## References
 

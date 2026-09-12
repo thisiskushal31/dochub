@@ -1,21 +1,21 @@
 [
   {
-    "name": "1-backups-to-object-storage.md",
-    "path": "1-backups-to-object-storage.md",
+    "name": "1_Backups_to_Object_Storage.md",
+    "path": "1_Backups_to_Object_Storage.md",
     "type": "file",
     "sha": "",
     "size": 468
   },
   {
-    "name": "2-cdc-and-replication-for-analytics.md",
-    "path": "2-cdc-and-replication-for-analytics.md",
+    "name": "2_CDC_and_Replication_for_Analytics.md",
+    "path": "2_CDC_and_Replication_for_Analytics.md",
     "type": "file",
     "sha": "",
     "size": 410
   },
   {
-    "name": "3-schema-migrations-and-contracts.md",
-    "path": "3-schema-migrations-and-contracts.md",
+    "name": "3_Schema_Migrations_and_Contracts.md",
+    "path": "3_Schema_Migrations_and_Contracts.md",
     "type": "file",
     "sha": "",
     "size": 438
@@ -25,6 +25,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 910
+    "size": 865
   }
 ]

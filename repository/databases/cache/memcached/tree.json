@@ -1,14 +1,14 @@
 [
   {
-    "name": "1-overview.md",
-    "path": "1-overview.md",
+    "name": "1_Overview.md",
+    "path": "1_Overview.md",
     "type": "file",
     "sha": "",
     "size": 313
   },
   {
-    "name": "2-patterns-and-ops.md",
-    "path": "2-patterns-and-ops.md",
+    "name": "2_Patterns_and_Ops.md",
+    "path": "2_Patterns_and_Ops.md",
     "type": "file",
     "sha": "",
     "size": 325
@@ -18,6 +18,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 677
+    "size": 582
   }
 ]

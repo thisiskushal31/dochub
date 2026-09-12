@@ -2,7 +2,7 @@
 
 [← Vector folder](../README.md)
 
-*(Stub scaffold August 2026 — see [PLANNED_ENGINES.md](../../PLANNED_ENGINES.md) and [CONTENT_WRITE_ORDER.md](../../CONTENT_WRITE_ORDER.md))*
+*(Stub — fill this engine when you write it.)*
 
 ## Planned coverage (section summary)
 
@@ -14,9 +14,9 @@
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [Overview managed](./1-overview-managed.md) | stub |
-| 2 | [Ingest & query](./2-ingest-and-query.md) | stub |
-| 3 | [Operations & cost](./3-operations-and-cost.md) | stub |
+| 1 | [Overview managed](./1_Overview_Managed.md) | stub |
+| 2 | [Ingest & query](./2_Ingest_and_Query.md) | stub |
+| 3 | [Operations & cost](./3_Operations_and_Cost.md) | stub |
 
 ## Checklist before marking done (whole engine)
 

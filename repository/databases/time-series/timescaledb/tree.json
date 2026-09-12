@@ -1,21 +1,21 @@
 [
   {
-    "name": "1-overview-hypertables.md",
-    "path": "1-overview-hypertables.md",
+    "name": "1_Overview_Hypertables.md",
+    "path": "1_Overview_Hypertables.md",
     "type": "file",
     "sha": "",
     "size": 336
   },
   {
-    "name": "2-queries-and-compression.md",
-    "path": "2-queries-and-compression.md",
+    "name": "2_Queries_and_Compression.md",
+    "path": "2_Queries_and_Compression.md",
     "type": "file",
     "sha": "",
     "size": 337
   },
   {
-    "name": "3-operations.md",
-    "path": "3-operations.md",
+    "name": "3_Operations.md",
+    "path": "3_Operations.md",
     "type": "file",
     "sha": "",
     "size": 311
@@ -25,6 +25,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 790
+    "size": 695
   }
 ]

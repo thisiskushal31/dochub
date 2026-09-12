@@ -2,7 +2,7 @@
 
 [← Blob/Object folder](../README.md)
 
-*(Stub scaffold August 2026 — see [PLANNED_ENGINES.md](../../PLANNED_ENGINES.md) and [CONTENT_WRITE_ORDER.md](../../CONTENT_WRITE_ORDER.md))*
+*(Stub — fill this engine when you write it.)*
 
 ## Planned coverage (section summary)
 
@@ -14,9 +14,9 @@
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [Overview](./1-overview.md) | stub |
-| 2 | [Access tiers & lifecycle](./2-tiers-and-lifecycle.md) | stub |
-| 3 | [Security & ops](./3-security-and-ops.md) | stub |
+| 1 | [Overview](./1_Overview.md) | stub |
+| 2 | [Access tiers & lifecycle](./2_Tiers_and_Lifecycle.md) | stub |
+| 3 | [Security & ops](./3_Security_and_Ops.md) | stub |
 
 ## Checklist before marking done (whole engine)
 

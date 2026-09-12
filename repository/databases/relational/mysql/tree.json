@@ -1,49 +1,49 @@
 [
   {
-    "name": "1-overview-architecture.md",
-    "path": "1-overview-architecture.md",
+    "name": "1_Overview_Architecture.md",
+    "path": "1_Overview_Architecture.md",
     "type": "file",
     "sha": "",
     "size": 3833
   },
   {
-    "name": "2-data-management.md",
-    "path": "2-data-management.md",
+    "name": "2_Data_Management.md",
+    "path": "2_Data_Management.md",
     "type": "file",
     "sha": "",
     "size": 7876
   },
   {
-    "name": "3-sql-fundamentals.md",
-    "path": "3-sql-fundamentals.md",
+    "name": "3_SQL_Fundamentals.md",
+    "path": "3_SQL_Fundamentals.md",
     "type": "file",
     "sha": "",
     "size": 20395
   },
   {
-    "name": "4-transactions-concurrency.md",
-    "path": "4-transactions-concurrency.md",
+    "name": "4_Transactions_Concurrency.md",
+    "path": "4_Transactions_Concurrency.md",
     "type": "file",
     "sha": "",
     "size": 7253
   },
   {
-    "name": "5-performance-operations.md",
-    "path": "5-performance-operations.md",
+    "name": "5_Performance_Operations.md",
+    "path": "5_Performance_Operations.md",
     "type": "file",
     "sha": "",
     "size": 5534
   },
   {
-    "name": "6-security-maintenance.md",
-    "path": "6-security-maintenance.md",
+    "name": "6_Security_Maintenance.md",
+    "path": "6_Security_Maintenance.md",
     "type": "file",
     "sha": "",
     "size": 3067
   },
   {
-    "name": "7-advanced-topics.md",
-    "path": "7-advanced-topics.md",
+    "name": "7_Advanced_Topics.md",
+    "path": "7_Advanced_Topics.md",
     "type": "file",
     "sha": "",
     "size": 5870

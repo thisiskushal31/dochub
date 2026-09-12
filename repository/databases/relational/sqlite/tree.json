@@ -1,28 +1,28 @@
 [
   {
-    "name": "1-overview-architecture.md",
-    "path": "1-overview-architecture.md",
+    "name": "1_Overview_Architecture.md",
+    "path": "1_Overview_Architecture.md",
     "type": "file",
     "sha": "",
     "size": 390
   },
   {
-    "name": "2-sql-and-schema.md",
-    "path": "2-sql-and-schema.md",
+    "name": "2_SQL_and_Schema.md",
+    "path": "2_SQL_and_Schema.md",
     "type": "file",
     "sha": "",
     "size": 368
   },
   {
-    "name": "3-performance-and-pragmas.md",
-    "path": "3-performance-and-pragmas.md",
+    "name": "3_Performance_and_Pragmas.md",
+    "path": "3_Performance_and_Pragmas.md",
     "type": "file",
     "sha": "",
     "size": 368
   },
   {
-    "name": "4-backup-and-ops.md",
-    "path": "4-backup-and-ops.md",
+    "name": "4_Backup_and_Ops.md",
+    "path": "4_Backup_and_Ops.md",
     "type": "file",
     "sha": "",
     "size": 365
@@ -32,6 +32,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 947
+    "size": 852
   }
 ]

@@ -15,6 +15,7 @@ Vector databases store **high-dimensional vectors** (embeddings) and support **s
 - **Weaviate** — Open-source, graphql and vector search
 - **Milvus** — Open-source, scalable vector search
 - **pgvector** — PostgreSQL extension for vector similarity
+- **Qdrant** — Open-source vector database (collections, payloads, HNSW)
 
 ## Why you use it (use cases)
 
@@ -27,12 +28,13 @@ Vector databases store **high-dimensional vectors** (embeddings) and support **s
 ## In this repo
 
 - **Overview:** [Database types & use cases](../README.md#database-types--use-cases)
-- **Concepts:** [Storage & indexing](../concepts/README.md) (general indexing concepts)
-- **Relational:** [PostgreSQL](../relational/postgresql/README.md) — pgvector extension for vector search inside PostgreSQL
+- **Concepts:** [Storage & indexing](../Concepts/README.md) (general indexing concepts)
+- **Relational:** [PostgreSQL](../Relational/PostgreSQL/README.md) — pgvector extension for vector search inside PostgreSQL
 
 ## Databases (we're going to cover these)
 
-- **[Pinecone](./pinecone/README.md)** — deep dive planned
-- **[Weaviate](./weaviate/README.md)** — deep dive planned
-- **[Milvus](./milvus/README.md)** — deep dive planned
-- **[pgvector](./pgvector/README.md)** — deep dive planned (PostgreSQL extension)
+- **[Pinecone](./Pinecone/README.md)** — deep dive planned
+- **[Weaviate](./Weaviate/README.md)** — deep dive planned
+- **[Milvus](./Milvus/README.md)** — deep dive planned
+- **[pgvector](./Pgvector/README.md)** — deep dive planned (PostgreSQL extension)
+- **[Qdrant](./Qdrant/README.md)** — deep dive planned (production engine)

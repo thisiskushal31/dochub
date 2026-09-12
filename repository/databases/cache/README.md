@@ -23,8 +23,8 @@ Data stored entirely in **RAM** for sub-millisecond latency. Used as a layer in 
 
 ## Databases (covered + planned)
 
-- **[Redis](../key-value/redis/README.md)** — full deep dive (key-value + cache)
-- **[Memcached](./memcached/README.md)** — deep dive planned
-- **[Hazelcast](./hazelcast/README.md)** — deep dive planned
+- **[Redis](../Key-Value/Redis/README.md)** — full deep dive (key-value + cache)
+- **[Memcached](./Memcached/README.md)** — deep dive planned
+- **[Hazelcast](./Hazelcast/README.md)** — deep dive planned
 
 **Overview:** [Database types & use cases](../README.md#database-types--use-cases).

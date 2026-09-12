@@ -27,12 +27,12 @@ Wide-column stores use a table-like model where **each row can have a different 
 ## In this repo
 
 - **Overview:** [Database types & use cases](../README.md#database-types--use-cases)
-- **Cloud-managed:** [Cloud-managed databases](../cloud-managed/README.md) (e.g., Bigtable)
-- **Concepts:** [Sharding & partitioning](../concepts/README.md), [Consistency models](../concepts/README.md)
+- **Cloud-managed:** [Cloud-managed databases](../Cloud-Managed/README.md) (e.g., Bigtable)
+- **Concepts:** [Sharding & partitioning](../Concepts/README.md), [Consistency models](../Concepts/README.md)
 
 ## Databases (we're going to cover these)
 
-- **[Cassandra](./cassandra/README.md)** — deep dive planned
-- **[HBase](./hbase/README.md)** — deep dive planned
-- **[ScyllaDB](./scylladb/README.md)** — deep dive planned
-- **[Bigtable](./bigtable/README.md)** — deep dive planned (Google Cloud)
+- **[Cassandra](./Cassandra/README.md)** — deep dive planned
+- **[HBase](./HBase/README.md)** — deep dive planned
+- **[ScyllaDB](./ScyllaDB/README.md)** — deep dive planned
+- **[Bigtable](./Bigtable/README.md)** — deep dive planned (Google Cloud)

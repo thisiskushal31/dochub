@@ -2,7 +2,7 @@
 
 [← Cache folder](../README.md)
 
-*(Stub scaffold August 2026 — see [PLANNED_ENGINES.md](../../PLANNED_ENGINES.md) and [CONTENT_WRITE_ORDER.md](../../CONTENT_WRITE_ORDER.md))*
+*(Stub — fill this engine when you write it.)*
 
 ## Planned coverage (section summary)
 
@@ -13,8 +13,8 @@
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [Overview](./1-overview.md) | stub |
-| 2 | [Patterns & ops](./2-patterns-and-ops.md) | stub |
+| 1 | [Overview](./1_Overview.md) | stub |
+| 2 | [Patterns & ops](./2_Patterns_and_Ops.md) | stub |
 
 ## Checklist before marking done (whole engine)
 

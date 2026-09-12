@@ -2,7 +2,7 @@
 
 [← Blob/Object folder](../README.md)
 
-*(Stub scaffold August 2026 — see [PLANNED_ENGINES.md](../../PLANNED_ENGINES.md) and [CONTENT_WRITE_ORDER.md](../../CONTENT_WRITE_ORDER.md))*
+*(Stub — fill this engine when you write it.)*
 
 ## Planned coverage (section summary)
 
@@ -15,10 +15,10 @@
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [Overview & concepts](./1-overview-and-concepts.md) | stub |
-| 2 | [Storage classes & lifecycle](./2-storage-classes-and-lifecycle.md) | stub |
-| 3 | [Security & IAM](./3-security-and-iam.md) | stub |
-| 4 | [Operations & patterns](./4-operations-and-patterns.md) | stub |
+| 1 | [Overview & concepts](./1_Overview_and_Concepts.md) | stub |
+| 2 | [Storage classes & lifecycle](./2_Storage_Classes_and_Lifecycle.md) | stub |
+| 3 | [Security & IAM](./3_Security_and_IAM.md) | stub |
+| 4 | [Operations & patterns](./4_Operations_and_Patterns.md) | stub |
 
 ## Checklist before marking done (whole engine)
 

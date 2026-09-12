@@ -1,21 +1,21 @@
 [
   {
-    "name": "1-overview-and-model.md",
-    "path": "1-overview-and-model.md",
+    "name": "1_Overview_and_Model.md",
+    "path": "1_Overview_and_Model.md",
     "type": "file",
     "sha": "",
     "size": 340
   },
   {
-    "name": "2-queries-and-retention.md",
-    "path": "2-queries-and-retention.md",
+    "name": "2_Queries_and_Retention.md",
+    "path": "2_Queries_and_Retention.md",
     "type": "file",
     "sha": "",
     "size": 332
   },
   {
-    "name": "3-operations.md",
-    "path": "3-operations.md",
+    "name": "3_Operations.md",
+    "path": "3_Operations.md",
     "type": "file",
     "sha": "",
     "size": 308
@@ -25,6 +25,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 789
+    "size": 694
   }
 ]

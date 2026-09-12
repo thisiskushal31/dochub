@@ -6,22 +6,22 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview.md",
-        "path": "azure-blob/1-overview.md",
+        "name": "1_Overview.md",
+        "path": "azure-blob/1_Overview.md",
         "type": "file",
         "sha": "",
         "size": 341
       },
       {
-        "name": "2-tiers-and-lifecycle.md",
-        "path": "azure-blob/2-tiers-and-lifecycle.md",
+        "name": "2_Tiers_and_Lifecycle.md",
+        "path": "azure-blob/2_Tiers_and_Lifecycle.md",
         "type": "file",
         "sha": "",
         "size": 329
       },
       {
-        "name": "3-security-and-ops.md",
-        "path": "azure-blob/3-security-and-ops.md",
+        "name": "3_Security_and_Ops.md",
+        "path": "azure-blob/3_Security_and_Ops.md",
         "type": "file",
         "sha": "",
         "size": 321
@@ -31,7 +31,7 @@
         "path": "azure-blob/README.md",
         "type": "file",
         "sha": "",
-        "size": 777
+        "size": 682
       }
     ]
   },
@@ -42,29 +42,29 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview-and-concepts.md",
-        "path": "gcs/1-overview-and-concepts.md",
+        "name": "1_Overview_and_Concepts.md",
+        "path": "gcs/1_Overview_and_Concepts.md",
         "type": "file",
         "sha": "",
         "size": 347
       },
       {
-        "name": "2-storage-classes-and-lifecycle.md",
-        "path": "gcs/2-storage-classes-and-lifecycle.md",
+        "name": "2_Storage_Classes_and_Lifecycle.md",
+        "path": "gcs/2_Storage_Classes_and_Lifecycle.md",
         "type": "file",
         "sha": "",
         "size": 340
       },
       {
-        "name": "3-security-and-iam.md",
-        "path": "gcs/3-security-and-iam.md",
+        "name": "3_Security_and_IAM.md",
+        "path": "gcs/3_Security_and_IAM.md",
         "type": "file",
         "sha": "",
         "size": 326
       },
       {
-        "name": "4-operations-and-patterns.md",
-        "path": "gcs/4-operations-and-patterns.md",
+        "name": "4_Operations_and_Patterns.md",
+        "path": "gcs/4_Operations_and_Patterns.md",
         "type": "file",
         "sha": "",
         "size": 345
@@ -74,7 +74,7 @@
         "path": "gcs/README.md",
         "type": "file",
         "sha": "",
-        "size": 877
+        "size": 782
       }
     ]
   },
@@ -85,22 +85,22 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview-s3-compatible.md",
-        "path": "minio/1-overview-s3-compatible.md",
+        "name": "1_Overview_S3_Compatible.md",
+        "path": "minio/1_Overview_S3_Compatible.md",
         "type": "file",
         "sha": "",
         "size": 326
       },
       {
-        "name": "2-deployment-and-security.md",
-        "path": "minio/2-deployment-and-security.md",
+        "name": "2_Deployment_and_Security.md",
+        "path": "minio/2_Deployment_and_Security.md",
         "type": "file",
         "sha": "",
         "size": 321
       },
       {
-        "name": "3-operations.md",
-        "path": "minio/3-operations.md",
+        "name": "3_Operations.md",
+        "path": "minio/3_Operations.md",
         "type": "file",
         "sha": "",
         "size": 306
@@ -110,7 +110,7 @@
         "path": "minio/README.md",
         "type": "file",
         "sha": "",
-        "size": 790
+        "size": 695
       }
     ]
   },
@@ -121,29 +121,29 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview-and-concepts.md",
-        "path": "s3/1-overview-and-concepts.md",
+        "name": "1_Overview_and_Concepts.md",
+        "path": "s3/1_Overview_and_Concepts.md",
         "type": "file",
         "sha": "",
         "size": 347
       },
       {
-        "name": "2-storage-classes-and-lifecycle.md",
-        "path": "s3/2-storage-classes-and-lifecycle.md",
+        "name": "2_Storage_Classes_and_Lifecycle.md",
+        "path": "s3/2_Storage_Classes_and_Lifecycle.md",
         "type": "file",
         "sha": "",
         "size": 335
       },
       {
-        "name": "3-security-and-iam.md",
-        "path": "s3/3-security-and-iam.md",
+        "name": "3_Security_and_IAM.md",
+        "path": "s3/3_Security_and_IAM.md",
         "type": "file",
         "sha": "",
         "size": 344
       },
       {
-        "name": "4-operations-and-patterns.md",
-        "path": "s3/4-operations-and-patterns.md",
+        "name": "4_Operations_and_Patterns.md",
+        "path": "s3/4_Operations_and_Patterns.md",
         "type": "file",
         "sha": "",
         "size": 341
@@ -153,7 +153,7 @@
         "path": "s3/README.md",
         "type": "file",
         "sha": "",
-        "size": 914
+        "size": 819
       }
     ]
   },

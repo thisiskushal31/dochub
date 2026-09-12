@@ -27,12 +27,12 @@ Blob and object storage systems store **unstructured files** (images, videos, ba
 ## In this repo
 
 - **Overview:** [Database types & use cases](../README.md#database-types--use-cases)
-- **Cloud-managed:** [Cloud-managed databases](../cloud-managed/README.md) (S3, GCS, Azure Blob are typically used as managed services)
-- **Concepts:** [Backup & recovery](../concepts/README.md)
+- **Cloud-managed:** [Cloud-managed databases](../Cloud-Managed/README.md) (S3, GCS, Azure Blob are typically used as managed services)
+- **Concepts:** [Backup & recovery](../Concepts/README.md)
 
 ## Databases (we're going to cover these)
 
-- **[S3](./s3/README.md)** — deep dive planned (Amazon)
-- **[GCS](./gcs/README.md)** — deep dive planned (Google Cloud)
-- **[Azure Blob](./azure-blob/README.md)** — deep dive planned
-- **[MinIO](./minio/README.md)** — deep dive planned (S3-compatible)
+- **[S3](./S3/README.md)** — deep dive planned (Amazon)
+- **[GCS](./GCS/README.md)** — deep dive planned (Google Cloud)
+- **[Azure Blob](./Azure-Blob/README.md)** — deep dive planned
+- **[MinIO](./MinIO/README.md)** — deep dive planned (S3-compatible)

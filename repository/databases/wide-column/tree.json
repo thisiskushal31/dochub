@@ -6,22 +6,22 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview-architecture.md",
-        "path": "bigtable/1-overview-architecture.md",
+        "name": "1_Overview_Architecture.md",
+        "path": "bigtable/1_Overview_Architecture.md",
         "type": "file",
         "sha": "",
         "size": 330
       },
       {
-        "name": "2-data-model.md",
-        "path": "bigtable/2-data-model.md",
+        "name": "2_Data_Model.md",
+        "path": "bigtable/2_Data_Model.md",
         "type": "file",
         "sha": "",
         "size": 328
       },
       {
-        "name": "3-operations-and-pricing.md",
-        "path": "bigtable/3-operations-and-pricing.md",
+        "name": "3_Operations_and_Pricing.md",
+        "path": "bigtable/3_Operations_and_Pricing.md",
         "type": "file",
         "sha": "",
         "size": 319
@@ -31,7 +31,7 @@
         "path": "bigtable/README.md",
         "type": "file",
         "sha": "",
-        "size": 754
+        "size": 659
       }
     ]
   },
@@ -42,29 +42,29 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview-architecture.md",
-        "path": "cassandra/1-overview-architecture.md",
+        "name": "1_Overview_Architecture.md",
+        "path": "cassandra/1_Overview_Architecture.md",
         "type": "file",
         "sha": "",
         "size": 347
       },
       {
-        "name": "2-data-model-and-cql.md",
-        "path": "cassandra/2-data-model-and-cql.md",
+        "name": "2_Data_Model_and_CQL.md",
+        "path": "cassandra/2_Data_Model_and_CQL.md",
         "type": "file",
         "sha": "",
         "size": 360
       },
       {
-        "name": "3-replication-and-tuning.md",
-        "path": "cassandra/3-replication-and-tuning.md",
+        "name": "3_Replication_and_Tuning.md",
+        "path": "cassandra/3_Replication_and_Tuning.md",
         "type": "file",
         "sha": "",
         "size": 339
       },
       {
-        "name": "4-operations.md",
-        "path": "cassandra/4-operations.md",
+        "name": "4_Operations.md",
+        "path": "cassandra/4_Operations.md",
         "type": "file",
         "sha": "",
         "size": 324
@@ -74,7 +74,7 @@
         "path": "cassandra/README.md",
         "type": "file",
         "sha": "",
-        "size": 889
+        "size": 794
       }
     ]
   },
@@ -85,22 +85,22 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview-architecture.md",
-        "path": "hbase/1-overview-architecture.md",
+        "name": "1_Overview_Architecture.md",
+        "path": "hbase/1_Overview_Architecture.md",
         "type": "file",
         "sha": "",
         "size": 332
       },
       {
-        "name": "2-data-model.md",
-        "path": "hbase/2-data-model.md",
+        "name": "2_Data_Model.md",
+        "path": "hbase/2_Data_Model.md",
         "type": "file",
         "sha": "",
         "size": 319
       },
       {
-        "name": "3-operations.md",
-        "path": "hbase/3-operations.md",
+        "name": "3_Operations.md",
+        "path": "hbase/3_Operations.md",
         "type": "file",
         "sha": "",
         "size": 315
@@ -110,7 +110,7 @@
         "path": "hbase/README.md",
         "type": "file",
         "sha": "",
-        "size": 747
+        "size": 652
       }
     ]
   },
@@ -121,22 +121,22 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview-architecture.md",
-        "path": "scylladb/1-overview-architecture.md",
+        "name": "1_Overview_Architecture.md",
+        "path": "scylladb/1_Overview_Architecture.md",
         "type": "file",
         "sha": "",
         "size": 324
       },
       {
-        "name": "2-data-model-and-cql.md",
-        "path": "scylladb/2-data-model-and-cql.md",
+        "name": "2_Data_Model_and_CQL.md",
+        "path": "scylladb/2_Data_Model_and_CQL.md",
         "type": "file",
         "sha": "",
         "size": 336
       },
       {
-        "name": "3-operations.md",
-        "path": "scylladb/3-operations.md",
+        "name": "3_Operations.md",
+        "path": "scylladb/3_Operations.md",
         "type": "file",
         "sha": "",
         "size": 309
@@ -146,7 +146,7 @@
         "path": "scylladb/README.md",
         "type": "file",
         "sha": "",
-        "size": 755
+        "size": 660
       }
     ]
   },

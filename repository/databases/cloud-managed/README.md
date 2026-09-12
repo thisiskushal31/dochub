@@ -7,17 +7,17 @@ Comprehensive guide to managed database services across major cloud providers, c
 ## Related Deep Dive Documentation
 
 ### Relational Databases
-- **[MySQL Deep Dive](../relational/mysql/README.md)**: Complete technical guide covering architecture, SQL fundamentals, transactions, performance, and operations
-- **[PostgreSQL Deep Dive](../relational/postgresql/README.md)**: Comprehensive guide covering data types, SQL fundamentals, high availability, performance optimization, and advanced topics
+- **[MySQL Deep Dive](../Relational/MySQL/README.md)**: Complete technical guide covering architecture, SQL fundamentals, transactions, performance, and operations
+- **[PostgreSQL Deep Dive](../Relational/PostgreSQL/README.md)**: Comprehensive guide covering data types, SQL fundamentals, high availability, performance optimization, and advanced topics
 
 ### NoSQL Databases
-- **[MongoDB Deep Dive](../document/mongodb/README.md)**: Complete technical guide covering document model, operations, aggregation, replication, sharding, and best practices
-- **[Redis Deep Dive](../key-value/redis/README.md)**: Comprehensive guide covering data structures, persistence, replication, modules, operations, and use cases
-- **[Elasticsearch Deep Dive](../search-engine/elasticsearch/README.md)**: Complete guide covering mapping, searching, aggregations, and advanced search features
-- **[Aerospike Deep Dive](../key-value/aerospike/README.md)**: Comprehensive guide covering hybrid memory architecture, operations, clustering, and deployment
+- **[MongoDB Deep Dive](../Document/MongoDB/README.md)**: Complete technical guide covering document model, operations, aggregation, replication, sharding, and best practices
+- **[Redis Deep Dive](../Key-Value/Redis/README.md)**: Comprehensive guide covering data structures, persistence, replication, modules, operations, and use cases
+- **[Elasticsearch Deep Dive](../Search-Engine/Elasticsearch/README.md)**: Complete guide covering mapping, searching, aggregations, and advanced search features
+- **[Aerospike Deep Dive](../Key-Value/Aerospike/README.md)**: Comprehensive guide covering hybrid memory architecture, operations, clustering, and deployment
 
 ### Database Concepts
-- **[Database Concepts](../concepts/README.md)**: Cross-cutting topics like replication, sharding, consistency, transactions, and performance optimization
+- **[Database Concepts](../Concepts/README.md)**: Cross-cutting topics like replication, sharding, consistency, transactions, and performance optimization
 
 ## Overview
 
@@ -42,7 +42,7 @@ Comprehensive guide to managed database services across major cloud providers, c
 - **Features**: Automated backups, Multi-AZ, Read replicas
 - **Use cases**: Traditional relational workloads
 - **Pricing**: Instance-based, storage, I/O
-- **Related Deep Dives**: [MySQL](../relational/mysql/README.md), [PostgreSQL](../relational/postgresql/README.md)
+- **Related Deep Dives**: [MySQL](../Relational/MySQL/README.md), [PostgreSQL](../Relational/PostgreSQL/README.md)
 - **Blog Series**: [MySQL Mastery Series](https://thisiskushal31.github.io/blog/#/blog/mysql-mastery-series)
 
 ### Aurora
@@ -50,7 +50,7 @@ Comprehensive guide to managed database services across major cloud providers, c
 - **Features**: Serverless, Global Database, Backtrack
 - **Performance**: Up to 5x MySQL, 3x PostgreSQL
 - **Use cases**: High-performance relational workloads
-- **Related Deep Dives**: [MySQL](../relational/mysql/README.md), [PostgreSQL](../relational/postgresql/README.md)
+- **Related Deep Dives**: [MySQL](../Relational/MySQL/README.md), [PostgreSQL](../Relational/PostgreSQL/README.md)
 - **Blog Series**: [MySQL Mastery Series](https://thisiskushal31.github.io/blog/#/blog/mysql-mastery-series)
 
 ### DynamoDB
@@ -58,20 +58,20 @@ Comprehensive guide to managed database services across major cloud providers, c
 - **Features**: Serverless, auto-scaling, global tables
 - **Performance**: Single-digit millisecond latency
 - **Use cases**: High-traffic applications, gaming, IoT
-- **Related Concepts**: [NoSQL Data Models](../nosql/README.md#data-models), [Sharding](../concepts/README.md)
+- **Related Concepts**: [NoSQL Data Models](../NoSQL/README.md#data-models), [Sharding](../Concepts/README.md)
 
 ### DocumentDB
 - **Compatible with**: MongoDB
 - **Features**: Fully managed, automatic backups
 - **Use cases**: MongoDB workloads on AWS
-- **Related Deep Dive**: [MongoDB Deep Dive](../document/mongodb/README.md)
+- **Related Deep Dive**: [MongoDB Deep Dive](../Document/MongoDB/README.md)
 - **Blog Series**: [MongoDB Mastery Series](https://thisiskushal31.github.io/blog/#/blog/mongodb-mastery-series)
 
 ### ElastiCache
 - **Types**: Redis, Memcached
 - **Features**: Managed caching, automatic failover
 - **Use cases**: Caching, session storage, real-time analytics
-- **Related Deep Dive**: [Redis Deep Dive](../key-value/redis/README.md)
+- **Related Deep Dive**: [Redis Deep Dive](../Key-Value/Redis/README.md)
 - **Blog Series**: [Redis Mastery Series](https://thisiskushal31.github.io/blog/#/blog/redis-mastery-series)
 
 ### Neptune
@@ -86,7 +86,7 @@ Comprehensive guide to managed database services across major cloud providers, c
 - **Features**: Automated backups, replication, high availability
 - **Use cases**: Traditional relational workloads
 - **Pricing**: Instance-based, storage, network egress
-- **Related Deep Dives**: [MySQL](../relational/mysql/README.md), [PostgreSQL](../relational/postgresql/README.md)
+- **Related Deep Dives**: [MySQL](../Relational/MySQL/README.md), [PostgreSQL](../Relational/PostgreSQL/README.md)
 - **Blog Series**: [MySQL Mastery Series](https://thisiskushal31.github.io/blog/#/blog/mysql-mastery-series)
 
 ### Cloud Spanner
@@ -111,7 +111,7 @@ Comprehensive guide to managed database services across major cloud providers, c
 - **Types**: Redis, Memcached
 - **Features**: Managed caching, high availability
 - **Use cases**: Caching, session storage
-- **Related Deep Dive**: [Redis Deep Dive](../key-value/redis/README.md)
+- **Related Deep Dive**: [Redis Deep Dive](../Key-Value/Redis/README.md)
 - **Blog Series**: [Redis Mastery Series](https://thisiskushal31.github.io/blog/#/blog/redis-mastery-series)
 
 ## Azure Services
@@ -133,14 +133,14 @@ Comprehensive guide to managed database services across major cloud providers, c
 - **Type**: Managed MySQL/PostgreSQL
 - **Features**: Automated backups, high availability
 - **Use cases**: Open-source database workloads on Azure
-- **Related Deep Dives**: [MySQL](../relational/mysql/README.md), [PostgreSQL](../relational/postgresql/README.md)
+- **Related Deep Dives**: [MySQL](../Relational/MySQL/README.md), [PostgreSQL](../Relational/PostgreSQL/README.md)
 - **Blog Series**: [MySQL Mastery Series](https://thisiskushal31.github.io/blog/#/blog/mysql-mastery-series)
 
 ### Azure Cache for Redis
 - **Type**: Managed Redis
 - **Features**: High availability, clustering
 - **Use cases**: Caching, session storage
-- **Related Deep Dive**: [Redis Deep Dive](../key-value/redis/README.md)
+- **Related Deep Dive**: [Redis Deep Dive](../Key-Value/Redis/README.md)
 - **Blog Series**: [Redis Mastery Series](https://thisiskushal31.github.io/blog/#/blog/redis-mastery-series)
 
 ## Provisioning
@@ -325,9 +325,9 @@ Comprehensive guide to managed database services across major cloud providers, c
 ## Related Content
 
 - **[Databases Deep Dive Overview](../README.md)**: Main index with all database categories
-- **[Relational Databases](../relational/README.md)**: MySQL and PostgreSQL deep dives
-- **[NoSQL Databases](../nosql/README.md)**: MongoDB, Redis, Elasticsearch, and Aerospike deep dives
-- **[Database Concepts](../concepts/README.md)**: Cross-cutting topics like replication, sharding, consistency
+- **[Relational Databases](../Relational/README.md)**: MySQL and PostgreSQL deep dives
+- **[NoSQL Databases](../NoSQL/README.md)**: MongoDB, Redis, Elasticsearch, and Aerospike deep dives
+- **[Database Concepts](../Concepts/README.md)**: Cross-cutting topics like replication, sharding, consistency
 
 ## Resources
 

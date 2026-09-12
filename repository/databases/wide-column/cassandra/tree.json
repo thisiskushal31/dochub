@@ -1,28 +1,28 @@
 [
   {
-    "name": "1-overview-architecture.md",
-    "path": "1-overview-architecture.md",
+    "name": "1_Overview_Architecture.md",
+    "path": "1_Overview_Architecture.md",
     "type": "file",
     "sha": "",
     "size": 347
   },
   {
-    "name": "2-data-model-and-cql.md",
-    "path": "2-data-model-and-cql.md",
+    "name": "2_Data_Model_and_CQL.md",
+    "path": "2_Data_Model_and_CQL.md",
     "type": "file",
     "sha": "",
     "size": 360
   },
   {
-    "name": "3-replication-and-tuning.md",
-    "path": "3-replication-and-tuning.md",
+    "name": "3_Replication_and_Tuning.md",
+    "path": "3_Replication_and_Tuning.md",
     "type": "file",
     "sha": "",
     "size": 339
   },
   {
-    "name": "4-operations.md",
-    "path": "4-operations.md",
+    "name": "4_Operations.md",
+    "path": "4_Operations.md",
     "type": "file",
     "sha": "",
     "size": 324
@@ -32,6 +32,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 889
+    "size": 794
   }
 ]

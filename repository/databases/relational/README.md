@@ -9,7 +9,7 @@ Relational Database Management Systems (RDBMS) store data in structured tables w
 ### MySQL
 
 **Complete Technical Guide:**
-- **[MySQL Deep Dive](./mysql/README.md)**: Comprehensive guide organized into focused topics covering overview & architecture, data management, SQL fundamentals, transactions & concurrency, performance & operations, security & maintenance, and advanced topics.
+- **[MySQL Deep Dive](./MySQL/README.md)**: Comprehensive guide organized into focused topics covering overview & architecture, data management, SQL fundamentals, transactions & concurrency, performance & operations, security & maintenance, and advanced topics.
 
 **Blog Series:**
 - **[MySQL Mastery Series](https://thisiskushal31.github.io/blog/#/blog/mysql-mastery-series)**: Complete 8-part series covering deployment strategies, cloud-managed vs self-managed, Docker, Kubernetes, performance optimization, and decision frameworks.
@@ -17,7 +17,7 @@ Relational Database Management Systems (RDBMS) store data in structured tables w
 ### PostgreSQL
 
 **Complete Technical Guide:**
-- **[PostgreSQL Deep Dive](./postgresql/README.md)**: Comprehensive guide organized into focused topics covering overview & architecture, data management, SQL fundamentals, transactions & concurrency, high availability, performance & operations, advanced topics, infrastructure & security, utilities & recipes, and best practices.
+- **[PostgreSQL Deep Dive](./PostgreSQL/README.md)**: Comprehensive guide organized into focused topics covering overview & architecture, data management, SQL fundamentals, transactions & concurrency, high availability, performance & operations, advanced topics, infrastructure & security, utilities & recipes, and best practices.
 
 **Resources:**
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)
@@ -25,12 +25,13 @@ Relational Database Management Systems (RDBMS) store data in structured tables w
 
 ### Planned (we're going to cover these)
 
-- **[Oracle](./oracle/README.md)** — deep dive planned
-- **[SQL Server](./sql-server/README.md)** — deep dive planned
-- **[SQLite](./sqlite/README.md)** — deep dive planned (embedded / local)
+- **[Oracle](./Oracle/README.md)** — deep dive planned
+- **[SQL Server](./SQL-Server/README.md)** — deep dive planned
+- **[SQLite](./SQLite/README.md)** — deep dive planned (embedded OLTP / local)
+- **[DuckDB](./DuckDB/README.md)** — in-process OLAP SQL (written). Pipeline placement → [DE Systems/DuckDB](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Systems/DuckDB)
 
 ## Related Content
 
 - **[Databases Deep Dive Overview](../README.md)**: Main index with all database categories
-- **[Database Concepts](../concepts/README.md)**: Cross-cutting topics like replication, sharding, consistency
-- **[Cloud-Managed Databases](../cloud-managed/README.md)**: Managed services across AWS, GCP, Azure
+- **[Database Concepts](../Concepts/README.md)**: Cross-cutting topics like replication, sharding, consistency
+- **[Cloud-Managed Databases](../Cloud-Managed/README.md)**: Managed services across AWS, GCP, Azure

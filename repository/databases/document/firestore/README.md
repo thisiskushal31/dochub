@@ -2,7 +2,7 @@
 
 [← Document folder](../README.md)
 
-*(Stub scaffold August 2026 — see [PLANNED_ENGINES.md](../../PLANNED_ENGINES.md) and [CONTENT_WRITE_ORDER.md](../../CONTENT_WRITE_ORDER.md))*
+*(Stub — fill this engine when you write it.)*
 
 ## Planned coverage (section summary)
 
@@ -15,10 +15,10 @@
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [Overview & data model](./1-overview-and-data-model.md) | stub |
-| 2 | [Queries & indexes](./2-queries-and-indexes.md) | stub |
-| 3 | [Security rules & IAM](./3-security-and-rules.md) | stub |
-| 4 | [Operations & pricing](./4-operations-and-pricing.md) | stub |
+| 1 | [Overview & data model](./1_Overview_and_Data_Model.md) | stub |
+| 2 | [Queries & indexes](./2_Queries_and_Indexes.md) | stub |
+| 3 | [Security rules & IAM](./3_Security_and_Rules.md) | stub |
+| 4 | [Operations & pricing](./4_Operations_and_Pricing.md) | stub |
 
 ## Checklist before marking done (whole engine)
 

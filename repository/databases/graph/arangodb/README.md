@@ -2,7 +2,7 @@
 
 [← Graph folder](../README.md)
 
-*(Stub scaffold August 2026 — see [PLANNED_ENGINES.md](../../PLANNED_ENGINES.md) and [CONTENT_WRITE_ORDER.md](../../CONTENT_WRITE_ORDER.md))*
+*(Stub — fill this engine when you write it.)*
 
 ## Planned coverage (section summary)
 
@@ -14,9 +14,9 @@
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [Overview multi-model](./1-overview-multi-model.md) | stub |
-| 2 | [AQL & graph traversals](./2-aql-and-graph.md) | stub |
-| 3 | [Operations](./3-operations.md) | stub |
+| 1 | [Overview multi-model](./1_Overview_Multi_Model.md) | stub |
+| 2 | [AQL & graph traversals](./2_Aql_and_Graph.md) | stub |
+| 3 | [Operations](./3_Operations.md) | stub |
 
 ## Checklist before marking done (whole engine)
 

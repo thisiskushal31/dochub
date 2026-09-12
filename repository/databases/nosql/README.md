@@ -4,16 +4,16 @@ This repo is organized by **10 database/storage types**. The former “NoSQL” 
 
 | Type | Folder | Deep dives / overview |
 |------|--------|------------------------|
-| Document Store | [document/](../document/mongodb/README.md) | [MongoDB](../document/mongodb/README.md) |
-| Key-Value | [key-value/](../key-value/redis/README.md) | [Redis](../key-value/redis/README.md), [Aerospike](../key-value/aerospike/README.md) |
-| Wide-Column | [wide-column/](../wide-column/README.md) | Overview (Cassandra, ScyllaDB planned) |
-| Graph | [graph/](../graph/README.md) | Overview (Neo4j planned) |
-| Time-Series | [time-series/](../time-series/README.md) | Overview (InfluxDB, TimescaleDB planned) |
-| Search Engine | [search-engine/](../search-engine/elasticsearch/README.md) | [Elasticsearch](../search-engine/elasticsearch/README.md) |
-| In-Memory Cache | [cache/](../cache/README.md) | → [key-value/redis](../key-value/redis/README.md) |
-| Blob/Object | [blob-object/](../blob-object/README.md) | Overview |
-| Vector | [vector/](../vector/README.md) | Overview |
+| Document Store | [Document/](../Document/MongoDB/README.md) | [MongoDB](../Document/MongoDB/README.md) |
+| Key-Value | [Key-Value/](../Key-Value/Redis/README.md) | [Redis](../Key-Value/Redis/README.md), [Aerospike](../Key-Value/Aerospike/README.md) |
+| Wide-Column | [Wide-Column/](../Wide-Column/README.md) | Overview (Cassandra, ScyllaDB planned) |
+| Graph | [Graph/](../Graph/README.md) | Overview (Neo4j planned) |
+| Time-Series | [Time-Series/](../Time-Series/README.md) | Overview (InfluxDB, TimescaleDB planned) |
+| Search Engine | [Search-Engine/](../Search-Engine/Elasticsearch/README.md) | [Elasticsearch](../Search-Engine/Elasticsearch/README.md) |
+| In-Memory Cache | [Cache/](../Cache/README.md) | → [Key-Value/redis](../Key-Value/Redis/README.md) |
+| Blob/Object | [Blob-Object/](../Blob-Object/README.md) | Overview |
+| Vector | [Vector/](../Vector/README.md) | Overview |
 
 **Main index:** [Databases Deep Dive README — Database Types & Use Cases](../README.md#database-types--use-cases).
 
-**Concepts:** [concepts/](../concepts/README.md) · **Cloud-managed:** [cloud-managed/](../cloud-managed/README.md).
+**Concepts:** [Concepts/](../Concepts/README.md) · **Cloud-managed:** [Cloud-Managed/](../Cloud-Managed/README.md).

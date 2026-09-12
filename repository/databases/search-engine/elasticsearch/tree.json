@@ -1,49 +1,49 @@
 [
   {
-    "name": "1-overview-getting-started.md",
-    "path": "1-overview-getting-started.md",
+    "name": "1_Overview_Getting_Started.md",
+    "path": "1_Overview_Getting_Started.md",
     "type": "file",
     "sha": "",
     "size": 20684
   },
   {
-    "name": "2-mapping-analysis.md",
-    "path": "2-mapping-analysis.md",
+    "name": "2_Mapping_Analysis.md",
+    "path": "2_Mapping_Analysis.md",
     "type": "file",
     "sha": "",
     "size": 30477
   },
   {
-    "name": "3-searching.md",
-    "path": "3-searching.md",
+    "name": "3_Searching.md",
+    "path": "3_Searching.md",
     "type": "file",
     "sha": "",
     "size": 22241
   },
   {
-    "name": "4-joining-queries.md",
-    "path": "4-joining-queries.md",
+    "name": "4_Joining_Queries.md",
+    "path": "4_Joining_Queries.md",
     "type": "file",
     "sha": "",
     "size": 12296
   },
   {
-    "name": "5-controlling-results.md",
-    "path": "5-controlling-results.md",
+    "name": "5_Controlling_Results.md",
+    "path": "5_Controlling_Results.md",
     "type": "file",
     "sha": "",
     "size": 5456
   },
   {
-    "name": "6-aggregations.md",
-    "path": "6-aggregations.md",
+    "name": "6_Aggregations.md",
+    "path": "6_Aggregations.md",
     "type": "file",
     "sha": "",
     "size": 19074
   },
   {
-    "name": "7-improving-results.md",
-    "path": "7-improving-results.md",
+    "name": "7_Improving_Results.md",
+    "path": "7_Improving_Results.md",
     "type": "file",
     "sha": "",
     "size": 8282

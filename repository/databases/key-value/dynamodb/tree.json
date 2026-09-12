@@ -1,35 +1,35 @@
 [
   {
-    "name": "1-overview-and-data-model.md",
-    "path": "1-overview-and-data-model.md",
+    "name": "1_Overview_and_Data_Model.md",
+    "path": "1_Overview_and_Data_Model.md",
     "type": "file",
     "sha": "",
     "size": 360
   },
   {
-    "name": "2-capacity-and-throttling.md",
-    "path": "2-capacity-and-throttling.md",
+    "name": "2_Capacity_and_Throttling.md",
+    "path": "2_Capacity_and_Throttling.md",
     "type": "file",
     "sha": "",
     "size": 351
   },
   {
-    "name": "3-patterns-and-access.md",
-    "path": "3-patterns-and-access.md",
+    "name": "3_Patterns_and_Access.md",
+    "path": "3_Patterns_and_Access.md",
     "type": "file",
     "sha": "",
     "size": 345
   },
   {
-    "name": "4-backup-and-global.md",
-    "path": "4-backup-and-global.md",
+    "name": "4_Backup_and_Global.md",
+    "path": "4_Backup_and_Global.md",
     "type": "file",
     "sha": "",
     "size": 340
   },
   {
-    "name": "5-operations-and-cost.md",
-    "path": "5-operations-and-cost.md",
+    "name": "5_Operations_and_Cost.md",
+    "path": "5_Operations_and_Cost.md",
     "type": "file",
     "sha": "",
     "size": 326
@@ -39,6 +39,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1008
+    "size": 913
   }
 ]

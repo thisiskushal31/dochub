@@ -2,7 +2,7 @@
 
 [← Vector folder](../README.md)
 
-*(Stub scaffold August 2026 — see [PLANNED_ENGINES.md](../../PLANNED_ENGINES.md) and [CONTENT_WRITE_ORDER.md](../../CONTENT_WRITE_ORDER.md))*
+*(Stub — fill this engine when you write it.)*
 
 ## Planned coverage (section summary)
 
@@ -15,10 +15,10 @@
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [Overview](./1-overview-architecture.md) | stub |
-| 2 | [Indexing & GraphQL](./2-indexing-and-queries.md) | stub |
-| 3 | [RAG patterns](./3-rag-patterns.md) | stub |
-| 4 | [Operations](./4-operations.md) | stub |
+| 1 | [Overview](./1_Overview_Architecture.md) | stub |
+| 2 | [Indexing & GraphQL](./2_Indexing_and_Queries.md) | stub |
+| 3 | [RAG patterns](./3_RAG_Patterns.md) | stub |
+| 4 | [Operations](./4_Operations.md) | stub |
 
 ## Checklist before marking done (whole engine)
 

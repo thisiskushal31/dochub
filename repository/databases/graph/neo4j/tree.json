@@ -1,21 +1,21 @@
 [
   {
-    "name": "1-overview-and-model.md",
-    "path": "1-overview-and-model.md",
+    "name": "1_Overview_and_Model.md",
+    "path": "1_Overview_and_Model.md",
     "type": "file",
     "sha": "",
     "size": 333
   },
   {
-    "name": "2-cypher-queries.md",
-    "path": "2-cypher-queries.md",
+    "name": "2_Cypher_Queries.md",
+    "path": "2_Cypher_Queries.md",
     "type": "file",
     "sha": "",
     "size": 326
   },
   {
-    "name": "3-operations.md",
-    "path": "3-operations.md",
+    "name": "3_Operations.md",
+    "path": "3_Operations.md",
     "type": "file",
     "sha": "",
     "size": 311
@@ -25,6 +25,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 763
+    "size": 668
   }
 ]

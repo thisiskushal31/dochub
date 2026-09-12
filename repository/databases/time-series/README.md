@@ -26,11 +26,11 @@ Time-series databases are optimized for **data that arrives with timestamps**. T
 ## In this repo
 
 - **Overview:** [Database types & use cases](../README.md#database-types--use-cases)
-- **Cloud-managed:** [Cloud-managed databases](../cloud-managed/README.md) (e.g., managed time-series offerings)
-- **Concepts:** [Sharding & partitioning](../concepts/README.md) (e.g., time-based partitioning)
+- **Cloud-managed:** [Cloud-managed databases](../Cloud-Managed/README.md) (e.g., managed time-series offerings)
+- **Concepts:** [Sharding & partitioning](../Concepts/README.md) (e.g., time-based partitioning)
 
 ## Databases (we're going to cover these)
 
-- **[InfluxDB](./influxdb/README.md)** — deep dive planned
-- **[TimescaleDB](./timescaledb/README.md)** — deep dive planned
-- **[Prometheus](./prometheus/README.md)** — deep dive planned (metrics)
+- **[InfluxDB](./InfluxDB/README.md)** — deep dive planned
+- **[TimescaleDB](./TimescaleDB/README.md)** — deep dive planned
+- **[Prometheus](./Prometheus/README.md)** — deep dive planned (metrics)

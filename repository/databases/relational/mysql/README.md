@@ -10,7 +10,7 @@ This section provides detailed coverage of MySQL organized into focused topics. 
 
 ## Topics
 
-### [1. Overview & Architecture](./1-overview-architecture.md)
+### [1. Overview & Architecture](./1_Overview_Architecture.md)
 
 Introduction to MySQL, architecture components, storage engines, and installation.
 
@@ -18,7 +18,7 @@ Introduction to MySQL, architecture components, storage engines, and installatio
 - Architecture (Storage Engines, Components)
 - Installation & Configuration
 
-### [2. Data Management](./2-data-management.md)
+### [2. Data Management](./2_Data_Management.md)
 
 Data types, schema design, and database structure management.
 
@@ -28,7 +28,7 @@ Data types, schema design, and database structure management.
 - Indexes
 - Foreign Keys
 
-### [3. SQL Fundamentals](./3-sql-fundamentals.md)
+### [3. SQL Fundamentals](./3_SQL_Fundamentals.md)
 
 Essential SQL concepts for working with MySQL.
 
@@ -43,7 +43,7 @@ Essential SQL concepts for working with MySQL.
 - Subqueries and Views
 - Common Table Expressions (CTEs)
 
-### [4. Transactions & Concurrency](./4-transactions-concurrency.md)
+### [4. Transactions & Concurrency](./4_Transactions_Concurrency.md)
 
 Transaction management, ACID properties, and concurrency control.
 
@@ -53,7 +53,7 @@ Transaction management, ACID properties, and concurrency control.
 - Locking
 - Concurrency Control Best Practices
 
-### [5. Performance & Operations](./5-performance-operations.md)
+### [5. Performance & Operations](./5_Performance_Operations.md)
 
 Performance optimization, replication, high availability, backup, and monitoring.
 
@@ -63,7 +63,7 @@ Performance optimization, replication, high availability, backup, and monitoring
 - Backup & Recovery (mysqldump, Binary Log, Point-in-Time Recovery)
 - Monitoring (Performance Schema, Slow Query Log, Status Variables)
 
-### [6. Security & Maintenance](./6-security-maintenance.md)
+### [6. Security & Maintenance](./6_Security_Maintenance.md)
 
 Security practices, operational checklists, and troubleshooting.
 
@@ -71,7 +71,7 @@ Security practices, operational checklists, and troubleshooting.
 - Operational Checklists (Daily, Weekly, Monthly)
 - Troubleshooting (Common Issues, Debugging)
 
-### [7. Advanced Topics](./7-advanced-topics.md)
+### [7. Advanced Topics](./7_Advanced_Topics.md)
 
 Advanced SQL features, best practices, and learning resources.
 
@@ -83,23 +83,23 @@ Advanced SQL features, best practices, and learning resources.
 ## Learning Path
 
 ### Beginner
-1. Start with [Overview & Architecture](./1-overview-architecture.md)
-2. Learn [Data Management](./2-data-management.md)
-3. Understand [SQL Fundamentals](./3-sql-fundamentals.md)
+1. Start with [Overview & Architecture](./1_Overview_Architecture.md)
+2. Learn [Data Management](./2_Data_Management.md)
+3. Understand [SQL Fundamentals](./3_SQL_Fundamentals.md)
 
 ### Intermediate
-4. Study [Transactions & Concurrency](./4-transactions-concurrency.md)
-5. Learn [Performance & Operations](./5-performance-operations.md)
+4. Study [Transactions & Concurrency](./4_Transactions_Concurrency.md)
+5. Learn [Performance & Operations](./5_Performance_Operations.md)
 
 ### Advanced
-6. Explore [Security & Maintenance](./6-security-maintenance.md)
-7. Master [Advanced Topics](./7-advanced-topics.md)
+6. Explore [Security & Maintenance](./6_Security_Maintenance.md)
+7. Master [Advanced Topics](./7_Advanced_Topics.md)
 
 ## Related Content
 
 - **[Relational Databases Overview](../README.md)**: Overview of relational databases
 - **[PostgreSQL Deep Dive](../2-postgresql.md)**: PostgreSQL-specific implementation
-- **[DBMS Fundamentals](../../concepts/dbms-fundamentals/README.md)**: Database fundamentals
+- **[DBMS Fundamentals](../../Concepts/DBMS-Fundamentals/README.md)**: Database fundamentals
 
 ## Resources
 

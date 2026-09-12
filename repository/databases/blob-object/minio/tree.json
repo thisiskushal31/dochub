@@ -1,21 +1,21 @@
 [
   {
-    "name": "1-overview-s3-compatible.md",
-    "path": "1-overview-s3-compatible.md",
+    "name": "1_Overview_S3_Compatible.md",
+    "path": "1_Overview_S3_Compatible.md",
     "type": "file",
     "sha": "",
     "size": 326
   },
   {
-    "name": "2-deployment-and-security.md",
-    "path": "2-deployment-and-security.md",
+    "name": "2_Deployment_and_Security.md",
+    "path": "2_Deployment_and_Security.md",
     "type": "file",
     "sha": "",
     "size": 321
   },
   {
-    "name": "3-operations.md",
-    "path": "3-operations.md",
+    "name": "3_Operations.md",
+    "path": "3_Operations.md",
     "type": "file",
     "sha": "",
     "size": 306
@@ -25,6 +25,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 790
+    "size": 695
   }
 ]

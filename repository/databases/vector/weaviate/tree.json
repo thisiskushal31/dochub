@@ -1,28 +1,28 @@
 [
   {
-    "name": "1-overview-architecture.md",
-    "path": "1-overview-architecture.md",
+    "name": "1_Overview_Architecture.md",
+    "path": "1_Overview_Architecture.md",
     "type": "file",
     "sha": "",
     "size": 303
   },
   {
-    "name": "2-indexing-and-queries.md",
-    "path": "2-indexing-and-queries.md",
+    "name": "2_Indexing_and_Queries.md",
+    "path": "2_Indexing_and_Queries.md",
     "type": "file",
     "sha": "",
     "size": 319
   },
   {
-    "name": "3-rag-patterns.md",
-    "path": "3-rag-patterns.md",
+    "name": "3_RAG_Patterns.md",
+    "path": "3_RAG_Patterns.md",
     "type": "file",
     "sha": "",
     "size": 328
   },
   {
-    "name": "4-operations.md",
-    "path": "4-operations.md",
+    "name": "4_Operations.md",
+    "path": "4_Operations.md",
     "type": "file",
     "sha": "",
     "size": 305
@@ -32,6 +32,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 816
+    "size": 721
   }
 ]

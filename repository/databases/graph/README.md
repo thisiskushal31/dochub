@@ -26,11 +26,11 @@ Graph databases store data as **nodes** (entities) and **edges** (relationships)
 ## In this repo
 
 - **Overview:** [Database types & use cases](../README.md#database-types--use-cases)
-- **Cloud-managed:** [Cloud-managed databases](../cloud-managed/README.md) (e.g., Neptune)
-- **Concepts:** [Database concepts](../concepts/README.md)
+- **Cloud-managed:** [Cloud-managed databases](../Cloud-Managed/README.md) (e.g., Neptune)
+- **Concepts:** [Database concepts](../Concepts/README.md)
 
 ## Databases (we're going to cover these)
 
-- **[Neo4j](./neo4j/README.md)** — deep dive planned
-- **[Neptune](./neptune/README.md)** — deep dive planned (Amazon)
-- **[ArangoDB](./arangodb/README.md)** — deep dive planned
+- **[Neo4j](./Neo4j/README.md)** — deep dive planned
+- **[Neptune](./Neptune/README.md)** — deep dive planned (Amazon)
+- **[ArangoDB](./ArangoDB/README.md)** — deep dive planned

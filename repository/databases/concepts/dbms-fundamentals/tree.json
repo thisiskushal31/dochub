@@ -1,49 +1,49 @@
 [
   {
-    "name": "1-basics-of-dbms.md",
-    "path": "1-basics-of-dbms.md",
+    "name": "1_Basics_of_DBMS.md",
+    "path": "1_Basics_of_DBMS.md",
     "type": "file",
     "sha": "",
     "size": 5023
   },
   {
-    "name": "2-er-relational-model.md",
-    "path": "2-er-relational-model.md",
+    "name": "2_ER_Relational_Model.md",
+    "path": "2_ER_Relational_Model.md",
     "type": "file",
     "sha": "",
     "size": 8233
   },
   {
-    "name": "3-relational-algebra.md",
-    "path": "3-relational-algebra.md",
+    "name": "3_Relational_Algebra.md",
+    "path": "3_Relational_Algebra.md",
     "type": "file",
     "sha": "",
     "size": 6774
   },
   {
-    "name": "4-functional-dependencies-normalisation.md",
-    "path": "4-functional-dependencies-normalisation.md",
+    "name": "4_Functional_Dependencies_Normalisation.md",
+    "path": "4_Functional_Dependencies_Normalisation.md",
     "type": "file",
     "sha": "",
     "size": 7171
   },
   {
-    "name": "5-transactions-concurrency-control.md",
-    "path": "5-transactions-concurrency-control.md",
+    "name": "5_Transactions_Concurrency_Control.md",
+    "path": "5_Transactions_Concurrency_Control.md",
     "type": "file",
     "sha": "",
     "size": 8037
   },
   {
-    "name": "6-advanced-dbms.md",
-    "path": "6-advanced-dbms.md",
+    "name": "6_Advanced_DBMS.md",
+    "path": "6_Advanced_DBMS.md",
     "type": "file",
     "sha": "",
     "size": 8612
   },
   {
-    "name": "7-practice-questions.md",
-    "path": "7-practice-questions.md",
+    "name": "7_Practice_Questions.md",
+    "path": "7_Practice_Questions.md",
     "type": "file",
     "sha": "",
     "size": 4713

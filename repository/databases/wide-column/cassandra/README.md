@@ -2,7 +2,7 @@
 
 [← Wide-Column folder](../README.md)
 
-*(Stub scaffold August 2026 — see [PLANNED_ENGINES.md](../../PLANNED_ENGINES.md) and [CONTENT_WRITE_ORDER.md](../../CONTENT_WRITE_ORDER.md))*
+*(Stub — fill this engine when you write it.)*
 
 ## Planned coverage (section summary)
 
@@ -15,10 +15,10 @@
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [Overview & architecture](./1-overview-architecture.md) | stub |
-| 2 | [Data model & CQL](./2-data-model-and-cql.md) | stub |
-| 3 | [Replication & consistency](./3-replication-and-tuning.md) | stub |
-| 4 | [Operations](./4-operations.md) | stub |
+| 1 | [Overview & architecture](./1_Overview_Architecture.md) | stub |
+| 2 | [Data model & CQL](./2_Data_Model_and_CQL.md) | stub |
+| 3 | [Replication & consistency](./3_Replication_and_Tuning.md) | stub |
+| 4 | [Operations](./4_Operations.md) | stub |
 
 ## Checklist before marking done (whole engine)
 

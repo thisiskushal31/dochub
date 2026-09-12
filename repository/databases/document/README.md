@@ -4,8 +4,8 @@ Flexible JSON-like documents; no rigid schema. Each document can have a differen
 
 ## Databases (covered + planned)
 
-- **[MongoDB](./mongodb/README.md)** — full deep dive
-- **[CouchDB](./couchdb/README.md)** — deep dive planned
-- **[Firestore](./firestore/README.md)** — deep dive planned
+- **[MongoDB](./MongoDB/README.md)** — full deep dive
+- **[CouchDB](./CouchDB/README.md)** — deep dive planned
+- **[Firestore](./Firestore/README.md)** — deep dive planned
 
 Type overview: [Database types & use cases](../README.md#database-types--use-cases).

@@ -6,25 +6,25 @@ Comprehensive technical guide to Elasticsearch, a distributed search and analyti
 
 ## Table of Contents
 
-1. [Overview & Getting Started](./1-overview-getting-started.md)
+1. [Overview & Getting Started](./1_Overview_Getting_Started.md)
    - Overview, Getting Started, Managing Documents
 
-2. [Mapping & Analysis](./2-mapping-analysis.md)
+2. [Mapping & Analysis](./2_Mapping_Analysis.md)
    - Mapping & Analysis, Field Types, Analyzers, Dynamic Mapping
 
-3. [Searching](./3-searching.md)
+3. [Searching](./3_Searching.md)
    - Searching for Data, Query Types, Boolean Logic, Nested Objects
 
-4. [Joining Queries](./4-joining-queries.md)
+4. [Joining Queries](./4_Joining_Queries.md)
    - Parent-Child Relationships, Multi-level Relations, Inner Hits
 
-5. [Controlling Query Results](./5-controlling-results.md)
+5. [Controlling Query Results](./5_Controlling_Results.md)
    - Sorting, Pagination, Source Filtering, Result Format
 
-6. [Aggregations](./6-aggregations.md)
+6. [Aggregations](./6_Aggregations.md)
    - Metric Aggregations, Bucket Aggregations, Nested Aggregations, Histograms
 
-7. [Improving Search Results](./7-improving-results.md)
+7. [Improving Search Results](./7_Improving_Results.md)
    - Synonyms, Stemming, Proximity Searches, Fuzzy Matching, Highlighting
 
 ---

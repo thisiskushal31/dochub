@@ -2,7 +2,7 @@
 
 [← Time-Series folder](../README.md)
 
-*(Stub scaffold August 2026 — see [PLANNED_ENGINES.md](../../PLANNED_ENGINES.md) and [CONTENT_WRITE_ORDER.md](../../CONTENT_WRITE_ORDER.md))*
+*(Stub — fill this engine when you write it.)*
 
 ## Planned coverage (section summary)
 
@@ -14,9 +14,9 @@
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [Hypertables & chunks](./1-overview-hypertables.md) | stub |
-| 2 | [Queries & compression](./2-queries-and-compression.md) | stub |
-| 3 | [Operations](./3-operations.md) | stub |
+| 1 | [Hypertables & chunks](./1_Overview_Hypertables.md) | stub |
+| 2 | [Queries & compression](./2_Queries_and_Compression.md) | stub |
+| 3 | [Operations](./3_Operations.md) | stub |
 
 ## Checklist before marking done (whole engine)
 

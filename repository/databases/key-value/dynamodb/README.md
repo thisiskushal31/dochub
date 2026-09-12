@@ -2,7 +2,7 @@
 
 [← Key-Value folder](../README.md)
 
-*(Stub scaffold August 2026 — see [PLANNED_ENGINES.md](../../PLANNED_ENGINES.md) and [CONTENT_WRITE_ORDER.md](../../CONTENT_WRITE_ORDER.md))*
+*(Stub — fill this engine when you write it.)*
 
 ## Planned coverage (section summary)
 
@@ -16,11 +16,11 @@
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [Overview & single-table design](./1-overview-and-data-model.md) | stub |
-| 2 | [Capacity & throttling](./2-capacity-and-throttling.md) | stub |
-| 3 | [Access patterns](./3-patterns-and-access.md) | stub |
-| 4 | [Backup & global tables](./4-backup-and-global.md) | stub |
-| 5 | [Operations & cost](./5-operations-and-cost.md) | stub |
+| 1 | [Overview & single-table design](./1_Overview_and_Data_Model.md) | stub |
+| 2 | [Capacity & throttling](./2_Capacity_and_Throttling.md) | stub |
+| 3 | [Access patterns](./3_Patterns_and_Access.md) | stub |
+| 4 | [Backup & global tables](./4_Backup_and_Global.md) | stub |
+| 5 | [Operations & cost](./5_Operations_and_Cost.md) | stub |
 
 ## Checklist before marking done (whole engine)
 
