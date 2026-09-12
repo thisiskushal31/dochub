@@ -145,25 +145,25 @@
     "size": 44184
   },
   {
-    "name": "course_2_Essential_Cloud_Infrastructure__Foundation.md",
-    "path": "course_2_Essential_Cloud_Infrastructure__Foundation.md",
+    "name": "Course_2_Essential_Cloud_Infrastructure_Foundation.md",
+    "path": "Course_2_Essential_Cloud_Infrastructure_Foundation.md",
     "type": "file",
     "sha": "",
     "size": 20513
   },
   {
-    "name": "course_3_Essential_Cloud_Infrastructure__Core_Services.md",
-    "path": "course_3_Essential_Cloud_Infrastructure__Core_Services.md",
+    "name": "Course_3_Essential_Cloud_Infrastructure_Core_Services.md",
+    "path": "Course_3_Essential_Cloud_Infrastructure_Core_Services.md",
     "type": "file",
     "sha": "",
-    "size": 37520
+    "size": 37519
   },
   {
-    "name": "course_4_Elastic_Cloud_Infrastructure__Scaling_and_Automation.md",
-    "path": "course_4_Elastic_Cloud_Infrastructure__Scaling_and_Automation.md",
+    "name": "Course_4_Elastic_Cloud_Infrastructure_Scaling_and_Automation.md",
+    "path": "Course_4_Elastic_Cloud_Infrastructure_Scaling_and_Automation.md",
     "type": "file",
     "sha": "",
-    "size": 31893
+    "size": 31892
   },
   {
     "name": "course_5_Elastic_Cloud_Infrastructure_Containers_and_Services.md",
@@ -177,7 +177,7 @@
     "path": "course_6_Reliable_Cloud_Infrastructure_Design_and_Process.md",
     "type": "file",
     "sha": "",
-    "size": 87176
+    "size": 87177
   },
   {
     "name": "course_6_Reliable_Cloud_Infrastructure_Design_for_Resiliency_Scalability_and_Disaster_Recovery.md",

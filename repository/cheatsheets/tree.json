@@ -54,15 +54,15 @@
         "sha": "",
         "children": [
           {
-            "name": "#1-aws-certified-solutions-architect-associate-notes-by-jvidalgz.md",
-            "path": "DevOps-And-Cloud-Essentials/AWS-Notes/#1-aws-certified-solutions-architect-associate-notes-by-jvidalgz.md",
+            "name": "1_AWS_Certified_Solutions_Architect_Associate_Notes_by_Jvidalgz.md",
+            "path": "DevOps-And-Cloud-Essentials/AWS-Notes/1_AWS_Certified_Solutions_Architect_Associate_Notes_by_Jvidalgz.md",
             "type": "file",
             "sha": "",
             "size": 96228
           },
           {
-            "name": "#2-AWS-SAA-C02-Study-Guide-By-keenanromain.md",
-            "path": "DevOps-And-Cloud-Essentials/AWS-Notes/#2-AWS-SAA-C02-Study-Guide-By-keenanromain.md",
+            "name": "2_AWS_SAA_C02_Study_Guide_by_Keenanromain.md",
+            "path": "DevOps-And-Cloud-Essentials/AWS-Notes/2_AWS_SAA_C02_Study_Guide_by_Keenanromain.md",
             "type": "file",
             "sha": "",
             "size": 203421
@@ -72,7 +72,7 @@
             "path": "DevOps-And-Cloud-Essentials/AWS-Notes/Readme.md",
             "type": "file",
             "sha": "",
-            "size": 939
+            "size": 933
           }
         ]
       },
@@ -234,25 +234,25 @@
                 "size": 44184
               },
               {
-                "name": "course_2_Essential_Cloud_Infrastructure__Foundation.md",
-                "path": "DevOps-And-Cloud-Essentials/GCP-Notes/cloud_architect/course_2_Essential_Cloud_Infrastructure__Foundation.md",
+                "name": "Course_2_Essential_Cloud_Infrastructure_Foundation.md",
+                "path": "DevOps-And-Cloud-Essentials/GCP-Notes/cloud_architect/Course_2_Essential_Cloud_Infrastructure_Foundation.md",
                 "type": "file",
                 "sha": "",
                 "size": 20513
               },
               {
-                "name": "course_3_Essential_Cloud_Infrastructure__Core_Services.md",
-                "path": "DevOps-And-Cloud-Essentials/GCP-Notes/cloud_architect/course_3_Essential_Cloud_Infrastructure__Core_Services.md",
+                "name": "Course_3_Essential_Cloud_Infrastructure_Core_Services.md",
+                "path": "DevOps-And-Cloud-Essentials/GCP-Notes/cloud_architect/Course_3_Essential_Cloud_Infrastructure_Core_Services.md",
                 "type": "file",
                 "sha": "",
-                "size": 37520
+                "size": 37519
               },
               {
-                "name": "course_4_Elastic_Cloud_Infrastructure__Scaling_and_Automation.md",
-                "path": "DevOps-And-Cloud-Essentials/GCP-Notes/cloud_architect/course_4_Elastic_Cloud_Infrastructure__Scaling_and_Automation.md",
+                "name": "Course_4_Elastic_Cloud_Infrastructure_Scaling_and_Automation.md",
+                "path": "DevOps-And-Cloud-Essentials/GCP-Notes/cloud_architect/Course_4_Elastic_Cloud_Infrastructure_Scaling_and_Automation.md",
                 "type": "file",
                 "sha": "",
-                "size": 31893
+                "size": 31892
               },
               {
                 "name": "course_5_Elastic_Cloud_Infrastructure_Containers_and_Services.md",
@@ -266,7 +266,7 @@
                 "path": "DevOps-And-Cloud-Essentials/GCP-Notes/cloud_architect/course_6_Reliable_Cloud_Infrastructure_Design_and_Process.md",
                 "type": "file",
                 "sha": "",
-                "size": 87176
+                "size": 87177
               },
               {
                 "name": "course_6_Reliable_Cloud_Infrastructure_Design_for_Resiliency_Scalability_and_Disaster_Recovery.md",
@@ -617,7 +617,7 @@
             "path": "DevOps-And-Cloud-Essentials/GCP-Notes/README.md",
             "type": "file",
             "sha": "",
-            "size": 8373
+            "size": 8370
           }
         ]
       },
@@ -631,26 +631,26 @@
     ]
   },
   {
-    "name": "Langauges",
-    "path": "Langauges",
+    "name": "Languages",
+    "path": "Languages",
     "type": "dir",
     "sha": "",
     "children": [
       {
-        "name": "cpp",
-        "path": "Langauges/cpp",
+        "name": "Cpp",
+        "path": "Languages/Cpp",
         "type": "dir",
         "sha": "",
         "children": [
           {
-            "name": "assets",
-            "path": "Langauges/cpp/assets",
+            "name": "Assets",
+            "path": "Languages/Cpp/Assets",
             "type": "dir",
             "sha": ""
           },
           {
             "name": "Readme.md",
-            "path": "Langauges/cpp/Readme.md",
+            "path": "Languages/Cpp/Readme.md",
             "type": "file",
             "sha": "",
             "size": 666
@@ -658,14 +658,14 @@
         ]
       },
       {
-        "name": "css",
-        "path": "Langauges/css",
+        "name": "CSS",
+        "path": "Languages/CSS",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "Readme.md",
-            "path": "Langauges/css/Readme.md",
+            "path": "Languages/CSS/Readme.md",
             "type": "file",
             "sha": "",
             "size": 17
@@ -673,14 +673,14 @@
         ]
       },
       {
-        "name": "html",
-        "path": "Langauges/html",
+        "name": "HTML",
+        "path": "Languages/HTML",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "Readme.md",
-            "path": "Langauges/html/Readme.md",
+            "path": "Languages/HTML/Readme.md",
             "type": "file",
             "sha": "",
             "size": 17
@@ -688,34 +688,34 @@
         ]
       },
       {
-        "name": "java",
-        "path": "Langauges/java",
+        "name": "Java",
+        "path": "Languages/Java",
         "type": "dir",
         "sha": "",
         "children": [
           {
-            "name": "files",
-            "path": "Langauges/java/files",
+            "name": "Files",
+            "path": "Languages/Java/Files",
             "type": "dir",
             "sha": ""
           },
           {
             "name": "Interviewbit_Java.md",
-            "path": "Langauges/java/Interviewbit_Java.md",
+            "path": "Languages/Java/Interviewbit_Java.md",
             "type": "file",
             "sha": "",
             "size": 939
           },
           {
             "name": "PrincetonEDU_Java.md",
-            "path": "Langauges/java/PrincetonEDU_Java.md",
+            "path": "Languages/Java/PrincetonEDU_Java.md",
             "type": "file",
             "sha": "",
             "size": 212
           },
           {
             "name": "Readme.md",
-            "path": "Langauges/java/Readme.md",
+            "path": "Languages/Java/Readme.md",
             "type": "file",
             "sha": "",
             "size": 579
@@ -723,14 +723,14 @@
         ]
       },
       {
-        "name": "javascript",
-        "path": "Langauges/javascript",
+        "name": "JavaScript",
+        "path": "Languages/JavaScript",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "Readme.md",
-            "path": "Langauges/javascript/Readme.md",
+            "path": "Languages/JavaScript/Readme.md",
             "type": "file",
             "sha": "",
             "size": 20
@@ -738,14 +738,14 @@
         ]
       },
       {
-        "name": "python",
-        "path": "Langauges/python",
+        "name": "Python",
+        "path": "Languages/Python",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "Readme.md",
-            "path": "Langauges/python/Readme.md",
+            "path": "Languages/Python/Readme.md",
             "type": "file",
             "sha": "",
             "size": 10
@@ -1300,17 +1300,10 @@
     ]
   },
   {
-    "name": "CONTENT_WRITE_ORDER.md",
-    "path": "CONTENT_WRITE_ORDER.md",
+    "name": "README.md",
+    "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 492
-  },
-  {
-    "name": "Readme.md",
-    "path": "Readme.md",
-    "type": "file",
-    "sha": "",
-    "size": 1875
+    "size": 2634
   }
 ]

@@ -1,19 +1,19 @@
 [
   {
-    "name": "cpp",
-    "path": "cpp",
+    "name": "Cpp",
+    "path": "Cpp",
     "type": "dir",
     "sha": "",
     "children": [
       {
-        "name": "assets",
-        "path": "cpp/assets",
+        "name": "Assets",
+        "path": "Cpp/Assets",
         "type": "dir",
         "sha": ""
       },
       {
         "name": "Readme.md",
-        "path": "cpp/Readme.md",
+        "path": "Cpp/Readme.md",
         "type": "file",
         "sha": "",
         "size": 666
@@ -21,14 +21,14 @@
     ]
   },
   {
-    "name": "css",
-    "path": "css",
+    "name": "CSS",
+    "path": "CSS",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "Readme.md",
-        "path": "css/Readme.md",
+        "path": "CSS/Readme.md",
         "type": "file",
         "sha": "",
         "size": 17
@@ -36,14 +36,14 @@
     ]
   },
   {
-    "name": "html",
-    "path": "html",
+    "name": "HTML",
+    "path": "HTML",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "Readme.md",
-        "path": "html/Readme.md",
+        "path": "HTML/Readme.md",
         "type": "file",
         "sha": "",
         "size": 17
@@ -51,34 +51,34 @@
     ]
   },
   {
-    "name": "java",
-    "path": "java",
+    "name": "Java",
+    "path": "Java",
     "type": "dir",
     "sha": "",
     "children": [
       {
-        "name": "files",
-        "path": "java/files",
+        "name": "Files",
+        "path": "Java/Files",
         "type": "dir",
         "sha": ""
       },
       {
         "name": "Interviewbit_Java.md",
-        "path": "java/Interviewbit_Java.md",
+        "path": "Java/Interviewbit_Java.md",
         "type": "file",
         "sha": "",
         "size": 939
       },
       {
         "name": "PrincetonEDU_Java.md",
-        "path": "java/PrincetonEDU_Java.md",
+        "path": "Java/PrincetonEDU_Java.md",
         "type": "file",
         "sha": "",
         "size": 212
       },
       {
         "name": "Readme.md",
-        "path": "java/Readme.md",
+        "path": "Java/Readme.md",
         "type": "file",
         "sha": "",
         "size": 579
@@ -86,14 +86,14 @@
     ]
   },
   {
-    "name": "javascript",
-    "path": "javascript",
+    "name": "JavaScript",
+    "path": "JavaScript",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "Readme.md",
-        "path": "javascript/Readme.md",
+        "path": "JavaScript/Readme.md",
         "type": "file",
         "sha": "",
         "size": 20
@@ -101,14 +101,14 @@
     ]
   },
   {
-    "name": "python",
-    "path": "python",
+    "name": "Python",
+    "path": "Python",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "Readme.md",
-        "path": "python/Readme.md",
+        "path": "Python/Readme.md",
         "type": "file",
         "sha": "",
         "size": 10

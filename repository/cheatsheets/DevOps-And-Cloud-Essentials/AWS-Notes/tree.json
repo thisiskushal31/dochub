@@ -1,14 +1,14 @@
 [
   {
-    "name": "#1-aws-certified-solutions-architect-associate-notes-by-jvidalgz.md",
-    "path": "#1-aws-certified-solutions-architect-associate-notes-by-jvidalgz.md",
+    "name": "1_AWS_Certified_Solutions_Architect_Associate_Notes_by_Jvidalgz.md",
+    "path": "1_AWS_Certified_Solutions_Architect_Associate_Notes_by_Jvidalgz.md",
     "type": "file",
     "sha": "",
     "size": 96228
   },
   {
-    "name": "#2-AWS-SAA-C02-Study-Guide-By-keenanromain.md",
-    "path": "#2-AWS-SAA-C02-Study-Guide-By-keenanromain.md",
+    "name": "2_AWS_SAA_C02_Study_Guide_by_Keenanromain.md",
+    "path": "2_AWS_SAA_C02_Study_Guide_by_Keenanromain.md",
     "type": "file",
     "sha": "",
     "size": 203421
@@ -18,6 +18,6 @@
     "path": "Readme.md",
     "type": "file",
     "sha": "",
-    "size": 939
+    "size": 933
   }
 ]
