@@ -1,0 +1,30 @@
+[
+  {
+    "name": "1_SIEM_And_Detection.md",
+    "path": "1_SIEM_And_Detection.md",
+    "type": "file",
+    "sha": "",
+    "size": 628
+  },
+  {
+    "name": "2_Incident_Response.md",
+    "path": "2_Incident_Response.md",
+    "type": "file",
+    "sha": "",
+    "size": 639
+  },
+  {
+    "name": "3_Forensics.md",
+    "path": "3_Forensics.md",
+    "type": "file",
+    "sha": "",
+    "size": 630
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 430
+  }
+]

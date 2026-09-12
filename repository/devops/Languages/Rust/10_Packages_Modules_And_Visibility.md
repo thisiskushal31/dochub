@@ -1,0 +1,269 @@
+# Packages, modules, and visibility
+
+[← Back to Rust](./README.md)
+
+## What this chapter covers
+
+How Rust code is organized for humans and the compiler: **packages**, **crates**, **modules**, **`mod` / `use` / `pub`**, filesystem layout (`src/lib.rs`, `src/main.rs`), **path visibility**, **re-exports**, and the **prelude** concept. This is the scaffolding for maintainable multi-file crates and workspace libraries before operational `std` surfaces (chapter 11).
+
+---
+
+## 1. Concepts
+
+### 1. Packages and crates
+
+- A **package** is a Cargo unit: a directory with `Cargo.toml` that produces one or more crates.
+- A **crate** is a compilation unit the compiler builds—either a **library** crate, a **binary** crate, or both from one package.
+
+A package may contain at most one library crate and any number of binary crates. `cargo new` / `cargo new --lib` set up the common defaults described in chapters 02–03.
+
+### 2. `src/lib.rs` and `src/main.rs`
+
+| File | Role |
+|------|------|
+| `src/lib.rs` | Root of the **library** crate; other modules hang off this tree |
+| `src/main.rs` | Root of the default **binary** crate; may depend on the package’s library |
+
+Idiom: put reusable logic in the library (`lib.rs` modules); keep `main.rs` thin—parse args, call library, map errors to exit codes. Integration tests and doc tests link against the library API, which reinforces that split.
+
+Additional binaries live under `src/bin/*.rs`. Examples and tests have their own conventional directories (`examples/`, `tests/`, `benches/`).
+
+### 3. Modules: namespaces and privacy boundaries
+
+A **module** groups items (functions, types, submodules) and defines a **privacy boundary**. By default, items are **private** to the parent module. `pub` exposes them to parents/outsiders according to path visibility rules.
+
+Declare a submodule inline or by file:
+
+```rust
+// in lib.rs
+mod config;
+pub mod net;
+```
+
+This expects `src/config.rs` (or `src/config/mod.rs`) and `src/net.rs` (or `src/net/mod.rs`). Nested modules map to nested directories.
+
+**Edition note:** The 2018+ module system drops most `mod foo;` + `mod.rs` ceremony requirements from older layouts; both `foo.rs` and `foo/mod.rs` styles work—pick one style per crate and stay consistent. Path clarity improved with 2018’s path changes; brownfield 2015 code may look more verbose.
+
+### 4. `use` and paths
+
+`use` brings paths into scope:
+
+```rust
+use std::collections::HashMap;
+use crate::config::Config;
+use super::helpers::parse;
+```
+
+Path keywords:
+
+- `crate::` — from the crate root
+- `super::` — parent module
+- `self::` — current module (rarely needed)
+- External crate name — dependency root (after `extern crate` in ancient style; modern editions `use serde::Serialize` directly)
+
+Prefer `use` at the top of the file for paths you reference often; keep deep paths inline when used once if that improves clarity.
+
+### 5. `pub` and visibility
+
+| Form | Meaning (simplified) |
+|------|----------------------|
+| (no `pub`) | Visible only inside the current module and its descendants |
+| `pub` | Visible outside the module (subject to ancestor visibility) |
+| `pub(crate)` | Visible anywhere inside this crate only |
+| `pub(super)` | Visible to the parent module |
+| `pub(in path)` | Visible within a given ancestor path |
+
+An item is reachable from outside the crate only if **every module in its path** exposes it. Making a struct `pub` inside a private module does not export it. This is how you keep implementation modules private while re-exporting a small façade.
+
+### 6. Re-exports
+
+Crates often expose a stable surface from `lib.rs`:
+
+```rust
+pub use crate::config::Config;
+pub use crate::error::{Error, Result};
+```
+
+Callers write `mycrate::Config` without knowing the internal file layout. Re-exports are an API design tool: rearrange modules without breaking downstream `use` paths (within semver limits).
+
+`pub use` of dependencies (**facade / wrapping**) should be intentional—you take on API surface and semver coupling to those types.
+
+### 7. The prelude concept
+
+A **prelude** is a set of names brought into scope automatically or by convention.
+
+- The **standard library prelude** imports common traits and types (for example `Option`, `Result`, `Clone`, `Vec`) so everyday code works without explicit `use`.
+- Crates may define `prelude` modules (`mycrate::prelude::*`) for frameworks—convenient inside apps, aggressive inside libraries (name clashes, hidden dependencies). Prefer explicit imports in library code review standards unless you are building an application framework.
+
+Prelude contents evolve carefully across editions/Rust releases; edition docs note shifts when they matter.
+
+---
+
+## 2. Advanced concepts
+
+### 1. Binary ↔ library dependency inside one package
+
+When both `src/main.rs` and `src/lib.rs` exist, the binary treats the library as an external crate named like the package (`use my_package::...`). Do not `mod` the same files from both roots—that duplicates types. One tree of modules under `lib.rs` is enough.
+
+### 2. Semver surface: what counts as public API
+
+For library crates, **semver** cares about what downstream code can name and rely on after `use your_crate::…`. Practically that includes:
+
+- **`pub` items** reachable from the crate root (functions, types, constants, modules, macros).
+- **Trait implementations** for public types (including blanket impls you add)—callers can depend on method availability even when the impl block is not “imported.”
+- **Public fields** of `pub` structs, variants of `pub` enums (unless `#[non_exhaustive]`), and sealed-vs-open trait designs.
+- **Re-exports** (`pub use`): the *path* you export is part of the API, not only the underlying item.
+
+Not public API: `pub(crate)` / private modules, undocumented internal binaries, and items only under `#[cfg(test)]`. Changing a private helper is fine; expanding `pub` without intending a stable commitment is how accidental major bumps happen. Cargo/semver conventions for Rust libraries are documented in the Cargo Book—treat visibility diffs as API diffs in review.
+
+### 3. Prelude and `pub use` as API design
+
+A crate **`prelude`** module plus `pub use` is a deliberate product choice:
+
+- **Façade re-exports** in `lib.rs` give short, stable paths (`mycrate::Client`) while files move underneath.
+- A **`mycrate::prelude::*`** glob is for application frameworks where convenience beats provenance; library-facing code should usually import named items so reviews see dependencies.
+- Re-exporting a dependency’s type makes that type part of *your* semver story (version coupling). Prefer wrapping or re-exporting only types callers must name.
+
+Design the export list first; let module layout serve that list.
+
+### 4. `#[doc(hidden)]` and unstable-looking surfaces
+
+`#[doc(hidden)]` on `pub` items keeps them out of rustdoc’s default view while remaining usable—common for:
+
+- Compatibility shims you must keep `pub` for semver but do not want featured.
+- Macro support internals (`#[doc(hidden)] pub fn` called only from your macros).
+- Soft-unstable hooks where you document “may change; not a supported surface.”
+
+Hidden is **not** privacy: other crates can still call the item if they know the path. Prefer `pub(crate)` when outside crates must not use it. Nightly/`unstable` feature gates and `#[unstable]`-style std attributes are a different mechanism (language/std evolution); for ordinary crates, document experimental modules clearly and feature-gate them rather than relying on doc hiding alone.
+
+### 5. Feature-gated modules and documentation
+
+Cargo features can gate modules (`#[cfg(feature = "net")]`). Requirements for a clean surface:
+
+- List features in `Cargo.toml` with short descriptions; mention them in the crate root docs (`#![doc = …]` / README module map).
+- Document which **paths and types** each feature unlocks; rustdoc can show `cfg`-gated items when built with features—CI docs should enable the feature set you advertise.
+- Avoid putting feature-only types in **default** public signatures (forces every consumer to enable the feature). Prefer separate modules or optional traits.
+- Semver: removing a feature or changing what it gates is an API change for anyone who depended on it.
+
+### 6. Workspaces and cross-crate visibility
+
+`pub(crate)` stops at the crate boundary—not the workspace. Sibling crates in a workspace only see each other’s **public** API. Split crates to enforce harder boundaries (for example `foo-core` vs `foo-cli`).
+
+### 7. `include!` and non-module organization (rare)
+
+Code generation sometimes includes files outside the module tree. Prefer normal modules; treat includes as build-system edges that need review (path hygiene, reproducibility).
+
+### 8. Privacy vs security
+
+Module privacy is a **maintainability and API** boundary, not a sandbox. Unsafe code or logic bugs in private modules are still in-process. Privacy helps reviewers reason about invariants; it does not stop a determined caller of unsafe or a compromised dependency.
+
+### 9. Glob imports
+
+`use crate::module::*` is convenient in binaries and tests; in libraries it obscures provenance. Clippy lints often discourage wildcard imports in production library modules—follow project standards.
+
+### 10. Inline modules for tiny private helpers
+
+`mod tests { ... }` inside a file (with `#[cfg(test)]`) keeps unit tests next to code. Inline private `mod` blocks are fine for small sealed helpers; grow into files when navigation suffers.
+
+### 11. Rust API Guidelines as a staff checklist for public crates
+
+Before you treat a library crate as publishable, run the public surface against the **Rust API Guidelines**—naming, conversions (`From`/`AsRef`), error types, documentation, and semver-minded design. Use it as a **review checklist**, not a citation dump inside module docs: the guidelines live under References. Pair them with this chapter’s visibility rules (`pub` reachability, re-exports, `non_exhaustive`) so “compiles and is exported” is not mistaken for “is a good crate API.”
+
+### 12. Crate-level docs and README for crates.io consumers
+
+Publishable crates need a **consumer-facing** story beyond private module comments:
+
+- **Crate-level rustdoc** (`//!` on `lib.rs`, or `#![doc = include_str!("…")]`) — what the crate is for, feature flags, MSRV if you promise one, and a short example.
+- **README** — often rendered on crates.io and as the first human landing page; keep it aligned with rustdoc (same crate name, same features, one working example).
+- **Module docs on `pub` items** — every public type/trait/function should say role, ownership, panic/error conditions, and whether it is cheap to clone or `Send`.
+
+Internal workspace crates that are never published can be thinner, but anything on the default members path to crates.io should meet the same bar you would accept as a dependent.
+
+### 13. Workspace vs publishable crate boundaries
+
+A **Cargo workspace** is a development and CI grouping; **publishability** is per-crate:
+
+| Concern | Workspace | Publishable crate |
+|---------|-----------|-------------------|
+| Visibility | Members may depend on each other via path; still only via each crate’s `pub` API | Downstream crates.io users see only what you publish |
+| Versioning | Path deps and `[workspace.package]` ease local churn | Semver and yanked versions matter; path deps must become version deps for publish |
+| Surface | Fine to have `*-internal` / unpublished members | Only crates with a deliberate public API and docs should be published |
+| Features | Can coordinate across members in CI | Feature flags become part of the published contract |
+
+Staff rule: do not publish a crate just because it sits in the workspace. Keep glue binaries, scratch pads, and tightly coupled internals **unpublished** (`publish = false` in `Cargo.toml` when needed). Publish the stable library façades; keep workspace edges for compile-time separation, not as an excuse to expose every member.
+
+---
+
+## 3. Applications and use cases
+
+### Software engineering
+
+- Design the **public module tree** as a product: shallow, stable names; private `internal` / `detail` modules for churn.
+- Document the intended entrypoints in `lib.rs` (and crate-level docs).
+- Match filesystem layout to cognitive layout—one major domain area per top-level module.
+- For crates you ship publicly, walk the Rust API Guidelines checklist before the first publish and on major bumps.
+
+### API and semver
+
+- Re-export only what callers should depend on; treat trait impls and `pub use` paths as part of the surface.
+- Changing a type from re-exported path A to B is breaking if you drop the old `pub use`.
+- `pub(crate)` helpers freely; promote to `pub` only with docs and tests.
+- Use `#[doc(hidden)]` for macro/compat internals—not as a substitute for true privacy.
+- Keep README + crate-level rustdoc in sync with features and examples consumers will copy.
+
+### Large codebases and workspaces
+
+- Split crates when compile times or ownership boundaries demand it; use a workspace (chapter 03).
+- Integration tests in `tests/` exercise the public crate surface—the same surface external users see.
+- Mark non-publishable members explicitly; do not blur “workspace member” with “public product.”
+
+### Delivery and ops tooling
+
+- CLI packages: `lib.rs` for logic + tests; `main.rs` / `src/bin` for entrypoints; features for optional backends.
+- Avoid circular crate dependencies in workspaces—extract a small shared crate instead.
+- Publish only the libraries other orgs should depend on; ship CLIs as binaries/releases without forcing every helper crate onto crates.io.
+
+### Reliability and reviewability
+
+- Private modules plus public constructors preserve invariants (ports in range, non-empty IDs).
+- Review `pub` diffs carefully in PRs—visibility expansion is an API change even without logic changes.
+
+### Staff-level review checklist
+
+- `main` is thin; logic lives in the library crate when the package has both.
+- Module tree matches privacy intent; no accidental `pub` on internal helpers.
+- `pub(crate)` used for crate-wide internals instead of making them world-public.
+- Re-exports form a deliberate façade; file moves do not silently break paths.
+- No duplicate `mod` of the same file from binary and library roots.
+- Wildcard imports limited per team policy; library code prefers explicit `use`.
+- Feature-gated modules documented in README/`Cargo.toml` and crate docs; docs builds enable advertised features.
+- `#[doc(hidden)]` justified; no “hidden but load-bearing” public API without a comment.
+- Workspace crates depend on public APIs only; invariants do not rely on sibling `pub(crate)`.
+- Publishable crates reviewed against Rust API Guidelines; README and crate-level rustdoc present and aligned.
+- Non-publishable workspace members marked; publish boundary intentional.
+
+---
+
+## References
+
+- [The Book: Packages and Crates](https://doc.rust-lang.org/stable/book/ch07-01-packages-and-crates.html)
+- [The Book: Defining Modules to Control Scope and Privacy](https://doc.rust-lang.org/stable/book/ch07-02-defining-modules-to-control-scope-and-privacy.html)
+- [The Book: Paths for Referring to an Item in the Module Tree](https://doc.rust-lang.org/stable/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html)
+- [The Book: Bringing Paths into Scope with use](https://doc.rust-lang.org/stable/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html)
+- [The Book: Separating Modules into Different Files](https://doc.rust-lang.org/stable/book/ch07-05-separating-modules-into-different-files.html)
+- [Rust By Example: Modules](https://doc.rust-lang.org/stable/rust-by-example/mod.html)
+- [Rust By Example: Visibility](https://doc.rust-lang.org/stable/rust-by-example/mod/visibility.html)
+- [Rust By Example: use](https://doc.rust-lang.org/stable/rust-by-example/mod/use.html)
+- [Cargo Book: Package Layout](https://doc.rust-lang.org/stable/cargo/guide/project-layout.html)
+- [Cargo Book: SemVer Compatibility](https://doc.rust-lang.org/stable/cargo/reference/semver.html)
+- [Cargo Book: Features](https://doc.rust-lang.org/stable/cargo/reference/features.html)
+- [Cargo Book: Publishing on crates.io](https://doc.rust-lang.org/stable/cargo/reference/publishing.html)
+- [Cargo Book: Workspaces](https://doc.rust-lang.org/stable/cargo/reference/workspaces.html)
+- [The Reference: Visibility and Privacy](https://doc.rust-lang.org/stable/reference/visibility-and-privacy.html)
+- [The Reference: Items — Modules](https://doc.rust-lang.org/stable/reference/items/modules.html)
+- [rustdoc: `#[doc(hidden)]`](https://doc.rust-lang.org/stable/rustdoc/write-documentation/the-doc-attribute.html)
+- [rustdoc: What is rustdoc?](https://doc.rust-lang.org/stable/rustdoc/what-is-rustdoc.html)
+- [Edition Guide: Path and module system changes](https://doc.rust-lang.org/edition-guide/rust-2018/module-system/path-clarity.html)
+- [std prelude](https://doc.rust-lang.org/stable/std/prelude/index.html)
+- [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)
+- [crates.io](https://crates.io/)

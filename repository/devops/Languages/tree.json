@@ -1,0 +1,6643 @@
+[
+  {
+    "name": "Ada",
+    "path": "Ada",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Basics_And_Syntax.md",
+        "path": "Ada/1_Basics_And_Syntax.md",
+        "type": "file",
+        "sha": "",
+        "size": 5689
+      },
+      {
+        "name": "10_Fixed_Point_Types.md",
+        "path": "Ada/10_Fixed_Point_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 2789
+      },
+      {
+        "name": "11_Privacy.md",
+        "path": "Ada/11_Privacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 4067
+      },
+      {
+        "name": "12_Standard_Library.md",
+        "path": "Ada/12_Standard_Library.md",
+        "type": "file",
+        "sha": "",
+        "size": 4496
+      },
+      {
+        "name": "13_Appendices.md",
+        "path": "Ada/13_Appendices.md",
+        "type": "file",
+        "sha": "",
+        "size": 2392
+      },
+      {
+        "name": "14_Case_Studies_And_Hands_On.md",
+        "path": "Ada/14_Case_Studies_And_Hands_On.md",
+        "type": "file",
+        "sha": "",
+        "size": 8503
+      },
+      {
+        "name": "15_Use_Cases_Airborne_And_Railway.md",
+        "path": "Ada/15_Use_Cases_Airborne_And_Railway.md",
+        "type": "file",
+        "sha": "",
+        "size": 20250
+      },
+      {
+        "name": "2_Subprograms_And_Modularity.md",
+        "path": "Ada/2_Subprograms_And_Modularity.md",
+        "type": "file",
+        "sha": "",
+        "size": 6196
+      },
+      {
+        "name": "3_Strongly_Typed_Language.md",
+        "path": "Ada/3_Strongly_Typed_Language.md",
+        "type": "file",
+        "sha": "",
+        "size": 6128
+      },
+      {
+        "name": "4_Records_And_Aggregates.md",
+        "path": "Ada/4_Records_And_Aggregates.md",
+        "type": "file",
+        "sha": "",
+        "size": 2567
+      },
+      {
+        "name": "5_Arrays.md",
+        "path": "Ada/5_Arrays.md",
+        "type": "file",
+        "sha": "",
+        "size": 3836
+      },
+      {
+        "name": "6_More_Types_And_Access_Types.md",
+        "path": "Ada/6_More_Types_And_Access_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 4005
+      },
+      {
+        "name": "7_Generics_Exceptions_Tasking.md",
+        "path": "Ada/7_Generics_Exceptions_Tasking.md",
+        "type": "file",
+        "sha": "",
+        "size": 4387
+      },
+      {
+        "name": "8_Contracts_Interfacing_OOP.md",
+        "path": "Ada/8_Contracts_Interfacing_OOP.md",
+        "type": "file",
+        "sha": "",
+        "size": 3828
+      },
+      {
+        "name": "9_More_About_Records.md",
+        "path": "Ada/9_More_About_Records.md",
+        "type": "file",
+        "sha": "",
+        "size": 3275
+      },
+      {
+        "name": "README.md",
+        "path": "Ada/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 5384
+      }
+    ]
+  },
+  {
+    "name": "Assembly",
+    "path": "Assembly",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Basics_Registers_And_Instructions.md",
+        "path": "Assembly/1_Basics_Registers_And_Instructions.md",
+        "type": "file",
+        "sha": "",
+        "size": 7269
+      },
+      {
+        "name": "10_Numbers_Strings_And_Arrays.md",
+        "path": "Assembly/10_Numbers_Strings_And_Arrays.md",
+        "type": "file",
+        "sha": "",
+        "size": 3786
+      },
+      {
+        "name": "11_Recursion_File_And_Memory_Management.md",
+        "path": "Assembly/11_Recursion_File_And_Memory_Management.md",
+        "type": "file",
+        "sha": "",
+        "size": 4278
+      },
+      {
+        "name": "12_Use_Cases_Ecosystem_And_Online_Tools.md",
+        "path": "Assembly/12_Use_Cases_Ecosystem_And_Online_Tools.md",
+        "type": "file",
+        "sha": "",
+        "size": 7874
+      },
+      {
+        "name": "13_Case_Studies.md",
+        "path": "Assembly/13_Case_Studies.md",
+        "type": "file",
+        "sha": "",
+        "size": 7731
+      },
+      {
+        "name": "2_Reading_Disassembly_And_Calling_Conventions.md",
+        "path": "Assembly/2_Reading_Disassembly_And_Calling_Conventions.md",
+        "type": "file",
+        "sha": "",
+        "size": 5185
+      },
+      {
+        "name": "3_Where_It_Shows_Up.md",
+        "path": "Assembly/3_Where_It_Shows_Up.md",
+        "type": "file",
+        "sha": "",
+        "size": 7159
+      },
+      {
+        "name": "4_Tooling.md",
+        "path": "Assembly/4_Tooling.md",
+        "type": "file",
+        "sha": "",
+        "size": 5147
+      },
+      {
+        "name": "5_Environment_Syntax_And_Program_Structure.md",
+        "path": "Assembly/5_Environment_Syntax_And_Program_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 5535
+      },
+      {
+        "name": "6_Registers_Flags_And_System_Calls.md",
+        "path": "Assembly/6_Registers_Flags_And_System_Calls.md",
+        "type": "file",
+        "sha": "",
+        "size": 4733
+      },
+      {
+        "name": "7_Addressing_Variables_Constants.md",
+        "path": "Assembly/7_Addressing_Variables_Constants.md",
+        "type": "file",
+        "sha": "",
+        "size": 5076
+      },
+      {
+        "name": "8_Arithmetic_Logical_And_Control_Flow.md",
+        "path": "Assembly/8_Arithmetic_Logical_And_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 4938
+      },
+      {
+        "name": "9_Procedures_Stack_And_Macros.md",
+        "path": "Assembly/9_Procedures_Stack_And_Macros.md",
+        "type": "file",
+        "sha": "",
+        "size": 4373
+      },
+      {
+        "name": "README.md",
+        "path": "Assembly/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 5219
+      }
+    ]
+  },
+  {
+    "name": "C-C++",
+    "path": "C-C++",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_C_And_C++.md",
+        "path": "C-C++/1_What_Is_C_And_C++.md",
+        "type": "file",
+        "sha": "",
+        "size": 5645
+      },
+      {
+        "name": "10_Memory_Storage_And_Dynamic_Allocation.md",
+        "path": "C-C++/10_Memory_Storage_And_Dynamic_Allocation.md",
+        "type": "file",
+        "sha": "",
+        "size": 4946
+      },
+      {
+        "name": "11_Structures_Unions_Typedef.md",
+        "path": "C-C++/11_Structures_Unions_Typedef.md",
+        "type": "file",
+        "sha": "",
+        "size": 6964
+      },
+      {
+        "name": "12_Preprocessor_And_File_IO.md",
+        "path": "C-C++/12_Preprocessor_And_File_IO.md",
+        "type": "file",
+        "sha": "",
+        "size": 10634
+      },
+      {
+        "name": "13_C++_Object_Oriented_Programming.md",
+        "path": "C-C++/13_C++_Object_Oriented_Programming.md",
+        "type": "file",
+        "sha": "",
+        "size": 14692
+      },
+      {
+        "name": "14_C++_Templates_STL_Exceptions_And_More.md",
+        "path": "C-C++/14_C++_Templates_STL_Exceptions_And_More.md",
+        "type": "file",
+        "sha": "",
+        "size": 17982
+      },
+      {
+        "name": "15_Use_Cases_Cybersecurity_And_Engineering.md",
+        "path": "C-C++/15_Use_Cases_Cybersecurity_And_Engineering.md",
+        "type": "file",
+        "sha": "",
+        "size": 11665
+      },
+      {
+        "name": "16_Case_Studies.md",
+        "path": "C-C++/16_Case_Studies.md",
+        "type": "file",
+        "sha": "",
+        "size": 4112
+      },
+      {
+        "name": "2_Environment_And_First_Program.md",
+        "path": "C-C++/2_Environment_And_First_Program.md",
+        "type": "file",
+        "sha": "",
+        "size": 4219
+      },
+      {
+        "name": "3_Basic_Syntax_And_Structure.md",
+        "path": "C-C++/3_Basic_Syntax_And_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 4753
+      },
+      {
+        "name": "4_Data_Types_Variables_Constants.md",
+        "path": "C-C++/4_Data_Types_Variables_Constants.md",
+        "type": "file",
+        "sha": "",
+        "size": 4961
+      },
+      {
+        "name": "5_Operators_And_Expressions.md",
+        "path": "C-C++/5_Operators_And_Expressions.md",
+        "type": "file",
+        "sha": "",
+        "size": 4332
+      },
+      {
+        "name": "6_Control_Flow_Decision_And_Loops.md",
+        "path": "C-C++/6_Control_Flow_Decision_And_Loops.md",
+        "type": "file",
+        "sha": "",
+        "size": 5114
+      },
+      {
+        "name": "7_Functions.md",
+        "path": "C-C++/7_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 6159
+      },
+      {
+        "name": "8_Arrays_And_Strings.md",
+        "path": "C-C++/8_Arrays_And_Strings.md",
+        "type": "file",
+        "sha": "",
+        "size": 6581
+      },
+      {
+        "name": "9_Pointers.md",
+        "path": "C-C++/9_Pointers.md",
+        "type": "file",
+        "sha": "",
+        "size": 7850
+      },
+      {
+        "name": "README.md",
+        "path": "C-C++/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 4606
+      }
+    ]
+  },
+  {
+    "name": "Cairo",
+    "path": "Cairo",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Cairo.md",
+        "path": "Cairo/1_What_Is_Cairo.md",
+        "type": "file",
+        "sha": "",
+        "size": 5172
+      },
+      {
+        "name": "10_Dictionaries.md",
+        "path": "Cairo/10_Dictionaries.md",
+        "type": "file",
+        "sha": "",
+        "size": 2692
+      },
+      {
+        "name": "11_Comments_And_Documentation.md",
+        "path": "Cairo/11_Comments_And_Documentation.md",
+        "type": "file",
+        "sha": "",
+        "size": 1885
+      },
+      {
+        "name": "12_Proving_And_Executables.md",
+        "path": "Cairo/12_Proving_And_Executables.md",
+        "type": "file",
+        "sha": "",
+        "size": 2920
+      },
+      {
+        "name": "13_Modules_Packages_And_Crates.md",
+        "path": "Cairo/13_Modules_Packages_And_Crates.md",
+        "type": "file",
+        "sha": "",
+        "size": 4728
+      },
+      {
+        "name": "14_Generic_Types_And_Traits.md",
+        "path": "Cairo/14_Generic_Types_And_Traits.md",
+        "type": "file",
+        "sha": "",
+        "size": 2621
+      },
+      {
+        "name": "15_Error_Handling.md",
+        "path": "Cairo/15_Error_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 2644
+      },
+      {
+        "name": "16_Testing.md",
+        "path": "Cairo/16_Testing.md",
+        "type": "file",
+        "sha": "",
+        "size": 2011
+      },
+      {
+        "name": "17_Closures.md",
+        "path": "Cairo/17_Closures.md",
+        "type": "file",
+        "sha": "",
+        "size": 1390
+      },
+      {
+        "name": "18_Advanced_Cairo_Features.md",
+        "path": "Cairo/18_Advanced_Cairo_Features.md",
+        "type": "file",
+        "sha": "",
+        "size": 6312
+      },
+      {
+        "name": "19_Smart_Contracts_On_Starknet.md",
+        "path": "Cairo/19_Smart_Contracts_On_Starknet.md",
+        "type": "file",
+        "sha": "",
+        "size": 12278
+      },
+      {
+        "name": "2_Getting_Started.md",
+        "path": "Cairo/2_Getting_Started.md",
+        "type": "file",
+        "sha": "",
+        "size": 4107
+      },
+      {
+        "name": "20_Cairo_VM_And_Appendix.md",
+        "path": "Cairo/20_Cairo_VM_And_Appendix.md",
+        "type": "file",
+        "sha": "",
+        "size": 8335
+      },
+      {
+        "name": "21_Use_Cases_And_Case_Studies.md",
+        "path": "Cairo/21_Use_Cases_And_Case_Studies.md",
+        "type": "file",
+        "sha": "",
+        "size": 13894
+      },
+      {
+        "name": "3_Variables_And_Data_Types.md",
+        "path": "Cairo/3_Variables_And_Data_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 8272
+      },
+      {
+        "name": "4_Functions.md",
+        "path": "Cairo/4_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 4262
+      },
+      {
+        "name": "5_Control_Flow.md",
+        "path": "Cairo/5_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 4258
+      },
+      {
+        "name": "6_Arrays_And_Collections.md",
+        "path": "Cairo/6_Arrays_And_Collections.md",
+        "type": "file",
+        "sha": "",
+        "size": 3942
+      },
+      {
+        "name": "7_Ownership_And_References.md",
+        "path": "Cairo/7_Ownership_And_References.md",
+        "type": "file",
+        "sha": "",
+        "size": 4865
+      },
+      {
+        "name": "8_Structs.md",
+        "path": "Cairo/8_Structs.md",
+        "type": "file",
+        "sha": "",
+        "size": 5288
+      },
+      {
+        "name": "9_Enums_And_Pattern_Matching.md",
+        "path": "Cairo/9_Enums_And_Pattern_Matching.md",
+        "type": "file",
+        "sha": "",
+        "size": 3650
+      },
+      {
+        "name": "README.md",
+        "path": "Cairo/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 7037
+      }
+    ]
+  },
+  {
+    "name": "Clojure",
+    "path": "Clojure",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Clojure.md",
+        "path": "Clojure/1_What_Is_Clojure.md",
+        "type": "file",
+        "sha": "",
+        "size": 3357
+      },
+      {
+        "name": "10_Sequences.md",
+        "path": "Clojure/10_Sequences.md",
+        "type": "file",
+        "sha": "",
+        "size": 2124
+      },
+      {
+        "name": "11_Namespaces_And_Project_Structure.md",
+        "path": "Clojure/11_Namespaces_And_Project_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 2071
+      },
+      {
+        "name": "12_Exception_Handling.md",
+        "path": "Clojure/12_Exception_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 1683
+      },
+      {
+        "name": "13_Destructuring_And_Threading_Macros.md",
+        "path": "Clojure/13_Destructuring_And_Threading_Macros.md",
+        "type": "file",
+        "sha": "",
+        "size": 2338
+      },
+      {
+        "name": "14_Metadata_And_Reader_Conditionals.md",
+        "path": "Clojure/14_Metadata_And_Reader_Conditionals.md",
+        "type": "file",
+        "sha": "",
+        "size": 1847
+      },
+      {
+        "name": "15_Concurrency.md",
+        "path": "Clojure/15_Concurrency.md",
+        "type": "file",
+        "sha": "",
+        "size": 2645
+      },
+      {
+        "name": "16_Macros.md",
+        "path": "Clojure/16_Macros.md",
+        "type": "file",
+        "sha": "",
+        "size": 2013
+      },
+      {
+        "name": "17_Java_Interop_And_Deployment.md",
+        "path": "Clojure/17_Java_Interop_And_Deployment.md",
+        "type": "file",
+        "sha": "",
+        "size": 2054
+      },
+      {
+        "name": "18_Testing.md",
+        "path": "Clojure/18_Testing.md",
+        "type": "file",
+        "sha": "",
+        "size": 1911
+      },
+      {
+        "name": "19_Tools_Deps_And_Build.md",
+        "path": "Clojure/19_Tools_Deps_And_Build.md",
+        "type": "file",
+        "sha": "",
+        "size": 1786
+      },
+      {
+        "name": "2_Getting_Started.md",
+        "path": "Clojure/2_Getting_Started.md",
+        "type": "file",
+        "sha": "",
+        "size": 2813
+      },
+      {
+        "name": "20_Spec_And_Validation.md",
+        "path": "Clojure/20_Spec_And_Validation.md",
+        "type": "file",
+        "sha": "",
+        "size": 1819
+      },
+      {
+        "name": "21_Use_Cases_And_Applications.md",
+        "path": "Clojure/21_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 8146
+      },
+      {
+        "name": "22_Security_Pitfalls_And_Best_Practices.md",
+        "path": "Clojure/22_Security_Pitfalls_And_Best_Practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 2969
+      },
+      {
+        "name": "23_Numbers.md",
+        "path": "Clojure/23_Numbers.md",
+        "type": "file",
+        "sha": "",
+        "size": 1627
+      },
+      {
+        "name": "24_Recursion.md",
+        "path": "Clojure/24_Recursion.md",
+        "type": "file",
+        "sha": "",
+        "size": 1620
+      },
+      {
+        "name": "25_Strings.md",
+        "path": "Clojure/25_Strings.md",
+        "type": "file",
+        "sha": "",
+        "size": 1792
+      },
+      {
+        "name": "26_File_IO.md",
+        "path": "Clojure/26_File_IO.md",
+        "type": "file",
+        "sha": "",
+        "size": 1939
+      },
+      {
+        "name": "27_Regular_Expressions.md",
+        "path": "Clojure/27_Regular_Expressions.md",
+        "type": "file",
+        "sha": "",
+        "size": 1660
+      },
+      {
+        "name": "28_Predicates.md",
+        "path": "Clojure/28_Predicates.md",
+        "type": "file",
+        "sha": "",
+        "size": 1561
+      },
+      {
+        "name": "29_Date_And_Time.md",
+        "path": "Clojure/29_Date_And_Time.md",
+        "type": "file",
+        "sha": "",
+        "size": 1598
+      },
+      {
+        "name": "3_Basic_Syntax_And_REPL.md",
+        "path": "Clojure/3_Basic_Syntax_And_REPL.md",
+        "type": "file",
+        "sha": "",
+        "size": 2854
+      },
+      {
+        "name": "30_StructMaps.md",
+        "path": "Clojure/30_StructMaps.md",
+        "type": "file",
+        "sha": "",
+        "size": 1893
+      },
+      {
+        "name": "31_Equality_And_Comparators.md",
+        "path": "Clojure/31_Equality_And_Comparators.md",
+        "type": "file",
+        "sha": "",
+        "size": 2550
+      },
+      {
+        "name": "32_Databases.md",
+        "path": "Clojure/32_Databases.md",
+        "type": "file",
+        "sha": "",
+        "size": 2207
+      },
+      {
+        "name": "33_Libraries.md",
+        "path": "Clojure/33_Libraries.md",
+        "type": "file",
+        "sha": "",
+        "size": 2004
+      },
+      {
+        "name": "34_Dev_Startup_Time.md",
+        "path": "Clojure/34_Dev_Startup_Time.md",
+        "type": "file",
+        "sha": "",
+        "size": 2253
+      },
+      {
+        "name": "4_Data_Types_And_Literals.md",
+        "path": "Clojure/4_Data_Types_And_Literals.md",
+        "type": "file",
+        "sha": "",
+        "size": 2140
+      },
+      {
+        "name": "5_Variables_And_Bindings.md",
+        "path": "Clojure/5_Variables_And_Bindings.md",
+        "type": "file",
+        "sha": "",
+        "size": 1922
+      },
+      {
+        "name": "6_Operators_And_Expressions.md",
+        "path": "Clojure/6_Operators_And_Expressions.md",
+        "type": "file",
+        "sha": "",
+        "size": 1926
+      },
+      {
+        "name": "7_Control_Flow.md",
+        "path": "Clojure/7_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 2561
+      },
+      {
+        "name": "8_Functions.md",
+        "path": "Clojure/8_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 2257
+      },
+      {
+        "name": "9_Collections.md",
+        "path": "Clojure/9_Collections.md",
+        "type": "file",
+        "sha": "",
+        "size": 2478
+      },
+      {
+        "name": "README.md",
+        "path": "Clojure/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 5311
+      }
+    ]
+  },
+  {
+    "name": "COBOL",
+    "path": "COBOL",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_COBOL.md",
+        "path": "COBOL/1_What_Is_COBOL.md",
+        "type": "file",
+        "sha": "",
+        "size": 4052
+      },
+      {
+        "name": "10_Table_Processing.md",
+        "path": "COBOL/10_Table_Processing.md",
+        "type": "file",
+        "sha": "",
+        "size": 3329
+      },
+      {
+        "name": "11_File_Handling.md",
+        "path": "COBOL/11_File_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 4883
+      },
+      {
+        "name": "12_Subroutines.md",
+        "path": "COBOL/12_Subroutines.md",
+        "type": "file",
+        "sha": "",
+        "size": 3071
+      },
+      {
+        "name": "13_Internal_Sort.md",
+        "path": "COBOL/13_Internal_Sort.md",
+        "type": "file",
+        "sha": "",
+        "size": 2854
+      },
+      {
+        "name": "14_Database_Interface.md",
+        "path": "COBOL/14_Database_Interface.md",
+        "type": "file",
+        "sha": "",
+        "size": 2924
+      },
+      {
+        "name": "15_Use_Cases_And_Applications.md",
+        "path": "COBOL/15_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 3568
+      },
+      {
+        "name": "16_Security_Compliance_And_Best_Practices.md",
+        "path": "COBOL/16_Security_Compliance_And_Best_Practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 3100
+      },
+      {
+        "name": "2_Environment_Setup.md",
+        "path": "COBOL/2_Environment_Setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 2627
+      },
+      {
+        "name": "3_Program_Structure.md",
+        "path": "COBOL/3_Program_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 4078
+      },
+      {
+        "name": "4_Basic_Syntax.md",
+        "path": "COBOL/4_Basic_Syntax.md",
+        "type": "file",
+        "sha": "",
+        "size": 3333
+      },
+      {
+        "name": "5_Data_Types_And_Data_Layout.md",
+        "path": "COBOL/5_Data_Types_And_Data_Layout.md",
+        "type": "file",
+        "sha": "",
+        "size": 7756
+      },
+      {
+        "name": "6_Basic_Verbs.md",
+        "path": "COBOL/6_Basic_Verbs.md",
+        "type": "file",
+        "sha": "",
+        "size": 3657
+      },
+      {
+        "name": "7_Conditional_Statements.md",
+        "path": "COBOL/7_Conditional_Statements.md",
+        "type": "file",
+        "sha": "",
+        "size": 3585
+      },
+      {
+        "name": "8_Loop_Statements.md",
+        "path": "COBOL/8_Loop_Statements.md",
+        "type": "file",
+        "sha": "",
+        "size": 2568
+      },
+      {
+        "name": "9_String_Handling.md",
+        "path": "COBOL/9_String_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 3299
+      },
+      {
+        "name": "README.md",
+        "path": "COBOL/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 4614
+      }
+    ]
+  },
+  {
+    "name": "Crystal",
+    "path": "Crystal",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Crystal.md",
+        "path": "Crystal/1_What_Is_Crystal.md",
+        "type": "file",
+        "sha": "",
+        "size": 4576
+      },
+      {
+        "name": "10_Shards_Packages.md",
+        "path": "Crystal/10_Shards_Packages.md",
+        "type": "file",
+        "sha": "",
+        "size": 2079
+      },
+      {
+        "name": "11_Compiler_And_Build.md",
+        "path": "Crystal/11_Compiler_And_Build.md",
+        "type": "file",
+        "sha": "",
+        "size": 2784
+      },
+      {
+        "name": "12_Testing.md",
+        "path": "Crystal/12_Testing.md",
+        "type": "file",
+        "sha": "",
+        "size": 1681
+      },
+      {
+        "name": "13_Use_Cases_And_Applications.md",
+        "path": "Crystal/13_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 4686
+      },
+      {
+        "name": "14_Security_And_Best_Practices.md",
+        "path": "Crystal/14_Security_And_Best_Practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 2582
+      },
+      {
+        "name": "15_Macros_And_C_Bindings.md",
+        "path": "Crystal/15_Macros_And_C_Bindings.md",
+        "type": "file",
+        "sha": "",
+        "size": 3664
+      },
+      {
+        "name": "2_Environment_Setup_And_Install.md",
+        "path": "Crystal/2_Environment_Setup_And_Install.md",
+        "type": "file",
+        "sha": "",
+        "size": 1751
+      },
+      {
+        "name": "3_Program_Structure_And_Basic_Syntax.md",
+        "path": "Crystal/3_Program_Structure_And_Basic_Syntax.md",
+        "type": "file",
+        "sha": "",
+        "size": 2025
+      },
+      {
+        "name": "4_Literals_And_Types.md",
+        "path": "Crystal/4_Literals_And_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 3498
+      },
+      {
+        "name": "5_Control_Flow.md",
+        "path": "Crystal/5_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 1868
+      },
+      {
+        "name": "6_Methods_And_Classes.md",
+        "path": "Crystal/6_Methods_And_Classes.md",
+        "type": "file",
+        "sha": "",
+        "size": 2403
+      },
+      {
+        "name": "7_Modules_Generics_And_Structs.md",
+        "path": "Crystal/7_Modules_Generics_And_Structs.md",
+        "type": "file",
+        "sha": "",
+        "size": 2522
+      },
+      {
+        "name": "8_Exception_Handling.md",
+        "path": "Crystal/8_Exception_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 1931
+      },
+      {
+        "name": "9_Concurrency.md",
+        "path": "Crystal/9_Concurrency.md",
+        "type": "file",
+        "sha": "",
+        "size": 2443
+      },
+      {
+        "name": "README.md",
+        "path": "Crystal/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 4067
+      }
+    ]
+  },
+  {
+    "name": "CSharp",
+    "path": "CSharp",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_CSharp.md",
+        "path": "CSharp/1_What_Is_CSharp.md",
+        "type": "file",
+        "sha": "",
+        "size": 2665
+      },
+      {
+        "name": "10_Classes_And_Objects.md",
+        "path": "CSharp/10_Classes_And_Objects.md",
+        "type": "file",
+        "sha": "",
+        "size": 2054
+      },
+      {
+        "name": "11_Inheritance_And_Polymorphism.md",
+        "path": "CSharp/11_Inheritance_And_Polymorphism.md",
+        "type": "file",
+        "sha": "",
+        "size": 2134
+      },
+      {
+        "name": "12_Interfaces_Structs_And_Enums.md",
+        "path": "CSharp/12_Interfaces_Structs_And_Enums.md",
+        "type": "file",
+        "sha": "",
+        "size": 2308
+      },
+      {
+        "name": "13_Exception_Handling.md",
+        "path": "CSharp/13_Exception_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 2146
+      },
+      {
+        "name": "14_File_IO.md",
+        "path": "CSharp/14_File_IO.md",
+        "type": "file",
+        "sha": "",
+        "size": 2280
+      },
+      {
+        "name": "15_Namespaces_And_Assemblies.md",
+        "path": "CSharp/15_Namespaces_And_Assemblies.md",
+        "type": "file",
+        "sha": "",
+        "size": 1934
+      },
+      {
+        "name": "16_Delegates_Events_And_Generics.md",
+        "path": "CSharp/16_Delegates_Events_And_Generics.md",
+        "type": "file",
+        "sha": "",
+        "size": 2576
+      },
+      {
+        "name": "17_LINQ_And_Async_Await.md",
+        "path": "CSharp/17_LINQ_And_Async_Await.md",
+        "type": "file",
+        "sha": "",
+        "size": 2434
+      },
+      {
+        "name": "18_NuGet_And_Testing.md",
+        "path": "CSharp/18_NuGet_And_Testing.md",
+        "type": "file",
+        "sha": "",
+        "size": 2163
+      },
+      {
+        "name": "19_Use_Cases_And_Applications.md",
+        "path": "CSharp/19_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 3508
+      },
+      {
+        "name": "2_Environment_Setup_And_DotNet_SDK.md",
+        "path": "CSharp/2_Environment_Setup_And_DotNet_SDK.md",
+        "type": "file",
+        "sha": "",
+        "size": 1727
+      },
+      {
+        "name": "20_Security_And_Best_Practices.md",
+        "path": "CSharp/20_Security_And_Best_Practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 2535
+      },
+      {
+        "name": "3_Program_Structure_And_Basic_Syntax.md",
+        "path": "CSharp/3_Program_Structure_And_Basic_Syntax.md",
+        "type": "file",
+        "sha": "",
+        "size": 2547
+      },
+      {
+        "name": "4_Data_Types_And_Type_Conversion.md",
+        "path": "CSharp/4_Data_Types_And_Type_Conversion.md",
+        "type": "file",
+        "sha": "",
+        "size": 2582
+      },
+      {
+        "name": "5_Variables_And_Constants.md",
+        "path": "CSharp/5_Variables_And_Constants.md",
+        "type": "file",
+        "sha": "",
+        "size": 1775
+      },
+      {
+        "name": "6_Operators.md",
+        "path": "CSharp/6_Operators.md",
+        "type": "file",
+        "sha": "",
+        "size": 2110
+      },
+      {
+        "name": "7_Control_Flow.md",
+        "path": "CSharp/7_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 2776
+      },
+      {
+        "name": "8_Methods.md",
+        "path": "CSharp/8_Methods.md",
+        "type": "file",
+        "sha": "",
+        "size": 2171
+      },
+      {
+        "name": "9_Arrays_And_Strings.md",
+        "path": "CSharp/9_Arrays_And_Strings.md",
+        "type": "file",
+        "sha": "",
+        "size": 3549
+      },
+      {
+        "name": "README.md",
+        "path": "CSharp/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 4523
+      }
+    ]
+  },
+  {
+    "name": "D",
+    "path": "D",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_D.md",
+        "path": "D/1_What_Is_D.md",
+        "type": "file",
+        "sha": "",
+        "size": 3147
+      },
+      {
+        "name": "10_Templates_And_Mixins.md",
+        "path": "D/10_Templates_And_Mixins.md",
+        "type": "file",
+        "sha": "",
+        "size": 1907
+      },
+      {
+        "name": "11_Contracts_And_Conditional_Compilation.md",
+        "path": "D/11_Contracts_And_Conditional_Compilation.md",
+        "type": "file",
+        "sha": "",
+        "size": 2108
+      },
+      {
+        "name": "12_Traits_Error_Handling_And_Testing.md",
+        "path": "D/12_Traits_Error_Handling_And_Testing.md",
+        "type": "file",
+        "sha": "",
+        "size": 2226
+      },
+      {
+        "name": "13_Memory_And_Runtime.md",
+        "path": "D/13_Memory_And_Runtime.md",
+        "type": "file",
+        "sha": "",
+        "size": 1937
+      },
+      {
+        "name": "14_Interfacing_To_C_And_Cpp.md",
+        "path": "D/14_Interfacing_To_C_And_Cpp.md",
+        "type": "file",
+        "sha": "",
+        "size": 1978
+      },
+      {
+        "name": "15_Portability_Memory_Safety_And_Advanced.md",
+        "path": "D/15_Portability_Memory_Safety_And_Advanced.md",
+        "type": "file",
+        "sha": "",
+        "size": 3652
+      },
+      {
+        "name": "16_Use_Cases_And_Applications.md",
+        "path": "D/16_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 4679
+      },
+      {
+        "name": "17_Security_And_Best_Practices.md",
+        "path": "D/17_Security_And_Best_Practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 2868
+      },
+      {
+        "name": "2_Environment_And_Build.md",
+        "path": "D/2_Environment_And_Build.md",
+        "type": "file",
+        "sha": "",
+        "size": 1781
+      },
+      {
+        "name": "3_Lexical_Modules_And_Declarations.md",
+        "path": "D/3_Lexical_Modules_And_Declarations.md",
+        "type": "file",
+        "sha": "",
+        "size": 2752
+      },
+      {
+        "name": "4_Types_Properties_And_Attributes.md",
+        "path": "D/4_Types_Properties_And_Attributes.md",
+        "type": "file",
+        "sha": "",
+        "size": 2407
+      },
+      {
+        "name": "5_Expressions_And_Statements.md",
+        "path": "D/5_Expressions_And_Statements.md",
+        "type": "file",
+        "sha": "",
+        "size": 1896
+      },
+      {
+        "name": "6_Arrays_And_Associative_Arrays.md",
+        "path": "D/6_Arrays_And_Associative_Arrays.md",
+        "type": "file",
+        "sha": "",
+        "size": 2298
+      },
+      {
+        "name": "7_Structs_Classes_And_Interfaces.md",
+        "path": "D/7_Structs_Classes_And_Interfaces.md",
+        "type": "file",
+        "sha": "",
+        "size": 2268
+      },
+      {
+        "name": "8_Enums_And_Type_Qualifiers.md",
+        "path": "D/8_Enums_And_Type_Qualifiers.md",
+        "type": "file",
+        "sha": "",
+        "size": 1733
+      },
+      {
+        "name": "9_Functions_And_Operator_Overloading.md",
+        "path": "D/9_Functions_And_Operator_Overloading.md",
+        "type": "file",
+        "sha": "",
+        "size": 2175
+      },
+      {
+        "name": "README.md",
+        "path": "D/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 5758
+      }
+    ]
+  },
+  {
+    "name": "Dart",
+    "path": "Dart",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Dart.md",
+        "path": "Dart/1_What_Is_Dart.md",
+        "type": "file",
+        "sha": "",
+        "size": 6252
+      },
+      {
+        "name": "10_Classes_And_Constructors.md",
+        "path": "Dart/10_Classes_And_Constructors.md",
+        "type": "file",
+        "sha": "",
+        "size": 2835
+      },
+      {
+        "name": "11_Methods_Inheritance_And_Mixins.md",
+        "path": "Dart/11_Methods_Inheritance_And_Mixins.md",
+        "type": "file",
+        "sha": "",
+        "size": 3120
+      },
+      {
+        "name": "12_Enums_Extensions_And_Extension_Types.md",
+        "path": "Dart/12_Enums_Extensions_And_Extension_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 2535
+      },
+      {
+        "name": "13_Patterns_And_Metadata.md",
+        "path": "Dart/13_Patterns_And_Metadata.md",
+        "type": "file",
+        "sha": "",
+        "size": 2448
+      },
+      {
+        "name": "14_Concurrency.md",
+        "path": "Dart/14_Concurrency.md",
+        "type": "file",
+        "sha": "",
+        "size": 7048
+      },
+      {
+        "name": "15_Null_Safety_In_Depth.md",
+        "path": "Dart/15_Null_Safety_In_Depth.md",
+        "type": "file",
+        "sha": "",
+        "size": 2986
+      },
+      {
+        "name": "16_Effective_Dart.md",
+        "path": "Dart/16_Effective_Dart.md",
+        "type": "file",
+        "sha": "",
+        "size": 3014
+      },
+      {
+        "name": "17_Core_Libraries.md",
+        "path": "Dart/17_Core_Libraries.md",
+        "type": "file",
+        "sha": "",
+        "size": 3664
+      },
+      {
+        "name": "18_Packages_And_Pub.md",
+        "path": "Dart/18_Packages_And_Pub.md",
+        "type": "file",
+        "sha": "",
+        "size": 2962
+      },
+      {
+        "name": "19_SDK_And_Command_Line_Tools.md",
+        "path": "Dart/19_SDK_And_Command_Line_Tools.md",
+        "type": "file",
+        "sha": "",
+        "size": 3105
+      },
+      {
+        "name": "2_Environment_And_SDK.md",
+        "path": "Dart/2_Environment_And_SDK.md",
+        "type": "file",
+        "sha": "",
+        "size": 6468
+      },
+      {
+        "name": "20_Server_And_Command_Line_Apps.md",
+        "path": "Dart/20_Server_And_Command_Line_Apps.md",
+        "type": "file",
+        "sha": "",
+        "size": 2815
+      },
+      {
+        "name": "21_Web_Apps_And_Deployment.md",
+        "path": "Dart/21_Web_Apps_And_Deployment.md",
+        "type": "file",
+        "sha": "",
+        "size": 2604
+      },
+      {
+        "name": "22_Interoperability.md",
+        "path": "Dart/22_Interoperability.md",
+        "type": "file",
+        "sha": "",
+        "size": 3058
+      },
+      {
+        "name": "23_Use_Cases_And_Applications.md",
+        "path": "Dart/23_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 8937
+      },
+      {
+        "name": "24_Security_And_Best_Practices.md",
+        "path": "Dart/24_Security_And_Best_Practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 8763
+      },
+      {
+        "name": "3_Program_Structure_And_Basic_Syntax.md",
+        "path": "Dart/3_Program_Structure_And_Basic_Syntax.md",
+        "type": "file",
+        "sha": "",
+        "size": 6854
+      },
+      {
+        "name": "4_Variables_And_Null_Safety.md",
+        "path": "Dart/4_Variables_And_Null_Safety.md",
+        "type": "file",
+        "sha": "",
+        "size": 7804
+      },
+      {
+        "name": "5_Types.md",
+        "path": "Dart/5_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 6176
+      },
+      {
+        "name": "6_Operators.md",
+        "path": "Dart/6_Operators.md",
+        "type": "file",
+        "sha": "",
+        "size": 3243
+      },
+      {
+        "name": "7_Control_Flow.md",
+        "path": "Dart/7_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 5504
+      },
+      {
+        "name": "8_Functions.md",
+        "path": "Dart/8_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 4184
+      },
+      {
+        "name": "9_Libraries_And_Imports.md",
+        "path": "Dart/9_Libraries_And_Imports.md",
+        "type": "file",
+        "sha": "",
+        "size": 2194
+      },
+      {
+        "name": "README.md",
+        "path": "Dart/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 8331
+      }
+    ]
+  },
+  {
+    "name": "Delphi",
+    "path": "Delphi",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Delphi.md",
+        "path": "Delphi/1_What_Is_Delphi.md",
+        "type": "file",
+        "sha": "",
+        "size": 8464
+      },
+      {
+        "name": "10_Building_And_Deployment.md",
+        "path": "Delphi/10_Building_And_Deployment.md",
+        "type": "file",
+        "sha": "",
+        "size": 4797
+      },
+      {
+        "name": "11_Use_Cases_And_Applications.md",
+        "path": "Delphi/11_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 3501
+      },
+      {
+        "name": "12_Security_Recognition_And_Artifacts.md",
+        "path": "Delphi/12_Security_Recognition_And_Artifacts.md",
+        "type": "file",
+        "sha": "",
+        "size": 6620
+      },
+      {
+        "name": "2_Environment_And_Tooling.md",
+        "path": "Delphi/2_Environment_And_Tooling.md",
+        "type": "file",
+        "sha": "",
+        "size": 8934
+      },
+      {
+        "name": "3_Program_Structure_And_Basic_Syntax.md",
+        "path": "Delphi/3_Program_Structure_And_Basic_Syntax.md",
+        "type": "file",
+        "sha": "",
+        "size": 8426
+      },
+      {
+        "name": "4_Data_Types_Variables_And_Constants.md",
+        "path": "Delphi/4_Data_Types_Variables_And_Constants.md",
+        "type": "file",
+        "sha": "",
+        "size": 9840
+      },
+      {
+        "name": "5_Procedures_And_Functions.md",
+        "path": "Delphi/5_Procedures_And_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 5034
+      },
+      {
+        "name": "6_Control_Flow.md",
+        "path": "Delphi/6_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 4722
+      },
+      {
+        "name": "7_Classes_And_Objects.md",
+        "path": "Delphi/7_Classes_And_Objects.md",
+        "type": "file",
+        "sha": "",
+        "size": 5301
+      },
+      {
+        "name": "8_Units_RTL_And_Libraries.md",
+        "path": "Delphi/8_Units_RTL_And_Libraries.md",
+        "type": "file",
+        "sha": "",
+        "size": 4982
+      },
+      {
+        "name": "9_Exception_Handling_And_Threading.md",
+        "path": "Delphi/9_Exception_Handling_And_Threading.md",
+        "type": "file",
+        "sha": "",
+        "size": 4848
+      },
+      {
+        "name": "README.md",
+        "path": "Delphi/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 5750
+      }
+    ]
+  },
+  {
+    "name": "Elixir",
+    "path": "Elixir",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Elixir.md",
+        "path": "Elixir/1_What_Is_Elixir.md",
+        "type": "file",
+        "sha": "",
+        "size": 6296
+      },
+      {
+        "name": "10_Modules_And_Functions.md",
+        "path": "Elixir/10_Modules_And_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 4201
+      },
+      {
+        "name": "11_Structs.md",
+        "path": "Elixir/11_Structs.md",
+        "type": "file",
+        "sha": "",
+        "size": 3344
+      },
+      {
+        "name": "12_Recursion_And_Enumerables.md",
+        "path": "Elixir/12_Recursion_And_Enumerables.md",
+        "type": "file",
+        "sha": "",
+        "size": 3360
+      },
+      {
+        "name": "13_Comprehensions_And_Streams.md",
+        "path": "Elixir/13_Comprehensions_And_Streams.md",
+        "type": "file",
+        "sha": "",
+        "size": 3213
+      },
+      {
+        "name": "14_Protocols.md",
+        "path": "Elixir/14_Protocols.md",
+        "type": "file",
+        "sha": "",
+        "size": 2898
+      },
+      {
+        "name": "15_Sigils.md",
+        "path": "Elixir/15_Sigils.md",
+        "type": "file",
+        "sha": "",
+        "size": 2419
+      },
+      {
+        "name": "16_Try_Catch_And_Rescue.md",
+        "path": "Elixir/16_Try_Catch_And_Rescue.md",
+        "type": "file",
+        "sha": "",
+        "size": 3365
+      },
+      {
+        "name": "17_Processes.md",
+        "path": "Elixir/17_Processes.md",
+        "type": "file",
+        "sha": "",
+        "size": 4494
+      },
+      {
+        "name": "18_IO_And_The_File_System.md",
+        "path": "Elixir/18_IO_And_The_File_System.md",
+        "type": "file",
+        "sha": "",
+        "size": 3402
+      },
+      {
+        "name": "19_Mix_And_Projects.md",
+        "path": "Elixir/19_Mix_And_Projects.md",
+        "type": "file",
+        "sha": "",
+        "size": 3958
+      },
+      {
+        "name": "2_Environment_And_Installation.md",
+        "path": "Elixir/2_Environment_And_Installation.md",
+        "type": "file",
+        "sha": "",
+        "size": 3875
+      },
+      {
+        "name": "20_OTP_Agents_GenServer_And_Supervision.md",
+        "path": "Elixir/20_OTP_Agents_GenServer_And_Supervision.md",
+        "type": "file",
+        "sha": "",
+        "size": 4363
+      },
+      {
+        "name": "21_Use_Cases_And_Applications.md",
+        "path": "Elixir/21_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 4094
+      },
+      {
+        "name": "22_Security_And_DevOps.md",
+        "path": "Elixir/22_Security_And_DevOps.md",
+        "type": "file",
+        "sha": "",
+        "size": 4360
+      },
+      {
+        "name": "23_Standard_Library_Modules_Reference.md",
+        "path": "Elixir/23_Standard_Library_Modules_Reference.md",
+        "type": "file",
+        "sha": "",
+        "size": 18149
+      },
+      {
+        "name": "3_Basic_Types.md",
+        "path": "Elixir/3_Basic_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 5552
+      },
+      {
+        "name": "4_Lists_And_Tuples.md",
+        "path": "Elixir/4_Lists_And_Tuples.md",
+        "type": "file",
+        "sha": "",
+        "size": 4122
+      },
+      {
+        "name": "5_Pattern_Matching.md",
+        "path": "Elixir/5_Pattern_Matching.md",
+        "type": "file",
+        "sha": "",
+        "size": 3909
+      },
+      {
+        "name": "6_Case_Cond_And_If.md",
+        "path": "Elixir/6_Case_Cond_And_If.md",
+        "type": "file",
+        "sha": "",
+        "size": 3256
+      },
+      {
+        "name": "7_Anonymous_Functions.md",
+        "path": "Elixir/7_Anonymous_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 2931
+      },
+      {
+        "name": "8_Binaries_Strings_And_Charlists.md",
+        "path": "Elixir/8_Binaries_Strings_And_Charlists.md",
+        "type": "file",
+        "sha": "",
+        "size": 2739
+      },
+      {
+        "name": "9_Keyword_Lists_And_Maps.md",
+        "path": "Elixir/9_Keyword_Lists_And_Maps.md",
+        "type": "file",
+        "sha": "",
+        "size": 2861
+      },
+      {
+        "name": "README.md",
+        "path": "Elixir/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 6530
+      }
+    ]
+  },
+  {
+    "name": "Erlang",
+    "path": "Erlang",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Erlang.md",
+        "path": "Erlang/1_What_Is_Erlang.md",
+        "type": "file",
+        "sha": "",
+        "size": 5214
+      },
+      {
+        "name": "10_Recursion_And_Higher_Order_Functions.md",
+        "path": "Erlang/10_Recursion_And_Higher_Order_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 4317
+      },
+      {
+        "name": "11_List_Comprehensions.md",
+        "path": "Erlang/11_List_Comprehensions.md",
+        "type": "file",
+        "sha": "",
+        "size": 3208
+      },
+      {
+        "name": "12_Error_Handling.md",
+        "path": "Erlang/12_Error_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 3619
+      },
+      {
+        "name": "13_Processes_And_Message_Passing.md",
+        "path": "Erlang/13_Processes_And_Message_Passing.md",
+        "type": "file",
+        "sha": "",
+        "size": 5435
+      },
+      {
+        "name": "14_Registered_Processes_And_Distribution.md",
+        "path": "Erlang/14_Registered_Processes_And_Distribution.md",
+        "type": "file",
+        "sha": "",
+        "size": 5052
+      },
+      {
+        "name": "15_IO_And_The_File_System.md",
+        "path": "Erlang/15_IO_And_The_File_System.md",
+        "type": "file",
+        "sha": "",
+        "size": 3521
+      },
+      {
+        "name": "16_Rebar3_And_Projects.md",
+        "path": "Erlang/16_Rebar3_And_Projects.md",
+        "type": "file",
+        "sha": "",
+        "size": 2318
+      },
+      {
+        "name": "17_OTP_GenServer_Supervision_Applications.md",
+        "path": "Erlang/17_OTP_GenServer_Supervision_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 4708
+      },
+      {
+        "name": "18_Use_Cases_And_Applications.md",
+        "path": "Erlang/18_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 4606
+      },
+      {
+        "name": "19_Security_And_DevOps.md",
+        "path": "Erlang/19_Security_And_DevOps.md",
+        "type": "file",
+        "sha": "",
+        "size": 4140
+      },
+      {
+        "name": "2_Environment_And_Installation.md",
+        "path": "Erlang/2_Environment_And_Installation.md",
+        "type": "file",
+        "sha": "",
+        "size": 3738
+      },
+      {
+        "name": "3_Basic_Types.md",
+        "path": "Erlang/3_Basic_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 6085
+      },
+      {
+        "name": "4_Tuples_And_Lists.md",
+        "path": "Erlang/4_Tuples_And_Lists.md",
+        "type": "file",
+        "sha": "",
+        "size": 4870
+      },
+      {
+        "name": "5_Pattern_Matching_And_Guards.md",
+        "path": "Erlang/5_Pattern_Matching_And_Guards.md",
+        "type": "file",
+        "sha": "",
+        "size": 5117
+      },
+      {
+        "name": "6_Modules_And_Functions.md",
+        "path": "Erlang/6_Modules_And_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 3948
+      },
+      {
+        "name": "7_Control_Flow_Case_And_If.md",
+        "path": "Erlang/7_Control_Flow_Case_And_If.md",
+        "type": "file",
+        "sha": "",
+        "size": 3194
+      },
+      {
+        "name": "8_Maps_And_Records.md",
+        "path": "Erlang/8_Maps_And_Records.md",
+        "type": "file",
+        "sha": "",
+        "size": 2275
+      },
+      {
+        "name": "9_Binaries_And_Strings.md",
+        "path": "Erlang/9_Binaries_And_Strings.md",
+        "type": "file",
+        "sha": "",
+        "size": 3063
+      },
+      {
+        "name": "README.md",
+        "path": "Erlang/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 10013
+      }
+    ]
+  },
+  {
+    "name": "Fortran",
+    "path": "Fortran",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Fortran.md",
+        "path": "Fortran/1_What_Is_Fortran.md",
+        "type": "file",
+        "sha": "",
+        "size": 3776
+      },
+      {
+        "name": "10_Derived_Types_And_Pointers.md",
+        "path": "Fortran/10_Derived_Types_And_Pointers.md",
+        "type": "file",
+        "sha": "",
+        "size": 3000
+      },
+      {
+        "name": "11_Basic_And_File_IO.md",
+        "path": "Fortran/11_Basic_And_File_IO.md",
+        "type": "file",
+        "sha": "",
+        "size": 4057
+      },
+      {
+        "name": "12_Procedures.md",
+        "path": "Fortran/12_Procedures.md",
+        "type": "file",
+        "sha": "",
+        "size": 3614
+      },
+      {
+        "name": "13_Modules.md",
+        "path": "Fortran/13_Modules.md",
+        "type": "file",
+        "sha": "",
+        "size": 2893
+      },
+      {
+        "name": "14_Intrinsic_Functions_And_Precision.md",
+        "path": "Fortran/14_Intrinsic_Functions_And_Precision.md",
+        "type": "file",
+        "sha": "",
+        "size": 2987
+      },
+      {
+        "name": "15_Libraries_Build_Style_Debugging.md",
+        "path": "Fortran/15_Libraries_Build_Style_Debugging.md",
+        "type": "file",
+        "sha": "",
+        "size": 4041
+      },
+      {
+        "name": "16_Use_Cases_And_Applications.md",
+        "path": "Fortran/16_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 5168
+      },
+      {
+        "name": "17_Security_And_DevOps.md",
+        "path": "Fortran/17_Security_And_DevOps.md",
+        "type": "file",
+        "sha": "",
+        "size": 3638
+      },
+      {
+        "name": "2_Environment_And_Setup.md",
+        "path": "Fortran/2_Environment_And_Setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 3449
+      },
+      {
+        "name": "3_Basic_Syntax.md",
+        "path": "Fortran/3_Basic_Syntax.md",
+        "type": "file",
+        "sha": "",
+        "size": 3303
+      },
+      {
+        "name": "4_Data_Types_Variables_Constants.md",
+        "path": "Fortran/4_Data_Types_Variables_Constants.md",
+        "type": "file",
+        "sha": "",
+        "size": 3807
+      },
+      {
+        "name": "5_Operators.md",
+        "path": "Fortran/5_Operators.md",
+        "type": "file",
+        "sha": "",
+        "size": 2991
+      },
+      {
+        "name": "6_Decisions.md",
+        "path": "Fortran/6_Decisions.md",
+        "type": "file",
+        "sha": "",
+        "size": 2468
+      },
+      {
+        "name": "7_Loops.md",
+        "path": "Fortran/7_Loops.md",
+        "type": "file",
+        "sha": "",
+        "size": 2721
+      },
+      {
+        "name": "8_Numbers_Characters_Strings.md",
+        "path": "Fortran/8_Numbers_Characters_Strings.md",
+        "type": "file",
+        "sha": "",
+        "size": 3225
+      },
+      {
+        "name": "9_Arrays_And_Dynamic_Arrays.md",
+        "path": "Fortran/9_Arrays_And_Dynamic_Arrays.md",
+        "type": "file",
+        "sha": "",
+        "size": 3646
+      },
+      {
+        "name": "README.md",
+        "path": "Fortran/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 8033
+      }
+    ]
+  },
+  {
+    "name": "FSharp",
+    "path": "FSharp",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_FSharp.md",
+        "path": "FSharp/1_What_Is_FSharp.md",
+        "type": "file",
+        "sha": "",
+        "size": 4271
+      },
+      {
+        "name": "10_Modules_And_Namespaces.md",
+        "path": "FSharp/10_Modules_And_Namespaces.md",
+        "type": "file",
+        "sha": "",
+        "size": 5204
+      },
+      {
+        "name": "11_Exception_Handling_And_Resources.md",
+        "path": "FSharp/11_Exception_Handling_And_Resources.md",
+        "type": "file",
+        "sha": "",
+        "size": 3524
+      },
+      {
+        "name": "12_Object_Programming.md",
+        "path": "FSharp/12_Object_Programming.md",
+        "type": "file",
+        "sha": "",
+        "size": 2795
+      },
+      {
+        "name": "13_Async_And_Computation_Expressions.md",
+        "path": "FSharp/13_Async_And_Computation_Expressions.md",
+        "type": "file",
+        "sha": "",
+        "size": 4292
+      },
+      {
+        "name": "14_Build_And_Tooling.md",
+        "path": "FSharp/14_Build_And_Tooling.md",
+        "type": "file",
+        "sha": "",
+        "size": 2963
+      },
+      {
+        "name": "15_Use_Cases_And_Applications.md",
+        "path": "FSharp/15_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 3617
+      },
+      {
+        "name": "16_Security_And_DevOps.md",
+        "path": "FSharp/16_Security_And_DevOps.md",
+        "type": "file",
+        "sha": "",
+        "size": 2831
+      },
+      {
+        "name": "2_Environment_And_Setup.md",
+        "path": "FSharp/2_Environment_And_Setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 3108
+      },
+      {
+        "name": "3_Values_And_Functions.md",
+        "path": "FSharp/3_Values_And_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 6830
+      },
+      {
+        "name": "4_Types_And_Type_Inference.md",
+        "path": "FSharp/4_Types_And_Type_Inference.md",
+        "type": "file",
+        "sha": "",
+        "size": 4845
+      },
+      {
+        "name": "5_Tuples_And_Collections.md",
+        "path": "FSharp/5_Tuples_And_Collections.md",
+        "type": "file",
+        "sha": "",
+        "size": 5392
+      },
+      {
+        "name": "6_Records_And_Discriminated_Unions.md",
+        "path": "FSharp/6_Records_And_Discriminated_Unions.md",
+        "type": "file",
+        "sha": "",
+        "size": 6123
+      },
+      {
+        "name": "7_Pattern_Matching.md",
+        "path": "FSharp/7_Pattern_Matching.md",
+        "type": "file",
+        "sha": "",
+        "size": 5459
+      },
+      {
+        "name": "8_Options_And_Error_Handling.md",
+        "path": "FSharp/8_Options_And_Error_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 4506
+      },
+      {
+        "name": "9_Conditionals_And_Loops.md",
+        "path": "FSharp/9_Conditionals_And_Loops.md",
+        "type": "file",
+        "sha": "",
+        "size": 3674
+      },
+      {
+        "name": "README.md",
+        "path": "FSharp/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 6084
+      }
+    ]
+  },
+  {
+    "name": "Go",
+    "path": "Go",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Go.md",
+        "path": "Go/1_What_Is_Go.md",
+        "type": "file",
+        "sha": "",
+        "size": 4950
+      },
+      {
+        "name": "10_Structs_And_Pointers.md",
+        "path": "Go/10_Structs_And_Pointers.md",
+        "type": "file",
+        "sha": "",
+        "size": 4531
+      },
+      {
+        "name": "11_Maps.md",
+        "path": "Go/11_Maps.md",
+        "type": "file",
+        "sha": "",
+        "size": 3526
+      },
+      {
+        "name": "12_Methods_And_Interfaces.md",
+        "path": "Go/12_Methods_And_Interfaces.md",
+        "type": "file",
+        "sha": "",
+        "size": 4390
+      },
+      {
+        "name": "13_Goroutines_And_Channels.md",
+        "path": "Go/13_Goroutines_And_Channels.md",
+        "type": "file",
+        "sha": "",
+        "size": 4453
+      },
+      {
+        "name": "14_Select_And_Concurrent_Patterns.md",
+        "path": "Go/14_Select_And_Concurrent_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 3591
+      },
+      {
+        "name": "15_Error_Handling.md",
+        "path": "Go/15_Error_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 3429
+      },
+      {
+        "name": "16_Defer_Panic_And_Recover.md",
+        "path": "Go/16_Defer_Panic_And_Recover.md",
+        "type": "file",
+        "sha": "",
+        "size": 3648
+      },
+      {
+        "name": "17_Packages_And_Imports.md",
+        "path": "Go/17_Packages_And_Imports.md",
+        "type": "file",
+        "sha": "",
+        "size": 5042
+      },
+      {
+        "name": "18_Build_Modules_And_Tooling.md",
+        "path": "Go/18_Build_Modules_And_Tooling.md",
+        "type": "file",
+        "sha": "",
+        "size": 4598
+      },
+      {
+        "name": "19_Use_Cases_And_Applications.md",
+        "path": "Go/19_Use_Cases_And_Applications.md",
+        "type": "file",
+        "sha": "",
+        "size": 3588
+      },
+      {
+        "name": "2_Environment_And_Setup.md",
+        "path": "Go/2_Environment_And_Setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 3523
+      },
+      {
+        "name": "20_Security_And_DevOps.md",
+        "path": "Go/20_Security_And_DevOps.md",
+        "type": "file",
+        "sha": "",
+        "size": 4311
+      },
+      {
+        "name": "3_Packages_And_Source_Structure.md",
+        "path": "Go/3_Packages_And_Source_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 18882
+      },
+      {
+        "name": "4_Types_Constants_And_Variables.md",
+        "path": "Go/4_Types_Constants_And_Variables.md",
+        "type": "file",
+        "sha": "",
+        "size": 23232
+      },
+      {
+        "name": "5_Operators_And_Expressions.md",
+        "path": "Go/5_Operators_And_Expressions.md",
+        "type": "file",
+        "sha": "",
+        "size": 26996
+      },
+      {
+        "name": "6_Control_Flow.md",
+        "path": "Go/6_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 8701
+      },
+      {
+        "name": "7_Functions.md",
+        "path": "Go/7_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 5237
+      },
+      {
+        "name": "9_Arrays_And_Slices.md",
+        "path": "Go/9_Arrays_And_Slices.md",
+        "type": "file",
+        "sha": "",
+        "size": 4551
+      },
+      {
+        "name": "README.md",
+        "path": "Go/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 8017
+      }
+    ]
+  },
+  {
+    "name": "Groovy",
+    "path": "Groovy",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Groovy.md",
+        "path": "Groovy/1_What_Is_Groovy.md",
+        "type": "file",
+        "sha": "",
+        "size": 3063
+      },
+      {
+        "name": "10_GDK_And_Style.md",
+        "path": "Groovy/10_GDK_And_Style.md",
+        "type": "file",
+        "sha": "",
+        "size": 5361
+      },
+      {
+        "name": "11_Tools_Grape_And_IDE.md",
+        "path": "Groovy/11_Tools_Grape_And_IDE.md",
+        "type": "file",
+        "sha": "",
+        "size": 5314
+      },
+      {
+        "name": "12_Testing_DSLs_And_Integration.md",
+        "path": "Groovy/12_Testing_DSLs_And_Integration.md",
+        "type": "file",
+        "sha": "",
+        "size": 5283
+      },
+      {
+        "name": "13_Metaprogramming_And_Data_APIs.md",
+        "path": "Groovy/13_Metaprogramming_And_Data_APIs.md",
+        "type": "file",
+        "sha": "",
+        "size": 4652
+      },
+      {
+        "name": "14_DevOps_Jenkins_And_Gradle.md",
+        "path": "Groovy/14_DevOps_Jenkins_And_Gradle.md",
+        "type": "file",
+        "sha": "",
+        "size": 5876
+      },
+      {
+        "name": "15_Security_And_Use_Cases.md",
+        "path": "Groovy/15_Security_And_Use_Cases.md",
+        "type": "file",
+        "sha": "",
+        "size": 5226
+      },
+      {
+        "name": "2_Environment_And_Setup.md",
+        "path": "Groovy/2_Environment_And_Setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 2533
+      },
+      {
+        "name": "3_Syntax_And_Structure.md",
+        "path": "Groovy/3_Syntax_And_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 8068
+      },
+      {
+        "name": "4_Types_Strings_And_Collections.md",
+        "path": "Groovy/4_Types_Strings_And_Collections.md",
+        "type": "file",
+        "sha": "",
+        "size": 9040
+      },
+      {
+        "name": "5_Closures.md",
+        "path": "Groovy/5_Closures.md",
+        "type": "file",
+        "sha": "",
+        "size": 8575
+      },
+      {
+        "name": "6_Operators_And_Control_Flow.md",
+        "path": "Groovy/6_Operators_And_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 5629
+      },
+      {
+        "name": "7_Scripts_And_Classes.md",
+        "path": "Groovy/7_Scripts_And_Classes.md",
+        "type": "file",
+        "sha": "",
+        "size": 6503
+      },
+      {
+        "name": "8_Differences_With_Java.md",
+        "path": "Groovy/8_Differences_With_Java.md",
+        "type": "file",
+        "sha": "",
+        "size": 5635
+      },
+      {
+        "name": "9_Object_Orientation.md",
+        "path": "Groovy/9_Object_Orientation.md",
+        "type": "file",
+        "sha": "",
+        "size": 3443
+      },
+      {
+        "name": "README.md",
+        "path": "Groovy/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 7162
+      }
+    ]
+  },
+  {
+    "name": "Haskell",
+    "path": "Haskell",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Haskell.md",
+        "path": "Haskell/1_What_Is_Haskell.md",
+        "type": "file",
+        "sha": "",
+        "size": 3597
+      },
+      {
+        "name": "10_Testing_And_Tooling.md",
+        "path": "Haskell/10_Testing_And_Tooling.md",
+        "type": "file",
+        "sha": "",
+        "size": 4283
+      },
+      {
+        "name": "11_DevOps_Security_Formal_Methods.md",
+        "path": "Haskell/11_DevOps_Security_Formal_Methods.md",
+        "type": "file",
+        "sha": "",
+        "size": 3686
+      },
+      {
+        "name": "12_Use_Cases_By_Role.md",
+        "path": "Haskell/12_Use_Cases_By_Role.md",
+        "type": "file",
+        "sha": "",
+        "size": 3690
+      },
+      {
+        "name": "2_Environment_And_Setup.md",
+        "path": "Haskell/2_Environment_And_Setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 3797
+      },
+      {
+        "name": "3_Syntax_And_Structure.md",
+        "path": "Haskell/3_Syntax_And_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 7318
+      },
+      {
+        "name": "4_Types_And_Type_System.md",
+        "path": "Haskell/4_Types_And_Type_System.md",
+        "type": "file",
+        "sha": "",
+        "size": 6184
+      },
+      {
+        "name": "5_Functions_And_Purity.md",
+        "path": "Haskell/5_Functions_And_Purity.md",
+        "type": "file",
+        "sha": "",
+        "size": 4913
+      },
+      {
+        "name": "6_Modules_And_Programs.md",
+        "path": "Haskell/6_Modules_And_Programs.md",
+        "type": "file",
+        "sha": "",
+        "size": 4538
+      },
+      {
+        "name": "7_Type_Classes.md",
+        "path": "Haskell/7_Type_Classes.md",
+        "type": "file",
+        "sha": "",
+        "size": 4813
+      },
+      {
+        "name": "8_IO_And_Effects.md",
+        "path": "Haskell/8_IO_And_Effects.md",
+        "type": "file",
+        "sha": "",
+        "size": 4639
+      },
+      {
+        "name": "9_Build_And_Packages.md",
+        "path": "Haskell/9_Build_And_Packages.md",
+        "type": "file",
+        "sha": "",
+        "size": 4307
+      },
+      {
+        "name": "README.md",
+        "path": "Haskell/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 5812
+      }
+    ]
+  },
+  {
+    "name": "HCL",
+    "path": "HCL",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_HCL.md",
+        "path": "HCL/1_What_Is_HCL.md",
+        "type": "file",
+        "sha": "",
+        "size": 3814
+      },
+      {
+        "name": "2_Syntax_And_Structure.md",
+        "path": "HCL/2_Syntax_And_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 4058
+      },
+      {
+        "name": "3_Expressions_And_Types.md",
+        "path": "HCL/3_Expressions_And_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 6287
+      },
+      {
+        "name": "4_Where_HCL_Is_Used_And_Use_Cases.md",
+        "path": "HCL/4_Where_HCL_Is_Used_And_Use_Cases.md",
+        "type": "file",
+        "sha": "",
+        "size": 4742
+      },
+      {
+        "name": "5_How_HCL_Works_In_Each_Tool_SRE.md",
+        "path": "HCL/5_How_HCL_Works_In_Each_Tool_SRE.md",
+        "type": "file",
+        "sha": "",
+        "size": 10482
+      },
+      {
+        "name": "README.md",
+        "path": "HCL/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 4464
+      }
+    ]
+  },
+  {
+    "name": "Java",
+    "path": "Java",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Java.md",
+        "path": "Java/1_What_Is_Java.md",
+        "type": "file",
+        "sha": "",
+        "size": 4029
+      },
+      {
+        "name": "10_Collections_And_Generics.md",
+        "path": "Java/10_Collections_And_Generics.md",
+        "type": "file",
+        "sha": "",
+        "size": 14146
+      },
+      {
+        "name": "11_Build_And_JVM_Basics.md",
+        "path": "Java/11_Build_And_JVM_Basics.md",
+        "type": "file",
+        "sha": "",
+        "size": 13120
+      },
+      {
+        "name": "12_DevOps_Jenkins_And_Security.md",
+        "path": "Java/12_DevOps_Jenkins_And_Security.md",
+        "type": "file",
+        "sha": "",
+        "size": 10070
+      },
+      {
+        "name": "13_Use_Cases_By_Role.md",
+        "path": "Java/13_Use_Cases_By_Role.md",
+        "type": "file",
+        "sha": "",
+        "size": 8587
+      },
+      {
+        "name": "2_Environment_And_Setup.md",
+        "path": "Java/2_Environment_And_Setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 3631
+      },
+      {
+        "name": "3_Syntax_And_Structure.md",
+        "path": "Java/3_Syntax_And_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 5082
+      },
+      {
+        "name": "4_Data_Types_Variables_Operators.md",
+        "path": "Java/4_Data_Types_Variables_Operators.md",
+        "type": "file",
+        "sha": "",
+        "size": 12061
+      },
+      {
+        "name": "5_Control_Flow.md",
+        "path": "Java/5_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 15796
+      },
+      {
+        "name": "6_Classes_And_Objects.md",
+        "path": "Java/6_Classes_And_Objects.md",
+        "type": "file",
+        "sha": "",
+        "size": 18355
+      },
+      {
+        "name": "7_Inheritance_Polymorphism_Interfaces.md",
+        "path": "Java/7_Inheritance_Polymorphism_Interfaces.md",
+        "type": "file",
+        "sha": "",
+        "size": 18630
+      },
+      {
+        "name": "8_Exceptions_And_IO.md",
+        "path": "Java/8_Exceptions_And_IO.md",
+        "type": "file",
+        "sha": "",
+        "size": 19081
+      },
+      {
+        "name": "9_Multithreading_And_Concurrency.md",
+        "path": "Java/9_Multithreading_And_Concurrency.md",
+        "type": "file",
+        "sha": "",
+        "size": 15015
+      },
+      {
+        "name": "README.md",
+        "path": "Java/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 6204
+      }
+    ]
+  },
+  {
+    "name": "JavaScript",
+    "path": "JavaScript",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_JavaScript.md",
+        "path": "JavaScript/1_What_Is_JavaScript.md",
+        "type": "file",
+        "sha": "",
+        "size": 10486
+      },
+      {
+        "name": "10_Code_Quality_And_Testing.md",
+        "path": "JavaScript/10_Code_Quality_And_Testing.md",
+        "type": "file",
+        "sha": "",
+        "size": 4436
+      },
+      {
+        "name": "11_Data_Types_Arrays_Iterables_JSON.md",
+        "path": "JavaScript/11_Data_Types_Arrays_Iterables_JSON.md",
+        "type": "file",
+        "sha": "",
+        "size": 5256
+      },
+      {
+        "name": "12_Advanced_Functions.md",
+        "path": "JavaScript/12_Advanced_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 5748
+      },
+      {
+        "name": "13_Property_Descriptors_Prototypes.md",
+        "path": "JavaScript/13_Property_Descriptors_Prototypes.md",
+        "type": "file",
+        "sha": "",
+        "size": 5249
+      },
+      {
+        "name": "14_Classes_Generators.md",
+        "path": "JavaScript/14_Classes_Generators.md",
+        "type": "file",
+        "sha": "",
+        "size": 5047
+      },
+      {
+        "name": "15_Proxy_Reflect_Eval_Misc.md",
+        "path": "JavaScript/15_Proxy_Reflect_Eval_Misc.md",
+        "type": "file",
+        "sha": "",
+        "size": 5075
+      },
+      {
+        "name": "16_DOM_And_Events.md",
+        "path": "JavaScript/16_DOM_And_Events.md",
+        "type": "file",
+        "sha": "",
+        "size": 8900
+      },
+      {
+        "name": "17_DOM_Deep_Dive.md",
+        "path": "JavaScript/17_DOM_Deep_Dive.md",
+        "type": "file",
+        "sha": "",
+        "size": 5280
+      },
+      {
+        "name": "18_UI_Events_Forms_Loading.md",
+        "path": "JavaScript/18_UI_Events_Forms_Loading.md",
+        "type": "file",
+        "sha": "",
+        "size": 6452
+      },
+      {
+        "name": "19_Node_NPM_And_Tooling.md",
+        "path": "JavaScript/19_Node_NPM_And_Tooling.md",
+        "type": "file",
+        "sha": "",
+        "size": 6968
+      },
+      {
+        "name": "2_Environment_And_Where_To_Run.md",
+        "path": "JavaScript/2_Environment_And_Where_To_Run.md",
+        "type": "file",
+        "sha": "",
+        "size": 8746
+      },
+      {
+        "name": "20_Use_Cases_By_Role.md",
+        "path": "JavaScript/20_Use_Cases_By_Role.md",
+        "type": "file",
+        "sha": "",
+        "size": 4894
+      },
+      {
+        "name": "21_DevOps_Automation_And_Security.md",
+        "path": "JavaScript/21_DevOps_Automation_And_Security.md",
+        "type": "file",
+        "sha": "",
+        "size": 6531
+      },
+      {
+        "name": "22_Frames_Windows_Storage.md",
+        "path": "JavaScript/22_Frames_Windows_Storage.md",
+        "type": "file",
+        "sha": "",
+        "size": 5669
+      },
+      {
+        "name": "23_Binary_Network.md",
+        "path": "JavaScript/23_Binary_Network.md",
+        "type": "file",
+        "sha": "",
+        "size": 6288
+      },
+      {
+        "name": "24_Animation_WebComponents_Regex.md",
+        "path": "JavaScript/24_Animation_WebComponents_Regex.md",
+        "type": "file",
+        "sha": "",
+        "size": 6488
+      },
+      {
+        "name": "3_Syntax_And_Structure.md",
+        "path": "JavaScript/3_Syntax_And_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 13167
+      },
+      {
+        "name": "4_Variables_Types_Operators.md",
+        "path": "JavaScript/4_Variables_Types_Operators.md",
+        "type": "file",
+        "sha": "",
+        "size": 12691
+      },
+      {
+        "name": "5_Control_Flow_And_Loops.md",
+        "path": "JavaScript/5_Control_Flow_And_Loops.md",
+        "type": "file",
+        "sha": "",
+        "size": 9306
+      },
+      {
+        "name": "6_Functions.md",
+        "path": "JavaScript/6_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 10248
+      },
+      {
+        "name": "7_Objects_And_Classes.md",
+        "path": "JavaScript/7_Objects_And_Classes.md",
+        "type": "file",
+        "sha": "",
+        "size": 9205
+      },
+      {
+        "name": "8_ES6_Syntax_And_Modules.md",
+        "path": "JavaScript/8_ES6_Syntax_And_Modules.md",
+        "type": "file",
+        "sha": "",
+        "size": 6914
+      },
+      {
+        "name": "9_Async_Promise_AsyncAwait.md",
+        "path": "JavaScript/9_Async_Promise_AsyncAwait.md",
+        "type": "file",
+        "sha": "",
+        "size": 6995
+      },
+      {
+        "name": "README.md",
+        "path": "JavaScript/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 8816
+      }
+    ]
+  },
+  {
+    "name": "JSON",
+    "path": "JSON",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_JSON.md",
+        "path": "JSON/1_What_Is_JSON.md",
+        "type": "file",
+        "sha": "",
+        "size": 7336
+      },
+      {
+        "name": "2_Syntax_And_Structure.md",
+        "path": "JSON/2_Syntax_And_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 11740
+      },
+      {
+        "name": "3_Validation_Schema_And_Tooling.md",
+        "path": "JSON/3_Validation_Schema_And_Tooling.md",
+        "type": "file",
+        "sha": "",
+        "size": 10289
+      },
+      {
+        "name": "4_Use_Cases_By_Context.md",
+        "path": "JSON/4_Use_Cases_By_Context.md",
+        "type": "file",
+        "sha": "",
+        "size": 10557
+      },
+      {
+        "name": "5_Implementation_And_Security.md",
+        "path": "JSON/5_Implementation_And_Security.md",
+        "type": "file",
+        "sha": "",
+        "size": 7481
+      },
+      {
+        "name": "6_Advanced_JSON.md",
+        "path": "JSON/6_Advanced_JSON.md",
+        "type": "file",
+        "sha": "",
+        "size": 30929
+      },
+      {
+        "name": "README.md",
+        "path": "JSON/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 5743
+      }
+    ]
+  },
+  {
+    "name": "Julia",
+    "path": "Julia",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Julia.md",
+        "path": "Julia/1_What_Is_Julia.md",
+        "type": "file",
+        "sha": "",
+        "size": 9262
+      },
+      {
+        "name": "2_Syntax_And_REPL.md",
+        "path": "Julia/2_Syntax_And_REPL.md",
+        "type": "file",
+        "sha": "",
+        "size": 23458
+      },
+      {
+        "name": "3_Advanced_Concepts.md",
+        "path": "Julia/3_Advanced_Concepts.md",
+        "type": "file",
+        "sha": "",
+        "size": 15728
+      },
+      {
+        "name": "4_Packages_And_Environments.md",
+        "path": "Julia/4_Packages_And_Environments.md",
+        "type": "file",
+        "sha": "",
+        "size": 7219
+      },
+      {
+        "name": "5_Use_Data_Pipelines_HPC_Research.md",
+        "path": "Julia/5_Use_Data_Pipelines_HPC_Research.md",
+        "type": "file",
+        "sha": "",
+        "size": 12553
+      },
+      {
+        "name": "6_Deployment_And_Ops.md",
+        "path": "Julia/6_Deployment_And_Ops.md",
+        "type": "file",
+        "sha": "",
+        "size": 8382
+      },
+      {
+        "name": "README.md",
+        "path": "Julia/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 8060
+      }
+    ]
+  },
+  {
+    "name": "Kotlin",
+    "path": "Kotlin",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Kotlin.md",
+        "path": "Kotlin/1_What_Is_Kotlin.md",
+        "type": "file",
+        "sha": "",
+        "size": 7126
+      },
+      {
+        "name": "10_Null_Safety.md",
+        "path": "Kotlin/10_Null_Safety.md",
+        "type": "file",
+        "sha": "",
+        "size": 7436
+      },
+      {
+        "name": "11_Collections_And_Sequences.md",
+        "path": "Kotlin/11_Collections_And_Sequences.md",
+        "type": "file",
+        "sha": "",
+        "size": 7544
+      },
+      {
+        "name": "12_Lambdas_And_Higher_Order_Functions.md",
+        "path": "Kotlin/12_Lambdas_And_Higher_Order_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 5981
+      },
+      {
+        "name": "13_Scope_Functions_Builders_And_Extension_Functions.md",
+        "path": "Kotlin/13_Scope_Functions_Builders_And_Extension_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 6550
+      },
+      {
+        "name": "14_Generics_And_Operator_Overloading.md",
+        "path": "Kotlin/14_Generics_And_Operator_Overloading.md",
+        "type": "file",
+        "sha": "",
+        "size": 6581
+      },
+      {
+        "name": "15_Coroutines_And_Async.md",
+        "path": "Kotlin/15_Coroutines_And_Async.md",
+        "type": "file",
+        "sha": "",
+        "size": 5093
+      },
+      {
+        "name": "16_Exceptions_And_Error_Handling.md",
+        "path": "Kotlin/16_Exceptions_And_Error_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 5438
+      },
+      {
+        "name": "17_Annotations_Reflection_And_KDoc.md",
+        "path": "Kotlin/17_Annotations_Reflection_And_KDoc.md",
+        "type": "file",
+        "sha": "",
+        "size": 5712
+      },
+      {
+        "name": "18_Interoperability_With_Java.md",
+        "path": "Kotlin/18_Interoperability_With_Java.md",
+        "type": "file",
+        "sha": "",
+        "size": 5651
+      },
+      {
+        "name": "19_Gradle_And_Build_Tooling.md",
+        "path": "Kotlin/19_Gradle_And_Build_Tooling.md",
+        "type": "file",
+        "sha": "",
+        "size": 4721
+      },
+      {
+        "name": "2_Environment_And_Setup.md",
+        "path": "Kotlin/2_Environment_And_Setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 8969
+      },
+      {
+        "name": "20_Android_Server_Side_And_JVM.md",
+        "path": "Kotlin/20_Android_Server_Side_And_JVM.md",
+        "type": "file",
+        "sha": "",
+        "size": 3759
+      },
+      {
+        "name": "21_Kotlin_Multiplatform.md",
+        "path": "Kotlin/21_Kotlin_Multiplatform.md",
+        "type": "file",
+        "sha": "",
+        "size": 5148
+      },
+      {
+        "name": "22_Compose_Multiplatform_And_Testing.md",
+        "path": "Kotlin/22_Compose_Multiplatform_And_Testing.md",
+        "type": "file",
+        "sha": "",
+        "size": 4072
+      },
+      {
+        "name": "23_DevOps_CI_And_Security.md",
+        "path": "Kotlin/23_DevOps_CI_And_Security.md",
+        "type": "file",
+        "sha": "",
+        "size": 4958
+      },
+      {
+        "name": "24_Use_Cases_By_Role.md",
+        "path": "Kotlin/24_Use_Cases_By_Role.md",
+        "type": "file",
+        "sha": "",
+        "size": 5760
+      },
+      {
+        "name": "3_Syntax_And_Structure.md",
+        "path": "Kotlin/3_Syntax_And_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 6300
+      },
+      {
+        "name": "4_Variables_And_Basic_Types.md",
+        "path": "Kotlin/4_Variables_And_Basic_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 4773
+      },
+      {
+        "name": "5_Strings_Characters_And_Arrays.md",
+        "path": "Kotlin/5_Strings_Characters_And_Arrays.md",
+        "type": "file",
+        "sha": "",
+        "size": 4955
+      },
+      {
+        "name": "6_Control_Flow.md",
+        "path": "Kotlin/6_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 5217
+      },
+      {
+        "name": "7_Functions.md",
+        "path": "Kotlin/7_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 5248
+      },
+      {
+        "name": "8_Classes_And_Objects.md",
+        "path": "Kotlin/8_Classes_And_Objects.md",
+        "type": "file",
+        "sha": "",
+        "size": 7974
+      },
+      {
+        "name": "9_Inheritance_Interfaces_And_Abstract_Classes.md",
+        "path": "Kotlin/9_Inheritance_Interfaces_And_Abstract_Classes.md",
+        "type": "file",
+        "sha": "",
+        "size": 7882
+      },
+      {
+        "name": "README.md",
+        "path": "Kotlin/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 9450
+      }
+    ]
+  },
+  {
+    "name": "LaTeX",
+    "path": "LaTeX",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_LaTeX.md",
+        "path": "LaTeX/1_What_Is_LaTeX.md",
+        "type": "file",
+        "sha": "",
+        "size": 5098
+      },
+      {
+        "name": "10_Use_Cases_And_Engineering_Perspective.md",
+        "path": "LaTeX/10_Use_Cases_And_Engineering_Perspective.md",
+        "type": "file",
+        "sha": "",
+        "size": 6348
+      },
+      {
+        "name": "2_Environment_And_Setup.md",
+        "path": "LaTeX/2_Environment_And_Setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 4991
+      },
+      {
+        "name": "3_Document_Structure_And_Basics.md",
+        "path": "LaTeX/3_Document_Structure_And_Basics.md",
+        "type": "file",
+        "sha": "",
+        "size": 7516
+      },
+      {
+        "name": "4_Commands_Environments_And_Packages.md",
+        "path": "LaTeX/4_Commands_Environments_And_Packages.md",
+        "type": "file",
+        "sha": "",
+        "size": 8044
+      },
+      {
+        "name": "5_Mathematics.md",
+        "path": "LaTeX/5_Mathematics.md",
+        "type": "file",
+        "sha": "",
+        "size": 7417
+      },
+      {
+        "name": "6_Tables_And_Figures.md",
+        "path": "LaTeX/6_Tables_And_Figures.md",
+        "type": "file",
+        "sha": "",
+        "size": 7947
+      },
+      {
+        "name": "7_Cross_References_And_Bibliography.md",
+        "path": "LaTeX/7_Cross_References_And_Bibliography.md",
+        "type": "file",
+        "sha": "",
+        "size": 6245
+      },
+      {
+        "name": "8_Compilation_And_Toolchains.md",
+        "path": "LaTeX/8_Compilation_And_Toolchains.md",
+        "type": "file",
+        "sha": "",
+        "size": 4067
+      },
+      {
+        "name": "9_CI_Automation_And_Templated_PDFs.md",
+        "path": "LaTeX/9_CI_Automation_And_Templated_PDFs.md",
+        "type": "file",
+        "sha": "",
+        "size": 4713
+      },
+      {
+        "name": "README.md",
+        "path": "LaTeX/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 5619
+      }
+    ]
+  },
+  {
+    "name": "Lua",
+    "path": "Lua",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Lua.md",
+        "path": "Lua/1_What_Is_Lua.md",
+        "type": "file",
+        "sha": "",
+        "size": 4086
+      },
+      {
+        "name": "10_Metatables_And_Metamethods.md",
+        "path": "Lua/10_Metatables_And_Metamethods.md",
+        "type": "file",
+        "sha": "",
+        "size": 3693
+      },
+      {
+        "name": "11_Garbage_Collection_And_Weak_Tables.md",
+        "path": "Lua/11_Garbage_Collection_And_Weak_Tables.md",
+        "type": "file",
+        "sha": "",
+        "size": 3398
+      },
+      {
+        "name": "12_Coroutines.md",
+        "path": "Lua/12_Coroutines.md",
+        "type": "file",
+        "sha": "",
+        "size": 2910
+      },
+      {
+        "name": "13_Standard_Libraries.md",
+        "path": "Lua/13_Standard_Libraries.md",
+        "type": "file",
+        "sha": "",
+        "size": 8094
+      },
+      {
+        "name": "14_Modules.md",
+        "path": "Lua/14_Modules.md",
+        "type": "file",
+        "sha": "",
+        "size": 4241
+      },
+      {
+        "name": "15_C_API_And_Embedding.md",
+        "path": "Lua/15_C_API_And_Embedding.md",
+        "type": "file",
+        "sha": "",
+        "size": 6519
+      },
+      {
+        "name": "16_Use_Cases_And_DevOps.md",
+        "path": "Lua/16_Use_Cases_And_DevOps.md",
+        "type": "file",
+        "sha": "",
+        "size": 5878
+      },
+      {
+        "name": "2_Environment_And_Setup.md",
+        "path": "Lua/2_Environment_And_Setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 4851
+      },
+      {
+        "name": "3_Values_And_Types.md",
+        "path": "Lua/3_Values_And_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 3944
+      },
+      {
+        "name": "4_Variables_Scopes_And_Environments.md",
+        "path": "Lua/4_Variables_Scopes_And_Environments.md",
+        "type": "file",
+        "sha": "",
+        "size": 3674
+      },
+      {
+        "name": "5_Lexical_Conventions_Blocks_And_Chunks.md",
+        "path": "Lua/5_Lexical_Conventions_Blocks_And_Chunks.md",
+        "type": "file",
+        "sha": "",
+        "size": 3971
+      },
+      {
+        "name": "6_Statements.md",
+        "path": "Lua/6_Statements.md",
+        "type": "file",
+        "sha": "",
+        "size": 4784
+      },
+      {
+        "name": "7_Expressions_And_Operators.md",
+        "path": "Lua/7_Expressions_And_Operators.md",
+        "type": "file",
+        "sha": "",
+        "size": 4048
+      },
+      {
+        "name": "8_Functions_Calls_And_Definitions.md",
+        "path": "Lua/8_Functions_Calls_And_Definitions.md",
+        "type": "file",
+        "sha": "",
+        "size": 3650
+      },
+      {
+        "name": "9_Error_Handling.md",
+        "path": "Lua/9_Error_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 2310
+      },
+      {
+        "name": "README.md",
+        "path": "Lua/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 4850
+      }
+    ]
+  },
+  {
+    "name": "Move",
+    "path": "Move",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Move.md",
+        "path": "Move/1_What_Is_Move.md",
+        "type": "file",
+        "sha": "",
+        "size": 6870
+      },
+      {
+        "name": "10_Move_VM_And_Bytecode.md",
+        "path": "Move/10_Move_VM_And_Bytecode.md",
+        "type": "file",
+        "sha": "",
+        "size": 2938
+      },
+      {
+        "name": "11_Security_And_Audit_Patterns.md",
+        "path": "Move/11_Security_And_Audit_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 4008
+      },
+      {
+        "name": "12_Use_Cases_And_Engineering_Perspectives.md",
+        "path": "Move/12_Use_Cases_And_Engineering_Perspectives.md",
+        "type": "file",
+        "sha": "",
+        "size": 3380
+      },
+      {
+        "name": "13_Move_On_Aptos_Overview.md",
+        "path": "Move/13_Move_On_Aptos_Overview.md",
+        "type": "file",
+        "sha": "",
+        "size": 4859
+      },
+      {
+        "name": "14_Aptos_Account_Model_And_Storage.md",
+        "path": "Move/14_Aptos_Account_Model_And_Storage.md",
+        "type": "file",
+        "sha": "",
+        "size": 4925
+      },
+      {
+        "name": "15_Aptos_Toolchain.md",
+        "path": "Move/15_Aptos_Toolchain.md",
+        "type": "file",
+        "sha": "",
+        "size": 4205
+      },
+      {
+        "name": "16_Aptos_Block_STM_And_Parallel_Execution.md",
+        "path": "Move/16_Aptos_Block_STM_And_Parallel_Execution.md",
+        "type": "file",
+        "sha": "",
+        "size": 4010
+      },
+      {
+        "name": "17_Aptos_Framework_And_Standard_Library.md",
+        "path": "Move/17_Aptos_Framework_And_Standard_Library.md",
+        "type": "file",
+        "sha": "",
+        "size": 3842
+      },
+      {
+        "name": "18_Aptos_Security_And_Formal_Verification.md",
+        "path": "Move/18_Aptos_Security_And_Formal_Verification.md",
+        "type": "file",
+        "sha": "",
+        "size": 3620
+      },
+      {
+        "name": "19_Aptos_Use_Cases_And_Patterns.md",
+        "path": "Move/19_Aptos_Use_Cases_And_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 3484
+      },
+      {
+        "name": "2_Environment_And_Toolchains.md",
+        "path": "Move/2_Environment_And_Toolchains.md",
+        "type": "file",
+        "sha": "",
+        "size": 5385
+      },
+      {
+        "name": "20_Move_On_Sui_Overview.md",
+        "path": "Move/20_Move_On_Sui_Overview.md",
+        "type": "file",
+        "sha": "",
+        "size": 4267
+      },
+      {
+        "name": "21_Sui_Object_Model.md",
+        "path": "Move/21_Sui_Object_Model.md",
+        "type": "file",
+        "sha": "",
+        "size": 4277
+      },
+      {
+        "name": "22_Sui_Toolchain.md",
+        "path": "Move/22_Sui_Toolchain.md",
+        "type": "file",
+        "sha": "",
+        "size": 3420
+      },
+      {
+        "name": "23_Sui_Programmable_Transaction_Blocks.md",
+        "path": "Move/23_Sui_Programmable_Transaction_Blocks.md",
+        "type": "file",
+        "sha": "",
+        "size": 3230
+      },
+      {
+        "name": "24_Sui_Dynamic_Fields_And_Collections.md",
+        "path": "Move/24_Sui_Dynamic_Fields_And_Collections.md",
+        "type": "file",
+        "sha": "",
+        "size": 2809
+      },
+      {
+        "name": "25_Sui_Entry_Functions_And_Module_Initializers.md",
+        "path": "Move/25_Sui_Entry_Functions_And_Module_Initializers.md",
+        "type": "file",
+        "sha": "",
+        "size": 3091
+      },
+      {
+        "name": "26_Sui_Security_And_Gas_Model.md",
+        "path": "Move/26_Sui_Security_And_Gas_Model.md",
+        "type": "file",
+        "sha": "",
+        "size": 3043
+      },
+      {
+        "name": "27_Sui_Use_Cases_And_Patterns.md",
+        "path": "Move/27_Sui_Use_Cases_And_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 3259
+      },
+      {
+        "name": "28_Comparison_And_Choosing_A_Platform.md",
+        "path": "Move/28_Comparison_And_Choosing_A_Platform.md",
+        "type": "file",
+        "sha": "",
+        "size": 11188
+      },
+      {
+        "name": "3_Modules_And_Scripts.md",
+        "path": "Move/3_Modules_And_Scripts.md",
+        "type": "file",
+        "sha": "",
+        "size": 3152
+      },
+      {
+        "name": "4_Structs_And_Resources.md",
+        "path": "Move/4_Structs_And_Resources.md",
+        "type": "file",
+        "sha": "",
+        "size": 3074
+      },
+      {
+        "name": "5_Abilities.md",
+        "path": "Move/5_Abilities.md",
+        "type": "file",
+        "sha": "",
+        "size": 2477
+      },
+      {
+        "name": "6_Global_Storage.md",
+        "path": "Move/6_Global_Storage.md",
+        "type": "file",
+        "sha": "",
+        "size": 3516
+      },
+      {
+        "name": "7_References_And_Ownership.md",
+        "path": "Move/7_References_And_Ownership.md",
+        "type": "file",
+        "sha": "",
+        "size": 2668
+      },
+      {
+        "name": "8_Functions_And_Visibility.md",
+        "path": "Move/8_Functions_And_Visibility.md",
+        "type": "file",
+        "sha": "",
+        "size": 6632
+      },
+      {
+        "name": "9_Generics_And_Type_System.md",
+        "path": "Move/9_Generics_And_Type_System.md",
+        "type": "file",
+        "sha": "",
+        "size": 2343
+      },
+      {
+        "name": "README.md",
+        "path": "Move/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 7449
+      }
+    ]
+  },
+  {
+    "name": "Nim",
+    "path": "Nim",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Is_Nim.md",
+        "path": "Nim/1_What_Is_Nim.md",
+        "type": "file",
+        "sha": "",
+        "size": 5084
+      },
+      {
+        "name": "10_Nimble_Package_Management.md",
+        "path": "Nim/10_Nimble_Package_Management.md",
+        "type": "file",
+        "sha": "",
+        "size": 2313
+      },
+      {
+        "name": "11_NimScript_And_Build_Automation.md",
+        "path": "Nim/11_NimScript_And_Build_Automation.md",
+        "type": "file",
+        "sha": "",
+        "size": 4117
+      },
+      {
+        "name": "12_Backend_Integration_And_Interop.md",
+        "path": "Nim/12_Backend_Integration_And_Interop.md",
+        "type": "file",
+        "sha": "",
+        "size": 4465
+      },
+      {
+        "name": "13_Testing_Debugging_And_Observability.md",
+        "path": "Nim/13_Testing_Debugging_And_Observability.md",
+        "type": "file",
+        "sha": "",
+        "size": 6184
+      },
+      {
+        "name": "14_Security_And_Reverse_Engineering_Perspectives.md",
+        "path": "Nim/14_Security_And_Reverse_Engineering_Perspectives.md",
+        "type": "file",
+        "sha": "",
+        "size": 3936
+      },
+      {
+        "name": "15_Use_Cases_And_Architecture_Patterns.md",
+        "path": "Nim/15_Use_Cases_And_Architecture_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 2875
+      },
+      {
+        "name": "16_Choosing_Nim_And_Engineering_Tradeoffs.md",
+        "path": "Nim/16_Choosing_Nim_And_Engineering_Tradeoffs.md",
+        "type": "file",
+        "sha": "",
+        "size": 3258
+      },
+      {
+        "name": "2_Environment_Toolchain_And_First_Build.md",
+        "path": "Nim/2_Environment_Toolchain_And_First_Build.md",
+        "type": "file",
+        "sha": "",
+        "size": 3602
+      },
+      {
+        "name": "3_Core_Syntax_Types_And_Control_Flow.md",
+        "path": "Nim/3_Core_Syntax_Types_And_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 2845
+      },
+      {
+        "name": "4_Procedures_Iterators_OOP_And_Exceptions.md",
+        "path": "Nim/4_Procedures_Iterators_OOP_And_Exceptions.md",
+        "type": "file",
+        "sha": "",
+        "size": 3194
+      },
+      {
+        "name": "5_Generics_Templates_And_Macros.md",
+        "path": "Nim/5_Generics_Templates_And_Macros.md",
+        "type": "file",
+        "sha": "",
+        "size": 2631
+      },
+      {
+        "name": "6_Modules_Imports_And_Project_Structure.md",
+        "path": "Nim/6_Modules_Imports_And_Project_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 2014
+      },
+      {
+        "name": "7_Memory_Model_References_And_Runtime.md",
+        "path": "Nim/7_Memory_Model_References_And_Runtime.md",
+        "type": "file",
+        "sha": "",
+        "size": 3861
+      },
+      {
+        "name": "8_Standard_Library_Essentials.md",
+        "path": "Nim/8_Standard_Library_Essentials.md",
+        "type": "file",
+        "sha": "",
+        "size": 6945
+      },
+      {
+        "name": "9_Compiler_User_Guide_And_Build_Targets.md",
+        "path": "Nim/9_Compiler_User_Guide_And_Build_Targets.md",
+        "type": "file",
+        "sha": "",
+        "size": 5442
+      },
+      {
+        "name": "README.md",
+        "path": "Nim/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 5567
+      }
+    ]
+  },
+  {
+    "name": "Objective-C",
+    "path": "Objective-C",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "01_Introduction_Platform_Binary_Model_Toolchain_And_First_Build.md",
+        "path": "Objective-C/01_Introduction_Platform_Binary_Model_Toolchain_And_First_Build.md",
+        "type": "file",
+        "sha": "",
+        "size": 6887
+      },
+      {
+        "name": "02_Messaging_Selectors_Types_And_Objective_C_Grammar.md",
+        "path": "Objective-C/02_Messaging_Selectors_Types_And_Objective_C_Grammar.md",
+        "type": "file",
+        "sha": "",
+        "size": 5225
+      },
+      {
+        "name": "03_Classes_Properties_Protocols_Categories_And_Oop.md",
+        "path": "Objective-C/03_Classes_Properties_Protocols_Categories_And_Oop.md",
+        "type": "file",
+        "sha": "",
+        "size": 5573
+      },
+      {
+        "name": "04_Memory_ARC_And_CoreFoundation_Bridging.md",
+        "path": "Objective-C/04_Memory_ARC_And_CoreFoundation_Bridging.md",
+        "type": "file",
+        "sha": "",
+        "size": 5045
+      },
+      {
+        "name": "05_Runtime_Dispatch_Forwarding_And_Dynamic_Features.md",
+        "path": "Objective-C/05_Runtime_Dispatch_Forwarding_And_Dynamic_Features.md",
+        "type": "file",
+        "sha": "",
+        "size": 5188
+      },
+      {
+        "name": "06_Foundation_Collections_Serialization_Errors_And_Logging.md",
+        "path": "Objective-C/06_Foundation_Collections_Serialization_Errors_And_Logging.md",
+        "type": "file",
+        "sha": "",
+        "size": 4685
+      },
+      {
+        "name": "07_Blocks_GCD_And_Concurrency.md",
+        "path": "Objective-C/07_Blocks_GCD_And_Concurrency.md",
+        "type": "file",
+        "sha": "",
+        "size": 4625
+      },
+      {
+        "name": "08_Swift_Interop_Bridging_And_Mixed_Targets.md",
+        "path": "Objective-C/08_Swift_Interop_Bridging_And_Mixed_Targets.md",
+        "type": "file",
+        "sha": "",
+        "size": 4255
+      },
+      {
+        "name": "09_Build_Clang_Linking_And_Release_Artifacts.md",
+        "path": "Objective-C/09_Build_Clang_Linking_And_Release_Artifacts.md",
+        "type": "file",
+        "sha": "",
+        "size": 4524
+      },
+      {
+        "name": "10_Testing_Debugging_Sanitizers_And_Observability.md",
+        "path": "Objective-C/10_Testing_Debugging_Sanitizers_And_Observability.md",
+        "type": "file",
+        "sha": "",
+        "size": 4210
+      },
+      {
+        "name": "11_Security_Signing_Sandbox_Hardening_And_Re.md",
+        "path": "Objective-C/11_Security_Signing_Sandbox_Hardening_And_Re.md",
+        "type": "file",
+        "sha": "",
+        "size": 4368
+      },
+      {
+        "name": "12_Objective_C_Plus_Plus_Migration_Swift_Comparison_And_Patterns.md",
+        "path": "Objective-C/12_Objective_C_Plus_Plus_Migration_Swift_Comparison_And_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 4895
+      },
+      {
+        "name": "README.md",
+        "path": "Objective-C/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 6519
+      }
+    ]
+  },
+  {
+    "name": "OCaml",
+    "path": "OCaml",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "01_Introduction_Platform_And_First_Program.md",
+        "path": "OCaml/01_Introduction_Platform_And_First_Program.md",
+        "type": "file",
+        "sha": "",
+        "size": 11310
+      },
+      {
+        "name": "02_Core_Syntax_Types_And_Pattern_Matching.md",
+        "path": "OCaml/02_Core_Syntax_Types_And_Pattern_Matching.md",
+        "type": "file",
+        "sha": "",
+        "size": 20438
+      },
+      {
+        "name": "03_Modules_Signatures_Functors_And_Encapsulation.md",
+        "path": "OCaml/03_Modules_Signatures_Functors_And_Encapsulation.md",
+        "type": "file",
+        "sha": "",
+        "size": 10824
+      },
+      {
+        "name": "04_Opam_Dune_Reproducible_Builds_And_CI.md",
+        "path": "OCaml/04_Opam_Dune_Reproducible_Builds_And_CI.md",
+        "type": "file",
+        "sha": "",
+        "size": 10660
+      },
+      {
+        "name": "05_Memory_Gc_Mutability_And_FFI_Edges.md",
+        "path": "OCaml/05_Memory_Gc_Mutability_And_FFI_Edges.md",
+        "type": "file",
+        "sha": "",
+        "size": 9275
+      },
+      {
+        "name": "06_Concurrency_Domains_Effects_And_Async.md",
+        "path": "OCaml/06_Concurrency_Domains_Effects_And_Async.md",
+        "type": "file",
+        "sha": "",
+        "size": 8151
+      },
+      {
+        "name": "07_C_Interop_Ctypes_Stubs_And_Linking.md",
+        "path": "OCaml/07_C_Interop_Ctypes_Stubs_And_Linking.md",
+        "type": "file",
+        "sha": "",
+        "size": 6337
+      },
+      {
+        "name": "08_Testing_Debugging_And_Observability.md",
+        "path": "OCaml/08_Testing_Debugging_And_Observability.md",
+        "type": "file",
+        "sha": "",
+        "size": 8640
+      },
+      {
+        "name": "09_Security_Supply_Chain_Binaries_And_Assurance.md",
+        "path": "OCaml/09_Security_Supply_Chain_Binaries_And_Assurance.md",
+        "type": "file",
+        "sha": "",
+        "size": 5009
+      },
+      {
+        "name": "10_Use_Cases_Mirage_Compilers_Verification.md",
+        "path": "OCaml/10_Use_Cases_Mirage_Compilers_Verification.md",
+        "type": "file",
+        "sha": "",
+        "size": 4823
+      },
+      {
+        "name": "11_Standard_Library_Data_Structures_And_Idioms.md",
+        "path": "OCaml/11_Standard_Library_Data_Structures_And_Idioms.md",
+        "type": "file",
+        "sha": "",
+        "size": 8799
+      },
+      {
+        "name": "12_Metaprogramming_Operators_Objects_And_Compiler.md",
+        "path": "OCaml/12_Metaprogramming_Operators_Objects_And_Compiler.md",
+        "type": "file",
+        "sha": "",
+        "size": 7062
+      },
+      {
+        "name": "README.md",
+        "path": "OCaml/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 9659
+      }
+    ]
+  },
+  {
+    "name": "Perl",
+    "path": "Perl",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "01_Introduction_Platform_Toolchain_And_First_Script.md",
+        "path": "Perl/01_Introduction_Platform_Toolchain_And_First_Script.md",
+        "type": "file",
+        "sha": "",
+        "size": 11273
+      },
+      {
+        "name": "02_Scalars_Context_And_Core_Syntax.md",
+        "path": "Perl/02_Scalars_Context_And_Core_Syntax.md",
+        "type": "file",
+        "sha": "",
+        "size": 8186
+      },
+      {
+        "name": "03_Arrays_Hashes_Lists_And_Control_Flow.md",
+        "path": "Perl/03_Arrays_Hashes_Lists_And_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 6970
+      },
+      {
+        "name": "04_Regular_Expressions_And_Text_Processing.md",
+        "path": "Perl/04_Regular_Expressions_And_Text_Processing.md",
+        "type": "file",
+        "sha": "",
+        "size": 6820
+      },
+      {
+        "name": "05_Subroutines_Packages_And_Modules.md",
+        "path": "Perl/05_Subroutines_Packages_And_Modules.md",
+        "type": "file",
+        "sha": "",
+        "size": 7051
+      },
+      {
+        "name": "06_CPAN_Installers_And_Reproducible_Environments.md",
+        "path": "Perl/06_CPAN_Installers_And_Reproducible_Environments.md",
+        "type": "file",
+        "sha": "",
+        "size": 5895
+      },
+      {
+        "name": "07_References_And_Complex_Data.md",
+        "path": "Perl/07_References_And_Complex_Data.md",
+        "type": "file",
+        "sha": "",
+        "size": 4892
+      },
+      {
+        "name": "08_Object_Oriented_Perl_And_Design.md",
+        "path": "Perl/08_Object_Oriented_Perl_And_Design.md",
+        "type": "file",
+        "sha": "",
+        "size": 6185
+      },
+      {
+        "name": "09_Processes_IO_And_Security_Boundaries.md",
+        "path": "Perl/09_Processes_IO_And_Security_Boundaries.md",
+        "type": "file",
+        "sha": "",
+        "size": 6005
+      },
+      {
+        "name": "10_Testing_Debugging_And_Profiling.md",
+        "path": "Perl/10_Testing_Debugging_And_Profiling.md",
+        "type": "file",
+        "sha": "",
+        "size": 4790
+      },
+      {
+        "name": "11_CI_Deployment_Cron_And_Operations.md",
+        "path": "Perl/11_CI_Deployment_Cron_And_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 4835
+      },
+      {
+        "name": "12_Use_Cases_Supply_Chain_And_Migration.md",
+        "path": "Perl/12_Use_Cases_Supply_Chain_And_Migration.md",
+        "type": "file",
+        "sha": "",
+        "size": 4993
+      },
+      {
+        "name": "13_Networking_TLS_HTTP_And_Clients.md",
+        "path": "Perl/13_Networking_TLS_HTTP_And_Clients.md",
+        "type": "file",
+        "sha": "",
+        "size": 6771
+      },
+      {
+        "name": "14_Databases_DBI_And_SQL_Boundaries.md",
+        "path": "Perl/14_Databases_DBI_And_SQL_Boundaries.md",
+        "type": "file",
+        "sha": "",
+        "size": 5719
+      },
+      {
+        "name": "15_Web_PSGI_Plack_CGI_And_Frameworks.md",
+        "path": "Perl/15_Web_PSGI_Plack_CGI_And_Frameworks.md",
+        "type": "file",
+        "sha": "",
+        "size": 6768
+      },
+      {
+        "name": "16_XS_Embedding_And_C_Boundary.md",
+        "path": "Perl/16_XS_Embedding_And_C_Boundary.md",
+        "type": "file",
+        "sha": "",
+        "size": 5502
+      },
+      {
+        "name": "README.md",
+        "path": "Perl/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 20148
+      }
+    ]
+  },
+  {
+    "name": "PHP",
+    "path": "PHP",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "01_Introduction_PHP_Runtime_SAPIs_Toolchain_And_First_Script.md",
+        "path": "PHP/01_Introduction_PHP_Runtime_SAPIs_Toolchain_And_First_Script.md",
+        "type": "file",
+        "sha": "",
+        "size": 13935
+      },
+      {
+        "name": "02_Types_Coercion_Operators_And_Expressions.md",
+        "path": "PHP/02_Types_Coercion_Operators_And_Expressions.md",
+        "type": "file",
+        "sha": "",
+        "size": 10691
+      },
+      {
+        "name": "03_Control_Flow_Functions_Namespaces_And_Autoloading.md",
+        "path": "PHP/03_Control_Flow_Functions_Namespaces_And_Autoloading.md",
+        "type": "file",
+        "sha": "",
+        "size": 7231
+      },
+      {
+        "name": "04_Arrays_Strings_Encoding_And_Serialization.md",
+        "path": "PHP/04_Arrays_Strings_Encoding_And_Serialization.md",
+        "type": "file",
+        "sha": "",
+        "size": 7603
+      },
+      {
+        "name": "05_Classes_Objects_OOP_And_Modern_Features.md",
+        "path": "PHP/05_Classes_Objects_OOP_And_Modern_Features.md",
+        "type": "file",
+        "sha": "",
+        "size": 5720
+      },
+      {
+        "name": "06_Errors_Exceptions_And_Production_Logging.md",
+        "path": "PHP/06_Errors_Exceptions_And_Production_Logging.md",
+        "type": "file",
+        "sha": "",
+        "size": 5819
+      },
+      {
+        "name": "07_Composer_Dependencies_And_Reproducible_Builds.md",
+        "path": "PHP/07_Composer_Dependencies_And_Reproducible_Builds.md",
+        "type": "file",
+        "sha": "",
+        "size": 6232
+      },
+      {
+        "name": "08_Files_Streams_Processes_And_Security_Boundaries.md",
+        "path": "PHP/08_Files_Streams_Processes_And_Security_Boundaries.md",
+        "type": "file",
+        "sha": "",
+        "size": 4453
+      },
+      {
+        "name": "09_Web_Request_Lifecycle_Sessions_And_Input_Handling.md",
+        "path": "PHP/09_Web_Request_Lifecycle_Sessions_And_Input_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 8530
+      },
+      {
+        "name": "10_Databases_PDO_SQL_And_Connection_Management.md",
+        "path": "PHP/10_Databases_PDO_SQL_And_Connection_Management.md",
+        "type": "file",
+        "sha": "",
+        "size": 4456
+      },
+      {
+        "name": "11_PHP_FPM_Web_Servers_OpCache_And_Performance.md",
+        "path": "PHP/11_PHP_FPM_Web_Servers_OpCache_And_Performance.md",
+        "type": "file",
+        "sha": "",
+        "size": 6514
+      },
+      {
+        "name": "12_Testing_Debugging_And_Profiling.md",
+        "path": "PHP/12_Testing_Debugging_And_Profiling.md",
+        "type": "file",
+        "sha": "",
+        "size": 4091
+      },
+      {
+        "name": "13_CI_Deployment_Environments_And_Operations.md",
+        "path": "PHP/13_CI_Deployment_Environments_And_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 4731
+      },
+      {
+        "name": "14_Security_Hardening_Supply_Chain_And_Threat_Model.md",
+        "path": "PHP/14_Security_Hardening_Supply_Chain_And_Threat_Model.md",
+        "type": "file",
+        "sha": "",
+        "size": 5068
+      },
+      {
+        "name": "15_Concurrency_Queues_And_Long_Running_Workloads.md",
+        "path": "PHP/15_Concurrency_Queues_And_Long_Running_Workloads.md",
+        "type": "file",
+        "sha": "",
+        "size": 4321
+      },
+      {
+        "name": "16_Frameworks_Ecosystem_Version_Migration_And_Use_Cases.md",
+        "path": "PHP/16_Frameworks_Ecosystem_Version_Migration_And_Use_Cases.md",
+        "type": "file",
+        "sha": "",
+        "size": 8322
+      },
+      {
+        "name": "17_Pre_Framework_Competency_Domains_And_Active_Ecosystem.md",
+        "path": "PHP/17_Pre_Framework_Competency_Domains_And_Active_Ecosystem.md",
+        "type": "file",
+        "sha": "",
+        "size": 10854
+      },
+      {
+        "name": "18_Generators_Iterators_Fibers_And_Execution_Patterns.md",
+        "path": "PHP/18_Generators_Iterators_Fibers_And_Execution_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 3806
+      },
+      {
+        "name": "19_Predefined_Variables_Interfaces_Classes_And_Reflection.md",
+        "path": "PHP/19_Predefined_Variables_Interfaces_Classes_And_Reflection.md",
+        "type": "file",
+        "sha": "",
+        "size": 3603
+      },
+      {
+        "name": "20_Protocols_Wrappers_Context_Options_And_Stream_Integration.md",
+        "path": "PHP/20_Protocols_Wrappers_Context_Options_And_Stream_Integration.md",
+        "type": "file",
+        "sha": "",
+        "size": 3587
+      },
+      {
+        "name": "21_Extension_Landscape_Interoperability_And_Production_Selection.md",
+        "path": "PHP/21_Extension_Landscape_Interoperability_And_Production_Selection.md",
+        "type": "file",
+        "sha": "",
+        "size": 3358
+      },
+      {
+        "name": "22_Interoperability_Edge_Cases_And_Production_Pitfalls.md",
+        "path": "PHP/22_Interoperability_Edge_Cases_And_Production_Pitfalls.md",
+        "type": "file",
+        "sha": "",
+        "size": 11091
+      },
+      {
+        "name": "README.md",
+        "path": "PHP/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 14747
+      }
+    ]
+  },
+  {
+    "name": "Python",
+    "path": "Python",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "01_Introduction_Python_CPython_Interpreter_And_First_Steps.md",
+        "path": "Python/01_Introduction_Python_CPython_Interpreter_And_First_Steps.md",
+        "type": "file",
+        "sha": "",
+        "size": 8265
+      },
+      {
+        "name": "02_Numbers_Text_Bytes_Unicode_And_Core_Semantics.md",
+        "path": "Python/02_Numbers_Text_Bytes_Unicode_And_Core_Semantics.md",
+        "type": "file",
+        "sha": "",
+        "size": 5502
+      },
+      {
+        "name": "03_Control_Flow_Functions_Match_Parameters_And_Style.md",
+        "path": "Python/03_Control_Flow_Functions_Match_Parameters_And_Style.md",
+        "type": "file",
+        "sha": "",
+        "size": 6023
+      },
+      {
+        "name": "04_Data_Structures_Comprehensions_And_Algorithmic_Idioms.md",
+        "path": "Python/04_Data_Structures_Comprehensions_And_Algorithmic_Idioms.md",
+        "type": "file",
+        "sha": "",
+        "size": 5082
+      },
+      {
+        "name": "05_Modules_Packages_Import_System_And_Main.md",
+        "path": "Python/05_Modules_Packages_Import_System_And_Main.md",
+        "type": "file",
+        "sha": "",
+        "size": 4640
+      },
+      {
+        "name": "06_IO_Formatting_Files_Encodings_And_JSON.md",
+        "path": "Python/06_IO_Formatting_Files_Encodings_And_JSON.md",
+        "type": "file",
+        "sha": "",
+        "size": 4308
+      },
+      {
+        "name": "07_Errors_Exceptions_Context_Managers_And_Cleanup.md",
+        "path": "Python/07_Errors_Exceptions_Context_Managers_And_Cleanup.md",
+        "type": "file",
+        "sha": "",
+        "size": 4631
+      },
+      {
+        "name": "08_Classes_Protocols_Iterators_And_Generators.md",
+        "path": "Python/08_Classes_Protocols_Iterators_And_Generators.md",
+        "type": "file",
+        "sha": "",
+        "size": 4505
+      },
+      {
+        "name": "09_Standard_Library_Part_I_OS_CLI_Text_Time_Net_Quality.md",
+        "path": "Python/09_Standard_Library_Part_I_OS_CLI_Text_Time_Net_Quality.md",
+        "type": "file",
+        "sha": "",
+        "size": 5298
+      },
+      {
+        "name": "10_Standard_Library_Part_II_Formatting_Threading_Logging_Decimal.md",
+        "path": "Python/10_Standard_Library_Part_II_Formatting_Threading_Logging_Decimal.md",
+        "type": "file",
+        "sha": "",
+        "size": 4213
+      },
+      {
+        "name": "11_Virtual_Environments_Pip_And_Reproducible_Dependencies.md",
+        "path": "Python/11_Virtual_Environments_Pip_And_Reproducible_Dependencies.md",
+        "type": "file",
+        "sha": "",
+        "size": 3292
+      },
+      {
+        "name": "12_Floating_Point_Limitations_And_Decimal_Arithmetic.md",
+        "path": "Python/12_Floating_Point_Limitations_And_Decimal_Arithmetic.md",
+        "type": "file",
+        "sha": "",
+        "size": 2713
+      },
+      {
+        "name": "13_Type_Hints_Protocols_And_Static_Analysis.md",
+        "path": "Python/13_Type_Hints_Protocols_And_Static_Analysis.md",
+        "type": "file",
+        "sha": "",
+        "size": 3325
+      },
+      {
+        "name": "14_Concurrency_GIL_Threading_Asyncio_And_Multiprocessing.md",
+        "path": "Python/14_Concurrency_GIL_Threading_Asyncio_And_Multiprocessing.md",
+        "type": "file",
+        "sha": "",
+        "size": 3644
+      },
+      {
+        "name": "15_Security_Unsafe_Patterns_And_Supply_Chain.md",
+        "path": "Python/15_Security_Unsafe_Patterns_And_Supply_Chain.md",
+        "type": "file",
+        "sha": "",
+        "size": 3367
+      },
+      {
+        "name": "16_Testing_Debugging_And_Profiling.md",
+        "path": "Python/16_Testing_Debugging_And_Profiling.md",
+        "type": "file",
+        "sha": "",
+        "size": 2762
+      },
+      {
+        "name": "17_Packaging_CI_Containers_And_Operations.md",
+        "path": "Python/17_Packaging_CI_Containers_And_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 3045
+      },
+      {
+        "name": "18_Ecosystem_Domains_And_Competency_Map.md",
+        "path": "Python/18_Ecosystem_Domains_And_Competency_Map.md",
+        "type": "file",
+        "sha": "",
+        "size": 3450
+      },
+      {
+        "name": "19_Runtime_Edge_Cases_Interop_And_Observability.md",
+        "path": "Python/19_Runtime_Edge_Cases_Interop_And_Observability.md",
+        "type": "file",
+        "sha": "",
+        "size": 4053
+      },
+      {
+        "name": "README.md",
+        "path": "Python/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 12334
+      }
+    ]
+  },
+  {
+    "name": "R",
+    "path": "R",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "01_Introduction_Runtime_And_First_Scripts.md",
+        "path": "R/01_Introduction_Runtime_And_First_Scripts.md",
+        "type": "file",
+        "sha": "",
+        "size": 8048
+      },
+      {
+        "name": "02_Syntax_Types_Vectors_And_Coercion.md",
+        "path": "R/02_Syntax_Types_Vectors_And_Coercion.md",
+        "type": "file",
+        "sha": "",
+        "size": 6232
+      },
+      {
+        "name": "03_Control_Flow_Functions_Environments_And_Scoping.md",
+        "path": "R/03_Control_Flow_Functions_Environments_And_Scoping.md",
+        "type": "file",
+        "sha": "",
+        "size": 4849
+      },
+      {
+        "name": "04_Core_Data_Structures.md",
+        "path": "R/04_Core_Data_Structures.md",
+        "type": "file",
+        "sha": "",
+        "size": 4647
+      },
+      {
+        "name": "05_Packages_Namespaces_And_Project_Structure.md",
+        "path": "R/05_Packages_Namespaces_And_Project_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 4696
+      },
+      {
+        "name": "06_Data_IO_CSV_Excel_JSON_XML_Databases.md",
+        "path": "R/06_Data_IO_CSV_Excel_JSON_XML_Databases.md",
+        "type": "file",
+        "sha": "",
+        "size": 4849
+      },
+      {
+        "name": "07_Data_Transformation_And_Reshaping.md",
+        "path": "R/07_Data_Transformation_And_Reshaping.md",
+        "type": "file",
+        "sha": "",
+        "size": 4070
+      },
+      {
+        "name": "08_Visualization_Engineering.md",
+        "path": "R/08_Visualization_Engineering.md",
+        "type": "file",
+        "sha": "",
+        "size": 3598
+      },
+      {
+        "name": "09_Statistical_Modeling_Fundamentals.md",
+        "path": "R/09_Statistical_Modeling_Fundamentals.md",
+        "type": "file",
+        "sha": "",
+        "size": 3852
+      },
+      {
+        "name": "10_Time_Series_And_Advanced_Modeling.md",
+        "path": "R/10_Time_Series_And_Advanced_Modeling.md",
+        "type": "file",
+        "sha": "",
+        "size": 3508
+      },
+      {
+        "name": "11_Reproducibility_Environments_And_Dependency_Locking.md",
+        "path": "R/11_Reproducibility_Environments_And_Dependency_Locking.md",
+        "type": "file",
+        "sha": "",
+        "size": 3325
+      },
+      {
+        "name": "12_Performance_Memory_And_Profiling.md",
+        "path": "R/12_Performance_Memory_And_Profiling.md",
+        "type": "file",
+        "sha": "",
+        "size": 3431
+      },
+      {
+        "name": "13_Testing_Quality_And_Code_Review.md",
+        "path": "R/13_Testing_Quality_And_Code_Review.md",
+        "type": "file",
+        "sha": "",
+        "size": 3657
+      },
+      {
+        "name": "14_Security_And_Supply_Chain.md",
+        "path": "R/14_Security_And_Supply_Chain.md",
+        "type": "file",
+        "sha": "",
+        "size": 3589
+      },
+      {
+        "name": "15_Automation_CI_CD_And_Operations.md",
+        "path": "R/15_Automation_CI_CD_And_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 3440
+      },
+      {
+        "name": "16_Ecosystem_Use_Cases_And_Competency_Map.md",
+        "path": "R/16_Ecosystem_Use_Cases_And_Competency_Map.md",
+        "type": "file",
+        "sha": "",
+        "size": 3949
+      },
+      {
+        "name": "README.md",
+        "path": "R/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 6743
+      }
+    ]
+  },
+  {
+    "name": "Ruby",
+    "path": "Ruby",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "01_Introduction_MRI_Runtime_And_First_Scripts.md",
+        "path": "Ruby/01_Introduction_MRI_Runtime_And_First_Scripts.md",
+        "type": "file",
+        "sha": "",
+        "size": 12512
+      },
+      {
+        "name": "02_Syntax_Literals_Operators_And_Precedence.md",
+        "path": "Ruby/02_Syntax_Literals_Operators_And_Precedence.md",
+        "type": "file",
+        "sha": "",
+        "size": 10589
+      },
+      {
+        "name": "03_Control_Flow_Blocks_Procs_And_Methods.md",
+        "path": "Ruby/03_Control_Flow_Blocks_Procs_And_Methods.md",
+        "type": "file",
+        "sha": "",
+        "size": 11154
+      },
+      {
+        "name": "04_Classes_Modules_And_Object_Model.md",
+        "path": "Ruby/04_Classes_Modules_And_Object_Model.md",
+        "type": "file",
+        "sha": "",
+        "size": 9862
+      },
+      {
+        "name": "05_Core_Types_Strings_Collections_And_Time.md",
+        "path": "Ruby/05_Core_Types_Strings_Collections_And_Time.md",
+        "type": "file",
+        "sha": "",
+        "size": 9551
+      },
+      {
+        "name": "06_Enumerable_Iteration_And_Pattern_Matching.md",
+        "path": "Ruby/06_Enumerable_Iteration_And_Pattern_Matching.md",
+        "type": "file",
+        "sha": "",
+        "size": 7195
+      },
+      {
+        "name": "07_Exceptions_Fibers_Threading_And_GVL.md",
+        "path": "Ruby/07_Exceptions_Fibers_Threading_And_GVL.md",
+        "type": "file",
+        "sha": "",
+        "size": 10651
+      },
+      {
+        "name": "08_Metaprogramming_And_DSL_Patterns.md",
+        "path": "Ruby/08_Metaprogramming_And_DSL_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 7640
+      },
+      {
+        "name": "09_Load_Path_Require_Gems_And_Packaging.md",
+        "path": "Ruby/09_Load_Path_Require_Gems_And_Packaging.md",
+        "type": "file",
+        "sha": "",
+        "size": 7364
+      },
+      {
+        "name": "10_Files_Processes_IO_And_Networking.md",
+        "path": "Ruby/10_Files_Processes_IO_And_Networking.md",
+        "type": "file",
+        "sha": "",
+        "size": 9040
+      },
+      {
+        "name": "11_Standard_Library_Part_I_Data_CLI_Logging.md",
+        "path": "Ruby/11_Standard_Library_Part_I_Data_CLI_Logging.md",
+        "type": "file",
+        "sha": "",
+        "size": 7043
+      },
+      {
+        "name": "12_Standard_Library_Part_II_Net_Crypto_And_Ops.md",
+        "path": "Ruby/12_Standard_Library_Part_II_Net_Crypto_And_Ops.md",
+        "type": "file",
+        "sha": "",
+        "size": 6797
+      },
+      {
+        "name": "13_RubyGems_Bundler_And_Reproducible_Dependencies.md",
+        "path": "Ruby/13_RubyGems_Bundler_And_Reproducible_Dependencies.md",
+        "type": "file",
+        "sha": "",
+        "size": 7563
+      },
+      {
+        "name": "14_GC_Memory_Profiling_And_Performance.md",
+        "path": "Ruby/14_GC_Memory_Profiling_And_Performance.md",
+        "type": "file",
+        "sha": "",
+        "size": 7612
+      },
+      {
+        "name": "15_YJIT_Native_Extensions_And_Runtime_Internals.md",
+        "path": "Ruby/15_YJIT_Native_Extensions_And_Runtime_Internals.md",
+        "type": "file",
+        "sha": "",
+        "size": 8176
+      },
+      {
+        "name": "16_JRuby_JVM_Threads_And_Deployment.md",
+        "path": "Ruby/16_JRuby_JVM_Threads_And_Deployment.md",
+        "type": "file",
+        "sha": "",
+        "size": 8153
+      },
+      {
+        "name": "17_TruffleRuby_And_GraalVM.md",
+        "path": "Ruby/17_TruffleRuby_And_GraalVM.md",
+        "type": "file",
+        "sha": "",
+        "size": 6569
+      },
+      {
+        "name": "18_Alternate_Implementations_And_Embedded_Ruby.md",
+        "path": "Ruby/18_Alternate_Implementations_And_Embedded_Ruby.md",
+        "type": "file",
+        "sha": "",
+        "size": 8506
+      },
+      {
+        "name": "19_Testing_Debugging_And_Quality.md",
+        "path": "Ruby/19_Testing_Debugging_And_Quality.md",
+        "type": "file",
+        "sha": "",
+        "size": 7078
+      },
+      {
+        "name": "20_Security_Unsafe_Patterns_And_Supply_Chain.md",
+        "path": "Ruby/20_Security_Unsafe_Patterns_And_Supply_Chain.md",
+        "type": "file",
+        "sha": "",
+        "size": 7180
+      },
+      {
+        "name": "21_CI_Containers_And_Operations.md",
+        "path": "Ruby/21_CI_Containers_And_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 7335
+      },
+      {
+        "name": "22_Ecosystem_DevOps_Tools_And_Competency_Map.md",
+        "path": "Ruby/22_Ecosystem_DevOps_Tools_And_Competency_Map.md",
+        "type": "file",
+        "sha": "",
+        "size": 6360
+      },
+      {
+        "name": "README.md",
+        "path": "Ruby/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 7230
+      }
+    ]
+  },
+  {
+    "name": "Rust",
+    "path": "Rust",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "01_What_Is_Rust_And_Why_Teams_Use_It.md",
+        "path": "Rust/01_What_Is_Rust_And_Why_Teams_Use_It.md",
+        "type": "file",
+        "sha": "",
+        "size": 14678
+      },
+      {
+        "name": "02_Toolchain_Rustup_Rustc_Cargo_And_Editions.md",
+        "path": "Rust/02_Toolchain_Rustup_Rustc_Cargo_And_Editions.md",
+        "type": "file",
+        "sha": "",
+        "size": 20200
+      },
+      {
+        "name": "03_Cargo_Projects_Crates_And_Workspaces.md",
+        "path": "Rust/03_Cargo_Projects_Crates_And_Workspaces.md",
+        "type": "file",
+        "sha": "",
+        "size": 24317
+      },
+      {
+        "name": "04_Syntax_Types_And_Ownership_Basics.md",
+        "path": "Rust/04_Syntax_Types_And_Ownership_Basics.md",
+        "type": "file",
+        "sha": "",
+        "size": 23025
+      },
+      {
+        "name": "05_Ownership_Borrowing_And_Lifetimes.md",
+        "path": "Rust/05_Ownership_Borrowing_And_Lifetimes.md",
+        "type": "file",
+        "sha": "",
+        "size": 20788
+      },
+      {
+        "name": "06_Structs_Enums_And_Pattern_Matching.md",
+        "path": "Rust/06_Structs_Enums_And_Pattern_Matching.md",
+        "type": "file",
+        "sha": "",
+        "size": 17934
+      },
+      {
+        "name": "07_Error_Handling_Result_Option_And_Panic.md",
+        "path": "Rust/07_Error_Handling_Result_Option_And_Panic.md",
+        "type": "file",
+        "sha": "",
+        "size": 16878
+      },
+      {
+        "name": "08_Traits_Generics_And_Advanced_Lifetimes.md",
+        "path": "Rust/08_Traits_Generics_And_Advanced_Lifetimes.md",
+        "type": "file",
+        "sha": "",
+        "size": 21722
+      },
+      {
+        "name": "09_Collections_Iterators_And_Closures.md",
+        "path": "Rust/09_Collections_Iterators_And_Closures.md",
+        "type": "file",
+        "sha": "",
+        "size": 10079
+      },
+      {
+        "name": "10_Packages_Modules_And_Visibility.md",
+        "path": "Rust/10_Packages_Modules_And_Visibility.md",
+        "type": "file",
+        "sha": "",
+        "size": 17151
+      },
+      {
+        "name": "11_Std_For_Operations_Fs_Process_Env_Net.md",
+        "path": "Rust/11_Std_For_Operations_Fs_Process_Env_Net.md",
+        "type": "file",
+        "sha": "",
+        "size": 26180
+      },
+      {
+        "name": "12_Concurrency_Threads_Sync_Send_Sync.md",
+        "path": "Rust/12_Concurrency_Threads_Sync_Send_Sync.md",
+        "type": "file",
+        "sha": "",
+        "size": 18179
+      },
+      {
+        "name": "13_Async_Rust_Runtimes_And_Pitfalls.md",
+        "path": "Rust/13_Async_Rust_Runtimes_And_Pitfalls.md",
+        "type": "file",
+        "sha": "",
+        "size": 20766
+      },
+      {
+        "name": "14_Unsafe_FFI_And_Boundaries.md",
+        "path": "Rust/14_Unsafe_FFI_And_Boundaries.md",
+        "type": "file",
+        "sha": "",
+        "size": 23462
+      },
+      {
+        "name": "15_Testing_Clippy_Rustfmt_And_Docs.md",
+        "path": "Rust/15_Testing_Clippy_Rustfmt_And_Docs.md",
+        "type": "file",
+        "sha": "",
+        "size": 19311
+      },
+      {
+        "name": "16_Cross_Compile_Targets_And_Release_Builds.md",
+        "path": "Rust/16_Cross_Compile_Targets_And_Release_Builds.md",
+        "type": "file",
+        "sha": "",
+        "size": 16772
+      },
+      {
+        "name": "17_Security_And_Supply_Chain.md",
+        "path": "Rust/17_Security_And_Supply_Chain.md",
+        "type": "file",
+        "sha": "",
+        "size": 14457
+      },
+      {
+        "name": "18_Use_Cases_CLI_Agents_Infra_Embedded.md",
+        "path": "Rust/18_Use_Cases_CLI_Agents_Infra_Embedded.md",
+        "type": "file",
+        "sha": "",
+        "size": 15065
+      },
+      {
+        "name": "19_Production_CI_Containers_And_Observability.md",
+        "path": "Rust/19_Production_CI_Containers_And_Observability.md",
+        "type": "file",
+        "sha": "",
+        "size": 16935
+      },
+      {
+        "name": "20_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "path": "Rust/20_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "type": "file",
+        "sha": "",
+        "size": 13937
+      },
+      {
+        "name": "README.md",
+        "path": "Rust/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 8747
+      }
+    ]
+  },
+  {
+    "name": "Scala",
+    "path": "Scala",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "01_What_Is_Scala_And_Why_JVM_Teams_Use_It.md",
+        "path": "Scala/01_What_Is_Scala_And_Why_JVM_Teams_Use_It.md",
+        "type": "file",
+        "sha": "",
+        "size": 16491
+      },
+      {
+        "name": "02_Toolchain_JDK_Scala3_Sbt_And_Versions.md",
+        "path": "Scala/02_Toolchain_JDK_Scala3_Sbt_And_Versions.md",
+        "type": "file",
+        "sha": "",
+        "size": 14770
+      },
+      {
+        "name": "03_Syntax_Expressions_Vals_And_Vars.md",
+        "path": "Scala/03_Syntax_Expressions_Vals_And_Vars.md",
+        "type": "file",
+        "sha": "",
+        "size": 13910
+      },
+      {
+        "name": "04_Types_Hierarchy_And_Null_Safety.md",
+        "path": "Scala/04_Types_Hierarchy_And_Null_Safety.md",
+        "type": "file",
+        "sha": "",
+        "size": 13648
+      },
+      {
+        "name": "05_Control_Flow_And_Expressions.md",
+        "path": "Scala/05_Control_Flow_And_Expressions.md",
+        "type": "file",
+        "sha": "",
+        "size": 12610
+      },
+      {
+        "name": "06_Functions_Methods_And_Higher_Order.md",
+        "path": "Scala/06_Functions_Methods_And_Higher_Order.md",
+        "type": "file",
+        "sha": "",
+        "size": 13834
+      },
+      {
+        "name": "07_Classes_Objects_Traits_And_Case_Classes.md",
+        "path": "Scala/07_Classes_Objects_Traits_And_Case_Classes.md",
+        "type": "file",
+        "sha": "",
+        "size": 13559
+      },
+      {
+        "name": "08_Collections_Option_Either_And_Try.md",
+        "path": "Scala/08_Collections_Option_Either_And_Try.md",
+        "type": "file",
+        "sha": "",
+        "size": 12662
+      },
+      {
+        "name": "09_Pattern_Matching_And_Algebraic_Data.md",
+        "path": "Scala/09_Pattern_Matching_And_Algebraic_Data.md",
+        "type": "file",
+        "sha": "",
+        "size": 11997
+      },
+      {
+        "name": "10_Packages_Imports_And_Visibility.md",
+        "path": "Scala/10_Packages_Imports_And_Visibility.md",
+        "type": "file",
+        "sha": "",
+        "size": 11523
+      },
+      {
+        "name": "11_Sbt_Projects_Dependencies_And_Packaging.md",
+        "path": "Scala/11_Sbt_Projects_Dependencies_And_Packaging.md",
+        "type": "file",
+        "sha": "",
+        "size": 15593
+      },
+      {
+        "name": "12_Java_Interop_And_The_JVM.md",
+        "path": "Scala/12_Java_Interop_And_The_JVM.md",
+        "type": "file",
+        "sha": "",
+        "size": 17121
+      },
+      {
+        "name": "13_Concurrency_Futures_And_Effects_Literacy.md",
+        "path": "Scala/13_Concurrency_Futures_And_Effects_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 22300
+      },
+      {
+        "name": "14_Testing_Style_And_Scaladoc.md",
+        "path": "Scala/14_Testing_Style_And_Scaladoc.md",
+        "type": "file",
+        "sha": "",
+        "size": 18945
+      },
+      {
+        "name": "15_Security_And_Supply_Chain.md",
+        "path": "Scala/15_Security_And_Supply_Chain.md",
+        "type": "file",
+        "sha": "",
+        "size": 26301
+      },
+      {
+        "name": "16_Build_Containers_And_JVM_Operations.md",
+        "path": "Scala/16_Build_Containers_And_JVM_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 18158
+      },
+      {
+        "name": "17_Use_Cases_Services_Spark_And_Kafka.md",
+        "path": "Scala/17_Use_Cases_Services_Spark_And_Kafka.md",
+        "type": "file",
+        "sha": "",
+        "size": 15259
+      },
+      {
+        "name": "18_Spark_Data_Engineering_And_Architecture.md",
+        "path": "Scala/18_Spark_Data_Engineering_And_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 26854
+      },
+      {
+        "name": "19_Kafka_Streaming_And_Pipeline_Architecture.md",
+        "path": "Scala/19_Kafka_Streaming_And_Pipeline_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 29168
+      },
+      {
+        "name": "20_DevSecOps_Threat_Modeling_And_Hardening.md",
+        "path": "Scala/20_DevSecOps_Threat_Modeling_And_Hardening.md",
+        "type": "file",
+        "sha": "",
+        "size": 24838
+      },
+      {
+        "name": "21_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "path": "Scala/21_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "type": "file",
+        "sha": "",
+        "size": 17416
+      },
+      {
+        "name": "README.md",
+        "path": "Scala/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 7429
+      }
+    ]
+  },
+  {
+    "name": "Shell",
+    "path": "Shell",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "00_First_Steps_In_The_Terminal.md",
+        "path": "Shell/00_First_Steps_In_The_Terminal.md",
+        "type": "file",
+        "sha": "",
+        "size": 17471
+      },
+      {
+        "name": "01_What_Is_A_Shell_Bash_POSIX_And_The_Family.md",
+        "path": "Shell/01_What_Is_A_Shell_Bash_POSIX_And_The_Family.md",
+        "type": "file",
+        "sha": "",
+        "size": 24741
+      },
+      {
+        "name": "02_Versions_Legacy_Pins_And_Compatibility.md",
+        "path": "Shell/02_Versions_Legacy_Pins_And_Compatibility.md",
+        "type": "file",
+        "sha": "",
+        "size": 21935
+      },
+      {
+        "name": "03_Toolchain_Shebangs_And_Environments.md",
+        "path": "Shell/03_Toolchain_Shebangs_And_Environments.md",
+        "type": "file",
+        "sha": "",
+        "size": 12310
+      },
+      {
+        "name": "04_Words_Quoting_And_Expansion_Order.md",
+        "path": "Shell/04_Words_Quoting_And_Expansion_Order.md",
+        "type": "file",
+        "sha": "",
+        "size": 11430
+      },
+      {
+        "name": "05_Variables_Parameters_And_Special_Parameters.md",
+        "path": "Shell/05_Variables_Parameters_And_Special_Parameters.md",
+        "type": "file",
+        "sha": "",
+        "size": 10933
+      },
+      {
+        "name": "06_Control_Flow_And_Exit_Status.md",
+        "path": "Shell/06_Control_Flow_And_Exit_Status.md",
+        "type": "file",
+        "sha": "",
+        "size": 10843
+      },
+      {
+        "name": "07_Functions_And_Script_Structure.md",
+        "path": "Shell/07_Functions_And_Script_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 10671
+      },
+      {
+        "name": "08_Redirection_Pipelines_And_Job_Control.md",
+        "path": "Shell/08_Redirection_Pipelines_And_Job_Control.md",
+        "type": "file",
+        "sha": "",
+        "size": 13975
+      },
+      {
+        "name": "09_Bash_Extensions_In_Depth.md",
+        "path": "Shell/09_Bash_Extensions_In_Depth.md",
+        "type": "file",
+        "sha": "",
+        "size": 11948
+      },
+      {
+        "name": "10_Portable_POSIX_Sh_Scripting.md",
+        "path": "Shell/10_Portable_POSIX_Sh_Scripting.md",
+        "type": "file",
+        "sha": "",
+        "size": 11325
+      },
+      {
+        "name": "11_Zsh_And_MacOS_Scripting.md",
+        "path": "Shell/11_Zsh_And_MacOS_Scripting.md",
+        "type": "file",
+        "sha": "",
+        "size": 21015
+      },
+      {
+        "name": "12_PowerShell_As_A_Scripting_Language.md",
+        "path": "Shell/12_PowerShell_As_A_Scripting_Language.md",
+        "type": "file",
+        "sha": "",
+        "size": 11895
+      },
+      {
+        "name": "13_Cmd_And_Batch_Scripting.md",
+        "path": "Shell/13_Cmd_And_Batch_Scripting.md",
+        "type": "file",
+        "sha": "",
+        "size": 11365
+      },
+      {
+        "name": "14_Commands_Files_Paths_And_Processes.md",
+        "path": "Shell/14_Commands_Files_Paths_And_Processes.md",
+        "type": "file",
+        "sha": "",
+        "size": 27413
+      },
+      {
+        "name": "15_Commands_Text_Search_And_Data_Shaping.md",
+        "path": "Shell/15_Commands_Text_Search_And_Data_Shaping.md",
+        "type": "file",
+        "sha": "",
+        "size": 23818
+      },
+      {
+        "name": "16_Robust_Scripts_Errors_Traps_And_Idioms.md",
+        "path": "Shell/16_Robust_Scripts_Errors_Traps_And_Idioms.md",
+        "type": "file",
+        "sha": "",
+        "size": 11386
+      },
+      {
+        "name": "17_Testing_ShellCheck_And_PS_Analysis.md",
+        "path": "Shell/17_Testing_ShellCheck_And_PS_Analysis.md",
+        "type": "file",
+        "sha": "",
+        "size": 13132
+      },
+      {
+        "name": "18_Security_Injection_Secrets_And_Trust.md",
+        "path": "Shell/18_Security_Injection_Secrets_And_Trust.md",
+        "type": "file",
+        "sha": "",
+        "size": 20985
+      },
+      {
+        "name": "19_Use_Cases_CI_Ops_And_Cross_OS.md",
+        "path": "Shell/19_Use_Cases_CI_Ops_And_Cross_OS.md",
+        "type": "file",
+        "sha": "",
+        "size": 12536
+      },
+      {
+        "name": "20_Linux_Distros_Sh_And_Userland_Differences.md",
+        "path": "Shell/20_Linux_Distros_Sh_And_Userland_Differences.md",
+        "type": "file",
+        "sha": "",
+        "size": 22766
+      },
+      {
+        "name": "21_Legacy_Timelines_And_Security_Engineering.md",
+        "path": "Shell/21_Legacy_Timelines_And_Security_Engineering.md",
+        "type": "file",
+        "sha": "",
+        "size": 24183
+      },
+      {
+        "name": "22_Shell_Subsets_In_Extreme_Depth.md",
+        "path": "Shell/22_Shell_Subsets_In_Extreme_Depth.md",
+        "type": "file",
+        "sha": "",
+        "size": 29814
+      },
+      {
+        "name": "23_How_To_Read_Any_Command_Flags_Letter_By_Letter.md",
+        "path": "Shell/23_How_To_Read_Any_Command_Flags_Letter_By_Letter.md",
+        "type": "file",
+        "sha": "",
+        "size": 13788
+      },
+      {
+        "name": "24_Jq_And_Structured_Data_In_Scripts.md",
+        "path": "Shell/24_Jq_And_Structured_Data_In_Scripts.md",
+        "type": "file",
+        "sha": "",
+        "size": 15798
+      },
+      {
+        "name": "25_Network_Process_Recon_Commands_For_Ops_And_Security.md",
+        "path": "Shell/25_Network_Process_Recon_Commands_For_Ops_And_Security.md",
+        "type": "file",
+        "sha": "",
+        "size": 16252
+      },
+      {
+        "name": "26_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "path": "Shell/26_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "type": "file",
+        "sha": "",
+        "size": 20253
+      },
+      {
+        "name": "27_Command_Atlas_Complete_Shell_Command_Surface.md",
+        "path": "Shell/27_Command_Atlas_Complete_Shell_Command_Surface.md",
+        "type": "file",
+        "sha": "",
+        "size": 28583
+      },
+      {
+        "name": "28_Bash_And_POSIX_Builtins_In_Extreme_Depth.md",
+        "path": "Shell/28_Bash_And_POSIX_Builtins_In_Extreme_Depth.md",
+        "type": "file",
+        "sha": "",
+        "size": 19440
+      },
+      {
+        "name": "29_Commands_Identity_Time_Env_Disks_And_System.md",
+        "path": "Shell/29_Commands_Identity_Time_Env_Disks_And_System.md",
+        "type": "file",
+        "sha": "",
+        "size": 12613
+      },
+      {
+        "name": "30_Commands_Archives_Checksums_And_Transfer.md",
+        "path": "Shell/30_Commands_Archives_Checksums_And_Transfer.md",
+        "type": "file",
+        "sha": "",
+        "size": 12223
+      },
+      {
+        "name": "31_PowerShell_Cmdlet_Atlas_And_Cmd_Builtins.md",
+        "path": "Shell/31_PowerShell_Cmdlet_Atlas_And_Cmd_Builtins.md",
+        "type": "file",
+        "sha": "",
+        "size": 14451
+      },
+      {
+        "name": "32_Terminal_TTY_And_Command_Eras_Across_OS.md",
+        "path": "Shell/32_Terminal_TTY_And_Command_Eras_Across_OS.md",
+        "type": "file",
+        "sha": "",
+        "size": 23679
+      },
+      {
+        "name": "README.md",
+        "path": "Shell/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 11539
+      }
+    ]
+  },
+  {
+    "name": "Solidity",
+    "path": "Solidity",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "00_First_Steps_On_The_EVM.md",
+        "path": "Solidity/00_First_Steps_On_The_EVM.md",
+        "type": "file",
+        "sha": "",
+        "size": 14381
+      },
+      {
+        "name": "01_What_Is_Solidity_And_The_EVM.md",
+        "path": "Solidity/01_What_Is_Solidity_And_The_EVM.md",
+        "type": "file",
+        "sha": "",
+        "size": 13966
+      },
+      {
+        "name": "02_Versions_Pragmas_And_Breaking_Changes.md",
+        "path": "Solidity/02_Versions_Pragmas_And_Breaking_Changes.md",
+        "type": "file",
+        "sha": "",
+        "size": 10330
+      },
+      {
+        "name": "03_Toolchain_Solc_Remix_Foundry_Hardhat.md",
+        "path": "Solidity/03_Toolchain_Solc_Remix_Foundry_Hardhat.md",
+        "type": "file",
+        "sha": "",
+        "size": 9180
+      },
+      {
+        "name": "04_Source_Files_SPDX_Pragma_And_Imports.md",
+        "path": "Solidity/04_Source_Files_SPDX_Pragma_And_Imports.md",
+        "type": "file",
+        "sha": "",
+        "size": 6790
+      },
+      {
+        "name": "05_Structure_Of_A_Contract.md",
+        "path": "Solidity/05_Structure_Of_A_Contract.md",
+        "type": "file",
+        "sha": "",
+        "size": 9026
+      },
+      {
+        "name": "06_Types_Value_Reference_And_Conversions.md",
+        "path": "Solidity/06_Types_Value_Reference_And_Conversions.md",
+        "type": "file",
+        "sha": "",
+        "size": 9629
+      },
+      {
+        "name": "07_Units_Globals_And_Blockchain_Context.md",
+        "path": "Solidity/07_Units_Globals_And_Blockchain_Context.md",
+        "type": "file",
+        "sha": "",
+        "size": 11632
+      },
+      {
+        "name": "08_Functions_Visibility_Modifiers_And_Payable.md",
+        "path": "Solidity/08_Functions_Visibility_Modifiers_And_Payable.md",
+        "type": "file",
+        "sha": "",
+        "size": 11186
+      },
+      {
+        "name": "09_Control_Flow_Errors_And_Checked_Math.md",
+        "path": "Solidity/09_Control_Flow_Errors_And_Checked_Math.md",
+        "type": "file",
+        "sha": "",
+        "size": 11019
+      },
+      {
+        "name": "10_Events_Custom_Errors_And_NatSpec.md",
+        "path": "Solidity/10_Events_Custom_Errors_And_NatSpec.md",
+        "type": "file",
+        "sha": "",
+        "size": 8726
+      },
+      {
+        "name": "11_Data_Locations_Storage_Memory_Calldata_Transient.md",
+        "path": "Solidity/11_Data_Locations_Storage_Memory_Calldata_Transient.md",
+        "type": "file",
+        "sha": "",
+        "size": 10537
+      },
+      {
+        "name": "12_Mappings_Arrays_Structs_And_Enums.md",
+        "path": "Solidity/12_Mappings_Arrays_Structs_And_Enums.md",
+        "type": "file",
+        "sha": "",
+        "size": 10129
+      },
+      {
+        "name": "13_Inheritance_Interfaces_And_Libraries.md",
+        "path": "Solidity/13_Inheritance_Interfaces_And_Libraries.md",
+        "type": "file",
+        "sha": "",
+        "size": 10080
+      },
+      {
+        "name": "14_ABI_Selectors_And_Encoding.md",
+        "path": "Solidity/14_ABI_Selectors_And_Encoding.md",
+        "type": "file",
+        "sha": "",
+        "size": 11143
+      },
+      {
+        "name": "15_Calls_Value_Transfer_And_Creating_Contracts.md",
+        "path": "Solidity/15_Calls_Value_Transfer_And_Creating_Contracts.md",
+        "type": "file",
+        "sha": "",
+        "size": 12325
+      },
+      {
+        "name": "16_Gas_Optimizer_ViaIR_And_Metadata.md",
+        "path": "Solidity/16_Gas_Optimizer_ViaIR_And_Metadata.md",
+        "type": "file",
+        "sha": "",
+        "size": 10159
+      },
+      {
+        "name": "17_Testing_With_Foundry_And_Hardhat.md",
+        "path": "Solidity/17_Testing_With_Foundry_And_Hardhat.md",
+        "type": "file",
+        "sha": "",
+        "size": 7808
+      },
+      {
+        "name": "18_Security_Review_Reentrancy_Access_And_Trust.md",
+        "path": "Solidity/18_Security_Review_Reentrancy_Access_And_Trust.md",
+        "type": "file",
+        "sha": "",
+        "size": 11695
+      },
+      {
+        "name": "19_Static_Analysis_SMTChecker_And_Audits.md",
+        "path": "Solidity/19_Static_Analysis_SMTChecker_And_Audits.md",
+        "type": "file",
+        "sha": "",
+        "size": 6813
+      },
+      {
+        "name": "20_DevOps_CI_Verify_Keys_And_Upgrades.md",
+        "path": "Solidity/20_DevOps_CI_Verify_Keys_And_Upgrades.md",
+        "type": "file",
+        "sha": "",
+        "size": 9820
+      },
+      {
+        "name": "21_Yul_Assembly_And_EVM_Internals_Literacy.md",
+        "path": "Solidity/21_Yul_Assembly_And_EVM_Internals_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 10002
+      },
+      {
+        "name": "22_Use_Cases_Tokens_Apps_And_Whole_Engineering.md",
+        "path": "Solidity/22_Use_Cases_Tokens_Apps_And_Whole_Engineering.md",
+        "type": "file",
+        "sha": "",
+        "size": 9164
+      },
+      {
+        "name": "23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "path": "Solidity/23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "type": "file",
+        "sha": "",
+        "size": 7173
+      },
+      {
+        "name": "24_Where_This_Is_Going_And_How_To_Stay_Oriented.md",
+        "path": "Solidity/24_Where_This_Is_Going_And_How_To_Stay_Oriented.md",
+        "type": "file",
+        "sha": "",
+        "size": 17629
+      },
+      {
+        "name": "README.md",
+        "path": "Solidity/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 12364
+      }
+    ]
+  },
+  {
+    "name": "Swift",
+    "path": "Swift",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "00_First_Steps_Toolchain_And_Hello.md",
+        "path": "Swift/00_First_Steps_Toolchain_And_Hello.md",
+        "type": "file",
+        "sha": "",
+        "size": 21746
+      },
+      {
+        "name": "01_What_Is_Swift.md",
+        "path": "Swift/01_What_Is_Swift.md",
+        "type": "file",
+        "sha": "",
+        "size": 24053
+      },
+      {
+        "name": "02_Versions_Language_Modes_And_Swift_6.md",
+        "path": "Swift/02_Versions_Language_Modes_And_Swift_6.md",
+        "type": "file",
+        "sha": "",
+        "size": 22153
+      },
+      {
+        "name": "03_Toolchains_Swift_Org_Xcode_Linux_Windows.md",
+        "path": "Swift/03_Toolchains_Swift_Org_Xcode_Linux_Windows.md",
+        "type": "file",
+        "sha": "",
+        "size": 21358
+      },
+      {
+        "name": "04_Syntax_Bindings_Types_Optionals.md",
+        "path": "Swift/04_Syntax_Bindings_Types_Optionals.md",
+        "type": "file",
+        "sha": "",
+        "size": 18782
+      },
+      {
+        "name": "05_Control_Flow_Functions_Closures.md",
+        "path": "Swift/05_Control_Flow_Functions_Closures.md",
+        "type": "file",
+        "sha": "",
+        "size": 17846
+      },
+      {
+        "name": "06_Structs_Classes_Enums_Value_And_Reference.md",
+        "path": "Swift/06_Structs_Classes_Enums_Value_And_Reference.md",
+        "type": "file",
+        "sha": "",
+        "size": 20289
+      },
+      {
+        "name": "07_Properties_Methods_Init_Deinit.md",
+        "path": "Swift/07_Properties_Methods_Init_Deinit.md",
+        "type": "file",
+        "sha": "",
+        "size": 17769
+      },
+      {
+        "name": "08_Protocols_Extensions_Generics_Opaque_Types.md",
+        "path": "Swift/08_Protocols_Extensions_Generics_Opaque_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 23110
+      },
+      {
+        "name": "09_Error_Handling.md",
+        "path": "Swift/09_Error_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 17870
+      },
+      {
+        "name": "10_Concurrency_Async_Await_Tasks_Actors.md",
+        "path": "Swift/10_Concurrency_Async_Await_Tasks_Actors.md",
+        "type": "file",
+        "sha": "",
+        "size": 25078
+      },
+      {
+        "name": "11_ARC_Memory_Safety_Access_Control.md",
+        "path": "Swift/11_ARC_Memory_Safety_Access_Control.md",
+        "type": "file",
+        "sha": "",
+        "size": 21765
+      },
+      {
+        "name": "12_Standard_Library_Literacy.md",
+        "path": "Swift/12_Standard_Library_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 16950
+      },
+      {
+        "name": "13_Foundation_And_Core_Libraries.md",
+        "path": "Swift/13_Foundation_And_Core_Libraries.md",
+        "type": "file",
+        "sha": "",
+        "size": 19147
+      },
+      {
+        "name": "14_Swift_Package_Manager.md",
+        "path": "Swift/14_Swift_Package_Manager.md",
+        "type": "file",
+        "sha": "",
+        "size": 19019
+      },
+      {
+        "name": "15_Modules_Imports_And_Interop.md",
+        "path": "Swift/15_Modules_Imports_And_Interop.md",
+        "type": "file",
+        "sha": "",
+        "size": 18869
+      },
+      {
+        "name": "16_Testing_Swift_Testing_And_XCTest.md",
+        "path": "Swift/16_Testing_Swift_Testing_And_XCTest.md",
+        "type": "file",
+        "sha": "",
+        "size": 15342
+      },
+      {
+        "name": "17_DocC_And_API_Design_Guidelines.md",
+        "path": "Swift/17_DocC_And_API_Design_Guidelines.md",
+        "type": "file",
+        "sha": "",
+        "size": 19344
+      },
+      {
+        "name": "18_Xcode_Projects_Schemes_Build_Settings.md",
+        "path": "Swift/18_Xcode_Projects_Schemes_Build_Settings.md",
+        "type": "file",
+        "sha": "",
+        "size": 18176
+      },
+      {
+        "name": "19_SwiftUI_UIKit_AppKit_Surface_Literacy.md",
+        "path": "Swift/19_SwiftUI_UIKit_AppKit_Surface_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 19039
+      },
+      {
+        "name": "20_Security_Privacy_Signing_And_Secrets.md",
+        "path": "Swift/20_Security_Privacy_Signing_And_Secrets.md",
+        "type": "file",
+        "sha": "",
+        "size": 42737
+      },
+      {
+        "name": "21_CI_CD_Xcode_Cloud_Fastlane_Mac_Runners.md",
+        "path": "Swift/21_CI_CD_Xcode_Cloud_Fastlane_Mac_Runners.md",
+        "type": "file",
+        "sha": "",
+        "size": 28417
+      },
+      {
+        "name": "22_Use_Cases_Scripts_Packages_Apps_Server_Glance.md",
+        "path": "Swift/22_Use_Cases_Scripts_Packages_Apps_Server_Glance.md",
+        "type": "file",
+        "sha": "",
+        "size": 15444
+      },
+      {
+        "name": "23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "path": "Swift/23_Whole_Engineering_Wrap_And_Staff_Checklist.md",
+        "type": "file",
+        "sha": "",
+        "size": 19437
+      },
+      {
+        "name": "24_Where_Swift_Is_Going_And_Adjacent_Doors.md",
+        "path": "Swift/24_Where_Swift_Is_Going_And_Adjacent_Doors.md",
+        "type": "file",
+        "sha": "",
+        "size": 21496
+      },
+      {
+        "name": "README.md",
+        "path": "Swift/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 14248
+      }
+    ]
+  },
+  {
+    "name": "Tcl",
+    "path": "Tcl",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "00_First_Steps_Tclsh_And_Hello.md",
+        "path": "Tcl/00_First_Steps_Tclsh_And_Hello.md",
+        "type": "file",
+        "sha": "",
+        "size": 13655
+      },
+      {
+        "name": "01_What_Is_Tcl_And_Where_It_Lives.md",
+        "path": "Tcl/01_What_Is_Tcl_And_Where_It_Lives.md",
+        "type": "file",
+        "sha": "",
+        "size": 26601
+      },
+      {
+        "name": "02_Versions_Tcl8_Vs_Tcl9_And_Migration.md",
+        "path": "Tcl/02_Versions_Tcl8_Vs_Tcl9_And_Migration.md",
+        "type": "file",
+        "sha": "",
+        "size": 11756
+      },
+      {
+        "name": "03_Syntax_Words_Substitution_And_Quoting.md",
+        "path": "Tcl/03_Syntax_Words_Substitution_And_Quoting.md",
+        "type": "file",
+        "sha": "",
+        "size": 12221
+      },
+      {
+        "name": "04_Variables_Arrays_Namespaces_And_Scope.md",
+        "path": "Tcl/04_Variables_Arrays_Namespaces_And_Scope.md",
+        "type": "file",
+        "sha": "",
+        "size": 9090
+      },
+      {
+        "name": "05_Control_Flow_Procs_And_Return.md",
+        "path": "Tcl/05_Control_Flow_Procs_And_Return.md",
+        "type": "file",
+        "sha": "",
+        "size": 12726
+      },
+      {
+        "name": "06_Lists_And_Dictionaries.md",
+        "path": "Tcl/06_Lists_And_Dictionaries.md",
+        "type": "file",
+        "sha": "",
+        "size": 12578
+      },
+      {
+        "name": "07_Strings_Regex_Encoding_And_Unicode.md",
+        "path": "Tcl/07_Strings_Regex_Encoding_And_Unicode.md",
+        "type": "file",
+        "sha": "",
+        "size": 16688
+      },
+      {
+        "name": "08_Files_Channels_Exec_And_Environment.md",
+        "path": "Tcl/08_Files_Channels_Exec_And_Environment.md",
+        "type": "file",
+        "sha": "",
+        "size": 18951
+      },
+      {
+        "name": "09_Errors_Catch_Trace_And_Introspection.md",
+        "path": "Tcl/09_Errors_Catch_Trace_And_Introspection.md",
+        "type": "file",
+        "sha": "",
+        "size": 13800
+      },
+      {
+        "name": "10_Packages_Namespaces_And_Libraries.md",
+        "path": "Tcl/10_Packages_Namespaces_And_Libraries.md",
+        "type": "file",
+        "sha": "",
+        "size": 18278
+      },
+      {
+        "name": "11_Event_Loop_Sockets_And_Async_IO.md",
+        "path": "Tcl/11_Event_Loop_Sockets_And_Async_IO.md",
+        "type": "file",
+        "sha": "",
+        "size": 13088
+      },
+      {
+        "name": "12_Coroutines_Threads_And_Child_Interps.md",
+        "path": "Tcl/12_Coroutines_Threads_And_Child_Interps.md",
+        "type": "file",
+        "sha": "",
+        "size": 11439
+      },
+      {
+        "name": "13_Tk_Surface_Literacy.md",
+        "path": "Tcl/13_Tk_Surface_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 13704
+      },
+      {
+        "name": "14_C_API_Embedding_And_Extensions.md",
+        "path": "Tcl/14_C_API_Embedding_And_Extensions.md",
+        "type": "file",
+        "sha": "",
+        "size": 12574
+      },
+      {
+        "name": "15_Expect_Interactive_Automation.md",
+        "path": "Tcl/15_Expect_Interactive_Automation.md",
+        "type": "file",
+        "sha": "",
+        "size": 15906
+      },
+      {
+        "name": "16_Security_Review_Of_Tcl_Automation.md",
+        "path": "Tcl/16_Security_Review_Of_Tcl_Automation.md",
+        "type": "file",
+        "sha": "",
+        "size": 13425
+      },
+      {
+        "name": "17_Use_Cases_And_Engineering_Perspectives.md",
+        "path": "Tcl/17_Use_Cases_And_Engineering_Perspectives.md",
+        "type": "file",
+        "sha": "",
+        "size": 11518
+      },
+      {
+        "name": "18_Where_Tcl_Is_Going_And_Adjacent_Doors.md",
+        "path": "Tcl/18_Where_Tcl_Is_Going_And_Adjacent_Doors.md",
+        "type": "file",
+        "sha": "",
+        "size": 16392
+      },
+      {
+        "name": "README.md",
+        "path": "Tcl/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 8130
+      }
+    ]
+  },
+  {
+    "name": "TypeScript",
+    "path": "TypeScript",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "00_First_Steps_Toolchain_And_Hello.md",
+        "path": "TypeScript/00_First_Steps_Toolchain_And_Hello.md",
+        "type": "file",
+        "sha": "",
+        "size": 7634
+      },
+      {
+        "name": "01_What_Is_TypeScript_And_Why_It_Exists.md",
+        "path": "TypeScript/01_What_Is_TypeScript_And_Why_It_Exists.md",
+        "type": "file",
+        "sha": "",
+        "size": 11313
+      },
+      {
+        "name": "02_Tsconfig_Modules_And_Compiler_Pin.md",
+        "path": "TypeScript/02_Tsconfig_Modules_And_Compiler_Pin.md",
+        "type": "file",
+        "sha": "",
+        "size": 11650
+      },
+      {
+        "name": "03_Everyday_Types_And_Type_System_Basics.md",
+        "path": "TypeScript/03_Everyday_Types_And_Type_System_Basics.md",
+        "type": "file",
+        "sha": "",
+        "size": 11145
+      },
+      {
+        "name": "04_Narrowing_Type_Guards_And_Control_Flow.md",
+        "path": "TypeScript/04_Narrowing_Type_Guards_And_Control_Flow.md",
+        "type": "file",
+        "sha": "",
+        "size": 12071
+      },
+      {
+        "name": "05_Functions_Call_Signatures_And_Overloads.md",
+        "path": "TypeScript/05_Functions_Call_Signatures_And_Overloads.md",
+        "type": "file",
+        "sha": "",
+        "size": 9137
+      },
+      {
+        "name": "06_Objects_Interfaces_And_Type_Aliases.md",
+        "path": "TypeScript/06_Objects_Interfaces_And_Type_Aliases.md",
+        "type": "file",
+        "sha": "",
+        "size": 12063
+      },
+      {
+        "name": "07_Unions_Intersections_Literals_And_Enums.md",
+        "path": "TypeScript/07_Unions_Intersections_Literals_And_Enums.md",
+        "type": "file",
+        "sha": "",
+        "size": 9281
+      },
+      {
+        "name": "08_Generics_Constraints_And_Inference.md",
+        "path": "TypeScript/08_Generics_Constraints_And_Inference.md",
+        "type": "file",
+        "sha": "",
+        "size": 15588
+      },
+      {
+        "name": "09_Classes_This_And_Heritage.md",
+        "path": "TypeScript/09_Classes_This_And_Heritage.md",
+        "type": "file",
+        "sha": "",
+        "size": 13235
+      },
+      {
+        "name": "10_Modules_Imports_Exports_And_Interop.md",
+        "path": "TypeScript/10_Modules_Imports_Exports_And_Interop.md",
+        "type": "file",
+        "sha": "",
+        "size": 17326
+      },
+      {
+        "name": "11_Error_Handling_Unknown_Never_And_Results.md",
+        "path": "TypeScript/11_Error_Handling_Unknown_Never_And_Results.md",
+        "type": "file",
+        "sha": "",
+        "size": 17398
+      },
+      {
+        "name": "12_Async_Promises_Abort_And_Concurrency.md",
+        "path": "TypeScript/12_Async_Promises_Abort_And_Concurrency.md",
+        "type": "file",
+        "sha": "",
+        "size": 12145
+      },
+      {
+        "name": "13_Runtime_Performance_What_The_Machine_Pays_For.md",
+        "path": "TypeScript/13_Runtime_Performance_What_The_Machine_Pays_For.md",
+        "type": "file",
+        "sha": "",
+        "size": 16062
+      },
+      {
+        "name": "14_File_IO_Streams_Paths_And_Bytes.md",
+        "path": "TypeScript/14_File_IO_Streams_Paths_And_Bytes.md",
+        "type": "file",
+        "sha": "",
+        "size": 18002
+      },
+      {
+        "name": "15_Performance_Faster_Builds_And_Typecheck.md",
+        "path": "TypeScript/15_Performance_Faster_Builds_And_Typecheck.md",
+        "type": "file",
+        "sha": "",
+        "size": 17271
+      },
+      {
+        "name": "16_Utility_Mapped_Conditional_And_Template_Types.md",
+        "path": "TypeScript/16_Utility_Mapped_Conditional_And_Template_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 13359
+      },
+      {
+        "name": "17_Declaration_Files_And_DefinitelyTyped.md",
+        "path": "TypeScript/17_Declaration_Files_And_DefinitelyTyped.md",
+        "type": "file",
+        "sha": "",
+        "size": 13150
+      },
+      {
+        "name": "18_Testing_Type_Aware_Vitest_And_Jest.md",
+        "path": "TypeScript/18_Testing_Type_Aware_Vitest_And_Jest.md",
+        "type": "file",
+        "sha": "",
+        "size": 11560
+      },
+      {
+        "name": "19_DOM_React_Surface_Literacy.md",
+        "path": "TypeScript/19_DOM_React_Surface_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 11228
+      },
+      {
+        "name": "20_Security_Supply_Chain_And_Safe_Config.md",
+        "path": "TypeScript/20_Security_Supply_Chain_And_Safe_Config.md",
+        "type": "file",
+        "sha": "",
+        "size": 11304
+      },
+      {
+        "name": "21_Use_Cases_And_Engineering_Perspectives.md",
+        "path": "TypeScript/21_Use_Cases_And_Engineering_Perspectives.md",
+        "type": "file",
+        "sha": "",
+        "size": 15401
+      },
+      {
+        "name": "22_Where_TypeScript_Is_Going_And_Adjacent_Doors.md",
+        "path": "TypeScript/22_Where_TypeScript_Is_Going_And_Adjacent_Doors.md",
+        "type": "file",
+        "sha": "",
+        "size": 19151
+      },
+      {
+        "name": "README.md",
+        "path": "TypeScript/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 12570
+      }
+    ]
+  },
+  {
+    "name": "VBA",
+    "path": "VBA",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "00_First_Steps_VBE_Macros_And_Hello.md",
+        "path": "VBA/00_First_Steps_VBE_Macros_And_Hello.md",
+        "type": "file",
+        "sha": "",
+        "size": 13314
+      },
+      {
+        "name": "01_What_Is_VBA_And_Where_It_Lives.md",
+        "path": "VBA/01_What_Is_VBA_And_Where_It_Lives.md",
+        "type": "file",
+        "sha": "",
+        "size": 10956
+      },
+      {
+        "name": "02_Modules_Procedures_Option_Explicit_And_Scope.md",
+        "path": "VBA/02_Modules_Procedures_Option_Explicit_And_Scope.md",
+        "type": "file",
+        "sha": "",
+        "size": 14220
+      },
+      {
+        "name": "03_Types_Variables_Variants_And_Conversions.md",
+        "path": "VBA/03_Types_Variables_Variants_And_Conversions.md",
+        "type": "file",
+        "sha": "",
+        "size": 12234
+      },
+      {
+        "name": "04_Control_Flow_And_Loops.md",
+        "path": "VBA/04_Control_Flow_And_Loops.md",
+        "type": "file",
+        "sha": "",
+        "size": 8060
+      },
+      {
+        "name": "05_Errors_On_Error_Err_And_Resume.md",
+        "path": "VBA/05_Errors_On_Error_Err_And_Resume.md",
+        "type": "file",
+        "sha": "",
+        "size": 9928
+      },
+      {
+        "name": "06_Strings_Dates_Collections_And_Dictionary.md",
+        "path": "VBA/06_Strings_Dates_Collections_And_Dictionary.md",
+        "type": "file",
+        "sha": "",
+        "size": 13708
+      },
+      {
+        "name": "07_Objects_With_CreateObject_And_GetObject.md",
+        "path": "VBA/07_Objects_With_CreateObject_And_GetObject.md",
+        "type": "file",
+        "sha": "",
+        "size": 10668
+      },
+      {
+        "name": "08_Excel_Object_Model_Literacy.md",
+        "path": "VBA/08_Excel_Object_Model_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 15870
+      },
+      {
+        "name": "09_Word_And_Other_Office_Hosts.md",
+        "path": "VBA/09_Word_And_Other_Office_Hosts.md",
+        "type": "file",
+        "sha": "",
+        "size": 13872
+      },
+      {
+        "name": "10_UserForms_And_Microsoft_Forms_Door.md",
+        "path": "VBA/10_UserForms_And_Microsoft_Forms_Door.md",
+        "type": "file",
+        "sha": "",
+        "size": 10183
+      },
+      {
+        "name": "11_Files_FSO_Environ_And_Shell.md",
+        "path": "VBA/11_Files_FSO_Environ_And_Shell.md",
+        "type": "file",
+        "sha": "",
+        "size": 15630
+      },
+      {
+        "name": "12_Events_And_Auto_Macros.md",
+        "path": "VBA/12_Events_And_Auto_Macros.md",
+        "type": "file",
+        "sha": "",
+        "size": 12355
+      },
+      {
+        "name": "13_Declare_And_Win32_API_Literacy.md",
+        "path": "VBA/13_Declare_And_Win32_API_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 11618
+      },
+      {
+        "name": "14_VBScript_WSH_And_Deprecation.md",
+        "path": "VBA/14_VBScript_WSH_And_Deprecation.md",
+        "type": "file",
+        "sha": "",
+        "size": 11376
+      },
+      {
+        "name": "15_Macro_Security_And_Enterprise_Defense.md",
+        "path": "VBA/15_Macro_Security_And_Enterprise_Defense.md",
+        "type": "file",
+        "sha": "",
+        "size": 13671
+      },
+      {
+        "name": "16_Reading_Malicious_Macros_Safely.md",
+        "path": "VBA/16_Reading_Malicious_Macros_Safely.md",
+        "type": "file",
+        "sha": "",
+        "size": 9479
+      },
+      {
+        "name": "17_Use_Cases_And_Engineering_Perspectives.md",
+        "path": "VBA/17_Use_Cases_And_Engineering_Perspectives.md",
+        "type": "file",
+        "sha": "",
+        "size": 9829
+      },
+      {
+        "name": "18_Where_VBA_Is_Going_And_Adjacent_Doors.md",
+        "path": "VBA/18_Where_VBA_Is_Going_And_Adjacent_Doors.md",
+        "type": "file",
+        "sha": "",
+        "size": 11496
+      },
+      {
+        "name": "README.md",
+        "path": "VBA/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 10493
+      }
+    ]
+  },
+  {
+    "name": "VBNet",
+    "path": "VBNet",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "00_First_Steps_SDK_DotNet_And_Hello.md",
+        "path": "VBNet/00_First_Steps_SDK_DotNet_And_Hello.md",
+        "type": "file",
+        "sha": "",
+        "size": 11312
+      },
+      {
+        "name": "01_What_VBNet_Is_And_Is_Not.md",
+        "path": "VBNet/01_What_VBNet_Is_And_Is_Not.md",
+        "type": "file",
+        "sha": "",
+        "size": 9801
+      },
+      {
+        "name": "02_Projects_Modules_Namespaces_And_Entry_Points.md",
+        "path": "VBNet/02_Projects_Modules_Namespaces_And_Entry_Points.md",
+        "type": "file",
+        "sha": "",
+        "size": 9249
+      },
+      {
+        "name": "03_Types_Variables_And_Option_Directives.md",
+        "path": "VBNet/03_Types_Variables_And_Option_Directives.md",
+        "type": "file",
+        "sha": "",
+        "size": 9820
+      },
+      {
+        "name": "04_Operators_Control_Flow_And_Loops.md",
+        "path": "VBNet/04_Operators_Control_Flow_And_Loops.md",
+        "type": "file",
+        "sha": "",
+        "size": 9242
+      },
+      {
+        "name": "05_Procedures_Parameters_Properties_And_Overloads.md",
+        "path": "VBNet/05_Procedures_Parameters_Properties_And_Overloads.md",
+        "type": "file",
+        "sha": "",
+        "size": 8616
+      },
+      {
+        "name": "06_Strings_Arrays_And_Collections.md",
+        "path": "VBNet/06_Strings_Arrays_And_Collections.md",
+        "type": "file",
+        "sha": "",
+        "size": 8621
+      },
+      {
+        "name": "07_Classes_Structures_Inheritance_And_Interfaces.md",
+        "path": "VBNet/07_Classes_Structures_Inheritance_And_Interfaces.md",
+        "type": "file",
+        "sha": "",
+        "size": 9793
+      },
+      {
+        "name": "08_Exceptions_And_Error_Handling.md",
+        "path": "VBNet/08_Exceptions_And_Error_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 8735
+      },
+      {
+        "name": "09_Generics_Delegates_Events_And_Lambdas.md",
+        "path": "VBNet/09_Generics_Delegates_Events_And_Lambdas.md",
+        "type": "file",
+        "sha": "",
+        "size": 8835
+      },
+      {
+        "name": "10_LINQ_And_Query_Expressions.md",
+        "path": "VBNet/10_LINQ_And_Query_Expressions.md",
+        "type": "file",
+        "sha": "",
+        "size": 9092
+      },
+      {
+        "name": "11_Async_And_Task_Literacy.md",
+        "path": "VBNet/11_Async_And_Task_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 8565
+      },
+      {
+        "name": "12_File_IO_Streams_And_My.md",
+        "path": "VBNet/12_File_IO_Streams_And_My.md",
+        "type": "file",
+        "sha": "",
+        "size": 8659
+      },
+      {
+        "name": "13_Assemblies_References_And_NuGet.md",
+        "path": "VBNet/13_Assemblies_References_And_NuGet.md",
+        "type": "file",
+        "sha": "",
+        "size": 10372
+      },
+      {
+        "name": "14_COM_Interop_And_PInvoke_Literacy.md",
+        "path": "VBNet/14_COM_Interop_And_PInvoke_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 8260
+      },
+      {
+        "name": "15_WinForms_And_Windows_Services_Doors.md",
+        "path": "VBNet/15_WinForms_And_Windows_Services_Doors.md",
+        "type": "file",
+        "sha": "",
+        "size": 8468
+      },
+      {
+        "name": "16_Security_And_Best_Practices.md",
+        "path": "VBNet/16_Security_And_Best_Practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 8082
+      },
+      {
+        "name": "17_Use_Cases_And_Engineering_Perspectives.md",
+        "path": "VBNet/17_Use_Cases_And_Engineering_Perspectives.md",
+        "type": "file",
+        "sha": "",
+        "size": 7530
+      },
+      {
+        "name": "18_Where_VBNet_Is_Going_And_Adjacent_Doors.md",
+        "path": "VBNet/18_Where_VBNet_Is_Going_And_Adjacent_Doors.md",
+        "type": "file",
+        "sha": "",
+        "size": 16764
+      },
+      {
+        "name": "README.md",
+        "path": "VBNet/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 11532
+      }
+    ]
+  },
+  {
+    "name": "Vyper",
+    "path": "Vyper",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "00_First_Steps_Install_And_Hello.md",
+        "path": "Vyper/00_First_Steps_Install_And_Hello.md",
+        "type": "file",
+        "sha": "",
+        "size": 9985
+      },
+      {
+        "name": "01_What_Vyper_Is_And_Is_Not.md",
+        "path": "Vyper/01_What_Vyper_Is_And_Is_Not.md",
+        "type": "file",
+        "sha": "",
+        "size": 18944
+      },
+      {
+        "name": "02_Versions_Pragmas_And_Pins.md",
+        "path": "Vyper/02_Versions_Pragmas_And_Pins.md",
+        "type": "file",
+        "sha": "",
+        "size": 9804
+      },
+      {
+        "name": "03_Toolchain_Vyper_Titanoboa_Brownie.md",
+        "path": "Vyper/03_Toolchain_Vyper_Titanoboa_Brownie.md",
+        "type": "file",
+        "sha": "",
+        "size": 9813
+      },
+      {
+        "name": "04_Structure_Of_A_Contract.md",
+        "path": "Vyper/04_Structure_Of_A_Contract.md",
+        "type": "file",
+        "sha": "",
+        "size": 9560
+      },
+      {
+        "name": "05_Types.md",
+        "path": "Vyper/05_Types.md",
+        "type": "file",
+        "sha": "",
+        "size": 9298
+      },
+      {
+        "name": "06_Environment_Constants_And_Immutables.md",
+        "path": "Vyper/06_Environment_Constants_And_Immutables.md",
+        "type": "file",
+        "sha": "",
+        "size": 9995
+      },
+      {
+        "name": "07_Control_Structures_And_Statements.md",
+        "path": "Vyper/07_Control_Structures_And_Statements.md",
+        "type": "file",
+        "sha": "",
+        "size": 8670
+      },
+      {
+        "name": "08_Functions_Visibility_And_Mutability.md",
+        "path": "Vyper/08_Functions_Visibility_And_Mutability.md",
+        "type": "file",
+        "sha": "",
+        "size": 9802
+      },
+      {
+        "name": "09_Built_In_Functions.md",
+        "path": "Vyper/09_Built_In_Functions.md",
+        "type": "file",
+        "sha": "",
+        "size": 10506
+      },
+      {
+        "name": "10_Events_And_NatSpec.md",
+        "path": "Vyper/10_Events_And_NatSpec.md",
+        "type": "file",
+        "sha": "",
+        "size": 8110
+      },
+      {
+        "name": "11_Interfaces_And_Modules.md",
+        "path": "Vyper/11_Interfaces_And_Modules.md",
+        "type": "file",
+        "sha": "",
+        "size": 9595
+      },
+      {
+        "name": "12_Compiling_Deploying_And_ABI.md",
+        "path": "Vyper/12_Compiling_Deploying_And_ABI.md",
+        "type": "file",
+        "sha": "",
+        "size": 10197
+      },
+      {
+        "name": "13_Testing_Contracts.md",
+        "path": "Vyper/13_Testing_Contracts.md",
+        "type": "file",
+        "sha": "",
+        "size": 9328
+      },
+      {
+        "name": "14_Security_Design_And_Review.md",
+        "path": "Vyper/14_Security_Design_And_Review.md",
+        "type": "file",
+        "sha": "",
+        "size": 10125
+      },
+      {
+        "name": "15_Use_Cases_And_Engineering_Perspectives.md",
+        "path": "Vyper/15_Use_Cases_And_Engineering_Perspectives.md",
+        "type": "file",
+        "sha": "",
+        "size": 10856
+      },
+      {
+        "name": "16_Where_Vyper_Is_Going_And_Adjacent_Doors.md",
+        "path": "Vyper/16_Where_Vyper_Is_Going_And_Adjacent_Doors.md",
+        "type": "file",
+        "sha": "",
+        "size": 13854
+      },
+      {
+        "name": "17_Scoping_Declarations_And_Style.md",
+        "path": "Vyper/17_Scoping_Declarations_And_Style.md",
+        "type": "file",
+        "sha": "",
+        "size": 9346
+      },
+      {
+        "name": "18_Gas_Bounds_Compiler_Exceptions_And_Venom.md",
+        "path": "Vyper/18_Gas_Bounds_Compiler_Exceptions_And_Venom.md",
+        "type": "file",
+        "sha": "",
+        "size": 9973
+      },
+      {
+        "name": "19_Gas_Performance_And_Efficient_Contracts.md",
+        "path": "Vyper/19_Gas_Performance_And_Efficient_Contracts.md",
+        "type": "file",
+        "sha": "",
+        "size": 9795
+      },
+      {
+        "name": "README.md",
+        "path": "Vyper/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 14017
+      }
+    ]
+  },
+  {
+    "name": "YAML",
+    "path": "YAML",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "01_What_YAML_Is_And_Is_Not.md",
+        "path": "YAML/01_What_YAML_Is_And_Is_Not.md",
+        "type": "file",
+        "sha": "",
+        "size": 7521
+      },
+      {
+        "name": "02_Syntax_And_Structure.md",
+        "path": "YAML/02_Syntax_And_Structure.md",
+        "type": "file",
+        "sha": "",
+        "size": 6975
+      },
+      {
+        "name": "03_Scalars_And_Multiline.md",
+        "path": "YAML/03_Scalars_And_Multiline.md",
+        "type": "file",
+        "sha": "",
+        "size": 6582
+      },
+      {
+        "name": "04_Collections_And_Nesting.md",
+        "path": "YAML/04_Collections_And_Nesting.md",
+        "type": "file",
+        "sha": "",
+        "size": 4334
+      },
+      {
+        "name": "05_Anchors_Aliases_And_Merge.md",
+        "path": "YAML/05_Anchors_Aliases_And_Merge.md",
+        "type": "file",
+        "sha": "",
+        "size": 5147
+      },
+      {
+        "name": "06_Documents_Directives_And_Versions.md",
+        "path": "YAML/06_Documents_Directives_And_Versions.md",
+        "type": "file",
+        "sha": "",
+        "size": 4659
+      },
+      {
+        "name": "07_Tags_Schemas_And_Typing.md",
+        "path": "YAML/07_Tags_Schemas_And_Typing.md",
+        "type": "file",
+        "sha": "",
+        "size": 6600
+      },
+      {
+        "name": "08_Tooling_Linting_And_Validation.md",
+        "path": "YAML/08_Tooling_Linting_And_Validation.md",
+        "type": "file",
+        "sha": "",
+        "size": 5015
+      },
+      {
+        "name": "09_Use_Cases_And_Engineering_Perspectives.md",
+        "path": "YAML/09_Use_Cases_And_Engineering_Perspectives.md",
+        "type": "file",
+        "sha": "",
+        "size": 4621
+      },
+      {
+        "name": "10_Security_Design_And_Review.md",
+        "path": "YAML/10_Security_Design_And_Review.md",
+        "type": "file",
+        "sha": "",
+        "size": 5157
+      },
+      {
+        "name": "11_Where_YAML_Is_Going_And_Adjacent_Doors.md",
+        "path": "YAML/11_Where_YAML_Is_Going_And_Adjacent_Doors.md",
+        "type": "file",
+        "sha": "",
+        "size": 5347
+      },
+      {
+        "name": "12_Reading_Unfamiliar_YAML.md",
+        "path": "YAML/12_Reading_Unfamiliar_YAML.md",
+        "type": "file",
+        "sha": "",
+        "size": 8130
+      },
+      {
+        "name": "README.md",
+        "path": "YAML/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 9427
+      }
+    ]
+  },
+  {
+    "name": "Zig",
+    "path": "Zig",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "00_First_Steps_Install_And_Hello.md",
+        "path": "Zig/00_First_Steps_Install_And_Hello.md",
+        "type": "file",
+        "sha": "",
+        "size": 7180
+      },
+      {
+        "name": "01_What_Zig_Is_And_Is_Not.md",
+        "path": "Zig/01_What_Zig_Is_And_Is_Not.md",
+        "type": "file",
+        "sha": "",
+        "size": 9511
+      },
+      {
+        "name": "02_Toolchain_Build_Modes_And_Targets.md",
+        "path": "Zig/02_Toolchain_Build_Modes_And_Targets.md",
+        "type": "file",
+        "sha": "",
+        "size": 6531
+      },
+      {
+        "name": "03_Syntax_Values_And_Primitives.md",
+        "path": "Zig/03_Syntax_Values_And_Primitives.md",
+        "type": "file",
+        "sha": "",
+        "size": 6006
+      },
+      {
+        "name": "04_Variables_Const_And_Undefined.md",
+        "path": "Zig/04_Variables_Const_And_Undefined.md",
+        "type": "file",
+        "sha": "",
+        "size": 5243
+      },
+      {
+        "name": "05_Control_Flow_Defer_And_Unreachable.md",
+        "path": "Zig/05_Control_Flow_Defer_And_Unreachable.md",
+        "type": "file",
+        "sha": "",
+        "size": 5002
+      },
+      {
+        "name": "06_Structs_Enums_Unions_And_Optionals.md",
+        "path": "Zig/06_Structs_Enums_Unions_And_Optionals.md",
+        "type": "file",
+        "sha": "",
+        "size": 5797
+      },
+      {
+        "name": "07_Error_Sets_And_Error_Handling.md",
+        "path": "Zig/07_Error_Sets_And_Error_Handling.md",
+        "type": "file",
+        "sha": "",
+        "size": 5098
+      },
+      {
+        "name": "08_Pointers_Slices_And_Arrays.md",
+        "path": "Zig/08_Pointers_Slices_And_Arrays.md",
+        "type": "file",
+        "sha": "",
+        "size": 4708
+      },
+      {
+        "name": "09_Memory_And_Allocators.md",
+        "path": "Zig/09_Memory_And_Allocators.md",
+        "type": "file",
+        "sha": "",
+        "size": 5329
+      },
+      {
+        "name": "10_Comptime.md",
+        "path": "Zig/10_Comptime.md",
+        "type": "file",
+        "sha": "",
+        "size": 4404
+      },
+      {
+        "name": "11_Functions_Packages_And_Modules.md",
+        "path": "Zig/11_Functions_Packages_And_Modules.md",
+        "type": "file",
+        "sha": "",
+        "size": 8022
+      },
+      {
+        "name": "12_Build_System.md",
+        "path": "Zig/12_Build_System.md",
+        "type": "file",
+        "sha": "",
+        "size": 6716
+      },
+      {
+        "name": "13_Testing.md",
+        "path": "Zig/13_Testing.md",
+        "type": "file",
+        "sha": "",
+        "size": 4290
+      },
+      {
+        "name": "14_C_Interop.md",
+        "path": "Zig/14_C_Interop.md",
+        "type": "file",
+        "sha": "",
+        "size": 6464
+      },
+      {
+        "name": "15_Safety_UB_And_Security_Review.md",
+        "path": "Zig/15_Safety_UB_And_Security_Review.md",
+        "type": "file",
+        "sha": "",
+        "size": 5043
+      },
+      {
+        "name": "16_Use_Cases_And_Engineering_Perspectives.md",
+        "path": "Zig/16_Use_Cases_And_Engineering_Perspectives.md",
+        "type": "file",
+        "sha": "",
+        "size": 5115
+      },
+      {
+        "name": "17_Where_Zig_Is_Going_And_Adjacent_Doors.md",
+        "path": "Zig/17_Where_Zig_Is_Going_And_Adjacent_Doors.md",
+        "type": "file",
+        "sha": "",
+        "size": 5693
+      },
+      {
+        "name": "18_Builtins_Casting_And_Compile_Variables.md",
+        "path": "Zig/18_Builtins_Casting_And_Compile_Variables.md",
+        "type": "file",
+        "sha": "",
+        "size": 5092
+      },
+      {
+        "name": "19_Atomics_Assembly_Wasm_And_Async_Door.md",
+        "path": "Zig/19_Atomics_Assembly_Wasm_And_Async_Door.md",
+        "type": "file",
+        "sha": "",
+        "size": 5794
+      },
+      {
+        "name": "README.md",
+        "path": "Zig/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 10132
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 18764
+  }
+]
