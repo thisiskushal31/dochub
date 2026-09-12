@@ -1,135 +1,135 @@
 [
   {
-    "name": "01-Arrays-&-Strings",
-    "path": "01-Arrays-&-Strings",
+    "name": "01_Arrays_and_Strings",
+    "path": "01_Arrays_and_Strings",
     "type": "dir",
     "sha": "",
     "children": [
       {
-        "name": "cyclically-rotate-an-array-by-one",
-        "path": "01-Arrays-&-Strings/cyclically-rotate-an-array-by-one",
+        "name": "Cyclically_Rotate_an_Array_by_One",
+        "path": "01_Arrays_and_Strings/Cyclically_Rotate_an_Array_by_One",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "find-a-peak-in-a-given-array",
-        "path": "01-Arrays-&-Strings/find-a-peak-in-a-given-array",
+        "name": "Find_a_Peak_in_a_Given_Array",
+        "path": "01_Arrays_and_Strings/Find_a_Peak_in_a_Given_Array",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "find-duplicates-in-an-array",
-        "path": "01-Arrays-&-Strings/find-duplicates-in-an-array",
+        "name": "Find_Duplicates_in_an_Array",
+        "path": "01_Arrays_and_Strings/Find_Duplicates_in_an_Array",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "find-transition-point-binary-array",
-        "path": "01-Arrays-&-Strings/find-transition-point-binary-array",
+        "name": "Find_Transition_Point_Binary_Array",
+        "path": "01_Arrays_and_Strings/Find_Transition_Point_Binary_Array",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "kth-smallestlargest-element-unsorted-array",
-        "path": "01-Arrays-&-Strings/kth-smallestlargest-element-unsorted-array",
+        "name": "Kth_Smallestlargest_Element_Unsorted_Array",
+        "path": "01_Arrays_and_Strings/Kth_Smallestlargest_Element_Unsorted_Array",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "largest-element-in-array",
-        "path": "01-Arrays-&-Strings/largest-element-in-array",
+        "name": "Largest_Element_in_Array",
+        "path": "01_Arrays_and_Strings/Largest_Element_in_Array",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "largest-sum-contiguous-subarray",
-        "path": "01-Arrays-&-Strings/largest-sum-contiguous-subarray",
+        "name": "Largest_Sum_Contiguous_Subarray",
+        "path": "01_Arrays_and_Strings/Largest_Sum_Contiguous_Subarray",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "maximum-and-minimum-in-an-array",
-        "path": "01-Arrays-&-Strings/maximum-and-minimum-in-an-array",
+        "name": "Maximum_and_Minimum_in_an_Array",
+        "path": "01_Arrays_and_Strings/Maximum_and_Minimum_in_an_Array",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "minimize-the-maximum-difference-between-the-heights",
-        "path": "01-Arrays-&-Strings/minimize-the-maximum-difference-between-the-heights",
+        "name": "Minimize_the_Maximum_Difference_Between_the_Heights",
+        "path": "01_Arrays_and_Strings/Minimize_the_Maximum_Difference_Between_the_Heights",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "minimum-number-of-jumps",
-        "path": "01-Arrays-&-Strings/minimum-number-of-jumps",
+        "name": "Minimum_Number_of_Jumps",
+        "path": "01_Arrays_and_Strings/Minimum_Number_of_Jumps",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "move-negative-numbers-beginning-positive-end-constant-extra-space",
-        "path": "01-Arrays-&-Strings/move-negative-numbers-beginning-positive-end-constant-extra-space",
+        "name": "Move_Negative_Numbers_Beginning_Positive_End_Constant_Extra_Space",
+        "path": "01_Arrays_and_Strings/Move_Negative_Numbers_Beginning_Positive_End_Constant_Extra_Space",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "remove-duplicate-elements-from-sorted-array",
-        "path": "01-Arrays-&-Strings/remove-duplicate-elements-from-sorted-array",
+        "name": "Remove_Duplicate_Elements_From_Sorted_Array",
+        "path": "01_Arrays_and_Strings/Remove_Duplicate_Elements_From_Sorted_Array",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "reverse-the-array",
-        "path": "01-Arrays-&-Strings/reverse-the-array",
+        "name": "Reverse_the_Array",
+        "path": "01_Arrays_and_Strings/Reverse_the_Array",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "search-an-element-in-a-sorted-and-pivoted-array",
-        "path": "01-Arrays-&-Strings/search-an-element-in-a-sorted-and-pivoted-array",
+        "name": "Search_an_Element_in_a_Sorted_and_Pivoted_Array",
+        "path": "01_Arrays_and_Strings/Search_an_Element_in_a_Sorted_and_Pivoted_Array",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "sort-an-array-of-0s-1s-and-2s",
-        "path": "01-Arrays-&-Strings/sort-an-array-of-0s-1s-and-2s",
+        "name": "Sort_an_Array_of_0s_1s_and_2s",
+        "path": "01_Arrays_and_Strings/Sort_an_Array_of_0s_1s_and_2s",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "sort-array-wave-form",
-        "path": "01-Arrays-&-Strings/sort-array-wave-form",
+        "name": "Sort_Array_Wave_Form",
+        "path": "01_Arrays_and_Strings/Sort_Array_Wave_Form",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "two-sum-ii-input-array-is-sorted",
-        "path": "01-Arrays-&-Strings/two-sum-ii-input-array-is-sorted",
+        "name": "Two_Sum_II_Input_Array_Is_Sorted",
+        "path": "01_Arrays_and_Strings/Two_Sum_II_Input_Array_Is_Sorted",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "union-of-two-arrays",
-        "path": "01-Arrays-&-Strings/union-of-two-arrays",
+        "name": "Union_of_Two_Arrays",
+        "path": "01_Arrays_and_Strings/Union_of_Two_Arrays",
         "type": "dir",
         "sha": ""
       }
     ]
   },
   {
-    "name": "03-Stacks-&-Queues",
-    "path": "03-Stacks-&-Queues",
+    "name": "03_Stacks_and_Queues",
+    "path": "03_Stacks_and_Queues",
     "type": "dir",
     "sha": ""
   },
   {
-    "name": "19-Mathmetical",
-    "path": "19-Mathmetical",
+    "name": "19_Mathematical",
+    "path": "19_Mathematical",
     "type": "dir",
     "sha": "",
     "children": [
       {
-        "name": "container-with-most-water",
-        "path": "19-Mathmetical/container-with-most-water",
+        "name": "Container_with_Most_Water",
+        "path": "19_Mathematical/Container_with_Most_Water",
         "type": "dir",
         "sha": ""
       }
@@ -140,6 +140,6 @@
     "path": "Readme.md",
     "type": "file",
     "sha": "",
-    "size": 1678
+    "size": 1686
   }
 ]

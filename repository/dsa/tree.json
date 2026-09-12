@@ -166,162 +166,162 @@
         "sha": ""
       },
       {
-        "name": "01-Array_&_String.md",
-        "path": "DataStructures/01-Array_&_String.md",
+        "name": "01_Array_&_String.md",
+        "path": "DataStructures/01_Array_&_String.md",
         "type": "file",
         "sha": "",
         "size": 11497
       },
       {
-        "name": "02-Linked_List.md",
-        "path": "DataStructures/02-Linked_List.md",
+        "name": "02_Linked_List.md",
+        "path": "DataStructures/02_Linked_List.md",
         "type": "file",
         "sha": "",
         "size": 10799
       },
       {
-        "name": "03-Stack.md",
-        "path": "DataStructures/03-Stack.md",
+        "name": "03_Stack.md",
+        "path": "DataStructures/03_Stack.md",
         "type": "file",
         "sha": "",
         "size": 16014
       },
       {
-        "name": "04-Queue.md",
-        "path": "DataStructures/04-Queue.md",
+        "name": "04_Queue.md",
+        "path": "DataStructures/04_Queue.md",
         "type": "file",
         "sha": "",
         "size": 12370
       },
       {
-        "name": "05-Hashing.md",
-        "path": "DataStructures/05-Hashing.md",
+        "name": "05_Hashing.md",
+        "path": "DataStructures/05_Hashing.md",
         "type": "file",
         "sha": "",
         "size": 4816
       },
       {
-        "name": "06-Heap.md",
-        "path": "DataStructures/06-Heap.md",
+        "name": "06_Heap.md",
+        "path": "DataStructures/06_Heap.md",
         "type": "file",
         "sha": "",
         "size": 9435
       },
       {
-        "name": "07-Graph.md",
-        "path": "DataStructures/07-Graph.md",
+        "name": "07_Graph.md",
+        "path": "DataStructures/07_Graph.md",
         "type": "file",
         "sha": "",
         "size": 12065
       },
       {
-        "name": "08-Matrix.md",
-        "path": "DataStructures/08-Matrix.md",
+        "name": "08_Matrix.md",
+        "path": "DataStructures/08_Matrix.md",
         "type": "file",
         "sha": "",
         "size": 10737
       },
       {
-        "name": "09-Tree.md",
-        "path": "DataStructures/09-Tree.md",
+        "name": "09_Tree.md",
+        "path": "DataStructures/09_Tree.md",
         "type": "file",
         "sha": "",
         "size": 11416
       },
       {
-        "name": "10-Binary_Tree.md",
-        "path": "DataStructures/10-Binary_Tree.md",
+        "name": "10_Binary_Tree.md",
+        "path": "DataStructures/10_Binary_Tree.md",
         "type": "file",
         "sha": "",
         "size": 24780
       },
       {
-        "name": "11-Binary_Search_Tree.md",
-        "path": "DataStructures/11-Binary_Search_Tree.md",
+        "name": "11_Binary_Search_Tree.md",
+        "path": "DataStructures/11_Binary_Search_Tree.md",
         "type": "file",
         "sha": "",
         "size": 11234
       },
       {
-        "name": "12-Segment_Tree.md",
-        "path": "DataStructures/12-Segment_Tree.md",
+        "name": "12_Segment_Tree.md",
+        "path": "DataStructures/12_Segment_Tree.md",
         "type": "file",
         "sha": "",
         "size": 11451
       },
       {
-        "name": "13-Trie.md",
-        "path": "DataStructures/13-Trie.md",
+        "name": "13_Trie.md",
+        "path": "DataStructures/13_Trie.md",
         "type": "file",
         "sha": "",
         "size": 9498
       },
       {
-        "name": "14-Binary_Indexed_Tree.md",
-        "path": "DataStructures/14-Binary_Indexed_Tree.md",
+        "name": "14_Binary_Indexed_Tree.md",
+        "path": "DataStructures/14_Binary_Indexed_Tree.md",
         "type": "file",
         "sha": "",
         "size": 9347
       },
       {
-        "name": "15-Suffix_Array.md",
-        "path": "DataStructures/15-Suffix_Array.md",
+        "name": "15_Suffix_Array.md",
+        "path": "DataStructures/15_Suffix_Array.md",
         "type": "file",
         "sha": "",
         "size": 6752
       },
       {
-        "name": "16-Suffix_Tree.md",
-        "path": "DataStructures/16-Suffix_Tree.md",
+        "name": "16_Suffix_Tree.md",
+        "path": "DataStructures/16_Suffix_Tree.md",
         "type": "file",
         "sha": "",
         "size": 10623
       },
       {
-        "name": "17-AVL_Tree.md",
-        "path": "DataStructures/17-AVL_Tree.md",
+        "name": "17_AVL_Tree.md",
+        "path": "DataStructures/17_AVL_Tree.md",
         "type": "file",
         "sha": "",
         "size": 9564
       },
       {
-        "name": "18-Splay_Tree.md",
-        "path": "DataStructures/18-Splay_Tree.md",
+        "name": "18_Splay_Tree.md",
+        "path": "DataStructures/18_Splay_Tree.md",
         "type": "file",
         "sha": "",
         "size": 9425
       },
       {
-        "name": "19-B_Tree.md",
-        "path": "DataStructures/19-B_Tree.md",
+        "name": "19_B_Tree.md",
+        "path": "DataStructures/19_B_Tree.md",
         "type": "file",
         "sha": "",
         "size": 8449
       },
       {
-        "name": "20-Self_Balancing_Binary_Search_Trees.md",
-        "path": "DataStructures/20-Self_Balancing_Binary_Search_Trees.md",
+        "name": "20_Self_Balancing_Binary_Search_Trees.md",
+        "path": "DataStructures/20_Self_Balancing_Binary_Search_Trees.md",
         "type": "file",
         "sha": "",
         "size": 6107
       },
       {
-        "name": "21-Red_Black_Tree.md",
-        "path": "DataStructures/21-Red_Black_Tree.md",
+        "name": "21_Red_Black_Tree.md",
+        "path": "DataStructures/21_Red_Black_Tree.md",
         "type": "file",
         "sha": "",
         "size": 12666
       },
       {
-        "name": "22-K_Dimensional_Tree.md",
-        "path": "DataStructures/22-K_Dimensional_Tree.md",
+        "name": "22_K_Dimensional_Tree.md",
+        "path": "DataStructures/22_K_Dimensional_Tree.md",
         "type": "file",
         "sha": "",
         "size": 9256
       },
       {
-        "name": "23-Others.md",
-        "path": "DataStructures/23-Others.md",
+        "name": "23_Others.md",
+        "path": "DataStructures/23_Others.md",
         "type": "file",
         "sha": "",
         "size": 9124
@@ -336,47 +336,33 @@
     ]
   },
   {
-    "name": "Entry-Points",
-    "path": "Entry-Points",
-    "type": "dir",
-    "sha": "",
-    "children": [
-      {
-        "name": "Cheatsheets.md",
-        "path": "Entry-Points/Cheatsheets.md",
-        "type": "file",
-        "sha": "",
-        "size": 363
-      },
-      {
-        "name": "DevOps_Handbook.md",
-        "path": "Entry-Points/DevOps_Handbook.md",
-        "type": "file",
-        "sha": "",
-        "size": 324
-      },
-      {
-        "name": "README.md",
-        "path": "Entry-Points/README.md",
-        "type": "file",
-        "sha": "",
-        "size": 652
-      },
-      {
-        "name": "System_Design.md",
-        "path": "Entry-Points/System_Design.md",
-        "type": "file",
-        "sha": "",
-        "size": 579
-      }
-    ]
-  },
-  {
     "name": "Foundation",
     "path": "Foundation",
     "type": "dir",
     "sha": "",
     "children": [
+      {
+        "name": "Paper_And_Timer",
+        "path": "Foundation/Paper_And_Timer",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Install_And_First_Use.md",
+            "path": "Foundation/Paper_And_Timer/1_Install_And_First_Use.md",
+            "type": "file",
+            "sha": "",
+            "size": 458
+          },
+          {
+            "name": "README.md",
+            "path": "Foundation/Paper_And_Timer/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 287
+          }
+        ]
+      },
       {
         "name": "Coding_Patterns.md",
         "path": "Foundation/Coding_Patterns.md",
@@ -396,7 +382,7 @@
         "path": "Foundation/Readme.md",
         "type": "file",
         "sha": "",
-        "size": 2175
+        "size": 2257
       }
     ]
   },
@@ -407,136 +393,136 @@
     "sha": "",
     "children": [
       {
-        "name": "01-Arrays-&-Strings",
-        "path": "GeekforGeeks/01-Arrays-&-Strings",
+        "name": "01_Arrays_and_Strings",
+        "path": "GeekforGeeks/01_Arrays_and_Strings",
         "type": "dir",
         "sha": "",
         "children": [
           {
-            "name": "cyclically-rotate-an-array-by-one",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/cyclically-rotate-an-array-by-one",
+            "name": "Cyclically_Rotate_an_Array_by_One",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Cyclically_Rotate_an_Array_by_One",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "find-a-peak-in-a-given-array",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/find-a-peak-in-a-given-array",
+            "name": "Find_a_Peak_in_a_Given_Array",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Find_a_Peak_in_a_Given_Array",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "find-duplicates-in-an-array",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/find-duplicates-in-an-array",
+            "name": "Find_Duplicates_in_an_Array",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Find_Duplicates_in_an_Array",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "find-transition-point-binary-array",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/find-transition-point-binary-array",
+            "name": "Find_Transition_Point_Binary_Array",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Find_Transition_Point_Binary_Array",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "kth-smallestlargest-element-unsorted-array",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/kth-smallestlargest-element-unsorted-array",
+            "name": "Kth_Smallestlargest_Element_Unsorted_Array",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Kth_Smallestlargest_Element_Unsorted_Array",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "largest-element-in-array",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/largest-element-in-array",
+            "name": "Largest_Element_in_Array",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Largest_Element_in_Array",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "largest-sum-contiguous-subarray",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/largest-sum-contiguous-subarray",
+            "name": "Largest_Sum_Contiguous_Subarray",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Largest_Sum_Contiguous_Subarray",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "maximum-and-minimum-in-an-array",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/maximum-and-minimum-in-an-array",
+            "name": "Maximum_and_Minimum_in_an_Array",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Maximum_and_Minimum_in_an_Array",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "minimize-the-maximum-difference-between-the-heights",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/minimize-the-maximum-difference-between-the-heights",
+            "name": "Minimize_the_Maximum_Difference_Between_the_Heights",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Minimize_the_Maximum_Difference_Between_the_Heights",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "minimum-number-of-jumps",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/minimum-number-of-jumps",
+            "name": "Minimum_Number_of_Jumps",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Minimum_Number_of_Jumps",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "move-negative-numbers-beginning-positive-end-constant-extra-space",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/move-negative-numbers-beginning-positive-end-constant-extra-space",
+            "name": "Move_Negative_Numbers_Beginning_Positive_End_Constant_Extra_Space",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Move_Negative_Numbers_Beginning_Positive_End_Constant_Extra_Space",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "remove-duplicate-elements-from-sorted-array",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/remove-duplicate-elements-from-sorted-array",
+            "name": "Remove_Duplicate_Elements_From_Sorted_Array",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Remove_Duplicate_Elements_From_Sorted_Array",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "reverse-the-array",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/reverse-the-array",
+            "name": "Reverse_the_Array",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Reverse_the_Array",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "search-an-element-in-a-sorted-and-pivoted-array",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/search-an-element-in-a-sorted-and-pivoted-array",
+            "name": "Search_an_Element_in_a_Sorted_and_Pivoted_Array",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Search_an_Element_in_a_Sorted_and_Pivoted_Array",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "sort-an-array-of-0s-1s-and-2s",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/sort-an-array-of-0s-1s-and-2s",
+            "name": "Sort_an_Array_of_0s_1s_and_2s",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Sort_an_Array_of_0s_1s_and_2s",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "sort-array-wave-form",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/sort-array-wave-form",
+            "name": "Sort_Array_Wave_Form",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Sort_Array_Wave_Form",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "two-sum-ii-input-array-is-sorted",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/two-sum-ii-input-array-is-sorted",
+            "name": "Two_Sum_II_Input_Array_Is_Sorted",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Two_Sum_II_Input_Array_Is_Sorted",
             "type": "dir",
             "sha": ""
           },
           {
-            "name": "union-of-two-arrays",
-            "path": "GeekforGeeks/01-Arrays-&-Strings/union-of-two-arrays",
+            "name": "Union_of_Two_Arrays",
+            "path": "GeekforGeeks/01_Arrays_and_Strings/Union_of_Two_Arrays",
             "type": "dir",
             "sha": ""
           }
         ]
       },
       {
-        "name": "03-Stacks-&-Queues",
-        "path": "GeekforGeeks/03-Stacks-&-Queues",
+        "name": "03_Stacks_and_Queues",
+        "path": "GeekforGeeks/03_Stacks_and_Queues",
         "type": "dir",
         "sha": ""
       },
       {
-        "name": "19-Mathmetical",
-        "path": "GeekforGeeks/19-Mathmetical",
+        "name": "19_Mathematical",
+        "path": "GeekforGeeks/19_Mathematical",
         "type": "dir",
         "sha": "",
         "children": [
           {
-            "name": "container-with-most-water",
-            "path": "GeekforGeeks/19-Mathmetical/container-with-most-water",
+            "name": "Container_with_Most_Water",
+            "path": "GeekforGeeks/19_Mathematical/Container_with_Most_Water",
             "type": "dir",
             "sha": ""
           }
@@ -547,7 +533,7 @@
         "path": "GeekforGeeks/Readme.md",
         "type": "file",
         "sha": "",
-        "size": 1678
+        "size": 1686
       }
     ]
   },
@@ -564,14 +550,14 @@
         "sha": "",
         "children": [
           {
-            "name": "033.Search-in-Rotated-Sorted-Array",
-            "path": "Leetcode/Binary_Search/033.Search-in-Rotated-Sorted-Array",
+            "name": "033_Search_in_Rotated_Sorted_Array",
+            "path": "Leetcode/Binary_Search/033_Search_in_Rotated_Sorted_Array",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Binary_Search/033.Search-in-Rotated-Sorted-Array/Readme.md",
+                "path": "Leetcode/Binary_Search/033_Search_in_Rotated_Sorted_Array/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 3668
@@ -579,19 +565,41 @@
             ]
           },
           {
-            "name": "069.Sqrt(x)",
-            "path": "Leetcode/Binary_Search/069.Sqrt(x)",
+            "name": "069_Sqrt_X",
+            "path": "Leetcode/Binary_Search/069_Sqrt_X",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Binary_Search/069.Sqrt(x)/Readme.md",
+                "path": "Leetcode/Binary_Search/069_Sqrt_X/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 975
               }
             ]
+          }
+        ]
+      },
+      {
+        "name": "LeetCode_Workflow",
+        "path": "Leetcode/LeetCode_Workflow",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Install_And_First_Use.md",
+            "path": "Leetcode/LeetCode_Workflow/1_Install_And_First_Use.md",
+            "type": "file",
+            "sha": "",
+            "size": 509
+          },
+          {
+            "name": "README.md",
+            "path": "Leetcode/LeetCode_Workflow/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 292
           }
         ]
       },
@@ -602,14 +610,14 @@
         "sha": "",
         "children": [
           {
-            "name": "061.Rotate-List",
-            "path": "Leetcode/Linked_List/061.Rotate-List",
+            "name": "061_Rotate_List",
+            "path": "Leetcode/Linked_List/061_Rotate_List",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Linked_List/061.Rotate-List/Readme.md",
+                "path": "Leetcode/Linked_List/061_Rotate_List/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 79
@@ -617,14 +625,14 @@
             ]
           },
           {
-            "name": "082.Remove-Duplicates-from-Sorted-List-II",
-            "path": "Leetcode/Linked_List/082.Remove-Duplicates-from-Sorted-List-II",
+            "name": "082_Remove_Duplicates_from_Sorted_List_II",
+            "path": "Leetcode/Linked_List/082_Remove_Duplicates_from_Sorted_List_II",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Linked_List/082.Remove-Duplicates-from-Sorted-List-II/Readme.md",
+                "path": "Leetcode/Linked_List/082_Remove_Duplicates_from_Sorted_List_II/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 46
@@ -632,14 +640,14 @@
             ]
           },
           {
-            "name": "086.Partition-List",
-            "path": "Leetcode/Linked_List/086.Partition-List",
+            "name": "086_Partition_List",
+            "path": "Leetcode/Linked_List/086_Partition_List",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Linked_List/086.Partition-List/Readme.md",
+                "path": "Leetcode/Linked_List/086_Partition_List/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 85
@@ -647,14 +655,14 @@
             ]
           },
           {
-            "name": "142.Linked-List-Cycle-II",
-            "path": "Leetcode/Linked_List/142.Linked-List-Cycle-II",
+            "name": "142_Linked_List_Cycle_II",
+            "path": "Leetcode/Linked_List/142_Linked_List_Cycle_II",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Linked_List/142.Linked-List-Cycle-II/Readme.md",
+                "path": "Leetcode/Linked_List/142_Linked_List_Cycle_II/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 1576
@@ -670,14 +678,14 @@
         "sha": "",
         "children": [
           {
-            "name": "011.Container-With-Most-Water",
-            "path": "Leetcode/Two_Pointers/011.Container-With-Most-Water",
+            "name": "011_Container_With_Most_Water",
+            "path": "Leetcode/Two_Pointers/011_Container_With_Most_Water",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Two_Pointers/011.Container-With-Most-Water/Readme.md",
+                "path": "Leetcode/Two_Pointers/011_Container_With_Most_Water/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 1076
@@ -685,14 +693,14 @@
             ]
           },
           {
-            "name": "015.3Sum",
-            "path": "Leetcode/Two_Pointers/015.3Sum",
+            "name": "015_3Sum",
+            "path": "Leetcode/Two_Pointers/015_3Sum",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Two_Pointers/015.3Sum/Readme.md",
+                "path": "Leetcode/Two_Pointers/015_3Sum/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 1009
@@ -700,14 +708,14 @@
             ]
           },
           {
-            "name": "016.3Sum-Closet",
-            "path": "Leetcode/Two_Pointers/016.3Sum-Closet",
+            "name": "016_3Sum_Closet",
+            "path": "Leetcode/Two_Pointers/016_3Sum_Closet",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Two_Pointers/016.3Sum-Closet/Readme.md",
+                "path": "Leetcode/Two_Pointers/016_3Sum_Closet/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 1116
@@ -715,14 +723,14 @@
             ]
           },
           {
-            "name": "018.4Sum",
-            "path": "Leetcode/Two_Pointers/018.4Sum",
+            "name": "018_4Sum",
+            "path": "Leetcode/Two_Pointers/018_4Sum",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Two_Pointers/018.4Sum/Readme.md",
+                "path": "Leetcode/Two_Pointers/018_4Sum/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 1523
@@ -730,14 +738,14 @@
             ]
           },
           {
-            "name": "075.Sort-Colors",
-            "path": "Leetcode/Two_Pointers/075.Sort-Colors",
+            "name": "075_Sort_Colors",
+            "path": "Leetcode/Two_Pointers/075_Sort_Colors",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Two_Pointers/075.Sort-Colors/Readme.md",
+                "path": "Leetcode/Two_Pointers/075_Sort_Colors/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 1268
@@ -745,14 +753,14 @@
             ]
           },
           {
-            "name": "088.Merge-Sorted-Array",
-            "path": "Leetcode/Two_Pointers/088.Merge-Sorted-Array",
+            "name": "088_Merge_Sorted_Array",
+            "path": "Leetcode/Two_Pointers/088_Merge_Sorted_Array",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Two_Pointers/088.Merge-Sorted-Array/Readme.md",
+                "path": "Leetcode/Two_Pointers/088_Merge_Sorted_Array/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 1029
@@ -760,14 +768,14 @@
             ]
           },
           {
-            "name": "141.Linked-List-Cycle",
-            "path": "Leetcode/Two_Pointers/141.Linked-List-Cycle",
+            "name": "141_Linked_List_Cycle",
+            "path": "Leetcode/Two_Pointers/141_Linked_List_Cycle",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Two_Pointers/141.Linked-List-Cycle/Readme.md",
+                "path": "Leetcode/Two_Pointers/141_Linked_List_Cycle/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 523
@@ -775,14 +783,14 @@
             ]
           },
           {
-            "name": "209.Minimum-Size-Subarray-Sum",
-            "path": "Leetcode/Two_Pointers/209.Minimum-Size-Subarray-Sum",
+            "name": "209_Minimum_Size_Subarray_Sum",
+            "path": "Leetcode/Two_Pointers/209_Minimum_Size_Subarray_Sum",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Two_Pointers/209.Minimum-Size-Subarray-Sum/Readme.md",
+                "path": "Leetcode/Two_Pointers/209_Minimum_Size_Subarray_Sum/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 1084
@@ -790,14 +798,14 @@
             ]
           },
           {
-            "name": "259.3Sum-Smaller",
-            "path": "Leetcode/Two_Pointers/259.3Sum-Smaller",
+            "name": "259_3Sum_Smaller",
+            "path": "Leetcode/Two_Pointers/259_3Sum_Smaller",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Two_Pointers/259.3Sum-Smaller/Readme.md",
+                "path": "Leetcode/Two_Pointers/259_3Sum_Smaller/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 83
@@ -805,14 +813,14 @@
             ]
           },
           {
-            "name": "283.Move-Zeroes",
-            "path": "Leetcode/Two_Pointers/283.Move-Zeroes",
+            "name": "283_Move_Zeroes",
+            "path": "Leetcode/Two_Pointers/283_Move_Zeroes",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Two_Pointers/283.Move-Zeroes/Readme.md",
+                "path": "Leetcode/Two_Pointers/283_Move_Zeroes/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 1869
@@ -820,14 +828,14 @@
             ]
           },
           {
-            "name": "360.Sort-Transformed-Array",
-            "path": "Leetcode/Two_Pointers/360.Sort-Transformed-Array",
+            "name": "360_Sort_Transformed_Array",
+            "path": "Leetcode/Two_Pointers/360_Sort_Transformed_Array",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Two_Pointers/360.Sort-Transformed-Array/Readme.md",
+                "path": "Leetcode/Two_Pointers/360_Sort_Transformed_Array/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 1950
@@ -835,14 +843,14 @@
             ]
           },
           {
-            "name": "713.Subarray-Product-Less-Than-K",
-            "path": "Leetcode/Two_Pointers/713.Subarray-Product-Less-Than-K",
+            "name": "713_Subarray_Product_Less_Than_K",
+            "path": "Leetcode/Two_Pointers/713_Subarray_Product_Less_Than_K",
             "type": "dir",
             "sha": "",
             "children": [
               {
                 "name": "Readme.md",
-                "path": "Leetcode/Two_Pointers/713.Subarray-Product-Less-Than-K/Readme.md",
+                "path": "Leetcode/Two_Pointers/713_Subarray_Product_Less_Than_K/Readme.md",
                 "type": "file",
                 "sha": "",
                 "size": 1566
@@ -856,78 +864,78 @@
         "path": "Leetcode/Readme.md",
         "type": "file",
         "sha": "",
-        "size": 26017
+        "size": 26069
       }
     ]
   },
   {
-    "name": "system-design-bridge",
-    "path": "system-design-bridge",
+    "name": "SystemDesignBridge",
+    "path": "SystemDesignBridge",
     "type": "dir",
     "sha": "",
     "children": [
       {
-        "name": "1-lru-cache.md",
-        "path": "system-design-bridge/1-lru-cache.md",
+        "name": "1_LRU_Cache.md",
+        "path": "SystemDesignBridge/1_LRU_Cache.md",
         "type": "file",
         "sha": "",
-        "size": 450
+        "size": 448
       },
       {
-        "name": "2-lfu-cache.md",
-        "path": "system-design-bridge/2-lfu-cache.md",
+        "name": "2_LFU_Cache.md",
+        "path": "SystemDesignBridge/2_LFU_Cache.md",
         "type": "file",
         "sha": "",
-        "size": 450
+        "size": 448
       },
       {
-        "name": "3-top-k-and-streaming.md",
-        "path": "system-design-bridge/3-top-k-and-streaming.md",
+        "name": "3_Top_K_and_Streaming.md",
+        "path": "SystemDesignBridge/3_Top_K_and_Streaming.md",
+        "type": "file",
+        "sha": "",
+        "size": 465
+      },
+      {
+        "name": "4_Consistent_Hashing_Impl.md",
+        "path": "SystemDesignBridge/4_Consistent_Hashing_Impl.md",
+        "type": "file",
+        "sha": "",
+        "size": 481
+      },
+      {
+        "name": "5_Token_Bucket_Impl.md",
+        "path": "SystemDesignBridge/5_Token_Bucket_Impl.md",
+        "type": "file",
+        "sha": "",
+        "size": 475
+      },
+      {
+        "name": "6_URL_Shortener_Keys.md",
+        "path": "SystemDesignBridge/6_URL_Shortener_Keys.md",
         "type": "file",
         "sha": "",
         "size": 467
       },
       {
-        "name": "4-consistent-hashing-impl.md",
-        "path": "system-design-bridge/4-consistent-hashing-impl.md",
+        "name": "7_Trie_Prefix_Search.md",
+        "path": "SystemDesignBridge/7_Trie_Prefix_Search.md",
         "type": "file",
         "sha": "",
-        "size": 483
+        "size": 461
       },
       {
-        "name": "5-token-bucket-impl.md",
-        "path": "system-design-bridge/5-token-bucket-impl.md",
+        "name": "8_Union_Find_Connectivity.md",
+        "path": "SystemDesignBridge/8_Union_Find_Connectivity.md",
         "type": "file",
         "sha": "",
-        "size": 477
-      },
-      {
-        "name": "6-url-shortener-keys.md",
-        "path": "system-design-bridge/6-url-shortener-keys.md",
-        "type": "file",
-        "sha": "",
-        "size": 469
-      },
-      {
-        "name": "7-trie-prefix-search.md",
-        "path": "system-design-bridge/7-trie-prefix-search.md",
-        "type": "file",
-        "sha": "",
-        "size": 463
-      },
-      {
-        "name": "8-union-find-connectivity.md",
-        "path": "system-design-bridge/8-union-find-connectivity.md",
-        "type": "file",
-        "sha": "",
-        "size": 468
+        "size": 466
       },
       {
         "name": "README.md",
-        "path": "system-design-bridge/README.md",
+        "path": "SystemDesignBridge/README.md",
         "type": "file",
         "sha": "",
-        "size": 1760
+        "size": 1743
       }
     ]
   },
@@ -1045,31 +1053,10 @@
     ]
   },
   {
-    "name": "0_Start_Here.md",
-    "path": "0_Start_Here.md",
-    "type": "file",
-    "sha": "",
-    "size": 1879
-  },
-  {
-    "name": "CONTENT_WRITE_ORDER.md",
-    "path": "CONTENT_WRITE_ORDER.md",
-    "type": "file",
-    "sha": "",
-    "size": 3394
-  },
-  {
-    "name": "PLANNED_PROBLEMS.md",
-    "path": "PLANNED_PROBLEMS.md",
-    "type": "file",
-    "sha": "",
-    "size": 2691
-  },
-  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3067
+    "size": 3311
   }
 ]

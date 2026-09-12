@@ -1,5 +1,27 @@
 [
   {
+    "name": "Paper_And_Timer",
+    "path": "Paper_And_Timer",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "Paper_And_Timer/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 458
+      },
+      {
+        "name": "README.md",
+        "path": "Paper_And_Timer/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 287
+      }
+    ]
+  },
+  {
     "name": "Coding_Patterns.md",
     "path": "Coding_Patterns.md",
     "type": "file",
@@ -18,6 +40,6 @@
     "path": "Readme.md",
     "type": "file",
     "sha": "",
-    "size": 2175
+    "size": 2257
   }
 ]

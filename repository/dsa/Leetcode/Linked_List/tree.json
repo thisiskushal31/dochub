@@ -1,13 +1,13 @@
 [
   {
-    "name": "061.Rotate-List",
-    "path": "061.Rotate-List",
+    "name": "061_Rotate_List",
+    "path": "061_Rotate_List",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "Readme.md",
-        "path": "061.Rotate-List/Readme.md",
+        "path": "061_Rotate_List/Readme.md",
         "type": "file",
         "sha": "",
         "size": 79
@@ -15,14 +15,14 @@
     ]
   },
   {
-    "name": "082.Remove-Duplicates-from-Sorted-List-II",
-    "path": "082.Remove-Duplicates-from-Sorted-List-II",
+    "name": "082_Remove_Duplicates_from_Sorted_List_II",
+    "path": "082_Remove_Duplicates_from_Sorted_List_II",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "Readme.md",
-        "path": "082.Remove-Duplicates-from-Sorted-List-II/Readme.md",
+        "path": "082_Remove_Duplicates_from_Sorted_List_II/Readme.md",
         "type": "file",
         "sha": "",
         "size": 46
@@ -30,14 +30,14 @@
     ]
   },
   {
-    "name": "086.Partition-List",
-    "path": "086.Partition-List",
+    "name": "086_Partition_List",
+    "path": "086_Partition_List",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "Readme.md",
-        "path": "086.Partition-List/Readme.md",
+        "path": "086_Partition_List/Readme.md",
         "type": "file",
         "sha": "",
         "size": 85
@@ -45,14 +45,14 @@
     ]
   },
   {
-    "name": "142.Linked-List-Cycle-II",
-    "path": "142.Linked-List-Cycle-II",
+    "name": "142_Linked_List_Cycle_II",
+    "path": "142_Linked_List_Cycle_II",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "Readme.md",
-        "path": "142.Linked-List-Cycle-II/Readme.md",
+        "path": "142_Linked_List_Cycle_II/Readme.md",
         "type": "file",
         "sha": "",
         "size": 1576
