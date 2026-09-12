@@ -1,0 +1,176 @@
+[
+  {
+    "name": "Assets",
+    "path": "Assets",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "01_Array_&_String.md",
+    "path": "01_Array_&_String.md",
+    "type": "file",
+    "sha": "",
+    "size": 11497
+  },
+  {
+    "name": "02_Linked_List.md",
+    "path": "02_Linked_List.md",
+    "type": "file",
+    "sha": "",
+    "size": 10799
+  },
+  {
+    "name": "03_Stack.md",
+    "path": "03_Stack.md",
+    "type": "file",
+    "sha": "",
+    "size": 16014
+  },
+  {
+    "name": "04_Queue.md",
+    "path": "04_Queue.md",
+    "type": "file",
+    "sha": "",
+    "size": 12370
+  },
+  {
+    "name": "05_Hashing.md",
+    "path": "05_Hashing.md",
+    "type": "file",
+    "sha": "",
+    "size": 4816
+  },
+  {
+    "name": "06_Heap.md",
+    "path": "06_Heap.md",
+    "type": "file",
+    "sha": "",
+    "size": 9435
+  },
+  {
+    "name": "07_Graph.md",
+    "path": "07_Graph.md",
+    "type": "file",
+    "sha": "",
+    "size": 12065
+  },
+  {
+    "name": "08_Matrix.md",
+    "path": "08_Matrix.md",
+    "type": "file",
+    "sha": "",
+    "size": 10737
+  },
+  {
+    "name": "09_Tree.md",
+    "path": "09_Tree.md",
+    "type": "file",
+    "sha": "",
+    "size": 11416
+  },
+  {
+    "name": "10_Binary_Tree.md",
+    "path": "10_Binary_Tree.md",
+    "type": "file",
+    "sha": "",
+    "size": 24780
+  },
+  {
+    "name": "11_Binary_Search_Tree.md",
+    "path": "11_Binary_Search_Tree.md",
+    "type": "file",
+    "sha": "",
+    "size": 11234
+  },
+  {
+    "name": "12_Segment_Tree.md",
+    "path": "12_Segment_Tree.md",
+    "type": "file",
+    "sha": "",
+    "size": 11451
+  },
+  {
+    "name": "13_Trie.md",
+    "path": "13_Trie.md",
+    "type": "file",
+    "sha": "",
+    "size": 9498
+  },
+  {
+    "name": "14_Binary_Indexed_Tree.md",
+    "path": "14_Binary_Indexed_Tree.md",
+    "type": "file",
+    "sha": "",
+    "size": 9347
+  },
+  {
+    "name": "15_Suffix_Array.md",
+    "path": "15_Suffix_Array.md",
+    "type": "file",
+    "sha": "",
+    "size": 6752
+  },
+  {
+    "name": "16_Suffix_Tree.md",
+    "path": "16_Suffix_Tree.md",
+    "type": "file",
+    "sha": "",
+    "size": 10623
+  },
+  {
+    "name": "17_AVL_Tree.md",
+    "path": "17_AVL_Tree.md",
+    "type": "file",
+    "sha": "",
+    "size": 9564
+  },
+  {
+    "name": "18_Splay_Tree.md",
+    "path": "18_Splay_Tree.md",
+    "type": "file",
+    "sha": "",
+    "size": 9425
+  },
+  {
+    "name": "19_B_Tree.md",
+    "path": "19_B_Tree.md",
+    "type": "file",
+    "sha": "",
+    "size": 8449
+  },
+  {
+    "name": "20_Self_Balancing_Binary_Search_Trees.md",
+    "path": "20_Self_Balancing_Binary_Search_Trees.md",
+    "type": "file",
+    "sha": "",
+    "size": 6107
+  },
+  {
+    "name": "21_Red_Black_Tree.md",
+    "path": "21_Red_Black_Tree.md",
+    "type": "file",
+    "sha": "",
+    "size": 12666
+  },
+  {
+    "name": "22_K_Dimensional_Tree.md",
+    "path": "22_K_Dimensional_Tree.md",
+    "type": "file",
+    "sha": "",
+    "size": 9256
+  },
+  {
+    "name": "23_Others.md",
+    "path": "23_Others.md",
+    "type": "file",
+    "sha": "",
+    "size": 9124
+  },
+  {
+    "name": "Readme.md",
+    "path": "Readme.md",
+    "type": "file",
+    "sha": "",
+    "size": 3982
+  }
+]

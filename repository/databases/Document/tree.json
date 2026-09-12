@@ -1,0 +1,159 @@
+[
+  {
+    "name": "CouchDB",
+    "path": "CouchDB",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Architecture.md",
+        "path": "CouchDB/1_Overview_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 342
+      },
+      {
+        "name": "2_Queries_and_Views.md",
+        "path": "CouchDB/2_Queries_and_Views.md",
+        "type": "file",
+        "sha": "",
+        "size": 340
+      },
+      {
+        "name": "3_Replication.md",
+        "path": "CouchDB/3_Replication.md",
+        "type": "file",
+        "sha": "",
+        "size": 340
+      },
+      {
+        "name": "4_Operations.md",
+        "path": "CouchDB/4_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 333
+      },
+      {
+        "name": "README.md",
+        "path": "CouchDB/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 763
+      }
+    ]
+  },
+  {
+    "name": "Firestore",
+    "path": "Firestore",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_and_Data_Model.md",
+        "path": "Firestore/1_Overview_and_Data_Model.md",
+        "type": "file",
+        "sha": "",
+        "size": 362
+      },
+      {
+        "name": "2_Queries_and_Indexes.md",
+        "path": "Firestore/2_Queries_and_Indexes.md",
+        "type": "file",
+        "sha": "",
+        "size": 342
+      },
+      {
+        "name": "3_Security_and_Rules.md",
+        "path": "Firestore/3_Security_and_Rules.md",
+        "type": "file",
+        "sha": "",
+        "size": 333
+      },
+      {
+        "name": "4_Operations_and_Pricing.md",
+        "path": "Firestore/4_Operations_and_Pricing.md",
+        "type": "file",
+        "sha": "",
+        "size": 343
+      },
+      {
+        "name": "README.md",
+        "path": "Firestore/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 816
+      }
+    ]
+  },
+  {
+    "name": "MongoDB",
+    "path": "MongoDB",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Architecture.md",
+        "path": "MongoDB/1_Overview_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 11009
+      },
+      {
+        "name": "2_Data_Management.md",
+        "path": "MongoDB/2_Data_Management.md",
+        "type": "file",
+        "sha": "",
+        "size": 5183
+      },
+      {
+        "name": "3_Operations.md",
+        "path": "MongoDB/3_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 13249
+      },
+      {
+        "name": "4_Aggregation.md",
+        "path": "MongoDB/4_Aggregation.md",
+        "type": "file",
+        "sha": "",
+        "size": 3702
+      },
+      {
+        "name": "5_Advanced_Features.md",
+        "path": "MongoDB/5_Advanced_Features.md",
+        "type": "file",
+        "sha": "",
+        "size": 5415
+      },
+      {
+        "name": "6_Performance_Security.md",
+        "path": "MongoDB/6_Performance_Security.md",
+        "type": "file",
+        "sha": "",
+        "size": 2567
+      },
+      {
+        "name": "7_Best_Practices.md",
+        "path": "MongoDB/7_Best_Practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 12425
+      },
+      {
+        "name": "README.md",
+        "path": "MongoDB/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 3318
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 410
+  }
+]

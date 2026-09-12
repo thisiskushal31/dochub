@@ -1,0 +1,224 @@
+[
+  {
+    "name": "Milvus",
+    "path": "Milvus",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Architecture.md",
+        "path": "Milvus/1_Overview_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 327
+      },
+      {
+        "name": "2_Indexes_and_Search.md",
+        "path": "Milvus/2_Indexes_and_Search.md",
+        "type": "file",
+        "sha": "",
+        "size": 311
+      },
+      {
+        "name": "3_Operations.md",
+        "path": "Milvus/3_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 322
+      },
+      {
+        "name": "README.md",
+        "path": "Milvus/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 647
+      }
+    ]
+  },
+  {
+    "name": "Pgvector",
+    "path": "Pgvector",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_and_Setup.md",
+        "path": "Pgvector/1_Overview_and_Setup.md",
+        "type": "file",
+        "sha": "",
+        "size": 339
+      },
+      {
+        "name": "2_Indexes_and_Distance.md",
+        "path": "Pgvector/2_Indexes_and_Distance.md",
+        "type": "file",
+        "sha": "",
+        "size": 334
+      },
+      {
+        "name": "3_Query_Patterns.md",
+        "path": "Pgvector/3_Query_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 326
+      },
+      {
+        "name": "4_RAG_Storage_Patterns.md",
+        "path": "Pgvector/4_RAG_Storage_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 339
+      },
+      {
+        "name": "5_Operations.md",
+        "path": "Pgvector/5_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 350
+      },
+      {
+        "name": "README.md",
+        "path": "Pgvector/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 846
+      }
+    ]
+  },
+  {
+    "name": "Pinecone",
+    "path": "Pinecone",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Managed.md",
+        "path": "Pinecone/1_Overview_Managed.md",
+        "type": "file",
+        "sha": "",
+        "size": 326
+      },
+      {
+        "name": "2_Ingest_and_Query.md",
+        "path": "Pinecone/2_Ingest_and_Query.md",
+        "type": "file",
+        "sha": "",
+        "size": 318
+      },
+      {
+        "name": "3_Operations_and_Cost.md",
+        "path": "Pinecone/3_Operations_and_Cost.md",
+        "type": "file",
+        "sha": "",
+        "size": 321
+      },
+      {
+        "name": "README.md",
+        "path": "Pinecone/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 677
+      }
+    ]
+  },
+  {
+    "name": "Qdrant",
+    "path": "Qdrant",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Architecture.md",
+        "path": "Qdrant/1_Overview_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 441
+      },
+      {
+        "name": "2_Collections_Payloads_Filters.md",
+        "path": "Qdrant/2_Collections_Payloads_Filters.md",
+        "type": "file",
+        "sha": "",
+        "size": 436
+      },
+      {
+        "name": "3_Indexes_and_Search.md",
+        "path": "Qdrant/3_Indexes_and_Search.md",
+        "type": "file",
+        "sha": "",
+        "size": 403
+      },
+      {
+        "name": "4_RAG_Storage_Patterns.md",
+        "path": "Qdrant/4_RAG_Storage_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 464
+      },
+      {
+        "name": "5_Operations.md",
+        "path": "Qdrant/5_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 458
+      },
+      {
+        "name": "README.md",
+        "path": "Qdrant/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1107
+      }
+    ]
+  },
+  {
+    "name": "Weaviate",
+    "path": "Weaviate",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Architecture.md",
+        "path": "Weaviate/1_Overview_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 303
+      },
+      {
+        "name": "2_Indexing_and_Queries.md",
+        "path": "Weaviate/2_Indexing_and_Queries.md",
+        "type": "file",
+        "sha": "",
+        "size": 319
+      },
+      {
+        "name": "3_RAG_Patterns.md",
+        "path": "Weaviate/3_RAG_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 328
+      },
+      {
+        "name": "4_Operations.md",
+        "path": "Weaviate/4_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 305
+      },
+      {
+        "name": "README.md",
+        "path": "Weaviate/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 721
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 2074
+  }
+]

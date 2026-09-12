@@ -1,0 +1,351 @@
+[
+  {
+    "name": "DuckDB",
+    "path": "DuckDB",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Architecture.md",
+        "path": "DuckDB/1_Overview_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 3242
+      },
+      {
+        "name": "2_SQL_and_Files.md",
+        "path": "DuckDB/2_SQL_and_Files.md",
+        "type": "file",
+        "sha": "",
+        "size": 2972
+      },
+      {
+        "name": "3_Storage_and_Performance.md",
+        "path": "DuckDB/3_Storage_and_Performance.md",
+        "type": "file",
+        "sha": "",
+        "size": 2592
+      },
+      {
+        "name": "4_Ops_and_When_to_Use.md",
+        "path": "DuckDB/4_Ops_and_When_to_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 3008
+      },
+      {
+        "name": "5_Install_and_First_Use.md",
+        "path": "DuckDB/5_Install_and_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 1339
+      },
+      {
+        "name": "README.md",
+        "path": "DuckDB/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2102
+      }
+    ]
+  },
+  {
+    "name": "MySQL",
+    "path": "MySQL",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Architecture.md",
+        "path": "MySQL/1_Overview_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 3833
+      },
+      {
+        "name": "2_Data_Management.md",
+        "path": "MySQL/2_Data_Management.md",
+        "type": "file",
+        "sha": "",
+        "size": 7876
+      },
+      {
+        "name": "3_SQL_Fundamentals.md",
+        "path": "MySQL/3_SQL_Fundamentals.md",
+        "type": "file",
+        "sha": "",
+        "size": 20395
+      },
+      {
+        "name": "4_Transactions_Concurrency.md",
+        "path": "MySQL/4_Transactions_Concurrency.md",
+        "type": "file",
+        "sha": "",
+        "size": 7253
+      },
+      {
+        "name": "5_Performance_Operations.md",
+        "path": "MySQL/5_Performance_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 5534
+      },
+      {
+        "name": "6_Security_Maintenance.md",
+        "path": "MySQL/6_Security_Maintenance.md",
+        "type": "file",
+        "sha": "",
+        "size": 3067
+      },
+      {
+        "name": "7_Advanced_Topics.md",
+        "path": "MySQL/7_Advanced_Topics.md",
+        "type": "file",
+        "sha": "",
+        "size": 5870
+      },
+      {
+        "name": "README.md",
+        "path": "MySQL/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 3972
+      }
+    ]
+  },
+  {
+    "name": "Oracle",
+    "path": "Oracle",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Architecture.md",
+        "path": "Oracle/1_Overview_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 350
+      },
+      {
+        "name": "2_SQL_and_PLSQL.md",
+        "path": "Oracle/2_SQL_and_PLSQL.md",
+        "type": "file",
+        "sha": "",
+        "size": 338
+      },
+      {
+        "name": "3_Performance_Tuning.md",
+        "path": "Oracle/3_Performance_Tuning.md",
+        "type": "file",
+        "sha": "",
+        "size": 343
+      },
+      {
+        "name": "4_HA_and_Backup_RMAN.md",
+        "path": "Oracle/4_HA_and_Backup_RMAN.md",
+        "type": "file",
+        "sha": "",
+        "size": 350
+      },
+      {
+        "name": "5_Security_and_Ops.md",
+        "path": "Oracle/5_Security_and_Ops.md",
+        "type": "file",
+        "sha": "",
+        "size": 328
+      },
+      {
+        "name": "README.md",
+        "path": "Oracle/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 863
+      }
+    ]
+  },
+  {
+    "name": "PostgreSQL",
+    "path": "PostgreSQL",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Architecture.md",
+        "path": "PostgreSQL/1_Overview_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 3061
+      },
+      {
+        "name": "10_Best_Practices.md",
+        "path": "PostgreSQL/10_Best_Practices.md",
+        "type": "file",
+        "sha": "",
+        "size": 6459
+      },
+      {
+        "name": "2_Data_Management.md",
+        "path": "PostgreSQL/2_Data_Management.md",
+        "type": "file",
+        "sha": "",
+        "size": 16386
+      },
+      {
+        "name": "3_SQL_Fundamentals.md",
+        "path": "PostgreSQL/3_SQL_Fundamentals.md",
+        "type": "file",
+        "sha": "",
+        "size": 16469
+      },
+      {
+        "name": "4_Transactions_Concurrency.md",
+        "path": "PostgreSQL/4_Transactions_Concurrency.md",
+        "type": "file",
+        "sha": "",
+        "size": 3117
+      },
+      {
+        "name": "5_High_Availability.md",
+        "path": "PostgreSQL/5_High_Availability.md",
+        "type": "file",
+        "sha": "",
+        "size": 17867
+      },
+      {
+        "name": "6_Performance_Operations.md",
+        "path": "PostgreSQL/6_Performance_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 7286
+      },
+      {
+        "name": "7_Advanced_Topics.md",
+        "path": "PostgreSQL/7_Advanced_Topics.md",
+        "type": "file",
+        "sha": "",
+        "size": 6991
+      },
+      {
+        "name": "8_Infrastructure_Security.md",
+        "path": "PostgreSQL/8_Infrastructure_Security.md",
+        "type": "file",
+        "sha": "",
+        "size": 11985
+      },
+      {
+        "name": "9_Utilities_Recipes.md",
+        "path": "PostgreSQL/9_Utilities_Recipes.md",
+        "type": "file",
+        "sha": "",
+        "size": 4982
+      },
+      {
+        "name": "README.md",
+        "path": "PostgreSQL/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 5065
+      }
+    ]
+  },
+  {
+    "name": "SQL-Server",
+    "path": "SQL-Server",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Architecture.md",
+        "path": "SQL-Server/1_Overview_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 362
+      },
+      {
+        "name": "2_SQL_and_T_SQL.md",
+        "path": "SQL-Server/2_SQL_and_T_SQL.md",
+        "type": "file",
+        "sha": "",
+        "size": 367
+      },
+      {
+        "name": "3_Indexing_and_Performance.md",
+        "path": "SQL-Server/3_Indexing_and_Performance.md",
+        "type": "file",
+        "sha": "",
+        "size": 373
+      },
+      {
+        "name": "4_HA_and_Backup.md",
+        "path": "SQL-Server/4_HA_and_Backup.md",
+        "type": "file",
+        "sha": "",
+        "size": 347
+      },
+      {
+        "name": "5_Security_and_Ops.md",
+        "path": "SQL-Server/5_Security_and_Ops.md",
+        "type": "file",
+        "sha": "",
+        "size": 354
+      },
+      {
+        "name": "README.md",
+        "path": "SQL-Server/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 911
+      }
+    ]
+  },
+  {
+    "name": "SQLite",
+    "path": "SQLite",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Architecture.md",
+        "path": "SQLite/1_Overview_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 390
+      },
+      {
+        "name": "2_SQL_and_Schema.md",
+        "path": "SQLite/2_SQL_and_Schema.md",
+        "type": "file",
+        "sha": "",
+        "size": 368
+      },
+      {
+        "name": "3_Performance_and_Pragmas.md",
+        "path": "SQLite/3_Performance_and_Pragmas.md",
+        "type": "file",
+        "sha": "",
+        "size": 368
+      },
+      {
+        "name": "4_Backup_and_Ops.md",
+        "path": "SQLite/4_Backup_and_Ops.md",
+        "type": "file",
+        "sha": "",
+        "size": 365
+      },
+      {
+        "name": "README.md",
+        "path": "SQLite/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 852
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 2420
+  }
+]

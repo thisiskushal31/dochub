@@ -1,1 +1,1943 @@
-[]
+[
+  {
+    "name": "Assets",
+    "path": "Assets",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "DBMS-Fundamentals",
+        "path": "Assets/DBMS-Fundamentals",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "PostgreSQL",
+        "path": "Assets/PostgreSQL",
+        "type": "dir",
+        "sha": ""
+      }
+    ]
+  },
+  {
+    "name": "Blob-Object",
+    "path": "Blob-Object",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Azure-Blob",
+        "path": "Blob-Object/Azure-Blob",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview.md",
+            "path": "Blob-Object/Azure-Blob/1_Overview.md",
+            "type": "file",
+            "sha": "",
+            "size": 341
+          },
+          {
+            "name": "2_Tiers_and_Lifecycle.md",
+            "path": "Blob-Object/Azure-Blob/2_Tiers_and_Lifecycle.md",
+            "type": "file",
+            "sha": "",
+            "size": 329
+          },
+          {
+            "name": "3_Security_and_Ops.md",
+            "path": "Blob-Object/Azure-Blob/3_Security_and_Ops.md",
+            "type": "file",
+            "sha": "",
+            "size": 321
+          },
+          {
+            "name": "README.md",
+            "path": "Blob-Object/Azure-Blob/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 682
+          }
+        ]
+      },
+      {
+        "name": "GCS",
+        "path": "Blob-Object/GCS",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_and_Concepts.md",
+            "path": "Blob-Object/GCS/1_Overview_and_Concepts.md",
+            "type": "file",
+            "sha": "",
+            "size": 347
+          },
+          {
+            "name": "2_Storage_Classes_and_Lifecycle.md",
+            "path": "Blob-Object/GCS/2_Storage_Classes_and_Lifecycle.md",
+            "type": "file",
+            "sha": "",
+            "size": 340
+          },
+          {
+            "name": "3_Security_and_IAM.md",
+            "path": "Blob-Object/GCS/3_Security_and_IAM.md",
+            "type": "file",
+            "sha": "",
+            "size": 326
+          },
+          {
+            "name": "4_Operations_and_Patterns.md",
+            "path": "Blob-Object/GCS/4_Operations_and_Patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 345
+          },
+          {
+            "name": "README.md",
+            "path": "Blob-Object/GCS/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 782
+          }
+        ]
+      },
+      {
+        "name": "MinIO",
+        "path": "Blob-Object/MinIO",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_S3_Compatible.md",
+            "path": "Blob-Object/MinIO/1_Overview_S3_Compatible.md",
+            "type": "file",
+            "sha": "",
+            "size": 326
+          },
+          {
+            "name": "2_Deployment_and_Security.md",
+            "path": "Blob-Object/MinIO/2_Deployment_and_Security.md",
+            "type": "file",
+            "sha": "",
+            "size": 321
+          },
+          {
+            "name": "3_Operations.md",
+            "path": "Blob-Object/MinIO/3_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 306
+          },
+          {
+            "name": "README.md",
+            "path": "Blob-Object/MinIO/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 695
+          }
+        ]
+      },
+      {
+        "name": "S3",
+        "path": "Blob-Object/S3",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_and_Concepts.md",
+            "path": "Blob-Object/S3/1_Overview_and_Concepts.md",
+            "type": "file",
+            "sha": "",
+            "size": 347
+          },
+          {
+            "name": "2_Storage_Classes_and_Lifecycle.md",
+            "path": "Blob-Object/S3/2_Storage_Classes_and_Lifecycle.md",
+            "type": "file",
+            "sha": "",
+            "size": 335
+          },
+          {
+            "name": "3_Security_and_IAM.md",
+            "path": "Blob-Object/S3/3_Security_and_IAM.md",
+            "type": "file",
+            "sha": "",
+            "size": 344
+          },
+          {
+            "name": "4_Operations_and_Patterns.md",
+            "path": "Blob-Object/S3/4_Operations_and_Patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 341
+          },
+          {
+            "name": "README.md",
+            "path": "Blob-Object/S3/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 819
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "Blob-Object/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1884
+      }
+    ]
+  },
+  {
+    "name": "Cache",
+    "path": "Cache",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Hazelcast",
+        "path": "Cache/Hazelcast",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview.md",
+            "path": "Cache/Hazelcast/1_Overview.md",
+            "type": "file",
+            "sha": "",
+            "size": 322
+          },
+          {
+            "name": "2_Patterns_and_Ops.md",
+            "path": "Cache/Hazelcast/2_Patterns_and_Ops.md",
+            "type": "file",
+            "sha": "",
+            "size": 314
+          },
+          {
+            "name": "README.md",
+            "path": "Cache/Hazelcast/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 570
+          }
+        ]
+      },
+      {
+        "name": "Memcached",
+        "path": "Cache/Memcached",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview.md",
+            "path": "Cache/Memcached/1_Overview.md",
+            "type": "file",
+            "sha": "",
+            "size": 313
+          },
+          {
+            "name": "2_Patterns_and_Ops.md",
+            "path": "Cache/Memcached/2_Patterns_and_Ops.md",
+            "type": "file",
+            "sha": "",
+            "size": 325
+          },
+          {
+            "name": "README.md",
+            "path": "Cache/Memcached/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 582
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "Cache/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1028
+      }
+    ]
+  },
+  {
+    "name": "Cloud-Managed",
+    "path": "Cloud-Managed",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Cloud-Managed/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 14942
+      }
+    ]
+  },
+  {
+    "name": "Concepts",
+    "path": "Concepts",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "DBMS-Fundamentals",
+        "path": "Concepts/DBMS-Fundamentals",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Basics_of_DBMS.md",
+            "path": "Concepts/DBMS-Fundamentals/1_Basics_of_DBMS.md",
+            "type": "file",
+            "sha": "",
+            "size": 5023
+          },
+          {
+            "name": "2_ER_Relational_Model.md",
+            "path": "Concepts/DBMS-Fundamentals/2_ER_Relational_Model.md",
+            "type": "file",
+            "sha": "",
+            "size": 8233
+          },
+          {
+            "name": "3_Relational_Algebra.md",
+            "path": "Concepts/DBMS-Fundamentals/3_Relational_Algebra.md",
+            "type": "file",
+            "sha": "",
+            "size": 6774
+          },
+          {
+            "name": "4_Functional_Dependencies_Normalisation.md",
+            "path": "Concepts/DBMS-Fundamentals/4_Functional_Dependencies_Normalisation.md",
+            "type": "file",
+            "sha": "",
+            "size": 7171
+          },
+          {
+            "name": "5_Transactions_Concurrency_Control.md",
+            "path": "Concepts/DBMS-Fundamentals/5_Transactions_Concurrency_Control.md",
+            "type": "file",
+            "sha": "",
+            "size": 8037
+          },
+          {
+            "name": "6_Advanced_DBMS.md",
+            "path": "Concepts/DBMS-Fundamentals/6_Advanced_DBMS.md",
+            "type": "file",
+            "sha": "",
+            "size": 8612
+          },
+          {
+            "name": "7_Practice_Questions.md",
+            "path": "Concepts/DBMS-Fundamentals/7_Practice_Questions.md",
+            "type": "file",
+            "sha": "",
+            "size": 4713
+          },
+          {
+            "name": "README.md",
+            "path": "Concepts/DBMS-Fundamentals/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 4166
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "Concepts/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 13578
+      }
+    ]
+  },
+  {
+    "name": "Data-Platform",
+    "path": "Data-Platform",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Backups_to_Object_Storage.md",
+        "path": "Data-Platform/1_Backups_to_Object_Storage.md",
+        "type": "file",
+        "sha": "",
+        "size": 468
+      },
+      {
+        "name": "2_CDC_and_Replication_for_Analytics.md",
+        "path": "Data-Platform/2_CDC_and_Replication_for_Analytics.md",
+        "type": "file",
+        "sha": "",
+        "size": 410
+      },
+      {
+        "name": "3_Schema_Migrations_and_Contracts.md",
+        "path": "Data-Platform/3_Schema_Migrations_and_Contracts.md",
+        "type": "file",
+        "sha": "",
+        "size": 438
+      },
+      {
+        "name": "README.md",
+        "path": "Data-Platform/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 865
+      }
+    ]
+  },
+  {
+    "name": "Document",
+    "path": "Document",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "CouchDB",
+        "path": "Document/CouchDB",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Document/CouchDB/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 342
+          },
+          {
+            "name": "2_Queries_and_Views.md",
+            "path": "Document/CouchDB/2_Queries_and_Views.md",
+            "type": "file",
+            "sha": "",
+            "size": 340
+          },
+          {
+            "name": "3_Replication.md",
+            "path": "Document/CouchDB/3_Replication.md",
+            "type": "file",
+            "sha": "",
+            "size": 340
+          },
+          {
+            "name": "4_Operations.md",
+            "path": "Document/CouchDB/4_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 333
+          },
+          {
+            "name": "README.md",
+            "path": "Document/CouchDB/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 763
+          }
+        ]
+      },
+      {
+        "name": "Firestore",
+        "path": "Document/Firestore",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_and_Data_Model.md",
+            "path": "Document/Firestore/1_Overview_and_Data_Model.md",
+            "type": "file",
+            "sha": "",
+            "size": 362
+          },
+          {
+            "name": "2_Queries_and_Indexes.md",
+            "path": "Document/Firestore/2_Queries_and_Indexes.md",
+            "type": "file",
+            "sha": "",
+            "size": 342
+          },
+          {
+            "name": "3_Security_and_Rules.md",
+            "path": "Document/Firestore/3_Security_and_Rules.md",
+            "type": "file",
+            "sha": "",
+            "size": 333
+          },
+          {
+            "name": "4_Operations_and_Pricing.md",
+            "path": "Document/Firestore/4_Operations_and_Pricing.md",
+            "type": "file",
+            "sha": "",
+            "size": 343
+          },
+          {
+            "name": "README.md",
+            "path": "Document/Firestore/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 816
+          }
+        ]
+      },
+      {
+        "name": "MongoDB",
+        "path": "Document/MongoDB",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Document/MongoDB/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 11009
+          },
+          {
+            "name": "2_Data_Management.md",
+            "path": "Document/MongoDB/2_Data_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 5183
+          },
+          {
+            "name": "3_Operations.md",
+            "path": "Document/MongoDB/3_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 13249
+          },
+          {
+            "name": "4_Aggregation.md",
+            "path": "Document/MongoDB/4_Aggregation.md",
+            "type": "file",
+            "sha": "",
+            "size": 3702
+          },
+          {
+            "name": "5_Advanced_Features.md",
+            "path": "Document/MongoDB/5_Advanced_Features.md",
+            "type": "file",
+            "sha": "",
+            "size": 5415
+          },
+          {
+            "name": "6_Performance_Security.md",
+            "path": "Document/MongoDB/6_Performance_Security.md",
+            "type": "file",
+            "sha": "",
+            "size": 2567
+          },
+          {
+            "name": "7_Best_Practices.md",
+            "path": "Document/MongoDB/7_Best_Practices.md",
+            "type": "file",
+            "sha": "",
+            "size": 12425
+          },
+          {
+            "name": "README.md",
+            "path": "Document/MongoDB/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 3318
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "Document/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 410
+      }
+    ]
+  },
+  {
+    "name": "Graph",
+    "path": "Graph",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "ArangoDB",
+        "path": "Graph/ArangoDB",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Multi_Model.md",
+            "path": "Graph/ArangoDB/1_Overview_Multi_Model.md",
+            "type": "file",
+            "sha": "",
+            "size": 327
+          },
+          {
+            "name": "2_Aql_and_Graph.md",
+            "path": "Graph/ArangoDB/2_Aql_and_Graph.md",
+            "type": "file",
+            "sha": "",
+            "size": 320
+          },
+          {
+            "name": "3_Operations.md",
+            "path": "Graph/ArangoDB/3_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 308
+          },
+          {
+            "name": "README.md",
+            "path": "Graph/ArangoDB/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 678
+          }
+        ]
+      },
+      {
+        "name": "Neo4j",
+        "path": "Graph/Neo4j",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_and_Model.md",
+            "path": "Graph/Neo4j/1_Overview_and_Model.md",
+            "type": "file",
+            "sha": "",
+            "size": 333
+          },
+          {
+            "name": "2_Cypher_Queries.md",
+            "path": "Graph/Neo4j/2_Cypher_Queries.md",
+            "type": "file",
+            "sha": "",
+            "size": 326
+          },
+          {
+            "name": "3_Operations.md",
+            "path": "Graph/Neo4j/3_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 311
+          },
+          {
+            "name": "README.md",
+            "path": "Graph/Neo4j/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 668
+          }
+        ]
+      },
+      {
+        "name": "Neptune",
+        "path": "Graph/Neptune",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview.md",
+            "path": "Graph/Neptune/1_Overview.md",
+            "type": "file",
+            "sha": "",
+            "size": 324
+          },
+          {
+            "name": "2_Data_and_Queries.md",
+            "path": "Graph/Neptune/2_Data_and_Queries.md",
+            "type": "file",
+            "sha": "",
+            "size": 333
+          },
+          {
+            "name": "3_Operations.md",
+            "path": "Graph/Neptune/3_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 308
+          },
+          {
+            "name": "README.md",
+            "path": "Graph/Neptune/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 651
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "Graph/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1609
+      }
+    ]
+  },
+  {
+    "name": "Key-Value",
+    "path": "Key-Value",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Aerospike",
+        "path": "Key-Value/Aerospike",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Key-Value/Aerospike/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 14060
+          },
+          {
+            "name": "2_Operations.md",
+            "path": "Key-Value/Aerospike/2_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 9157
+          },
+          {
+            "name": "3_Advanced_Features.md",
+            "path": "Key-Value/Aerospike/3_Advanced_Features.md",
+            "type": "file",
+            "sha": "",
+            "size": 4920
+          },
+          {
+            "name": "4_Clustering_Replication.md",
+            "path": "Key-Value/Aerospike/4_Clustering_Replication.md",
+            "type": "file",
+            "sha": "",
+            "size": 4053
+          },
+          {
+            "name": "5_Tools.md",
+            "path": "Key-Value/Aerospike/5_Tools.md",
+            "type": "file",
+            "sha": "",
+            "size": 4307
+          },
+          {
+            "name": "6_Operations_Management.md",
+            "path": "Key-Value/Aerospike/6_Operations_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 5004
+          },
+          {
+            "name": "7_Deployment_Best_Practices.md",
+            "path": "Key-Value/Aerospike/7_Deployment_Best_Practices.md",
+            "type": "file",
+            "sha": "",
+            "size": 7255
+          },
+          {
+            "name": "README.md",
+            "path": "Key-Value/Aerospike/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 1729
+          }
+        ]
+      },
+      {
+        "name": "DynamoDB",
+        "path": "Key-Value/DynamoDB",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_and_Data_Model.md",
+            "path": "Key-Value/DynamoDB/1_Overview_and_Data_Model.md",
+            "type": "file",
+            "sha": "",
+            "size": 360
+          },
+          {
+            "name": "2_Capacity_and_Throttling.md",
+            "path": "Key-Value/DynamoDB/2_Capacity_and_Throttling.md",
+            "type": "file",
+            "sha": "",
+            "size": 351
+          },
+          {
+            "name": "3_Patterns_and_Access.md",
+            "path": "Key-Value/DynamoDB/3_Patterns_and_Access.md",
+            "type": "file",
+            "sha": "",
+            "size": 345
+          },
+          {
+            "name": "4_Backup_and_Global.md",
+            "path": "Key-Value/DynamoDB/4_Backup_and_Global.md",
+            "type": "file",
+            "sha": "",
+            "size": 340
+          },
+          {
+            "name": "5_Operations_and_Cost.md",
+            "path": "Key-Value/DynamoDB/5_Operations_and_Cost.md",
+            "type": "file",
+            "sha": "",
+            "size": 326
+          },
+          {
+            "name": "README.md",
+            "path": "Key-Value/DynamoDB/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 913
+          }
+        ]
+      },
+      {
+        "name": "Memcached",
+        "path": "Key-Value/Memcached",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Key-Value/Memcached/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 266
+          }
+        ]
+      },
+      {
+        "name": "Redis",
+        "path": "Key-Value/Redis",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Key-Value/Redis/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 5412
+          },
+          {
+            "name": "2_Data_Structures.md",
+            "path": "Key-Value/Redis/2_Data_Structures.md",
+            "type": "file",
+            "sha": "",
+            "size": 12340
+          },
+          {
+            "name": "3_Advanced_Features.md",
+            "path": "Key-Value/Redis/3_Advanced_Features.md",
+            "type": "file",
+            "sha": "",
+            "size": 5318
+          },
+          {
+            "name": "4_Persistence_Replication.md",
+            "path": "Key-Value/Redis/4_Persistence_Replication.md",
+            "type": "file",
+            "sha": "",
+            "size": 6030
+          },
+          {
+            "name": "5_Modules.md",
+            "path": "Key-Value/Redis/5_Modules.md",
+            "type": "file",
+            "sha": "",
+            "size": 3005
+          },
+          {
+            "name": "6_Operations_Management.md",
+            "path": "Key-Value/Redis/6_Operations_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 5493
+          },
+          {
+            "name": "7_Use_Cases_Best_Practices.md",
+            "path": "Key-Value/Redis/7_Use_Cases_Best_Practices.md",
+            "type": "file",
+            "sha": "",
+            "size": 7433
+          },
+          {
+            "name": "README.md",
+            "path": "Key-Value/Redis/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 1515
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "Key-Value/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 493
+      }
+    ]
+  },
+  {
+    "name": "NoSQL",
+    "path": "NoSQL",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "NoSQL/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1391
+      }
+    ]
+  },
+  {
+    "name": "Relational",
+    "path": "Relational",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "DuckDB",
+        "path": "Relational/DuckDB",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Relational/DuckDB/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 3242
+          },
+          {
+            "name": "2_SQL_and_Files.md",
+            "path": "Relational/DuckDB/2_SQL_and_Files.md",
+            "type": "file",
+            "sha": "",
+            "size": 2972
+          },
+          {
+            "name": "3_Storage_and_Performance.md",
+            "path": "Relational/DuckDB/3_Storage_and_Performance.md",
+            "type": "file",
+            "sha": "",
+            "size": 2592
+          },
+          {
+            "name": "4_Ops_and_When_to_Use.md",
+            "path": "Relational/DuckDB/4_Ops_and_When_to_Use.md",
+            "type": "file",
+            "sha": "",
+            "size": 3008
+          },
+          {
+            "name": "5_Install_and_First_Use.md",
+            "path": "Relational/DuckDB/5_Install_and_First_Use.md",
+            "type": "file",
+            "sha": "",
+            "size": 1339
+          },
+          {
+            "name": "README.md",
+            "path": "Relational/DuckDB/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 2102
+          }
+        ]
+      },
+      {
+        "name": "MySQL",
+        "path": "Relational/MySQL",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Relational/MySQL/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 3833
+          },
+          {
+            "name": "2_Data_Management.md",
+            "path": "Relational/MySQL/2_Data_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 7876
+          },
+          {
+            "name": "3_SQL_Fundamentals.md",
+            "path": "Relational/MySQL/3_SQL_Fundamentals.md",
+            "type": "file",
+            "sha": "",
+            "size": 20395
+          },
+          {
+            "name": "4_Transactions_Concurrency.md",
+            "path": "Relational/MySQL/4_Transactions_Concurrency.md",
+            "type": "file",
+            "sha": "",
+            "size": 7253
+          },
+          {
+            "name": "5_Performance_Operations.md",
+            "path": "Relational/MySQL/5_Performance_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 5534
+          },
+          {
+            "name": "6_Security_Maintenance.md",
+            "path": "Relational/MySQL/6_Security_Maintenance.md",
+            "type": "file",
+            "sha": "",
+            "size": 3067
+          },
+          {
+            "name": "7_Advanced_Topics.md",
+            "path": "Relational/MySQL/7_Advanced_Topics.md",
+            "type": "file",
+            "sha": "",
+            "size": 5870
+          },
+          {
+            "name": "README.md",
+            "path": "Relational/MySQL/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 3972
+          }
+        ]
+      },
+      {
+        "name": "Oracle",
+        "path": "Relational/Oracle",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Relational/Oracle/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 350
+          },
+          {
+            "name": "2_SQL_and_PLSQL.md",
+            "path": "Relational/Oracle/2_SQL_and_PLSQL.md",
+            "type": "file",
+            "sha": "",
+            "size": 338
+          },
+          {
+            "name": "3_Performance_Tuning.md",
+            "path": "Relational/Oracle/3_Performance_Tuning.md",
+            "type": "file",
+            "sha": "",
+            "size": 343
+          },
+          {
+            "name": "4_HA_and_Backup_RMAN.md",
+            "path": "Relational/Oracle/4_HA_and_Backup_RMAN.md",
+            "type": "file",
+            "sha": "",
+            "size": 350
+          },
+          {
+            "name": "5_Security_and_Ops.md",
+            "path": "Relational/Oracle/5_Security_and_Ops.md",
+            "type": "file",
+            "sha": "",
+            "size": 328
+          },
+          {
+            "name": "README.md",
+            "path": "Relational/Oracle/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 863
+          }
+        ]
+      },
+      {
+        "name": "PostgreSQL",
+        "path": "Relational/PostgreSQL",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Relational/PostgreSQL/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 3061
+          },
+          {
+            "name": "10_Best_Practices.md",
+            "path": "Relational/PostgreSQL/10_Best_Practices.md",
+            "type": "file",
+            "sha": "",
+            "size": 6459
+          },
+          {
+            "name": "2_Data_Management.md",
+            "path": "Relational/PostgreSQL/2_Data_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 16386
+          },
+          {
+            "name": "3_SQL_Fundamentals.md",
+            "path": "Relational/PostgreSQL/3_SQL_Fundamentals.md",
+            "type": "file",
+            "sha": "",
+            "size": 16469
+          },
+          {
+            "name": "4_Transactions_Concurrency.md",
+            "path": "Relational/PostgreSQL/4_Transactions_Concurrency.md",
+            "type": "file",
+            "sha": "",
+            "size": 3117
+          },
+          {
+            "name": "5_High_Availability.md",
+            "path": "Relational/PostgreSQL/5_High_Availability.md",
+            "type": "file",
+            "sha": "",
+            "size": 17867
+          },
+          {
+            "name": "6_Performance_Operations.md",
+            "path": "Relational/PostgreSQL/6_Performance_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 7286
+          },
+          {
+            "name": "7_Advanced_Topics.md",
+            "path": "Relational/PostgreSQL/7_Advanced_Topics.md",
+            "type": "file",
+            "sha": "",
+            "size": 6991
+          },
+          {
+            "name": "8_Infrastructure_Security.md",
+            "path": "Relational/PostgreSQL/8_Infrastructure_Security.md",
+            "type": "file",
+            "sha": "",
+            "size": 11985
+          },
+          {
+            "name": "9_Utilities_Recipes.md",
+            "path": "Relational/PostgreSQL/9_Utilities_Recipes.md",
+            "type": "file",
+            "sha": "",
+            "size": 4982
+          },
+          {
+            "name": "README.md",
+            "path": "Relational/PostgreSQL/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 5065
+          }
+        ]
+      },
+      {
+        "name": "SQL-Server",
+        "path": "Relational/SQL-Server",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Relational/SQL-Server/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 362
+          },
+          {
+            "name": "2_SQL_and_T_SQL.md",
+            "path": "Relational/SQL-Server/2_SQL_and_T_SQL.md",
+            "type": "file",
+            "sha": "",
+            "size": 367
+          },
+          {
+            "name": "3_Indexing_and_Performance.md",
+            "path": "Relational/SQL-Server/3_Indexing_and_Performance.md",
+            "type": "file",
+            "sha": "",
+            "size": 373
+          },
+          {
+            "name": "4_HA_and_Backup.md",
+            "path": "Relational/SQL-Server/4_HA_and_Backup.md",
+            "type": "file",
+            "sha": "",
+            "size": 347
+          },
+          {
+            "name": "5_Security_and_Ops.md",
+            "path": "Relational/SQL-Server/5_Security_and_Ops.md",
+            "type": "file",
+            "sha": "",
+            "size": 354
+          },
+          {
+            "name": "README.md",
+            "path": "Relational/SQL-Server/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 911
+          }
+        ]
+      },
+      {
+        "name": "SQLite",
+        "path": "Relational/SQLite",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Relational/SQLite/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 390
+          },
+          {
+            "name": "2_SQL_and_Schema.md",
+            "path": "Relational/SQLite/2_SQL_and_Schema.md",
+            "type": "file",
+            "sha": "",
+            "size": 368
+          },
+          {
+            "name": "3_Performance_and_Pragmas.md",
+            "path": "Relational/SQLite/3_Performance_and_Pragmas.md",
+            "type": "file",
+            "sha": "",
+            "size": 368
+          },
+          {
+            "name": "4_Backup_and_Ops.md",
+            "path": "Relational/SQLite/4_Backup_and_Ops.md",
+            "type": "file",
+            "sha": "",
+            "size": 365
+          },
+          {
+            "name": "README.md",
+            "path": "Relational/SQLite/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 852
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "Relational/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2420
+      }
+    ]
+  },
+  {
+    "name": "Search-Engine",
+    "path": "Search-Engine",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Elasticsearch",
+        "path": "Search-Engine/Elasticsearch",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Getting_Started.md",
+            "path": "Search-Engine/Elasticsearch/1_Overview_Getting_Started.md",
+            "type": "file",
+            "sha": "",
+            "size": 20684
+          },
+          {
+            "name": "2_Mapping_Analysis.md",
+            "path": "Search-Engine/Elasticsearch/2_Mapping_Analysis.md",
+            "type": "file",
+            "sha": "",
+            "size": 30477
+          },
+          {
+            "name": "3_Searching.md",
+            "path": "Search-Engine/Elasticsearch/3_Searching.md",
+            "type": "file",
+            "sha": "",
+            "size": 22241
+          },
+          {
+            "name": "4_Joining_Queries.md",
+            "path": "Search-Engine/Elasticsearch/4_Joining_Queries.md",
+            "type": "file",
+            "sha": "",
+            "size": 12296
+          },
+          {
+            "name": "5_Controlling_Results.md",
+            "path": "Search-Engine/Elasticsearch/5_Controlling_Results.md",
+            "type": "file",
+            "sha": "",
+            "size": 5456
+          },
+          {
+            "name": "6_Aggregations.md",
+            "path": "Search-Engine/Elasticsearch/6_Aggregations.md",
+            "type": "file",
+            "sha": "",
+            "size": 19074
+          },
+          {
+            "name": "7_Improving_Results.md",
+            "path": "Search-Engine/Elasticsearch/7_Improving_Results.md",
+            "type": "file",
+            "sha": "",
+            "size": 8282
+          },
+          {
+            "name": "README.md",
+            "path": "Search-Engine/Elasticsearch/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 1402
+          }
+        ]
+      },
+      {
+        "name": "Meilisearch",
+        "path": "Search-Engine/Meilisearch",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview.md",
+            "path": "Search-Engine/Meilisearch/1_Overview.md",
+            "type": "file",
+            "sha": "",
+            "size": 319
+          },
+          {
+            "name": "2_Indexing_and_Search.md",
+            "path": "Search-Engine/Meilisearch/2_Indexing_and_Search.md",
+            "type": "file",
+            "sha": "",
+            "size": 323
+          },
+          {
+            "name": "3_Operations.md",
+            "path": "Search-Engine/Meilisearch/3_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 300
+          },
+          {
+            "name": "README.md",
+            "path": "Search-Engine/Meilisearch/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 650
+          }
+        ]
+      },
+      {
+        "name": "Solr",
+        "path": "Search-Engine/Solr",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Search-Engine/Solr/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 319
+          },
+          {
+            "name": "2_Indexing_and_Queries.md",
+            "path": "Search-Engine/Solr/2_Indexing_and_Queries.md",
+            "type": "file",
+            "sha": "",
+            "size": 315
+          },
+          {
+            "name": "3_Operations.md",
+            "path": "Search-Engine/Solr/3_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 310
+          },
+          {
+            "name": "README.md",
+            "path": "Search-Engine/Solr/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 658
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "Search-Engine/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 410
+      }
+    ]
+  },
+  {
+    "name": "Time-Series",
+    "path": "Time-Series",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "InfluxDB",
+        "path": "Time-Series/InfluxDB",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_and_Model.md",
+            "path": "Time-Series/InfluxDB/1_Overview_and_Model.md",
+            "type": "file",
+            "sha": "",
+            "size": 340
+          },
+          {
+            "name": "2_Queries_and_Retention.md",
+            "path": "Time-Series/InfluxDB/2_Queries_and_Retention.md",
+            "type": "file",
+            "sha": "",
+            "size": 332
+          },
+          {
+            "name": "3_Operations.md",
+            "path": "Time-Series/InfluxDB/3_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 308
+          },
+          {
+            "name": "README.md",
+            "path": "Time-Series/InfluxDB/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 694
+          }
+        ]
+      },
+      {
+        "name": "Prometheus",
+        "path": "Time-Series/Prometheus",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Time-Series/Prometheus/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 327
+          },
+          {
+            "name": "2_PromQL_and_Storage.md",
+            "path": "Time-Series/Prometheus/2_PromQL_and_Storage.md",
+            "type": "file",
+            "sha": "",
+            "size": 342
+          },
+          {
+            "name": "3_Operations.md",
+            "path": "Time-Series/Prometheus/3_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 328
+          },
+          {
+            "name": "README.md",
+            "path": "Time-Series/Prometheus/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 656
+          }
+        ]
+      },
+      {
+        "name": "TimescaleDB",
+        "path": "Time-Series/TimescaleDB",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Hypertables.md",
+            "path": "Time-Series/TimescaleDB/1_Overview_Hypertables.md",
+            "type": "file",
+            "sha": "",
+            "size": 336
+          },
+          {
+            "name": "2_Queries_and_Compression.md",
+            "path": "Time-Series/TimescaleDB/2_Queries_and_Compression.md",
+            "type": "file",
+            "sha": "",
+            "size": 337
+          },
+          {
+            "name": "3_Operations.md",
+            "path": "Time-Series/TimescaleDB/3_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 311
+          },
+          {
+            "name": "README.md",
+            "path": "Time-Series/TimescaleDB/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 695
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "Time-Series/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1683
+      }
+    ]
+  },
+  {
+    "name": "Vector",
+    "path": "Vector",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Milvus",
+        "path": "Vector/Milvus",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Vector/Milvus/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 327
+          },
+          {
+            "name": "2_Indexes_and_Search.md",
+            "path": "Vector/Milvus/2_Indexes_and_Search.md",
+            "type": "file",
+            "sha": "",
+            "size": 311
+          },
+          {
+            "name": "3_Operations.md",
+            "path": "Vector/Milvus/3_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 322
+          },
+          {
+            "name": "README.md",
+            "path": "Vector/Milvus/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 647
+          }
+        ]
+      },
+      {
+        "name": "Pgvector",
+        "path": "Vector/Pgvector",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_and_Setup.md",
+            "path": "Vector/Pgvector/1_Overview_and_Setup.md",
+            "type": "file",
+            "sha": "",
+            "size": 339
+          },
+          {
+            "name": "2_Indexes_and_Distance.md",
+            "path": "Vector/Pgvector/2_Indexes_and_Distance.md",
+            "type": "file",
+            "sha": "",
+            "size": 334
+          },
+          {
+            "name": "3_Query_Patterns.md",
+            "path": "Vector/Pgvector/3_Query_Patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 326
+          },
+          {
+            "name": "4_RAG_Storage_Patterns.md",
+            "path": "Vector/Pgvector/4_RAG_Storage_Patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 339
+          },
+          {
+            "name": "5_Operations.md",
+            "path": "Vector/Pgvector/5_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 350
+          },
+          {
+            "name": "README.md",
+            "path": "Vector/Pgvector/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 846
+          }
+        ]
+      },
+      {
+        "name": "Pinecone",
+        "path": "Vector/Pinecone",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Managed.md",
+            "path": "Vector/Pinecone/1_Overview_Managed.md",
+            "type": "file",
+            "sha": "",
+            "size": 326
+          },
+          {
+            "name": "2_Ingest_and_Query.md",
+            "path": "Vector/Pinecone/2_Ingest_and_Query.md",
+            "type": "file",
+            "sha": "",
+            "size": 318
+          },
+          {
+            "name": "3_Operations_and_Cost.md",
+            "path": "Vector/Pinecone/3_Operations_and_Cost.md",
+            "type": "file",
+            "sha": "",
+            "size": 321
+          },
+          {
+            "name": "README.md",
+            "path": "Vector/Pinecone/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 677
+          }
+        ]
+      },
+      {
+        "name": "Qdrant",
+        "path": "Vector/Qdrant",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Vector/Qdrant/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 441
+          },
+          {
+            "name": "2_Collections_Payloads_Filters.md",
+            "path": "Vector/Qdrant/2_Collections_Payloads_Filters.md",
+            "type": "file",
+            "sha": "",
+            "size": 436
+          },
+          {
+            "name": "3_Indexes_and_Search.md",
+            "path": "Vector/Qdrant/3_Indexes_and_Search.md",
+            "type": "file",
+            "sha": "",
+            "size": 403
+          },
+          {
+            "name": "4_RAG_Storage_Patterns.md",
+            "path": "Vector/Qdrant/4_RAG_Storage_Patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 464
+          },
+          {
+            "name": "5_Operations.md",
+            "path": "Vector/Qdrant/5_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 458
+          },
+          {
+            "name": "README.md",
+            "path": "Vector/Qdrant/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 1107
+          }
+        ]
+      },
+      {
+        "name": "Weaviate",
+        "path": "Vector/Weaviate",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Vector/Weaviate/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 303
+          },
+          {
+            "name": "2_Indexing_and_Queries.md",
+            "path": "Vector/Weaviate/2_Indexing_and_Queries.md",
+            "type": "file",
+            "sha": "",
+            "size": 319
+          },
+          {
+            "name": "3_RAG_Patterns.md",
+            "path": "Vector/Weaviate/3_RAG_Patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 328
+          },
+          {
+            "name": "4_Operations.md",
+            "path": "Vector/Weaviate/4_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 305
+          },
+          {
+            "name": "README.md",
+            "path": "Vector/Weaviate/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 721
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "Vector/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2074
+      }
+    ]
+  },
+  {
+    "name": "Wide-Column",
+    "path": "Wide-Column",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Bigtable",
+        "path": "Wide-Column/Bigtable",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Wide-Column/Bigtable/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 330
+          },
+          {
+            "name": "2_Data_Model.md",
+            "path": "Wide-Column/Bigtable/2_Data_Model.md",
+            "type": "file",
+            "sha": "",
+            "size": 328
+          },
+          {
+            "name": "3_Operations_and_Pricing.md",
+            "path": "Wide-Column/Bigtable/3_Operations_and_Pricing.md",
+            "type": "file",
+            "sha": "",
+            "size": 319
+          },
+          {
+            "name": "README.md",
+            "path": "Wide-Column/Bigtable/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 659
+          }
+        ]
+      },
+      {
+        "name": "Cassandra",
+        "path": "Wide-Column/Cassandra",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Wide-Column/Cassandra/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 347
+          },
+          {
+            "name": "2_Data_Model_and_CQL.md",
+            "path": "Wide-Column/Cassandra/2_Data_Model_and_CQL.md",
+            "type": "file",
+            "sha": "",
+            "size": 360
+          },
+          {
+            "name": "3_Replication_and_Tuning.md",
+            "path": "Wide-Column/Cassandra/3_Replication_and_Tuning.md",
+            "type": "file",
+            "sha": "",
+            "size": 339
+          },
+          {
+            "name": "4_Operations.md",
+            "path": "Wide-Column/Cassandra/4_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 324
+          },
+          {
+            "name": "README.md",
+            "path": "Wide-Column/Cassandra/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 794
+          }
+        ]
+      },
+      {
+        "name": "HBase",
+        "path": "Wide-Column/HBase",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Wide-Column/HBase/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 332
+          },
+          {
+            "name": "2_Data_Model.md",
+            "path": "Wide-Column/HBase/2_Data_Model.md",
+            "type": "file",
+            "sha": "",
+            "size": 319
+          },
+          {
+            "name": "3_Operations.md",
+            "path": "Wide-Column/HBase/3_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 315
+          },
+          {
+            "name": "README.md",
+            "path": "Wide-Column/HBase/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 652
+          }
+        ]
+      },
+      {
+        "name": "ScyllaDB",
+        "path": "Wide-Column/ScyllaDB",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_Architecture.md",
+            "path": "Wide-Column/ScyllaDB/1_Overview_Architecture.md",
+            "type": "file",
+            "sha": "",
+            "size": 324
+          },
+          {
+            "name": "2_Data_Model_and_CQL.md",
+            "path": "Wide-Column/ScyllaDB/2_Data_Model_and_CQL.md",
+            "type": "file",
+            "sha": "",
+            "size": 336
+          },
+          {
+            "name": "3_Operations.md",
+            "path": "Wide-Column/ScyllaDB/3_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 309
+          },
+          {
+            "name": "README.md",
+            "path": "Wide-Column/ScyllaDB/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 660
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "Wide-Column/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1895
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 19199
+  }
+]

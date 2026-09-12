@@ -1,0 +1,30 @@
+[
+  {
+    "name": "1_SLAs_And_Failure.md",
+    "path": "1_SLAs_And_Failure.md",
+    "type": "file",
+    "sha": "",
+    "size": 385
+  },
+  {
+    "name": "2_Observability.md",
+    "path": "2_Observability.md",
+    "type": "file",
+    "sha": "",
+    "size": 405
+  },
+  {
+    "name": "3_Provisioning_As_A_Class.md",
+    "path": "3_Provisioning_As_A_Class.md",
+    "type": "file",
+    "sha": "",
+    "size": 424
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 593
+  }
+]

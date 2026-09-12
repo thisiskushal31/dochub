@@ -1,0 +1,145 @@
+[
+  {
+    "name": "01_Arrays_and_Strings",
+    "path": "01_Arrays_and_Strings",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Cyclically_Rotate_an_Array_by_One",
+        "path": "01_Arrays_and_Strings/Cyclically_Rotate_an_Array_by_One",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Find_a_Peak_in_a_Given_Array",
+        "path": "01_Arrays_and_Strings/Find_a_Peak_in_a_Given_Array",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Find_Duplicates_in_an_Array",
+        "path": "01_Arrays_and_Strings/Find_Duplicates_in_an_Array",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Find_Transition_Point_Binary_Array",
+        "path": "01_Arrays_and_Strings/Find_Transition_Point_Binary_Array",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Kth_Smallestlargest_Element_Unsorted_Array",
+        "path": "01_Arrays_and_Strings/Kth_Smallestlargest_Element_Unsorted_Array",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Largest_Element_in_Array",
+        "path": "01_Arrays_and_Strings/Largest_Element_in_Array",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Largest_Sum_Contiguous_Subarray",
+        "path": "01_Arrays_and_Strings/Largest_Sum_Contiguous_Subarray",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Maximum_and_Minimum_in_an_Array",
+        "path": "01_Arrays_and_Strings/Maximum_and_Minimum_in_an_Array",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Minimize_the_Maximum_Difference_Between_the_Heights",
+        "path": "01_Arrays_and_Strings/Minimize_the_Maximum_Difference_Between_the_Heights",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Minimum_Number_of_Jumps",
+        "path": "01_Arrays_and_Strings/Minimum_Number_of_Jumps",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Move_Negative_Numbers_Beginning_Positive_End_Constant_Extra_Space",
+        "path": "01_Arrays_and_Strings/Move_Negative_Numbers_Beginning_Positive_End_Constant_Extra_Space",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Remove_Duplicate_Elements_From_Sorted_Array",
+        "path": "01_Arrays_and_Strings/Remove_Duplicate_Elements_From_Sorted_Array",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Reverse_the_Array",
+        "path": "01_Arrays_and_Strings/Reverse_the_Array",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Search_an_Element_in_a_Sorted_and_Pivoted_Array",
+        "path": "01_Arrays_and_Strings/Search_an_Element_in_a_Sorted_and_Pivoted_Array",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Sort_an_Array_of_0s_1s_and_2s",
+        "path": "01_Arrays_and_Strings/Sort_an_Array_of_0s_1s_and_2s",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Sort_Array_Wave_Form",
+        "path": "01_Arrays_and_Strings/Sort_Array_Wave_Form",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Two_Sum_II_Input_Array_Is_Sorted",
+        "path": "01_Arrays_and_Strings/Two_Sum_II_Input_Array_Is_Sorted",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Union_of_Two_Arrays",
+        "path": "01_Arrays_and_Strings/Union_of_Two_Arrays",
+        "type": "dir",
+        "sha": ""
+      }
+    ]
+  },
+  {
+    "name": "03_Stacks_and_Queues",
+    "path": "03_Stacks_and_Queues",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "19_Mathematical",
+    "path": "19_Mathematical",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Container_with_Most_Water",
+        "path": "19_Mathematical/Container_with_Most_Water",
+        "type": "dir",
+        "sha": ""
+      }
+    ]
+  },
+  {
+    "name": "Readme.md",
+    "path": "Readme.md",
+    "type": "file",
+    "sha": "",
+    "size": 1686
+  }
+]

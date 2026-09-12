@@ -1,0 +1,79 @@
+[
+  {
+    "name": "1_Overview_Perimeter.md",
+    "path": "1_Overview_Perimeter.md",
+    "type": "file",
+    "sha": "",
+    "size": 12360
+  },
+  {
+    "name": "10_Applications_Network_Perspective.md",
+    "path": "10_Applications_Network_Perspective.md",
+    "type": "file",
+    "sha": "",
+    "size": 13284
+  },
+  {
+    "name": "2_Encryption_Tls.md",
+    "path": "2_Encryption_Tls.md",
+    "type": "file",
+    "sha": "",
+    "size": 9202
+  },
+  {
+    "name": "3_Cybersecurity_Threats_Config.md",
+    "path": "3_Cybersecurity_Threats_Config.md",
+    "type": "file",
+    "sha": "",
+    "size": 10099
+  },
+  {
+    "name": "4_Attacks_Mitigations.md",
+    "path": "4_Attacks_Mitigations.md",
+    "type": "file",
+    "sha": "",
+    "size": 18975
+  },
+  {
+    "name": "5_Firewalls_Aaa.md",
+    "path": "5_Firewalls_Aaa.md",
+    "type": "file",
+    "sha": "",
+    "size": 18992
+  },
+  {
+    "name": "6_Ipsec_Vpns.md",
+    "path": "6_Ipsec_Vpns.md",
+    "type": "file",
+    "sha": "",
+    "size": 6999
+  },
+  {
+    "name": "7_Nids_DoS_Identity.md",
+    "path": "7_Nids_DoS_Identity.md",
+    "type": "file",
+    "sha": "",
+    "size": 8413
+  },
+  {
+    "name": "8_Reconnaissance_Offensive.md",
+    "path": "8_Reconnaissance_Offensive.md",
+    "type": "file",
+    "sha": "",
+    "size": 27103
+  },
+  {
+    "name": "9_Blue_Team_Defensive.md",
+    "path": "9_Blue_Team_Defensive.md",
+    "type": "file",
+    "sha": "",
+    "size": 27164
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 6825
+  }
+]

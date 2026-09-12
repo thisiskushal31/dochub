@@ -1,0 +1,145 @@
+[
+  {
+    "name": "Elasticsearch",
+    "path": "Elasticsearch",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Getting_Started.md",
+        "path": "Elasticsearch/1_Overview_Getting_Started.md",
+        "type": "file",
+        "sha": "",
+        "size": 20684
+      },
+      {
+        "name": "2_Mapping_Analysis.md",
+        "path": "Elasticsearch/2_Mapping_Analysis.md",
+        "type": "file",
+        "sha": "",
+        "size": 30477
+      },
+      {
+        "name": "3_Searching.md",
+        "path": "Elasticsearch/3_Searching.md",
+        "type": "file",
+        "sha": "",
+        "size": 22241
+      },
+      {
+        "name": "4_Joining_Queries.md",
+        "path": "Elasticsearch/4_Joining_Queries.md",
+        "type": "file",
+        "sha": "",
+        "size": 12296
+      },
+      {
+        "name": "5_Controlling_Results.md",
+        "path": "Elasticsearch/5_Controlling_Results.md",
+        "type": "file",
+        "sha": "",
+        "size": 5456
+      },
+      {
+        "name": "6_Aggregations.md",
+        "path": "Elasticsearch/6_Aggregations.md",
+        "type": "file",
+        "sha": "",
+        "size": 19074
+      },
+      {
+        "name": "7_Improving_Results.md",
+        "path": "Elasticsearch/7_Improving_Results.md",
+        "type": "file",
+        "sha": "",
+        "size": 8282
+      },
+      {
+        "name": "README.md",
+        "path": "Elasticsearch/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1402
+      }
+    ]
+  },
+  {
+    "name": "Meilisearch",
+    "path": "Meilisearch",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview.md",
+        "path": "Meilisearch/1_Overview.md",
+        "type": "file",
+        "sha": "",
+        "size": 319
+      },
+      {
+        "name": "2_Indexing_and_Search.md",
+        "path": "Meilisearch/2_Indexing_and_Search.md",
+        "type": "file",
+        "sha": "",
+        "size": 323
+      },
+      {
+        "name": "3_Operations.md",
+        "path": "Meilisearch/3_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 300
+      },
+      {
+        "name": "README.md",
+        "path": "Meilisearch/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 650
+      }
+    ]
+  },
+  {
+    "name": "Solr",
+    "path": "Solr",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Overview_Architecture.md",
+        "path": "Solr/1_Overview_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 319
+      },
+      {
+        "name": "2_Indexing_and_Queries.md",
+        "path": "Solr/2_Indexing_and_Queries.md",
+        "type": "file",
+        "sha": "",
+        "size": 315
+      },
+      {
+        "name": "3_Operations.md",
+        "path": "Solr/3_Operations.md",
+        "type": "file",
+        "sha": "",
+        "size": 310
+      },
+      {
+        "name": "README.md",
+        "path": "Solr/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 658
+      }
+    ]
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 410
+  }
+]
