@@ -1,13 +1,13 @@
 [
   {
-    "name": "nodejs",
-    "path": "nodejs",
+    "name": "Nodejs",
+    "path": "Nodejs",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "Readme.md",
-        "path": "nodejs/Readme.md",
+        "path": "Nodejs/Readme.md",
         "type": "file",
         "sha": "",
         "size": 336

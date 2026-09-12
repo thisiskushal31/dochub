@@ -1,0 +1,224 @@
+[
+  {
+    "name": "Challenge_GCP_Architecture",
+    "path": "Challenge_GCP_Architecture",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Build_and_Deploy_a_Docker_Image_to_a_Kubernetes_Cluster",
+        "path": "Challenge_GCP_Architecture/Build_and_Deploy_a_Docker_Image_to_a_Kubernetes_Cluster",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Challenge_GCP_Architecture/Build_and_Deploy_a_Docker_Image_to_a_Kubernetes_Cluster/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 11408
+          }
+        ]
+      },
+      {
+        "name": "Configure_a_Firewall_and_a_Startup_Script_with_Deployment_Manager",
+        "path": "Challenge_GCP_Architecture/Configure_a_Firewall_and_a_Startup_Script_with_Deployment_Manager",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Configure_Secure_RDP_using_a_Windows_Bastion_Host",
+        "path": "Challenge_GCP_Architecture/Configure_Secure_RDP_using_a_Windows_Bastion_Host",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Challenge_GCP_Architecture/Configure_Secure_RDP_using_a_Windows_Bastion_Host/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 2786
+          }
+        ]
+      },
+      {
+        "name": "Migrate_a_MySQL_Database_to_Google_Cloud_SQL",
+        "path": "Challenge_GCP_Architecture/Migrate_a_MySQL_Database_to_Google_Cloud_SQL",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Challenge_GCP_Architecture/Migrate_a_MySQL_Database_to_Google_Cloud_SQL/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 2755
+          }
+        ]
+      },
+      {
+        "name": "Scale_Out_and_Update_a_Containerized_Application_on_a_Kubernetes_Cluster",
+        "path": "Challenge_GCP_Architecture/Scale_Out_and_Update_a_Containerized_Application_on_a_Kubernetes_Cluster",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Challenge_GCP_Architecture/Scale_Out_and_Update_a_Containerized_Application_on_a_Kubernetes_Cluster/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 4812
+          }
+        ]
+      },
+      {
+        "name": "README.md",
+        "path": "Challenge_GCP_Architecture/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 4010
+      }
+    ]
+  },
+  {
+    "name": "Qwiklabs",
+    "path": "Qwiklabs",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Deployment_Manager_-_Full_Production.md",
+        "path": "Qwiklabs/Deployment_Manager_-_Full_Production.md",
+        "type": "file",
+        "sha": "",
+        "size": 22492
+      },
+      {
+        "name": "Managing_Deployments_Using_Kubernetes_Engine.md",
+        "path": "Qwiklabs/Managing_Deployments_Using_Kubernetes_Engine.md",
+        "type": "file",
+        "sha": "",
+        "size": 21794
+      },
+      {
+        "name": "Multiple_VPC_Networks.md",
+        "path": "Qwiklabs/Multiple_VPC_Networks.md",
+        "type": "file",
+        "sha": "",
+        "size": 28784
+      },
+      {
+        "name": "Orchestrating_the_Cloud_with_Kubernetes.md",
+        "path": "Qwiklabs/Orchestrating_the_Cloud_with_Kubernetes.md",
+        "type": "file",
+        "sha": "",
+        "size": 23571
+      },
+      {
+        "name": "README.md",
+        "path": "Qwiklabs/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 3309
+      },
+      {
+        "name": "Site_Reliability_Troubleshooting_with_Stackdriver_APM.md",
+        "path": "Qwiklabs/Site_Reliability_Troubleshooting_with_Stackdriver_APM.md",
+        "type": "file",
+        "sha": "",
+        "size": 33570
+      }
+    ]
+  },
+  {
+    "name": "Cloud_Services_in_a_Table.md",
+    "path": "Cloud_Services_in_a_Table.md",
+    "type": "file",
+    "sha": "",
+    "size": 3535
+  },
+  {
+    "name": "Course_1_Core_Infrastructure.md",
+    "path": "Course_1_Core_Infrastructure.md",
+    "type": "file",
+    "sha": "",
+    "size": 44184
+  },
+  {
+    "name": "Course_2_Essential_Cloud_Infrastructure_Foundation.md",
+    "path": "Course_2_Essential_Cloud_Infrastructure_Foundation.md",
+    "type": "file",
+    "sha": "",
+    "size": 20513
+  },
+  {
+    "name": "Course_3_Essential_Cloud_Infrastructure_Core_Services.md",
+    "path": "Course_3_Essential_Cloud_Infrastructure_Core_Services.md",
+    "type": "file",
+    "sha": "",
+    "size": 37519
+  },
+  {
+    "name": "Course_4_Elastic_Cloud_Infrastructure_Scaling_and_Automation.md",
+    "path": "Course_4_Elastic_Cloud_Infrastructure_Scaling_and_Automation.md",
+    "type": "file",
+    "sha": "",
+    "size": 31892
+  },
+  {
+    "name": "Course_5_Elastic_Cloud_Infrastructure_Containers_and_Services.md",
+    "path": "Course_5_Elastic_Cloud_Infrastructure_Containers_and_Services.md",
+    "type": "file",
+    "sha": "",
+    "size": 19347
+  },
+  {
+    "name": "Course_6_Reliable_Cloud_Infrastructure_Design_and_Process.md",
+    "path": "Course_6_Reliable_Cloud_Infrastructure_Design_and_Process.md",
+    "type": "file",
+    "sha": "",
+    "size": 87177
+  },
+  {
+    "name": "Course_6_Reliable_Cloud_Infrastructure_Design_for_Resiliency_Scalability_and_Disaster_Recovery.md",
+    "path": "Course_6_Reliable_Cloud_Infrastructure_Design_for_Resiliency_Scalability_and_Disaster_Recovery.md",
+    "type": "file",
+    "sha": "",
+    "size": 79330
+  },
+  {
+    "name": "Exam_Case_Studies.md",
+    "path": "Exam_Case_Studies.md",
+    "type": "file",
+    "sha": "",
+    "size": 863
+  },
+  {
+    "name": "Exam_Rules.md",
+    "path": "Exam_Rules.md",
+    "type": "file",
+    "sha": "",
+    "size": 11713
+  },
+  {
+    "name": "Lab_Graded_Cloud_Essentials_Content.md",
+    "path": "Lab_Graded_Cloud_Essentials_Content.md",
+    "type": "file",
+    "sha": "",
+    "size": 4588
+  },
+  {
+    "name": "Lab_Graded_ScaleOut_Containerized_App_on_GKE.md",
+    "path": "Lab_Graded_ScaleOut_Containerized_App_on_GKE.md",
+    "type": "file",
+    "sha": "",
+    "size": 8369
+  },
+  {
+    "name": "Preparing_for_the_Professional_Cloud_Architect_Examination.md",
+    "path": "Preparing_for_the_Professional_Cloud_Architect_Examination.md",
+    "type": "file",
+    "sha": "",
+    "size": 108522
+  }
+]

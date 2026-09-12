@@ -6,8 +6,8 @@
     "sha": "",
     "children": [
       {
-        "name": "assets",
-        "path": "SQL/assets",
+        "name": "Assets",
+        "path": "SQL/Assets",
         "type": "dir",
         "sha": ""
       },
