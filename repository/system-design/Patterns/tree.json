@@ -1,0 +1,65 @@
+[
+  {
+    "name": "1_Event_Sourcing.md",
+    "path": "1_Event_Sourcing.md",
+    "type": "file",
+    "sha": "",
+    "size": 4140
+  },
+  {
+    "name": "2_Cqrs.md",
+    "path": "2_Cqrs.md",
+    "type": "file",
+    "sha": "",
+    "size": 4094
+  },
+  {
+    "name": "3_Leader_Election.md",
+    "path": "3_Leader_Election.md",
+    "type": "file",
+    "sha": "",
+    "size": 1543
+  },
+  {
+    "name": "4_Circuit_Breaker.md",
+    "path": "4_Circuit_Breaker.md",
+    "type": "file",
+    "sha": "",
+    "size": 4167
+  },
+  {
+    "name": "5_Bulkhead_and_Retry.md",
+    "path": "5_Bulkhead_and_Retry.md",
+    "type": "file",
+    "sha": "",
+    "size": 1285
+  },
+  {
+    "name": "6_Event_Driven_Architecture.md",
+    "path": "6_Event_Driven_Architecture.md",
+    "type": "file",
+    "sha": "",
+    "size": 2454
+  },
+  {
+    "name": "7_Serverless.md",
+    "path": "7_Serverless.md",
+    "type": "file",
+    "sha": "",
+    "size": 1887
+  },
+  {
+    "name": "8_Event_Sourcing_vs_Event_Streaming.md",
+    "path": "8_Event_Sourcing_vs_Event_Streaming.md",
+    "type": "file",
+    "sha": "",
+    "size": 2023
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 1708
+  }
+]

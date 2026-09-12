@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Availability",
+    "path": "Availability",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Caching",
+    "path": "Caching",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Consistency",
+    "path": "Consistency",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Databases",
+    "path": "Databases",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Databases/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 581
+      }
+    ]
+  },
+  {
+    "name": "Fundamentals",
+    "path": "Fundamentals",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Messaging",
+    "path": "Messaging",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Patterns",
+    "path": "Patterns",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Performance",
+    "path": "Performance",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Security",
+    "path": "Security",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Storage",
+    "path": "Storage",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 2558
+  }
+]
