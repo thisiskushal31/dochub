@@ -105,7 +105,7 @@ xcodebuild -create-xcframework \
 
 - [Xcode](https://developer.apple.com/xcode/) (Apple Developer)
 - [Clang documentation](https://clang.llvm.org/docs/)
-- [Code Signing Guide](https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html) (Apple Archive)
+- [Code Signing Guide](https://developer.apple.com/library/archive/documentation/security/Conceptual/CodeSigningGuide/Introduction/Introduction.html) (Apple Archive)
 - [Notarizing macOS software](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution) (Apple Developer)
 
 ### Supplemental tutorial

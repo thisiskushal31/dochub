@@ -28,7 +28,7 @@ Security reviews and operational runbooks should always include framework module
 
 Common capabilities include:
 
-- `vector`, tables/maps, options
+- `Vector`, tables/maps, options
 - serialization helpers and type info
 - cryptography primitives and signature utilities
 

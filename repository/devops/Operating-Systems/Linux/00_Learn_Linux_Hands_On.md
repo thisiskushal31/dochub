@@ -66,7 +66,7 @@ Below is the **section index** of one [Beginner’s Guide for Linux](https://www
 | 15 | LEMP setup | Install LEMP; FcgiWrap (Perl, Ruby, Bash); LEMP on Gentoo, Arch. |
 | 16 | MySQL/MariaDB administration | Basic admin commands; mysqladmin; backup/restore; replication; Mytop, Mtop; performance monitoring. |
 | 17 | Shell scripting | Shell and basic scripting (Parts I–XI): shell, scripts, math, functions, arrays, variables, nested substitution, predefined BASH variables. |
-| 18 | Linux interview questions | **ls**, basic, beginners, core, random, commands, services/daemons, MySQL, Apache, VsFTP, SSH, Squid, iptables, networking. |
+| 18 | Linux interview questions | **ls**, basic, beginners, core, random, commands, Services/daemons, MySQL, Apache, VsFTP, SSH, Squid, iptables, networking. |
 | 19 | Shell scripting interview questions | Q&A on shell scripting (theory and practical). |
 | 20 | Free Linux books | Cheat sheet; GNU/Linux advanced administration; securing & optimizing; patch management; hands-on guide; Linux Bible; Linux from Scratch; shell scripting cookbook; Bash guide. |
 | 21 | Certifications | RHCSA, LFCS, LFCE preparation guides. |
@@ -77,7 +77,7 @@ Below is the **section index** of one [Beginner’s Guide for Linux](https://www
 
 - **Run every command** — Don’t just read; type (or paste) and run. See success and error messages.
 - **Break things on purpose** — Wrong options, missing args, wrong paths. Then fix them; that’s how you learn.
-- **Use one VM per “role”** — e.g. one for LVM/RAID, one for services/firewall, one for scripting. Snapshots help.
+- **Use one VM per “role”** — e.g. one for LVM/RAID, one for Services/firewall, one for scripting. Snapshots help.
 - **Keep notes** — Commands that worked, mistakes, and fixes. Reuse them later.
 - **Combine with handbook** — When a tutorial says “create an LVM,” read [Storage advanced: LVM](./12_Storage_Advanced_LVM_ACLs.md) for the concepts and options, then do the steps in the linked tutorial.
 

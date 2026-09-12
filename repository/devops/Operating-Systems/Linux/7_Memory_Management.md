@@ -14,7 +14,7 @@ Typical hierarchy (fast and small to slow and large):
 
 Memory is measured in bytes; larger units: KB, MB, GB, TB. The OS manages **main memory** (RAM) and the use of **secondary storage** for swapping and paging.
 
-![Types of memory and storage](../../Assets/Operating-Systems/bytebytego-memory-storage.png)
+![Types of memory and storage](../../Assets/Operating-Systems/Bytebytego_Memory_Storage.png)
 
 *Image: [ByteByteGo – Types of Memory and Storage](https://bytebytego.com/guides/types-of-memory-and-storage/).*
 
@@ -55,7 +55,7 @@ Partitioning schemes (e.g. first-fit, best-fit, worst-fit) decide which hole to 
 
 **Segmentation** divides the address space into **segments** (e.g. code, data, stack) of variable size. Each segment has a base and limit. It matches program structure but causes **external fragmentation**. **Segmentation with paging** combines both: segments are themselves paged (e.g. some modern systems).
 
-![Paging vs segmentation](../../Assets/Operating-Systems/bytebytego-paging-vs-segmentation.png)
+![Paging vs segmentation](../../Assets/Operating-Systems/Bytebytego_Paging_vs_Segmentation.png)
 
 *Image: [ByteByteGo – Paging vs Segmentation](https://bytebytego.com/guides/what-are-the-differences-between-paging-and-segmentation/).*
 

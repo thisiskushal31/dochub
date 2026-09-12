@@ -84,11 +84,11 @@ macOS uses **Unified Logging** (not traditional syslog files) for most system an
 
 **MDM (Mobile Device Management)** — In organizations, Macs can be managed by MDM (e.g. Jamf, Kandji, Microsoft Intune). MDM can push profiles, enforce policies, and manage apps. Security research often covers MDM enrollment and abuse; see Further reading for red-team references.
 
-**Keychain and certificates** — The **Keychain** stores passwords, keys, and **certificates**. **Keychain Access** (Applications → Utilities) is the GUI; the **`security`** command is the CLI. Examples: **`security find-identity -v -p codesigning`** — list code-signing identities; **`security find-certificate -a -p /path/to/keychain`** — export certs; **`security unlock-keychain`** — unlock a keychain for scripting. Certificates are used for TLS, code signing, and S/MIME. Add/remove/trust certs via Keychain Access or **`security add-trusted-cert`** (admin). **References:** [Keychain Access (Apple)](https://support.apple.com/guide/keychain-access/welcome-kychn001/mac), [Key Management APIs (Apple)](https://developer.apple.com/library/archive/documentation/Security/Conceptual/cryptoservices/KeyManagementAPIs/KeyManagementAPIs.html).
+**Keychain and certificates** — The **Keychain** stores passwords, keys, and **certificates**. **Keychain Access** (Applications → Utilities) is the GUI; the **`Security`** command is the CLI. Examples: **`security find-identity -v -p codesigning`** — list code-signing identities; **`security find-certificate -a -p /path/to/keychain`** — export certs; **`security unlock-keychain`** — unlock a keychain for scripting. Certificates are used for TLS, code signing, and S/MIME. Add/remove/trust certs via Keychain Access or **`security add-trusted-cert`** (admin). **References:** [Keychain Access (Apple)](https://support.apple.com/guide/keychain-access/welcome-kychn001/mac), [Key Management APIs (Apple)](https://developer.apple.com/library/archive/documentation/security/Conceptual/cryptoservices/KeyManagementAPIs/KeyManagementAPIs.html).
 
 **User management (local):** **System Settings → Users & Groups** (GUI). CLI: **`dscl . -list /Users`** — list users; **`dscl . -read /Users/<user>`** — user record. **`sudo dscl . -create /Users/newuser`** and related **dscl** commands for creating/modifying users (advanced). **`id`, `whoami`** — current user/group.
 
-**References:** [System Integrity Protection (Apple)](https://developer.apple.com/documentation/security/hardened_runtime), [Gatekeeper (Apple)](https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/), [Entitlements (Apple)](https://developer.apple.com/documentation/bundleresources/entitlements). For **offensive/defensive** and **red-team** coverage (privilege escalation, persistence, TCC, etc.), see **Further reading** below.
+**References:** [System Integrity Protection (Apple)](https://developer.apple.com/documentation/security/hardened_runtime), [Gatekeeper (Apple)](https://developer.apple.com/library/archive/documentation/security/Conceptual/CodeSigningGuide/), [Entitlements (Apple)](https://developer.apple.com/documentation/bundleresources/entitlements). For **offensive/defensive** and **red-team** coverage (privilege escalation, persistence, TCC, etc.), see **Further reading** below.
 
 ---
 
@@ -126,7 +126,7 @@ macOS uses **Unified Logging** (not traditional syslog files) for most system an
 - [Unified Logging (OSLog)](https://developer.apple.com/documentation/oslog)
 - [Network Architecture (Kernel)](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Networking/Networking.html)
 - [Hardened Runtime / Code Signing](https://developer.apple.com/documentation/security/hardened_runtime)
-- [Keychain Access (Apple)](https://support.apple.com/guide/keychain-access/welcome-kychn001/mac), [Key Management APIs](https://developer.apple.com/library/archive/documentation/Security/Conceptual/cryptoservices/KeyManagementAPIs/KeyManagementAPIs.html)
+- [Keychain Access (Apple)](https://support.apple.com/guide/keychain-access/welcome-kychn001/mac), [Key Management APIs](https://developer.apple.com/library/archive/documentation/security/Conceptual/cryptoservices/KeyManagementAPIs/KeyManagementAPIs.html)
 - [Homebrew](https://brew.sh/), [Installation](https://docs.brew.sh/Installation)
 
 **Logging and forensics**

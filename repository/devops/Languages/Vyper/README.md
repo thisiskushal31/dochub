@@ -72,10 +72,10 @@ Staff hire Vyper fluency for five practical pillars:
 | A **small Vyper contract** on 0.4.x | `#pragma version`, types honest, compiles clean | **00–08**, **17** |
 | **Read a Curve-style / DeFi Vyper module** | Interfaces/modules recognized; no Solidity-modifier assumptions | **01**, **11**, **15** |
 | A **compile + ABI + deploy story** | Pinned compiler; artifact ownership clear | **02**, **12**, **18** |
-| A **Titanoboa test** for a state change | Asserts on storage/events; CI-friendly | **13** |
+| A **Titanoboa test** for a state change | Asserts on Storage/events; CI-friendly | **13** |
 | A **security review conversation** | Non-features and assert style named correctly | **14** |
 | A **keep Vyper vs use Solidity** decision | Host and team skill named | **01**, **16** |
-| A **gas-sensible hot path** | Measured gas; bound loops; storage/calls deliberate | **19**, **07**, **12** |
+| A **gas-sensible hot path** | Measured gas; bound loops; Storage/calls deliberate | **19**, **07**, **12** |
 
 ---
 
@@ -150,7 +150,7 @@ Links live in each chapter’s **References** (official hubs only).
 | Mutability honesty | `@view` that writes | **08** |
 | Version pin | Untagged `vyper` in CI | **02**, **12**, **18** |
 | Modules/interfaces | Copy-paste instead of composition | **11** |
-| Gas performance | Hot path unmeasured; storage/calls in user-sized loops | **19** |
+| Gas performance | Hot path unmeasured; Storage/calls in user-sized loops | **19** |
 
 ---
 

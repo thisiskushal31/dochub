@@ -21,8 +21,8 @@ The handbook is **standalone prose**: each chapter explains **what** a topic is,
 Every numbered chapter **`01`–`19`** uses the same **three-part body** (before **`## References`**):
 
 1. **Concepts** — definitions and mechanics (`## 1. Concepts`).
-2. **Advanced concepts** — interactions with the runtime, performance, or security model (`## 2. Advanced concepts`).
-3. **Applications and use cases** — software engineering, security, data boundaries, operations, and migration scenarios (`## 3. Applications and use cases`).
+2. **Advanced concepts** — interactions with the runtime, performance, or security model (`## 2. Advanced Concepts`).
+3. **Applications and use cases** — software engineering, security, data boundaries, operations, and migration scenarios (`## 3. Applications and use Cases`).
 
 **References** at chapter ends list official documentation and other stable URLs for readers who want exhaustive detail. The body does not attribute facts to a named document.
 

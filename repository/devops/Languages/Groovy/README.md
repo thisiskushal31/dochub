@@ -114,7 +114,7 @@ The following table maps the [official Groovy documentation](https://groovy-lang
 
 ## Scope: what's covered and what's not
 
-**Covered:** What Groovy is, why and how to use it, and where it fits. Syntax, structure, types, strings, closures, operators, control flow, scripts vs classes, differences with Java, object orientation, tools (groovyc, groovydoc, groovysh, groovyConsole), Grape, GDK and style, testing and DSLs and integration, metaprogramming overview, and working with JSON/XML/YAML/databases/templates. Security and use cases from software engineering, DevOps, and security perspectives. Concrete commands appear wherever the concept is introduced.
+**Covered:** What Groovy is, why and how to use it, and where it fits. Syntax, structure, types, strings, closures, operators, control flow, scripts vs classes, differences with Java, object orientation, tools (groovyc, groovydoc, groovysh, groovyConsole), Grape, GDK and style, testing and DSLs and integration, metaprogramming overview, and working with JSON/XML/YAML/Databases/templates. Security and use cases from software engineering, DevOps, and security perspectives. Concrete commands appear wherever the concept is introduced.
 
 **Not covered in depth here (by design):** Every GDK method, every AST transformation, and every Jenkins or Gradle API are only introduced or pointed to in Further reading so the section stays focused and navigable.
 

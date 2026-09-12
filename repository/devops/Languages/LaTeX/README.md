@@ -47,7 +47,7 @@ Read in **number order** for a single path: **basics first**, then **structure a
 | **Document and formatting** | 3 → 4 | Write a structured document (preamble, body, sections), use commands and environments, load packages, format text and lists. |
 | **Content** | 5 → 7 | Add math, tables, and figures; use labels and references; manage citations and bibliography. |
 | **Build and automation** | 8 → 9 | Choose and use compilation engines (pdflatex, xelatex, lualatex), use latexmk, run LaTeX in CI and scripts. |
-| **Use cases** | 10 | Decide when to use LaTeX, apply it to reports, docs, and security/audit deliverables; understand relevance by role. |
+| **Use cases** | 10 | Decide when to use LaTeX, apply it to reports, docs, and Security/audit deliverables; understand relevance by role. |
 
 ---
 

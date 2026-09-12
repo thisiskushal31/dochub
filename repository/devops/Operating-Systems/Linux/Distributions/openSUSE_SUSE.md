@@ -77,7 +77,7 @@ Many settings can also be done by editing config files and using systemctl/zyppe
 
 ## Firewall and services
 
-openSUSE/SLE use **firewalld** (same concepts as RHEL). Commands: `firewall-cmd --list-all`, `firewall-cmd --add-service=http --permanent`, `firewall-cmd --reload`. Services are managed with **systemd**: `systemctl start/enable nginx`.
+openSUSE/SLE use **firewalld** (same concepts as RHEL). Commands: `firewall-cmd --list-all`, `firewall-cmd --add-service=http --permanent`, `firewall-cmd --reload`. Services are managed with **systemd**: `systemctl start/enable Nginx`.
 
 ---
 

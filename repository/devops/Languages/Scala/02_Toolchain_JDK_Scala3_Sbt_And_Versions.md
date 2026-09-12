@@ -249,7 +249,7 @@ That is workable if **boundaries are explicit**: separate repos or modules, clea
 
 ```text
 # Good estate shape
-services/*     → Scala 3
+Services/*     → Scala 3
 jobs/spark/*   → Scala 2.13 (platform-forced)
 libs/java-*    → Java (consumed by both)
 

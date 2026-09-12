@@ -8,7 +8,7 @@ Clojure connects to databases via **JDBC**: add the appropriate JDBC driver and 
 
 ## Dependencies and driver
 
-Add the database driver (e.g. **com.mysql/mysql-connector-java** or **org.postgresql/postgresql**) and optionally **clojure.java.jdbc** or **com.github.seancorfield/next.jdbc** to **deps.edn**. Ensure the driver JAR is on the classpath when running.
+Add the database driver (e.g. **com.mysql/mysql-connector-java** or **org.PostgreSQL/postgresql**) and optionally **clojure.java.jdbc** or **com.github.seancorfield/next.jdbc** to **deps.edn**. Ensure the driver JAR is on the classpath when running.
 
 ---
 

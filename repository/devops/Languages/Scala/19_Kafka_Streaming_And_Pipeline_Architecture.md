@@ -421,7 +421,7 @@ Treat registry rights like topic ACLs:
 On topics that carry PII or regulated data:
 
 - Issue **separate principals** (and ACLs) for **produce** vs **consume**. A warehouse writer should not inherit broad produce rights “for debugging.”
-- Prefer distinct identities per application/team rather than one shared `data-platform` user on every sensitive topic.
+- Prefer distinct identities per application/team rather than one shared `Data-Platform` user on every sensitive topic.
 
 **Offset reset / replay** is not a free ops convenience. Replaying a retained PII topic can re-exfiltrate data into new sinks, amplify integrity bugs (double side effects), and bypass “we already processed that.” Require **approval + audit** for resets outside a documented reprocess runbook: who asked, which group/topic/partitions, time window, and which sinks were frozen or made idempotent.
 

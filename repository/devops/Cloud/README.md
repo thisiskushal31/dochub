@@ -1,6 +1,6 @@
 # Cloud provider literacy
 
-Shared concepts for software engineers doing DevOps on **AWS, GCP, and Azure**. *Not certification dumps — [write order](../CONTENT_WRITE_ORDER.md).*
+Shared concepts for software engineers doing DevOps on **AWS, GCP, and Azure**. *Not certification dumps.*
 
 ## Topics
 

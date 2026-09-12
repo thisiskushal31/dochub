@@ -52,7 +52,7 @@ Links live in each chapter’s **References** section (official hubs only).
 |--------|----------|---------|
 | Foundations | 01–07 | What Scala is; toolchain; syntax; types; control flow; functions; classes/traits/case classes. |
 | Libraries and modeling | 08–12 | Collections/`Option`/`Either`/`Try`; pattern matching; packages; sbt; Java interop. |
-| Runtime and production | 13–16 | Concurrency literacy; testing/docs; security/supply chain; containers and JVM ops. |
+| Runtime and production | 13–16 | Concurrency literacy; testing/docs; Security/supply chain; containers and JVM ops. |
 | Placement | 17 | Domain use cases: services vs Spark vs Kafka lanes. |
 | Architecture & DevSecOps | 18–20 | Spark data engineering; Kafka/pipeline architecture; threat modeling and hardening. |
 | Wrap | 21 | Competency map and consolidated staff checklist. |

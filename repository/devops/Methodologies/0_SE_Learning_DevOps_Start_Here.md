@@ -1,6 +1,6 @@
 # If you are a software engineer learning DevOps — start here
 
-[← Back to Methodologies](./README.md) · [Write order](../CONTENT_WRITE_ORDER.md)
+[← Back to Methodologies](./README.md)
 
 *(Content TBD — stub created August 2026)*
 
@@ -9,7 +9,7 @@
 - Who this handbook is for (backend, frontend, fullstack, platform-leaning SE)
 - **Two promises:** learn here **or** get a clear door to a sister deep-dive — never silent gaps
 - Recommended paths by role (platform vs app developer)
-- How this repo relates to Languages/ (syntax) vs CiCd/Security/ (delivery) vs Entry-Points/ (links out)
+- How this repo relates to Languages/ (syntax) vs CiCd/Security/ (delivery) vs README sister-repos table (links out)
 - Monthly learning checklist template (GFM `- [ ]` tasks)
 - Link matrix to all sister repos (11 DocHub repos)
 
@@ -20,10 +20,10 @@
 | Delivery loop | [CiCd/](../CiCd/README.md) |
 | Host / web tier | [Servers/](../Servers/README.md) |
 | Cloud basics | [Cloud/](../Cloud/README.md) |
-| Containers depth | [Entry-Points/Docker_And_Podman.md](../Entry-Points/Docker_And_Podman.md) |
-| Frameworks catalog | [Entry-Points/Application_Frameworks.md](../Entry-Points/Application_Frameworks.md) |
-| Full cyber program | [Entry-Points/Cybersecurity_Deep_Dive.md](../Entry-Points/Cybersecurity_Deep_Dive.md) |
-| Completeness map | [PLAN_DevOps_Concepts_Beyond_Languages.md](../PLAN_DevOps_Concepts_Beyond_Languages.md) |
+| Containers depth | [Containerization Deep Dive](../../Containerization-Deep-Dive/README.md) |
+| Frameworks catalog | [Tooling and Frameworks Deep Dive](../../Tooling-and-Frameworks-Deep-Dive/README.md) |
+| Full cyber program | [Security Deep Dive](../../Security-Deep-Dive/README.md) |
+| Completeness map | [README](../README.md) |
 
 ## Checklist before marking done
 

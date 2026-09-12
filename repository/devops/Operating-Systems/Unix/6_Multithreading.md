@@ -16,7 +16,7 @@ On most Unix and Unix-like systems, the **unit of scheduling** is the same as th
 
 Unix standardized **POSIX threads (pthreads)**. Each thread shares the process address space but has its own stack and register state. Most Unix-like systems use a **1:1** model (one user thread = one kernel schedulable entity). **pthread_create**, **pthread_join**, **pthread_mutex_lock** are the standard API.
 
-![Program, process, and thread relationship](../../Assets/Operating-Systems/bytebytego-process-vs-thread.png)
+![Program, process, and thread relationship](../../Assets/Operating-Systems/Bytebytego_Process_vs_Thread.png)
 
 *Image: [ByteByteGo – Process vs Thread: Key Differences](https://bytebytego.com/guides/what-is-the-difference-between-process-and-thread/).*
 

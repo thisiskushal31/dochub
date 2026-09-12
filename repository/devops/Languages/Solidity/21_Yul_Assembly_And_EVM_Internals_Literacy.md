@@ -4,7 +4,7 @@
 
 ## What this chapter covers
 
-When **inline assembly** and **Yul** are justified, what **storage/memory/calldata** look like at the slot/byte level, and how to review assembly without becoming a compiler engineer. Default remains high-level Solidity **0.8.x** / **0.8.36**. Assembly is an exception you can explain.
+When **inline assembly** and **Yul** are justified, what **Storage/memory/calldata** look like at the slot/byte level, and how to review assembly without becoming a compiler engineer. Default remains high-level Solidity **0.8.x** / **0.8.36**. Assembly is an exception you can explain.
 
 High-level Solidity is the grown-up default: checked math, memory rules, readable calls. An `assembly` block is you taking the steering wheel and the airbags at once. That can be the right move for a well-tested `muldiv`. It is a poor personality.
 
@@ -51,7 +51,7 @@ This example is a **warning**, not a template: you just reintroduced wrap. Real 
 
 You need this to:
 
-- read a slot in an incident (`cast storage`),
+- read a slot in an incident (`cast Storage`),
 - review a proxy layout,
 - understand why swapping two `uint128`s is an upgrade break.
 
@@ -193,7 +193,7 @@ EOF did not land as some compiler experiments assumed; later 0.8.x **removed** t
 | Lens | Habit |
 |------|--------|
 | **Application** | Zero assembly in app contracts unless a named library |
-| **Systems** | Slot maps in the ops doc for anything you will `cast storage` |
+| **Systems** | Slot maps in the ops doc for anything you will `cast Storage` |
 | **Security** | Assembly blocks get extra review + extra tests |
 | **Operations** | Source maps kept for traces |
 | **Software engineering** | Comment *why* above every `assembly` keyword |

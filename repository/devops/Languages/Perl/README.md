@@ -15,8 +15,8 @@ This handbook is written to stand alone: each chapter explains **what** a topic 
 Every numbered chapter file **`01`–`16`** uses the same **three-part body** (before **`## References`**):
 
 1. **Concepts** — definitions, syntax, and mechanics you need to read code and docs (`###` subsections under **`## 1. Concepts`**).
-2. **Advanced concepts** — edge cases, interactions with other layers (XS, locale, concurrency), and deeper implementation notes (**`## 2. Advanced concepts`**).
-3. **Applications and use cases** — **DevOps**, **security**, **CI/cron**, **incident response**, and **migration** scenarios where the chapter’s ideas show up in real work (**`## 3. Applications and use cases`**).
+2. **Advanced concepts** — edge cases, interactions with other layers (XS, locale, concurrency), and deeper implementation notes (**`## 2. Advanced Concepts`**).
+3. **Applications and use cases** — **DevOps**, **security**, **CI/cron**, **incident response**, and **migration** scenarios where the chapter’s ideas show up in real work (**`## 3. Applications and use Cases`**).
 
 **References** stay last: upstream **Perldoc** / **MetaCPAN** only, so goals and guardrails remain in the narrative.
 
@@ -136,7 +136,7 @@ The second line prints a compact version line useful for logs and support ticket
 
 ### Deep-study workflow (body-first)
 
-1. Within each chapter, read in order: **`## 1. Concepts`**, then **`## 2. Advanced concepts`**, then **`## 3. Applications and use cases`** (same headings as in the files).
+1. Within each chapter, read in order: **`## 1. Concepts`**, then **`## 2. Advanced Concepts`**, then **`## 3. Applications and use Cases`** (same headings as in the files).
 2. Re-read and extract invariants, failure modes, and operational constraints (context, `@INC`, encoding, subprocess boundaries).
 3. Cross-link chapters: syntax and data → modules and CPAN → I/O and security → testing and operations → supply chain → **HTTP/TLS** (13) → **DBI** (14) → **web** process models (15) → **XS/C** when debugging native code (16).
 4. Only then use Perldoc and MetaCPAN for exhaustive tables, edge cases, and **release-specific** behavior; pick the **same** Perl version in the browser as in production.

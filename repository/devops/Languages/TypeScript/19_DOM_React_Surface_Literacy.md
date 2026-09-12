@@ -131,7 +131,7 @@ packages/web      — lib: DOM + JSX, depends on core
 packages/cli      — @types/node, depends on core
 ```
 
-Shared code must not import `document` or `fs` without sitting in the right package. Violations should fail typecheck, not production.
+Shared code must not import `Document` or `fs` without sitting in the right package. Violations should fail typecheck, not production.
 
 ### 2. `strict` JSX pitfalls
 

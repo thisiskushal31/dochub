@@ -26,7 +26,7 @@ Same format as [Linux](../Linux/README.md), [Windows](../Windows/README.md), and
 | **Virtualization** | **Hypervisor.framework** (low-level), **Virtualization.framework** (high-level); Apple Silicon | [Storage advanced and virtualization](./11_Storage_Advanced_And_Virtualization.md) |
 | **Kernel optimization** | **sysctl**; kernel tuning; XNU open source | [Memory management](./7_Memory_Management.md), [Architecture](./0_MacOS_Architecture_And_Structure.md) |
 
-**Factual basis:** Content is drawn from **Apple Developer Documentation** (Kernel Programming Guide, File System Programming Guide, launchd, Hypervisor, Unified Logging), **XNU open source** ([apple-oss-distributions/xnu](https://github.com/apple-oss-distributions/xnu)), and **security/forensics** sources (e.g. HackTricks macOS, CyberArk, Eclectic Light, forensic APFS references) where they document internals. Links are cited in topic files and **Further reading**.
+**Factual basis:** Content is drawn from **Apple Developer Documentation** (Kernel Programming Guide, File System Programming Guide, launchd, Hypervisor, Unified Logging), **XNU open source** ([apple-oss-distributions/xnu](https://github.com/apple-oss-distributions/xnu)), and **Security/forensics** sources (e.g. HackTricks macOS, CyberArk, Eclectic Light, forensic APFS references) where they document internals. Links are cited in topic files and **Further reading**.
 
 ---
 

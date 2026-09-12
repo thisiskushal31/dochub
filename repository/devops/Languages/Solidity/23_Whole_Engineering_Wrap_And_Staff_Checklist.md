@@ -106,7 +106,7 @@ Deep-study leftovers from the README: if you skipped the labs, do them before si
 
 - Visibility and mutability are explicit; payable surface is intentional.
 - Custom errors + events on value-moving paths; NatSpec on `external` functions.
-- `calldata`/`memory`/`storage`/`transient` used on purpose.
+- `calldata`/`memory`/`Storage`/`transient` used on purpose.
 - No unbounded loops over user-grown arrays in a single user tx.
 - Inheritance/layout is drawable (C3 order); libraries are `internal` unless linked on purpose.
 - Storage packing / mapping-slot / short-`bytes` rules are understood if anyone reads slots raw.

@@ -102,7 +102,7 @@ In DevOps and servers, the **CLI** is primary: automation, SSH, containers, and 
 
 So when you run a command in a terminal, the **shell** parses it and uses **system calls** to ask the **kernel** to do the work (e.g. create a process, open a file).
 
-![How computer programs run from launch to termination](../../Assets/Operating-Systems/bytebytego-how-programs-run.png)
+![How computer programs run from launch to termination](../../Assets/Operating-Systems/Bytebytego_How_Programs_Run.png)
 
 *Image: [ByteByteGo – How Do Computer Programs Run?](https://bytebytego.com/guides/how-do-computer-programs-run/).*
 
@@ -144,7 +144,7 @@ Rough sequence:
 
 **Concepts (hands-on):** On most modern Linux systems the boot uses **GRUB2** and **systemd**. The process is often described in four stages: (1) **BIOS/POST** — power-on self-test, checks RAM, disk, keyboard, etc.; (2) **Bootloader (GRUB2)** — MBR/first sector (e.g. `/dev/sda`), loads kernel from `/boot`, menu at `/boot/grub2/grub.cfg` (or `/boot/grub/grub.cfg`); (3) **Kernel** — self-extracts, mounts root, runs `/sbin/init` (PID 1); (4) **systemd** — parent of all processes, mounts filesystems from `/etc/fstab`, starts daemons and the default **target** (run level). Init mounts **initrd/initramfs** as a temporary root until the real root is available; kernel and initrd live under `/boot`.
 
-![Linux boot process from power-on to login](../../Assets/Operating-Systems/bytebytego-linux-boot-process.png)
+![Linux boot process from power-on to login](../../Assets/Operating-Systems/Bytebytego_Linux_Boot_Process.png)
 
 *Image: [ByteByteGo – Linux Boot Process Explained](https://bytebytego.com/guides/linux-boot-process-explained/).*
 

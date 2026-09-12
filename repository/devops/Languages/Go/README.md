@@ -97,7 +97,7 @@ The table below shows where each language subject appears in this section.
 
 ## Scope: what's covered and what's not
 
-**Covered:** This section gives a full path from zero to use: what Go is, why and how to use it, and where it fits (use cases, security, DevOps). It includes lexical basics (comments, identifiers, keywords, literals), types and variables, control flow, functions, composite types (arrays, slices, structs, maps), methods and interfaces, concurrency (goroutines, channels, select), error handling, defer/panic/recover, packages and modules, build and tooling, use cases, and security/DevOps. That is enough to read and write Go, build and test with the go command, and operate in cloud and DevOps contexts from software, DevOps, and security perspectives.
+**Covered:** This section gives a full path from zero to use: what Go is, why and how to use it, and where it fits (use cases, security, DevOps). It includes lexical basics (comments, identifiers, keywords, literals), types and variables, control flow, functions, composite types (arrays, slices, structs, maps), methods and interfaces, concurrency (goroutines, channels, select), error handling, defer/panic/recover, packages and modules, build and tooling, use cases, and Security/DevOps. That is enough to read and write Go, build and test with the go command, and operate in cloud and DevOps contexts from software, DevOps, and security perspectives.
 
 **Not covered in depth here (by design):** Generics (Go 1.18+), reflection, cgo, and the full standard library are only introduced or pointed to in further reading so the section stays focused on the core language and typical DevOps use.
 

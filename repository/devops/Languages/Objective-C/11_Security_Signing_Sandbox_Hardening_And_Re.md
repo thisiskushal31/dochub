@@ -80,7 +80,7 @@ csrutil status
 - [Security](https://developer.apple.com/documentation/security) (Apple Developer)
 - [App Sandbox](https://developer.apple.com/documentation/security/app_sandbox) (Apple Developer)
 - [Hardened Runtime](https://developer.apple.com/documentation/security/hardened_runtime) (Apple Developer)
-- [Code Signing Guide](https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html) (Apple Archive)
+- [Code Signing Guide](https://developer.apple.com/library/archive/documentation/security/Conceptual/CodeSigningGuide/Introduction/Introduction.html) (Apple Archive)
 - [Notarizing macOS software](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution) (Apple Developer)
 - [Objective-C Runtime Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Introduction/Introduction.html)
 

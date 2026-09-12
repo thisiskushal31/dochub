@@ -79,7 +79,7 @@ Staff need a **single policy**: store **UTC** in databases, convert at display b
 
 Beyond `pm.*` tuning (chapter 11), several pool directives reduce entire classes of misconfiguration and abuse:
 
-- **`security.limit_extensions`** — restricts which script extensions FPM will execute as the primary script; narrows the window where a bad nginx/apache mapping executes unexpected file types.
+- **`security.limit_extensions`** — restricts which script extensions FPM will execute as the primary script; narrows the window where a bad Nginx/apache mapping executes unexpected file types.
 - **`clear_env`** — when yes, strips inherited environment before applying pool-specific variables; reduces surprise `$_ENV`/`getenv()` leakage from process managers.
 - **`chroot`** — optional root jail for the worker; powerful but breaks paths unless the tree is complete (sessions, uploads, unix sockets).
 - **`listen.allowed_clients`** — for TCP listeners, ties which IPs may connect (localhost-only for local reverse proxies).

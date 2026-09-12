@@ -95,7 +95,7 @@ sudo systemctl enable nginx
 sudo systemctl status nginx
 ```
 
-**Logs:** `journalctl -b -u nginx`, `journalctl -f`, etc.
+**Logs:** `journalctl -b -u Nginx`, `journalctl -f`, etc.
 
 ---
 

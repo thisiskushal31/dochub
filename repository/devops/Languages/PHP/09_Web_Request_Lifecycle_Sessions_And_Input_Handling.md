@@ -73,7 +73,7 @@ if (!move_uploaded_file($tmp, $dest)) {
 
 | Directive | Why it matters |
 |-----------|----------------|
-| `session.save_handler` / `session.save_path` | File vs `redis` vs custom—wrong path fills disks or loses sessions on multi-node. |
+| `session.save_handler` / `session.save_path` | File vs `Redis` vs custom—wrong path fills disks or loses sessions on multi-node. |
 | `session.gc_probability` / `session.gc_divisor` | GC frequency for file sessions—can cause latency spikes on busy dirs. |
 | `session.use_strict_mode` | Rejects uninitialized session IDs—mitigates fixation. |
 | `session.sid_length` / `session.sid_bits_per_character` | Entropy of ID—balance security vs log/header size. |

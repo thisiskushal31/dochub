@@ -2,7 +2,7 @@
 
 [← Back to Languages](../README.md)
 
-**Why in DevOps and security:** **COBOL** runs **mainframe and legacy systems** in banking, government, and insurance. You may need to operate, secure, or integrate with these systems; compliance and legacy security often touch COBOL codebases and data flows. **Before you dive in:** Topic 1 explains **what this language does** and **why it's here**. The section then goes **basics → advanced → implementation**: program structure, syntax, data types, verbs, control flow, file handling, subroutines, sort, and database interface first; use cases and security/compliance last. Content is standalone; references are in Further reading only.
+**Why in DevOps and security:** **COBOL** runs **mainframe and legacy systems** in banking, government, and insurance. You may need to operate, secure, or integrate with these systems; compliance and legacy security often touch COBOL codebases and data flows. **Before you dive in:** Topic 1 explains **what this language does** and **why it's here**. The section then goes **basics → advanced → implementation**: program structure, syntax, data types, verbs, control flow, file handling, subroutines, sort, and database interface first; use cases and Security/compliance last. Content is standalone; references are in Further reading only.
 
 **Use cases and implementation:** For where COBOL runs (mainframes, batch, integration) and how to read, navigate, and safely change COBOL systems, see **[Topic 15 — Use cases and applications](./15_Use_Cases_And_Applications.md)** and **Topic 16** (security and compliance).
 

@@ -73,7 +73,7 @@ Several factors explain its widespread use:
 
 So JavaScript is used for front-end UIs, for server-side and serverless backends, for build and DevOps tooling, and for scripting and automation—all with the same core language.
 
-**When to use browser vs Node.** Use the **browser** when the goal is to drive a web page: UI, user interaction, and talking to your own (or third-party) APIs. Use **Node.js** when the goal is to run scripts on a machine or server: file system, processes, long-running services, or CLI tools. The same language and many of the same patterns (promises, async/await, modules) apply in both; the difference is the set of globals and APIs (e.g. `window` and `document` vs `process` and `require`). Hybrid setups (e.g. Electron, React Native) expose a subset of APIs so one codebase can target different environments.
+**When to use browser vs Node.** Use the **browser** when the goal is to drive a web page: UI, user interaction, and talking to your own (or third-party) APIs. Use **Node.js** when the goal is to run scripts on a machine or server: file system, processes, long-running services, or CLI tools. The same language and many of the same patterns (promises, async/await, modules) apply in both; the difference is the set of globals and APIs (e.g. `window` and `Document` vs `process` and `require`). Hybrid setups (e.g. Electron, React Native) expose a subset of APIs so one codebase can target different environments.
 
 ---
 

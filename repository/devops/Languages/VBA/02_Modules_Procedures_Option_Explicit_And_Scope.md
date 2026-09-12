@@ -34,7 +34,7 @@ Handbook default: **Microsoft 365 Apps VBA on Windows**, every module starts wit
 Rule of thumb for LOB work:
 
 - Put **callable macros and shared logic** in **standard modules**.
-- Put **event handlers** in the document/sheet modules that own those events (chapter **12**).
+- Put **event handlers** in the Document/sheet modules that own those events (chapter **12**).
 - Do not dump everything into `ThisWorkbook` “because it is already there.”
 
 ### 2. `Sub` vs `Function`

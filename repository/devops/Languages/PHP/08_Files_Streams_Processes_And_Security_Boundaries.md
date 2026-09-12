@@ -80,7 +80,7 @@ Move uploads with `move_uploaded_file`; never execute uploaded content; store ou
 - **Web:** Map uploads to random names; virus-scan if policy requires; serve via X-Accel-Redirect or signed URLs.
 - **IR:** Hunt `eval`, `assert`, `create_function`, `preg_replace` `/e` legacy, dynamic includes.
 - **Containers:** Read-only rootfs + non-root user + noexec on upload volumes where supported.
-- **Compliance:** File permission audits on `storage/`, `.env`, and private keys—world-readable secrets are recurring findings.
+- **Compliance:** File permission audits on `Storage/`, `.env`, and private keys—world-readable secrets are recurring findings.
 
 ---
 

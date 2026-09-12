@@ -16,7 +16,7 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 - **Core language:** Syntax and structure, data types and variables, operators, control flow.
 - **OOP and core APIs:** Classes and objects, inheritance and polymorphism, interfaces and packages, exceptions and I/O.
 - **Concepts:** Multithreading, collections and generics, build (Maven, Gradle), JVM basics.
-- **Use cases:** Where Java appears in practice—DevOps, Jenkins, microservices, security—and use cases by role (software engineering, DevOps/SRE, security/cybersecurity).
+- **Use cases:** Where Java appears in practice—DevOps, Jenkins, microservices, security—and use cases by role (software engineering, DevOps/SRE, Security/cybersecurity).
 
 ---
 
@@ -84,7 +84,7 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 
 ## Scope: what's covered and what's not
 
-**Covered:** What Java is, why and how to use it, and where it fits. Syntax, data types, variables, operators, control flow, OOP (classes, inheritance, polymorphism, interfaces), exceptions and I/O, multithreading, collections and generics, build (Maven, Gradle), JVM basics, and use cases from software engineering, DevOps, and security/cybersecurity perspectives. Concrete examples appear where they illustrate the concept. No attribution in the body; further reading at the end of each file.
+**Covered:** What Java is, why and how to use it, and where it fits. Syntax, data types, variables, operators, control flow, OOP (classes, inheritance, polymorphism, interfaces), exceptions and I/O, multithreading, collections and generics, build (Maven, Gradle), JVM basics, and use cases from software engineering, DevOps, and Security/cybersecurity perspectives. Concrete examples appear where they illustrate the concept. No attribution in the body; further reading at the end of each file.
 
 **Not covered in depth here (by design):** Every Java SE API, every framework (Spring, etc.), and full JVM internals are only introduced or pointed to in Further reading so the section stays focused and navigable.
 

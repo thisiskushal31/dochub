@@ -26,7 +26,7 @@ Memory in a system is organized in a **hierarchy**:
 
 The OS is concerned with **main memory** and **secondary**: it allocates physical frames to processes, maps virtual pages to frames or to disk (swap), and uses the **page cache** to buffer file data in RAM. The **anatomy** of memory from the OS view is: physical address space (frames), virtual address spaces (per process), and the structures (page tables, swap) that connect them.
 
-![Virtual memory](../../Assets/Operating-Systems/gfg-virtual-memory.webp)
+![Virtual memory](../../Assets/Operating-Systems/GFG_Virtual_Memory.webp)
 
 *Image: [Virtual Memory in Operating System](https://www.geeksforgeeks.org/operating-systems/virtual-memory-in-operating-system/).*
 
@@ -95,11 +95,11 @@ The **buddy system** is a **contiguous** memory allocation technique that reduce
 
 ## 3. Non-contiguous: Paging
 
-![Paging in operating system](../../Assets/Operating-Systems/gfg-paging.webp)
+![Paging in operating system](../../Assets/Operating-Systems/GFG_Paging.webp)
 
 *Image: [Paging in Operating System](https://www.geeksforgeeks.org/operating-systems/paging-in-operating-system/).*
 
-![Page table and TLB](../../Assets/Operating-Systems/gfg-page-table-tlb.webp)
+![Page table and TLB](../../Assets/Operating-Systems/GFG_Page_Table_TLB.webp)
 
 *Image: [Paging in Operating System](https://www.geeksforgeeks.org/operating-systems/paging-in-operating-system/) (page table and TLB).*
 

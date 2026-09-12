@@ -1,6 +1,6 @@
 # DevOps Methodologies
 
-DevOps culture, practices, workflows, and team collaboration patterns. *Stub scaffold August 2026 — expand in [write order](../CONTENT_WRITE_ORDER.md).*
+DevOps culture, practices, workflows, and team collaboration patterns. *Stub — expand when you write this folder.*
 
 ## Start here
 
@@ -15,6 +15,7 @@ DevOps culture, practices, workflows, and team collaboration patterns. *Stub sca
 | 6 | [ChatOps and notifications](./6_ChatOps_And_Notifications.md) | stub |
 | 7 | [Docs-as-code and runbooks](./7_Docs_And_Runbooks.md) | stub |
 | 8 | [FinOps literacy](./8_FinOps_Literacy.md) | stub |
+| 9 | [Maintenance and legacy](./9_Maintenance_And_Legacy.md) | stub |
 
 ## Scope
 

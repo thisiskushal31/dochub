@@ -360,5 +360,5 @@ Workers add complexity. Earn them with measurements.
 - [Node.js — Diagnostics & profiling (guides hub)](https://nodejs.org/en/learn/diagnostics/)
 - [Node.js — File system (`fs` / promises)](https://nodejs.org/docs/latest/api/fs.html)
 - [TypeScript Handbook — intro (types erase to JS)](https://www.typescriptlang.org/docs/handbook/intro.html)
-- [MDN — `Performance.now()`](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now)
+- [MDN — `Performance.now()`](https://developer.mozilla.org/en-US/docs/Web/API/performance/now)
 - [MDN — Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)

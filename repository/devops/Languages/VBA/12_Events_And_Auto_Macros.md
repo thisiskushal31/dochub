@@ -50,7 +50,7 @@ Private Sub Document_Open()
 End Sub
 ```
 
-Same idea: class module of the document/template project, not a random standard module. Word also exposes other document events (close, save)—look them up when you need them; literacy is knowing **where** they must live.
+Same idea: class module of the Document/template project, not a random standard module. Word also exposes other document events (close, save)—look them up when you need them; literacy is knowing **where** they must live.
 
 ### 4. Classic `Auto_Open` / `Auto_Close`
 

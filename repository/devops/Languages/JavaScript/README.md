@@ -15,7 +15,7 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 - **Objects and OOP:** Objects, properties, methods, this, constructors, prototypes; ES6 classes.
 - **ES6+ and modern:** Modules, destructuring, spread/rest, Promise, async/await, optional chaining, nullish coalescing; code quality, arrays, iterables, Map/Set, Date, JSON; advanced functions, prototypes, generators, Proxy/Reflect.
 - **DOM and browser:** DOM tree, selecting and modifying elements, events, forms, dimensions, coordinates; UI events, forms, loading; Node.js, npm, package.json.
-- **Use cases:** Where JavaScript appears in practice—front-end, Node, DevOps/automation, serverless—and use cases by role (software engineering, DevOps/SRE, security/cybersecurity). Implementation topics (21–24) cover DevOps and security, frames and storage, binary and network, animation and Web Components and regex.
+- **Use cases:** Where JavaScript appears in practice—front-end, Node, DevOps/automation, serverless—and use cases by role (software engineering, DevOps/SRE, Security/cybersecurity). Implementation topics (21–24) cover DevOps and security, frames and storage, binary and network, animation and Web Components and regex.
 
 ---
 
@@ -97,7 +97,7 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 
 ## Scope: what's covered and what's not
 
-**Covered:** What JavaScript is, why and how to use it, and where it fits. Syntax, variables, data types, operators, control flow, functions, objects, prototypes, **ES6 and modern JavaScript** (classes, modules, destructuring, spread/rest, Promise, async/await), code quality and testing, arrays and iterables and Map/Set and Date and JSON, advanced functions, property descriptors and prototypes, classes and generators, Proxy/Reflect/eval, DOM and events, UI events and forms and loading, Node.js and npm, and use cases from front-end, backend, DevOps, and security/cybersecurity perspectives. Implementation topics (21–24) cover DevOps and security, frames and storage, binary and network, animation and Web Components and regex. Further reading at the end of each file.
+**Covered:** What JavaScript is, why and how to use it, and where it fits. Syntax, variables, data types, operators, control flow, functions, objects, prototypes, **ES6 and modern JavaScript** (classes, modules, destructuring, spread/rest, Promise, async/await), code quality and testing, arrays and iterables and Map/Set and Date and JSON, advanced functions, property descriptors and prototypes, classes and generators, Proxy/Reflect/eval, DOM and events, UI events and forms and loading, Node.js and npm, and use cases from front-end, backend, DevOps, and Security/cybersecurity perspectives. Implementation topics (21–24) cover DevOps and security, frames and storage, binary and network, animation and Web Components and regex. Further reading at the end of each file.
 
 **Not covered in depth here (by design):** Every browser or Node API, and every framework (React, Vue, Angular, etc.), are only introduced or pointed to in Further reading so the section stays focused and navigable.
 

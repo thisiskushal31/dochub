@@ -64,7 +64,7 @@ contract Locations {
 - `messWithCopy`: `memory` is a copy. Changing `copy[0]` does not change `items`.
 - `messWithAlias`: `storage ref` **is** `items`. Changing `ref[0]` changes the contract forever.
 
-Getting `storage` vs `memory` wrong is the classic “I thought I had a copy” bug. When you see `uint256[] storage`, ask: *did we mean to alias the wall?*
+Getting `Storage` vs `memory` wrong is the classic “I thought I had a copy” bug. When you see `uint256[] Storage`, ask: *did we mean to alias the wall?*
 
 ### 3. Storage is the database
 
@@ -111,14 +111,14 @@ Anyone can `eth_getStorageAt`. `private` only stops other Solidity contracts fro
 
 | From → To | Behavior |
 |-----------|----------|
-| storage → local `storage` | **Reference** (alias) |
+| storage → local `Storage` | **Reference** (alias) |
 | storage → `memory` | **Copy** |
 | `memory` → `memory` | Reference (same memory region) |
 | `calldata` → `memory` | Copy |
 | `memory` → storage | Copy into slots |
 | `calldata` → local `calldata` | Reference into the input tape |
 
-If two `storage` references alias, writes collide. Draw it when reviewing nested structs.
+If two `Storage` references alias, writes collide. Draw it when reviewing nested structs.
 
 ### 2. Packing rules (the actual ones)
 
@@ -153,7 +153,7 @@ struct T { uint128 x; uint256 y; uint128 z; } // three slots — y breaks the pa
 
 Official guidance: order members `uint128, uint128, uint256` not `uint128, uint256, uint128`.
 
-Changing declaration **order** changes layout. That breaks proxies and `cast storage` notes. Freeze layout once you ship.
+Changing declaration **order** changes layout. That breaks proxies and `cast Storage` notes. Freeze layout once you ship.
 
 `constant` is not a slot. `immutable` is not a slot (baked into bytecode). `transient` uses the **same numbering rules** on a *separate* map — a `uint256 transient x` does not occupy persistent slot 0. Mappings and dynamic arrays each reserve a full slot for their base `p` even though the slot’s *contents* are empty (mappings) or a length (arrays) — they never share that slot with a neighbor.
 

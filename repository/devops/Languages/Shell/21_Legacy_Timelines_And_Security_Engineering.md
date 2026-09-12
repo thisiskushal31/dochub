@@ -294,7 +294,7 @@ This is architecture, not a CVE bingo card.
 
 ### 16. Mapping to the Linux distros chapter
 
-Dialect lies often come from **distro `/bin/sh`**, not from Bash major alone. Use the distros/userland chapter for dash vs BusyBox vs RHEL false friends; use **this** chapter for era defaults, login migration, and security/IR framing. Together they answer: *what was normal when this was written, and what does the target actually run?*
+Dialect lies often come from **distro `/bin/sh`**, not from Bash major alone. Use the distros/userland chapter for dash vs BusyBox vs RHEL false friends; use **this** chapter for era defaults, login migration, and Security/IR framing. Together they answer: *what was normal when this was written, and what does the target actually run?*
 
 ---
 

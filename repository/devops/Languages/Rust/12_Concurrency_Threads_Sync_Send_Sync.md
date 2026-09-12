@@ -172,7 +172,7 @@ Staff practice: document ordered lock sets for multi-mutex modules; keep critica
 
 ### 7. `Arc` cycles and leaks
 
-`Arc` cycles leak memory unless you break them with **`Weak`**. Less common than in GC graphs, but long-lived graphs of services/handlers can create cycles—know the escape hatch.
+`Arc` cycles leak memory unless you break them with **`Weak`**. Less common than in GC graphs, but long-lived graphs of Services/handlers can create cycles—know the escape hatch.
 
 ### 8. Mixing threads and async
 

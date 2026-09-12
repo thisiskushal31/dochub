@@ -65,7 +65,7 @@ So: the **kernel** is **C and C++**; the **rest of the system** uses C, Objectiv
 - **Mach** and **BSD** do not talk to hardware directly; they use **IOKit** (and the **platform expert**, etc.) for device I/O. So: **application or BSD layer** → **syscall or API** → **Mach or BSD** → **IOKit** → **device**. Hardware-specific code (CPU features, interrupts, DMA) is abstracted by IOKit and the platform code.
 - **Apple Silicon (M1, M2, etc.):** The same XNU kernel runs on **ARM64**. Virtualization uses the **Hypervisor.framework**, which uses hardware **virtualization extensions**; no third-party kernel extensions are required for VMs. Security (e.g. **System Integrity Protection**, **SIP**) and **Secure Enclave** are part of the hardware–OS integration.
 
-**References:** [I/O Kit Fundamentals (Apple)](https://developer.apple.com/library/archive/documentation/DeviceDrivers/Conceptual/IOKitFundamentals/), [Hypervisor framework (Apple)](https://developer.apple.com/documentation/hypervisor).
+**References:** [I/O Kit Fundamentals (Apple)](https://developer.apple.com/library/archive/documentation/DeviceDrivers/Conceptual/IOKitfundamentals/), [Hypervisor framework (Apple)](https://developer.apple.com/documentation/hypervisor).
 
 ---
 

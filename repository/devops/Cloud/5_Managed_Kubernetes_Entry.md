@@ -9,7 +9,7 @@
 - What managed control plane buys you
 - Node pools, upgrades, add-ons at operator level
 - Ingress, LB, persistent volumes — DevOps checklist
-- **Depth lives elsewhere:** [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) managed-services sections
+- **Depth lives elsewhere:** [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) Managed-Services sections
 
 ## Checklist before marking done
 

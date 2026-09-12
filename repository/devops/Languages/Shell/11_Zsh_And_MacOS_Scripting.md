@@ -67,7 +67,7 @@ macOS continues to ship **`/bin/bash` at 3.2.x** for legacy reasons. That binary
 
 If a script’s shebang is `#!/bin/bash` on a Mac, it may be 3.2 even when the engineer also installed Homebrew Bash elsewhere.
 
-Why **security/ops** still inventory this binary:
+Why **Security/ops** still inventory this binary:
 
 - **Shebang gravity:** installers, MDM payloads, and old internal tools hard-code `/bin/bash` and never see Homebrew.
 - **Feature false confidence:** a reviewer on Linux Bash 5 approves syntax that **cannot run** on stock Mac agents—or worse, partially runs with subtle bugs.

@@ -17,7 +17,7 @@ Scripting, orchestration, patterns, and tools. **Each tool has its own folder**;
 | [**Chef**](./Chef/README.md) | Cookbooks, automation (see also [IAC/Chef](../IAC/Chef/README.md)) |
 | [**Puppet**](./Puppet/README.md) | Manifests, automation (see also [IAC/Puppet](../IAC/Puppet/README.md)) |
 
-To add a new tool: create a folder and add it to the table above. Community-maintained.
+To add a new *config-management* tool: create a folder here. App workflow products (n8n) → [Tooling Automation](../../Tooling-and-Frameworks-Deep-Dive/Automation/README.md).
 
 ## Scope
 

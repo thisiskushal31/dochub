@@ -4,7 +4,7 @@
     "path": "0_SE_Learning_DevOps_Start_Here.md",
     "type": "file",
     "sha": "",
-    "size": 1524
+    "size": 1398
   },
   {
     "name": "1_DevOps_Culture_And_Collaboration.md",
@@ -63,10 +63,17 @@
     "size": 718
   },
   {
+    "name": "9_Maintenance_And_Legacy.md",
+    "path": "9_Maintenance_And_Legacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 693
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1383
+    "size": 1416
   }
 ]

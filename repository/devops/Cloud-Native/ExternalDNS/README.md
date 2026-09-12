@@ -12,4 +12,4 @@
 
 ## Checklist before marking done
 
-- [ ] Cross-link [Entry-Points/DNS_CDN_And_Load_Balancers.md](../../Entry-Points/DNS_CDN_And_Load_Balancers.md)
+- [ ] Cross-link [Networks Deep Dive](../../../Networks-Deep-Dive/README.md)

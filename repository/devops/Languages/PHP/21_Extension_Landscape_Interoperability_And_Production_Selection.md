@@ -18,9 +18,9 @@ Common categories:
 
 - **core runtime/perf**: `opcache`, `mbstring`, `intl`,
 - **crypto/security**: `openssl`, `sodium`,
-- **database**: `pdo_mysql`, `pdo_pgsql`, `mysqli`, `redis` (PECL),
+- **database**: `pdo_mysql`, `pdo_pgsql`, `mysqli`, `Redis` (PECL),
 - **process/network**: `curl`, `pcntl`, `sockets`,
-- **observability/debug**: `xdebug`, profilers.
+- **Observability/debug**: `xdebug`, profilers.
 
 Composer packages can require `ext-*`; CI and production images must satisfy those explicitly.
 

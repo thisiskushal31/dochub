@@ -22,7 +22,7 @@ Unix kernels are typically **monolithic** and **modular**. The kernel manages pr
 
 On power-on, firmware (e.g. BIOS or UEFI) runs POST, finds the **boot loader** (e.g. **boot0**/boot loader on BSD, **GRUB** on some systems), which loads the **kernel**. The kernel mounts the root file system and starts **init** (traditional **init**, **OpenRC**, or **systemd** on some Unix-like systems). The sequence is conceptually the same as on Linux: firmware → boot loader → kernel → init → user space.
 
-![Boot process from power-on to login (Linux; Unix flow is similar)](../../Assets/Operating-Systems/bytebytego-linux-boot-process.png)
+![Boot process from power-on to login (Linux; Unix flow is similar)](../../Assets/Operating-Systems/Bytebytego_Linux_Boot_Process.png)
 
 *Image: [ByteByteGo – Linux Boot Process Explained](https://bytebytego.com/guides/linux-boot-process-explained/). The diagram shows BIOS/UEFI → boot loader → kernel → systemd; on classic Unix/BSD the last step is init or rc scripts.*
 

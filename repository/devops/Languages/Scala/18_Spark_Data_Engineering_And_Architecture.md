@@ -142,7 +142,7 @@ Skew fixes are data design (salted keys, separate handling of hot keys, better j
 
 ### 6. Persistence and caching literacy
 
-`cache` / `persist` keep partitions in memory (or memory+disk) across actions so Spark does not recompute the lineage from source every time. Caching is a **trade**: memory pressure and consistency risk versus recomputation cost.
+`Cache` / `persist` keep partitions in memory (or memory+disk) across actions so Spark does not recompute the lineage from source every time. Caching is a **trade**: memory pressure and consistency risk versus recomputation cost.
 
 Rules of thumb:
 

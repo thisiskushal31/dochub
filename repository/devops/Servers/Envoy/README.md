@@ -13,7 +13,7 @@
 ## Cross-links
 
 - [Cloud-Native/Istio](../Cloud-Native/Istio/README.md)
-- [Entry-Points/DNS_CDN_And_Load_Balancers.md](../Entry-Points/DNS_CDN_And_Load_Balancers.md)
+- [Networks Deep Dive](../../../Networks-Deep-Dive/README.md)
 
 ## Checklist before marking done
 

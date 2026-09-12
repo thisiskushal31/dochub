@@ -82,11 +82,11 @@ cat /etc/pam.d/sudo
 # Common modules (names may vary)
 # pam_unix.so   — password/auth against /etc/shadow
 # pam_sss.so    — SSSD (LDAP/AD)
-# pam_limits.so — limits (e.g. nofile) from /etc/security/limits.conf
+# pam_limits.so — limits (e.g. nofile) from /etc/Security/limits.conf
 # pam_tally2.so / pam_faillock.so — lockout after failed attempts
 ```
 
-**limits.conf** — PAM can apply resource limits at login. Edit `/etc/security/limits.conf` or files under `/etc/security/limits.d/` (e.g. `nofile`, `nproc`). Requires a new login or session to take effect.
+**limits.conf** — PAM can apply resource limits at login. Edit `/etc/Security/limits.conf` or files under `/etc/Security/limits.d/` (e.g. `nofile`, `nproc`). Requires a new login or session to take effect.
 
 **Why it matters:** Broken PAM config can lock you out (e.g. wrong `pam_sss.so` or typo). Always keep a root console or recovery access when changing PAM. For LDAP/AD integration, see SSSD and distro docs.
 
@@ -145,7 +145,7 @@ sudo ausearch -ui 1000
 ## Summary
 
 - **MAC:** **SELinux** (RHEL) or **AppArmor** (Debian/Ubuntu) enforce policy; use `getenforce`/`setenforce` or `aa-status`/`aa-enforce`; fix contexts or profiles when access is wrongly denied.
-- **PAM:** Authentication stack in `/etc/pam.d/`; **limits** in `/etc/security/limits.conf`; changes apply at next login.
+- **PAM:** Authentication stack in `/etc/pam.d/`; **limits** in `/etc/Security/limits.conf`; changes apply at next login.
 - **SSH:** Harden `/etc/ssh/sshd_config` (e.g. no root login, key-only), protect `authorized_keys` and host keys; monitor auth logs.
 - **Audit:** **auditd** and **ausearch** for compliance and forensics; AVC logs for SELinux.
 

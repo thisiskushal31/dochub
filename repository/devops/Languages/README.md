@@ -42,7 +42,7 @@ Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-p
 | **Julia**   | Scientific/numerical, HPC, data pipelines; research infra. |
 | **Dart**    | Flutter (mobile/cross-platform); build, deploy, app security. |
 | **D**       | Systems language; tooling and niche malware; recognition. |
-| **Haskell** | Functional; security/finance tooling, formal methods. |
+| **Haskell** | Functional; Security/finance tooling, formal methods. |
 | **Clojure** | JVM Lisp; data processing, tooling, backend services. |
 | **Crystal** | Ruby-like, compiled; web and CLI tooling. |
 | **VB.NET**  | .NET legacy; Windows enterprise apps and services. |
@@ -105,13 +105,13 @@ One folder per language. Add topic files (e.g. `1_Basics_And_Syntax.md`, `2_Tool
 | 26 | [**COBOL**](./COBOL/README.md) | COBOL: mainframes, banking, government; legacy and compliance. |
 | 27 | [**Objective-C**](./Objective-C/README.md) | Objective-C: macOS/iOS legacy; Apple frameworks. |
 | 28 | [**OCaml**](./OCaml/README.md) | OCaml: compilers, MirageOS, formal/security tooling. |
-| 29 | [**Solidity**](./Solidity/README.md) | Solidity whole-engineering track: baby steps→staff; 0.8.x, Foundry/Hardhat, ABI/security/ops, compass for forks/AA (00–24). |
+| 29 | [**Solidity**](./Solidity/README.md) | Solidity whole-engineering track: baby steps→staff; 0.8.x, Foundry/Hardhat, ABI/Security/ops, compass for forks/AA (00–24). |
 | 30 | [**FSharp**](./FSharp/README.md) | F#: .NET functional; Azure, data, scripting. |
 | 31 | [**Ada**](./Ada/README.md) | Ada: safety-critical; avionics, defense, regulated. |
 | 32 | [**Julia**](./Julia/README.md) | Julia: scientific, HPC, data pipelines. |
 | 33 | [**Dart**](./Dart/README.md) | Dart: Flutter; mobile/cross-platform; build and deploy. |
 | 34 | [**D**](./D/README.md) | D: systems language; tooling, recognition. |
-| 35 | [**Haskell**](./Haskell/README.md) | Haskell: functional; security/finance, formal methods. |
+| 35 | [**Haskell**](./Haskell/README.md) | Haskell: functional; Security/finance, formal methods. |
 | 36 | [**Clojure**](./Clojure/README.md) | Clojure: JVM Lisp; data, tooling. |
 | 37 | [**Crystal**](./Crystal/README.md) | Crystal: Ruby-like, compiled; web and CLI. |
 | 38 | [**VBNet**](./VBNet/README.md) | VB.NET: .NET legacy; Windows enterprise. |
@@ -148,17 +148,17 @@ Database-specific **query and config languages** are covered in **[Databases-Dee
 
 | Language / API | Used by (in Databases-Deep-Dive) | Where covered |
 |----------------|----------------------------------|---------------|
-| **SQL** | MySQL, PostgreSQL, Oracle, SQL Server, SQLite; TimescaleDB, pgvector | [Relational](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/relational), [MySQL](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/relational/mysql), [PostgreSQL](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/relational/postgresql), [time-series](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/time-series), [vector](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/vector) |
-| **MongoDB query / aggregation** | MongoDB | [Document/MongoDB](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/document/mongodb) |
-| **Cypher** | Neo4j (graph) | [Graph/Neo4j](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/graph/neo4j) |
-| **AQL** | ArangoDB (graph, document) | [Graph/ArangoDB](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/graph/arangodb) |
-| **Gremlin** | Neptune, some graph APIs | [Graph/Neptune](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/graph/neptune) |
+| **SQL** | MySQL, PostgreSQL, Oracle, SQL Server, SQLite; TimescaleDB, pgvector | [Relational](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/relational), [MySQL](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Relational/MySQL), [PostgreSQL](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Relational/postgresql), [time-series](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/time-series), [vector](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/vector) |
+| **MongoDB query / aggregation** | MongoDB | [Document/MongoDB](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Document/mongodb) |
+| **Cypher** | Neo4j (graph) | [Graph/Neo4j](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Graph/neo4j) |
+| **AQL** | ArangoDB (graph, document) | [Graph/ArangoDB](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Graph/arangodb) |
+| **Gremlin** | Neptune, some graph APIs | [Graph/Neptune](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Graph/neptune) |
 | **CQL** (Cassandra Query Language) | Cassandra, ScyllaDB | [Wide-column](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/wide-column) |
-| **Flux / InfluxQL** | InfluxDB (time-series) | [Time-series/InfluxDB](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/time-series/influxdb) |
-| **PromQL** | Prometheus (metrics) | [Time-series/Prometheus](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/time-series/prometheus) — Prometheus and PromQL are covered there |
-| **Elasticsearch DSL** (Query DSL, JSON) | Elasticsearch | [Search-engine/Elasticsearch](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/search-engine/elasticsearch) |
-| **Redis commands / Lua** | Redis (key-value, cache) | [Key-value/Redis](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/key-value/redis); Lua see [Lua](./Lua/README.md) here |
-| **PartiQL / DynamoDB API** | DynamoDB | [Key-value/DynamoDB](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/key-value/dynamodb) |
+| **Flux / InfluxQL** | InfluxDB (time-series) | [Time-series/InfluxDB](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Time-Series/influxdb) |
+| **PromQL** | Prometheus (metrics) | [Time-series/Prometheus](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Time-Series/prometheus) — Prometheus and PromQL are covered there |
+| **Elasticsearch DSL** (Query DSL, JSON) | Elasticsearch | [Search-engine/Elasticsearch](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Search-Engine/elasticsearch) |
+| **Redis commands / Lua** | Redis (key-value, cache) | [Key-value/Redis](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Key-Value/redis); Lua see [Lua](./Lua/README.md) here |
+| **PartiQL / DynamoDB API** | DynamoDB | [Key-value/DynamoDB](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Key-Value/dynamodb) |
 
 For **SQL**, **PromQL**, and all other database languages above, use [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) (each engine and its query language are covered together there).
 

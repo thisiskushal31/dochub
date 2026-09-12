@@ -147,7 +147,7 @@ Fear-mongering (“all macros are malware”) is as unhelpful as recklessness (�
 
 ### 4. What this track is and is not
 
-This handbook teaches **language + VBE + host literacy + I/O/Automation surfaces + security/defense literacy**.
+This handbook teaches **language + VBE + host literacy + I/O/Automation surfaces + Security/defense literacy**.
 
 It is **not**: a full financial modeling course, an Access schema design book, a complete Outlook rules product, a malware-construction guide, or a substitute for your org’s macro policy.
 

@@ -14,7 +14,7 @@
 
 ## Cross-links
 
-- Data depth: [Entry-Points/Data_Messaging_And_Cache.md](../Entry-Points/Data_Messaging_And_Cache.md) → Databases-Deep-Dive
+- Data depth: [Databases Deep Dive](../../Databases-Deep-Dive/README.md) → Databases-Deep-Dive
 - Pipeline overview: [1_Pipelines_Build_Test_Deploy.md](./1_Pipelines_Build_Test_Deploy.md)
 
 ## Checklist before marking done

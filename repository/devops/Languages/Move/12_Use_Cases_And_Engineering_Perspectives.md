@@ -46,7 +46,7 @@ public fun publish<C>(account: &signer) {
 
 **Sui-style object:** types with **`key`** get a unique **`UID`** at creation; **`public entry`** transfers or mutates those objects in one PTB—see topics **20–27**.
 
-Most nontrivial packages lean on the **standard library** (**`vector`**, **`option`**, **`string`**, encoding helpers) plus chain **framework** modules for coins, objects, and system hooks. The tutorial-style **creating coins** flow walks from publish through mint and balance—useful as an end-to-end mental model after topics **1–11**.
+Most nontrivial packages lean on the **standard library** (**`Vector`**, **`option`**, **`string`**, encoding helpers) plus chain **framework** modules for coins, objects, and system hooks. The tutorial-style **creating coins** flow walks from publish through mint and balance—useful as an end-to-end mental model after topics **1–11**.
 
 Use cases are **not** DevOps-only: they span **application security**, **platform reliability**, and **compliance-aware** design where applicable.
 

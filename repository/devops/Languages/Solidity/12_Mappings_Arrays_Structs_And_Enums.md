@@ -175,7 +175,7 @@ mstore(0x20, 0x00…00)                 // slot p = 0
 slot = keccak256(0x00..0x3f)
 ```
 
-Then `sload(slot)` is the balance. If `cast storage` disagrees with `bal(addr)`, your padding or endianness is wrong.
+Then `sload(slot)` is the balance. If `cast Storage` disagrees with `bal(addr)`, your padding or endianness is wrong.
 
 ### 2. Dynamic array slots
 

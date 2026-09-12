@@ -67,7 +67,7 @@ function copies() external pure returns (uint256, uint256) {
 | Structs | `struct Foo { uint256 x; }` |
 | Mappings | `mapping(address => uint256)` |
 
-These require **`storage`**, **`memory`**, or **`calldata`** (mappings only in storage). Two references can alias the same data—chapter **11**.
+These require **`Storage`**, **`memory`**, or **`calldata`** (mappings only in storage). Two references can alias the same data—chapter **11**.
 
 `string` and `bytes` are dynamic byte arrays with different APIs, not UTF-8-smart string objects.
 
@@ -177,7 +177,7 @@ Enums encode as `uint8` unless they need more (ABI). Out-of-range `enum` convers
 
 ### 6. `address(this)` and `address(0)`
 
-`address(this)` is the account whose **code is running** — except under `delegatecall`, where code is theirs and storage/`address(this)` are **yours** (chapter **15**). `address(0)` is the zero account: default, sometimes a burn destination, and the classic unset-owner bug.
+`address(this)` is the account whose **code is running** — except under `delegatecall`, where code is theirs and Storage/`address(this)` are **yours** (chapter **15**). `address(0)` is the zero account: default, sometimes a burn destination, and the classic unset-owner bug.
 
 ### 7. Contract types are not subclasses of `address`
 

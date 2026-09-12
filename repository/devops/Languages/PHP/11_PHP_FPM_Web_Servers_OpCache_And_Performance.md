@@ -4,7 +4,7 @@
 
 ## What this chapter covers
 
-FPM master/worker architecture, `pm` strategies and queueing before accept, pool directives that bound latency and memory, nginx/Apache FastCGI timeout alignment, Opcache shared memory, timestamp validation vs immutable deploys, interned strings and eviction, JIT buffer sizing and modes, realpath cache effects, and APCu pitfalls. Later chapters assume you size pools from measured RSS, not guesses.
+FPM master/worker architecture, `pm` strategies and queueing before accept, pool directives that bound latency and memory, Nginx/Apache FastCGI timeout alignment, Opcache shared memory, timestamp validation vs immutable deploys, interned strings and eviction, JIT buffer sizing and modes, realpath cache effects, and APCu pitfalls. Later chapters assume you size pools from measured RSS, not guesses.
 
 ---
 
@@ -54,7 +54,7 @@ Opcache stores shared bytecode across workers. Key directives:
 - **`opcache.interned_strings_buffer`** — shared literal deduplication; starving it increases per-request allocations.
 - **`opcache.validate_timestamps` + `opcache.revalidate_freq`** — dev-friendly; production immutables often disable validation and rely on reload.
 - **`opcache.max_wasted_percentage` + `opcache.force_restart_timeout`** — automatic restarts when shared memory is fragmented or exhausted—watch logs for restart loops.
-- **`opcache.file_cache`** — secondary file-backed cache for cold starts or shared hosting patterns; understand consistency semantics before relying on it.
+- **`opcache.file_Cache`** — secondary file-backed cache for cold starts or shared hosting patterns; understand consistency semantics before relying on it.
 - **`opcache.restrict_api`** — limits who may call `opcache_reset`—prevent unauthenticated endpoints from nuking cache.
 
 ```ini

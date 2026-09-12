@@ -28,7 +28,7 @@ apk upgrade
 # Install / remove
 apk add package-name
 apk add package1 package2
-apk add --no-cache package-name   # Don't keep index/cache in /var/cache/apk (standard in Docker)
+apk add --no-cache package-name   # Don't keep index/cache in /var/Cache/apk (standard in Docker)
 apk del package-name
 apk del --purge package-name      # Remove and purge config
 
@@ -63,7 +63,7 @@ apk add package@3.18.0
 # Or in /etc/apk/repositories use @edge or @community in the URL for that repo
 ```
 
-**Cache** — By default apk keeps downloaded packages in `/var/cache/apk/`. In containers you usually want `apk add --no-cache` and then `rm -rf /var/cache/apk/*` (or use `--no-cache` so they aren’t cached) to keep the image small.
+**Cache** — By default apk keeps downloaded packages in `/var/Cache/apk/`. In containers you usually want `apk add --no-cache` and then `rm -rf /var/Cache/apk/*` (or use `--no-cache` so they aren’t cached) to keep the image small.
 
 ---
 
@@ -97,7 +97,7 @@ The official **alpine** image on Docker Hub is the standard minimal base. In a D
 ```dockerfile
 FROM alpine:3.18
 RUN apk add --no-cache nginx
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/Nginx/nginx.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```

@@ -52,7 +52,7 @@ uint256 dust = 1 wei;    // 1
 
 The EVM balances are **wei** (`uint256`). Suffixes are source sugar. Off-chain UIs show ether; your tests should assert wei (or named constants).
 
-There is no built-in “USD.” Prices are an **oracle/trust** problem (chapter **18**).
+There is no built-in “USD.” Prices are an **Oracle/trust** problem (chapter **18**).
 
 ### 2. Time units
 

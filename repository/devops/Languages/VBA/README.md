@@ -6,7 +6,7 @@
 
 **VBScript** is a related, lighter scripting dialect historically used with **Windows Script Host** (`.vbs` files via `wscript` / `cscript`). It remains important for **brownfield** and incident response, but it is **deprecated** on modern Windows—treat it as literacy plus a migrate-to-PowerShell story, not a greenfield default.
 
-This track teaches **language + Visual Basic Editor + host object-model literacy + file/Automation surfaces + macro security/defense literacy**. It is **not** a full Excel modeling course, an Access database design book, an Office Scripts/TypeScript curriculum, or a malware-construction guide. Chapter **18** is the **compass** for those doors.
+This track teaches **language + Visual Basic Editor + host object-model literacy + file/Automation surfaces + macro Security/defense literacy**. It is **not** a full Excel modeling course, an Access database design book, an Office Scripts/TypeScript curriculum, or a malware-construction guide. Chapter **18** is the **compass** for those doors.
 
 Staff hire VBA fluency for four practical pillars:
 

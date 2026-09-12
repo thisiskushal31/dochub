@@ -69,7 +69,7 @@ The Assembly section is structured as a **deep dive** from very basic to impleme
 3. **Where it shows up** (3) — Malware, shellcode, firmware, kernels; security context.
 4. **Tooling** (4) — Disassemblers, debuggers, assemblers.
 5. **Core programming** (6, 8–11) — Registers, flags, system calls; arithmetic, logical, control flow; procedures, stack, macros; numbers, strings, arrays; recursion, file and memory management.
-6. **Use cases and ecosystem** (12) — C and assemblers, security/ethical hacking, online tools, data structures/algorithms.
+6. **Use cases and ecosystem** (12) — C and assemblers, Security/ethical hacking, online tools, data structures/algorithms.
 7. **Case studies and implementation** (13) — Hands-on examples: Hello World, factorial recursion, reading disassembly, file write. See [13_Case_Studies.md](./13_Case_Studies.md).
 
 ---

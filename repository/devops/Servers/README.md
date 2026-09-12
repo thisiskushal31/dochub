@@ -1,6 +1,6 @@
 # Servers and web tier
 
-Host lifecycle, web servers, reverse proxies, and classic deploy patterns (VM/bare metal). *New section August 2026 — [write order](../CONTENT_WRITE_ORDER.md).*
+Host lifecycle, web servers, reverse proxies, and classic deploy patterns (VM/bare metal). *New section — expand when you write this folder.*
 
 **Not duplicate of:** [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) (containers) or [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive) (packet depth).
 
@@ -14,7 +14,7 @@ Host lifecycle, web servers, reverse proxies, and classic deploy patterns (VM/ba
 
 | Product | Role | Status |
 |---------|------|--------|
-| [**nginx**](./nginx/README.md) | Reverse proxy, static, upstream | stub — **v1 priority** |
+| [**nginx**](./Nginx/README.md) | Reverse proxy, static, upstream | stub — **v1 priority** |
 | [**Apache httpd**](./Apache/README.md) | Web server, modules, vhosts | stub — **v1 priority** |
 | [**IIS**](./IIS/README.md) | Windows web server | stub — **v1 priority** |
 | [**Caddy**](./Caddy/README.md) | Auto TLS, simple config | stub |
@@ -26,7 +26,7 @@ Host lifecycle, web servers, reverse proxies, and classic deploy patterns (VM/ba
 
 - OS services: [Operating-Systems/](../Operating-Systems/README.md)
 - Deploy automation: [Automation/](../Automation/README.md) (Ansible roles → hosts)
-- TLS / ingress overlap: [Cloud-Native/Kubernetes](../Cloud-Native/Kubernetes/README.md), [Entry-Points/DNS_CDN_And_Load_Balancers.md](../Entry-Points/DNS_CDN_And_Load_Balancers.md)
+- TLS / ingress overlap: [Cloud-Native/Kubernetes](../Cloud-Native/Kubernetes/README.md), [Networks Deep Dive](../../Networks-Deep-Dive/README.md)
 
 ## v1 done when
 

@@ -19,7 +19,7 @@ Architectures, Kubernetes, platforms, and tools. **Each tool has its own folder*
 | [**Helm**](./Helm/README.md) | Charts, package management for K8s |
 | [**Istio**](./Istio/README.md) | Service mesh, traffic, security, observability |
 | [**Linkerd**](./Linkerd/README.md) | Lightweight service mesh |
-| [**cert-manager**](./cert-manager/README.md) | TLS certificates in K8s | stub |
+| [**cert-manager**](./Cert-Manager/README.md) | TLS certificates in K8s | stub |
 | [**ExternalDNS**](./ExternalDNS/README.md) | DNS automation from K8s | stub |
 | [**Backstage**](./Backstage/README.md) | Internal developer portal | stub |
 

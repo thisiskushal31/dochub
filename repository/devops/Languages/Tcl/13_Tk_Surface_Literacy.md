@@ -226,7 +226,7 @@ When the tool leaves your home directory:
 3. List toplevel widget creates (`.`, `toplevel`, major frames).
 4. Find geometry managers (`pack`/`grid`/`place`) per parent.
 5. Jump to `-command` and `bind` targets—those are behavior.
-6. Search for `exec`, `open`, `eval`—security/ops hotspots.
+6. Search for `exec`, `open`, `eval`—Security/ops hotspots.
 7. Ask whether CI can run any of this without a display.
 
 That seven-step pass is enough for most staff reviews without becoming a Tk designer.

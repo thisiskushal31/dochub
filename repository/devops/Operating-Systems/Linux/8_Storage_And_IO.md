@@ -109,14 +109,14 @@ Examples you will see often:
 ```
 
 - **Logs:** Look in **/var/log/** (and **journalctl** for systemd).
-- **Package manager** stores its database and cache under **/var** (e.g. /var/lib/dpkg, /var/cache/apt).
+- **Package manager** stores its database and cache under **/var** (e.g. /var/lib/dpkg, /var/Cache/apt).
 
 **Key system dirs and files under /var and what they do:**
 
 | Path | What it does |
 |------|----------------|
 | **/var/log/** | System and app logs: **syslog**, **auth.log** (or **secure**), **journal/** (systemd). Daemons and installers write here. |
-| **/var/cache/** | Caches (apt, dnf, fonts). Safe to clear when apps are idle; they will repopulate. |
+| **/var/Cache/** | Caches (apt, dnf, fonts). Safe to clear when apps are idle; they will repopulate. |
 | **/var/lib/** | Persistent app state: **dpkg**/rpm DB, **docker** (images, containers), DB files (e.g. PostgreSQL, MySQL). |
 | **/var/spool/** | Queues: **cron** (scheduled jobs), **mail**, **cups** (print). Data waiting to be processed. |
 | **/var/run** | Runtime data (PIDs, sockets); on many systems a symlink to **/run** (tmpfs, cleared at boot). |
@@ -130,7 +130,7 @@ Examples you will see often:
 ### Why this matters
 
 - **Config** → **/etc**. **Logs and caches** → **/var**. **Your own installs** → **/usr/local** or **/opt**.
-- **Paths in docs** (e.g. “edit /etc/nginx/nginx.conf”) assume this layout. Same layout across most distros (RHEL, Debian, Arch, etc.) with small differences (e.g. /usr/bin vs /bin symlinks).
+- **Paths in docs** (e.g. “edit /etc/Nginx/nginx.conf”) assume this layout. Same layout across most distros (RHEL, Debian, Arch, etc.) with small differences (e.g. /usr/bin vs /bin symlinks).
 
 For the full spec, see [FHS (Filesystem Hierarchy Standard)](https://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html). Distro docs may describe minor variations.
 

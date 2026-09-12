@@ -386,7 +386,7 @@ ss -tnp
 
 ### 3. Name resolution noise
 
-`-n` / `-P` / `-nP` reduce DNS and `/etc/services` lookups. During incidents, numeric output is faster and avoids DNS delays or misleading names. Resolve deliberately afterward if needed.
+`-n` / `-P` / `-nP` reduce DNS and `/etc/Services` lookups. During incidents, numeric output is faster and avoids DNS delays or misleading names. Resolve deliberately afterward if needed.
 
 ### 4. Containers and PID namespaces
 

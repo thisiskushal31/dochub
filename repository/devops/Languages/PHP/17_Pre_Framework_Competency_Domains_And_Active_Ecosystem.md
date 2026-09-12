@@ -136,7 +136,7 @@ Treat each item as pass/fail for “I can own production PHP.”
 
 ## 2. Advanced concepts
 
-**Framework documentation vs runtime truth:** Frameworks document *their* abstractions; when docs say “flush cache,” you must know whether that means Opcache, Redis, Symfony cache pools, Laravel `config:cache`, or WordPress object cache—different failure modes.
+**Framework documentation vs runtime truth:** Frameworks document *their* abstractions; when docs say “flush cache,” you must know whether that means Opcache, Redis, Symfony cache pools, Laravel `config:Cache`, or WordPress object cache—different failure modes.
 
 **Product vs platform ownership:** Staff in **platform** teams standardize images, FPM pools, and ingress; **product** teams own Composer deps and release cadence. Handoffs fail when platform does not expose extension matrix and product does not declare required `ext-*`.
 

@@ -23,6 +23,7 @@ IAC concepts, patterns, and tools. **Each tool has its own folder**; add new too
 | [**Pulumi**](./Pulumi/README.md) | IaC in TypeScript, Python, Go |
 | [**OpenTofu**](./OpenTofu/README.md) | Terraform-compatible fork | stub |
 | [**Packer**](./Packer/README.md) | Machine image baking | stub |
+| [**Atlantis**](./Atlantis/README.md) | Terraform PR apply | stub |
 
 Cloud provider literacy (not full cert content): [Cloud/](../Cloud/README.md)
 

@@ -82,19 +82,19 @@ A process moves through a set of **states**. The exact names and number of state
 
 The diagram below shows process state transitions (two-state and multi-state models).
 
-![Process state diagram](../../Assets/Operating-Systems/gfg-process-states-modified.png)
+![Process state diagram](../../Assets/Operating-Systems/GFG_Process_States_Modified.png)
 
 *Image: [States of a Process in Operating Systems](https://www.geeksforgeeks.org/operating-systems/states-of-a-process-in-operating-systems/).*
 
 The **five-state model** (New, Ready, Running, Blocked/Waiting, Exit) is common; the figure below illustrates the five-state lifecycle.
 
-![Five-state process model](../../Assets/Operating-Systems/gfg-process-states-five.webp)
+![Five-state process model](../../Assets/Operating-Systems/GFG_Process_States_Five.webp)
 
 *Image: [States of a Process in Operating Systems](https://www.geeksforgeeks.org/operating-systems/states-of-a-process-in-operating-systems/).*
 
 The **seven-state model** adds Suspend Ready and Suspend Blocked (processes swapped out of main memory); the diagram below illustrates it.
 
-![Seven-state process model](../../Assets/Operating-Systems/gfg-process-states-seven.webp)
+![Seven-state process model](../../Assets/Operating-Systems/GFG_Process_States_Seven.webp)
 
 *Image: [States of a Process in Operating Systems](https://www.geeksforgeeks.org/operating-systems/states-of-a-process-in-operating-systems/).*
 

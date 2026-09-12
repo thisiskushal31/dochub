@@ -1,6 +1,6 @@
 # Security
 
-Practices, compliance, threat mitigation, and tools. **Each tool has its own folder**; add new tools as new folders. *Stub scaffold August 2026 — see [gate chain](./4_Security_Gate_Chain.md) and [write order](../CONTENT_WRITE_ORDER.md).*
+Practices, compliance, threat mitigation, and tools. **Each tool has its own folder**; add new tools as new folders. *Stub — see [gate chain](./4_Security_Gate_Chain.md).*
 
 ## Concept overviews
 

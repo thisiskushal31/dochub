@@ -75,11 +75,11 @@ The **disk** (or SSD) has a **queue** of I/O requests (read/write at logical blo
 | **C-SCAN** | Like SCAN but when the head reaches the end, **jump back to the start** (or the first request) and scan again. Reduces variance in wait time. |
 | **LOOK / C-LOOK** | Like SCAN / C-SCAN but **stop** when there are no more requests in the current direction (do not go to the physical end). More efficient when the queue is not full. |
 
-![Disk scheduling – FCFS example](../../Assets/Operating-Systems/gfg-disk-fcfs.jpg)
+![Disk scheduling – FCFS example](../../Assets/Operating-Systems/GFG_Disk_Fcfs.jpg)
 
 *Image: [Disk Scheduling Algorithms](https://www.geeksforgeeks.org/operating-systems/disk-scheduling-algorithms/).*
 
-![Disk scheduling – SSTF example](../../Assets/Operating-Systems/gfg-disk-scheduling.webp)
+![Disk scheduling – SSTF example](../../Assets/Operating-Systems/GFG_Disk_Scheduling.webp)
 
 *Image: [Disk Scheduling Algorithms](https://www.geeksforgeeks.org/operating-systems/disk-scheduling-algorithms/) (SSTF).*
 
@@ -109,11 +109,11 @@ The OS **device management** includes:
 
 So: **buffer** = in-memory, short-term smoothing; **spool** = on-disk (or persistent) queue for a shared or slow device.
 
-![Spooling vs buffering](../../Assets/Operating-Systems/gfg-spooling-vs-buffering.jpg)
+![Spooling vs buffering](../../Assets/Operating-Systems/GFG_Spooling_vs_Buffering.jpg)
 
 *Image: [Difference between Spooling and Buffering](https://www.geeksforgeeks.org/operating-systems/difference-between-spooling-and-buffering/) (spooling).*
 
-![Buffering](../../Assets/Operating-Systems/gfg-buffering.jpg)
+![Buffering](../../Assets/Operating-Systems/GFG_Buffering.jpg)
 
 *Image: [Difference between Spooling and Buffering](https://www.geeksforgeeks.org/operating-systems/difference-between-spooling-and-buffering/) (buffering).*
 

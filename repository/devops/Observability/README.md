@@ -23,8 +23,9 @@ Each tool has its own folder. **To add a new tool:** create a folder (e.g. `NewT
 | [**Datadog**](./Datadog/README.md) | APM, metrics, logs, traces (commercial) |
 | [**New Relic**](./New_Relic/README.md) | APM, tracing, metrics, logs (commercial) |
 | [**Loki**](./Loki/README.md) | Log aggregation (Grafana stack) | stub |
+| [**PagerDuty**](./PagerDuty/README.md) | On-call paging | stub |
 
-On-call tooling (PagerDuty, Opsgenie, Grafana OnCall): expand [Methodologies/3_Team_Patterns_SRE_Incident.md](../Methodologies/3_Team_Patterns_SRE_Incident.md)
+On-call *practice* (schedules, escalation, blameless) stays in [Methodologies/3](../Methodologies/3_Team_Patterns_SRE_Incident.md). PagerDuty the product lives here.
 
 ## Scope
 

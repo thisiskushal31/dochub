@@ -285,7 +285,7 @@ Multi-stage bootstrap example:
 
 ### Application configuration renders
 
-Template shells that emit nginx/HAProxy fragments should use quoted here-docs and POSIX `printf`. Bash brace expansion in generated paths causes “works on Ubuntu, breaks on Alpine” tickets.
+Template shells that emit Nginx/HAProxy fragments should use quoted here-docs and POSIX `printf`. Bash brace expansion in generated paths causes “works on Ubuntu, breaks on Alpine” tickets.
 
 ### Compliance builds
 

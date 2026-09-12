@@ -50,7 +50,7 @@ The **Resource Allocation Graph** is a directed graph used to model who holds wh
 - **Request edge:** Process → Resource (process is **waiting** for one instance of that resource).
 - **Assignment edge:** Resource → Process (one instance of that resource is **assigned** to that process).
 
-![Resource Allocation Graph (RAG)](../../Assets/Operating-Systems/gfg-rag-deadlock.webp)
+![Resource Allocation Graph (RAG)](../../Assets/Operating-Systems/GFG_Rag_Deadlock.webp)
 
 *Image: [Resource Allocation Graph (RAG) in Operating System](https://www.geeksforgeeks.org/operating-systems/resource-allocation-graph-rag-in-operating-system/).*
 

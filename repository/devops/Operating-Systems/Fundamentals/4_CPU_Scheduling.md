@@ -73,7 +73,7 @@ Flow of a job through the three levels (conceptual):
 
 **Dispatch latency** is the time from “decision to switch” to “new process actually running.” It is part of the overhead of preemptive multitasking.
 
-![CPU scheduling overview](../../Assets/Operating-Systems/gfg-cpu-scheduling.png)
+![CPU scheduling overview](../../Assets/Operating-Systems/GFG_Cpu_Scheduling.png)
 
 *Image: [CPU Scheduling in Operating Systems](https://www.geeksforgeeks.org/operating-systems/cpu-scheduling-in-operating-systems/).*
 

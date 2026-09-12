@@ -26,7 +26,7 @@
 ## Cross-links
 
 - Delivery loop: [CiCd/1](../CiCd/1_Pipelines_Build_Test_Deploy.md)
-- Full cyber depth: [Entry-Points/Cybersecurity_Deep_Dive.md](../Entry-Points/Cybersecurity_Deep_Dive.md)
+- Full cyber depth: [Security Deep Dive](../../Security-Deep-Dive/README.md)
 
 ## Checklist before marking done
 

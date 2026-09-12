@@ -10,9 +10,9 @@ This topic covers the **object-oriented** part of **C++**: **classes and objects
 
 In C, **structs** hold data; you pass them to functions that operate on them. In C++, a **class** bundles **data** (member variables) and **behavior** (member functions) into one type. An **object** is an instance of a class. Classes are the core of C++ OOP: they give you **encapsulation** (hiding implementation) and a place to attach **constructors**, **destructors**, and **inheritance**.
 
-![Types of OOP concepts in C++](../../Assets/Languages/C-C++/gfg-types-of-oops.gif)
+![Types of OOP concepts in C++](../../Assets/Languages/C-C++/GFG_Types_of_Oops.gif)
 
-![Class and object relationship](../../Assets/Languages/C-C++/gfg-class-object-example.webp)
+![Class and object relationship](../../Assets/Languages/C-C++/GFG_Class_Object_Example.webp)
 
 *Image: [GeeksforGeeks – Object Oriented Programming in C++](https://www.geeksforgeeks.org/cpp/object-oriented-programming-in-cpp/)*
 
@@ -96,7 +96,7 @@ Here, `Student` is a class with public members; `Employee` is an object with **s
 
 Hiding data in **private** and exposing only a **public** interface (member functions) reduces misuse and keeps the design flexible. In C, struct members are all “public”; in C++ you choose.
 
-![Encapsulation: data and methods in one unit with controlled access](../../Assets/Languages/C-C++/gfg-encapsulation.webp)
+![Encapsulation: data and methods in one unit with controlled access](../../Assets/Languages/C-C++/GFG_Encapsulation.webp)
 
 *Image: [GeeksforGeeks – Encapsulation in C++](https://www.geeksforgeeks.org/cpp/encapsulation-in-cpp/)*
 
@@ -206,7 +206,7 @@ The constructor allocates `data`; the destructor frees it. This **RAII** pattern
 
 **Inheritance** lets you define a new class (**derived**) that extends an existing one (**base**). The derived class gets the base’s members (subject to access rules) and can add new ones or **override** behavior. Syntax: `class Derived : public Base { ... };`. **public** inheritance means “is-a”: a derived object is a kind of base.
 
-![Inheritance: base and derived classes](../../Assets/Languages/C-C++/gfg-inheritance.png)
+![Inheritance: base and derived classes](../../Assets/Languages/C-C++/GFG_Inheritance.png)
 
 *Image: [GeeksforGeeks – Inheritance in C++](https://www.geeksforgeeks.org/cpp/inheritance-in-c/)*
 
@@ -282,7 +282,7 @@ public:
 
 **Polymorphism** means “one interface, many implementations.” C++ supports **compile-time polymorphism** (e.g. function overloading, operator overloading) and **runtime polymorphism** (virtual functions and overriding). When a base class declares a function **virtual**, the derived class can **override** it; calls through a **pointer or reference to the base** then invoke the **derived** implementation. That is **dynamic dispatch** (runtime choice based on the actual object type).
 
-![Polymorphism: one interface, many forms](../../Assets/Languages/C-C++/gfg-polymorphism.webp)
+![Polymorphism: one interface, many forms](../../Assets/Languages/C-C++/GFG_Polymorphism.webp)
 
 *Image: [GeeksforGeeks – Polymorphism in C++](https://www.geeksforgeeks.org/cpp/cpp-polymorphism/)*
 

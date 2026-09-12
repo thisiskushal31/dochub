@@ -277,7 +277,7 @@ Hiring bar (concurrency vs platforms): do not treat **service concurrency** (`Fu
 
 ### What this track integrates vs defers
 
-**Inside this track you should leave knowing:** Scala 3 language and modeling habits; sbt/dependency literacy; Java/JVM boundaries; futures/context literacy; testing/style/docs gates; security/supply-chain habits; container/JVM ops basics; when to place services vs Spark vs Kafka; Spark/Kafka **architecture literacy** (DAGs, shuffles, topics, delivery semantics—not every operator); DevSecOps threat-modeling habits for services and data platforms; how to read Scala 2 brownfield and plan migration without drive-by rewrites.
+**Inside this track you should leave knowing:** Scala 3 language and modeling habits; sbt/dependency literacy; Java/JVM boundaries; futures/context literacy; testing/style/docs gates; Security/supply-chain habits; container/JVM ops basics; when to place services vs Spark vs Kafka; Spark/Kafka **architecture literacy** (DAGs, shuffles, topics, delivery semantics—not every operator); DevSecOps threat-modeling habits for services and data platforms; how to read Scala 2 brownfield and plan migration without drive-by rewrites.
 
 **This track does not replace:** Akka/Pekko or Cats Effect manuals; Play/http4s (or other) framework courses; full Spark operator/tuning curricula or cluster-admin runbooks; full Kafka admin/streams courses; Kubernetes/Terraform product docs; or your org’s secure-coding standards. Those stay in their official docs once you know what you are looking for.
 

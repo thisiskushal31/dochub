@@ -266,7 +266,7 @@ Use this section for hiring bars, promotion conversations, and release readiness
 - Invariants notebook updated for the product.
 - OS companion chapters consulted when host policy (TCC, ACL, systemd) matters.
 - Beginner onboarding starts at chapter **00** (not mid-track at 01).
-- Flag-decode, jq, and recon specialty (**23–25**) covered for security/ops owners before wrap **26** sign-off.
+- Flag-decode, jq, and recon specialty (**23–25**) covered for Security/ops owners before wrap **26** sign-off.
 
 ### Use as a hiring / promotion rubric
 

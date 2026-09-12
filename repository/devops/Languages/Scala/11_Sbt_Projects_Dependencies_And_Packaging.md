@@ -211,7 +211,7 @@ Neither replaces understanding what goes on the classpath. Prefer thin jars + la
 
 | Clash | What goes wrong |
 |-------|-----------------|
-| **`META-INF/services/*` discarded wholesale** | ServiceLoader / SPI providers vanish; plugins and JDBC drivers “disappear” at runtime while compile stays green. |
+| **`META-INF/Services/*` discarded wholesale** | ServiceLoader / SPI providers vanish; plugins and JDBC drivers “disappear” at runtime while compile stays green. |
 | **First-wins / last-wins on class files** | Two jars ship the same FQCN; the loser is shadowed. You run a different implementation than CI thought—often an older crypto, logging, or Jackson path. |
 | **Blind `META-INF` discard** | Signature files, licenses, and service registries get swept with junk; prefer path-specific strategies. |
 | **Shaded + unshaded duplicates** | Relocated copies leave an unshaded twin on the classpath; loaders pick unpredictably under parent-first platforms. |
@@ -247,7 +247,7 @@ sbt resolves versions (including ranges and evictions). An **eviction** is the r
 
 - Pin **exact** coordinates so resolve is deterministic across laptops and CI.
 - When the team commits a lockfile (Coursier lock or locking plugin), treat it as the contract: bump it deliberately with the dependency change, never “whatever resolve did locally.”
-- **CI cache keys** must include the lockfile hash (and sbt/plugin pins)—not only `build.sbt` text. Caching `~/.cache/coursier` / Ivy without tying the key to the lock yields “green on cache hit, red on cold” ghosts.
+- **CI cache keys** must include the lockfile hash (and sbt/plugin pins)—not only `build.sbt` text. Caching `~/.Cache/coursier` / Ivy without tying the key to the lock yields “green on cache hit, red on cold” ghosts.
 
 ```scala
 // avoid in apps:
@@ -332,7 +332,7 @@ sbt -batch -Dsbt.supershell=false clean test package
 - Eviction / conflict policy enforced in CI (fail or explicit reviewed override); graph report available on dependency PRs.
 - CI cache keys include lockfile (or equivalent resolve hash), not only `build.sbt` text.
 - Multi-project `dependsOn` / `aggregate` edges clear and acyclic; publish vs aggregate chosen for shared libs across Scala lines.
-- Packaging path chosen deliberately (thin jar, assembly, native-packager)—`assemblyMergeStrategy` reviewed for `META-INF/services` and shadowed classes.
+- Packaging path chosen deliberately (thin jar, assembly, native-packager)—`assemblyMergeStrategy` reviewed for `META-INF/Services` and shadowed classes.
 - Resolvers approved; credentials never in repo (`~/.sbt` locally, CI secrets in pipeline).
 - `Provided` runtime assumptions match deployment environment.
 - Common CI commands use pinned sbt/JDK; `dependencyTree` / `evicted` available for incidents.

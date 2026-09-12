@@ -195,7 +195,7 @@ Useful for serializers and CLI help text; toxic for huge DOM dumps. Treat snapsh
 
 ### 6. JSDOM / happy-dom for DOM APIs
 
-When tests touch `document` / `window`, the environment must provide them. That is **environment config**, not a reason to enable DOM `lib` in a Node library’s published tsconfig. Keep lib tsconfig Node-true; isolate DOM tests (chapter **19**).
+When tests touch `Document` / `window`, the environment must provide them. That is **environment config**, not a reason to enable DOM `lib` in a Node library’s published tsconfig. Keep lib tsconfig Node-true; isolate DOM tests (chapter **19**).
 
 ### 7. Flake quarantine policy
 

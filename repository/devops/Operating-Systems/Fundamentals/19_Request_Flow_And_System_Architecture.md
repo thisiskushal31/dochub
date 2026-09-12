@@ -59,7 +59,7 @@ The **architecture** is designed so that **every request** from user space goes 
 
 When an application asks the kernel to do something (e.g. read from a file, create a process), it goes through a **trap**. The flow is the same conceptually on any architecture; the CPU just uses different instructions and registers.
 
-![System call: user to kernel](../../Assets/Operating-Systems/gfg-system-call-intro.webp)
+![System call: user to kernel](../../Assets/Operating-Systems/GFG_System_Call_Intro.webp)
 
 *Image: [Introduction of System Call](https://www.geeksforgeeks.org/operating-systems/introduction-of-system-call/).*
 
@@ -202,7 +202,7 @@ On the **receive** path: NIC receives a packet → **hard interrupt** → kernel
 
 The diagram below shows this path (user space → kernel buffers → network stack → NIC → network, and the reverse on receive).
 
-![Data transmission: user space to kernel to NIC to network](../../Assets/Operating-Systems/bytebytego-data-transfer-between-apps.png)
+![Data transmission: user space to kernel to NIC to network](../../Assets/Operating-Systems/Bytebytego_Data_Transfer_Between_Apps.png)
 
 *Image: [ByteByteGo – Data Transmission Between Applications](https://bytebytego.com/guides/how-is-data-transmitted-between-applications/).*
 

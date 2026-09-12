@@ -148,7 +148,7 @@ Memory-based worker restart gems exist because Ruby processes grow. Prefer fixin
 - Bound in-memory caches (size + TTL + eviction policy documented).
 - Stream large datasets; **do not** slurp multi-GB files into strings.
 - **N+1 queries** dominate Rails slowness more than micro-optimizations—fix data layer first.
-- **Benchmark** in `test/performance` or dedicated scripts with realistic fixtures—not empty loops.
+- **Benchmark** in `test/Performance` or dedicated scripts with realistic fixtures—not empty loops.
 
 ### Product and cost engineering
 

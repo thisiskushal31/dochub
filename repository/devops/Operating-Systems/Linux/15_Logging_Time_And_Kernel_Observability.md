@@ -68,7 +68,7 @@ grep "Failed password" /var/log/secure
 grep -i error /var/log/syslog
 ```
 
-Application logs may go to **/var/log/** (e.g. `/var/log/nginx/`) or to the journal if the service is a systemd unit with `StandardOutput=journal`.
+Application logs may go to **/var/log/** (e.g. `/var/log/Nginx/`) or to the journal if the service is a systemd unit with `StandardOutput=journal`.
 
 ### Log rotation (logrotate)
 
@@ -76,7 +76,7 @@ Application logs may go to **/var/log/** (e.g. `/var/log/nginx/`) or to the jour
 
 ```bash
 # Config example: /etc/logrotate.d/nginx
-/var/log/nginx/*.log {
+/var/log/Nginx/*.log {
     daily
     rotate 14
     compress

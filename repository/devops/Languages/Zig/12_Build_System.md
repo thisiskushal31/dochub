@@ -143,7 +143,7 @@ zig build --fork=/path/to/local/foo   # ephemeral override by name+fingerprint
 ### 3. Generating files and `@embedFile`
 
 ```zig
-// In application code (after a build step writes assets/version.txt):
+// In application code (after a build step writes Assets/version.txt):
 const version = @embedFile("version.txt");
 ```
 

@@ -13,7 +13,7 @@ This topic covers **race condition**, **critical section**, solutions (hardware 
 
 **Goal:** Ensure **mutual exclusion** — at any time, at most one process is in the critical section for a given resource.
 
-![Critical section in synchronization](../../Assets/Operating-Systems/gfg-critical-section.webp)
+![Critical section in synchronization](../../Assets/Operating-Systems/GFG_Critical_Section.webp)
 
 *Image: [Critical Section in Synchronization](https://www.geeksforgeeks.org/operating-systems/critical-section-in-synchronization/).*
 

@@ -1,6 +1,6 @@
 # CI/CD
 
-Pipelines, tools, practices, and deployment strategies. **Each tool has its own folder**; add new tools as new folders. *Stub scaffold August 2026 — [write order](../CONTENT_WRITE_ORDER.md).*
+Pipelines, tools, practices, and deployment strategies. **Each tool has its own folder**; add new tools as new folders. *Stub — expand when you write this folder.*
 
 ## Concept overviews
 
@@ -33,6 +33,9 @@ See [Security/4_Security_Gate_Chain.md](../Security/4_Security_Gate_Chain.md) fo
 | [**Tekton**](./Tekton/README.md) | expand |
 | [**Argo CD**](./Argo_CD/README.md) | expand |
 | [**Flux**](./Flux/README.md) | expand |
+| [**Azure DevOps**](./Azure_DevOps/README.md) | Pipelines / Boards |
+| [**Buildkite**](./Buildkite/README.md) | Agent-based CI |
+| [**Unleash**](./Unleash/README.md) | Feature flags |
 
 ## Scope
 

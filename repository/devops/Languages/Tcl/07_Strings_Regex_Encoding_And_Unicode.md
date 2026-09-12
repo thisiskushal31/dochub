@@ -272,7 +272,7 @@ Tcl ships IDNA-related support for internationalized domain names in the encodin
 | `double -strict` | Measurements (still validate range yourself) |
 | `boolean -strict` | Config flags (`true`/`false`/`yes`/`no`/…) |
 | `list` | “Can this be parsed as a list?” before `lindex` on untrusted text |
-| `ascii` / `print` / `graph` | Rough allowlists for tokens (not a full policy engine) |
+| `ascii` / `print` / `Graph` | Rough allowlists for tokens (not a full policy engine) |
 | `digit` / `xdigit` / `alnum` | Character-class checks on short fields |
 
 Remember: without `-strict`, empty strings pass many `string is` tests. That single switch prevents a surprising class of “blank config looked valid” bugs.

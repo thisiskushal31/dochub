@@ -37,7 +37,7 @@ After chapters **00–17** you should be able to:
 | Read hostile macros safely in a lab mindset | **16** |
 | Map roles, domains, and wrong-hammer cases | **17** |
 
-Bullseye: **language + VBE + host OM + I/O/Automation surface + security/defense literacy**. Not Excel financial modeling encyclopedia, not TypeScript, not malware engineering.
+Bullseye: **language + VBE + host OM + I/O/Automation surface + Security/defense literacy**. Not Excel financial modeling encyclopedia, not TypeScript, not malware engineering.
 
 ### 2. Owned here versus directed elsewhere
 

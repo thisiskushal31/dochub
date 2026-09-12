@@ -81,7 +81,7 @@ path "secret/data/app/*" {
 
 **Files:** Job specs are typically `.nomad.hcl`, `.hcl`, or inline. One job per file is common. Nomad parses HCL and accepts it via CLI or API (often converted to JSON internally).
 
-**Main HCL blocks you write:** `job` (one per file), `group`, `task`, plus nested blocks such as `network`, `service`, `resources`, `config`, `template`, `volume`, `connect`. The `job` block has one label (job name). `group` and `task` each have one label. Driver-specific config goes inside `task` in a `config` block. Service discovery and mesh use `service` and `connect`.
+**Main HCL blocks you write:** `job` (one per file), `group`, `task`, plus nested blocks such as `network`, `service`, `Resources`, `config`, `template`, `volume`, `connect`. The `job` block has one label (job name). `group` and `task` each have one label. Driver-specific config goes inside `task` in a `config` block. Service discovery and mesh use `service` and `connect`.
 
 **How HCL works here:** You describe workloads declaratively; Nomad schedules them, handles placement, restarts, and updates. The same HCL grammar (arguments, blocks, expressions) applies; Nomad defines the job schema. SREs use this to define services, resource limits, and rollout behavior.
 

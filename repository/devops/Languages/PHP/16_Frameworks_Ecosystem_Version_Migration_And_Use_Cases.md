@@ -26,7 +26,7 @@ Staff must not conflate “we use modern Laravel” with “PHP security is solv
 
 | Stack | Typical deploy shape | Primary ops/security notes |
 |-------|----------------------|----------------------------|
-| **Laravel** | `php-fpm` + nginx; Horizon/Redis; Octane optional | `artisan` in CI/CD; `config:cache`; queue workers separate from web |
+| **Laravel** | `php-fpm` + nginx; Horizon/Redis; Octane optional | `artisan` in CI/CD; `config:Cache`; queue workers separate from web |
 | **Symfony** | FPM or `symfony server` in dev; Messenger workers | Long-term **LTS** vs standard releases; heavy DI/config caches |
 | **Lumen / Slim / Mezzio** | Thin HTTP; often API behind gateway | You own more middleware, auth, and error shape |
 | **API Platform** | Symfony + schema/OpenAPI tooling | GraphQL/JSON-LD attack surface; cache invalidation complexity |
@@ -81,14 +81,14 @@ Treat them as **different SAPI lifetime class**, not “FPM but faster.”
 
 ### 7. Laravel / Symfony operations snapshot
 
-- **Laravel:** `php artisan migrate --force` in deploy; `config:cache` `route:cache` `view:cache` for prod; Horizon supervised separately; schedule runner via cron/K8s CronJob.
+- **Laravel:** `php artisan migrate --force` in deploy; `config:Cache` `route:Cache` `view:Cache` for prod; Horizon supervised separately; schedule runner via cron/K8s CronJob.
 - **Symfony:** `cache:warmup` in build; env-specific `APP_ENV`; Messenger consumers as separate processes; secrets via `secrets:*` vault integration or env.
 
 ---
 
 ## 2. Advanced concepts
 
-**Framework cache layers stack:** Opcache (bytecode) ≠ Redis (data) ≠ Symfony cache pools ≠ Laravel `cache` ≠ WordPress object cache—flushing the wrong layer wastes hours.
+**Framework cache layers stack:** Opcache (bytecode) ≠ Redis (data) ≠ Symfony cache pools ≠ Laravel `Cache` ≠ WordPress object cache—flushing the wrong layer wastes hours.
 
 **Composer in CMS:** Modern Drupal/Craft/Shopware lean on Composer; classic WordPress may not—dependency governance differs.
 

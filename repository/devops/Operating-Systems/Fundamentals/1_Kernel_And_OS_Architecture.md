@@ -100,7 +100,7 @@ So: **kernel is a subset of the OS**. The kernel is what talks directly to the h
 
 Common types include batch, multiprogramming, multitasking (time-sharing), multiprocessing, real-time, and distributed. The diagram below summarizes how the OS is viewed and how it manages resources.
 
-![Types of operating systems](../../Assets/Operating-Systems/gfg-types-of-os.webp)
+![Types of operating systems](../../Assets/Operating-Systems/GFG_Types_of_Os.webp)
 
 *Image: [GeeksforGeeks – Types of Operating Systems](https://www.geeksforgeeks.org/operating-systems/types-of-operating-systems/).*
 
@@ -171,7 +171,7 @@ The **kernel** is the part of the OS that:
 
 So: **kernel = privileged, always-on core that implements processes, memory, I/O, and security, and that user code accesses only via system calls (or equivalent).**
 
-![Kernel in operating system](../../Assets/Operating-Systems/gfg-kernel.webp)
+![Kernel in operating system](../../Assets/Operating-Systems/GFG_Kernel.webp)
 
 *Image: [GeeksforGeeks – Kernel in Operating System](https://www.geeksforgeeks.org/operating-systems/kernel-in-operating-system/).*
 
@@ -179,7 +179,7 @@ So: **kernel = privileged, always-on core that implements processes, memory, I/O
 
 The kernel is responsible for process management, memory management, device and file-system management, security and access control, inter-process communication, and resource allocation. The following diagram summarizes these functions.
 
-![Functions of the kernel](../../Assets/Operating-Systems/gfg-function-of-kernel.webp)
+![Functions of the kernel](../../Assets/Operating-Systems/GFG_Function_of_Kernel.webp)
 
 *Image: [GeeksforGeeks – Kernel in Operating System](https://www.geeksforgeeks.org/operating-systems/kernel-in-operating-system/).*
 
@@ -222,13 +222,13 @@ How much code runs in the privileged kernel? This is the main design split.
 
 **System calls** are the **only** way user programs can request kernel services (create process, allocate memory, read file, send network packet, etc.). From the program’s point of view, a system call looks like a function call; underneath, it is implemented as:
 
-![Introduction to system call](../../Assets/Operating-Systems/gfg-system-call-intro.webp)
+![Introduction to system call](../../Assets/Operating-Systems/GFG_System_Call_Intro.webp)
 
 *Image: [Introduction of System Call](https://www.geeksforgeeks.org/operating-systems/introduction-of-system-call/).*
 
 The following diagram groups system calls by category (process control, file system, device management, memory management, IPC):
 
-![Types of system calls](../../Assets/Operating-Systems/gfg-system-call-types.webp)
+![Types of system calls](../../Assets/Operating-Systems/GFG_System_Call_Types.webp)
 
 *Image: [Introduction of System Call](https://www.geeksforgeeks.org/operating-systems/introduction-of-system-call/).*
 

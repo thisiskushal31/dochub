@@ -15,7 +15,7 @@ A **process** is an instance of a running program. It includes:
 - **Memory** (stack, heap, data)
 - **Resources** (open files, file descriptors, environment)
 
-One program (e.g. `/usr/bin/nginx`) can be run many times → many processes.
+One program (e.g. `/usr/bin/Nginx`) can be run many times → many processes.
 
 ---
 

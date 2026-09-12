@@ -156,7 +156,7 @@ gas | addr | value | argsOffset | argsSize | retOffset | retSize
 → pushes success (0 or 1)
 ```
 
-`STATICCALL` omits `value`. `DELEGATECALL` omits `value` and uses the caller’s storage/`msg.sender`/`msg.value`. Solidity’s `addr.call{value: v, gas: g}(data)` fills these from the `bytes memory data` pointer (`mload(data)` = length, data at `data+0x20`) and a returndata scratch region.
+`STATICCALL` omits `value`. `DELEGATECALL` omits `value` and uses the caller’s Storage/`msg.sender`/`msg.value`. Solidity’s `addr.call{value: v, gas: g}(data)` fills these from the `bytes memory data` pointer (`mload(data)` = length, data at `data+0x20`) and a returndata scratch region.
 
 After the call:
 

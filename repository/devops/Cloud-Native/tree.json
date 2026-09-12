@@ -15,14 +15,14 @@
     ]
   },
   {
-    "name": "cert-manager",
-    "path": "cert-manager",
+    "name": "Cert-Manager",
+    "path": "Cert-Manager",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "README.md",
-        "path": "cert-manager/README.md",
+        "path": "Cert-Manager/README.md",
         "type": "file",
         "sha": "",
         "size": 373
@@ -40,7 +40,7 @@
         "path": "ExternalDNS/README.md",
         "type": "file",
         "sha": "",
-        "size": 446
+        "size": 411
       }
     ]
   },

@@ -16,7 +16,7 @@ The kernel does **not** detect or break user-level deadlocks. When a thread **bl
 
 Deadlock occurs when two or more processes (or threads) wait for each other’s resources. On Unix, this can involve **file locks** (flock, fcntl), **semaphores**, **mutexes** (pthreads), or **kernel locks**. Prevention: **lock ordering**, **trylock** with timeout, avoid holding multiple locks.
 
-![Deadlock: conditions, prevention, and recovery](../../Assets/Operating-Systems/bytebytego-deadlock.png)
+![Deadlock: conditions, prevention, and recovery](../../Assets/Operating-Systems/Bytebytego_Deadlock.png)
 
 *Image: [ByteByteGo – What is a Deadlock?](https://bytebytego.com/guides/what-is-a-deadlock/).*
 

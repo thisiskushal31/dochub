@@ -14,7 +14,7 @@ A **deadlock** occurs when two or more processes (or threads) are each waiting f
 
 Example: Process A holds resource 1 and wants resource 2; Process B holds resource 2 and wants resource 1. Both wait forever.
 
-![Deadlock: conditions, prevention, and recovery](../../Assets/Operating-Systems/bytebytego-deadlock.png)
+![Deadlock: conditions, prevention, and recovery](../../Assets/Operating-Systems/Bytebytego_Deadlock.png)
 
 *Image: [ByteByteGo – What is a Deadlock?](https://bytebytego.com/guides/what-is-a-deadlock/).*
 

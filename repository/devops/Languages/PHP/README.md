@@ -17,8 +17,8 @@ This handbook is **standalone prose**: each chapter explains **what** a topic is
 Every numbered chapter **`01`–`22`** uses the same **three-part body** (before **`## References`**):
 
 1. **Concepts** — definitions, syntax, and mechanics you need to read code and configs (`###` subsections under **`## 1. Concepts`**).
-2. **Advanced concepts** — VM details, SAPI differences, extension ABI, concurrency limits, and interactions with the web server or database layer (**`## 2. Advanced concepts`**).
-3. **Applications and use cases** — scenarios across **software engineering** (design, reviews, refactors), **security**, **data and integration**, **quality and delivery**, **operations** and **incident response**, and **migration**—where the chapter’s ideas show up in real work (**`## 3. Applications and use cases`**).
+2. **Advanced concepts** — VM details, SAPI differences, extension ABI, concurrency limits, and interactions with the web server or database layer (**`## 2. Advanced Concepts`**).
+3. **Applications and use cases** — scenarios across **software engineering** (design, reviews, refactors), **security**, **data and integration**, **quality and delivery**, **operations** and **incident response**, and **migration**—where the chapter’s ideas show up in real work (**`## 3. Applications and use Cases`**).
 
 Chapters are written for **depth**: opcode caching and JIT policy, INI changeability modes, FPM pool mathematics, PDO and persistent connection failure modes, Composer supply-chain mechanics, and concrete failure-mode checklists—not a syntax tutorial alone.
 
@@ -50,7 +50,7 @@ Four ideas unlock most reading and most production incidents:
 - **How** to read **`composer.json` / `composer.lock`**, reproduce installs in **CI**, and audit **extensions** on images—so **builds** match **design intent** and **supply-chain** policy.
 - **Where** PHP shows up across engineering: **CMS** and **framework** stacks, **HTTP APIs**, **batch** workers, **commerce** and **plugin** economies, and **legacy** glue—and what **design reviews** and **threat models** should cover: **superglobals**, **subprocess** calls, **upload** paths, **sessions**, **data boundaries**, and **dependency** graphs—not only deploy mechanics.
 
-Suggested order: **17** (domains + ecosystem + checklist) → **1 → 12** (language, packaging, web, DB, performance) → **18 → 21** (completeness tracks: generators/reflection/wrappers/extensions) → **13 → 16** (CI, security, concurrency, frameworks/migration) → **22** (PSR/Composer security/async/OTEL/intl/FPM edge cases—capstone before shipping opinions to the next stack).
+Suggested order: **17** (domains + ecosystem + checklist) → **1 → 12** (language, packaging, web, DB, performance) → **18 → 21** (completeness tracks: generators/reflection/wrappers/extensions) → **13 → 16** (CI, security, concurrency, frameworks/migration) → **22** (PSR/Composer Security/async/OTEL/intl/FPM edge cases—capstone before shipping opinions to the next stack).
 
 ```bash
 php -v
@@ -89,7 +89,7 @@ The second command shows which **`php.ini`** files are loaded for that binary—
 
 ### Deep-study workflow (body-first)
 
-1. Read each chapter in order: **`## 1. Concepts`**, **`## 2. Advanced concepts`**, **`## 3. Applications and use cases`**.
+1. Read each chapter in order: **`## 1. Concepts`**, **`## 2. Advanced Concepts`**, **`## 3. Applications and use Cases`**.
 2. Extract invariants and failure modes: **SAPI**, **worker** reuse, **strict_types** boundaries, **extension** presence, **session** storage, **SQL** parameterization.
 3. Cross-link: types and OOP → Composer autoload → web input → PDO → FPM/Opcache → CI → security → workers → migration (chapter **17** maps these to roles). Finish with **22** for PSR/OTEL/ICU/FPM edge cases that appear in reviews and incidents.
 4. Use the reference lists only when you need version-specific wording or exhaustive function tables; match the **PHP minor** you ship.

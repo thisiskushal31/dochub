@@ -4,7 +4,7 @@
 
 ## What are generics?
 
-**Generics** parameterize functions and structs over types chosen at call sites—**parametric polymorphism**. The same `vector` logic works for many element types; the same `Coin<Currency>` pattern can tag currencies at the type level. The **type checker** instantiates and checks each use separately.
+**Generics** parameterize functions and structs over types chosen at call sites—**parametric polymorphism**. The same `Vector` logic works for many element types; the same `Coin<Currency>` pattern can tag currencies at the type level. The **type checker** instantiates and checks each use separately.
 
 ## Why constraints and phantom parameters?
 

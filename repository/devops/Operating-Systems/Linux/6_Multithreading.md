@@ -19,7 +19,7 @@ A **thread** is a flow of execution within a process. One process can have many 
 
 Threads allow concurrency inside one process (e.g. one thread for I/O, another for computation) with less overhead than multiple processes, but require synchronization (mutexes, etc.) for shared data.
 
-![Program, process, and thread relationship](../../Assets/Operating-Systems/bytebytego-process-vs-thread.png)
+![Program, process, and thread relationship](../../Assets/Operating-Systems/Bytebytego_Process_vs_Thread.png)
 
 *Image: [ByteByteGo – Process vs Thread: Key Differences](https://bytebytego.com/guides/what-is-the-difference-between-process-and-thread/).*
 

@@ -2,7 +2,7 @@
 
 [← Back to Languages](../README.md)
 
-**Shell** is the family of **command interpreters** used to run commands and scripts. **Bash** is the most common Unix/Linux scripting dialect in that family (POSIX `sh` plus Bash extensions). This track also covers **zsh** (macOS default interactive, including **pre-Catalina bash** history), **PowerShell** and **cmd** (Windows), **Linux distro differences** (Debian/Ubuntu `dash`, RHEL-family, Alpine BusyBox, …), and the bridges (**WSL**, Git Bash, Microsoft Coreutils)—so a beginner can become confident **on any OS and any brownfield estate**, including security/legacy work.
+**Shell** is the family of **command interpreters** used to run commands and scripts. **Bash** is the most common Unix/Linux scripting dialect in that family (POSIX `sh` plus Bash extensions). This track also covers **zsh** (macOS default interactive, including **pre-Catalina bash** history), **PowerShell** and **cmd** (Windows), **Linux distro differences** (Debian/Ubuntu `dash`, RHEL-family, Alpine BusyBox, …), and the bridges (**WSL**, Git Bash, Microsoft Coreutils)—so a beginner can become confident **on any OS and any brownfield estate**, including Security/legacy work.
 
 This is the **Languages** deep track for shell scripting. Operating-Systems chapters remain useful OS-context companions (they are not duplicates of this curriculum):
 

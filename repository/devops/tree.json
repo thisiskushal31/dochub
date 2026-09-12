@@ -239,7 +239,7 @@
         "path": "Automation/README.md",
         "type": "file",
         "sha": "",
-        "size": 1383
+        "size": 1471
       }
     ]
   },
@@ -261,6 +261,50 @@
             "type": "file",
             "sha": "",
             "size": 269
+          }
+        ]
+      },
+      {
+        "name": "Azure_DevOps",
+        "path": "CiCd/Azure_DevOps",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Install_And_First_Use.md",
+            "path": "CiCd/Azure_DevOps/1_Install_And_First_Use.md",
+            "type": "file",
+            "sha": "",
+            "size": 466
+          },
+          {
+            "name": "README.md",
+            "path": "CiCd/Azure_DevOps/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 283
+          }
+        ]
+      },
+      {
+        "name": "Buildkite",
+        "path": "CiCd/Buildkite",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Install_And_First_Use.md",
+            "path": "CiCd/Buildkite/1_Install_And_First_Use.md",
+            "type": "file",
+            "sha": "",
+            "size": 446
+          },
+          {
+            "name": "README.md",
+            "path": "CiCd/Buildkite/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 275
           }
         ]
       },
@@ -355,6 +399,28 @@
         ]
       },
       {
+        "name": "Unleash",
+        "path": "CiCd/Unleash",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Install_And_First_Use.md",
+            "path": "CiCd/Unleash/1_Install_And_First_Use.md",
+            "type": "file",
+            "sha": "",
+            "size": 441
+          },
+          {
+            "name": "README.md",
+            "path": "CiCd/Unleash/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 270
+          }
+        ]
+      },
+      {
         "name": "1_Pipelines_Build_Test_Deploy.md",
         "path": "CiCd/1_Pipelines_Build_Test_Deploy.md",
         "type": "file",
@@ -401,14 +467,14 @@
         "path": "CiCd/7_DB_Migrations_In_Pipelines.md",
         "type": "file",
         "sha": "",
-        "size": 846
+        "size": 817
       },
       {
         "name": "README.md",
         "path": "CiCd/README.md",
         "type": "file",
         "sha": "",
-        "size": 1888
+        "size": 2045
       }
     ]
   },
@@ -458,7 +524,7 @@
         "path": "Cloud/README.md",
         "type": "file",
         "sha": "",
-        "size": 1137
+        "size": 1092
       }
     ]
   },
@@ -484,14 +550,14 @@
         ]
       },
       {
-        "name": "cert-manager",
-        "path": "Cloud-Native/cert-manager",
+        "name": "Cert-Manager",
+        "path": "Cloud-Native/Cert-Manager",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "README.md",
-            "path": "Cloud-Native/cert-manager/README.md",
+            "path": "Cloud-Native/Cert-Manager/README.md",
             "type": "file",
             "sha": "",
             "size": 373
@@ -509,7 +575,7 @@
             "path": "Cloud-Native/ExternalDNS/README.md",
             "type": "file",
             "sha": "",
-            "size": 446
+            "size": 411
           }
         ]
       },
@@ -611,77 +677,6 @@
     ]
   },
   {
-    "name": "Entry-Points",
-    "path": "Entry-Points",
-    "type": "dir",
-    "sha": "",
-    "children": [
-      {
-        "name": "Application_Frameworks.md",
-        "path": "Entry-Points/Application_Frameworks.md",
-        "type": "file",
-        "sha": "",
-        "size": 757
-      },
-      {
-        "name": "Cybersecurity_Deep_Dive.md",
-        "path": "Entry-Points/Cybersecurity_Deep_Dive.md",
-        "type": "file",
-        "sha": "",
-        "size": 782
-      },
-      {
-        "name": "Data_Engineering_Entry.md",
-        "path": "Entry-Points/Data_Engineering_Entry.md",
-        "type": "file",
-        "sha": "",
-        "size": 529
-      },
-      {
-        "name": "Data_Messaging_And_Cache.md",
-        "path": "Entry-Points/Data_Messaging_And_Cache.md",
-        "type": "file",
-        "sha": "",
-        "size": 756
-      },
-      {
-        "name": "Data_Science_AI_Entry.md",
-        "path": "Entry-Points/Data_Science_AI_Entry.md",
-        "type": "file",
-        "sha": "",
-        "size": 509
-      },
-      {
-        "name": "DNS_CDN_And_Load_Balancers.md",
-        "path": "Entry-Points/DNS_CDN_And_Load_Balancers.md",
-        "type": "file",
-        "sha": "",
-        "size": 831
-      },
-      {
-        "name": "Docker_And_Podman.md",
-        "path": "Entry-Points/Docker_And_Podman.md",
-        "type": "file",
-        "sha": "",
-        "size": 596
-      },
-      {
-        "name": "Local_Dev_Parity.md",
-        "path": "Entry-Points/Local_Dev_Parity.md",
-        "type": "file",
-        "sha": "",
-        "size": 582
-      },
-      {
-        "name": "README.md",
-        "path": "Entry-Points/README.md",
-        "type": "file",
-        "sha": "",
-        "size": 2187
-      }
-    ]
-  },
-  {
     "name": "IAC",
     "path": "IAC",
     "type": "dir",
@@ -699,6 +694,28 @@
             "type": "file",
             "sha": "",
             "size": 328
+          }
+        ]
+      },
+      {
+        "name": "Atlantis",
+        "path": "IAC/Atlantis",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Install_And_First_Use.md",
+            "path": "IAC/Atlantis/1_Install_And_First_Use.md",
+            "type": "file",
+            "sha": "",
+            "size": 472
+          },
+          {
+            "name": "README.md",
+            "path": "IAC/Atlantis/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 268
           }
         ]
       },
@@ -848,7 +865,7 @@
         "path": "IAC/README.md",
         "type": "file",
         "sha": "",
-        "size": 1926
+        "size": 1995
       }
     ]
   },
@@ -7512,7 +7529,7 @@
         "path": "Methodologies/0_SE_Learning_DevOps_Start_Here.md",
         "type": "file",
         "sha": "",
-        "size": 1524
+        "size": 1398
       },
       {
         "name": "1_DevOps_Culture_And_Collaboration.md",
@@ -7571,11 +7588,18 @@
         "size": 718
       },
       {
+        "name": "9_Maintenance_And_Legacy.md",
+        "path": "Methodologies/9_Maintenance_And_Legacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 693
+      },
+      {
         "name": "README.md",
         "path": "Methodologies/README.md",
         "type": "file",
         "sha": "",
-        "size": 1383
+        "size": 1416
       }
     ]
   },
@@ -7676,6 +7700,28 @@
         ]
       },
       {
+        "name": "PagerDuty",
+        "path": "Observability/PagerDuty",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Install_And_First_Use.md",
+            "path": "Observability/PagerDuty/1_Install_And_First_Use.md",
+            "type": "file",
+            "sha": "",
+            "size": 444
+          },
+          {
+            "name": "README.md",
+            "path": "Observability/PagerDuty/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 270
+          }
+        ]
+      },
+      {
         "name": "Prometheus",
         "path": "Observability/Prometheus",
         "type": "dir",
@@ -7716,7 +7762,7 @@
         "path": "Observability/README.md",
         "type": "file",
         "sha": "",
-        "size": 1954
+        "size": 2027
       }
     ]
   },
@@ -8555,7 +8601,7 @@
         "path": "Security/4_Security_Gate_Chain.md",
         "type": "file",
         "sha": "",
-        "size": 1359
+        "size": 1330
       },
       {
         "name": "5_OIDC_CI_And_Least_Privilege.md",
@@ -8569,7 +8615,7 @@
         "path": "Security/README.md",
         "type": "file",
         "sha": "",
-        "size": 1993
+        "size": 1927
       }
     ]
   },
@@ -8620,7 +8666,7 @@
             "path": "Servers/Envoy/README.md",
             "type": "file",
             "sha": "",
-            "size": 536
+            "size": 504
           }
         ]
       },
@@ -8655,14 +8701,14 @@
         ]
       },
       {
-        "name": "nginx",
-        "path": "Servers/nginx",
+        "name": "Nginx",
+        "path": "Servers/Nginx",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "README.md",
-            "path": "Servers/nginx/README.md",
+            "path": "Servers/Nginx/README.md",
             "type": "file",
             "sha": "",
             "size": 585
@@ -8696,29 +8742,15 @@
         "path": "Servers/README.md",
         "type": "file",
         "sha": "",
-        "size": 1758
+        "size": 1704
       }
     ]
-  },
-  {
-    "name": "CONTENT_WRITE_ORDER.md",
-    "path": "CONTENT_WRITE_ORDER.md",
-    "type": "file",
-    "sha": "",
-    "size": 3185
-  },
-  {
-    "name": "PLAN_DevOps_Concepts_Beyond_Languages.md",
-    "path": "PLAN_DevOps_Concepts_Beyond_Languages.md",
-    "type": "file",
-    "sha": "",
-    "size": 21041
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 8754
+    "size": 8990
   }
 ]

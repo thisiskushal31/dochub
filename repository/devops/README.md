@@ -6,26 +6,22 @@ Comprehensive DevOps handbook covering methodologies, best practices, tooling gu
 
 ## Structure
 
-- **`Methodologies/`** — DevOps culture, practices, workflows, and team collaboration patterns — **start at [0_SE_Learning_DevOps_Start_Here.md](./Methodologies/0_SE_Learning_DevOps_Start_Here.md)**
-- **`CiCd/`** — Continuous Integration and Continuous Delivery pipelines, practices, and tools
-- **`IAC/`** — Infrastructure as Code: Terraform, CloudFormation, Pulumi, and best practices
-- **`Automation/`** — Automation patterns, scripting, orchestration, and workflow automation
-- **`Cloud/`** — **New:** AWS / GCP / Azure literacy (shared concepts, not cert dumps)
-- **`Cloud-Native/`** — Cloud-native architectures, patterns, and platform engineering
-- **`Servers/`** — **New:** Web servers, reverse proxies, host lifecycle (nginx, Apache, …)
-- **`Observability/`** — Monitoring, logging, tracing, SLO/SLI; one folder per tool (Prometheus, Grafana, OpenTelemetry, etc.)
-- **`Security/`** — Security practices, compliance, secrets management, and threat mitigation
-- **`Entry-Points/`** — **New:** Short doors to sister deep-dives (containers, data, cyber, frameworks, …)
-- **`Operating-Systems/`** — **Fundamentals/** (OS-agnostic theory), **Linux/**, **Windows/**, **Unix/**, **MacOS/**
-- **`Languages/`** — General-purpose and niche languages (mature content; syntax depth lives here)
-- **`Assets/`** — Images and diagrams (with credit in the topic files). See [Assets/README.md](Assets/README.md)
+This handbook is how software is **delivered**. Start at [Methodologies/0 — SE learning DevOps](./Methodologies/0_SE_Learning_DevOps_Start_Here.md) if you are new; jump a folder if you already know the job.
 
-**Content write order (stubs + plan):** [CONTENT_WRITE_ORDER.md](./CONTENT_WRITE_ORDER.md)  
-**Gap matrix / completeness contract:** [PLAN_DevOps_Concepts_Beyond_Languages.md](./PLAN_DevOps_Concepts_Beyond_Languages.md)
+- **[`Methodologies/`](./Methodologies/)** — DevOps culture, practices, workflows, and team collaboration — **start at [0_SE_Learning_DevOps_Start_Here.md](./Methodologies/0_SE_Learning_DevOps_Start_Here.md)**
+- **[`CiCd/`](./CiCd/)** — Continuous Integration and Continuous Delivery pipelines, practices, and tools
+- **[`IAC/`](./IAC/)** — Infrastructure as Code: Terraform, CloudFormation, Pulumi, and best practices
+- **[`Automation/`](./Automation/)** — Config-management automation (Ansible and kin), not app workflow tools
+- **[`Cloud/`](./Cloud/)** — AWS / GCP / Azure literacy (shared concepts, not cert dumps)
+- **[`Cloud-Native/`](./Cloud-Native/)** — Cloud-native architectures, patterns, and platform engineering
+- **[`Servers/`](./Servers/)** — Web servers, reverse proxies, host lifecycle (nginx, Apache, …)
+- **[`Observability/`](./Observability/)** — Monitoring, logging, tracing, SLO/SLI; one folder per tool (Prometheus, Grafana, OpenTelemetry, etc.)
+- **[`Security/`](./Security/)** — Pipeline gates, secrets, compliance — not the full cyber program
+- **[`Operating-Systems/`](./Operating-Systems/)** — **Fundamentals/** (OS-agnostic theory), **Linux/**, **Windows/**, **Unix/**, **MacOS/**
+- **[`Languages/`](./Languages/)** — General-purpose and niche languages (syntax depth lives here)
+- **[`Assets/`](./Assets/README.md)** — Images and diagrams (credited in the topic files)
 
-**Application frameworks catalog** lives in [Tooling-and-Frameworks-Deep-Dive](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive) — see [Entry-Points/Application_Frameworks.md](./Entry-Points/Application_Frameworks.md). Do not duplicate as `Frameworks/` here.
-
-**Next (in progress):** Fill stubs in Methodologies → CiCd → Security → Servers → Cloud → Entry-Points per CONTENT_WRITE_ORDER.
+**Application frameworks** live in [Tooling-and-Frameworks-Deep-Dive](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive). Do not duplicate them as `Frameworks/` here. Git and Make live in Tooling `Utility/`. What Docker and Kubernetes *are* lives in [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive).
 
 ## Visual guides and images
 
@@ -43,8 +39,8 @@ Images from these sources can be downloaded into the right `Assets/` subfolder a
 1. Start with [**Methodologies/0 — SE learning DevOps**](./Methodologies/0_SE_Learning_DevOps_Start_Here.md) or `Methodologies/` for culture
 2. Use `Operating-Systems/` for OS fundamentals (theory first in **Fundamentals/**), then Linux, Windows, Unix, or macOS implementation and commands
 3. Use `Languages/` when you need to read or write code (Python for automation, Go for K8s/Terraform, etc.)
-4. Jump into `CiCd/` or `IAC/` based on your immediate needs; follow [CONTENT_WRITE_ORDER.md](./CONTENT_WRITE_ORDER.md) for stub fill order
-5. Use `Servers/` for web tier; `Cloud/` for provider literacy; `Entry-Points/` for sister deep-dives
+4. Jump into [`CiCd/`](./CiCd/) or [`IAC/`](./IAC/) based on your immediate needs
+5. Use `Servers/` for web tier; `Cloud/` for provider literacy; sister repos in the table below
 6. Use `Automation/` for workflow and orchestration patterns
 7. Reference `Observability/` and `Security/` for production operations
 8. Keep checklists and commands handy — [Commands-and-Cheatsheets](https://github.com/thisiskushal31/Commands-and-Cheatsheets)
@@ -61,10 +57,12 @@ When a topic here touches another domain, we give enough context to continue in 
 | **System design** | [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) | Patterns, components, trade-offs; fundamentals, caching, messaging, case studies. |
 | **DSA** | [Datastructures-and-Algorithms](https://github.com/thisiskushal31/Datastructures-and-Algorithms) | Data structures and algorithms notes and solutions (GFG, Leetcode). |
 | **Commands** | [Commands-and-Cheatsheets](https://github.com/thisiskushal31/Commands-and-Cheatsheets) | Essential commands and cheatsheets (languages, DevOps & cloud, databases). |
-| **Data engineering** | [Data-Engineering-Deep-Dive](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive) | Pipelines, warehousing, orchestration — [entry](./Entry-Points/Data_Engineering_Entry.md). |
-| **Data science & AI** | [Data-Science-AI-Deep-Dive](https://github.com/thisiskushal31/Data-Science-AI-Deep-Dive) | ML/AI depth — [entry](./Entry-Points/Data_Science_AI_Entry.md). |
-| **Tooling & frameworks** | [Tooling-and-Frameworks-Deep-Dive](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive) | Framework/SDK catalog — [entry](./Entry-Points/Application_Frameworks.md). |
-| **Cybersecurity** | [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) | Full cyber program — [entry](./Entry-Points/Cybersecurity_Deep_Dive.md). Handbook `Security/` = delivery gates only. |
+| **Data / messaging / cache (ops literacy)** | [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) · [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) · Kafka engine → [DE Systems](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive) | Backups, connection strings; design-time Cache/queue choice. |
+| **Local dev parity** | [Containerization-Deep-Dive `Local-Dev/`](https://github.com/thisiskushal31/Containerization-Deep-Dive) | kind, minikube, compose, Tilt. |
+| **Data engineering** | [Data-Engineering-Deep-Dive](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive) | How a fact becomes a table. |
+| **Data science & AI** | [Data-Science-AI-Deep-Dive](https://github.com/thisiskushal31/Data-Science-AI-Deep-Dive) | Learning / retrieval jobs. |
+| **Tooling & frameworks** | [Tooling-and-Frameworks-Deep-Dive](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive) | Frameworks (Django, FastAPI) and utilities (Git, Make). Not language syntax. |
+| **Cybersecurity** | [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) | Full cyber program. Handbook `Security/` = delivery gates only. |
 
 ## Contributing — content guidelines
 
@@ -74,7 +72,7 @@ When adding content:
 - **Images are first priority** when they fit: store under `Assets/<Section>/`, reference in the topic right after the text they illustrate, and **credit** the original source (e.g. "Image: [ByteByteGo – CI/CD Pipeline](URL)").
 - If there’s no suitable image, use a **code block** for visual understanding (diagram, flow, or fundamentals).
 - Content must be **standalone** (beginner-to-advanced) with references at the end of each topic. Be **factually correct**; verify when unsure.
-- **External links:** Use only **GitHub repository URLs** for other repos. For a database or object store (e.g. S3, GCS) that has only a placeholder in Databases-Deep-Dive, link to that repo path (e.g. `.../Databases-Deep-Dive/tree/main/relational/mysql`).
+- **External links:** Use only **GitHub repository URLs** for other repos. For a database or object store (e.g. S3, GCS) that has only a placeholder in Databases-Deep-Dive, link to that repo path (e.g. `.../Databases-Deep-Dive/tree/main/Relational/MySQL`).
 
 ## Contributing
 

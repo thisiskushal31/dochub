@@ -17,7 +17,7 @@
 
 | Tool | Folder |
 |------|--------|
-| cert-manager | [cert-manager/](./cert-manager/README.md) |
+| cert-manager | [Cert-Manager/](./Cert-Manager/README.md) |
 | ExternalDNS | [ExternalDNS/](./ExternalDNS/README.md) |
 | Backstage (IDP) | [Backstage/](./Backstage/README.md) — also [3_Platform_Engineering.md](./3_Platform_Engineering.md) |
 

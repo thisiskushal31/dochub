@@ -220,7 +220,7 @@ sudo semodule -i mymodule.pp
 
 ## Firewalld (dynamic firewall)
 
-**firewalld** manages **nftables** (or iptables) with a zone-based model. Each zone has a default policy and a set of allowed services/ports. Interfaces and sources are assigned to zones (e.g. `public`, `dmz`, `trusted`).
+**firewalld** manages **nftables** (or iptables) with a zone-based model. Each zone has a default policy and a set of allowed Services/ports. Interfaces and sources are assigned to zones (e.g. `public`, `dmz`, `trusted`).
 
 **Structure:**
 

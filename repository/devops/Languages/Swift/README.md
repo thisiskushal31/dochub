@@ -105,7 +105,7 @@ Pin the **Swift 6.3.x** patch your CI actually runs; the chapter text is literac
 | Language core | **04–09** | Bindings & optionals; control/functions/closures; types; properties/init; protocols/generics/macros; errors |
 | Systems Swift | **10–13** | Concurrency (+ Observation literacy); ARC & access; stdlib; Foundation |
 | Engineering surface | **14–17** | SPM; interop; Swift Testing / XCTest; DocC & API guidelines |
-| Apple ship lane | **18–21** | Xcode projects; UI surface literacy; security/privacy; CI/CD |
+| Apple ship lane | **18–21** | Xcode projects; UI surface literacy; Security/privacy; CI/CD |
 | Applications + wrap | **22–23** | Use-case gallery; whole-engineering master checklist |
 | Compass | **24** | Evolution + adjacent doors (server, Wasm, Android SDK, Embedded, ownership, …) |
 

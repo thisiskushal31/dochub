@@ -157,7 +157,7 @@ Shipping fully stripped binaries without external debuginfo slows incident respo
 
 ### 5. Health check anti-patterns
 
-Deep checks that open DB transactions on every probe can amplify outages. Use shallow checks for liveness; readiness may check critical deps with caching/backoff. See §1.5 for migration vs dependency-down examples; do not copy the same deep check into both probes.
+Deep checks that open DB transactions on every probe can amplify outages. Use shallow checks for liveness; readiness may check critical deps with Caching/backoff. See §1.5 for migration vs dependency-down examples; do not copy the same deep check into both probes.
 
 ### 6. Legacy notes
 

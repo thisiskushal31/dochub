@@ -74,7 +74,7 @@ fun two_plus_two() {
 
 ### Standard library
 
-Core Move ships **modules** such as **`vector`**, **`option`**, **`string`**, **`signer`**, **`bcs`**, and math helpers. Chains publish **additional** framework modules on-chain. You **`use`** std modules by name; exact paths differ slightly between Aptos and Sui editions—follow your stack’s prelude and framework docs.
+Core Move ships **modules** such as **`Vector`**, **`option`**, **`string`**, **`signer`**, **`bcs`**, and math helpers. Chains publish **additional** framework modules on-chain. You **`use`** std modules by name; exact paths differ slightly between Aptos and Sui editions—follow your stack’s prelude and framework docs.
 
 ## What are the use cases?
 

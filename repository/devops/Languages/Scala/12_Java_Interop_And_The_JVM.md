@@ -256,9 +256,9 @@ Staff rule: frameworks may need reflection; **application code** that reflects o
 
 ### 7. ServiceLoader, SPI, and plugin classloaders
 
-**`ServiceLoader`** and Java SPI discover implementations listed under `META-INF/services/…`. That registry is part of your classpath trust surface:
+**`ServiceLoader`** and Java SPI discover implementations listed under `META-INF/Services/…`. That registry is part of your classpath trust surface:
 
-- Fat-jar merge strategies that discard or overwrite `META-INF/services` silently drop providers (chapter 11).
+- Fat-jar merge strategies that discard or overwrite `META-INF/Services` silently drop providers (chapter 11).
 - Spark, Kafka clients, and JDBC-adjacent stacks load **plugin / connector jars** under child or isolated classloaders. A jar on the wrong loader is invisible; a jar on the parent loader can shadow the job’s copy.
 - “Drop a jar in the plugins directory” is code execution under the process identity—owners, checksums, and promotion paths matter as much as for application dependencies.
 
@@ -351,7 +351,7 @@ def safeMessage(t: Throwable): String =
 - Java-facing APIs avoid exposing hard-to-call Scala encodings without a facade.
 - Framework **annotations placed on the members the framework actually reads** (field vs accessor vs constructor)—verified, not assumed.
 - HashMap/get nulls wrapped with `Option(...)` before domain use.
-- No untrusted reflective load/`setAccessible` shortcuts; SPI/`META-INF/services` and plugin jars have owners.
+- No untrusted reflective load/`setAccessible` shortcuts; SPI/`META-INF/Services` and plugin jars have owners.
 - Case classes at serializer boundaries use owned codecs; no untrusted Java deserialization (chapter 15).
 - Logs/metrics do not exfiltrate `getMessage` / Java-client detail that may hold secrets or PII.
 

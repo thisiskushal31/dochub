@@ -40,7 +40,7 @@
         "path": "Envoy/README.md",
         "type": "file",
         "sha": "",
-        "size": 536
+        "size": 504
       }
     ]
   },
@@ -75,14 +75,14 @@
     ]
   },
   {
-    "name": "nginx",
-    "path": "nginx",
+    "name": "Nginx",
+    "path": "Nginx",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "README.md",
-        "path": "nginx/README.md",
+        "path": "Nginx/README.md",
         "type": "file",
         "sha": "",
         "size": 585
@@ -116,6 +116,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1758
+    "size": 1704
   }
 ]
