@@ -62,7 +62,7 @@ The swarm rolls back using the same rolling strategy. You can inspect update and
 - **Advanced scheduling** – Affinity/anti-affinity, taints/tolerations, resource quotas, multiple schedulers.
 - **API and tooling** – Many platforms and vendors assume Kubernetes; Swarm has less third-party tooling.
 
-For learning orchestration concepts (replicas, services, rolling updates), Swarm is a light option. For production at scale or multi-cloud, Kubernetes (or a managed Kubernetes service) is usually the choice. See this repo's [Kubernetes deep dive](../kubernetes/README.md) and [Managed services](../../managed-services/README.md).
+For learning orchestration concepts (replicas, services, rolling updates), Swarm is a light option. For production at scale or multi-cloud, Kubernetes (or a managed Kubernetes service) is usually the choice. See this repo's [Kubernetes deep dive](../Kubernetes/README.md) and [Managed services](../../Managed-Services/README.md).
 
 ---
 

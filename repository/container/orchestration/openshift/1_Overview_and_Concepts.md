@@ -79,7 +79,7 @@ This section defines the main Kubernetes and OpenShift terms you will see in the
 
 The following diagram shows the main layers: a **control plane** (API server, etcd, scheduler, controllers, and OpenShift Operators such as the Cluster Network Operator, Machine Config Operator, OLM, and Cluster Version Operator), **worker nodes** running RHCOS with kubelet and CRI-O (where your pods, the router, registry, and builds run), and the **OpenShift layer** that adds Routes, BuildConfig, ImageStreams, Projects, OperatorHub, the integrated registry, and the Machine API on top of Kubernetes.
 
-![OpenShift Container Platform stack: control plane, workers, and OpenShift layer](../../assets/oke-about-ocp-stack-image.png)
+![OpenShift Container Platform stack: control plane, workers, and OpenShift layer](../../Assets/Oke_About_Ocp_Stack_Image.png)
 
 *Credit: Red Hat. Source: [About OpenShift Kubernetes Engine](https://docs.openshift.com/container-platform/4.17/welcome/oke_about.html) and [OpenShift Container Platform overview](https://docs.openshift.com/container-platform/4.17/getting_started/openshift-overview.html), OpenShift Container Platform documentation. Select your version from the [documentation index](https://docs.redhat.com/en/documentation/openshift_container_platform/).*
 
@@ -130,7 +130,7 @@ The OpenShift installation program is flexible. You can:
 - Deploy a cluster on **infrastructure that the installation program provisions and the cluster maintains** (installer-provisioned infrastructure, IPI), or  
 - Deploy on **infrastructure that you prepare and maintain** (user-provisioned infrastructure, UPI).
 
-The installation **scope is intentionally narrow**: the program is designed for simplicity and success. Many configuration tasks (storage, authentication, operators, tuning) are done **after** installation. For the full installation process, supported platforms, and how to choose a method, see [2. Installation](./2-installation.md) and the official installation documentation.
+The installation **scope is intentionally narrow**: the program is designed for simplicity and success. Many configuration tasks (storage, authentication, operators, tuning) are done **after** installation. For the full installation process, supported platforms, and how to choose a method, see [2. Installation](./2_Installation.md) and the official installation documentation.
 
 ---
 
@@ -144,11 +144,11 @@ OpenShift Local brings a minimal, preconfigured OpenShift cluster to your machin
 
 ## Next steps by role
 
-**Developers** – Work with projects and applications (Developer perspective and Topology view in the web console); use the developer CLI (`odo`); create CI/CD pipelines; deploy Helm charts; understand image builds and build strategies; create container images and deployments; use templates; install and use Operators; develop your own Operators. See [4. Develop and Operators](./4-develop-and-operators.md).
+**Developers** – Work with projects and applications (Developer perspective and Topology view in the web console); use the developer CLI (`odo`); create CI/CD pipelines; deploy Helm charts; understand image builds and build strategies; create container images and deployments; use templates; install and use Operators; develop your own Operators. See [4. Develop and Operators](./4_Develop_and_Operators.md).
 
-**Administrators** – Understand platform management (control plane, Machine API, Operators, etcd); manage users, groups, and authentication; manage networking (Cluster Network Operator, multiple networks, network policy); manage storage and Operators; use CRDs; set resource quotas; prune and reclaim resources; scale and tune clusters; use the OpenShift Update Service in disconnected environments; configure monitoring and remote health (Telemetry, Insights). See [3. Configure and manage](./3-configure-and-manage.md) and [5. Networking, security, and observability](./5-networking-security-observability.md).
+**Administrators** – Understand platform management (control plane, Machine API, Operators, etcd); manage users, groups, and authentication; manage networking (Cluster Network Operator, multiple networks, network policy); manage storage and Operators; use CRDs; set resource quotas; prune and reclaim resources; scale and tune clusters; use the OpenShift Update Service in disconnected environments; configure monitoring and remote health (Telemetry, Insights). See [3. Configure and manage](./3_Configure_and_Manage.md) and [5. Networking, security, and observability](./5_Networking_Security_Observability.md).
 
-**Additional topics** – For deeper coverage, see [6. Service Mesh](./6-service-mesh.md), [7. OpenShift Virtualization](./7-virtualization.md), [8. etcd and Hosted Control Planes](./8-etcd-hosted-control-planes.md), [9. Updating, registry, and API](./9-updating-registry-api.md), and [10. Windows, edge, AI, and hardware](./10-windows-edge-ai-hardware.md).
+**Additional topics** – For deeper coverage, see [6. Service Mesh](./6_Service_Mesh.md), [7. OpenShift Virtualization](./7_Virtualization.md), [8. etcd and Hosted Control Planes](./8_Etcd_Hosted_Control_Planes.md), [9. Updating, registry, and API](./9_Updating_Registry_API.md), and [10. Windows, edge, AI, and hardware](./10_Windows_Edge_AI_Hardware.md).
 
 ---
 

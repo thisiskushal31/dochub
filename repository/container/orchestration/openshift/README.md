@@ -4,64 +4,64 @@ Hands-on notes for **OpenShift Container Platform** (OCP): Red Hat’s Kubernete
 
 ## Topics
 
-### [1. Overview and concepts](./1-overview-and-concepts.md)
+### [1. Overview and concepts](./1_Overview_and_Concepts.md)
 
 What OpenShift Container Platform is; key capabilities; glossary (Pods, Services, Routes, Builds, Projects, Operators, control plane, RHCOS); how OCP works; use cases; installation options; OpenShift Local; next steps for developers and administrators.
 
-### [2. Installation](./2-installation.md)
+### [2. Installation](./2_Installation.md)
 
 Installation methods (interactive, Agent-based, automated IPI, full-control UPI); installation program and process; bootstrap, control plane, and compute machines; RHCOS and Ignition; supported platforms; post-install configuration; updating and migrating.
 
-### [3. Configure and manage](./3-configure-and-manage.md)
+### [3. Configure and manage](./3_Configure_and_Manage.md)
 
 Postinstallation configuration; backup and restore; storage, nodes, machine management and Machine Config Operator; CLI (`oc`) and web console; scalability and performance; disconnected environments; cluster administrator tasks.
 
-### [4. Develop and Operators](./4-develop-and-operators.md)
+### [4. Develop and Operators](./4_Develop_and_Operators.md)
 
 Building applications; projects and deployments; images and ImageStreams; builds (BuildConfig, strategies, Shipwright); Operators, OLM, OperatorHub, and the Operator Framework; CI/CD, GitOps, Pipelines; serverless and sandboxed containers.
 
-### [5. Networking, security, and observability](./5-networking-security-observability.md)
+### [5. Networking, security, and observability](./5_Networking_Security_Observability.md)
 
 Networking (pod networking, Services, Routes, Cluster Network Operator, OVN-Kubernetes, ingress, network policy); authentication and authorization; security and compliance; monitoring, logging, observability, and remote health.
 
-### [6. Service Mesh](./6-service-mesh.md)
+### [6. Service Mesh](./6_Service_Mesh.md)
 
 Red Hat OpenShift Service Mesh (Istio-based): traffic management, service identity and security, policy enforcement, telemetry; Kiali and distributed tracing; installation and lifecycle.
 
-### [7. OpenShift Virtualization](./7-virtualization.md)
+### [7. OpenShift Virtualization](./7_Virtualization.md)
 
 Running and managing VMs on OpenShift: architecture (virt-operator, CDI, HCO), creating and managing VMs, storage and networking, live migration, installation and compatibility.
 
-### [8. etcd and Hosted Control Planes](./8-etcd-hosted-control-planes.md)
+### [8. etcd and Hosted Control Planes](./8_Etcd_Hosted_Control_Planes.md)
 
 etcd overview, backup and restore, performance and scalability; Hosted Control Planes (HCP) architecture, benefits, when to use, and next steps.
 
-### [9. Updating, registry, and API](./9-updating-registry-api.md)
+### [9. Updating, registry, and API](./9_Updating_Registry_API.md)
 
 How OpenShift updates work (CVO, Runlevels, OSUS); update channels; connected and disconnected updates; integrated registry (config, storage, securing); OpenShift REST API for automation.
 
-### [10. Windows, edge, AI, and hardware](./10-windows-edge-ai-hardware.md)
+### [10. Windows, edge, AI, and hardware](./10_Windows_Edge_AI_Hardware.md)
 
 Windows containers (WMCO, MachineSets, BYOH); edge computing (single-node, two-node, ZTP, image-based install); AI workloads (Kueue, JobSet, Leader Worker Set); hardware accelerators (GPUs, NPUs, RDMA); Migration Toolkit for Containers; Extensions (OLM v1).
 
 ## Learning path
 
-1. [Overview and concepts](./1-overview-and-concepts.md)
-2. [Installation](./2-installation.md)
-3. [Configure and manage](./3-configure-and-manage.md)
-4. [Develop and Operators](./4-develop-and-operators.md)
-5. [Networking, security, and observability](./5-networking-security-observability.md)
-6. [Service Mesh](./6-service-mesh.md)
-7. [OpenShift Virtualization](./7-virtualization.md)
-8. [etcd and Hosted Control Planes](./8-etcd-hosted-control-planes.md)
-9. [Updating, registry, and API](./9-updating-registry-api.md)
-10. [Windows, edge, AI, and hardware](./10-windows-edge-ai-hardware.md)
+1. [Overview and concepts](./1_Overview_and_Concepts.md)
+2. [Installation](./2_Installation.md)
+3. [Configure and manage](./3_Configure_and_Manage.md)
+4. [Develop and Operators](./4_Develop_and_Operators.md)
+5. [Networking, security, and observability](./5_Networking_Security_Observability.md)
+6. [Service Mesh](./6_Service_Mesh.md)
+7. [OpenShift Virtualization](./7_Virtualization.md)
+8. [etcd and Hosted Control Planes](./8_Etcd_Hosted_Control_Planes.md)
+9. [Updating, registry, and API](./9_Updating_Registry_API.md)
+10. [Windows, edge, AI, and hardware](./10_Windows_Edge_AI_Hardware.md)
 
 ## Related
 
-- **[Containerization basics](../../containerization-basic/README.md)** – concepts
-- **[Kubernetes](../kubernetes/README.md)** – upstream Kubernetes
-- **[Managed services](../../managed-services/README.md)** – ROSA, ARO, and managed OpenShift offerings
+- **[Containerization basics](../../Containerization-Basic/README.md)** – concepts
+- **[Kubernetes](../Kubernetes/README.md)** – upstream Kubernetes
+- **[Managed services](../../Managed-Services/README.md)** – ROSA, ARO, and managed OpenShift offerings
 
 ## References
 

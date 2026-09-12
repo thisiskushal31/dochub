@@ -65,7 +65,7 @@ When a cluster is provisioned, each machine needs information about the cluster.
 
 The result is a running OpenShift cluster. The cluster then downloads and configures the rest of the day-to-day components, including creating compute machines in supported environments. The following diagram illustrates this process.
 
-![Creating bootstrap, control plane, and compute machines](../../assets/create-nodes.png)
+![Creating bootstrap, control plane, and compute machines](../../Assets/Create_Nodes.png)
 
 *Credit: Red Hat. Source: [Installation process](https://docs.openshift.com/container-platform/4.17/installing/overview/index.html) and [Installation overview](https://docs.redhat.com/en/documentation/openshift_container_platform/html/installation_overview), OpenShift Container Platform documentation. Select your version from the [documentation index](https://docs.redhat.com/en/documentation/openshift_container_platform/).*
 
@@ -91,7 +91,7 @@ The **scope of the installation program is intentionally narrow**. It is designe
 - Configuring **storage**, **networking**, **authentication**, **certificates**, and **Operators**.
 - Setting **resource quotas**, **pruning** resources, and **scaling/tuning** the cluster.
 
-See [3. Configure and manage](./3-configure-and-manage.md) for day-2 operations.
+See [3. Configure and manage](./3_Configure_and_Manage.md) for day-2 operations.
 
 **OpenShift Local** is a separate option for local development: a minimal cluster on your laptop or desktop, not for production. See [Red Hat OpenShift Local](https://developers.redhat.com/products/openshift-local/overview).
 
@@ -118,7 +118,7 @@ For IPI, all machines (including the one running the install) typically need dir
 
 ## Single-node and two-node clusters
 
-**Single-node OpenShift (SNO)** – A single machine runs both the control plane and workloads. There is no high availability: one node is the entire cluster. SNO is suited to **edge**, small remote sites, or development. The installer (IPI, UPI, Agent-based, or Assisted) supports a single-node topology; minimum CPU, memory, and disk are documented. RHCOS and the Machine Config Operator apply as in multi-node clusters; some features (e.g. OpenShift Virtualization) have SNO-specific behavior. See [10. Windows, edge, AI, and hardware](./10-windows-edge-ai-hardware.md#single-node-and-two-node-clusters) and the official “Installing on a single node” documentation for requirements and steps.
+**Single-node OpenShift (SNO)** – A single machine runs both the control plane and workloads. There is no high availability: one node is the entire cluster. SNO is suited to **edge**, small remote sites, or development. The installer (IPI, UPI, Agent-based, or Assisted) supports a single-node topology; minimum CPU, memory, and disk are documented. RHCOS and the Machine Config Operator apply as in multi-node clusters; some features (e.g. OpenShift Virtualization) have SNO-specific behavior. See [10. Windows, edge, AI, and hardware](./10_Windows_Edge_AI_Hardware.md#single-node-and-two-node-clusters) and the official “Installing on a single node” documentation for requirements and steps.
 
 **Two-node cluster** – A two-node topology (e.g. one control plane and one compute node) is supported for **edge** or resource-constrained environments. Requirements and installation steps differ from standard multi-node; use the official “Installing a two-node cluster” guide for your platform.
 

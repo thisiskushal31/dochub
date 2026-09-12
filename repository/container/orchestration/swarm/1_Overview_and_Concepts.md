@@ -34,7 +34,7 @@ Benefits (from Docker docs): native to Docker, simple to start, declarative desi
 | Networking | Overlay network, ingress | CNI, Services, Ingress, many options |
 | Learning curve | Quick if you know Docker | Steeper |
 
-Use **Swarm** when you want lightweight orchestration, already use Docker, and do not need the full Kubernetes ecosystem. Use **Kubernetes** when you need portability across clouds, a large add-on ecosystem, or very large scale. See [6. Scaling, updates, and when to use](./6-scaling-updates-and-when-to-use.md).
+Use **Swarm** when you want lightweight orchestration, already use Docker, and do not need the full Kubernetes ecosystem. Use **Kubernetes** when you need portability across clouds, a large add-on ecosystem, or very large scale. See [6. Scaling, updates, and when to use](./6_Scaling_Updates_and_When_to_Use.md).
 
 ---
 
@@ -59,7 +59,7 @@ Example:
 docker service create --name web --replicas 3 -p 8080:80 nginx:alpine
 ```
 
-You get 3 replicas of nginx; Swarm publishes port 8080 on every node (routing mesh) so you can hit any node and reach the service. Scale with `docker service scale web=5`. Update the image with `docker service update --image nginx:latest web` (rolling update by default). See [3. Services and tasks](./3-services-and-tasks.md).
+You get 3 replicas of nginx; Swarm publishes port 8080 on every node (routing mesh) so you can hit any node and reach the service. Scale with `docker service scale web=5`. Update the image with `docker service update --image nginx:latest web` (rolling update by default). See [3. Services and tasks](./3_Services_and_Tasks.md).
 
 ---
 

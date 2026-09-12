@@ -4,33 +4,33 @@ Hands-on notes for Podman: daemonless, rootless-capable container engine with a 
 
 ## Topics
 
-### [1. Get Podman & first steps](./1-get-podman-first-steps.md)
+### [1. Get Podman & first steps](./1_Get_Podman_First_Steps.md)
 
 What Podman is; Podman vs Docker; installing on Linux, macOS, and Windows; verify and run your first container; common commands.
 
-### [2. Podman concepts](./2-podman-concepts.md)
+### [2. Podman concepts](./2_Podman_Concepts.md)
 
 Containers, images, storage, registries, and pods. CLI usage and how Podman stores data.
 
-### [3. Building images](./3-building-images.md)
+### [3. Building images](./3_Building_Images.md)
 
 Dockerfile, `podman build`, layers and cache, multi-stage builds, and Buildah.
 
-### [4. Running containers](./4-running-containers.md)
+### [4. Running containers](./4_Running_Containers.md)
 
 Ports, environment, volumes and bind mounts, networks, and podman-compose for multi-container apps.
 
-### [5. Pods and rootless](./5-pods-and-rootless.md)
+### [5. Pods and rootless](./5_Pods_and_Rootless.md)
 
 Pods in depth; rootless setup and why it matters; systemd user services for containers and pods.
 
 ## Learning path
 
-1. [Get Podman & first steps](./1-get-podman-first-steps.md)
-2. [Podman concepts](./2-podman-concepts.md)
-3. [Building images](./3-building-images.md)
-4. [Running containers](./4-running-containers.md)
-5. [Pods and rootless](./5-pods-and-rootless.md)
+1. [Get Podman & first steps](./1_Get_Podman_First_Steps.md)
+2. [Podman concepts](./2_Podman_Concepts.md)
+3. [Building images](./3_Building_Images.md)
+4. [Running containers](./4_Running_Containers.md)
+5. [Pods and rootless](./5_Pods_and_Rootless.md)
 
 ## Quick reference
 
@@ -44,9 +44,9 @@ podman run -d --pod mypod --name web nginx:alpine
 
 ## Related
 
-- **[Containerization basics](../../containerization-basic/README.md)** – concepts
-- **[Docker](../docker/README.md)** – Docker Engine and Compose
-- **[Orchestration](../../orchestration/README.md)** – Kubernetes, Swarm
+- **[Containerization basics](../../Containerization-Basic/README.md)** – concepts
+- **[Docker](../Docker/README.md)** – Docker Engine and Compose
+- **[Orchestration](../../Orchestration/README.md)** – Kubernetes, Swarm
 
 ## References
 

@@ -18,7 +18,7 @@ This page gives an overview of managed Kubernetes and container platforms and wh
 
 **Managed Kubernetes** means a provider runs the **control plane** (API server, scheduler, controllers, etcd) for you. You get a Kubernetes API endpoint and deploy workloads; the provider handles control plane upgrades, availability, and often security hardening. In some offerings (e.g. GKE Autopilot, EKS Auto Mode), the provider also **manages the nodes** so you only define workloads and pay for what they use.
 
-Benefits: less operational burden, faster time to production, integration with the provider's IAM, networking, storage, and monitoring. You still need to understand Kubernetes concepts (pods, services, deployments); see this repo's [Kubernetes deep dive](../orchestration/kubernetes/README.md).
+Benefits: less operational burden, faster time to production, integration with the provider's IAM, networking, storage, and monitoring. You still need to understand Kubernetes concepts (pods, services, deployments); see this repo's [Kubernetes deep dive](../Orchestration/Kubernetes/README.md).
 
 ---
 
@@ -39,10 +39,10 @@ Benefits: less operational burden, faster time to production, integration with t
 - **GKE** – You are on or going to **Google Cloud**. Use **Autopilot** for minimal node management and pay-per-Pod; use **Standard** when you need full control of node pools. Good fit for data/ML, Cloud Build/Deploy, and multi-cluster with Anthos.
 - **EKS** – You are on or going to **AWS**. Use **EKS Standard** with EC2/Fargate node groups, or **EKS Auto Mode** for managed nodes. Strong IAM integration, ECR, and AWS add-ons. Use **EKS Anywhere** for on-prem clusters with the same EKS experience.
 - **AKS** – You are on or going to **Azure**. Managed control plane at no extra cost; you pay for nodes. Good integration with Entra ID, ACR, and Azure Monitor. **Azure Red Hat OpenShift (ARO)** if you want OpenShift on Azure.
-- **OpenShift managed (ROSA, ARO)** – You want **OpenShift** (operators, routes, developer experience) with Red Hat support on AWS (ROSA) or Azure (ARO). See [5. OpenShift managed and turnkey Kubernetes](./5-openshift-managed-and-turnkey.md).
-- **Open source / turnkey** – You need Kubernetes **on-premises**, at the **edge**, or for **local development** without a cloud provider. Options include k3s, k0s, RKE2, MicroK8s, Minikube, and Kind. See [5. OpenShift managed and turnkey Kubernetes](./5-openshift-managed-and-turnkey.md#turnkey-and-open-source-kubernetes).
+- **OpenShift managed (ROSA, ARO)** – You want **OpenShift** (operators, routes, developer experience) with Red Hat support on AWS (ROSA) or Azure (ARO). See [5. OpenShift managed and turnkey Kubernetes](./5_OpenShift_Managed_and_Turnkey.md).
+- **Open source / turnkey** – You need Kubernetes **on-premises**, at the **edge**, or for **local development** without a cloud provider. Options include k3s, k0s, RKE2, MicroK8s, Minikube, and Kind. See [5. OpenShift managed and turnkey Kubernetes](./5_OpenShift_Managed_and_Turnkey.md#turnkey-and-open-source-kubernetes).
 
-For concepts and hands-on Kubernetes without a specific cloud, use the [Kubernetes docs](https://kubernetes.io/docs/) and this repo's [Kubernetes deep dive](../orchestration/kubernetes/README.md).
+For concepts and hands-on Kubernetes without a specific cloud, use the [Kubernetes docs](https://kubernetes.io/docs/) and this repo's [Kubernetes deep dive](../Orchestration/Kubernetes/README.md).
 
 ---
 
@@ -54,7 +54,7 @@ The Kubernetes project lists [certified conformant](https://kubernetes.io/docs/s
 - **Self-managed / turnkey** – Distributions you install yourself: k3s (lightweight), k0s (single binary), RKE2 (Rancher), MicroK8s (Canonical), OpenShift (Red Hat), and others.
 - **Local / dev** – Minikube, Kind (Kubernetes in Docker), k3d (k3s in Docker).
 
-Use turnkey solutions when you need a consistent Kubernetes API on your own hardware or in dev; use managed services when you want the provider to run and maintain the control plane (and optionally nodes). See [5. OpenShift managed and turnkey Kubernetes](./5-openshift-managed-and-turnkey.md) for details on ROSA, ARO, and popular turnkey options.
+Use turnkey solutions when you need a consistent Kubernetes API on your own hardware or in dev; use managed services when you want the provider to run and maintain the control plane (and optionally nodes). See [5. OpenShift managed and turnkey Kubernetes](./5_OpenShift_Managed_and_Turnkey.md) for details on ROSA, ARO, and popular turnkey options.
 
 ---
 

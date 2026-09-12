@@ -16,4 +16,4 @@
 - [ ] Decision table: Nomad vs K8s vs Swarm
 - [ ] Optional: minimal job HCL example
 
-**Priority:** low — fill after local-dev and serverless sections
+**Priority:** low — fill after Local-Dev and serverless sections

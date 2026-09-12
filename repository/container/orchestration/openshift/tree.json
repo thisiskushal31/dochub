@@ -1,70 +1,70 @@
 [
   {
-    "name": "1-overview-and-concepts.md",
-    "path": "1-overview-and-concepts.md",
+    "name": "1_Overview_and_Concepts.md",
+    "path": "1_Overview_and_Concepts.md",
     "type": "file",
     "sha": "",
     "size": 16190
   },
   {
-    "name": "10-windows-edge-ai-hardware.md",
-    "path": "10-windows-edge-ai-hardware.md",
+    "name": "10_Windows_Edge_AI_Hardware.md",
+    "path": "10_Windows_Edge_AI_Hardware.md",
     "type": "file",
     "sha": "",
     "size": 11171
   },
   {
-    "name": "2-installation.md",
-    "path": "2-installation.md",
+    "name": "2_Installation.md",
+    "path": "2_Installation.md",
     "type": "file",
     "sha": "",
     "size": 16470
   },
   {
-    "name": "3-configure-and-manage.md",
-    "path": "3-configure-and-manage.md",
+    "name": "3_Configure_and_Manage.md",
+    "path": "3_Configure_and_Manage.md",
     "type": "file",
     "sha": "",
     "size": 12935
   },
   {
-    "name": "4-develop-and-operators.md",
-    "path": "4-develop-and-operators.md",
+    "name": "4_Develop_and_Operators.md",
+    "path": "4_Develop_and_Operators.md",
     "type": "file",
     "sha": "",
     "size": 13713
   },
   {
-    "name": "5-networking-security-observability.md",
-    "path": "5-networking-security-observability.md",
+    "name": "5_Networking_Security_Observability.md",
+    "path": "5_Networking_Security_Observability.md",
     "type": "file",
     "sha": "",
     "size": 13940
   },
   {
-    "name": "6-service-mesh.md",
-    "path": "6-service-mesh.md",
+    "name": "6_Service_Mesh.md",
+    "path": "6_Service_Mesh.md",
     "type": "file",
     "sha": "",
     "size": 8203
   },
   {
-    "name": "7-virtualization.md",
-    "path": "7-virtualization.md",
+    "name": "7_Virtualization.md",
+    "path": "7_Virtualization.md",
     "type": "file",
     "sha": "",
     "size": 8922
   },
   {
-    "name": "8-etcd-hosted-control-planes.md",
-    "path": "8-etcd-hosted-control-planes.md",
+    "name": "8_Etcd_Hosted_Control_Planes.md",
+    "path": "8_Etcd_Hosted_Control_Planes.md",
     "type": "file",
     "sha": "",
     "size": 9963
   },
   {
-    "name": "9-updating-registry-api.md",
-    "path": "9-updating-registry-api.md",
+    "name": "9_Updating_Registry_API.md",
+    "path": "9_Updating_Registry_API.md",
     "type": "file",
     "sha": "",
     "size": 10010

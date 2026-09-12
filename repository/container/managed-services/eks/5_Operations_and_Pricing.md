@@ -9,7 +9,7 @@ Technical detail on **EKS upgrades**, monitoring, and **pricing**. Kubernetes ha
 ## Kubernetes vs EKS
 
 - **Kubernetes:** You upgrade the cluster (control plane and nodes) yourself or via a vendor.
-- **EKS:** **Control plane** is upgraded by AWS (you choose when to opt in to new versions). **Nodes** you upgrade (or they’re managed in Auto Mode/Fargate). **Pricing** is per cluster (control plane), per node (EC2/Fargate), and for storage/transfer.
+- **EKS:** **Control plane** is upgraded by AWS (you choose when to opt in to new versions). **Nodes** you upgrade (or they’re managed in Auto Mode/Fargate). **Pricing** is per cluster (control plane), per node (EC2/Fargate), and for Storage/transfer.
 
 ---
 

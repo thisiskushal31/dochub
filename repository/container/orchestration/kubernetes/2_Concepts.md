@@ -21,7 +21,7 @@ This page gives a concise overview of Kubernetes architecture (control plane and
 
 A **Kubernetes cluster** has two kinds of machines: a **control plane** (one or more nodes that run the API and cluster logic) and **worker nodes** (where your Pods run). You talk to the cluster through the **API server** using `kubectl` or other clients.
 
-![Components of a Kubernetes cluster: control plane and nodes](../../assets/components-of-kubernetes.svg)
+![Components of a Kubernetes cluster: control plane and nodes](../../Assets/Components_of_Kubernetes.svg)
 
 ---
 

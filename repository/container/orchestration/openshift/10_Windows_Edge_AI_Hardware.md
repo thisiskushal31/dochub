@@ -76,7 +76,7 @@ Red Hat combines OpenShift with Red Hat OpenShift AI for an enterprise AI platfo
 - **Single-node OpenShift (SNO)** – A **single node** runs the entire cluster (control plane and workloads). Minimum CPU, memory, and disk are documented. Use for edge, small sites, or development; there is no HA. Installation is via the standard installer with a single-node topology; Agent-based and Assisted Installer support SNO. RHCOS and Machine Config Operator apply as in multi-node clusters; some features (e.g. OpenShift Virtualization) have SNO-specific behavior.
 - **Two-node cluster** – A **two-node** topology (e.g. one control plane node and one compute node, or two nodes sharing roles) is documented for edge and resource-constrained environments. Check the “Installing a two-node cluster” documentation for requirements and steps.
 
-See [2. Installation](./2-installation.md) and the official installing on single-node and two-node guides for details.
+See [2. Installation](./2_Installation.md) and the official installing on single-node and two-node guides for details.
 
 ---
 

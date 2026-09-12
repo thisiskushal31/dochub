@@ -35,7 +35,7 @@ Standard instructions: **FROM**, **RUN**, **COPY**, **WORKDIR**, **ENV**, **EXPO
 ```dockerfile
 FROM alpine:3.19
 RUN apk add --no-cache nginx
-COPY index.html /usr/share/nginx/html/
+COPY index.html /usr/share/Nginx/html/
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```

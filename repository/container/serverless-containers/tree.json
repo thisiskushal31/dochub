@@ -1,28 +1,28 @@
 [
   {
-    "name": "1-overview-serverless-vs-k8s.md",
-    "path": "1-overview-serverless-vs-k8s.md",
+    "name": "1_Overview_Serverless_vs_K8s.md",
+    "path": "1_Overview_Serverless_vs_K8s.md",
     "type": "file",
     "sha": "",
     "size": 481
   },
   {
-    "name": "2-google-cloud-run.md",
-    "path": "2-google-cloud-run.md",
+    "name": "2_Google_Cloud_Run.md",
+    "path": "2_Google_Cloud_Run.md",
     "type": "file",
     "sha": "",
     "size": 619
   },
   {
-    "name": "3-aws-fargate-and-ecs.md",
-    "path": "3-aws-fargate-and-ecs.md",
+    "name": "3_AWS_Fargate_and_ECS.md",
+    "path": "3_AWS_Fargate_and_ECS.md",
     "type": "file",
     "sha": "",
     "size": 403
   },
   {
-    "name": "4-azure-container-apps.md",
-    "path": "4-azure-container-apps.md",
+    "name": "4_Azure_Container_Apps.md",
+    "path": "4_Azure_Container_Apps.md",
     "type": "file",
     "sha": "",
     "size": 398
@@ -32,6 +32,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 808
+    "size": 762
   }
 ]

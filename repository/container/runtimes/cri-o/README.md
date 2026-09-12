@@ -14,4 +14,4 @@
 ## Checklist before marking done
 
 - [ ] Comparison table containerd vs CRI-O
-- [ ] Link [OpenShift](../orchestration/openshift/README.md) runtime notes
+- [ ] Link [OpenShift](../Orchestration/OpenShift/README.md) runtime notes

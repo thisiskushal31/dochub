@@ -12,29 +12,29 @@
     "sha": "",
     "children": [
       {
-        "name": "1-containers-vms-runtimes.md",
-        "path": "containerization-basic/1-containers-vms-runtimes.md",
+        "name": "1_Containers_VMs_Runtimes.md",
+        "path": "containerization-basic/1_Containers_VMs_Runtimes.md",
         "type": "file",
         "sha": "",
         "size": 10970
       },
       {
-        "name": "2-images-registries.md",
-        "path": "containerization-basic/2-images-registries.md",
+        "name": "2_Images_Registries.md",
+        "path": "containerization-basic/2_Images_Registries.md",
         "type": "file",
         "sha": "",
         "size": 8313
       },
       {
-        "name": "3-networking-storage.md",
-        "path": "containerization-basic/3-networking-storage.md",
+        "name": "3_Networking_Storage.md",
+        "path": "containerization-basic/3_Networking_Storage.md",
         "type": "file",
         "sha": "",
         "size": 8900
       },
       {
-        "name": "4-security-basics.md",
-        "path": "containerization-basic/4-security-basics.md",
+        "name": "4_Security_Basics.md",
+        "path": "containerization-basic/4_Security_Basics.md",
         "type": "file",
         "sha": "",
         "size": 7223
@@ -49,64 +49,21 @@
     ]
   },
   {
-    "name": "Entry-Points",
-    "path": "Entry-Points",
-    "type": "dir",
-    "sha": "",
-    "children": [
-      {
-        "name": "DevOps_Handbook.md",
-        "path": "Entry-Points/DevOps_Handbook.md",
-        "type": "file",
-        "sha": "",
-        "size": 705
-      },
-      {
-        "name": "Networks_Deep_Dive.md",
-        "path": "Entry-Points/Networks_Deep_Dive.md",
-        "type": "file",
-        "sha": "",
-        "size": 758
-      },
-      {
-        "name": "README.md",
-        "path": "Entry-Points/README.md",
-        "type": "file",
-        "sha": "",
-        "size": 966
-      },
-      {
-        "name": "Security_Deep_Dive.md",
-        "path": "Entry-Points/Security_Deep_Dive.md",
-        "type": "file",
-        "sha": "",
-        "size": 826
-      },
-      {
-        "name": "System_Design.md",
-        "path": "Entry-Points/System_Design.md",
-        "type": "file",
-        "sha": "",
-        "size": 553
-      }
-    ]
-  },
-  {
     "name": "gitops-packaging",
     "path": "gitops-packaging",
     "type": "dir",
     "sha": "",
     "children": [
       {
-        "name": "1-helm-and-kustomize.md",
-        "path": "gitops-packaging/1-helm-and-kustomize.md",
+        "name": "1_Helm_and_Kustomize.md",
+        "path": "gitops-packaging/1_Helm_and_Kustomize.md",
         "type": "file",
         "sha": "",
         "size": 448
       },
       {
-        "name": "2-gitops-entry.md",
-        "path": "gitops-packaging/2-gitops-entry.md",
+        "name": "2_GitOps_Entry.md",
+        "path": "gitops-packaging/2_GitOps_Entry.md",
         "type": "file",
         "sha": "",
         "size": 584
@@ -116,7 +73,7 @@
         "path": "gitops-packaging/README.md",
         "type": "file",
         "sha": "",
-        "size": 751
+        "size": 705
       }
     ]
   },
@@ -127,46 +84,46 @@
     "sha": "",
     "children": [
       {
-        "name": "1-kind-kubernetes-in-docker.md",
-        "path": "local-dev/1-kind-kubernetes-in-docker.md",
+        "name": "1_Kind_Kubernetes_in_Docker.md",
+        "path": "local-dev/1_Kind_Kubernetes_in_Docker.md",
         "type": "file",
         "sha": "",
         "size": 472
       },
       {
-        "name": "2-minikube.md",
-        "path": "local-dev/2-minikube.md",
+        "name": "2_Minikube.md",
+        "path": "local-dev/2_Minikube.md",
         "type": "file",
         "sha": "",
         "size": 339
       },
       {
-        "name": "3-k3d-k3s-in-docker.md",
-        "path": "local-dev/3-k3d-k3s-in-docker.md",
+        "name": "3_K3d_K3s_in_Docker.md",
+        "path": "local-dev/3_K3d_K3s_in_Docker.md",
         "type": "file",
         "sha": "",
         "size": 323
       },
       {
-        "name": "4-tilt-and-skaffold.md",
-        "path": "local-dev/4-tilt-and-skaffold.md",
+        "name": "4_Tilt_and_Skaffold.md",
+        "path": "local-dev/4_Tilt_and_Skaffold.md",
         "type": "file",
         "sha": "",
         "size": 402
       },
       {
-        "name": "5-devcontainers-and-compose.md",
-        "path": "local-dev/5-devcontainers-and-compose.md",
+        "name": "5_DevContainers_and_Compose.md",
+        "path": "local-dev/5_DevContainers_and_Compose.md",
         "type": "file",
         "sha": "",
-        "size": 445
+        "size": 412
       },
       {
         "name": "README.md",
         "path": "local-dev/README.md",
         "type": "file",
         "sha": "",
-        "size": 1057
+        "size": 958
       }
     ]
   },
@@ -183,36 +140,36 @@
         "sha": "",
         "children": [
           {
-            "name": "1-architecture-and-modes.md",
-            "path": "managed-services/aks/1-architecture-and-modes.md",
+            "name": "1_Architecture_and_Modes.md",
+            "path": "managed-services/aks/1_Architecture_and_Modes.md",
             "type": "file",
             "sha": "",
             "size": 2167
           },
           {
-            "name": "2-node-pools-and-compute.md",
-            "path": "managed-services/aks/2-node-pools-and-compute.md",
+            "name": "2_Node_Pools_and_Compute.md",
+            "path": "managed-services/aks/2_Node_Pools_and_Compute.md",
             "type": "file",
             "sha": "",
             "size": 2402
           },
           {
-            "name": "3-networking.md",
-            "path": "managed-services/aks/3-networking.md",
+            "name": "3_Networking.md",
+            "path": "managed-services/aks/3_Networking.md",
             "type": "file",
             "sha": "",
             "size": 3645
           },
           {
-            "name": "4-identity-and-security.md",
-            "path": "managed-services/aks/4-identity-and-security.md",
+            "name": "4_Identity_and_Security.md",
+            "path": "managed-services/aks/4_Identity_and_Security.md",
             "type": "file",
             "sha": "",
             "size": 3309
           },
           {
-            "name": "5-operations-and-pricing.md",
-            "path": "managed-services/aks/5-operations-and-pricing.md",
+            "name": "5_Operations_and_Pricing.md",
+            "path": "managed-services/aks/5_Operations_and_Pricing.md",
             "type": "file",
             "sha": "",
             "size": 3731
@@ -233,36 +190,36 @@
         "sha": "",
         "children": [
           {
-            "name": "1-architecture-and-compute.md",
-            "path": "managed-services/eks/1-architecture-and-compute.md",
+            "name": "1_Architecture_and_Compute.md",
+            "path": "managed-services/eks/1_Architecture_and_Compute.md",
             "type": "file",
             "sha": "",
             "size": 3718
           },
           {
-            "name": "2-addons-and-capabilities.md",
-            "path": "managed-services/eks/2-addons-and-capabilities.md",
+            "name": "2_Addons_and_Capabilities.md",
+            "path": "managed-services/eks/2_Addons_and_Capabilities.md",
             "type": "file",
             "sha": "",
             "size": 2317
           },
           {
-            "name": "3-networking-and-storage.md",
-            "path": "managed-services/eks/3-networking-and-storage.md",
+            "name": "3_Networking_and_Storage.md",
+            "path": "managed-services/eks/3_Networking_and_Storage.md",
             "type": "file",
             "sha": "",
             "size": 1597
           },
           {
-            "name": "4-security-identity.md",
-            "path": "managed-services/eks/4-security-identity.md",
+            "name": "4_Security_Identity.md",
+            "path": "managed-services/eks/4_Security_Identity.md",
             "type": "file",
             "sha": "",
             "size": 1663
           },
           {
-            "name": "5-operations-and-pricing.md",
-            "path": "managed-services/eks/5-operations-and-pricing.md",
+            "name": "5_Operations_and_Pricing.md",
+            "path": "managed-services/eks/5_Operations_and_Pricing.md",
             "type": "file",
             "sha": "",
             "size": 3179
@@ -283,36 +240,36 @@
         "sha": "",
         "children": [
           {
-            "name": "1-architecture-and-modes.md",
-            "path": "managed-services/gke/1-architecture-and-modes.md",
+            "name": "1_Architecture_and_Modes.md",
+            "path": "managed-services/gke/1_Architecture_and_Modes.md",
             "type": "file",
             "sha": "",
             "size": 3091
           },
           {
-            "name": "2-node-images-and-compute.md",
-            "path": "managed-services/gke/2-node-images-and-compute.md",
+            "name": "2_Node_Images_and_Compute.md",
+            "path": "managed-services/gke/2_Node_Images_and_Compute.md",
             "type": "file",
             "sha": "",
             "size": 3201
           },
           {
-            "name": "3-networking.md",
-            "path": "managed-services/gke/3-networking.md",
+            "name": "3_Networking.md",
+            "path": "managed-services/gke/3_Networking.md",
             "type": "file",
             "sha": "",
             "size": 6686
           },
           {
-            "name": "4-security-identity.md",
-            "path": "managed-services/gke/4-security-identity.md",
+            "name": "4_Security_Identity.md",
+            "path": "managed-services/gke/4_Security_Identity.md",
             "type": "file",
             "sha": "",
             "size": 4142
           },
           {
-            "name": "5-operations-and-pricing.md",
-            "path": "managed-services/gke/5-operations-and-pricing.md",
+            "name": "5_Operations_and_Pricing.md",
+            "path": "managed-services/gke/5_Operations_and_Pricing.md",
             "type": "file",
             "sha": "",
             "size": 4390
@@ -327,15 +284,15 @@
         ]
       },
       {
-        "name": "1-overview-when-to-use.md",
-        "path": "managed-services/1-overview-when-to-use.md",
+        "name": "1_Overview_When_to_Use.md",
+        "path": "managed-services/1_Overview_When_to_Use.md",
         "type": "file",
         "sha": "",
         "size": 4974
       },
       {
-        "name": "5-openshift-managed-and-turnkey.md",
-        "path": "managed-services/5-openshift-managed-and-turnkey.md",
+        "name": "5_OpenShift_Managed_and_Turnkey.md",
+        "path": "managed-services/5_OpenShift_Managed_and_Turnkey.md",
         "type": "file",
         "sha": "",
         "size": 3686
@@ -356,22 +313,22 @@
     "sha": "",
     "children": [
       {
-        "name": "1-cilium-and-ebpf.md",
-        "path": "networking-advanced/1-cilium-and-ebpf.md",
+        "name": "1_Cilium_and_eBPF.md",
+        "path": "networking-advanced/1_Cilium_and_eBPF.md",
         "type": "file",
         "sha": "",
         "size": 629
       },
       {
-        "name": "2-network-policies-in-practice.md",
-        "path": "networking-advanced/2-network-policies-in-practice.md",
+        "name": "2_Network_Policies_in_Practice.md",
+        "path": "networking-advanced/2_Network_Policies_in_Practice.md",
         "type": "file",
         "sha": "",
         "size": 518
       },
       {
-        "name": "3-ingress-gateway-service-mesh.md",
-        "path": "networking-advanced/3-ingress-gateway-service-mesh.md",
+        "name": "3_Ingress_Gateway_Service_Mesh.md",
+        "path": "networking-advanced/3_Ingress_Gateway_Service_Mesh.md",
         "type": "file",
         "sha": "",
         "size": 434
@@ -381,7 +338,7 @@
         "path": "networking-advanced/README.md",
         "type": "file",
         "sha": "",
-        "size": 740
+        "size": 719
       }
     ]
   },
@@ -398,36 +355,36 @@
         "sha": "",
         "children": [
           {
-            "name": "1-getting-started-install.md",
-            "path": "orchestration/kubernetes/1-getting-started-install.md",
+            "name": "1_Getting_Started_Install.md",
+            "path": "orchestration/kubernetes/1_Getting_Started_Install.md",
             "type": "file",
             "sha": "",
             "size": 9155
           },
           {
-            "name": "2-concepts.md",
-            "path": "orchestration/kubernetes/2-concepts.md",
+            "name": "2_Concepts.md",
+            "path": "orchestration/kubernetes/2_Concepts.md",
             "type": "file",
             "sha": "",
             "size": 7725
           },
           {
-            "name": "3-tasks.md",
-            "path": "orchestration/kubernetes/3-tasks.md",
+            "name": "3_Tasks.md",
+            "path": "orchestration/kubernetes/3_Tasks.md",
             "type": "file",
             "sha": "",
             "size": 7599
           },
           {
-            "name": "4-tutorials.md",
-            "path": "orchestration/kubernetes/4-tutorials.md",
+            "name": "4_Tutorials.md",
+            "path": "orchestration/kubernetes/4_Tutorials.md",
             "type": "file",
             "sha": "",
             "size": 6123
           },
           {
-            "name": "5-production-operations.md",
-            "path": "orchestration/kubernetes/5-production-operations.md",
+            "name": "5_Production_Operations.md",
+            "path": "orchestration/kubernetes/5_Production_Operations.md",
             "type": "file",
             "sha": "",
             "size": 8443
@@ -463,71 +420,71 @@
         "sha": "",
         "children": [
           {
-            "name": "1-overview-and-concepts.md",
-            "path": "orchestration/openshift/1-overview-and-concepts.md",
+            "name": "1_Overview_and_Concepts.md",
+            "path": "orchestration/openshift/1_Overview_and_Concepts.md",
             "type": "file",
             "sha": "",
             "size": 16190
           },
           {
-            "name": "10-windows-edge-ai-hardware.md",
-            "path": "orchestration/openshift/10-windows-edge-ai-hardware.md",
+            "name": "10_Windows_Edge_AI_Hardware.md",
+            "path": "orchestration/openshift/10_Windows_Edge_AI_Hardware.md",
             "type": "file",
             "sha": "",
             "size": 11171
           },
           {
-            "name": "2-installation.md",
-            "path": "orchestration/openshift/2-installation.md",
+            "name": "2_Installation.md",
+            "path": "orchestration/openshift/2_Installation.md",
             "type": "file",
             "sha": "",
             "size": 16470
           },
           {
-            "name": "3-configure-and-manage.md",
-            "path": "orchestration/openshift/3-configure-and-manage.md",
+            "name": "3_Configure_and_Manage.md",
+            "path": "orchestration/openshift/3_Configure_and_Manage.md",
             "type": "file",
             "sha": "",
             "size": 12935
           },
           {
-            "name": "4-develop-and-operators.md",
-            "path": "orchestration/openshift/4-develop-and-operators.md",
+            "name": "4_Develop_and_Operators.md",
+            "path": "orchestration/openshift/4_Develop_and_Operators.md",
             "type": "file",
             "sha": "",
             "size": 13713
           },
           {
-            "name": "5-networking-security-observability.md",
-            "path": "orchestration/openshift/5-networking-security-observability.md",
+            "name": "5_Networking_Security_Observability.md",
+            "path": "orchestration/openshift/5_Networking_Security_Observability.md",
             "type": "file",
             "sha": "",
             "size": 13940
           },
           {
-            "name": "6-service-mesh.md",
-            "path": "orchestration/openshift/6-service-mesh.md",
+            "name": "6_Service_Mesh.md",
+            "path": "orchestration/openshift/6_Service_Mesh.md",
             "type": "file",
             "sha": "",
             "size": 8203
           },
           {
-            "name": "7-virtualization.md",
-            "path": "orchestration/openshift/7-virtualization.md",
+            "name": "7_Virtualization.md",
+            "path": "orchestration/openshift/7_Virtualization.md",
             "type": "file",
             "sha": "",
             "size": 8922
           },
           {
-            "name": "8-etcd-hosted-control-planes.md",
-            "path": "orchestration/openshift/8-etcd-hosted-control-planes.md",
+            "name": "8_Etcd_Hosted_Control_Planes.md",
+            "path": "orchestration/openshift/8_Etcd_Hosted_Control_Planes.md",
             "type": "file",
             "sha": "",
             "size": 9963
           },
           {
-            "name": "9-updating-registry-api.md",
-            "path": "orchestration/openshift/9-updating-registry-api.md",
+            "name": "9_Updating_Registry_API.md",
+            "path": "orchestration/openshift/9_Updating_Registry_API.md",
             "type": "file",
             "sha": "",
             "size": 10010
@@ -548,43 +505,43 @@
         "sha": "",
         "children": [
           {
-            "name": "1-overview-and-concepts.md",
-            "path": "orchestration/swarm/1-overview-and-concepts.md",
+            "name": "1_Overview_and_Concepts.md",
+            "path": "orchestration/swarm/1_Overview_and_Concepts.md",
             "type": "file",
             "sha": "",
             "size": 4137
           },
           {
-            "name": "2-initialize-and-nodes.md",
-            "path": "orchestration/swarm/2-initialize-and-nodes.md",
+            "name": "2_Initialize_and_Nodes.md",
+            "path": "orchestration/swarm/2_Initialize_and_Nodes.md",
             "type": "file",
             "sha": "",
             "size": 1512
           },
           {
-            "name": "3-services-and-tasks.md",
-            "path": "orchestration/swarm/3-services-and-tasks.md",
+            "name": "3_Services_and_Tasks.md",
+            "path": "orchestration/swarm/3_Services_and_Tasks.md",
             "type": "file",
             "sha": "",
             "size": 3406
           },
           {
-            "name": "4-stacks-and-compose.md",
-            "path": "orchestration/swarm/4-stacks-and-compose.md",
+            "name": "4_Stacks_and_Compose.md",
+            "path": "orchestration/swarm/4_Stacks_and_Compose.md",
             "type": "file",
             "sha": "",
             "size": 1559
           },
           {
-            "name": "5-networking-storage-secrets.md",
-            "path": "orchestration/swarm/5-networking-storage-secrets.md",
+            "name": "5_Networking_Storage_Secrets.md",
+            "path": "orchestration/swarm/5_Networking_Storage_Secrets.md",
             "type": "file",
             "sha": "",
             "size": 1699
           },
           {
-            "name": "6-scaling-updates-and-when-to-use.md",
-            "path": "orchestration/swarm/6-scaling-updates-and-when-to-use.md",
+            "name": "6_Scaling_Updates_and_When_to_Use.md",
+            "path": "orchestration/swarm/6_Scaling_Updates_and_When_to_Use.md",
             "type": "file",
             "sha": "",
             "size": 3297
@@ -635,15 +592,15 @@
         "sha": "",
         "children": [
           {
-            "name": "1-cri-containerd-and-nerdctl.md",
-            "path": "runtimes/containerd/1-cri-containerd-and-nerdctl.md",
+            "name": "1_CRI_Containerd_and_Nerdctl.md",
+            "path": "runtimes/containerd/1_CRI_Containerd_and_Nerdctl.md",
             "type": "file",
             "sha": "",
             "size": 560
           },
           {
-            "name": "2-debugging-on-the-node.md",
-            "path": "runtimes/containerd/2-debugging-on-the-node.md",
+            "name": "2_Debugging_On_the_Node.md",
+            "path": "runtimes/containerd/2_Debugging_On_the_Node.md",
             "type": "file",
             "sha": "",
             "size": 412
@@ -679,36 +636,36 @@
         "sha": "",
         "children": [
           {
-            "name": "1-get-docker-first-steps.md",
-            "path": "runtimes/docker/1-get-docker-first-steps.md",
+            "name": "1_Get_Docker_First_Steps.md",
+            "path": "runtimes/docker/1_Get_Docker_First_Steps.md",
             "type": "file",
             "sha": "",
             "size": 5749
           },
           {
-            "name": "2-docker-concepts.md",
-            "path": "runtimes/docker/2-docker-concepts.md",
+            "name": "2_Docker_Concepts.md",
+            "path": "runtimes/docker/2_Docker_Concepts.md",
             "type": "file",
             "sha": "",
             "size": 6243
           },
           {
-            "name": "3-building-images.md",
-            "path": "runtimes/docker/3-building-images.md",
+            "name": "3_Building_Images.md",
+            "path": "runtimes/docker/3_Building_Images.md",
             "type": "file",
             "sha": "",
             "size": 6937
           },
           {
-            "name": "4-running-containers.md",
-            "path": "runtimes/docker/4-running-containers.md",
+            "name": "4_Running_Containers.md",
+            "path": "runtimes/docker/4_Running_Containers.md",
             "type": "file",
             "sha": "",
             "size": 6081
           },
           {
-            "name": "5-docker-workshop.md",
-            "path": "runtimes/docker/5-docker-workshop.md",
+            "name": "5_Docker_Workshop.md",
+            "path": "runtimes/docker/5_Docker_Workshop.md",
             "type": "file",
             "sha": "",
             "size": 8105
@@ -729,36 +686,36 @@
         "sha": "",
         "children": [
           {
-            "name": "1-get-podman-first-steps.md",
-            "path": "runtimes/podman/1-get-podman-first-steps.md",
+            "name": "1_Get_Podman_First_Steps.md",
+            "path": "runtimes/podman/1_Get_Podman_First_Steps.md",
             "type": "file",
             "sha": "",
             "size": 3951
           },
           {
-            "name": "2-podman-concepts.md",
-            "path": "runtimes/podman/2-podman-concepts.md",
+            "name": "2_Podman_Concepts.md",
+            "path": "runtimes/podman/2_Podman_Concepts.md",
             "type": "file",
             "sha": "",
             "size": 1391
           },
           {
-            "name": "3-building-images.md",
-            "path": "runtimes/podman/3-building-images.md",
+            "name": "3_Building_Images.md",
+            "path": "runtimes/podman/3_Building_Images.md",
             "type": "file",
             "sha": "",
             "size": 2053
           },
           {
-            "name": "4-running-containers.md",
-            "path": "runtimes/podman/4-running-containers.md",
+            "name": "4_Running_Containers.md",
+            "path": "runtimes/podman/4_Running_Containers.md",
             "type": "file",
             "sha": "",
             "size": 1798
           },
           {
-            "name": "5-pods-and-rootless.md",
-            "path": "runtimes/podman/5-pods-and-rootless.md",
+            "name": "5_Pods_and_Rootless.md",
+            "path": "runtimes/podman/5_Pods_and_Rootless.md",
             "type": "file",
             "sha": "",
             "size": 4512
@@ -788,22 +745,22 @@
     "sha": "",
     "children": [
       {
-        "name": "1-admission-and-policy.md",
-        "path": "security-advanced/1-admission-and-policy.md",
+        "name": "1_Admission_and_Policy.md",
+        "path": "security-advanced/1_Admission_and_Policy.md",
         "type": "file",
         "sha": "",
         "size": 468
       },
       {
-        "name": "2-hardening-checklist-prod.md",
-        "path": "security-advanced/2-hardening-checklist-prod.md",
+        "name": "2_Hardening_Checklist_Prod.md",
+        "path": "security-advanced/2_Hardening_Checklist_Prod.md",
         "type": "file",
         "sha": "",
         "size": 470
       },
       {
-        "name": "3-image-supply-chain.md",
-        "path": "security-advanced/3-image-supply-chain.md",
+        "name": "3_Image_Supply_Chain.md",
+        "path": "security-advanced/3_Image_Supply_Chain.md",
         "type": "file",
         "sha": "",
         "size": 618
@@ -813,7 +770,7 @@
         "path": "security-advanced/README.md",
         "type": "file",
         "sha": "",
-        "size": 883
+        "size": 862
       }
     ]
   },
@@ -824,29 +781,29 @@
     "sha": "",
     "children": [
       {
-        "name": "1-overview-serverless-vs-k8s.md",
-        "path": "serverless-containers/1-overview-serverless-vs-k8s.md",
+        "name": "1_Overview_Serverless_vs_K8s.md",
+        "path": "serverless-containers/1_Overview_Serverless_vs_K8s.md",
         "type": "file",
         "sha": "",
         "size": 481
       },
       {
-        "name": "2-google-cloud-run.md",
-        "path": "serverless-containers/2-google-cloud-run.md",
+        "name": "2_Google_Cloud_Run.md",
+        "path": "serverless-containers/2_Google_Cloud_Run.md",
         "type": "file",
         "sha": "",
         "size": 619
       },
       {
-        "name": "3-aws-fargate-and-ecs.md",
-        "path": "serverless-containers/3-aws-fargate-and-ecs.md",
+        "name": "3_AWS_Fargate_and_ECS.md",
+        "path": "serverless-containers/3_AWS_Fargate_and_ECS.md",
         "type": "file",
         "sha": "",
         "size": 403
       },
       {
-        "name": "4-azure-container-apps.md",
-        "path": "serverless-containers/4-azure-container-apps.md",
+        "name": "4_Azure_Container_Apps.md",
+        "path": "serverless-containers/4_Azure_Container_Apps.md",
         "type": "file",
         "sha": "",
         "size": 398
@@ -856,29 +813,15 @@
         "path": "serverless-containers/README.md",
         "type": "file",
         "sha": "",
-        "size": 808
+        "size": 762
       }
     ]
-  },
-  {
-    "name": "0_Start_Here.md",
-    "path": "0_Start_Here.md",
-    "type": "file",
-    "sha": "",
-    "size": 1183
-  },
-  {
-    "name": "CONTENT_WRITE_ORDER.md",
-    "path": "CONTENT_WRITE_ORDER.md",
-    "type": "file",
-    "sha": "",
-    "size": 4297
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 8659
+    "size": 8467
   }
 ]

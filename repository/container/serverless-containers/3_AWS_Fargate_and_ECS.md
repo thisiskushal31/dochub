@@ -7,7 +7,7 @@
 ## Planned coverage
 
 - ECS task definition + Fargate launch type
-- EKS Fargate profiles (link [eks/](../managed-services/eks/1-architecture-and-compute.md))
+- EKS Fargate profiles (link [eks/](../Managed-Services/EKS/1_Architecture_and_Compute.md))
 - Networking (awsvpc), IAM task roles
 - When ECS vs EKS vs Lambda
 

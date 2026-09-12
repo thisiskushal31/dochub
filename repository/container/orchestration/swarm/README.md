@@ -4,38 +4,38 @@ Hands-on notes for Docker Swarm mode: initialize a swarm, add nodes, deploy serv
 
 ## Topics
 
-### [1. Overview and concepts](./1-overview-and-concepts.md)
+### [1. Overview and concepts](./1_Overview_and_Concepts.md)
 
 What Swarm mode is; nodes (managers and workers); services and tasks; Swarm vs Kubernetes.
 
-### [2. Initialize and add nodes](./2-initialize-and-nodes.md)
+### [2. Initialize and add nodes](./2_Initialize_and_Nodes.md)
 
 Initialize the swarm, add workers and managers, list and manage nodes, leave the swarm.
 
-### [3. Services and tasks](./3-services-and-tasks.md)
+### [3. Services and tasks](./3_Services_and_Tasks.md)
 
 Create and update services; replicas and global mode; publishing ports (routing mesh); placement; rolling updates; scale and inspect.
 
-### [4. Stacks and Compose](./4-stacks-and-compose.md)
+### [4. Stacks and Compose](./4_Stacks_and_Compose.md)
 
 Deploy multi-service apps with `docker stack deploy` and a Compose file; limitations vs docker-compose.
 
-### [5. Networking, storage, and secrets](./5-networking-storage-secrets.md)
+### [5. Networking, storage, and secrets](./5_Networking_Storage_Secrets.md)
 
 Overlay networks; volumes in swarm; secrets and configs.
 
-### [6. Scaling, updates, and when to use](./6-scaling-updates-and-when-to-use.md)
+### [6. Scaling, updates, and when to use](./6_Scaling_Updates_and_When_to_Use.md)
 
 Scaling services; rolling updates and rollback; when to use Swarm vs Kubernetes.
 
 ## Learning path
 
-1. [Overview and concepts](./1-overview-and-concepts.md)
-2. [Initialize and add nodes](./2-initialize-and-nodes.md)
-3. [Services and tasks](./3-services-and-tasks.md)
-4. [Stacks and Compose](./4-stacks-and-compose.md)
-5. [Networking, storage, and secrets](./5-networking-storage-secrets.md)
-6. [Scaling, updates, and when to use](./6-scaling-updates-and-when-to-use.md)
+1. [Overview and concepts](./1_Overview_and_Concepts.md)
+2. [Initialize and add nodes](./2_Initialize_and_Nodes.md)
+3. [Services and tasks](./3_Services_and_Tasks.md)
+4. [Stacks and Compose](./4_Stacks_and_Compose.md)
+5. [Networking, storage, and secrets](./5_Networking_Storage_Secrets.md)
+6. [Scaling, updates, and when to use](./6_Scaling_Updates_and_When_to_Use.md)
 
 ## Quick reference
 
@@ -50,10 +50,10 @@ docker service update --image nginx:latest web
 
 ## Related
 
-- **[Containerization basics](../../containerization-basic/README.md)** – concepts
-- **[Docker](../../runtimes/docker/README.md)** – Docker Engine (Swarm is part of Docker)
-- **[Kubernetes](../kubernetes/README.md)** – alternative orchestrator
-- **[Managed services](../../managed-services/README.md)** – GKE, EKS, AKS, turnkey K8s
+- **[Containerization basics](../../Containerization-Basic/README.md)** – concepts
+- **[Docker](../../Runtimes/Docker/README.md)** – Docker Engine (Swarm is part of Docker)
+- **[Kubernetes](../Kubernetes/README.md)** – alternative orchestrator
+- **[Managed services](../../Managed-Services/README.md)** – GKE, EKS, AKS, turnkey K8s
 
 ## References
 

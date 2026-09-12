@@ -50,7 +50,7 @@ Choose by environment (cloud vs on-prem vs edge vs laptop), ops model, and certi
 ## References
 
 - [ROSA](https://docs.openshift.com/rosa/) · [ARO](https://docs.openshift.com/aro/)
-- [OpenShift deep-dive in this repo](../orchestration/openshift/README.md)
+- [OpenShift deep-dive in this repo](../Orchestration/OpenShift/README.md)
 - [Kubernetes turnkey solutions](https://kubernetes.io/docs/setup/production-environment/turnkey-solutions/)
 - [k3s](https://k3s.io/) · [k0s](https://k0sproject.io/) · [RKE2](https://docs.rke2.io/) · [MicroK8s](https://microk8s.io/)
 - [Minikube](https://minikube.sigs.k8s.io/) · [Kind](https://kind.sigs.k8s.io/) · [k3d](https://k3d.io/)

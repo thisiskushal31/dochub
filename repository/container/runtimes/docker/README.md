@@ -4,33 +4,33 @@ Hands-on notes for Docker from basics to advanced. **Read each topic file fully*
 
 ## Topics
 
-### [1. Get Docker & first steps](./1-get-docker-first-steps.md)
+### [1. Get Docker & first steps](./1_Get_Docker_First_Steps.md)
 
 What Docker is; installing Docker Engine and Docker Desktop; verifying the install; running your first container and cleaning up; common commands.
 
-### [2. Docker concepts (containers, images, registry, Compose)](./2-docker-concepts.md)
+### [2. Docker concepts (containers, images, registry, Compose)](./2_Docker_Concepts.md)
 
 Containers (run, inspect, exec); images (pull, list, layers); registry (login, tag, push); Docker Compose (compose file, up/down, multi-container).
 
-### [3. Building images](./3-building-images.md)
+### [3. Building images](./3_Building_Images.md)
 
 Dockerfile instructions; layers and build cache; multi-stage builds; example Dockerfiles; build, tag, and push.
 
-### [4. Running containers](./4-running-containers.md)
+### [4. Running containers](./4_Running_Containers.md)
 
 Publishing ports; overriding defaults (command, env); volumes and bind mounts; multi-container apps and networks.
 
-### [5. Docker workshop (hands-on)](./5-docker-workshop.md)
+### [5. Docker workshop (hands-on)](./5_Docker_Workshop.md)
 
 Full path: containerize → update → share → persist DB → bind mounts → multi-container → Compose → image best practices. Steps and commands are in the file.
 
 ## Learning path
 
-1. [Get Docker & first steps](./1-get-docker-first-steps.md)
-2. [Docker concepts](./2-docker-concepts.md)
-3. [Building images](./3-building-images.md)
-4. [Running containers](./4-running-containers.md)
-5. [Docker workshop](./5-docker-workshop.md)
+1. [Get Docker & first steps](./1_Get_Docker_First_Steps.md)
+2. [Docker concepts](./2_Docker_Concepts.md)
+3. [Building images](./3_Building_Images.md)
+4. [Running containers](./4_Running_Containers.md)
+5. [Docker workshop](./5_Docker_Workshop.md)
 
 ## Quick reference (CLI)
 
@@ -47,10 +47,10 @@ docker image prune -a
 
 ## Related
 
-- **[Containerization basics](../../containerization-basic/README.md)** – concepts before Docker
-- **[Podman](../podman/README.md)** – daemonless alternative
-- **[Kubernetes](../../orchestration/kubernetes/README.md)** – orchestration
-- **[Managed services](../../managed-services/README.md)** – GKE, EKS, AKS, OpenShift
+- **[Containerization basics](../../Containerization-Basic/README.md)** – concepts before Docker
+- **[Podman](../Podman/README.md)** – daemonless alternative
+- **[Kubernetes](../../Orchestration/Kubernetes/README.md)** – orchestration
+- **[Managed services](../../Managed-Services/README.md)** – GKE, EKS, AKS, OpenShift
 
 ## References
 

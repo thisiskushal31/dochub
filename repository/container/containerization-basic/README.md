@@ -4,36 +4,36 @@ Core concepts that apply across Docker, Kubernetes, and other container runtimes
 
 ## Topics
 
-### [1. Containers vs VMs & runtimes](./1-containers-vms-runtimes.md)
+### [1. Containers vs VMs & runtimes](./1_Containers_VMs_Runtimes.md)
 
 What a container is; deployment evolution (traditional → VMs → containers); containers vs VMs; images and layers; OCI and runtimes (runc, containerd, CRI-O); first Docker commands.
 
-### [2. Images & registries](./2-images-registries.md)
+### [2. Images & registries](./2_Images_Registries.md)
 
 Image lifecycle (build, tag, push, pull); layers and caching; registries vs repositories; hands-on pull, tag, and push.
 
-### [3. Networking & storage](./3-networking-storage.md)
+### [3. Networking & storage](./3_Networking_Storage.md)
 
 Publishing and exposing ports; bridge and user-defined networks; service discovery; volumes vs bind mounts; persistence patterns and commands.
 
-### [4. Security basics](./4-security-basics.md)
+### [4. Security basics](./4_Security_Basics.md)
 
 Least privilege, minimal base images, image scanning; Kubernetes Pod Security Standards and access control; practical checklist.
 
-**Next level:** [security-advanced/](../security-advanced/README.md) (admission, hardening, supply chain) · [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) (full cyber program)
+**Next level:** [Security-Advanced/](../Security-Advanced/README.md) (admission, hardening, supply chain) · [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) (full cyber program)
 
 ## Learning path
 
-1. [Containers vs VMs & runtimes](./1-containers-vms-runtimes.md)
-2. [Images & registries](./2-images-registries.md)
-3. [Networking & storage](./3-networking-storage.md)
-4. [Security basics](./4-security-basics.md)
+1. [Containers vs VMs & runtimes](./1_Containers_VMs_Runtimes.md)
+2. [Images & registries](./2_Images_Registries.md)
+3. [Networking & storage](./3_Networking_Storage.md)
+4. [Security basics](./4_Security_Basics.md)
 
 ## Related
 
-- **[Container runtimes](../runtimes/README.md)** – Docker, Podman
-- **[Orchestration](../orchestration/README.md)** – Kubernetes, Swarm
-- **[Managed services](../managed-services/README.md)** – GKE, EKS, AKS, OpenShift
+- **[Container runtimes](../Runtimes/README.md)** – Docker, Podman
+- **[Orchestration](../Orchestration/README.md)** – Kubernetes, Swarm
+- **[Managed services](../Managed-Services/README.md)** – GKE, EKS, AKS, OpenShift
 
 ## References
 

@@ -1,14 +1,14 @@
 [
   {
-    "name": "1-cri-containerd-and-nerdctl.md",
-    "path": "1-cri-containerd-and-nerdctl.md",
+    "name": "1_CRI_Containerd_and_Nerdctl.md",
+    "path": "1_CRI_Containerd_and_Nerdctl.md",
     "type": "file",
     "sha": "",
     "size": 560
   },
   {
-    "name": "2-debugging-on-the-node.md",
-    "path": "2-debugging-on-the-node.md",
+    "name": "2_Debugging_On_the_Node.md",
+    "path": "2_Debugging_On_the_Node.md",
     "type": "file",
     "sha": "",
     "size": 412

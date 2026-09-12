@@ -13,7 +13,7 @@
 
 ## Cross-links
 
-- [managed-services/aks/](../managed-services/aks/README.md)
+- [Managed-Services/AKS/](../Managed-Services/AKS/README.md)
 
 ## Checklist before marking done
 

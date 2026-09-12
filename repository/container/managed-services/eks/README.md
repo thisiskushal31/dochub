@@ -20,11 +20,11 @@ EKS is AWS's fully managed Kubernetes service. **AWS runs the control plane**; y
 
 EKS follows standard Kubernetes architecture: **control plane** + **compute (nodes)**. The control plane is fully managed by AWS, with at least two API server instances and three etcd instances across three Availability Zones. Traffic is isolated in the cluster’s VPC. **Compute** options: EKS Auto Mode, Fargate, Karpenter, managed node groups, self-managed nodes, EKS Hybrid Nodes.
 
-![EKS standard and Auto Mode](../../assets/eks-whatis.png)
+![EKS standard and Auto Mode](../../Assets/Eks_Whatis.png)
 
 *Credit: AWS. Source: [What is Amazon EKS?](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html), [EKS architecture](https://docs.aws.amazon.com/eks/latest/userguide/eks-architecture.html).*
 
-![Kubernetes in action](../../assets/eks-k8sinaction.png)
+![Kubernetes in action](../../Assets/Eks_K8sinaction.png)
 
 *Credit: AWS. Source: [Kubernetes concepts](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-concepts.html).*
 
@@ -34,11 +34,11 @@ EKS follows standard Kubernetes architecture: **control plane** + **compute (nod
 
 | # | Topic | What’s covered | Kubernetes vs EKS |
 |---|--------|----------------|-------------------|
-| 1 | [Architecture and compute](./1-architecture-and-compute.md) | Control plane, Auto Mode, Fargate, Karpenter, node groups | Who manages what; EKS compute options |
-| 2 | [Add-ons and Capabilities](./2-addons-and-capabilities.md) | VPC CNI, CoreDNS, kube-proxy, EBS CSI; ACK, Argo CD | EKS-managed vs self-managed add-ons; Capabilities |
-| 3 | [Networking and storage](./3-networking-and-storage.md) | VPC CNI, load balancing, EBS/EFS CSI | AWS CNI and storage drivers |
-| 4 | [Security and identity](./4-security-identity.md) | IRSA, Pod Identity, RBAC, encryption, GuardDuty | IAM integration is EKS-specific |
-| 5 | [Operations and pricing](./5-operations-and-pricing.md) | Upgrades, monitoring, pricing | EKS control plane and node pricing |
+| 1 | [Architecture and compute](./1_Architecture_and_Compute.md) | Control plane, Auto Mode, Fargate, Karpenter, node groups | Who manages what; EKS compute options |
+| 2 | [Add-ons and Capabilities](./2_Addons_and_Capabilities.md) | VPC CNI, CoreDNS, kube-proxy, EBS CSI; ACK, Argo CD | EKS-managed vs self-managed add-ons; Capabilities |
+| 3 | [Networking and storage](./3_Networking_and_Storage.md) | VPC CNI, load balancing, EBS/EFS CSI | AWS CNI and storage drivers |
+| 4 | [Security and identity](./4_Security_Identity.md) | IRSA, Pod Identity, RBAC, encryption, GuardDuty | IAM integration is EKS-specific |
+| 5 | [Operations and pricing](./5_Operations_and_Pricing.md) | Upgrades, monitoring, pricing | EKS control plane and node pricing |
 
 ---
 

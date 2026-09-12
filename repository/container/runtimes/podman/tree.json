@@ -1,35 +1,35 @@
 [
   {
-    "name": "1-get-podman-first-steps.md",
-    "path": "1-get-podman-first-steps.md",
+    "name": "1_Get_Podman_First_Steps.md",
+    "path": "1_Get_Podman_First_Steps.md",
     "type": "file",
     "sha": "",
     "size": 3951
   },
   {
-    "name": "2-podman-concepts.md",
-    "path": "2-podman-concepts.md",
+    "name": "2_Podman_Concepts.md",
+    "path": "2_Podman_Concepts.md",
     "type": "file",
     "sha": "",
     "size": 1391
   },
   {
-    "name": "3-building-images.md",
-    "path": "3-building-images.md",
+    "name": "3_Building_Images.md",
+    "path": "3_Building_Images.md",
     "type": "file",
     "sha": "",
     "size": 2053
   },
   {
-    "name": "4-running-containers.md",
-    "path": "4-running-containers.md",
+    "name": "4_Running_Containers.md",
+    "path": "4_Running_Containers.md",
     "type": "file",
     "sha": "",
     "size": 1798
   },
   {
-    "name": "5-pods-and-rootless.md",
-    "path": "5-pods-and-rootless.md",
+    "name": "5_Pods_and_Rootless.md",
+    "path": "5_Pods_and_Rootless.md",
     "type": "file",
     "sha": "",
     "size": 4512

@@ -9,7 +9,7 @@
 - docker compose for local multi-container
 - devcontainer.json for consistent team env
 - Parity with prod K8s manifests (what differs)
-- Link [DevOps-Handbook Entry-Points](../DevOps-Handbook/Entry-Points/Local_Dev_Parity.md)
+- Link [DevOps Handbook](../../DevOps-Handbook/README.md)
 
 ## Checklist before marking done
 

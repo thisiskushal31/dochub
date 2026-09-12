@@ -4,33 +4,33 @@ Hands-on notes for Kubernetes from setup to production. **Read each topic file f
 
 ## Topics
 
-### [1. Getting started & install](./1-getting-started-install.md)
+### [1. Getting started & install](./1_Getting_Started_Install.md)
 
 Getting started overview; learning vs production environments; installing kubectl; bootstrapping a cluster with kubeadm; best practices and production checklist.
 
-### [2. Concepts (architecture, workloads, networking, storage)](./2-concepts.md)
+### [2. Concepts (architecture, workloads, networking, storage)](./2_Concepts.md)
 
 Control plane and node components; workloads (Pods, Deployments, StatefulSets, Jobs, DaemonSets); Services, Ingress, DNS; Volumes, PersistentVolumes, StorageClasses; ConfigMaps and Secrets.
 
-### [3. Tasks (run apps, expose, scale, manage)](./3-tasks.md)
+### [3. Tasks (run apps, expose, scale, manage)](./3_Tasks.md)
 
 Run a stateless app with a Deployment; expose with a Service (ClusterIP, NodePort, LoadBalancer); scale and rolling updates; managing objects (apply, Kustomize, imperative, patch).
 
-### [4. Tutorials](./4-tutorials.md)
+### [4. Tutorials](./4_Tutorials.md)
 
 Create a learning cluster; deploy an app; explore Pods and nodes; expose with a Service; scale; rolling update. Full walkthrough so you can follow from this file.
 
-### [5. Production & operations](./5-production-operations.md)
+### [5. Production & operations](./5_Production_Operations.md)
 
 High availability with kubeadm; best practices (large clusters, multiple zones, Pod Security, PKI); administration (add nodes, upgrade, certificates, secure cluster); reference and checklist.
 
 ## Learning path
 
-1. [Getting started & install](./1-getting-started-install.md)
-2. [Concepts](./2-concepts.md)
-3. [Tasks](./3-tasks.md)
-4. [Tutorials](./4-tutorials.md)
-5. [Production & operations](./5-production-operations.md)
+1. [Getting started & install](./1_Getting_Started_Install.md)
+2. [Concepts](./2_Concepts.md)
+3. [Tasks](./3_Tasks.md)
+4. [Tutorials](./4_Tutorials.md)
+5. [Production & operations](./5_Production_Operations.md)
 
 ## Quick reference (kubectl)
 
@@ -48,10 +48,10 @@ kubectl rollout status deployment/myapp
 
 ## Related
 
-- **[Containerization basics](../../containerization-basic/README.md)** – concepts
-- **[Docker](../../runtimes/docker/README.md)** – images and containers
-- **[Swarm](../swarm/README.md)** – Docker’s built-in orchestration
-- **[Managed services](../../managed-services/README.md)** – GKE, EKS, AKS, OpenShift
+- **[Containerization basics](../../Containerization-Basic/README.md)** – concepts
+- **[Docker](../../Runtimes/Docker/README.md)** – images and containers
+- **[Swarm](../Swarm/README.md)** – Docker’s built-in orchestration
+- **[Managed services](../../Managed-Services/README.md)** – GKE, EKS, AKS, OpenShift
 
 ## References
 

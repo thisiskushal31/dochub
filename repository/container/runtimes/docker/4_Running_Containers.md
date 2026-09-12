@@ -2,7 +2,7 @@
 
 [← Back to Docker deep dive](./README.md)
 
-This page covers how to run containers: publishing ports, overriding defaults, persisting data with volumes, sharing host files with bind mounts, and running multi-container apps. The same ideas are introduced in [Containerization basics – Networking & storage](../../containerization-basic/3-networking-storage.md); here they’re tied to the Docker CLI and Compose. Everything you need is in this file; links at the end are for further reading only.
+This page covers how to run containers: publishing ports, overriding defaults, persisting data with volumes, sharing host files with bind mounts, and running multi-container apps. The same ideas are introduced in [Containerization basics – Networking & storage](../../Containerization-Basic/3_Networking_Storage.md); here they’re tied to the Docker CLI and Compose. Everything you need is in this file; links at the end are for further reading only.
 
 ## Table of Contents
 
@@ -117,7 +117,7 @@ docker run -d --name app --network mynet -p 8080:80 myapp
 
 From `app`, connect to the database using hostname `db`. No need to publish the DB port to the host unless you need external access.
 
-**Docker Compose** is the standard way to define and run multi-container apps: one `compose.yaml` describes services, ports, volumes, and networks; `docker compose up -d` starts everything. See [Docker concepts – Compose](./2-docker-concepts.md#docker-compose) and [Containerization basics – Networking & storage](../../containerization-basic/3-networking-storage.md).
+**Docker Compose** is the standard way to define and run multi-container apps: one `compose.yaml` describes services, ports, volumes, and networks; `docker compose up -d` starts everything. See [Docker concepts – Compose](./2_Docker_Concepts.md#docker-compose) and [Containerization basics – Networking & storage](../../Containerization-Basic/3_Networking_Storage.md).
 
 ---
 

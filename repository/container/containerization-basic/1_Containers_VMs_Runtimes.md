@@ -37,7 +37,7 @@ Under the hood, containers use **namespaces** (to isolate process, network, file
 
 Understanding how we got to containers helps clarify why they exist and when to use them.
 
-![Deployment evolution: traditional physical servers, virtualized VMs, and containerized apps sharing the host OS](../assets/Container_Evolution.svg)
+![Deployment evolution: traditional physical servers, virtualized VMs, and containerized apps sharing the host OS](../Assets/Container_Evolution.svg)
 
 ### Traditional deployment
 
@@ -182,7 +182,7 @@ You now have a good mental model: **containers** are isolated processes; **image
 Use these only if you want more detail or the latest wording from the official documentation.
 
 - **Docker:** [What is a container?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/), [What is an image?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/), [Docker overview](https://docs.docker.com/get-started/docker-overview/)
-- **Kubernetes:** [Overview (why Kubernetes, deployment evolution)](https://kubernetes.io/docs/concepts/overview/), [Container runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)
+- **Kubernetes:** [Overview (why Kubernetes, deployment evolution)](https://kubernetes.io/docs/concepts/overview/), [Container runtimes](https://kubernetes.io/docs/setup/production-environment/container-Runtimes/)
 - **OCI:** [Open Container Initiative](https://opencontainers.org/) (image and runtime specs)
 
 [← Back to Containerization basics](./README.md)

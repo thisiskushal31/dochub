@@ -16,10 +16,10 @@ Technical deep dive on **AKS**: standard Kubernetes plus **AKS-specific** behavi
 
 **Control plane:** API server, etcd, scheduler, controllers—Azure-managed. **Nodes:** Azure VMs in **node pools** (system + user). **Node resource group:** AKS creates a second resource group for node infrastructure.
 
-![Baseline AKS](../../assets/aks-baseline-architecture.svg)  
+![Baseline AKS](../../Assets/Aks_Baseline_Architecture.svg)  
 *Credit: Microsoft. [Baseline architecture for AKS](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/containers/aks/baseline-aks).*
 
-![Microservices on AKS](../../assets/aks-microservices-architecture.svg)  
+![Microservices on AKS](../../Assets/Aks_Microservices_Architecture.svg)  
 *Credit: Microsoft. [Microservices on AKS](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices).*
 
 ---
@@ -28,11 +28,11 @@ Technical deep dive on **AKS**: standard Kubernetes plus **AKS-specific** behavi
 
 | # | Topic | Focus |
 |---|--------|--------|
-| 1 | [Architecture and modes](./1-architecture-and-modes.md) | Control plane, nodes, node pools, Automatic vs Standard, pricing tiers |
-| 2 | [Node pools and compute](./2-node-pools-and-compute.md) | VM size/image, OS (Ubuntu, Azure Linux, Windows), containerd, reservations |
-| 3 | [Networking](./3-networking.md) | Azure CNI, kubenet, overlay, egress, network policies, load balancing |
-| 4 | [Identity and security](./4-identity-and-security.md) | Entra ID, workload identity, Azure Policy, Defender |
-| 5 | [Operations and pricing](./5-operations-and-pricing.md) | Upgrades, scaling, storage, monitoring, pricing |
+| 1 | [Architecture and modes](./1_Architecture_and_Modes.md) | Control plane, nodes, node pools, Automatic vs Standard, pricing tiers |
+| 2 | [Node pools and compute](./2_Node_Pools_and_Compute.md) | VM size/image, OS (Ubuntu, Azure Linux, Windows), containerd, reservations |
+| 3 | [Networking](./3_Networking.md) | Azure CNI, kubenet, overlay, egress, network policies, load balancing |
+| 4 | [Identity and security](./4_Identity_and_Security.md) | Entra ID, workload identity, Azure Policy, Defender |
+| 5 | [Operations and pricing](./5_Operations_and_Pricing.md) | Upgrades, scaling, storage, monitoring, pricing |
 
 ---
 

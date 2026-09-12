@@ -6,36 +6,36 @@
     "sha": "",
     "children": [
       {
-        "name": "1-architecture-and-modes.md",
-        "path": "aks/1-architecture-and-modes.md",
+        "name": "1_Architecture_and_Modes.md",
+        "path": "aks/1_Architecture_and_Modes.md",
         "type": "file",
         "sha": "",
         "size": 2167
       },
       {
-        "name": "2-node-pools-and-compute.md",
-        "path": "aks/2-node-pools-and-compute.md",
+        "name": "2_Node_Pools_and_Compute.md",
+        "path": "aks/2_Node_Pools_and_Compute.md",
         "type": "file",
         "sha": "",
         "size": 2402
       },
       {
-        "name": "3-networking.md",
-        "path": "aks/3-networking.md",
+        "name": "3_Networking.md",
+        "path": "aks/3_Networking.md",
         "type": "file",
         "sha": "",
         "size": 3645
       },
       {
-        "name": "4-identity-and-security.md",
-        "path": "aks/4-identity-and-security.md",
+        "name": "4_Identity_and_Security.md",
+        "path": "aks/4_Identity_and_Security.md",
         "type": "file",
         "sha": "",
         "size": 3309
       },
       {
-        "name": "5-operations-and-pricing.md",
-        "path": "aks/5-operations-and-pricing.md",
+        "name": "5_Operations_and_Pricing.md",
+        "path": "aks/5_Operations_and_Pricing.md",
         "type": "file",
         "sha": "",
         "size": 3731
@@ -56,36 +56,36 @@
     "sha": "",
     "children": [
       {
-        "name": "1-architecture-and-compute.md",
-        "path": "eks/1-architecture-and-compute.md",
+        "name": "1_Architecture_and_Compute.md",
+        "path": "eks/1_Architecture_and_Compute.md",
         "type": "file",
         "sha": "",
         "size": 3718
       },
       {
-        "name": "2-addons-and-capabilities.md",
-        "path": "eks/2-addons-and-capabilities.md",
+        "name": "2_Addons_and_Capabilities.md",
+        "path": "eks/2_Addons_and_Capabilities.md",
         "type": "file",
         "sha": "",
         "size": 2317
       },
       {
-        "name": "3-networking-and-storage.md",
-        "path": "eks/3-networking-and-storage.md",
+        "name": "3_Networking_and_Storage.md",
+        "path": "eks/3_Networking_and_Storage.md",
         "type": "file",
         "sha": "",
         "size": 1597
       },
       {
-        "name": "4-security-identity.md",
-        "path": "eks/4-security-identity.md",
+        "name": "4_Security_Identity.md",
+        "path": "eks/4_Security_Identity.md",
         "type": "file",
         "sha": "",
         "size": 1663
       },
       {
-        "name": "5-operations-and-pricing.md",
-        "path": "eks/5-operations-and-pricing.md",
+        "name": "5_Operations_and_Pricing.md",
+        "path": "eks/5_Operations_and_Pricing.md",
         "type": "file",
         "sha": "",
         "size": 3179
@@ -106,36 +106,36 @@
     "sha": "",
     "children": [
       {
-        "name": "1-architecture-and-modes.md",
-        "path": "gke/1-architecture-and-modes.md",
+        "name": "1_Architecture_and_Modes.md",
+        "path": "gke/1_Architecture_and_Modes.md",
         "type": "file",
         "sha": "",
         "size": 3091
       },
       {
-        "name": "2-node-images-and-compute.md",
-        "path": "gke/2-node-images-and-compute.md",
+        "name": "2_Node_Images_and_Compute.md",
+        "path": "gke/2_Node_Images_and_Compute.md",
         "type": "file",
         "sha": "",
         "size": 3201
       },
       {
-        "name": "3-networking.md",
-        "path": "gke/3-networking.md",
+        "name": "3_Networking.md",
+        "path": "gke/3_Networking.md",
         "type": "file",
         "sha": "",
         "size": 6686
       },
       {
-        "name": "4-security-identity.md",
-        "path": "gke/4-security-identity.md",
+        "name": "4_Security_Identity.md",
+        "path": "gke/4_Security_Identity.md",
         "type": "file",
         "sha": "",
         "size": 4142
       },
       {
-        "name": "5-operations-and-pricing.md",
-        "path": "gke/5-operations-and-pricing.md",
+        "name": "5_Operations_and_Pricing.md",
+        "path": "gke/5_Operations_and_Pricing.md",
         "type": "file",
         "sha": "",
         "size": 4390
@@ -150,15 +150,15 @@
     ]
   },
   {
-    "name": "1-overview-when-to-use.md",
-    "path": "1-overview-when-to-use.md",
+    "name": "1_Overview_When_to_Use.md",
+    "path": "1_Overview_When_to_Use.md",
     "type": "file",
     "sha": "",
     "size": 4974
   },
   {
-    "name": "5-openshift-managed-and-turnkey.md",
-    "path": "5-openshift-managed-and-turnkey.md",
+    "name": "5_OpenShift_Managed_and_Turnkey.md",
+    "path": "5_OpenShift_Managed_and_Turnkey.md",
     "type": "file",
     "sha": "",
     "size": 3686

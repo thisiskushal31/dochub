@@ -32,7 +32,7 @@ OpenShift provides procedures for **backing up and restoring** your cluster. Two
 - **Control plane backup and restore** – Backing up and restoring the cluster’s control plane state (etcd, API server, etc.) so you can recover from control plane failure or restore to a previous cluster state. The docs describe scenarios (e.g. restoring to a previous cluster state) and step-by-step procedures.
 - **Application backup and restore** – Backing up and restoring application data and state, often using the OpenShift API for Data Protection (OADP) and provider-specific plugins (e.g. for AWS, Azure, GCP). Use cases include disaster recovery, migration, and restoring 3scale or other applications.
 
-Follow the official backup and restore documentation for your OpenShift version and storage/cloud provider.
+Follow the official backup and restore documentation for your OpenShift version and Storage/cloud provider.
 
 ---
 

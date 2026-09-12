@@ -1,14 +1,14 @@
 [
   {
-    "name": "1-helm-and-kustomize.md",
-    "path": "1-helm-and-kustomize.md",
+    "name": "1_Helm_and_Kustomize.md",
+    "path": "1_Helm_and_Kustomize.md",
     "type": "file",
     "sha": "",
     "size": 448
   },
   {
-    "name": "2-gitops-entry.md",
-    "path": "2-gitops-entry.md",
+    "name": "2_GitOps_Entry.md",
+    "path": "2_GitOps_Entry.md",
     "type": "file",
     "sha": "",
     "size": 584
@@ -18,6 +18,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 751
+    "size": 705
   }
 ]

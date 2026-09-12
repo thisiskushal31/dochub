@@ -20,7 +20,7 @@ GKE is Google Cloud's managed Kubernetes service. **Google manages the control p
 
 A GKE cluster has a **control plane** (managed by GKE) and **nodes** (worker machines). In **Autopilot** mode GKE manages both; in **Standard** mode GKE manages the control plane and system components, and you manage node pools. Cluster state is stored in etcd or (in some cases) Spanner; the API server, scheduler, and controllers are all managed by GKE.
 
-![GKE cluster architecture](../../assets/gke-architecture.svg)
+![GKE cluster architecture](../../Assets/GKE_Architecture.svg)
 
 *Credit: Google Cloud. Source: [GKE cluster architecture](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture).*
 
@@ -30,11 +30,11 @@ A GKE cluster has a **control plane** (managed by GKE) and **nodes** (worker mac
 
 | # | Topic | What’s covered | Kubernetes vs GKE |
 |---|--------|-----------------|-------------------|
-| 1 | [Architecture and modes](./1-architecture-and-modes.md) | Cluster architecture, Autopilot vs Standard, container-optimized compute | Control plane and node lifecycle; who manages what |
-| 2 | [Node images and compute](./2-node-images-and-compute.md) | Node OS (COS, Ubuntu, Windows), containerd, ComputeClasses, resource requests | Node images and defaults are GKE-specific |
-| 3 | [Networking](./3-networking.md) | VPC-native, Dataplane V2, load balancing, Gateway API, network policies | CNI, LB, and observability are GKE/Google Cloud–specific |
-| 4 | [Security and identity](./4-security-identity.md) | Workload Identity Federation, Policy Controller, Binary Authorization | Pod-to-Google-Cloud auth is GKE-specific |
-| 5 | [Operations and pricing](./5-operations-and-pricing.md) | Release channels, upgrades, maintenance, monitoring, pricing | Release cadence and billing are GKE-specific |
+| 1 | [Architecture and modes](./1_Architecture_and_Modes.md) | Cluster architecture, Autopilot vs Standard, container-optimized compute | Control plane and node lifecycle; who manages what |
+| 2 | [Node images and compute](./2_Node_Images_and_Compute.md) | Node OS (COS, Ubuntu, Windows), containerd, ComputeClasses, resource requests | Node images and defaults are GKE-specific |
+| 3 | [Networking](./3_Networking.md) | VPC-native, Dataplane V2, load balancing, Gateway API, network policies | CNI, LB, and observability are GKE/Google Cloud–specific |
+| 4 | [Security and identity](./4_Security_Identity.md) | Workload Identity Federation, Policy Controller, Binary Authorization | Pod-to-Google-Cloud auth is GKE-specific |
+| 5 | [Operations and pricing](./5_Operations_and_Pricing.md) | Release channels, upgrades, maintenance, monitoring, pricing | Release cadence and billing are GKE-specific |
 
 ---
 

@@ -1,26 +1,26 @@
 # Container runtimes
 
-Hands-on notes for **container runtimes** and day-to-day container usage: building images, running containers, and composing multi-container apps. Start with [containerization-basic](../containerization-basic/README.md) for concepts that apply to all of these.
+Hands-on notes for **container runtimes** and day-to-day container usage: building images, running containers, and composing multi-container apps. Start with [Containerization-Basic](../Containerization-Basic/README.md) for concepts that apply to all of these.
 
 ## Runtimes in this guide
 
-### [Docker](./docker/README.md)
+### [Docker](./Docker/README.md)
 
 Docker Engine, Dockerfile, Docker Compose, and the Docker CLI. The most common way to run and build containers locally and in CI.
 
-### [Podman](./podman/README.md)
+### [Podman](./Podman/README.md)
 
 Daemonless, rootless container runtime with a Docker-compatible CLI. Use Podman when you want a Docker alternative that doesn’t require a daemon or root.
 
-### [containerd](./containerd/README.md) *(stub — fill next)*
+### [containerd](./Containerd/README.md) *(stub — fill next)*
 
 What Kubernetes nodes actually run: CRI, nerdctl, node debugging.
 
-### [CRI-O](./cri-o/README.md) *(stub)*
+### [CRI-O](./CRI-O/README.md) *(stub)*
 
 Alternative CRI runtime (OpenShift/RHEL ecosystems).
 
-### [Buildah and Skopeo](./buildah-skopeo/README.md) *(stub)*
+### [Buildah and Skopeo](./Buildah-Skopeo/README.md) *(stub)*
 
 Daemonless image build and registry copy/sign tooling.
 
@@ -30,6 +30,6 @@ This section is structured so you can add more runtimes (e.g. other OCI-compatib
 
 ## Related
 
-- **[Containerization basics](../containerization-basic/README.md)** – concepts before picking a runtime
-- **[Orchestration](../orchestration/README.md)** – Kubernetes, Swarm, and running at scale
-- **[Managed services](../managed-services/README.md)** – GKE, EKS, AKS, OpenShift
+- **[Containerization basics](../Containerization-Basic/README.md)** – concepts before picking a runtime
+- **[Orchestration](../Orchestration/README.md)** – Kubernetes, Swarm, and running at scale
+- **[Managed services](../Managed-Services/README.md)** – GKE, EKS, AKS, OpenShift

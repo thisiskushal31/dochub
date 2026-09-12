@@ -110,7 +110,7 @@ Docker is configured to use Docker Hub by default. When you use an image like `n
 ### Registry vs repository
 
 - **Registry** – The whole server or service that holds many repositories (e.g. Docker Hub, or `myregistry.io`).
-- **Repository** – A collection of related images inside a registry, usually identified by a name (e.g. `nginx`, `myteam/myapp`). A repository holds one or more tagged images (e.g. `myapp:1.0`, `myapp:latest`).
+- **Repository** – A collection of related images inside a registry, usually identified by a name (e.g. `Nginx`, `myteam/myapp`). A repository holds one or more tagged images (e.g. `myapp:1.0`, `myapp:latest`).
 
 So: one **registry** contains many **repositories**; each **repository** contains many **tags** (and thus image manifests/layers).
 

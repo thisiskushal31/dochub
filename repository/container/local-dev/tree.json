@@ -1,44 +1,44 @@
 [
   {
-    "name": "1-kind-kubernetes-in-docker.md",
-    "path": "1-kind-kubernetes-in-docker.md",
+    "name": "1_Kind_Kubernetes_in_Docker.md",
+    "path": "1_Kind_Kubernetes_in_Docker.md",
     "type": "file",
     "sha": "",
     "size": 472
   },
   {
-    "name": "2-minikube.md",
-    "path": "2-minikube.md",
+    "name": "2_Minikube.md",
+    "path": "2_Minikube.md",
     "type": "file",
     "sha": "",
     "size": 339
   },
   {
-    "name": "3-k3d-k3s-in-docker.md",
-    "path": "3-k3d-k3s-in-docker.md",
+    "name": "3_K3d_K3s_in_Docker.md",
+    "path": "3_K3d_K3s_in_Docker.md",
     "type": "file",
     "sha": "",
     "size": 323
   },
   {
-    "name": "4-tilt-and-skaffold.md",
-    "path": "4-tilt-and-skaffold.md",
+    "name": "4_Tilt_and_Skaffold.md",
+    "path": "4_Tilt_and_Skaffold.md",
     "type": "file",
     "sha": "",
     "size": 402
   },
   {
-    "name": "5-devcontainers-and-compose.md",
-    "path": "5-devcontainers-and-compose.md",
+    "name": "5_DevContainers_and_Compose.md",
+    "path": "5_DevContainers_and_Compose.md",
     "type": "file",
     "sha": "",
-    "size": 445
+    "size": 412
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1057
+    "size": 958
   }
 ]

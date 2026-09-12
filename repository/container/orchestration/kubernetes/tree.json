@@ -1,35 +1,35 @@
 [
   {
-    "name": "1-getting-started-install.md",
-    "path": "1-getting-started-install.md",
+    "name": "1_Getting_Started_Install.md",
+    "path": "1_Getting_Started_Install.md",
     "type": "file",
     "sha": "",
     "size": 9155
   },
   {
-    "name": "2-concepts.md",
-    "path": "2-concepts.md",
+    "name": "2_Concepts.md",
+    "path": "2_Concepts.md",
     "type": "file",
     "sha": "",
     "size": 7725
   },
   {
-    "name": "3-tasks.md",
-    "path": "3-tasks.md",
+    "name": "3_Tasks.md",
+    "path": "3_Tasks.md",
     "type": "file",
     "sha": "",
     "size": 7599
   },
   {
-    "name": "4-tutorials.md",
-    "path": "4-tutorials.md",
+    "name": "4_Tutorials.md",
+    "path": "4_Tutorials.md",
     "type": "file",
     "sha": "",
     "size": 6123
   },
   {
-    "name": "5-production-operations.md",
-    "path": "5-production-operations.md",
+    "name": "5_Production_Operations.md",
+    "path": "5_Production_Operations.md",
     "type": "file",
     "sha": "",
     "size": 8443

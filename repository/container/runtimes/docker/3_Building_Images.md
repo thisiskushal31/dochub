@@ -113,8 +113,8 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
 
 ```dockerfile
 FROM nginx:alpine
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY public/ /usr/share/nginx/html/
+COPY nginx.conf /etc/Nginx/nginx.conf
+COPY public/ /usr/share/Nginx/html/
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```

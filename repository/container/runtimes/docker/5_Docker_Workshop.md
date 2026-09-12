@@ -97,7 +97,7 @@ You can use the [getting-started todo app](https://github.com/docker/getting-sta
 1. Create a volume and run the database with it mounted at the data directory:
    ```bash
    docker volume create dbdata
-   docker run -d --name db -e POSTGRES_PASSWORD=secret -v dbdata:/var/lib/postgresql/data postgres:16-alpine
+   docker run -d --name db -e POSTGRES_PASSWORD=secret -v dbdata:/var/lib/PostgreSQL/data postgres:16-alpine
    ```
 2. Run your app and connect it to the database (use `--network` and the DB hostname, or link, depending on your app’s config). For a simple test, exec into the DB and create a table:
    ```bash
@@ -106,7 +106,7 @@ You can use the [getting-started todo app](https://github.com/docker/getting-sta
 3. Stop and remove the DB container, then start a new one with the same volume:
    ```bash
    docker stop db && docker rm db
-   docker run -d --name db -e POSTGRES_PASSWORD=secret -v dbdata:/var/lib/postgresql/data postgres:16-alpine
+   docker run -d --name db -e POSTGRES_PASSWORD=secret -v dbdata:/var/lib/PostgreSQL/data postgres:16-alpine
    ```
 4. Verify the data is still there: `docker exec -it db psql -U postgres -c "\\dt"`.
 
@@ -135,7 +135,7 @@ You can use the [getting-started todo app](https://github.com/docker/getting-sta
    ```
 2. Start the database on that network:
    ```bash
-   docker run -d --name db --network appnet -e POSTGRES_PASSWORD=secret -v dbdata:/var/lib/postgresql/data postgres:16-alpine
+   docker run -d --name db --network appnet -e POSTGRES_PASSWORD=secret -v dbdata:/var/lib/PostgreSQL/data postgres:16-alpine
    ```
 3. Start the app on the same network; configure it to use hostname `db` and the DB port:
    ```bash
@@ -165,7 +165,7 @@ You can use the [getting-started todo app](https://github.com/docker/getting-sta
        environment:
          POSTGRES_PASSWORD: secret
        volumes:
-         - dbdata:/var/lib/postgresql/data
+         - dbdata:/var/lib/PostgreSQL/data
    volumes:
      dbdata: {}
    ```

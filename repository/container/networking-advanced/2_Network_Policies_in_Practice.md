@@ -13,7 +13,7 @@
 
 ## Cross-links
 
-- [managed-services/aks/3-networking.md](../managed-services/aks/3-networking.md)
+- [Managed-Services/AKS/3_Networking.md](../Managed-Services/AKS/3_Networking.md)
 
 ## Checklist before marking done
 

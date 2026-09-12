@@ -21,7 +21,7 @@ OCI images: pull with `podman pull`, build with `podman build`, list with `podma
 
 ## Storage
 
-Root: `/var/lib/containers/storage`. Rootless: under user home. `podman system reset` removes all data (destructive).
+Root: `/var/lib/containers/Storage`. Rootless: under user home. `podman system reset` removes all data (destructive).
 
 ## Registries
 
@@ -37,7 +37,7 @@ podman run -d --pod mypod --name web nginx:alpine
 podman pod ps
 ```
 
-See [5. Pods and rootless](./5-pods-and-rootless.md) for more.
+See [5. Pods and rootless](./5_Pods_and_Rootless.md) for more.
 
 ## References
 

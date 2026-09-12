@@ -178,13 +178,13 @@ docker rm web
 
 ### Persist data with a volume
 
-PostgreSQL stores data under `/var/lib/postgresql/data`. Attach a volume so data survives restarts:
+PostgreSQL stores data under `/var/lib/PostgreSQL/data`. Attach a volume so data survives restarts:
 
 ```bash
 # Start Postgres with a named volume
 docker run -d --name db \
   -e POSTGRES_PASSWORD=secret \
-  -v postgres_data:/var/lib/postgresql/data \
+  -v postgres_data:/var/lib/PostgreSQL/data \
   postgres:16-alpine
 ```
 
@@ -206,7 +206,7 @@ docker rm db
 
 docker run -d --name db2 \
   -e POSTGRES_PASSWORD=secret \
-  -v postgres_data:/var/lib/postgresql/data \
+  -v postgres_data:/var/lib/PostgreSQL/data \
   postgres:16-alpine
 ```
 

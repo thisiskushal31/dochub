@@ -1,42 +1,42 @@
 [
   {
-    "name": "1-overview-and-concepts.md",
-    "path": "1-overview-and-concepts.md",
+    "name": "1_Overview_and_Concepts.md",
+    "path": "1_Overview_and_Concepts.md",
     "type": "file",
     "sha": "",
     "size": 4137
   },
   {
-    "name": "2-initialize-and-nodes.md",
-    "path": "2-initialize-and-nodes.md",
+    "name": "2_Initialize_and_Nodes.md",
+    "path": "2_Initialize_and_Nodes.md",
     "type": "file",
     "sha": "",
     "size": 1512
   },
   {
-    "name": "3-services-and-tasks.md",
-    "path": "3-services-and-tasks.md",
+    "name": "3_Services_and_Tasks.md",
+    "path": "3_Services_and_Tasks.md",
     "type": "file",
     "sha": "",
     "size": 3406
   },
   {
-    "name": "4-stacks-and-compose.md",
-    "path": "4-stacks-and-compose.md",
+    "name": "4_Stacks_and_Compose.md",
+    "path": "4_Stacks_and_Compose.md",
     "type": "file",
     "sha": "",
     "size": 1559
   },
   {
-    "name": "5-networking-storage-secrets.md",
-    "path": "5-networking-storage-secrets.md",
+    "name": "5_Networking_Storage_Secrets.md",
+    "path": "5_Networking_Storage_Secrets.md",
     "type": "file",
     "sha": "",
     "size": 1699
   },
   {
-    "name": "6-scaling-updates-and-when-to-use.md",
-    "path": "6-scaling-updates-and-when-to-use.md",
+    "name": "6_Scaling_Updates_and_When_to_Use.md",
+    "path": "6_Scaling_Updates_and_When_to_Use.md",
     "type": "file",
     "sha": "",
     "size": 3297

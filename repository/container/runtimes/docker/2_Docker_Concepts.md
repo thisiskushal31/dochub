@@ -2,7 +2,7 @@
 
 [← Back to Docker deep dive](./README.md)
 
-This page summarizes the core Docker concepts: containers, images, the registry, and Docker Compose. The details are already covered in [Containerization basics](../../containerization-basic/README.md); here we tie them to the Docker CLI and Compose. Read this file for the full picture; links at the end are for further reading only.
+This page summarizes the core Docker concepts: containers, images, the registry, and Docker Compose. The details are already covered in [Containerization basics](../../Containerization-Basic/README.md); here we tie them to the Docker CLI and Compose. Read this file for the full picture; links at the end are for further reading only.
 
 ## Table of Contents
 
@@ -126,7 +126,7 @@ services:
     environment:
       POSTGRES_PASSWORD: secret
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/PostgreSQL/data
 
 volumes:
   postgres_data: {}
@@ -165,7 +165,7 @@ docker run -d -p 8080:80 --name web nginx:alpine
 
 # Open http://localhost:8080, then open a shell inside the container
 docker exec -it web sh
-# Inside: ls /usr/share/nginx/html, exit
+# Inside: ls /usr/share/Nginx/html, exit
 
 # Clean up
 docker stop web

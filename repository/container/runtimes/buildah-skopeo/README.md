@@ -1,6 +1,6 @@
 # Buildah and Skopeo
 
-[← Runtimes](../README.md) · [Podman](../podman/README.md)
+[← Runtimes](../README.md) · [Podman](../Podman/README.md)
 
 *(Content TBD — stub created August 2026)*
 

@@ -1,16 +1,16 @@
 # Container security (advanced)
 
-Beyond [containerization-basic/4-security-basics.md](../containerization-basic/4-security-basics.md). *Stub section August 2026.*
+Beyond [Containerization-Basic/4_Security_Basics.md](../Containerization-Basic/4_Security_Basics.md). *Stub section August 2026.*
 
-[← Write order](../CONTENT_WRITE_ORDER.md) · [Security-Deep-Dive entry](../Entry-Points/Security_Deep_Dive.md)
+[← README](../README.md) · [Security-Deep-Dive entry](../../Security-Deep-Dive/README.md)
 
 ## Topics
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [Admission control and policy](./1-admission-and-policy.md) | stub |
-| 2 | [Hardening checklist (prod clusters)](./2-hardening-checklist-prod.md) | stub |
-| 3 | [Image supply chain](./3-image-supply-chain.md) | stub |
+| 1 | [Admission control and policy](./1_Admission_and_Policy.md) | stub |
+| 2 | [Hardening checklist (prod clusters)](./2_Hardening_Checklist_Prod.md) | stub |
+| 3 | [Image supply chain](./3_Image_Supply_Chain.md) | stub |
 
 ## Boundary
 

@@ -46,7 +46,7 @@ For production, you typically use either:
 - **Self-managed** – You install and operate the control plane and nodes yourself (e.g. with **kubeadm** on VMs or bare metal).
 - **Managed** – A cloud provider runs the control plane and often the node lifecycle (e.g. **GKE**, **EKS**, **AKS**). You get a cluster endpoint and credentials; you install `kubectl` and optionally node pools.
 
-Turnkey and cloud solutions are documented in the official Kubernetes setup docs (see References). Managed services are also covered in this repo under [Managed services](../../managed-services/README.md).
+Turnkey and cloud solutions are documented in the official Kubernetes setup docs (see References). Managed services are also covered in this repo under [Managed services](../../Managed-Services/README.md).
 
 ---
 
@@ -144,7 +144,7 @@ If these work, your kubeconfig is correct and the cluster is reachable. From her
 
 Use these only if you want more detail or the latest wording from the official documentation.
 
-- **Getting started:** [Kubernetes setup](https://kubernetes.io/docs/setup/), [Learning environment](https://kubernetes.io/docs/setup/learning-environment/), [Production environment](https://kubernetes.io/docs/setup/production-environment/), [Container runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/), [Turnkey solutions](https://kubernetes.io/docs/setup/production-environment/turnkey-solutions/)
+- **Getting started:** [Kubernetes setup](https://kubernetes.io/docs/setup/), [Learning environment](https://kubernetes.io/docs/setup/learning-environment/), [Production environment](https://kubernetes.io/docs/setup/production-environment/), [Container runtimes](https://kubernetes.io/docs/setup/production-environment/container-Runtimes/), [Turnkey solutions](https://kubernetes.io/docs/setup/production-environment/turnkey-solutions/)
 - **kubectl:** [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/) (with links for [macOS](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/), [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/))
 - **kubeadm:** [Bootstrapping clusters with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/), [Installing kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm), [Creating a cluster with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm), [Troubleshooting](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/troubleshooting-kubeadm), [HA with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)
 - **Best practices:** [Best practices](https://kubernetes.io/docs/setup/best-practices/), [Large clusters](https://kubernetes.io/docs/setup/best-practices/cluster-large/), [Multiple zones](https://kubernetes.io/docs/setup/best-practices/multiple-zones/), [Pod Security Standards](https://kubernetes.io/docs/setup/best-practices/enforcing-pod-security-standards/), [PKI certificates](https://kubernetes.io/docs/setup/best-practices/certificates/)

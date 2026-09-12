@@ -40,7 +40,7 @@ podman run -d --network mynet --name db postgres:15
 podman run -d --network mynet --name app -p 8080:80 myapp:1.0
 ```
 
-Containers on the same network can resolve each other by name. For shared localhost, use a **pod** (see [2. Podman concepts](./2-podman-concepts.md#pods)).
+Containers on the same network can resolve each other by name. For shared localhost, use a **pod** (see [2. Podman concepts](./2_Podman_Concepts.md#pods)).
 
 ---
 

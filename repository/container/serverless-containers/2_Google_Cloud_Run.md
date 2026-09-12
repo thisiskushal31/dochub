@@ -14,7 +14,7 @@
 
 ## Cross-links
 
-- [managed-services/gke/](../managed-services/gke/README.md)
+- [Managed-Services/GKE/](../Managed-Services/GKE/README.md)
 - [DevOps-Handbook Cloud/2_GCP](../DevOps-Handbook/Cloud/2_GCP_Literacy.md)
 
 ## Checklist before marking done
