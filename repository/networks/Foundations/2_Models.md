@@ -20,7 +20,7 @@ Layered models used to describe network protocols and communication. Both OSI an
 
 The **OSI (Open Systems Interconnection) model** was developed by the International Organization for Standardization (ISO). It is a **seven-layer** conceptual framework used to understand and design network communication. Each layer has a clearly defined function and works independently. The OSI model is widely used as a reference to understand how network systems function and to troubleshoot by focusing on one layer at a time.
 
-![OSI model — seven layers from Application (top) to Physical (bottom)](../Assets/Foundations/osi-model.gif)
+![OSI model — seven layers from Application (top) to Physical (bottom)](../Assets/Foundations/Osi_Model.gif)
 
 The stack can be visualized as follows (Application at top, Physical at bottom; data flows down on send, up on receive):
 
@@ -218,7 +218,7 @@ As data moves **down** the stack (sender), each layer **encapsulates** the PDU f
 
 The diagram below (from [ByteByteGo – OSI Model Explained](https://bytebytego.com/guides/what-is-osi-model/)) shows how data is encapsulated and de-encapsulated when Device A sends to Device B over the network (e.g. via HTTP).
 
-![OSI encapsulation and de-encapsulation (ByteByteGo)](../Assets/Foundations/bytebytego-osi-model-encapsulation.jpeg)
+![OSI encapsulation and de-encapsulation (ByteByteGo)](../Assets/Foundations/Bytebytego_Osi_Model_Encapsulation.jpeg)
 
 **Step-by-step (sender → receiver):**
 
@@ -312,7 +312,7 @@ So: **application data** is wrapped by **transport** (ports, reliability), then 
 
 Network protocols are standard methods of transferring data between two computers. The diagram below summarizes **eight common protocols** and where they sit in the stack. Source and image: [ByteByteGo – Explaining 8 Popular Network Protocols in 1 Diagram](https://bytebytego.com/guides/explaining-8-popular-network-protocols-in-1-diagram/).
 
-![8 popular network protocols (ByteByteGo)](../Assets/Foundations/bytebytego-8-network-protocols.png)
+![8 popular network protocols (ByteByteGo)](../Assets/Foundations/Bytebytego_8_Network_Protocols.png)
 
 **Quick reference:**
 

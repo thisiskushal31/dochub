@@ -8,14 +8,14 @@ Guided path to build a **safe practice network** from zero — complements [Labs
 
 | # | File | Focus |
 |---|------|--------|
-| 1 | [Topology and addressing](./1-topology-and-addressing.md) | Subnets, gateway, DNS, lab isolation |
-| 2 | [VirtualBox and OpenWRT](./2-virtualbox-and-openwrt.md) | Multi-VM router + clients |
-| 3 | [Packet Tracer / Cisco basics](./3-packet-tracer-cisco-basics.md) | VLAN, STP, ACL intro labs |
+| 1 | [Topology and addressing](./1_Topology_and_Addressing.md) | Subnets, gateway, DNS, lab isolation |
+| 2 | [VirtualBox and OpenWRT](./2_VirtualBox_and_OpenWrt.md) | Multi-VM router + clients |
+| 3 | [Packet Tracer / Cisco basics](./3_Packet_Tracer_Cisco_Basics.md) | VLAN, STP, ACL intro labs |
 
 ## Learning path
 
-1. [1-topology-and-addressing](./1-topology-and-addressing.md) → [2-virtualbox-and-openwrt](./2-virtualbox-and-openwrt.md) → [3-packet-tracer-cisco-basics](./3-packet-tracer-cisco-basics.md)
-2. Then [labs-expanded/](../labs-expanded/README.md) for capture walkthroughs
+1. [1-topology-and-addressing](./1_Topology_and_Addressing.md) → [2-virtualbox-and-openwrt](./2_VirtualBox_and_OpenWrt.md) → [3-packet-tracer-cisco-basics](./3_Packet_Tracer_Cisco_Basics.md)
+2. Then [Labs-Expanded/](../Labs-Expanded/README.md) for capture walkthroughs
 
 ## Cross-references
 

@@ -41,7 +41,7 @@ Deep dive: what DNS is, types of DNS (servers and roles), why DNS exists, record
 
 So: the client asks the **recursive resolver**; the resolver **iteratively** queries root → TLD → authoritative, then returns the **final answer** to the client. The client typically sees a single request/response. Source: [ByteByteGo – How Does the Domain Name System (DNS) Lookup Work?](https://bytebytego.com/guides/how-does-the-domain-name-system-dns-lookup-work/).
 
-![How DNS lookup works (ByteByteGo)](../Assets/Services/bytebytego-dns-lookup.png)
+![How DNS lookup works (ByteByteGo)](../Assets/Services/Bytebytego_DNS_Lookup.png)
 
 ---
 
@@ -49,7 +49,7 @@ So: the client asks the **recursive resolver**; the resolver **iteratively** que
 
 The most common and important DNS record types are summarized below. Use them to map names to IPs, delegate zones, route email, and verify ownership. Source and diagram: [ByteByteGo – DNS Record Types You Should Know](https://bytebytego.com/guides/dns-record-types-you-should-know/).
 
-![DNS record types you should know (ByteByteGo)](../Assets/Services/bytebytego-dns-record-types.png)
+![DNS record types you should know (ByteByteGo)](../Assets/Services/Bytebytego_DNS_Record_Types.png)
 
 | Record | Purpose | Example |
 |--------|---------|---------|

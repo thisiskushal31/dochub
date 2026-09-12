@@ -1,21 +1,21 @@
 [
   {
-    "name": "1-envoy-and-data-plane.md",
-    "path": "1-envoy-and-data-plane.md",
+    "name": "1_Envoy_and_Data_Plane.md",
+    "path": "1_Envoy_and_Data_Plane.md",
     "type": "file",
     "sha": "",
     "size": 832
   },
   {
-    "name": "2-istio-or-linkerd-control-plane.md",
-    "path": "2-istio-or-linkerd-control-plane.md",
+    "name": "2_Istio_or_Linkerd_Control_Plane.md",
+    "path": "2_Istio_or_Linkerd_Control_Plane.md",
     "type": "file",
     "sha": "",
     "size": 769
   },
   {
-    "name": "3-mtls-and-east-west-traffic.md",
-    "path": "3-mtls-and-east-west-traffic.md",
+    "name": "3_mTLS_and_East_West_Traffic.md",
+    "path": "3_mTLS_and_East_West_Traffic.md",
     "type": "file",
     "sha": "",
     "size": 818

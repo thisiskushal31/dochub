@@ -14,7 +14,7 @@
 
 ## Cross-references
 
-- [Containerization-Deep-Dive/networking-advanced/](../../Containerization-Deep-Dive/networking-advanced/README.md)
+- [Containerization-Deep-Dive/Networking-Advanced/](../../Containerization-Deep-Dive/Networking-Advanced/README.md)
 
 ## Checklist before marking done
 

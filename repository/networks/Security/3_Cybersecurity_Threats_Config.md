@@ -126,6 +126,6 @@ See [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md) for DoS and [Antimalware](#a
 
 ## References
 
-- [GeeksforGeeks – Introduction of Firewall](https://www.geeksforgeeks.org/computer-networks/introduction-of-firewall-in-computer-network/); [GeeksforGeeks – What is Network Security?](https://www.geeksforgeeks.org/computer-networks/network-Security/)
+- [GeeksforGeeks – Introduction of Firewall](https://www.geeksforgeeks.org/computer-networks/introduction-of-firewall-in-computer-network/); [GeeksforGeeks – What is Network Security?](https://www.geeksforgeeks.org/computer-networks/network-security/)
 - Networking-Essentials (Cisco): Security Threats, Social Engineering, Malware, DoS, Antimalware, Wireless Security, Wireless Authentication, Firewall (DMZ, Port Forwarding)
 - [1_Overview_Perimeter](./1_Overview_Perimeter.md); [4_Attacks_Mitigations](./4_Attacks_Mitigations.md); [5_Firewalls_Aaa](./5_Firewalls_Aaa.md); [7_Nids_DoS_Identity](./7_Nids_DoS_Identity.md); [Observability/5_Security_Monitoring](../Observability/5_Security_Monitoring.md); [Advanced/5_Wireless_Special_Networks](../Advanced/5_Wireless_Special_Networks.md) (wireless)

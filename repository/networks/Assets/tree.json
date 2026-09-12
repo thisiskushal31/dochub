@@ -1,43 +1,43 @@
 [
   {
-    "name": "cloud-native",
-    "path": "cloud-native",
+    "name": "Cloud-Native",
+    "path": "Cloud-Native",
     "type": "dir",
     "sha": ""
   },
   {
-    "name": "foundations",
-    "path": "foundations",
+    "name": "Foundations",
+    "path": "Foundations",
     "type": "dir",
     "sha": ""
   },
   {
-    "name": "observability",
-    "path": "observability",
+    "name": "Observability",
+    "path": "Observability",
     "type": "dir",
     "sha": ""
   },
   {
-    "name": "routing-switching",
-    "path": "routing-switching",
+    "name": "Routing-Switching",
+    "path": "Routing-Switching",
     "type": "dir",
     "sha": ""
   },
   {
-    "name": "security",
-    "path": "security",
+    "name": "Security",
+    "path": "Security",
     "type": "dir",
     "sha": ""
   },
   {
-    "name": "services",
-    "path": "services",
+    "name": "Services",
+    "path": "Services",
     "type": "dir",
     "sha": ""
   },
   {
-    "name": "transport",
-    "path": "transport",
+    "name": "Transport",
+    "path": "Transport",
     "type": "dir",
     "sha": ""
   },

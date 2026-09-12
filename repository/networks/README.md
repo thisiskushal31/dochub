@@ -7,7 +7,9 @@ with definitions, how-it-works, examples, failure modes, and operational
 checklists. Content is filled for real depth; placeholders (TBD) are where
 additional detail will go.
 
-**Start here:** [0_Start_Here.md](./0_Start_Here.md) · **Write order:** [CONTENT_WRITE_ORDER.md](./CONTENT_WRITE_ORDER.md) · **Deepen next:** [THIN_TOPICS.md](./THIN_TOPICS.md)
+This repo is how **bits move** — L1 through L7, DNS, TLS, routing, cloud-native networking, and labs. Nmap and Wireshark *install* live in [Tooling Security](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive/tree/main/Security). The cybersecurity *program* lives in [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive). CDN / load-balancer *choice* lives in [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts). ping / dig / curl live in [Tooling Network-Utilities](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive/tree/main/Network-Utilities).
+
+New to networking? Start at [Foundations](./Foundations/README.md).
 
 ## Depth
 
@@ -35,22 +37,21 @@ additional detail will go.
 | **[Observability/](Observability/README.md)** | Signals & performance, packet capture (tcpdump, SPAN/RSPAN/ERSPAN), Wireshark, QoS, security monitoring & threat hunting, network operations (monitoring, IP SLA, flow/NetFlow, NETCONF/YANG/gNMI, AI/ML, automation, inventory). |
 | **[Advanced/](Advanced/README.md)** | Replacing TCP for datacenters, resource limits & failure modes, TLS 0-RTT, on-premises & enterprise (Cisco, IOS, troubleshooting, Packet Tracer), wireless & special networks (incl. 6G emerging). |
 | **[Labs/](Labs/README.md)** | Code examples (UDP/TCP servers), packet capture walkthroughs, operational how-tos, simulators & tools, VMs & security labs, reference & practice. |
-| **[labs-expanded/](labs-expanded/README.md)** *(new — stubs)* | Step-by-step capture and validation labs (TCP, DNS, Cilium/Hubble, firewall matrix). |
-| **[home-lab/](home-lab/README.md)** *(new — stubs)* | Guided home/SOHO lab: topology, VirtualBox/OpenWRT, Packet Tracer basics. |
-| **[service-mesh/](service-mesh/README.md)** *(new — stubs)* | Envoy, Istio/Linkerd control plane, mTLS east–west — complements Cloud-Native/2. |
-| **[Entry-Points/](Entry-Points/README.md)** *(new — stubs)* | Doors to DevOps, Containerization, Security capstone, System Design. |
+| **[Labs-Expanded/](Labs-Expanded/README.md)** *(new — stubs)* | Step-by-step capture and validation labs (TCP, DNS, Cilium/Hubble, firewall matrix). |
+| **[Home-Lab/](Home-Lab/README.md)** *(new — stubs)* | Guided home/SOHO lab: topology, VirtualBox/OpenWRT, Packet Tracer basics. |
+| **[Service-Mesh/](Service-Mesh/README.md)** *(new — stubs)* | Envoy, Istio/Linkerd control plane, mTLS east–west — complements Cloud-Native/2. |
+
+Sister repos: [DevOps-Handbook](https://github.com/thisiskushal31/DevOps-Handbook) (CI, VPC ops) · [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) (K8s operator) · [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) (program) · [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) (CDN / LB *choice*) · [Network utilities](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive/tree/main/Network-Utilities) (ping, dig, curl).
 
 ## How to use
 
-1. **New?** Open [0_Start_Here.md](./0_Start_Here.md) for checkbox learning path.
-2. **Foundations** — Layer 1–3, IP, ICMP, ARP, routing basics.
-3. **Transport** — UDP/TCP internals, performance, kernel behavior.
-4. **Routing & switching** — Control-plane, failure handling, validation.
-5. **Services & security** — Application delivery and protection.
-6. **Cloud-native & observability** — Cloud workloads and visibility.
-7. **Advanced** — Edge cases and modern transport alternatives.
-8. **Labs** — [Labs/](./Labs/README.md) + [labs-expanded/](./labs-expanded/README.md) + [home-lab/](./home-lab/README.md).
-9. **Thin topics** — Prioritize files listed in [THIN_TOPICS.md](./THIN_TOPICS.md).
+1. **New?** [Foundations](./Foundations/README.md) — Layer 1–3, IP, ICMP, ARP, routing basics.
+2. **[Transport](./Transport/README.md)** — UDP/TCP internals, performance, kernel behavior.
+3. **[Routing & switching](./Routing-Switching/README.md)** — Control-plane, failure handling, validation.
+4. **[Services](./Services/README.md) & [Security](./Security/README.md)** — Application delivery and protection on the wire.
+5. **[Cloud-native](./Cloud-Native/README.md) & [Observability](./Observability/README.md)** — Cloud workloads and visibility.
+6. **[Advanced](./Advanced/README.md)** — Edge cases and modern transport alternatives.
+7. **Labs** — [Labs/](./Labs/README.md) + [Labs-Expanded/](./Labs-Expanded/README.md) + [Home-Lab/](./Home-Lab/README.md).
 
 ## Contributing
 

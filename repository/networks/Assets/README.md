@@ -5,7 +5,7 @@ Images and diagrams for **Networks-Deep-Dive** notes. All paths are relative to 
 ## Structure
 
 - **`Assets/`** — Root for all static assets.
-- **`Assets/<section>/`** — Per-section images. `<section>` matches the concept folder (e.g. `foundations`, `transport`, `routing-switching`).
+- **`Assets/<section>/`** — Per-section images. `<section>` matches the concept folder (e.g. `Foundations`, `Transport`, `Routing-Switching`).
 
 | Folder | Use for |
 |--------|--------|

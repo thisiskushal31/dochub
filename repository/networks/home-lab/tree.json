@@ -1,21 +1,21 @@
 [
   {
-    "name": "1-topology-and-addressing.md",
-    "path": "1-topology-and-addressing.md",
+    "name": "1_Topology_and_Addressing.md",
+    "path": "1_Topology_and_Addressing.md",
     "type": "file",
     "sha": "",
     "size": 947
   },
   {
-    "name": "2-virtualbox-and-openwrt.md",
-    "path": "2-virtualbox-and-openwrt.md",
+    "name": "2_VirtualBox_and_OpenWrt.md",
+    "path": "2_VirtualBox_and_OpenWrt.md",
     "type": "file",
     "sha": "",
     "size": 819
   },
   {
-    "name": "3-packet-tracer-cisco-basics.md",
-    "path": "3-packet-tracer-cisco-basics.md",
+    "name": "3_Packet_Tracer_Cisco_Basics.md",
+    "path": "3_Packet_Tracer_Cisco_Basics.md",
     "type": "file",
     "sha": "",
     "size": 877

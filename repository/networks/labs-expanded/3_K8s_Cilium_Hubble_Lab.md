@@ -6,7 +6,7 @@
 
 ## Planned coverage
 
-- Prerequisites: kind/minikube + Cilium (pointer to Containerization local-dev)
+- Prerequisites: kind/minikube + Cilium (pointer to Containerization Local-Dev)
 - Deploy sample app (two services)
 - `hubble observe` — L3/L4/L7 flows
 - NetworkPolicy deny — observe dropped flows

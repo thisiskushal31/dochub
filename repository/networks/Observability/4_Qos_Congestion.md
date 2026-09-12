@@ -24,11 +24,11 @@ Quality of Service, token/leaky bucket, techniques, congestion control.
 
 The diagram below summarizes key QoS parameters used to evaluate and control network performance. Source and image: [GeeksforGeeks – Quality of Service and Multimedia](https://www.geeksforgeeks.org/computer-networks/computer-network-quality-of-service-and-multimedia/) (used with credit).
 
-![QoS parameters — latency, jitter, packet loss, throughput, bandwidth, error rate (GeeksforGeeks)](../Assets/Observability/gfg-qos-parameters.webp)
+![QoS parameters — latency, jitter, packet loss, throughput, bandwidth, error rate (GeeksforGeeks)](../Assets/Observability/GFG_Qos_Parameters.webp)
 
 - **Multimedia:** Audio, video, and real-time streams need **predictable** delay and **low loss**. QoS **prioritizes** this traffic (e.g. via queues and scheduling) and can **reserve** or **limit** bandwidth so other traffic does not starve or overwhelm the path. The diagram below illustrates multimedia components and their relation to QoS. Source and image: [GeeksforGeeks – Quality of Service and Multimedia](https://www.geeksforgeeks.org/computer-networks/computer-network-quality-of-service-and-multimedia/) (used with credit).
 
-![Multimedia components and QoS (GeeksforGeeks)](../Assets/Observability/gfg-multimedia.webp)
+![Multimedia components and QoS (GeeksforGeeks)](../Assets/Observability/GFG_Multimedia.webp)
 
 ---
 
@@ -59,7 +59,7 @@ The **leaky bucket** algorithm **smooths** traffic by **outputting** at a **cons
 
 Implementing QoS is typically done in phases: planning, design, testing, deployment, and monitoring/tuning. The diagram below illustrates this approach. Source and image: [GeeksforGeeks – Quality of Service and Multimedia](https://www.geeksforgeeks.org/computer-networks/computer-network-quality-of-service-and-multimedia/) (used with credit).
 
-![Implementing QoS — phased approach (GeeksforGeeks)](../Assets/Observability/gfg-implementing-qos.webp)
+![Implementing QoS — phased approach (GeeksforGeeks)](../Assets/Observability/GFG_Implementing_Qos.webp)
 
 ---
 

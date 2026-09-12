@@ -26,7 +26,7 @@ UDP is used where speed and small overhead are important and occasional loss is 
 
 **Top use cases for UDP (from [ByteByteGo – Top 4 Most Popular Use Cases for UDP](https://bytebytego.com/guides/top-4-most-popular-use-cases-for-udp/)):**
 
-![Top 4 UDP use cases (ByteByteGo)](../Assets/Transport/bytebytego-top-4-udp-use-cases.png)
+![Top 4 UDP use cases (ByteByteGo)](../Assets/Transport/Bytebytego_Top_4_Udp_Use_Cases.png)
 
 ```text
   1. Streaming     →  Video/audio; occasional drops OK; low latency matters
@@ -35,7 +35,7 @@ UDP is used where speed and small overhead are important and occasional loss is 
   4. IoT           →  Small, frequent sensor data; low power; loss tolerable
 ```
 
-![UDP — connectionless datagram delivery](../Assets/Transport/udp-datagram.gif)
+![UDP — connectionless datagram delivery](../Assets/Transport/Udp_Datagram.gif)
 
 ---
 

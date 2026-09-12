@@ -31,7 +31,7 @@ The physical layer:
 
 It also defines **physical topologies** (how devices and cables are arranged) and **line configuration** (point-to-point vs multi-point). Hardware at this layer includes cables, connectors, plugs, NICs, hubs, repeaters, and modems.
 
-![Physical layer — bits, signals, and medium](../Assets/Foundations/physical-layer.png)
+![Physical layer — bits, signals, and medium](../Assets/Foundations/Physical_Layer.png)
 
 ### Line configuration
 
@@ -142,7 +142,7 @@ Combination of two or more of the above (e.g. star + bus, star + ring). Flexible
 
 Communication is **one-way only**: from sender to receiver. No reverse path; no feedback or acknowledgment.
 
-![Simplex — data flows in one direction only](../Assets/Foundations/simplex-duplex.png)
+![Simplex — data flows in one direction only](../Assets/Foundations/Simplex_Duplex.png)
 
 - **Examples:** Keyboard to computer; traditional broadcast (e.g. TV, radio).
 - **Pros:** Simple; full bandwidth for the one direction; lower cost.
@@ -154,7 +154,7 @@ Communication is **one-way only**: from sender to receiver. No reverse path; no 
 
 Communication is **two-way but only one device transmits at a time**. Devices take turns; the same channel is shared.
 
-![Half-duplex — one direction at a time; devices take turns](../Assets/Foundations/half-duplex.png)
+![Half-duplex — one direction at a time; devices take turns](../Assets/Foundations/Half_Duplex.png)
 
 - **Examples:** Walkie-talkie; shared Ethernet in legacy bus/hub setups.
 - **Pros:** Efficient use of one channel; more flexible than simplex; cost-effective.
@@ -166,7 +166,7 @@ Communication is **two-way but only one device transmits at a time**. Devices ta
 
 **Both directions at the same time.** Both devices can transmit and receive simultaneously (separate channels or divided bandwidth).
 
-![Full-duplex — simultaneous send and receive in both directions](../Assets/Foundations/full-duplex.png)
+![Full-duplex — simultaneous send and receive in both directions](../Assets/Foundations/Full_Duplex.png)
 
 - **Examples:** Telephone network; modern Ethernet (switch with full-duplex links).
 - **Pros:** No waiting; better for interactive applications; faster and more efficient.

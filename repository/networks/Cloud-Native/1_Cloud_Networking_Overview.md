@@ -64,7 +64,7 @@ Cloud vs on-prem, types of cloud services, VPC/VNet, hybrid connectivity.
 
 AWS provides networking building blocks for secure, scalable connectivity between the internet, remote workers, data centers, and within AWS. The diagram below shows a **typical AWS network architecture** with key components. Source and image: [ByteByteGo – Typical AWS Network Architecture](https://bytebytego.com/guides/typical-aws-network-architecture-in-one-diagram/).
 
-![Typical AWS network architecture (ByteByteGo)](../Assets/Cloud-Native/bytebytego-typical-aws-network-architecture.png)
+![Typical AWS network architecture (ByteByteGo)](../Assets/Cloud-Native/Bytebytego_Typical_Aws_Network_Architecture.png)
 
 **Key components:**
 

@@ -26,7 +26,7 @@ Computer network cheat sheet, last-minute notes, interview questions (aligned to
 
 ### Expanded walkthroughs *(new — stubs)*
 
-Step-by-step labs with validation → [labs-expanded/](../labs-expanded/README.md). Home lab build path → [home-lab/](../home-lab/README.md).
+Step-by-step labs with validation → [Labs-Expanded/](../Labs-Expanded/README.md). Home lab build path → [Home-Lab/](../Home-Lab/README.md).
 
 ## Learning path
 

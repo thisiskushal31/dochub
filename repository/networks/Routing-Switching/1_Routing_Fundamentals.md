@@ -21,7 +21,7 @@ Forwarding vs routing, RIB/FIB, static vs dynamic, distance vector and link stat
 
 The diagram below shows how a data packet is routed by analyzing its destination IP; the nearest router receives the packet and, based on metrics, forwards it toward the destination. Source and image: [GeeksforGeeks – What is Routing?](https://www.geeksforgeeks.org/computer-networks/what-is-routing/) (used with credit).
 
-![Routing by destination IP — packet flow through routers (GeeksforGeeks)](../Assets/Routing-Switching/gfg-ip-routing.webp)
+![Routing by destination IP — packet flow through routers (GeeksforGeeks)](../Assets/Routing-Switching/GFG_IP_Routing.webp)
 
 ---
 
@@ -71,7 +71,7 @@ A packet with destination IP **10.1.2.50** arrives at a router. The router finds
 
 The diagram below illustrates the working principle: sender, routers, and receiver; the **shortest path** (e.g. by hop count) is typically chosen when metrics are satisfied. Source and image: [GeeksforGeeks – What is Routing?](https://www.geeksforgeeks.org/computer-networks/what-is-routing/) (used with credit).
 
-![Routing working example — sender, routers, receiver, shortest path (GeeksforGeeks)](../Assets/Routing-Switching/gfg-routing-working-example.webp)
+![Routing working example — sender, routers, receiver, shortest path (GeeksforGeeks)](../Assets/Routing-Switching/GFG_Routing_Working_Example.webp)
 
 ---
 

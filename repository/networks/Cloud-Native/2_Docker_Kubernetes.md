@@ -22,7 +22,7 @@ Docker gives **containers** isolated **network namespaces** and connects them vi
 
 The diagram below shows how Docker works: client, daemon, images, containers, and the flow from build to run. Source and image: [ByteByteGo – How does Docker work?](https://bytebytego.com/guides/how-does-docker-work/).
 
-![How Docker works — client, daemon, images, containers (ByteByteGo)](../Assets/Cloud-Native/bytebytego-how-docker-works.png)
+![How Docker works — client, daemon, images, containers (ByteByteGo)](../Assets/Cloud-Native/Bytebytego_How_Docker_Works.png)
 
 - **Bridge (default)** — A **software bridge** (e.g. `docker0`) on the host; each container gets a **veth** into the bridge and an IP from the bridge subnet (e.g. 172.17.0.0/16). **Container-to-container** on the same bridge: traffic goes by MAC at L2. **Container to internet**: NAT via host; **port publishing** (e.g. `-p 8080:80`) maps host port to container port.
 - **Host** — Container shares the **host network namespace** (same interfaces, ports); no isolation; used for performance or when host network is needed.
@@ -57,7 +57,7 @@ Kubernetes assumes a **flat Pod network**: **every Pod has its own IP**; **Pods 
 
 The diagram below summarizes the **four main Kubernetes Service types** (ClusterIP, NodePort, LoadBalancer, Headless) and how they expose Pods. Source and image: [ByteByteGo – Top 4 Kubernetes Service Types](https://bytebytego.com/guides/top-4-kubernetes-service-types-in-one-diagram/).
 
-![Top 4 Kubernetes Service types (ByteByteGo)](../Assets/Cloud-Native/bytebytego-k8s-service-types.png)
+![Top 4 Kubernetes Service types (ByteByteGo)](../Assets/Cloud-Native/Bytebytego_K8s_Service_Types.png)
 
 - **CNI** — When a Pod is created, the **kubelet** calls the **CNI plugin** (e.g. Calico, Flannel, Cilium). The plugin **assigns** the Pod an IP, **attaches** the Pod to the node network (veth + bridge or overlay), and **configures** routing so other Pods and nodes can reach it. **IPAM** (IP address management) is often part of the CNI or a separate plugin.
 - **Services** — Stable **clusterIP** (virtual IP) for a set of Pods; **kube-proxy** (or equivalent) programs **DNAT** so that traffic to the Service IP:port is sent to a backing Pod. **NodePort** and **LoadBalancer** expose Services outside the cluster.

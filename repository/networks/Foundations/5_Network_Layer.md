@@ -88,7 +88,7 @@ An **IP address (Internet Protocol address)** is a **unique numerical label** as
 → Network ID: **192.168.1.0**  
 → Host ID: **10**
 
-![IP address — network and host portions, subnet mask](../Assets/Foundations/ip-address-representation.jpg)
+![IP address — network and host portions, subnet mask](../Assets/Foundations/IP_Address_Representation.jpg)
 
 ### Types of IP (summary)
 
@@ -114,9 +114,9 @@ IP addresses can be classified in several ways. The following table and list cov
 | **Multicast** | One sender → a group of receivers | IPTV, video conferencing (IPv4: 224.0.0.0–239.255.255.255) |
 | **Anycast** | One sender → nearest of a group (by routing) | CDN, DNS (same IP at multiple locations) |
 
-![Unicast, multicast, and broadcast compared](../Assets/Foundations/ip-unicast-multicast-broadcast.png)
+![Unicast, multicast, and broadcast compared](../Assets/Foundations/IP_Unicast_Multicast_Broadcast.png)
 
-![Anycast — one sender to nearest of a group (by routing distance)](../Assets/Foundations/ip-anycast.png)
+![Anycast — one sender to nearest of a group (by routing distance)](../Assets/Foundations/IP_Anycast.png)
 
 ### IPv4 and IPv6
 
@@ -129,9 +129,9 @@ IP addresses can be classified in several ways. The following table and list cov
 
 **Classful IP addressing** (1981–1993) divided the IPv4 address space into **fixed classes** (A, B, C, D, E). The **first few bits** of the address determined the class, which in turn fixed the boundary between **network ID** and **host ID**. This made allocation and routing simple but led to **waste** (e.g. a Class B for a small network). It was superseded by **classless addressing (CIDR)**.
 
-![Classful addressing — classes A, B, C, D, E and default masks](../Assets/Foundations/classful-classes.jpg)
+![Classful addressing — classes A, B, C, D, E and default masks](../Assets/Foundations/Classful_Classes.jpg)
 
-![Classful IP address structure (network vs host bits)](../Assets/Foundations/classful-addressing.png)
+![Classful IP address structure (network vs host bits)](../Assets/Foundations/Classful_Addressing.png)
 
 ### Classes (summary)
 
@@ -320,7 +320,7 @@ So end-to-end delivery is achieved by: **destination IP in header** → **routin
 
 The **IPv4 header** is at least **20 bytes** (without options). With options it can go up to **60 bytes**. The receiver uses the header to route, fragment/reassemble, and pass the payload to the correct upper-layer protocol.
 
-![IPv4 datagram header — fields and layout](../Assets/Foundations/ipv4-datagram-header.jpg)
+![IPv4 datagram header — fields and layout](../Assets/Foundations/Ipv4_Datagram_Header.jpg)
 
 **Header layout (simplified):**
 
@@ -366,7 +366,7 @@ The **IPv4 header** is at least **20 bytes** (without options). With options it 
 
 Key differences between IPv4 and IPv6 in one diagram. Source and image: [ByteByteGo – IPv4 vs. IPv6: Differences](https://bytebytego.com/guides/ipv4-vs-ipv6/).
 
-![IPv4 vs IPv6 (ByteByteGo)](../Assets/Foundations/bytebytego-ipv4-vs-ipv6.png)
+![IPv4 vs IPv6 (ByteByteGo)](../Assets/Foundations/Bytebytego_Ipv4_vs_Ipv6.png)
 
 | Aspect | IPv4 | IPv6 |
 |--------|------|------|
@@ -587,11 +587,11 @@ tracert 8.8.8.8
 
 **ARP (Address Resolution Protocol)** maps a **network-layer address (IPv4)** to a **data-link-layer address (MAC)** on the **same local network**. Applications and the kernel use **IP addresses**; the NIC and switches use **MAC addresses**. ARP bridges the two on the LAN.
 
-![How ARP works — request (broadcast) and reply (unicast)](../Assets/Foundations/arp-works.gif)
+![How ARP works — request (broadcast) and reply (unicast)](../Assets/Foundations/Arp_Works.gif)
 
-![ARP in the network layer — IP to MAC resolution](../Assets/Foundations/arp-network-layer.jpg)
+![ARP in the network layer — IP to MAC resolution](../Assets/Foundations/Arp_Network_Layer.jpg)
 
-![ARP request and reply flow](../Assets/Foundations/arp-diagram.png)
+![ARP request and reply flow](../Assets/Foundations/Arp_Diagram.png)
 
 ### How ARP works
 
@@ -600,7 +600,7 @@ tracert 8.8.8.8
 3. The host with IP **X** replies (unicast): “IP X is at MAC M.”
 4. Sender stores **IP X → MAC M** in its **ARP cache** and then sends the frame to MAC M.
 
-![ARP request and reply — sender/receiver IP and MAC](../Assets/Foundations/arp-request-reply.jpg)
+![ARP request and reply — sender/receiver IP and MAC](../Assets/Foundations/Arp_Request_Reply.jpg)
 
 **ARP request** is a **broadcast** (destination MAC = FF:FF:FF:FF:FF:FF). **ARP reply** is **unicast**.
 

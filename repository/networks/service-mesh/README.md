@@ -1,6 +1,6 @@
 # Service mesh — data plane depth
 
-East–west traffic, Envoy, control plane, mTLS — **wire-level** complement to [Cloud-Native/2_Docker_Kubernetes.md](../Cloud-Native/2_Docker_Kubernetes.md). Operator install/Helm lives in [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive/networking-advanced/README.md).
+East–west traffic, Envoy, control plane, mTLS — **wire-level** complement to [Cloud-Native/2_Docker_Kubernetes.md](../Cloud-Native/2_Docker_Kubernetes.md). Operator install/Helm lives in [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive/tree/main/Networking-Advanced).
 
 *(New section — stubs August 2026)*
 
@@ -8,9 +8,9 @@ East–west traffic, Envoy, control plane, mTLS — **wire-level** complement to
 
 | # | File | Focus |
 |---|------|--------|
-| 1 | [Envoy and the data plane](./1-envoy-and-data-plane.md) | Listeners, clusters, xDS, sidecar path |
-| 2 | [Istio or Linkerd control plane](./2-istio-or-linkerd-control-plane.md) | Pilot/control vs data plane split |
-| 3 | [mTLS and east–west traffic](./3-mtls-and-east-west-traffic.md) | Identity, SPIFFE, policy at L7 |
+| 1 | [Envoy and the data plane](./1_Envoy_and_Data_Plane.md) | Listeners, clusters, xDS, sidecar path |
+| 2 | [Istio or Linkerd control plane](./2_Istio_or_Linkerd_Control_Plane.md) | Pilot/control vs data plane split |
+| 3 | [mTLS and east–west traffic](./3_mTLS_and_East_West_Traffic.md) | Identity, SPIFFE, policy at L7 |
 
 ## Learning path
 

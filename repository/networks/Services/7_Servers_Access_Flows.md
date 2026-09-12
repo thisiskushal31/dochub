@@ -76,7 +76,7 @@ When you **click a link** (e.g. https://example.com/page), the following happens
 
 The diagram below summarizes the journey from typing a URL to the browser rendering the page (DNS, TCP, TLS, HTTP). Source and image: [ByteByteGo – What Happens When You Type a URL Into Your Browser?](https://bytebytego.com/guides/what-happens-when-you-type-a-url-into-your-browser/).
 
-![What happens when you type a URL into your browser (ByteByteGo)](../Assets/Services/bytebytego-what-happens-when-you-type-url.png)
+![What happens when you type a URL into your browser (ByteByteGo)](../Assets/Services/Bytebytego_What_Happens_When_You_Type_Url.png)
 
 **Commands (hands-on):** you can see DNS, TCP, and HTTP in action with `curl`. Use these from a terminal to mimic what the browser does (resolve, connect, TLS, request).
 

@@ -1,28 +1,28 @@
 [
   {
-    "name": "1-tcp-handshake-capture.md",
-    "path": "1-tcp-handshake-capture.md",
+    "name": "1_TCP_Handshake_Capture.md",
+    "path": "1_TCP_Handshake_Capture.md",
     "type": "file",
     "sha": "",
     "size": 577
   },
   {
-    "name": "2-dns-resolution-lab.md",
-    "path": "2-dns-resolution-lab.md",
+    "name": "2_DNS_Resolution_Lab.md",
+    "path": "2_DNS_Resolution_Lab.md",
     "type": "file",
     "sha": "",
     "size": 528
   },
   {
-    "name": "3-k8s-cilium-hubble-lab.md",
-    "path": "3-k8s-cilium-hubble-lab.md",
+    "name": "3_K8s_Cilium_Hubble_Lab.md",
+    "path": "3_K8s_Cilium_Hubble_Lab.md",
     "type": "file",
     "sha": "",
     "size": 587
   },
   {
-    "name": "4-firewall-rule-validation.md",
-    "path": "4-firewall-rule-validation.md",
+    "name": "4_Firewall_Rule_Validation.md",
+    "path": "4_Firewall_Rule_Validation.md",
     "type": "file",
     "sha": "",
     "size": 671
