@@ -15,6 +15,7 @@ Stay DevOps-scoped: enough to prevent waste and escalate early. Not a billing ce
 | Waste pattern | Who usually creates it |
 |---------------|------------------------|
 | Idle non-prod left on 24/7 | Platform / app teams via IaC |
+| Orphan optional parallel / preview DEVs | Missing TTL after a rare parallel soak |
 | Oversized nodes “just in case” | Copy-paste modules |
 | Orphan disks / IPs / load balancers | Incomplete teardown |
 | Chatty cross-AZ / egress traffic | Architecture + defaults |
@@ -57,6 +58,23 @@ Enforce in IaC (default tags module) and reject untagged resources in policy (OP
 
 ---
 
+## Optional parallel DEV environments (cost)
+
+Default non-prod shape is **one shared DEV** plus staging/prod ([CiCd/8](../CiCd/8_Environments_Promotion_And_Approvals.md)). Parallel / ephemeral DEVs are **optional** — use them only when shared DEV contention is chronic enough to justify spend.
+
+If you do run them (same snapshot tag; GitOps create/destroy — [Argo_CD](../CiCd/Argo_CD/README.md)):
+
+| Do | Don’t |
+|----|--------|
+| Budget a small concurrent cap; destroy when the task ends | Leave “dev-alice” running for weeks |
+| Tag `env=dev-ephemeral`, `owner=…`, `ttl=…` | Untagged clones nobody can attribute |
+| Right-size below staging | Full prod-sized stack per person |
+| Alert the team that can tear down | Only Finance sees the spike |
+
+Orphaned previews are a classic anomaly — wire cleanup into the same automation that creates them ([CiCd/24](../CiCd/24_Workflow_Automation_Beyond_PR_CI.md)).
+
+---
+
 ## Budgets and anomalies (concept)
 
 All major clouds offer:
@@ -83,7 +101,7 @@ Wire alerts to the team that can **turn resources off**, not only to Finance. Ch
 
 | Situation | You fix | Escalate |
 |-----------|---------|----------|
-| Forgotten staging cluster | Tear down / schedule | — |
+| Forgotten staging / ephemeral DEV | Tear down / TTL schedule | — |
 | Need enterprise discount / CUDs | Provide usage data | FinOps / Finance |
 | Shared VPC cost attribution | Improve tags | FinOps for chargeback model |
 | Product wants always-on multi-region active-active | Show cost delta | Product + architecture |

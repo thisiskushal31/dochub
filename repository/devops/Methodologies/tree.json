@@ -4,7 +4,7 @@
     "path": "0_SE_Learning_DevOps_Start_Here.md",
     "type": "file",
     "sha": "",
-    "size": 8700
+    "size": 5603
   },
   {
     "name": "1_DevOps_Culture_And_Collaboration.md",
@@ -18,7 +18,7 @@
     "path": "10_Core_Principles_Three_Ways_CALMS.md",
     "type": "file",
     "sha": "",
-    "size": 5393
+    "size": 5352
   },
   {
     "name": "11_Value_Streams_And_Lean_Flow.md",
@@ -39,7 +39,7 @@
     "path": "13_Continuous_Everything.md",
     "type": "file",
     "sha": "",
-    "size": 4477
+    "size": 4662
   },
   {
     "name": "14_DevSecOps_Mindset.md",
@@ -81,14 +81,21 @@
     "path": "19_Durable_Mindsets_And_Evolving_Toolsets.md",
     "type": "file",
     "sha": "",
-    "size": 9391
+    "size": 9804
   },
   {
     "name": "2_Practices_And_Workflows.md",
     "path": "2_Practices_And_Workflows.md",
     "type": "file",
     "sha": "",
-    "size": 4699
+    "size": 4794
+  },
+  {
+    "name": "20_Delivery_Reality_Full_Spectrum.md",
+    "path": "20_Delivery_Reality_Full_Spectrum.md",
+    "type": "file",
+    "sha": "",
+    "size": 4021
   },
   {
     "name": "3_Team_Patterns_SRE_Incident.md",
@@ -102,7 +109,7 @@
     "path": "4_Branching_And_PR_Practices.md",
     "type": "file",
     "sha": "",
-    "size": 3902
+    "size": 9845
   },
   {
     "name": "5_DORA_And_Delivery_Metrics.md",
@@ -130,20 +137,20 @@
     "path": "8_FinOps_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 3875
+    "size": 4902
   },
   {
     "name": "9_Maintenance_And_Legacy.md",
     "path": "9_Maintenance_And_Legacy.md",
     "type": "file",
     "sha": "",
-    "size": 4098
+    "size": 6017
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 5476
+    "size": 7220
   }
 ]

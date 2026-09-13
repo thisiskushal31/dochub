@@ -68,10 +68,13 @@ If releases are rare because of **business choice** but any given change *could*
 | Continuous Deployment without test reliability | Stay on Delivery + progressive rollout |
 | Skipping Continuous Delivery because “we are not Netflix” | Delivery is for everyone; Deployment is optional |
 
-## Next
+## Next on the staircase
 
-- Implement the loop: [CiCd/1_Pipelines_Build_Test_Deploy.md](../CiCd/1_Pipelines_Build_Test_Deploy.md)  
-- Measure: [5_DORA_And_Delivery_Metrics.md](./5_DORA_And_Delivery_Metrics.md)
+- Toolchain stages: [17_Toolchain_Stages.md](./17_Toolchain_Stages.md)  
+- Then see the work: [11_Value_Streams_And_Lean_Flow.md](./11_Value_Streams_And_Lean_Flow.md)  
+- When ready to implement: [CiCd Floor 1](../CiCd/1_Pipelines_Build_Test_Deploy.md)  
+
+(Full climb: [Methodologies README](./README.md) → then [CiCd staircase](../CiCd/README.md).)
 
 ## Further reading
 

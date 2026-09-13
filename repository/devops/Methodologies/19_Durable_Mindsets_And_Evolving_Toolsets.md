@@ -22,6 +22,8 @@ Evolving: Which CI, which cluster API, which assistant, which policy engine
 
 Assisted delivery, platforms, and automation **amplify** whatever system you already have — strength or dysfunction. That is why foundations stay non-negotiable.
 
+**Full deploy-target spectrum** (mainframe → classical VM/Jenkins → Compose/Swarm → static/CDN → K8s → AI systems): mindset in [20](./20_Delivery_Reality_Full_Spectrum.md); adapters in [CiCd/19](../CiCd/19_Delivery_Spectrum_Legacy_Through_Modern.md). Syllabus Part A rule *Timeless and full-spectrum coverage* is the agent guardrail across Deep-Dives.
+
 ---
 
 ## Rule for beginners
@@ -160,11 +162,11 @@ When you replace a tool, update the example cell — **do not rewrite the mindse
 | Desired-state sync without secrets hygiene | Externalize secrets; policy |
 | Chasing exotic runtimes before Linux + CI | Prerequisites in [0](./0_SE_Learning_DevOps_Start_Here.md) |
 
-## Next
+## Next on the staircase
 
-- Delivery spine: [CiCd/1](../CiCd/1_Pipelines_Build_Test_Deploy.md)  
+- Hand-off to implementation: [CiCd staircase](../CiCd/README.md) → [CiCd/1](../CiCd/1_Pipelines_Build_Test_Deploy.md)  
+- If you skipped Floor 5: [9](./9_Maintenance_And_Legacy.md) → [20](./20_Delivery_Reality_Full_Spectrum.md) first  
 - Platform depth: [Cloud-Native/](../Cloud-Native/README.md)  
-- Learning / retrieval systems beyond delivery: [Data-Science-AI-Deep-Dive](https://github.com/thisiskushal31/Data-Science-AI-Deep-Dive)
 
 ## Further reading
 

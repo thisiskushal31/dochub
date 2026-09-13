@@ -2,16 +2,33 @@
 
 [← Back to Methodologies](./README.md)
 
-This handbook is how software is **delivered**. You do not need to be a “DevOps engineer” title to use it. If you ship code — backend, frontend, fullstack, or platform — this room is for you.
+**Staircase Floor 0.** This handbook teaches how software is **delivered**. You do not need a “DevOps” title. If you ship code, this room is for you.
+
+Climb the **Methodologies staircase** first (mindset), then the **[CiCd staircase](../CiCd/README.md)** (how to ship). One story, two flights — not scattered blog posts.
 
 ---
 
 ## Two promises
 
 1. **Learn it here** when the topic is delivery, platforms, OS literacy, or languages-as-tools.  
-2. **Get a clear door** to a sister deep-dive when depth lives elsewhere — never a silent gap (“we assumed you already know Docker/networking”).
+2. **Get a clear door** to a sister deep-dive when depth lives elsewhere — never a silent gap.
 
-If a chapter is short on purpose, it says where to go next.
+---
+
+## The climb in one page
+
+```text
+Floor 0  You are here — orient
+Floor 1  What DevOps is          →  10 → 12
+Floor 2  Flow & vocabulary       →  13 → 17 → 11 → 18 → 14
+Floor 3  People & habits         →  1 → 2 → 4 → 16
+Floor 4  Operate & measure       →  3 → 6 → 7 → 5 → 15 → 8
+Floor 5  Every estate            →  9 → 20   (legacy through AI — required)
+Floor 6  Amplifiers              →  19       (after foundations)
+         Hand-off                →  CiCd staircase
+```
+
+Full table: [Methodologies README — The staircase](./README.md).
 
 ---
 
@@ -19,88 +36,50 @@ If a chapter is short on purpose, it says where to go next.
 
 | Need | Start here | Deeper elsewhere |
 |------|------------|------------------|
-| Culture, branching, on-call, DORA, FinOps | [Methodologies/](./README.md) (this folder) | — |
-| Build → test → deploy → verify | [CiCd/](../CiCd/README.md) | — |
+| Culture, branching, on-call, DORA, FinOps, legacy posture | [Methodologies/](./README.md) | — |
+| Build → test → deploy → verify (all targets) | [CiCd/](../CiCd/README.md) | — |
 | Terraform / Pulumi / state | [IAC/](../IAC/README.md) | — |
 | Metrics, logs, traces, paging | [Observability/](../Observability/README.md) | — |
-| Pipeline secrets, SAST/DAST gates | [Security/](../Security/README.md) | Full cyber program → [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) |
+| Pipeline secrets, SAST/DAST gates | [Security/](../Security/README.md) | [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) |
 | nginx / host deploy | [Servers/](../Servers/README.md) | — |
 | AWS / GCP / Azure literacy | [Cloud/](../Cloud/README.md) | — |
-| What Docker / K8s *are* | Short doors in README + Cloud-Native | [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) |
+| What Docker / K8s *are* | Cloud-Native doors | [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) |
 | TCP / DNS / TLS on the wire | Short doors | [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive) |
-| SQL vs Redis vs object store *choice* | Short doors | [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) · [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) |
-| Spring / FastAPI / React | Not here | [Tooling-and-Frameworks-Deep-Dive](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive) |
-| Language syntax (Python, Go, Shell, …) | [Languages/](../Languages/README.md) | — |
-| Git / Make | Not here | Tooling `Utility/` |
-| Commands you forget | — | [Commands-and-Cheatsheets](https://github.com/thisiskushal31/Commands-and-Cheatsheets) |
-
-Root map: [handbook README — Where to go deeper](../README.md#where-to-go-deeper).
+| Data stores / design choice | Short doors | [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) · [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) |
+| App frameworks | Not here | [Tooling-and-Frameworks](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive) |
+| Language syntax | [Languages/](../Languages/README.md) | — |
+| Git / Make | Tooling `Utility/` | — |
 
 ---
 
-## Beginner learning order (fact-checked foundations first)
+## Prerequisites (grow in parallel)
 
-Do **not** start with a random tool tutorial. Industry Foundation courses and *The DevOps Handbook* teach principles before pipelines.
-
-1. [10 — Three Ways, CALMS, constraints](./10_Core_Principles_Three_Ways_CALMS.md) — what DevOps actually is  
-2. [12 — Agile, Lean, ITSM](./12_Agile_Lean_ITSM_And_DevOps.md) — how the frameworks fit (no tribe wars)  
-3. [13 — CI vs CD vs continuous deployment](./13_Continuous_Everything.md) + [17 — toolchain stages](./17_Toolchain_Stages.md)  
-4. [11 — Value streams and lean flow](./11_Value_Streams_And_Lean_Flow.md) · [18 — Value Stream Management](./18_Value_Stream_Management.md)  
-5. [14 — DevSecOps mindset](./14_DevSecOps_Mindset.md)  
-6. [1 Culture](./1_DevOps_Culture_And_Collaboration.md) → [2 Practices](./2_Practices_And_Workflows.md) → [4 Branching](./4_Branching_And_PR_Practices.md)  
-7. [16 — Roles / teams / platforms](./16_Roles_Teams_And_Platforms.md) (so titles do not confuse you)  
-8. [19 — Durable mindsets & evolving toolsets](./19_Durable_Mindsets_And_Evolving_Toolsets.md) — platform, assisted delivery, GitOps mindset, DevEx (after foundations)  
-9. [CiCd/1](../CiCd/1_Pipelines_Build_Test_Deploy.md) — then Security gates, IAC, Observability  
-10. [5 DORA metrics](./5_DORA_And_Delivery_Metrics.md) + [15 capabilities map](./15_DORA_Capabilities_Map.md) when you can measure a real team  
-
-### Prerequisites (skills under the mindset)
-
-Most serious beginner roadmaps (and this handbook’s structure) expect you to grow these **in parallel**, not instead of principles:
-
-| Skill | Where in this ecosystem |
-|-------|-------------------------|
+| Skill | Where |
+|-------|--------|
 | Linux / OS literacy | [Operating-Systems/](../Operating-Systems/README.md) |
 | Networking basics | [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive) |
-| Git | Tooling `Utility/` (not duplicated here) |
+| Git | Tooling `Utility/` |
 | Scripting | [Languages/](../Languages/README.md) (Shell, Python, …) |
-
-Primary sources to trust: [Three Ways (IT Revolution)](https://itrevolution.com/articles/the-three-ways-principles-underpinning-devops/), [DORA capabilities](https://dora.dev/capabilities/), [DORA metrics guide](https://dora.dev/guides/dora-metrics/), [Microsoft Learn — What is DevOps?](https://learn.microsoft.com/en-us/devops/what-is-devops), [Red Hat — DevSecOps](https://www.redhat.com/en/topics/devops/what-is-devsecops). Treat random blogs as secondary.
 
 ---
 
-## Paths by role (pick one in under 5 minutes)
+## Paths by role (same staircase, different depth)
 
-### Backend / fullstack SE who wants to ship safely
+### Backend / fullstack
 
-1. This file → beginner order above (at least **10 → 13 → 1 → 4**)  
-2. [4_Branching_And_PR](./4_Branching_And_PR_Practices.md) → [CiCd/1](../CiCd/1_Pipelines_Build_Test_Deploy.md)  
-3. [Security/4 gate chain](../Security/4_Security_Gate_Chain.md)  
-4. Enough [IAC/1](../IAC/1_IAC_Tools_And_Patterns.md) to review Terraform PRs  
-5. [Observability/1](../Observability/1_Monitoring_And_Metrics.md) so “it works on my laptop” is not the bar  
+Floors 1–3 at minimum → [CiCd Floor 1–3](../CiCd/README.md) → Security gates → enough IAC to review → Observability basics. Include Floor 5 if you touch brownfield (you will).
 
-Containers: operate literacy here; depth in Containerization when you own clusters.
+### Frontend
 
-### Frontend SE
+Floors 1–2 + branching → CiCd loop + [static/CDN](../CiCd/17_Static_Sites_And_CDN_Deploy.md). Skip kernel until needed.
 
-1. Beginner order in this file (**10 → 13** at minimum)  
-2. Branching + CI for web apps ([4](./4_Branching_And_PR_Practices.md), [CiCd/1](../CiCd/1_Pipelines_Build_Test_Deploy.md))  
-3. Env/config, preview deploys, CDN/static doors (README + System Design)  
-4. Observability of UX-impacting failures (errors, RUM pointers)  
-5. Frameworks → [Tooling Web-Frontend](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive)
+### Platform / SRE-leaning
 
-Skip kernel deep-dives until you need them.
-
-### Platform / DevOps / SRE-leaning
-
-1. Full beginner order (10 → 13 → culture/practices) + whole Methodologies folder  
-2. CiCd `1–7` → Security gates → IAC `1–3` → Observability `1–3`  
-3. [Cloud/](../Cloud/README.md) + [Cloud-Native/](../Cloud-Native/README.md)  
-4. [Operating-Systems/](../Operating-Systems/README.md) when debugging hosts  
-5. Sister repos when the wire, cluster, or data plane is the job  
+Full Methodologies staircase → full CiCd staircase (including classical + K8s + MLOps adapters) → Cloud / Cloud-Native / OS as needed.
 
 ### “I only need OS / a language”
 
-Go straight to [Operating-Systems/](../Operating-Systems/README.md) or [Languages/](../Languages/README.md). Come back here when you own a pipeline — start at [10](./10_Core_Principles_Three_Ways_CALMS.md), not at a random tool.
+[Operating-Systems/](../Operating-Systems/README.md) or [Languages/](../Languages/README.md), then return at Floor 1 ([10](./10_Core_Principles_Three_Ways_CALMS.md)).
 
 ---
 
@@ -113,23 +92,23 @@ Idea / ticket
   → security gates       (Security/)
   → immutable artifact   (CiCd/4)
   → provision / config   (IAC + Automation + OS)
-  → deploy + strategy    (CiCd/3)
+  → deploy + strategy    (CiCd — target adapter)
   → verify + observe     (CiCd/5 + Observability)
   → notify / on-call     (Methodologies/3, /6)
   → bad path: rollback + incident + postmortem
-  → day-2: patch, cost, improve gates (FinOps, maintenance)
+  → day-2: patch, cost, improve (FinOps, maintenance)
 ```
 
-You will fill each box in this handbook. Do not memorize tools first — own the loop, then attach tools.
+Own the loop, then attach tools. Estate does not change the questions — only the adapter ([20](./20_Delivery_Reality_Full_Spectrum.md)).
 
 ---
 
-## Monthly learning checklist (copy)
+## Monthly checklist
 
-- [ ] Read or deepen one Methodologies topic  
-- [ ] Trace one real PR from branch → prod (or staging) against the loop above  
-- [ ] Add or fix one pipeline gate / alert / runbook you actually use  
-- [ ] Tick the matching row in your private syllabus when a note becomes defendable  
+- [ ] Climb or deepen one Methodologies floor  
+- [ ] Trace one real change from branch → prod against the loop  
+- [ ] Add or fix one gate / alert / runbook you use  
+- [ ] Tick syllabus when a note is defendable  
 - [ ] After push: `npm run update-repos` in `dochub/` if the public site should refresh  
 
 ---
@@ -138,19 +117,19 @@ You will fill each box in this handbook. Do not memorize tools first — own the
 
 | Pitfall | Better |
 |---------|--------|
-| Learning only kubectl/Terraform with no delivery loop | Start from CiCd + Methodologies, then tools |
-| Duplicating Docker books inside this repo | Link Containerization; keep operator literacy here |
-| Treating handbook Security/ as AppSec career | Pipeline gates here; program in Security-Deep-Dive |
-| Skipping culture because “tools are enough” | Broken ownership shows up as failed deploys and blame |
+| Random tool tutorials first | Staircase Floor 1 → then CiCd |
+| Skipping Floor 5 (legacy/spectrum) | Most value is brownfield |
+| Amplifiers before foundations | Floor 6 only after 1–5 |
+| Fragments from the internet only | Consolidate here; then go deeper via doors |
 
 ---
 
-## Next
+## Next on the staircase
 
-- Culture: [1_DevOps_Culture_And_Collaboration.md](./1_DevOps_Culture_And_Collaboration.md)  
-- Or jump to delivery: [CiCd/1_Pipelines_Build_Test_Deploy.md](../CiCd/1_Pipelines_Build_Test_Deploy.md)
+**Floor 1:** [10_Core_Principles_Three_Ways_CALMS.md](./10_Core_Principles_Three_Ways_CALMS.md)
 
 ## Further reading
 
-- [DevOps Handbook (Kim et al.)](https://itrevolution.com/product/the-devops-handbook/) — culture and flow (book; concepts, not a vendor guide)  
-- Root [README](../README.md) — structure and sister-repo table  
+- [DevOps Handbook (Kim et al.)](https://itrevolution.com/product/the-devops-handbook/)  
+- [Three Ways](https://itrevolution.com/articles/the-three-ways-principles-underpinning-devops/) · [DORA](https://dora.dev/)  
+- Root [README](../README.md)  

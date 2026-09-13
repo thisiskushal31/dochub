@@ -104,11 +104,12 @@ In delivery, common constraints: slow code review, flaky tests, waiting for envi
 | Local optimization (faster builds, same CAB delay) | Attack the constraint |
 | “Three Ways” posters without changing batch size | Change how work flows |
 
-## Next
+## Next on the staircase
 
-- Lean flow + value streams: [11_Value_Streams_And_Lean_Flow.md](./11_Value_Streams_And_Lean_Flow.md)  
-- How Agile / Lean / ITSM relate: [12_Agile_Lean_ITSM_And_DevOps.md](./12_Agile_Lean_ITSM_And_DevOps.md)  
-- Culture in depth: [1_DevOps_Culture_And_Collaboration.md](./1_DevOps_Culture_And_Collaboration.md)
+- How frameworks fit: [12_Agile_Lean_ITSM_And_DevOps.md](./12_Agile_Lean_ITSM_And_DevOps.md)  
+- Then continuous vocabulary: [13_Continuous_Everything.md](./13_Continuous_Everything.md)  
+
+(Full climb: [Methodologies README — staircase](./README.md).)
 
 ## Further reading (primary)
 

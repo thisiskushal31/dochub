@@ -225,7 +225,7 @@
         "path": "Automation/1_Scripting_And_Orchestration.md",
         "type": "file",
         "sha": "",
-        "size": 326
+        "size": 1998
       },
       {
         "name": "2_Automation_Patterns_And_Tools.md",
@@ -260,7 +260,22 @@
             "path": "CiCd/Argo_CD/README.md",
             "type": "file",
             "sha": "",
-            "size": 269
+            "size": 4074
+          }
+        ]
+      },
+      {
+        "name": "Argo_Rollouts",
+        "path": "CiCd/Argo_Rollouts",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "CiCd/Argo_Rollouts/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 2415
           }
         ]
       },
@@ -275,14 +290,29 @@
             "path": "CiCd/Azure_DevOps/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 466
+            "size": 1330
           },
           {
             "name": "README.md",
             "path": "CiCd/Azure_DevOps/README.md",
             "type": "file",
             "sha": "",
-            "size": 283
+            "size": 1651
+          }
+        ]
+      },
+      {
+        "name": "Bitbucket_Pipelines",
+        "path": "CiCd/Bitbucket_Pipelines",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "CiCd/Bitbucket_Pipelines/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 2017
           }
         ]
       },
@@ -297,14 +327,14 @@
             "path": "CiCd/Buildkite/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 446
+            "size": 1017
           },
           {
             "name": "README.md",
             "path": "CiCd/Buildkite/README.md",
             "type": "file",
             "sha": "",
-            "size": 275
+            "size": 1451
           }
         ]
       },
@@ -319,7 +349,7 @@
             "path": "CiCd/CircleCI/README.md",
             "type": "file",
             "sha": "",
-            "size": 245
+            "size": 1582
           }
         ]
       },
@@ -334,7 +364,7 @@
             "path": "CiCd/Flux/README.md",
             "type": "file",
             "sha": "",
-            "size": 266
+            "size": 2033
           }
         ]
       },
@@ -349,7 +379,7 @@
             "path": "CiCd/GitHub_Actions/README.md",
             "type": "file",
             "sha": "",
-            "size": 301
+            "size": 8168
           }
         ]
       },
@@ -364,7 +394,7 @@
             "path": "CiCd/GitLab_CI/README.md",
             "type": "file",
             "sha": "",
-            "size": 279
+            "size": 1923
           }
         ]
       },
@@ -379,7 +409,7 @@
             "path": "CiCd/Jenkins/README.md",
             "type": "file",
             "sha": "",
-            "size": 335
+            "size": 3619
           }
         ]
       },
@@ -394,7 +424,7 @@
             "path": "CiCd/Tekton/README.md",
             "type": "file",
             "sha": "",
-            "size": 249
+            "size": 1936
           }
         ]
       },
@@ -409,14 +439,14 @@
             "path": "CiCd/Unleash/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 441
+            "size": 1085
           },
           {
             "name": "README.md",
             "path": "CiCd/Unleash/README.md",
             "type": "file",
             "sha": "",
-            "size": 270
+            "size": 1759
           }
         ]
       },
@@ -425,56 +455,175 @@
         "path": "CiCd/1_Pipelines_Build_Test_Deploy.md",
         "type": "file",
         "sha": "",
-        "size": 543
+        "size": 6162
+      },
+      {
+        "name": "10_Testing_In_The_Pipeline.md",
+        "path": "CiCd/10_Testing_In_The_Pipeline.md",
+        "type": "file",
+        "sha": "",
+        "size": 3689
+      },
+      {
+        "name": "11_Pipeline_As_Code_Runners_Caching_Matrix.md",
+        "path": "CiCd/11_Pipeline_As_Code_Runners_Caching_Matrix.md",
+        "type": "file",
+        "sha": "",
+        "size": 3479
+      },
+      {
+        "name": "12_Release_Versioning_And_Changelogs.md",
+        "path": "CiCd/12_Release_Versioning_And_Changelogs.md",
+        "type": "file",
+        "sha": "",
+        "size": 5627
+      },
+      {
+        "name": "13_Config_Secrets_And_Env_Parity.md",
+        "path": "CiCd/13_Config_Secrets_And_Env_Parity.md",
+        "type": "file",
+        "sha": "",
+        "size": 3627
+      },
+      {
+        "name": "14_Monorepo_And_Multi_Repo_CI.md",
+        "path": "CiCd/14_Monorepo_And_Multi_Repo_CI.md",
+        "type": "file",
+        "sha": "",
+        "size": 3059
+      },
+      {
+        "name": "15_Pipeline_Security_And_Gates.md",
+        "path": "CiCd/15_Pipeline_Security_And_Gates.md",
+        "type": "file",
+        "sha": "",
+        "size": 3608
+      },
+      {
+        "name": "16_Notifications_Webhooks_And_ChatOps.md",
+        "path": "CiCd/16_Notifications_Webhooks_And_ChatOps.md",
+        "type": "file",
+        "sha": "",
+        "size": 2573
+      },
+      {
+        "name": "17_Static_Sites_And_CDN_Deploy.md",
+        "path": "CiCd/17_Static_Sites_And_CDN_Deploy.md",
+        "type": "file",
+        "sha": "",
+        "size": 4744
+      },
+      {
+        "name": "18_VM_MIG_And_Host_Based_Deploy.md",
+        "path": "CiCd/18_VM_MIG_And_Host_Based_Deploy.md",
+        "type": "file",
+        "sha": "",
+        "size": 6027
+      },
+      {
+        "name": "19_Delivery_Spectrum_Legacy_Through_Modern.md",
+        "path": "CiCd/19_Delivery_Spectrum_Legacy_Through_Modern.md",
+        "type": "file",
+        "sha": "",
+        "size": 7286
       },
       {
         "name": "2_CI_CD_Tools.md",
         "path": "CiCd/2_CI_CD_Tools.md",
         "type": "file",
         "sha": "",
-        "size": 901
+        "size": 4683
+      },
+      {
+        "name": "20_Classical_Jenkins_Host_And_Web_Deploy.md",
+        "path": "CiCd/20_Classical_Jenkins_Host_And_Web_Deploy.md",
+        "type": "file",
+        "sha": "",
+        "size": 5524
+      },
+      {
+        "name": "21_Compose_And_Swarm_Delivery.md",
+        "path": "CiCd/21_Compose_And_Swarm_Delivery.md",
+        "type": "file",
+        "sha": "",
+        "size": 4049
+      },
+      {
+        "name": "22_MLOps_And_AI_System_Delivery.md",
+        "path": "CiCd/22_MLOps_And_AI_System_Delivery.md",
+        "type": "file",
+        "sha": "",
+        "size": 6487
+      },
+      {
+        "name": "23_Classical_DevOps_Stack_Map.md",
+        "path": "CiCd/23_Classical_DevOps_Stack_Map.md",
+        "type": "file",
+        "sha": "",
+        "size": 4909
+      },
+      {
+        "name": "24_Workflow_Automation_Beyond_PR_CI.md",
+        "path": "CiCd/24_Workflow_Automation_Beyond_PR_CI.md",
+        "type": "file",
+        "sha": "",
+        "size": 11796
       },
       {
         "name": "3_Deployment_Strategies.md",
         "path": "CiCd/3_Deployment_Strategies.md",
         "type": "file",
         "sha": "",
-        "size": 248
+        "size": 5921
       },
       {
         "name": "4_Artifacts_And_Registries.md",
         "path": "CiCd/4_Artifacts_And_Registries.md",
         "type": "file",
         "sha": "",
-        "size": 929
+        "size": 6033
       },
       {
         "name": "5_Verify_Rollback_And_Synthetic_Tests.md",
         "path": "CiCd/5_Verify_Rollback_And_Synthetic_Tests.md",
         "type": "file",
         "sha": "",
-        "size": 858
+        "size": 5595
       },
       {
         "name": "6_Supply_Chain_And_Signing.md",
         "path": "CiCd/6_Supply_Chain_And_Signing.md",
         "type": "file",
         "sha": "",
-        "size": 802
+        "size": 5400
       },
       {
         "name": "7_DB_Migrations_In_Pipelines.md",
         "path": "CiCd/7_DB_Migrations_In_Pipelines.md",
         "type": "file",
         "sha": "",
-        "size": 817
+        "size": 5890
+      },
+      {
+        "name": "8_Environments_Promotion_And_Approvals.md",
+        "path": "CiCd/8_Environments_Promotion_And_Approvals.md",
+        "type": "file",
+        "sha": "",
+        "size": 8693
+      },
+      {
+        "name": "9_Progressive_Delivery_Controllers.md",
+        "path": "CiCd/9_Progressive_Delivery_Controllers.md",
+        "type": "file",
+        "sha": "",
+        "size": 4284
       },
       {
         "name": "README.md",
         "path": "CiCd/README.md",
         "type": "file",
         "sha": "",
-        "size": 2045
+        "size": 9254
       }
     ]
   },
@@ -7529,7 +7678,7 @@
         "path": "Methodologies/0_SE_Learning_DevOps_Start_Here.md",
         "type": "file",
         "sha": "",
-        "size": 8700
+        "size": 5603
       },
       {
         "name": "1_DevOps_Culture_And_Collaboration.md",
@@ -7543,7 +7692,7 @@
         "path": "Methodologies/10_Core_Principles_Three_Ways_CALMS.md",
         "type": "file",
         "sha": "",
-        "size": 5393
+        "size": 5352
       },
       {
         "name": "11_Value_Streams_And_Lean_Flow.md",
@@ -7564,7 +7713,7 @@
         "path": "Methodologies/13_Continuous_Everything.md",
         "type": "file",
         "sha": "",
-        "size": 4477
+        "size": 4662
       },
       {
         "name": "14_DevSecOps_Mindset.md",
@@ -7606,14 +7755,21 @@
         "path": "Methodologies/19_Durable_Mindsets_And_Evolving_Toolsets.md",
         "type": "file",
         "sha": "",
-        "size": 9391
+        "size": 9804
       },
       {
         "name": "2_Practices_And_Workflows.md",
         "path": "Methodologies/2_Practices_And_Workflows.md",
         "type": "file",
         "sha": "",
-        "size": 4699
+        "size": 4794
+      },
+      {
+        "name": "20_Delivery_Reality_Full_Spectrum.md",
+        "path": "Methodologies/20_Delivery_Reality_Full_Spectrum.md",
+        "type": "file",
+        "sha": "",
+        "size": 4021
       },
       {
         "name": "3_Team_Patterns_SRE_Incident.md",
@@ -7627,7 +7783,7 @@
         "path": "Methodologies/4_Branching_And_PR_Practices.md",
         "type": "file",
         "sha": "",
-        "size": 3902
+        "size": 9845
       },
       {
         "name": "5_DORA_And_Delivery_Metrics.md",
@@ -7655,21 +7811,21 @@
         "path": "Methodologies/8_FinOps_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 3875
+        "size": 4902
       },
       {
         "name": "9_Maintenance_And_Legacy.md",
         "path": "Methodologies/9_Maintenance_And_Legacy.md",
         "type": "file",
         "sha": "",
-        "size": 4098
+        "size": 6017
       },
       {
         "name": "README.md",
         "path": "Methodologies/README.md",
         "type": "file",
         "sha": "",
-        "size": 5476
+        "size": 7220
       }
     ]
   },
@@ -8671,14 +8827,14 @@
         "path": "Security/4_Security_Gate_Chain.md",
         "type": "file",
         "sha": "",
-        "size": 1330
+        "size": 3821
       },
       {
         "name": "5_OIDC_CI_And_Least_Privilege.md",
         "path": "Security/5_OIDC_CI_And_Least_Privilege.md",
         "type": "file",
         "sha": "",
-        "size": 710
+        "size": 5125
       },
       {
         "name": "README.md",

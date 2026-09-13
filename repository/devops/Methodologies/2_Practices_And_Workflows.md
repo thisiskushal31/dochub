@@ -46,7 +46,7 @@ Anti-pattern: only scanning in production or once a year for compliance theater.
 
 Prefer **short-lived branches** merging to a shared trunk many times per day, protected by CI. Long-lived feature branches are where merge hell and “big bang” risk live.
 
-Full comparison (trunk vs GitFlow vs GitHub Flow): [4_Branching_And_PR_Practices](./4_Branching_And_PR_Practices.md).
+Full comparison (trunk vs GitFlow vs PR/MR-to-main / “GitHub Flow” nickname): [4_Branching_And_PR_Practices](./4_Branching_And_PR_Practices.md) — host-neutral (GitHub, GitLab, Bitbucket, Azure DevOps, …).
 
 Precise CI / Continuous Delivery / Continuous Deployment meanings: [13_Continuous_Everything](./13_Continuous_Everything.md) — read that before claiming “we do CI/CD.”
 
