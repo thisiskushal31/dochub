@@ -4,76 +4,146 @@
     "path": "0_SE_Learning_DevOps_Start_Here.md",
     "type": "file",
     "sha": "",
-    "size": 1398
+    "size": 8700
   },
   {
     "name": "1_DevOps_Culture_And_Collaboration.md",
     "path": "1_DevOps_Culture_And_Collaboration.md",
     "type": "file",
     "sha": "",
-    "size": 364
+    "size": 5929
+  },
+  {
+    "name": "10_Core_Principles_Three_Ways_CALMS.md",
+    "path": "10_Core_Principles_Three_Ways_CALMS.md",
+    "type": "file",
+    "sha": "",
+    "size": 5393
+  },
+  {
+    "name": "11_Value_Streams_And_Lean_Flow.md",
+    "path": "11_Value_Streams_And_Lean_Flow.md",
+    "type": "file",
+    "sha": "",
+    "size": 5090
+  },
+  {
+    "name": "12_Agile_Lean_ITSM_And_DevOps.md",
+    "path": "12_Agile_Lean_ITSM_And_DevOps.md",
+    "type": "file",
+    "sha": "",
+    "size": 7491
+  },
+  {
+    "name": "13_Continuous_Everything.md",
+    "path": "13_Continuous_Everything.md",
+    "type": "file",
+    "sha": "",
+    "size": 4477
+  },
+  {
+    "name": "14_DevSecOps_Mindset.md",
+    "path": "14_DevSecOps_Mindset.md",
+    "type": "file",
+    "sha": "",
+    "size": 3450
+  },
+  {
+    "name": "15_DORA_Capabilities_Map.md",
+    "path": "15_DORA_Capabilities_Map.md",
+    "type": "file",
+    "sha": "",
+    "size": 4680
+  },
+  {
+    "name": "16_Roles_Teams_And_Platforms.md",
+    "path": "16_Roles_Teams_And_Platforms.md",
+    "type": "file",
+    "sha": "",
+    "size": 4825
+  },
+  {
+    "name": "17_Toolchain_Stages.md",
+    "path": "17_Toolchain_Stages.md",
+    "type": "file",
+    "sha": "",
+    "size": 2578
+  },
+  {
+    "name": "18_Value_Stream_Management.md",
+    "path": "18_Value_Stream_Management.md",
+    "type": "file",
+    "sha": "",
+    "size": 3665
+  },
+  {
+    "name": "19_Durable_Mindsets_And_Evolving_Toolsets.md",
+    "path": "19_Durable_Mindsets_And_Evolving_Toolsets.md",
+    "type": "file",
+    "sha": "",
+    "size": 9391
   },
   {
     "name": "2_Practices_And_Workflows.md",
     "path": "2_Practices_And_Workflows.md",
     "type": "file",
     "sha": "",
-    "size": 397
+    "size": 4699
   },
   {
     "name": "3_Team_Patterns_SRE_Incident.md",
     "path": "3_Team_Patterns_SRE_Incident.md",
     "type": "file",
     "sha": "",
-    "size": 627
+    "size": 5422
   },
   {
     "name": "4_Branching_And_PR_Practices.md",
     "path": "4_Branching_And_PR_Practices.md",
     "type": "file",
     "sha": "",
-    "size": 915
+    "size": 3902
   },
   {
     "name": "5_DORA_And_Delivery_Metrics.md",
     "path": "5_DORA_And_Delivery_Metrics.md",
     "type": "file",
     "sha": "",
-    "size": 890
+    "size": 7020
   },
   {
     "name": "6_ChatOps_And_Notifications.md",
     "path": "6_ChatOps_And_Notifications.md",
     "type": "file",
     "sha": "",
-    "size": 781
+    "size": 3539
   },
   {
     "name": "7_Docs_And_Runbooks.md",
     "path": "7_Docs_And_Runbooks.md",
     "type": "file",
     "sha": "",
-    "size": 835
+    "size": 3513
   },
   {
     "name": "8_FinOps_Literacy.md",
     "path": "8_FinOps_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 718
+    "size": 3875
   },
   {
     "name": "9_Maintenance_And_Legacy.md",
     "path": "9_Maintenance_And_Legacy.md",
     "type": "file",
     "sha": "",
-    "size": 693
+    "size": 4098
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1416
+    "size": 5476
   }
 ]
