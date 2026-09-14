@@ -876,18 +876,193 @@
         "sha": "",
         "children": [
           {
-            "name": "1_Install_And_First_Use.md",
-            "path": "CiCd/Buildkite/1_Install_And_First_Use.md",
+            "name": "01_What_Is_Buildkite.md",
+            "path": "CiCd/Buildkite/01_What_Is_Buildkite.md",
             "type": "file",
             "sha": "",
-            "size": 1017
+            "size": 3612
+          },
+          {
+            "name": "02_Organization_Teams_And_Clusters.md",
+            "path": "CiCd/Buildkite/02_Organization_Teams_And_Clusters.md",
+            "type": "file",
+            "sha": "",
+            "size": 2040
+          },
+          {
+            "name": "03_Create_Pipeline_Connect_Git_And_View_Builds.md",
+            "path": "CiCd/Buildkite/03_Create_Pipeline_Connect_Git_And_View_Builds.md",
+            "type": "file",
+            "sha": "",
+            "size": 2968
+          },
+          {
+            "name": "04_Agents_Self_Hosted_And_Hosted.md",
+            "path": "CiCd/Buildkite/04_Agents_Self_Hosted_And_Hosted.md",
+            "type": "file",
+            "sha": "",
+            "size": 2428
+          },
+          {
+            "name": "05_Queues_Clusters_And_Targeting.md",
+            "path": "CiCd/Buildkite/05_Queues_Clusters_And_Targeting.md",
+            "type": "file",
+            "sha": "",
+            "size": 2073
+          },
+          {
+            "name": "06_Pipeline_YAML_And_Step_Types.md",
+            "path": "CiCd/Buildkite/06_Pipeline_YAML_And_Step_Types.md",
+            "type": "file",
+            "sha": "",
+            "size": 2216
+          },
+          {
+            "name": "07_Templates_And_First_Pipeline_Yml.md",
+            "path": "CiCd/Buildkite/07_Templates_And_First_Pipeline_Yml.md",
+            "type": "file",
+            "sha": "",
+            "size": 2334
+          },
+          {
+            "name": "08_Workflows_Depends_Matrix_Schedules_And_Blocks.md",
+            "path": "CiCd/Buildkite/08_Workflows_Depends_Matrix_Schedules_And_Blocks.md",
+            "type": "file",
+            "sha": "",
+            "size": 2146
+          },
+          {
+            "name": "09_Plugins_Artifacts_Cache_And_Annotations.md",
+            "path": "CiCd/Buildkite/09_Plugins_Artifacts_Cache_And_Annotations.md",
+            "type": "file",
+            "sha": "",
+            "size": 1897
+          },
+          {
+            "name": "10_Secrets_Environment_And_OIDC.md",
+            "path": "CiCd/Buildkite/10_Secrets_Environment_And_OIDC.md",
+            "type": "file",
+            "sha": "",
+            "size": 2327
+          },
+          {
+            "name": "11_Dynamic_Pipelines_And_Pipeline_Upload.md",
+            "path": "CiCd/Buildkite/11_Dynamic_Pipelines_And_Pipeline_Upload.md",
+            "type": "file",
+            "sha": "",
+            "size": 2002
+          },
+          {
+            "name": "12_Deployments_And_Environments.md",
+            "path": "CiCd/Buildkite/12_Deployments_And_Environments.md",
+            "type": "file",
+            "sha": "",
+            "size": 2925
+          },
+          {
+            "name": "13_Self_Hosted_Stacks_AWS_And_Kubernetes.md",
+            "path": "CiCd/Buildkite/13_Self_Hosted_Stacks_AWS_And_Kubernetes.md",
+            "type": "file",
+            "sha": "",
+            "size": 2431
+          },
+          {
+            "name": "14_Package_Registries_And_Test_Engine.md",
+            "path": "CiCd/Buildkite/14_Package_Registries_And_Test_Engine.md",
+            "type": "file",
+            "sha": "",
+            "size": 2410
+          },
+          {
+            "name": "15_Platform_Teams_SSO_And_Governance.md",
+            "path": "CiCd/Buildkite/15_Platform_Teams_SSO_And_Governance.md",
+            "type": "file",
+            "sha": "",
+            "size": 1862
+          },
+          {
+            "name": "16_Worked_Example_Build_And_Deploy.md",
+            "path": "CiCd/Buildkite/16_Worked_Example_Build_And_Deploy.md",
+            "type": "file",
+            "sha": "",
+            "size": 2007
+          },
+          {
+            "name": "17_Best_Practices_And_When_Not_Buildkite.md",
+            "path": "CiCd/Buildkite/17_Best_Practices_And_When_Not_Buildkite.md",
+            "type": "file",
+            "sha": "",
+            "size": 1640
+          },
+          {
+            "name": "18_Feature_And_Configuration_Coverage_Map.md",
+            "path": "CiCd/Buildkite/18_Feature_And_Configuration_Coverage_Map.md",
+            "type": "file",
+            "sha": "",
+            "size": 3667
+          },
+          {
+            "name": "19_YAML_And_Configuration_Catalog.md",
+            "path": "CiCd/Buildkite/19_YAML_And_Configuration_Catalog.md",
+            "type": "file",
+            "sha": "",
+            "size": 1865
+          },
+          {
+            "name": "20_Troubleshooting_And_Staff_Checklist.md",
+            "path": "CiCd/Buildkite/20_Troubleshooting_And_Staff_Checklist.md",
+            "type": "file",
+            "sha": "",
+            "size": 2603
+          },
+          {
+            "name": "21_Source_Control_Providers_And_Code_Access.md",
+            "path": "CiCd/Buildkite/21_Source_Control_Providers_And_Code_Access.md",
+            "type": "file",
+            "sha": "",
+            "size": 2494
+          },
+          {
+            "name": "22_Agent_Hooks_Lifecycle_And_Install_Spectrum.md",
+            "path": "CiCd/Buildkite/22_Agent_Hooks_Lifecycle_And_Install_Spectrum.md",
+            "type": "file",
+            "sha": "",
+            "size": 3265
+          },
+          {
+            "name": "23_Hosted_Agent_Operations.md",
+            "path": "CiCd/Buildkite/23_Hosted_Agent_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 2589
+          },
+          {
+            "name": "24_Integrations_Notifications_Observability_And_Insights.md",
+            "path": "CiCd/Buildkite/24_Integrations_Notifications_Observability_And_Insights.md",
+            "type": "file",
+            "sha": "",
+            "size": 2339
+          },
+          {
+            "name": "25_Governance_Permissions_And_Migration.md",
+            "path": "CiCd/Buildkite/25_Governance_Permissions_And_Migration.md",
+            "type": "file",
+            "sha": "",
+            "size": 2350
+          },
+          {
+            "name": "26_APIs_CLI_Terraform_And_Platform_Extras.md",
+            "path": "CiCd/Buildkite/26_APIs_CLI_Terraform_And_Platform_Extras.md",
+            "type": "file",
+            "sha": "",
+            "size": 2555
           },
           {
             "name": "README.md",
             "path": "CiCd/Buildkite/README.md",
             "type": "file",
             "sha": "",
-            "size": 1451
+            "size": 5732
           }
         ]
       },
@@ -1085,7 +1260,7 @@
         "path": "CiCd/2_CI_CD_Tools.md",
         "type": "file",
         "sha": "",
-        "size": 4707
+        "size": 4721
       },
       {
         "name": "20_Classical_Jenkins_Host_And_Web_Deploy.md",
@@ -1176,7 +1351,7 @@
         "path": "CiCd/README.md",
         "type": "file",
         "sha": "",
-        "size": 9482
+        "size": 9533
       }
     ]
   },
