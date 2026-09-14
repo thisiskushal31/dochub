@@ -118,7 +118,7 @@ Numbers are labels — **climb by floor table**, not by sorting `#` alone.
 |------|------|
 | [Jenkins](./Jenkins/README.md) | Classical + enterprise CI (see also [20](./20_Classical_Jenkins_Host_And_Web_Deploy.md)) |
 | [GitHub Actions](./GitHub_Actions/README.md) | Full track **01–24** (depth pass) — workflows, runners/larger/private-net/ARC, reusable+OIDC, environments/protection, attestations, limits |
-| [GitLab CI](./GitLab_CI/README.md) | `.gitlab-ci.yml` |
+| [GitLab CI](./GitLab_CI/README.md) | Full track **01–26** — CI depth + GitLab platform literacy (MR, AppSec, registry, Agent, Duo, admin doors) |
 | [CircleCI](./CircleCI/README.md) | Full track **01–24** — Cloud config + runners (+ Server literacy) |
 | [Tekton](./Tekton/README.md) | K8s-native pipelines |
 | [Bitbucket](./Bitbucket/README.md) | Full track **01–21** — Cloud forge + Pipelines (+ Data Center literacy) |

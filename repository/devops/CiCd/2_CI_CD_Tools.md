@@ -29,15 +29,15 @@ Classic **push CD**: CI applies once with cluster creds.
 | Tool | Folder | Category |
 |------|--------|----------|
 | Jenkins | [Jenkins/](./Jenkins/README.md) | CI/CD server; Jenkinsfile; agents |
-| GitHub Actions | [GitHub_Actions/](./GitHub_Actions/README.md) | Full track 01–24 |
-| GitLab CI | [GitLab_CI/](./GitLab_CI/README.md) | SCM-native CI/CD |
-| CircleCI | [CircleCI/](./CircleCI/README.md) | Full track (config.yml + executors/runners) |
+| GitHub Actions | [GitHub_Actions/](./GitHub_Actions/README.md) | GitHub-native CI/CD; workflows, runners, OIDC, environments |
+| GitLab CI | [GitLab_CI/](./GitLab_CI/README.md) | GitLab-native CI/CD plus platform literacy (MR, registry, AppSec, Agent) |
+| CircleCI | [CircleCI/](./CircleCI/README.md) | Hosted CI; `config.yml`, executors, runners |
 | Tekton | [Tekton/](./Tekton/README.md) | K8s-native pipelines |
-| Bitbucket | [Bitbucket/](./Bitbucket/README.md) | Full track (Cloud forge + Pipelines) |
-| Azure DevOps | [Azure_DevOps/](./Azure_DevOps/README.md) | Full track (Pipelines + suite + Azure deploy spectrum) |
-| Buildkite | [Buildkite/](./Buildkite/README.md) | Full track (Pipelines + agents) |
+| Bitbucket | [Bitbucket/](./Bitbucket/README.md) | Atlassian forge + Pipelines |
+| Azure DevOps | [Azure_DevOps/](./Azure_DevOps/README.md) | Azure DevOps suite + Pipelines + Azure deploy spectrum |
+| Buildkite | [Buildkite/](./Buildkite/README.md) | Hybrid CI; Pipelines control plane + your agents |
 | Argo CD | [Argo_CD/](./Argo_CD/README.md) | GitOps CD |
-| Flux | [Flux/](./Flux/README.md) | GitOps toolkit (full track 01–22) |
+| Flux | [Flux/](./Flux/README.md) | GitOps toolkit; sources, Kustomize/Helm, image automation |
 | Argo Rollouts | [Argo_Rollouts/](./Argo_Rollouts/README.md) | Progressive delivery |
 | Unleash | [Unleash/](./Unleash/README.md) | Feature flags |
 
