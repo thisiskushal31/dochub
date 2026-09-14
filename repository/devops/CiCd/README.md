@@ -117,7 +117,7 @@ Numbers are labels — **climb by floor table**, not by sorting `#` alone.
 | Tool | Role |
 |------|------|
 | [Jenkins](./Jenkins/README.md) | Classical + enterprise CI (see also [20](./20_Classical_Jenkins_Host_And_Web_Deploy.md)) |
-| [GitHub Actions](./GitHub_Actions/README.md) | Workflows on GitHub (reusable paved road; cron + SemVer promote — [24](./24_Workflow_Automation_Beyond_PR_CI.md)) |
+| [GitHub Actions](./GitHub_Actions/README.md) | Full track **01–24** (depth pass) — workflows, runners/larger/private-net/ARC, reusable+OIDC, environments/protection, attestations, limits |
 | [GitLab CI](./GitLab_CI/README.md) | `.gitlab-ci.yml` |
 | [CircleCI](./CircleCI/README.md) | Full track **01–24** — Cloud config + runners (+ Server literacy) |
 | [Tekton](./Tekton/README.md) | K8s-native pipelines |

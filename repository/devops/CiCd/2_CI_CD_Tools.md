@@ -29,7 +29,7 @@ Classic **push CD**: CI applies once with cluster creds.
 | Tool | Folder | Category |
 |------|--------|----------|
 | Jenkins | [Jenkins/](./Jenkins/README.md) | CI/CD server; Jenkinsfile; agents |
-| GitHub Actions | [GitHub_Actions/](./GitHub_Actions/README.md) | SCM-native CI/CD |
+| GitHub Actions | [GitHub_Actions/](./GitHub_Actions/README.md) | Full track 01–24 |
 | GitLab CI | [GitLab_CI/](./GitLab_CI/README.md) | SCM-native CI/CD |
 | CircleCI | [CircleCI/](./CircleCI/README.md) | Full track (config.yml + executors/runners) |
 | Tekton | [Tekton/](./Tekton/README.md) | K8s-native pipelines |

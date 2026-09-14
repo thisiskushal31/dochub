@@ -2,196 +2,72 @@
 
 [← Back to CI/CD](../README.md)
 
-**This folder is the GitHub-specific primer.** The same delivery jobs (CI, schedule, promote, reusable templates) exist on GitLab CI, Bitbucket Pipelines, Azure Pipelines, Jenkins, CircleCI, Buildkite, Tekton, and kin — see [24](../24_Workflow_Automation_Beyond_PR_CI.md) and [2](../2_CI_CD_Tools.md). Prefer host-neutral concepts in Methodologies / CiCd concept chapters; open this page when the forge is GitHub.
+**GitHub Actions** runs automated **workflows** from YAML under `.github/workflows/`. An **event** (push, pull request, schedule, manual dispatch, …) starts a run; **jobs** execute on **runners** (GitHub-hosted VMs or machines you host); each job is a sequence of **steps** (shell or reusable **actions**).
 
-CI/CD and automation built into GitHub. **Workflows** are YAML under `.github/workflows/`. For many teams whose code already lives on GitHub, this is the default instead of operating a separate Jenkins controller — GitHub-hosted runners remove most of the “keep the CI server alive” tax. Keep Jenkins when you need that control plane ([20](../20_Classical_Jenkins_Host_And_Web_Deploy.md), [2](../2_CI_CD_Tools.md)).
+This folder is a **standalone deep dive**. Host-neutral delivery jobs (CI, schedule, promote, reusable templates) also exist on other forges — see [24](../24_Workflow_Automation_Beyond_PR_CI.md) and [2](../2_CI_CD_Tools.md). Prefer those concept chapters for cross-host patterns; open **this** track when the forge is GitHub.
 
-Concepts: [1](../1_Pipelines_Build_Test_Deploy.md), [11](../11_Pipeline_As_Code_Runners_Caching_Matrix.md).  
-**Scheduled audits · reusable templates · SemVer RC→prod (all hosts):** [24](../24_Workflow_Automation_Beyond_PR_CI.md). SemVer spec: [semver.org](https://semver.org/).
+Related tools: [GitLab_CI/](../GitLab_CI/README.md), [Bitbucket/](../Bitbucket/README.md), [CircleCI/](../CircleCI/README.md), [Buildkite/](../Buildkite/README.md), [Azure_DevOps/](../Azure_DevOps/README.md), [Jenkins/](../Jenkins/README.md), [Flux/](../Flux/README.md), [Argo_CD/](../Argo_CD/README.md).
 
----
+Delivery-loop concepts: [1](../1_Pipelines_Build_Test_Deploy.md), [8](../8_Environments_Promotion_And_Approvals.md), [11](../11_Pipeline_As_Code_Runners_Caching_Matrix.md), [24](../24_Workflow_Automation_Beyond_PR_CI.md).
 
-## Core model
+Depth pass: product surface mapped from official docs inventory. **Final offering map:** [21](./21_Feature_And_Configuration_Coverage_Map.md) (diagram + full inventory — free and paid/SKU surfaces listed; plan gates called out, not omitted). Language/cloud cookbooks stay upstream.
 
-| Concept | Meaning |
-|---------|---------|
-| **Workflow** | YAML file; triggered by events |
-| **Job** | Runs on a runner; jobs can `need` others |
-| **Step** | Shell or **action** (`uses:`) |
-| **Runner** | **GitHub-hosted** VM (common default) or **self-hosted** |
-| **Environment** | Named deploy target with protection rules / secrets |
-| **Reusable workflow** | Shared YAML with `on: workflow_call`; callers `uses:` it |
-| **Composite action** | Shared local action under `.github/actions/` |
+Someone who knows nothing about Actions should leave able to:
 
-### Triggers you will use
+- Explain workflow → job → step → runner  
+- Add a first CI workflow and read the run in the UI  
+- Use matrix, cache, artifacts, reusable workflows, and environments  
+- Prefer OIDC over long-lived cloud keys; harden permissions and fork PRs  
+- Promote by **image digest**; hand off to GitOps when that is the platform path  
+- Find **every** product offering (hosted/larger/self-hosted/ARC, OIDC, attestations, Importer, …) in the [coverage map](./21_Feature_And_Configuration_Coverage_Map.md) — paid or free — then open the chapter  
 
-| Trigger | Use |
-|---------|-----|
-| `pull_request` / `push` | Classic CI on every change |
-| `push` tags `v*` | Build RC / release image tags ([12](../12_Release_Versioning_And_Changelogs.md)) |
-| `workflow_dispatch` | Manual run (promote image, emergency GitOps bump, one-off audit) |
-| `schedule` (cron) | Inventory / cost / compliance / synthetic watches |
-| `workflow_call` | Reusable workflows (org paved road) |
 
----
+### Chapter structure
 
-## Why teams pick Actions over self-operated Jenkins
+Each numbered chapter: **Concepts → Advanced → Applications/use cases → References** (official docs only).
 
-| Factor | Actions (hosted) | Jenkins (self-operated) |
-|--------|------------------|-------------------------|
-| Server upkeep | Vendor runs control plane | You patch controller, plugins, backups |
-| Runner upkeep | Ephemeral hosted VMs (typical) | You size and harden agents |
-| Config location | In-repo workflows | Jenkinsfile + often UI/job state |
-| Best when | GitHub is SoR for code; want low CI ops | Air-gap, heavy custom agents, large existing estate |
+### Progression
 
-Self-hosted Actions runners exist when jobs must stay in your VPC — you then own runner hygiene again ([11](../11_Pipeline_As_Code_Runners_Caching_Matrix.md)).
+| Phase | Chapters | Outcome |
+|-------|----------|---------|
+| Foundation | [01](./01_What_Is_GitHub_Actions.md)–[03](./03_First_Workflow_And_Actions_UI.md) | Product; model; first run |
+| Syntax & craft | [04](./04_Workflow_Syntax_Mental_Model.md)–[07](./07_Contexts_Expressions_And_Variables.md) | YAML; events; jobs; expressions |
+| Compute | [08](./08_GitHub_Hosted_Runners.md)–[10](./10_Actions_Runner_Controller_ARC.md) | Hosted, self-hosted, ARC literacy |
+| Reuse & data | [11](./11_Actions_Marketplace_And_Pinning.md)–[13](./13_Reusable_Workflows_And_Composites.md) | Actions; cache; paved road |
+| Secure & ship | [14](./14_Secrets_Variables_And_Environments.md)–[17](./17_Deploy_Environments_And_Promote.md) | Secrets; OIDC; harden; deploy |
+| Craft & catalogs | [18](./18_Monitor_Metrics_And_Billing_Literacy.md)–[24](./24_Migrate_Packages_And_Extras.md) | Ops; lab; judgment; inventory |
+
+Suggested order: **01 → 24**. After **05**, jump to **19** if you learn by building.
 
 ---
 
-## Illustrative CI workflow
+## Chapters
 
-```yaml
-name: ci
-on:
-  pull_request:
-  push:
-    branches: [main]
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: npm test
-```
+| # | File | Focus |
+|---|------|--------|
+| 01 | [What is GitHub Actions](./01_What_Is_GitHub_Actions.md) | CI/CD on GitHub; when to choose it |
+| 02 | [Core model](./02_Core_Model_Workflows_Jobs_Steps_Runners.md) | Workflow, job, step, action, runner |
+| 03 | [First workflow and UI](./03_First_Workflow_And_Actions_UI.md) | First YAML; Actions tab; checks |
+| 04 | [Workflow syntax](./04_Workflow_Syntax_Mental_Model.md) | `on`, jobs, permissions, env |
+| 05 | [Events and triggers](./05_Events_And_Triggers.md) | push/PR, schedule, dispatch, call |
+| 06 | [Jobs, needs, concurrency, matrix](./06_Jobs_Needs_Concurrency_And_Matrix.md) | Graph; cancel; matrices |
+| 07 | [Contexts and expressions](./07_Contexts_Expressions_And_Variables.md) | github/secrets/vars; conditionals |
+| 08 | [GitHub-hosted runners](./08_GitHub_Hosted_Runners.md) | Labels; larger runners; networking |
+| 09 | [Self-hosted runners](./09_Self_Hosted_Runners_And_Groups.md) | Labels; groups; hygiene |
+| 10 | [ARC](./10_Actions_Runner_Controller_ARC.md) | Kubernetes scale sets literacy |
+| 11 | [Actions and pinning](./11_Actions_Marketplace_And_Pinning.md) | `uses:`; pin versions/SHAs |
+| 12 | [Caches and artifacts](./12_Caches_And_Artifacts.md) | Speed and handoff |
+| 13 | [Reusable workflows](./13_Reusable_Workflows_And_Composites.md) | Org paved road |
+| 14 | [Secrets and environments](./14_Secrets_Variables_And_Environments.md) | Secrets; protection rules |
+| 15 | [OIDC](./15_OIDC_And_Cloud_Federation.md) | Short-lived cloud auth |
+| 16 | [Security hardening](./16_Security_Hardening_Permissions_And_Forks.md) | Perms; forks; injections |
+| 17 | [Deploy and promote](./17_Deploy_Environments_And_Promote.md) | Approvals; digest promote |
+| 18 | [Monitor and billing literacy](./18_Monitor_Metrics_And_Billing_Literacy.md) | Runs; metrics; limits |
+| 19 | [Worked example](./19_Worked_Example_CI_Build_And_Promote.md) | End-to-end lab |
+| 20 | [Best practices](./20_Best_Practices_And_When_Not_Actions.md) | Judgment |
+| 21 | [Coverage map](./21_Feature_And_Configuration_Coverage_Map.md) | Full offering diagram + inventory (free/paid) |
+| 22 | [YAML catalog](./22_YAML_And_Configuration_Catalog.md) | Config surfaces |
+| 23 | [Troubleshooting](./23_Troubleshooting_And_Staff_Checklist.md) | Playbook |
+| 24 | [Migrate and extras](./24_Migrate_Packages_And_Extras.md) | Importer; packages; extras |
 
-Pin actions by version tag or commit SHA. Use **OIDC** (`permissions: id-token: write`) to cloud/registries ([Security/5](../Security/5_OIDC_CI_And_Least_Privilege.md)).
-
----
-
-## Scheduled ops workflow (inventory / cost audit)
-
-```yaml
-name: cost-audit
-on:
-  schedule:
-    - cron: "0 7 * * *"    # daily 07:00 UTC
-  workflow_dispatch:
-jobs:
-  audit:
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
-    steps:
-      - uses: actions/checkout@v4
-      - name: Audit
-        run: ./scripts/cost_audit.sh
-```
-
-Same pattern for inventory drift, stale preview cleanup, nightly scans — details in [24](../24_Workflow_Automation_Beyond_PR_CI.md).
-
----
-
-## Reusable workflows (central paved road)
-
-Put shared CI/build in an org **workflows** repo; service repos only call them:
-
-```yaml
-# org/workflows — reusable-build.yaml (shape)
-on:
-  workflow_call:
-    inputs:
-      image_name:
-        type: string
-        required: true
-    # secrets: inherit from caller when needed
-
-# service-repo — build.yml
-jobs:
-  build:
-    uses: org/workflows/.github/workflows/reusable-build.yaml@v10
-    with:
-      image_name: ${{ vars.SERVICE_NAME }}
-    secrets: inherit
-```
-
-**Version the paved road:** pin `@v10` (or commit SHA). Bumping the workflows tag is a deliberate platform change — same discipline as dependency upgrades.
-
-Typical split:
-
-| Reusable file | When |
-|---------------|------|
-| `reusable-ci-*.yaml` | PR/push: lint, test, SCA, image smoke |
-| `reusable-build-*.yaml` | Push to default branch or SemVer tags: build + push registry |
-| Language/frontend variants | Go / Node / Python / Next-style — shared gates, different setup |
-
-**Data plane services** (schedulers, workers, batch APIs) use the **same** reusable CI/build as HTTP services — only `image_name` / Dockerfile inputs change. Cron **ops** audits stay Use-case-A workflows ([24](../24_Workflow_Automation_Beyond_PR_CI.md)).
-
-GitHub: [Reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows).
-
----
-
-## SemVer image build + promote (immutable candidate)
-
-**Build lane** (often inside `reusable-build`, triggered by ref):
-
-| Git ref | Image tag scheme | Intent |
-|---------|------------------|--------|
-| `main` | Snapshot (`YYYY.MM.DD.run-….sha-…`) | Continuous / dev |
-| `vX.Y.Z-rc.N` | Pre-release SemVer | Test in staging |
-| `vX.Y.Z` | Release SemVer | Production pointer |
-
-**Promote contract:** after staging proves the RC (or snapshot) digest, production must reference **that digest** — retag to `vX.Y.Z` and/or write GitOps values (Image Updater / PR). Do not treat a fresh rebuild on the release tag as “the same” unless digests match.
-
-Manual promote shape:
-
-1. `workflow_dispatch` (often `environment: production` approval).  
-2. Resolve RC tag → digest.  
-3. Apply `:1.4.0` / `:prod` to **that digest** (`crane` / `skopeo` / `docker buildx imagetools create`).  
-4. Deploy by digest (GitOps preferred over `kubectl set image` in CI).
-
-Full narrative: [24](../24_Workflow_Automation_Beyond_PR_CI.md), [4](../4_Artifacts_And_Registries.md), [12](../12_Release_Versioning_And_Changelogs.md).
-
----
-
-## Common patterns
-
-- Matrix builds (`strategy.matrix`)  
-- Caching (`actions/cache`) keyed on lockfiles  
-- Central reusable workflows + composite actions  
-- Environment approvals for production ([8](../8_Environments_Promotion_And_Approvals.md))  
-- Build provenance attestations when applicable ([6](../6_Supply_Chain_And_Signing.md))  
-- Slack/ChatOps on build/CI/release ([16](../16_Notifications_Webhooks_And_ChatOps.md))  
-
----
-
-## First use (outline)
-
-1. Thin `ci.yml` calling `reusable-ci@vN` (or local CI until the paved road exists).  
-2. Required checks on `main`.  
-3. `build.yml` calling `reusable-build@vN` with OIDC; snapshot on `main`, SemVer on tags.  
-4. Promote RC → release **same digest** (manual workflow or Image Updater + policy).  
-5. One scheduled audit workflow your team actually needs.  
-
-Docs: [GitHub Actions](https://docs.github.com/en/actions).
-
----
-
-## Pitfalls
-
-| Pitfall | Better |
-|---------|--------|
-| Floating action / reusable tags (`@main`) | Pin versions/SHAs |
-| Fork PR secrets leakage | Restrict; careful `pull_request_target` |
-| Rebuild for prod promote | Retag same digest ([24](../24_Workflow_Automation_Beyond_PR_CI.md)) |
-| Long-lived cloud keys in secrets | OIDC |
-| Per-repo copy-paste of CI YAML | `workflow_call` paved road |
-| CI mutates cluster directly | Push image; GitOps writes desired state |
-
-## Further reading
-
-- [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)  
-- [Events that trigger workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows) (`schedule`, `workflow_dispatch`, `workflow_call`)  
-- [Reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows)  
-- [Security hardening for Actions](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions)  
-- [24 — Beyond PR CI](../24_Workflow_Automation_Beyond_PR_CI.md)  
+Start: [01](./01_What_Is_GitHub_Actions.md).
