@@ -34,7 +34,7 @@ New here? Start at [Foundations](./Foundations/README.md), then open [Systems](.
 
 Example: Spark is `Systems/Spark/` (bounded jobs, unbounded jobs, SQL, ops, use cases). Its *job* is Transformation. Kafka is `Systems/Kafka/` (log). Neither is a layer.
 
-## Sister repos
+## Related repos
 
 - [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) — engines (warehouse, OLTP, vector)
 - [Data-Science-AI-Deep-Dive](https://github.com/thisiskushal31/Data-Science-AI-Deep-Dive) — learning / retrieval

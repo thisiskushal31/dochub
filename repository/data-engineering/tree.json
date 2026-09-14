@@ -685,7 +685,7 @@
             "path": "Systems/DuckDB/1_In_A_Pipeline.md",
             "type": "file",
             "sha": "",
-            "size": 4324
+            "size": 4330
           },
           {
             "name": "README.md",
@@ -1179,7 +1179,7 @@
             "path": "Systems/Trino/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 460
+            "size": 461
           },
           {
             "name": "README.md",
@@ -1304,6 +1304,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2766
+    "size": 2767
   }
 ]

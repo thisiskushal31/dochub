@@ -96,7 +96,7 @@ Optional: [Podman](./Runtimes/Podman/README.md), [containerd](./Runtimes/Contain
 - **Beginners:** [Containerization-Basic](./Containerization-Basic/README.md) → [Runtimes/Docker](./Runtimes/Docker/README.md) → [Orchestration/Kubernetes](./Orchestration/Kubernetes/README.md).
 - **Adding a new technology:** Add a subfolder under [Runtimes/](./Runtimes/README.md) or [Orchestration/](./Orchestration/README.md) with README + topic files.
 
-## Sister repositories
+## Related repositories
 
 | Topic | Repository |
 |-------|------------|

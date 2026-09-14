@@ -51,7 +51,7 @@ object store / Iceberg snapshot
 
 If the worker cannot finish with spill + one host, the **same SQL** moves to Spark or a warehouse. The *job* (Transformation) did not change.
 
-## Sister GitHub URLs
+## Related home GitHub URLs
 
 | What | URL |
 |------|-----|
