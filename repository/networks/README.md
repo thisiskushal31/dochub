@@ -41,7 +41,7 @@ New to networking? Start at [Foundations](./Foundations/README.md).
 | **[Home-Lab/](Home-Lab/README.md)** *(new — stubs)* | Guided home/SOHO lab: topology, VirtualBox/OpenWRT, Packet Tracer basics. |
 | **[Service-Mesh/](Service-Mesh/README.md)** *(new — stubs)* | Envoy, Istio/Linkerd control plane, mTLS east–west — complements Cloud-Native/2. |
 
-Sister repos: [DevOps-Handbook](https://github.com/thisiskushal31/DevOps-Handbook) (CI, VPC ops) · [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) (K8s operator) · [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) (program) · [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) (CDN / LB *choice*) · [Network utilities](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive/tree/main/Network-Utilities) (ping, dig, curl).
+Related repos: [DevOps-Handbook](https://github.com/thisiskushal31/DevOps-Handbook) (CI, VPC ops) · [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) (K8s operator) · [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) (program) · [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) (CDN / LB *choice*) · [Network utilities](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive/tree/main/Network-Utilities) (ping, dig, curl).
 
 ## How to use
 

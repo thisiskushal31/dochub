@@ -12,5 +12,5 @@
 
 ## Checklist before marking done
 
-- [ ] Sister pointer to Data-Engineering for pipelines
+- [ ] Related pointer to Data-Engineering for pipelines
 - [ ] No vendor-first feature-store chapter

@@ -23,7 +23,7 @@ Layers in this tree are meant to outlive a model family. Today’s product names
 | 11 | [Instances/](./Instances/README.md) | Dated market map (will rot) |
 | — | [Assets/](./Assets/README.md) | Diagrams, notebooks |
 
-## Sister repos
+## Related repos
 
 - [Data-Engineering-Deep-Dive](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive) — capture, transform, orchestrate
 - [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) — store types and engines

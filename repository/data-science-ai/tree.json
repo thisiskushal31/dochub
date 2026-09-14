@@ -147,7 +147,7 @@
         "path": "Control-And-Agency/4_MCP_And_Tool_Protocols.md",
         "type": "file",
         "sha": "",
-        "size": 619
+        "size": 620
       },
       {
         "name": "README.md",
@@ -349,7 +349,7 @@
         "path": "Representation/1_Features.md",
         "type": "file",
         "sha": "",
-        "size": 401
+        "size": 402
       },
       {
         "name": "2_Tokens.md",
@@ -458,6 +458,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2654
+    "size": 2655
   }
 ]

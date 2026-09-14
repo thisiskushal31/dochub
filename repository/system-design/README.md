@@ -30,7 +30,7 @@ Topics are organized into these folders:
 | **[`Security-Tradeoffs/`](./Security-Tradeoffs/README.md)** | Threat modeling, auth vs zero trust, encryption trade-offs — extends `Security/` toward Security-Deep-Dive. |
 | **[`Primer-Gaps/`](./Primer-Gaps/README.md)** | Industry topics still being filled: gossip, Bloom filters, 2PC/saga, search-at-scale, RAG/LLM gateway. |
 
-Sister repos: [Networks](https://github.com/thisiskushal31/Networks-Deep-Dive) (wire) · [Databases](https://github.com/thisiskushal31/Databases-Deep-Dive) (engine ops) · [DevOps](https://github.com/thisiskushal31/DevOps-Handbook) (delivery / SLOs) · [Security](https://github.com/thisiskushal31/Security-Deep-Dive) (program) · [DSA](https://github.com/thisiskushal31/Datastructures-and-Algorithms) · [Containerization](https://github.com/thisiskushal31/Containerization-Deep-Dive) · [Diagramming](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive) (`Diagramming/` — draw while you read).
+Related repos: [Networks](https://github.com/thisiskushal31/Networks-Deep-Dive) (wire) · [Databases](https://github.com/thisiskushal31/Databases-Deep-Dive) (engine ops) · [DevOps](https://github.com/thisiskushal31/DevOps-Handbook) (delivery / SLOs) · [Security](https://github.com/thisiskushal31/Security-Deep-Dive) (program) · [DSA](https://github.com/thisiskushal31/Datastructures-and-Algorithms) · [Containerization](https://github.com/thisiskushal31/Containerization-Deep-Dive) · [Diagramming](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive) (`Diagramming/` — draw while you read).
 
 ---
 

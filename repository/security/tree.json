@@ -10,14 +10,14 @@
         "path": "AppSec/1_OWASP_And_Secure_SDLC.md",
         "type": "file",
         "sha": "",
-        "size": 660
+        "size": 667
       },
       {
         "name": "2_API_Security.md",
         "path": "AppSec/2_API_Security.md",
         "type": "file",
         "sha": "",
-        "size": 645
+        "size": 652
       },
       {
         "name": "README.md",
@@ -39,21 +39,21 @@
         "path": "Cloud-Security/1_CSPM_And_Posture.md",
         "type": "file",
         "sha": "",
-        "size": 662
+        "size": 669
       },
       {
         "name": "2_Secrets_And_K8s.md",
         "path": "Cloud-Security/2_Secrets_And_K8s.md",
         "type": "file",
         "sha": "",
-        "size": 669
+        "size": 676
       },
       {
         "name": "3_Supply_Chain.md",
         "path": "Cloud-Security/3_Supply_Chain.md",
         "type": "file",
         "sha": "",
-        "size": 664
+        "size": 671
       },
       {
         "name": "README.md",
@@ -75,7 +75,7 @@
         "path": "Cryptography/1_Practical_Pitfalls.md",
         "type": "file",
         "sha": "",
-        "size": 662
+        "size": 669
       },
       {
         "name": "README.md",
@@ -97,21 +97,21 @@
         "path": "Defensive-Ops/1_SIEM_And_Detection.md",
         "type": "file",
         "sha": "",
-        "size": 628
+        "size": 635
       },
       {
         "name": "2_Incident_Response.md",
         "path": "Defensive-Ops/2_Incident_Response.md",
         "type": "file",
         "sha": "",
-        "size": 639
+        "size": 646
       },
       {
         "name": "3_Forensics.md",
         "path": "Defensive-Ops/3_Forensics.md",
         "type": "file",
         "sha": "",
-        "size": 630
+        "size": 637
       },
       {
         "name": "README.md",
@@ -133,21 +133,21 @@
         "path": "Foundations/1_CIA_And_Risk.md",
         "type": "file",
         "sha": "",
-        "size": 646
+        "size": 653
       },
       {
         "name": "2_STRIDE_And_Threat_Modeling.md",
         "path": "Foundations/2_STRIDE_And_Threat_Modeling.md",
         "type": "file",
         "sha": "",
-        "size": 640
+        "size": 647
       },
       {
         "name": "3_Controls_And_Physical.md",
         "path": "Foundations/3_Controls_And_Physical.md",
         "type": "file",
         "sha": "",
-        "size": 571
+        "size": 572
       },
       {
         "name": "README.md",
@@ -169,7 +169,7 @@
         "path": "GRC/1_NIST_ISO_And_ATTCK.md",
         "type": "file",
         "sha": "",
-        "size": 640
+        "size": 647
       },
       {
         "name": "README.md",
@@ -191,14 +191,14 @@
         "path": "Identity/1_OAuth_OIDC_SAML.md",
         "type": "file",
         "sha": "",
-        "size": 711
+        "size": 718
       },
       {
         "name": "2_Zero_Trust.md",
         "path": "Identity/2_Zero_Trust.md",
         "type": "file",
         "sha": "",
-        "size": 660
+        "size": 667
       },
       {
         "name": "README.md",
@@ -220,7 +220,7 @@
         "path": "Labs/1_Paths.md",
         "type": "file",
         "sha": "",
-        "size": 609
+        "size": 616
       },
       {
         "name": "README.md",
@@ -242,7 +242,7 @@
         "path": "Offensive/1_Methodology_Lab_Only.md",
         "type": "file",
         "sha": "",
-        "size": 673
+        "size": 680
       },
       {
         "name": "2_Planning_And_Scope.md",
@@ -320,28 +320,28 @@
         "path": "Threats/1_Actors_And_Motivations.md",
         "type": "file",
         "sha": "",
-        "size": 450
+        "size": 451
       },
       {
         "name": "2_Vectors_And_Surfaces.md",
         "path": "Threats/2_Vectors_And_Surfaces.md",
         "type": "file",
         "sha": "",
-        "size": 462
+        "size": 463
       },
       {
         "name": "3_Vulnerabilities.md",
         "path": "Threats/3_Vulnerabilities.md",
         "type": "file",
         "sha": "",
-        "size": 413
+        "size": 414
       },
       {
         "name": "4_Mitigations.md",
         "path": "Threats/4_Mitigations.md",
         "type": "file",
         "sha": "",
-        "size": 421
+        "size": 422
       },
       {
         "name": "README.md",
@@ -357,6 +357,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2029
+    "size": 2030
   }
 ]
