@@ -2,84 +2,71 @@
 
 [← Back to CI/CD](../README.md)
 
-Declarative **GitOps** continuous delivery for Kubernetes. Desired state in Git (or OCI); the controller **pulls** and reconciles. Concepts: [2](../2_CI_CD_Tools.md), [OpenGitOps](https://opengitops.dev/). Progressive delivery add-on: [Argo_Rollouts/](../Argo_Rollouts/README.md).
+Argo CD is a **declarative GitOps continuous delivery** controller for **Kubernetes**. Desired application state lives in **Git** or **OCI**; Argo CD **pulls** that state, compares it to what is running, and **syncs** the cluster until they match. It is **CD**, not CI: pipelines still **build**, **test**, and **push** images; Argo CD owns **apply** and **reconcile**.
+
+This folder is a **full standalone track**. Someone who knows nothing about Argo CD should leave able to:
+
+- Explain how it works (pull GitOps, sync vs health, Projects, ApplicationSets)  
+- Install and configure it the **right** way (and name **bad** practices)  
+- Ship a simple website end-to-end from Git ([12](./12_Worked_Example_Simple_Website_GitOps.md))  
+- Choose Application vs App-of-Apps vs ApplicationSet sizing ([13](./13_Best_Practices_Topology_And_App_Sizing.md))  
+- Find **every feature class and configuration kind** Argo CD offers ([14](./14_Feature_And_Configuration_Coverage_Map.md) → catalogs 15–18)  
+
+Progressive canary/blue-green is a **separate** product: [Argo_Rollouts/](../Argo_Rollouts/README.md). Other GitOps toolkit: [Flux/](../Flux/README.md). Delivery-loop concepts stay in numbered CiCd chapters ([1](../1_Pipelines_Build_Test_Deploy.md), [8](../8_Environments_Promotion_And_Approvals.md), …).
+
+CNCF graduated. Optional version-exact field reference: [argo-cd.readthedocs.io](https://argo-cd.readthedocs.io/) (CLI man pages, per-IdP cookbooks, and upgrade changelogs stay there — see [14](./14_Feature_And_Configuration_Coverage_Map.md) section H).
+
+### Chapter structure
+
+Each numbered chapter uses the same arc: **Concepts → Advanced → Applications/use cases → References**.
+
+### Progression
+
+| Phase | Chapters | Outcome |
+|-------|----------|---------|
+| Foundation | [01](./01_What_Is_Argo_CD_And_Why_GitOps.md)–[02](./02_Core_Concepts_Applications_Sync_And_Health.md) | GitOps CD mental model; Application, sync, health, Project |
+| Internals & first ship | [03](./03_Architecture_Components_And_Multi_Cluster.md)–[04](./04_Install_Access_And_First_Application.md) | Components; install; first sync |
+| Day-to-day control | [05](./05_Manifest_Sources_Tracking_And_Immutability.md)–[06](./06_Sync_Policies_Waves_Projects_And_RBAC.md) | Sources/pins; sync policy; tenancy |
+| Scale & CI | [07](./07_ApplicationSets_App_Of_Apps_And_Scale.md)–[08](./08_Secrets_CI_Integration_And_Operations.md) | Fan-out; secrets; CI auth |
+| Judgment | [09](./09_Use_Cases_Pitfalls_And_Staff_Checklist.md)–[11](./11_Security_Tenancy_Hydrator_And_Troubleshooting.md) | Pitfalls; ownership; security; troubleshoot |
+| Hands-on & trade craft | [12](./12_Worked_Example_Simple_Website_GitOps.md)–[13](./13_Best_Practices_Topology_And_App_Sizing.md) | Website sync; good/bad; how many apps |
+| Complete catalogs | [14](./14_Feature_And_Configuration_Coverage_Map.md)–[18](./18_Platform_Ingress_HA_UI_And_Extras.md) | Every feature class; Application/sync/control-plane/sources/platform config |
+
+Suggested order: **01 → 18**. After **04**, you can pause and do **12** early if you learn best by building.
+
+### Fit in the CiCd staircase
+
+| Need | Start here |
+|------|------------|
+| What a deployment pipeline is | [CiCd/1](../1_Pipelines_Build_Test_Deploy.md) |
+| Tools map | [CiCd/2](../2_CI_CD_Tools.md) |
+| Environments / shared DEV | [CiCd/8](../8_Environments_Promotion_And_Approvals.md) |
+| Progressive traffic | [CiCd/9](../9_Progressive_Delivery_Controllers.md) · [Argo_Rollouts](../Argo_Rollouts/README.md) |
+| This product end-to-end | Chapters **01–18** below |
 
 ---
 
-## What it is
+## Chapters
 
-- Watches Git/Helm/Kustomize/OCI sources  
-- Syncs cluster resources to match desired state  
-- Shows **sync status** and **health**; optional auto-sync and self-heal (drift repair)  
-- **Application** and **ApplicationSet** (multi-cluster / multi-app generation)  
-- UI + CLI + API — common platform choice for app-centric GitOps  
+| # | File | Focus |
+|---|------|--------|
+| 01 | [What is Argo CD and why GitOps](./01_What_Is_Argo_CD_And_Why_GitOps.md) | Problem, pull model, when to choose it |
+| 02 | [Core concepts](./02_Core_Concepts_Applications_Sync_And_Health.md) | Application, target/live, sync, health, Projects |
+| 03 | [Architecture](./03_Architecture_Components_And_Multi_Cluster.md) | API server, repo-server, controller, multi-cluster |
+| 04 | [Install, access, first Application](./04_Install_Access_And_First_Application.md) | Install variants, CLI/UI, first sync |
+| 05 | [Sources and tracking](./05_Manifest_Sources_Tracking_And_Immutability.md) | Helm, Kustomize, OCI, pins, GitOps layout |
+| 06 | [Sync, waves, Projects, RBAC](./06_Sync_Policies_Waves_Projects_And_RBAC.md) | Auto-sync, prune, self-heal, tenancy |
+| 07 | [ApplicationSets and App-of-Apps](./07_ApplicationSets_App_Of_Apps_And_Scale.md) | Generators, scale patterns |
+| 08 | [Secrets, CI, day-2 ops](./08_Secrets_CI_Integration_And_Operations.md) | Secrets, CI auth, Image Updater |
+| 09 | [Use cases, pitfalls, checklist](./09_Use_Cases_Pitfalls_And_Staff_Checklist.md) | Roles, anti-patterns, review criteria |
+| 10 | [Ownership, diffing, webhooks, ops](./10_Ownership_Diffing_Webhooks_And_Observability.md) | Tracking, ignoreDifferences, metrics, DR |
+| 11 | [Security, tenancy, hydrator, troubleshooting](./11_Security_Tenancy_Hydrator_And_Troubleshooting.md) | JWT/RBAC, apps-any-ns, impersonation, playbook |
+| 12 | [Worked example: simple website](./12_Worked_Example_Simple_Website_GitOps.md) | End-to-end GitOps website sync |
+| 13 | [Best practices and app sizing](./13_Best_Practices_Topology_And_App_Sizing.md) | Good/bad; how many Applications / App-of-Apps |
+| 14 | [Feature and configuration coverage map](./14_Feature_And_Configuration_Coverage_Map.md) | Inventory of every feature class |
+| 15 | [Application and sync config catalog](./15_Application_And_Sync_Configuration_Catalog.md) | Spec fields, all sync options, hooks |
+| 16 | [Control-plane config catalog](./16_Control_Plane_Configuration_Catalog.md) | argocd-cm, rbac, secrets, cmd-params |
+| 17 | [Sources in depth](./17_Sources_Private_Repos_And_Parameters.md) | Helm/Kustomize/OCI/plugins/private repos |
+| 18 | [Platform ingress, HA, UI, extras](./18_Platform_Ingress_HA_UI_And_Extras.md) | Expose, HA, clusters, UI/notifications extras |
 
-CNCF graduated project.
-
----
-
-## Push CI vs pull GitOps
-
-```text
-CI: build + test + push image@digest (+ optionally commit manifest bump)
-Argo CD: pull manifests → apply → health
-```
-
-CI should not need standing `kubectl` admin into prod if GitOps owns apply ([2](../2_CI_CD_Tools.md)).
-
-**Image tags after CI:** common pattern is CI only **build + push**; **Argo CD Image Updater** (or Flux image automation) writes the new tag/digest into the GitOps values repo. Keep emergency manual value bumps as escape hatches, not the happy path ([24](../24_Workflow_Automation_Beyond_PR_CI.md), SemVer lanes in [12](../12_Release_Versioning_And_Changelogs.md)).
-
----
-
-## Applications for shared DEV (and optional parallels)
-
-Shared DEV, staging, and prod should be Argo CD Applications (or ApplicationSet children) — create/destroy is **Git-managed**.
-
-**Optional:** short-lived parallel DEV Applications when shared DEV contention is chronic ([8](../8_Environments_Promotion_And_Approvals.md)). Most teams only need `dev-shared` + staging + prod.
-
-```text
-usual:   apps/dev-shared/ · staging · prod
-optional: apps/dev-<task>/  → remove path → Argo prunes
-```
-
-| Mechanism | Use |
-|-----------|-----|
-| **Application per env path** | Folders for shared DEV, staging, prod (and rare `dev-<task>`) |
-| **ApplicationSet PR/SCM generator** | Only if you adopt optional per-PR previews |
-| **App-of-Apps** | One parent owns a multi-service stack for that env |
-
-Same snapshot image tag can be reused; deleting an Application does not delete the registry image. Trunk posture: [Methodologies/4](../../Methodologies/4_Branching_And_PR_Practices.md).
-
-Docs: [ApplicationSet Pull Request generator](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/generators/pull-request/).
-
----
-
-## First use (outline)
-
-1. Install Argo CD in a management cluster/namespace ([getting started](https://argo-cd.readthedocs.io/en/stable/getting_started/)).  
-2. Register a Git repo; create an Application pointing at a path/Helm chart.  
-3. Sync; confirm health.  
-4. Change image digest in Git; let auto-sync (or manual sync) roll out.  
-5. Add RBAC (SSO groups); separate prod apps with stricter sync policy.  
-
-Pin to digests in manifests ([4](../4_Artifacts_And_Registries.md)); enable signature verification patterns where you use cosign ([6](../6_Supply_Chain_And_Signing.md)).
-
----
-
-## Pitfalls
-
-| Pitfall | Better |
-|---------|--------|
-| Manual kubectl drift as normal | Self-heal or forbid UI-only edits |
-| Secrets in plain Git | External secrets / sealed + [13](../13_Config_Secrets_And_Env_Parity.md) |
-| Auto-sync without policies | Sync windows, manual for prod if required |
-| Hand-built namespaces for any env | Application in Git + prune on remove |
-| Parallel DEVs as the default platform | Shared DEV first; parallels only when needed ([8](../8_Environments_Promotion_And_Approvals.md)) |
-| Deleting an Application expecting the image gone | Image stays in registry; only cluster desired state is removed |
-
-## Further reading
-
-- [Argo CD documentation](https://argo-cd.readthedocs.io/)  
-- [ApplicationSet Pull Request generator](https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/generators/pull-request/)  
-- [OpenGitOps principles](https://opengitops.dev/)  
-- Parallel DEV pattern (optional): [8](../8_Environments_Promotion_And_Approvals.md)  
+Start: [01 — What is Argo CD and why GitOps](./01_What_Is_Argo_CD_And_Why_GitOps.md).

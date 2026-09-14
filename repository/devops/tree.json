@@ -256,11 +256,137 @@
         "sha": "",
         "children": [
           {
+            "name": "01_What_Is_Argo_CD_And_Why_GitOps.md",
+            "path": "CiCd/Argo_CD/01_What_Is_Argo_CD_And_Why_GitOps.md",
+            "type": "file",
+            "sha": "",
+            "size": 6120
+          },
+          {
+            "name": "02_Core_Concepts_Applications_Sync_And_Health.md",
+            "path": "CiCd/Argo_CD/02_Core_Concepts_Applications_Sync_And_Health.md",
+            "type": "file",
+            "sha": "",
+            "size": 6319
+          },
+          {
+            "name": "03_Architecture_Components_And_Multi_Cluster.md",
+            "path": "CiCd/Argo_CD/03_Architecture_Components_And_Multi_Cluster.md",
+            "type": "file",
+            "sha": "",
+            "size": 5743
+          },
+          {
+            "name": "04_Install_Access_And_First_Application.md",
+            "path": "CiCd/Argo_CD/04_Install_Access_And_First_Application.md",
+            "type": "file",
+            "sha": "",
+            "size": 6621
+          },
+          {
+            "name": "05_Manifest_Sources_Tracking_And_Immutability.md",
+            "path": "CiCd/Argo_CD/05_Manifest_Sources_Tracking_And_Immutability.md",
+            "type": "file",
+            "sha": "",
+            "size": 6298
+          },
+          {
+            "name": "06_Sync_Policies_Waves_Projects_And_RBAC.md",
+            "path": "CiCd/Argo_CD/06_Sync_Policies_Waves_Projects_And_RBAC.md",
+            "type": "file",
+            "sha": "",
+            "size": 5901
+          },
+          {
+            "name": "07_ApplicationSets_App_Of_Apps_And_Scale.md",
+            "path": "CiCd/Argo_CD/07_ApplicationSets_App_Of_Apps_And_Scale.md",
+            "type": "file",
+            "sha": "",
+            "size": 5920
+          },
+          {
+            "name": "08_Secrets_CI_Integration_And_Operations.md",
+            "path": "CiCd/Argo_CD/08_Secrets_CI_Integration_And_Operations.md",
+            "type": "file",
+            "sha": "",
+            "size": 6183
+          },
+          {
+            "name": "09_Use_Cases_Pitfalls_And_Staff_Checklist.md",
+            "path": "CiCd/Argo_CD/09_Use_Cases_Pitfalls_And_Staff_Checklist.md",
+            "type": "file",
+            "sha": "",
+            "size": 6907
+          },
+          {
+            "name": "10_Ownership_Diffing_Webhooks_And_Observability.md",
+            "path": "CiCd/Argo_CD/10_Ownership_Diffing_Webhooks_And_Observability.md",
+            "type": "file",
+            "sha": "",
+            "size": 7155
+          },
+          {
+            "name": "11_Security_Tenancy_Hydrator_And_Troubleshooting.md",
+            "path": "CiCd/Argo_CD/11_Security_Tenancy_Hydrator_And_Troubleshooting.md",
+            "type": "file",
+            "sha": "",
+            "size": 8851
+          },
+          {
+            "name": "12_Worked_Example_Simple_Website_GitOps.md",
+            "path": "CiCd/Argo_CD/12_Worked_Example_Simple_Website_GitOps.md",
+            "type": "file",
+            "sha": "",
+            "size": 7025
+          },
+          {
+            "name": "13_Best_Practices_Topology_And_App_Sizing.md",
+            "path": "CiCd/Argo_CD/13_Best_Practices_Topology_And_App_Sizing.md",
+            "type": "file",
+            "sha": "",
+            "size": 7680
+          },
+          {
+            "name": "14_Feature_And_Configuration_Coverage_Map.md",
+            "path": "CiCd/Argo_CD/14_Feature_And_Configuration_Coverage_Map.md",
+            "type": "file",
+            "sha": "",
+            "size": 11918
+          },
+          {
+            "name": "15_Application_And_Sync_Configuration_Catalog.md",
+            "path": "CiCd/Argo_CD/15_Application_And_Sync_Configuration_Catalog.md",
+            "type": "file",
+            "sha": "",
+            "size": 8248
+          },
+          {
+            "name": "16_Control_Plane_Configuration_Catalog.md",
+            "path": "CiCd/Argo_CD/16_Control_Plane_Configuration_Catalog.md",
+            "type": "file",
+            "sha": "",
+            "size": 6026
+          },
+          {
+            "name": "17_Sources_Private_Repos_And_Parameters.md",
+            "path": "CiCd/Argo_CD/17_Sources_Private_Repos_And_Parameters.md",
+            "type": "file",
+            "sha": "",
+            "size": 7123
+          },
+          {
+            "name": "18_Platform_Ingress_HA_UI_And_Extras.md",
+            "path": "CiCd/Argo_CD/18_Platform_Ingress_HA_UI_And_Extras.md",
+            "type": "file",
+            "sha": "",
+            "size": 8163
+          },
+          {
             "name": "README.md",
             "path": "CiCd/Argo_CD/README.md",
             "type": "file",
             "sha": "",
-            "size": 4074
+            "size": 6128
           }
         ]
       },
@@ -275,7 +401,7 @@
             "path": "CiCd/Argo_Rollouts/README.md",
             "type": "file",
             "sha": "",
-            "size": 2415
+            "size": 9932
           }
         ]
       },
@@ -623,7 +749,7 @@
         "path": "CiCd/README.md",
         "type": "file",
         "sha": "",
-        "size": 9254
+        "size": 9306
       }
     ]
   },
