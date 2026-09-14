@@ -15,6 +15,8 @@
 | OIDC missing on fork | Fork secrets setting | [13](./13_OIDC_And_Cloud_Federation.md) |
 | Cache weirdness | Bad key; corrupt cache | [09](./09_Caches_Workspaces_And_Artifacts.md) |
 | Deploy skipped | filters / missing approval | [08](./08_Workflows_Requires_Filters_Matrix_And_Triggers.md), [15](./15_Deployments_Approvals_And_Markers.md) |
+| Auto-rollback never fires | No rollback pipeline / GitHub App / validation misconfig | [15](./15_Deployments_Approvals_And_Markers.md) |
+| Policy rejects config | Org config policies | [16](./16_Security_Permissions_SSO_And_Policies.md) |
 | Runner job pending | resource_class mismatch | [07](./07_Self_Hosted_Runners.md) |
 
 ---
@@ -38,6 +40,7 @@
 - Runners owned/patched if used; classes isolated by trust  
 - SSO/roles considered; fork secret policy explicit  
 - Cloud vs Server choice documented  
+- One release-gating model chosen (approval vs Smart Deployments vs release agent)  
 - Rollback / previous digest path known  
 
 ---

@@ -18,7 +18,7 @@ Use this map to see **which CircleCI feature classes exist** and **where they ar
 |---------|---------|
 | What CircleCI is; Cloud vs Server | [01](./01_What_Is_CircleCI.md) |
 | Org / project / VCS | [02](./02_Organization_Project_And_VCS.md) |
-| Permissions / SSO / policies / IP ranges | [16](./16_Security_Permissions_SSO_And_Policies.md) |
+| Permissions / SSO / **config policies (Scale+)** / IP ranges | [16](./16_Security_Permissions_SSO_And_Policies.md) |
 | Plans / migrate / integrations extras | [24](./24_Integrations_Migrate_Plans_And_Extras.md) |
 | Server / CLI / API | [18](./18_Server_CLI_API_And_Toolkit.md) |
 
@@ -26,8 +26,8 @@ Use this map to see **which CircleCI feature classes exist** and **where they ar
 
 | Feature | Chapter |
 |---------|---------|
-| Managed executors / resource classes | [06](./06_Managed_Executors_And_Resource_Classes.md) |
-| Self-hosted runners | [07](./07_Self_Hosted_Runners.md) |
+| Managed executors / resource classes / ARM / GPU / iOS | [06](./06_Managed_Executors_And_Resource_Classes.md) |
+| Self-hosted runners / **Runner Provisioner (preview)** | [07](./07_Self_Hosted_Runners.md) |
 
 ### C. Config & orchestration
 
@@ -41,7 +41,7 @@ Use this map to see **which CircleCI feature classes exist** and **where they ar
 | Orbs | [10](./10_Orbs_Use_And_Author_Literacy.md) |
 | Reusable config | [11](./11_Reusable_Config_Commands_Executors_Parameters.md) |
 | Dynamic config | [14](./14_Dynamic_Config_And_Continuation.md) |
-| Deployments / approvals / markers | [15](./15_Deployments_Approvals_And_Markers.md) |
+| Deployments / approvals / markers / **Smart Deployments** / release agent | [15](./15_Deployments_Approvals_And_Markers.md) |
 
 ### D. Security & identity
 
@@ -67,6 +67,9 @@ Use this map to see **which CircleCI feature classes exist** and **where they ar
 | Every orb in the registry | Pin and read the orb you adopt |
 | Every Server operator runbook | Use versioned Server docs |
 | Every cloud deploy how-to | Start from deploy guide for that target |
+| Smart Deployments validation field encyclopedia | Release validation reference |
+| Every Server operator runbook version | Pin your Server 4.x docs |
+| Runner Provisioner Helm/KubeVirt encyclopedia | Runner Provisioner guide (preview) |
 
 ---
 

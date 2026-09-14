@@ -15,7 +15,7 @@ Someone who knows nothing about CircleCI or CI/CD should leave able to:
 - Author jobs, workflows, executors; use orbs and reusable config safely  
 - Choose managed executors vs self-hosted runners  
 - Use contexts, OIDC, caches/workspaces/artifacts, dynamic config  
-- Deploy with approval holds; recognize insights, policies, Server  
+- Deploy with approval holds or Smart Deployments; recognize insights, policies, Server  
 - Find feature classes in the catalogs  
 
 ### Chapter structure
@@ -48,7 +48,7 @@ Suggested order: **01 → 24**. After **05**, jump to **19** if you learn by bui
 | 04 | [Config mental model](./04_Config_Mental_Model_Jobs_Steps_Workflows.md) | workflows → jobs → steps |
 | 05 | [Templates and first config.yml](./05_Templates_And_First_Config_Yml.md) | Hello world and shapes |
 | 06 | [Managed executors](./06_Managed_Executors_And_Resource_Classes.md) | Docker/machine/macOS/Windows; resource_class |
-| 07 | [Self-hosted runners](./07_Self_Hosted_Runners.md) | Machine + container runners |
+| 07 | [Self-hosted runners](./07_Self_Hosted_Runners.md) | Machine + container runners; Runner Provisioner |
 | 08 | [Workflows and triggers](./08_Workflows_Requires_Filters_Matrix_And_Triggers.md) | requires; filters; matrix; schedules |
 | 09 | [Caches, workspaces, artifacts](./09_Caches_Workspaces_And_Artifacts.md) | Speed and handoff |
 | 10 | [Orbs](./10_Orbs_Use_And_Author_Literacy.md) | Registry/inline/URL orbs; pin versions |
@@ -56,7 +56,7 @@ Suggested order: **01 → 24**. After **05**, jump to **19** if you learn by bui
 | 12 | [Contexts and secrets](./12_Contexts_Env_Vars_And_Secrets.md) | Shared secrets; env layers |
 | 13 | [OIDC](./13_OIDC_And_Cloud_Federation.md) | Short-lived cloud auth |
 | 14 | [Dynamic config](./14_Dynamic_Config_And_Continuation.md) | Setup workflows; continuation |
-| 15 | [Deployments](./15_Deployments_Approvals_And_Markers.md) | Hold/approve; markers; targets |
+| 15 | [Deployments](./15_Deployments_Approvals_And_Markers.md) | Approvals; markers; Smart Deployments; release agent |
 | 16 | [Security and access](./16_Security_Permissions_SSO_And_Policies.md) | IP ranges; SSO; config policies |
 | 17 | [Insights and optimize](./17_Insights_Test_Splitting_And_Optimize.md) | Insights; parallelism; usage |
 | 18 | [Server, CLI, API](./18_Server_CLI_API_And_Toolkit.md) | Self-managed; CLI; API |

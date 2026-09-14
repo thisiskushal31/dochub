@@ -27,7 +27,11 @@ Set up SSO and group mapping so IdP groups become CircleCI access. MFA for users
 
 ### Config policies
 
-Policy-as-code over configs and sometimes runners/contexts — confirm which plan includes it before promising.
+Policy-as-code (Rego/OPA-style workflows via CircleCI CLI `policy` commands) evaluates project configs against org policies when enabled.
+
+Documented availability includes **Scale** plan on Cloud and **Server v4.2+** — confirm before promising. Example use: restrict which **projects** may use a given self-hosted **runner resource class**. Policies can also touch contexts — see policy management guides.
+
+Enable policy evaluation for the organization, keep policies in a reviewed repo, and test with the CLI before enforcing.
 
 ### Site-to-site / networking
 
@@ -55,3 +59,4 @@ Hybrid connectivity docs exist for private network patterns — use with runners
 - [Roles and permissions](https://circleci.com/docs/guides/permissions-authentication/roles-and-permissions-overview/)  
 - [SSO overview](https://circleci.com/docs/guides/permissions-authentication/sso-overview/)  
 - [Config policies overview](https://circleci.com/docs/guides/config-policies/config-policy-management-overview/)  
+- [Config policies for self-hosted runner](https://circleci.com/docs/guides/config-policies/config-policies-for-self-hosted-runner/)  

@@ -36,8 +36,18 @@ jobs:
 
 - Multiple images → primary + service containers (DBs).  
 - **Remote Docker** / machine when you need to build images.  
-- Private images need registry auth.  
-- ARM and CUDA images exist for specialized workloads.
+- Private images need registry auth (OIDC to ECR/GAR preferred — [13](./13_OIDC_And_Cloud_Federation.md)).  
+
+### Specialized managed compute
+
+| Need | Docs angle |
+|------|------------|
+| **ARM** Linux VMs | Arm VM execution / resource classes |
+| **CUDA / GPU** | Linux CUDA images; Windows GPU executor where offered |
+| **iOS** | macOS executor + codesigning guides |
+| **Android** | Android machine images / support policy |
+
+Confirm current image names and resource classes in execution-managed docs — they rotate under support policies.
 
 ### SSH into jobs
 
@@ -68,3 +78,6 @@ If you need VPC residency or custom hardware → runners ([07](./07_Self_Hosted_
 - [Using Docker](https://circleci.com/docs/guides/execution-managed/using-docker/)  
 - [Resource class overview](https://circleci.com/docs/guides/execution-managed/resource-class-overview/)  
 - [Building Docker images](https://circleci.com/docs/guides/execution-managed/building-docker-images/)  
+- [Using ARM](https://circleci.com/docs/guides/execution-managed/using-arm/)  
+- [Using GPU](https://circleci.com/docs/guides/execution-managed/using-gpu/)  
+- [iOS codesigning](https://circleci.com/docs/guides/execution-managed/ios-codesigning/)  

@@ -11,6 +11,7 @@
 | `.circleci/config.yml` | `version`, `orbs`, `commands`, `executors`, `jobs`, `workflows`, parameters |
 | Job | executor (`docker`/`machine`/`macos`/…), `resource_class`, `steps` |
 | Workflow job entry | `requires`, `filters`, `context`, `type: approval`, matrix |
+| Release / Smart Deployments | `type: release`, release plan steps, `validation` block |
 | Project settings | env vars, advanced (fork secrets), SSH keys |
 | Contexts | org secret bundles |
 | Runners | namespace/resource_class registration + agent config |

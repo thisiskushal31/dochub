@@ -31,6 +31,8 @@ GitHub App vs older OAuth/GitHub Checks differences matter for triggers and perm
 
 Multiple pipelines / config files per project are supported for advanced layouts ([08](./08_Workflows_Requires_Filters_Matrix_And_Triggers.md), [14](./14_Dynamic_Config_And_Continuation.md)).
 
+A pipeline has a **config source** (where `.circleci/config.yml` lives) and a **checkout source** (what `checkout` pulls). On some VCS integrations these can differ; GitLab typically keeps them the same repo — see pipelines overview for your integration.
+
 Stop building / rename org-repo mappings carefully — docs cover rename and delete flows under security guides.
 
 ---
