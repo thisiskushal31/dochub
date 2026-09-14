@@ -4,15 +4,41 @@
 
 Argo CD is a **declarative GitOps continuous delivery** controller for **Kubernetes**. Desired application state lives in **Git** or **OCI**; Argo CD **pulls** that state, compares it to what is running, and **syncs** the cluster until they match. It is **CD**, not CI: pipelines still **build**, **test**, and **push** images; Argo CD owns **apply** and **reconcile**.
 
-This folder is a **full standalone track**. Someone who knows nothing about Argo CD should leave able to:
+### Argo CD vs Argo Rollouts (same cluster)
+
+Same **argoproj** family, **two separate products** — two installs, two controllers, two jobs. Installing Argo CD does **not** install Rollouts (and the reverse is also true).
+
+| | **Argo CD** | **Argo Rollouts** |
+|--|-------------|-------------------|
+| **Job** | Make the cluster match **Git/OCI** (desired manifests) | Make an update **safe** (canary / blue-green / analysis / abort) |
+| **Main object** | `Application` (and ApplicationSet, AppProject) | `Rollout` (and AnalysisTemplate / AnalysisRun, …) |
+| **Watches** | Git/OCI vs live cluster for *many* kinds of YAML | `Rollout` resources (ignores ordinary Deployments) |
+| **Typical question it answers** | “Is prod what Git says?” | “Should this new version get more traffic — or abort?” |
+
+**When both run in the same cluster, individual roles:**
+
+```text
+CI builds image@digest
+  → commit digest into GitOps repo
+      → Argo CD syncs YAML (including a Rollout + Services + AnalysisTemplates)
+          → Argo Rollouts controller sees the new Rollout pod template
+              → shifts traffic / runs analysis / promote or abort
+```
+
+- **Argo CD** owns *whether* and *when* the desired Rollout manifest (image digest, steps, templates) is applied from Git. It does not implement canary weights or metric abort.  
+- **Argo Rollouts** owns *how* pods and traffic move after that desired state is already on the cluster. It does not replace Git as source of truth.  
+- **Together:** GitOps + progressive delivery. **Argo CD alone:** sync Deployments (or Rollouts that only roll) without progressive controllers. **Rollouts alone:** progressive delivery without GitOps (kubectl/Helm) — possible, less common in platforms.  
+- **Neither replaces CI** (build/test/push) or **feature flags** (in-process behavior). Depth: chapters here · [Argo_Rollouts/](../Argo_Rollouts/README.md).
+
+Other GitOps toolkit: [Flux/](../Flux/README.md). Delivery-loop concepts: [1](../1_Pipelines_Build_Test_Deploy.md), [8](../8_Environments_Promotion_And_Approvals.md), [9](../9_Progressive_Delivery_Controllers.md).
+
+This folder is a **standalone deep dive**. Someone who knows nothing about Argo CD should leave able to:
 
 - Explain how it works (pull GitOps, sync vs health, Projects, ApplicationSets)  
 - Install and configure it the **right** way (and name **bad** practices)  
 - Ship a simple website end-to-end from Git ([12](./12_Worked_Example_Simple_Website_GitOps.md))  
 - Choose Application vs App-of-Apps vs ApplicationSet sizing ([13](./13_Best_Practices_Topology_And_App_Sizing.md))  
 - Find **every feature class and configuration kind** Argo CD offers ([14](./14_Feature_And_Configuration_Coverage_Map.md) → catalogs 15–18)  
-
-Progressive canary/blue-green is a **separate** product: [Argo_Rollouts/](../Argo_Rollouts/README.md). Other GitOps toolkit: [Flux/](../Flux/README.md). Delivery-loop concepts stay in numbered CiCd chapters ([1](../1_Pipelines_Build_Test_Deploy.md), [8](../8_Environments_Promotion_And_Approvals.md), …).
 
 CNCF graduated. Optional version-exact field reference: [argo-cd.readthedocs.io](https://argo-cd.readthedocs.io/) (CLI man pages, per-IdP cookbooks, and upgrade changelogs stay there — see [14](./14_Feature_And_Configuration_Coverage_Map.md) section H).
 

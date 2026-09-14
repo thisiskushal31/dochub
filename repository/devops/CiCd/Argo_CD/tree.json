@@ -4,7 +4,7 @@
     "path": "01_What_Is_Argo_CD_And_Why_GitOps.md",
     "type": "file",
     "sha": "",
-    "size": 6120
+    "size": 6124
   },
   {
     "name": "02_Core_Concepts_Applications_Sync_And_Health.md",
@@ -60,7 +60,7 @@
     "path": "09_Use_Cases_Pitfalls_And_Staff_Checklist.md",
     "type": "file",
     "sha": "",
-    "size": 6907
+    "size": 6903
   },
   {
     "name": "10_Ownership_Diffing_Webhooks_And_Observability.md",
@@ -95,7 +95,7 @@
     "path": "14_Feature_And_Configuration_Coverage_Map.md",
     "type": "file",
     "sha": "",
-    "size": 11918
+    "size": 11809
   },
   {
     "name": "15_Application_And_Sync_Configuration_Catalog.md",
@@ -130,6 +130,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 6128
+    "size": 7946
   }
 ]

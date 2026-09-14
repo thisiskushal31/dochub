@@ -4,15 +4,15 @@
 
 ---
 
-## 1. Concepts — how to use this chapter
+## 1. Concepts
 
-Argo CD’s upstream docs are large (user guide, operator manual, ApplicationSet, upgrades, developer guide). This track aims for **operator literacy on every feature class** and **every configuration kind**. Fields and flags evolve by version — tables here name the *surface*; pin your version and confirm exact keys in References when implementing.
+Argo CD’s upstream docs are large (user guide, operator manual, ApplicationSet, upgrades, developer guide). These chapters cover **operator literacy across the feature surface** and **configuration kinds**. Fields and flags evolve by version — tables here name the surface; pin your version and confirm exact keys in References when implementing.
 
-**Out of scope for handbook prose (intentionally):** contributing to Argo CD itself, full CLI man pages line-by-line, every SSO vendor click-path. Those appear in the map as “official only” with a pointer — you still know *that the feature exists* and *when to use it*.
+**Outside handbook depth:** contributing to Argo CD itself, full CLI man pages line-by-line, every SSO vendor click-path. Those appear in the map as “official only” with a pointer — you still know *that the feature exists* and *when to use it*.
 
-### Learning contract
+### What you should be able to do
 
-After **01–18**, you should be able to:
+After these chapters, you should be able to:
 
 - Explain and operate every major feature area below  
 - Know which ConfigMap/Secret/CRD holds a setting  
@@ -21,7 +21,7 @@ After **01–18**, you should be able to:
 
 ---
 
-## 2. Advanced concepts — complete inventory
+## 2. Advanced concepts — feature inventory
 
 ### A. Core delivery objects
 
@@ -122,16 +122,16 @@ List · Cluster · Git (directories/files) · OCI · SCM Provider · Pull Reques
 | Argo Rollouts | [Argo_Rollouts](../Argo_Rollouts/README.md) |
 | OpenGitOps posture | [01](./01_What_Is_Argo_CD_And_Why_GitOps.md) |
 
-### H. Official-only (know it exists)
+### H. Deeper upstream essays
 
-| Area | Why not duplicated here |
-|------|-------------------------|
+| Area | Notes |
+|------|-------|
 | Full `argocd` CLI command reference | Huge; version-specific — use `--help` + official commands docs |
 | Per-IdP cookbooks (Auth0, Okta, Keycloak, …) | Same OIDC/Dex pattern; vendor UIs change |
-| Every notification **service** YAML (Slack, Teams, PagerDuty, …) | Same triggers/templates model — catalogued as a class in [18](./18_Platform_Ingress_HA_UI_And_Extras.md) |
-| Every **from→to** upgrade changelog | Always read upstream for *your* pair |
-| Developer guide / releasing Argo CD / e2e internals | Not operator delivery literacy |
-| `security_considerations.md` essay-length CVE history | Security model + practices covered in [11](./11_Security_Tenancy_Hydrator_And_Troubleshooting.md); CVE detail stays upstream |
+| Per-notification-service YAML (Slack, Teams, PagerDuty, …) | Same triggers/templates model — class covered in [18](./18_Platform_Ingress_HA_UI_And_Extras.md) |
+| Per–version-pair upgrade changelogs | Always read upstream for *your* from→to pair |
+| Developer guide / releasing Argo CD / e2e internals | Contributor process, not day-2 operator literacy |
+| Long CVE-history essays | Security model + practices in [11](./11_Security_Tenancy_Hydrator_And_Troubleshooting.md); CVE detail stays upstream |
 
 ---
 

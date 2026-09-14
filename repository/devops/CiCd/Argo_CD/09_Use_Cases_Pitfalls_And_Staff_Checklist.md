@@ -93,7 +93,7 @@ When reviewing an Argo CD installation or a GitOps change:
 
 ---
 
-## How this track maps to the CiCd staircase
+## Where this sits on the CiCd staircase
 
 | Floor | Link |
 |-------|------|

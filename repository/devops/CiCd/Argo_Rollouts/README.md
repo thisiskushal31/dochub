@@ -2,184 +2,85 @@
 
 [← Back to CI/CD](../README.md)
 
-**This folder is the Argo Rollouts primer** (Kubernetes **progressive delivery** controller). Strategy patterns: [3](../3_Deployment_Strategies.md). Controller comparison: [9](../9_Progressive_Delivery_Controllers.md). GitOps sibling that usually owns the desired image: [Argo_CD/](../Argo_CD/README.md). Flux-side progressive option: Flagger ([9](../9_Progressive_Delivery_Controllers.md), [Flux/](../Flux/README.md)).
+Argo Rollouts is a Kubernetes **progressive delivery** controller and set of CRDs. It replaces (or references) a Deployment when you need **blue-green**, **canary**, **metric analysis**, **abort**, and optional **traffic shaping** — not only rolling updates with readiness probes.
 
-CNCF project. Docs: [argoproj.github.io/argo-rollouts](https://argoproj.github.io/argo-rollouts/) · [argo-rollouts.readthedocs.io](https://argo-rollouts.readthedocs.io/).
+### Argo Rollouts vs Argo CD (same cluster)
 
----
+Same **argoproj** family, **two separate products** — two installs, two controllers, two jobs. Installing Argo CD does **not** install Rollouts (and the reverse is also true).
 
-## What it is
+| | **Argo CD** | **Argo Rollouts** |
+|--|-------------|-------------------|
+| **Job** | Make the cluster match **Git/OCI** (desired manifests) | Make an update **safe** (canary / blue-green / analysis / abort) |
+| **Main object** | `Application` (and ApplicationSet, AppProject) | `Rollout` (and AnalysisTemplate / AnalysisRun, …) |
+| **Watches** | Git/OCI vs live cluster for *many* kinds of YAML | `Rollout` resources (ignores ordinary Deployments) |
+| **Typical question it answers** | “Is prod what Git says?” | “Should this new version get more traffic — or abort?” |
 
-A Kubernetes **controller + CRDs** that add blue-green, canary, metric analysis, and progressive promotion/abort on top of ReplicaSets. A **`Rollout`** is the workload object teams use instead of a plain `Deployment` when rolling updates are not enough (no fine traffic control, weak automated abort, readiness-only safety).
-
-| Concept | Meaning |
-|---------|---------|
-| **Rollout** | Drop-in Deployment-shaped workload with `canary` / `blueGreen` strategies |
-| **AnalysisTemplate** | Reusable “how to measure success” (queries, frequency, pass/fail) |
-| **ClusterAnalysisTemplate** | Same, cluster-scoped |
-| **AnalysisRun** | One execution of a template → Successful / Failed / Inconclusive |
-| **Experiment** | Short-lived parallel ReplicaSets (e.g. baseline vs canary) for comparison |
-| **trafficRouting** | Optional mesh/ingress integration for fine-grained weights (Istio, NGINX, ALB, Gateway API plugins, …) |
-
-Without traffic routing, canary `setWeight` is a **best-effort replica ratio**. With traffic routing, weight can be a true traffic percentage.
-
-Rollouts does **not** require Argo CD — it is self-contained — but the usual delivery path is: CI publishes digest → GitOps updates the Rollout → Rollouts shifts traffic + analysis.
-
----
-
-## When to pick Argo Rollouts
-
-| Situation | Lean toward |
-|-----------|-------------|
-| Kubernetes + need metric-gated canary / blue-green | **Argo Rollouts** (or Flagger) |
-| Already on Argo CD GitOps | Rollouts as the progressive layer |
-| Flux + keep native Deployments | Flagger ([9](../9_Progressive_Delivery_Controllers.md)) |
-| Ephemeral PR preview environments | Not Rollouts — Argo CD ApplicationSet PR generator / similar |
-| Multi-day “preview stays up for a week” experiments | Prefer flags ([Unleash/](../Unleash/README.md)) or rethink; Rollouts assumes **brief** progressive windows |
-| Shared-resource / queue workers that cannot run two versions | Start with **blue-green** or fix app compatibility first |
-| Non-Kubernetes primary runtime | Not Rollouts — [18](../18_VM_MIG_And_Host_Based_Deploy.md) / host strategies ([3](../3_Deployment_Strategies.md)) |
-
-Upstream guidance: start with **blue-green** (simpler, works without a traffic manager), then canaries once metrics and app compatibility are solid.
-
----
-
-## Push CI vs progressive CD
+**When both run in the same cluster, individual roles:**
 
 ```text
-CI (Actions / GitLab / Jenkins / …):
-  build → test → push image@digest
-  (+ GitOps commit / Image Updater)
-
-GitOps (often Argo CD):
-  sync Rollout + Services + AnalysisTemplates
-
-Argo Rollouts:
-  new ReplicaSet → steps / blue-green switch
-  → AnalysisRun → promote stable | abort to previous stable
+CI builds image@digest
+  → commit digest into GitOps repo
+      → Argo CD syncs YAML (including a Rollout + Services + AnalysisTemplates)
+          → Argo Rollouts controller sees the new Rollout pod template
+              → shifts traffic / runs analysis / promote or abort
 ```
 
-CI should not “sleep and curl once” as a substitute for AnalysisRuns ([5](../5_Verify_Rollback_And_Synthetic_Tests.md)).
+- **Argo CD** owns *whether* and *when* the desired Rollout manifest (image digest, steps, templates) is applied from Git. It does not implement canary weights or metric abort.  
+- **Argo Rollouts** owns *how* pods and traffic move after that desired state is already on the cluster. It does not replace Git as source of truth.  
+- **Together:** GitOps + progressive delivery. **Argo CD alone:** sync Deployments (or Rollouts that only roll) without progressive controllers. **Rollouts alone:** progressive delivery without GitOps (kubectl/Helm) — possible, less common in platforms.  
+- **Neither replaces CI** (build/test/push) or **feature flags** (in-process behavior). Depth: chapters here · [Argo_CD/](../Argo_CD/README.md).
+
+Flux-side progressive option: Flagger ([9](../9_Progressive_Delivery_Controllers.md), [Flux/](../Flux/README.md)). Strategy patterns: [3](../3_Deployment_Strategies.md). Controller comparison: [9](../9_Progressive_Delivery_Controllers.md).
+
+This folder is a **standalone deep dive** (same depth bar as [Argo_CD/](../Argo_CD/README.md)). Someone who knows nothing about Rollouts should leave able to:
+
+- Explain progressive delivery vs plain Deployments and vs feature flags  
+- Install the controller and ship a first blue-green / canary  
+- Wire analysis, traffic providers, and GitOps (usually with Argo CD)  
+- Name good vs bad practices and when *not* to use Rollouts  
+- Find **every feature class and configuration kind** Rollouts offers ([14](./14_Feature_And_Configuration_Coverage_Map.md))  
+
+CNCF project. Optional version-exact reference: [argoproj.github.io/argo-rollouts](https://argoproj.github.io/argo-rollouts/) · [argo-rollouts.readthedocs.io](https://argo-rollouts.readthedocs.io/).
+
+### Chapter structure
+
+Each numbered chapter: **Concepts → Advanced → Applications/use cases → References**.
+
+### Progression
+
+| Phase | Chapters | Outcome |
+|-------|----------|---------|
+| Foundation | [01](./01_What_Is_Argo_Rollouts_And_Progressive_Delivery.md)–[03](./03_Architecture_And_Controller.md) | Why PD; CRDs; how the controller works |
+| First ship | [04](./04_Install_Plugin_Dashboard_And_First_Rollout.md) | Install; CLI; dashboard; first Rollout |
+| Strategies | [05](./05_Blue_Green_Strategy.md)–[06](./06_Canary_Strategy_And_Steps.md) | Blue-green and canary in depth |
+| Traffic & analysis | [07](./07_Traffic_Management.md)–[08](./08_Analysis_And_Metric_Providers.md) | Meshes/ingress; AnalysisTemplate/Run |
+| Extra features | [09](./09_Experiments_HPA_Metadata_Restart_Rollback.md)–[11](./11_Notifications_Metrics_And_Kubectl_Plugin.md) | Experiments, HPA/VPA, GitOps, notify/CLI |
+| Craft | [12](./12_Worked_Example_Canary_A_Service.md)–[13](./13_Best_Practices_And_When_Not_To_Use.md) | Lab; good/bad |
+| Catalogs | [14](./14_Feature_And_Configuration_Coverage_Map.md)–[16](./16_Troubleshooting_And_Staff_Checklist.md) | Feature map; Rollout spec; troubleshoot |
+
+Suggested order: **01 → 16**. After **04**, you can jump to **12** if you learn by building.
 
 ---
 
-## Strategy literacy
+## Chapters
 
-| Strategy | Behavior | Notes |
-|----------|----------|-------|
-| **Blue-green** | New version up on preview; active stays on stable until promote | Works without traffic manager; good for queue/DB workers that cannot split live traffic |
-| **Canary (basic)** | `setWeight` + `pause` (+ optional analysis) | Without mesh/ingress: weight ≈ replica ratio |
-| **Canary + trafficRouting** | True % / header routing via mesh or ingress | Fine-grained blast-radius control |
-| **Canary with empty steps** | Behaves like Deployment rolling update (`maxSurge` / `maxUnavailable`) | Escape hatch, not progressive delivery |
+| # | File | Focus |
+|---|------|--------|
+| 01 | [What is Argo Rollouts](./01_What_Is_Argo_Rollouts_And_Progressive_Delivery.md) | Progressive delivery; when to pick it |
+| 02 | [Core concepts](./02_Core_Concepts_Rollout_Analysis_Experiment.md) | Rollout, Analysis*, Experiment, traffic |
+| 03 | [Architecture](./03_Architecture_And_Controller.md) | Controller, ReplicaSets, Services |
+| 04 | [Install and first Rollout](./04_Install_Plugin_Dashboard_And_First_Rollout.md) | Install, plugin, dashboard |
+| 05 | [Blue-green](./05_Blue_Green_Strategy.md) | Active/preview; promote; ALB caveats |
+| 06 | [Strategies and canary steps](./06_Canary_Strategy_And_Steps.md) | Strategy shapes and canary step types |
+| 07 | [Traffic management](./07_Traffic_Management.md) | Providers catalog |
+| 08 | [Analysis](./08_Analysis_And_Metric_Providers.md) | Templates, runs, providers |
+| 09 | [Experiments and extras](./09_Experiments_HPA_Metadata_Restart_Rollback.md) | Experiment, HPA/VPA, rollback, … |
+| 10 | [GitOps, Helm, migrate](./10_GitOps_Helm_Kustomize_And_Migrating.md) | Argo CD pairing; migrate Deployment |
+| 11 | [Notifications, metrics, CLI](./11_Notifications_Metrics_And_Kubectl_Plugin.md) | Day-2 surfaces |
+| 12 | [Worked example](./12_Worked_Example_Canary_A_Service.md) | Canary a service end-to-end |
+| 13 | [Best practices](./13_Best_Practices_And_When_Not_To_Use.md) | Trade judgment |
+| 14 | [Feature coverage map](./14_Feature_And_Configuration_Coverage_Map.md) | Every feature class |
+| 15 | [Rollout spec catalog](./15_Rollout_Spec_And_Strategy_Configuration_Catalog.md) | Configuration surfaces |
+| 16 | [Troubleshooting & checklist](./16_Troubleshooting_And_Staff_Checklist.md) | Playbook + staff review |
 
-**App compatibility:** not every app can run two versions at once (shared files, exclusive locks, naive queue consumers). Confirm with owners before canaries. Do **not** put platform add-ons (cert-manager, CoreDNS, ingress controllers) on Rollouts.
-
-**Scope:** one application per cluster (controller installed where Rollouts run). Not a multi-cluster orchestrator.
-
----
-
-## Analysis (how promote/abort is decided)
-
-| Mode | Idea |
-|------|------|
-| **Background analysis** | AnalysisRun runs while canary steps advance; failure aborts |
-| **Inline / step analysis** | Explicit analysis step in the canary list |
-| **Pre-/post-promotion** (blue-green) | Checks before or after traffic cutover |
-
-Failed → abort (canary weight back / previous stable). Inconclusive → typically pause for human judgment. Built-in providers include Prometheus, Datadog, New Relic, jobs, webhooks, and others; **new** metric or traffic integrations are expected as **plugins**, not core PRs.
-
-Goal: automated promote/abort on KPIs that answer in **minutes**, not humans staring at dashboards for hours. Dry-run analysis templates before trusting production.
-
----
-
-## First use (outline)
-
-1. Install the controller in each cluster that will run Rollouts ([installation](https://argoproj.github.io/argo-rollouts/installation/)).  
-2. Install the kubectl plugin (`kubectl argo rollouts`) for status and promote/abort.  
-3. Convert a Deployment to a **Rollout** (or start fresh) with a simple **blue-green** or short canary step list ([getting started](https://argoproj.github.io/argo-rollouts/getting-started/)).  
-4. Add stable (+ canary/preview) **Services**; add `trafficRouting` only when you need fine weights.  
-5. Add an **AnalysisTemplate** against your metrics backend; attach it as background or step analysis.  
-6. Point GitOps at the Rollout manifests; ship a **digest**; watch `kubectl argo rollouts get rollout <name>`.  
-7. Practice abort and successful promote in non-prod before enabling aggressive auto-promote in prod.
-
-Illustrative canary shape (fields vary by version — follow current docs):
-
-```yaml
-# Conceptual — pin API versions from current Argo Rollouts docs
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
-metadata:
-  name: myapp
-spec:
-  replicas: 10
-  selector:
-    matchLabels:
-      app: myapp
-  template:
-    metadata:
-      labels:
-        app: myapp
-    spec:
-      containers:
-        - name: app
-          image: registry.example.com/myapp@sha256:…
-  strategy:
-    canary:
-      canaryService: myapp-canary
-      stableService: myapp-stable
-      steps:
-        - setWeight: 20
-        - pause: { duration: 10m }
-        - setWeight: 50
-        - pause: { duration: 10m }
-      analysis:
-        templates:
-          - templateName: success-rate
-        startingStep: 1
-```
-
-Pin digests in Git ([4](../4_Artifacts_And_Registries.md)). Schema overlap still needs expand/contract ([7](../7_DB_Migrations_In_Pipelines.md)).
-
----
-
-## How it fits the delivery staircase
-
-| Floor | Link |
-|-------|------|
-| Strategies | [3](../3_Deployment_Strategies.md) — patterns Rollouts implements |
-| Controllers | [9](../9_Progressive_Delivery_Controllers.md) — Rollouts vs Flagger vs flags |
-| Loop | [1](../1_Pipelines_Build_Test_Deploy.md) — progressive step after deploy |
-| Artifact | [4](../4_Artifacts_And_Registries.md) — pin digest the Rollout consumes |
-| Verify | [5](../5_Verify_Rollback_And_Synthetic_Tests.md) — analysis > sleep+curl |
-| Environments | [8](../8_Environments_Promotion_And_Approvals.md) |
-| GitOps CD | [Argo_CD/](../Argo_CD/README.md) |
-| Flags (behavior) | [Unleash/](../Unleash/README.md) — which *behavior*, not which *pods* |
-| Tools map | [2](../2_CI_CD_Tools.md) |
-
----
-
-## Pitfalls
-
-| Pitfall | Better |
-|---------|--------|
-| Canary without canary-vs-stable metrics | Version/track labels; SRE canary guidance; AnalysisTemplate that compares cohorts |
-| Analysis on noisy global SLOs | Tighten queries; A/A-test the template |
-| Manual pause forever as “production process” | Automate on metrics; pauses for experiments only |
-| Expecting fine % with 2 replicas and no mesh | Raise replica count or add trafficRouting |
-| Two apply paths (CI kubectl set image + GitOps) | One desired-state path — usually GitOps |
-| Floating `:latest` on the Rollout | Digest or immutable SemVer tag ([4](../4_Artifacts_And_Registries.md), [12](../12_Release_Versioning_And_Changelogs.md)) |
-| Multi-day preview + mid-flight hotfixes | Keep progressive windows short; use flags for long experiments |
-| Rollouts for cert-manager / ingress / CoreDNS | Leave platform add-ons on normal Deployments |
-| Skipping DB expand/contract while two versions run | Still required ([7](../7_DB_Migrations_In_Pipelines.md)) |
-| Flags *or* canaries only for high risk | Binary canary **and** behavior flags when both matter ([9](../9_Progressive_Delivery_Controllers.md)) |
-
----
-
-## Further reading
-
-- [Argo Rollouts documentation](https://argoproj.github.io/argo-rollouts/)  
-- [Concepts](https://argoproj.github.io/argo-rollouts/concepts/) · [Getting started](https://argoproj.github.io/argo-rollouts/getting-started/) · [Installation](https://argoproj.github.io/argo-rollouts/installation/)  
-- [Canary](https://argoproj.github.io/argo-rollouts/features/canary/) · [Blue-green](https://argoproj.github.io/argo-rollouts/features/bluegreen/) · [Analysis](https://argoproj.github.io/argo-rollouts/features/analysis/)  
-- [Traffic management](https://argoproj.github.io/argo-rollouts/features/traffic-management/) · [Best practices](https://argoproj.github.io/argo-rollouts/best-practices/)  
-- [Google SRE Workbook — Canarying](https://sre.google/workbook/canarying-releases/)  
-- Concept chapter: [9](../9_Progressive_Delivery_Controllers.md)  
-- GitOps CD: [Argo_CD/](../Argo_CD/README.md)  
+Start: [01](./01_What_Is_Argo_Rollouts_And_Progressive_Delivery.md).

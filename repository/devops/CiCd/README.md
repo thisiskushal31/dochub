@@ -126,7 +126,7 @@ Numbers are labels — **climb by floor table**, not by sorting `#` alone.
 | [Buildkite](./Buildkite/README.md) | You-run-agents CI |
 | [Argo CD](./Argo_CD/README.md) | GitOps CD **full track** (01–18: concepts → website lab → best practices → feature/config catalogs) |
 | [Flux](./Flux/README.md) | GitOps toolkit |
-| [Argo Rollouts](./Argo_Rollouts/README.md) | Progressive delivery |
+| [Argo Rollouts](./Argo_Rollouts/README.md) | Progressive delivery **full track** (01–16: strategies, traffic, analysis, GitOps, catalogs) |
 | [Unleash](./Unleash/README.md) | Feature flags |
 
 Pick **one** CI + the deploy adapter you need. Index: [2](./2_CI_CD_Tools.md).

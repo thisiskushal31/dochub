@@ -92,7 +92,7 @@ Many orgs run Argo CD for Kubernetes apps while **Jenkins**, host SSH, or cloud 
 | **Backend / app engineer** | You change GitOps paths or chart values; you watch Synced/Healthy; you do not need cluster-admin for routine releases |
 | **Platform / SRE** | You install and harden Argo CD; you own Projects and cluster registration |
 | **Security** | You care that prod apply rights leave CI; audit moves to Git; Projects limit destinations |
-| **SE learning delivery** | Pair with [CiCd/1](../1_Pipelines_Build_Test_Deploy.md) (loop) then this track (Kubernetes CD mechanism) |
+| **SE learning delivery** | Pair with [CiCd/1](../1_Pipelines_Build_Test_Deploy.md) (loop) then these chapters (Kubernetes CD mechanism) |
 
 **When not to force Argo CD:** non-Kubernetes primary runtimes; teams that cannot keep desired state in Git; environments where a pull reconciler is forbidden by policy (rare — then document the push path explicitly).
 

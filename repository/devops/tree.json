@@ -260,7 +260,7 @@
             "path": "CiCd/Argo_CD/01_What_Is_Argo_CD_And_Why_GitOps.md",
             "type": "file",
             "sha": "",
-            "size": 6120
+            "size": 6124
           },
           {
             "name": "02_Core_Concepts_Applications_Sync_And_Health.md",
@@ -316,7 +316,7 @@
             "path": "CiCd/Argo_CD/09_Use_Cases_Pitfalls_And_Staff_Checklist.md",
             "type": "file",
             "sha": "",
-            "size": 6907
+            "size": 6903
           },
           {
             "name": "10_Ownership_Diffing_Webhooks_And_Observability.md",
@@ -351,7 +351,7 @@
             "path": "CiCd/Argo_CD/14_Feature_And_Configuration_Coverage_Map.md",
             "type": "file",
             "sha": "",
-            "size": 11918
+            "size": 11809
           },
           {
             "name": "15_Application_And_Sync_Configuration_Catalog.md",
@@ -386,7 +386,7 @@
             "path": "CiCd/Argo_CD/README.md",
             "type": "file",
             "sha": "",
-            "size": 6128
+            "size": 7946
           }
         ]
       },
@@ -397,11 +397,123 @@
         "sha": "",
         "children": [
           {
+            "name": "01_What_Is_Argo_Rollouts_And_Progressive_Delivery.md",
+            "path": "CiCd/Argo_Rollouts/01_What_Is_Argo_Rollouts_And_Progressive_Delivery.md",
+            "type": "file",
+            "sha": "",
+            "size": 3657
+          },
+          {
+            "name": "02_Core_Concepts_Rollout_Analysis_Experiment.md",
+            "path": "CiCd/Argo_Rollouts/02_Core_Concepts_Rollout_Analysis_Experiment.md",
+            "type": "file",
+            "sha": "",
+            "size": 2840
+          },
+          {
+            "name": "03_Architecture_And_Controller.md",
+            "path": "CiCd/Argo_Rollouts/03_Architecture_And_Controller.md",
+            "type": "file",
+            "sha": "",
+            "size": 2560
+          },
+          {
+            "name": "04_Install_Plugin_Dashboard_And_First_Rollout.md",
+            "path": "CiCd/Argo_Rollouts/04_Install_Plugin_Dashboard_And_First_Rollout.md",
+            "type": "file",
+            "sha": "",
+            "size": 2865
+          },
+          {
+            "name": "05_Blue_Green_Strategy.md",
+            "path": "CiCd/Argo_Rollouts/05_Blue_Green_Strategy.md",
+            "type": "file",
+            "sha": "",
+            "size": 3066
+          },
+          {
+            "name": "06_Canary_Strategy_And_Steps.md",
+            "path": "CiCd/Argo_Rollouts/06_Canary_Strategy_And_Steps.md",
+            "type": "file",
+            "sha": "",
+            "size": 7970
+          },
+          {
+            "name": "07_Traffic_Management.md",
+            "path": "CiCd/Argo_Rollouts/07_Traffic_Management.md",
+            "type": "file",
+            "sha": "",
+            "size": 3103
+          },
+          {
+            "name": "08_Analysis_And_Metric_Providers.md",
+            "path": "CiCd/Argo_Rollouts/08_Analysis_And_Metric_Providers.md",
+            "type": "file",
+            "sha": "",
+            "size": 2809
+          },
+          {
+            "name": "09_Experiments_HPA_Metadata_Restart_Rollback.md",
+            "path": "CiCd/Argo_Rollouts/09_Experiments_HPA_Metadata_Restart_Rollback.md",
+            "type": "file",
+            "sha": "",
+            "size": 3091
+          },
+          {
+            "name": "10_GitOps_Helm_Kustomize_And_Migrating.md",
+            "path": "CiCd/Argo_Rollouts/10_GitOps_Helm_Kustomize_And_Migrating.md",
+            "type": "file",
+            "sha": "",
+            "size": 2636
+          },
+          {
+            "name": "11_Notifications_Metrics_And_Kubectl_Plugin.md",
+            "path": "CiCd/Argo_Rollouts/11_Notifications_Metrics_And_Kubectl_Plugin.md",
+            "type": "file",
+            "sha": "",
+            "size": 2169
+          },
+          {
+            "name": "12_Worked_Example_Canary_A_Service.md",
+            "path": "CiCd/Argo_Rollouts/12_Worked_Example_Canary_A_Service.md",
+            "type": "file",
+            "sha": "",
+            "size": 3038
+          },
+          {
+            "name": "13_Best_Practices_And_When_Not_To_Use.md",
+            "path": "CiCd/Argo_Rollouts/13_Best_Practices_And_When_Not_To_Use.md",
+            "type": "file",
+            "sha": "",
+            "size": 2828
+          },
+          {
+            "name": "14_Feature_And_Configuration_Coverage_Map.md",
+            "path": "CiCd/Argo_Rollouts/14_Feature_And_Configuration_Coverage_Map.md",
+            "type": "file",
+            "sha": "",
+            "size": 6174
+          },
+          {
+            "name": "15_Rollout_Spec_And_Strategy_Configuration_Catalog.md",
+            "path": "CiCd/Argo_Rollouts/15_Rollout_Spec_And_Strategy_Configuration_Catalog.md",
+            "type": "file",
+            "sha": "",
+            "size": 3168
+          },
+          {
+            "name": "16_Troubleshooting_And_Staff_Checklist.md",
+            "path": "CiCd/Argo_Rollouts/16_Troubleshooting_And_Staff_Checklist.md",
+            "type": "file",
+            "sha": "",
+            "size": 3027
+          },
+          {
             "name": "README.md",
             "path": "CiCd/Argo_Rollouts/README.md",
             "type": "file",
             "sha": "",
-            "size": 9932
+            "size": 6359
           }
         ]
       },
@@ -749,7 +861,7 @@
         "path": "CiCd/README.md",
         "type": "file",
         "sha": "",
-        "size": 9306
+        "size": 9380
       }
     ]
   },
