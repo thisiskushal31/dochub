@@ -6,7 +6,7 @@
 
 Classic DevOps (Three Ways, CALMS, CI/CD definitions, DORA) comes **first**. What follows does not replace that foundation. It **extends** the same narrative with clearer operating models and newer levers. When a logo dies, keep the mindset; swap the tool row.
 
-Depth for any named product lives in linked handbook / sister homes. This file owns the **durable story**.
+Depth for any named product lives in linked handbook / related homes. This file owns the **durable story**.
 
 **Primary references (principles, not fashion):** [DORA capabilities](https://dora.dev/capabilities/) (incl. platform engineering), [DORA AI Capabilities Model](https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model), Three Ways ([IT Revolution](https://itrevolution.com/articles/the-three-ways-principles-underpinning-devops/)). Industry reports illustrate the same ideas; prefer dora.dev and the Handbook lineage when blogs disagree.
 

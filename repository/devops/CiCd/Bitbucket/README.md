@@ -4,7 +4,7 @@
 
 **Bitbucket** is Atlassian’s Git forge and collaboration product. This folder is a **standalone deep dive** into **Bitbucket Cloud** end-to-end — workspaces, repos, pull requests, branch permissions, merge checks — with **Bitbucket Pipelines** as the built-in CI/CD spine (`bitbucket-pipelines.yml`).
 
-**Bitbucket Data Center** (self-managed) is covered as brownfield literacy: same Git/PR ideas; CI is often **Bamboo** or external (Pipelines is Cloud-native). Sister tools: [GitHub_Actions/](../GitHub_Actions/README.md), [GitLab_CI/](../GitLab_CI/README.md), [Azure_DevOps/](../Azure_DevOps/README.md), [Jenkins/](../Jenkins/README.md).
+**Bitbucket Data Center** (self-managed) is covered as brownfield literacy: same Git/PR ideas; CI is often **Bamboo** or external (Pipelines is Cloud-native). Related tools: [GitHub_Actions/](../GitHub_Actions/README.md), [GitLab_CI/](../GitLab_CI/README.md), [Azure_DevOps/](../Azure_DevOps/README.md), [Jenkins/](../Jenkins/README.md).
 
 Delivery-loop concepts: [1](../1_Pipelines_Build_Test_Deploy.md), [8](../8_Environments_Promotion_And_Approvals.md), [24](../24_Workflow_Automation_Beyond_PR_CI.md).
 

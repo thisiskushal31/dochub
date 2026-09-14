@@ -67,7 +67,7 @@
     "path": "10_Secrets_Environment_And_OIDC.md",
     "type": "file",
     "sha": "",
-    "size": 2327
+    "size": 2328
   },
   {
     "name": "11_Dynamic_Pipelines_And_Pipeline_Upload.md",
@@ -81,14 +81,14 @@
     "path": "12_Deployments_And_Environments.md",
     "type": "file",
     "sha": "",
-    "size": 2925
+    "size": 2932
   },
   {
     "name": "13_Self_Hosted_Stacks_AWS_And_Kubernetes.md",
     "path": "13_Self_Hosted_Stacks_AWS_And_Kubernetes.md",
     "type": "file",
     "sha": "",
-    "size": 2431
+    "size": 2432
   },
   {
     "name": "14_Package_Registries_And_Test_Engine.md",
@@ -186,6 +186,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 5732
+    "size": 5733
   }
 ]

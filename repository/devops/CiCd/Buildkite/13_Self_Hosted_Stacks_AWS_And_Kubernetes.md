@@ -32,7 +32,7 @@ Helm install with cluster agent token and queue. Checkout and command may run in
 
 If you do not need VPC residency, prefer Buildkite hosted queues and skip this ops surface ([04](./04_Agents_Self_Hosted_And_Hosted.md)).
 
-Sister ops depth for K8s/AWS lives in Containerization / Cloud folders — this chapter is Buildkite literacy only.
+Related ops depth for K8s/AWS lives in Containerization / Cloud folders — this chapter is Buildkite literacy only.
 
 ---
 

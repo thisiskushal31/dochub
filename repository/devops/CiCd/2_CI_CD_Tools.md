@@ -31,7 +31,7 @@ Classic **push CD**: CI applies once with cluster creds.
 | Jenkins | [Jenkins/](./Jenkins/README.md) | CI/CD server; Jenkinsfile; agents |
 | GitHub Actions | [GitHub_Actions/](./GitHub_Actions/README.md) | SCM-native CI/CD |
 | GitLab CI | [GitLab_CI/](./GitLab_CI/README.md) | SCM-native CI/CD |
-| CircleCI | [CircleCI/](./CircleCI/README.md) | Hosted CI; orbs |
+| CircleCI | [CircleCI/](./CircleCI/README.md) | Full track (config.yml + executors/runners) |
 | Tekton | [Tekton/](./Tekton/README.md) | K8s-native pipelines |
 | Bitbucket | [Bitbucket/](./Bitbucket/README.md) | Full track (Cloud forge + Pipelines) |
 | Azure DevOps | [Azure_DevOps/](./Azure_DevOps/README.md) | Full track (Pipelines + suite + Azure deploy spectrum) |
@@ -70,7 +70,7 @@ Classic **push CD**: CI applies once with cluster creds.
 
 **Ops note:** Jenkins asks you to run a controller (plugins, HA, backups). GitHub-hosted Actions shifts that burden to the platform. Prefer the lower-ops default when it fits; do not abandon a working Jenkins platform for fashion alone.
 
-Sister-repo depth: [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive).
+Related-repo depth: [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive).
 
 ---
 

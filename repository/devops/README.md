@@ -40,7 +40,7 @@ Images from these sources can be downloaded into the right `Assets/` subfolder a
 2. Use `Operating-Systems/` for OS fundamentals (theory first in **Fundamentals/**), then Linux, Windows, Unix, or macOS implementation and commands
 3. Use `Languages/` when you need to read or write code (Python for automation, Go for K8s/Terraform, etc.)
 4. Jump into [`CiCd/`](./CiCd/) or [`IAC/`](./IAC/) based on your immediate needs
-5. Use `Servers/` for web tier; `Cloud/` for provider literacy; sister repos in the table below
+5. Use `Servers/` for web tier; `Cloud/` for provider literacy; related repos in the table below
 6. Use `Automation/` for workflow and orchestration patterns
 7. Reference `Observability/` and `Security/` for production operations
 8. Keep checklists and commands handy — [Commands-and-Cheatsheets](https://github.com/thisiskushal31/Commands-and-Cheatsheets)

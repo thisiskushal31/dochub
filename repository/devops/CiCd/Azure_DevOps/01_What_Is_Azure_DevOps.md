@@ -70,7 +70,7 @@ Treat classic as **brownfield literacy**, not the paved road for new work ([03](
 “DevOps in Azure” curricula often mix Cloud Shell, ARM, Terraform, Ansible, Docker, and Kubernetes with Azure DevOps. In this handbook:
 
 - **This track** = Azure DevOps product + how Pipelines deploys.
-- **Sister rooms** = deep craft of those tools ([Cloud/](../../Cloud/README.md), [IAC/](../../IAC/README.md), Containerization).
+- **Related folders** = deep craft of those tools ([Cloud/](../../Cloud/README.md), [IAC/](../../IAC/README.md), Containerization).
 
 ---
 

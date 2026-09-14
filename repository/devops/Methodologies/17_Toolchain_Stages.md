@@ -13,7 +13,7 @@ Plan → Code → Build → Test → Release → Deploy → Operate → Monitor
          ↑________________________________feedback____________|
 ```
 
-| Stage | Job | Handbook / sister home |
+| Stage | Job | Handbook / related home |
 |-------|-----|-------------------------|
 | **Plan** | Prioritize work, security/data class early | Backlog + [14 DevSecOps](./14_DevSecOps_Mindset.md) |
 | **Code** | Version control, branching, reviews | [4](./4_Branching_And_PR_Practices.md); Git in Tooling Utility |

@@ -11,7 +11,7 @@ Climb the **Methodologies staircase** first (mindset), then the **[CiCd staircas
 ## Two promises
 
 1. **Learn it here** when the topic is delivery, platforms, OS literacy, or languages-as-tools.  
-2. **Get a clear door** to a sister deep-dive when depth lives elsewhere — never a silent gap.
+2. **Get a clear door** to a related deep-dive when depth lives elsewhere — never a silent gap.
 
 ---
 

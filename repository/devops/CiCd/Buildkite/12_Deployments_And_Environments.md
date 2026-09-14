@@ -51,7 +51,7 @@ Scripts/plugins deploy to cloud, K8s, hosts, static/CDN — Buildkite does not r
 |---------------|----------------------|
 | AWS Lambda | Dedicated deploy guide |
 | Kubernetes | Deploy guide + kubectl/helm on agents |
-| Argo CD | Trigger/sync from pipeline (GitOps sister: [Argo_CD/](../Argo_CD/README.md)) |
+| Argo CD | Trigger/sync from pipeline (GitOps related track: [Argo_CD/](../Argo_CD/README.md)) |
 | Heroku | Deploy plugin/guide |
 | Generic | Deployment plugins catalog |
 

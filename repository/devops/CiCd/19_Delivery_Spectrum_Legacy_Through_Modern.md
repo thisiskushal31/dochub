@@ -37,7 +37,7 @@ Mainframe / proprietary promote
   → edge / multi-region variants of the above
 ```
 
-| Target | CiCd home | Sister depth |
+| Target | CiCd home | Related depth |
 |--------|-----------|--------------|
 | Static + CDN | [17](./17_Static_Sites_And_CDN_Deploy.md) | Servers, Networks |
 | VM / MIG / host fleet | [18](./18_VM_MIG_And_Host_Based_Deploy.md) | Automation, Cloud, Servers |

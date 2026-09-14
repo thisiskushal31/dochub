@@ -25,7 +25,7 @@ Floor 6  Amplifiers      →  platform, GitOps mindset, assisted delivery (after
 
 | Floor | Step | File | You should leave able to… |
 |-------|------|------|---------------------------|
-| **0** | Orient | [0 — Start here](./0_SE_Learning_DevOps_Start_Here.md) | Know what this repo owns vs sister doors |
+| **0** | Orient | [0 — Start here](./0_SE_Learning_DevOps_Start_Here.md) | Know what this repo owns vs related doors |
 | **1** | What DevOps is | [10 — Three Ways, CALMS, ToC](./10_Core_Principles_Three_Ways_CALMS.md) | Explain flow, feedback, learning without tool names |
 | **1** | How frameworks fit | [12 — Agile, Lean, ITSM](./12_Agile_Lean_ITSM_And_DevOps.md) | Stop tribe wars; see complementary jobs |
 | **2** | Continuous vocabulary | [13 — Continuous everything](./13_Continuous_Everything.md) | Separate CI / Delivery / Deployment correctly |

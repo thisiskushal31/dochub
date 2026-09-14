@@ -119,7 +119,7 @@ Numbers are labels — **climb by floor table**, not by sorting `#` alone.
 | [Jenkins](./Jenkins/README.md) | Classical + enterprise CI (see also [20](./20_Classical_Jenkins_Host_And_Web_Deploy.md)) |
 | [GitHub Actions](./GitHub_Actions/README.md) | Workflows on GitHub (reusable paved road; cron + SemVer promote — [24](./24_Workflow_Automation_Beyond_PR_CI.md)) |
 | [GitLab CI](./GitLab_CI/README.md) | `.gitlab-ci.yml` |
-| [CircleCI](./CircleCI/README.md) | Orbs; cloud/self-hosted |
+| [CircleCI](./CircleCI/README.md) | Full track **01–24** — Cloud config + runners (+ Server literacy) |
 | [Tekton](./Tekton/README.md) | K8s-native pipelines |
 | [Bitbucket](./Bitbucket/README.md) | Full track **01–21** — Cloud forge + Pipelines (+ Data Center literacy) |
 | [Azure DevOps](./Azure_DevOps/README.md) | Full track **01–25** — suite + Pipelines + Azure deploy spectrum + platform ops |

@@ -4,7 +4,7 @@
     "path": "0_SE_Learning_DevOps_Start_Here.md",
     "type": "file",
     "sha": "",
-    "size": 5603
+    "size": 5604
   },
   {
     "name": "1_DevOps_Culture_And_Collaboration.md",
@@ -53,21 +53,21 @@
     "path": "15_DORA_Capabilities_Map.md",
     "type": "file",
     "sha": "",
-    "size": 4680
+    "size": 4681
   },
   {
     "name": "16_Roles_Teams_And_Platforms.md",
     "path": "16_Roles_Teams_And_Platforms.md",
     "type": "file",
     "sha": "",
-    "size": 4825
+    "size": 4826
   },
   {
     "name": "17_Toolchain_Stages.md",
     "path": "17_Toolchain_Stages.md",
     "type": "file",
     "sha": "",
-    "size": 2578
+    "size": 2579
   },
   {
     "name": "18_Value_Stream_Management.md",
@@ -81,7 +81,7 @@
     "path": "19_Durable_Mindsets_And_Evolving_Toolsets.md",
     "type": "file",
     "sha": "",
-    "size": 9804
+    "size": 9805
   },
   {
     "name": "2_Practices_And_Workflows.md",
@@ -151,6 +151,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 7220
+    "size": 7221
   }
 ]

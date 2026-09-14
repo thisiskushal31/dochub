@@ -2,62 +2,69 @@
 
 [← Back to CI/CD](../README.md)
 
-Hosted CI/CD with **orbs** (reusable packages), workflows, and cloud or self-hosted runners.
+**CircleCI** is a CI/CD platform that runs automated pipelines from **configuration as code** (`.circleci/config.yml`). Jobs run on **CircleCI-managed executors** (Docker, Linux VM, macOS, Windows, …) or on **self-hosted runners**. This folder is a **standalone deep dive** into the product — Cloud and Server literacy, config/workflows/orbs, secrets/OIDC, deploy, security, insights, and tooling.
 
-Concepts: [1](../1_Pipelines_Build_Test_Deploy.md), [11](../11_Pipeline_As_Code_Runners_Caching_Matrix.md).
+Related tools: [GitHub_Actions/](../GitHub_Actions/README.md), [GitLab_CI/](../GitLab_CI/README.md), [Bitbucket/](../Bitbucket/README.md), [Buildkite/](../Buildkite/README.md), [Azure_DevOps/](../Azure_DevOps/README.md), [Jenkins/](../Jenkins/README.md).
 
----
+Delivery-loop concepts: [1](../1_Pipelines_Build_Test_Deploy.md), [8](../8_Environments_Promotion_And_Approvals.md), [11](../11_Pipeline_As_Code_Runners_Caching_Matrix.md), [24](../24_Workflow_Automation_Beyond_PR_CI.md).
 
-## Core model
+Someone who knows nothing about CircleCI or CI/CD should leave able to:
 
-| Concept | Meaning |
-|---------|---------|
-| **Config** | `.circleci/config.yml` (or dynamic config) |
-| **Job** | Steps in an executor (Docker, machine, macOS, …) |
-| **Workflow** | Orchestrates jobs (fan-out, approval jobs) |
-| **Orb** | Versioned reusable config (official/partner/community) |
-| **Context** | Shared secrets across projects |
+- Explain Cloud vs CircleCI Server and what a project/pipeline is  
+- Connect a VCS repo, add `.circleci/config.yml`, and **view** a pipeline run  
+- Author jobs, workflows, executors; use orbs and reusable config safely  
+- Choose managed executors vs self-hosted runners  
+- Use contexts, OIDC, caches/workspaces/artifacts, dynamic config  
+- Deploy with approval holds; recognize insights, policies, Server  
+- Find feature classes in the catalogs  
 
----
+### Chapter structure
 
-## Illustrative snippet
+Each numbered chapter: **Concepts → Advanced → Applications/use cases → References**.
 
-```yaml
-version: 2.1
-jobs:
-  test:
-    docker: [{ image: "cimg/node:22.11" }]
-    steps:
-      - checkout
-      - run: npm test
-workflows:
-  build:
-    jobs: [test]
-```
+### Progression
 
-Pin orb and image versions. Use contexts carefully (who can access production secrets).
+| Phase | Chapters | Outcome |
+|-------|----------|---------|
+| Foundation | [01](./01_What_Is_CircleCI.md)–[03](./03_Create_Project_Config_And_View_Pipelines.md) | Product map; org/project; first run + UI |
+| Config core | [04](./04_Config_Mental_Model_Jobs_Steps_Workflows.md)–[07](./07_Self_Hosted_Runners.md) | YAML model; templates; executors; runners |
+| Pipeline craft | [08](./08_Workflows_Requires_Filters_Matrix_And_Triggers.md)–[11](./11_Reusable_Config_Commands_Executors_Parameters.md) | Workflows; caches; orbs; reuse |
+| Security & dynamic | [12](./12_Contexts_Env_Vars_And_Secrets.md)–[15](./15_Deployments_Approvals_And_Markers.md) | Secrets; OIDC; dynamic; deploy |
+| Estate & platform | [16](./16_Security_Permissions_SSO_And_Policies.md)–[18](./18_Server_CLI_API_And_Toolkit.md) | Harden; insights; Server/CLI/API |
+| Craft & catalogs | [19](./19_Worked_Example_Build_And_Deploy.md)–[23](./23_Troubleshooting_And_Staff_Checklist.md) | Lab; practices; inventory; checklist |
+| Full surface | [24](./24_Integrations_Migrate_Plans_And_Extras.md) | Integrations; migrate; plans |
 
----
-
-## First use (outline)
-
-1. Connect the GitHub/GitLab repo to CircleCI.  
-2. Add `.circleci/config.yml` with a test job.  
-3. Enable required status checks on the VCS side.  
-4. Add deploy workflow with manual approval job for production if practicing Continuous Delivery.  
-
-Docs: [CircleCI docs](https://circleci.com/docs/).
+Suggested order: **01 → 24**. After **05**, jump to **19** if you learn by building.
 
 ---
 
-## Pitfalls
+## Chapters
 
-| Pitfall | Better |
-|---------|--------|
-| Unpinned orbs | Version pins + review orb source |
-| One context for all envs | Separate prod context + restricted teams |
+| # | File | Focus |
+|---|------|--------|
+| 01 | [What is CircleCI](./01_What_Is_CircleCI.md) | CI/CD; Cloud vs Server; product surface |
+| 02 | [Org, project, VCS](./02_Organization_Project_And_VCS.md) | Tenancy; connect GitHub/GitLab/Bitbucket |
+| 03 | [Create project and view pipelines](./03_Create_Project_Config_And_View_Pipelines.md) | First config; UI; logs |
+| 04 | [Config mental model](./04_Config_Mental_Model_Jobs_Steps_Workflows.md) | workflows → jobs → steps |
+| 05 | [Templates and first config.yml](./05_Templates_And_First_Config_Yml.md) | Hello world and shapes |
+| 06 | [Managed executors](./06_Managed_Executors_And_Resource_Classes.md) | Docker/machine/macOS/Windows; resource_class |
+| 07 | [Self-hosted runners](./07_Self_Hosted_Runners.md) | Machine + container runners |
+| 08 | [Workflows and triggers](./08_Workflows_Requires_Filters_Matrix_And_Triggers.md) | requires; filters; matrix; schedules |
+| 09 | [Caches, workspaces, artifacts](./09_Caches_Workspaces_And_Artifacts.md) | Speed and handoff |
+| 10 | [Orbs](./10_Orbs_Use_And_Author_Literacy.md) | Registry/inline/URL orbs; pin versions |
+| 11 | [Reusable config](./11_Reusable_Config_Commands_Executors_Parameters.md) | commands; executors; parameters |
+| 12 | [Contexts and secrets](./12_Contexts_Env_Vars_And_Secrets.md) | Shared secrets; env layers |
+| 13 | [OIDC](./13_OIDC_And_Cloud_Federation.md) | Short-lived cloud auth |
+| 14 | [Dynamic config](./14_Dynamic_Config_And_Continuation.md) | Setup workflows; continuation |
+| 15 | [Deployments](./15_Deployments_Approvals_And_Markers.md) | Hold/approve; markers; targets |
+| 16 | [Security and access](./16_Security_Permissions_SSO_And_Policies.md) | IP ranges; SSO; config policies |
+| 17 | [Insights and optimize](./17_Insights_Test_Splitting_And_Optimize.md) | Insights; parallelism; usage |
+| 18 | [Server, CLI, API](./18_Server_CLI_API_And_Toolkit.md) | Self-managed; CLI; API |
+| 19 | [Worked example](./19_Worked_Example_Build_And_Deploy.md) | End-to-end lab |
+| 20 | [Best practices](./20_Best_Practices_And_When_Not_CircleCI.md) | Judgment; spectrum |
+| 21 | [Feature coverage map](./21_Feature_And_Configuration_Coverage_Map.md) | Inventory |
+| 22 | [YAML catalog](./22_YAML_And_Configuration_Catalog.md) | Config surfaces |
+| 23 | [Troubleshooting](./23_Troubleshooting_And_Staff_Checklist.md) | Playbook |
+| 24 | [Integrations and extras](./24_Integrations_Migrate_Plans_And_Extras.md) | VCS options; migrate; plans |
 
-## Further reading
-
-- [CircleCI configuration reference](https://circleci.com/docs/configuration-reference/)  
-- [Orbs](https://circleci.com/docs/orbs/)  
+Start: [01](./01_What_Is_CircleCI.md).

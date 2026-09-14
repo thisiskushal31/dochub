@@ -2,7 +2,7 @@
 
 [← Back to CI/CD](./README.md)
 
-Open curriculum check against widely taught **classical DevOps** specializations (e.g. [LinuxWorld Specialisation in DevOps](https://www.hash13.com/specialisation-devops/) / placement-oriented variants on hash13). Their hours skew to Git, Ansible, Jenkins, Docker/Compose/Swarm, Kubernetes, GitLab CI, Prometheus/Grafana, shell, AWS, Terraform. This handbook must not leave those topics as blind spots — either **here** or via an explicit sister home.
+Open curriculum check against widely taught **classical DevOps** specializations (e.g. [LinuxWorld Specialisation in DevOps](https://www.hash13.com/specialisation-devops/) / placement-oriented variants on hash13). Their hours skew to Git, Ansible, Jenkins, Docker/Compose/Swarm, Kubernetes, GitLab CI, Prometheus/Grafana, shell, AWS, Terraform. This handbook must not leave those topics as blind spots — either **here** or via an explicit related home.
 
 Timeless guardrail: syllabus Part A rule 9. Spectrum: [19](./19_Delivery_Spectrum_Legacy_Through_Modern.md).
 
@@ -30,7 +30,7 @@ Timeless guardrail: syllabus Part A rule 9. Spectrum: [19](./19_Delivery_Spectru
 | AWS EC2, ASG, ELB, S3, IAM | [Cloud/](../Cloud/README.md); VM delivery [18](./18_VM_MIG_And_Host_Based_Deploy.md); static/S3 [17](./17_Static_Sites_And_CDN_Deploy.md) |
 | Static sites / CDN | [17](./17_Static_Sites_And_CDN_Deploy.md) |
 | Legacy / mainframe-adjacent delivery | [Methodologies/9](../Methodologies/9_Maintenance_And_Legacy.md), [19](./19_Delivery_Spectrum_Legacy_Through_Modern.md) |
-| MLOps / model & distributed AI delivery | **[22](./22_MLOps_And_AI_System_Delivery.md)** → DS-AI / DE sister repos |
+| MLOps / model & distributed AI delivery | **[22](./22_MLOps_And_AI_System_Delivery.md)** → DS-AI / DE related repos |
 | Agentic / assisted coding on the loop | [Methodologies/19](../Methodologies/19_Durable_Mindsets_And_Evolving_Toolsets.md), [19](./19_Delivery_Spectrum_Legacy_Through_Modern.md) |
 
 ---

@@ -68,7 +68,7 @@ Prefer **immutable digests** over `:latest` ([4](./4_Artifacts_And_Registries.md
 
 ## Content trust / signing (classical Docker)
 
-Older curricula emphasize **Docker Content Trust** (Notary) and registry signing. Modern sister path is Sigstore/cosign ([6](./6_Supply_Chain_And_Signing.md)). Mentally map: **sign what you push; verify what you run** — mechanism names change.
+Older curricula emphasize **Docker Content Trust** (Notary) and registry signing. Modern related path is Sigstore/cosign ([6](./6_Supply_Chain_And_Signing.md)). Mentally map: **sign what you push; verify what you run** — mechanism names change.
 
 ---
 

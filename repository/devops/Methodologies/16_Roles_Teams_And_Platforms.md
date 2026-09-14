@@ -78,7 +78,7 @@ If leadership only demands “do DevOps by next quarter” with no capacity, you
 
 ## Beginner career note
 
-Skill stack most roadmaps agree on **after** mindset: Linux, networking basics, Git, one cloud, containers, CI/CD, IaC, observability — in that spirit. This handbook’s [Operating-Systems/](../Operating-Systems/README.md), [Languages/](../Languages/README.md), [CiCd/](../CiCd/README.md), and sister [Networks](https://github.com/thisiskushal31/Networks-Deep-Dive) / [Containerization](https://github.com/thisiskushal31/Containerization-Deep-Dive) repos are those doors. **Principles first** ([10](./10_Core_Principles_Three_Ways_CALMS.md)), then that stack.
+Skill stack most roadmaps agree on **after** mindset: Linux, networking basics, Git, one cloud, containers, CI/CD, IaC, observability — in that spirit. This handbook’s [Operating-Systems/](../Operating-Systems/README.md), [Languages/](../Languages/README.md), [CiCd/](../CiCd/README.md), and related [Networks](https://github.com/thisiskushal31/Networks-Deep-Dive) / [Containerization](https://github.com/thisiskushal31/Containerization-Deep-Dive) repos are those doors. **Principles first** ([10](./10_Core_Principles_Three_Ways_CALMS.md)), then that stack.
 
 ## Pitfalls
 

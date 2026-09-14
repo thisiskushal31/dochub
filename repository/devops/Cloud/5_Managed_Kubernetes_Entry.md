@@ -14,4 +14,4 @@
 ## Checklist before marking done
 
 - [ ] One-page comparison GKE vs EKS vs AKS for platform engineer
-- [ ] Link sister repo paths explicitly
+- [ ] Link related repo paths explicitly

@@ -27,7 +27,7 @@ Environment variables can be set in many layers — learn **precedence** so a UI
 
 ### Risk basics
 
-Don’t `echo` secrets; don’t put prod credentials on PR pipelines from forks; rotate agent tokens; prefer job-scoped cloud roles ([CiCd/7](../7_Secrets_OIDC_And_Pipeline_Identity.md) sister literacy).
+Don’t `echo` secrets; don’t put prod credentials on PR pipelines from forks; rotate agent tokens; prefer job-scoped cloud roles ([CiCd/7](../7_Secrets_OIDC_And_Pipeline_Identity.md) related literacy).
 
 ### Deploy allowlists
 

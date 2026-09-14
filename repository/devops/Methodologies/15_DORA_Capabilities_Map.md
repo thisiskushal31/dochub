@@ -4,7 +4,7 @@
 
 DORA / *Accelerate* research identified **24 capabilities** that predict software delivery performance. Metrics ([5](./5_DORA_And_Delivery_Metrics.md)) tell you *how you are doing*. Capabilities tell you *what to improve*.
 
-**Source:** [DORA capability catalog](https://dora.dev/capabilities/) and the *Accelerate* appendix list (also summarized by practitioners from the research). This file is a **map for beginners** — every capability gets a home in this handbook or a sister repo. We do **not** re-teach Kubernetes inside Methodologies.
+**Source:** [DORA capability catalog](https://dora.dev/capabilities/) and the *Accelerate* appendix list (also summarized by practitioners from the research). This file is a **map for beginners** — every capability gets a home in this handbook or a related repo. We do **not** re-teach Kubernetes inside Methodologies.
 
 ---
 

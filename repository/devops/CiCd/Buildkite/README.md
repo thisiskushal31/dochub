@@ -4,7 +4,7 @@
 
 **Buildkite** is a CI/CD platform whose core idea is: **Pipelines** orchestrate builds in Buildkite’s control plane; **agents** (yours or Buildkite-hosted) execute the jobs. This folder is a **standalone deep dive** into the full product surface — Pipelines, agents/queues/clusters/hooks, source control connections, secrets/OIDC, deployments, integrations/insights, governance, APIs — plus literacy for **Package Registries**, **Test Engine**, and **Platform** (teams/SSO/Terraform/audit).
 
-Sister tools: [GitHub_Actions/](../GitHub_Actions/README.md), [GitLab_CI/](../GitLab_CI/README.md), [Bitbucket/](../Bitbucket/README.md), [Azure_DevOps/](../Azure_DevOps/README.md), [Jenkins/](../Jenkins/README.md).
+Related tools: [GitHub_Actions/](../GitHub_Actions/README.md), [GitLab_CI/](../GitLab_CI/README.md), [Bitbucket/](../Bitbucket/README.md), [Azure_DevOps/](../Azure_DevOps/README.md), [Jenkins/](../Jenkins/README.md).
 
 Delivery-loop concepts: [1](../1_Pipelines_Build_Test_Deploy.md), [8](../8_Environments_Promotion_And_Approvals.md), [11](../11_Pipeline_As_Code_Runners_Caching_Matrix.md), [24](../24_Workflow_Automation_Beyond_PR_CI.md).
 
