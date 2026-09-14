@@ -9,7 +9,7 @@
 - What it is and which pentest *phase* it belongs to (Post-ex)
 - Install on the lab VM
 - Lab domain only
-- Sister: Offensive/ for the phase; Networks if the wire matters
+- Related: Offensive/ for the phase; Networks if the wire matters
 
 ## Checklist before marking done
 

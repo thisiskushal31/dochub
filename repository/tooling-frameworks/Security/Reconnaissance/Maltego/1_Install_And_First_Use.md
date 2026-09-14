@@ -10,7 +10,7 @@
 - Install on the lab VM
 - Community edition
 - One graph from a domain you own
-- Sister: Offensive/ for the phase; Networks if the wire matters
+- Related: Offensive/ for the phase; Networks if the wire matters
 
 ## Checklist before marking done
 

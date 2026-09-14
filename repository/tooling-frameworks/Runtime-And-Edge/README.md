@@ -12,7 +12,7 @@
 - Cold start, limits, regional fan-out
 - When this loses to a small always-on service
 
-## Sister
+## Related home
 
 - Cloud Run / Fargate / Container Apps → [Containerization Serverless-Containers](../../Containerization-Deep-Dive/Serverless-Containers/README.md)
 - CDN / edge as *distribution* → System Design `Fundamentals/4_CDN.md`

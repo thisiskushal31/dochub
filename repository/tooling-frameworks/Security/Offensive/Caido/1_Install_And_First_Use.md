@@ -9,7 +9,7 @@
 - What it is and which pentest *phase* it belongs to (Web)
 - Install on the lab VM
 - When people pick it vs Burp
-- Sister: Offensive/ for the phase; Networks if the wire matters
+- Related: Offensive/ for the phase; Networks if the wire matters
 
 ## Checklist before marking done
 

@@ -10,7 +10,7 @@
 - Install on the lab VM
 - Sample memory image
 - Pointer: Defensive-Ops/Forensics
-- Sister: Offensive/ for the phase; Networks if the wire matters
+- Related: Offensive/ for the phase; Networks if the wire matters
 
 ## Checklist before marking done
 

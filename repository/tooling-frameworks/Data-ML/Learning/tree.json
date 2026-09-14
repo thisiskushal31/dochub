@@ -10,7 +10,7 @@
         "path": "HuggingFace/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 451
+        "size": 452
       },
       {
         "name": "README.md",
@@ -32,7 +32,7 @@
         "path": "PyTorch/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 437
+        "size": 438
       },
       {
         "name": "README.md",
@@ -54,7 +54,7 @@
         "path": "scikit-learn/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 463
+        "size": 464
       },
       {
         "name": "README.md",

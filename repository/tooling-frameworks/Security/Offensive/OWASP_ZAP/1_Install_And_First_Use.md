@@ -10,7 +10,7 @@
 - Install on the lab VM
 - Automated scan of lab app
 - Pointer: Burp_Suite/
-- Sister: Offensive/ for the phase; Networks if the wire matters
+- Related: Offensive/ for the phase; Networks if the wire matters
 
 ## Checklist before marking done
 

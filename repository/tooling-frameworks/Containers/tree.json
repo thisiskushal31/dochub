@@ -10,7 +10,7 @@
         "path": "dive/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 435
+        "size": 436
       },
       {
         "name": "README.md",
@@ -32,7 +32,7 @@
         "path": "Helm_CLI/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 467
+        "size": 468
       },
       {
         "name": "README.md",
@@ -54,7 +54,7 @@
         "path": "k9s/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 427
+        "size": 428
       },
       {
         "name": "README.md",
@@ -76,7 +76,7 @@
         "path": "kubectl/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 468
+        "size": 469
       },
       {
         "name": "README.md",
@@ -98,7 +98,7 @@
         "path": "nerdctl/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 470
+        "size": 471
       },
       {
         "name": "README.md",

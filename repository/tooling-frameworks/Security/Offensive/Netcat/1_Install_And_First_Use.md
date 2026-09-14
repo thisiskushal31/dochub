@@ -10,7 +10,7 @@
 - Install on the lab VM
 - lvnp
 - What a reverse shell looks like to a defender
-- Sister: Offensive/ for the phase; Networks if the wire matters
+- Related: Offensive/ for the phase; Networks if the wire matters
 
 ## Checklist before marking done
 

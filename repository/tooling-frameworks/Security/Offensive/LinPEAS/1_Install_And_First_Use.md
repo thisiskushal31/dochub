@@ -10,7 +10,7 @@
 - Install on the lab VM
 - Lab VM
 - WinPEAS is the Windows sibling
-- Sister: Offensive/ for the phase; Networks if the wire matters
+- Related: Offensive/ for the phase; Networks if the wire matters
 
 ## Checklist before marking done
 

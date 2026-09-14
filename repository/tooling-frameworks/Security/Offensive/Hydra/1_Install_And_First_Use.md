@@ -10,7 +10,7 @@
 - Install on the lab VM
 - lockout risk
 - Tiny wordlist on lab SSH
-- Sister: Offensive/ for the phase; Networks if the wire matters
+- Related: Offensive/ for the phase; Networks if the wire matters
 
 ## Checklist before marking done
 

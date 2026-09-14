@@ -16,7 +16,7 @@
             "path": "Inference/Ollama/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 447
+            "size": 448
           },
           {
             "name": "README.md",
@@ -38,7 +38,7 @@
             "path": "Inference/vLLM/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 444
+            "size": 445
           },
           {
             "name": "README.md",
@@ -75,7 +75,7 @@
             "path": "Learning/HuggingFace/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 451
+            "size": 452
           },
           {
             "name": "README.md",
@@ -97,7 +97,7 @@
             "path": "Learning/PyTorch/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 437
+            "size": 438
           },
           {
             "name": "README.md",
@@ -119,7 +119,7 @@
             "path": "Learning/scikit-learn/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 463
+            "size": 464
           },
           {
             "name": "README.md",
@@ -156,7 +156,7 @@
             "path": "Retrieval/LangChain/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 471
+            "size": 472
           },
           {
             "name": "README.md",
@@ -178,7 +178,7 @@
             "path": "Retrieval/LlamaIndex/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 486
+            "size": 487
           },
           {
             "name": "README.md",
@@ -215,7 +215,7 @@
             "path": "Tracking/MLflow/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 444
+            "size": 445
           },
           {
             "name": "README.md",
@@ -237,7 +237,7 @@
             "path": "Tracking/Weights_And_Biases/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 446
+            "size": 447
           },
           {
             "name": "README.md",
@@ -274,7 +274,7 @@
             "path": "Workbench/Jupyter/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 444
+            "size": 445
           },
           {
             "name": "README.md",

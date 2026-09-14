@@ -10,7 +10,7 @@
 - Install on the lab VM
 - banner on a vulnerable lab
 - Never production DBs
-- Sister: Offensive/ for the phase; Networks if the wire matters
+- Related: Offensive/ for the phase; Networks if the wire matters
 
 ## Checklist before marking done
 

@@ -10,7 +10,7 @@
 - Install on the lab VM
 - searchsploit apache
 - Read, do not spray
-- Sister: Offensive/ for the phase; Networks if the wire matters
+- Related: Offensive/ for the phase; Networks if the wire matters
 
 ## Checklist before marking done
 

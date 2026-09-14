@@ -23,7 +23,7 @@
 
 Add pytest, JUnit, k6, Pact when you use them — same pattern as FastAPI. Not a `Tools/` dump.
 
-## Sister
+## Related home
 
 - Pipeline as a gate → DevOps-Handbook `CiCd/`
 - Load / failure at design time → System-Design `Failure-Modes/` + `Performance/`

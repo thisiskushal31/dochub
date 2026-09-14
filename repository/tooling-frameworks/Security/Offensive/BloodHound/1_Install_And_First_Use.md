@@ -10,7 +10,7 @@
 - Install on the lab VM
 - SharpHound in a lab AD
 - Choke points for defenders too
-- Sister: Offensive/ for the phase; Networks if the wire matters
+- Related: Offensive/ for the phase; Networks if the wire matters
 
 ## Checklist before marking done
 

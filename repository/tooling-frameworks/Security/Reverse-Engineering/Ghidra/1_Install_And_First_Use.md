@@ -10,7 +10,7 @@
 - Install on the lab VM
 - Open a lab binary
 - Pointer: DevOps Languages/Assembly
-- Sister: Offensive/ for the phase; Networks if the wire matters
+- Related: Offensive/ for the phase; Networks if the wire matters
 
 ## Checklist before marking done
 

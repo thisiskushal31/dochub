@@ -10,7 +10,7 @@
 - Install on the lab VM
 - airmon-ng / airodump-ng
 - Never neighbors' Wi-Fi
-- Sister: Offensive/ for the phase; Networks if the wire matters
+- Related: Offensive/ for the phase; Networks if the wire matters
 
 ## Checklist before marking done
 

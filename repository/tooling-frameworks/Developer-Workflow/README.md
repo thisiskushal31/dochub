@@ -19,7 +19,7 @@
 - AI-assisted coding as a tool class (editors, agents) — tools rotate; the job is faster correct change
 - MCP / tool-using agents for *the developer*, vs product agents in DS-AI `Control-And-Agency/`
 
-## Sister
+## Related home
 
 - Git / PR / trunk → DevOps `Methodologies/`
 - Product agents / RAG apps → Data-Science-AI-Deep-Dive
