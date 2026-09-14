@@ -125,7 +125,7 @@ Numbers are labels — **climb by floor table**, not by sorting `#` alone.
 | [Azure DevOps](./Azure_DevOps/README.md) | Full track **01–25** — suite + Pipelines + Azure deploy spectrum + platform ops |
 | [Buildkite](./Buildkite/README.md) | Full track **01–26** — Pipelines + agents + full product surface |
 | [Argo CD](./Argo_CD/README.md) | GitOps CD **full track** (01–18: concepts → website lab → best practices → feature/config catalogs) |
-| [Flux](./Flux/README.md) | GitOps toolkit |
+| [Flux](./Flux/README.md) | GitOps toolkit **full track** (01–22: bootstrap → sources/Kustomize/Helm → image automation → Flagger literacy → catalogs) |
 | [Argo Rollouts](./Argo_Rollouts/README.md) | Progressive delivery **full track** (01–16: strategies, traffic, analysis, GitOps, catalogs) |
 | [Unleash](./Unleash/README.md) | Feature flags |
 

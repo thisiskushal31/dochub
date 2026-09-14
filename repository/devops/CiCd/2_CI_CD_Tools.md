@@ -37,7 +37,7 @@ Classic **push CD**: CI applies once with cluster creds.
 | Azure DevOps | [Azure_DevOps/](./Azure_DevOps/README.md) | Full track (Pipelines + suite + Azure deploy spectrum) |
 | Buildkite | [Buildkite/](./Buildkite/README.md) | Full track (Pipelines + agents) |
 | Argo CD | [Argo_CD/](./Argo_CD/README.md) | GitOps CD |
-| Flux | [Flux/](./Flux/README.md) | GitOps toolkit |
+| Flux | [Flux/](./Flux/README.md) | GitOps toolkit (full track 01–22) |
 | Argo Rollouts | [Argo_Rollouts/](./Argo_Rollouts/README.md) | Progressive delivery |
 | Unleash | [Unleash/](./Unleash/README.md) | Feature flags |
 
