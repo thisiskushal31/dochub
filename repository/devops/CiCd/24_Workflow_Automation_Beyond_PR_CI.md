@@ -4,7 +4,7 @@
 
 **Staircase:** Floor 5 (after the core ship loop). Teams use **host-native CI** (or a separate engine like Jenkins / CircleCI / Buildkite / Tekton) not only for “build on every PR/MR,” but for **scheduled ops**, **reusable paved-road CI/build**, **SemVer RC→release image lanes**, and **GitOps tag write-back**.
 
-Jobs are durable; YAML is not. Primers: [GitHub_Actions/](./GitHub_Actions/README.md), [GitLab_CI/](./GitLab_CI/README.md), [Bitbucket_Pipelines/](./Bitbucket_Pipelines/README.md), [Azure_DevOps/](./Azure_DevOps/README.md), [Jenkins/](./Jenkins/README.md), [CircleCI/](./CircleCI/README.md), [Buildkite/](./Buildkite/README.md), [Tekton/](./Tekton/README.md). Immutable promote: [4](./4_Artifacts_And_Registries.md). Version lanes + [semver.org](https://semver.org/): [12](./12_Release_Versioning_And_Changelogs.md). Tool map: [2](./2_CI_CD_Tools.md). Classical Jenkins ops: [20](./20_Classical_Jenkins_Host_And_Web_Deploy.md).
+Jobs are durable; YAML is not. Primers: [GitHub_Actions/](./GitHub_Actions/README.md), [GitLab_CI/](./GitLab_CI/README.md), [Bitbucket/](./Bitbucket/README.md), [Azure_DevOps/](./Azure_DevOps/README.md), [Jenkins/](./Jenkins/README.md), [CircleCI/](./CircleCI/README.md), [Buildkite/](./Buildkite/README.md), [Tekton/](./Tekton/README.md). Immutable promote: [4](./4_Artifacts_And_Registries.md). Version lanes + [semver.org](https://semver.org/): [12](./12_Release_Versioning_And_Changelogs.md). Tool map: [2](./2_CI_CD_Tools.md). Classical Jenkins ops: [20](./20_Classical_Jenkins_Host_And_Web_Deploy.md).
 
 ---
 
@@ -154,7 +154,7 @@ on: PR/MR or push to main
 
 **Data / backend / frontend** services should all call the same paved road: a scheduler, webhook worker, API, and SPA differ in **inputs**, not in inventing a new pipeline shape. Scheduled **ops** jobs (inventory, cost) stay Use case A; they can still share notify/OIDC helpers.
 
-Primers: [GitHub_Actions](./GitHub_Actions/README.md), [GitLab_CI](./GitLab_CI/README.md), [Bitbucket_Pipelines](./Bitbucket_Pipelines/README.md), [Azure_DevOps](./Azure_DevOps/README.md), [CircleCI](./CircleCI/README.md), [Jenkins](./Jenkins/README.md), [Buildkite](./Buildkite/README.md), [Tekton](./Tekton/README.md).
+Primers: [GitHub_Actions](./GitHub_Actions/README.md), [GitLab_CI](./GitLab_CI/README.md), [Bitbucket](./Bitbucket/README.md), [Azure_DevOps](./Azure_DevOps/README.md), [CircleCI](./CircleCI/README.md), [Jenkins](./Jenkins/README.md), [Buildkite](./Buildkite/README.md), [Tekton](./Tekton/README.md).
 
 ---
 

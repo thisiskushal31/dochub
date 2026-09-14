@@ -121,7 +121,7 @@ Numbers are labels — **climb by floor table**, not by sorting `#` alone.
 | [GitLab CI](./GitLab_CI/README.md) | `.gitlab-ci.yml` |
 | [CircleCI](./CircleCI/README.md) | Orbs; cloud/self-hosted |
 | [Tekton](./Tekton/README.md) | K8s-native pipelines |
-| [Bitbucket Pipelines](./Bitbucket_Pipelines/README.md) | Bitbucket Cloud CI/CD |
+| [Bitbucket](./Bitbucket/README.md) | Full track **01–21** — Cloud forge + Pipelines (+ Data Center literacy) |
 | [Azure DevOps](./Azure_DevOps/README.md) | Full track **01–25** — suite + Pipelines + Azure deploy spectrum + platform ops |
 | [Buildkite](./Buildkite/README.md) | You-run-agents CI |
 | [Argo CD](./Argo_CD/README.md) | GitOps CD **full track** (01–18: concepts → website lab → best practices → feature/config catalogs) |

@@ -33,7 +33,7 @@ Classic **push CD**: CI applies once with cluster creds.
 | GitLab CI | [GitLab_CI/](./GitLab_CI/README.md) | SCM-native CI/CD |
 | CircleCI | [CircleCI/](./CircleCI/README.md) | Hosted CI; orbs |
 | Tekton | [Tekton/](./Tekton/README.md) | K8s-native pipelines |
-| Bitbucket Pipelines | [Bitbucket_Pipelines/](./Bitbucket_Pipelines/README.md) | Bitbucket Cloud CI/CD |
+| Bitbucket | [Bitbucket/](./Bitbucket/README.md) | Full track (Cloud forge + Pipelines) |
 | Azure DevOps | [Azure_DevOps/](./Azure_DevOps/README.md) | Full track (Pipelines + suite + Azure deploy spectrum) |
 | Buildkite | [Buildkite/](./Buildkite/README.md) | You-run-agents CI |
 | Argo CD | [Argo_CD/](./Argo_CD/README.md) | GitOps CD |

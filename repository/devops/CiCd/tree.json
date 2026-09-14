@@ -458,17 +458,164 @@
     ]
   },
   {
-    "name": "Bitbucket_Pipelines",
-    "path": "Bitbucket_Pipelines",
+    "name": "Bitbucket",
+    "path": "Bitbucket",
     "type": "dir",
     "sha": "",
     "children": [
       {
-        "name": "README.md",
-        "path": "Bitbucket_Pipelines/README.md",
+        "name": "01_What_Is_Bitbucket.md",
+        "path": "Bitbucket/01_What_Is_Bitbucket.md",
         "type": "file",
         "sha": "",
-        "size": 2017
+        "size": 5015
+      },
+      {
+        "name": "02_Workspace_Project_Repo_And_Access.md",
+        "path": "Bitbucket/02_Workspace_Project_Repo_And_Access.md",
+        "type": "file",
+        "sha": "",
+        "size": 4754
+      },
+      {
+        "name": "03_Pull_Requests_Branch_Permissions_Merge_Checks.md",
+        "path": "Bitbucket/03_Pull_Requests_Branch_Permissions_Merge_Checks.md",
+        "type": "file",
+        "sha": "",
+        "size": 3590
+      },
+      {
+        "name": "04_Pipelines_Mental_Model_And_YAML.md",
+        "path": "Bitbucket/04_Pipelines_Mental_Model_And_YAML.md",
+        "type": "file",
+        "sha": "",
+        "size": 2978
+      },
+      {
+        "name": "05_First_Pipeline_And_Enablement.md",
+        "path": "Bitbucket/05_First_Pipeline_And_Enablement.md",
+        "type": "file",
+        "sha": "",
+        "size": 4631
+      },
+      {
+        "name": "06_Runners_Cloud_And_Self_Hosted.md",
+        "path": "Bitbucket/06_Runners_Cloud_And_Self_Hosted.md",
+        "type": "file",
+        "sha": "",
+        "size": 1791
+      },
+      {
+        "name": "07_Variables_Secrets_And_OIDC.md",
+        "path": "Bitbucket/07_Variables_Secrets_And_OIDC.md",
+        "type": "file",
+        "sha": "",
+        "size": 2192
+      },
+      {
+        "name": "08_Triggers_Steps_Stages_Parallel.md",
+        "path": "Bitbucket/08_Triggers_Steps_Stages_Parallel.md",
+        "type": "file",
+        "sha": "",
+        "size": 4269
+      },
+      {
+        "name": "09_Caches_Artifacts_And_Services.md",
+        "path": "Bitbucket/09_Caches_Artifacts_And_Services.md",
+        "type": "file",
+        "sha": "",
+        "size": 2473
+      },
+      {
+        "name": "10_Pipes_Anchors_And_Reuse.md",
+        "path": "Bitbucket/10_Pipes_Anchors_And_Reuse.md",
+        "type": "file",
+        "sha": "",
+        "size": 2304
+      },
+      {
+        "name": "11_Deployments_And_Environments.md",
+        "path": "Bitbucket/11_Deployments_And_Environments.md",
+        "type": "file",
+        "sha": "",
+        "size": 1964
+      },
+      {
+        "name": "12_Deploy_Targets_And_Pipes_Catalog.md",
+        "path": "Bitbucket/12_Deploy_Targets_And_Pipes_Catalog.md",
+        "type": "file",
+        "sha": "",
+        "size": 2111
+      },
+      {
+        "name": "13_Dynamic_Pipelines_And_Advanced_YAML.md",
+        "path": "Bitbucket/13_Dynamic_Pipelines_And_Advanced_YAML.md",
+        "type": "file",
+        "sha": "",
+        "size": 2271
+      },
+      {
+        "name": "14_Jira_And_Atlassian_Integrations.md",
+        "path": "Bitbucket/14_Jira_And_Atlassian_Integrations.md",
+        "type": "file",
+        "sha": "",
+        "size": 1958
+      },
+      {
+        "name": "15_Security_Access_And_Workspace_Hardening.md",
+        "path": "Bitbucket/15_Security_Access_And_Workspace_Hardening.md",
+        "type": "file",
+        "sha": "",
+        "size": 2370
+      },
+      {
+        "name": "16_Worked_Example_Build_And_Deploy.md",
+        "path": "Bitbucket/16_Worked_Example_Build_And_Deploy.md",
+        "type": "file",
+        "sha": "",
+        "size": 2199
+      },
+      {
+        "name": "17_Best_Practices_And_Cloud_Vs_Data_Center.md",
+        "path": "Bitbucket/17_Best_Practices_And_Cloud_Vs_Data_Center.md",
+        "type": "file",
+        "sha": "",
+        "size": 2678
+      },
+      {
+        "name": "18_Feature_And_Configuration_Coverage_Map.md",
+        "path": "Bitbucket/18_Feature_And_Configuration_Coverage_Map.md",
+        "type": "file",
+        "sha": "",
+        "size": 3299
+      },
+      {
+        "name": "19_YAML_And_Configuration_Catalog.md",
+        "path": "Bitbucket/19_YAML_And_Configuration_Catalog.md",
+        "type": "file",
+        "sha": "",
+        "size": 1756
+      },
+      {
+        "name": "20_Troubleshooting_And_Staff_Checklist.md",
+        "path": "Bitbucket/20_Troubleshooting_And_Staff_Checklist.md",
+        "type": "file",
+        "sha": "",
+        "size": 2900
+      },
+      {
+        "name": "21_Snippets_Search_Code_Insights_And_Wiki.md",
+        "path": "Bitbucket/21_Snippets_Search_Code_Insights_And_Wiki.md",
+        "type": "file",
+        "sha": "",
+        "size": 2431
+      },
+      {
+        "name": "README.md",
+        "path": "Bitbucket/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 5194
       }
     ]
   },
@@ -688,7 +835,7 @@
     "path": "2_CI_CD_Tools.md",
     "type": "file",
     "sha": "",
-    "size": 4722
+    "size": 4707
   },
   {
     "name": "20_Classical_Jenkins_Host_And_Web_Deploy.md",
@@ -723,7 +870,7 @@
     "path": "24_Workflow_Automation_Beyond_PR_CI.md",
     "type": "file",
     "sha": "",
-    "size": 11796
+    "size": 11756
   },
   {
     "name": "3_Deployment_Strategies.md",
@@ -779,6 +926,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 9448
+    "size": 9482
   }
 ]
