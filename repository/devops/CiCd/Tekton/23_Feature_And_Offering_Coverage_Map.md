@@ -153,8 +153,9 @@ flowchart TB
 
 | Offering / config | Track |
 |-------------------|-------|
-| `tkn` (list/start/logs/describe) | [15](./15_CLI_tkn.md) |
-| `tkn` plugins (hub/PAC) | [15](./15_CLI_tkn.md) |
+| `tkn` full built-in surface (task/taskrun/pipeline/pipelinerun; Triggers; customrun; bundle; hub; version; completion; sign/verify) | [15](./15_CLI_tkn.md) |
+| Global kubeconfig flags / start-logs-cancel-export-delete hygiene | [15](./15_CLI_tkn.md) |
+| `tkn` plugins mechanism + `tkn pac` command map | [15](./15_CLI_tkn.md), [13](./13_Pipelines_As_Code.md) |
 | Dashboard UI | [16](./16_Dashboard.md) |
 
 ### H. Chains (supply chain)
@@ -236,7 +237,7 @@ flowchart TB
 | Results summary / aggregation API | [18](./18_Results_And_Pruner.md) |
 | Results watcher / retention agent / external DB | [18](./18_Results_And_Pruner.md) |
 | Chains SLSA predicate generations (incl. v2 literacy) | [17](./17_Chains_Supply_Chain_Security.md) |
-| `tkn` Triggers/CustomRun/bundle/hub families | [15](./15_CLI_tkn.md) |
+| `tkn` full command surface (pre-install literacy; Triggers/CustomRun/bundle/hub/PAC) | [15](./15_CLI_tkn.md) |
 | PAC statuses, skip-ci, tracing/profiling/informer-cache | [13](./13_Pipelines_As_Code.md), [20](./20_Observability_HA_Debug_And_Windows.md) |
 | OpenShift centralized TLS / OpenShift PAC Operator | [19](./19_Operator_Platform_Config.md) |
 | FIPS literacy (component build) | [08](./08_Auth_ServiceAccounts_And_RBAC.md), [20](./20_Observability_HA_Debug_And_Windows.md) |
@@ -250,7 +251,7 @@ flowchart TB
 |---------|-----|
 | Every Task/Pipeline on Hub/Catalog | Pin and read what you install |
 | Full CRD OpenAPI / generated API reference | Generated; version-specific |
-| Every `tkn` subcommand man page | CLI reference upstream |
+| Per-flag dump for every `tkn` option across releases | Version drifts; [15](./15_CLI_tkn.md) covers the full **command** surface and operator-critical flags — use `tkn <cmd> --help` only for release-exact option lists |
 | Distro-only click-paths | OpenShift Pipelines admin encyclopedias |
 | Contributor / experimental / MCP servers | Not operator CI surface |
 | Website contribute / blog / run-locally authoring | Contributor path |

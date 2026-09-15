@@ -56,7 +56,7 @@ Suggested order: **01 → 26**. After **04**, jump to **21** if you learn by bui
 | 12 | [Triggers](./12_Triggers_EventListeners_And_Interceptors.md) | Webhooks → Runs |
 | 13 | [Pipelines-as-Code](./13_Pipelines_As_Code.md) | Git-native CI |
 | 14 | [Catalog and Hub](./14_Catalog_Hub_And_Reusable_Tasks.md) | Reuse; pin digests |
-| 15 | [CLI `tkn`](./15_CLI_tkn.md) | Day-2 CLI |
+| 15 | [CLI `tkn`](./15_CLI_tkn.md) | Full `tkn` surface (pre-install literacy) + plugins / `tkn pac` |
 | 16 | [Dashboard](./16_Dashboard.md) | Web UI |
 | 17 | [Chains](./17_Chains_Supply_Chain_Security.md) | Sign / attest |
 | 18 | [Results and Pruner](./18_Results_And_Pruner.md) | Retention and storage |

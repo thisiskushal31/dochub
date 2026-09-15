@@ -2090,7 +2090,7 @@
             "path": "CiCd/Tekton/13_Pipelines_As_Code.md",
             "type": "file",
             "sha": "",
-            "size": 3295
+            "size": 3772
           },
           {
             "name": "14_Catalog_Hub_And_Reusable_Tasks.md",
@@ -2104,7 +2104,7 @@
             "path": "CiCd/Tekton/15_CLI_tkn.md",
             "type": "file",
             "sha": "",
-            "size": 2512
+            "size": 14417
           },
           {
             "name": "16_Dashboard.md",
@@ -2160,7 +2160,7 @@
             "path": "CiCd/Tekton/23_Feature_And_Offering_Coverage_Map.md",
             "type": "file",
             "sha": "",
-            "size": 13923
+            "size": 14376
           },
           {
             "name": "24_YAML_CRD_Catalog_And_Troubleshooting.md",
@@ -2188,7 +2188,7 @@
             "path": "CiCd/Tekton/README.md",
             "type": "file",
             "sha": "",
-            "size": 5343
+            "size": 5397
           }
         ]
       },

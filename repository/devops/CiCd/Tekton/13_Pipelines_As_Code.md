@@ -67,6 +67,10 @@ Global and per-repo settings: concurrency limits, GitHub token scoping, certific
 
 Fork PRs: no prod credentials; use separate SA and pull policies. Operator / OpenShift PAC docs cover distro installs ([19](./19_Operator_Platform_Config.md)).
 
+### CLI: `tkn pac` (plugin)
+
+PAC ships a **`tkn-pac`** plugin (`tkn pac …`): bootstrap, Repository create/delete/list/describe, `generate` / `resolve`, logs, CEL eval, webhook helpers. Full pre-install command map lives in [15](./15_CLI_tkn.md) — learn what it does before installing the plugin.
+
 ---
 
 ## 3. Applications and use cases
@@ -76,6 +80,7 @@ Fork PRs: no prod credentials; use separate SA and pull policies. Operator / Ope
 | PR checks | on-event pull_request PipelineRuns |
 | Push to main | build-push + Chains ([17](./17_Chains_Supply_Chain_Security.md)) |
 | Monorepo | path matching annotations |
+| Scaffold / resolve locally | `tkn pac generate` / `resolve` ([15](./15_CLI_tkn.md)) |
 
 **Staff checklist**
 
@@ -83,6 +88,7 @@ Fork PRs: no prod credentials; use separate SA and pull policies. Operator / Ope
 - Path/CEL filters for monorepos  
 - Fork PRs isolated from prod credentials  
 - Concurrency limits set  
+- Engineers know `tkn pac` surface before first plugin install ([15](./15_CLI_tkn.md)) 
 
 **Good:** pipelines reviewed in the same PR. **Bad:** PAC with cluster-admin and secrets on all fork PRs.
 
