@@ -32,7 +32,7 @@ Classic **push CD**: CI applies once with cluster creds.
 | GitHub Actions | [GitHub_Actions/](./GitHub_Actions/README.md) | GitHub-native CI/CD; workflows, runners, OIDC, environments |
 | GitLab CI | [GitLab_CI/](./GitLab_CI/README.md) | GitLab-native CI/CD plus platform literacy (MR, registry, AppSec, Agent) |
 | CircleCI | [CircleCI/](./CircleCI/README.md) | Hosted CI; `config.yml`, executors, runners |
-| Tekton | [Tekton/](./Tekton/README.md) | K8s-native pipelines |
+| Tekton | [Tekton/](./Tekton/README.md) | K8s-native Pipelines, Triggers, PAC, Chains |
 | Bitbucket | [Bitbucket/](./Bitbucket/README.md) | Atlassian forge + Pipelines |
 | Azure DevOps | [Azure_DevOps/](./Azure_DevOps/README.md) | Azure DevOps suite + Pipelines + Azure deploy spectrum |
 | Buildkite | [Buildkite/](./Buildkite/README.md) | Hybrid CI; Pipelines control plane + your agents |

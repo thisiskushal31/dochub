@@ -1752,11 +1752,193 @@
     "sha": "",
     "children": [
       {
+        "name": "01_What_Is_Tekton.md",
+        "path": "Tekton/01_What_Is_Tekton.md",
+        "type": "file",
+        "sha": "",
+        "size": 2746
+      },
+      {
+        "name": "02_Install_Pipelines_And_Operator.md",
+        "path": "Tekton/02_Install_Pipelines_And_Operator.md",
+        "type": "file",
+        "sha": "",
+        "size": 2609
+      },
+      {
+        "name": "03_Core_Model_Tasks_Pipelines_Runs.md",
+        "path": "Tekton/03_Core_Model_Tasks_Pipelines_Runs.md",
+        "type": "file",
+        "sha": "",
+        "size": 2155
+      },
+      {
+        "name": "04_First_Task_And_PipelineRun.md",
+        "path": "Tekton/04_First_Task_And_PipelineRun.md",
+        "type": "file",
+        "sha": "",
+        "size": 2053
+      },
+      {
+        "name": "05_Tasks_Steps_Params_And_Results.md",
+        "path": "Tekton/05_Tasks_Steps_Params_And_Results.md",
+        "type": "file",
+        "sha": "",
+        "size": 2877
+      },
+      {
+        "name": "06_Pipelines_Ordering_And_Finally.md",
+        "path": "Tekton/06_Pipelines_Ordering_And_Finally.md",
+        "type": "file",
+        "sha": "",
+        "size": 2645
+      },
+      {
+        "name": "07_Workspaces_Artifacts_And_Volumes.md",
+        "path": "Tekton/07_Workspaces_Artifacts_And_Volumes.md",
+        "type": "file",
+        "sha": "",
+        "size": 2567
+      },
+      {
+        "name": "08_Auth_ServiceAccounts_And_RBAC.md",
+        "path": "Tekton/08_Auth_ServiceAccounts_And_RBAC.md",
+        "type": "file",
+        "sha": "",
+        "size": 3397
+      },
+      {
+        "name": "09_Pod_Templates_Compute_And_Affinity.md",
+        "path": "Tekton/09_Pod_Templates_Compute_And_Affinity.md",
+        "type": "file",
+        "sha": "",
+        "size": 2046
+      },
+      {
+        "name": "10_Matrix_CustomRuns_And_StepActions.md",
+        "path": "Tekton/10_Matrix_CustomRuns_And_StepActions.md",
+        "type": "file",
+        "sha": "",
+        "size": 2808
+      },
+      {
+        "name": "11_Resolvers_Bundles_And_Remote_Resources.md",
+        "path": "Tekton/11_Resolvers_Bundles_And_Remote_Resources.md",
+        "type": "file",
+        "sha": "",
+        "size": 2151
+      },
+      {
+        "name": "12_Triggers_EventListeners_And_Interceptors.md",
+        "path": "Tekton/12_Triggers_EventListeners_And_Interceptors.md",
+        "type": "file",
+        "sha": "",
+        "size": 2469
+      },
+      {
+        "name": "13_Pipelines_As_Code.md",
+        "path": "Tekton/13_Pipelines_As_Code.md",
+        "type": "file",
+        "sha": "",
+        "size": 3295
+      },
+      {
+        "name": "14_Catalog_Hub_And_Reusable_Tasks.md",
+        "path": "Tekton/14_Catalog_Hub_And_Reusable_Tasks.md",
+        "type": "file",
+        "sha": "",
+        "size": 1645
+      },
+      {
+        "name": "15_CLI_tkn.md",
+        "path": "Tekton/15_CLI_tkn.md",
+        "type": "file",
+        "sha": "",
+        "size": 2512
+      },
+      {
+        "name": "16_Dashboard.md",
+        "path": "Tekton/16_Dashboard.md",
+        "type": "file",
+        "sha": "",
+        "size": 2300
+      },
+      {
+        "name": "17_Chains_Supply_Chain_Security.md",
+        "path": "Tekton/17_Chains_Supply_Chain_Security.md",
+        "type": "file",
+        "sha": "",
+        "size": 2515
+      },
+      {
+        "name": "18_Results_And_Pruner.md",
+        "path": "Tekton/18_Results_And_Pruner.md",
+        "type": "file",
+        "sha": "",
+        "size": 2382
+      },
+      {
+        "name": "19_Operator_Platform_Config.md",
+        "path": "Tekton/19_Operator_Platform_Config.md",
+        "type": "file",
+        "sha": "",
+        "size": 2447
+      },
+      {
+        "name": "20_Observability_HA_Debug_And_Windows.md",
+        "path": "Tekton/20_Observability_HA_Debug_And_Windows.md",
+        "type": "file",
+        "sha": "",
+        "size": 3347
+      },
+      {
+        "name": "21_Worked_Example_Build_Test_Push.md",
+        "path": "Tekton/21_Worked_Example_Build_Test_Push.md",
+        "type": "file",
+        "sha": "",
+        "size": 2826
+      },
+      {
+        "name": "22_Best_Practices_And_When_Not_Tekton.md",
+        "path": "Tekton/22_Best_Practices_And_When_Not_Tekton.md",
+        "type": "file",
+        "sha": "",
+        "size": 2722
+      },
+      {
+        "name": "23_Feature_And_Offering_Coverage_Map.md",
+        "path": "Tekton/23_Feature_And_Offering_Coverage_Map.md",
+        "type": "file",
+        "sha": "",
+        "size": 13923
+      },
+      {
+        "name": "24_YAML_CRD_Catalog_And_Troubleshooting.md",
+        "path": "Tekton/24_YAML_CRD_Catalog_And_Troubleshooting.md",
+        "type": "file",
+        "sha": "",
+        "size": 3162
+      },
+      {
+        "name": "25_Migrate_Versioning_And_Extras.md",
+        "path": "Tekton/25_Migrate_Versioning_And_Extras.md",
+        "type": "file",
+        "sha": "",
+        "size": 2185
+      },
+      {
+        "name": "26_GitOps_Handoff_And_Spectrum.md",
+        "path": "Tekton/26_GitOps_Handoff_And_Spectrum.md",
+        "type": "file",
+        "sha": "",
+        "size": 2580
+      },
+      {
         "name": "README.md",
         "path": "Tekton/README.md",
         "type": "file",
         "sha": "",
-        "size": 1936
+        "size": 5343
       }
     ]
   },
@@ -1864,7 +2046,7 @@
     "path": "2_CI_CD_Tools.md",
     "type": "file",
     "sha": "",
-    "size": 4918
+    "size": 4941
   },
   {
     "name": "20_Classical_Jenkins_Host_And_Web_Deploy.md",
@@ -1955,6 +2137,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 9813
+    "size": 9861
   }
 ]

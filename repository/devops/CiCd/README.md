@@ -120,7 +120,7 @@ Numbers are labels — **climb by floor table**, not by sorting `#` alone.
 | [GitHub Actions](./GitHub_Actions/README.md) | Full track **01–24** (depth pass) — workflows, runners/larger/private-net/ARC, reusable+OIDC, environments/protection, attestations, limits |
 | [GitLab CI](./GitLab_CI/README.md) | Full track **01–26** — CI depth + GitLab platform literacy (MR, AppSec, registry, Agent, Duo, admin doors) |
 | [CircleCI](./CircleCI/README.md) | Full track **01–24** — Cloud config + runners (+ Server literacy) |
-| [Tekton](./Tekton/README.md) | K8s-native pipelines |
+| [Tekton](./Tekton/README.md) | Full track — K8s-native Pipelines, Triggers, PAC, Chains, Operator |
 | [Bitbucket](./Bitbucket/README.md) | Full track **01–21** — Cloud forge + Pipelines (+ Data Center literacy) |
 | [Azure DevOps](./Azure_DevOps/README.md) | Full track **01–25** — suite + Pipelines + Azure deploy spectrum + platform ops |
 | [Buildkite](./Buildkite/README.md) | Full track **01–26** — Pipelines + agents + full product surface |
