@@ -28,7 +28,7 @@ Classic **push CD**: CI applies once with cluster creds.
 
 | Tool | Folder | Category |
 |------|--------|----------|
-| Jenkins | [Jenkins/](./Jenkins/README.md) | CI/CD server; Jenkinsfile; agents |
+| Jenkins | [Jenkins/](./Jenkins/README.md) | Automation server; Pipeline, agents, JCasC, plugins |
 | GitHub Actions | [GitHub_Actions/](./GitHub_Actions/README.md) | GitHub-native CI/CD; workflows, runners, OIDC, environments |
 | GitLab CI | [GitLab_CI/](./GitLab_CI/README.md) | GitLab-native CI/CD plus platform literacy (MR, registry, AppSec, Agent) |
 | CircleCI | [CircleCI/](./CircleCI/README.md) | Hosted CI; `config.yml`, executors, runners |
