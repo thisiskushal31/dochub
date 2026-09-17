@@ -14,6 +14,7 @@ Someone who knows nothing about Unleash should leave able to:
 - Choose backend vs frontend SDKs, Edge vs Proxy, OpenFeature providers  
 - Wire tokens, SSO/RBAC/SCIM, change requests, and integrations  
 - Name compliance, scale, AI/MCP literacy, and find them in the [coverage map](./21_Feature_And_Offering_Coverage_Map.md)  
+- Look up **SDK methods** ([09](./09_SDKs_Backend_Frontend_And_OpenFeature.md)) and **every Admin/Client/Frontend/Edge endpoint** ([23](./23_Admin_Client_Frontend_And_Edge_APIs.md)) without installing first  
 - Run gradual rollout / kill-switch patterns with CI/CD  
 - Know when **not** to use flags (permanent debt, secrets, unfinished migrations alone)  
 
@@ -29,9 +30,9 @@ Each numbered chapter: **Concepts → Advanced → Applications/use cases → Re
 | Authoring | [05](./05_Projects_Environments_And_Applications.md)–[08](./08_Context_Constraints_And_Segments.md) | Organize; flags; strategies; targeting |
 | Clients & edge | [09](./09_SDKs_Backend_Frontend_And_OpenFeature.md)–[11](./11_API_Tokens_Keys_And_Service_Accounts.md) | SDKs; Edge; tokens |
 | Govern & integrate | [12](./12_SSO_RBAC_SCIM_And_Provisioning.md)–[16](./16_AI_Assistants_MCP_And_Assisted_Delivery.md) | Identity; CR; analytics; integrations; AI |
-| Operate & craft | [17](./17_Security_Privacy_And_Compliance.md)–[22](./22_Config_Catalog_Migrate_And_Spectrum.md) | Security; ops; lab; judgment; inventory; spectrum |
+| Operate & craft | [17](./17_Security_Privacy_And_Compliance.md)–[23](./23_Admin_Client_Frontend_And_Edge_APIs.md) | Security; ops; lab; judgment; inventory; spectrum; HTTP APIs |
 
-Suggested order: **01 → 22**. After **04**, jump to **19** if you learn by building.
+Suggested order: **01 → 23**. After **04**, jump to **19** if you learn by building.
 
 ---
 
@@ -47,7 +48,7 @@ Suggested order: **01 → 22**. After **04**, jump to **19** if you learn by bui
 | 06 | [Flags and variants](./06_Feature_Flags_Variants_And_Strategy_Variants.md) | Types; variants |
 | 07 | [Activation strategies](./07_Activation_Strategies_Stickiness_And_Custom.md) | Rollout rules |
 | 08 | [Context and segments](./08_Context_Constraints_And_Segments.md) | Targeting |
-| 09 | [SDKs and OpenFeature](./09_SDKs_Backend_Frontend_And_OpenFeature.md) | Client model |
+| 09 | [SDKs and OpenFeature](./09_SDKs_Backend_Frontend_And_OpenFeature.md) | Every official method family |
 | 10 | [Edge and Proxy](./10_Edge_Proxy_And_Streaming.md) | Topology |
 | 11 | [Tokens and keys](./11_API_Tokens_Keys_And_Service_Accounts.md) | API access |
 | 12 | [SSO, RBAC, SCIM](./12_SSO_RBAC_SCIM_And_Provisioning.md) | Identity |
@@ -61,6 +62,7 @@ Suggested order: **01 → 22**. After **04**, jump to **19** if you learn by bui
 | 20 | [Best practices](./20_Best_Practices_And_When_Not_Unleash.md) | Judgment |
 | 21 | [Coverage map](./21_Feature_And_Offering_Coverage_Map.md) | Full offering inventory |
 | 22 | [Catalog, migrate, spectrum](./22_Config_Catalog_Migrate_And_Spectrum.md) | Config index; doors |
+| 23 | [Admin, Client, Frontend, Edge APIs](./23_Admin_Client_Frontend_And_Edge_APIs.md) | Every documented HTTP endpoint |
 
 Start: [01](./01_What_Is_Unleash_And_Feature_Flags.md).
 

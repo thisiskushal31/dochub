@@ -30,6 +30,10 @@ Unleash is built so **flag evaluation is fast and private**: SDKs (or Edge) eval
 
 Backend evaluation is in-process (nanoseconds once cached). Config updates propagate on a poll/stream interval — expect a short delay, not instant global consistency by default.
 
+**Frontend API** is built into the Unleash server (and Edge): the client sends context, the server/Edge returns **already evaluated** flags. Talking Frontend API **directly** to the central server sends context (possible PII) upstream — Edge keeps that evaluation off the origin ([10](./10_Edge_Proxy_And_Streaming.md), [17](./17_Security_Privacy_And_Compliance.md)). SDKs also **register** and post **metrics** (Client/Frontend); custom metrics feed impact metrics ([14](./14_Impression_Analytics_Impact_And_Playground.md)).
+
+Every documented HTTP operation (Client 5, Frontend 4, Edge 14, Admin 376 as of OpenAPI v8.0.3) is listed in [23](./23_Admin_Client_Frontend_And_Edge_APIs.md). SDK method names live in [09](./09_SDKs_Backend_Frontend_And_OpenFeature.md).
+
 ---
 
 ## 2. Advanced concepts
@@ -78,5 +82,9 @@ Small labs often point SDKs straight at the server. Production estates usually p
 ## References
 
 - [Architecture overview](https://docs.getunleash.io/get-started/unleash-overview)  
-- [API overview](https://docs.getunleash.io/apis/overview)  
+- [Admin API overview](https://docs.getunleash.io/api/admin-api-overview)  
+- [Client API overview](https://docs.getunleash.io/api/client-api-overview)  
+- [Frontend API overview](https://docs.getunleash.io/api/frontend-api-overview)  
+- [Edge API overview](https://docs.getunleash.io/api/edge-api-overview)  
+- [Frontend API concept](https://docs.getunleash.io/concepts/front-end-api)  
 - [SDKs overview](https://docs.getunleash.io/sdks)  

@@ -34,6 +34,10 @@ Browser-visible flags are **hints**, not authorization. Enforce entitlements on 
 
 Official docs cover SOC2, ISO 27001, FedRAMP, data privacy for the Unleash product/cloud. Self-host implies **your** controls on Postgres, backups, IAM, and logging. Map Unleash events into your SIEM if regulated.
 
+### CORS and IP allow lists
+
+Frontend API CORS defaults to `*` — restrict origins per environment so random sites cannot query evaluated flags. **IP allow lists** (cloud / support-configured) can lock Admin and Hosted Edge to VPN/office ranges. Edge should remain the only public flag endpoint; Admin API stays private.
+
 ### Maintenance mode / banners
 
 Operational controls exist to signal degraded admin or freeze changes — know them before incident week.
@@ -63,4 +67,4 @@ Operational controls exist to signal degraded admin or freeze changes — know t
 
 - [Data and privacy](https://docs.getunleash.io/privacy-and-compliance/data-privacy)  
 - [Compliance overview](https://docs.getunleash.io/privacy-and-compliance/compliance-overview)  
-- [Security and compliance guide](https://docs.getunleash.io/guides/security-compliance)  
+- [Security and compliance](https://docs.getunleash.io/guides/security-and-compliance)  

@@ -16,11 +16,23 @@ Day-2 Unleash is mostly **boring platform ops**:
 | **Sync** | Import/export / instance sync when running multiple Unleash |
 | **Troubleshoot** | Toggle lag, token mismatch, context missing, SDK skew |
 
-Resource limits (flags, strategies, …) exist so one project cannot melt the instance — know your edition’s ceilings.
+Resource limits cap flags, strategies, constraints, segments, tokens, projects, environments (OSS: **1 project, 2 environments**, not overridable). Enterprise raises ceilings (e.g. 50k flags, 500 projects). Self-host can override most via `UNLEASH_*_LIMIT` env vars — prefer talking to Unleash rather than silently raising.
 
 ---
 
 ## 2. Advanced concepts
+
+### Import / export and instance sync
+
+Move flag configs **between environments on one instance** or **between instances** (self-host ↔ cloud). Use tagged exports and dedicated source/target tokens. This is a migration/DR tool, not chatops.
+
+### Network view, applications, Edge observability
+
+**Network** dashboards show inbound request volume from SDKs, Edge, and Admin UI. **Applications** list connected clients and outdated SDKs. **Enterprise Edge observability** shows Edge node health in Admin settings. Use these before guessing at toggle lag.
+
+### Maintenance mode, banners, command menu
+
+**Maintenance mode** makes the instance mostly read-only (freeze config during upgrades). **Banners** are instance-wide UI messages. **Command menu** is Admin UX for jumping to flags/projects — not a control plane. **Search** on Flags overview / project flag lists / Projects is full-text plus filters (type, stale, tags, segments, last seen, favorites) — operators, not a second API.
 
 ### Toggle lag runbook
 
@@ -37,10 +49,6 @@ Read breaking changes; upgrade Edge and server as a pair when required; pin imag
 ### Backups
 
 Postgres is the SoR for self-host. Test restore. Cloud customers still need export discipline for catastrophic vendor/project mistakes.
-
-### Network view / maintenance
-
-Use admin network/application views to find chatty or stale clients. Maintenance mode when you must freeze writes.
 
 ---
 
@@ -65,7 +73,11 @@ Use admin network/application views to find chatty or stale clients. Maintenance
 
 ## References
 
+- [Resource limits](https://docs.getunleash.io/concepts/resource-limits)  
+- [Import and export](https://docs.getunleash.io/concepts/import-export)  
+- [Network](https://docs.getunleash.io/concepts/network-view)  
 - [Scaling Unleash](https://docs.getunleash.io/guides/scaling-unleash)  
 - [Upgrade Unleash](https://docs.getunleash.io/deploy/upgrading-unleash)  
 - [Troubleshooting](https://docs.getunleash.io/support/troubleshooting)  
 - [Synchronize instances](https://docs.getunleash.io/guides/how-to-synchronize-unleash-instances)  
+- [Search](https://docs.getunleash.io/concepts/search-operators)  

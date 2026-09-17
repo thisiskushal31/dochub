@@ -30,7 +30,7 @@ Open Source commonly centers on a single Default project; Enterprise unlocks mul
 
 ### Project collaboration mode
 
-Projects can constrain who changes what (open vs protected collaboration patterns). Pair with RBAC and change requests ([12](./12_SSO_RBAC_SCIM_And_Provisioning.md), [13](./13_Change_Requests_Release_Management_And_Governance.md)).
+Default is **open** (instance members can see the project and open change requests). Tighten to protected/private so only assigned groups edit flags. Pair with RBAC and change requests ([12](./12_SSO_RBAC_SCIM_And_Provisioning.md), [13](./13_Change_Requests_Release_Management_And_Governance.md)).
 
 ### Organizing flags
 
@@ -68,7 +68,8 @@ Connected SDKs register as applications. Use that view to find orphan flags (no 
 
 ## References
 
-- [Core concepts](https://docs.getunleash.io/concepts)  
 - [Projects](https://docs.getunleash.io/concepts/projects)  
+- [Project collaboration mode](https://docs.getunleash.io/concepts/project-collaboration-mode)  
 - [Environments](https://docs.getunleash.io/concepts/environments)  
+- [Applications](https://docs.getunleash.io/concepts/applications)  
 - [Organize feature flags](https://docs.getunleash.io/guides/organize-feature-flags)  

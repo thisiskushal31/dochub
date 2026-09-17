@@ -39,7 +39,7 @@ Classic **push CD**: CI applies once with cluster creds.
 | Argo CD | [Argo_CD/](./Argo_CD/README.md) | GitOps CD |
 | Flux | [Flux/](./Flux/README.md) | GitOps toolkit; sources, Kustomize/Helm, image automation |
 | Argo Rollouts | [Argo_Rollouts/](./Argo_Rollouts/README.md) | Progressive delivery |
-| Unleash | [Unleash/](./Unleash/README.md) | Feature flags, strategies, Edge, OpenFeature, governance |
+| Unleash | [Unleash/](./Unleash/README.md) | Feature flags, strategies, Edge, SDK methods, Admin/Client/Frontend/Edge APIs, OpenFeature, governance |
 
 ---
 

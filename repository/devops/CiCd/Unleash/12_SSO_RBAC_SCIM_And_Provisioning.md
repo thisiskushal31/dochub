@@ -45,7 +45,7 @@ Project **collaboration mode** (private/protected) and **public signup / invite 
 
 ### Login history and service accounts
 
-**Login history** supports investigation. Automations should use **service accounts** + tokens ([11](./11_API_Tokens_Keys_And_Service_Accounts.md)), not shared human Admin passwords.
+**Login history** supports investigation. **Access requests** (in-app notifications) let users ask for project access instead of sharing Admin. Automations should use **service accounts** + tokens ([11](./11_API_Tokens_Keys_And_Service_Accounts.md)), not shared human Admin passwords.
 
 ### OSS vs Enterprise identity
 

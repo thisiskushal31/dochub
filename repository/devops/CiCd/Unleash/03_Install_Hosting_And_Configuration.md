@@ -6,15 +6,15 @@
 
 ## 1. Concepts
 
-You can run Unleash three ways:
+You can run Unleash in three **server** hosting models (plan-dependent):
 
 | Option | When |
 |--------|------|
-| **Unleash Cloud** (hosted) | Fastest start; vendor operates the control plane |
-| **Self-hosted Open Source** | You run the server (commonly Docker Compose) |
-| **Self-hosted Enterprise** | Same operational model + Enterprise features/license |
+| **Cloud-hosted** | Unleash operates API, UI, DB, and optionally **Enterprise Edge Cloud** (multi-AZ / multi-region) |
+| **Hybrid** | Unleash hosts API/UI/DB; **you** run Edge in your VPC (`UPSTREAM_URL` + backend `TOKENS`) |
+| **Self-hosted** | You run server + Postgres + UI + optional Edge (OSS or Enterprise license keys) |
 
-All paths still teach the same objects: projects, environments, flags, tokens, SDKs.
+All paths still teach the same objects: projects, environments, flags, tokens, SDKs. Edge is **optional** but Fair Use / latency / frontend privacy usually require it in production ([10](./10_Edge_Proxy_And_Streaming.md)).
 
 ### Self-hosted mental model
 
@@ -43,11 +43,11 @@ Treat config as platform secrets in your secret store — not in Git plaintext.
 
 ### Hosting choices
 
-| Concern | Cloud | Self-host |
-|---------|-------|-----------|
-| Ops load | Low | You own HA, upgrades, Postgres |
-| Data residency | Vendor regions | Your VPC |
-| Feature pack | Plan-dependent | OSS baseline vs Enterprise license |
+| Concern | Cloud | Hybrid | Self-host |
+|---------|-------|--------|-----------|
+| Ops load | Lowest | You operate Edge | You own HA, upgrades, Postgres, Edge |
+| Data residency | Vendor regions | Context can stay on your Edge | Your VPC |
+| Feature pack | Plan-dependent | Enterprise server + your Edge | OSS baseline vs Enterprise license |
 
 OSS vs Enterprise capability gaps (multi-project, change requests, SSO depth, SCIM, …) matter when you design governance ([22](./22_Config_Catalog_Migrate_And_Spectrum.md)).
 
@@ -81,4 +81,5 @@ Terminate TLS at the load balancer or configure the app for HTTPS. Mixed-content
 - [Hosting options](https://docs.getunleash.io/deploy/hosting-options)  
 - [Self-hosted getting started](https://docs.getunleash.io/deploy/getting-started)  
 - [Configure Unleash](https://docs.getunleash.io/deploy/configuring-unleash)  
+- [License keys](https://docs.getunleash.io/deploy/license-keys)  
 - [Unleash GitHub](https://github.com/Unleash/unleash)  

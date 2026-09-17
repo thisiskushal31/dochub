@@ -12,8 +12,8 @@ Surfaces you may see:
 
 | Surface | Role |
 |---------|------|
-| **Unleash MCP** | Tooling bridge for agents to query/change Unleash via MCP |
-| **Copilot / Claude Code / Cursor / Codex / …** | IDE agents taught to use Unleash patterns |
+| **Unleash MCP** | Tooling bridge for agents to query/change Unleash via MCP (local or remote server settings) |
+| **IDE agents** | Copilot, Claude Code, Cursor, Codex, Kiro, OpenCode, Gemini/Antigravity — same MCP, different install recipes (upstream) |
 | **Flags for AI features** | Gate model prompts, providers, or risky AI paths in *your* product |
 
 Same rule as humans: **prod exposure needs governance** ([13](./13_Change_Requests_Release_Management_And_Governance.md)). An agent with an admin token is still an admin.

@@ -24,16 +24,16 @@ Evaluation is designed to happen **locally in the SDK** (backend) or at **Edge**
 
 ### Flag types (lifecycle literacy)
 
-| Type | Job | Typical lifespan |
-|------|-----|------------------|
-| Release | Ship incomplete/new product behind a gate | Weeks |
-| Experiment | A/B / multivariate | Days–weeks |
-| Operational | Swap implementations (library, path) safely | Days |
-| Kill switch | Instantly degrade/disable a risky path | Long-lived |
-| Permission | Entitlements / early access | Often long-lived |
-| Sunset | Controlled retirement of an existing feature | Weeks–months |
+| Type | Job | Default expected lifetime |
+|------|-----|---------------------------|
+| Release | Ship incomplete/new product behind a gate | 40 days |
+| Experiment | A/B / multivariate | 40 days |
+| Operational | Swap implementations (library, path) safely | 7 days |
+| Kill switch | Instantly degrade/disable a risky path | Permanent |
+| Permission | Entitlements / early access | Permanent |
+| Sunset | Coordinate planned removal of an existing feature | 90 days |
 
-Types are signals for cleanup and UI sorting — not separate runtime engines.
+Types are signals for cleanup, UI sorting, and **potentially stale** marking — not separate runtime engines. Admins can change expected lifetimes under Configure → Feature flag types.
 
 ### Vs progressive delivery controllers
 

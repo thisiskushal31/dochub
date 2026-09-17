@@ -2203,21 +2203,21 @@
             "path": "CiCd/Unleash/01_What_Is_Unleash_And_Feature_Flags.md",
             "type": "file",
             "sha": "",
-            "size": 5787
+            "size": 5903
           },
           {
             "name": "02_Architecture_Server_SDK_Edge_And_APIs.md",
             "path": "CiCd/Unleash/02_Architecture_Server_SDK_Edge_And_APIs.md",
             "type": "file",
             "sha": "",
-            "size": 3515
+            "size": 4610
           },
           {
             "name": "03_Install_Hosting_And_Configuration.md",
             "path": "CiCd/Unleash/03_Install_Hosting_And_Configuration.md",
             "type": "file",
             "sha": "",
-            "size": 3143
+            "size": 3581
           },
           {
             "name": "04_First_Flag_SDK_And_Toggle_Loop.md",
@@ -2231,14 +2231,14 @@
             "path": "CiCd/Unleash/05_Projects_Environments_And_Applications.md",
             "type": "file",
             "sha": "",
-            "size": 2884
+            "size": 3059
           },
           {
             "name": "06_Feature_Flags_Variants_And_Strategy_Variants.md",
             "path": "CiCd/Unleash/06_Feature_Flags_Variants_And_Strategy_Variants.md",
             "type": "file",
             "sha": "",
-            "size": 2743
+            "size": 4072
           },
           {
             "name": "07_Activation_Strategies_Stickiness_And_Custom.md",
@@ -2259,7 +2259,7 @@
             "path": "CiCd/Unleash/09_SDKs_Backend_Frontend_And_OpenFeature.md",
             "type": "file",
             "sha": "",
-            "size": 2931
+            "size": 15784
           },
           {
             "name": "10_Edge_Proxy_And_Streaming.md",
@@ -2273,14 +2273,14 @@
             "path": "CiCd/Unleash/11_API_Tokens_Keys_And_Service_Accounts.md",
             "type": "file",
             "sha": "",
-            "size": 2245
+            "size": 3524
           },
           {
             "name": "12_SSO_RBAC_SCIM_And_Provisioning.md",
             "path": "CiCd/Unleash/12_SSO_RBAC_SCIM_And_Provisioning.md",
             "type": "file",
             "sha": "",
-            "size": 4037
+            "size": 4139
           },
           {
             "name": "13_Change_Requests_Release_Management_And_Governance.md",
@@ -2294,35 +2294,35 @@
             "path": "CiCd/Unleash/14_Impression_Analytics_Impact_And_Playground.md",
             "type": "file",
             "sha": "",
-            "size": 2371
+            "size": 3014
           },
           {
             "name": "15_Integrations_Terraform_Webhooks_And_Chatops.md",
             "path": "CiCd/Unleash/15_Integrations_Terraform_Webhooks_And_Chatops.md",
             "type": "file",
             "sha": "",
-            "size": 4114
+            "size": 4555
           },
           {
             "name": "16_AI_Assistants_MCP_And_Assisted_Delivery.md",
             "path": "CiCd/Unleash/16_AI_Assistants_MCP_And_Assisted_Delivery.md",
             "type": "file",
             "sha": "",
-            "size": 2497
+            "size": 2578
           },
           {
             "name": "17_Security_Privacy_And_Compliance.md",
             "path": "CiCd/Unleash/17_Security_Privacy_And_Compliance.md",
             "type": "file",
             "sha": "",
-            "size": 2401
+            "size": 2722
           },
           {
             "name": "18_Scale_Upgrade_Operate_And_Troubleshoot.md",
             "path": "CiCd/Unleash/18_Scale_Upgrade_Operate_And_Troubleshoot.md",
             "type": "file",
             "sha": "",
-            "size": 2280
+            "size": 3606
           },
           {
             "name": "19_Worked_Example_Gradual_Rollout_In_CI_CD.md",
@@ -2343,21 +2343,28 @@
             "path": "CiCd/Unleash/21_Feature_And_Offering_Coverage_Map.md",
             "type": "file",
             "sha": "",
-            "size": 4263
+            "size": 7510
           },
           {
             "name": "22_Config_Catalog_Migrate_And_Spectrum.md",
             "path": "CiCd/Unleash/22_Config_Catalog_Migrate_And_Spectrum.md",
             "type": "file",
             "sha": "",
-            "size": 3579
+            "size": 4340
+          },
+          {
+            "name": "23_Admin_Client_Frontend_And_Edge_APIs.md",
+            "path": "CiCd/Unleash/23_Admin_Client_Frontend_And_Edge_APIs.md",
+            "type": "file",
+            "sha": "",
+            "size": 43878
           },
           {
             "name": "README.md",
             "path": "CiCd/Unleash/README.md",
             "type": "file",
             "sha": "",
-            "size": 5499
+            "size": 5859
           }
         ]
       },
@@ -2443,7 +2450,7 @@
         "path": "CiCd/2_CI_CD_Tools.md",
         "type": "file",
         "sha": "",
-        "size": 4984
+        "size": 5030
       },
       {
         "name": "20_Classical_Jenkins_Host_And_Web_Deploy.md",
@@ -2534,7 +2541,7 @@
         "path": "CiCd/README.md",
         "type": "file",
         "sha": "",
-        "size": 9924
+        "size": 9976
       }
     ]
   },

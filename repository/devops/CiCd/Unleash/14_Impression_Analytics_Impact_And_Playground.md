@@ -11,15 +11,20 @@ Flags without feedback become superstition. Unleash surfaces:
 | Tool | Job |
 |------|-----|
 | **Impression data** | SDK emits events when a flag is evaluated (opt-in per flag) |
-| **Insights / analytics** | Product views of flag usage and trends |
-| **Impact metrics** | Tie rollouts to business/tech signals (edition-dependent) |
-| **Playground** | Simulate evaluation for a context before changing prod |
+| **Insights / analytics** | Product views of flag usage, debt, and trends |
+| **Impact metrics** | Tie rollouts to SDK/custom metrics or Prometheus/VictoriaMetrics (edition-dependent) |
+| **Playground** | Simulate evaluation for a context (including change-request preview) |
+| **Events** | Audit trail: **Event Log** (full, filter/export CSV/JSON) vs **Event Timeline** (Enterprise, ~48h debug + Signals) |
 
-Enable impressions when you run experiments or need audit-like “who saw what.” Ship them to your analytics stack (Segment, Mixpanel, …) via guides — Unleash is not your warehouse.
+Enable impressions when you run experiments or need “who saw what.” Ship them to your analytics stack — Unleash is not your warehouse. SDKs also **register** and send **usage metrics**; Client API has a custom-metrics path used by impact metrics.
 
 ---
 
 ## 2. Advanced concepts
+
+### Events vs impressions
+
+**Events** are Admin-side “what changed in Unleash” (who edited a strategy). **Impressions** are app-side “this context evaluated this flag.” Both can feed webhooks. Event schema includes `type`, `createdBy`, `data`/`preData`, and (Enterprise) client IP. Timeline groups nearby events for incident debug.
 
 ### Cost and privacy
 
@@ -55,6 +60,7 @@ Enterprise release automation may consume **signals** and fire **actions** (paus
 
 ## References
 
+- [Events](https://docs.getunleash.io/concepts/events)  
 - [Impression data](https://docs.getunleash.io/concepts/impression-data)  
 - [Capture impression data](https://docs.getunleash.io/guides/how-to-capture-impression-data)  
 - [Playground](https://docs.getunleash.io/concepts/playground)  

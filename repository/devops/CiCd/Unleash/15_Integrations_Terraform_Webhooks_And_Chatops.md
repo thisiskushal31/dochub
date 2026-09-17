@@ -11,7 +11,7 @@ Unleash integrates in two directions:
 1. **Outbound** — Unleash posts when flags/events change (webhooks, Slack, Teams, Datadog, …).  
 2. **Inbound / bidirectional** — other systems drive or mirror Unleash (Jira Cloud plugin, ServiceNow CR tracking, Terraform provider, Signals).
 
-Official surface includes Datadog, Jira Cloud, Microsoft Teams workflows, ServiceNow, Slack app, generic **webhook**, plus **Terraform** for instance bootstrap. Community plugins exist; treat them as third-party risk.
+Official surface includes Datadog, Jira Cloud, Microsoft Teams workflows, ServiceNow (beta), Slack app, generic **webhook**, plus **Terraform** for instance bootstrap. **GitHub Actions** can evaluate flags in workflows via `Unleash/unleash-action` (Frontend API / Edge; not the Admin control plane). Community plugins exist; treat them as third-party risk.
 
 **Integration events** log outbound executions so you can see delivery failures without guessing in Slack.
 
@@ -61,7 +61,7 @@ Slack/Teams “enable flag” bots are powerful. Require prod path through chang
 | IaC baseline | Terraform for projects, envs, tokens, SSO — not ephemeral flags |
 | Incident kill switch | Signal from alertmanager → Action disable |
 | Audit in ITSM | ServiceNow CR sync |
-| Observability correlate | Datadog events alongside deploy markers |
+| CI kill-switch / experiment in Actions | `unleash-action` with a **frontend** token + Edge URL |
 
 **Staff checklist**
 
@@ -78,9 +78,13 @@ Slack/Teams “enable flag” bots are powerful. Require prod path through chang
 
 ## References
 
-- [Integrations](https://docs.getunleash.io/integrate/integrations)  
+- [Integrations](https://docs.getunleash.io/integrate)  
 - [Webhook](https://docs.getunleash.io/integrate/webhook)  
 - [Terraform](https://docs.getunleash.io/integrate/terraform)  
-- [Slack app](https://docs.getunleash.io/integrate/slack-app)  
-- [Datadog](https://docs.getunleash.io/integrate/datadog)  
+- [Slack app](https://docs.getunleash.io/integrate/slack)  
+- [Datadog](https://docs.getunleash.io/integrate/data)  
 - [ServiceNow](https://docs.getunleash.io/integrate/servicenow)  
+- [Jira Cloud](https://docs.getunleash.io/integrate/jira-cloud-plugin-installation)  
+- [Microsoft Teams](https://docs.getunleash.io/integrate/teams)  
+- [Developer Toolbar](https://docs.getunleash.io/integrate/toolbar)  
+- [Unleash GitHub Action](https://github.com/Unleash/unleash-action)  
