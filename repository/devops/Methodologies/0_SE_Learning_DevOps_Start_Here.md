@@ -42,7 +42,8 @@ Full table: [Methodologies README — The staircase](./README.md).
 | Metrics, logs, traces, paging | [Observability/](../Observability/README.md) | — |
 | Pipeline secrets, SAST/DAST gates | [Security/](../Security/README.md) | [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) |
 | nginx / host deploy | [Servers/](../Servers/README.md) | — |
-| AWS / GCP / Azure literacy | [Cloud/](../Cloud/README.md) | — |
+| Named cloud (AWS / GCP / Azure / …) | [Cloud/](../Cloud/README.md) | — |
+| On-prem metal, colo, vSphere | [Datacenter/](../Datacenter/README.md) | — |
 | What Docker / K8s *are* | Cloud-Native doors | [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) |
 | TCP / DNS / TLS on the wire | Short doors | [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive) |
 | Data stores / design choice | Short doors | [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) · [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) |

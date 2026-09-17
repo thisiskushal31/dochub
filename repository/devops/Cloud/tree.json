@@ -4,41 +4,104 @@
     "path": "1_Shared_Cloud_Concepts.md",
     "type": "file",
     "sha": "",
-    "size": 585
+    "size": 6614
   },
   {
-    "name": "2_GCP_Literacy.md",
-    "path": "2_GCP_Literacy.md",
+    "name": "10_Tencent_Cloud.md",
+    "path": "10_Tencent_Cloud.md",
     "type": "file",
     "sha": "",
-    "size": 749
+    "size": 1831
   },
   {
-    "name": "3_AWS_Literacy.md",
-    "path": "3_AWS_Literacy.md",
+    "name": "11_Huawei_Cloud.md",
+    "path": "11_Huawei_Cloud.md",
     "type": "file",
     "sha": "",
-    "size": 420
+    "size": 2123
   },
   {
-    "name": "4_Azure_Literacy.md",
-    "path": "4_Azure_Literacy.md",
+    "name": "12_OVHcloud.md",
+    "path": "12_OVHcloud.md",
     "type": "file",
     "sha": "",
-    "size": 390
+    "size": 2725
   },
   {
-    "name": "5_Managed_Kubernetes_Entry.md",
-    "path": "5_Managed_Kubernetes_Entry.md",
+    "name": "13_Deutsche_Telekom.md",
+    "path": "13_Deutsche_Telekom.md",
     "type": "file",
     "sha": "",
-    "size": 576
+    "size": 2725
+  },
+  {
+    "name": "14_CtrlS_And_Yotta.md",
+    "path": "14_CtrlS_And_Yotta.md",
+    "type": "file",
+    "sha": "",
+    "size": 3596
+  },
+  {
+    "name": "2_Spectrum_And_When_Which.md",
+    "path": "2_Spectrum_And_When_Which.md",
+    "type": "file",
+    "sha": "",
+    "size": 4779
+  },
+  {
+    "name": "3_Managed_Kubernetes.md",
+    "path": "3_Managed_Kubernetes.md",
+    "type": "file",
+    "sha": "",
+    "size": 4938
+  },
+  {
+    "name": "4_GCP_Literacy.md",
+    "path": "4_GCP_Literacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 4410
+  },
+  {
+    "name": "5_AWS_Literacy.md",
+    "path": "5_AWS_Literacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 4439
+  },
+  {
+    "name": "6_Azure_Literacy.md",
+    "path": "6_Azure_Literacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 4441
+  },
+  {
+    "name": "7_Oracle_Cloud.md",
+    "path": "7_Oracle_Cloud.md",
+    "type": "file",
+    "sha": "",
+    "size": 2531
+  },
+  {
+    "name": "8_IBM_Cloud.md",
+    "path": "8_IBM_Cloud.md",
+    "type": "file",
+    "sha": "",
+    "size": 2263
+  },
+  {
+    "name": "9_Alibaba_Cloud.md",
+    "path": "9_Alibaba_Cloud.md",
+    "type": "file",
+    "sha": "",
+    "size": 2398
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1092
+    "size": 3958
   }
 ]

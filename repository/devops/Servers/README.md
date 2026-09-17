@@ -26,6 +26,7 @@ Host lifecycle, web servers, reverse proxies, and classic deploy patterns (VM/ba
 
 - OS services: [Operating-Systems/](../Operating-Systems/README.md)
 - Deploy automation: [Automation/](../Automation/README.md) (Ansible roles → hosts)
+- Facility / metal / vSphere: [Datacenter/](../Datacenter/README.md) (this folder stays nginx/host)
 - TLS / ingress overlap: [Cloud-Native/Kubernetes](../Cloud-Native/Kubernetes/README.md), [Networks Deep Dive](../../Networks-Deep-Dive/README.md)
 
 ## v1 done when

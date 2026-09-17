@@ -1,0 +1,93 @@
+[
+  {
+    "name": "1_On_Prem_As_A_Solution.md",
+    "path": "1_On_Prem_As_A_Solution.md",
+    "type": "file",
+    "sha": "",
+    "size": 9164
+  },
+  {
+    "name": "10_Clusters_On_Prem.md",
+    "path": "10_Clusters_On_Prem.md",
+    "type": "file",
+    "sha": "",
+    "size": 6082
+  },
+  {
+    "name": "11_Identity_Access_And_Change.md",
+    "path": "11_Identity_Access_And_Change.md",
+    "type": "file",
+    "sha": "",
+    "size": 5447
+  },
+  {
+    "name": "12_Sites_DR_Hybrid_And_The_Job.md",
+    "path": "12_Sites_DR_Hybrid_And_The_Job.md",
+    "type": "file",
+    "sha": "",
+    "size": 6039
+  },
+  {
+    "name": "2_Ownership_Colo_And_Contracts.md",
+    "path": "2_Ownership_Colo_And_Contracts.md",
+    "type": "file",
+    "sha": "",
+    "size": 6115
+  },
+  {
+    "name": "3_Facility_Power_Cooling_And_Rooms.md",
+    "path": "3_Facility_Power_Cooling_And_Rooms.md",
+    "type": "file",
+    "sha": "",
+    "size": 5412
+  },
+  {
+    "name": "4_Rack_BMC_And_Provisioning.md",
+    "path": "4_Rack_BMC_And_Provisioning.md",
+    "type": "file",
+    "sha": "",
+    "size": 5291
+  },
+  {
+    "name": "5_Fabric_Cross_Connect_And_OOB.md",
+    "path": "5_Fabric_Cross_Connect_And_OOB.md",
+    "type": "file",
+    "sha": "",
+    "size": 5344
+  },
+  {
+    "name": "6_Storage_Backup_And_Restore.md",
+    "path": "6_Storage_Backup_And_Restore.md",
+    "type": "file",
+    "sha": "",
+    "size": 5335
+  },
+  {
+    "name": "7_VMware_vSphere.md",
+    "path": "7_VMware_vSphere.md",
+    "type": "file",
+    "sha": "",
+    "size": 6331
+  },
+  {
+    "name": "8_Other_Hypervisors_And_Private_IaaS.md",
+    "path": "8_Other_Hypervisors_And_Private_IaaS.md",
+    "type": "file",
+    "sha": "",
+    "size": 5875
+  },
+  {
+    "name": "9_Deploy_On_The_Estate.md",
+    "path": "9_Deploy_On_The_Estate.md",
+    "type": "file",
+    "sha": "",
+    "size": 5323
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 4369
+  }
+]

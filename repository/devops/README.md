@@ -12,7 +12,8 @@ This handbook is how software is **delivered**. Start at [Methodologies/0 — SE
 - **[`CiCd/`](./CiCd/)** — Continuous Integration and Continuous Delivery pipelines, practices, and tools
 - **[`IAC/`](./IAC/)** — Infrastructure as Code: Terraform, CloudFormation, Pulumi, and best practices
 - **[`Automation/`](./Automation/)** — Config-management automation (Ansible and kin), not app workflow tools
-- **[`Cloud/`](./Cloud/)** — AWS / GCP / Azure literacy (shared concepts, not cert dumps)
+- **[`Cloud/`](./Cloud/)** — Named provider solutions (AWS/GCP/Azure/OCI/IBM/Aliyun/Tencent/Huawei/OVH/Telekom/CtrlS/Yotta, including GKE/EKS/AKS and ROSA/ARO/ROKS as SKUs — not cert dumps, not kubeadm)
+- **[`Datacenter/`](./Datacenter/)** — On-prem as a solution: colo/contracts, facility, BMC, fabric, storage, vSphere and other hypervisors, deploy, clusters-on-prem, identity, DR/hybrid
 - **[`Cloud-Native/`](./Cloud-Native/)** — Cloud-native architectures, patterns, and platform engineering
 - **[`Servers/`](./Servers/)** — Web servers, reverse proxies, host lifecycle (nginx, Apache, …)
 - **[`Observability/`](./Observability/)** — Monitoring, logging, tracing, SLO/SLI; one folder per tool (Prometheus, Grafana, OpenTelemetry, etc.)
@@ -40,7 +41,7 @@ Images from these sources can be downloaded into the right `Assets/` subfolder a
 2. Use `Operating-Systems/` for OS fundamentals (theory first in **Fundamentals/**), then Linux, Windows, Unix, or macOS implementation and commands
 3. Use `Languages/` when you need to read or write code (Python for automation, Go for K8s/Terraform, etc.)
 4. Jump into [`CiCd/`](./CiCd/) or [`IAC/`](./IAC/) based on your immediate needs
-5. Use `Servers/` for web tier; `Cloud/` for provider literacy; related repos in the table below
+5. Use `Servers/` for web tier; `Cloud/` for provider literacy; `Datacenter/` for metal and the hall; related repos in the table below
 6. Use `Automation/` for workflow and orchestration patterns
 7. Reference `Observability/` and `Security/` for production operations
 8. Keep checklists and commands handy — [Commands-and-Cheatsheets](https://github.com/thisiskushal31/Commands-and-Cheatsheets)
@@ -52,7 +53,7 @@ When a topic here touches another domain, we give enough context to continue in 
 | Topic | Repository | What’s there |
 |-------|------------|--------------|
 | **Networking** | [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive) | Physical layer to cloud-native: foundations, transport, routing, security, observability, labs. |
-| **Containers** | [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) | Runtimes (Docker, Podman), orchestration (Kubernetes, Swarm, OpenShift), managed (GKE, EKS, AKS). |
+| **Containers** | [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) | Runtimes (Docker, Podman), orchestration (Kubernetes, OpenShift, Rancher, Swarm), managed (GKE, EKS, AKS). |
 | **Databases & object storage** | [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) | Relational, NoSQL, analytical, vector; engines and managed services. For why S3, GCS, or similar object stores are used and how they fit in, see this repo. |
 | **System design** | [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) | Patterns, components, trade-offs; fundamentals, caching, messaging, case studies. |
 | **DSA** | [Datastructures-and-Algorithms](https://github.com/thisiskushal31/Datastructures-and-Algorithms) | Data structures and algorithms notes and solutions (GFG, Leetcode). |

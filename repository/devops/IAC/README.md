@@ -25,7 +25,7 @@ IAC concepts, patterns, and tools. **Each tool has its own folder**; add new too
 | [**Packer**](./Packer/README.md) | Machine image baking | stub |
 | [**Atlantis**](./Atlantis/README.md) | Terraform PR apply | stub |
 
-Cloud provider literacy (not full cert content): [Cloud/](../Cloud/README.md)
+Cloud provider literacy (not full cert content): [Cloud/](../Cloud/README.md). Metal, colo, and vSphere: [Datacenter/](../Datacenter/README.md).
 
 To add a new tool: create a folder (e.g. `NewTool/README.md`) and add it to the table above. Community-maintained.
 

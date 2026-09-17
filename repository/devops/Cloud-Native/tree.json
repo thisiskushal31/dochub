@@ -85,7 +85,7 @@
         "path": "Kubernetes/README.md",
         "type": "file",
         "sha": "",
-        "size": 329
+        "size": 1010
       }
     ]
   },
@@ -116,7 +116,7 @@
     "path": "2_Kubernetes_And_Platforms.md",
     "type": "file",
     "sha": "",
-    "size": 572
+    "size": 739
   },
   {
     "name": "3_Platform_Engineering.md",

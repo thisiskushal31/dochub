@@ -2556,42 +2556,105 @@
         "path": "Cloud/1_Shared_Cloud_Concepts.md",
         "type": "file",
         "sha": "",
-        "size": 585
+        "size": 6614
       },
       {
-        "name": "2_GCP_Literacy.md",
-        "path": "Cloud/2_GCP_Literacy.md",
+        "name": "10_Tencent_Cloud.md",
+        "path": "Cloud/10_Tencent_Cloud.md",
         "type": "file",
         "sha": "",
-        "size": 749
+        "size": 1831
       },
       {
-        "name": "3_AWS_Literacy.md",
-        "path": "Cloud/3_AWS_Literacy.md",
+        "name": "11_Huawei_Cloud.md",
+        "path": "Cloud/11_Huawei_Cloud.md",
         "type": "file",
         "sha": "",
-        "size": 420
+        "size": 2123
       },
       {
-        "name": "4_Azure_Literacy.md",
-        "path": "Cloud/4_Azure_Literacy.md",
+        "name": "12_OVHcloud.md",
+        "path": "Cloud/12_OVHcloud.md",
         "type": "file",
         "sha": "",
-        "size": 390
+        "size": 2725
       },
       {
-        "name": "5_Managed_Kubernetes_Entry.md",
-        "path": "Cloud/5_Managed_Kubernetes_Entry.md",
+        "name": "13_Deutsche_Telekom.md",
+        "path": "Cloud/13_Deutsche_Telekom.md",
         "type": "file",
         "sha": "",
-        "size": 576
+        "size": 2725
+      },
+      {
+        "name": "14_CtrlS_And_Yotta.md",
+        "path": "Cloud/14_CtrlS_And_Yotta.md",
+        "type": "file",
+        "sha": "",
+        "size": 3596
+      },
+      {
+        "name": "2_Spectrum_And_When_Which.md",
+        "path": "Cloud/2_Spectrum_And_When_Which.md",
+        "type": "file",
+        "sha": "",
+        "size": 4779
+      },
+      {
+        "name": "3_Managed_Kubernetes.md",
+        "path": "Cloud/3_Managed_Kubernetes.md",
+        "type": "file",
+        "sha": "",
+        "size": 4938
+      },
+      {
+        "name": "4_GCP_Literacy.md",
+        "path": "Cloud/4_GCP_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 4410
+      },
+      {
+        "name": "5_AWS_Literacy.md",
+        "path": "Cloud/5_AWS_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 4439
+      },
+      {
+        "name": "6_Azure_Literacy.md",
+        "path": "Cloud/6_Azure_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 4441
+      },
+      {
+        "name": "7_Oracle_Cloud.md",
+        "path": "Cloud/7_Oracle_Cloud.md",
+        "type": "file",
+        "sha": "",
+        "size": 2531
+      },
+      {
+        "name": "8_IBM_Cloud.md",
+        "path": "Cloud/8_IBM_Cloud.md",
+        "type": "file",
+        "sha": "",
+        "size": 2263
+      },
+      {
+        "name": "9_Alibaba_Cloud.md",
+        "path": "Cloud/9_Alibaba_Cloud.md",
+        "type": "file",
+        "sha": "",
+        "size": 2398
       },
       {
         "name": "README.md",
         "path": "Cloud/README.md",
         "type": "file",
         "sha": "",
-        "size": 1092
+        "size": 3958
       }
     ]
   },
@@ -2687,7 +2750,7 @@
             "path": "Cloud-Native/Kubernetes/README.md",
             "type": "file",
             "sha": "",
-            "size": 329
+            "size": 1010
           }
         ]
       },
@@ -2718,7 +2781,7 @@
         "path": "Cloud-Native/2_Kubernetes_And_Platforms.md",
         "type": "file",
         "sha": "",
-        "size": 572
+        "size": 739
       },
       {
         "name": "3_Platform_Engineering.md",
@@ -2740,6 +2803,105 @@
         "type": "file",
         "sha": "",
         "size": 1867
+      }
+    ]
+  },
+  {
+    "name": "Datacenter",
+    "path": "Datacenter",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_On_Prem_As_A_Solution.md",
+        "path": "Datacenter/1_On_Prem_As_A_Solution.md",
+        "type": "file",
+        "sha": "",
+        "size": 9164
+      },
+      {
+        "name": "10_Clusters_On_Prem.md",
+        "path": "Datacenter/10_Clusters_On_Prem.md",
+        "type": "file",
+        "sha": "",
+        "size": 6082
+      },
+      {
+        "name": "11_Identity_Access_And_Change.md",
+        "path": "Datacenter/11_Identity_Access_And_Change.md",
+        "type": "file",
+        "sha": "",
+        "size": 5447
+      },
+      {
+        "name": "12_Sites_DR_Hybrid_And_The_Job.md",
+        "path": "Datacenter/12_Sites_DR_Hybrid_And_The_Job.md",
+        "type": "file",
+        "sha": "",
+        "size": 6039
+      },
+      {
+        "name": "2_Ownership_Colo_And_Contracts.md",
+        "path": "Datacenter/2_Ownership_Colo_And_Contracts.md",
+        "type": "file",
+        "sha": "",
+        "size": 6115
+      },
+      {
+        "name": "3_Facility_Power_Cooling_And_Rooms.md",
+        "path": "Datacenter/3_Facility_Power_Cooling_And_Rooms.md",
+        "type": "file",
+        "sha": "",
+        "size": 5412
+      },
+      {
+        "name": "4_Rack_BMC_And_Provisioning.md",
+        "path": "Datacenter/4_Rack_BMC_And_Provisioning.md",
+        "type": "file",
+        "sha": "",
+        "size": 5291
+      },
+      {
+        "name": "5_Fabric_Cross_Connect_And_OOB.md",
+        "path": "Datacenter/5_Fabric_Cross_Connect_And_OOB.md",
+        "type": "file",
+        "sha": "",
+        "size": 5344
+      },
+      {
+        "name": "6_Storage_Backup_And_Restore.md",
+        "path": "Datacenter/6_Storage_Backup_And_Restore.md",
+        "type": "file",
+        "sha": "",
+        "size": 5335
+      },
+      {
+        "name": "7_VMware_vSphere.md",
+        "path": "Datacenter/7_VMware_vSphere.md",
+        "type": "file",
+        "sha": "",
+        "size": 6331
+      },
+      {
+        "name": "8_Other_Hypervisors_And_Private_IaaS.md",
+        "path": "Datacenter/8_Other_Hypervisors_And_Private_IaaS.md",
+        "type": "file",
+        "sha": "",
+        "size": 5875
+      },
+      {
+        "name": "9_Deploy_On_The_Estate.md",
+        "path": "Datacenter/9_Deploy_On_The_Estate.md",
+        "type": "file",
+        "sha": "",
+        "size": 5323
+      },
+      {
+        "name": "README.md",
+        "path": "Datacenter/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 4369
       }
     ]
   },
@@ -2932,7 +3094,7 @@
         "path": "IAC/README.md",
         "type": "file",
         "sha": "",
-        "size": 1995
+        "size": 2062
       }
     ]
   },
@@ -9596,7 +9758,7 @@
         "path": "Methodologies/0_SE_Learning_DevOps_Start_Here.md",
         "type": "file",
         "sha": "",
-        "size": 5604
+        "size": 5695
       },
       {
         "name": "1_DevOps_Culture_And_Collaboration.md",
@@ -10886,7 +11048,7 @@
         "path": "Servers/README.md",
         "type": "file",
         "sha": "",
-        "size": 1704
+        "size": 1804
       }
     ]
   },
@@ -10895,6 +11057,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 8991
+    "size": 9342
   }
 ]
