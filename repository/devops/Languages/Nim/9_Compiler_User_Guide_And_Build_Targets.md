@@ -92,8 +92,6 @@ The first compiles and runs; the second is a common **optimized binary** build p
 - **Balance** checks and optimizations against **security** (crash info, hardening) and **performance** SLAs.
 - **Reproducible artifacts:** some teams pin embedded timestamps via environment conventions (for example **`SOURCE_DATE_EPOCH`**) when building toolchains or release binaries—follow your org’s reproducible-build policy.
 
----
-
 ## Further reading
 
 - [Compiler user guide](https://nim-lang.org/docs/nimc.html)

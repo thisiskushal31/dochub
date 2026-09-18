@@ -26,8 +26,6 @@ The template creates a **.fsproj** and a **Program.fs** with a simple **printfn*
 
 **Why this matters for DevOps.** CI/CD for F# uses the same `dotnet build` and `dotnet test` as other .NET projects. Build agents need the .NET SDK (or a Docker image that includes it). Understanding `dotnet` and project layout helps you script builds and troubleshoot failures.
 
----
-
 ## Further reading
 
 - [Get started with F# (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/get-started/)

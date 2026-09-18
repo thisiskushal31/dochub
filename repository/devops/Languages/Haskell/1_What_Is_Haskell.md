@@ -20,8 +20,6 @@ main = putStrLn "Hello, Haskell!"
 
 **Use cases.** Haskell is used for compilers and interpreters, domain-specific languages, verification and formal methods, security-sensitive tooling, financial and protocol logic, and as a vehicle for research in type systems and functional programming. In engineering roles, it shows up in backend and library code, in DevOps when maintaining or extending Haskell-based tools, and in security and research when building or auditing high-assurance systems.
 
----
-
 ## Further reading
 
 - [Haskell documentation](https://www.haskell.org/documentation/)

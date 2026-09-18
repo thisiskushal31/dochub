@@ -6,8 +6,6 @@ Shipping **models and AI systems** uses the same delivery jobs as apps — artif
 
 Primary pattern reference: [Google — MLOps: Continuous delivery and automation pipelines in machine learning](https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning). Assisted-coding in app CI is separate: [Methodologies/19](../Methodologies/19_Durable_Mindsets_And_Evolving_Toolsets.md), [19](./19_Delivery_Spectrum_Legacy_Through_Modern.md).
 
----
-
 ## Two pipelines (do not conflate)
 
 | Pipeline | Produces | Deploys |
@@ -17,8 +15,6 @@ Primary pattern reference: [Google — MLOps: Continuous delivery and automation
 | **App CI/CD** | Application that *calls* the model | Same as [1](./1_Pipelines_Build_Test_Deploy.md) |
 
 Level-2 MLOps (Google’s framing) continuously delivers **pipeline code** that retrains and can redeploy serving when data or code changes.
-
----
 
 ## Durable ML delivery loop
 
@@ -32,8 +28,6 @@ Data validation → train (single or distributed) → evaluate
 
 App gates still apply to training code and serving images: tests, SCA, sign, SBOM ([15](./15_Pipeline_Security_And_Gates.md), [6](./6_Supply_Chain_And_Signing.md)).
 
----
-
 ## Artifacts (AI-specific)
 
 | Artifact | Role |
@@ -44,8 +38,6 @@ App gates still apply to training code and serving images: tests, SCA, sign, SBO
 | **Pipeline definition** | Training DAG (orchestrator) — version like app code |
 
 Promote **model version IDs** the way you promote image digests ([4](./4_Artifacts_And_Registries.md)). Never “overwrite prod weights in place” without a version.
-
----
 
 ## Single-node vs distributed
 
@@ -58,8 +50,6 @@ Promote **model version IDs** the way you promote image digests ([4](./4_Artifac
 
 Scalable AI **is** a distributed systems problem: partitioning, retries, backpressure, observability — System Design + Observability doors apply.
 
----
-
 ## Online vs batch serving
 
 | Mode | Verify in CD |
@@ -69,8 +59,6 @@ Scalable AI **is** a distributed systems problem: partitioning, retries, backpre
 
 Feature stores (when used) need **training/serving skew** checks — same features offline and online ([Google MLOps feature store notes](https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)).
 
----
-
 ## Classical through modern hosting for models
 
 | Host | Notes |
@@ -79,8 +67,6 @@ Feature stores (when used) need **training/serving skew** checks — same featur
 | **Compose / Swarm** | Small stacks — [21](./21_Compose_And_Swarm_Delivery.md) |
 | **Kubernetes** | Deployments/Rollouts + GPU operators — Containerization |
 | **Managed endpoints** | Cloud model services — still pin model version + app contract tests |
-
----
 
 ## Gates that differ from pure app CD
 
@@ -92,16 +78,12 @@ Feature stores (when used) need **training/serving skew** checks — same featur
 | **Drift / quality monitors** | Trigger retrain or rollback ([5](./5_Verify_Rollback_And_Synthetic_Tests.md), Observability) |
 | **Cost / quota** | Distributed train can burn budget — FinOps literacy ([Methodologies/8](../Methodologies/8_FinOps_Literacy.md)) |
 
----
-
 ## Assisted / agentic tooling vs model CD
 
 - **Assistants writing app/ML code** → still pass CI gates; small batches ([Methodologies/19](../Methodologies/19_Durable_Mindsets_And_Evolving_Toolsets.md))  
 - **Models as production dependencies** → this chapter (registry, serving CD, monitor)  
 
 Do not skip model CD because “we use an API vendor model” — still version prompts/configs, monitor quality, and gate app deploys that change model wiring.
-
----
 
 ## Pitfalls
 

@@ -2,8 +2,6 @@
 
 [← Previous](./15_Application_And_Sync_Configuration_Catalog.md) · [Argo CD](./README.md) · [Next: Sources catalog →](./17_Sources_Private_Repos_And_Parameters.md)
 
----
-
 ## 1. Concepts — configuring Argo CD itself
 
 Application CRs describe **workloads**. These resources describe the **control plane**. Good practice: manage them **declaratively in Git** (Kustomize overlay on upstream install manifests, or a dedicated “argocd-config” Application). Label ConfigMaps with `app.kubernetes.io/part-of: argocd` or Argo may ignore them.
@@ -22,8 +20,6 @@ Application CRs describe **workloads**. These resources describe the **control p
 | **argocd-ssh-known-hosts-cm** | ConfigMap | SSH known_hosts entries |
 
 Multiple **Application** / **AppProject** / repo Secrets may exist; the ConfigMaps above are singletons — merge before apply.
-
----
 
 ## 2. Advanced concepts — what lives in `argocd-cm` (feature groups)
 
@@ -69,8 +65,6 @@ Project-scoped roles + JWTs still apply for automation ([08](./08_Secrets_CI_Int
 3. Root App-of-Apps or kubectl bootstrap once.  
 4. Day-2 changes are PRs to that config repo.  
 
----
-
 ## 3. Applications and use cases
 
 | Need | Where to configure |
@@ -91,8 +85,6 @@ Project-scoped roles + JWTs still apply for automation ([08](./08_Secrets_CI_Int
 | Pin Argo version | Untracked `latest` install |
 | SSO + RBAC | Anonymous write in prod |
 | Encrypted management secrets | Plain kubeconfig for all clusters in a gist |
-
----
 
 ## References
 

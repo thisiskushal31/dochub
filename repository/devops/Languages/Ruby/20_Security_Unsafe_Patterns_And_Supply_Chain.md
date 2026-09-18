@@ -6,8 +6,6 @@
 
 Ruby-specific **footguns** that become remote code execution, credential leaks, or supply-chain compromise: **`Marshal`**, unsafe **`YAML`**, **`eval`**, shelling out, deserialization in cookies, gem trust, and secrets handling. Written for reviewers and operators who must sign off on Ruby in production and on agents.
 
----
-
 ## 1. Concepts
 
 ### 1. Threat model baseline
@@ -96,8 +94,6 @@ Compare HMACs and tokens with **`OpenSSL.fixed_length_secure_compare`** when tim
 
 **`Tempfile`** with mode **0600** for sensitive data; beware world-readable `/tmp` on shared hosts.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `DRb` and remote objects
@@ -141,8 +137,6 @@ PII in logs violates GDPR-style obligations. Redact emails, tokens, and health d
 
 Private packages + public index misconfiguration can install malicious gems. Use **`source` per gem** explicitly in Gemfile; scope private registry in CI with credentials.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and secure SDLC
@@ -177,8 +171,6 @@ If untrusted YAML/Marshal was loaded: assume host compromise, rotate secrets, re
 - Gems pinned; audit job in CI.
 - Secrets not in logs or node attributes without encryption.
 - SSRF controls on outbound HTTP from user URLs.
-
----
 
 ## References
 

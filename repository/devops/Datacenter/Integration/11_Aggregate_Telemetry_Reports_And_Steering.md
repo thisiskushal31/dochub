@@ -2,8 +2,6 @@
 
 [← Previous](./10_Units_Voltage_Frequency_Literacy.md) · [README](./README.md) · [Jobs reading dashboards →](../Jobs/13_Reading_Dashboards_Reports_And_Steering.md)
 
----
-
 ## Mental map
 
 ![Whole hall layers](../../Assets/Datacenter/Integration/whole-hall-layers.svg)
@@ -55,8 +53,6 @@ Device-level EPMS literacy: [Electrical/15](../Electrical/15_EPMS_BMS_And_Power_
 | **Trend** | Inlet temp rising over weeks | Filter/chemistry/plant health |
 
 **Disconfirm:** A pretty dashboard is **not** truth if meters are wrong, clocks are skewed, or inhibits hide alarms. **Confirm:** Name one aggregate you would use before approving a 20 kW GPU rack on a row.
-
----
 
 ## 2. Advanced concepts — report types that actually steer
 
@@ -119,8 +115,6 @@ Tool brands differ (Schneider, Vertiv, Siemens, custom DCIM, cloud-only views fo
 
 Hyperscale honesty: you may not see their EPMS—you still use region/AZ and *your* on-ramp metrics ([Jobs/12](../Jobs/12_Hyperscale_Ops_Honesty.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -155,8 +149,6 @@ Hyperscale honesty: you may not see their EPMS—you still use region/AZ and *yo
 - A single green overview tile is **not** a redundancy audit.
 
 **Good:** measured aggregates → explicit decision → verify. **Bad:** vibe-based capacity; decorative DCIM; steering without closing the loop.
-
----
 
 ## References
 

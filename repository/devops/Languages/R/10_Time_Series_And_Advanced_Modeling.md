@@ -6,8 +6,6 @@
 
 Time-indexed workflows where calendar semantics matter: **frequency**, **seasonality**, **stationarity** assumptions (often overstated), forecast evaluation with **horizons**, and operational controls when reality shifts (**change points**, **covariate breaks**). R historically excels here (`stats::ts`, **forecast** ecosystem, **fable** in tidy forecasting). Staff engineering focuses on **backtesting discipline**, **interval forecasts**, and **monitoring**—not only picking an `ARIMA` order.
 
----
-
 ## 1. Concepts
 
 ### 1. Representing time correctly
@@ -29,8 +27,6 @@ Seasonal naive and simple moving averages are surprisingly competitive baselines
 ### 5. Forecast intervals, not only points
 
 Operational decisions depend on downside risk; communicate **prediction intervals** with documented calibration caveats.
-
----
 
 ## 2. Advanced concepts
 
@@ -54,8 +50,6 @@ Different tools assume different failure modes: holidays, missing data imputatio
 
 Long high-frequency series stress memory; consider **downsampling**, **online updates**, or exporting heavy modeling to Spark—while keeping R as **evaluation and diagnostic** layer.
 
----
-
 ## 3. Applications and use cases
 
 - **Demand planning:** weekly forecasts with interval bands by SKU cluster.
@@ -73,8 +67,6 @@ plot(x)
 - Baselines exist and are compared on aligned metrics.
 - Intervals are communicated with calibration limits.
 - Break/drift monitoring triggers documented human review.
-
----
 
 ## References
 

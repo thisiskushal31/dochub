@@ -2,8 +2,6 @@
 
 [README](./README.md) · [Next: Crate to live rack →](./2_Crate_To_Live_Rack.md)
 
----
-
 ## Mental map
 
 ![Hall network planes](../../Assets/Datacenter/Setup-And-Bring-Up/hall-planes-map.svg)
@@ -18,8 +16,6 @@ People / devices
    ├─ Storage fabric (FC or Ethernet storage VLANs)
    └─ MMR / border (carriers, cloud XC leave here)
 ```
-
----
 
 ## 1. Concepts
 
@@ -40,8 +36,6 @@ Device depth: [Fabric-Physical/](../Fabric-Physical/README.md). Protocols: [Netw
 
 **Confirm:** Name three planes that should not share a single ToR downlink casually.
 
----
-
 ## 2. Advanced concepts
 
 ### Operator experience (verify locally)
@@ -56,8 +50,6 @@ Themes operators repeat (e.g. r/networking fabric threads): dual leaf per rack o
 | Storage on best-effort Wi‑Fi path | Cluster partitions |
 | Single border | Site offline on one XC cut |
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -69,8 +61,6 @@ Themes operators repeat (e.g. r/networking fabric threads): dual leaf per rack o
 **Staff checklist:** plane diagram owned; A/B power named per plane; who owns each plane’s change window.
 
 **Good:** planes drawn and dual-homed. **Bad:** one switch does BMC, PXE, iSCSI, and guest Wi‑Fi.
-
----
 
 ## References
 

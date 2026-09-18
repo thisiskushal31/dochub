@@ -42,8 +42,6 @@ let printOption (data: int option) =
 
 **Why this matters.** Pattern matching is the main way you branch on data in F#. Exhaustiveness forces you to handle every case of a DU or option, which catches many bugs at compile time. Knowing the different pattern kinds (constant, variable, identifier, tuple, list, record, cons, OR, AND, wildcard, type test) lets you write clear, safe control flow. In security- and correctness-sensitive code, explicit handling of every case is a best practice.
 
----
-
 ## Further reading
 
 - [Pattern Matching (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/pattern-matching)

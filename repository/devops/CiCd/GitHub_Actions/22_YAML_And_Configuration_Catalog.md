@@ -2,8 +2,6 @@
 
 [← Previous](./21_Feature_And_Configuration_Coverage_Map.md) · [README](./README.md) · [Next: Troubleshooting →](./23_Troubleshooting_And_Staff_Checklist.md)
 
----
-
 ## 1. Concepts — surfaces you edit
 
 | Surface | Where |
@@ -17,8 +15,6 @@
 | Branch rules / required checks | Rulesets / branch protection |
 | Custom properties (OIDC claims) | Org/enterprise metadata |
 
----
-
 ## 2. Advanced — workflow keys (index)
 
 **Workflow:** `name`, `run-name`, `on` (+ filters/types/inputs), `permissions`, `env`, `defaults`, `concurrency` (incl. queue behavior), `jobs`.
@@ -31,8 +27,6 @@
 
 Event catalog and every subkey: [workflow syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax) + [events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows) + [workflow commands](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands).
 
----
-
 ## 3. Applications and use cases
 
 | Task | Start |
@@ -41,8 +35,6 @@ Event catalog and every subkey: [workflow syntax](https://docs.github.com/en/act
 | Paved road | [13](./13_Reusable_Workflows_And_Composites.md) |
 | OIDC job | [15](./15_OIDC_And_Cloud_Federation.md) |
 | Hit a ceiling | [18](./18_Monitor_Metrics_And_Billing_Literacy.md) + [limits](https://docs.github.com/en/actions/reference/limits) |
-
----
 
 ## References
 

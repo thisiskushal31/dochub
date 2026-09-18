@@ -2,8 +2,6 @@
 
 [← Previous](./09_Experiments_HPA_Metadata_Restart_Rollback.md) · [README](./README.md) · [Next: Notifications & CLI →](./11_Notifications_Metrics_And_Kubectl_Plugin.md)
 
----
-
 ## 1. Concepts
 
 ### Pairing with Argo CD (usual path)
@@ -30,8 +28,6 @@ Two approaches:
 
 Migrate one service at a time; leave unrelated Deployments alone (controller ignores them).
 
----
-
 ## 2. Advanced concepts
 
 ### One apply path
@@ -46,8 +42,6 @@ While two versions run, DB migrations still need expand/contract ([7](../7_DB_Mi
 
 Rollouts moves traffic **inside** an environment. Promoting digest DEV → staging → prod remains GitOps paths / Application policies ([Argo_CD](../Argo_CD/README.md), [8](../8_Environments_Promotion_And_Approvals.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Situation | Practice |
@@ -57,8 +51,6 @@ Rollouts moves traffic **inside** an environment. Promoting digest DEV → stagi
 | Cautious migrate | workloadRef first, then full Rollout |
 
 **Good:** digest in Git; analysis templates versioned beside apps. **Bad:** only live `kubectl argo rollouts set image` in prod.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./06_Variables_Secrets_And_Library.md) · [README](./README.md) · [Next: Templates →](./08_Templates_Tasks_And_Extensions.md)
 
----
-
 ## 1. Concepts
 
 ### Triggers
@@ -30,8 +28,6 @@ Stages order the delivery story. Jobs inside a stage can run in parallel (`depen
 | `canary` | VM canary; Kubernetes canary via `KubernetesManifest@1` actions ([13](./13_Deploy_Containers_ACR_Container_Apps_And_AKS.md)) |
 
 Matrix (`strategy.matrix`) fans out test jobs across versions/OS.
-
----
 
 ## 2. Advanced concepts
 
@@ -63,8 +59,6 @@ Human and automated **checks** can sit on environments, service connections, var
 
 Scheduled inventory, SemVer promote, reusable templates — same durable jobs as [CiCd/24](../24_Workflow_Automation_Beyond_PR_CI.md); syntax here is Azure Pipelines YAML.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Shape |
@@ -75,8 +69,6 @@ Scheduled inventory, SemVer promote, reusable templates — same durable jobs as
 | Monorepo | Path filters + sparse checkout |
 
 **Good:** fail-fast test stage before expensive deploy. **Bad:** one giant stage with no conditions and always-deploy-on-fail paths.
-
----
 
 ## References
 

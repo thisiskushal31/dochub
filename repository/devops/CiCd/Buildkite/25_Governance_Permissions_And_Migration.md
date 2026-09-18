@@ -2,8 +2,6 @@
 
 [← Previous](./24_Integrations_Notifications_Observability_And_Insights.md) · [README](./README.md) · [Next: APIs & platform extras →](./26_APIs_CLI_Terraform_And_Platform_Extras.md)
 
----
-
 ## 1. Concepts
 
 ### Permissions
@@ -29,15 +27,11 @@ With **teams** enabled, control who can view/create builds, edit pipelines, mana
 | **Pipeline converter** | Assist translating foreign CI YAML — verify output; don’t trust blindly |
 | YAML steps upgrade | Leave legacy visual editor |
 
----
-
 ## 2. Advanced concepts
 
 Incoming webhooks: know what can trigger builds; restrict tokens ([10](./10_Secrets_Environment_And_OIDC.md)).
 
 Public pipelines: intentional only — default private for company code.
-
----
 
 ## 3. Applications and use cases
 
@@ -48,8 +42,6 @@ Public pipelines: intentional only — default private for company code.
 | Enforce “must scan” | Template or required steps via policy |
 
 **Good:** teams before wide org invite. **Bad:** everyone Full Access on prod deploy pipelines.
-
----
 
 ## References
 

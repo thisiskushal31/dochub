@@ -2,8 +2,6 @@
 
 [← Previous](./11_Mechanical_Failure_Walks.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 **Mechanical commissioning** proves air, water, and liquid systems deliver design temperatures, flows, and redundancy—alone and with electrical sequences ([Electrical/18](../Electrical/18_Commissioning_And_IST_Power.md)).
@@ -17,8 +15,6 @@ Design → install → TAB (test/adjust/balance) → functional Cx → integrate
 ```
 
 Ops inherits: setpoints, sequences, as-built duct/pipe drawings, alarm lists, water chemistry baselines.
-
----
 
 ## 2. Advanced concepts
 
@@ -55,8 +51,6 @@ Facility ratings language: [Facility](../Facility/README.md). Build/ops roles: [
 
 Cx scripts cite owner standards and local codes. Climate makes seasonal testing mandatory in some metros. The jobs—prove airflow, water, failover, alarms, as-builts—are universal.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -75,8 +69,6 @@ Cx scripts cite owner standards and local codes. Climate makes seasonal testing 
 - Never accept “units ran for an hour” as IST  
 
 **Good:** balanced air, proven N+1, integrated power+cooling tests, living sequences. **Bad:** Cx binder closed forever; production is the thermal IST.
-
----
 
 ## References
 

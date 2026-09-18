@@ -2,8 +2,6 @@
 
 [← Previous](./15_Observability_Hooks_And_Non_Azure_Targets.md) · [README](./README.md) · [Next: Repos →](./17_Azure_Repos_Git_And_TFVC.md)
 
----
-
 ## 1. Concepts
 
 **Azure Boards** tracks work: epics, features, user stories/issues, tasks, bugs — depending on process (Basic / Agile / Scrum / CMMI).
@@ -17,8 +15,6 @@
 | **Queries / dashboards** | Reporting and personal views |
 
 Link commits and PRs to work item IDs (`AB#123` / `#123` patterns) so delivery is traceable.
-
----
 
 ## 2. Advanced concepts
 
@@ -43,8 +39,6 @@ Secure Boards data (who sees which area paths) when multi-tenant products share 
 
 Fully valid: GitHub/GitLab for code, Boards for work, Pipelines for CI — use GitHub connections / AB# linking.
 
----
-
 ## 3. Applications and use cases
 
 | Team | Pattern |
@@ -54,8 +48,6 @@ Fully valid: GitHub/GitLab for code, Boards for work, Pipelines for CI — use G
 | Compliance | Work item ↔ release evidence |
 
 **Good:** Definition of Done includes pipeline green + work item Done. **Bad:** Boards as a graveyard of never-updated tasks.
-
----
 
 ## References
 

@@ -8,8 +8,6 @@ Cost is already a DevOps concern. **Stewardship / sustainability** extends the s
 
 Stay DevOps-scoped: enough to prevent waste and escalate early. Not a billing certification.
 
----
-
 ## Why DevOps owns cost awareness
 
 | Waste pattern | Who usually creates it |
@@ -23,8 +21,6 @@ Stay DevOps-scoped: enough to prevent waste and escalate early. Not a billing ce
 
 Fixing these is closer to IaC and paved roads than to an invoice spreadsheet.
 
----
-
 ## Levers you control
 
 | Lever | Action |
@@ -37,8 +33,6 @@ Fixing these is closer to IaC and paved roads than to an invoice spreadsheet.
 | **Egress** | Co-locate; cache; avoid accidental public downloads of large artifacts |
 
 Cloud literacy doors: [Cloud/](../Cloud/README.md). Module design: [IAC/](../IAC/README.md).
-
----
 
 ## Tagging / labeling for allocation
 
@@ -56,8 +50,6 @@ cost-center=CC123
 
 Enforce in IaC (default tags module) and reject untagged resources in policy (OPA/Checkov — Security tool folders later).
 
----
-
 ## Optional parallel DEV environments (cost)
 
 Default non-prod shape is **one shared DEV** plus staging/prod ([CiCd/8](../CiCd/8_Environments_Promotion_And_Approvals.md)). Parallel / ephemeral DEVs are **optional** — use them only when shared DEV contention is chronic enough to justify spend.
@@ -73,8 +65,6 @@ If you do run them (same snapshot tag; GitOps create/destroy — [Argo_CD](../Ci
 
 Orphaned previews are a classic anomaly — wire cleanup into the same automation that creates them ([CiCd/24](../CiCd/24_Workflow_Automation_Beyond_PR_CI.md)).
 
----
-
 ## Budgets and anomalies (concept)
 
 All major clouds offer:
@@ -83,8 +73,6 @@ All major clouds offer:
 - Anomaly detection on sudden spend spikes  
 
 Wire alerts to the team that can **turn resources off**, not only to Finance. Chat notify is fine ([6](./6_ChatOps_And_Notifications.md)); paging at 3am for a slow spend creep usually is not.
-
----
 
 ## Checklist: before merging an infra PR
 
@@ -95,8 +83,6 @@ Wire alerts to the team that can **turn resources off**, not only to Finance. Ch
 - [ ] Egress or NAT implications?  
 - [ ] If expensive (GPU, large DB): who approved?  
 
----
-
 ## When to escalate vs fix in IaC
 
 | Situation | You fix | Escalate |
@@ -105,8 +91,6 @@ Wire alerts to the team that can **turn resources off**, not only to Finance. Ch
 | Need enterprise discount / CUDs | Provide usage data | FinOps / Finance |
 | Shared VPC cost attribution | Improve tags | FinOps for chargeback model |
 | Product wants always-on multi-region active-active | Show cost delta | Product + architecture |
-
----
 
 ## Pitfalls
 

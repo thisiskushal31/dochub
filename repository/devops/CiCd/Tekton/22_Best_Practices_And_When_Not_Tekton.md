@@ -2,8 +2,6 @@
 
 [← Previous](./21_Worked_Example_Build_Test_Push.md) · [README](./README.md) · [Next: Coverage map →](./23_Feature_And_Offering_Coverage_Map.md)
 
----
-
 ## 1. Concepts — defaults that age well
 
 | Do | Don’t |
@@ -16,8 +14,6 @@
 | Isolate untrusted PRs (PAC/Triggers) | Prod push from forks |
 | Git as source of truth | Only Dashboard/`tkn start` snowflakes |
 | Durable jobs first (build, attest, promote) | Tool fashion without a platform team |
-
----
 
 ## 2. Advanced — when *not* (or not only) Tekton
 
@@ -34,8 +30,6 @@ Keep Tekton when **pipelines-as-cluster-API** is the platform bet and you can st
 
 Cluster *internals* are not taught here — [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive).
 
----
-
 ## 3. Applications and use cases
 
 | Decision | Ask |
@@ -50,8 +44,6 @@ Cluster *internals* are not taught here — [Containerization-Deep-Dive](https:/
 - Pins + SA tiers + pruner on every cluster that runs Tekton  
 - Spectrum doors documented for classical/forge estates still in the company  
 - GitOps handoff path clear for digests ([26](./26_GitOps_Handoff_And_Spectrum.md))  
-
----
 
 ## References
 

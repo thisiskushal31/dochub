@@ -4,8 +4,6 @@
 
 *Final choice page for IBM Cloud. Deeper API: [cloud.ibm.com/docs](https://cloud.ibm.com/docs).*
 
----
-
 ## Compute
 
 | Product | What for | When | Why not |
@@ -65,8 +63,6 @@
 | **IBM Cloud Monitoring / Log Analysis / Activity Tracker** | Signals + audit | Default | — |
 | **watsonx / Watson services** | AI platform + vertical | GenAI/ML on IBM | Pure open models on IKS only when needed |
 | **Schematics / Terraform / toolchain** | IaC / delivery | IBM-centric | External CI paved |
-
----
 
 ## How to use
 

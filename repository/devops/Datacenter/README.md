@@ -41,8 +41,6 @@ Floor 12 Jobs             →  role knowledge base + **reading dashboards**
 
 **Visual plates:** [Assets/Datacenter/](../Assets/Datacenter/README.md) — power, cool, rack, fabric, RAID, whole-hall layers. Each deep-track chapter **1** opens with a mental map.
 
----
-
 ## Floor −1 — Plain language (start here if needed)
 
 | # | File | Focus |
@@ -50,8 +48,6 @@ Floor 12 Jobs             →  role knowledge base + **reading dashboards**
 | 0 | [How to read + quality bar](./0_How_To_Read_And_Quality_Bar.md) | How chapters work; maps/assets; Disconfirm/Confirm; first-week path |
 | 0b | [Equipment in plain language](./0b_Equipment_In_Plain_Language.md) | Power, cool, rack, net, storage, screens—without jargon fog |
 | 0c | [Whole hall mental map](./0c_Whole_Hall_Mental_Map.md) | Five layers; which folder owns which; where to start by goal |
-
----
 
 ## Floor 0 — On-ramp (SE / first week)
 
@@ -69,8 +65,6 @@ Floor 12 Jobs             →  role knowledge base + **reading dashboards**
 | 10 | [Clusters on-prem](./10_Clusters_On_Prem.md) | kubeadm / OpenShift / Rancher map | Containerization (depth) |
 | 11 | [Identity, access, and change](./11_Identity_Access_And_Change.md) | IdP, jump, BMC, CAB | [Jobs/](./Jobs/README.md), [Provider-Use/](./Provider-Use/README.md) |
 | 12 | [Sites, DR, hybrid, and the job](./12_Sites_DR_Hybrid_And_The_Job.md) | Two buildings, hybrid SKUs, first week | [Integration/](./Integration/README.md), [Jobs/](./Jobs/README.md) |
-
----
 
 ## Deep tracks (physical depth)
 
@@ -93,8 +87,6 @@ Floor 12 Jobs             →  role knowledge base + **reading dashboards**
 All deep-track chapter bodies filled (Batches 1–8 + Facility in Batch 9). Navigation contract = track READMEs.
 
 **Operator awareness (majors + minor/regional):** living index lives in the private syllabus Part E (not this public tree)—so DocHub stays a handbook, not a phone book. Public Markets track teaches taxonomy + research method + peer hubs.
-
----
 
 ## Cross-links
 

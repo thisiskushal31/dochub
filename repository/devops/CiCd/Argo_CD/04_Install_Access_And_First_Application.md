@@ -2,8 +2,6 @@
 
 [← Previous](./03_Architecture_Components_And_Multi_Cluster.md) · [Argo CD](./README.md) · [Next: Sources →](./05_Manifest_Sources_Tracking_And_Immutability.md)
 
----
-
 ## 1. Concepts
 
 This chapter is the practical path from empty cluster to **Synced + Healthy**. Commands illustrate the flow; pin versions and follow current install notes for production.
@@ -99,8 +97,6 @@ You want **Synced** and **Healthy**. If Synced but Degraded, debug the workload 
 
 Serious installs manage Argo CD’s own ConfigMaps, Projects, and repo credentials as GitOps (Kustomize overlays on the upstream manifests). Bootstrapping can start imperative; steady state should not depend on click-ops in the UI for control-plane config.
 
----
-
 ## 2. Advanced concepts
 
 ### CreateNamespace and first sync footguns
@@ -128,8 +124,6 @@ Read the version upgrade notes for your from→to pair. CRD changes and SSO/Dex 
 
 `argocd app sync APP --local ./dir` pushes local manifests — useful for debugging, an anti-pattern for production delivery (breaks the Git source of truth). Requires elevated permissions.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Practical path |
@@ -146,8 +140,6 @@ Read the version upgrade notes for your from→to pair. CRD changes and SSO/Dex 
 - One real Application Synced/Healthy from *your* Git, not only the example  
 - Project created that is tighter than `default` for anything non-lab  
 - Document how image digests get into Git after CI  
-
----
 
 ## References
 

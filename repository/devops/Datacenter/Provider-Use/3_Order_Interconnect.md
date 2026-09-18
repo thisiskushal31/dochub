@@ -2,8 +2,6 @@
 
 [← Previous](./2_Contract_Capacity.md) · [README](./README.md) · [Next: Access →](./4_Access_Badges_And_Change_Windows.md)
 
----
-
 ## 1. Concepts
 
 **Interconnect** orders create physical (and sometimes virtual) connectivity:
@@ -16,8 +14,6 @@
 | **Fabric / IX / cloud on-ramp** | Productized interconnect ([7](./7_Land_Cloud_On_Ramp.md)) |
 
 Physical MMR: [Fabric-Physical/5](../Fabric-Physical/5_MMR_And_Cross_Connect_Physical.md). Lifecycle: [9](./9_Bandwidth_And_Cross_Connect_Lifecycle.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -34,8 +30,6 @@ Physical MMR: [Fabric-Physical/5](../Fabric-Physical/5_MMR_And_Cross_Connect_Phy
 ### How it connects
 
 Equinix-class products: [Markets/4](../Markets-And-Operators/4_Equinix_Class_Interconnection.md). Portal patterns: [6](./6_Customer_Portal_Patterns.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -55,8 +49,6 @@ Equinix-class products: [Markets/4](../Markets-And-Operators/4_Equinix_Class_Int
 - Never cutover on untested XC  
 
 **Good:** dual diverse XCs, clean LOA, tested. **Bad:** single strand; paperwork diversity; hope.
-
----
 
 ## References
 

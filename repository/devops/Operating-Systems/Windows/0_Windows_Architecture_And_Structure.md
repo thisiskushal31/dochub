@@ -4,13 +4,9 @@
 
 **Prerequisite:** [Fundamentals](../Fundamentals/README.md). Here: **how Windows is structured beneath the surface** — the NT kernel, user and kernel mode, file system layout, boot process, registry, and how Windows differs by edition and machine type. This is the foundation; for commands and tools see [Windows commands and PowerShell](./1_Windows_Commands_And_PowerShell.md) and the other Windows topics.
 
----
-
 ## Why this topic
 
 Windows is not only PowerShell and commands. Like Linux, it has a **kernel**, a **file system layout**, a **boot process**, and a **structure** (registry, drivers, services) that runs beneath every application. Understanding that structure helps you troubleshoot, secure, and automate Windows in DevOps. This topic describes how Windows works at the OS level; the rest of the Windows section covers what you do from the shell and tools.
-
----
 
 ## For complete beginners: terms you’ll see
 
@@ -26,8 +22,6 @@ If you’re new to operating systems, these definitions may help. You can return
 
 Acronyms and product names (e.g. **NTFS**, **CDFS**, **PowerShell**) are explained in the sections where they appear.
 
----
-
 ## NT kernel: user mode and kernel mode
 
 Windows is built on the **Windows NT** architecture. The system is split into two **privilege levels**:
@@ -36,8 +30,6 @@ Windows is built on the **Windows NT** architecture. The system is split into tw
 - **Kernel mode (ring 0)** — The kernel, drivers, and core OS services run here with full access to hardware and memory.
 
 So: **user mode** is where your apps and many subsystems live; **kernel mode** is where the NT kernel, the **Executive**, the **Hardware Abstraction Layer (HAL)**, and **kernel-mode drivers** run. User-mode code cannot touch hardware or kernel data structures directly; it calls into kernel mode via **system calls** (implemented in the Executive and exposed through the Windows API).
-
----
 
 ## Kernel mode: Executive, kernel, HAL, drivers
 
@@ -70,8 +62,6 @@ So: **user mode** is where your apps and many subsystems live; **kernel mode** i
                      └── Kernel-mode drivers (file systems, devices)
 ```
 
----
-
 ## User mode: environment subsystems and integral subsystems
 
 **Environment subsystems** — They expose an **API** to applications (e.g. Win32, historically OS/2, POSIX). Applications call into these APIs; the subsystem translates requests and either calls **ntdll.dll** to trap into kernel mode or talks to other user-mode components. The main one in modern Windows is the **Win32** subsystem, implemented by **Client/Server Runtime Subsystem (csrss.exe)** and supporting DLLs.
@@ -79,8 +69,6 @@ So: **user mode** is where your apps and many subsystems live; **kernel mode** i
 **Integral subsystems** — They perform system-wide functions. The **Local Security Authority (LSA)**, for example, handles **authentication**, **logon**, and **security tokens**. The **Service Control Manager (SCM)** starts and manages **Windows services**. These run in user mode but have privileges and work closely with the kernel (e.g. SRM).
 
 So: **applications** run in user mode and call the **Win32 API** (or another subsystem); the **Executive** and **kernel** run in kernel mode and do the real work; the **registry**, **services**, and **security** are part of this layered design.
-
----
 
 ## File system: what it is and what Windows uses
 
@@ -131,8 +119,6 @@ A **file system** is the set of rules and structures the OS uses to store and fi
 
 Paths are case-insensitive by default. The system environment variable for the Windows folder is **%windir%** (or **%SystemRoot%**); both usually expand to **C:\Windows**. Environment variables store information about the OS environment (paths, number of processors, temp folders, etc.) and are used in scripts and configs. **C:\Windows\System32** holds critical OS files; many built-in and admin tools live here. Deleting or changing files in System32 can make Windows unbootable or unstable — use extreme caution.
 
----
-
 ## Desktop (GUI) and where to change settings
 
 **Common Windows terms** — The **desktop** is the background of your screen on which programs run (think of it as your electronic desktop). **Icons** are the small pictures on the desktop and in folders that represent programs, folders, or files. **Folders** are containers for files and other folders (sub-folders). The **title bar** is the bar at the top of an open window; it shows the window’s purpose and has minimize, maximize, and close buttons — you can drag it to move the window. The **cursor** is the on-screen pointer that changes shape with context (arrow, I-beam for text, double-arrow for resizing). The **taskbar** is usually at the bottom and contains the **Start** button (Windows logo), open apps, and the **notification area** (clock, network, volume). A **scroll bar** appears when content doesn’t fit in the window (vertical or horizontal); Windows 10/11 often hide scroll bars until you hover. The **address bar** in File Explorer shows your location and can show a **breadcrumb** path (e.g. `Owner > Documents > Backups`); clicking behind it can switch to the full path (e.g. `C:\Users\Owner\Documents\Backups`). Other operating systems (e.g. Mac, Linux) use much of the same terminology.
@@ -149,8 +135,6 @@ Paths are case-insensitive by default. The system environment variable for the W
 
 **Legacy menus and keyboard** — In older or classic apps, menus often follow **File** (open, close, print), **Edit** (copy, paste), **View** (toolbars, display), **Help** (About for version). **Keyboard shortcuts** work in many apps: **Ctrl+P** (print), **Ctrl+N** (new window), **Ctrl+B** / **Ctrl+I** / **Ctrl+U** (bold, italic, underline). Many modern apps hide menus and use a **hamburger** (≡) or **ellipsis** (⋮ or …) icon for options.
 
----
-
 ## Boot process (Windows NT, Vista and later)
 
 On modern Windows (Vista and later), the boot sequence is roughly:
@@ -163,8 +147,6 @@ On modern Windows (Vista and later), the boot sequence is roughly:
 6. **Logon** — **winlogon.exe** presents the logon UI. After a user logs on, **User and Computer Group Policy** are applied and **startup** programs (from registry and Startup folders) run.
 
 So: **firmware → Boot Manager → BCD → winload → ntoskrnl + boot drivers → smss → csrss, wininit → services, lsass → winlogon → logon and startup**. Understanding this helps when diagnosing boot failures (e.g. BCD corruption, driver failure, or service hang).
-
----
 
 ## Registry
 
@@ -182,8 +164,6 @@ The **registry** is a hierarchical database that holds configuration for the sys
 
 **Backing files** — Hive data is stored in files. Machine hives live under **%SystemRoot%\System32\Config\** (e.g. **SAM**, **Security**, **Software**, **System**; **Default**, **DRIVERS**). User hive is **Ntuser.dat** in the user’s profile directory. Supporting **.log** files are transaction logs; **.sav** are backups from setup. Editing the registry incorrectly can make the system unbootable; use **Group Policy** or documented APIs where possible.
 
----
-
 ## Editions and machine types
 
 Windows comes in **client** and **server** editions. What you can do (e.g. Hyper-V, Group Policy, domain join, maximum RAM) depends on the **SKU** and **edition**.
@@ -193,8 +173,6 @@ Windows comes in **client** and **server** editions. What you can do (e.g. Hyper
 **Server** — **Windows Server Standard** and **Datacenter** (and **Datacenter: Azure Edition** for Azure). **Datacenter** includes features such as **Storage Spaces Direct**, **Host Guardian**, and **unlimited virtual instances** (under license). **Standard** has a more limited feature set and virtualization rights. Server is used for file, DNS, AD, Hyper-V, and other roles.
 
 So: **how Windows works on each type of machine** depends on **edition** (client vs server, Home vs Pro vs Enterprise, Standard vs Datacenter). The **kernel and structure** (Executive, NTFS, registry, boot) are the same; the **features and licensing** differ.
-
----
 
 ## User accounts, UAC, and Safe Mode (beginners)
 
@@ -206,8 +184,6 @@ So: **how Windows works on each type of machine** depends on **edition** (client
 
 **Safe Mode** — If Windows won’t start normally (e.g. after a bad driver or update), you can boot into **Safe Mode**: a minimal mode that loads only essential drivers and services. From there you can uninstall a driver, undo a change, or run troubleshooting tools. How you get there depends on the Windows version (e.g. hold Shift while clicking Restart, then Troubleshoot → Advanced options → Startup Settings → Safe Mode, or use installation media). See Microsoft’s troubleshooting docs for your Windows version.
 
----
-
 ## File extensions and safety
 
 **What is a file extension?** — The **extension** is the part of the filename **after the last dot** (e.g. **readme.txt** → **txt**). It tells Windows the **type** of file so it can associate a default program (double‑click to open). Old DOS used **8.3** names (eight characters before the dot, three after; no spaces). Current Windows allows long names (e.g. up to 256 characters before the dot, several after) and spaces, but very long paths with many nested folders can cause copy/backup issues.
@@ -218,8 +194,6 @@ So: **how Windows works on each type of machine** depends on **edition** (client
 
 **Hidden extensions (security)** — Windows **hides “known” extensions** by default. A file named **phonelist.txt.scr** may appear as **phonelist.txt**; opening it could run the .scr script. **Unhide extensions** so you see the real type: **Windows 10** — search “File Explorer Options” (or Control Panel → File Explorer Options) → **View** tab → clear “Hide extensions for known file types”; or in File Explorer open the **View** tab and check **File name extensions**. **Windows 11** — File Explorer → **View** → **Show** → **File name extensions**. Then you can see .scr, .exe, etc. and avoid opening dangerous files by mistake.
 
----
-
 ## System and hardware information
 
 **Where to find it** — **Control Panel** → **System**, or right‑click **This PC / Computer** → **Properties**, or (Windows 10/11) right‑click **Start** → **System**. In Windows 10 the **build number** is under **Settings** → **Update & Security** → **OS build info**.
@@ -229,8 +203,6 @@ So: **how Windows works on each type of machine** depends on **edition** (client
 **RAM** — 32‑bit Windows typically cannot use more than about **2.5 GB** of RAM (the exact usable amount varies). 64‑bit can use much more. If the system is slow and the disk is constantly busy (**thrashing**), adding RAM often helps. Minimums are published per Windows version; meeting only the minimum may make the system sluggish — aim for more for normal use.
 
 **Drivers** — For missing or updated drivers, use the **manufacturer’s site** (e.g. support.hp.com for HP). Avoid generic “driver update” tools and third‑party driver sites; stick to official sources to reduce malware and bad drivers.
-
----
 
 ## Summary
 
@@ -244,8 +216,6 @@ So: **how Windows works on each type of machine** depends on **edition** (client
 - **Registry** — **HKLM**, **HKCU**, **HKU**, **HKCR**, **HKCC**; backing files in **System32\Config** and **Ntuser.dat**.
 - **User accounts and profiles** — **Administrator** vs **standard user**; **UAC** for elevation; **lusrmgr.msc** for local users and groups; profiles under **C:\Users\<username>** (created on first logon).
 - **Editions** — **Client** (Home, Pro, Enterprise, etc.) vs **Server** (Standard, Datacenter); features and licensing vary by SKU.
-
----
 
 ## Further reading
 

@@ -2,8 +2,6 @@
 
 [← Previous](./5_MMR_And_Cross_Connect_Physical.md) · [README](./README.md) · [Next: Bonding and MLAG →](./7_Bonding_MLAG_And_Dual_Home.md)
 
----
-
 ## 1. Concepts
 
 **Border** devices connect the hall fabric to carriers, cloud on-ramps, partner networks, and sometimes internet. **Edge** roles also include firewalls, WAN routers, and DDoS appliances as *physical boxes* with power, optics, and HA pairs.
@@ -22,8 +20,6 @@ Protocol detail → Networks-Deep-Dive / Security-Deep-Dive. Here: placement, HA
 ### Where it sits
 
 MMR-adjacent cages or network rooms; dual power; dual upstream XCs ([5](./5_MMR_And_Cross_Connect_Physical.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -49,8 +45,6 @@ LB appliances may sit inside ([9](./9_Load_Balancer_Appliances.md)). Cloud on-ra
 
 Same roles; carrier diversity quality differs by metro. Hyperscale edges unpublished—customer borders remain your responsibility.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -69,8 +63,6 @@ Same roles; carrier diversity quality differs by metro. Hyperscale edges unpubli
 - Never “save bandwidth” by dropping the second ISP silently  
 
 **Good:** diverse edges, HA independent, documented circuits. **Bad:** one router; HA twins on one strip; untested failover.
-
----
 
 ## References
 

@@ -4,13 +4,9 @@
 
 COBOL file handling works with **logical files** defined in the ENVIRONMENT and DATA DIVISION and operated on with **file verbs** in the PROCEDURE DIVISION. Files are collections of **records**; each record is made of **fields**. On mainframes, **physical sequential (PS)** and **VSAM** files are common. File **organization** (sequential, indexed, relative) and **access mode** (sequential, random, dynamic) determine how records are read, written, and updated.
 
----
-
 ## Concepts: field, record, file
 
 A **field** is a single data element (e.g. employee number, name). A **record** is a collection of fields describing one entity. A **physical record** (block) is what is read or written to the device; a **logical record** is the unit the program works with. A **file** is a collection of related records. In the FILE SECTION, you define the record layout with level numbers and pictures; in FILE-CONTROL you associate the file with an external data set (DD name) and specify organization and access.
-
----
 
 ## OPEN, READ, WRITE, REWRITE, CLOSE
 
@@ -47,8 +43,6 @@ A **field** is a single data element (e.g. employee number, name). A **record** 
            STOP RUN.
 ```
 
----
-
 ## File organization
 
 **Sequential:** Records are stored and read in physical order. To read the nth record, all previous records must be read. New records are added at the end; records cannot be inserted in the middle. Record length is fixed once written. Sequential is typical for batch input/output and printing.
@@ -78,13 +72,9 @@ A **field** is a single data element (e.g. employee number, name). A **record** 
            ACCESS IS RANDOM.
 ```
 
----
-
 ## Access mode
 
 **SEQUENTIAL:** Records are processed in order. Required for sequential organization; optional for indexed and relative. **RANDOM:** Access by key (indexed) or relative record number (relative). **DYNAMIC:** Both sequential and random in the same program; you can switch with START and then READ NEXT, or READ by key. EXTEND mode applies only to sequential files; I-O mode is used to read and REWRITE or DELETE.
-
----
 
 ## Further reading
 

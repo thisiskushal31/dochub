@@ -2,8 +2,6 @@
 
 [← Back to IAC](../README.md) · [Terraform](../Terraform/README.md)
 
----
-
 ## 1. Concepts
 
 **OpenTofu** is an open-source **Terraform-compatible** IaC tool (Linux Foundation). For most day-to-day HCL modules, providers, and state workflows, skills transfer from Terraform.
@@ -14,8 +12,6 @@
 
 **Confirm:** What stays the same (HCL, state model) vs what you must verify (provider/version compatibility)?
 
----
-
 ## 2. Advanced concepts
 
 | Topic | Literacy |
@@ -24,8 +20,6 @@
 | Providers | Registry / mirror choices; pin versions |
 | CI | `tofu plan` / `apply` in PR bots ([Atlantis](../Atlantis/README.md)) |
 | Migration | Follow current OpenTofu↔Terraform migration docs; never casual swap on prod state |
-
----
 
 ## 3. Applications
 
@@ -36,8 +30,6 @@
 | Policy | Same Checkov/OPA gates on HCL |
 
 **Staff checklist:** pin `tofu` version; remote state + lock; code review plans; no apply from laptops to prod without audit path.
-
----
 
 ## References
 

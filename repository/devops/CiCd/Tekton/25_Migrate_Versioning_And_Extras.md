@@ -2,8 +2,6 @@
 
 [← Previous](./24_YAML_CRD_Catalog_And_Troubleshooting.md) · [README](./README.md) · [Next: Spectrum →](./26_GitOps_Handoff_And_Spectrum.md)
 
----
-
 ## 1. Concepts
 
 ### API migrations
@@ -35,13 +33,9 @@ Often to forge CI for ops simplicity, or keep Tekton for build and GitOps for de
 | MCP / experimental repos | Upstream-only unless you adopt |
 | Results PostgreSQL upgrades | Ops when using Results DB |
 
----
-
 ## 2. Advanced concepts
 
 Deprecation tables in Pipelines docs — check before copying old tutorials. CustomRun migration guides exist for Run API changes.
-
----
 
 ## 3. Applications and use cases
 
@@ -52,8 +46,6 @@ Deprecation tables in Pipelines docs — check before copying old tutorials. Cus
 | Leave Tekton | Parallel forge pipelines; freeze new CRDs |
 
 **Good:** staged upgrades. **Bad:** jump three API majors on Friday.
-
----
 
 ## References
 

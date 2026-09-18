@@ -4,84 +4,84 @@
     "path": "1_DAS_Local_Disks_And_RAID.md",
     "type": "file",
     "sha": "",
-    "size": 2667
+    "size": 2642
   },
   {
     "name": "10_Encryption_And_Key_Custody.md",
     "path": "10_Encryption_And_Key_Custody.md",
     "type": "file",
     "sha": "",
-    "size": 2565
+    "size": 2545
   },
   {
     "name": "11_Latency_For_Etcd_And_Databases.md",
     "path": "11_Latency_For_Etcd_And_Databases.md",
     "type": "file",
     "sha": "",
-    "size": 2215
+    "size": 2195
   },
   {
     "name": "12_Storage_Failure_Walks.md",
     "path": "12_Storage_Failure_Walks.md",
     "type": "file",
     "sha": "",
-    "size": 2131
+    "size": 2111
   },
   {
     "name": "2_NAS_NFS_SMB.md",
     "path": "2_NAS_NFS_SMB.md",
     "type": "file",
     "sha": "",
-    "size": 2549
+    "size": 2529
   },
   {
     "name": "3_SAN_Fibre_Channel.md",
     "path": "3_SAN_Fibre_Channel.md",
     "type": "file",
     "sha": "",
-    "size": 2404
+    "size": 2384
   },
   {
     "name": "4_SAN_iSCSI_And_NVMe_oF.md",
     "path": "4_SAN_iSCSI_And_NVMe_oF.md",
     "type": "file",
     "sha": "",
-    "size": 2325
+    "size": 2305
   },
   {
     "name": "5_HBA_HCA_And_Multipath.md",
     "path": "5_HBA_HCA_And_Multipath.md",
     "type": "file",
     "sha": "",
-    "size": 2188
+    "size": 2168
   },
   {
     "name": "6_Array_Controllers_And_Shelves.md",
     "path": "6_Array_Controllers_And_Shelves.md",
     "type": "file",
     "sha": "",
-    "size": 2451
+    "size": 2431
   },
   {
     "name": "7_Software_Defined_Ceph_vSAN_Kin.md",
     "path": "7_Software_Defined_Ceph_vSAN_Kin.md",
     "type": "file",
     "sha": "",
-    "size": 2475
+    "size": 2455
   },
   {
     "name": "8_Object_On_Prem.md",
     "path": "8_Object_On_Prem.md",
     "type": "file",
     "sha": "",
-    "size": 2360
+    "size": 2340
   },
   {
     "name": "9_Snapshots_Vs_Backups_Vs_Replication.md",
     "path": "9_Snapshots_Vs_Backups_Vs_Replication.md",
     "type": "file",
     "sha": "",
-    "size": 2534
+    "size": 2514
   },
   {
     "name": "README.md",

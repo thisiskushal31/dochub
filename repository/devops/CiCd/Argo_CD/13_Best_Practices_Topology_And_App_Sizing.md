@@ -2,8 +2,6 @@
 
 [← Previous](./12_Worked_Example_Simple_Website_GitOps.md) · [Argo CD](./README.md) · [Next: Feature map →](./14_Feature_And_Configuration_Coverage_Map.md)
 
----
-
 ## 1. Concepts — how professionals structure Argo CD
 
 This chapter answers trade questions: what is **good**, what is **bad**, how many Applications, when App-of-Apps, when ApplicationSet, how to manage day-2 without drowning.
@@ -39,8 +37,6 @@ Pattern C — many clusters
   Cluster generator ApplicationSets for add-ons + apps
   Management cluster hosts Argo CD (HA)
 ```
-
----
 
 ## 2. Advanced concepts — sizing Applications and App-of-Apps
 
@@ -113,8 +109,6 @@ Default: **one shared DEV** Application (or few) per product ([CiCd/8](../8_Envi
 
 Argo CD syncs desired Pods/Rollouts. **Canary weight / analysis** is [Argo Rollouts](../Argo_Rollouts/README.md) (or Flagger). Do not overload Sync hooks as a full progressive delivery system.
 
----
-
 ## 3. Applications and use cases — decision cheatsheet
 
 **“Should this be a new Application?”**
@@ -137,8 +131,6 @@ Argo CD syncs desired Pods/Rollouts. **Canary weight / analysis** is [Argo Rollo
 - Prod Applications are not on `default` Project  
 - You can rebuild Argo CD from Git + tested backup ([10](./10_Ownership_Diffing_Webhooks_And_Observability.md))  
 - Repo-server and controller metrics are boring (no constant reconcile storms)  
-
----
 
 ## References
 

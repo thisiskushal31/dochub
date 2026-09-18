@@ -6,8 +6,6 @@
 
 **TLS and crypto** (`OpenSSL`, `Digest`), **IP addressing**, deeper **HTTP** usage, and operational patterns for secrets, checksums, and certificate handling in Ruby automation—where mistakes become outages or credential leaks.
 
----
-
 ## 1. Concepts
 
 ### 1. `Digest` — fingerprints and integrity
@@ -93,8 +91,6 @@ SecureRandom.hex(32)
 
 Not `rand` for session ids or API keys.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Certificate verification failures
@@ -128,8 +124,6 @@ Prefer modern TLS versions via system OpenSSL policy; legacy clients may need ex
 ### 8. Digest vs encryption
 
 **SHA-256** is hashing (integrity). **AES** is encryption (confidentiality). Do not confuse `Digest` with protecting secrets at rest—use KMS/vault and proper crypto libraries with nonces and authenticated encryption.
-
----
 
 ## 3. Applications and use cases
 
@@ -177,8 +171,6 @@ end
 - User-supplied URLs validated against SSRF policy.
 - Checksums use strong algorithms (SHA-256+), not MD5 for security.
 - Hostname clients record DNS failure mode (timeout vs NXDOMAIN) in structured logs.
-
----
 
 ## References
 

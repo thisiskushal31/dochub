@@ -6,8 +6,6 @@
 
 **TruffleRuby** is a Ruby implementation on **GraalVM** focused on peak performance and polyglot interop. This chapter explains when it fits, how it differs from MRI and JRuby, and what operations teams must plan for (native image, JVM tuning, compatibility).
 
----
-
 ## 1. Concepts
 
 ### 1. GraalVM and Truffle
@@ -62,8 +60,6 @@ TruffleRuby is built on a **JIT that speculates** (assuming types and paths stay
 
 Both chase **Ruby-level speed**. **YJIT** stays inside **MRI**: fewer moving parts for teams already expert in CRuby, exceptional for **latency-outlier reduction** in monoliths when enabled and tuned. **TruffleRuby** needs **JDK fluency** and validated **gem/porting** work—payoff tends to appear in **sustained CPU-heavy** workloads after warm-up. **Proof is always your traffic + your gem graph**, not a synthetic loop.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Memory and JVM tuning
@@ -95,8 +91,6 @@ CRuby invests in **YJIT** for in-process speedups without JVM. TruffleRuby compe
 - **Phase C — regression:** deploy a change that alters a hot path (feature flag), repeat Phase B—**deoptimization storms** show here first.
 - Always record **JDK version**, **container CPU cap**, **CFS throttling**, and **DB latency**—Ruby JIT cannot fix poisoned dependencies.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -121,8 +115,6 @@ Most infrastructure Ruby (Chef, Vagrant, small glue) stays **MRI**. TruffleRuby 
 - Load tests include cold start and warm steady state.
 - Rollback path to MRI documented if experiment fails.
 - Dashboards distinguish **JVM GC** pauses from **Ruby** time; on-call runbooks mention Graal logging flags alongside app logs.
-
----
 
 ## References
 

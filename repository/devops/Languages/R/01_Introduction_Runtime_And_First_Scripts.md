@@ -6,8 +6,6 @@
 
 What “running R” actually means in practice: interactive versus batch execution, how R loads startup configuration before your code sees light of day, why session state is never neutral for reproducibility, how `Rscript` differs from `R --slave` / `R --no-save` patterns, and how to build **entrypoints** that behave like real software (arguments, env vars, exit codes, logging) instead of ad-hoc notebook scripts. This is the chapter you use when a job “worked in the IDE” but **fails in cron, Airflow, or GitHub Actions** for reasons that look magical until you model the session.
 
----
-
 ## 1. Concepts
 
 ### 1. R as a language and a process
@@ -47,8 +45,6 @@ For production, treat uncontrolled startup as **untrusted input**: it can change
 
 `options()` can influence printing, warnings-to-errors policy, connection defaults, and numeric formatting. For pipelines that compare outputs across machines, standardize **digits**, **scipen**, **encoding**, and **warning** treatment in the entrypoint so interactive defaults cannot leak into automation.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Why “same code, different machine” is the default failure mode
@@ -86,8 +82,6 @@ Strong patterns:
 
 `.Renviron` is a frequent place for accidental **secret persistence**. CI images should not silently mount user home directories. Prefer injecting secrets at runtime from your orchestrator and **never** echo them in `sessionInfo()` output.
 
----
-
 ## 3. Applications and use cases
 
 - **Scheduled reporting:** one `Rscript` per job, explicit input paths, exit non-zero on validation failure.
@@ -116,8 +110,6 @@ print(.libPaths())
 - Startup files cannot mutate production behavior without review (`--vanilla` or controlled images where appropriate).
 - Logs include a reproducible runtime fingerprint (at least R version, platform, library paths, timezone).
 - BLAS/LAPACK and locale assumptions are documented for numerically sensitive workflows.
-
----
 
 ## References
 

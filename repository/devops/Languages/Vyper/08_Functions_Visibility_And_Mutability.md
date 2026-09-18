@@ -8,8 +8,6 @@ How Vyper marks **who can call** a function and **what the function is allowed t
 
 Pin: **Vyper 0.4.x** (**0.4.3**). Solidity’s visibility/payable story in [Solidity](../Solidity/README.md) is a useful comparison; Vyper has **no modifiers** and **no overloading**—one name, one behavior, guards inline. Structure and reading order: chapter **[04](./04_Structure_Of_A_Contract.md)**. Environment values those functions read: chapter **[06](./06_Environment_Constants_And_Immutables.md)**.
 
----
-
 ## 1. Concepts
 
 ### 1. Two axes (keep them separate)
@@ -88,8 +86,6 @@ Exact declarations depend on version—read the **0.4.x** docs before copying fo
 
 That verbosity is the audit feature. When Solidity-trained engineers ask “where is the modifier?”, point at the first lines of the function body.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Constructor / `@deploy` is not an everyday external
@@ -164,8 +160,6 @@ Spend five minutes on this table before debating naming aesthetics.
 
 Cross-link [Solidity](../Solidity/README.md) for shared call mechanics; do not import Solidity *style* into `.vy` reviews.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Function-decorator habit |
@@ -180,8 +174,6 @@ Cross-link [Solidity](../Solidity/README.md) for shared call mechanics; do not i
 
 **Smell:** a large `@external` surface with half the functions unused by any client. Delete or `@internal` what the product does not need.
 
----
-
 ## 4. Staff-level review checklist
 
 - Every function has correct `@external` / `@internal` marking; no accidental ABI exports.
@@ -194,8 +186,6 @@ Cross-link [Solidity](../Solidity/README.md) for shared call mechanics; do not i
 - ABI published to clients matches the pinned compiler output.
 - Module `exports` (if used) match the intended product API.
 - New externals ship with Titanoboa happy-path and auth-failure tests.
-
----
 
 ## References
 

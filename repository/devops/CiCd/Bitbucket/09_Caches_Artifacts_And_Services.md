@@ -2,8 +2,6 @@
 
 [← Previous](./08_Triggers_Steps_Stages_Parallel.md) · [README](./README.md) · [Next: Pipes →](./10_Pipes_Anchors_And_Reuse.md)
 
----
-
 ## 1. Concepts
 
 | Mechanism | Job |
@@ -47,8 +45,6 @@ pipelines:
 
 Caches speed restores; **artifacts** hand files to later steps / the UI; **services** run beside the step. Memory is shared with the step — size carefully.
 
----
-
 ## 2. Advanced concepts
 
 ### Cache hygiene
@@ -63,8 +59,6 @@ Pipeline artifacts are for **within-pipeline** handoff. Immutable release bits b
 
 Spin Postgres/Redis for integration tests; use Docker service for image builds. Memory is shared with the step — size accordingly on Cloud vs runners.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -74,8 +68,6 @@ Spin Postgres/Redis for integration tests; use Docker service for image builds. 
 | Integration tests | Service: postgres |
 
 **Good:** small artifacts; registry for releases. **Bad:** artifact the world every build.
-
----
 
 ## References
 

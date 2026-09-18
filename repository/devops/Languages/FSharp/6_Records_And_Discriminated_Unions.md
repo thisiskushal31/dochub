@@ -62,8 +62,6 @@ let matchShape shape =
 
 **Why this matters.** Records give you named, typed data with minimal syntax and structural equality. Copy-and-update and pattern matching make updates and branching clear. DUs make invalid states unrepresentable and force exhaustive handling. Together they are the backbone of domain modeling in F# and reduce bugs in security- and correctness-sensitive code.
 
----
-
 ## Further reading
 
 - [Records (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/records)

@@ -2,8 +2,6 @@
 
 [← Previous](./09_Caches_Workspaces_And_Artifacts.md) · [README](./README.md) · [Next: Reusable config →](./11_Reusable_Config_Commands_Executors_Parameters.md)
 
----
-
 ## 1. Concepts
 
 **Orbs** are shareable packages of reusable config: **jobs**, **commands**, and **executors**.
@@ -30,8 +28,6 @@ workflows:
 
 **Pin versions.** Review orb source before production use ([CiCd/6](../6_Supply_Chain_And_Signing.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### Authoring
@@ -42,8 +38,6 @@ Registry orbs use pack/publish flows and the Orb Development Kit. Inline orbs te
 
 Private orb registries / import rules differ on CircleCI Server — confirm Server docs for your version ([18](./18_Server_CLI_API_And_Toolkit.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -53,8 +47,6 @@ Private orb registries / import rules differ on CircleCI Server — confirm Serv
 | Learn reuse | Inline orb first |
 
 **Good:** pin majors; read changelogs. **Bad:** floating tags on prod deploy orbs.
-
----
 
 ## References
 

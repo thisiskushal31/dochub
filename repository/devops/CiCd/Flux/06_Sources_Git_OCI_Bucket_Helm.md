@@ -2,8 +2,6 @@
 
 [← Previous](./05_First_Reconcile_And_Day1_Loop.md) · [README](./README.md) · [Next: ExternalArtifact →](./07_ExternalArtifact_And_ArtifactGenerator.md)
 
----
-
 ## 1. Concepts
 
 A **Source** tells Flux: *where the files are, how to authenticate, and which version to take.* After a successful fetch, Flux stores an **artifact** other objects consume.
@@ -35,8 +33,6 @@ spec:
 
 One Source can feed many Kustomizations — fetch once, apply many ways.
 
----
-
 ## 2. Advanced concepts
 
 ### GitRepository features worth knowing
@@ -66,8 +62,6 @@ Production clusters talk to a registry, not Git. Humans still edit Git; CI runs 
 
 Cosign/PGP-style options exist on sources — turn on when supply-chain policy requires ([12](./12_Security_Identity_And_Air_Gap.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Scenario | Choice |
@@ -79,8 +73,6 @@ Cosign/PGP-style options exist on sources — turn on when supply-chain policy r
 | Want sync right after push | Receiver ([14](./14_Notifications_Alerts_And_Receivers.md)) |
 
 **Good:** credentials in Secrets or workload identity. **Bad:** tokens pasted into Source YAML; production on floating `latest`.
-
----
 
 ## References
 

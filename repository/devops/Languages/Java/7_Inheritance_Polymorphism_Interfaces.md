@@ -2,8 +2,6 @@
 
 Inheritance lets you reuse and extend behavior from a superclass; polymorphism lets you treat subtypes through a common type and dispatch to the right implementation at run time. Interfaces define contracts without implementation and support multiple “types” for a class. This topic goes deep into single and multilevel inheritance, the super keyword, method overriding and its rules, compile-time vs run-time polymorphism, abstract classes and methods, and declaring, implementing, and extending interfaces.
 
----
-
 ## Inheritance: concept and syntax
 
 **Inheritance** is a relationship between a superclass (base, parent) and a subclass (derived, child). The subclass gains the non-private members of the superclass (fields, methods); constructors are not inherited but can be invoked from the subclass. In Java a class has exactly one direct superclass (single inheritance of implementation); the keyword is `extends`. Reuse and extension: the subclass can add new fields and methods and can override inherited methods to change behavior.
@@ -28,8 +26,6 @@ public class My_Calculation extends Calculation {
 }
 ```
 
----
-
 ## Superclass and subclass references
 
 A variable of superclass type can hold a reference to a subclass object: `SuperClass ref = new SubClass();`. The compile-time type of `ref` is SuperClass, so only members declared in SuperClass (and visible) are callable by the compiler. At run time, the object is a SubClass; if a method is overridden, the subclass version runs (dynamic dispatch). You cannot call subclass-specific methods through a superclass reference without a cast; the compiler does not know they exist.
@@ -40,8 +36,6 @@ cal.addition(a, b);
 cal.subtraction(a, b);
 // cal.multiplication(a, b);  // compile error: type Calculation has no multiplication
 ```
-
----
 
 ## The super keyword
 
@@ -80,15 +74,11 @@ public class Subclass extends Superclass {
 }
 ```
 
----
-
 ## IS-A and HAS-A
 
 **IS-A** is the inheritance relationship: “Subclass IS-A Superclass.” It is expressed with `extends` (and `implements` for interfaces). Example: `Dog extends Mammal`, so a Dog is a Mammal and also an Animal if Mammal extends Animal. The **instanceof** operator checks IS-A: `obj instanceof Type` is true if the object referred to is non-null and of that type or a subtype. For interfaces, it is true if the object’s class (or any superclass) implements that interface. So `obj instanceof Object` is true for any non-null reference. If `obj` is null, `obj instanceof AnyType` is false (no exception). After a successful instanceof check, you can safely cast: `if (obj instanceof String) { String s = (String) obj; ... }`. Java 16+ allows pattern matching: `if (obj instanceof String s) { ... }` both checks and binds `s` in one step.
 
 **HAS-A** is composition: one class has a reference to another as a field. It does not use extends; the contained object is used by the class. Example: `Van extends Vehicle` and has a `Speed sp` field — Van HAS-A Speed. Use HAS-A when you need a component, IS-A when you are specializing a more general type.
-
----
 
 ## Types of inheritance in Java
 
@@ -99,8 +89,6 @@ Java allows:
 - **Hierarchical** — One superclass, many subclasses. B extends A, C extends A.
 
 Java does **not** allow multiple inheritance of implementation: a class cannot `extends` more than one class. So `class D extends A, B` is illegal. Multiple “behavior” is achieved via **interfaces**: a class can `implements` several interfaces.
-
----
 
 ## Method overriding
 
@@ -145,8 +133,6 @@ class Dog extends Animal {
 }
 ```
 
----
-
 ## Run-time polymorphism (dynamic dispatch)
 
 When you call an instance method through a reference, the **actual** type of the object (at run time) determines which method body runs, not the type of the reference. So `Animal a = new Dog(); a.move();` runs Dog’s `move()`. This is virtual method invocation: the overridden method in the subclass is invoked. The compiler only checks that the method exists on the declared type; the JVM selects the implementation from the object’s class. That’s why you can write code against a superclass or interface type and pass different implementations.
@@ -158,13 +144,9 @@ s.mailCheck();  // Salary's mailCheck
 e.mailCheck();  // Still Salary's mailCheck — same object type
 ```
 
----
-
 ## Compile-time polymorphism (overloading)
 
 Overloading is multiple methods in the same class (or between a class and its subclass) with the same name but different parameter lists. The choice is made at **compile time** from the static types of the arguments. It is unrelated to overriding; overloading does not require inheritance and is not polymorphic in the run-time sense. **Overload resolution with inheritance:** If the subclass declares a method with the same name but different parameters than the superclass, both are overloads; the compiler picks based on the argument types. If the subclass has a method with the **same signature** as the superclass, that is overriding (and must obey override rules), not overloading. When you call through a superclass reference, the compiler chooses the overload based on the **reference** type’s methods only; the actual object type does not affect which overload is selected, but it does determine which override runs.
-
----
 
 ## Abstract classes and methods
 
@@ -202,8 +184,6 @@ public class Salary extends Employee {
 
 Abstraction (hiding implementation details, exposing only behavior) is achieved with abstract classes and interfaces; the caller depends on the type/contract, not the concrete implementation.
 
----
-
 ## Interfaces: declaration and semantics
 
 An **interface** is a reference type that defines a contract: typically abstract methods (no body), and optionally constants (public static final), default methods (Java 8+), and static methods. A class **implements** an interface with `implements InterfaceName`; it must provide implementations for all abstract methods of the interface (or be abstract). A class can implement multiple interfaces (e.g. `class C extends B implements I1, I2`). Interfaces are not classes: no constructors, no instance fields, no direct instantiation.
@@ -229,8 +209,6 @@ public class MammalInt implements Animal {
     }
 }
 ```
-
----
 
 ## Implementing multiple interfaces and extending interfaces
 
@@ -260,13 +238,9 @@ public class HockeyDemo implements Hockey, Event {
 }
 ```
 
----
-
 ## Tagging (marker) interfaces
 
 An interface with no methods is a **marker** or **tagging** interface. It adds a type: the class is considered to be of that type for polymorphism and type checks (e.g. Serializable, Cloneable). The JVM or APIs may use it (e.g. serialization). Modern code often uses annotations for similar purposes, but marker interfaces are still present in the platform.
-
----
 
 ## Polymorphism and reference types
 
@@ -281,13 +255,9 @@ Object o = d;
 
 d, a, v, o all refer to the same Deer object. The type of the reference limits which members you can call; the actual object type determines which overridden implementation runs.
 
----
-
 ## Summary
 
 Inheritance is single (one superclass) via `extends`; the subclass gets non-private members and can override methods and call super with `super` or `super(args)`. Overriding follows strict rules (signature, return type, access, exceptions). Run-time polymorphism is dynamic dispatch on overridden instance methods; compile-time polymorphism is overloading. Abstract classes and methods force subclasses to provide implementations. Interfaces define contracts; a class can implement multiple interfaces and an interface can extend multiple interfaces. Together, inheritance, abstraction, and interfaces support reusable, extensible design while keeping contracts clear.
-
----
 
 ## Further reading
 

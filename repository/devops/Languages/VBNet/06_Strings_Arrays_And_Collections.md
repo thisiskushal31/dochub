@@ -16,8 +16,6 @@ Chapter **[05](./05_Procedures_Parameters_Properties_And_Overloads.md)** covered
 
 Handbook default: **BCL-first** (`String`, `List(Of T)`, `Dictionary(Of K, V)`); VB runtime helpers only when maintaining idiomatic brownfield.
 
----
-
 ## 1. Concepts
 
 ### 1. Strings are immutable reference types
@@ -146,8 +144,6 @@ Dim left3 As String = Microsoft.VisualBasic.Left(text, 3)
 
 Reasons to prefer BCL: cross-language readability in mixed C#/VB solutions, clearer culture control, fewer surprises for new hires. Keep VB helpers when maintaining idiomatic legacy modules—don’t rewrite mid-incident for aesthetics.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Culture, casing, and security
@@ -178,8 +174,6 @@ Returning an internal `List(Of T)` from a property lets callers mutate your priv
 
 `Where` / `Select` on `IEnumerable(Of T)` is shared .NET literacy (often documented first in [C# LINQ chapters](../CSharp/17_LINQ_And_Async_Await.md)). VB query syntax exists (`From … Where … Select`). Prefer clarity; avoid multiple enumeration of expensive sequences.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How strings/collections show up |
@@ -192,8 +186,6 @@ Returning an internal `List(Of T)` from a property lets callers mutate your priv
 
 **Whole-engineering picture:** collections are memory policy; string compares are sometimes authZ policy—treat both as design, not syntax.
 
----
-
 ## 4. Staff-level review checklist
 
 - New code prefers **BCL** string APIs over `Microsoft.VisualBasic` helpers unless file is legacy-idiomatic.
@@ -204,8 +196,6 @@ Returning an internal `List(Of T)` from a property lets callers mutate your priv
 - Path construction uses **`Path`** APIs.
 - Hot-loop string building considers **`StringBuilder`** when allocations matter.
 - Interop arrays are bounds-checked before indexing.
-
----
 
 ## References
 

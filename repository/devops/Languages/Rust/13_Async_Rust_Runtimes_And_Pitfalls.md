@@ -6,8 +6,6 @@
 
 What **`async` / `await`** means in the language, how the **`Future`** trait fits, why **async is not multithreading by itself**, why you need a **runtime**, common pitfalls (**blocking**, **cancellation**, **`Pin`** at a high level), and when to **stay synchronous**. After this chapter you should choose async only when concurrency of many waits justifies the model—and review async code for scheduler assumptions.
 
----
-
 ## 1. Concepts
 
 ### 1. `async` / `await` as a language feature
@@ -84,8 +82,6 @@ Prefer ordinary threads or single-threaded sync code when:
 - You would only wrap sync I/O in `async` without overlapping waits
 
 Async shines when **many concurrent waits** (connections, timers, fan-out) must share few threads efficiently.
-
----
 
 ## 2. Advanced concepts
 
@@ -234,8 +230,6 @@ This handbook teaches the language and delivery habits. It does not walk through
 
 Learn Rust here first; learn the framework from its official book second—the same order you would use for any other language’s web or UI stack.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -276,8 +270,6 @@ Learn Rust here first; learn the framework from its official book second—the s
 - Sync remains an option for CLIs and simple agents—async is not a style tax.
 - Someone can explain, in plain terms, what the runtime’s scheduler, I/O watcher, and wakers are when a service looks stuck (section 15).
 - Framework picks follow the “what is a framework?” questions in section 16—not “we installed a crate, so we know Rust.”
-
----
 
 ## References
 

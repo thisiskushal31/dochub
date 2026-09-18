@@ -2,8 +2,6 @@
 
 [← Previous](./09_Pod_Templates_Compute_And_Affinity.md) · [README](./README.md) · [Next: Resolvers →](./11_Resolvers_Bundles_And_Remote_Resources.md)
 
----
-
 ## 1. Concepts
 
 Beyond a linear Pipeline graph, Pipelines offers three extension shapes:
@@ -35,8 +33,6 @@ spec:
 
 Prefer matrix over copy-pasted Tasks per version. Prefer StepAction over copy-pasted step blobs. Prefer CustomRun only when a Catalog Task cannot express the runtime.
 
----
-
 ## 2. Advanced concepts
 
 ### Matrix discipline
@@ -60,8 +56,6 @@ Pin StepAction versions the same way you pin Tasks (resolver + SHA/digest). Brea
 
 Matrix / StepAction / CustomRun fields evolve with Pipelines API lines — match examples to your installed version ([25](./25_Migrate_Versioning_And_Extras.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -78,8 +72,6 @@ Matrix / StepAction / CustomRun fields evolve with Pipelines API lines — match
 - StepActions pinned; no floating `main`  
 
 **Good:** matrix for versions. **Bad:** 200-cell matrix without quotas or owners.
-
----
 
 ## References
 

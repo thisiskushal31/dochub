@@ -6,8 +6,6 @@
 
 How **shell variables** and **parameters** work in Bash and POSIX `sh`: assignment, expansion, `export`, `readonly`, positional parameters (`$1`, `$@`, `$#`), and status (`$?`). Brief **PowerShell** contrast (`$var`, `$env:`) so Windows automation is not forced into Bash metaphors. You leave able to pass arguments safely, export environment to child processes, and read exit status without cargo-culting snippets.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. Variables vs environment
@@ -142,8 +140,6 @@ Write-Output $?
 
 By default, variables in Bash functions are **global** to the shell unless declared `local` (Bash/ksh-family; not all POSIX `sh`). Details belong with functions; the rule for this chapter: **export only what children need**, keep secrets out of `export` when possible, and prefer locals inside functions.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Environment size and child visibility
@@ -229,8 +225,6 @@ ENV=prod API_TOKEN="$token" ./run_job.sh
 
 PowerShell analogue—process-scoped env mutation should be restored if you alter `$env:` for a session-wide effect; prefer `Start-Process`/`pwsh -Command` patterns that pass env explicitly when isolation matters.
 
----
-
 ## 3. Applications and use cases
 
 ### CLI wrappers and DevOps glue
@@ -303,8 +297,6 @@ printf 'token_len=%s\n' "${#API_TOKEN}" >&2
 - ShellCheck clean for unused/unquoted parameter issues.
 - No `eval`-based indirection for untrusted names.
 - Required environment variables are listed and fail fast with clear errors.
-
----
 
 ## References
 

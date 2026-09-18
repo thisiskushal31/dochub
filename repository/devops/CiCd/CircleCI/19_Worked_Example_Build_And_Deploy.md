@@ -2,8 +2,6 @@
 
 [← Previous](./18_Server_CLI_API_And_Toolkit.md) · [README](./README.md) · [Next: Best practices →](./20_Best_Practices_And_When_Not_CircleCI.md)
 
----
-
 ## 1. Concepts
 
 Narrative for a small service on CircleCI Cloud:
@@ -16,8 +14,6 @@ Narrative for a small service on CircleCI Cloud:
 - Context `prod-deploy` limited to deployers  
 - Cloud identity via OIDC or scoped secrets  
 - Branch protection / required checks on the VCS side  
-
----
 
 ## 2. Advanced concepts — pipeline shape
 
@@ -86,13 +82,9 @@ Replace echoes with real build/push/deploy (orbs/scripts). Prefer OIDC for cloud
 - Deploy does not run without approval on `main`.  
 - Job logs and artifacts visible in the UI.
 
----
-
 ## 3. Applications and use cases
 
 Add deploy markers and staging job when you need promotion visibility ([15](./15_Deployments_Approvals_And_Markers.md)).
-
----
 
 ## References
 

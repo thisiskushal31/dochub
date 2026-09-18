@@ -4,90 +4,90 @@
     "path": "1_What_Is_Haskell.md",
     "type": "file",
     "sha": "",
-    "size": 3597
+    "size": 3592
   },
   {
     "name": "10_Testing_And_Tooling.md",
     "path": "10_Testing_And_Tooling.md",
     "type": "file",
     "sha": "",
-    "size": 4283
+    "size": 4278
   },
   {
     "name": "11_DevOps_Security_Formal_Methods.md",
     "path": "11_DevOps_Security_Formal_Methods.md",
     "type": "file",
     "sha": "",
-    "size": 3686
+    "size": 3681
   },
   {
     "name": "12_Use_Cases_By_Role.md",
     "path": "12_Use_Cases_By_Role.md",
     "type": "file",
     "sha": "",
-    "size": 3690
+    "size": 3685
   },
   {
     "name": "2_Environment_And_Setup.md",
     "path": "2_Environment_And_Setup.md",
     "type": "file",
     "sha": "",
-    "size": 3797
+    "size": 3792
   },
   {
     "name": "3_Syntax_And_Structure.md",
     "path": "3_Syntax_And_Structure.md",
     "type": "file",
     "sha": "",
-    "size": 7318
+    "size": 7313
   },
   {
     "name": "4_Types_And_Type_System.md",
     "path": "4_Types_And_Type_System.md",
     "type": "file",
     "sha": "",
-    "size": 6184
+    "size": 6179
   },
   {
     "name": "5_Functions_And_Purity.md",
     "path": "5_Functions_And_Purity.md",
     "type": "file",
     "sha": "",
-    "size": 4913
+    "size": 4908
   },
   {
     "name": "6_Modules_And_Programs.md",
     "path": "6_Modules_And_Programs.md",
     "type": "file",
     "sha": "",
-    "size": 4538
+    "size": 4533
   },
   {
     "name": "7_Type_Classes.md",
     "path": "7_Type_Classes.md",
     "type": "file",
     "sha": "",
-    "size": 4813
+    "size": 4808
   },
   {
     "name": "8_IO_And_Effects.md",
     "path": "8_IO_And_Effects.md",
     "type": "file",
     "sha": "",
-    "size": 4639
+    "size": 4634
   },
   {
     "name": "9_Build_And_Packages.md",
     "path": "9_Build_And_Packages.md",
     "type": "file",
     "sha": "",
-    "size": 4307
+    "size": 4302
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 5812
+    "size": 5777
   }
 ]

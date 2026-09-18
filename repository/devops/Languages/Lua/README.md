@@ -8,8 +8,6 @@ Lua is a small, embeddable scripting language. This section uses **16 topic file
 
 **Where you use it:** Lua is used for scripting and configuration in applications, games, and tools; for embedding in C/C++ (Nginx/OpenResty, Redis, HAProxy, game engines); and for security-sensitive contexts (sandboxing, safe subsets). The use-cases topic (16) covers where Lua appears and what to focus on by role.
 
----
-
 ## How to read this section
 
 Read in **number order** for a single path: **basics first**, then **language core**, then **advanced and libraries**, then **embedding and use cases**.
@@ -19,8 +17,6 @@ Read in **number order** for a single path: **basics first**, then **language co
 - **Advanced:** Error handling, metatables and metamethods, garbage collection and weak tables, coroutines.
 - **Libraries and embedding:** Standard libraries, modules, C API overview, Lua standalone.
 - **Use cases:** Where Lua is used—infra, applications, games, tools—and what to focus on by role.
-
----
 
 ## Topic index
 
@@ -43,8 +39,6 @@ Read in **number order** for a single path: **basics first**, then **language co
 | 15 | C API and embedding | [15_C_API_And_Embedding.md](./15_C_API_And_Embedding.md) |
 | 16 | Use cases and engineering perspectives | [16_Use_Cases_And_DevOps.md](./16_Use_Cases_And_DevOps.md) |
 
----
-
 ## Learning path
 
 | Stage | Topics | What you'll be able to do |
@@ -54,8 +48,6 @@ Read in **number order** for a single path: **basics first**, then **language co
 | **Advanced** | 9 → 12 | Handle errors, use metatables and metamethods, understand GC and weak tables, use coroutines. |
 | **Libraries and embedding** | 13 → 15 | Use string, table, io, os, utf8, package, debug; write and load modules; understand C API context. |
 | **Use cases** | 16 | Where Lua is used (infra, apps, games, tools) and what to focus on by role. |
-
----
 
 ## Further reading
 

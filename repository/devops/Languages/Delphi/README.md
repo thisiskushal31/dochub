@@ -6,13 +6,9 @@
 
 **How this section is organized:** (1) **Very basic** — Topics 1–4: what Delphi is, environment and tooling, program structure and syntax, data types and variables. (2) **Core language** — Topics 5–7: procedures and functions, control flow, classes and objects. (3) **Libraries and runtime** — Topics 8–9: units, RTL, exception handling, threading. (4) **Implementation and use cases** — Topics 10–12: building and deployment, use cases and applications, security and recognition (artifacts, tooling, malware patterns). Each topic is a **deep dive**: you get the **why** and **when**, not just the **how**.
 
----
-
 ## For complete beginners
 
 If you are new to Delphi, start with **Topic 1** (What is Delphi?) to understand what the language is and why it appears in this handbook. Then **Topic 2** (Environment and tooling) to set up the compiler (Free Pascal or RAD Studio). **Topic 3** (Program structure and basic syntax) and **Topic 4** (Data types, variables, and constants) give you the foundation to read and write simple programs. From there, follow the learning path below in order (5 → 6 → 7 → 8 → 9 → 10 → 11 → 12) for a full path from basics to implementation and security.
-
----
 
 ## Learning path: from basics to implementation
 
@@ -23,13 +19,9 @@ If you are new to Delphi, start with **Topic 1** (What is Delphi?) to understand
 | **Libraries and runtime** | 8 → 9 | Use units and the RTL; handle exceptions and write multi-threaded code. |
 | **Implementation and use cases** | 10 → 11 → 12 | Build and deploy apps; apply Delphi knowledge for legacy, DevOps, or security (recognition, artifacts). |
 
----
-
 ## Coverage
 
 This section is a **deep dive**. It covers: **language** (syntax, types, procedures, control flow, classes, interfaces, units); **runtime** (RTL units, packages, exceptions, threading); **build and deploy** (command-line, options, resources, deployment); and **security and recognition** (how to identify Delphi binaries, typical malware patterns, tooling, hardening). Content is **standalone** (no “this is from X” in the body); **text-then-code**; and aimed at **very beginner** through **advanced** to **implementation** from **application**, **DevOps**, and **security** perspectives.
-
----
 
 ## Topics
 
@@ -48,8 +40,6 @@ This section is a **deep dive**. It covers: **language** (syntax, types, procedu
 | 11 | Use cases and applications | [11_Use_Cases_And_Applications.md](./11_Use_Cases_And_Applications.md) |
 | 12 | Security, recognition, and artifacts | [12_Security_Recognition_And_Artifacts.md](./12_Security_Recognition_And_Artifacts.md) |
 
----
-
 ## By engineering role
 
 | Role | Focus | Key topics |
@@ -58,8 +48,6 @@ This section is a **deep dive**. It covers: **language** (syntax, types, procedu
 | **DevOps / build and deploy** | Build pipelines, installers, deployment | 2, 8, 10–11 |
 | **Security / malware analysis** | Delphi binaries, recognition, tooling | 1–2, 7–8, 10, 12 |
 | **Reverse engineering** | Artifacts, patterns, Delphi-specific tooling | 3–7, 12 |
-
----
 
 ## Further reading
 

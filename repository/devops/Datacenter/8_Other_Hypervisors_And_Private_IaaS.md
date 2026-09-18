@@ -2,8 +2,6 @@
 
 [← Previous](./7_VMware_vSphere.md) · [README](./README.md) · [Next: Deploy →](./9_Deploy_On_The_Estate.md)
 
----
-
 ## 1. Concepts
 
 vSphere is common, not mandatory. The **jobs** are the same: isolate tenants, place VMs, attach disks, attach networks, live-migrate when you can, restart when a host dies. The API names change.
@@ -22,8 +20,6 @@ vSphere is common, not mandatory. The **jobs** are the same: isolate tenants, pl
 Pick **one** primary VM API per estate unless you have a written reason. Dual-running vSphere and OpenStack “for strategy” is two on-call rotations.
 
 Public OpenStack (OTC): [Cloud/13](../Cloud/13_Deutsche_Telekom.md). Huawei public vs HCS: [Cloud/11](../Cloud/11_Huawei_Cloud.md). Hybrid SKUs: [12](./12_Sites_DR_Hybrid_And_The_Job.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -72,8 +68,6 @@ You operate a **distributed system**, not a hypervisor checkbox. Upgrades are a 
 
 LXC on Proxmox, Kata, OpenShift virtualization ([OpenShift 7](https://github.com/thisiskushal31/Containerization-Deep-Dive/blob/main/Orchestration/OpenShift/7_Virtualization.md)) — VMs and containers can share a hall. Isolation, PCI passthrough, and live migrate behave differently. Do not mix GPU passthrough and DRS-like moves without a test.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -96,8 +90,6 @@ LXC on Proxmox, Kata, OpenShift virtualization ([OpenShift 7](https://github.com
 - If Outposts/Stack: parent-region dependency written down  
 
 **Good:** one stack, templates, manager backup, firmware cadence. **Bad:** vSphere + Proxmox + OpenStack for the same app tier, local qcow2 as prod, no cluster, cloud-on-prem assuming the WAN always works.
-
----
 
 ## Go deeper
 

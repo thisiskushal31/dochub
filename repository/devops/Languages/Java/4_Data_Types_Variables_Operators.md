@@ -2,8 +2,6 @@
 
 Java is statically typed: every variable and expression has a type known at compile time. Types determine the size and layout of values, the range of representable values, and the operations that can be performed. This topic covers primitive and reference types, variable declaration and the three kinds of variables (local, instance, static), type casting, and the full operator set including precedence and associativity.
 
----
-
 ## Primitive data types
 
 Java defines eight primitive types. They are not objects and have no methods; they are stored by value.
@@ -50,8 +48,6 @@ byte x = 2, y = 4;
 byte sum = (byte) (x + y);
 ```
 
----
-
 ## Reference (object) types
 
 Non-primitive types are reference types: classes (including wrapper classes like `Integer`, `String`), interfaces, arrays, and enums. A variable of reference type holds a reference (pointer) to an object or null. The default value for an uninitialized reference is `null`. Reference types are created with `new` (or via literals/constructors for strings, arrays, etc.); they are stored on the heap, and the variable holds the reference.
@@ -62,8 +58,6 @@ int[] arr = { 10, 20, 30 };
 // Default for reference: null
 String unset;  // unset is null until assigned
 ```
-
----
 
 ## Variable declaration and initialization
 
@@ -95,8 +89,6 @@ public class Example {
 }
 ```
 
----
-
 ## Type casting (conversion)
 
 **Widening (implicit)** — Converting a smaller or more restrictive type to a larger or more general one. The compiler performs this automatically when assigning or when passing arguments. No cast is required. The widening order for numerics is: byte → short → int → long → float → double; char widens to int (and then to long, float, double). No information is lost in numeric widening (though int/long to float/double can lose precision). For example, assigning an int to a double widens automatically.
@@ -116,8 +108,6 @@ int n = (int) d;  // n is 5004
 ```
 
 For expressions mixing byte, short, char: arithmetic operators promote operands to int (or long if a long is present), so the result of `byte + byte` is int; assigning back to byte requires a cast.
-
----
 
 ## Operators
 
@@ -160,8 +150,6 @@ String name = "James";
 boolean isString = name instanceof String;  // true
 ```
 
----
-
 ## Operator precedence and associativity
 
 Precedence determines how expressions are grouped when multiple operators appear. Higher precedence binds tighter. When precedence is equal, associativity (left-to-right or right-to-left) determines order. Use parentheses to override.
@@ -191,8 +179,6 @@ int result2 = (10 + 5) * 2;  // 30
 int result3 = 20 / 4 * 2;    // 10
 int result4 = 10 - 3 + 2;    // 9
 ```
-
----
 
 ## Further reading
 

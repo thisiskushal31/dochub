@@ -2,8 +2,6 @@
 
 [← Previous](./14_Jira_And_Atlassian_Integrations.md) · [README](./README.md) · [Next: Worked example →](./16_Worked_Example_Build_And_Deploy.md)
 
----
-
 ## 1. Concepts
 
 Harden Bitbucket on three planes:
@@ -13,8 +11,6 @@ Harden Bitbucket on three planes:
 | **People** | Workspace/project/repo permissions; SSO; 2FA |
 | **Network** | IP allowlisting (plan-gated); private networking for runners |
 | **Pipelines** | Secured/deployment variables; OIDC; runner isolation; pipe supply chain |
-
----
 
 ## 2. Advanced concepts
 
@@ -45,8 +41,6 @@ Know who can install Marketplace apps; review tokens/App passwords; rotate when 
 
 You own the perimeter (reverse proxy, SSO, upgrades). Do not assume Cloud Premium controls exist identically.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -56,8 +50,6 @@ You own the perimeter (reverse proxy, SSO, upgrades). Do not assume Cloud Premiu
 | Contractor access | Read-only groups; no workspace admin |
 
 **Good:** least privilege + merge checks. **Bad:** workspace admin for everyone; prod keys on PR pipelines.
-
----
 
 ## References
 

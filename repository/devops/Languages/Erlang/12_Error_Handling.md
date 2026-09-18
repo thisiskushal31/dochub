@@ -39,8 +39,6 @@ end.
 
 **Why this matters.** Knowing the difference between errors, exits, and throws, and when to catch versus let crash, is central to building reliable systems. Supervision trees depend on process termination and restart; local try/catch is for the cases where you need to recover or return a value instead of crashing.
 
----
-
 ## Further reading
 
 - [Errors and Error Handling](https://www.erlang.org/doc/system/errors)

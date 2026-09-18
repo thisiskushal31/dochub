@@ -84,8 +84,6 @@ Each complete line is a new chunk, so **local** variables do not persist across 
 
 When Lua is embedded, the host creates a Lua state, optionally loads the standard libraries, and runs code via the C API (e.g. `luaL_dofile`, `lua_pcall`). There is no `lua` binary in that case; the host decides how scripts are loaded and when they run. Topic 15 (C API and embedding) gives an overview relevant to reading or extending embedding code.
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §7 Lua Standalone](https://www.lua.org/manual/5.5/manual.html#7)

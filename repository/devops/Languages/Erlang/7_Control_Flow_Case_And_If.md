@@ -47,8 +47,6 @@ sign(N) ->
 
 **Why this matters.** Control flow is explicit: every branch is visible. Combined with pattern matching in function heads, you keep logic in small, readable pieces. Using a catch-all in `case` or `true` in `if` avoids run-time errors when you add new cases later.
 
----
-
 ## Further reading
 
 - [Expressions](https://www.erlang.org/doc/system/expressions) (if, case, maybe)

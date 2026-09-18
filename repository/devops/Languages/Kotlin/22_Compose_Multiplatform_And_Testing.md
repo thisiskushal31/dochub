@@ -22,8 +22,6 @@ Best practices include keeping as much test logic as possible in `commonTest` so
 
 For **Compose UI tests**, use the Compose testing APIs (e.g. semantics, `composeTestTag`) in platform test source sets or in shared code where the testing library supports multiplatform. UI tests that drive the composable tree and assert on content or interaction are often platform-specific (JVM, Android, or iOS) because they run in that platform’s runtime; share test *logic* or helpers in `commonTest` where possible and keep only the launcher or platform glue in the platform test source set. The next topic covers DevOps, CI, and security for Kotlin and multiplatform projects.
 
----
-
 ## Further reading
 
 - [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/)

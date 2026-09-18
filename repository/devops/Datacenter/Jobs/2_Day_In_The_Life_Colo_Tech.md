@@ -2,8 +2,6 @@
 
 [← Previous](./1_Role_Map.md) · [README](./README.md) · [Next: Critical facilities →](./3_Day_In_The_Life_Critical_Facilities.md)
 
----
-
 ## 1. Concepts
 
 A **colo / DC tech** day is rounds + tickets + hands—physical truth in white space and plant rooms you are cleared for.
@@ -20,8 +18,6 @@ A **colo / DC tech** day is rounds + tickets + hands—physical truth in white s
 
 Tracks: White-Space, Electrical/Mechanical literacy, Provider-Use hands patterns.
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes
@@ -36,8 +32,6 @@ Tracks: White-Space, Electrical/Mechanical literacy, Provider-Use hands patterns
 ### How it connects
 
 Safety [7](./7_Safety_LOTO_And_EPO.md). Escalation [6](./6_Ticket_Taxonomy_And_Escalation.md). Integration failure drills.
-
----
 
 ## 3. Applications and use cases
 
@@ -56,8 +50,6 @@ Safety [7](./7_Safety_LOTO_And_EPO.md). Escalation [6](./6_Ticket_Taxonomy_And_E
 - Never improvise electrical beyond authorization  
 
 **Good:** disciplined rounds + precise hands. **Bad:** ticket cowboy; ignored alarms.
-
----
 
 ## References
 

@@ -8,8 +8,6 @@ You climb one floor at a time. Each floor deepens the same story: *safe, frequen
 
 **Syllabus guardrail:** Part A — *Timeless and full-spectrum coverage* (legacy through assisted/AI delivery).
 
----
-
 ## The staircase (read in this order)
 
 ```text
@@ -49,8 +47,6 @@ Floor 6  Amplifiers      →  platform, GitOps mindset, assisted delivery (after
 
 Do not skip Floor 5. Most production value still lives on “boring” or legacy estates; Floor 6 without Floor 1–5 is faster chaos.
 
----
-
 ## How floors connect (one story)
 
 ```text
@@ -63,8 +59,6 @@ Mindset (Three Ways / CALMS)
   → amplify (platform, assisted) without abandoning the loop
   → CiCd: build the loop for real
 ```
-
----
 
 ## Full index (by number)
 
@@ -93,8 +87,6 @@ Mindset (Three Ways / CALMS)
 | 20 | [Delivery reality: full spectrum](./20_Delivery_Reality_Full_Spectrum.md) |
 
 Numbers are labels, not the climb order — **use the staircase table above**.
-
----
 
 ## Scope
 

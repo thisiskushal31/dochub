@@ -2,8 +2,6 @@
 
 [← Previous](./4_SAN_iSCSI_And_NVMe_oF.md) · [README](./README.md) · [Next: Arrays →](./6_Array_Controllers_And_Shelves.md)
 
----
-
 ## 1. Concepts
 
 **HBAs** (FC) and **HCAs** (InfiniBand / some RDMA) are initiator cards. **Multipath** bonds multiple physical paths into one logical device so a cable/switch/array-port loss does not kill the volume.
@@ -11,8 +9,6 @@
 ### Where it sits
 
 PCIe slots ([Compute/13](../Compute/13_NICs_HBAs_And_Slot_Planning.md)); dual cards preferred to dual fabrics/switches; OS multipath daemon or hypervisor PSA/NMP equivalents.
-
----
 
 ## 2. Advanced concepts
 
@@ -41,8 +37,6 @@ InfiniBand HCAs appear in HPC/GPU clusters ([Accelerators](../Accelerators/READM
 
 `multipath-tools`, PowerPath-class, VMware NMP/SATPs—different UIs, same jobs: discover paths, set policy, alert on path loss.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -61,8 +55,6 @@ InfiniBand HCAs appear in HPC/GPU clusters ([Accelerators](../Accelerators/READM
 - Never zone both HBAs identically to one port “temporarily”  
 
 **Good:** dual fabric, healthy multipath, tested pull. **Bad:** four paths on one switch; ignored failed path alarms.
-
----
 
 ## References
 

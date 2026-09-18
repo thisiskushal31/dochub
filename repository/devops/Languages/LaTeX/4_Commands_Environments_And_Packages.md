@@ -131,8 +131,6 @@ The **enumitem** package customizes list appearance and behavior. You can set op
 
 Load only the packages you need. Order can matter: for example, **hyperref** is often loaded last so it can override link behavior. If a class or another package already loads a package, you may only need to pass options: `\PassOptionsToPackage{option}{packagename}` before the class, or pass options when the class loads the package, depending on the setup. For class and package writers, the “class and package writers” documentation describes the underlying mechanisms.
 
----
-
 ## Further reading
 
 - [LaTeX2e for authors](https://latex-project.org/help/documentation/usrguide.pdf)

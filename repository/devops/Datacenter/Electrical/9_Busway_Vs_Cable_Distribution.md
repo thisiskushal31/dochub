@@ -2,8 +2,6 @@
 
 [← Previous](./8_Paralleling_And_Transfer_Sequences.md) · [README](./README.md) · [Next: Floor and row PDUs →](./10_Floor_And_Row_PDUs.md)
 
----
-
 ## 1. Concepts
 
 After UPS (or LV boards), power must reach rows and racks. Two dominant physical methods:
@@ -22,8 +20,6 @@ UPS / LV gear → (busway or cable) → floor/row PDU or RPP → whips → rack 
 ```
 
 Overhead busway above hot/cold aisles is common in modern high-density halls; underfloor cable remains common in raised-floor sites.
-
----
 
 ## 2. Advanced concepts
 
@@ -59,8 +55,6 @@ Overhead busbar and 415 V / 48 V distribution show up with dense compute—see [
 
 Conductor standards (AWG vs mm²), bus brands, and IP ratings differ. Read local ampacity tables; do not copy US tray fill rules into an IEC site by memory.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -79,8 +73,6 @@ Conductor standards (AWG vs mm²), bus brands, and IP ratings differ. Read local
 - Never open tap boxes without LOTO  
 
 **Good:** segregated A/B bus, IR program, labeled taps. **Bad:** shared tray for “A and B”; unlabeled tap-offs; maxed bus sold as spare.
-
----
 
 ## References
 

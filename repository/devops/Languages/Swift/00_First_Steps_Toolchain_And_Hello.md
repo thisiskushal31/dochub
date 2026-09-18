@@ -8,8 +8,6 @@ Your first honest contact with Swift on a real machine. By the end you should kn
 
 Today’s job is one working picture: *language + toolchain + something that prints*. If that picture is fuzzy, every later chapter will feel like someone else’s laptop. Staff job after the hellos: know the **failure modes** (wrong PATH, playground ≠ CI) and walk a new hire through an **onboarding checklist** that actually matches the Mac they were issued.
 
----
-
 ## 1. Concepts
 
 ### 1. Three surfaces, one language
@@ -277,8 +275,6 @@ You get a working `swift` one of these ways:
 
 For first steps: install *something official*, run `swift --version`, print hello four ways, then stop rearranging PATH. Chapter **03** is the full map.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Driver vs language mode vs SDK
@@ -439,8 +435,6 @@ Date: _______________  Hire: _______________  Buddy: _______________
 - Library vs executable is explicit so nobody spends week two fighting the wrong scaffold.
 - PATH ghosts are caught on day one, not during the first production incident.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Practice |
@@ -450,8 +444,6 @@ Date: _______________  Hire: _______________  Buddy: _______________
 | **Security** | Treat “random gist as `swift script` in CI” as unreviewed code execution—pin sources and review like any binary build |
 | **Operations** | Onboarding doc: install channel + expected `swift --version` + four hello commands + failure-mode forensics |
 | **Software engineering** | Default new shared code to SPM **library** layout early; use executables for tools; avoid “we’ll package it later” debt |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -466,8 +458,6 @@ Date: _______________  Hire: _______________  Buddy: _______________
 - Onboarding includes `which swift` / `type -a swift` / `xcrun --find swift` so PATH ghosts are visible.
 - Playground success is never accepted as a CI substitute.
 - New hire Mac checklist exists and has been run at least once this quarter.
-
----
 
 ## References
 

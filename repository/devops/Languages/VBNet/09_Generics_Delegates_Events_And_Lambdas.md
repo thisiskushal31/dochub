@@ -8,8 +8,6 @@
 
 You leave able to read generic APIs, wire events without leaking subscriptions, and choose between named methods and lambdas deliberately.
 
----
-
 ## 1. Concepts
 
 ### 1. Generics `Of T`
@@ -90,8 +88,6 @@ items.ForEach(Sub(x) Console.WriteLine(x))
 
 Multi-line lambdas use `Function`/`Sub` … `End Function`/`End Sub`. Capture variables carefully—loops capturing the loop variable by reference historically surprised people; prefer clear locals.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Covariance and constraints literacy
@@ -152,8 +148,6 @@ After `Imports` of the module’s namespace, callers write `s.Truncate(10)`. Sta
 | Prefer instance methods on types you own | Extensions are for types you cannot change |
 | Discoverability needs `Imports` | Missing import = “method not found” noise |
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -165,8 +159,6 @@ After `Imports` of the module’s namespace, callers write `s.Truncate(10)`. Sta
 | **Software engineering** | Generic repositories/helpers constrained honestly; ban non-generic collections in new code |
 
 Office VBA “events” are host Application events—not CLR delegates ([VBA events](../VBA/12_Events_And_Auto_Macros.md)). Keep the models separate when modernizing macros toward .NET.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -181,8 +173,6 @@ Office VBA “events” are host Application events—not CLR delegates ([VBA ev
 - Handler failures isolated or logged on multicast critical paths.
 - Public APIs prefer read-only sequence types over leaking mutable lists.
 - Custom extension methods are pure, discoverable via `Imports`, and justified vs instance methods.
-
----
 
 ## References
 

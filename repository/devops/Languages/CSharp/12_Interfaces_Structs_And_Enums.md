@@ -6,8 +6,6 @@
 
 **Why interfaces?** They allow multiple unrelated types to share a contract (e.g. IComparable, IDisposable) and support dependency injection and testing. **Why structs?** They avoid heap allocation for small data (e.g. Point, Range) and are copied by value. **Why enums?** They replace magic numbers with named values (e.g. Status.Pending).
 
----
-
 ## Interfaces
 
 An **interface** declares members without implementation. A class **implements** an interface by providing implementations for all its members. A variable of the interface type can hold any implementing instance.
@@ -26,8 +24,6 @@ class ConsoleLogger : ILogger
 ILogger logger = new ConsoleLogger();
 ```
 
----
-
 ## Structs
 
 **struct** defines a value type. Structs are copied on assignment and when passed by value. They can have constructors, properties, and methods but cannot inherit from another struct (only from ValueType). Use structs for small, immutable or short-lived data.
@@ -40,8 +36,6 @@ struct Point
 }
 ```
 
----
-
 ## Enums
 
 **enum** defines a set of named integral constants. The underlying type is int by default but can be specified. Use enums for fixed sets of related values.
@@ -51,8 +45,6 @@ enum Status { Pending, Active, Completed }
 Status s = Status.Active;
 int value = (int)Status.Completed;
 ```
-
----
 
 ## Further reading
 

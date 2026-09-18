@@ -2,8 +2,6 @@
 
 [← Previous](./05_Queues_Clusters_And_Targeting.md) · [README](./README.md) · [Next: Templates →](./07_Templates_And_First_Pipeline_Yml.md)
 
----
-
 ## 1. Concepts
 
 Steps live in YAML — in the Buildkite UI editor and/or in the repo (commonly `.buildkite/pipeline.yml`).
@@ -46,8 +44,6 @@ steps:
 
 Top-level `agents:` and `env:` apply to command steps unless overridden.
 
----
-
 ## 2. Advanced concepts
 
 ### Pipeline upload
@@ -60,8 +56,6 @@ A common pattern: UI (or a tiny bootstrap YAML) runs `buildkite-agent pipeline u
 
 Exact schema: configuration docs for your agent/docs version.
 
----
-
 ## 3. Applications and use cases
 
 | Estate | Shape |
@@ -71,8 +65,6 @@ Exact schema: configuration docs for your agent/docs version.
 | Human gate | block before production |
 
 **Good:** YAML in Git reviewed in PRs. **Bad:** only UI YAML with no repo history.
-
----
 
 ## References
 

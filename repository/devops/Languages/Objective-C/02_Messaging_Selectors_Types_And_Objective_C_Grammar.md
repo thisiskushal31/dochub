@@ -11,8 +11,6 @@ id o = @"x";
 [o description]; /* always a message send, never a direct C call */
 ```
 
----
-
 ## 1. Messages are not C function calls
 
 A message send looks like a call, but the runtime resolves **receiver + selector → implementation** at execution time (with caching):
@@ -31,8 +29,6 @@ NSString *t = [s stringByReplacingOccurrencesOfString:@"a"
                                               range:NSMakeRange(0, s.length)];
 ```
 
----
-
 ## 2. `id`, `Class`, `SEL`, `BOOL`
 
 ```objc
@@ -46,8 +42,6 @@ BOOL ok = [anyObject respondsToSelector:sel];
 - **`Class`** — handle for a class object.
 - **`SEL`** — opaque selector; compare with **`sel_isEqual`** or **`==`** for compile-time constants.
 - **`BOOL`** — use **`YES`** / **`NO`**.
-
----
 
 ## 3. `super`
 
@@ -64,8 +58,6 @@ BOOL ok = [anyObject respondsToSelector:sel];
 
 Inside **categories**, **`super`** behavior is easy to get wrong and changes which implementation runs.
 
----
-
 ## 4. Messaging `nil`
 
 Sending to **`nil`** yields zero-like results for scalar returns without crashing:
@@ -76,8 +68,6 @@ NSUInteger z = [n length]; // z == 0
 ```
 
 That is not “safe” application logic: silent failures can hide broken invariants and authorization mistakes.
-
----
 
 ## 5. Literals
 
@@ -92,8 +82,6 @@ NSDictionary *d = @{ @"k": n, @"s": s };
 
 Prefer immutable **Foundation** graphs where possible; mutable literal variants exist but are less common.
 
----
-
 ## 6. `@encode` and dynamic APIs
 
 **`@encode`** yields a type-encoding string for runtime registration:
@@ -103,8 +91,6 @@ const char *enc = @encode(NSUInteger);
 ```
 
 **`NSInvocation`** and some **KVC** paths depend on correct encodings; mismatches can corrupt memory or crash.
-
----
 
 ## 7. `NSSelectorFromString` and security
 
@@ -119,8 +105,6 @@ if ([obj respondsToSelector:s]) {
 
 That pattern expands **what** arbitrary code can invoke. Prefer typed methods, **blocks**, or explicit dispatch tables.
 
----
-
 ## Advanced use cases and implementation
 
 **`@dynamic`:** Declares that accessors are **not** synthesized by the compiler—they will exist at runtime (e.g. **Core Data** **NSManagedObject** properties, or runtime-generated methods). Misuse produces **unrecognized selector** crashes at first access if nothing supplies the implementation.
@@ -133,8 +117,6 @@ That pattern expands **what** arbitrary code can invoke. Prefer typed methods, *
 @property (nonatomic, copy) void (^onComplete)(BOOL ok);
 /* Prefer blocks + protocols at boundaries; reserve performSelector for plugins */
 ```
-
----
 
 ## References
 

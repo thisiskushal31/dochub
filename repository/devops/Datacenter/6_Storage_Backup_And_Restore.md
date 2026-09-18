@@ -2,8 +2,6 @@
 
 [← Previous](./5_Fabric_Cross_Connect_And_OOB.md) · [README](./README.md) · [Next: vSphere →](./7_VMware_vSphere.md)
 
----
-
 ## Mental map
 
 ![RAID levels](../Assets/Datacenter/Storage-Physical/raid-levels-board.svg)
@@ -28,8 +26,6 @@ On-prem storage is **where bits live when the VM or pod is gone**. Cloud disks h
 **Snapshots are not backups.** A snapshot on the same array is a convenience. Databases, etcd, and Active Directory need a **restore onto different disks** that you have tested.
 
 Datastores and CSI are consumers of this chapter. vSphere datastores: [7](./7_VMware_vSphere.md). Cluster CSI: [10](./10_Clusters_On_Prem.md). Database engines: [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive).
-
----
 
 ## 2. Advanced concepts
 
@@ -78,8 +74,6 @@ At rest: array SED, vSphere VM encryption, LUKS, application. In flight: FC is n
 
 NetApp, EMC/PowerMax, Pure, HPE, IBM FlashSystem, Hitachi — you will meet them. The durable jobs are the same: LUNs/exports, multipath, snapshots, replication, support contract. Learn **this** array’s restore drill; do not collect logos.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -101,8 +95,6 @@ NetApp, EMC/PowerMax, Pure, HPE, IBM FlashSystem, Hitachi — you will meet them
 - Support contract and spares for the array  
 
 **Good:** documented restore onto other iron, rack-aware SDS, etcd on SSD that is not the backup target. **Bad:** one NAS for VMs + backups + home dirs, snapshots forever, hostPath for prod, stretch L2 “DR.”
-
----
 
 ## Go deeper
 

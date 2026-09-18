@@ -4,118 +4,118 @@
     "path": "1_What_Is_Nim.md",
     "type": "file",
     "sha": "",
-    "size": 5084
+    "size": 5079
   },
   {
     "name": "10_Nimble_Package_Management.md",
     "path": "10_Nimble_Package_Management.md",
     "type": "file",
     "sha": "",
-    "size": 2313
+    "size": 2308
   },
   {
     "name": "11_NimScript_And_Build_Automation.md",
     "path": "11_NimScript_And_Build_Automation.md",
     "type": "file",
     "sha": "",
-    "size": 4117
+    "size": 4112
   },
   {
     "name": "12_Backend_Integration_And_Interop.md",
     "path": "12_Backend_Integration_And_Interop.md",
     "type": "file",
     "sha": "",
-    "size": 4465
+    "size": 4460
   },
   {
     "name": "13_Testing_Debugging_And_Observability.md",
     "path": "13_Testing_Debugging_And_Observability.md",
     "type": "file",
     "sha": "",
-    "size": 6184
+    "size": 6179
   },
   {
     "name": "14_Security_And_Reverse_Engineering_Perspectives.md",
     "path": "14_Security_And_Reverse_Engineering_Perspectives.md",
     "type": "file",
     "sha": "",
-    "size": 3936
+    "size": 3931
   },
   {
     "name": "15_Use_Cases_And_Architecture_Patterns.md",
     "path": "15_Use_Cases_And_Architecture_Patterns.md",
     "type": "file",
     "sha": "",
-    "size": 2875
+    "size": 2870
   },
   {
     "name": "16_Choosing_Nim_And_Engineering_Tradeoffs.md",
     "path": "16_Choosing_Nim_And_Engineering_Tradeoffs.md",
     "type": "file",
     "sha": "",
-    "size": 3258
+    "size": 3253
   },
   {
     "name": "2_Environment_Toolchain_And_First_Build.md",
     "path": "2_Environment_Toolchain_And_First_Build.md",
     "type": "file",
     "sha": "",
-    "size": 3602
+    "size": 3597
   },
   {
     "name": "3_Core_Syntax_Types_And_Control_Flow.md",
     "path": "3_Core_Syntax_Types_And_Control_Flow.md",
     "type": "file",
     "sha": "",
-    "size": 2845
+    "size": 2840
   },
   {
     "name": "4_Procedures_Iterators_OOP_And_Exceptions.md",
     "path": "4_Procedures_Iterators_OOP_And_Exceptions.md",
     "type": "file",
     "sha": "",
-    "size": 3194
+    "size": 3189
   },
   {
     "name": "5_Generics_Templates_And_Macros.md",
     "path": "5_Generics_Templates_And_Macros.md",
     "type": "file",
     "sha": "",
-    "size": 2631
+    "size": 2626
   },
   {
     "name": "6_Modules_Imports_And_Project_Structure.md",
     "path": "6_Modules_Imports_And_Project_Structure.md",
     "type": "file",
     "sha": "",
-    "size": 2014
+    "size": 2009
   },
   {
     "name": "7_Memory_Model_References_And_Runtime.md",
     "path": "7_Memory_Model_References_And_Runtime.md",
     "type": "file",
     "sha": "",
-    "size": 3861
+    "size": 3856
   },
   {
     "name": "8_Standard_Library_Essentials.md",
     "path": "8_Standard_Library_Essentials.md",
     "type": "file",
     "sha": "",
-    "size": 6945
+    "size": 6940
   },
   {
     "name": "9_Compiler_User_Guide_And_Build_Targets.md",
     "path": "9_Compiler_User_Guide_And_Build_Targets.md",
     "type": "file",
     "sha": "",
-    "size": 5442
+    "size": 5437
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 5567
+    "size": 5557
   }
 ]

@@ -2,8 +2,6 @@
 
 [← Previous](./1_Hall_Network_Mental_Map.md) · [README](./README.md) · [Next: Cabling →](./3_Structured_Cabling_Bring_Up.md)
 
----
-
 ## Mental map
 
 ```text
@@ -17,8 +15,6 @@ Dock / receive → uncrate / inventory serials
 ![Populated server rack](../../Assets/Datacenter/Setup-And-Bring-Up/server-rack-populated.jpg)
 
 *What to notice: vertical U stack, airflow front-to-back, cable management at sides—not a random shelf of towers. Image: [Wikimedia Foundation Servers (Commons)](https://commons.wikimedia.org/wiki/File:Wikimedia_Foundation_Servers-8055_13.jpg).*
-
----
 
 ## 1. Concepts
 
@@ -38,8 +34,6 @@ White-space depth: [White-Space/](../White-Space/README.md).
 
 **Confirm:** What three fields go on a rack label before the first cable?
 
----
-
 ## 2. Advanced concepts
 
 ### Operator experience (verify locally)
@@ -54,13 +48,9 @@ Operators stress mid-rack ToR for cable length when dense; odd/even spine racks 
 | Missing blanking | Hotspots later—install now |
 | No grounding | Safety stop |
 
----
-
 ## 3. Applications
 
 **Staff checklist:** elevation signed; serials in DCIM; A/B PDUs identified; photos front/rear; next = cabling ([3](./3_Structured_Cabling_Bring_Up.md)).
-
----
 
 ## References
 

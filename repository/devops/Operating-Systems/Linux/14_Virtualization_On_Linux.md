@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Fundamentals: Virtualization and datacenter](../Fundamentals/20_Virtualization_Hypervisors_And_Datacenter.md). Here: **how virtualization works and is configured on Linux** — KVM (Type 1), libvirt, and VirtualBox (Type 2). Commands and typical setup so you can create and manage VMs on a Linux host.
 
----
-
 ## 1. How virtualization works on Linux
 
 On Linux you typically use:
@@ -15,8 +13,6 @@ On Linux you typically use:
 - **VirtualBox** — A **Type 2** hypervisor that runs as a user-space application on the host. It can run on Linux (and Windows, macOS). Good for desktops and dev VMs; for servers, KVM is more common.
 
 So: **KVM + libvirt** = how you configure and run VMs “on Linux” in a server or datacenter; **VirtualBox** = alternative on the same Linux machine for desktop-style use.
-
----
 
 ## 2. Prerequisites: CPU and kernel
 
@@ -33,8 +29,6 @@ lsmod | grep kvm
 ```
 
 If nothing appears, enable virtualization in the host BIOS/UEFI and ensure the right `kvm` module is loaded.
-
----
 
 ## 3. KVM and libvirt: installation and service
 
@@ -58,8 +52,6 @@ sudo systemctl enable --now libvirtd
 - **libvirt** — Daemon (`libvirtd`) and tools (`virsh`, `virt-install`).
 - **virt-install** — CLI to create new VMs.
 - **virt-viewer** — Connect to VM console (SPICE/VNC).
-
----
 
 ## 4. Creating a VM with virt-install
 
@@ -101,8 +93,6 @@ virt-install \
 
 After creation, the VM is defined in libvirt; you start/stop it with **virsh**.
 
----
-
 ## 5. Managing VMs with virsh
 
 **virsh** is the CLI to manage VMs (and pools, networks) under libvirt.
@@ -133,8 +123,6 @@ virsh edit myvm
 
 So **how it is configured on Linux**: VM “hardware” (vCPUs, memory, disks, network) is stored in an **XML definition**; `virt-install` creates it, `virsh edit` changes it. Libvirt passes that to QEMU/KVM when you start the VM.
 
----
-
 ## 6. Storage pools and networks
 
 **Storage pools** are where libvirt keeps VM disks (dir, LVM, etc.):
@@ -146,8 +134,6 @@ virsh pool-info default
 ```
 
 **Networks**: default is a NAT network; for bridged networking you create a bridge on the host and use `--network bridge=br0` (or equivalent in XML).
-
----
 
 ## 7. VirtualBox on Linux
 
@@ -192,8 +178,6 @@ virtualbox
 
 **RHEL 9 (free):** Download RHEL 9 ISO from [Red Hat Developer Portal](https://developers.redhat.com/) (no-cost subscription). Create bootable USB (e.g. with `dd` or Rufus). Boot, run installer (language, destination/partitioning, root + user). After install, register: `sudo subscription-manager register --username=... --password=...`, `sudo subscription-manager attach --auto`; confirm with `subscription-manager list --installed`.
 
----
-
 ## 8. Summary: virtualization on Linux
 
 | Component | Role on Linux |
@@ -205,8 +189,6 @@ virtualbox
 | **VirtualBox** | Type 2 option on Linux; VBoxManage or GUI to create and run VMs. |
 
 For **concepts** (Type 1 vs 2, CPU/memory virtualization, datacenter), see [Fundamentals: Virtualization and datacenter](../Fundamentals/20_Virtualization_Hypervisors_And_Datacenter.md). For **RAID on Linux**, see [Storage advanced](./12_Storage_Advanced_LVM_ACLs.md).
-
----
 
 ## Further reading
 

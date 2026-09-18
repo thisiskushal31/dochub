@@ -2,8 +2,6 @@
 
 [← Previous](./01_What_Is_GitHub_Actions.md) · [README](./README.md) · [Next: First workflow →](./03_First_Workflow_And_Actions_UI.md)
 
----
-
 ## 1. Concepts
 
 | Term | Plain meaning |
@@ -25,8 +23,6 @@ event
 ```
 
 Jobs in one workflow share the run’s context (commit SHA, actor, event payload) but **not** a filesystem unless you pass **artifacts**, **caches**, or job **outputs**.
-
----
 
 ## 2. Advanced concepts
 
@@ -51,8 +47,6 @@ Prefer small `run:` scripts you own for business logic; use well-known actions f
 
 Steps can talk to the runner via stdout commands / environment files (`::warning::`, `$GITHUB_ENV`, `$GITHUB_OUTPUT`, job summaries). Details: [04](./04_Workflow_Syntax_Mental_Model.md) and the workflow-commands reference.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Model focus |
@@ -62,8 +56,6 @@ Steps can talk to the runner via stdout commands / environment files (`::warning
 | Org standard | Caller workflows thin; reusable workflows thick |
 
 **Good:** one clear graph per delivery lane. **Bad:** one giant job that mixes test, publish, and prod apply with write-all permissions.
-
----
 
 ## References
 

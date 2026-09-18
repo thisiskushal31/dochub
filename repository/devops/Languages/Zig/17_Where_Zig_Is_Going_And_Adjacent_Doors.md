@@ -8,8 +8,6 @@ Why Zig **persists**, how it sits beside **C** and **Rust**, what you should alr
 
 **Lens:** what you’ve seen → what the language is → where you go next.
 
----
-
 ## 1. Concepts
 
 ### 1. What this track already owns
@@ -57,8 +55,6 @@ Carry that sentence into design reviews. It prevents both overselling and unders
 
 Stay when C ABI + allocator-explicit design + cross-build are the job, and the team can maintain pins and mode policy. Move toward Rust when compile-time memory-safety proofs are non-negotiable. Stay with C when rewrite cost dominates and Zig would only be a thin wrapper you never invest in.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. How to choose what to learn next
@@ -104,8 +100,6 @@ Signing, SBOMs, reproducible builds for native tooling—especially if you distr
 | Rewriting all C in a month | Wrap → test → replace gradually |
 | Confusing Bun skill with Zig skill | Learn the language chapters |
 
----
-
 ## 3. Applications and use cases
 
 | Angle | What “next” looks like |
@@ -118,8 +112,6 @@ Signing, SBOMs, reproducible builds for native tooling—especially if you distr
 
 **Whole-engineering picture:** finish Zig literacy, then go deep on **one adjacent systems skill**—C, Rust, or shipping discipline.
 
----
-
 ## 4. Staff-level review checklist
 
 - Learner can explain Zig vs C vs Rust in one clear minute.
@@ -127,8 +119,6 @@ Signing, SBOMs, reproducible builds for native tooling—especially if you distr
 - Pin/mode/test habits will travel with the team into the next project.
 - C or Rust follow-on is scheduled if the estate needs it.
 - No confusion between Zig-the-language and Zig-built products.
-
----
 
 ## References
 

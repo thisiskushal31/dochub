@@ -2,8 +2,6 @@
 
 [← Previous](./13_EPO_And_Safety_Disconnects.md) · [README](./README.md) · [Next: EPMS →](./15_EPMS_BMS_And_Power_Monitoring.md)
 
----
-
 ## 1. Concepts
 
 Classic halls distribute **AC** to rack PDUs and server PSUs. Dense AI/GPU and some hyperscale designs add or shift toward:
@@ -20,8 +18,6 @@ You will meet these as **variants of the same jobs**: ampacity, redundancy, prot
 ### Where it sits
 
 Overhead bus over dense rows; DC plants in dedicated electrical galleries; shelf-level DC-DC in OCP-style racks; still UPS/battery concepts at the plant level (chemistry and conversion stages change).
-
----
 
 ## 2. Advanced concepts
 
@@ -56,8 +52,6 @@ Hyperscaler internal HVDC/48 V fabrics are often unpublished. Learn principles a
 
 OCP and Open Rack appear more in some operators than others. EU/US connector and voltage norms still apply at the cage edge even when the tray is 48 V inside the rack.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -76,8 +70,6 @@ OCP and Open Rack appear more in some operators than others. EU/US connector and
 - Never assume C13 whips scale to GPU racks  
 
 **Good:** density zone with matched power+cooling design. **Bad:** adapter pyramids; DC work without procedure; nameplate ignorance.
-
----
 
 ## References
 

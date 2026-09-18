@@ -8,8 +8,6 @@
 
 **How this section is organized:** (1) **Start from the very basic** — Topics 1–4 cover what Crystal is, install, program structure, and literals and types. (2) **Build bit by bit** — Topics 5–12 add control flow, methods and classes, modules and generics, exception handling, concurrency, Shards, compiler, and testing. (3) **Advanced** — Topic 15 covers macros and C bindings. (4) **Then where you can implement** — Topics 13–14 show use cases and security. Follow the topics in order; each builds on the previous.
 
----
-
 ## Learning path: from basics to implementation
 
 | Stage | Topics | What you'll be able to do |
@@ -19,8 +17,6 @@
 | **Advanced & tooling** | 9 → 10 → 11 → 12 | Use concurrency, Shards, the compiler, and testing. |
 | **Advanced language** | 15 | Use macros and C bindings for code generation and native interop. |
 | **Implementation** | 13 → 14 | Apply Crystal in web/CLI contexts and follow security and best practices. |
-
----
 
 ## Topics
 
@@ -41,8 +37,6 @@
 | 13 | Use cases and applications | [13_Use_Cases_And_Applications.md](./13_Use_Cases_And_Applications.md) |
 | 14 | Security and best practices | [14_Security_And_Best_Practices.md](./14_Security_And_Best_Practices.md) |
 | 15 | Macros and C bindings | [15_Macros_And_C_Bindings.md](./15_Macros_And_C_Bindings.md) |
-
----
 
 ## Further reading
 

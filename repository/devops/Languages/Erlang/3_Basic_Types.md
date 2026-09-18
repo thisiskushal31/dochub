@@ -41,8 +41,6 @@ Erlang programs work with **terms**: every value is a term. The basic types are 
 
 **Why this matters.** Types and immutability underpin safe concurrency and clear data flow. Using atoms only for known symbols and avoiding dynamic atom creation keeps the system stable in production. Choosing the right type (list vs map, list vs binary) affects both clarity and performance.
 
----
-
 ## Further reading
 
 - [Data Types](https://www.erlang.org/doc/system/data_types)

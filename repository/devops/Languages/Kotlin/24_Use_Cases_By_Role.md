@@ -46,8 +46,6 @@ Kotlin and Kotlin Multiplatform suit different engineering roles and goals: mobi
 
 This section of the handbook has introduced Kotlin from basics through advanced topics, interop, tooling, platforms, and use cases. Use the topic index in the Kotlin README and the further-reading links in each file to go deeper on any area.
 
----
-
 ## Further reading
 
 - [What is cross-platform mobile development](https://kotlinlang.org/docs/multiplatform/cross-platform-mobile-development.html)

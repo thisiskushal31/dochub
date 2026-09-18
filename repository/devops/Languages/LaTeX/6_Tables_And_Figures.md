@@ -200,8 +200,6 @@ After `\tableofcontents` you can add:
 
 LaTeX generates these from captions and updates them on the next run. They appear in the document where you place these commands (often after the table of contents).
 
----
-
 ## Further reading
 
 - [LaTeX2e — Floats (unofficial reference)](https://latex2e.org/Floats.html)

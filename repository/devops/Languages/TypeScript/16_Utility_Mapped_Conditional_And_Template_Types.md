@@ -8,8 +8,6 @@ How TypeScript’s **type-level toolbox** works once you already know objects, u
 
 This is not a parlor-trick catalog. Staff use these tools to **reshape APIs**, **derive DTOs from domain types**, and **keep stringly protocols honest**—without inventing a second language inside the type checker. Pathological types that compile slowly belong in chapter **15**; here the habit is **clear transforms with an escape hatch**.
 
----
-
 ## 1. Concepts
 
 ### 1. Why type transforms exist
@@ -136,8 +134,6 @@ type Route = `/api/${string}/items`;
 
 Intrinsic string helpers you will see: `Uppercase`, `Lowercase`, `Capitalize`, `Uncapitalize`. Use templates for **event maps**, **CSS-ish keys**, **route patterns**, and **versioned message tags**—not for parsing English.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Key remapping (`as` in mapped types)
@@ -239,8 +235,6 @@ None of these constructs emit runtime checks. A `NonNullable` return type does n
 - parsers at trust boundaries,
 - tests that exercise the runtime path (chapter **18**).
 
----
-
 ## 3. Applications and use cases
 
 ### Application / product
@@ -275,8 +269,6 @@ None of these constructs emit runtime checks. A `NonNullable` return type does n
 | Tooling config | `satisfies` + literals | Faster builds if shallow |
 | Event protocols | Template keys | Exhaustiveness via `never` |
 
----
-
 ## 4. Staff-level review checklist
 
 - Utility types compose for **sync with source**, not for obscurity.
@@ -290,8 +282,6 @@ None of these constructs emit runtime checks. A `NonNullable` return type does n
 - Type-only cleverness does not replace runtime validation at trust boundaries.
 - Compile-time cost considered (chapter **15**) if CI slowed after the PR.
 - Default pin remains **TS 5.9.x** + `strict` for new packages.
-
----
 
 ## References
 

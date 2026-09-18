@@ -2,13 +2,9 @@
 
 [← Previous](./13_Best_Practices_And_When_Not_To_Use.md) · [README](./README.md) · [Next: Spec catalog →](./15_Rollout_Spec_And_Strategy_Configuration_Catalog.md)
 
----
-
 ## 1. Concepts
 
 Use this chapter to see **which feature classes exist** and **where they are taught** in these notes. Field-level YAML evolves by version — confirm keys in References when implementing. The handbook teaches the product surface; official docs remain the place for exhaustive CLI man pages and long per-provider cookbooks.
-
----
 
 ## 2. Advanced concepts — feature inventory
 
@@ -101,13 +97,9 @@ Use this chapter to see **which feature classes exist** and **where they are tau
 | CONTRIBUTING / releasing / roadmap / proposals | Contributor process, not day-2 operator literacy |
 | Third-party metric plugin catalogs (Honeycomb, Instana, …) | Plugin *class* covered; individual community plugins stay upstream |
 
----
-
 ## 3. Applications and use cases
 
 Walk A–H when designing a platform checklist: use / defer / N/A per row.
-
----
 
 ## References
 

@@ -14,8 +14,6 @@ Running F# in production or in automation involves **configuration and secrets**
 
 **Why this matters.** F# and .NET share the same runtime and ecosystem; security and DevOps practices for .NET apply to F#. Secure config, supply-chain hygiene, and safe error handling and logging reduce risk. Applying these practices helps you operate F#-based systems reliably and securely in production and in automation.
 
----
-
 ## Further reading
 
 - [F# Component Design Guidelines (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/style-guide/component-design-guidelines)

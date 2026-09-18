@@ -2,8 +2,6 @@
 
 [← Previous](./13_Best_Practices_Topology_And_App_Sizing.md) · [Argo CD](./README.md) · [Next: Application config catalog →](./15_Application_And_Sync_Configuration_Catalog.md)
 
----
-
 ## 1. Concepts
 
 Argo CD’s upstream docs are large (user guide, operator manual, ApplicationSet, upgrades, developer guide). These chapters cover **operator literacy across the feature surface** and **configuration kinds**. Fields and flags evolve by version — tables here name the surface; pin your version and confirm exact keys in References when implementing.
@@ -18,8 +16,6 @@ After these chapters, you should be able to:
 - Know which ConfigMap/Secret/CRD holds a setting  
 - Choose good topology ([13](./13_Best_Practices_Topology_And_App_Sizing.md))  
 - Walk a website from Git to Synced ([12](./12_Worked_Example_Simple_Website_GitOps.md))  
-
----
 
 ## 2. Advanced concepts — feature inventory
 
@@ -133,13 +129,9 @@ List · Cluster · Git (directories/files) · OCI · SCM Provider · Pull Reques
 | Developer guide / releasing Argo CD / e2e internals | Contributor process, not day-2 operator literacy |
 | Long CVE-history essays | Security model + practices in [11](./11_Security_Tenancy_Hydrator_And_Troubleshooting.md); CVE detail stays upstream |
 
----
-
 ## 3. Applications and use cases
 
 Use this map when designing a platform checklist: walk tables A–G and mark “we use / we defer / N/A.” Anything marked “we use” should have a Git-managed config owner.
-
----
 
 ## References
 

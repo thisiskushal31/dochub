@@ -2,8 +2,6 @@
 
 [← Previous](./14_India_Market.md) · [README](./README.md) · [Next: Architecture shapes →](./16_Architecture_Shapes_By_Operator_Class.md)
 
----
-
 ## 1. Concepts
 
 Beyond the primary hub chapters, keep a place for **additional metros** as the living index grows.
@@ -17,8 +15,6 @@ Beyond the primary hub chapters, keep a place for **additional metros** as the l
 | **Other global** | Whenever a client metro appears—index it |
 
 São Paulo primary coverage also sits in [9](./9_Americas_Hubs.md); this chapter is the expansion shelf.
-
----
 
 ## 2. Advanced concepts
 
@@ -36,8 +32,6 @@ Research method [3](./3_Research_Any_Operator.md). Syllabus Americas + LatAm see
 ### Honesty
 
 This chapter stays a **hub pattern**, not a fake complete directory.
-
----
 
 ## 3. Applications and use cases
 
@@ -57,8 +51,6 @@ This chapter stays a **hub pattern**, not a fake complete directory.
 - Don’t stop at São Paulo for “LatAm done”  
 
 **Good:** expandable hub notes + living index. **Bad:** static phone book claim; Miami-default thinking.
-
----
 
 ## References
 

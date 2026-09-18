@@ -6,8 +6,6 @@
 
 How Bash and POSIX `sh` make decisions: **`if`**, **`case`**, **`for`**, **`while`**, the difference between **`[` / `test`** and Bash **`[[`**, and how **exit status** drives `&&` / `||` and CI failure. A short **PowerShell** `if` / `switch` sketch keeps Windows automation in view. You leave able to write conditionals that mean what reviewers think they mean—and to avoid `[[` under `#!/bin/sh`.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. Exit status is the boolean system
@@ -164,8 +162,6 @@ if ($LASTEXITCODE -ne 0) { throw "failed: $LASTEXITCODE" }
 
 Windows PowerShell **5.1** and PowerShell **7** share this shape; differences show up more in modules and operators than in basic `if`.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `[` is not magic syntax alone
@@ -267,8 +263,6 @@ esac
 
 This pattern keeps failure categories explicit—know whether your script enables `errexit` before copying list-heavy idioms.
 
----
-
 ## 3. Applications and use cases
 
 ### CI gate scripts
@@ -357,8 +351,6 @@ if (-not $ok) { exit 1 }
 - Default `case` / `switch` branches fail closed for unknown input.
 - Retry loops are bounded and log why they stopped.
 - Destructive paths require an explicit confirmation gate.
-
----
 
 ## References
 

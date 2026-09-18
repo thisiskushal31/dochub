@@ -4,8 +4,6 @@
 
 *Final choice page for Oracle Cloud Infrastructure. Deeper API: [docs.oracle.com/iaas](https://docs.oracle.com/en-us/iaas/).*
 
----
-
 ## Compute
 
 | Product | What for | When | Why not |
@@ -78,8 +76,6 @@
 |---------|----------|------|---------|
 | **OCI Generative AI / Data Science / AI Services** | FM + ML + vertical AI | GenAI/ML on OCI | Pure DIY OKE when required |
 | **Oracle SaaS / Fusion integration** | ERP/apps | Oracle app estates | Pure greenfield IaaS |
-
----
 
 ## How to use
 

@@ -6,8 +6,6 @@
 
 Software engineering discipline for R: **testthat** (and friends), **continuous integration** expectations, **linting** (`lintr`), static patterns for common footguns, and code review checklists that include **statistical validity** (not just style). R codebases often mix analysis and software; the goal is to make **invariants** testable: schema, key uniqueness, monotonicity, monotonic time ordering, and model I/O contracts.
 
----
-
 ## 1. Concepts
 
 ### 1. What to test in analytics code
@@ -39,8 +37,6 @@ Reviewers should ask:
 - is the **time window** correct,
 - are **NA** handled per policy?
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Golden testing pitfalls
@@ -63,8 +59,6 @@ Standardize allowed patterns: no `T`/`F` literals, no `1:n` in certain contexts,
 
 Internal packages should run `R CMD check` in CI; it catches many cross-platform and documentation issues.
 
----
-
 ## 3. Applications and use cases
 
 - **CI for analytics repos:** run tests on each PR; block merges.
@@ -84,8 +78,6 @@ testthat::test_that("ids are unique", {
 - Randomized tests are seeded; parallel tests are isolated.
 - Review rubric includes statistical and operational questions, not only code style.
 - `R CMD check` (or agreed equivalent) runs for package-like code.
-
----
 
 ## References
 

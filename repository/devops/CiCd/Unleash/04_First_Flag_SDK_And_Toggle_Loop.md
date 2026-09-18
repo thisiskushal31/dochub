@@ -2,8 +2,6 @@
 
 [← Previous](./03_Install_Hosting_And_Configuration.md) · [README](./README.md) · [Next: Projects →](./05_Projects_Environments_And_Applications.md)
 
----
-
 ## 1. Concepts
 
 Goal: prove **toggle without redeploy** end-to-end.
@@ -24,8 +22,6 @@ Admin UI: flag on  → app path B
 ```
 
 You do **not** need every strategy yet — prove the loop first.
-
----
 
 ## 2. Advanced concepts
 
@@ -50,8 +46,6 @@ Start backend unless your only app is a SPA.
 
 Production pattern later ([19](./19_Worked_Example_Gradual_Rollout_In_CI_CD.md)): deploy with flag off → smoke → open percentage → kill switch drill.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -68,8 +62,6 @@ Production pattern later ([19](./19_Worked_Example_Gradual_Rollout_In_CI_CD.md))
 - Kill-switch drill once in lab  
 
 **Good:** tiny app proves the platform. **Bad:** first flag is also the production cutover for payments.
-
----
 
 ## References
 

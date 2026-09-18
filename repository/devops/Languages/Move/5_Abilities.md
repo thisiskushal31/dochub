@@ -48,8 +48,6 @@ On **Sui**, **key** + **store** govern **objects** and what may be transferred a
 - **Security:** Linear types (**no copy/drop**) reduce duplication bugs; **key**/**store** gate persistence.
 - **Operations:** Upgrades that change abilities are breaking; plan migrations.
 
----
-
 ## Further reading
 
 - [The Move Book — Abilities](https://move-language.github.io/move/abilities.html)

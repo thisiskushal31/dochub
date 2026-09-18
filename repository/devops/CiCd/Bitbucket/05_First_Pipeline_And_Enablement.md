@@ -2,8 +2,6 @@
 
 [← Previous](./04_Pipelines_Mental_Model_And_YAML.md) · [README](./README.md) · [Next: Runners →](./06_Runners_Cloud_And_Self_Hosted.md)
 
----
-
 ## 1. Concepts
 
 This chapter is the hands-on path: **turn Pipelines on**, **write YAML**, **watch the run**, **read logs**.
@@ -76,8 +74,6 @@ That is “seeing a pipeline”: history → one run → step logs.
 | Deployment step | Shows on **Deployments** dashboard ([11](./11_Deployments_And_Environments.md)) |
 | Red build | Fix code/YAML; push again or rerun |
 
----
-
 ## 2. Advanced concepts
 
 ### Branch and PR pipelines
@@ -96,8 +92,6 @@ Atlassian provides a Pipelines YAML validator (online) — use it when editors d
 
 Each run consumes **build minutes**. Larger `size:` multiplies minutes used; **`4x` and above** need a paid plan (Standard or Premium) ([08](./08_Triggers_Steps_Stages_Parallel.md), plan docs).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Milestone |
@@ -107,8 +101,6 @@ Each run consumes **build minutes**. Larger `size:` multiplies minutes used; **`
 | Path to prod | Artifact → staging deployment → manual production |
 
 **Verify:** PR shows pipeline status; required merge check blocks red builds; secured variables do not appear in plain log text.
-
----
 
 ## References
 

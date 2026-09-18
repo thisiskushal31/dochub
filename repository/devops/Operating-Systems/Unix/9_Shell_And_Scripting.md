@@ -6,13 +6,9 @@
 
 **Deep scripting curriculum (all OS):** [Languages/Shell](../../Languages/Shell/README.md).
 
----
-
 ## Shells on Unix
 
 The **shell** is the command interpreter: it runs commands, pipelines, and scripts. **sh** (Bourne shell) is the POSIX baseline; **ksh** (Korn), **csh**/tcsh (C shell), and **bash** (Bourne-again) are common. On BSD, **sh** is often Almquist shell (**ash**/dash-like); **bash** is common on Linux. Scripts should target **POSIX sh** for portability when possible.
-
----
 
 ## Scripting basics
 
@@ -37,8 +33,6 @@ test -r file && cat file
 for f in *; do echo "$f"; done
 while read line; do echo "$line"; done < file
 ```
-
----
 
 ## Common Unix/Linux commands (portable)
 
@@ -73,15 +67,11 @@ whoami
 id
 ```
 
----
-
 ## Summary
 
 - **sh** = POSIX baseline; **bash**, **ksh**, **csh** are common.
 - Use **set -e** (and **set -u**, **pipefail** in bash) for robust scripts.
 - Prefer **POSIX sh** for portability across Unix and Linux.
-
----
 
 ## Further reading
 

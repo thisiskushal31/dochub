@@ -6,8 +6,6 @@
 
 Depth of meshes/Gateway API: [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive). Flags product folder: [Unleash/](./Unleash/README.md).
 
----
-
 ## Progressive delivery (definition)
 
 Expose a new version gradually, driven by **policy + signals**, not a single big cutover:
@@ -19,8 +17,6 @@ deploy new version → shift a little traffic → analyze metrics
 
 Google SRE canarying and Spinnaker/automated analysis popularized metric-gated rollouts; on Kubernetes, **Argo Rollouts** and **Flagger** are common controllers.
 
----
-
 ## Argo Rollouts
 
 - **Rollout** CRD: drop-in replacement for Deployment with `canary` and `blueGreen` strategies  
@@ -31,8 +27,6 @@ Google SRE canarying and Spinnaker/automated analysis popularized metric-gated r
 
 Folder for install notes: [Argo_Rollouts/](./Argo_Rollouts/README.md).
 
----
-
 ## Flagger
 
 - Works with standard **Deployments** (plus Canary custom resource)  
@@ -41,8 +35,6 @@ Folder for install notes: [Argo_Rollouts/](./Argo_Rollouts/README.md).
 - Part of the Flux project family for progressive delivery alongside Flux GitOps  
 
 Often paired with Flux ([Flux/](./Flux/README.md)).
-
----
 
 ## Argo Rollouts vs Flagger (practical)
 
@@ -55,8 +47,6 @@ Often paired with Flux ([Flux/](./Flux/README.md)).
 
 Pick one progressive-delivery controller per platform team unless you have a clear split (e.g. Flux+Flagger vs Argo CD+Rollouts).
 
----
-
 ## Feature flags vs progressive delivery
 
 | Mechanism | Controls |
@@ -68,8 +58,6 @@ Use both: ship dark code safely, then open flags; or canary the binary *and* gat
 
 OpenFeature is a **vendor-neutral API** for flag evaluation in apps — not a Kubernetes traffic controller.
 
----
-
 ## Pipeline wiring
 
 ```text
@@ -80,8 +68,6 @@ CI publishes digest D
 ```
 
 CI should not “sleep 30m and curl once” as a substitute for controller analysis — see [5](./5_Verify_Rollback_And_Synthetic_Tests.md).
-
----
 
 ## Pitfalls
 

@@ -8,8 +8,6 @@ How shell **defaults and versions moved** over roughly two decades—and what th
 
 If you know nothing yet: read Concepts first as a timeline story; Advanced is for IR, recon, and policy; Applications maps the story onto real estates.
 
----
-
 ## 1. Concepts (if you know nothing → progressive)
 
 ### 1. Why timelines matter more than trivia
@@ -111,8 +109,6 @@ Three ideas before Advanced:
 3. **Download-and-pipe** installers on legacy appliances combine old crypto/TLS, old Bash, and root—highest caution.
 
 You do not need a CVE encyclopedia to act: inventory → patch/replace image → stop piping untrusted scripts to root shells.
-
----
 
 ## 2. Advanced concepts
 
@@ -296,8 +292,6 @@ This is architecture, not a CVE bingo card.
 
 Dialect lies often come from **distro `/bin/sh`**, not from Bash major alone. Use the distros/userland chapter for dash vs BusyBox vs RHEL false friends; use **this** chapter for era defaults, login migration, and Security/IR framing. Together they answer: *what was normal when this was written, and what does the target actually run?*
 
----
-
 ## 3. Applications and use cases
 
 ### Supporting 10-year-old images
@@ -421,8 +415,6 @@ Goal: practice **fingerprint → contain → replace image**, not debate CVE num
 - WSL dual-plane inventoried when Windows + Linux scripts coexist.  
 - ShellCheck (and PSScriptAnalyzer where relevant) gate shared repos.  
 - Login/profile customization never required by production entrypoints.
-
----
 
 ## References
 

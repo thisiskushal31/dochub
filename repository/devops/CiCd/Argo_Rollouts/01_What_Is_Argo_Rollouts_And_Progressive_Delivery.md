@@ -2,8 +2,6 @@
 
 [← Argo Rollouts](./README.md) · [Next: Core concepts →](./02_Core_Concepts_Rollout_Analysis_Experiment.md)
 
----
-
 ## 1. Concepts
 
 ### The problem rolling updates leave open
@@ -37,8 +35,6 @@ Argo Rollouts: new ReplicaSet → steps / blue-green switch
   → AnalysisRun → promote stable | abort to previous stable
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### Rollouts vs Flagger vs flags
@@ -55,8 +51,6 @@ High risk: canary the binary **and** gate features with flags ([9](../9_Progress
 
 Rollouts only manages **Rollout** resources (or Rollouts that `workloadRef` a Deployment). Normal Deployments are untouched — you can adopt gradually ([10](./10_GitOps_Helm_Kustomize_And_Migrating.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Situation | Lean toward |
@@ -70,8 +64,6 @@ Rollouts only manages **Rollout** resources (or Rollouts that `workloadRef` a De
 | Non-Kubernetes | Not Rollouts — [3](../3_Deployment_Strategies.md), [18](../18_VM_MIG_And_Host_Based_Deploy.md) |
 
 Upstream guidance: start with **blue-green**, then canaries once metrics and dual-version compatibility are solid. Rollouts first-class strategies are only **blue-green** and **canary** (rolling update = canary with no steps; recreate is not a Rollout strategy) — details in [06](./06_Canary_Strategy_And_Steps.md).
-
----
 
 ## References
 

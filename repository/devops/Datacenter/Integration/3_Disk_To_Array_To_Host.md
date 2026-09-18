@@ -2,8 +2,6 @@
 
 [← Previous](./2_NIC_To_MMR.md) · [README](./README.md) · [Next: OOB plane →](./4_OOB_Plane_Walk.md)
 
----
-
 ## 1. Concepts
 
 End-to-end **storage path** (block example):
@@ -17,8 +15,6 @@ Drive/shelf → array controllers (or OSD hosts)
 NAS/object variants branch at the protocol edge but share independence lessons.
 
 Home: [Storage-Physical](../Storage-Physical/README.md); fabric separation [Fabric-Physical/11](../Fabric-Physical/11_Storage_Network_Separation.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -39,8 +35,6 @@ Home: [Storage-Physical](../Storage-Physical/README.md); fabric separation [Fabr
 
 FC vs NVMe-oF mix differs; walk order does not.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -58,8 +52,6 @@ FC vs NVMe-oF mix differs; walk order does not.
 - Never “shared VLAN is fine” without p99 data  
 
 **Good:** dual path + restore plan. **Bad:** single fabric; snap-only DR.
-
----
 
 ## References
 

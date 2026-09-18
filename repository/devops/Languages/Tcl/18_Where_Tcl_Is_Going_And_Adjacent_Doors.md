@@ -8,8 +8,6 @@ The **compass** for this track: what **00–17** already make you fluent in, how
 
 You came here for Tcl. You should leave able to **read, fix, review, and migrate** scripts and embeddings—and able to say where the next deep topic lives.
 
----
-
 ## 1. Concepts
 
 ### 1. What this track already owns
@@ -72,8 +70,6 @@ Read after **17** (or skim early so you know the bullseye). Revisit when:
 - someone proposes OO frameworks, threads, or DB packages,
 - a TIP your vendor cares about lands,
 - an embedding upgrade breaks stubs / `Tcl_Size`.
-
----
 
 ## 2. Advanced concepts
 
@@ -302,8 +298,6 @@ When you adopt a new package or TIP-driven feature:
 3. Re-run the security checklist if it evaluates code, loads native libs, or talks to networks/DBs.
 4. Resist copying non-official tutorial dumps into the handbook tree.
 
----
-
 ## 3. Applications and use cases
 
 ### Application teams
@@ -331,8 +325,6 @@ When you adopt a new package or TIP-driven feature:
 - Combine Tcl glue with other handbook languages deliberately (API in X, Expect residue in Tcl).
 - Avoid dual sources of truth for the same change procedure.
 
----
-
 ## Staff-level review checklist
 
 - Team agrees this change stays in-bullseye or explicitly opens a named door (OO, Thread, TDBC, deep Tk, deep C).
@@ -345,8 +337,6 @@ When you adopt a new package or TIP-driven feature:
 - Compass updated in the repo README when a door becomes a real dependency.
 - No attempt to make this PR a full Tk or OO textbook.
 - Owner knows where to go next after merge (which official index).
-
----
 
 ## References
 

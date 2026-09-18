@@ -16,8 +16,6 @@ Erlang is a **concurrent, functional** programming language built for **fault-to
 
 **Erlang vs Erlang/OTP vs “system.”** **Erlang** is the language (syntax, types, processes, etc.). **Erlang/OTP** is what you install: the language plus the BEAM VM plus OTP (Kernel, STDLIB, gen_server, supervisor, applications, releases, and the rest of the platform). So “Erlang/OTP” = language + runtime + standard library + OTP framework. The **system documentation** is the official manuals on erlang.org that describe this whole system (under `doc/system/`—e.g. Getting Started, Reference Manual, OTP Design Principles). When we say we “scraped” or used “system” docs, we mean we used those manuals to build this handbook; the handbook itself is standalone and points to them only in “Further reading.”
 
----
-
 ## Further reading
 
 - [Erlang/OTP documentation](https://www.erlang.org/docs)

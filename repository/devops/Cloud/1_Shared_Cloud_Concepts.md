@@ -2,8 +2,6 @@
 
 [← How to read](./0_How_To_Read.md) · [README](./README.md) · [Next: Spectrum →](./2_Spectrum_And_When_Which.md)
 
----
-
 ## 1. Concepts
 
 A **public cloud** is someone else’s data centers, APIs, and IAM, billed as metered resources. A **datacenter operator** (colo, hosted VMware) sells buildings and sometimes a smaller API. Names differ; the **jobs** do not: identity, network, load balancing, compute, disks, object storage, DNS/CDN, secrets, and “which SKU runs my containers.”
@@ -87,8 +85,6 @@ Exact wiring: provider chapters [4](./4_GCP_Literacy.md)–[14](./14_CtrlS_And_Y
 | OpenShift platform | [OpenShift](https://github.com/thisiskushal31/Containerization-Deep-Dive/tree/main/Orchestration/OpenShift) |
 | Rancher | [Rancher](https://github.com/thisiskushal31/Containerization-Deep-Dive/tree/main/Orchestration/Rancher) |
 
----
-
 ## 2. Advanced concepts
 
 ### Identity sketch
@@ -117,8 +113,6 @@ Every API has **quotas**. Autoscaling into a quota wall looks like an outage. Ta
 
 Not a list of every product SKU. Not kubeadm. Not hypervisor internals. Not Terraform HCL ([IAC/](../IAC/README.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -139,8 +133,6 @@ Not a list of every product SKU. Not kubeadm. Not hypervisor internals. Not Terr
 - Know which Floor 1 chapter owns IAM vs LB vs storage  
 
 **Good:** two AZs, private nodes, OIDC from CI. **Bad:** one public VM with an access key in GitHub Secrets.
-
----
 
 ## References
 

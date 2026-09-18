@@ -8,8 +8,6 @@ Foundations: Fowler/Sadalage **evolutionary database design**; Fowler **parallel
 
 Data-store depth: [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive). Pipeline overview: [1](./1_Pipelines_Build_Test_Deploy.md).
 
----
-
 ## Why migrations belong in the pipeline
 
 | Manual SSH migrations | Pipeline-managed migrations |
@@ -21,8 +19,6 @@ Data-store depth: [Databases-Deep-Dive](https://github.com/thisiskushal31/Databa
 
 Store migration scripts **with** the application (or in a dedicated DB repo for shared databases — Fowler’s evolutionary DB guidance for shared DB integration). Apply **only** through automation.
 
----
-
 ## Tool literacy (examples)
 
 | Approach | Examples | Role |
@@ -32,8 +28,6 @@ Store migration scripts **with** the application (or in a dedicated DB repo for 
 | Raw ordered SQL | Numbered files + wrapper job | Fine if discipline matches tools above |
 
 Pick one system per schema; do not mix ad-hoc SQL with a migrator for the same DB.
-
----
 
 ## Job ordering
 
@@ -52,8 +46,6 @@ Patterns:
 - **Failure = stop**: if migration fails, do not continue app rollout.
 
 Never “deploy app that requires column X” before “add column X” unless expand/contract already made both versions safe.
-
----
 
 ## Expand / migrate / contract (parallel change)
 
@@ -75,8 +67,6 @@ contract: stop writing old_column; DROP old_column  (later release)
 
 Destructive one-shot renames break rollback and blue-green switches.
 
----
-
 ## Rollback limits
 
 | Change type | Rollback reality |
@@ -88,8 +78,6 @@ Destructive one-shot renames break rollback and blue-green switches.
 
 **Rule:** design each migration so the previous app version still runs (expand) until you intentionally contract. Treat “down” migrations as optional and often unsafe in prod — many teams prefer forward fixes.
 
----
-
 ## Secrets and safety in CI
 
 - Connection strings via secret store / OIDC to cloud DB IAM — **never** commit passwords.  
@@ -99,8 +87,6 @@ Destructive one-shot renames break rollback and blue-green switches.
 
 Lock/timeout behavior is database-specific — validate in staging; see Databases Deep Dive for engine detail.
 
----
-
 ## Checklist
 
 - [ ] Migrations in VCS, applied only by automation  
@@ -109,8 +95,6 @@ Lock/timeout behavior is database-specific — validate in staging; see Database
 - [ ] Failed migration blocks release  
 - [ ] Zero-downtime changes use expand → migrate → contract  
 - [ ] Known-good app digests remain compatible with current schema during rollback window  
-
----
 
 ## Pitfalls
 

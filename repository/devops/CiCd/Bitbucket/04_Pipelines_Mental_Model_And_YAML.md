@@ -2,8 +2,6 @@
 
 [← Previous](./03_Pull_Requests_Branch_Permissions_Merge_Checks.md) · [README](./README.md) · [Next: First pipeline →](./05_First_Pipeline_And_Enablement.md)
 
----
-
 ## 1. Concepts
 
 Pipelines config lives in **`bitbucket-pipelines.yml`** at the repo root.
@@ -24,8 +22,6 @@ pipelines:
     → steps / stages / parallel
       → script | pipe
 ```
-
----
 
 ## 2. Advanced concepts
 
@@ -53,8 +49,6 @@ Steps often need a Docker service for `docker build`. Memory and runtime options
 
 Premium can **share** pipeline definitions across repositories in a workspace so teams do not copy-paste YAML — pair with [10](./10_Pipes_Anchors_And_Reuse.md).
 
----
-
 ## 3. Applications and use cases
 
 | Estate | Shape |
@@ -64,8 +58,6 @@ Premium can **share** pipeline definitions across repositories in a workspace so
 | Shared platform | Pipes + anchors + child pipelines |
 
 **Good:** one YAML reviewed in PRs. **Bad:** UI-only secrets with no documented owners.
-
----
 
 ## References
 

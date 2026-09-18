@@ -6,8 +6,6 @@
 
 **f-strings**, **`str.format`**, **format specification**, **file** objects (text vs binary), **`pathlib`**, **newline** handling, and **JSON** interchange—daily work for APIs, ETL, config, and logs, with security and portability implications.
 
----
-
 ## 1. Concepts
 
 ### 1. F-strings and formatting
@@ -36,8 +34,6 @@
 
 **`json.dump`** / **`load`** stream to file-like objects. **`ensure_ascii=False`** preserves non-ASCII in output (UTF-8 file assumed).
 
----
-
 ## 2. Advanced concepts
 
 **`object_hook`** / **`object_pairs_hook`** in **`json.loads`** can resurrect arbitrary objects—keep hooks strict on untrusted input.
@@ -45,8 +41,6 @@
 **Streaming:** iterate large text files line-by-line; avoid reading multi-GB files into one **str**.
 
 **Logging vs print:** services should use **`logging`** with structured formatters (chapter 10)—**print** bypasses levels and handlers.
-
----
 
 ## 3. Applications and use cases
 
@@ -69,8 +63,6 @@ payload = {"ts": datetime.now(timezone.utc), "ok": True}
 text = json.dumps(payload, default=json_default, ensure_ascii=False)
 data = json.loads(text)
 ```
-
----
 
 ## References
 

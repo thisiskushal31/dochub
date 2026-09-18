@@ -6,8 +6,6 @@
 
 **Deep scripting curriculum (all OS):** [Languages/Shell](../../Languages/Shell/README.md) — Bash/POSIX/zsh, PowerShell, cmd, version pins, and cross-OS command depth. Use this Linux chapter for Linux-context commands and ops; use Languages/Shell when you need the full scripting track.
 
----
-
 ## What is the shell?
 
 The **shell** is the program that sits between you and the kernel. It:
@@ -79,8 +77,6 @@ A **shebang** on the first line tells the kernel which interpreter to use:
 
 Make the script executable with `chmod +x script.sh`. Then `./script.sh` uses the shebang; `bash script.sh` ignores it and uses the current Bash.
 
----
-
 ## Command-line interface (CLI) basics
 
 - **Command** — Program name plus arguments, e.g. `ls -la /tmp`.
@@ -97,8 +93,6 @@ echo $?
 mkdir -p /tmp/dir && cd /tmp/dir
 false || echo "previous command failed"
 ```
-
----
 
 ## Essential commands for DevOps
 
@@ -119,8 +113,6 @@ find /var -name "*.log" -mtime +7
 cat file | sort | uniq -c
 xargs -I {} echo {} < list.txt
 ```
-
----
 
 ## More essential commands (by category)
 
@@ -172,8 +164,6 @@ wget -qO- https://example.com
 dig example.com
 ```
 
----
-
 ## Archive, compress, links, and documentation
 
 **Archive and compress** — Bundle and compress files for backup or transfer:
@@ -212,8 +202,6 @@ umask
 umask 022
 ```
 
----
-
 **Documentation** — Built-in help and system docs:
 
 ```bash
@@ -231,8 +219,6 @@ grep -P 'perl-regex' file            # Perl regex (if supported)
 grep -r 'pattern' /path             # Recursive
 grep -i 'pattern' file               # Ignore case
 ```
-
----
 
 ## Redirection and pipes
 
@@ -316,8 +302,6 @@ false | true
 echo $?   # 1 (false failed)
 ```
 
----
-
 ## Shell scripting basics
 
 A script is a text file with commands; first line often:
@@ -343,8 +327,6 @@ for f in *.txt; do
   echo "Processing $f"
 done
 ```
-
----
 
 ## Variables and quoting
 
@@ -377,8 +359,6 @@ for f in "$files"; do echo $f; done # one iteration, f = "a b c"
 ```
 
 **Positional parameters** — Prefer `"$@"` (each argument quoted separately) over `"$*"` (all as one string) when passing arguments through to another command.
-
----
 
 ## Parameter expansion (deep)
 
@@ -482,8 +462,6 @@ echo {a,b}-{1,2}      # a-1 a-2 b-1 b-2
 echo {1..5}
 ```
 
----
-
 ## Test and conditionals (deep)
 
 ### [ ] vs [[ ]]
@@ -551,8 +529,6 @@ case "$1" in
   *)      echo "Usage: $0 {start|stop|restart}"; exit 1 ;;
 esac
 ```
-
----
 
 ## Bash keywords and control flow
 
@@ -778,16 +754,12 @@ Scripts that start with **#!/bin/sh** are often run by **dash** or another POSIX
 
 For maximum portability, run scripts with `sh script.sh` during development and use only POSIX constructs.
 
----
-
 ### Practical script ideas
 
 - **ANSI colors** — `echo -e "\e[31mRed\e[0m"`, `\e[32m` green, `\e[1m` bold.
 - **Server health** — Combine `uptime`, `w`, `df -h`, `free -m`, `ss -s`, `top -b | head`, redirect to a report file.
 - **Disk alert** — Use `df` and `awk` to get usage %; if above threshold, send mail or log.
 - **Input validation** — Check `$#` for argument count, `[ -f "$file" ]` for file existence, `[ -d "$dir" ]` for directory.
-
----
 
 ## Scripting for DevOps: patterns
 
@@ -806,8 +778,6 @@ mkdir -p /opt/app/logs
 /path/to/script.sh >> /opt/app/logs/script.log 2>&1
 ```
 
----
-
 ## Summary
 
 - **Shell**: Interprets commands, runs built-ins or fork/exec for externals; interactive vs non-interactive, login vs non-login; job control (`jobs`, `fg`, `bg`, `disown`); source vs execute.
@@ -819,8 +789,6 @@ mkdir -p /opt/app/logs
 - **Functions**: `local`, `return` vs `exit`, `"$@"`; recursion; optional `nameref`.
 - **Robustness**: `set -euo pipefail`; **trap** for EXIT/ERR/signals; **getopts** for options; **ShellCheck**; POSIX vs Bash for portability.
 - **DevOps**: Idempotency, error handling, logging; prefer shell for glue and system tasks, other languages for complex logic.
-
----
 
 ## Further reading
 

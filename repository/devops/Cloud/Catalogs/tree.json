@@ -4,77 +4,77 @@
     "path": "Akamai_Linode_Products.md",
     "type": "file",
     "sha": "",
-    "size": 2729
+    "size": 2719
   },
   {
     "name": "Alibaba_Products.md",
     "path": "Alibaba_Products.md",
     "type": "file",
     "sha": "",
-    "size": 4537
+    "size": 4527
   },
   {
     "name": "AWS_Products.md",
     "path": "AWS_Products.md",
     "type": "file",
     "sha": "",
-    "size": 10906
+    "size": 10896
   },
   {
     "name": "Azure_Products.md",
     "path": "Azure_Products.md",
     "type": "file",
     "sha": "",
-    "size": 7943
+    "size": 7933
   },
   {
     "name": "GCP_Products.md",
     "path": "GCP_Products.md",
     "type": "file",
     "sha": "",
-    "size": 7790
+    "size": 7780
   },
   {
     "name": "Huawei_Products.md",
     "path": "Huawei_Products.md",
     "type": "file",
     "sha": "",
-    "size": 3392
+    "size": 3382
   },
   {
     "name": "IBM_Products.md",
     "path": "IBM_Products.md",
     "type": "file",
     "sha": "",
-    "size": 3771
+    "size": 3761
   },
   {
     "name": "India_CtrlS_Yotta_Products.md",
     "path": "India_CtrlS_Yotta_Products.md",
     "type": "file",
     "sha": "",
-    "size": 4816
+    "size": 4791
   },
   {
     "name": "OCI_Products.md",
     "path": "OCI_Products.md",
     "type": "file",
     "sha": "",
-    "size": 4933
+    "size": 4923
   },
   {
     "name": "OTC_Products.md",
     "path": "OTC_Products.md",
     "type": "file",
     "sha": "",
-    "size": 3190
+    "size": 3180
   },
   {
     "name": "OVH_Products.md",
     "path": "OVH_Products.md",
     "type": "file",
     "sha": "",
-    "size": 3505
+    "size": 3495
   },
   {
     "name": "README.md",
@@ -88,6 +88,6 @@
     "path": "Tencent_Products.md",
     "type": "file",
     "sha": "",
-    "size": 3334
+    "size": 3324
   }
 ]

@@ -16,8 +16,6 @@ F# projects are built with the **.NET CLI** (**dotnet**). A project is a `.fspro
 
 **Why this matters for DevOps.** CI pipelines run **dotnet restore**, **dotnet build**, and **dotnet test**. Builds must be reproducible (same SDK and dependencies). Scripts run with **dotnet fsi** in automation; ensure the correct runtime and script path. Understanding the project model and CLI is necessary for maintaining and deploying F# and mixed .NET solutions.
 
----
-
 ## Further reading
 
 - [Get started with the .NET CLI (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line)

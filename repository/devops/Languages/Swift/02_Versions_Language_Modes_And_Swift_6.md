@@ -8,8 +8,6 @@ How Swift **versions** evolved from **1.0 (2014)** through the **Swift 3** sourc
 
 **Legacy = literacy for brownfield maintenance. Legacy is not a template for new work.**
 
----
-
 ## 1. Concepts
 
 ### 1. Two dials: compiler version vs language mode
@@ -318,8 +316,6 @@ func paint() {
 
 Staff rule: availability bugs are “works on my phone, crashes on last year’s phone.” Test the deployment target you claim.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Source break psychology (Swift 3)
@@ -409,8 +405,6 @@ In a brownfield repo (or an old sample), find and label **one** of each if prese
 
 Write the modern alternative in the PR description—even if you are not fixing all six today. Literacy is the deliverable; a reckless rewrite is not.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Practice |
@@ -420,8 +414,6 @@ Write the modern alternative in the PR description—even if you are not fixing 
 | **Security** | Concurrency bugs are exploit-adjacent in parsers and network stacks—treat mode 6 checking as a control, not fashion |
 | **Operations** | Image tags include Swift/Xcode version; changelog entries for language-mode flips; availability matrices for supported OS versions |
 | **Software engineering** | Deprecation tables in the team wiki: removed syntax → replacement; ban `++` “for clarity” in review; SE triage checklist in onboarding |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -436,8 +428,6 @@ Write the modern alternative in the PR description—even if you are not fixing 
 - `String` / Unicode indexing fossils are recognized; not “fixed” with unsafe `Int` subscripts.
 - `@available` / `#available` used correctly for OS API gates; deployment target matches claims.
 - Migration follows library-first burn-down—not a Friday global flip with `@unchecked` wallpaper.
-
----
 
 ## References
 

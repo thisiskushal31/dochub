@@ -2,8 +2,6 @@
 
 [← Previous](./9_Environmental_Sensors_And_PDU_Meters.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 Accelerators fail differently from CPU DIMMs: **whole trays**, **optics**, **mezzanines**, and **DPU/FPGA bitstreams** dominate sparing—not a loose HBM stick.
@@ -20,8 +18,6 @@ Accelerators fail differently from CPU DIMMs: **whole trays**, **optics**, **mez
 | **Console / timing** | Low count, high criticality |
 
 SKU discipline from Compute applies harder here ([Compute/16](../Compute/16_Spares_SKU_Discipline.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -52,8 +48,6 @@ Remote hands need serial/U/photos ([White-Space/7](../White-Space/7_Asset_Tags_S
 
 Lead times for GPUs can be extreme—plan capacity + spares early. Cloud burst is a business hedge, not a spare part.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -72,8 +66,6 @@ Lead times for GPUs can be extreme—plan capacity + spares early. Cloud burst i
 - Never cannibalize the last spare silently  
 
 **Good:** tray+optics spares, clear RMA, gen-locked pools. **Bad:** zero spare GPUs; random optics; heroic mid-job reseats without drain.
-
----
 
 ## References
 

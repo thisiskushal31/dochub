@@ -6,8 +6,6 @@
 
 How Rust code is organized for building and publishing: **packages** versus **crates**, binary versus library layouts, what lives in **`Cargo.toml`** and **`Cargo.lock`**, how **crates.io** and features fit dependency management, how **workspaces** scale multi-crate repos, and the core **`cargo build` / `test` / `run` / `doc`** loop you will use in local development and CI.
 
----
-
 ## 1. Concepts
 
 ### 1. Package versus crate
@@ -197,8 +195,6 @@ cargo doc --no-deps
 
 Profiles (`dev`, `release`, custom) live under `[profile.*]` in manifests or workspace config—trade compile time for runtime speed and binary size.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Targets beyond lib/bin
@@ -349,8 +345,6 @@ Cargo and crates.io assume **SemVer**. Rough API intuition for **libraries**:
 
 Rust-specific traps: **adding a public enum variant** is a **breaking** change for downstream exhaustive `match`es—unless the enum is **`#[non_exhaustive]`** (downstream must use `_`). Adding a public struct field is likewise breaking for literal construction outside the crate unless the struct is `non_exhaustive` or construction stays behind constructors. Changing the type of a public field, making a safe function `unsafe`, or removing a feature flag that dependents relied on are major. Applications that are never published can still use SemVer for release tags; the hard ecosystem rules apply once others depend on your crate versions.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -387,8 +381,6 @@ Rust-specific traps: **adding a public enum variant** is a **breaking** change f
 - No unexplained **git/path** deps in release tags; `[patch]` is temporary and tracked.
 - `cargo test` and docs build are green on the pinned toolchain; `cargo tree` reviewed for duplicate or unexpected crates on major changes.
 - Custom proc-macro crates (if any) have justified scope, expansion tests, and supply-chain review equal to `build.rs`.
-
----
 
 ## References
 

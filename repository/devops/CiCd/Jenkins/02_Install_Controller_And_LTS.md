@@ -2,8 +2,6 @@
 
 [← Previous](./01_What_Is_Jenkins.md) · [README](./README.md) · [Next: Architecture →](./03_Architecture_Controller_Agents_Executors.md)
 
----
-
 ## 1. Concepts
 
 Install a **controller** first (not a zoo of agents). Prefer **LTS** for production.
@@ -33,8 +31,6 @@ docker run --name jenkins --rm -p 8080:8080 -p 50000:50000 \
 
 Open `http://localhost:8080`, complete the setup wizard, then set built-in executors to **0**. WAR path literacy: `java -jar jenkins.war` (see install docs for Java version).
 
----
-
 ## 2. Advanced concepts
 
 ### Initial settings that matter
@@ -54,8 +50,6 @@ Helm charts and K8s-specific install docs exist — literacy; values encyclopedi
 
 Java/OS compatibility and “platform information” handbook pages — pin supported combinations before upgrading.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -65,8 +59,6 @@ Java/OS compatibility and “platform information” handbook pages — pin supp
 | K8s platform | Helm controller + K8s cloud agents |
 
 **Good:** LTS + documented install + backup before plugins. **Bad:** latest weekly in prod with no snapshot.
-
----
 
 ## References
 

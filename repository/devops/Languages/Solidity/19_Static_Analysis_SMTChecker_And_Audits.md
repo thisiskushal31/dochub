@@ -8,8 +8,6 @@ How **machines and humans** review contracts: **Slither** (and similar analyzers
 
 A green CI is not a halo. Analyzers are extremely good at “this *shape* has hurt people before.” They are average at “your product idea is wrong.” Humans still have to read. Tools still have to run. Audits still have to match the commit you actually deploy.
 
----
-
 ## 1. Concepts
 
 ### 1. Three layers, none optional for serious value
@@ -71,8 +69,6 @@ You owe yourself: time to **fix** and a **re-review** of diffs. “Audited” on
 
 Bug bounties are a later layer: scoped, with a safe harbor, after you can actually patch or compensate.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Detector fatigue
@@ -113,8 +109,6 @@ Dedicated FV (Certora-style specs, etc.) is a specialist lane. This track only r
 
 Pin Slither and Solhint versions. A random `pip install` on a developer laptop is not the CI story. Slither must compile with the **same** `solc` pin / remappings as tests or it analyzes a different program.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -125,8 +119,6 @@ Pin Slither and Solhint versions. A random `pip install` on a developer laptop i
 | **Operations** | Audit report + commit hash stored with the release |
 | **Software engineering** | Findings become tests so they cannot regress |
 
----
-
 ## 4. Staff-level review checklist
 
 - CI runs tests **and** at least one static analyzer on the contracts path.
@@ -135,8 +127,6 @@ Pin Slither and Solhint versions. A random `pip install` on a developer laptop i
 - Audit scope matches the **commit being deployed**.
 - Tool versions are pinned.
 - No culture of `--exclude-informational` as a way to hide everything.
-
----
 
 ## References
 

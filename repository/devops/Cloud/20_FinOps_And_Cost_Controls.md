@@ -2,8 +2,6 @@
 
 [← Previous](./19_Portals_CLI_And_API_Patterns.md) · [README](./README.md) · [Next: VPS kin →](./21_Akamai_Linode_And_VPS_Kin.md) · [Landing zones →](./29_Landing_Zones_And_Org_Guardrails.md)
 
----
-
 ## Mental map
 
 ```text
@@ -12,8 +10,6 @@ Quotas are ops walls: scale into a limit looks like an outage
 ```
 
 *What to notice: FinOps is a **control loop**, not a monthly spreadsheet panic. Program depth: [Methodologies/8](../Methodologies/8_FinOps_Literacy.md).*
-
----
 
 ## 1. Concepts
 
@@ -30,8 +26,6 @@ Cloud bills are a **product surface**. This chapter is **tenant control levers**
 **Disconfirm:** Rightsizing VMs alone is **not** FinOps. A commit purchase without a usage baseline is **not** savings—it is a bet.
 
 **Confirm:** Can you allocate last month’s bill by team? What happens when a quota is hit ([18](./18_Compute_Instances_And_Autoscaling.md))?
-
----
 
 ## 2. Advanced concepts
 
@@ -58,8 +52,6 @@ Autoscaling, GPU training jobs, and LB target growth all die at **service quotas
 | Commit without usage baseline | Bad lock-in |
 | Quotas ignored | Launch-day “outage” |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -78,8 +70,6 @@ Autoscaling, GPU training jobs, and LB target growth all die at **service quotas
 - Never buy commits blind  
 
 **Good:** tagged, budgeted, reviewed. **Bad:** surprise invoice; unowned resources.
-
----
 
 ## References
 

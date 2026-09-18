@@ -6,8 +6,6 @@
 
 How to write scripts that survive **`#!/bin/sh`** across Debian/Ubuntu **dash**, Alpine **BusyBox ash**, and other POSIX-oriented shells—without Bashisms. You will learn portable tests, safe parameter use, what to avoid, and how minimal userlands differ from GNU/Bash hosts. Bash remains first-class elsewhere in this track; this chapter is the deliberate **portability lane**.
 
----
-
 ## 1. Concepts
 
 ### 1. What “portable `sh`” means
@@ -92,8 +90,6 @@ POSIX allows functions. Prefer `return` for function exit status; avoid Bash `lo
 | `local` | **Not POSIX** | Yes | Common extension—know your policy |
 | `pipefail` | **No** (dash) | Yes | Check failures differently |
 | Brace expansion `{1..3}` | **No** | Yes | Use loops |
-
----
 
 ## 2. Advanced concepts
 
@@ -241,8 +237,6 @@ POSIX arithmetic via `$(( … ))` is fine. Avoid Bash `let` and `((…))` as a s
 
 `. ./lib.sh` requires a path. `. lib.sh` searches `PATH`—surprising and unsafe if `PATH` is attacker-influenced. Always dot-source with an explicit relative or absolute path.
 
----
-
 ## 3. Applications and use cases
 
 ### Container entrypoints
@@ -301,8 +295,6 @@ Regulated pipelines sometimes mandate minimal base images (distroless/Alpine). P
 - External tools use portable flags; GNU-only options gated or avoided.
 - Pipeline failures considered without `pipefail`.
 - Complexity that needs Bash upgraded to an explicit Bash shebang—not smuggled into `sh`.
-
----
 
 ## References
 

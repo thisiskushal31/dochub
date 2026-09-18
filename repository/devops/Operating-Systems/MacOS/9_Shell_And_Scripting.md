@@ -6,8 +6,6 @@
 
 **Deep scripting curriculum (all OS):** [Languages/Shell](../../Languages/Shell/README.md) — especially zsh/macOS and Bash 3.2 version pins.
 
----
-
 ## Default shell: zsh
 
 Since **macOS Catalina (10.15)**, the default login and interactive shell is **zsh** (Z shell). Previously it was **bash**. You can confirm with:
@@ -18,8 +16,6 @@ echo $SHELL
 ```
 
 **bash** is still installed (often an older version for compatibility); **sh** is provided and may point to **bash** or a POSIX sh. For **new scripts** that need to run on macOS and elsewhere, **#!/bin/sh** (POSIX) or **#!/usr/bin/env bash** are common; **#!/bin/zsh** is fine for macOS-only scripts that use zsh features.
-
----
 
 ## Writing and running scripts
 
@@ -42,15 +38,11 @@ chmod +x ~/bin/large_dirs.sh
 ~/bin/large_dirs.sh
 ```
 
----
-
 ## Where scripts run
 
 - **Terminal / iTerm** — Interactive; you see output; shell is zsh (or whatever you set).
 - **launchd** — Use **Launch Agents** or **Launch Daemons** with **ProgramArguments** (or **Program**) to run a script at login or at boot. No terminal; redirect stdout/stderr to log files if you need them. See [Users, networking, logging, and security](./10_Users_Networking_Logging_And_Security.md).
 - **cron** — **`crontab -e`** for user cron jobs. macOS also has **launchd** plists with **StartCalendarInterval** (like cron); Apple recommends launchd over cron for scheduled tasks.
-
----
 
 ## Shell features (zsh vs bash)
 
@@ -60,15 +52,11 @@ chmod +x ~/bin/large_dirs.sh
 
 **sh** — POSIX; use **#!/bin/sh** and avoid bash/zsh extensions for maximum portability.
 
----
-
 ## Summary
 
 - **Default shell:** **zsh** (since Catalina).
 - **Scripting:** Shebang (**#!/bin/zsh** or **#!/bin/sh**), **chmod +x**, run with **./script** or **zsh script**.
 - **Automation:** **launchd** (preferred), **crontab**; no terminal when run by launchd — log to files or use **log** (Unified Logging).
-
----
 
 ## Further reading
 

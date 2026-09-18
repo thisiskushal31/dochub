@@ -8,8 +8,6 @@ Your first honest contact with an Ethereum-style contract. By the end you should
 
 Assumes **Solidity 0.8.x** (handbook snapshot **0.8.36**). Later chapters explain the compiler and the EVM. Today you only need one working picture and one successful hello.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. Picture this before any jargon
@@ -229,8 +227,6 @@ Never paste a “helpful” contract or console snippet that asks you to **appro
 
 If a stranger’s snippet includes `delegatecall`, `selfdestruct`, `tx.origin`, or an unverified “proxy,” stop and come back after chapters **15** and **18**.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Simulation vs a public network
@@ -274,8 +270,6 @@ Remix downloads a JavaScript `solc`. Foundry and Hardhat pin a compiler in a con
 
 EOA: has a private key, empty code, sends txs. Contract: has code, no key; it only runs when *called*. Both have nonce, balance, storage root, code hash (chapter **01**). `msg.sender` for a wallet click is the EOA; `msg.sender` for a contract calling you is that contract.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | What “first steps” looks like |
@@ -288,8 +282,6 @@ EOA: has a private key, empty code, sends txs. Contract: has code, no key; it on
 
 Stay here for a lab counter or a greeting. Payroll, tokens, and wallets wait until you have tests and access control.
 
----
-
 ## 4. Staff-level review checklist
 
 - Newcomers can explain **EOA vs contract**, **call vs transaction**, and **why gas exists** without slogans.
@@ -297,8 +289,6 @@ Stay here for a lab counter or a greeting. Payroll, tokens, and wallets wait unt
 - Learning deploys stay on **Remix VM** or a **local node**, not a funded mainnet wallet.
 - Someone recorded **which solc** compiled the hello (Remix and/or Foundry).
 - No seed phrases, private keys, or “approve this random token” steps appear in onboarding notes.
-
----
 
 ## References
 

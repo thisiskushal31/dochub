@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Fundamentals: Virtualization and datacenter](../Fundamentals/20_Virtualization_Hypervisors_And_Datacenter.md), [Fundamentals: Storage and I/O — RAID](../Fundamentals/10_Storage_And_IO.md#5-raid-storage-subsystem). Here: **how virtualization and RAID-like storage work and are configured on Windows** — Hyper-V, VirtualBox, and Storage Spaces.
 
----
-
 ## 1. Virtualization on Windows
 
 On Windows you typically use:
@@ -14,8 +12,6 @@ On Windows you typically use:
 - **VirtualBox** — A **Type 2** hypervisor that runs as an application on Windows (or Linux, macOS). Common for dev and desktop VMs.
 
 So: **Hyper-V** = how you configure and run VMs “on Windows” in a server or Pro/Enterprise desktop; **VirtualBox** = alternative that runs as an app on the same Windows machine.
-
----
 
 ## 2. Hyper-V: enable and create VMs
 
@@ -59,13 +55,9 @@ Get-VM -Name "MyVM" | Format-List *
 
 So **how it is configured on Windows**: enable the **Hyper-V** feature, then create VMs with **New-VM**, **New-VHD**, **Set-VM**, etc. VMs and disks are stored under the path you choose (e.g. `C:\VMs`). For concepts (Type 1, CPU/memory virtualization), see [Fundamentals: Virtualization and datacenter](../Fundamentals/20_Virtualization_Hypervisors_And_Datacenter.md).
 
----
-
 ## 3. VirtualBox on Windows
 
 VirtualBox runs as a normal application. Install from [virtualbox.org](https://www.virtualbox.org/), then create VMs via the **Graphical User Interface** or **VBoxManage.exe** (same as on Linux). Configuration is per-VM (memory, CPUs, disk, network) in VirtualBox’s own settings; the host OS is just “Windows.”
-
----
 
 ## 4. Storage and RAID on Windows
 
@@ -99,16 +91,12 @@ Format-Volume -DriveLetter E -FileSystem NTFS -NewFileSystemLabel "Data"
 
 So **how RAID (software) is configured on Windows**: use **Storage Spaces** to create a **storage pool** from physical disks, then create a **virtual disk** with the desired resiliency (Simple = RAID 0, Mirror = RAID 1, Parity = RAID 5/6–like); initialize and format it like any disk. For **all RAID levels** (0, 1, 2, 3, 4, 5, 6, 10) and how they work, see [Fundamentals: Storage and I/O — RAID](../Fundamentals/10_Storage_And_IO.md#5-raid-storage-subsystem).
 
----
-
 ## 5. Summary
 
 | Topic | On Windows |
 |-------|------------|
 | **Virtualization** | **Hyper-V** (Type 1): enable feature, create VMs with `New-VM`, `New-VHD`, etc. **VirtualBox** (Type 2): install and use GUI or VBoxManage. |
 | **Storage / RAID** | **Hardware RAID**: controller presents one disk; use normally. **Storage Spaces**: pool disks, create virtual disk with Mirror or Parity for software RAID-like redundancy. |
-
----
 
 ## Further reading
 

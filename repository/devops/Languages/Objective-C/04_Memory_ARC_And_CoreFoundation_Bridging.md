@@ -11,8 +11,6 @@ NSString *s = @"owned";
 /* ARC inserts retain/release; compiler flag: -fobjc-arc */
 ```
 
----
-
 ## 1. ARC in practice
 
 The compiler inserts **`retain`**, **`release`**, and **`autorelease`** according to ownership. Ordinary locals default to **strong**:
@@ -34,8 +32,6 @@ void (^block)(void) = ^{
 };
 ```
 
----
-
 ## 2. Retain cycles (blocks and delegates)
 
 A block that captures **`self`** strongly while **`self`** holds the block creates a cycle:
@@ -47,8 +43,6 @@ self.completionHandler = ^{
 ```
 
 Break the cycle with **`__weak`** capture, restructuring ownership, or shortening the block’s lifetime. **Delegate** properties toward external objects should almost always be **`weak`** unless a documented parent/child lifetime guarantees otherwise.
-
----
 
 ## 3. Autorelease pools
 
@@ -64,8 +58,6 @@ for (NSString *line in hugeLines) {
 ```
 
 Without nested pools, peak RSS can spike even when there is no “leak” in the classic sense.
-
----
 
 ## 4. Core Foundation bridging
 
@@ -86,8 +78,6 @@ CFStringRef cf3 = (__bridge CFStringRef)ns2;
 
 Wrong casts produce **double free** or **leaks**.
 
----
-
 ## 5. Associated objects
 
 ```objc
@@ -99,13 +89,9 @@ objc_setAssociatedObject(self, &kKey, value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
 Association policy must match intended lifetime; misuse creates hidden cycles or dangling peers.
 
----
-
 ## 6. MRC reading notes
 
 Older code still uses explicit **`retain`**, **`release`**, **`autorelease`**, and **`dealloc`**. Read for balanced ownership across boundaries and watch for nib and **`initWithCoder:`** edge cases.
-
----
 
 ## Advanced use cases and implementation
 
@@ -121,8 +107,6 @@ Older code still uses explicit **`retain`**, **`release`**, **`autorelease`**, a
 dispatch_queue_t q = dispatch_queue_create("com.example.arr", DISPATCH_QUEUE_SERIAL);
 dispatch_async(q, ^{ [mutableArray addObject:@"x"]; });
 ```
-
----
 
 ## References
 

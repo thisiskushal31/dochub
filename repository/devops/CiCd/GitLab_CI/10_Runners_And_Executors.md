@@ -2,8 +2,6 @@
 
 [← Previous](./09_Needs_DAG_And_Downstream_Pipelines.md) · [README](./README.md) · [Next: Images and Docker →](./11_Images_Services_And_Docker_Build.md)
 
----
-
 ## 1. Concepts
 
 A **runner** is the agent (GitLab Runner application) that executes jobs.
@@ -31,8 +29,6 @@ job:
 
 **Executors** (shell, docker, kubernetes, machine, custom, …) decide *how* the job isolation looks — see Runner docs.
 
----
-
 ## 2. Advanced concepts
 
 ### Hygiene for self-managed runners
@@ -56,8 +52,6 @@ Docker Machine (legacy patterns), **Kubernetes executor**, and **Fleeting**-base
 
 Jobs can expose an **interactive web terminal** for live debugging on supported executors — useful in break-glass; lock down who can use it on shared runners.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Choice |
@@ -67,8 +61,6 @@ Jobs can expose an **interactive web terminal** for live debugging on supported 
 | Kube-native elastic CI | Kubernetes executor |
 
 **Good:** tags match capability, not team nicknames only. **Bad:** one privileged shared runner for every project including forks/untrusted MRs.
-
----
 
 ## References
 

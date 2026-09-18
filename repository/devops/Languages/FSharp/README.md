@@ -4,8 +4,6 @@
 
 **What this language does and why it's here:** F# is a **functional-first**, **cross-platform** language on .NET. It is used for succinct, robust code in **Azure** tooling, data and analytics, scripting, and services. When you work in Microsoft-centric DevOps, maintain F# scripts or services, or need type-safe functional code on .NET, this section gives a deep dive: from **very basic** (what F# is, setup, values and functions) through **core and advanced** (types, pattern matching, async, build) to **use-case driven** (where and how it is used, security and DevOps).
 
----
-
 ## How to read this section
 
 Read in **number order** for a single path from beginner to advanced to use cases.
@@ -15,8 +13,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 - **Topics 9–12 (Control and structure):** Conditionals and loops, modules and namespaces, exception handling and resources, object programming.
 - **Topics 13–14 (Async and build):** Async and computation expressions, build and tooling.
 - **Topics 15–16 (Use cases and security):** Where F# is used (by domain and engineering role) and how to run it safely.
-
----
 
 ## Learning path: from basics to use cases
 
@@ -28,8 +24,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | **Async and build** | 13 → 14 | Write async code and use computation expressions; build and run projects and scripts. |
 | **Use cases and applications** | 15 | See where F# is used: web, data, Azure, scripting, and by engineering role. |
 | **Security and DevOps** | 16 | Apply security and DevOps practices for F# and .NET. |
-
----
 
 ## Topics (in order)
 
@@ -57,8 +51,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | 15 | Use cases and applications | [15_Use_Cases_And_Applications.md](./15_Use_Cases_And_Applications.md) |
 | 16 | Security and DevOps | [16_Security_And_DevOps.md](./16_Security_And_DevOps.md) |
 
----
-
 ## By engineering role
 
 | Role | Focus | Where to go |
@@ -68,15 +60,11 @@ Read in **number order** for a single path from beginner to advanced to use case
 | **Security** | Supply chain, config, .NET hardening | 11, 12, then **15**, **16**. |
 | **Data / analytics** | Scripts, type providers, interop | 1–8, 10, 14, **15**, **16**. |
 
----
-
 ## Scope: what's covered and what's not
 
 **Covered:** Full path from zero to use: what F# is, why and how to use it, and where it fits. Includes values and functions, types and inference, tuples and collections, records and discriminated unions, pattern matching, options, conditionals and loops, modules and namespaces, exception handling, object programming, async and computation expressions, build and tooling, use cases, and security and DevOps. Enough to read and write F#, build with dotnet, and operate in .NET and Azure contexts.
 
 **Not covered in depth here (by design):** Type providers (tutorials and creating custom providers), query expressions (LINQ), code quotations, Fable/JavaScript (browser and Node), full OOP (inheritance, delegates, object expressions in depth). Use the "Further reading" links in each topic or below.
-
----
 
 ## Further reading
 

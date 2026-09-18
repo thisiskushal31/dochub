@@ -2,8 +2,6 @@
 
 [← Previous](./03_Core_Model_Tasks_Pipelines_Runs.md) · [README](./README.md) · [Next: Tasks depth →](./05_Tasks_Steps_Params_And_Results.md)
 
----
-
 ## 1. Concepts
 
 1. Install Pipelines ([02](./02_Install_Pipelines_And_Operator.md)).  
@@ -54,13 +52,9 @@ spec:
 
 Compose two Tasks into a Pipeline when the lab needs ordering ([06](./06_Pipelines_Ordering_And_Finally.md)). Official Getting Started guides cover the same loop.
 
----
-
 ## 2. Advanced concepts
 
 Use `generateName` for Runs so re-applies do not collide. Prefer namespace-per-team or per-env for blast radius. Dashboard ([16](./16_Dashboard.md)) is optional UX.
-
----
 
 ## 3. Applications and use cases
 
@@ -76,8 +70,6 @@ Use `generateName` for Runs so re-applies do not collide. Prefer namespace-per-t
 - YAML committed before sharing the pattern  
 
 **Good:** change via Git + apply/PAC. **Bad:** only live-edit CRDs in prod with no source.
-
----
 
 ## References
 

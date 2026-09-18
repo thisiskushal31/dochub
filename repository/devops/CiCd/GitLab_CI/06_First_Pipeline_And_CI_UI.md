@@ -2,8 +2,6 @@
 
 [← Previous](./05_CI_Core_Model_Pipelines_Jobs_Stages.md) · [README](./README.md) · [Next: YAML mental model →](./07_YAML_Mental_Model_And_Keywords.md)
 
----
-
 ## 1. Concepts
 
 1. Ensure a **runner** is available (shared on GitLab.com, or register your own).  
@@ -35,8 +33,6 @@ unit:
 | Environments | Deploy history ([15](./15_Environments_Deployments_And_Release.md)) |
 | CI/CD settings | Variables, runners, auto-DevOps toggles |
 
----
-
 ## 2. Advanced concepts
 
 ### CI Lint
@@ -51,8 +47,6 @@ Validate YAML before you burn runner minutes — in the pipeline editor / lint t
 
 GitLab.com instance runners consume compute minutes by plan — confirm current billing docs; optimize with `rules:changes` and efficient images ([10](./10_Runners_And_Executors.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Checkpoint | Evidence |
@@ -62,8 +56,6 @@ GitLab.com instance runners consume compute minutes by plan — confirm current 
 | Operability | Team finds logs without asking platform |
 
 **Good:** stable job names used in merge checks. **Bad:** merging while ignoring a failed allowed job you thought was required.
-
----
 
 ## References
 

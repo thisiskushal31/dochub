@@ -8,8 +8,6 @@
 
 You leave able to read async call chains, propagate cancellation, and reject `.Result` / `.Wait()` anti-patterns in UI and ASP.NET-style hosts.
 
----
-
 ## 1. Concepts
 
 ### 1. Why async exists
@@ -70,8 +68,6 @@ Do not ignore tokens on public async APIs that can run long. Treat cancel as **c
 
 In library code that does not need the original SynchronizationContext (classic ASP.NET on Framework / UI apps), `Await someTask.ConfigureAwait(False)` avoids forcing resumption on the captured context and reduces deadlock risk. **ASP.NET Core** typically does not use that classic sync-context model the same way—still avoid `.Result` / `.Wait()` on thread-pool code. App-level UI code often **wants** the context so you can touch controls after await. Know which layer you are in.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Sync-over-async pitfalls
@@ -127,8 +123,6 @@ Prefer structured ownership (`Await` in the request scope, hosted service loops)
 
 Test async methods with async test methods and `Await`—do not `.Result` in tests either (same deadlock class on some runners). Assert cancellation by canceling a token and expecting `OperationCanceledException` / `TaskCanceledException` as appropriate.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -138,8 +132,6 @@ Test async methods with async test methods and `Await`—do not `.Result` in tes
 | **Security** | Cancel abandoned requests; do not leave authenticated work running after client disconnect without policy |
 | **Operations** | Log cancels separately from faults; avoid thread-pool starvation from sync-over-async |
 | **Software engineering** | Public APIs return `Task`/`Task(Of T)`; ban `.Result` in new code reviews |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -155,8 +147,6 @@ Test async methods with async test methods and `Await`—do not `.Result` in tes
 - Host shutdown cancels in-flight work where supported.
 - Background tasks are observed; faults logged; stop tokens honored in loops.
 - Async tests `Await` results instead of blocking on tasks.
-
----
 
 ## References
 

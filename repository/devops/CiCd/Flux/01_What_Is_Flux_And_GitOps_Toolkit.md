@@ -2,8 +2,6 @@
 
 [← Flux](./README.md) · [Next: Core concepts →](./02_Core_Concepts_Sources_And_Reconciliation.md)
 
----
-
 ## 1. Concepts
 
 ### The everyday problem
@@ -54,8 +52,6 @@ After tests, CI usually **publishes an image** and **updates an image digest in 
 - You assemble only the pieces you need  
 - Optional **Gitless GitOps**: the cluster reads OCI artifacts from a registry (humans may still edit Git; CI publishes the artifact)
 
----
-
 ## 2. Advanced concepts
 
 ### GitOps is a team contract, not a logo
@@ -75,8 +71,6 @@ Same job class. Flux = toolkit CRDs + CLI. Argo CD = Application objects + UI. P
 
 You can run Flux for some clusters while Jenkins or host deploys still ship other systems ([19](../19_Delivery_Spectrum_Legacy_Through_Modern.md)). Draw a clear line: *these namespaces are Flux-managed*.
 
----
-
 ## 3. Applications and use cases
 
 | Role | Takeaway |
@@ -86,8 +80,6 @@ You can run Flux for some clusters while Jenkins or host deploys still ship othe
 | Staff+ | Pick Flux vs Argo CD on ergonomics, not hype |
 
 **Good:** Git is how production changes. **Bad:** Flux installed, but everyone still kubectl-patches prod.
-
----
 
 ## References
 

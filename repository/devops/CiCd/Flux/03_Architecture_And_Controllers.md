@@ -2,8 +2,6 @@
 
 [← Previous](./02_Core_Concepts_Sources_And_Reconciliation.md) · [README](./README.md) · [Next: Install →](./04_Install_Bootstrap_And_CLI.md)
 
----
-
 ## 1. Concepts
 
 Flux is not one program. It is a **small set of controllers** (Pods) that each own one job. They usually run in the `flux-system` namespace after bootstrap.
@@ -30,8 +28,6 @@ Flux is not one program. It is a **small set of controllers** (Pods) that each o
 
 Tip: Flux registers resource categories so you can list many Flux kinds with one command (see [categories cheatsheet](https://fluxcd.io/flux/cheatsheets/crd-resource-categories/)).
 
----
-
 ## 2. Advanced concepts
 
 ### Why a toolkit?
@@ -48,8 +44,6 @@ Each controller has flags (concurrency, feature gates, …). Change them with me
 
 Common choices: **one Flux per cluster** (fleet Git path per cluster), a **hub** that applies to spokes via `kubeConfig`, or **OCI-per-cluster** (Gitless). Pick deliberately ([10](./10_Repository_Structure_Tenancy_And_Multi_Cluster.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Your estate | Controllers to plan for |
@@ -61,8 +55,6 @@ Common choices: **one Flux per cluster** (fleet Git path per cluster), a **hub**
 | Canary releases | + Flagger (separate) |
 
 **Good:** every enabled controller has an owner. **Bad:** turn on every optional component “just in case.”
-
----
 
 ## References
 

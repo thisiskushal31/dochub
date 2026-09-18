@@ -6,8 +6,6 @@
 
 **Use cases and implementation:** For where Clojure is used in practice (data pipelines, APIs, DevOps, tooling) and **how to implement** common scenarios (REST API, CLI, data pipeline, config-driven ETL, background workers, ops scripts), see **[Topic 21 — Use cases and applications](./21_Use_Cases_And_Applications.md)**.
 
----
-
 ## Learning path: from basics to advanced and use cases
 
 | Stage | Topics | What you'll be able to do |
@@ -19,8 +17,6 @@
 | **Equality & order** | 31 | Equality and comparators (sorting, sorted collections). |
 | **Tooling & ecosystem** | 17 → 18 → 19 → 20, 33, 34 | Java interop, testing, Deps/CLI/tools.build, spec, libraries, dev startup time. |
 | **Data & use cases** | 32, 21 → 22 | Databases, use cases and applications, security and best practices. |
-
----
 
 ## Topics
 
@@ -60,8 +56,6 @@
 | 32 | Databases | [32_Databases.md](./32_Databases.md) |
 | 33 | Libraries | [33_Libraries.md](./33_Libraries.md) |
 | 34 | Dev startup time | [34_Dev_Startup_Time.md](./34_Dev_Startup_Time.md) |
-
----
 
 ## Further reading
 

@@ -11,8 +11,6 @@ otool -L ./MyTool
 otool -l ./MyTool | rg -n 'LC_RPATH|path'
 ```
 
----
-
 ## 1. Modules vs textual includes
 
 Prefer framework **modules**:
@@ -22,8 +20,6 @@ Prefer framework **modules**:
 ```
 
 This reduces compile time and macro fragility compared to unbounded **`#import`** graphs.
-
----
 
 ## 2. Linking and `@rpath`
 
@@ -40,8 +36,6 @@ otool -l ./MyTool | rg LC_RPATH
 install_name_tool -add_rpath @executable_path/../Frameworks ./MyTool
 ```
 
----
-
 ## 3. Example link line (illustrative)
 
 ```bash
@@ -49,8 +43,6 @@ xcrun clang -fobjc-arc -framework Foundation -framework UIKit main.m -o MyTool
 ```
 
 Inspect install names with **`otool -L`** on built binaries.
-
----
 
 ## 4. dSYM and symbolication
 
@@ -61,8 +53,6 @@ dwarfdump --uuid MyApp.app/MyApp
 dwarfdump --uuid MyApp.app.dSYM
 atos -o MyApp.app/MyApp -l 0x100000000 0x100012340
 ```
-
----
 
 ## 5. App bundle layout (mental model)
 
@@ -75,8 +65,6 @@ MyApp.app/
 ```
 
 Code signing covers the bundle tree according to your distribution channel.
-
----
 
 ## Advanced use cases and implementation
 
@@ -96,8 +84,6 @@ xcodebuild -create-xcframework \
   -framework build/macos/My.framework \
   -output My.xcframework
 ```
-
----
 
 ## References
 

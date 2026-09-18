@@ -2,8 +2,6 @@
 
 [← Previous](./11_Dynamic_Pipelines_And_Pipeline_Upload.md) · [README](./README.md) · [Next: Self-hosted stacks →](./13_Self_Hosted_Stacks_AWS_And_Kubernetes.md)
 
----
-
 ## 1. Concepts
 
 Buildkite supports many deploy shapes. Simplest: a deploy **command** after tests, often behind `wait` / `block`, branch `if`, and a **concurrency group**.
@@ -33,8 +31,6 @@ Separate **test** and **deploy** pipelines (separate YAML files) so failures, pe
 
 Test pipeline can `trigger` the deploy pipeline after green builds. Align with [CiCd/8](../8_Environments_Promotion_And_Approvals.md).
 
----
-
 ## 2. Advanced concepts
 
 ### Manual vs continuous
@@ -61,8 +57,6 @@ Use the guide that matches your target; keep approvals/OIDC in Buildkite ([10](.
 
 Restrict who can unblock; allowlist deploy pipelines in agent hooks; use OIDC for cloud deploy roles ([10](./10_Secrets_Environment_And_OIDC.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -72,8 +66,6 @@ Restrict who can unblock; allowlist deploy pipelines in agent hooks; use OIDC fo
 | Clear ownership | Dedicated deploy pipeline + team |
 
 **Good:** same artifact digest staging→prod. **Bad:** rebuild for production.
-
----
 
 ## References
 

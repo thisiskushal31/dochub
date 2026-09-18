@@ -6,8 +6,6 @@
 
 Filesystem APIs, stream contexts and wrappers, `open_basedir` and `disable_functions` as coarse sandboxes, safe subprocess invocation patterns (`proc_open` argv arrays vs shell strings), environment inheritance, and race conditions around temporary files and uploads. Later chapters connect streams to SSRF, uploads, and include-based RCE.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the PHP [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -15,8 +13,6 @@ Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3
 ### 1. Paths, existence checks, and permissions
 
 `file_get_contents`, `fopen`, `is_file`, `is_dir`, and `realpath` interact with symlinks, mount namespaces, and SELinux/AppArmor denials that surface as “file not found.” Use `__DIR__` for includes; avoid cwd-dependent paths in cron/FPM.
-
----
 
 ### 2. Streams and wrappers
 
@@ -26,13 +22,9 @@ Uniform read/write APIs across `file://`, `http://`, `php://memory`, `data://`, 
 
 **`glob://` and `phar://`:** Patterns that include user input can enumerate unexpected paths; `phar://` archives can participate in stream chains—treat like file paths in reviews.
 
----
-
 ### 3. `open_basedir` and `disable_functions`
 
 `open_basedir` limits filesystem roots; extensions may bypass or partially honor it. `disable_functions` removes dangerous builtins—pair with app design that does not require them; verify bypasses via mail transports, ImageMagick delegates, or FFI if enabled.
-
----
 
 ### 4. Subprocess safety
 
@@ -52,13 +44,9 @@ if (!is_resource($p)) {
 
 Set explicit `$cwd` and minimal `$env` for automation—inherit-all environments leak secrets into child processes.
 
----
-
 ### 5. Temporary files and uploads
 
 Move uploads with `move_uploaded_file`; never execute uploaded content; store outside webroot. Temp directories on shared hosts may be world-readable—set `umask` and permissions deliberately.
-
----
 
 ## 2. Advanced concepts
 
@@ -72,8 +60,6 @@ Move uploads with `move_uploaded_file`; never execute uploaded content; store ou
 
 **`passthru` / `system` / backticks:** All invoke shells or merge streams in ways easy to footgun—standardize on one audited `proc_open` wrapper per codebase for subprocess needs.
 
----
-
 ## 3. Applications and use cases
 
 - **CI:** Forbid `bash -c` with interpolated PR metadata; wrap tools with argv arrays.
@@ -81,8 +67,6 @@ Move uploads with `move_uploaded_file`; never execute uploaded content; store ou
 - **IR:** Hunt `eval`, `assert`, `create_function`, `preg_replace` `/e` legacy, dynamic includes.
 - **Containers:** Read-only rootfs + non-root user + noexec on upload volumes where supported.
 - **Compliance:** File permission audits on `Storage/`, `.env`, and private keys—world-readable secrets are recurring findings.
-
----
 
 ## References
 

@@ -82,8 +82,6 @@ Ranges (e.g. `1..10`, `1 until 10`, `10 downTo 1 step 2`) are covered in the con
 
 Using the right collection type and choosing between eager collections and lazy sequences helps keep code clear and efficient. The next topic covers lambdas and higher-order functions, which are used throughout the collection API.
 
----
-
 ## Further reading
 
 - [Collections overview](https://kotlinlang.org/docs/collections-overview.html)

@@ -6,8 +6,6 @@
 
 Scala’s default **immutable collections**, intuition for **List**, **Vector**, **Map**, and **Set**, and the standard types for absence and failure: **Option**, **Either**, and **Try**. Mutable collections appear only where mutation is justified. This chapter is about choosing the right container and making failure visible in the type—not memorizing every method name. After it you should write clear pipelines, convert null at edges, and pick `Option` vs `Either` vs `Try` deliberately.
 
----
-
 ## 1. Concepts
 
 ### 1. Immutable by default
@@ -201,8 +199,6 @@ def safeDivide(a: Int, b: Int): Try[Int] =
   }
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Views and builders
@@ -287,8 +283,6 @@ def indexById(users: List[User]): Map[String, User] =
 
 Unjustified: mutating shared collections across modules “for convenience.”
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -344,8 +338,6 @@ def takeBounded[A](xs: List[A], max: Int): Either[String, List[A]] =
 - Error types are meaningful (`Left` is not always `String` forever—evolve when needed).
 - Untrusted input sizes bounded before materializing large collections.
 - Pipelines prefer `flatMap`/`for` over nested `map` that accidentally builds `List[Option[…]]`.
-
----
 
 ## References
 

@@ -8,8 +8,6 @@ How Vyper **declares** variables, how **scopes** work (module, function, block),
 
 Assumes chapters **04** (structure) and **05** (types). Modules that import state: chapter **11**. Layout dumps and compile flags: chapter **12**.
 
----
-
 ## 1. Concepts
 
 ### 1. First reference declares the type
@@ -128,8 +126,6 @@ Official style guidance for the **Vyper compiler codebase** is PEP 8–oriented 
 
 Consistency across a repo beats clever micro-style. If a protocol already has a house style, match it.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Storage layout defaults and overrides
@@ -174,8 +170,6 @@ Style does not replace asserts. A beautifully named `is_authorized` that is neve
 
 0.3.x trees may differ in declaration and decorator habits. When porting, re-check memory init rules, public getter shapes, and module introduction—do not assume a mechanical rename.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Habit |
@@ -187,8 +181,6 @@ Style does not replace asserts. A beautifully named `is_authorized` that is neve
 | **SE** | PR review asks: new storage slotted intentionally? public surface intentional? names match mutability? |
 
 **Smell:** a constructor that writes “config” into ordinary storage that is never meant to change—should have been `immutable` (or constant).
-
----
 
 ## 4. Staff-level review checklist
 
@@ -202,8 +194,6 @@ Style does not replace asserts. A beautifully named `is_authorized` that is neve
 - Module-owned state accessed through the correct module alias after init wiring.
 - ABI surface from `public` + `exports` matches the intended product API.
 - Port from 0.3.x re-validated declarations—not assumed identical.
-
----
 
 ## References
 

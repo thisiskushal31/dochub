@@ -4,15 +4,11 @@
 
 This topic covers the Go language from introduction and notation through source code representation, lexical elements (including all literal forms), and package/source layout.
 
----
-
 ## Introduction
 
 Go is a general-purpose language designed with systems programming in mind. It is strongly typed and garbage-collected and has explicit support for concurrent programming. Programs are constructed from packages, whose properties allow efficient management of dependencies.
 
 The syntax is compact and simple to parse, allowing for easy analysis by automatic tools such as integrated development environments.
-
----
 
 ## Notation
 
@@ -41,8 +37,6 @@ Productions are expressions constructed from terms and the following operators, 
 Lowercase production names are used to identify lexical (terminal) tokens. Non-terminals are in CamelCase. Lexical tokens are enclosed in double quotes `""` or back quotes.
 
 The form `a … b` represents the set of characters from `a` through `b` as alternatives. The horizontal ellipsis `…` is also used elsewhere to informally denote various enumerations or code snippets that are not further specified. The character `…` (as opposed to the three characters `...`) is not a token of the Go language.
-
----
 
 ## Source code representation
 
@@ -78,8 +72,6 @@ binary_digit  = "0" | "1" .
 octal_digit   = "0" … "7" .
 hex_digit     = "0" … "9" | "A" … "F" | "a" … "f" .
 ```
-
----
 
 ## Lexical elements
 
@@ -370,8 +362,6 @@ These examples all represent the same string:
 
 If the source code represents a character as two code points, such as a combining form involving an accent and a letter, the result will be an error if placed in a rune literal (it is not a single code point), and will appear as two code points if placed in a string literal.
 
----
-
 ## Package clause and source file layout
 
 The **package clause** is the first declaration in a file: `package name`. All files in the same directory must use the same package name. **package main** with a **main** function produces an executable. By convention the package name is the last element of the directory path (e.g. `encoding/base64` → `package base64`).
@@ -391,8 +381,6 @@ const unexportedConst = 2
 func ExportedFunc() {}
 func unexportedFunc() {}
 ```
-
----
 
 ## Further reading
 

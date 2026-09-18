@@ -4,13 +4,9 @@
 
 This topic covers **functions** in C: defining them, **prototypes**, **call by value** vs **call by reference** (via pointers), **recursion**, and **main**. Each idea is explained in text first, then with code blocks so you can write clear, modular C.
 
----
-
 ## Why functions?
 
 **Functions** group code into reusable, named units. They take **arguments** (inputs), optionally return a **value**, and help keep programs organized and testable. The C standard library is a set of functions (e.g. `printf`, `malloc`).
-
----
 
 ## Defining a function
 
@@ -35,8 +31,6 @@ int max(int x, int y) {
 }
 ```
 
----
-
 ## Function prototype (declaration)
 
 So that the compiler knows a function’s type before it is used, you **declare** it with a **prototype**: return type, name, and parameter types (names optional). The definition can appear later or in another file.
@@ -55,8 +49,6 @@ int add(int a, int b) {
 }
 ```
 
----
-
 ## The main function
 
 **`main`** is the program entry point. Two common forms:
@@ -72,8 +64,6 @@ int main(int argc, char *argv[]) {
    return 0;
 }
 ```
-
----
 
 ## Call by value
 
@@ -91,8 +81,6 @@ int main(void) {
    return 0;
 }
 ```
-
----
 
 ## Call by reference (using pointers)
 
@@ -113,8 +101,6 @@ int main(void) {
 }
 ```
 
----
-
 ## Recursion
 
 A function can **call itself** (recursion). You need a **base case** that stops the recursion; otherwise you get infinite recursion and eventually stack overflow.
@@ -132,8 +118,6 @@ int main(void) {
    return 0;
 }
 ```
-
----
 
 ## Variadic functions (variable arguments)
 
@@ -159,8 +143,6 @@ int main(void) {
 }
 ```
 
----
-
 ## Nested functions (GCC extension)
 
 Standard C does **not** allow defining a function **inside** another function. **GCC** (and some other compilers) support **nested functions** as an extension: a function defined inside another can use the outer function’s local variables (like a closure). They are **non-portable** and not part of ISO C, so avoid them in new, portable code. You may still see them in legacy or embedded code; knowing they exist helps when reading such code or when maintaining projects that rely on GCC-specific features.
@@ -175,8 +157,6 @@ void outer(int x) {
 }
 ```
 
----
-
 ## Summary
 
 - **Functions** have a return type, name, parameters, and body; they are declared with **prototypes** when used before definition.
@@ -185,8 +165,6 @@ void outer(int x) {
 - **Recursion** is when a function calls itself; always have a base case.
 - **Variadic functions** use **`...`** and **`<stdarg.h>`** (**va_list**, **va_start**, **va_arg**, **va_end**) for a variable number of arguments.
 - **Nested functions** (defining a function inside another) are a **GCC extension**, not standard C; useful to know when reading legacy or embedded code.
-
----
 
 ## Further reading
 

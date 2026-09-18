@@ -12,8 +12,6 @@ It is **not** an L2 encyclopedia, a DeFi product manual, or a wallet UI course. 
 
 Start at chapter **00**. The first goal is not “become an auditor.” It is: compile a tiny contract, change a number, and *feel* the difference between a read and a write.
 
----
-
 ## Versions and brownfield (default narrative)
 
 **Default for new contracts: Solidity 0.8.x.** This handbook’s language snapshot is **0.8.36**. Pin the **latest patch your team actually ships**. Solidity uses a `0.y.z` scheme because breaking changes are normal. **Only the latest compiler release is guaranteed security fixes**—do not leave production deploys on an abandoned `solc` without an explicit waiver.
@@ -36,8 +34,6 @@ forge --version
 npx hardhat --version
 ```
 
----
-
 ## Chapter structure
 
 Every chapter follows:
@@ -48,8 +44,6 @@ Every chapter follows:
 4. **Staff-level review checklist**
 
 Links live in each chapter’s **References** (official hubs only).
-
----
 
 ## How to read a chapter
 
@@ -64,8 +58,6 @@ You do not need to memorize the EVM. You need a picture you can hold:
 - **Four data locations.** **Storage** persists. **Memory** lasts one call. **Calldata** is read-only input. **Transient** lasts one transaction (Cancun / 0.8.24+).
 - **ABI is the public API.** Compiling strips names; selectors and encoding are how wallets and other contracts talk to you.
 - **Trust is inverted.** Users often trust bytecode more than authors. Tests, reviews, pins, and verification are part of the language job—not extras.
-
----
 
 ## Beginner to advanced progression
 
@@ -83,8 +75,6 @@ You do not need to memorize the EVM. You need a picture you can hold:
 | Compass | **24** | What this track owns, handoffs, and where Solidity/EVM are moving |
 
 Suggested order: **00 → 07**, then **08 → 13**, then **14 → 16**, then **17 → 20**, then **21 → 23**, then **24** (or skim **24** after **01** so you know the bullseye). Revisit **02** before pinning CI; **11** before any storage layout debate; **15**/**18** before shipping value transfer; **17** before claiming “tested”; **20** before a mainnet key ever exists; **24** on every hard-fork or “we’re going to L2 / AA” conversation.
-
----
 
 ## Chapters
 
@@ -116,8 +106,6 @@ Suggested order: **00 → 07**, then **08 → 13**, then **14 → 16**, then **1
 | 23 | Whole-engineering wrap and staff checklist | [23](./23_Whole_Engineering_Wrap_And_Staff_Checklist.md) |
 | 24 | Where this is going and how to stay oriented | [24](./24_Where_This_Is_Going_And_How_To_Stay_Oriented.md) |
 
----
-
 ## What this track is the all-in-one for
 
 | Owned here | Directed elsewhere (on purpose) |
@@ -132,8 +120,6 @@ Suggested order: **00 → 07**, then **08 → 13**, then **14 → 16**, then **1
 
 Detail and the “how to stay current” ritual: chapter **24**.
 
----
-
 ## Deep-study workflow
 
 1. After **00–03**, compile the same tiny contract in Remix **and** with Foundry (or Hardhat) and write down both `solc` versions.
@@ -143,8 +129,6 @@ Detail and the “how to stay current” ritual: chapter **24**.
 5. After **17–19**, put unit + fuzz tests and one analyzer in CI; triage findings instead of silencing them.
 6. After **20–23**, verify a testnet deploy, inventory keys, and sign the wrap checklist—including “we did not need a proxy.”
 7. Read **24** and write down your target chain’s current **`evmVersion`**, whether **7702/AA** affects your auth assumptions, and which topics you will *not* pretend this repo covers.
-
----
 
 ## Further reading
 
@@ -163,8 +147,6 @@ Detail and the “how to stay current” ritual: chapter **24**.
 - [Solidity compiler security policy](https://github.com/argotorg/solidity/security/policy)
 - [Ethereum roadmap](https://ethereum.org/roadmap/)
 - [Pectra / EIP-7702 (orientation)](./24_Where_This_Is_Going_And_How_To_Stay_Oriented.md)
-
----
 
 ## References (hub links)
 

@@ -2,8 +2,6 @@
 
 [← Previous](./07_YAML_Mental_Model_And_Keywords.md) · [README](./README.md) · [Next: Needs →](./09_Needs_DAG_And_Downstream_Pipelines.md)
 
----
-
 ## 1. Concepts
 
 **`rules:`** (job) and **`workflow:rules`** (pipeline) decide *if* something runs. Prefer `rules` over legacy `only`/`except`.
@@ -34,8 +32,6 @@ unit:
 | API / trigger / web | Manual or external start |
 | Downstream | Child or multi-project ([09](./09_Needs_DAG_And_Downstream_Pipelines.md)) |
 
----
-
 ## 2. Advanced concepts
 
 ### `rules` building blocks
@@ -50,8 +46,6 @@ Path `changes` and `workflow:rules` stop duplicate pipelines (e.g. avoid both br
 
 Scheduled pipelines use the **default branch** config version that applies to the schedule’s target — own them like production crons.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -61,8 +55,6 @@ Scheduled pipelines use the **default branch** config version that applies to th
 | Prod promote | `when: manual` on deploy job + protected env |
 
 **Good:** one intentional pipeline per event. **Bad:** double pipelines on every MR push burning minutes.
-
----
 
 ## References
 

@@ -4,13 +4,9 @@
 
 This topic covers the **preprocessor** (`#include`, `#define`, macros) and **file I/O** in C using the standard library. Each concept is explained in text first, then with code blocks.
 
----
-
 ## Preprocessor overview
 
 The **preprocessor** runs before compilation. It handles lines starting with **`#`**: it **includes** files, **defines** macros, and performs **conditional compilation**. Preprocessor output is still C source (with macros expanded and includes pasted).
-
----
 
 ## #include
 
@@ -21,8 +17,6 @@ The **preprocessor** runs before compilation. It handles lines starting with **`
 #include <stdlib.h>
 #include "my_header.h"
 ```
-
----
 
 ## What each common header provides
 
@@ -55,8 +49,6 @@ Including a header gives you the **declarations** (types and function prototypes
 
 You only need to **`#include`** a header if your code uses something declared in it. Including extra headers is harmless but keeps the list clear if you include only what you use.
 
----
-
 ## Using math.h and random numbers (rand)
 
 **&lt;math.h&gt;** provides functions such as **sqrt**, **sin**, **cos**, **pow**, **fabs**. Link with the math library (e.g. **-lm** on Unix). **&lt;stdlib.h&gt;** provides **rand()** (returns a pseudo-random integer in **0** to **RAND_MAX**) and **srand(seed)** to set the seed; call **srand** once (e.g. with **time(NULL)** from **&lt;time.h&gt;**) if you want different sequences per run.
@@ -77,8 +69,6 @@ int main(void) {
    return 0;
 }
 ```
-
----
 
 ## #define and macros
 
@@ -107,8 +97,6 @@ int n = SQUARE(5);
 /* STR(hello) becomes "hello"; JOIN(foo, bar) becomes foobar */
 ```
 
----
-
 ## Custom header files
 
 You can put declarations (and **inline** or **static** definitions) in a **`.h`** file and **`#include "myfile.h"`** in your **`.c`** files. Use **include guards** (**#ifndef** / **#define** / **#endif**) so the header is only processed once when included from multiple files.
@@ -120,8 +108,6 @@ You can put declarations (and **inline** or **static** definitions) in a **`.h`*
 int add(int a, int b);
 #endif
 ```
-
----
 
 ## Conditional compilation
 
@@ -137,13 +123,9 @@ int add(int a, int b);
 #endif
 ```
 
----
-
 ## Pragmas
 
 **#pragma** is a compiler-specific directive. Common uses: **#pragma once** (include guard in one line; many compilers support it), **#pragma pack(n)** (reduce struct padding; see topic 11), and implementation-defined options for warnings or alignment. The preprocessor does not remove **#pragma**; the compiler interprets it. Behavior varies by compiler.
-
----
 
 ## Error handling (errno, perror, strerror)
 
@@ -160,8 +142,6 @@ if (fp == NULL) {
    return 1;
 }
 ```
-
----
 
 ## File I/O (stdio)
 
@@ -198,8 +178,6 @@ if (out) {
 
 **Closing:** **`fclose(fp)`** flushes and closes the file. Always close when done; do not use the **FILE *** after closing.
 
----
-
 ## Command execution (system)
 
 The function **`system(command)`** (declared in **&lt;stdlib.h&gt;**) runs a **shell command** given as a string. It returns an implementation-defined status. Use with care: avoid passing user-controlled input without validation (security risk). For portable or safer process control, use platform APIs (e.g. **fork**/ **exec** on Unix).
@@ -209,8 +187,6 @@ The function **`system(command)`** (declared in **&lt;stdlib.h&gt;**) runs a **s
 int status = system("ls -l");
 ```
 
----
-
 ## Summary
 
 - **Preprocessor:** **`#include`** inserts a header file; **`#include <file>`** for system headers, **`#include "file"`** for local ones. Each header declares a part of the library (e.g. **&lt;stdio.h&gt;** for printf/fopen, **&lt;stdlib.h&gt;** for malloc/free, **&lt;string.h&gt;** for strlen/strcpy). **`#define`** for constants and macros; **#** and **##** in macros for stringify and concat; **custom headers** use **.h** and include guards; **#pragma** for compiler-specific options (e.g. **#pragma once**, **#pragma pack**). **#ifdef** / **#ifndef** / **#endif** for conditional compilation; expansion is text-only before compilation.
@@ -218,8 +194,6 @@ int status = system("ls -l");
 - **Command execution:** **system(command)** in **&lt;stdlib.h&gt;** runs a shell command; use with care for security.
 - **Error handling:** **errno**, **perror**, **strerror** for diagnosing library failures (e.g. failed **fopen**).
 - **File I/O:** **`fopen`** / **`fclose`**; **`fgets`**, **`fprintf`**, **`fscanf`** (and **`fread`** / **`fwrite`** for binary). Check return values and close files.
-
----
 
 ## Further reading
 

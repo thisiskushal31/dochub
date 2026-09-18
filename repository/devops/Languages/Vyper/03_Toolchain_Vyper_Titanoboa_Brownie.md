@@ -8,8 +8,6 @@ The practical tool map for Vyper work: the **`vyper` CLI** as the compiler of re
 
 Shared EVM testing intuition (forks, traces, invariant ideas) overlaps the [Solidity](../Solidity/README.md) toolchain world; the **first-class Vyper test stack** here is Titanoboa-centric. Testing workflows continue in chapter **[13](./13_Testing_Contracts.md)**; this chapter orients the tools.
 
----
-
 ## 1. Concepts
 
 ### 1. Three jobs, three tools
@@ -75,8 +73,6 @@ project venv
 ```
 
 One venv, one lockfile, one documented `pytest` (or `boa`) command. Titanoboa should not silently pull a different Vyper than CI deploys.
-
----
 
 ## 2. Advanced concepts
 
@@ -168,8 +164,6 @@ A new engineer should, in one sitting:
 
 If step 3 requires Slack archaeology, the *repo’s* toolchain docs are incomplete—not the language.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Toolchain role |
@@ -184,8 +178,6 @@ If step 3 requires Slack archaeology, the *repo’s* toolchain docs are incomple
 
 **Smell:** README lists three ways to test and none is marked canonical. Pick one; archive the rest.
 
----
-
 ## 4. Staff-level review checklist
 
 - `vyper --version` in CI matches the project pin (**0.4.3** / **0.4.x** policy).
@@ -198,8 +190,6 @@ If step 3 requires Slack archaeology, the *repo’s* toolchain docs are incomple
 - README shows one canonical `install` + `test` path.
 - Experimental compiler flags are not hidden in test helpers without comments.
 - Client ABI artifacts come from the same pipeline that gates merge.
-
----
 
 ## References
 

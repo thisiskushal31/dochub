@@ -2,15 +2,11 @@
 
 [← Previous](./12_Deploy_Targets_And_Pipes_Catalog.md) · [README](./README.md) · [Next: Jira →](./14_Jira_And_Atlassian_Integrations.md)
 
----
-
 ## 1. Concepts
 
 **Dynamic pipelines** let Bitbucket generate or adapt pipeline configuration at runtime (repository or workspace enablement) so large monorepos or intelligent path selection do not require enormous static YAML.
 
 Still review what runs — dynamic does not mean ungated.
-
----
 
 ## 2. Advanced concepts
 
@@ -34,8 +30,6 @@ Clone depth options, max-time, condition expressions, export/import of shared pi
 
 Bitbucket can embed **AI agents** inside pipeline steps (`definitions.agents` + `agent:` in a script). Workspace admins enable the feature; providers and plan requirements are documented by Atlassian and can change while it stays in beta. Treat it as assisted automation on the **same** gated loop (review PRs the agent opens; scope OAuth carefully) — not a replacement for merge checks and human ownership of production.
 
----
-
 ## 3. Applications and use cases
 
 | Estate | Pattern |
@@ -44,8 +38,6 @@ Bitbucket can embed **AI agents** inside pipeline steps (`definitions.agents` + 
 | Small repo | Static YAML is enough |
 
 **Good:** effective config auditable in logs. **Bad:** dynamic rules only one person understands.
-
----
 
 ## References
 

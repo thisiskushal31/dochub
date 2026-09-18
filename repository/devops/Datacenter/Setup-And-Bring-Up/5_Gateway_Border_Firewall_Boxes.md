@@ -2,8 +2,6 @@
 
 [← Previous](./4_Switch_Roles_In_Practice.md) · [README](./README.md) · [Next: LAN segmentation →](./6_LAN_Segmentation_Jobs.md)
 
----
-
 ## Mental map
 
 ```text
@@ -23,8 +21,6 @@ Internet / carrier / cloud on-ramp
 
 Physical roles: [Fabric-Physical/6](../Fabric-Physical/6_Border_And_Edge_Roles.md). Policies/WAF: [Security/WAF](../../Security/WAF/README.md). Packet detail: Networks-Deep-Dive.
 
----
-
 ## 1. Concepts
 
 | Box | Setup job |
@@ -40,8 +36,6 @@ Physical roles: [Fabric-Physical/6](../Fabric-Physical/6_Border_And_Edge_Roles.m
 
 **Confirm:** Where do your cross-connects land relative to the firewall?
 
----
-
 ## 2. Advanced concepts
 
 ### Operator experience
@@ -55,8 +49,6 @@ Async routing through firewall HA without care drops sessions. Keep border and f
 - Document default-deny vs allow lists  
 - Test failover deliberately  
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -65,8 +57,6 @@ Async routing through firewall HA without care drops sessions. Keep border and f
 | Office+DC | WLAN gateway zone ≠ server LAN zone |
 
 **Staff checklist:** HA tested; XC IDs in runbook; rollback for rule changes; Networks owner named.
-
----
 
 ## References
 

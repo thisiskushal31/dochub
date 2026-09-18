@@ -2,8 +2,6 @@
 
 [← Previous](./02_Core_Model_Workflows_Jobs_Steps_Runners.md) · [README](./README.md) · [Next: Syntax →](./04_Workflow_Syntax_Mental_Model.md)
 
----
-
 ## 1. Concepts
 
 1. Add `.github/workflows/ci.yml` on the default branch (or open a PR that adds it).  
@@ -40,8 +38,6 @@ jobs:
 | Deployment environments | Approvals and history ([14](./14_Secrets_Variables_And_Environments.md), [17](./17_Deploy_Environments_And_Promote.md)) |
 | Run graph | Visualize `needs` / matrix |
 
----
-
 ## 2. Advanced concepts
 
 ### Templates
@@ -62,8 +58,6 @@ GitHub and orgs ship **workflow templates**. Prefer templates as a starting poin
 
 Optional README badge for a workflow — useful for public repos; not a substitute for required checks.
 
----
-
 ## 3. Applications and use cases
 
 | Checkpoint | Evidence |
@@ -73,8 +67,6 @@ Optional README badge for a workflow — useful for public repos; not a substitu
 | Operability | Team can find logs without asking platform |
 
 **Good:** required check named stably. **Bad:** merge without reading why a job was skipped.
-
----
 
 ## References
 

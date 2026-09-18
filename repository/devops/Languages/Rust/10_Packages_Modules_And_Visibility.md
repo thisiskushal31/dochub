@@ -6,8 +6,6 @@
 
 How Rust code is organized for humans and the compiler: **packages**, **crates**, **modules**, **`mod` / `use` / `pub`**, filesystem layout (`src/lib.rs`, `src/main.rs`), **path visibility**, **re-exports**, and the **prelude** concept. This is the scaffolding for maintainable multi-file crates and workspace libraries before operational `std` surfaces (chapter 11).
 
----
-
 ## 1. Concepts
 
 ### 1. Packages and crates
@@ -96,8 +94,6 @@ A **prelude** is a set of names brought into scope automatically or by conventio
 - Crates may define `prelude` modules (`mycrate::prelude::*`) for frameworks—convenient inside apps, aggressive inside libraries (name clashes, hidden dependencies). Prefer explicit imports in library code review standards unless you are building an application framework.
 
 Prelude contents evolve carefully across editions/Rust releases; edition docs note shifts when they matter.
-
----
 
 ## 2. Advanced concepts
 
@@ -192,8 +188,6 @@ A **Cargo workspace** is a development and CI grouping; **publishability** is pe
 
 Staff rule: do not publish a crate just because it sits in the workspace. Keep glue binaries, scratch pads, and tightly coupled internals **unpublished** (`publish = false` in `Cargo.toml` when needed). Publish the stable library façades; keep workspace edges for compile-time separation, not as an excuse to expose every member.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -241,8 +235,6 @@ Staff rule: do not publish a crate just because it sits in the workspace. Keep g
 - Workspace crates depend on public APIs only; invariants do not rely on sibling `pub(crate)`.
 - Publishable crates reviewed against Rust API Guidelines; README and crate-level rustdoc present and aligned.
 - Non-publishable workspace members marked; publish boundary intentional.
-
----
 
 ## References
 

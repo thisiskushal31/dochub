@@ -17,8 +17,6 @@ Staff hire VBA fluency for four practical pillars:
 
 **New to VBA?** Start at chapter **01** (what it is), then **00** (touch the VBE and a hello macro), then **02** onward.
 
----
-
 ## After this track — what you can write
 
 | You can write / do… | What “done” looks like | Spine chapters |
@@ -29,8 +27,6 @@ Staff hire VBA fluency for four practical pillars:
 | A **policy/review conversation** about macros | MotW, Trusted Locations, ASR named correctly | **15** |
 | **Read a suspicious macro safely** | Static habits; no “enable all macros” on the analyst laptop | **16** |
 | **Read legacy `.vbs`** | WSH objects recognized; migration path named | **14** |
-
----
 
 ## What to learn next (complement paths)
 
@@ -46,8 +42,6 @@ Staff hire VBA fluency for four practical pillars:
 **Suggested order for a defender/analyst:** this track through **15–16** → Defender ASR/AMSI docs → org macro policy.  
 **Suggested order for an Excel automator:** **00–08** → official Excel VBA concepts → Office Scripts door when cloud matters.
 
----
-
 ## Versions and brownfield (default narrative)
 
 **Default for new work: VBA in Microsoft 365 Apps on Windows**, with macros governed by current enterprise defaults (internet macros blocked unless policy says otherwise). Pin the Office channel your org actually ships.
@@ -60,8 +54,6 @@ Staff hire VBA fluency for four practical pillars:
 | **VBScript** + WSH | Legacy scripts, IR samples | Brownfield; deprecated—migrate |
 | Excel 4.0 (**XLM**) | Malware / ancient sheets | Security literacy only (**15–16**) |
 
----
-
 ## Chapter structure
 
 Every chapter follows:
@@ -72,8 +64,6 @@ Every chapter follows:
 4. **Staff-level review checklist**
 
 Links live in each chapter’s **References** (official hubs only).
-
----
 
 ## Semantic model (five ideas)
 
@@ -91,14 +81,10 @@ Links live in each chapter’s **References** (official hubs only).
 | Automation surface | Undocumented `Shell` / `WScript.Shell` | **07**, **11**, **15** |
 | Policy literacy | “Just enable macros” as the fix | **15–16** |
 
----
-
 ## How to read this section
 
 **Absolute beginners:** **01 → 00 → 02 → …**  
 If you already open the VBE daily: **00 → 02…**, but do **not** skip **05**, **11**, and **15**.
-
----
 
 ## Progression
 
@@ -112,8 +98,6 @@ If you already open the VBE daily: **00 → 02…**, but do **not** skip **05**,
 | **VBScript brownfield** | 14 | Read WSH scripts; plan PowerShell migration |
 | **Security** | 15 → 16 | Defense controls; safe hostile-sample literacy |
 | **Synthesis / compass** | 17 → 18 | Roles, what you can write, adjacent doors |
-
----
 
 ## Chapters
 
@@ -138,8 +122,6 @@ If you already open the VBE daily: **00 → 02…**, but do **not** skip **05**,
 | 16 | Reading malicious macros safely | [16_Reading_Malicious_Macros_Safely.md](./16_Reading_Malicious_Macros_Safely.md) |
 | 17 | Use cases and engineering perspectives | [17_Use_Cases_And_Engineering_Perspectives.md](./17_Use_Cases_And_Engineering_Perspectives.md) |
 | 18 | Where VBA is going and adjacent doors | [18_Where_VBA_Is_Going_And_Adjacent_Doors.md](./18_Where_VBA_Is_Going_And_Adjacent_Doors.md) |
-
----
 
 ## Further reading
 

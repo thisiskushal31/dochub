@@ -2,8 +2,6 @@
 
 [← Previous](./6_Storage_Backup_And_Restore.md) · [README](./README.md) · [Next: Other hypervisors →](./8_Other_Hypervisors_And_Private_IaaS.md)
 
----
-
 ## 1. Concepts
 
 Most enterprise halls still run **VMware vSphere** for the fleet of distributed applications: **ESXi** on the host, **vCenter Server** as the API, clusters with HA/DRS, datastores, port groups. Docs now live under Broadcom techdocs; the product jobs did not change.
@@ -27,8 +25,6 @@ This chapter is the **hypervisor as IaaS you operate**. Hosted vCenter (someone 
 **VMware “cloud”** still means one of: on-prem vSphere, hosted private cloud (you get vCenter), or VMware Cloud on AWS-class SDDC. Identity is vCenter SSO / Entra / LDAP unless you added something else.
 
 Deploying a three-tier app is: **template → clone → guest customization → LB pool** — not `kubectl apply`, unless you added Supervisor.
-
----
 
 ## 2. Advanced concepts
 
@@ -79,8 +75,6 @@ CSI talks to vSphere disks (CNS). Load balancers are often NSX, AVI, or hardware
 
 Image ESXi from a known ISO/vLCM image, not “next/next” per box. vLCM (vSphere Lifecycle Manager) is how clusters stay at one firmware+driver+ESXi combo. Mixed driver VIBs are a vMotion tax.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -103,8 +97,6 @@ Image ESXi from a known ISO/vLCM image, not “next/next” per box. vLCM (vSphe
 - License/support path for patches  
 
 **Good:** templates, roles, HA with spare, vCenter backup, vLCM. **Bad:** 200 hand-cloned VMs, snapshots forever, HA off, Administrator for developers, one datastore for everything.
-
----
 
 ## Go deeper
 

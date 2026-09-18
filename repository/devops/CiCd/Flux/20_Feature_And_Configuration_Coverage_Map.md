@@ -2,14 +2,10 @@
 
 [← Previous](./19_Best_Practices_And_When_Not_Flux.md) · [README](./README.md) · [Next: CRD & CLI catalog →](./21_CRD_And_CLI_Catalog.md)
 
----
-
 ## 1. Concepts
 
 Use this page as a **map**: “does Flux have X, and where did we teach it?”  
 Full field encyclopedias and every mesh/VCS cookbook stay on official docs.
-
----
 
 ## 2. Advanced — inventory
 
@@ -57,13 +53,9 @@ Full field encyclopedias and every mesh/VCS cookbook stay on official docs.
 
 CRD OpenAPI · every bootstrap VCS page · cloud cookbooks · every Flagger mesh tutorial · Flux v1 migration · Go SDK · Operator CRD encyclopedia · AI agent-skills page.
 
----
-
 ## 3. Applications and use cases
 
 For your estate, mark each row: **use / later / N/A**.
-
----
 
 ## References
 

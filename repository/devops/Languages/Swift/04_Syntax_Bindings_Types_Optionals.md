@@ -8,8 +8,6 @@ Everyday Swift surface area: **`let` / `var`**, type annotations vs **type infer
 
 If chapter **00** got you printing hello, this chapter makes the next hundred lines readable—and makes `nil` feel like a type, not a crash waiting to happen.
 
----
-
 ## 1. Concepts
 
 ### 1. Bindings: `let` vs `var`
@@ -315,8 +313,6 @@ let up: Animal = definitely as Animal
 
 Staff habit: prefer `as?` + binding at runtime boundaries (`Any`, heterogeneous collections, ObjC import). Reserve `as!` for tests and impossible-to-fail bridges you are willing to crash on.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. IUO — implicitly unwrapped optionals (`Type!`)
@@ -424,8 +420,6 @@ let roundTrip = String(bytes: bytes, encoding: .utf8)
 - Four numbers, four meanings—pick the one your protocol documents.
 - Round-tripping through UTF-8 is the common network habit; Character count is not a wire length.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Practice |
@@ -435,8 +429,6 @@ let roundTrip = String(bytes: bytes, encoding: .utf8)
 | **Security** | Secrets and tokens as `String?` until validated; never log force-unwrapped credential paths that crash into noisy dumps |
 | **Operations** | Config DTOs: required vs optional fields documented; `??` defaults explicitly chosen, not accidental; multiline help text in `"""` |
 | **Software engineering** | Ban casual `!` and `as!` in style guides; allowlist IUO for known UIKit outlet patterns only; prefer `as?` at `Any` boundaries; Substring stays local |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -451,8 +443,6 @@ let roundTrip = String(bytes: bytes, encoding: .utf8)
 - Empty collections and `nil` sites have enough annotation to be unambiguous.
 - Parsed configs expose non-optional fields for required data.
 - No revived Swift 2-era `++` / C-style `for` in new contributions.
-
----
 
 ## References
 

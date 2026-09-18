@@ -8,8 +8,6 @@ Blockchain **environment** values (`msg`, `block`, `tx`-style data), and how **c
 
 Pin: **Vyper 0.4.x** (**0.4.3**). Parallel globals literacy for Solidity lives in [Solidity](../Solidity/README.md)—same EVM ideas, check Vyper names for your pin. Mutability of *functions* that *read* these values is chapter **[08](./08_Functions_Visibility_And_Mutability.md)**; here the focus is **inputs and frozen policy**.
 
----
-
 ## 1. Concepts
 
 ### 1. Environment: who, what, when
@@ -75,8 +73,6 @@ Changing a constant means **new bytecode**. That is a feature for auditability.
 | Change later | Redeploy | Redeploy | Via your setters / governance |
 
 Prefer immutables over storage slots for config that must never move—cheaper and clearer intent. Prefer storage when rotation is a product requirement (with events and tests).
-
----
 
 ## 2. Advanced concepts
 
@@ -161,8 +157,6 @@ A short review pass for env misuse:
 
 You do not need exploit demos to raise these.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How env/constants show up |
@@ -177,8 +171,6 @@ You do not need exploit demos to raise these.
 
 **Smell:** a “constant” address that differs per staging/prod via copy-paste files. That is either per-chain bytecode (documented) or a misuse of `constant`.
 
----
-
 ## 4. Staff-level review checklist
 
 - Access control uses immediate caller semantics intentionally; `tx.origin`-style auth is justified or absent.
@@ -191,8 +183,6 @@ You do not need exploit demos to raise these.
 - Cross-chain or signed-data designs bind chain identity explicitly.
 - Module-shared constants have a single source of truth.
 - Ops knows which admins can rotate and which cannot.
-
----
 
 ## References
 

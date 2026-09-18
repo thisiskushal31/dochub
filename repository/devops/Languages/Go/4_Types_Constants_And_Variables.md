@@ -4,8 +4,6 @@
 
 A **type** determines the set of values and the operations and methods that apply to them. A **variable** is a storage location for a value; its type is fixed. A **constant** is a value determined at compile time. Go is statically typed. This section covers the type grammar, all predeclared and composite types, constants (typed and untyped, default type, iota), variable declarations and short declarations, scope, zero values, and assignability so you can write and read correctly typed Go.
 
----
-
 ## Type grammar
 
 A type determines a set of values together with operations and methods specific to those values. A type may be denoted by a type name (with type arguments if generic) or specified using a type literal.
@@ -20,13 +18,9 @@ TypeLit  = ArrayType | StructType | PointerType | FunctionType | InterfaceType |
 
 The language predeclares certain type names; others are introduced with type declarations or type parameter lists. Composite types may be constructed using type literals. Predeclared types, defined types, and type parameters are called named types. Array and slice types are detailed in topic **9**; struct and pointer in **10**; map in **11**; interface in **12**; channel in **13**; function types appear in **7**.
 
----
-
 ## Boolean types
 
 A boolean type represents the set of Boolean truth values denoted by the predeclared constants `true` and `false`. The predeclared boolean type is `bool`; it is a defined type.
-
----
 
 ## Numeric types
 
@@ -51,13 +45,9 @@ A boolean type represents the set of Boolean truth values denoted by the predecl
 
 **Implementation-dependent:** **uint**, **int** (32 or 64 bits), **uintptr** (unsigned, holds pointer bits). Integer values use two’s complement. All numeric types are distinct except the byte/uint8 and rune/int32 aliases; mixing types in expressions or assignment requires explicit conversion (e.g. **int32** and **int** are different).
 
----
-
 ## String type
 
 **string** is the set of (possibly empty) byte sequences. Length is **len(s)**; never negative. Strings are **immutable**. Bytes are indexed **0** through **len(s)-1**. Taking **&s[i]** is illegal.
-
----
 
 ## Properties of types and values
 
@@ -84,8 +74,6 @@ A constant x is representable by a value of type T if: x is in the value set of 
 ### Method sets
 
 The method set of a type determines the methods that can be called on an operand of that type. The method set of an interface type is its interface. The method set of a pointer to defined type T contains all methods with receiver *T or T. The method set of a defined type T contains all methods with receiver T. Structs with embedded fields add promoted methods. Other types have an empty method set.
-
----
 
 ## Constants
 
@@ -171,8 +159,6 @@ Multiple **iota** in the same ConstSpec have the same value.
 
 **Constant expressions.** Constant values are built from literals, identifiers denoting constants, constant expressions, constant conversions, and certain built-ins (**len**, **cap** on some expressions, **real**, **imag**, **complex** on constants, **min**/ **max** on constant args, etc.). Operands in a constant expression are constants; the result is a constant. Numeric constant expressions have arbitrary precision; they are rounded or truncated only when converted to a finite type.
 
----
-
 ## Type declarations
 
 **Alias declaration:** **type** name **=** Type. The name is an alias for the given type (identical types). Example: **type byte = uint8**.
@@ -180,8 +166,6 @@ Multiple **iota** in the same ConstSpec have the same value.
 **Type definition:** **type** name Type. Creates a **new, distinct** type with the same underlying type and operations; the new type has no inherited methods from the given type (but method sets of interface and composite element types are unchanged). Example: **type MyInt int**; **MyInt** and **int** are different—explicit conversion required. A type definition may specify **type parameters** (generics); then the type name denotes a generic type and must be instantiated when used.
 
 **Type parameters** (generics, Go 1.18+) are declared in square brackets, e.g. **type List[T any] struct { next \*List[T]; value T }**. Each type parameter has a **type constraint** (usually an interface). Instantiation substitutes type arguments for the parameters; the type argument must satisfy the constraint.
-
----
 
 ## Variables
 
@@ -201,7 +185,6 @@ x = v              // x has value (*T)(nil) and dynamic type *T
 ```
 
 A variable's value is retrieved by referring to the variable in an expression; it is the most recent value assigned to the variable. If a variable has not yet been assigned a value, its value is the zero value for its type.
-
 
 ### Variable declarations
 
@@ -274,13 +257,9 @@ field1, offset := nextField(str, 0)
 field2, offset := nextField(str, offset)  // redeclares offset
 ```
 
----
-
 ## Zero value
 
 When storage is allocated and no explicit initialization is given, the variable gets the **zero value**: **false** (bool), **0** (numerics), **""** (string), **nil** (pointers, slices, maps, channels, interfaces, functions). Struct fields are zeroed recursively. Zero values make “declare and use” safe.
-
----
 
 ## Blocks
 
@@ -341,15 +320,11 @@ Given a set of identifiers, an identifier is unique if it is different from ever
 
 An identifier is **exported** if (1) first character is an uppercase letter (Unicode Lu), and (2) it is declared in the package block or is a field/method name. Only exported identifiers are visible from other packages.
 
----
-
 ## Assignability and representability
 
 **Assignability:** A value **x** of type **V** is assignable to type **T** if: **V** and **T** are identical; or **V** and **T** have identical underlying types and at least one is not a named type; or **T** is an interface and **x** implements **T**; or **x** is **nil** and **T** is a pointer, function, slice, map, channel, or interface; or **x** is an untyped constant representable by **T**. (Additional rules apply when **V** or **T** are type parameters.)
 
 **Representability:** A constant **x** is representable by type **T** if **x** is in **T**’s value set; or **T** is floating-point and **x** rounds to **T** without overflow; or **T** is complex and **real(x)** and **imag(x)** are representable by the component type. So **1024** is representable by **int16**; **1024** is not by **byte**; **-1** is not by **uint16**; **1.1** is not by **int**.
-
----
 
 ## Further reading
 

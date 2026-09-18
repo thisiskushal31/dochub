@@ -2,8 +2,6 @@
 
 [← Previous](./01_What_Is_Buildkite.md) · [README](./README.md) · [Next: Create pipeline →](./03_Create_Pipeline_Connect_Git_And_View_Builds.md)
 
----
-
 ## 1. Concepts
 
 | Layer | Meaning |
@@ -15,8 +13,6 @@
 | **Queue** | Group of agents inside a cluster ([05](./05_Queues_Clusters_And_Targeting.md)) |
 
 New orgs get a **default cluster** and starter queues (including hosted shapes when using hosted agents). Pipelines are assigned to a cluster so their jobs only run on that cluster’s agents.
-
----
 
 ## 2. Advanced concepts
 
@@ -35,8 +31,6 @@ Use teams for pipeline access instead of ad-hoc user grants. Pair with SSO on Pl
 
 Older estates may still show **unclustered** agents — migrate toward clusters for clearer isolation.
 
----
-
 ## 3. Applications and use cases
 
 | Shape | Pattern |
@@ -46,8 +40,6 @@ Older estates may still show **unclustered** agents — migrate toward clusters 
 | Strict prod deploys | Dedicated cluster + restricted deploy pipeline |
 
 **Good:** named cluster owners; pipeline→cluster assignment intentional. **Bad:** shared agent token across unrelated trust zones.
-
----
 
 ## References
 

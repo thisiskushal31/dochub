@@ -106,8 +106,6 @@ module demo::badge {
 }
 ```
 
----
-
 ## Further reading
 
 - [Sui Move concepts — Objects](https://docs.sui.io/concepts/sui-move-concepts)

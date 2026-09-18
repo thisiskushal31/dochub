@@ -6,8 +6,6 @@
 
 How Scala chooses what runs next while staying **expression-oriented**: `if`/`else` as values, an introduction to **for comprehensions**, `while` loops, and a basic look at **`match`**. Enough to read and write clear control flow before deeper pattern matching and collections chapters. The habit to build here: **compute a value**, don’t only “run steps.”
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. `if` / `else` are expressions
@@ -166,8 +164,6 @@ val msg =
     "non-pos"
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Branch type widening
@@ -267,8 +263,6 @@ scala> 2 match { case 1 => "a"; case 2 => "b"; case _ => "c" }
 ```
 
 Use the REPL to verify branch types with `:type` when an `if` looks suspicious.
-
----
 
 ## 3. Applications and use cases
 
@@ -371,8 +365,6 @@ def activeIds(rows: List[Row]): List[String] =
 - Match cases cover intended inputs; wildcards are deliberate, not silent swallow-alls.
 - Authorization and validation default to **deny / fail** when unmatched.
 - Retry/`while` loops are bounded and log why they stopped.
-
----
 
 ## References
 

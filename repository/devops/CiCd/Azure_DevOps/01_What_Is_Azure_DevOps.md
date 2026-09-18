@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [Next: Org & project →](./02_Organization_Project_Process_And_Access.md)
 
----
-
 ## 1. Concepts
 
 **Azure DevOps** is one product with five services under a shared **organization** and **project**:
@@ -48,8 +46,6 @@ Same durable jobs as any CI/CD staircase ([CiCd/1](../1_Pipelines_Build_Test_Dep
 | Kubernetes GitOps as primary CD | Pipelines build/push → [Argo_CD/](../Argo_CD/README.md) / [Flux/](../Flux/README.md) |
 | Want open-source forge + CI only | GitLab CI, Jenkins, etc. ([2](../2_CI_CD_Tools.md)) |
 
----
-
 ## 2. Advanced concepts
 
 ### Services vs Server
@@ -72,8 +68,6 @@ Treat classic as **brownfield literacy**, not the paved road for new work ([03](
 - **This track** = Azure DevOps product + how Pipelines deploys.
 - **Related folders** = deep craft of those tools ([Cloud/](../../Cloud/README.md), [IAC/](../../IAC/README.md), Containerization).
 
----
-
 ## 3. Applications and use cases
 
 | Role | How this product shows up |
@@ -84,8 +78,6 @@ Treat classic as **brownfield literacy**, not the paved road for new work ([03](
 | SE learning delivery | One suite that still maps to the universal loop in [CiCd/1](../1_Pipelines_Build_Test_Deploy.md) |
 
 **Good:** YAML in Git; scoped service connections; environments with approvals. **Bad:** treating Azure DevOps as a substitute for understanding App Service vs AKS vs VMs ([21](./21_Best_Practices_And_Delivery_Spectrum.md)).
-
----
 
 ## References
 

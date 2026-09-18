@@ -10,8 +10,6 @@ Clients only know what you publish. Compiler version and EVM target are part of 
 
 Shared bytecode/ABI machine picture: [Solidity](../Solidity/README.md). Vyper CLI flags and artifact habits below. Testing the result: chapter **[13](./13_Testing_Contracts.md)**. Pins: chapter **[02](./02_Versions_Pragmas_And_Pins.md)**.
 
----
-
 ## 1. Concepts
 
 ### 1. What “compile” produces
@@ -102,8 +100,6 @@ Verification publishes source (or metadata) so third parties can match bytecode.
 
 If verification fails, fix the build reproducibility story—do not shrug and leave production unverified without a recorded exception.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Initcode vs runtime
@@ -171,8 +167,6 @@ If a field is missing, verification and incident response both slow down.
 
 Fix reproducibility; do not “verify close enough.”
 
----
-
 ## 3. Applications and use cases
 
 | Role | Owns |
@@ -187,8 +181,6 @@ Fix reproducibility; do not “verify close enough.”
 
 **Smell:** “We deploy with prague defaults” said verbally but never written in the release sidecar.
 
----
-
 ## 4. Staff-level review checklist
 
 - CI pins Vyper **0.4.x** (patch recorded) and EVM target.
@@ -202,8 +194,6 @@ Fix reproducibility; do not “verify close enough.”
 - Clients updated atomically with address + ABI.
 - Optimize mode chosen deliberately (`gas` vs `codesize` vs `none`); hot entrypoints re-measured after changes (chapter **19**).
 - Artifact store location is known to ops—not only to one engineer.
-
----
 
 ## References
 

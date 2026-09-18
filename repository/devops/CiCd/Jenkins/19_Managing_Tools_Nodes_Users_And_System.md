@@ -2,8 +2,6 @@
 
 [← Previous](./18_Classical_Host_And_Web_Deploy.md) · [README](./README.md) · [Next: Scale →](./20_Scaling_HA_Backup_And_Monitoring.md)
 
----
-
 ## 1. Concepts
 
 **Manage Jenkins** is the operator console. Configuration classes:
@@ -25,8 +23,6 @@
 | **Time zone / locale** | Display and i18n literacy |
 
 Capture as much as possible in **JCasC** ([04](./04_Configuration_Surfaces_UI_JCasC_And_Init.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -63,8 +59,6 @@ pipeline {
 
 Prefer baking JDK/Maven into agent images for cattle fleets; use `tools { }` when permanent nodes share one controller-managed install.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -74,8 +68,6 @@ Prefer baking JDK/Maven into agent images for cattle fleets; use `tools { }` whe
 | Audit | System info + support bundle process |
 
 **Good:** JCasC for system/tools/clouds. **Bad:** undocumented UI-only tool paths.
-
----
 
 ## References
 

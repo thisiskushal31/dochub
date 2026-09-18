@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [IAM →](./15_Org_IAM_And_Identity_Federation.md) · [Landing zones →](./29_Landing_Zones_And_Org_Guardrails.md) · [FinOps →](./20_FinOps_And_Cost_Controls.md) · [Observability/](../Observability/README.md)
 
----
-
 ## Mental map
 
 ```text
@@ -14,8 +12,6 @@ Paging / on-call                →  cloud alarms → PagerDuty-class ([Observab
 ```
 
 *What to notice: **managed observability** is a cloud product family (like managed DB). SLO craft, PromQL, and OTel depth live in [Observability/](../Observability/README.md)—this chapter is **which product when** on a named cloud.*
-
----
 
 ## 1. Concepts
 
@@ -45,8 +41,6 @@ Paging / on-call                →  cloud alarms → PagerDuty-class ([Observab
 **Confirm:** Where do IAM changes land? Where do app RED/USE metrics land? Who owns alarm noise and log spend ([20](./20_FinOps_And_Cost_Controls.md))?
 
 Hall/plant screens are a different domain: [Datacenter Integration/11](../Datacenter/Integration/11_Aggregate_Telemetry_Reports_And_Steering.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -95,8 +89,6 @@ Platform maturity: Self-hosted Observability stack with clear owners
 
 Who may read logs/metrics, put metric filters, or disable trails is an IAM job ([15](./15_Org_IAM_And_Identity_Federation.md)). Least privilege: apps write telemetry; few humans can delete trails.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -118,8 +110,6 @@ Who may read logs/metrics, put metric filters, or disable trails is an IAM job (
 - Door to [Observability/](../Observability/README.md) for SLO/OTel/tool depth  
 
 **Good:** locked trail + native platform signals + deliberate app telemetry sink. **Bad:** dashboards tourism; trails off; unbounded flow logs.
-
----
 
 ## References
 

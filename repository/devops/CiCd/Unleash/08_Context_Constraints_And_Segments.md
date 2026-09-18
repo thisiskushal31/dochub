@@ -2,8 +2,6 @@
 
 [← Previous](./07_Activation_Strategies_Stickiness_And_Custom.md) · [README](./README.md) · [Next: SDKs →](./09_SDKs_Backend_Frontend_And_OpenFeature.md)
 
----
-
 ## 1. Concepts
 
 **Unleash context** is the bag of attributes the SDK passes into evaluation: who/what is asking.
@@ -21,8 +19,6 @@ Common fields:
 **Segments** are reusable constraint groups shared across flags (e.g. “internal staff”, “EU tenants”).
 
 Together they implement targeting without hard-coding lists into every strategy. Flag-level multiple strategies remain **OR** ([07](./07_Activation_Strategies_Stickiness_And_Custom.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -42,8 +38,6 @@ Define at the instance root; populate in every SDK that must honor them. If a re
 
 Frontend SDKs send context to Frontend API / Edge for **server-side evaluation** of what the client may see. Backend SDKs evaluate locally with full config — never trust the browser as the only enforcement for security-sensitive flags.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -59,8 +53,6 @@ Frontend SDKs send context to Frontend API / Edge for **server-side evaluation**
 - Segments owned; orphan segments cleaned  
 
 **Good:** backend enforces entitlement flags. **Bad:** “admin mode” only checked in React.
-
----
 
 ## References
 

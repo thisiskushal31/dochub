@@ -4,8 +4,6 @@
 
 This topic explains how a Dart program is structured and what the basic syntax rules are. By the end you will understand **where execution starts**, **how to run a program**, and **how to add comments and follow naming rules**. If you are a complete beginner, this is the first topic where you will write and run code.
 
----
-
 ## The entry point: main()
 
 Every **runnable** Dart program has exactly one **top-level** function named **`main`**. When you run the program, the Dart runtime starts by calling **`main()`**. Nothing runs before that. So the first thing you need in a runnable file is a **`main`** function.
@@ -18,8 +16,6 @@ void main() {
 ```
 
 This program does nothing and then exits. The **curly braces** **`{ }`** are required: they mark the **body** of the function. You will put your statements inside that body.
-
----
 
 ## Your first real program: Hello World
 
@@ -47,8 +43,6 @@ void main() {
 
 If you see that, you have written and run your first Dart program. From here, every other topic adds more building blocks (variables, types, control flow, functions, classes, etc.) that you still put inside **`main()`** or in other functions that **`main()`** calls.
 
----
-
 ## Command-line arguments (optional)
 
 Sometimes you want to pass arguments from the command line (e.g. **`dart run hello.dart Alice`**). You can declare **`main`** to accept a list of strings:
@@ -65,15 +59,11 @@ void main(List<String> arguments) {
 
 **`arguments`** is a **`List<String>`**: each command-line argument is one string. **`arguments.isEmpty`** is true when nothing was passed; **`arguments.first`** is the first argument. You will learn **if/else** and **string interpolation** (**`${...}`**) in later topics; for now it is enough to know that **`main`** can take this parameter to read CLI arguments.
 
----
-
 ## Statements and semicolons
 
 In Dart, **statements** are separated by **semicolons** **`;`**. Every statement that does something (assignment, function call, return, etc.) ends with **`;`**. Forgetting a semicolon can cause parse errors or combine lines in a way you did not intend. So: **always end statements with** **`;`**.
 
 Newlines and indentation are for **readability**. The compiler does **not** use indentation to decide where a block starts or ends; it uses **`{ }`** and **`;`**. So use consistent indentation (e.g. two or four spaces) so that you and others can read the code easily.
-
----
 
 ## Comments
 
@@ -106,8 +96,6 @@ void sayHello() {
 
 As a beginner, use **`//`** to add short notes above or beside lines. Use **`///`** when you write functions or classes that others (or you later) will reuse.
 
----
-
 ## Code organization: files and libraries
 
 Dart code lives in **files**. **Every Dart file is a library** (with an optional **`library`** name at the top). You do not need to write **`library`** for simple programs; the file itself is the unit of code. When your program grows, you **split** it into multiple files and **import** them. For example:
@@ -119,8 +107,6 @@ import 'package:my_package/my_lib.dart';  // A package you depend on.
 
 Topic **9 (Libraries and imports)** explains **`import`**, **`show`**, **`hide`**, **`as`**, and **deferred** loading. For your first programs, a single file with **`main()`** is enough. Just know that real projects are organized into many files and libraries.
 
----
-
 ## Basic syntax rules (what you can name and write)
 
 - **Identifiers** are names for variables, functions, classes, etc. They can contain **letters**, **digits**, and **underscores** **`_`**, but they **cannot start with a digit**. Examples: **`name`**, **`userName`**, **`count2`**, **`_private`**.
@@ -129,13 +115,9 @@ Topic **9 (Libraries and imports)** explains **`import`**, **`show`**, **`hide`*
 
 You do not need to memorize every keyword now. As you read the next topics (variables, types, control flow, functions), you will see the same rules applied over and over.
 
----
-
 ## What comes next
 
 You now know: **execution starts at** **`main()`**; you **run** a file with **`dart run`**; you **end statements with** **`;`** and use **comments** and **libraries** to organize code. Next, **Topic 4 (Variables and null safety)** shows how to store data in variables and what null safety means so your programs can work with real data safely.
-
----
 
 ## Further reading
 

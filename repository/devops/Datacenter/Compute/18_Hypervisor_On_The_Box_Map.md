@@ -2,8 +2,6 @@
 
 [← Previous](./17_Compute_Failure_Walks.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 The metal underneath does not change when you install a hypervisor—but **what owns CPUs, memory, and devices** does. This chapter maps bare-metal platform facts onto on-ramp hypervisor chapters.
@@ -24,8 +22,6 @@ The metal underneath does not change when you install a hypervisor—but **what 
 | CPU affinity for VMs | NUMA nodes ([8](./8_Memory_Population_And_NUMA.md)) |
 | Shared datastore | Storage paths ([Storage-Physical](../Storage-Physical/README.md)) |
 | Nested virt | Extra complexity—rarely needed |
-
----
 
 ## 2. Advanced concepts
 
@@ -54,8 +50,6 @@ Jobs: bare-metal admin vs virtualization admin ([Jobs](../Jobs/README.md)).
 
 Same map worldwide. Licensing and support matrices differ by product—consult current vendor docs (no cert dump here).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -74,8 +68,6 @@ Same map worldwide. Licensing and support matrices differ by product—consult c
 - Never assume hypervisor features replace hall redundancy  
 
 **Good:** metal standards first, virt features second. **Bad:** HA theater on single PDU; NUMA-blind VIP VMs; ignored BMC under ESXi.
-
----
 
 ## References
 

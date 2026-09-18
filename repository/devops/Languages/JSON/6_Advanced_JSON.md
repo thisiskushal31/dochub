@@ -146,8 +146,6 @@ Beyond the core format, several widely used standards are JSON at the wire level
 
 **OpenAPI** (Swagger) describes REST APIs in YAML or JSON. Request and response bodies are described using **JSON Schema**. The description document itself is JSON (or YAML); the actual API requests and responses are JSON. Use for documentation, code generation, and validation of API contracts.
 
----
-
 ## Further reading
 
 - [RFC 8259 – JSON](https://datatracker.ietf.org/doc/html/rfc8259)

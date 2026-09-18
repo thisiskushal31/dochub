@@ -11,8 +11,6 @@ How OCaml programs call C functions and link native libraries: stub code that co
 external my_stub : int -> int = "my_stub"
 ```
 
----
-
 ## 1. Why FFI appears
 
 FFI reaches operating system APIs, cryptographic libraries (e.g. OpenSSL), databases (e.g. SQLite), media codecs, and legacy C codebases. The ecosystem provides many bindings; you write custom stubs when you need coverage the ecosystem does not ship or when you need tight control over allocation and lifetimes.
@@ -22,8 +20,6 @@ Operations pain usually shows up here: missing `-dev` packages on Linux CI, inco
 ```bash
 pkg-config --libs openssl
 ```
-
----
 
 ## 2. Stubs: marshaling values
 
@@ -41,8 +37,6 @@ CAMLprim value stub_twice(value n) {
 }
 ```
 
----
-
 ## 3. Ctypes
 
 Ctypes describes C types and function signatures in OCaml and can call into C or help generate bindings. It reduces boilerplate but does not remove obligation: incorrect struct layout or calling convention still corrupts memory.
@@ -53,8 +47,6 @@ Ctypes describes C types and function signatures in OCaml and can call into C or
 (* let t = structure "point" in *)
 (* let () = field t "x" int *)
 ```
-
----
 
 ## 4. Linking and dune
 
@@ -70,8 +62,6 @@ Reproducible builds pin not only opam packages but also base-image packages (for
   (names stub)))
 ```
 
----
-
 ## 5. The runtime lock and re-entrancy
 
 The OCaml runtime coordinates the **GC** and **mutator** with rules about **which** OS thread may execute OCaml code at a time. C stubs that call **back** into OCaml, or C libraries that invoke **callbacks** from **worker** threads, must follow the **locking** contract for your compiler version: acquire the **runtime lock** before touching the OCaml heap from a foreign thread, and never hold OCaml-visible structures across arbitrary C concurrency without a documented plan.
@@ -83,8 +73,6 @@ Getting this wrong produces **intermittent** crashes—exactly the class of bugs
    (exact API is version-specific — see the manual’s interfacing chapter). */
 ```
 
----
-
 ## 6. GC roots and long-lived C pointers
 
 If C **stores** a pointer to an OCaml value between calls (for example in a **handle** struct), the GC must know that value is **live** even if no OCaml variable references it. The manual describes **global** and **local** **registration** of roots; forgetting **release** leaks or leads to **use-after-free** when the value is collected.
@@ -94,8 +82,6 @@ If C **stores** a pointer to an OCaml value between calls (for example in a **ha
 ```c
 /* caml_register_global_root(&global_ocaml_value); … caml_remove_global_root … */
 ```
-
----
 
 ## 7. ABI compatibility and upgrade discipline
 
@@ -111,8 +97,6 @@ Treat FFI bindings as versioned interfaces: run compatibility tests against ever
 ocamlopt -version
 cc --version
 ```
-
----
 
 ## 8. Strings, bytes, and buffers at the boundary
 
@@ -131,8 +115,6 @@ Bytes.set b 0 'H';
 Bytes.to_string b
 ```
 
----
-
 ## Advanced use cases and implementation
 
 Linked shared objects pick up security updates from the OS distribution independently of OCaml source—record their versions in release notes when auditing production artifacts.
@@ -144,8 +126,6 @@ TLS verification, path sanitization, and input limits must hold inside C-backed 
 let read_config path =
   if String.length path > 4096 then Error `path_too_long else Ok path
 ```
-
----
 
 ## References
 

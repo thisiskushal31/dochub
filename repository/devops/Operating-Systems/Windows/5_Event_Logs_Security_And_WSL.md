@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Windows commands and PowerShell](./1_Windows_Commands_And_PowerShell.md), [Services and networking](./2_Services_And_Networking.md). Here: **Windows Event Log**, **user management (local)**, **security from the OS view** (Group Policy, Windows Defender, audit), and **WSL (Windows Subsystem for Linux)** in depth for DevOps and cross-platform workflows.
 
----
-
 ## User management (local)
 
 Windows **local users and groups** live on the machine (not in Active Directory). Used for local logins, service accounts, and admin access. **Domain** users are managed in AD; here we cover **local** only.
@@ -57,8 +55,6 @@ Remove-LocalGroupMember -Group "Administrators" -Member "DeployUser"
 **GUI:** **lusrmgr.msc** (Local Users and Groups) — create users, add to groups, set password policy. On **Home** editions this snap-in may be missing; use **net user** or PowerShell instead.
 
 So **how Windows does user management (local)**: **net user** / **net localgroup** (cmd), **Get-LocalUser**, **New-LocalUser**, **Add-LocalGroupMember** (PowerShell), and **lusrmgr.msc** (GUI). For **domain** users and Group Policy, see “Security” below and [Services and networking](./2_Services_And_Networking.md).
-
----
 
 ## Windows Event Log
 
@@ -123,8 +119,6 @@ wevtutil cl System
 - **Application crashes:** **Application** log by provider (e.g. Application Error, .NET Runtime).
 - **Boot and shutdown:** **System** log for kernel and service start/stop around the time of reboot.
 
----
-
 ## Security from the OS view (Windows)
 
 ### Group Policy (GPO)
@@ -176,8 +170,6 @@ auditpol /set /subcategory:"Logon" /success:enable /failure:enable
 ```
 
 **Event IDs** (examples): 4624/4625 (logon), 4648 (explicit credentials), 4663 (object access), 4672 (admin logon). Use **Get-WinEvent** with filters to query Security log; forward to SIEM or central logging for compliance.
-
----
 
 ## WSL (Windows Subsystem for Linux) in depth
 
@@ -239,16 +231,12 @@ From **inside WSL** you have a normal Linux shell (bash, etc.): `apt`/`dnf`, `sy
 - **SSH:** Use the Linux OpenSSH inside WSL; agent and keys in `~/.ssh` work as on Linux.
 - **Containers:** Docker Desktop can use the WSL 2 engine; build and run Linux containers without a separate Linux VM.
 
----
-
 ## Summary
 
 - **User management (local):** **net user**, **net localgroup** (cmd); **Get-LocalUser**, **New-LocalUser**, **Set-LocalUser**, **Add-LocalGroupMember**, **Get-LocalGroupMember** (PowerShell); **lusrmgr.msc** (GUI). Domain users are in Active Directory; local users are per-machine.
 - **Event Log:** **Get-WinEvent** and **Get-EventLog** (PowerShell), **wevtutil** (cmd); System, Application, Security logs; filter by time, level, provider, ID for troubleshooting and audit.
 - **Security:** **Group Policy** (gpresult, gpupdate; GPO for domain); **Windows Defender** and firewall; **Audit policy** for Security log; use with central logging/SIEM for compliance.
 - **WSL:** **WSL 2** for full Linux; install and manage with `wsl --install`, `wsl -l -v`, `wsl --shutdown`; run Linux commands and scripts from PowerShell; use for Bash, Docker, git, and parity with Linux DevOps.
-
----
 
 ## Further reading
 

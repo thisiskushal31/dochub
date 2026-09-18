@@ -2,8 +2,6 @@
 
 [← Back to IAC](../README.md) · [Servers](../../Servers/README.md) · [CiCd VM deploy](../../CiCd/18_VM_MIG_And_Host_Based_Deploy.md)
 
----
-
 ## 1. Concepts
 
 **Packer** builds **machine images** (AMI, Azure Image, GCE image, QCOW2, …) from a template: provision once (Ansible/shell), seal an image, roll that image across fleets.
@@ -13,8 +11,6 @@
 **Disconfirm:** Packer is **not** config management for already-running hosts ([Ansible](../Ansible/README.md)). An image bake is **not** a substitute for patch cadence—you rebuild and redeploy.
 
 **Confirm:** What artifact does Packer produce, and what consumes it?
-
----
 
 ## 2. Advanced concepts
 
@@ -27,8 +23,6 @@
 
 Immutable infra: change code → new image → rolling replace ([CiCd/18](../../CiCd/18_VM_MIG_And_Host_Based_Deploy.md)).
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -38,8 +32,6 @@ Immutable infra: change code → new image → rolling replace ([CiCd/18](../../
 | Hybrid | Same playbooks; different builders per cloud |
 
 **Staff checklist:** pin plugin versions; scan images; don’t bake secrets; retire old image versions.
-
----
 
 ## References
 

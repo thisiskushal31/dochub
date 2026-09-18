@@ -2,8 +2,6 @@
 
 [← Previous](./02_Organization_Project_Process_And_Access.md) · [README](./README.md) · [Next: First pipeline →](./04_First_Pipeline_And_Project_Setup.md)
 
----
-
 ## 1. Concepts
 
 Azure Pipelines automates **build, test, and deploy**. The durable objects:
@@ -37,8 +35,6 @@ trigger → pipeline
 
 Classic **build** + classic **release** is the old TFS-shaped pattern. Multi-stage **YAML** replaces most of that for greenfield.
 
----
-
 ## 2. Advanced concepts
 
 ### Tasks vs scripts
@@ -66,8 +62,6 @@ Classic releases: **artifacts** from builds → **stages** (Dev/QA/Prod) → **t
 
 YAML multi-stage works on recent Server versions; confirm your Server version for feature gates (environments, checks, deployment strategies).
 
----
-
 ## 3. Applications and use cases
 
 | Estate | Shape |
@@ -77,8 +71,6 @@ YAML multi-stage works on recent Server versions; confirm your Server version fo
 | GitHub code + Azure deploy | Pipeline in Azure DevOps pointing at GitHub repo |
 
 **Good:** one pipeline definition path per product; digest promotion. **Bad:** copy-paste classic definitions per environment with divergent tasks.
-
----
 
 ## References
 

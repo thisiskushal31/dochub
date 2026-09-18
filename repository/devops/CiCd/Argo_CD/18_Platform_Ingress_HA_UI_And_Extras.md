@@ -2,8 +2,6 @@
 
 [← Previous](./17_Sources_Private_Repos_And_Parameters.md) · [Argo CD](./README.md)
 
----
-
 ## 1. Concepts — everything else operators configure
 
 Chapters 15–17 cover Application and source config. This chapter covers **exposing**, **hardening**, **scaling**, and **UI/ops extras** so the feature map in [14](./14_Feature_And_Configuration_Coverage_Map.md) has a home for each remaining class.
@@ -45,8 +43,6 @@ Related scale features:
 | Bootstrapping | App-of-Apps / declarative Projects |
 
 Least-privilege cluster credentials; prefer impersonation for sync identity where enabled ([11](./11_Security_Tenancy_Hydrator_And_Troubleshooting.md)).
-
----
 
 ## 2. Advanced concepts — UI and operator feature catalog
 
@@ -91,8 +87,6 @@ Triggers (on sync failed, degraded, …) · templates · services (Slack, email,
 - Impersonation SAs least-privilege  
 - Management cluster treated as tier-0  
 
----
-
 ## 3. Applications and use cases — putting the platform together
 
 ### Recommended production baseline
@@ -114,8 +108,6 @@ Non-HA, port-forward, `default` Project briefly, one website Application ([12](.
 ### After this chapter
 
 You have walked every **feature class** in [14](./14_Feature_And_Configuration_Coverage_Map.md). For field-level YAML on a specific minor version, open the References below for that version — the handbook taught **what exists, why, and how to choose**.
-
----
 
 ## References
 

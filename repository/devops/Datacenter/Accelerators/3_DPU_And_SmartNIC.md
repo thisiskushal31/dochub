@@ -2,8 +2,6 @@
 
 [← Previous](./2_GPU_Interconnect_Ideas.md) · [README](./README.md) · [Next: FPGA and IPU →](./4_FPGA_And_IPU.md)
 
----
-
 ## 1. Concepts
 
 A **SmartNIC** / **DPU** (Data Processing Unit) is a NIC with substantial compute/offload (often its own cores, memory, accelerators) that can run networking, security, storage, or hypervisor dataplane functions off the host CPU.
@@ -20,8 +18,6 @@ A **SmartNIC** / **DPU** (Data Processing Unit) is a NIC with substantial comput
 ### Where it sits
 
 PCIe slot (or onboard); ports to ToR like a NIC; management via vendor tools/BMC-adjacent channels; sometimes hosts the hypervisor datapath (cloud-style).
-
----
 
 ## 2. Advanced concepts
 
@@ -52,8 +48,6 @@ NVIDIA BlueField-class, AMD/Pensando-class, Intel IPU-adjacent products, cloud c
 
 See [4](./4_FPGA_And_IPU.md). Overlap exists; classify by *what you operate* (NIC offload appliance vs reconfigurable card).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -72,8 +66,6 @@ See [4](./4_FPGA_And_IPU.md). Overlap exists; classify by *what you operate* (NI
 - Never leave factory default DPU creds  
 
 **Good:** lifecycle parity with hosts, dual-home, monitored. **Bad:** invisible second computer; single ToR; default passwords.
-
----
 
 ## References
 

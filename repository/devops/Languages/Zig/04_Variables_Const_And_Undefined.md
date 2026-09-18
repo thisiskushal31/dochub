@@ -8,8 +8,6 @@ How Zig binds names to values: **`const` vs `var`**, initialization rules, and *
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. `const` by default, `var` by need
@@ -88,8 +86,6 @@ fn demo() void {
 
 Do not mix those ideas.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Namespace-level (global) variables
@@ -140,8 +136,6 @@ fn sendPassword(buf: []u8) void {
 
 When you see `= undefined`, ask: **where is the first write, and where is the first read?**
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Why this chapter matters |
@@ -154,8 +148,6 @@ When you see `= undefined`, ask: **where is the first write, and where is the fi
 
 **Whole-engineering picture:** initialization discipline is a large fraction of Zig’s practical safety—before you debate allocators.
 
----
-
 ## 4. Staff-level review checklist
 
 - New bindings prefer `const` unless mutation is required and obvious.
@@ -163,8 +155,6 @@ When you see `= undefined`, ask: **where is the first write, and where is the fi
 - No reads from undefined buffers on success paths (and none on failure paths that still observe the data).
 - Mutable globals are justified in writing or removed.
 - Buffers that leave the process are fully defined (or scrubbed per policy).
-
----
 
 ## References
 

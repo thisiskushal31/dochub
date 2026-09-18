@@ -54,8 +54,6 @@ Understanding LaTeX helps you: read and review `.tex` and `.bib` files; maintain
 
 Choosing LaTeX is a trade-off: it rewards structure and reproducibility and fits automation and engineering workflows, but it requires learning the markup and toolchain. For structured, technical, or generated documents where quality and consistency matter, LaTeX remains a standard option alongside Markdown-based and WYSIWYG alternatives.
 
----
-
 ## Further reading
 
 - [LaTeX Project — Documentation](https://latex-project.org/help/documentation/)

@@ -2,8 +2,6 @@
 
 [← Previous](./13_Deploy_Containers_ACR_Container_Apps_And_AKS.md) · [README](./README.md) · [Next: Observability & other →](./15_Observability_Hooks_And_Non_Azure_Targets.md)
 
----
-
 ## 1. Concepts
 
 Pipelines often deploy **infrastructure** as well as applications. Common Azure-centric tools:
@@ -22,8 +20,6 @@ PR → plan/validate
 main → apply to non-prod
 manual/approval environment → apply prod
 ```
-
----
 
 ## 2. Advanced concepts
 
@@ -46,8 +42,6 @@ Self-hosted agents often required for SSH into private estates. Inventories and 
 
 Those resources belong in **IaC templates**, not ad-hoc portal clicks. Pipelines applies the template; architecture literacy stays in [Cloud/4](../../Cloud/4_Azure_Literacy.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pipeline shape |
@@ -57,8 +51,6 @@ Those resources belong in **IaC templates**, not ad-hoc portal clicks. Pipelines
 | App + infra in one product | Separate stages; infra before app; compatible versions |
 
 **Good:** plan on PR; apply with approval. **Bad:** `apply` from developer laptops with personal cloud admin creds as the only path.
-
----
 
 ## References
 

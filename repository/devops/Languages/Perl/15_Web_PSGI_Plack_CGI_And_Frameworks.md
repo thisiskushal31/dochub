@@ -6,10 +6,6 @@
 
 How Perl **HTTP** applications are **invoked** by servers—from **CGI** and **FastCGI** to **PSGI**/**Plack** and **`mod_perl`**—and how **Mojolicious** and **Dancer2** fit into **deployment** and **security** reviews. The goal is **operations literacy**: what **process** model you are running, where **`@INC`** and **secrets** live, and what **restarts** cost.
 
----
-
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -22,15 +18,11 @@ Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3
 
 **Operations:** Prefer **PSGI** for **new** services; keep **CGI** knowledge for **legacy** **shared hosting** and **ancient** **intranet** tools.
 
----
-
 ### 2. FastCGI and PHP-FPM–style models
 
 **FastCGI** keeps **persistent** Perl workers behind a **socket** or **TCP** port. **Startup** cost moves to **worker** boot; **memory** can **grow** with **leaks** in **XS** or **circular** refs (chapter 7).
 
 **Configuration:** **Pool** size, **request** timeouts, and **max requests** per worker (recycle) mirror **PHP-FPM** tuning—tune for **Perl**’s **interpreter** size, often **larger** than **PHP** workers.
-
----
 
 ### 3. PSGI and Plack: the modern interface
 
@@ -42,8 +34,6 @@ Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3
 
 **`psgi.errors`:** Should go to **stderr** / **journald** in **containers**—align with **chapter 11** logging discipline.
 
----
-
 ### 4. `mod_perl`: Perl inside Apache httpd
 
 **`mod_perl`** embeds **`libperl`** in **Apache**. **Handlers** run in the **httpd** process: **shared** memory, **XS** **crash** risk takes down **workers**, and **reload** semantics are **coarse** compared to **PSGI** **zero-downtime** **socket** handoffs.
@@ -51,8 +41,6 @@ Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3
 **Security:** **File** permissions on **`.pm`** files and **`@INC`** matter **more** when the **web server** can **`require`** arbitrary paths. **Upgrade** **httpd** + **mod_perl** + **Perl** in **lockstep**.
 
 **When you still see it:** **Enterprise** **intranets**, **old** **CMS** plugins, **custom** **authentication** modules.
-
----
 
 ### 5. Mojolicious and Dancer2 (representative frameworks)
 
@@ -67,13 +55,9 @@ Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3
 - **Upload** size limits and **temp** disk (**chapter 9** **`File::Temp`**).
 - **Dependency** **pins** (chapter 6) for **framework** **plugins**.
 
----
-
 ### 6. Testing web apps
 
 **`Plack::Test`** and **`Test::Mojo`** send **synthetic** requests without **binding** a **port**—use them in **CI** for **smoke** tests on **routes** and **headers**.
-
----
 
 ## 2. Advanced concepts
 
@@ -81,16 +65,12 @@ Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3
 
 **Serverless:** Perl is **uncommon** on **AWS Lambda**-style platforms; if you **must**, treat **cold start** and **layer** **size** as **primary** **SLO** risks.
 
----
-
 ## 3. Applications and use cases
 
 - **nginx + Starman / uWSGI:** **Reverse** **proxy** **`X-Forwarded-*`** **trust**—**Mojo**/**Dancer** **behind** **TLS** **edge** is the **default** **Kubernetes**/**VM** pattern.
 - **Legacy CGI → PSGI:** **CGI::Emulate::PSGI** **shims** for **incremental** **moves**—**load** **test** **before** **cutover** (References).
 - **Enterprise mod_perl:** **Apache** **reload** **coordination** with **Perl** **upgrades**—**long-lived** **interpreter** = **memory** **growth** **monitoring** mandatory.
 - **Catalyst and older stacks:** **[Catalyst](https://metacpan.org/pod/Catalyst::Runtime)** remains in **legacy** **monoliths**—same **PSGI** **deployment** **options** as **Dancer2** when mounted under **Plack**; **budget** **time** for **dependency** **archeology** on **upgrades**.
-
----
 
 ## References
 

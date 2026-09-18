@@ -6,8 +6,6 @@
 
 How Rust separates **host** (where you compile) from **target** (where the binary runs), how **rustup** installs target stdlib support, how **Cargo** selects profiles for release, and what operators must verify for **cross-linkers**, **static linking**, **strip/debuginfo**, and **reproducible** artifacts. After this chapter you should be able to ship a release binary for another triple without guessing linker failures.
 
----
-
 ## 1. Concepts
 
 ### 1. Host vs target triple
@@ -65,8 +63,6 @@ Rust emits object code for the target; the **system linker** (or a configured cr
 - Use a container or VM whose userspace matches the target for “compile inside the target environment” instead of true cross.
 
 Native crates with `build.rs` that compile C need a **C cross-compiler**, not only `rustup target add`.
-
----
 
 ## 2. Advanced concepts
 
@@ -193,8 +189,6 @@ Same caution as chapter 15: global `RUSTFLAGS` apply broadly—prefer Cargo prof
 
 Microbenchmarks that run under the **dev/debug** profile measure the wrong binary: inlining, LLVM opts, and panic/`debug_assertions` differ from what you ship. Run Criterion-class (or Cargo bench) harnesses in **release** (Cargo’s bench profile is release-like by default—verify your setup). Use **`std::hint::black_box`** (or the harness equivalent) so the optimizer cannot delete the work under measurement. Still treat microbenches as optional signals (chapter 15): noisy CI, cache effects, and I/O-bound paths lie; prefer release profiling of real workloads for capacity calls.
 
----
-
 ## 3. Applications and use cases + staff checklist
 
 ### Software engineering
@@ -232,8 +226,6 @@ Microbenchmarks that run under the **dev/debug** profile measure the wrong binar
 - Portable release CI does **not** bake `target-cpu=native` (or ambient laptop `RUSTFLAGS`) into public artifacts.
 - Benchmarks run release-like profiles with `black_box`/harness discipline; not used as noisy merge blockers.
 - WASM (if shipped) has a size budget and CI check.
-
----
 
 ## References
 

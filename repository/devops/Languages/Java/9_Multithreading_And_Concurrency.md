@@ -2,13 +2,9 @@
 
 Java lets you run multiple threads within one process so that several tasks can make progress concurrently. This topic covers what threads are, how to create and run them (Runnable vs extending Thread), the thread lifecycle and states, priorities and daemon threads, important Thread and static methods (start, run, join, sleep, yield, interrupt), synchronization with monitors and the synchronized keyword, and thread pools (ExecutorService, fixed and cached pools). The goal is to understand when and how to use threads and how to coordinate access to shared state safely.
 
----
-
 ## Why multithreading?
 
 A **thread** is a lightweight unit of execution within a process. A single Java process can have many threads; each has its own call stack and program counter but shares the process memory (heap, static fields). Multithreading is used to use multiple CPU cores, keep the UI responsive while doing I/O or computation in the background, serve many requests concurrently in servers, or overlap I/O wait with computation. The OS schedules threads; the JVM maps Java threads to native threads, so thread execution is interleaved and preemptible. Without care, sharing mutable state between threads leads to **race conditions** (unpredictable results) or **visibility** issues (one thread not seeing another’s updates); synchronization and the Java Memory Model address that.
-
----
 
 ## Creating and starting threads
 
@@ -42,23 +38,17 @@ In both cases you must call **start()**, not **run()**. Calling `run()` directly
 
 **Runnable vs Thread: when to use which.** Prefer implementing `Runnable` when the task is “just work” and you want to keep the option to extend another class, or when the same runnable might be executed by multiple threads or submitted to an executor. Extend `Thread` only when you need to override other thread behavior (which is rare). Lambda expressions make Runnable concise: `new Thread(() -> doWork()).start();`.
 
----
-
 ## Thread lifecycle and states
 
 A thread is in one of these states (Thread.State enum): **NEW** (created, not started), **RUNNABLE** (may be running or ready to run—OS decides), **BLOCKED** (waiting to acquire a monitor lock), **WAITING** (waiting indefinitely for another thread to notify, e.g. Object.wait()), **TIMED_WAITING** (waiting with a timeout, e.g. Thread.sleep(), wait(timeout)), **TERMINATED** (run() finished or uncaught exception). After TERMINATED the thread cannot be run again. Transitions: start() moves NEW → RUNNABLE; when run() returns or throws, RUNNABLE → TERMINATED. Blocking and waiting states occur when the thread calls sleep, wait, lock acquisition, join, etc.
 
 **State transitions in detail.** From RUNNABLE, a thread enters BLOCKED when it tries to enter a `synchronized` block and another thread holds the lock. It enters WAITING when it calls `Object.wait()` (no timeout) or `Thread.join()` (no timeout); it enters TIMED_WAITING when it calls `Thread.sleep(ms)`, `Object.wait(timeout)`, or `Thread.join(timeout)`. Returning from wait/notify or acquiring the lock moves the thread back to RUNNABLE. The JVM does not distinguish “running” from “ready” in the state enum; both are reported as RUNNABLE. Use thread dumps (e.g. jstack) to see what each thread is doing when debugging deadlocks or stalls.
 
----
-
 ## Thread priorities and daemon threads
 
 Every thread has a **priority** (1–10, constants MIN_PRIORITY, NORM_PRIORITY, MAX_PRIORITY). The scheduler can prefer higher-priority threads but is not required to; behavior is platform-dependent. Do not rely on priority for correctness.
 
 A **daemon** thread is a background thread that does not keep the JVM alive. When all non-daemon threads finish, the JVM exits and daemon threads are abandoned. Set with `setDaemon(true)` before start(); the JVM does not wait for daemon threads to finish. Use daemon threads for housekeeping (e.g. cleanup, monitoring) that can be cut off at shutdown. The main thread is non-daemon; threads created by it are non-daemon by default. If you call `setDaemon(true)` after the thread has already been started, IllegalThreadStateException is thrown. Daemon threads are not meant to perform critical shutdown work (e.g. flushing buffers, closing connections); use shutdown hooks or explicit coordination for that.
-
----
 
 ## Important Thread methods
 
@@ -74,8 +64,6 @@ A **daemon** thread is a background thread that does not keep the JVM alive. Whe
 - **Thread.sleep(long millis)** — Current thread goes to TIMED_WAITING for at least the given milliseconds; can throw InterruptedException.  
 - **Thread.yield()** — Hint to the scheduler that the current thread is willing to yield; no guarantee.  
 - **Thread.holdsLock(Object)** — Returns true if the current thread holds the monitor lock on the given object.
-
----
 
 ## Synchronization and monitors
 
@@ -107,8 +95,6 @@ synchronized (PD) {
 
 **Synchronized method vs block.** A synchronized instance method is equivalent to wrapping the method body in `synchronized (this) { ... }`. A static synchronized method uses the lock of the Class object. If you need to lock on a different object (e.g. a private final lock object to avoid external code locking on your instance), use an explicit synchronized block. Lock on the same object for all code that guards the same shared state; locking on different objects gives no mutual exclusion.
 
----
-
 ## Thread pools (ExecutorService)
 
 Creating many short-lived threads has overhead. A **thread pool** keeps a set of worker threads and reuses them for many tasks. You submit tasks (Runnable or Callable); the pool assigns them to workers. **ExecutorService** is the main interface; **Executors** provides factory methods.
@@ -133,21 +119,15 @@ executor.shutdown();
 
 **Awaiting termination.** After shutdown(), the pool does not accept new tasks but continues running already-submitted tasks. To block until all tasks finish, use `awaitTermination(timeout, unit)` on the ExecutorService. shutdownNow() interrupts worker threads; tasks that do not respond to interruption may keep running until they complete.
 
----
-
 ## join and InterruptedException
 
 **join()** blocks the calling thread until the target thread terminates. Overloaded **join(millis)** returns after the thread dies or the timeout. Useful when the main thread (or another) must wait for workers to finish before proceeding. **InterruptedException** is thrown when the waiting thread is interrupted (e.g. another thread calls interrupt() on it). Handle it by restoring interrupt status (Thread.currentThread().interrupt()) and exiting or rethrowing, so higher-level code can react to cancellation.
 
 **Interrupt handling in run().** If your run() catches InterruptedException (e.g. from sleep or wait), either rethrow it or call Thread.currentThread().interrupt() before returning so that callers (or the executor) know the thread was interrupted. Swallowing the exception without restoring interrupt status makes cancellation and shutdown harder to implement correctly. Blocking methods that throw InterruptedException are the standard way to make long-running tasks responsive to cancellation.
 
----
-
 ## Summary
 
 Use Runnable or Thread to define work; start threads with start(), not run(). Threads go through NEW → RUNNABLE → (optionally BLOCKED/WAITING/TIMED_WAITING) → TERMINATED. Use sleep, join, interrupt, and priorities as needed; daemon threads do not keep the JVM running. Synchronize access to shared mutable state with synchronized blocks or methods so only one thread at a time runs the critical section and updates are visible; Java monitors are reentrant, but be aware of deadlock when holding multiple locks. Prefer thread pools (ExecutorService) over creating many threads by hand; use submit for results or cancellation (Future) and shutdown/awaitTermination for clean shutdown. Handle InterruptedException and restore interrupt status so cancellation and shutdown behave correctly.
-
----
 
 ## Further reading
 

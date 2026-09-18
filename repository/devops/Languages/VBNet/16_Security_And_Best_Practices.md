@@ -8,8 +8,6 @@
 
 This is not a malware or evasion course. Deeper shared NuGet/testing habits: [C# NuGet and testing](../CSharp/18_NuGet_And_Testing.md). Broader C# security notes: [C# security chapter](../CSharp/20_Security_And_Best_Practices.md). Office macro defense is a different world—[VBA](../VBA/README.md).
 
----
-
 ## 1. Concepts
 
 ### 1. Same platform, language-specific footguns
@@ -84,8 +82,6 @@ Classic rules still win:
 
 It does not replace input validation—but **Off** makes reviews slower and misses easier.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Deserialization caution
@@ -119,8 +115,6 @@ Dynamic load of arbitrary assemblies or scripts expands trust. If the product ne
 
 Log enough to debug; do not log tokens, passwords, or full personal data by default. Desktop LOB often talks more than services—set retention and access on log folders.
 
----
-
 ## 3. Applications and use cases
 
 | Role | “Secure enough” looks like |
@@ -131,8 +125,6 @@ Log enough to debug; do not log tokens, passwords, or full personal data by defa
 | Modernizer | Risky APIs quarantined; tests before TFM jump |
 
 Pair with WinForms/services doors (ch **15**) when reviewing desktop persistence and service accounts.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -146,8 +138,6 @@ Pair with WinForms/services doors (ch **15**) when reviewing desktop persistence
 - Confirm TLS and crypto use platform defaults/APIs—not home-rolled.
 - Keep error messages user-safe; send detail to protected logs only.
 - Separate Office VBA macro policy questions ([VBA](../VBA/README.md)) from VB.NET application reviews.
-
----
 
 ## References
 

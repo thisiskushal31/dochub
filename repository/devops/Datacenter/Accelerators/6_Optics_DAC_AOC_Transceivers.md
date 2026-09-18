@@ -2,8 +2,6 @@
 
 [← Previous](./5_HBM_And_Accelerator_Memory.md) · [README](./README.md) · [Next: PTP →](./7_PTP_Grandmaster_And_Time.md)
 
----
-
 ## 1. Concepts
 
 High-speed links use **direct attach copper (DAC)**, **active optical cables (AOC)**, or **transceivers + fiber**. Form factors (SFP/SFP+/SFP28, QSFP/QSFP28/QSFP-DD, OSFP, …) define the cage—not the protocol alone.
@@ -19,8 +17,6 @@ High-speed links use **direct attach copper (DAC)**, **active optical cables (AO
 ### Where it sits
 
 NIC/HBA/GPU/DPU cages ↔ ToR/leaf/spine or breakout panels; trunks in trays; labels mandatory.
-
----
 
 ## 2. Advanced concepts
 
@@ -47,8 +43,6 @@ Fabric equipment roles: [Fabric-Physical](../Fabric-Physical/README.md). GPU mul
 
 Same form factors worldwide; coded optics policies differ by switch vendor. Keep approved SKU list.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -67,8 +61,6 @@ Same form factors worldwide; coded optics policies differ by switch vendor. Keep
 - Never force wrong-form cages with adapters in prod without eng approval  
 
 **Good:** clean labeled plant, approved SKUs, DOM watched. **Bad:** dusty MPO; random eBay optics; DAC as 30 m hope.
-
----
 
 ## References
 

@@ -12,8 +12,6 @@
 @end
 ```
 
----
-
 ## 1. Interface and implementation
 
 Headers declare the contract; implementation files define behavior. **Designated initializers** and **`NS_UNAVAILABLE`** on the base **`init`** help subclasses and Swift see a single supported construction path.
@@ -52,8 +50,6 @@ NS_ASSUME_NONNULL_END
 
 **Nullability** macros (`NS_ASSUME_NONNULL_BEGIN`, pointer qualifiers) strongly affect generated Swift interfaces—treat public headers as API you are willing to support long term.
 
----
-
 ## 2. Property attributes
 
 | Attribute | Typical use |
@@ -74,8 +70,6 @@ Dot syntax calls accessors; direct ivar access bypasses **KVO** unless you coord
 @end
 ```
 
----
-
 ## 3. Protocols
 
 Protocols describe messages without fixing a class hierarchy. **`@optional`** methods require **`respondsToSelector:`** at runtime unless your code guarantees adoption.
@@ -88,8 +82,6 @@ Protocols describe messages without fixing a class hierarchy. **`@optional`** me
 @end
 ```
 
----
-
 ## 4. Categories
 
 Categories add methods to existing classes at link time. Two categories defining the same **selector** without coordination yields undefined which implementation wins—treat third-party categories on framework types as **supply-chain** risk.
@@ -99,8 +91,6 @@ Categories add methods to existing classes at link time. Two categories defining
 - (NSString *)my_trimmed;
 @end
 ```
-
----
 
 ## 5. Class extensions (private interface)
 
@@ -112,8 +102,6 @@ Extensions in the **`.m`** file hide implementation detail from public headers. 
 @end
 ```
 
----
-
 ## 6. Posing (legacy)
 
 **Posing** (substituting one class for another globally) is obsolete for new design. Know the term when reading old libraries or incident write-ups.
@@ -121,8 +109,6 @@ Extensions in the **`.m`** file hide implementation detail from public headers. 
 ```objc
 /* +[NSObject poseAsClass:] — removed long ago; do not use in new code */
 ```
-
----
 
 ## Advanced use cases and implementation
 
@@ -135,8 +121,6 @@ Extensions in the **`.m`** file hide implementation detail from public headers. 
 ```objc
 - (void)layoutSubviews NS_REQUIRES_SUPER;
 ```
-
----
 
 ## References
 

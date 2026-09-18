@@ -2,8 +2,6 @@
 
 [← Previous](./05_Events_And_Triggers.md) · [README](./README.md) · [Next: Contexts →](./07_Contexts_Expressions_And_Variables.md)
 
----
-
 ## 1. Concepts
 
 ### `needs` — the job graph
@@ -53,8 +51,6 @@ strategy:
 
 Expands to many jobs. Hard product limit: **256 jobs per workflow run** from a matrix (hosted and self-hosted). Design matrices with that ceiling in mind.
 
----
-
 ## 2. Advanced concepts
 
 ### Conditionals
@@ -77,8 +73,6 @@ Use sparingly. Prefer isolating flaky suites. Set `timeout-minutes` so hung jobs
 
 Plan-dependent concurrent job caps exist for standard vs larger runners (and separate macOS/GPU caps). Treat numbers as **plan facts to confirm**, not folklore.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Knob |
@@ -88,8 +82,6 @@ Plan-dependent concurrent job caps exist for standard vs larger runners (and sep
 | Safe prod | concurrency without cancel; environment gate |
 
 **Good:** matrix dimensions you actually support. **Bad:** 12×12 matrices that burn minutes and hit 256.
-
----
 
 ## References
 

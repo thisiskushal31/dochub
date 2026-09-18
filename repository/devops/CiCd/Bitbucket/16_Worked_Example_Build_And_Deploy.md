@@ -2,8 +2,6 @@
 
 [← Previous](./15_Security_Access_And_Workspace_Hardening.md) · [README](./README.md) · [Next: Best practices →](./17_Best_Practices_And_Cloud_Vs_Data_Center.md)
 
----
-
 ## 1. Concepts
 
 Narrative for a small web service on Bitbucket Cloud:
@@ -16,8 +14,6 @@ Narrative for a small web service on Bitbucket Cloud:
 - Merge checks: approvals + successful build  
 - Environments `staging` and `production` (prod deployers restricted)  
 - OIDC or scoped credentials for the target cloud  
-
----
 
 ## 2. Advanced concepts — pipeline shape
 
@@ -71,13 +67,9 @@ Replace echoes with real build/push/deploy (pipes or scripts). Pin pipe versions
 - Production waits for a human with permission.  
 - Jira issue key on the PR links the change ([14](./14_Jira_And_Atlassian_Integrations.md)).
 
----
-
 ## 3. Applications and use cases
 
 Reuse this shape for S3, K8s, or SSH targets ([12](./12_Deploy_Targets_And_Pipes_Catalog.md)) — only the deploy script/pipe changes.
-
----
 
 ## References
 

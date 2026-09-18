@@ -4,8 +4,6 @@
 
 This section is a **deep dive** into Groovy: factually correct, standalone, and written so you can go from zero knowledge to using the language in real projects. It answers four things: **What is this language?** **Why is it used?** **How can I use it?** **What are the use cases?** The section is organized as **concepts first (topics 1–13), then use cases (topics 14–15)**. You learn the basics (syntax, structure, types, strings, closures), then control flow and Java relation, then concepts (object orientation, GDK and style, tools, testing and DSLs and integration, metaprogramming and data APIs), and finally where and how Groovy is used—DevOps (Jenkins, Gradle) and security and use cases by role. Each topic is self-contained and in-depth: grammar-level detail, semantics, and concrete examples. Explanations come first, then code only when it illustrates the idea. For yet more depth, use the links in the Further reading section at the end of each file.
 
----
-
 ## How to read this section
 
 Read in **number order** for a single path: **concepts (1–13)** then **use cases (14–15)**.
@@ -14,8 +12,6 @@ Read in **number order** for a single path: **concepts (1–13)** then **use cas
 - **Topics 3–8 (Core language and Java relation):** Syntax, structure, types, strings, closures, operators, control flow, scripts and classes, differences with Java.
 - **Topics 9–13 (Concepts):** Object orientation, GDK and style, tools (groovyc, groovydoc, Grape, IDE), testing and DSLs and integration, metaprogramming and data APIs.
 - **Topics 14–15 (Use cases):** DevOps (Jenkins, Gradle) and Security and use cases.
-
----
 
 ## Topic index: aligned with documentation
 
@@ -58,8 +54,6 @@ The following table maps the [official Groovy documentation](https://groovy-lang
 | **API documentation** | |
 | GroovyDoc of Groovy APIs / GDK enhancements | 10, Further reading |
 
----
-
 ## Learning path: from basics to use cases
 
 | Stage | Topics | What you'll be able to do |
@@ -69,8 +63,6 @@ The following table maps the [official Groovy documentation](https://groovy-lang
 | **Control flow and Java** | 6 → 8 | Use operators and control flow; understand scripts vs classes and differences with Java. |
 | **Concepts** | 9 → 13 | Object orientation, GDK and style, tools (groovyc, groovydoc, Grape, IDE), testing and DSLs and integration, metaprogramming and data APIs. |
 | **Use cases** | 14 → 15 | DevOps (Jenkins, Gradle); security and use cases by role. |
-
----
 
 ## Topics
 
@@ -99,8 +91,6 @@ The following table maps the [official Groovy documentation](https://groovy-lang
 | 14 | DevOps: Jenkins and Gradle | [14_DevOps_Jenkins_And_Gradle.md](./14_DevOps_Jenkins_And_Gradle.md) |
 | 15 | Security and use cases | [15_Security_And_Use_Cases.md](./15_Security_And_Use_Cases.md) |
 
----
-
 ## By engineering role
 
 | Role | Focus | Where to go |
@@ -110,15 +100,11 @@ The following table maps the [official Groovy documentation](https://groovy-lang
 | **Security** | Safe use of Groovy, serialization, temp files | 7, 15. |
 | **Infrastructure** | Jenkinsfiles, build scripts, tooling | 3–5, 11, 14, 15. |
 
----
-
 ## Scope: what's covered and what's not
 
 **Covered:** What Groovy is, why and how to use it, and where it fits. Syntax, structure, types, strings, closures, operators, control flow, scripts vs classes, differences with Java, object orientation, tools (groovyc, groovydoc, groovysh, groovyConsole), Grape, GDK and style, testing and DSLs and integration, metaprogramming overview, and working with JSON/XML/YAML/Databases/templates. Security and use cases from software engineering, DevOps, and security perspectives. Concrete commands appear wherever the concept is introduced.
 
 **Not covered in depth here (by design):** Every GDK method, every AST transformation, and every Jenkins or Gradle API are only introduced or pointed to in Further reading so the section stays focused and navigable.
-
----
 
 ## Further reading
 

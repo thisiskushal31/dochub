@@ -2,8 +2,6 @@
 
 [← Previous](./08_Secrets_CI_Integration_And_Operations.md) · [Argo CD](./README.md) · [Next: Ownership and ops →](./10_Ownership_Diffing_Webhooks_And_Observability.md)
 
----
-
 ## 1. Concepts — where Argo CD shows up
 
 ### By engineering role
@@ -31,8 +29,6 @@
 
 Both are GitOps on Kubernetes. Argo CD is often chosen for an **app-centric UI**, Application/Project tenancy, and ApplicationSets. Flux is a **toolkit** of controllers (and pairs naturally with Flagger). Pick one primary GitOps stack per platform team unless you have a deliberate split ([2](../2_CI_CD_Tools.md), [Flux](../Flux/README.md)).
 
----
-
 ## 2. Advanced concepts — failure modes and pitfalls
 
 | Pitfall | What goes wrong | Better |
@@ -54,8 +50,6 @@ Both are GitOps on Kubernetes. Argo CD is often chosen for an **app-centric UI**
 
 Rollback is usually **Git revert** (or sync to a previous revision/SHA), not a mysterious UI-only action disconnected from history. Confirm database migrations still follow expand/contract rules when versions overlap ([7](../7_DB_Migrations_In_Pipelines.md)).
 
----
-
 ## 3. Applications and use cases — worked narratives
 
 ### Narrative A — First microservice on GitOps
@@ -69,8 +63,6 @@ Cluster generator ApplicationSet deploys cert-manager and observability agents t
 ### Narrative C — Brownfield coexistence
 
 Jenkins still deploys a fleet of VMs. New services land on Kubernetes with Argo CD. The handbook and the org chart both say which path owns which runtime — no forced “everything GitOps tomorrow.”
-
----
 
 ## Staff checklist
 
@@ -91,8 +83,6 @@ When reviewing an Argo CD installation or a GitOps change:
 - Rollback path is “Git revision,” and data migrations are safe across versions  
 - Control-plane ops covered in [10](./10_Ownership_Diffing_Webhooks_And_Observability.md)–[11](./11_Security_Tenancy_Hydrator_And_Troubleshooting.md) (tracking, webhooks, DR, tenancy, troubleshooting)
 
----
-
 ## Where this sits on the CiCd staircase
 
 | Floor | Link |
@@ -107,8 +97,6 @@ When reviewing an Argo CD installation or a GitOps change:
 | Versioning | [12](../12_Release_Versioning_And_Changelogs.md) |
 | Secrets parity | [13](../13_Config_Secrets_And_Env_Parity.md) |
 | Host CI automation | [24](../24_Workflow_Automation_Beyond_PR_CI.md) |
-
----
 
 ## References
 

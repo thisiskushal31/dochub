@@ -21,8 +21,6 @@ real(rk) :: x
 
 **Why this matters.** Relying on intrinsics keeps code portable and efficient. Document the required precision (e.g. "double precision") or use `selected_*_kind` so the code adapts to the platform. In HPC, the same source may be compiled with different kinds or compiler flags for different runs; clarity on precision avoids subtle numerical differences.
 
----
-
 ## Further reading
 
 - [Fortran – Intrinsic Functions (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_intrinsic_functions.htm)

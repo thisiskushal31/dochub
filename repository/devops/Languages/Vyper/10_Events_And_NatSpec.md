@@ -10,8 +10,6 @@ Storage is what the chain keeps. Events are what indexers, explorers, and UIs no
 
 For shared EVM log mental model and client decode habits, cross-link the [Solidity](../Solidity/README.md) events/NatSpec chapters when needed—Vyper’s surface is `event` / `log` and docstring tags below. ABI packaging of events is chapter **[12](./12_Compiling_Deploying_And_ABI.md)**; asserting them in tests is chapter **[13](./13_Testing_Contracts.md)**.
 
----
-
 ## 1. Concepts
 
 ### 1. Events are logs, not storage
@@ -121,8 +119,6 @@ A mature external surface has:
 
 Reviewers read all three. Clients decode logs using the ABI’s event section—keep the compiler artifact and the docstring story aligned.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. What not to put in events
@@ -166,8 +162,6 @@ Reviewers should flag:
 
 NatSpec is part of the security review surface when users rely on it.
 
----
-
 ## 3. Applications and use cases
 
 | Role | “Done” looks like |
@@ -182,8 +176,6 @@ NatSpec is part of the security review surface when users rely on it.
 
 **Smell:** event renamed in a “tiny refactor” without a client migration note.
 
----
-
 ## 4. Staff-level review checklist
 
 - State changes that matter to users or ops emit events.
@@ -196,8 +188,6 @@ NatSpec is part of the security review surface when users rely on it.
 - ABI artifact published with the same compiler pin as deploy (**12**).
 - Admin/parameter paths have dedicated events for monitoring.
 - `raw_log` usage is justified or replaced with declared events.
-
----
 
 ## References
 

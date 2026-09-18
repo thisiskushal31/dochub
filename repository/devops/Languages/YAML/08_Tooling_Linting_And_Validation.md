@@ -6,8 +6,6 @@
 
 How teams keep YAML honest in practice: **parse** vs **validate**, linters, editor support, schema checks, and CI gates. Format rules live in earlier chapters; this chapter is the engineering workflow around them.
 
----
-
 ## 1. Concepts
 
 ### 1. Parse ≠ validate
@@ -42,8 +40,6 @@ Many validators load YAML into JSON-compatible data and apply **JSON Schema**. T
 3. Lint (house rules).
 4. Validate against host schema or dry-run.
 5. Only then merge.
-
----
 
 ## 2. Advanced concepts
 
@@ -85,8 +81,6 @@ Load→dump often changes quoting, flow/block style, and key order. For golden t
 
 DOM-style “load entire file” is the common path. Very large multi-doc streams may need event/streaming APIs your language library provides. Prefer splitting manifests over multi-hundred-MB YAML blobs in Git.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Tooling role |
@@ -99,8 +93,6 @@ DOM-style “load entire file” is the common path. Very large multi-doc stream
 
 **Whole-engineering picture:** tooling turns format literacy into **merge gates**.
 
----
-
 ## 4. Staff-level review checklist
 
 - CI distinguishes parse failures from schema failures.
@@ -109,8 +101,6 @@ DOM-style “load entire file” is the common path. Very large multi-doc stream
 - Parser/toolchain versions are pinned.
 - Host dry-run or equivalent exists for production-bound manifests.
 - Formatter policy avoids drive-by whole-tree rewrites.
-
----
 
 ## References
 

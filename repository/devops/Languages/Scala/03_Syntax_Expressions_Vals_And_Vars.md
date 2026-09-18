@@ -6,8 +6,6 @@
 
 How Scala source **reads and evaluates**: everything-as-expression habits, **`val` versus `var`**, blocks, string interpolation, semicolon inference, and **optional braces** literacy in Scala 3. This is the vocabulary layer you need before types and control flow feel natural. Read for habits you will use in every later chapter.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. Expressions produce values
@@ -187,8 +185,6 @@ val multi =
 
 Multiline strings are common for SQL/JSON fixtures in tests—still parameterize untrusted input in production paths.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Optional braces (Scala 3 literacy)
@@ -320,8 +316,6 @@ scala> :type xs.map(_ + 1)     // ask the REPL for a type
 
 Use the REPL to check “is this an expression with the type I think?” before burying it in a service method.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -415,8 +409,6 @@ println(s"connecting as $creds")
 - Scala 2 files are not casually rewritten to optional braces without a migration decision.
 - Empty collections and mutable `var`s carry explicit types when inference would go wrong.
 - Blocks are used to scope temporaries instead of lengthening method-wide state.
-
----
 
 ## References
 

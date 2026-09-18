@@ -6,8 +6,6 @@ String handling in COBOL is done with **INSPECT**, **STRING**, and **UNSTRING**.
 
 **Why these verbs?** You often need to **build** one line from several fields (e.g. first name + space + last name into a full-name field)—**STRING** does that. You also need to **split** one line into parts (e.g. a comma-separated line into separate fields)—**UNSTRING** does that. **INSPECT** is for **counting** (how many spaces? how many 'X'?) or **replacing** (change all spaces to underscores, or fix a character). Without these you would have to move character by character in a loop; STRING, UNSTRING, and INSPECT do the work in one statement.
 
----
-
 ## INSPECT: TALLYING and REPLACING
 
 **INSPECT** works on a single data item. **TALLYING** counts occurrences (e.g. all characters, or all occurrences of a literal) into a numeric data item. **REPLACING** replaces characters (e.g. ALL 'A' BY 'X', or LEADING spaces BY a character). TALLYING and REPLACING can be combined in one INSPECT.
@@ -27,8 +25,6 @@ String handling in COBOL is done with **INSPECT**, **STRING**, and **UNSTRING**.
            STOP RUN.
 ```
 
----
-
 ## STRING
 
 **STRING** concatenates one or more sending fields into a single receiving field. Use **DELIMITED BY** to control how much of each sending field is used (e.g. BY SIZE for the full field, or BY space/literal to stop at a delimiter). **WITH POINTER** can track position in the receiving field; **ON OVERFLOW** handles the case when the receiving area is too small.
@@ -46,8 +42,6 @@ String handling in COBOL is done with **INSPECT**, **STRING**, and **UNSTRING**.
            END-STRING.
 ```
 
----
-
 ## UNSTRING
 
 **UNSTRING** splits a source field into one or more receiving fields. **DELIMITED BY** specifies what separates the pieces (e.g. BY SPACE, BY ','). **INTO** lists the receiving fields. **TALLYING IN** can count how many receiving fields were used; **WITH POINTER** and **ON OVERFLOW** are available.
@@ -62,8 +56,6 @@ String handling in COBOL is done with **INSPECT**, **STRING**, and **UNSTRING**.
                INTO WS-A WS-B WS-C
            END-UNSTRING.
 ```
-
----
 
 ## Further reading
 

@@ -6,8 +6,6 @@
 
 **int**, **float**, **complex**, **str**, **bytes**, **bytearray**, operators, **truthiness**, **`is` vs `==`**, integer division, **bitwise** operations, and the engineering boundary between **text** and **binary** data. These topics underpin APIs, cryptography, logs, persistence, and cross-platform correctness.
 
----
-
 ## 1. Concepts
 
 ### 1. Numbers
@@ -46,8 +44,6 @@
 
 **`& | ^ ~ << >>`** apply to integers; useful for flags, masks, and protocol fields. Right shift on negative integers is arithmetic (sign-propagating) in Python.
 
----
-
 ## 2. Advanced concepts
 
 **Surrogate pairs:** decoding with **`errors='surrogateescape'`** can represent arbitrary bytes in **str** for round-tripping POSIX filenames—mixing those strings with strict UTF-8 APIs can raise **UnicodeEncodeError**.
@@ -57,8 +53,6 @@
 **Interning:** CPython interns some strings; do not depend on it for deduplication or security.
 
 **Hashing for crypto:** use **`hashlib`**, not built-in **`hash()`**, for cryptographic digests.
-
----
 
 ## 3. Applications and use cases
 
@@ -83,8 +77,6 @@ def run(cfg):
     if cfg is None:
         raise TypeError("cfg required")
 ```
-
----
 
 ## References
 

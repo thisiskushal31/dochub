@@ -2,8 +2,6 @@
 
 [← Previous](./4_Access_Badges_And_Change_Windows.md) · [README](./README.md) · [Next: Portal patterns →](./6_Customer_Portal_Patterns.md)
 
----
-
 ## 1. Concepts
 
 **Remote / Smart Hands** executes scoped physical tasks: reseat, cable, photo, label, power cycle, install rails—per ticket, not open-ended labor.
@@ -22,8 +20,6 @@
 
 Elevations: [White-Space/7](../White-Space/7_Asset_Tags_Serials_And_Elevations.md).
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes
@@ -39,8 +35,6 @@ Elevations: [White-Space/7](../White-Space/7_Asset_Tags_Serials_And_Elevations.m
 ### How it connects
 
 Equinix-class hands product: [Markets/4](../Markets-And-Operators/4_Equinix_Class_Interconnection.md). Crash cart: [White-Space/8](../White-Space/8_Crash_Cart_KVM_And_Serial_Aggregation.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -60,8 +54,6 @@ Equinix-class hands product: [Markets/4](../Markets-And-Operators/4_Equinix_Clas
 - Never assume hands will “figure out cabling”  
 
 **Good:** precise tickets, photo evidence, tight scope. **Bad:** novel-length vagueness; wrong U; no serial.
-
----
 
 ## References
 

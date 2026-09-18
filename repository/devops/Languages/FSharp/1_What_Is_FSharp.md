@@ -16,8 +16,6 @@ F# is a **functional-first**, **statically typed** programming language that run
 
 **Relation to C# and .NET.** F# and C# compile to the same runtime (CLR). You can reference C# projects from F# and vice versa. F# emphasizes expressions, immutability, and pattern matching; C# has more imperative and OOP idioms. Both share the same base class library and ecosystem; the difference is in how you structure and reason about code.
 
----
-
 ## Further reading
 
 - [What is F# (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/what-is-fsharp)

@@ -2,8 +2,6 @@
 
 [← Previous](./20_Observability_HA_Debug_And_Windows.md) · [README](./README.md) · [Next: Best practices →](./22_Best_Practices_And_When_Not_Tekton.md)
 
----
-
 ## 1. Concepts — lab goal
 
 1. Install Pipelines; install `tkn`.  
@@ -54,8 +52,6 @@ tkn pipeline start build-test-push \
   --serviceaccount ci-builder --showlog
 ```
 
----
-
 ## 2. Advanced — stretch
 
 | Stretch | Chapter |
@@ -64,8 +60,6 @@ tkn pipeline start build-test-push \
 | Chains | [17](./17_Chains_Supply_Chain_Security.md) |
 | Matrix test versions | [10](./10_Matrix_CustomRuns_And_StepActions.md) |
 | Results + Pruner | [18](./18_Results_And_Pruner.md) |
-
----
 
 ## 3. Applications and use cases
 
@@ -82,8 +76,6 @@ tkn pipeline start build-test-push \
 - Lab manifests in Git  
 
 **Good:** lab YAML committed. **Bad:** only Dashboard-created one-offs.
-
----
 
 ## References
 

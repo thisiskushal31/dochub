@@ -88,8 +88,6 @@ Client PTBs can chain calls like "split coin -> deposit -> transfer resulting ob
 - Use capability-gated entry points for privileged steps.
 - Fuzz or scenario-test multi-command failure permutations.
 
----
-
 ## Further reading
 
 - [Sui — Programmable Transaction Blocks](https://docs.sui.io/guides/developer/transactions/ptbs/prog-txn-blocks)

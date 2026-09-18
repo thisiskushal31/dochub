@@ -2,8 +2,6 @@
 
 [← Previous](./14_Thermal_And_Power_Of_The_Box.md) · [README](./README.md) · [Next: Spares SKU →](./16_Spares_SKU_Discipline.md)
 
----
-
 ## Mental map
 
 ```text
@@ -17,8 +15,6 @@ Playbook depth: [Setup-And-Bring-Up/9](../Setup-And-Bring-Up/9_Imaging_Path.md) 
 ### Operator experience (verify locally)
 
 Operators often PXE on a dedicated VLAN then automate the switchport to production; others invent with Redfish and skip in-band PXE. Pin images; don’t share DHCP across BMC and prod. Pilot before 100×.
-
----
 
 ## 1. Concepts
 
@@ -37,8 +33,6 @@ Operators often PXE on a dedicated VLAN then automate the switchport to producti
 ### Where it sits
 
 OOB + PXE VLANs; image servers; secrets for BMC; CMDB identity. On-ramp survey: [4](../4_Rack_BMC_And_Provisioning.md). Delivery pipelines: [CiCd](../CiCd/README.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -70,8 +64,6 @@ Arch (arm64 vs amd64) must match ([4](./4_CPU_Platforms_ARM_And_Others.md)). Hyp
 
 Tool names differ; durable jobs—discover, firmware, image, configure, verify—do not.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -90,8 +82,6 @@ Tool names differ; durable jobs—discover, firmware, image, configure, verify�
 - Never handcraft production nodes as the standard path  
 
 **Good:** repeatable metal pipeline, conformance gates. **Bad:** USB heroes; undocumented PXE; golden image from 2019.
-
----
 
 ## References
 

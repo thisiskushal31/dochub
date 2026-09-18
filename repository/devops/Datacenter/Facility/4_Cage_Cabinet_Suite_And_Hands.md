@@ -2,8 +2,6 @@
 
 [← Previous](./3_Rooms_Campus_And_Adjacencies.md) · [README](./README.md) · [Next: Campus vs building →](./5_Campus_Vs_Single_Building.md)
 
----
-
 ## 1. Concepts
 
 What you **buy** in retail colo:
@@ -16,8 +14,6 @@ What you **buy** in retail colo:
 | **Remote / Smart Hands** | Scoped physical labor product |
 
 Contract jobs: [Provider-Use/2](../Provider-Use/2_Contract_Capacity.md). Hands tickets: [Provider-Use/5](../Provider-Use/5_Remote_Hands_Tickets.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -32,8 +28,6 @@ Contract jobs: [Provider-Use/2](../Provider-Use/2_Contract_Capacity.md). Hands t
 ### How it connects
 
 White-Space density [White-Space/3](../White-Space/3_Power_Density_And_Floor_Loading.md). Equinix-class [Markets/4](../Markets-And-Operators/4_Equinix_Class_Interconnection.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -50,8 +44,6 @@ White-Space density [White-Space/3](../White-Space/3_Power_Density_And_Floor_Loa
 - Never verbal-only upgrades  
 
 **Good:** clear SKU + SLA. **Bad:** hope-powered cabinets.
-
----
 
 ## References
 

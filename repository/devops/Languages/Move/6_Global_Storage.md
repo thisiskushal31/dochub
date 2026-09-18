@@ -62,8 +62,6 @@ These primitives **abort** on absence or double-publish. Callers use **`exists`*
 
 Objects carry **`UID`**; **`key`** means something different in daily Sui development. Use Sui topics for publish, transfer, and shared objects.
 
----
-
 ## Further reading
 
 - [The Move Book — Global Storage Structure](https://move-language.github.io/move/global-storage-structure.html)

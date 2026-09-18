@@ -4,8 +4,6 @@
 
 Assembly appears across **cybersecurity** (reverse engineering, malware, exploits) and **general engineering** (embedded, aerospace, automotive, industrial, compilers, DSP). You encounter it in **disassembler and debugger output**, in **shellcode** and **firmware**, in **boot and kernel code**, and in **safety-critical or performance-critical** systems. This topic summarizes those contexts; see **Further reading** for authoritative sources.
 
----
-
 ## Cybersecurity: disassembly and debuggers
 
 When you open a binary in a **disassembler** (IDA, Ghidra, Binary Ninja, objdump) or **debugger** (x64dbg, GDB, WinDbg), you see **assembly** (and often decompiled C-like code). The disassembler maps **machine code** back to **mnemonics and operands** using the CPU’s instruction set. That view is your primary way to reason about:
@@ -15,8 +13,6 @@ When you open a binary in a **disassembler** (IDA, Ghidra, Binary Ninja, objdump
 - Suspicious patterns (anti-debug, unpacking, shellcode).
 
 You don’t need to write assembly daily, but **reading** it is essential for reverse engineering and malware analysis.
-
----
 
 ## Cybersecurity: malware and implants
 
@@ -28,8 +24,6 @@ Many **malware families** and **implants** are written in C/C++ and compiled to 
 
 Understanding **calling conventions** and **common instruction sequences** helps you follow the logic and identify what the sample does without executing it.
 
----
-
 ## Cybersecurity: shellcode and exploit payloads
 
 **Shellcode** is typically **position-independent code** (PIC) in raw machine code (or assembly that assembles to it), often injected into a process or sent over the network. It is used in:
@@ -38,8 +32,6 @@ Understanding **calling conventions** and **common instruction sequences** helps
 - **Red-team tools** — In-memory execution, process injection, reflective loaders.
 
 Shellcode is usually **small** and **avoids** null bytes (or other bad bytes) so it can be embedded in strings or packets. It often uses **system calls** (e.g. Linux `syscall`, Windows API via stack or shellcode-resolved pointers) rather than libc, so you see **direct syscall** or **API call** patterns in the assembly. References: exploit-db, OS-specific syscall/ABI docs, and security research papers.
-
----
 
 ## Engineering: firmware and boot code
 
@@ -50,8 +42,6 @@ Shellcode is usually **small** and **avoids** null bytes (or other bad bytes) so
 - **Critical paths** — Where every cycle counts.
 
 You may see **16-bit real mode** (segment:offset), **32-bit protected mode**, or **64-bit long mode** depending on the stage. Intel and AMD manuals describe the modes; UEFI and firmware specs describe the environment.
-
----
 
 ## Engineering: embedded and real-time systems
 
@@ -64,8 +54,6 @@ You may see **16-bit real mode** (segment:offset), **32-bit protected mode**, or
 
 Architectures include **ARM Cortex-M**, **AVR**, **PIC**, **RISC-V**, and **MSP430**. Assembly is used when C cannot guarantee timing or code size, or when you are debugging compiler output in safety-critical or certified environments.
 
----
-
 ## Engineering: aerospace, automotive, and industrial
 
 **Aerospace** (flight control, avionics, DO-178C), **automotive** (engine/brake/steering ECUs, ISO 26262), and **industrial** (robotics, PLCs, motor control, IEC 61508) rely on deterministic, auditable low-level code. Assembly appears in:
@@ -75,8 +63,6 @@ Architectures include **ARM Cortex-M**, **AVR**, **PIC**, **RISC-V**, and **MSP4
 - **Legacy or certified code** — Systems where the toolchain (including assembly) is part of the qualification.
 
 Reading assembly is necessary to **review**, **trace**, and **verify** behavior in these domains; writing it (or inline assembly in C) is common in startup code and performance-critical sections.
-
----
 
 ## Engineering: kernels and drivers
 
@@ -89,15 +75,11 @@ Reading assembly is necessary to **review**, **trace**, and **verify** behavior 
 
 When analyzing a kernel or driver binary, you will see these patterns in disassembly; the OS vendor’s source (e.g. Linux kernel, Windows WRK docs) and processor manuals are the references.
 
----
-
 ## Engineering: compilers, runtimes, and signal processing
 
 **Compilers and runtimes** generate or use assembly for **code generation**, **trampolines**, **JIT stubs**, and **OS-specific sequences** (e.g. syscall wrappers, context switch). Understanding assembly helps when debugging codegen, optimizing hot paths, or maintaining a runtime.
 
 **Signal processing and DSP** (audio, video, radio, control) often use **SIMD** (SSE, AVX, NEON) or **fixed-point** arithmetic; the inner loops are sometimes hand-tuned in assembly or inspected in disassembly to verify performance and correctness.
-
----
 
 ## Summary
 
@@ -111,8 +93,6 @@ When analyzing a kernel or driver binary, you will see these patterns in disasse
 | Boot / firmware / aerospace | x86, ARM | Real/protected mode; no OS ABI |
 | Kernels / drivers | x86-64, ARM | Handlers, atomics, CPU-specific |
 | Compilers / DSP / SIMD | x86-64, ARM | Codegen; SIMD/fixed-point loops |
-
----
 
 ## Further reading
 

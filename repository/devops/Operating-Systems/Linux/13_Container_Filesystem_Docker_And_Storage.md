@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Storage and I/O](./8_Storage_And_IO.md), [Fundamentals: Storage and I/O](../Fundamentals/10_Storage_And_IO.md). Here: **how a Docker-based Linux filesystem works** on a Linux host — image layers, overlay2, volumes, and bind mounts. This is Linux-specific: the same concepts apply to other container runtimes (Podman, containerd) that use overlay or similar union filesystems on Linux.
 
----
-
 ## 1. Containers and the Linux filesystem
 
 A **container** on Linux is a **process** (and its children) with:
@@ -20,8 +18,6 @@ It is built from:
 - Optionally **volumes** or **bind mounts** for persistent or host data.
 
 Docker (and Podman, containerd with the right snapshotter) typically use the **overlay2** storage driver on Linux. The following describes how that works on a Linux machine.
-
----
 
 ## 2. Image layers and overlay2
 
@@ -45,8 +41,6 @@ A **container image** is a stack of **read-only layers**. Each layer is a set of
 - **Merged view** — Overlay combines lower + upper: if a file exists in upper, it shadows the same path in lower; otherwise the file is read from the appropriate lower layer.
 
 So **how it works on a Linux machine**: when the container reads a file, the kernel overlay driver looks in the upper layer first, then in the lower layers in order. When the container writes, the write goes to the upper layer (copy-up first if the file was in a lower layer). No layer below is ever modified.
-
----
 
 ## 3. Where Docker stores layers (on the host)
 
@@ -73,8 +67,6 @@ docker inspect <container_id> --format '{{.GraphDriver.Data.MergedDir}}'
 
 So on a **Linux machine**, the “Docker filesystem” is: **/var/lib/docker** (and optionally a custom data-root) containing overlay2 layer dirs and per-container upper/merged dirs; the container’s “/” is the **merged** overlay mount.
 
----
-
 ## 4. Copy-on-write (CoW)
 
 When the container **modifies** a file that exists only in a lower (read-only) layer, overlay does **copy-up**: it copies the file into the **upper** layer, then applies the write there. The lower layer stays unchanged. So:
@@ -83,8 +75,6 @@ When the container **modifies** a file that exists only in a lower (read-only) l
 - **Writes** — Go to upper; if the file was in lower, it’s copied to upper first (copy-on-write).
 
 This is how **layers** stay immutable and **containers** get a cheap, writable top layer.
-
----
 
 ## 5. Volumes (named and anonymous)
 
@@ -105,8 +95,6 @@ docker volume inspect appdata
 # "Mountpoint": "/var/lib/docker/volumes/appdata/_data"
 ```
 
----
-
 ## 6. Bind mounts
 
 A **bind mount** attaches an existing **host path** into the container. The container sees the host directory at a chosen path. No copy-on-write; changes are immediately visible on the host and to other containers using the same path.
@@ -117,8 +105,6 @@ docker run -d -v /opt/app:/app myimage
 ```
 
 On Linux this uses the kernel’s **bind mount**: the same filesystem (or directory) is visible at two locations (host and container). Useful for development (live code) or when you need to expose a specific host file or directory.
-
----
 
 ## 7. Summary: Docker filesystem on Linux
 
@@ -132,8 +118,6 @@ On Linux this uses the kernel’s **bind mount**: the same filesystem (or direct
 | **Bind mounts** | Host path mounted into container; no Docker-owned copy; direct host visibility. |
 
 So a **Docker-based Linux filesystem** on a Linux host = **overlay2** (layers + writable upper) for the container root, plus **volumes** and **bind mounts** for persistent or host-attached data. The same kernel overlay and mount primitives are used by other runtimes (e.g. Podman, containerd) with similar layout.
-
----
 
 ## Further reading
 

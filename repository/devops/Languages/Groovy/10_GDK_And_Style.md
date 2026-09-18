@@ -4,8 +4,6 @@
 
 The Groovy Development Kit (GDK) adds methods and behaviors to standard JDK types (File, String, Collection, etc.) so common tasks need less code. This topic summarizes the GDK and key style and idiom guidelines so you can write readable, idiomatic Groovy.
 
----
-
 ## 1. Groovy Development Kit overview
 
 The GDK extends **java.io.File**, **InputStream**, **OutputStream**, **Reader**, **Writer**, **String**, **Collection**, **Map**, and other types. You do not import a special library; these methods are available whenever you use Groovy.
@@ -27,8 +25,6 @@ file.bytes = [66, 22, 11]
 def dir = new File('src')
 dir.eachFileRecurse(FileType.FILES) { println it.name }
 ```
-
----
 
 ## 2. Style and idioms
 
@@ -62,13 +58,9 @@ dir.eachFileRecurse(FileType.FILES) { println it.name }
 
 **Optional typing.** Prefer strong typing for public APIs; **def** or untyped parameters are fine for internal or script code when brevity or flexibility matters.
 
----
-
 ## 3. Why this matters
 
 The GDK and these idioms are what make Groovy scripts and Jenkins/Gradle code short and readable. Using **eachLine**, **withReader**, **each**, **collect**, and **?.** in pipelines and build scripts matches how the language is intended to be used and reduces boilerplate.
-
----
 
 ## Further reading
 

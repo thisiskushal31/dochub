@@ -2,8 +2,6 @@
 
 [← Previous](./18_Feature_And_Configuration_Coverage_Map.md) · [README](./README.md) · [Next: Troubleshooting →](./20_Troubleshooting_And_Staff_Checklist.md)
 
----
-
 ## 1. Concepts — configuration surfaces
 
 | Surface | What you set |
@@ -24,8 +22,6 @@
 
 Exact keys: current configure + command-step docs.
 
----
-
 ## 2. Advanced concepts — good defaults
 
 | Env | Lean toward |
@@ -34,13 +30,9 @@ Exact keys: current configure + command-step docs.
 | Staging | Auto deploy on `main`; OIDC |
 | Prod | block or separate pipeline; concurrency_group; pinned plugins |
 
----
-
 ## 3. Applications and use cases
 
 PR checklist: every non-default YAML block needs a one-line reason.
-
----
 
 ## References
 

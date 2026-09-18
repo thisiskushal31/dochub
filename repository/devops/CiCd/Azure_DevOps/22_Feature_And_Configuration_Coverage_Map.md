@@ -2,13 +2,9 @@
 
 [← Previous](./21_Best_Practices_And_Delivery_Spectrum.md) · [README](./README.md) · [Next: YAML catalog →](./23_YAML_And_Task_Configuration_Catalog.md)
 
----
-
 ## 1. Concepts
 
 Use this map to see **which Azure DevOps feature classes exist** and **where they are taught**. Field-level YAML and task inputs evolve by version — confirm keys in References when implementing. Official Learn docs remain the place for exhaustive task input lists and Server version notes.
-
----
 
 ## 2. Advanced concepts — feature inventory
 
@@ -77,13 +73,9 @@ Use this map to see **which Azure DevOps feature classes exist** and **where the
 | Per-language / mobile cookbooks (Xcode, Android, …) | Ecosystem essays on Learn; class in [15](./15_Observability_Hooks_And_Non_Azure_Targets.md) |
 | Writing Marketplace extensions | Extensibility docs — consume extensions in [08](./08_Templates_Tasks_And_Extensions.md); authoring is contributor work |
 
----
-
 ## 3. Applications and use cases
 
 Walk A–E (and platform ops in [25](./25_Platform_Management_Wiki_Analytics_Billing_Audit.md)) when designing a platform checklist: use / defer / N/A per row.
-
----
 
 ## References
 

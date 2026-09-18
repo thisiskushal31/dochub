@@ -6,8 +6,6 @@
 
 Pipeline stages for PHP artifacts, twelve-factor configuration with `php.ini` and FPM interplay, secrets injection without baking credentials into images, database migration ordering with rolling workers, health probes, cron in Kubernetes, and DR ordering. Later chapters assume deploy hooks are idempotent and observable.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the PHP [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -37,33 +35,23 @@ Cache Composer directories keyed by lock hash to cut egress time.
 
 **CMS vs framework pipelines:** WordPress-style deploys may rsync `wp-content` or use managed host APIs; Composer-first apps use image builds. Do not force one pipeline template on both—permissions, `wp-cli`, and plugin zip installs need different guardrails.
 
----
-
 ### 2. Environment configuration
 
 `getenv`, `$_ENV`, and framework `.env` loaders should converge on immutable config per release. Secrets belong in orchestrator secret stores with rotation runbooks—not git, not world-readable files on disk.
-
----
 
 ### 3. Feature flags
 
 Flags decouple deploy from release. Defaults must be safe when remote flag services fail closed or open according to policy—document the behavior.
 
----
-
 ### 4. Migrations and rolling deploys
 
 Run backward-compatible schema changes (expand/contract) so old and new code coexist during rolling updates. Long DDL locks stall FPM workers—schedule off-peak or use online schema tools.
-
----
 
 ### 5. Health checks
 
 Readiness should check DB/cache dependencies; liveness should detect wedged processes only—avoid flapping when dependencies blip briefly.
 
 **PHP-specific readiness ideas:** Lightweight `cli` invocation (`php bin/console doctrine:query:sql 'SELECT 1'` or framework equivalent) from the same image as FPM; Opcache hit rate is **not** usually a readiness gate (cold start skew) but belongs in metrics.
-
----
 
 ## 2. Advanced concepts
 
@@ -75,8 +63,6 @@ Readiness should check DB/cache dependencies; liveness should detect wedged proc
 
 **Multi-tenant routing:** Per-tenant DB connection resolvers explode test matrices—automate fixture generation.
 
----
-
 ## 3. Applications and use cases
 
 - **Runbooks:** Drain → deploy → reload FPM → verify status endpoint → rollback image digest on SLO burn.
@@ -84,8 +70,6 @@ Readiness should check DB/cache dependencies; liveness should detect wedged proc
 - **Cost:** Right-size runners; cache dependencies; parallelize jobs without duplicating DB migrations unsafely.
 - **DR:** Restore secrets, databases, caches, then app tiers; rerun idempotent migrations with guards.
 - **Security:** Break-glass SSH minimized; ephemeral debug pods with command allowlists.
-
----
 
 ## References
 

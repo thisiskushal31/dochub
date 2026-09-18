@@ -11,8 +11,6 @@ This is not a pile of unrelated topics and not a timeline of “eras.” It is *
 Pipeline security detail: [Security/](../Security/README.md) (esp. [gate chain](../Security/4_Security_Gate_Chain.md)).  
 Vocabulary: [Methodologies/13](../Methodologies/13_Continuous_Everything.md).
 
----
-
 ## The staircase (read in this order)
 
 ```text
@@ -53,8 +51,6 @@ Floor 6  Target adapters     →  map first, then classical → hosts → contai
 
 **Floor 6 is choose-your-adapter after Floors 1–5** — not a chronological “history of industry.” Start with [19](./19_Delivery_Spectrum_Legacy_Through_Modern.md) + [23](./23_Classical_DevOps_Stack_Map.md), then open the one target you run.
 
----
-
 ## How floors connect (one story)
 
 ```text
@@ -67,8 +63,6 @@ Mindset (Methodologies)
   → Floor 6: attach the estate (legacy → classical → K8s → AI)
 ```
 
----
-
 ## End-to-end loop (every floor returns here)
 
 ```text
@@ -76,8 +70,6 @@ PR → build → test → security gates → publish artifact
   → deploy (your adapter) → verify → promote
   → observe → notify
 ```
-
----
 
 ## Concept index (by number)
 
@@ -110,8 +102,6 @@ PR → build → test → security gates → publish artifact
 
 Numbers are labels — **climb by floor table**, not by sorting `#` alone.
 
----
-
 ## Tools (after Floor 5)
 
 | Tool | Role |
@@ -131,15 +121,11 @@ Numbers are labels — **climb by floor table**, not by sorting `#` alone.
 
 Pick **one** CI + the deploy adapter you need. Index: [2](./2_CI_CD_Tools.md).
 
----
-
 ## Coming from Methodologies
 
 Finished Floor 5–6 there? Start **CiCd Floor 1:** [1_Pipelines_Build_Test_Deploy.md](./1_Pipelines_Build_Test_Deploy.md).
 
 Mindset for all estates: [Methodologies/20](../Methodologies/20_Delivery_Reality_Full_Spectrum.md).
-
----
 
 ## Scope
 

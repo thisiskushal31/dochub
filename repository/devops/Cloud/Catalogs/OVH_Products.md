@@ -4,8 +4,6 @@
 
 *Final choice page for OVHcloud. Deeper API: [help.ovhcloud.com](https://help.ovhcloud.com/) · [api.ovh.com](https://api.ovh.com/).*
 
----
-
 ## Compute
 
 | Product | What for | When | Why not |
@@ -60,8 +58,6 @@
 | **Web Hosting / Email / Domains** | Classic hosting | Simple sites | App platform → Public Cloud |
 | **Hosted Private Cloud (VMware)** | VMware as a service | VMware estates | Pure public instances |
 | **US / EU / CA regions** | Data residency | Compliance pick | Ignore locality |
-
----
 
 ## How to use
 

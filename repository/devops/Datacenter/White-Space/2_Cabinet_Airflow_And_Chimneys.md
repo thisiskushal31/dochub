@@ -2,8 +2,6 @@
 
 [← Previous](./1_Rack_Standards_And_Form_Factors.md) · [README](./README.md) · [Next: Power density →](./3_Power_Density_And_Floor_Loading.md)
 
----
-
 ## 1. Concepts
 
 A cabinet is part of the **air machine**. Door perforation, blanking, side seals, and optional **chimneys** (ducted exhaust) decide whether cold air reaches inlets and hot air returns cleanly.
@@ -22,8 +20,6 @@ A cabinet is part of the **air machine**. Door perforation, blanking, side seals
 ### Where it sits
 
 Fits the hall’s cold/hot aisle or containment scheme ([Mechanical/4](../Mechanical/4_Containment_Hot_And_Cold_Aisle.md)). Wrong door type in a contained aisle breaks the design.
-
----
 
 ## 2. Advanced concepts
 
@@ -50,8 +46,6 @@ Door free-area / perforation % is a real spec. “Looks perforated” ≠ enough
 
 Same physics. Some landlords lock cabinet door SKUs in the colo manual—deviating voids airflow assumptions.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -70,8 +64,6 @@ Same physics. Some landlords lock cabinet door SKUs in the colo manual—deviati
 - Never leave rear door open for “temporary cables”  
 
 **Good:** sealed rack path matching hall containment. **Bad:** missing blanking, open chimney gap, solid front door on cold aisle.
-
----
 
 ## References
 

@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Fundamentals: Memory management](../Fundamentals/9_Memory_Management.md). Here: **how Linux** manages memory (VM subsystem, page cache, swap, OOM killer) and **commands** (free, /proc/meminfo, pmap, vmstat).
 
----
-
 ## Memory hierarchy and units
 
 Typical hierarchy (fast and small to slow and large):
@@ -18,8 +16,6 @@ Memory is measured in bytes; larger units: KB, MB, GB, TB. The OS manages **main
 
 *Image: [ByteByteGo – Types of Memory and Storage](https://bytebytego.com/guides/types-of-memory-and-storage/).*
 
----
-
 ## Logical vs physical address
 
 | Type | Meaning | Who uses it |
@@ -28,8 +24,6 @@ Memory is measured in bytes; larger units: KB, MB, GB, TB. The OS manages **main
 | **Physical** | Address in actual RAM (or frame). | Hardware (MMU) and kernel. |
 
 The **Memory Management Unit (MMU)** translates logical to physical using per-process page tables (or segment tables). This gives isolation (one process cannot touch another’s memory unless shared) and enables virtual memory (more virtual address space than physical RAM).
-
----
 
 ## Contiguous allocation
 
@@ -40,16 +34,12 @@ Memory is given to a process as one contiguous block (or a few large blocks). Pr
 
 Partitioning schemes (e.g. first-fit, best-fit, worst-fit) decide which hole to use; they do not eliminate fragmentation.
 
----
-
 ## Paging
 
 **Paging** divides memory into fixed-size **pages** (e.g. 4 KB). Process address space is split into pages; physical memory is split into **frames** of the same size. Each (logical) page is mapped to a frame (or marked invalid / on disk). There is **no external fragmentation**; **internal fragmentation** is at most one page per region.
 
 - **Page table** — Per process; maps virtual page number → frame number (and flags: present, writable, etc.).
 - **TLB** (Translation Lookaside Buffer) — Hardware cache of page-table entries to speed up translation.
-
----
 
 ## Segmentation
 
@@ -59,15 +49,11 @@ Partitioning schemes (e.g. first-fit, best-fit, worst-fit) decide which hole to 
 
 *Image: [ByteByteGo – Paging vs Segmentation](https://bytebytego.com/guides/what-are-the-differences-between-paging-and-segmentation/).*
 
----
-
 ## Virtual memory
 
 **Virtual memory** allows the total virtual address space of all processes to be larger than physical RAM. Some pages reside in RAM; others are on **disk** (swap). When a process accesses a page that is not in RAM, the hardware raises a **page fault**; the OS loads the page (and may evict another), then resumes the process.
 
 Benefits: large address spaces, less RAM needed per process, and process isolation.
-
----
 
 ## Page replacement
 
@@ -82,13 +68,9 @@ When a page fault occurs and no free frame exists, the OS must **replace** a pag
 
 Linux uses variants of LRU-like (e.g. active/inactive lists) in its page cache and swap.
 
----
-
 ## Swapping
 
 **Swapping** means moving a whole process (or large parts of it) between memory and disk. When the OS **swaps out** a process, it frees its frames; when it **swaps in**, it loads it back. This is coarser than paging (which moves page by page). Linux uses **paging** and **swap partitions/files** for evicted pages rather than whole-process swapping in the classic sense.
-
----
 
 ## Linux: inspecting memory
 
@@ -114,8 +96,6 @@ cat /proc/swaps
 vmstat 1 5
 ```
 
----
-
 ## Summary
 
 - **Logical** addresses are per process; **physical** addresses are in RAM; the **MMU** translates using page tables.
@@ -124,8 +104,6 @@ vmstat 1 5
 - **Page replacement**: FIFO, LRU, Optimal, Clock; Linux uses LRU-like schemes.
 - **Swapping** (whole process or large chunks) is the older idea; Linux relies on paging and swap for pages.
 - On Linux: `free`, `/proc/meminfo`, `ps`, `/proc/<PID>/maps`, `pmap`, `swapon`, `vmstat`.
-
----
 
 ## Further reading
 

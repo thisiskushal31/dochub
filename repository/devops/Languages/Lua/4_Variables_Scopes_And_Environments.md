@@ -65,8 +65,6 @@ There are ten different `y` variables (one per iteration) and one shared `x`.
 
 Every reference to a global name `var` is treated as `_ENV.var`. Each chunk is compiled in the scope of an external local named `_ENV`, so free names in the chunk refer to this table. Any table used as the value of `_ENV` is called an **environment**. The **global environment** is the default: the standalone interpreter and `load`/`loadfile` set a chunk’s `_ENV` to this table, so globals behave as usual. You can load a chunk with a different environment (e.g. for sandboxing) by passing a different `_ENV` when loading. In C, you set the chunk’s first upvalue to the desired environment. The global `_G` is initialized to this same global environment; Lua does not use `_G` internally.
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §2.2 Scopes, Variables, and Environments](https://www.lua.org/manual/5.5/manual.html#2.2)

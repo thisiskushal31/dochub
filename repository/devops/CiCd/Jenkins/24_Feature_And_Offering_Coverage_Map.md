@@ -2,8 +2,6 @@
 
 [← Previous](./23_Best_Practices_And_When_Not_Jenkins.md) · [README](./README.md) · [Next: Config catalog →](./25_Jenkinsfile_JCasC_And_Config_Catalog.md)
 
----
-
 ## 1. Concepts
 
 Final **product + configuration map** for Jenkins. Jenkins is open-source and infinitely plugin-extended — this track covers **every major offering class and configuration surface** operators actually run. Individual plugin encyclopedias and the live Pipeline steps reference stay upstream; they still belong on this map as *classes*.
@@ -90,8 +88,6 @@ flowchart TB
 ```
 
 **How to read plugins:** every cloud, SCM, notifier, and deployer is usually a plugin. The *capability* is in-scope; the *specific plugin page* is upstream after you pin it.
-
----
 
 ## 2. Advanced — full offering inventory
 
@@ -327,13 +323,9 @@ flowchart TB
 | Language/stack solution pages | Same Pipeline shape |
 | Extender / Javadoc / plugin tutorials | Contributor path |
 
----
-
 ## 3. Applications and use cases
 
 Walk **A–M** for your estate: **use / later / N/A**. Production gaps in **H** (security) and **K** (ops) beat more Freestyle variants. Re-check this map after major LTS jumps — detached plugins and security defaults move.
-
----
 
 ## References
 

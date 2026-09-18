@@ -2,8 +2,6 @@
 
 [← Previous](./1_Server_Form_Factors.md) · [README](./README.md) · [Next: AMD EPYC →](./3_CPU_Platforms_AMD_EPYC.md)
 
----
-
 ## 1. Concepts
 
 **Intel Xeon** is a major datacenter CPU family. Generations change socket, memory tech, PCIe generation, and core counts—your job is to read **platform constraints**, not memorize every SKU marketing name.
@@ -24,8 +22,6 @@ Exact generation tables churn—use OEM and Intel ark/docs at purchase time; thi
 ### Where it sits
 
 In dual-socket (or single-socket) boards; paired with DIMMs on channels; connected to I/O via root complexes ([5](./5_Chipset_PCIe_And_Platform_IO.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -51,8 +47,6 @@ Hypervisor and OS scheduling care about topology ([18](./18_Hypervisor_On_The_Bo
 
 Same silicon worldwide; power/thermal envelope still constrained by local hall SKUs. Cloud instance types abstract this; bare metal does not.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -71,8 +65,6 @@ Same silicon worldwide; power/thermal envelope still constrained by local hall S
 - Never reseat CPUs without ESD and torque procedure  
 
 **Good:** generation-locked fleet, topology documented. **Bad:** random Xeon mix; ignoring TDP; population folklore from prior gen.
-
----
 
 ## References
 

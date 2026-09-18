@@ -2,8 +2,6 @@
 
 [← Previous](./3_DPU_And_SmartNIC.md) · [README](./README.md) · [Next: HBM →](./5_HBM_And_Accelerator_Memory.md)
 
----
-
 ## 1. Concepts
 
 **FPGAs** are reconfigurable accelerator cards used for networking, storage pipelines, video, fintech, and custom offload. **IPU** (Infrastructure Processing Unit) branding overlaps SmartNIC/DPU space—CPU-like devices aimed at infrastructure tasks.
@@ -20,8 +18,6 @@
 ### Where it sits
 
 PCIe add-in; sometimes with QSFP cages for inline networking; cooling/power like other accelerators; bitstream/firmware lifecycle separate from host OS.
-
----
 
 ## 2. Advanced concepts
 
@@ -47,8 +43,6 @@ Marketing terms (IPU/DPU/SmartNIC/FPGA) blur. Classify by: programmable logic vs
 
 Availability is workload-driven more than metro-driven. Support matrices are vendor-specific.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -67,8 +61,6 @@ Availability is workload-driven more than metro-driven. Support matrices are ven
 - Never flash untested bitstreams on prod mid-day  
 
 **Good:** versioned bitstreams, dual-path if inline, monitored thermals. **Bad:** one-off hero cards; no rollback; mystery flashes.
-
----
 
 ## References
 

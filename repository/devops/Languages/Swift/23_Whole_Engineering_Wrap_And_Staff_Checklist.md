@@ -8,8 +8,6 @@ A **competency map**, **chapter-arc master checklist**, **false-confidence traps
 
 If chapter **00** was “hello prints,” this page is “I could explain that hello — and a package pin, a race, a scheme, and a signing secret — to the person who has to live with it.”
 
----
-
 ## 1. Concepts — you are fluent when…
 
 You are fluent when you can walk a new hire through this story without notes:
@@ -29,8 +27,6 @@ You are fluent when you can:
 9. Point to chapter **24** for adjacent doors without pretending this track covered them.
 
 REPL-only fluency is chapter **00**. Staff fluency is this list.
-
----
 
 ## 2. Advanced concepts — brownfield, traps, hire bar, definition of done
 
@@ -251,8 +247,6 @@ Pick a real (or staged) ticket and write a one-page walkthrough:
 | “Let’s put Swift on X” proposal | **24** |
 | New hire onboarding | This chapter + **00** |
 
----
-
 ## 3. Applications — sign-off by lens
 
 | Lens | You can show |
@@ -274,8 +268,6 @@ Pick a real (or staged) ticket and write a one-page walkthrough:
 | “We distribute a Mac utility outside MAS” | Developer ID + notarize/staple gate in CI |
 
 Deep-study leftovers from earlier chapters: finish them before signing this page.
-
----
 
 ## 4. Staff-level review checklist (track sign-off)
 
@@ -321,8 +313,6 @@ Print this page for onboarding day one; re-check it on every toolchain bump.
 Keep a dated sign-off in the team wiki when the rollup goes green.
 
 When the boxes that apply to *your* system are checked, the track has done its job for **shipping Swift**. For **where the language and adjacent platforms are moving**, sign chapter **24** as well. Revisit on the cadence in §2.11.
-
----
 
 ## References
 

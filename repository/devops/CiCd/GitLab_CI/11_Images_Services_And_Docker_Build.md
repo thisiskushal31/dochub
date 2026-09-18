@@ -2,8 +2,6 @@
 
 [← Previous](./10_Runners_And_Executors.md) · [README](./README.md) · [Next: Cache and artifacts →](./12_Caching_Artifacts_And_Job_Tokens.md)
 
----
-
 ## 1. Concepts
 
 ```yaml
@@ -33,8 +31,6 @@ test:
 
 Prefer authenticating to the **GitLab container registry** with job token / deploy token patterns documented upstream. **GitLab↔Google Cloud** integration docs cover GCP-specific auth/deploy helpers — same OIDC/ID-token design as [14](./14_Variables_Secrets_And_OIDC.md); cookbook steps stay upstream.
 
----
-
 ## 2. Advanced concepts
 
 ### DinD realities
@@ -53,8 +49,6 @@ Prefer authenticating to the **GitLab container registry** with job token / depl
 
 Mobile DevOps and Xcode-like flows exist as specialized docs — literacy pointer only.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -64,8 +58,6 @@ Mobile DevOps and Xcode-like flows exist as specialized docs — literacy pointe
 | Stricter runners | Rootless Buildah / Kaniko vs privileged DinD |
 
 **Good:** pin base image digests for builds you care about. **Bad:** privileged DinD on a runner pool that also runs untrusted community MRs.
-
----
 
 ## References
 

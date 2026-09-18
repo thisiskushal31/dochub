@@ -2,8 +2,6 @@
 
 [← Previous](./11_Images_Services_And_Docker_Build.md) · [README](./README.md) · [Next: Includes →](./13_Includes_Components_And_CI_Catalog.md)
 
----
-
 ## 1. Concepts
 
 | Tool | Purpose |
@@ -24,8 +22,6 @@ build:
 
 Cache ≠ artifacts: caches can miss/evict; artifacts are the deliberate handoff (and expire).
 
----
-
 ## 2. Advanced concepts
 
 ### Cache practices
@@ -40,8 +36,6 @@ Artifacts can include **reports** that MR widgets understand: JUnit, coverage, c
 
 Limit job token permissions / allowed projects so a job can’t reach arbitrary group resources. Prefer least privilege.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Use |
@@ -51,8 +45,6 @@ Limit job token permissions / allowed projects so a job can’t reach arbitrary 
 | Cross-project fetch | Job token allowlists |
 
 **Good:** registry holds release truth; artifacts for pipeline plumbing. **Bad:** treating cache as a reliable release store.
-
----
 
 ## References
 

@@ -29,8 +29,6 @@ Reuse setup across jobs with a **composite action** (e.g. install Java, configur
 
 Applying these practices keeps Kotlin and KMP builds reliable, auditable, and aligned with common DevOps and security standards. The next topic summarizes use cases by role so you can map Kotlin and KMP to your team’s responsibilities.
 
----
-
 ## Further reading
 
 - [Configure GitHub Actions for KMP](https://kotlinlang.org/docs/multiplatform/kmp-ci-tutorial.html)

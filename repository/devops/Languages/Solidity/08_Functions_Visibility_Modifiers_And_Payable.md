@@ -8,8 +8,6 @@ How functions are declared, **visibility**, **state mutability** (`pure` / `view
 
 A function is a door. Visibility says *who may knock*. Mutability says *whether the door changes the house*. `payable` says *whether coins are allowed through*. Modifiers are a porch light you reuse on several doors.
 
----
-
 ## 1. Concepts
 
 ### 1. A complete door, labeled
@@ -149,8 +147,6 @@ A fat `fallback` that tries to be a router is a review magnet. Prefer explicit f
 
 Two functions may share a name if parameter types differ. Selectors differ. ABI JSON lists both. Overload on `uint256` vs `uint8` is how humans call the wrong one. Prefer distinct names at the external surface (`setAmount` / `setFlag`).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `this.f()` vs `f()` — JUMP vs CALL
@@ -242,8 +238,6 @@ Bodies end with `RETURN` of ABI-encoded outputs (or just stop). `JUMPDEST` marks
 
 Prefer `external` for the API surface when you never need an internal JUMP to that exact function. Prefer `public` when both paths matter (or use `external` + a thin `internal` helper).
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -254,8 +248,6 @@ Prefer `external` for the API surface when you never need an internal JUMP to th
 | **Operations** | ABI lists exactly the functions ops think exist |
 | **Software engineering** | Modifiers < 15 lines; overloads not on the external surface |
 
----
-
 ## 4. Staff-level review checklist
 
 - Every function has explicit visibility and the right mutability.
@@ -264,8 +256,6 @@ Prefer `external` for the API surface when you never need an internal JUMP to th
 - Modifiers do not hide external calls or state writes that belong in the body for CEI (chapter **18**).
 - No `tx.origin` in modifiers.
 - Overloads on the ABI are named clearly or removed.
-
----
 
 ## References
 

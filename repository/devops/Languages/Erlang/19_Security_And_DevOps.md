@@ -20,8 +20,6 @@ Running Erlang in production involves **configuration**, **distribution security
 
 **EEF guidelines.** The Erlang Ecosystem Foundation’s **Secure Coding and Deployment Hardening** document gives detailed, up-to-date recommendations for writing and running BEAM applications securely. Use it as the main reference for security hardening alongside the official Erlang/OTP documentation on SSL distribution, vm.args, and release handling.
 
----
-
 ## Further reading
 
 - [EEF Secure Coding and Deployment Hardening](https://security.erlef.org/secure_coding_and_deployment_hardening/)

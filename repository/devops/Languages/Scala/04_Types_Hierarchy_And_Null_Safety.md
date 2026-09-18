@@ -6,8 +6,6 @@
 
 Scala’s **type hierarchy** on the JVM (`Any`, `AnyRef`, `AnyVal`, `Nothing`, `Null`, `Unit`), how **type inference** helps without erasing contracts, and the production habit of preferring **`Option`** over **`null`**—especially at **Java** boundaries where null still leaks in. This chapter is about reading types as contracts, not memorizing every stdlib class.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. Static types, clear contracts
@@ -144,8 +142,6 @@ def readFile(path: String): Try[String] =
 
 Mental model: `Option` = maybe missing; `Either` = failure message or value; `Try` = exception-shaped success/failure.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Hierarchy sketch (mental model)
@@ -258,8 +254,6 @@ scala> :type List()
 
 Ask `:type` whenever a public signature feels fuzzy.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -362,8 +356,6 @@ def cellToOption(value: String): Option[String] =
 - Config and request parsing treat missing values as errors or explicit defaults, never silent nulls.
 - Optional domain fields are `Option[...]`, not magic empty strings—unless the domain truly needs both.
 - Secrets never appear in derived `toString` / log interpolation.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./13_Deutsche_Telekom.md) · [README](./README.md) · [Next: Org/IAM (Floor 1) →](./15_Org_IAM_And_Identity_Federation.md) · [Full catalog](./Catalogs/India_CtrlS_Yotta_Products.md) · [Datacenter](../Datacenter/README.md)
 
----
-
 ## Mental map — Floor 1 jobs still apply
 
 | Job | How it shows up here | Depth |
@@ -15,8 +13,6 @@
 | Capacity | kW / U — colo conversation | [Datacenter Jobs/8](../Datacenter/Jobs/8_Capacity_Conversation.md) |
 | Hybrid | Cloud burst + Indian DC | [22](./22_Hybrid_Colo_And_Cloud.md) |
 
----
-
 ## 1. Concepts
 
 **CtrlS** and **Yotta** are **India-centric datacenter and cloud operators**, not global hyperscalers with an AWS-shaped region map. You meet them as **colocation**, **dedicated racks**, **hosted private cloud** (often VMware), **DR sites**, and **regional cloud** SKUs aimed at Indian data residency.
@@ -27,8 +23,6 @@
 | **Yotta** | Hyperscale campuses (NM1, D1, G1, …), colocation, hosted/private cloud SKUs |
 
 Treat them as **datacenter + optional cloud API**, not as “AWS in India with a different logo.” Shared Floor 1 jobs still apply; plant depth is [Datacenter/](../Datacenter/README.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -48,9 +42,6 @@ India work often needs **in-country** copies and specific interconnects. Do not 
 
 Portal IAM is often **weaker than AWS IAM**. Compensate with bastions, your IdP, and no shared root ([15](./15_Org_IAM_And_Identity_Federation.md)).
 
----
-
-
 ### How you grant permission here (quick)
 
 Portal IAM is often **thinner** than AWS/GCP. Prefer corporate IdP, bastions, least portal admins, and your own OS/K8s RBAC. Depth: [15](./15_Org_IAM_And_Identity_Federation.md).
@@ -65,7 +56,6 @@ Portal IAM is often **thinner** than AWS/GCP. Prefer corporate IdP, bastions, le
 | AI | GPU colo or their SKU + open/hosted models | [33](./33_AI_And_ML_Platforms_On_Cloud.md) |
 | Observability | Portal metrics if any + your stack / SaaS; hall DCIM ≠ app APM | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
 | Hybrid burst | On-ramp to hyperscaler | [17](./17_Private_Connectivity_And_On_Ramps.md), [22](./22_Hybrid_Colo_And_Cloud.md) |
-
 
 ## 3. Applications and use cases
 
@@ -84,8 +74,6 @@ Portal IAM is often **thinner** than AWS/GCP. Prefer corporate IdP, bastions, le
 - Identity: your IdP + least portal admins  
 
 **Good:** colo + your installer + tested remote-hands runbook. **Bad:** “we’re on Yotta so we’re on cloud” with three unmanaged ESXi hosts and no backups.
-
----
 
 ## References
 

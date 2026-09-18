@@ -2,8 +2,6 @@
 
 [← Previous](./14_Dynamic_Config_And_Continuation.md) · [README](./README.md) · [Next: Security →](./16_Security_Permissions_SSO_And_Policies.md)
 
----
-
 ## 1. Concepts
 
 Deploy by adding a **job** that runs your promote scripts/orbs. Gate production with a workflow **approval** (hold) job so a human continues the graph (Continuous Delivery).
@@ -44,8 +42,6 @@ Do **not** invent field lists — use the release-validation reference when impl
 
 The **CircleCI release agent** is for teams that want **Kubernetes-native** controls (scale/restart from the UI) or progressive delivery with [Argo_Rollouts/](../Argo_Rollouts/README.md). Docs warn **not** to use Smart Deployments and the release agent together on the same release path — pick one model.
 
----
-
 ## 2. Advanced concepts
 
 ### Target spectrum (official how-tos)
@@ -64,8 +60,6 @@ Restrict egress for deploy jobs when policy requires ([16](./16_Security_Permiss
 
 Release validation itself can work without GitHub App; **automatic rollback pipelines** and some deploy-pipeline features need GitHub App per current docs — check before promising auto-rollback on GitLab/Bitbucket-only orgs.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -77,8 +71,6 @@ Release validation itself can work without GitHub App; **automatic rollback pipe
 | K8s progressive UI | Release agent (+ Argo Rollouts if needed) |
 
 **Good:** same artifact digest staging→prod; one release-gating model. **Bad:** rebuild for production; mixing Smart Deployments and release agent on one path.
-
----
 
 ## References
 

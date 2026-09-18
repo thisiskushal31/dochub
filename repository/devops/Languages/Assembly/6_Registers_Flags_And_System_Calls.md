@@ -4,13 +4,9 @@
 
 This topic summarizes **processor registers** and **flags** in the IA-32 (32-bit x86) model, and how **Linux system calls** are made with `int 0x80`. You will see these in disassembly and when writing or reading low-level code. Content is aligned with common assembly references; see **Further reading**.
 
----
-
 ## Why registers matter
 
 Processor **registers** are small, fast storage on the CPU. Operations on registers are faster than on memory. Registers hold operands for arithmetic and logic, addresses for memory access, and status (e.g. flags). In IA-32 there are **general-purpose**, **segment**, **pointer**, **index**, and **control** registers.
-
----
 
 ## Data registers (32-bit and sub-parts)
 
@@ -22,8 +18,6 @@ Four 32-bit **data registers** are used for arithmetic, logic, and data movement
 - **EDX** — Data; extended arithmetic (e.g. high part of product); I/O port address.
 
 You can use the **lower 16 bits** as AX, BX, CX, DX, and the **lower 8 bits** as AL, AH, BL, BH, CL, CH, DL, DH.
-
----
 
 ## Pointer and index registers
 
@@ -37,8 +31,6 @@ You can use the **lower 16 bits** as AX, BX, CX, DX, and the **lower 8 bits** as
 
 - **ESI** (SI) — Source index; e.g. source for string operations.
 - **EDI** (DI) — Destination index; e.g. destination for string operations.
-
----
 
 ## Flags register
 
@@ -58,8 +50,6 @@ The **flags** (EFLAGS) record results of arithmetic and comparisons and control 
 
 Instructions like `add`, `sub`, `cmp` set these; conditional jumps (e.g. `je`, `jz`, `jg`) test them.
 
----
-
 ## Segment registers
 
 In 32-bit protected mode, **segment registers** (CS, DS, SS, ES, FS, GS) select segments. Typically:
@@ -70,8 +60,6 @@ In 32-bit protected mode, **segment registers** (CS, DS, SS, ES, FS, GS) select 
 - **ES, FS, GS** — Extra segments (e.g. for string destination or OS-specific data).
 
 The OS and linker set these; application code often does not change them explicitly.
-
----
 
 ## Linux system calls (int 0x80)
 
@@ -113,8 +101,6 @@ int  0x80          ; call kernel
 ```
 
 Syscall numbers and argument layout are defined in the kernel (e.g. unistd_32.h); they are part of the Linux ABI.
-
----
 
 ## Further reading
 

@@ -8,8 +8,6 @@
 
 Types are not only fields: how values are created, derived, and torn down is where many production bugs hide — half-initialized objects, lazy side effects, and wrapper magic that reviewers cannot see.
 
----
-
 ## 1. Concepts
 
 ### 1. Stored vs computed properties
@@ -247,8 +245,6 @@ struct UniqueToken: ~Copyable {
 - Noncopyable `deinit` pairs with move-only ownership—no reference graph, one owner.
 - Prefer explicit `close()` / `cancel()` APIs; treat `deinit` as the safety net.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Lazy pitfalls
@@ -452,8 +448,6 @@ struct HeaderMap {
 }
 ```
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -465,8 +459,6 @@ struct HeaderMap {
 | **Software engineering** | Keep `init` boring; side effects belong in named methods; document every custom property wrapper’s policy |
 
 Resource ownership: if a class opens a handle in `init`, close it in `deinit` *or* (better) use a scope that closes explicitly and make `deinit` a safety net.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -483,8 +475,6 @@ Resource ownership: if a class opens a handle in `init`, close it in `deinit` *o
 - Stacked property wrappers are justified; reviewers can state wrapped vs projected meaning.
 - Wrappers that touch globals (`UserDefaults`, singletons) are treated as hidden I/O.
 - Class vs noncopyable `deinit` stories are not confused (chapter **06**).
-
----
 
 ## References
 

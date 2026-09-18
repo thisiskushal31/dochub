@@ -2,8 +2,6 @@
 
 [← Previous](./17_Chains_Supply_Chain_Security.md) · [README](./README.md) · [Next: Operator →](./19_Operator_Platform_Config.md)
 
----
-
 ## 1. Concepts
 
 | Component | Role |
@@ -18,8 +16,6 @@ Without pruning, CRDs and logs fill the API server. Without Results (or another 
 kubectl get pipelineruns -A
 # Install Results + Pruner per current docs or Operator CRs (TektonResult / TektonPruner)
 ```
-
----
 
 ## 2. Advanced concepts
 
@@ -45,8 +41,6 @@ Match compliance: keep N days and/or N Runs per Pipeline; prune failed lab names
 
 Design **archive-then-prune** (or accept loss). Pruner without Results is amnesia with a cleaner etcd.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -63,8 +57,6 @@ Design **archive-then-prune** (or accept loss). Pruner without Results is amnesi
 - DB backups if Results uses external Postgres  
 
 **Good:** retention policy documented. **Bad:** infinite Run history in etcd.
-
----
 
 ## References
 

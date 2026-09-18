@@ -2,8 +2,6 @@
 
 [← Previous](./04_Install_Plugin_Dashboard_And_First_Rollout.md) · [README](./README.md) · [Next: Strategies & steps →](./06_Canary_Strategy_And_Steps.md)
 
----
-
 ## 1. Concepts
 
 Blue-green keeps **two stacks**: **active** (production traffic) and optional **preview** (new version for tests). The controller updates Service selectors (via pod-template-hash) so active points at stable until promotion, then switches active to the new ReplicaSet.
@@ -21,8 +19,6 @@ strategy:
 ```
 
 Promote: `kubectl argo rollouts promote <name>` (or auto when enabled / after `autoPromotionSeconds`).
-
----
 
 ## 2. Advanced concepts
 
@@ -46,8 +42,6 @@ Together with canary, these are the **only** first-class strategies — shapes a
 
 Sequence (simplified): new RS ready → (optional analysis) → point active Service at new → wait scaleDownDelay → scale down old.
 
----
-
 ## 3. Applications and use cases
 
 | Use | Fit |
@@ -57,8 +51,6 @@ Sequence (simplified): new RS ready → (optional analysis) → point active Ser
 | Need gradual % traffic | Use canary + trafficRouting instead |
 
 **Good:** digest-pinned images; promote after smoke on preview. **Bad:** auto-promote with no analysis and no tests on preview.
-
----
 
 ## References
 

@@ -4,8 +4,6 @@
 
 This section is a **deep dive** into JavaScript: factually correct, standalone, and written so you can go from zero knowledge to using the language in real projects. It answers four things: **What is this language?** **Why is it used?** **How can I use it?** **What are the use cases?** The section is organized as **concepts first, then use cases**. You learn the basics (what JavaScript is, where it runs, syntax, types, control flow), then functions and objects, then **ES6 and modern JavaScript** (let/const, arrow functions, classes, modules, promises, async/await), then DOM and events, Node.js and npm for tooling, and finally where and how JavaScript is used—front-end, Node.js, DevOps, automation, security, and use cases by engineering role (software engineering, DevOps/SRE, security, cybersecurity). Each topic is self-contained and in-depth. For more depth on any topic, use the links in the Further reading section at the end of each file.
 
----
-
 ## How to read this section
 
 Read in **number order** for a single path: **concepts first**, then **use cases**.
@@ -16,8 +14,6 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 - **ES6+ and modern:** Modules, destructuring, spread/rest, Promise, async/await, optional chaining, nullish coalescing; code quality, arrays, iterables, Map/Set, Date, JSON; advanced functions, prototypes, generators, Proxy/Reflect.
 - **DOM and browser:** DOM tree, selecting and modifying elements, events, forms, dimensions, coordinates; UI events, forms, loading; Node.js, npm, package.json.
 - **Use cases:** Where JavaScript appears in practice—front-end, Node, DevOps/automation, serverless—and use cases by role (software engineering, DevOps/SRE, Security/cybersecurity). Implementation topics (21–24) cover DevOps and security, frames and storage, binary and network, animation and Web Components and regex.
-
----
 
 ## Topic index: aligned with documentation
 
@@ -31,8 +27,6 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 | **Use cases** | By role (software, DevOps/SRE, security, cybersecurity) | 20 |
 | **Implementation** | DevOps and security, frames and storage, binary and network, animation and Web Components and regex | 21–24 |
 
----
-
 ## Learning path: from basics to use cases
 
 | Stage | Topics | What you'll be able to do |
@@ -44,8 +38,6 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 | **DOM and Node** | 16 → 19 | Manipulate the DOM, handle events, work with forms and UI, use Node.js and npm. |
 | **Use cases** | 20 | Apply JavaScript in front-end, Node, DevOps, and security; navigate by role. |
 | **Implementation** | 21 → 24 | Apply JS: DevOps and security, frames and storage, binary and network, animation and Web Components and regex. |
-
----
 
 ## Topics
 
@@ -82,8 +74,6 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 | 23 | Binary data and network requests | [23_Binary_Network.md](./23_Binary_Network.md) |
 | 24 | Animation, Web Components, and regular expressions | [24_Animation_WebComponents_Regex.md](./24_Animation_WebComponents_Regex.md) |
 
----
-
 ## By engineering role
 
 | Role | Focus | Where to go |
@@ -93,15 +83,11 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 | **DevOps / SRE** | Scripts, npm, automation, tooling | 1–2, 6, 8, 9, 10, 19, then 20, 21. |
 | **Security / cybersecurity** | Safe coding, XSS, injection, supply chain | 4, 6, 8, 15, 16, 19, then 20, 21, 22. |
 
----
-
 ## Scope: what's covered and what's not
 
 **Covered:** What JavaScript is, why and how to use it, and where it fits. Syntax, variables, data types, operators, control flow, functions, objects, prototypes, **ES6 and modern JavaScript** (classes, modules, destructuring, spread/rest, Promise, async/await), code quality and testing, arrays and iterables and Map/Set and Date and JSON, advanced functions, property descriptors and prototypes, classes and generators, Proxy/Reflect/eval, DOM and events, UI events and forms and loading, Node.js and npm, and use cases from front-end, backend, DevOps, and Security/cybersecurity perspectives. Implementation topics (21–24) cover DevOps and security, frames and storage, binary and network, animation and Web Components and regex. Further reading at the end of each file.
 
 **Not covered in depth here (by design):** Every browser or Node API, and every framework (React, Vue, Angular, etc.), are only introduced or pointed to in Further reading so the section stays focused and navigable.
-
----
 
 ## Further reading
 

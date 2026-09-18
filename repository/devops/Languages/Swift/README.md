@@ -10,8 +10,6 @@ This track teaches the **language + toolchain + Package Manager + Apple ship lit
 
 Start at chapter **00**. The first goal is not “ship to the App Store.” It is: know which `swift` is on your PATH, run a hello, and feel the difference between a script, a package, and an app target.
 
----
-
 ## Versions and brownfield (default narrative)
 
 **Default for new work: Swift 6.x language mode** on the current stable toolchain your team ships. This handbook’s language snapshot is the **Swift 6.3.x** line—**pin the exact patch CI actually uses** (`swift --version` / Xcode’s Swift). Swift evolved in public; major versions changed both *syntax* and *meaning* (especially **3**’s source break and **6**’s concurrency checking).
@@ -34,8 +32,6 @@ xcodebuild -version 2>/dev/null || true
 swift package describe 2>/dev/null || true
 ```
 
----
-
 ## Chapter structure
 
 Every chapter follows:
@@ -46,8 +42,6 @@ Every chapter follows:
 4. **Staff-level review checklist**
 
 Links live in each chapter’s **References** (official hubs only).
-
----
 
 ## How to read a chapter
 
@@ -94,8 +88,6 @@ Official Further reading below stays the hub list—TSPL, Observation, Macros, S
 
 Pin the **Swift 6.3.x** patch your CI actually runs; the chapter text is literacy, not a substitute for `swift --version`.
 
----
-
 ## Beginner to advanced progression
 
 | Phase | Chapters | Outcome |
@@ -108,8 +100,6 @@ Pin the **Swift 6.3.x** patch your CI actually runs; the chapter text is literac
 | Apple ship lane | **18–21** | Xcode projects; UI surface literacy; Security/privacy; CI/CD |
 | Applications + wrap | **22–23** | Use-case gallery; whole-engineering master checklist |
 | Compass | **24** | Evolution + adjacent doors (server, Wasm, Android SDK, Embedded, ownership, …) |
-
----
 
 ## Topics
 
@@ -140,8 +130,6 @@ Pin the **Swift 6.3.x** patch your CI actually runs; the chapter text is literac
 | 22 | Use cases: scripts, packages, apps, server glance | [22_Use_Cases_Scripts_Packages_Apps_Server_Glance.md](./22_Use_Cases_Scripts_Packages_Apps_Server_Glance.md) |
 | 23 | Whole-engineering wrap and staff checklist | [23_Whole_Engineering_Wrap_And_Staff_Checklist.md](./23_Whole_Engineering_Wrap_And_Staff_Checklist.md) |
 | 24 | Where Swift is going and adjacent doors | [24_Where_Swift_Is_Going_And_Adjacent_Doors.md](./24_Where_Swift_Is_Going_And_Adjacent_Doors.md) |
-
----
 
 ## Further reading
 

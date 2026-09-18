@@ -10,8 +10,6 @@ How to test OCaml projects in CI, debug native binaries, profile CPU and allocat
 dune runtest
 ```
 
----
-
 ## 1. Tests with dune
 
 dune defines test stanzas that build and run test executables or inline tests. `dune runtest` from the project root is the usual CI entry point. Tests should be deterministic: avoid live network unless you use recorded fixtures or mocked backends.
@@ -23,8 +21,6 @@ Alcotest is a common library for organizing tests with readable output. ppx_expe
  (name my_test)
  (libraries alcotest mylib))
 ```
-
----
 
 ## 2. Debugging native code
 
@@ -39,8 +35,6 @@ lldb _build/default/bin/myexe
 # (gdb) run / (lldb) run — same as C
 ```
 
----
-
 ## 3. Profiling
 
 CPU and allocation profilers show where time and GC pressure go. Microbenchmarks can be noisy because of GC; prefer longer runs or production-like inputs. Profiling guides optimization: avoid allocating in tight loops before rewriting algorithms.
@@ -51,8 +45,6 @@ CPU and allocation profilers show where time and GC pressure go. Microbenchmarks
 # Example: time + allocations — use your org’s standard perf wrapper
 perf record -g -- ./_build/default/bin/myexe
 ```
-
----
 
 ## 4. Error handling in services
 
@@ -67,8 +59,6 @@ let load path : (string, [> err ]) result =
   if path = "" then Error `Invalid else Ok (path ^ ":data")
 ```
 
----
-
 ## 5. Logging and observability
 
 Use structured logging (JSON lines or key=value fields) with request or job IDs propagated through async chains. Integrate with whatever your platform uses (syslog, OpenTelemetry, cloud log sinks). Never log secrets or unsanitized PII without policy.
@@ -77,8 +67,6 @@ Use structured logging (JSON lines or key=value fields) with request or job IDs 
 let log_json ~request_id ~msg =
   Printf.printf {|{"request_id":"%s","msg":"%s"}|} request_id msg
 ```
-
----
 
 ## 6. Observability contracts and incident readiness
 
@@ -98,8 +86,6 @@ let () =
   Printf.printf "service=myapi version=%s\n%!" version
 ```
 
----
-
 ## 7. Pretty-printing with `Format` (boxes and break hints)
 
 The stdlib **`Format`** module implements a **pretty-printing engine**: you **open boxes** (layout regions), emit **break hints** (“if the line is full, break here with this indent; otherwise print a space”), and **close** boxes like nested parentheses. **`Format.printf`** / **`fprintf`** accept **`@`**-annotations in the format string to open/close boxes and insert breaks without dozens of tiny helper calls.
@@ -115,8 +101,6 @@ let () =
   printf "@[<v>line1@,line2@]@."
 ```
 
----
-
 ## 8. More debugging tools: traces, backtraces, and source locations
 
 The **toplevel** can trace selected functions (`#trace` / `#untrace`) to print call/return events—fast for small reproducers; **polymorphic** functions trace with less readable arguments unless you add a **type constraint** to make the trace monomorphic.
@@ -130,8 +114,6 @@ export OCAMLRUNPARAM=b
 ./_build/default/bin/myexe
 ```
 
----
-
 ## 9. Profiling: what you are measuring
 
 Profiler guides often walk down to **assembly** to show how **`ocamlopt`** represents calls and allocations. You do not need to read asm for day-to-day work, but you should internalise the idea: **hot paths** are a mix of **your** logic, **stdlib** code, **allocation rate**, and **GC**. A profile that attributes time to **known** functions is enough to choose between algorithm changes, **container** changes, or **reducing** closure and allocation churn.
@@ -140,8 +122,6 @@ Profiler guides often walk down to **assembly** to show how **`ocamlopt`** repre
 (* Profile attribution: time in List.map vs your [f] vs GC *)
 let work xs = List.map String.uppercase_ascii xs
 ```
-
----
 
 ## Advanced use cases and implementation
 
@@ -152,8 +132,6 @@ Ship version strings and build identifiers with binaries so support can match sy
 ```ocaml
 let build_id = "git-abc1234"
 ```
-
----
 
 ## References
 

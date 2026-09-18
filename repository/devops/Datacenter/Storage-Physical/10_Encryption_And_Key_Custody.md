@@ -2,8 +2,6 @@
 
 [← Previous](./9_Snapshots_Vs_Backups_Vs_Replication.md) · [README](./README.md) · [Next: Latency →](./11_Latency_For_Etcd_And_Databases.md)
 
----
-
 ## 1. Concepts
 
 Encryption answers confidentiality at rest; **key custody** answers who can decrypt after a theft, RMA, or admin leave.
@@ -23,8 +21,6 @@ Encrypting twice without a plan wastes CPU; encrypting zero times with “physic
 ### Where keys live
 
 HSM/KMS on-prem; array key managers; cloud KMS for hybrid; **printed escrow** procedures for break-glass—documented in Jobs/security practice, not Slack.
-
----
 
 ## 2. Advanced concepts
 
@@ -46,8 +42,6 @@ Secure Boot/TPM may wrap keys ([Compute/11](../Compute/11_Firmware_Trains_And_Se
 
 FIPS/local crypto regulations differ—follow org policy and current law counsel. Technical jobs: classify data, place keys, test recovery.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -66,8 +60,6 @@ FIPS/local crypto regulations differ—follow org policy and current law counsel
 - Never store KMS admin creds in the backup images  
 
 **Good:** external KMS, tested recovery, erase on RMA. **Bad:** checkbox SED; keys only on stolen appliance; no escrow.
-
----
 
 ## References
 

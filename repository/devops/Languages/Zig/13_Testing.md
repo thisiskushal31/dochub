@@ -8,8 +8,6 @@ How Zig expects you to **prove** code: `test` blocks, `zig test`, testing alloca
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. Tests live in the language
@@ -105,8 +103,6 @@ test "dupe frees" {
 | Target | Do we test the triple we ship? |
 | Integration | Real filesystem/network behind explicit flags? |
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Tests under different modes
@@ -136,8 +132,6 @@ Skip unsupported targets deliberately. Do not skip the target you actually deplo
 
 Inject clocks, seeds, and fake I/O. “Sometimes fails on CI” is a defect—own it.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Testing role |
@@ -150,8 +144,6 @@ Inject clocks, seeds, and fake I/O. “Sometimes fails on CI” is a defect—ow
 
 **Whole-engineering picture:** tests make Zig’s safe modes useful—bugs die in CI instead of in production telemetry.
 
----
-
 ## 4. Staff-level review checklist
 
 - New fallible logic includes failure-path tests, not only success.
@@ -159,8 +151,6 @@ Inject clocks, seeds, and fake I/O. “Sometimes fails on CI” is a defect—ow
 - Leak reports are treated as failures, not noise.
 - Flaky tests have owners and timelines.
 - Release mode policy is reflected in at least some CI configurations for critical paths.
-
----
 
 ## References
 

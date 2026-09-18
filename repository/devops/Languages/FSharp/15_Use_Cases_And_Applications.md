@@ -26,8 +26,6 @@ F# is used where **succinct**, **type-safe** code and **.NET interoperability** 
 
 **Why this matters.** Seeing use cases and roles together helps you decide when F# is a fit and how to use it from coding to deployment. The language and tooling are the same across web, Azure, and data; the context (DevOps, security, domain) determines how you build, deploy, and harden it.
 
----
-
 ## Further reading
 
 - [F# for Web Apps (fsharp.org)](https://fsharp.org/use/web-apps/)

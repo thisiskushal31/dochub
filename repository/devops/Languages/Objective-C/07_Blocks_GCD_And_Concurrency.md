@@ -10,8 +10,6 @@
 #import <dispatch/dispatch.h>
 ```
 
----
-
 ## 1. Block typedefs
 
 ```objc
@@ -20,8 +18,6 @@ typedef void (^CompletionBlock)(NSData * _Nullable data, NSError * _Nullable err
 ```
 
 Under **ARC**, blocks are Objective-C objects—**`self`** is captured **strongly** unless you break the cycle (e.g. **`__weak`** + strong local inside the block).
-
----
 
 ## 2. Dispatch basics
 
@@ -38,8 +34,6 @@ dispatch_async(q, ^{
 
 **`dispatch_sync`** to the **main** queue **from** the main queue **deadlocks**—avoid **`dispatch_sync`** on the UI queue unless you control reentrancy.
 
----
-
 ## 3. Barriers (concurrent queue)
 
 ```objc
@@ -50,8 +44,6 @@ dispatch_barrier_async(cq, ^{
   /* exclusive write */
 });
 ```
-
----
 
 ## 4. Global queues and QoS
 
@@ -64,8 +56,6 @@ dispatch_async(bg, ^{
 
 Pick **QoS** honestly—misclassification hurts latency and power.
 
----
-
 ## 5. NSOperationQueue
 
 ```objc
@@ -76,8 +66,6 @@ NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{ /* B */ }];
 ```
 
 Cancellation must be observed inside long-running **`NSOperation`** bodies.
-
----
 
 ## Advanced use cases and implementation
 
@@ -98,8 +86,6 @@ dispatch_async(dispatch_get_main_queue(), ^{
   /* UIKit / AppKit mutations */
 });
 ```
-
----
 
 ## References
 

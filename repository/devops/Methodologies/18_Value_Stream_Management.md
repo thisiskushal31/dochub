@@ -8,8 +8,6 @@
 
 PeopleCert / DevOps Foundation lists **Value Stream Management** next to CI/CD, DevSecOps, and Platform Engineering as a key practice. Separate VSM Foundation courses go deep; this file is the DevOps-methodology literacy a beginner needs.
 
----
-
 ## Mapping vs management
 
 | | Value stream **mapping** | Value Stream **Management** |
@@ -21,8 +19,6 @@ PeopleCert / DevOps Foundation lists **Value Stream Management** next to CI/CD, 
 
 You need both. Map to see. Manage to improve.
 
----
-
 ## What VSM manages
 
 1. **Flow** — how fast work moves (lead time, WIP, waits) — Lean + [11](./11_Value_Streams_And_Lean_Flow.md)  
@@ -30,8 +26,6 @@ You need both. Map to see. Manage to improve.
 3. **Stability** — whether flow created mess (DORA fail/rework/recovery — [5](./5_DORA_And_Delivery_Metrics.md))  
 
 Many modern courses pair **DORA + flow metrics + SPACE**-style views. Do not optimize flow by shipping junk faster.
-
----
 
 ## Operating ingredients
 
@@ -46,8 +40,6 @@ Many modern courses pair **DORA + flow metrics + SPACE**-style views. Do not opt
 
 Commercial **VSM platforms** (toolchain analytics products) exist. Buy them only after you can name your streams and metrics — otherwise you purchase a dashboard for confusion.
 
----
-
 ## How this fits DevOps
 
 ```text
@@ -59,8 +51,6 @@ Three Ways / CALMS
 ```
 
 VSM is how enterprises scale “DevOps” beyond one heroic team.
-
----
 
 ## Pitfalls
 

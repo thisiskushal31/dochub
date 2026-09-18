@@ -2,8 +2,6 @@
 
 [← Previous](./3_Managed_Kubernetes.md) · [README](./README.md) · [Next: AWS →](./5_AWS_Literacy.md) · [Full catalog](./Catalogs/GCP_Products.md) · [Jobs: IAM](./15_Org_IAM_And_Identity_Federation.md) · [LB](./23_Load_Balancing_Ingress_And_TLS.md)
 
----
-
 ## Mental map — Floor 1 jobs on GCP
 
 | Job | GCP wiring | Depth |
@@ -19,8 +17,6 @@
 | Registry | Artifact Registry | [27](./27_Container_Registries_And_Artifacts.md) |
 | Audit | Cloud Audit Logs | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
 | Metrics / logs / traces | Cloud Monitoring + Logging + Trace; Managed Prometheus optional | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
-
----
 
 ## 1. Concepts
 
@@ -59,8 +55,6 @@ Cloud Run is not “tiny GKE.” No cluster API, different networking and identi
 | Logs / metrics | Cloud Logging, Cloud Monitoring |
 | SQL / warehouse doors | Cloud SQL, Spanner, BigQuery — [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) |
 
----
-
 ## 2. Advanced concepts
 
 ### Network and entry
@@ -84,9 +78,6 @@ Org policies constrain “who can make a public bucket” regardless of IAM on o
 | Global VPC | Peering/firewall mental model differs from AWS regional VPC |
 | Shared VPC | Host project + service projects — landing-zone pattern |
 | Cloud Run vs GKE | Different deploy unit; pick deliberately ([28](./28_Deployment_Shapes_On_Cloud.md)) |
-
----
-
 
 ### How you grant permission on GCP (quick)
 
@@ -116,7 +107,6 @@ Full job: [15](./15_Org_IAM_And_Identity_Federation.md).
 | Managed Prometheus | Managed Service for Prometheus | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
 | Full N-tier system | Wire [34](./34_Multi_Tier_And_Reference_Topologies.md) | |
 
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -135,8 +125,6 @@ Full job: [15](./15_Org_IAM_And_Identity_Federation.md).
 - Org policies on for public IPs / public buckets  
 
 **Good:** project-per-env or folder-per-env with WIF. **Bad:** one project, SA JSON in CI, GKE node SA with `roles/owner`.
-
----
 
 ## References
 

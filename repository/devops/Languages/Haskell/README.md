@@ -4,8 +4,6 @@
 
 This section is a **deep dive** into Haskell: factually correct, standalone, and written so you can go from zero knowledge to using the language in real projects. It answers four things: **What is this language?** **Why is it used?** **How can I use it?** **What are the use cases?** The section is organized as **concepts first, then use cases**. You learn the basics (syntax, structure, types, purity, functions), then core language and tooling (GHC, Cabal, Stack), then concepts (type classes, I/O and effects, testing, libraries), and finally where and how Haskell is used—DevOps, security and formal methods, and use cases by engineering role. Each topic is self-contained and in-depth: the body never attributes content to external sources; explanations come first, then code only when it illustrates the idea. For more depth, use the links in the Further reading section at the end of each file.
 
----
-
 ## How to read this section
 
 Read in **number order** for a single path: **concepts first**, then **use cases**.
@@ -14,8 +12,6 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 - **Core language:** Syntax and structure, types and type system, functions and purity, modules and programs.
 - **Concepts:** Type classes, I/O and effects, build and packages (Cabal, Stack), testing and tooling, libraries and Hackage.
 - **Use cases:** Where Haskell appears in practice—DevOps, security tooling, formal methods—and use cases by role (software engineering, DevOps/SRE, security, research).
-
----
 
 ## Topic index: aligned with documentation
 
@@ -37,8 +33,6 @@ The table below maps common documentation areas to this handbook so you can find
 | **Use cases** | |
 | Security tooling, formal methods, DevOps | 11, 12 |
 
----
-
 ## Learning path: from basics to use cases
 
 | Stage | Topics | What you'll be able to do |
@@ -47,8 +41,6 @@ The table below maps common documentation areas to this handbook so you can find
 | **Core language** | 3 → 6 | Use syntax and structure, types, functions, purity, and modules. |
 | **Concepts** | 7 → 10 | Work with type classes, I/O and effects, Cabal/Stack, testing, and libraries. |
 | **Use cases** | 11 → 12 | Apply Haskell in DevOps, security, formal methods; navigate by engineering role. |
-
----
 
 ## Topics
 
@@ -73,8 +65,6 @@ The table below maps common documentation areas to this handbook so you can find
 | 11 | DevOps, security, and formal methods | [11_DevOps_Security_Formal_Methods.md](./11_DevOps_Security_Formal_Methods.md) |
 | 12 | Use cases by role | [12_Use_Cases_By_Role.md](./12_Use_Cases_By_Role.md) |
 
----
-
 ## By engineering role
 
 | Role | Focus | Where to go |
@@ -84,15 +74,11 @@ The table below maps common documentation areas to this handbook so you can find
 | **Security / cybersecurity** | Safe use, formal methods, high-assurance tooling | 7, 8, 11, 12. |
 | **Research / formal methods** | Purity, types, language report, verification | 4, 5, 7, 11, 12. |
 
----
-
 ## Scope: what's covered and what's not
 
 **Covered:** What Haskell is, why and how to use it, and where it fits. Syntax and structure, types and type system, functions and purity, modules and programs, type classes, I/O and effects, build and packages (Cabal, Stack), testing and tooling, and use cases from software engineering, DevOps, security, and cybersecurity perspectives. Concrete commands and examples appear where they illustrate the concept.
 
 **Not covered in depth here (by design):** Every GHC extension, every library on Hackage, and full formal semantics are only introduced or pointed to in Further reading so the section stays focused and navigable.
-
----
 
 ## Further reading
 

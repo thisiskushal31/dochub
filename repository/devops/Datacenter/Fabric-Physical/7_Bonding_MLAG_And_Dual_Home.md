@@ -2,8 +2,6 @@
 
 [← Previous](./6_Border_And_Edge_Roles.md) · [README](./README.md) · [Next: Optics roles →](./8_Optics_And_Transceiver_Roles.md)
 
----
-
 ## 1. Concepts
 
 **Dual-home** means a host (or switch) has links to **two independent upstream devices**. **LACP bonding** bundles links; **MLAG / vPC-class** pairs make two ToRs look like one logical neighbor for LACP.
@@ -18,8 +16,6 @@
 | Single NIC | Not dual-homed |
 
 Protocol minutiae → Networks-Deep-Dive. Hall job: **independence is physical**.
-
----
 
 ## 2. Advanced concepts
 
@@ -47,8 +43,6 @@ Compute slot planning: [Compute/13](../Compute/13_NICs_HBAs_And_Slot_Planning.md
 
 Vendor MLAG names differ (vPC, MCLAG, …). Jobs identical: peer link, dual-home hosts, test pull.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -67,8 +61,6 @@ Vendor MLAG names differ (vPC, MCLAG, …). Jobs identical: peer link, dual-home
 - Never celebrate “bonded” without tracing far ends  
 
 **Good:** true dual-home, tested failover. **Bad:** bond to one switch; MLAG untested; shared PDU.
-
----
 
 ## References
 

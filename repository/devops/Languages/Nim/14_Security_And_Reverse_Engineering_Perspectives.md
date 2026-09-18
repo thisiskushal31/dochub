@@ -51,8 +51,6 @@ else:
 - **Systems and operations:** native artifacts need **patching**, **SBOM**, and **runtime** monitoring like any other binary.
 - **Cybersecurity:** combine **threat intelligence** with **build forensics**; avoid monocausal attribution on language alone.
 
----
-
 ## Further reading
 
 - [Nim documentation portal](https://nim-lang.org/documentation.html)

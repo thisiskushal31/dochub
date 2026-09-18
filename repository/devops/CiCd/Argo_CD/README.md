@@ -70,8 +70,6 @@ Suggested order: **01 → 18**. After **04**, you can pause and do **12** early 
 | Progressive traffic | [CiCd/9](../9_Progressive_Delivery_Controllers.md) · [Argo_Rollouts](../Argo_Rollouts/README.md) |
 | This product end-to-end | Chapters **01–18** below |
 
----
-
 ## Chapters
 
 | # | File | Focus |

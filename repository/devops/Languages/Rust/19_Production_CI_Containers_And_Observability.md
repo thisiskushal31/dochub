@@ -6,8 +6,6 @@
 
 How to **build, test, and ship** Rust in CI; how to package binaries in **multi-stage containers** with **non-root** runtime; and how to operate services with **structured logging**, **metrics**, **panic hooks**, **health checks**, and **graceful shutdown**. Platform work is part of shipping Rust—not a separate craft from writing the code.
 
----
-
 ## 1. Concepts
 
 ### 1. CI matrix: stable and MSRV
@@ -135,8 +133,6 @@ On `SIGTERM`/`SIGINT`:
 
 Async runtimes typically integrate signal listening; sync servers use the same OS signals. Match Kubernetes `terminationGracePeriodSeconds` (or equivalent) to your drain timeout.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Feature and workspace CI cost
@@ -197,8 +193,6 @@ Libraries that emit via the **`log`** facade and binaries that standardize on **
 
 **`RUST_BACKTRACE=1`** (or `full`) asks the runtime to capture stack traces on panic. Enable it in **staging** (and local debug) so panic hooks and incident reviews get actionable frames. Production policy is a tradeoff: richer dumps vs cost, PII in frames, and noise—many teams keep full backtraces in staging/canary and a tighter policy in prod, with **debuginfo** available for symbolication (chapter 16). Document the env var in runbooks; do not rely on backtraces alone—structured panic hooks (§1.10) still matter.
 
----
-
 ## 3. Applications and use cases + staff checklist
 
 ### Software engineering
@@ -240,8 +234,6 @@ Libraries that emit via the **`log`** facade and binaries that standardize on **
 - Metrics (counters/histograms) for golden signals; scrape vs push documented.
 - Panic policy documented; `RUST_BACKTRACE` enabled in staging; graceful shutdown tested under SIGTERM.
 - No secrets in image layers or compile-time env baked into the binary.
-
----
 
 ## References
 

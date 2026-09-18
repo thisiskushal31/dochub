@@ -2,8 +2,6 @@
 
 [← Previous](./23_Hosted_Agent_Operations.md) · [README](./README.md) · [Next: Governance →](./25_Governance_Permissions_And_Migration.md)
 
----
-
 ## 1. Concepts
 
 Beyond core steps, Pipelines connects outward:
@@ -25,8 +23,6 @@ On a finished build: **View → Waterfall**. Shows wait (gray) / dispatch (yello
 
 Operational views for wait times and cluster health. Deeper cluster insights may be **plan-gated** (e.g. Enterprise) — confirm docs/pricing.
 
----
-
 ## 2. Advanced concepts
 
 ### Speed tools
@@ -37,8 +33,6 @@ Docs cover flaky-test reduction and tooling such as **bktec** for faster test fe
 
 Don’t spam production channels on every PR; route by pipeline/branch.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -48,8 +42,6 @@ Don’t spam production channels on every PR; route by pipeline/branch.
 | Org scanner gate | Security integration / plugin |
 
 **Good:** pinned plugins; owned notification routes. **Bad:** twenty chat bots on every step.
-
----
 
 ## References
 

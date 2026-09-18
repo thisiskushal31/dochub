@@ -8,8 +8,6 @@ Where Tcl **actually shows up**, and how **different roles** should think about 
 
 Default pin for new work remains **Tcl 9.0.x**; many domains below still run **8.6** in production. Name the pin when you inherit a system.
 
----
-
 ## 1. Concepts
 
 ### 1. Why Tcl persists
@@ -105,8 +103,6 @@ Desktop utilities: config editors, installers, status panels, educational IDEs. 
 
 Separate **fast pure-Tcl tests** (CI every commit) from **hardware/dialogue tests** (nightly, lab runners).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Brownfield gravity (8.6 everywhere)
@@ -193,8 +189,6 @@ A mid-size platform team might own:
 
 The mistake is pretending these are one stack. The staff move is **four pins, four owners, shared review checklists**.
 
----
-
 ## 3. Applications and use cases
 
 ### By role — concrete scenarios
@@ -238,8 +232,6 @@ The mistake is pretending these are one stack. The staff move is **four pins, fo
 - Shipping `.so` extensions built against a different Tcl.
 - Treating Tk and headless CI as the same environment.
 
----
-
 ## Staff-level review checklist
 
 - Domain and role for the change are named (ops dialogue vs embed vs test vs Tk).
@@ -252,8 +244,6 @@ The mistake is pretending these are one stack. The staff move is **four pins, fo
 - Embedding/C extensions considered if `load` or host eval is involved.
 - Exit criteria include operator runbook updates, not only code merge.
 - No vendor-manual dump—links point to official Tcl/Expect/DejaGnu hubs when depth is needed.
-
----
 
 ## References
 

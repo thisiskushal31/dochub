@@ -17,8 +17,6 @@ Staff hire VB.NET fluency for four practical pillars:
 
 **New to VB.NET?** Start at chapter **01** (what it is), then **00** (SDK + hello), then **02** onward.
 
----
-
 ## After this track — what you can write
 
 | You can write / do… | What “done” looks like | Spine chapters |
@@ -29,8 +27,6 @@ Staff hire VB.NET fluency for four practical pillars:
 | A **package and assembly review** | PackageReference inventory; restore understood | **13**, **16** |
 | A **COM / P/Invoke review conversation** | Surfaces named; late binding risk understood | **14** |
 | A **modernization / keep-or-migrate** decision | Windows doors + chapter **18** used honestly | **15**, **17–18** |
-
----
 
 ## What to learn next (complement paths)
 
@@ -57,8 +53,6 @@ VB.NET usually lands in **Windows LOB** (WinForms/services), **shared libraries*
 | **Ops** | **00 → 13 → 15 → 16** → PowerShell → publish/runtime baselines |
 | **Modernizer** | **14–18** → strangler plan → C# for new edges |
 
----
-
 ## Versions and brownfield (default narrative)
 
 **Default for new work: Visual Basic on modern .NET**, language **17.13** with Visual Studio **2026**-era tooling (pin whatever SDK/VS band **your org actually ships**), targeting a supported TFM such as **`net8.0` / `net9.0` / `net10.0`**.
@@ -76,8 +70,6 @@ dotnet --version
 dotnet --list-sdks
 ```
 
----
-
 ## Chapter structure
 
 Every chapter follows:
@@ -88,8 +80,6 @@ Every chapter follows:
 4. **Staff-level review checklist**
 
 Links live in each chapter’s **References** (official hubs only).
-
----
 
 ## Semantic model (six ideas)
 
@@ -109,14 +99,10 @@ Links live in each chapter’s **References** (official hubs only).
 | VBA boundary | Macro advice applied to `.vbproj` apps | **01**, **18** |
 | VB specialty syntax | Surprise XML literals / `My` in a C#-heavy review | **10**, **12** |
 
----
-
 ## How to read this section
 
 **Absolute beginners:** **01 → 00 → 02 → …**  
 If you already open VB solutions daily: **00 → 02…**, but do **not** skip **03**, **08**, **13**, and **16**.
-
----
 
 ## Progression
 
@@ -129,8 +115,6 @@ If you already open VB solutions daily: **00 → 02…**, but do **not** skip **
 | **Platform / legacy** | 13 → 15 | Assemblies/NuGet, COM/P/Invoke, WinForms/services doors |
 | **Security / synthesis** | 16 → 18 | Hardening habits, roles, complement paths |
 
----
-
 ## How this relates to .NET
 
 There is **no separate “.NET language” folder** in this handbook. **.NET** is the **platform** under C#, VB.NET, and F#.
@@ -141,8 +125,6 @@ There is **no separate “.NET language” folder** in this handbook. **.NET** i
 | **.NET SDK, projects, assemblies, NuGet, BCL—as used from VB** | **This track** (woven through **00**, **02**, **12–13**, and later) |
 | **Shared platform depth and common greenfield default** | [C#](../CSharp/README.md) |
 | **Office macros** | [VBA](../VBA/README.md) |
-
----
 
 ## Chapters
 
@@ -167,8 +149,6 @@ There is **no separate “.NET language” folder** in this handbook. **.NET** i
 | 16 | Security and best practices | [16_Security_And_Best_Practices.md](./16_Security_And_Best_Practices.md) |
 | 17 | Use cases and engineering perspectives | [17_Use_Cases_And_Engineering_Perspectives.md](./17_Use_Cases_And_Engineering_Perspectives.md) |
 | 18 | Where VB.NET is going and adjacent doors | [18_Where_VBNet_Is_Going_And_Adjacent_Doors.md](./18_Where_VBNet_Is_Going_And_Adjacent_Doors.md) |
-
----
 
 ## Further reading
 

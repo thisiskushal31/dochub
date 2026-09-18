@@ -2,8 +2,6 @@
 
 [← Previous](./06_Jobs_Needs_Concurrency_And_Matrix.md) · [README](./README.md) · [Next: Hosted runners →](./08_GitHub_Hosted_Runners.md)
 
----
-
 ## 1. Concepts
 
 **Contexts** are objects you read in `${{ }}` expressions: `github`, `env`, `vars`, `secrets`, `needs`, `steps`, `runner`, `job`, `matrix`, `inputs`, …
@@ -24,8 +22,6 @@ steps:
 **Default env vars** — `GITHUB_*`, `RUNNER_*`, etc. (variables reference).
 
 Expressions support operators, functions (`contains`, `startsWith`, `hashFiles`, `success()`, `always()`, …).
-
----
 
 ## 2. Advanced concepts
 
@@ -54,8 +50,6 @@ jobs:
 
 Cache keys commonly use `hashFiles('**/lockfile')` ([12](./12_Caches_And_Artifacts.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Tool |
@@ -66,8 +60,6 @@ Cache keys commonly use `hashFiles('**/lockfile')` ([12](./12_Caches_And_Artifac
 | Matrix values | `matrix.*` in `runs-on` / steps |
 
 **Good:** typed reusable-workflow `inputs`. **Bad:** secret values in `vars` or plaintext logs.
-
----
 
 ## References
 

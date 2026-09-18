@@ -4,8 +4,6 @@
 
 **Effective Dart** is a set of guidelines for writing consistent, maintainable, and idiomatic Dart. The main ideas: **be consistent** (formatting and style should not vary without reason) and **be brief** (prefer the clearest, most concise expression of intent). The guidelines are split into **style**, **documentation**, **usage**, and **design**.
 
----
-
 ## Style
 
 The **style guide** covers layout and naming. Use **`dart format`** for formatting. Naming conventions:
@@ -17,13 +15,9 @@ The **style guide** covers layout and naming. Use **`dart format`** for formatti
 
 Avoid redundant prefixes or suffixes; prefer short but clear names. The style guide also covers trailing commas, line length, and ordering of declarations.
 
----
-
 ## Documentation
 
 **Documentation comments** use **`///`** (or **`/** ... */`**). Document public APIs: what they do, parameters, return value, and thrown exceptions. Put the first sentence in the form “One-line summary.”; add more detail below. Use **`[ClassName]** to link to other types. Avoid stating the obvious; document why and when, not just what.
-
----
 
 ## Usage
 
@@ -38,8 +32,6 @@ The **usage guide** covers how to use language features well:
 
 The guide also covers types, parameters, equality, and error handling.
 
----
-
 ## Design
 
 The **design guide** focuses on APIs and library design:
@@ -52,8 +44,6 @@ The **design guide** focuses on APIs and library design:
 - Use **abstract** classes and **interfaces** to define contracts; use **extension methods** to add behavior without subtyping.
 
 The guides are enforced in part by the **analyzer** and **linter**; enable the recommended rule set and fix lint issues as you go.
-
----
 
 ## Further reading
 

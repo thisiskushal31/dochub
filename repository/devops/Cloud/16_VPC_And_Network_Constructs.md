@@ -2,8 +2,6 @@
 
 [← Previous](./15_Org_IAM_And_Identity_Federation.md) · [README](./README.md) · [Next: Private connectivity →](./17_Private_Connectivity_And_On_Ramps.md) · [LB →](./23_Load_Balancing_Ingress_And_TLS.md)
 
----
-
 ## Mental map
 
 ```text
@@ -15,8 +13,6 @@ VPC / VNet / VCN
 ```
 
 *What to notice: every cloud gives you a **virtual network object**. Scope quirks differ (GCP VPC can be global; AWS VPC is regional)—the jobs do not.*
-
----
 
 ## 1. Concepts
 
@@ -36,8 +32,6 @@ Packet deep → [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-
 **Disconfirm:** “Public subnet” does **not** mean every VM needs a public IP. Flat `10.0.0.0/8` for everything is **not** a plan.
 
 **Confirm:** Which subnets are private? How does egress work? Who owns the CIDR plan?
-
----
 
 ## 2. Advanced concepts
 
@@ -67,8 +61,6 @@ Write non-overlapping CIDRs before peering or on-ramp ([17](./17_Private_Connect
 
 Private connectivity [17](./17_Private_Connectivity_And_On_Ramps.md). Colo dual-home thinking still applies to dual AZs—not identical to dual PDUs ([Datacenter Jobs/12](../Datacenter/Jobs/12_Hyperscale_Ops_Honesty.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -87,8 +79,6 @@ Private connectivity [17](./17_Private_Connectivity_And_On_Ramps.md). Colo dual-
 - Filters allow LB→targets, not the internet→nodes  
 
 **Good:** planned CIDRs, private compute. **Bad:** flat public estate; CIDR collisions.
-
----
 
 ## References
 

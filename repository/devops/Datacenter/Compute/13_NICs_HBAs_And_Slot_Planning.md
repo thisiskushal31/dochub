@@ -2,8 +2,6 @@
 
 [← Previous](./12_Boot_UEFI_RAID_NVMe_SAN.md) · [README](./README.md) · [Next: Thermal and power →](./14_Thermal_And_Power_Of_The_Box.md)
 
----
-
 ## 1. Concepts
 
 **Slot planning** decides whether the box can hold the NICs, HBAs, GPUs, and NVMe it needs—*electrically* (lanes/power) and *mechanically* (riser height, cable space).
@@ -20,8 +18,6 @@
 ### Dual-home literacy
 
 Production hosts usually want **two NICs** (or dual-port) to two ToRs for fabric redundancy—same independence idea as A+B power.
-
----
 
 ## 2. Advanced concepts
 
@@ -51,8 +47,6 @@ Fabric roles: [Fabric-Physical](../Fabric-Physical/README.md). Storage paths: [S
 
 Connector form factors (SFP/QSFP/OSFP) change with speed; planning jobs identical.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -71,8 +65,6 @@ Connector form factors (SFP/QSFP/OSFP) change with speed; planning jobs identica
 - Never “just move the GPU up one slot” without map  
 
 **Good:** frozen I/O BOM, true dual-home. **Bad:** both uplinks one switch; surprise no-lanes-left; shared OOB/data.
-
----
 
 ## References
 

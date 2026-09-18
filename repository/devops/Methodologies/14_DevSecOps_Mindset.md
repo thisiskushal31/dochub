@@ -6,8 +6,6 @@
 
 Authoritative framing (same idea across vendors): security from design through runtime; automate gates so security does not become a multi-week queue; developers get fast, usable feedback. See [Red Hat — What is DevSecOps?](https://www.redhat.com/en/topics/devops/what-is-devsecops) and DORA’s **shift-left on security** capability.
 
----
-
 ## What beginners must get right
 
 | Correct | Wrong |
@@ -22,8 +20,6 @@ Authoritative framing (same idea across vendors): security from design through r
 
 Red Hat and others describe both. Neither replaces the other.
 
----
-
 ## Shared responsibility (RACI sketch)
 
 | Activity | Dev / app team | Platform / DevOps | Security |
@@ -35,8 +31,6 @@ Red Hat and others describe both. Neither replaces the other.
 
 Full AppSec program, offensive methods, GRC: [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive).  
 Pipeline gate order and scanner literacy: [Security/](../Security/README.md) especially [4_Security_Gate_Chain](../Security/4_Security_Gate_Chain.md).
-
----
 
 ## Minimum DevSecOps loop (conceptual)
 
@@ -50,8 +44,6 @@ Design (threats, data class)
 ```
 
 Supply chain (SBOM, signing): [CiCd/6](../CiCd/6_Supply_Chain_And_Signing.md) when filled. Do not confuse “we run Trivy once” with a supply-chain program.
-
----
 
 ## Pitfalls
 

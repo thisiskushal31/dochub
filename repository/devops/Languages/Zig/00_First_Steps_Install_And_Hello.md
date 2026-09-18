@@ -12,8 +12,6 @@ Today’s win is simple: a pinned `zig` answers you. Allocators, error sets, C i
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. What you are installing
@@ -89,8 +87,6 @@ zig build-exe hello.zig
 
 If you skipped **01**, read it next so “why Zig” is not only “it compiled.” Then **02** before you optimize anything: build modes change what “safe” means at runtime.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `zig` is more than `cc` with a new flag set
@@ -117,8 +113,6 @@ Do not begin in **ReleaseFast**. Learn how the program behaves in **Debug** (and
 
 Developers often keep several Zig versions. Shell PATH mistakes are common. `zig env` and `which zig` belong in the “it works on my machine” debug script.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | What day one is for |
@@ -131,8 +125,6 @@ Developers often keep several Zig versions. Shell PATH mistakes are common. `zig
 
 **Whole-engineering picture:** toolchain smoke is how language adoption becomes an engineering fact instead of a slide.
 
----
-
 ## 4. Staff-level review checklist
 
 - `zig version` in CI matches the project pin (and is logged on every build).
@@ -140,8 +132,6 @@ Developers often keep several Zig versions. Shell PATH mistakes are common. `zig
 - No “install whatever Zig” instructions without a version.
 - Editor/language-server pin is documented beside the CI pin.
 - Release artifacts will eventually record version **and** target—not only “Linux binary.”
-
----
 
 ## References
 

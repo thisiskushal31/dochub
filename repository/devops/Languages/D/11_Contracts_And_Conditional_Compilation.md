@@ -6,8 +6,6 @@
 
 **Why contracts?** They make requirements explicit and catch violations during development. **Why conditional compilation?** Different platforms, back ends, or feature sets can be handled in one codebase without runtime cost.
 
----
-
 ## Preconditions and postconditions
 
 **in** blocks are preconditions (checked on entry); **out** blocks are postconditions (checked on exit). **out(result)** can refer to the return value. Failed contracts throw **AssertError** in debug mode; they can be disabled in release.
@@ -21,13 +19,9 @@ out (result; result == a / b)
 }
 ```
 
----
-
 ## Invariants
 
 **invariant** blocks in structs and classes state conditions that must hold for the object whenever it is visible. The compiler inserts invariant checks at public entry and exit points. Use invariants to document and enforce consistent state.
-
----
 
 ## version and debug
 
@@ -43,8 +37,6 @@ debug writeln("debug build");
 static if (size_t.sizeof == 8)
     alias Word = ulong;
 ```
-
----
 
 ## Further reading
 

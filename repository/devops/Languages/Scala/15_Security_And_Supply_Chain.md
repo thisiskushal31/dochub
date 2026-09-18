@@ -6,8 +6,6 @@
 
 How Scala/JVM teams treat **secrets**, **deserialization** (including the official Scala position on Java serialization), **dependency trust and confusion**, **sbt plugins as build-time code execution**, **logging redaction**, and high-level **Spark/Kafka trust boundaries**. Safe types and immutability help; they do not replace application security or supply-chain discipline.
 
----
-
 ## 1. Concepts
 
 ### 1. What Scala does and does not buy you
@@ -292,8 +290,6 @@ Do not invent a private CVE laundry list in application ADRs. Staff duty: pin th
 
 This chapter does not replace platform security runbooks—it flags that **data platforms inherit your Scala dependency and secret mistakes at cluster scale**, and that Spark’s design already assumes code execution for authorized submitters.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Repository and resolver policy
@@ -365,8 +361,6 @@ Secret handling beyond “don’t commit keys”:
 - **Don’t roll JWT/crypto:** use maintained libraries and platform identity stacks; do not hand-roll HMAC, “JWT in 20 lines,” or custom cipher modes in a service ADR.
 - **TLS:** pin JVM/JDK major and TLS defaults deliberately; cipher and protocol folklore from old runbooks drifts. Re-check TLS posture when upgrading the JDK or terminating proxy—not only when a CVE lands.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Focus |
@@ -424,8 +418,6 @@ Edge checklist by surface (same chapter, different blast radius):
 - Kafka deployments have named owners for ACLs, jar/deserializer choice, and schema-registry rights.
 - Service vs Spark UDF vs Kafka consumer edges reviewed with the injection/SSRF table above.
 - CVE triage has an owner; ignores expire.
-
----
 
 ## References
 

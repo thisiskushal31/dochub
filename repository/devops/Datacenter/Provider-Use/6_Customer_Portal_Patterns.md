@@ -2,8 +2,6 @@
 
 [← Previous](./5_Remote_Hands_Tickets.md) · [README](./README.md) · [Next: Cloud on-ramp →](./7_Land_Cloud_On_Ramp.md)
 
----
-
 ## 1. Concepts
 
 Colo portals churn UIs. Learn **objects**, not pixel tours:
@@ -18,8 +16,6 @@ Colo portals churn UIs. Learn **objects**, not pixel tours:
 | **Notifications** | Maintenance |
 
 Map each object to your CMDB/ITSM—not the reverse.
-
----
 
 ## 2. Advanced concepts
 
@@ -36,8 +32,6 @@ Map each object to your CMDB/ITSM—not the reverse.
 ### How it connects
 
 Order XC [3](./3_Order_Interconnect.md), hands [5](./5_Remote_Hands_Tickets.md), access [4](./4_Access_Badges_And_Change_Windows.md). Official docs links in References—re-check when UI changes.
-
----
 
 ## 3. Applications and use cases
 
@@ -57,8 +51,6 @@ Order XC [3](./3_Order_Interconnect.md), hands [5](./5_Remote_Hands_Tickets.md),
 - Never screenshot-only runbooks for critical orders  
 
 **Good:** object-based runbooks + official doc links. **Bad:** click-training only; stale inventory; one admin.
-
----
 
 ## References
 

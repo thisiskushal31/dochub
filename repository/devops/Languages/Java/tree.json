@@ -4,97 +4,97 @@
     "path": "1_What_Is_Java.md",
     "type": "file",
     "sha": "",
-    "size": 4029
+    "size": 4024
   },
   {
     "name": "10_Collections_And_Generics.md",
     "path": "10_Collections_And_Generics.md",
     "type": "file",
     "sha": "",
-    "size": 14146
+    "size": 14081
   },
   {
     "name": "11_Build_And_JVM_Basics.md",
     "path": "11_Build_And_JVM_Basics.md",
     "type": "file",
     "sha": "",
-    "size": 13120
+    "size": 13060
   },
   {
     "name": "12_DevOps_Jenkins_And_Security.md",
     "path": "12_DevOps_Jenkins_And_Security.md",
     "type": "file",
     "sha": "",
-    "size": 10070
+    "size": 10020
   },
   {
     "name": "13_Use_Cases_By_Role.md",
     "path": "13_Use_Cases_By_Role.md",
     "type": "file",
     "sha": "",
-    "size": 8587
+    "size": 8552
   },
   {
     "name": "2_Environment_And_Setup.md",
     "path": "2_Environment_And_Setup.md",
     "type": "file",
     "sha": "",
-    "size": 3631
+    "size": 3626
   },
   {
     "name": "3_Syntax_And_Structure.md",
     "path": "3_Syntax_And_Structure.md",
     "type": "file",
     "sha": "",
-    "size": 5082
+    "size": 5077
   },
   {
     "name": "4_Data_Types_Variables_Operators.md",
     "path": "4_Data_Types_Variables_Operators.md",
     "type": "file",
     "sha": "",
-    "size": 12061
+    "size": 12026
   },
   {
     "name": "5_Control_Flow.md",
     "path": "5_Control_Flow.md",
     "type": "file",
     "sha": "",
-    "size": 15796
+    "size": 15706
   },
   {
     "name": "6_Classes_And_Objects.md",
     "path": "6_Classes_And_Objects.md",
     "type": "file",
     "sha": "",
-    "size": 18355
+    "size": 18270
   },
   {
     "name": "7_Inheritance_Polymorphism_Interfaces.md",
     "path": "7_Inheritance_Polymorphism_Interfaces.md",
     "type": "file",
     "sha": "",
-    "size": 18630
+    "size": 18555
   },
   {
     "name": "8_Exceptions_And_IO.md",
     "path": "8_Exceptions_And_IO.md",
     "type": "file",
     "sha": "",
-    "size": 19081
+    "size": 18976
   },
   {
     "name": "9_Multithreading_And_Concurrency.md",
     "path": "9_Multithreading_And_Concurrency.md",
     "type": "file",
     "sha": "",
-    "size": 15015
+    "size": 14965
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 6204
+    "size": 6169
   }
 ]

@@ -4,8 +4,6 @@
 
 Functions are the main way to structure Cairo code. The `main` function is the entry point of many programs. You declare functions with `fn`, a name, optional parameters, and an optional return type. This topic covers defining functions, parameters, return values, the difference between statements and expressions, named parameters, and const functions.
 
----
-
 ## Defining and calling functions
 
 Use `fn` followed by the function name and parentheses. The body goes in curly braces. By convention, function and variable names use **snake_case**.
@@ -23,8 +21,6 @@ fn main() {
 ```
 
 Functions can be defined in any order; the compiler only needs to see the definition in a visible scope when you call them.
-
----
 
 ## Parameters
 
@@ -72,8 +68,6 @@ fn main() {
 }
 ```
 
----
-
 ## Statements and expressions
 
 Function bodies are made of **statements** and optionally end with an **expression**. **Statements** perform an action and do not return a value (e.g. `let y = 6;`). **Expressions** evaluate to a value (e.g. `5 + 6`, or a block in braces). If you put a semicolon after an expression, it becomes a statement and no value is returned.
@@ -92,8 +86,6 @@ fn main() {
 ```
 
 Here `y` is 4. The `x + 1` line has no semicolon, so it is the value of the block.
-
----
 
 ## Return values
 
@@ -123,8 +115,6 @@ fn plus_one(x: u32) -> u32 {
 // }
 ```
 
----
-
 ## Const functions
 
 Functions that can be evaluated at compile time can be marked with `const fn`. They can be used in constant contexts (e.g. constant expressions). The arguments and return type, and the body, are restricted to what can be computed at compile time.
@@ -143,8 +133,6 @@ fn main() {
 ```
 
 Here `pow` is a const function from the core library, so it can be used to define `BYTE_MASK` at compile time.
-
----
 
 ## Further reading
 

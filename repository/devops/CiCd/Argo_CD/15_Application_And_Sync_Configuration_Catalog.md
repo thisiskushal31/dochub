@@ -2,8 +2,6 @@
 
 [← Previous](./14_Feature_And_Configuration_Coverage_Map.md) · [Argo CD](./README.md) · [Next: Control plane config →](./16_Control_Plane_Configuration_Catalog.md)
 
----
-
 ## 1. Concepts — every Application configuration surface
 
 An Application is configured through:
@@ -54,8 +52,6 @@ syncPolicy:
 ```
 
 Omit `automated` for manual sync. Sync **windows** are defined on the Project or via sync window config (time-based allow/deny) — use for change freezes ([06](./06_Sync_Policies_Waves_Projects_And_RBAC.md)).
-
----
 
 ## 2. Advanced concepts — sync options, hooks, compare, ops
 
@@ -134,8 +130,6 @@ Advanced: sync using kubectl mechanisms; prefer Argo’s sync API for audit. Ser
 | `argocd.argoproj.io/compare-options` | Per-resource compare tweaks |
 | Ignore health / restart-policy related | Health edge cases ([02](./02_Core_Concepts_Applications_Sync_And_Health.md), [11](./11_Security_Tenancy_Hydrator_And_Troubleshooting.md)) |
 
----
-
 ## 3. Applications and use cases — configuration recipes
 
 | Goal | Configuration |
@@ -146,8 +140,6 @@ Advanced: sync using kubectl mechanisms; prefer Argo’s sync API for audit. Ser
 | HPA owns scale | omit replicas; ignoreDifferences; RespectIgnoreDifferences |
 | Prevent two apps claiming one Deployment | FailOnSharedResource |
 | Safer namespace prune | Prune=confirm on Namespace |
-
----
 
 ## References
 

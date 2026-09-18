@@ -4,8 +4,6 @@
 
 Delphi supports **exception handling** with **try** / **except** / **finally** and **raise**, and **multi-threaded** applications with **TThread**, **TCriticalSection**, **TMonitor**, and related RTL support. This topic goes deep on exception types, **finally** vs **except**, re-raising, and on thread creation, **Synchronize**/ **Queue**, and synchronization primitives so you can write robust applications and recognize common patterns in legacy or analyzed code.
 
----
-
 ## Try / except / finally
 
 - **try** ... **except** ... **end** — catches exceptions; the **except** block can handle specific exception types (e.g. **on E: EConvertError do** ...) or do cleanup and then **raise** to rethrow.
@@ -34,13 +32,9 @@ except
 end;
 ```
 
----
-
 ## Raising exceptions
 
 Use **raise** to throw an exception. You can raise an instance of an exception class (e.g. **Exception**, **EConvertError**) or create one inline: **raise EConvertError.Create('Invalid input');**. Exceptions are objects; the RTL and VCL define many exception classes (e.g. **EAccessViolation**, **EOutOfMemory**, **EInOutError**, **EStackOverflow**). **raise** without an argument inside an **except** block **re-raises** the current exception (useful when you log or clean up and then want the caller to handle it). **Abort** raises **EAbort**, which is often swallowed by the VCL to cancel an operation without a message; do not use for general errors.
-
----
 
 ## TThread and multi-threading
 
@@ -65,26 +59,18 @@ end;
 
 Multi-threaded Delphi code is common in both legitimate applications and in malware (e.g. background tasks, C2 communication). Recognizing **TThread**, **Synchronize**, and synchronization primitives helps when analyzing behavior.
 
----
-
 ## Synchronization: TCriticalSection and TMonitor
 
 For **shared data** between threads, use a **TCriticalSection** (or **TMonitor** with **Enter**/ **Exit**). Acquire the lock before reading or writing the shared variable and release it after. **TMonitor.Enter(Obj)** / **TMonitor.Exit(Obj)** use an object’s monitor; **TCriticalSection** is a standalone lock. Deadlocks occur when two threads hold locks in different order; always acquire locks in a consistent order or use timeouts. **TThreadList** in **Classes** is a thread-safe list wrapper. For simple “run once on main thread” work, **Synchronize** and **Queue** (which post to the main thread’s message queue) are the standard VCL pattern.
-
----
 
 ## FreeOnTerminate and ownership
 
 **TThread.FreeOnTerminate := True** means the thread object is freed automatically when **Execute** returns (by the main thread). Use it when the thread is a fire-and-forget worker; then do not call **Free** yourself. When **FreeOnTerminate** is **False**, you must **Free** the thread (or store it and free on shutdown). Be careful not to access the thread object after it has been freed; **Synchronize** callbacks run on the main thread and can safely update UI or shared state if the worker has already finished.
 
----
-
 ## Summary
 
 - **try** / **finally** for guaranteed cleanup; **try** / **except** for handling exceptions. **raise** to throw; **raise** (no argument) in **except** to re-raise. **Abort** for silent cancel in VCL.
 - **TThread** and **Execute** override for worker threads; **Synchronize** / **Queue** for main-thread callbacks. **TCriticalSection** or **TMonitor** for shared data. **FreeOnTerminate** for fire-and-forget workers.
-
----
 
 ## Further reading
 

@@ -10,8 +10,6 @@
 
 **How this section is organized:** The material is written so you can start from zero and still follow it. (1) **Start from the very basic** — Topics 1–4 explain what COBOL is, how a program is structured (divisions, syntax), and why things look the way they do. (2) **Build bit by bit** — Topics 5–14 add data layout, verbs, conditions, loops, strings, tables, files, subroutines, sort, and database access one step at a time, with "why" and "when" so you know why we use each feature. (3) **Then where you can implement** — Topics 15–16 show where COBOL runs (batch, CICS, mainframes) and how to read, navigate, and safely change real programs. Follow the topics in order; each builds on the previous.
 
----
-
 ## Learning path: from basics to implementation
 
 | Stage | Topics | What you'll be able to do |
@@ -21,8 +19,6 @@
 | **Control and data** | 7 → 8 → 9 → 10 | Use conditionals (including 88-level), loops, string handling, and table processing. |
 | **Files and reuse** | 11 → 12 → 13 → 14 | Choose file organization and access, handle files, subroutines, internal sort, and database interface. |
 | **Implementation** | 15 → 16 | Apply COBOL in batch and CICS, read and navigate codebases, and follow security and compliance. |
-
----
 
 ## Topics
 
@@ -44,8 +40,6 @@
 | 14 | Database interface | [14_Database_Interface.md](./14_Database_Interface.md) |
 | 15 | Use cases and applications | [15_Use_Cases_And_Applications.md](./15_Use_Cases_And_Applications.md) |
 | 16 | Security, compliance, and best practices | [16_Security_Compliance_And_Best_Practices.md](./16_Security_Compliance_And_Best_Practices.md) |
-
----
 
 ## Further reading
 

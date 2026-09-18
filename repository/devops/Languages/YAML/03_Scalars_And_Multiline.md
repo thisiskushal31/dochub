@@ -6,8 +6,6 @@
 
 Leaf values: plain and quoted strings, numbers, booleans, null, and **multiline** block scalars (`|` and `>`). This is where most “YAML weirdness” lives—especially unquoted scalars that look like strings but load as other types.
 
----
-
 ## 1. Concepts
 
 ### 1. What a scalar is
@@ -73,8 +71,6 @@ Block scalars can control final newlines:
 
 Pick chomping deliberately when embedding scripts or comparing golden strings in tests.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. The “Norway problem” and friends (version-accurate)
@@ -134,8 +130,6 @@ Choose the shape the **host schema** expects (string vs array).
 
 Multiline blocks often hold certificates or keys. That is a **secrets management** problem (chapter **10**), not a syntax feature. Syntax only tells you how the text is captured.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Scalar role |
@@ -148,8 +142,6 @@ Multiline blocks often hold certificates or keys. That is a **secrets management
 
 **Whole-engineering picture:** most “YAML bugs” in production are **scalar typing or multiline whitespace**, not missing curly braces.
 
----
-
 ## 4. Staff-level review checklist
 
 - Ambiguous tokens (`yes`/`no`/`on`/`off`, country codes, versions) are quoted when they must be strings.
@@ -157,8 +149,6 @@ Multiline blocks often hold certificates or keys. That is a **secrets management
 - Double-quoted escapes are intentional, not copied from shell folklore.
 - Host expects string vs list-of-string is verified for command/arg fields.
 - No plaintext private keys committed “just for now” in `|` blocks.
-
----
 
 ## References
 

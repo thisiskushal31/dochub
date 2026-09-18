@@ -6,8 +6,6 @@
 
 What “Python” means in production (usually **CPython**), how the **interpreter** starts and exits, how **arguments** and **`-m`** interact with **`sys.argv`**, how **interactive** mode differs from **script** mode, **source encoding**, **shebangs**, **isolated mode**, and how **version** choice ties to documentation and support policy. Enough to debug wrong-interpreter incidents, CI skew, and encoding failures.
 
----
-
 ## 1. Concepts
 
 ### 1. Language versus implementation
@@ -60,8 +58,6 @@ Strengths: speed of development, ecosystem, **batteries-included** stdlib. Costs
 
 **Python 2.7** is a **legacy** line (distinct string model, **`print`** statement, old division). Staff may still see it in brownfield code; new systems target Python 3.
 
----
-
 ## 2. Advanced concepts
 
 **`python -I` (isolated mode):** avoids importing the **user site-packages** directory and sets safer defaults for batch jobs where environment pollution is a risk.
@@ -73,8 +69,6 @@ Strengths: speed of development, ecosystem, **batteries-included** stdlib. Costs
 **Version skew:** laptop **3.12**, CI **3.11**, container **3.10** yields “passes here, fails there” for syntax and stdlib. Pin **minor** in **`pyproject.toml`** (`requires-python`) and in images.
 
 **Bytecode:** **`__pycache__`** holds **`.pyc`** tagged by Python version; mixed versions sharing a volume can load wrong bytecode—usually rare if **`PYTHONPYCACHEPREFIX`** or clean builds are used.
-
----
 
 ## 3. Applications and use cases
 
@@ -98,8 +92,6 @@ import sys
 if __name__ == "__main__":
     print(sys.argv)
 ```
-
----
 
 ## References
 

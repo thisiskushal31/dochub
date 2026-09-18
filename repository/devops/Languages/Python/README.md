@@ -56,8 +56,6 @@ python3 -c "import sys; print(sys.executable)"
 
 The second line confirms **which interpreter** runs when multiple Python installs exist—essential for “wrong venv” incidents.
 
----
-
 ## Chapters (what each file is for)
 
 | # | Topic | You will be able to… |
@@ -88,8 +86,6 @@ The second line confirms **which interpreter** runs when multiple Python install
 2. Build a personal checklist: **imports**, **encoding**, **float vs Decimal**, **GIL**, **async** blocking, **pickle** boundaries.
 3. Cross-link: types (02) → data structures (04) → imports (05) → I/O (06) → exceptions (07) → concurrency (14) → security (15).
 
----
-
 ## Further reading
 
 - [The Python Tutorial](https://docs.python.org/3/tutorial/index.html)
@@ -100,8 +96,6 @@ The second line confirms **which interpreter** runs when multiple Python install
 - [Glossary](https://docs.python.org/3/glossary.html)
 - [Status of Python versions](https://devguide.python.org/versions/)
 - [Python downloads](https://www.python.org/downloads/)
-
----
 
 ## References (hub links)
 

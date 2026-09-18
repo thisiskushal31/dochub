@@ -8,8 +8,6 @@
 
 Swift’s abstraction style is often “protocol + extension + generic constraint,” not deep class hierarchies. Macros and result builders are *compiler-time* sugar you must still be able to expand mentally in review.
 
----
-
 ## 1. Concepts
 
 ### 1. Protocols as contracts
@@ -173,8 +171,6 @@ func painLab() {
 - `some` hides a **fixed** concrete type; `any` erases to a **box** that can vary.
 - Associated types are why “just write `any Animal`” often fails the moment you need the interesting API.
 - Prefer generics at boundaries you control; reach for `any` when the domain truly is mixed; use `some` when you want to hide an implementation type without paying existential soup on every call.
-
----
 
 ## 2. Advanced concepts
 
@@ -493,8 +489,6 @@ bag.host = "api.example.com"  // looks like a property; is a string key
 
 `Mirror` can inspect a value’s children at runtime (debugging, niche tooling). It is **not** a substitute for `Codable` or a stable public API. Prefer explicit properties; treat reflection as a diagnostic tool, not architecture.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -506,8 +500,6 @@ bag.host = "api.example.com"  // looks like a property; is a string key
 | **Software engineering** | Extension methods for shared behavior; minimal public protocol surfaces; `some` vs `any` chosen deliberately in signatures |
 
 SPM module boundaries often expose protocols as the stable API and keep structs internal — still publish the fewest requirements you can defend.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -525,8 +517,6 @@ SPM module boundaries often expose protocols as the stable API and keep structs 
 - Macro dependency pins and supply-chain trust are documented for third-party macros.
 - `@dynamicMemberLookup` / `@dynamicCallable` justified as DSLs — not accidental magic on domain models.
 - `Mirror`/reflection not used as a public architecture substitute for `Codable`/explicit APIs.
-
----
 
 ## References
 

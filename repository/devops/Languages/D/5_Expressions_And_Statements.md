@@ -6,8 +6,6 @@
 
 **Why this order?** Expressions and statements are the core of imperative D code. Getting operators, short-circuit evaluation, and loop semantics right avoids subtle bugs.
 
----
-
 ## Expressions
 
 Primary expressions include literals, **this**, **super**, and parenthesized expressions. **Postfix** expressions add indexing, calls, and property access. **Unary** and **binary** operators follow precedence and associativity. **Assignment** is an expression; **comma** sequences expressions.
@@ -18,8 +16,6 @@ int sum = a + b;
 bool ok = a > 0 && b != 0;
 a += 5;
 ```
-
----
 
 ## Statements
 
@@ -35,13 +31,9 @@ foreach (i; 0 .. 10)
     writeln(i);
 ```
 
----
-
 ## Scope and control flow
 
 **break** exits the innermost loop or **switch**; **continue** skips to the next iteration. **return** exits a function with an optional value. **scope** and **goto** are available but used sparingly. Block scope determines lifetime of locals.
-
----
 
 ## Further reading
 

@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [Spectrum →](./2_Spectrum_And_When_Which.md) · [Serverless →](./31_Serverless_Functions_And_Containers.md) · [Data →](./32_Managed_Data_And_Databases_On_Cloud.md) · [AI →](./33_AI_And_ML_Platforms_On_Cloud.md) · [Topologies →](./34_Multi_Tier_And_Reference_Topologies.md)
 
----
-
 ## Mental map
 
 ```text
@@ -15,8 +13,6 @@ Knobs change by cloud; jobs do not.
 ```
 
 *What to notice: Cloud literacy is **when which product**, not memorizing every SKU. CiCd jobs: [CiCd/19](../CiCd/19_Delivery_Spectrum_Legacy_Through_Modern.md). AI delivery: [CiCd/22](../CiCd/22_MLOps_And_AI_System_Delivery.md).*
-
----
 
 ## 1. Concepts
 
@@ -38,8 +34,6 @@ Knobs change by cloud; jobs do not.
 **Disconfirm:** “We deployed to the cloud” is **not** a shape. ECS is **not** Kubernetes. Bedrock is **not** SageMaker.
 
 **Confirm:** What is the unit of rollback? Which row in the table are you on? What health signal gates traffic?
-
----
 
 ## 2. Advanced concepts
 
@@ -75,8 +69,6 @@ Knobs change by cloud; jobs do not.
 | Quota hit mid-scale | “Outage” that is a limit ([20](./20_FinOps_And_Cost_Controls.md)) |
 | Wrong shape for team | Ops thrash |
 
----
-
 ## 3. Applications and use cases
 
 | Estate | Shape mix |
@@ -97,8 +89,6 @@ Knobs change by cloud; jobs do not.
 - Health checks aligned with LB ([23](./23_Load_Balancing_Ingress_And_TLS.md))  
 
 **Good:** paved shape + exception path + tier diagram. **Bad:** every team invents a different home.
-
----
 
 ## References
 

@@ -6,8 +6,6 @@ In COBOL, **tables** are the equivalent of arrays: a collection of data items of
 
 **Why OCCURS and tables?** When you have many items of the same type (e.g. 12 monthly totals, 100 account codes, a grid of rows and columns), you do not define 100 separate variables. You define **one** data name with **OCCURS** and refer to each element by position: WS-AMOUNT(1), WS-AMOUNT(2), …. That keeps the DATA DIVISION short and lets you loop with PERFORM VARYING or SEARCH. Use a one-dimensional table for lists; use nested OCCURS for a matrix (rows and columns). **SEARCH** and **SEARCH ALL** then let you find an element by value (linear or binary) instead of writing the loop yourself.
 
----
-
 ## Defining a table with OCCURS
 
 **OCCURS** specifies how many times a data item is repeated. It can be used with level numbers 02 through 49. The same level cannot use both OCCURS and REDEFINES. A **one-dimensional table** has one OCCURS; a **two-dimensional table** has nested OCCURS (one for each dimension).
@@ -28,8 +26,6 @@ Two-dimensional example: the first array occurs 10 times, and each element conta
                 15 WS-D PIC X(6).
 ```
 
----
-
 ## Subscripting
 
 A **subscript** is a numeric value (literal or data item) in parentheses that identifies which occurrence to use. Subscripts are 1-based by default (e.g. first element is 1). Reference the table element with the data name followed by (subscript).
@@ -45,8 +41,6 @@ For a two-level table, use two subscripts: (row, column).
 ```cobol
            MOVE 'X' TO WS-D(1, 1).
 ```
-
----
 
 ## INDEX and SEARCH
 
@@ -68,8 +62,6 @@ For a two-level table, use two subscripts: (row, column).
                    DISPLAY WS-VALUE(IDX)
            END-SEARCH.
 ```
-
----
 
 ## Further reading
 

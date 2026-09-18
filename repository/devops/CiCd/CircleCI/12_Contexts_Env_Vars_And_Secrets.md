@@ -2,8 +2,6 @@
 
 [← Previous](./11_Reusable_Config_Commands_Executors_Parameters.md) · [README](./README.md) · [Next: OIDC →](./13_OIDC_And_Cloud_Federation.md)
 
----
-
 ## 1. Concepts
 
 | Layer | Scope |
@@ -27,8 +25,6 @@ workflows:
 
 Create context → add env vars → reference by name. Restrict which teams/projects can use sensitive contexts ([16](./16_Security_Permissions_SSO_And_Policies.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### Precedence
@@ -43,8 +39,6 @@ Passing secrets to forked PRs is a project setting — default deny for public O
 
 Long-lived cloud keys in contexts are worse than OIDC federation ([13](./13_OIDC_And_Cloud_Federation.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -54,8 +48,6 @@ Long-lived cloud keys in contexts are worse than OIDC federation ([13](./13_OIDC
 | Non-secret flags | config `environment` |
 
 **Good:** separate staging vs prod contexts. **Bad:** one `org-global` with production keys for every job.
-
----
 
 ## References
 

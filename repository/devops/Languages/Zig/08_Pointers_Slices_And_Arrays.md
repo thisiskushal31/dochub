@@ -8,8 +8,6 @@ How Zig shows **addresses and contiguous bytes** in source: arrays, pointers, sl
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. Arrays: length in the type
@@ -95,8 +93,6 @@ test "oob traps in safe modes" {
 
 **Where you use it.** Untrusted input parsers—test in the mode you ship.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Sentinel slices (C strings)
@@ -148,8 +144,6 @@ fn bad() []const u8 {
 
 **What it is.** Same rule as C: stack dies when the frame dies. Tie buffers to callers’ allocators/arenas (chapter **09**).
 
----
-
 ## 3. Applications and use cases
 
 | Angle | What you write |
@@ -162,8 +156,6 @@ fn bad() []const u8 {
 
 **Whole-engineering picture:** slices make lengths visible—use that in every review.
 
----
-
 ## 4. Staff-level review checklist
 
 - Public APIs prefer slices when length is known.
@@ -171,8 +163,6 @@ fn bad() []const u8 {
 - Const correctness matches read vs mutate.
 - Sentinel conversions localized at FFI.
 - `@ptrCast` / `volatile` justified and tested.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./16_Power_Quality_And_Harmonics.md) · [README](./README.md) · [Next: Commissioning →](./18_Commissioning_And_IST_Power.md)
 
----
-
 ## 1. Concepts
 
 A **failure walk** traces what happens when a specific component dies—on the drawings and in the hall. This chapter practices the electrical spine:
@@ -24,8 +22,6 @@ Use it in design reviews, tabletop drills, and live incidents. Integration track
 5. Name the alarm you expect on EPMS  
 6. Name the human action if auto fails  
 7. Name the IT symptom if dual-cord discipline was wrong  
-
----
 
 ## 2. Advanced concepts
 
@@ -55,8 +51,6 @@ Use it in design reviews, tabletop drills, and live incidents. Integration track
 
 Facilities tech walks plant devices; bare-metal admin walks rack PDU/PSU/BMC; NOC correlates alarms. Role map: [Jobs](../Jobs/README.md). End-to-end multi-domain walks: [Integration](../Integration/README.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -75,8 +69,6 @@ Facilities tech walks plant devices; bare-metal admin walks rack PDU/PSU/BMC; NO
 - Practice generator+UPS walks before storm season  
 
 **Good:** written walks with expected alarms. **Bad:** first failure walk happens during the outage.
-
----
 
 ## References
 

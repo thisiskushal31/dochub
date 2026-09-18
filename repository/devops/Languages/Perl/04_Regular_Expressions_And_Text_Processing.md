@@ -6,10 +6,6 @@
 
 **Regex** syntax (`m//`, `s///`, `qr//`), **flags**, **capture groups**, **line** input **`<>`, `$.`**, and **encoding** basics. **Security** focus: **ReDoS**, **pathological** backtracking, and why regex is **not** a **HTML** or **JSON** parser for trust boundaries. **Operations** focus: **streaming** large logs without loading them into RAM.
 
----
-
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -27,8 +23,6 @@ $s =~ s/foo/baz/g;
 
 **`qr//`** compiles a **regex object** for reuse—avoids recompilation in tight loops.
 
----
-
 ### 2. Capture groups and context
 
 **Parentheses** capture; **`$1`**, **`$2`**, … refer to the **last successful** match in the **dynamic** scope—reset carefully in loops.
@@ -42,8 +36,6 @@ if ( $line =~ /^(\S+)\s+(\S+)/ ) {
 ```
 
 **Security review:** **untrusted** patterns must not be **`eval`**’d into **`qr//`** from users without a **denylist**—that is a **regex injection** surface.
-
----
 
 ### 3. Line processing: `<>`, `ARGV`, `$.`
 
@@ -61,8 +53,6 @@ perl -ne 'print if /error/' /var/log/app.log
 
 **`@ARGV` and magic `ARGV`:** **`<>`** can open files named on the command line; combined with **`ARGVOUT`** and **two-argument** **`open`** history, this was a **security** concern in older patterns. Prefer **explicit** **`open`** with **three arguments** when filenames are not fully trusted (chapter 9).
 
----
-
 ### 4. Unicode and encoding
 
 **Bytes vs characters:** **`length`** on a string counts **characters** according to Perl’s internal **UTF-8** model when the **UTF-8 flag** is set; **raw bytes** from a socket need **`Encode::decode`** before treating as text.
@@ -75,15 +65,11 @@ Mishandling encoding produces **mojibake** and **security** issues when **normal
 
 **Normalization:** Visually identical strings can differ in **Unicode normalization form** (NFC vs NFD). For **comparison** of user-chosen names, passwords, or **certificate** subject fields, normalize both sides with **`Unicode::Normalize`** (or your org’s crypto library) after **decode**—see **perlunifaq** and **[Unicode::Normalize](https://perldoc.perl.org/Unicode::Normalize)**.
 
----
-
 ### 5. When **not** to use regex
 
 - **HTML/XML:** use **proper** parsers (**HTML::Parser**, **XML::LibXML**) for anything **mutating** structure or **security**-relevant **filtering**.
 - **JSON:** use **`JSON::PP`** or **Cpanel::JSON::XS**—**never** **`eval`** JSON text.
 - **Structured logs:** **JSON Lines** → decode, then **field** access—regex on **JSON** strings is fragile.
-
----
 
 ## 2. Advanced concepts
 
@@ -93,16 +79,12 @@ Mishandling encoding produces **mojibake** and **security** issues when **normal
 
 **Parallelism:** **Perl** threads and **fork**-based workers complicate **global** **`$_`** and **regex** state—isolate **workers** or use **MCE**-style pools with clear **IPC**.
 
----
-
 ## 3. Applications and use cases
 
 - **One-liners and filters:** **`perl -ne` / `-pe`** for **ad hoc** **log** slicing—standard in **IR** and **SRE** playbooks; **redact** samples before **paste** to tickets.
 - **SIEM and parsing pipelines:** **ReDoS** is a **production** **DoS** when **regex** sits on **hot** paths—**fuzz** **user** patterns or **denylist** features.
 - **Structured data:** **Do not** “parse” **JSON/HTML** with **regex** for **security** decisions—use **decode_json** / **proper** parsers (chapter 7, 15).
 - **Internationalized apps:** **Normalization** and **encoding** at **ingress** prevent **account** and **search** bugs—apply **Unicode::Normalize** for comparisons (concepts above).
-
----
 
 ## References
 

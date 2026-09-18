@@ -10,8 +10,6 @@ Pair with README security pillar, chapters **11–13** (Shell / CreateObject / D
 
 **Hard boundary:** this chapter teaches what **defenders and policies block**. It does **not** teach how to build malware, craft phishing lures, obfuscate for evasion, or bypass controls.
 
----
-
 ## 1. Concepts
 
 ### 1. The macros-disabled-by-default story
@@ -128,8 +126,6 @@ Staff takeaways:
 
 Security is **policy + runtime + review**, matching the README semantic model.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Baselines and channels
@@ -158,8 +154,6 @@ Macro defense fails open if phishing delivers files into Trusted Locations or us
 ### 5. Developer friction is a feature
 
 When policy blocks a bad pattern, the fix is **redesign** (OM-only, Power Automate, Add-in, server API)—not a wiki titled “how we bypass ASR.” Chapter **18** lists adjacent doors.
-
----
 
 ## 3. Applications and use cases
 
@@ -196,8 +190,6 @@ When policy blocks a bad pattern, the fix is **redesign** (OM-only, Power Automa
 | SE | Does this feature require a blocked API surface? |
 | App owner | Who signs and who may publish updates? |
 
----
-
 ## Staff-level review checklist
 
 - Team can name **Block macros from running in Office files from the Internet** and explain MotW’s role without conflating it with Trusted Locations.
@@ -213,8 +205,6 @@ When policy blocks a bad pattern, the fix is **redesign** (OM-only, Power Automa
 - VBScript/WSH dependencies are inventoried and on a migration path (**14**).
 - Exceptions have owners and expiry; bypass instructions are forbidden in engineering wikis.
 - Hostile samples are routed to **16** workflows, never “opened with macros on” on the endpoint of record.
-
----
 
 ## References
 

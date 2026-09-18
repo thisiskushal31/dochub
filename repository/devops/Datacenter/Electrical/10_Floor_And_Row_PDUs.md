@@ -2,8 +2,6 @@
 
 [← Previous](./9_Busway_Vs_Cable_Distribution.md) · [README](./README.md) · [Next: Rack PDU →](./11_Rack_PDU_A_And_B.md)
 
----
-
 ## 1. Concepts
 
 **Floor PDUs** and **row PDUs** (and **remote power panels / RPPs**) transform and distribute UPS (or LV) power into branch circuits for racks. They sit between building electrical and the whips you see at the cabinet.
@@ -25,8 +23,6 @@ Nameplates vary by vendor; the job is: **protected, metered, landable branch pow
 - Often **metering** per panel or breaker  
 - Grounding/bonding landing  
 - Sometimes STS or dual-input options  
-
----
 
 ## 2. Advanced concepts
 
@@ -60,8 +56,6 @@ Connector standards differ by region (NEMA vs IEC). Same job: correct ampacity, 
 
 Row PDUs are often the **real** kW gate—not the rack PDU sticker. GPU rows fail here first when everyone believes “the busway is fine.”
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -80,8 +74,6 @@ Row PDUs are often the **real** kW gate—not the rack PDU sticker. GPU rows fai
 - Never land both whips on one PDU “temporarily”  
 
 **Good:** clear A/B floor PDUs, metered, labeled. **Bad:** mystery panels; shared upstream; no spare for growth.
-
----
 
 ## References
 

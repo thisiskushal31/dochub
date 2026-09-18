@@ -16,8 +16,6 @@ This chapter feeds pillar **11** (errors). If you only skim one early chapter de
 
 Handbook default: **TS 5.9.x**, **`strict`: true**.
 
----
-
 ## 1. Concepts
 
 ### 1. What narrowing is
@@ -191,8 +189,6 @@ function isUser(x: unknown): x is { id: string } {
 
 Deepen in chapter **13**.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Control-flow analysis limits
@@ -283,8 +279,6 @@ That last `as` is a controlled bridge after checks—not a substitute for them.
 
 Public unions should be designed so callers *can* exhaust. If you leave an open string (`string` instead of literals), you give up exhaustiveness—sometimes intentionally for extension, often by accident.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Narrowing in practice |
@@ -296,8 +290,6 @@ Public unions should be designed so callers *can* exhaust. If you leave an open 
 | **SE** | Exhaustive `switch` makes refactors add cases in CI, not in production. |
 
 **Whole-engineering picture:** narrowing is the type system’s version of **defense in depth**. It connects chapter **03** vocabulary to chapter **11** error discipline and chapter **12** async rejection handling.
-
----
 
 ## Staff-level review checklist
 
@@ -312,8 +304,6 @@ Public unions should be designed so callers *can* exhaust. If you leave an open 
 - No `as any` / `as unknown as T` to “finish the PR” on boundary data without justification.
 - Angle-bracket casts avoided in TSX; prefer `as` project-wide.
 - Type guards on hot paths stay cheap; heavy work is not buried inside predicates (ch **13**).
-
----
 
 ## References
 

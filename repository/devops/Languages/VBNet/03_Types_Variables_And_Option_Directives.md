@@ -16,8 +16,6 @@ Chapter **[02](./02_Projects_Modules_Namespaces_And_Entry_Points.md)** placed co
 
 Handbook default: **`Option Explicit On`**, **`Option Strict On`**, modern nullable awareness; do not rely on classic VB forgiveness.
 
----
-
 ## 1. Concepts
 
 ### 1. Types describe storage and operations
@@ -133,8 +131,6 @@ Dim back As Integer = CType(o, Integer)
 | `CType` / `DirectCast` | `DirectCast` is stricter when you know the runtime type |
 | `Parse` / `TryParse` | Prefer `TryParse` at trust boundaries |
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Why Strict Off still exists in the wild
@@ -178,8 +174,6 @@ Unnamed elements appear as `Item1`, `Item2`, …. Prefer named elements at publi
 
 On current Visual Basic (**17.13** / Visual Studio **2026**-era compilers), the compiler also recognizes the **`unmanaged`** generic constraint and **`OverloadResolutionPriorityAttribute`** for method resolution—mainly for **interop and library APIs** authored across languages. If a call “should resolve” and does not, check **language version** and the library’s target—not only your syntax.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How types and Options show up |
@@ -192,8 +186,6 @@ On current Visual Basic (**17.13** / Visual Studio **2026**-era compilers), the 
 
 **Whole-engineering picture:** Options are compiler policy. Weak policy in a LOB module becomes production incident policy.
 
----
-
 ## 4. Staff-level review checklist
 
 - New VB files show **`Option Explicit On`** and **`Option Strict On`** (or equivalent project defaults verified).
@@ -205,8 +197,6 @@ On current Visual Basic (**17.13** / Visual Studio **2026**-era compilers), the 
 - Tightening Strict is paired with tests—not a drive-by on Friday.
 - Reviewers can state nullable/`Nothing` expectations for public APIs.
 - Tuple returns at public APIs are named (or replaced with DTOs) when the shape is shared or serialized.
-
----
 
 ## References
 

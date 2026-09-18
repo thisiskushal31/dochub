@@ -144,8 +144,6 @@ A comment starts with `%` and runs to the end of the line. Nothing after `%` is 
 \section{Introduction}  % This comment is ignored.
 ```
 
----
-
 ## Further reading
 
 - [LaTeX2e for authors — new features](https://latex-project.org/help/documentation/usrguide.pdf)

@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [Storage →](./24_Object_Block_And_File_Storage.md) · [Deploy shapes →](./28_Deployment_Shapes_On_Cloud.md) · [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive)
 
----
-
 ## Mental map
 
 ```text
@@ -14,8 +12,6 @@ Need durable structured data?
 ```
 
 *What to notice: Cloud literacy is **which family and who patches**. Engine internals, query tuning, and schema design live in [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive).*
-
----
 
 ## 1. Concepts
 
@@ -42,8 +38,6 @@ Need durable structured data?
 
 **Confirm:** Who patches the engine? Where do backups live? Is the path private ([16](./16_VPC_And_Network_Constructs.md))?
 
----
-
 ## 2. Advanced concepts
 
 ### Cross-cloud recognition map (not an engine textbook)
@@ -68,8 +62,6 @@ Typical N-tier: LB → app (VM/Run/K8s) → **private** managed DB subnet/endpoi
 | Snapshots only, never restore-tested | False backups |
 | Engine depth ignored | Cloud SKU won’t fix bad schema |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -88,8 +80,6 @@ Typical N-tier: LB → app (VM/Run/K8s) → **private** managed DB subnet/endpoi
 - Door to Databases-Deep-Dive for engine work  
 
 **Good:** managed OLTP private; warehouse for analytics. **Bad:** public RDS; “Mongo on a t2.micro.”
-
----
 
 ## References
 

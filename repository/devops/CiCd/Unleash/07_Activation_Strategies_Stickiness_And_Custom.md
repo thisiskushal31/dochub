@@ -2,8 +2,6 @@
 
 [← Previous](./06_Feature_Flags_Variants_And_Strategy_Variants.md) · [README](./README.md) · [Next: Context →](./08_Context_Constraints_And_Segments.md)
 
----
-
 ## 1. Concepts
 
 An **activation strategy** decides whether a flag is enabled for a given **Unleash context** in one environment.
@@ -27,8 +25,6 @@ Exact labels evolve; learn the jobs:
 
 Legacy `userWithId` / older gradual-rollout strategy names were removed or superseded for new installs — prefer **flexibleRollout + constraints**. **Stickiness** picks which context field buckets a user into a percentage or variant bucket (commonly `userId`, `sessionId`, or custom) so they do not flip every request.
 
----
-
 ## 2. Advanced concepts
 
 ### Constraints vs strategy type
@@ -47,8 +43,6 @@ Advance only with signals (errors, latency, support). Pair with change requests 
 
 Use when built-ins cannot express a rule (complex entitlement). Document the contract; version carefully; test against the client specification mindset ([09](./09_SDKs_Backend_Frontend_And_OpenFeature.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -65,8 +59,6 @@ Use when built-ins cannot express a rule (complex entitlement). Document the con
 - Custom strategies justified and SDK-covered  
 
 **Good:** percentage + segment. **Bad:** custom strategy only implemented in one language SDK.
-
----
 
 ## References
 

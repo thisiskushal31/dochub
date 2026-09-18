@@ -33,8 +33,6 @@ mult(X, Y) ->
 
 **Why this matters.** Modules are the unit of code loading and naming; exports define the public API. OTP behaviours (gen_server, supervisor, application) are implemented as callback modules that export a fixed set of functions; the generic part calls into your module by name. Getting modules and exports right is the basis for both application code and OTP.
 
----
-
 ## Further reading
 
 - [Modules](https://www.erlang.org/doc/system/modules)

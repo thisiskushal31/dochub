@@ -2,8 +2,6 @@
 
 [← Previous](./02_Organization_Project_And_VCS.md) · [README](./README.md) · [Next: Config model →](./04_Config_Mental_Model_Jobs_Steps_Workflows.md)
 
----
-
 ## 1. Concepts
 
 ### Know-nothing path (Cloud)
@@ -31,15 +29,11 @@ Config lives under `.circleci/`. CircleCI believes in **configuration as code** 
 
 SSH into a running/finished job (when enabled) helps debug environment issues — use sparingly; treat as privileged access.
 
----
-
 ## 2. Advanced concepts
 
 **Config editor** and VS Code extension help validate and iterate. Prefer `circleci config validate` / `process` via CLI for local checks ([18](./18_Server_CLI_API_And_Toolkit.md)).
 
 Hello-world samples exist per executor (Docker, macOS, Windows) ([05](./05_Templates_And_First_Config_Yml.md), [06](./06_Managed_Executors_And_Resource_Classes.md)).
-
----
 
 ## 3. Applications and use cases
 
@@ -50,8 +44,6 @@ Hello-world samples exist per executor (Docker, macOS, Windows) ([05](./05_Templ
 | Path to prod | Deploy job + approval hold ([15](./15_Deployments_Approvals_And_Markers.md)) |
 
 **Verify:** VCS status checks (if used) reflect pipeline result; failed step log shows the failing command.
-
----
 
 ## References
 

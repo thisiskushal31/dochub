@@ -77,8 +77,6 @@ The type **`Char`** represents a single character. Character literals use single
 
 When you declare a variable with an initial value, the compiler infers the type. You can still add an explicit type for clarity or to constrain the type (e.g. to a supertype). Explicit types are especially helpful when the initializer is complex or when you want the variable to have a more general type than the inferred one. The next topic covers strings, characters in context, and arrays.
 
----
-
 ## Further reading
 
 - [Types overview](https://kotlinlang.org/docs/types-overview.html)

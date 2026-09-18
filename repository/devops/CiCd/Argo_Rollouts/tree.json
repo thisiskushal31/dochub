@@ -4,118 +4,118 @@
     "path": "01_What_Is_Argo_Rollouts_And_Progressive_Delivery.md",
     "type": "file",
     "sha": "",
-    "size": 3657
+    "size": 3637
   },
   {
     "name": "02_Core_Concepts_Rollout_Analysis_Experiment.md",
     "path": "02_Core_Concepts_Rollout_Analysis_Experiment.md",
     "type": "file",
     "sha": "",
-    "size": 2840
+    "size": 2820
   },
   {
     "name": "03_Architecture_And_Controller.md",
     "path": "03_Architecture_And_Controller.md",
     "type": "file",
     "sha": "",
-    "size": 2560
+    "size": 2540
   },
   {
     "name": "04_Install_Plugin_Dashboard_And_First_Rollout.md",
     "path": "04_Install_Plugin_Dashboard_And_First_Rollout.md",
     "type": "file",
     "sha": "",
-    "size": 2865
+    "size": 2845
   },
   {
     "name": "05_Blue_Green_Strategy.md",
     "path": "05_Blue_Green_Strategy.md",
     "type": "file",
     "sha": "",
-    "size": 3066
+    "size": 3046
   },
   {
     "name": "06_Canary_Strategy_And_Steps.md",
     "path": "06_Canary_Strategy_And_Steps.md",
     "type": "file",
     "sha": "",
-    "size": 7970
+    "size": 7950
   },
   {
     "name": "07_Traffic_Management.md",
     "path": "07_Traffic_Management.md",
     "type": "file",
     "sha": "",
-    "size": 3103
+    "size": 3083
   },
   {
     "name": "08_Analysis_And_Metric_Providers.md",
     "path": "08_Analysis_And_Metric_Providers.md",
     "type": "file",
     "sha": "",
-    "size": 2809
+    "size": 2789
   },
   {
     "name": "09_Experiments_HPA_Metadata_Restart_Rollback.md",
     "path": "09_Experiments_HPA_Metadata_Restart_Rollback.md",
     "type": "file",
     "sha": "",
-    "size": 3091
+    "size": 3071
   },
   {
     "name": "10_GitOps_Helm_Kustomize_And_Migrating.md",
     "path": "10_GitOps_Helm_Kustomize_And_Migrating.md",
     "type": "file",
     "sha": "",
-    "size": 2636
+    "size": 2616
   },
   {
     "name": "11_Notifications_Metrics_And_Kubectl_Plugin.md",
     "path": "11_Notifications_Metrics_And_Kubectl_Plugin.md",
     "type": "file",
     "sha": "",
-    "size": 2169
+    "size": 2149
   },
   {
     "name": "12_Worked_Example_Canary_A_Service.md",
     "path": "12_Worked_Example_Canary_A_Service.md",
     "type": "file",
     "sha": "",
-    "size": 3038
+    "size": 3018
   },
   {
     "name": "13_Best_Practices_And_When_Not_To_Use.md",
     "path": "13_Best_Practices_And_When_Not_To_Use.md",
     "type": "file",
     "sha": "",
-    "size": 2828
+    "size": 2808
   },
   {
     "name": "14_Feature_And_Configuration_Coverage_Map.md",
     "path": "14_Feature_And_Configuration_Coverage_Map.md",
     "type": "file",
     "sha": "",
-    "size": 6174
+    "size": 6154
   },
   {
     "name": "15_Rollout_Spec_And_Strategy_Configuration_Catalog.md",
     "path": "15_Rollout_Spec_And_Strategy_Configuration_Catalog.md",
     "type": "file",
     "sha": "",
-    "size": 3168
+    "size": 3148
   },
   {
     "name": "16_Troubleshooting_And_Staff_Checklist.md",
     "path": "16_Troubleshooting_And_Staff_Checklist.md",
     "type": "file",
     "sha": "",
-    "size": 3027
+    "size": 3007
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 6359
+    "size": 6354
   }
 ]

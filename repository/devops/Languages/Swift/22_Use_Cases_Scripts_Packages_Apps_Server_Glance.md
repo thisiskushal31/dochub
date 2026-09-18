@@ -8,8 +8,6 @@ A **gallery** of where Swift shows up as an engineering job: map the work to **s
 
 Chapters **00–21** taught the machine. This chapter answers: *which shape should this ticket become?*
 
----
-
 ## 1. Concepts
 
 ### 1. Pick the smallest honest shape
@@ -50,8 +48,6 @@ Take “validate a config file”:
 | **Software engineering** | Swift Testing suite; DocC for the public API |
 
 One package; five honest homes. That is the point of SPM discipline (chapter **14**).
-
----
 
 ## 2. Advanced concepts — worked use-case sketches
 
@@ -265,8 +261,6 @@ Compare with a teammate. Disagreement means the nouns aren’t shared yet—fix 
 | Supply-chain review aid | Pin audits of `Package.resolved` — process, not a magic app |
 | Release engineering | fastlane/Xcode Cloud owns upload; product code stays in Swift packages |
 
----
-
 ## 3. Applications and use cases
 
 ### Gallery (short)
@@ -309,8 +303,6 @@ Do not treat these as the only correct answers—treat them as **shared nouns**:
 - Login + token → **app feature module** + Keychain-backed session type in a package; never `Constants.token`.
 - Shared HTTP JSON → **SPM library** with Codable models; app and server (if any) import it; UI stays out.
 
----
-
 ## 4. Staff-level review checklist
 
 - New work picked **script / package / app / tool lane** on purpose.
@@ -326,8 +318,6 @@ Do not treat these as the only correct answers—treat them as **shared nouns**:
 - CI shape matches the artifact (Linux vs Mac) — chapter **21**.
 - Security-sensitive use cases cite signing/privacy habits from chapter **20**.
 - Team can explain why *this* ticket was not a Bash one-liner — or admit it should have been Shell track work.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./06_Managed_Executors_And_Resource_Classes.md) · [README](./README.md) · [Next: Workflows →](./08_Workflows_Requires_Filters_Matrix_And_Triggers.md)
 
----
-
 ## 1. Concepts
 
 **Self-hosted runners** execute jobs on infrastructure you operate while CircleCI still orchestrates pipelines.
@@ -25,8 +23,6 @@ jobs:
       - run: echo "Hi from a runner"
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### Lifecycle
@@ -47,8 +43,6 @@ Same as any CI agent: patch images, rotate tokens, isolate prod-capable runners,
 
 Legacy **launch agent** migrations to machine runner 3 are documented per OS — brownfield only.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -59,8 +53,6 @@ Legacy **launch agent** migrations to machine runner 3 are documented per OS —
 | Occasional special hardware | Dedicated resource class |
 
 **Good:** separate resource classes for untrusted PR vs deploy. **Bad:** one shared runner with prod kubeconfig for all projects.
-
----
 
 ## References
 

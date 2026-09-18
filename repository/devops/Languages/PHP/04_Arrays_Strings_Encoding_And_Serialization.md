@@ -6,8 +6,6 @@
 
 Byte-level string behavior vs UTF-8 policy, JSON as an API boundary, native serialization formats and their gadget risks, stream wrappers that turn URLs into code execution or SSRF, and operational concerns (logging charset, DB charsets, temporary file handling). Later chapters connect this material to sessions, uploads, and object injection reviews.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the PHP [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -15,8 +13,6 @@ Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3
 ### 1. Strings as bytes
 
 PHP strings are binary-safe byte sequences. `strlen` returns byte length. Correct Unicode handling requires `mbstring` (or ICU via intl) for grapheme-aware operations, case folding, and collation. Source file encoding, HTTP `Content-Type` charset, database connection charset, and filesystem normalization (NFC vs NFD on macOS clients hitting Linux servers) must be aligned or you get intermittent truncation and mojibake.
-
----
 
 ### 2. JSON: decode, encode, depth, and errors
 
@@ -38,27 +34,19 @@ Set maximum depth and payload size at ingress (reverse proxy body limits + appli
 
 **Double encoding:** Calling `json_encode` on a string that already contains JSON produces a quoted string, not a merged object—a common bug in “helpful” logging wrappers that stringify arrays twice.
 
----
-
 ### 3. `serialize` / `unserialize` and gadget chains
 
 Native PHP serialization can represent objects. `unserialize` on attacker-controlled data can invoke `__wakeup`, `__destruct`, and custom `__unserialize` paths, historically enabling critical RCE when gadget classes exist in vendor trees.
 
 Policy: treat untrusted deserialization as forbidden. Prefer JSON across language boundaries. If PHP serialization is unavoidable, constrain with `allowed_classes` options where supported and strip user input from ever reaching `unserialize`.
 
----
-
 ### 4. Streams and wrappers
 
 `php://filter`, `php://memory`, `data://`, `file://`, `http://`, `phar://`, and others participate in a uniform streams API. User-influenced URLs passed to `file_get_contents`, `include`, or HTTP clients enable SSRF and filter-chain tricks in vulnerable code.
 
----
-
 ### 5. Hashing, HMAC, random bytes
 
 `hash`, `hash_hmac`, `random_bytes`, and `sodium_*` underpin integrity and confidentiality primitives. Use `hash_equals` for comparing secrets to reduce timing leaks.
-
----
 
 ### 5b. Binary payloads, Base64, and transport limits
 
@@ -78,21 +66,15 @@ if ($decoded === false) {
 
 Strict decode mode (`true`) rejects malformed input instead of silently dropping invalid bytes.
 
----
-
 ### 6. XML, YAML, CSV
 
 Each parser class has billion-laughs, entity expansion, and type confusion histories. Disable external entities in XML; cap sizes; avoid `yaml_parse` on untrusted blobs in security-sensitive paths; treat CSV as untrusted code for formula injection into spreadsheets downstream.
-
----
 
 ### 7. Arrays: reference semantics, `array_merge`, `+`
 
 Assigning `$b = $a` on arrays is copy-on-write until either side mutates. **`$a + $b`** keeps left-hand keys and ignores collisions; **`array_merge`** overwrites numeric keys and reindexes in ways that differ from union—wrong choice corrupts config merges and feature-flag maps.
 
 Passing arrays by reference (`function foo(&$a)`) creates alias bugs across callers—prefer returning new arrays or objects in new code; legacy frameworks still use references heavily.
-
----
 
 ## 2. Advanced concepts
 
@@ -108,8 +90,6 @@ Passing arrays by reference (`function foo(&$a)`) creates alias bugs across call
 
 **`mbstring.func_overload` legacy:** Older deployments overloaded string functions—rare on modern PHP but if enabled, `strlen` semantics change catastrophically; treat as a critical env invariant in inherited hosts.
 
----
-
 ## 3. Applications and use cases
 
 - **API gateways:** Enforce max body size, validate JSON schema, reject wrong `Content-Type`, strip unsupported encodings at the edge.
@@ -117,8 +97,6 @@ Passing arrays by reference (`function foo(&$a)`) creates alias bugs across call
 - **Cache stores:** Sign or encrypt cached blobs if tampering is in threat model; never cache PHP-serialized user objects from anonymous input.
 - **Forensics:** Correlate charset issues with specific clients/CDNs; fix at the boundary instead of patching symptoms in PHP.
 - **Compliance:** Document where PII enters serialization boundaries (sessions, queues, exports) and how it is encrypted at rest.
-
----
 
 ## References
 

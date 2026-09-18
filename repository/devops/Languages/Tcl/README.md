@@ -10,8 +10,6 @@ This track teaches the **language + Linux/runtime picture + packages + channels/
 
 **New to Tcl?** Start at chapter **01** (what it is, history, where it runs, how it sits on Linux, what each command does). Then chapter **00** to touch `tclsh` on your machine. Then **02** → **03** and onward.
 
----
-
 ## Versions and brownfield (default narrative)
 
 **Default for new work: Tcl 9.0.x** on the toolchain your team actually ships. This handbook’s snapshot follows the **Tcl/Tk 9.0** man pages (re-pin the exact patch with `info patchlevel`). **Tcl 8.6** remains common in production and vendor images—treat it as **brownfield literacy**, not the default for new scripts.
@@ -31,8 +29,6 @@ puts [info patchlevel]
 EOF
 ```
 
----
-
 ## Chapter structure
 
 Every chapter follows:
@@ -43,8 +39,6 @@ Every chapter follows:
 4. **Staff-level review checklist**
 
 Links live in each chapter’s **References** (official hubs only).
-
----
 
 ## Semantic model (five ideas)
 
@@ -62,16 +56,12 @@ Links live in each chapter’s **References** (official hubs only).
 | Lists / dicts | `split`-fragile pipelines | **06**, **08** |
 | Channels / events | Busy-wait scripts; hung `vwait` | **08**, **11** |
 
----
-
 ## How to read this section
 
 **Absolute beginners:** **01 → 00 → 02 → 03…** (understand the territory, then touch the binary, then versions, then syntax microscope).  
 If you already know what Tcl is for, **00 → 01 → 02…** is fine.
 
 Then language core, I/O and packaging, async/embed, Expect and security, use cases and compass.
-
----
 
 ## Progression
 
@@ -87,8 +77,6 @@ Then language core, I/O and packaging, async/embed, Expect and security, use cas
 | **Platform / embed** | 13 → 14 | Tk surface, C API / embedding door |
 | **Ops / security** | 15 → 16 | Expect automation, review posture |
 | **Use cases / compass** | 17 → 18 | Roles, domains, adjacent doors |
-
----
 
 ## Chapters
 
@@ -113,8 +101,6 @@ Then language core, I/O and packaging, async/embed, Expect and security, use cas
 | 16 | Security review of Tcl automation | [16_Security_Review_Of_Tcl_Automation.md](./16_Security_Review_Of_Tcl_Automation.md) |
 | 17 | Use cases and engineering perspectives | [17_Use_Cases_And_Engineering_Perspectives.md](./17_Use_Cases_And_Engineering_Perspectives.md) |
 | 18 | Where Tcl is going and adjacent doors | [18_Where_Tcl_Is_Going_And_Adjacent_Doors.md](./18_Where_Tcl_Is_Going_And_Adjacent_Doors.md) |
-
----
 
 ## Further reading
 

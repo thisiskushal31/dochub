@@ -2,8 +2,6 @@
 
 [← Previous](./02_Core_Concepts_Rollout_Analysis_Experiment.md) · [README](./README.md) · [Next: Install →](./04_Install_Plugin_Dashboard_And_First_Rollout.md)
 
----
-
 ## 1. Concepts
 
 ### Components
@@ -24,8 +22,6 @@ The controller **ignores ordinary Deployments**. Only Rollouts (and referenced w
 
 Install the controller **in every cluster** that runs Rollout workloads. Rollouts is not a multi-cluster orchestrator; GitOps (Argo CD) often spans clusters while each cluster runs its own Rollouts controller.
 
----
-
 ## 2. Advanced concepts
 
 ### Namespace vs cluster install
@@ -40,8 +36,6 @@ A change to `spec.template` (usually image digest) creates a new ReplicaSet. The
 
 Users → Ingress/mesh → Service(s) → pods. Without a traffic provider, split is pod-count based. With a provider, the controller updates mesh/ingress objects to match `setWeight`.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Architecture choice |
@@ -50,8 +44,6 @@ Users → Ingress/mesh → Service(s) → pods. Without a traffic provider, spli
 | Many workload clusters | Controller per cluster; Argo CD manages Rollout YAML |
 | Shared cluster, team isolation | Namespace install + careful RBAC |
 | Observe without kubectl | Enable dashboard; still automate via Git |
-
----
 
 ## References
 

@@ -4,8 +4,6 @@
 
 Delphi is **object-oriented**: you define **classes** with **fields**, **methods**, and **properties**, and create **objects** (instances) at runtime. Classes can **inherit** from one parent and implement **interfaces**. Memory for objects is typically allocated with **Create** and freed with **Free** (or **Destroy**). Understanding classes is essential for both application code and for reading decompiled or disassembled Delphi (e.g. VCL/RTL class hierarchies).
 
----
-
 ## Class declaration
 
 A class is declared with **type** ClassName **= class**(ParentClass) ... **end**. **ParentClass** can be omitted (then it inherits from **TObject**). Inside the class you declare **fields** (var), **methods** (procedure/function), and **properties**. Visibility is controlled by **private**, **protected**, **public**, **published** (and sometimes **strict private** / **strict protected**).
@@ -23,8 +21,6 @@ type
     property Age: Integer read FAge write FAge;
   end;
 ```
-
----
 
 ## Constructors and destructors
 
@@ -56,8 +52,6 @@ begin
 end;
 ```
 
----
-
 ## Properties
 
 **Properties** expose data through **read** and **write** accessors. They can map to a field (read FName write FName) or to getter/setter methods. **published** properties are exposed to the IDE and streaming (e.g. form files); **public** and **published** are what you often see in component libraries like VCL.
@@ -66,8 +60,6 @@ end;
 property Name: string read FName write FName;
 property Age: Integer read FAge write FAge;
 ```
-
----
 
 ## Inheritance and Self / inherited
 
@@ -87,13 +79,9 @@ type
   end;
 ```
 
----
-
 ## Class methods and class references
 
 A **class method** is a procedure or function that belongs to the **class** rather than to an instance. Declare with **class procedure** / **class function**. It cannot access **Self** as an object (no instance fields) but can be called as **TMyClass.MyClassMethod**. **Class reference** types (e.g. **class of TForm**) allow you to store a type and call **Create** on it (e.g. **FClassRef := TForm1; FClassRef.Create(Self)**). Used in factories and in the VCL (e.g. **TForm** creation).
-
----
 
 ## Interfaces
 
@@ -115,13 +103,9 @@ begin
 end;
 ```
 
----
-
 ## Why this matters for security and RE
 
 Delphi binaries often expose **class names** (e.g. **TForm1**, **TButton**), **method names**, and **VCL/RTL** type names in metadata or strings. Recognizable patterns include **TForm**, **TApplication**, **TStream**, **TStringList**, and custom class names. Understanding class structure (constructors, destructors, properties, inheritance) helps when analyzing malware or legacy code that uses the same RTL/VCL.
-
----
 
 ## Further reading
 

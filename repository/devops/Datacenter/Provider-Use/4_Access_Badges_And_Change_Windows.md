@@ -2,8 +2,6 @@
 
 [← Previous](./3_Order_Interconnect.md) · [README](./README.md) · [Next: Remote hands →](./5_Remote_Hands_Tickets.md)
 
----
-
 ## 1. Concepts
 
 Physical access is a controlled product: **badges**, **escorts**, **mantraps**, and **change windows**.
@@ -16,8 +14,6 @@ Physical access is a controlled product: **badges**, **escorts**, **mantraps**, 
 | Schedule install | Dock + cage time |
 
 Identity culture on-ramp: [../11_Identity_Access_And_Change.md](../11_Identity_Access_And_Change.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -34,8 +30,6 @@ Identity culture on-ramp: [../11_Identity_Access_And_Change.md](../11_Identity_A
 ### How it connects
 
 Remote hands as alternative to travel ([5](./5_Remote_Hands_Tickets.md)). Safety: [White-Space/10](../White-Space/10_White_Space_Safety_And_Housekeeping.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -55,8 +49,6 @@ Remote hands as alternative to travel ([5](./5_Remote_Hands_Tickets.md)). Safety
 - Never prop doors or loan badges  
 
 **Good:** current access, noticed windows, ticketed work. **Bad:** surprise tests; badge sprawl; silent cage entries.
-
----
 
 ## References
 

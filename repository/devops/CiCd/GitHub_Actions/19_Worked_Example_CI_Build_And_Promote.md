@@ -2,8 +2,6 @@
 
 [← Previous](./18_Monitor_Metrics_And_Billing_Literacy.md) · [README](./README.md) · [Next: Best practices →](./20_Best_Practices_And_When_Not_Actions.md)
 
----
-
 ## 1. Concepts — lab goal
 
 Prove the paved-road loop on a real GitHub repo (personal or org sandbox).
@@ -19,8 +17,6 @@ Do not skip the digest — rebuilding on the release tag without comparing diges
 
 Language-specific build tutorials (Node, Go, Java, …) are upstream cookbooks; the lab is about the **delivery shape**.
 
----
-
 ## 2. Advanced — stretch goals
 
 | Stretch | Chapter |
@@ -33,8 +29,6 @@ Language-specific build tutorials (Node, Go, Java, …) are upstream cookbooks; 
 | GitOps write (Flux/Argo) | [17](./17_Deploy_Environments_And_Promote.md) |
 | Service containers for integration tests | [24](./24_Migrate_Packages_And_Extras.md) |
 
----
-
 ## 3. Applications and use cases
 
 | Checkpoint | Evidence |
@@ -46,8 +40,6 @@ Language-specific build tutorials (Node, Go, Java, …) are upstream cookbooks; 
 | Ops | Failed schedule pages a human |
 
 **Good:** lab notes become the team template. **Bad:** only green CI with `:latest` in prod.
-
----
 
 ## References
 

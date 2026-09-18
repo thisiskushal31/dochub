@@ -2,8 +2,6 @@
 
 [← Previous](./11_Firmware_Trains_And_Secure_Boot.md) · [README](./README.md) · [Next: NICs and HBAs →](./13_NICs_HBAs_And_Slot_Planning.md)
 
----
-
 ## 1. Concepts
 
 **Boot path** is how firmware finds an OS loader. Modern default is **UEFI**; legacy BIOS still appears on brownfield.
@@ -21,8 +19,6 @@
 ### Where it sits
 
 UEFI boot order in BIOS; Option ROMs for HBA/NIC; OS NVRAM boot entries.
-
----
 
 ## 2. Advanced concepts
 
@@ -49,8 +45,6 @@ Storage fabrics and multipath: Storage-Physical. NIC PXE/UEFI HTTP boot: Fabric 
 
 Same UEFI ideas; SAN boot more common in older enterprise estates than greenfield cloud-style metal.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -69,8 +63,6 @@ Same UEFI ideas; SAN boot more common in older enterprise estates than greenfiel
 - Never leave USB installer first in production order  
 
 **Good:** deterministic UEFI path, tested recovery media. **Bad:** mystery RAID packs; single-path SAN boot; installer-first boot order.
-
----
 
 ## References
 

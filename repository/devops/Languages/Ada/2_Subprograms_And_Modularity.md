@@ -4,8 +4,6 @@
 
 Subprograms (procedures and functions), parameter modes, packages, and child packages form the modular structure of Ada programs.
 
----
-
 ## Subprograms
 
 **Procedures** perform actions and do not return a value (similar to C/C++ functions returning `void`). **Functions** return a value. A subprogram with **no parameters** has no parameter list at all: `procedure Proc;` or `function F return Integer;`. Parameters can have **default values**; when calling, you can omit arguments that have defaults. A parameterless call does not use parentheses: `Increment_By;` uses default values.
@@ -27,13 +25,9 @@ end Increment;
 C := Increment_By (I => A, Incr => B);
 ```
 
----
-
 ## Function return values
 
 In Ada, a function call’s return value **cannot be ignored**: a function call cannot be used as a statement. If you call a function and do not need the result, you must assign it to a variable (or otherwise use it). This avoids silent misuse and supports static analysis.
-
----
 
 ## Parameter modes
 
@@ -59,13 +53,9 @@ end Swap;
 
 **out** parameters are used when a subprogram must “return” more than one value (Ada has no tuple type); the subprogram writes to the out parameter before returning. Semantically, modes are higher-level than “by value” vs “by reference”; the compiler may pass by reference for efficiency when the parameter is not modified (e.g. large arrays as **in**).
 
----
-
 ## Nested subprograms
 
 A subprogram can be declared inside another. Nested subprograms can use the outer scope (parameters and local variables), which helps with organization and controlled sharing of state. Helper procedures used only by one subprogram are often declared nested.
-
----
 
 ## Subprogram renaming
 
@@ -77,8 +67,6 @@ function Img (I : Integer) return String renames Integer'Image;
 ```
 
 Renaming can also add default expressions that the original declaration did not have.
-
----
 
 ## Packages
 
@@ -93,8 +81,6 @@ end Week;
 ```
 
 Accessing entities uses dot notation: **Package.Entity**. A **with** clause may only appear in the prelude of a compilation unit (before the unit’s declaration). A **use** clause may appear in the prelude or in any declarative region; its effect is limited to that scope.
-
----
 
 ## Package body and encapsulation
 
@@ -120,21 +106,15 @@ package body Operations is
 end Operations;
 ```
 
----
-
 ## Child packages
 
 **Child packages** extend a parent: the name is **Parent.Child** (e.g. **Ada.Text_IO**). The child automatically sees the **specification** of the parent (not the parent’s body). So **Week.Child** can use **Mon**, **Tue**, etc., from **Week** without a separate **with Week**. A parent can have multiple children (**Week.Child**, **Week.Child_2**). The hierarchy can go deeper: **Week.Child.Grandchild**.
 
 Visibility rule: only what is in the **parent’s specification** is visible in the child. Anything declared only in the parent’s **body** is not visible to the child. To expose behavior, the parent exposes subprograms in its spec that the child can call.
 
----
-
 ## Package and subprogram renaming
 
 Packages can be renamed: `package TIO renames Ada.Text_IO;` then `TIO.Put_Line ("Hello");`. You can also rename a subprogram inside a package: `procedure Say (S : String) renames Ada.Text_IO.Put_Line;`.
-
----
 
 ## Further reading
 

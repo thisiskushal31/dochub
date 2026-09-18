@@ -4,8 +4,6 @@
 
 *Final choice page for Alibaba Cloud (Aliyun). Deeper API: [alibabacloud.com/help](https://www.alibabacloud.com/help). China vs intl accounts/regions differ—pick the right partition first.*
 
----
-
 ## Compute
 
 | Product | What for | When | Why not |
@@ -74,8 +72,6 @@
 | **Container Registry (ACR)** | Images | ACK/SAE | — |
 | **ROS / Terraform** | IaC | Aliyun-native | External Terraform estate |
 | **Platform for AI (PAI) / Model Studio / DashScope** | ML / FM | GenAI + train on Aliyun | DIY ACK only when needed |
-
----
 
 ## How to use
 

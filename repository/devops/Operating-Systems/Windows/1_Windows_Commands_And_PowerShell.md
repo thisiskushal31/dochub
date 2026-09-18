@@ -6,8 +6,6 @@ Windows offers two main command-line environments: **Command Prompt (cmd)** and 
 
 **Deep scripting curriculum (all OS):** [Languages/Shell](../../Languages/Shell/README.md) — PowerShell language depth, cmd/batch, and cross-OS contrasts with Bash.
 
----
-
 ## Command Prompt (cmd) vs PowerShell
 
 | Aspect | Command Prompt (cmd) | PowerShell |
@@ -18,8 +16,6 @@ Windows offers two main command-line environments: **Command Prompt (cmd)** and 
 | **Use in DevOps** | Legacy scripts, minimal new use. | Preferred for automation, Desired State Configuration, Azure, etc. |
 
 For new automation on Windows, use **PowerShell** (Windows PowerShell 5.1 or PowerShell 7+).
-
----
 
 ## Essential Command Prompt (cmd) commands
 
@@ -68,8 +64,6 @@ setx VAR value
 path
 ```
 
----
-
 ## PowerShell: basics
 
 PowerShell uses **cmdlets** (verb-noun, e.g. `Get-Process`, `Set-Location`) and **objects** in the pipeline.
@@ -92,8 +86,6 @@ Get-Alias
 # Common: dir -> Get-ChildItem, cd -> Set-Location, cat -> Get-Content
 ```
 
----
-
 ## PowerShell: pipeline and objects
 
 The pipeline passes **objects**, not just text. You filter and format with cmdlets:
@@ -108,8 +100,6 @@ Get-Service | Format-Table Name, Status -AutoSize
 Get-Process | Sort-Object CPU -Descending
 Get-ChildItem | Group-Object Extension
 ```
-
----
 
 ## PowerShell: variables, conditionals, loops
 
@@ -127,8 +117,6 @@ foreach ($item in $collection) { }
 while ($condition) { }
 1..10 | ForEach-Object { $_ }
 ```
-
----
 
 ## PowerShell: scripting for DevOps
 
@@ -148,8 +136,6 @@ if (-not (Test-Path $TargetPath)) {
 }
 Get-ChildItem $TargetPath
 ```
-
----
 
 ## PowerShell: modules and remoting
 
@@ -222,15 +208,11 @@ wsl ls -la
 wsl bash -c "echo hello"
 ```
 
----
-
 ## Summary
 
 - **cmd** = legacy text shell; **PowerShell** = modern, object-based shell and scripting — use PowerShell for DevOps on Windows.
 - **PowerShell**: cmdlets (Get-*, Set-*), pipeline of objects, variables (`$x`), conditionals and loops, `.ps1` scripts.
 - **DevOps**: execution policy, parameters, error handling, idempotency; consider **PowerShell 7** and **WSL** for cross-platform and Linux parity.
-
----
 
 ## Further reading
 

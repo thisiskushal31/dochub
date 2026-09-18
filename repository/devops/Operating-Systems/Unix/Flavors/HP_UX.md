@@ -4,8 +4,6 @@
 
 **HP-UX** is Hewlett Packard’s Unix, historically on PA-RISC and later **Itanium**. It uses **swinstall** / **swlist** / **swremove** for software, **SAM** (System Administration Manager) for menu-driven admin, and **System V–style** init and run levels.
 
----
-
 ## Package management: swinstall / swlist / swremove
 
 ```bash
@@ -19,8 +17,6 @@ swinstall -x reinstall=true bundle_name
 # Remove
 swremove bundle_name
 ```
-
----
 
 ## Service and system management
 
@@ -37,14 +33,10 @@ vmstat
 iostat
 ```
 
----
-
 ## Summary
 
 - **HP-UX** = HP Unix (PA-RISC, Itanium); **swinstall** / **swlist** / **swremove** for packages; **SAM** for admin.
 - Legacy enterprise Unix; still in use in some environments.
-
----
 
 ## Further reading
 

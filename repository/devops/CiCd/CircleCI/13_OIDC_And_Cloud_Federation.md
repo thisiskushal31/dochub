@@ -2,8 +2,6 @@
 
 [← Previous](./12_Contexts_Env_Vars_And_Secrets.md) · [README](./README.md) · [Next: Dynamic config →](./14_Dynamic_Config_And_Continuation.md)
 
----
-
 ## 1. Concepts
 
 CircleCI can inject **OpenID Connect ID tokens** into jobs so you authenticate to AWS, GCP, and other OIDC-capable systems **without** long-lived cloud keys in contexts.
@@ -16,8 +14,6 @@ Available env vars (as documented):
 One-time: configure the cloud provider to **trust CircleCI** as an IdP for your org. Then jobs exchange the token for short-lived cloud roles.
 
 Advantages: less secret sprawl, automatic rotation story, finer role policies.
-
----
 
 ## 2. Advanced concepts
 
@@ -33,8 +29,6 @@ Docs cover custom claims for tighter cloud trust policies.
 
 Guides exist for pulling from AWS ECR / GCP Artifact Registry with OIDC — prefer over static registry passwords.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -44,8 +38,6 @@ Guides exist for pulling from AWS ECR / GCP Artifact Registry with OIDC — pref
 | Least privilege | Role scoped to pipeline/project claims |
 
 **Good:** cloud trust maps to CircleCI org/project. **Bad:** `AdministratorAccess` on the federated role.
-
----
 
 ## References
 

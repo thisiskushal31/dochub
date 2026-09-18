@@ -4,13 +4,9 @@
 
 Elixir uses **binaries** (contiguous sequences of bytes) for raw data and for **strings** (UTF-8 encoded text). **Charlists** are lists of character codepoints and appear in some APIs (e.g. older Erlang libraries). This topic explains how they relate, how to work with Unicode and encodings, and when to use each so you can handle text and binary data correctly in apps, scripts, and integrations.
 
----
-
 ## Unicode and code points
 
 Strings are UTF-8 encoded. A **code point** is a single Unicode character (e.g. the letter “ö” or an emoji). In UTF-8, a code point may use one or more **bytes**. So the number of bytes in a string can be greater than the number of graphemes (what users see as “characters”). Use `String.length/1` for grapheme count and `byte_size/1` for byte count when you care about encoding or storage.
-
----
 
 ## Strings (UTF-8)
 
@@ -25,13 +21,9 @@ byte_size("hellö")
 # => 6
 ```
 
----
-
 ## Binaries and bitstrings
 
 A **binary** is a sequence of bytes. String literals are binaries. You can also build or pattern-match on binaries with the `<<>>` syntax (e.g. `<<a, b, c>>` or size/specifier modifiers). **Bitstrings** generalize binaries to bit-level (e.g. `<<x::4, y::4>>` for 4-bit units). Binaries are used for file I/O, network protocols, and binary formats; pattern matching on them is efficient and common in parsers and decoders. In security-sensitive code (e.g. parsing uploads or protocol frames), validate size and shape to avoid misuse.
-
----
 
 ## Charlists
 
@@ -45,8 +37,6 @@ to_string('hello')
 ```
 
 For new Elixir code, prefer strings unless you are calling an API that requires charlists.
-
----
 
 ## Further reading
 

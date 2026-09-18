@@ -2,8 +2,6 @@
 
 [← Previous](./10_Edge_Proxy_And_Streaming.md) · [README](./README.md) · [Next: SSO →](./12_SSO_RBAC_SCIM_And_Provisioning.md)
 
----
-
 ## 1. Concepts
 
 Unleash authenticates machines differently from humans ([12](./12_SSO_RBAC_SCIM_And_Provisioning.md)). Official token types:
@@ -18,8 +16,6 @@ Unleash authenticates machines differently from humans ([12](./12_SSO_RBAC_SCIM_
 **Admin tokens are deprecated.** OSS: use PATs. Enterprise: use service accounts. Full endpoint list: [23](./23_Admin_Client_Frontend_And_Edge_APIs.md).
 
 Backend and frontend tokens are scoped to **one environment** and one or more projects (`default`, `[]` for a set, `*` for all current and future). Least privilege: a checkout service gets a backend token for `production` in its project — not a PAT and not `*`.
-
----
 
 ## 2. Advanced concepts
 
@@ -45,8 +41,6 @@ Unleash Proxy (maintenance) used arbitrary `clientKeys` you defined at Proxy sta
 
 Root Admin (or custom root with token permissions) can mint instance tokens; project Members can mint project tokens. Viewers cannot. Any role can create their own PAT.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -64,8 +58,6 @@ Root Admin (or custom root with token permissions) can mint instance tokens; pro
 - Edge backend token scope ≥ frontend token scope  
 
 **Good:** per-app backend tokens. **Bad:** one `*` backend token in every compose file.
-
----
 
 ## References
 

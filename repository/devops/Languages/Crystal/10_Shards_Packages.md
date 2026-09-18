@@ -6,8 +6,6 @@
 
 **Why Shards?** Without a package manager you would copy code or rely on ad-hoc paths. Shards gives you a single manifest (shard.yml), lockfile (shard.lock), and a standard layout so anyone can run `shards install` and get the same versions. For publishing your own code, you follow the same layout and host the Shard (e.g. on GitHub).
 
----
-
 ## shard.yml
 
 In the project root, **shard.yml** lists the project name, version, and dependencies. Each dependency has a name, a source (e.g. GitHub), and optionally a version constraint.
@@ -22,8 +20,6 @@ dependencies:
     version: ~> 1.0
 ```
 
----
-
 ## Installing dependencies
 
 Run **shards install** (or **crystal deps** in older setups) to resolve and install dependencies. Shards clones or fetches each dependency and writes a **shard.lock** so future installs are reproducible.
@@ -31,8 +27,6 @@ Run **shards install** (or **crystal deps** in older setups) to resolve and inst
 ```bash
 shards install
 ```
-
----
 
 ## Requiring Shards
 
@@ -48,13 +42,9 @@ end
 Kemal.run
 ```
 
----
-
 ## Writing and publishing a Shard
 
 To publish a library: create a project with **crystal init lib my_shard**, add a **shard.yml** with name and version, implement the library, and push to a Git host. Others can add your repo as a dependency. Follow the Shards specification for versioning and structure.
-
----
 
 ## Further reading
 

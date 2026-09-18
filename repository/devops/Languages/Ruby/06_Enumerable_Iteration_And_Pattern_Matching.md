@@ -6,8 +6,6 @@
 
 How Ruby traverses and transforms collections: the **Enumerable** protocol, **enumerators**, **lazy** pipelines, and **pattern matching** (`case/in`, hash/array patterns). This is the idiomatic core of data processing in scripts, tests, and cookbook helpers—and the foundation of many stdlib and gem APIs.
 
----
-
 ## 1. Concepts
 
 ### 1. The Enumerable contract
@@ -111,8 +109,6 @@ Rightward assignment can destructure in one line:
 
 Use when it improves clarity; avoid obscuring control flow in large methods.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Custom Enumerable objects
@@ -170,8 +166,6 @@ Clearer than manual `inject` for hash aggregation in many cases.
 
 `Enumerator` + `yielder` patterns implement pipelines; pair with **`lazy`** so consumers pull work—important for memory when producer is infinite (Kafka-style loops).
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and data pipelines
@@ -215,8 +209,6 @@ events.group_by { |e| e[:host] }.transform_values(&:size)
 - Pattern matching branches cover failure/`else` paths.
 - `&:method` chains stay readable or are refactored to named blocks.
 - Hash pattern keys document required vs optional fields for API versions.
-
----
 
 ## References
 

@@ -4,174 +4,174 @@
     "path": "1_What_Is_Kotlin.md",
     "type": "file",
     "sha": "",
-    "size": 7126
+    "size": 7121
   },
   {
     "name": "10_Null_Safety.md",
     "path": "10_Null_Safety.md",
     "type": "file",
     "sha": "",
-    "size": 7436
+    "size": 7431
   },
   {
     "name": "11_Collections_And_Sequences.md",
     "path": "11_Collections_And_Sequences.md",
     "type": "file",
     "sha": "",
-    "size": 7544
+    "size": 7539
   },
   {
     "name": "12_Lambdas_And_Higher_Order_Functions.md",
     "path": "12_Lambdas_And_Higher_Order_Functions.md",
     "type": "file",
     "sha": "",
-    "size": 5981
+    "size": 5976
   },
   {
     "name": "13_Scope_Functions_Builders_And_Extension_Functions.md",
     "path": "13_Scope_Functions_Builders_And_Extension_Functions.md",
     "type": "file",
     "sha": "",
-    "size": 6550
+    "size": 6545
   },
   {
     "name": "14_Generics_And_Operator_Overloading.md",
     "path": "14_Generics_And_Operator_Overloading.md",
     "type": "file",
     "sha": "",
-    "size": 6581
+    "size": 6576
   },
   {
     "name": "15_Coroutines_And_Async.md",
     "path": "15_Coroutines_And_Async.md",
     "type": "file",
     "sha": "",
-    "size": 5093
+    "size": 5088
   },
   {
     "name": "16_Exceptions_And_Error_Handling.md",
     "path": "16_Exceptions_And_Error_Handling.md",
     "type": "file",
     "sha": "",
-    "size": 5438
+    "size": 5433
   },
   {
     "name": "17_Annotations_Reflection_And_KDoc.md",
     "path": "17_Annotations_Reflection_And_KDoc.md",
     "type": "file",
     "sha": "",
-    "size": 5712
+    "size": 5707
   },
   {
     "name": "18_Interoperability_With_Java.md",
     "path": "18_Interoperability_With_Java.md",
     "type": "file",
     "sha": "",
-    "size": 5651
+    "size": 5646
   },
   {
     "name": "19_Gradle_And_Build_Tooling.md",
     "path": "19_Gradle_And_Build_Tooling.md",
     "type": "file",
     "sha": "",
-    "size": 4721
+    "size": 4716
   },
   {
     "name": "2_Environment_And_Setup.md",
     "path": "2_Environment_And_Setup.md",
     "type": "file",
     "sha": "",
-    "size": 8969
+    "size": 8964
   },
   {
     "name": "20_Android_Server_Side_And_JVM.md",
     "path": "20_Android_Server_Side_And_JVM.md",
     "type": "file",
     "sha": "",
-    "size": 3759
+    "size": 3754
   },
   {
     "name": "21_Kotlin_Multiplatform.md",
     "path": "21_Kotlin_Multiplatform.md",
     "type": "file",
     "sha": "",
-    "size": 5148
+    "size": 5143
   },
   {
     "name": "22_Compose_Multiplatform_And_Testing.md",
     "path": "22_Compose_Multiplatform_And_Testing.md",
     "type": "file",
     "sha": "",
-    "size": 4072
+    "size": 4067
   },
   {
     "name": "23_DevOps_CI_And_Security.md",
     "path": "23_DevOps_CI_And_Security.md",
     "type": "file",
     "sha": "",
-    "size": 4958
+    "size": 4953
   },
   {
     "name": "24_Use_Cases_By_Role.md",
     "path": "24_Use_Cases_By_Role.md",
     "type": "file",
     "sha": "",
-    "size": 5760
+    "size": 5755
   },
   {
     "name": "3_Syntax_And_Structure.md",
     "path": "3_Syntax_And_Structure.md",
     "type": "file",
     "sha": "",
-    "size": 6300
+    "size": 6295
   },
   {
     "name": "4_Variables_And_Basic_Types.md",
     "path": "4_Variables_And_Basic_Types.md",
     "type": "file",
     "sha": "",
-    "size": 4773
+    "size": 4768
   },
   {
     "name": "5_Strings_Characters_And_Arrays.md",
     "path": "5_Strings_Characters_And_Arrays.md",
     "type": "file",
     "sha": "",
-    "size": 4955
+    "size": 4950
   },
   {
     "name": "6_Control_Flow.md",
     "path": "6_Control_Flow.md",
     "type": "file",
     "sha": "",
-    "size": 5217
+    "size": 5212
   },
   {
     "name": "7_Functions.md",
     "path": "7_Functions.md",
     "type": "file",
     "sha": "",
-    "size": 5248
+    "size": 5243
   },
   {
     "name": "8_Classes_And_Objects.md",
     "path": "8_Classes_And_Objects.md",
     "type": "file",
     "sha": "",
-    "size": 7974
+    "size": 7969
   },
   {
     "name": "9_Inheritance_Interfaces_And_Abstract_Classes.md",
     "path": "9_Inheritance_Interfaces_And_Abstract_Classes.md",
     "type": "file",
     "sha": "",
-    "size": 7882
+    "size": 7877
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 9450
+    "size": 9410
   }
 ]

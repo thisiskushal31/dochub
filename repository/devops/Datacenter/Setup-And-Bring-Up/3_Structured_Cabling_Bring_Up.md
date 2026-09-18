@@ -2,8 +2,6 @@
 
 [← Previous](./2_Crate_To_Live_Rack.md) · [README](./README.md) · [Next: Switch roles →](./4_Switch_Roles_In_Practice.md)
 
----
-
 ## Mental map
 
 ```text
@@ -18,8 +16,6 @@ Server NIC / HBA
 ![Patch field](../../Assets/Datacenter/Setup-And-Bring-Up/patch-panel-fiber.jpg)
 
 *What to notice: labeled ports, managed slack, separate copper vs fiber fields when possible. Review plate against your site standard. Source: Wikimedia Commons search hit used in Assets credit table.*
-
----
 
 ## 1. Concepts
 
@@ -36,8 +32,6 @@ Server NIC / HBA
 
 **Confirm:** Where does permanent cabling end and patch begin in your cage?
 
----
-
 ## 2. Advanced concepts
 
 ### Operator experience
@@ -52,13 +46,9 @@ Color standards and A/B path colors prevent single-path mistakes. Document LOA/C
 | Bend radius | Intermittent CRC |
 | Undocumented XC | Hours of blame |
 
----
-
 ## 3. Applications
 
 **Staff checklist:** test results archived; labels both ends; A/B paths diverse; photo of rear after dress; ready for switch config ([4](./4_Switch_Roles_In_Practice.md)).
-
----
 
 ## References
 

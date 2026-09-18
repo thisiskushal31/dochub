@@ -4,8 +4,6 @@
 
 This topic covers **memory layout** in C, **storage classes** (scope and lifetime), and **dynamic allocation** with **`malloc`** and **`free`**. Understanding this is essential for correct and secure C code. Each concept is explained in text first, then with code blocks.
 
----
-
 ## Memory layout and memory address
 
 Every variable and allocation has a **memory address** (you get it with **`&x`**). A C process typically has:
@@ -18,13 +16,9 @@ Every variable and allocation has a **memory address** (you get it with **`&x`**
 
 Knowing where data lives helps you understand **lifetime**, **dangling pointers**, and **buffer overflows**.
 
----
-
 ## Scope rules and linkage
 
 **Scope** is where a name is visible: **block scope** (inside **{ }**), **file scope** (outside any function; visible to the end of the file). **Global variables** are declared at file scope; they have **static storage duration** and **external linkage** by default (visible in other files unless you use **static**). **Linkage**: **external** — the same name in different files refers to the same object; **internal** — **static** at file scope limits the name to that file; **none** — local variables have no linkage.
-
----
 
 ## Storage classes
 
@@ -54,8 +48,6 @@ int main(void) {
 
 Output: `1 2 3`.
 
----
-
 ## Dynamic allocation: malloc and free
 
 **`malloc(size)`** (in `<stdlib.h>`) allocates **size** bytes on the **heap** and returns a **`void *`** to the start. If allocation fails, it returns **NULL**. You **must** call **`free(ptr)`** exactly once for each pointer returned by `malloc` (or related functions) when the memory is no longer needed. Forgetting to free causes **memory leaks**; using memory after free causes **use-after-free** (undefined behavior and security bugs).
@@ -76,8 +68,6 @@ free(p);
 
 **calloc** allocates and zero-initializes: `calloc(n, size)` is like `malloc(n * size)` but bytes are zeroed. **realloc** resizes a previously allocated block (**dynamic array resizing**): `realloc(ptr, new_size)` can grow or shrink the block (it may move it); use the returned pointer from then on and do not use the old pointer after a successful realloc.
 
----
-
 ## Memory leaks and dangling pointers
 
 - **Memory leak** — You allocate with `malloc` but never `free`. Over time the process uses more and more memory.
@@ -91,16 +81,12 @@ int *bad(void) {
 /* Caller must not use the returned pointer: x no longer exists. */
 ```
 
----
-
 ## Summary
 
 - **Memory layout:** Text, data, BSS, heap, stack; heap is for dynamic allocation; stack is for locals and call frames.
 - **Storage classes** control scope and lifetime; **static** locals keep value across calls.
 - **malloc** allocates on the heap; **free** releases it; use **calloc** for zeroed memory, **realloc** to resize.
 - Avoid **leaks** (free when done) and **dangling pointers** (do not use after free or after object lifetime ends).
-
----
 
 ## Further reading
 

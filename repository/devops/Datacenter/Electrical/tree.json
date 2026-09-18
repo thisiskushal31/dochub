@@ -4,126 +4,126 @@
     "path": "1_Utility_Intake_And_Service_Entrance.md",
     "type": "file",
     "sha": "",
-    "size": 6128
+    "size": 6108
   },
   {
     "name": "10_Floor_And_Row_PDUs.md",
     "path": "10_Floor_And_Row_PDUs.md",
     "type": "file",
     "sha": "",
-    "size": 3068
+    "size": 3048
   },
   {
     "name": "11_Rack_PDU_A_And_B.md",
     "path": "11_Rack_PDU_A_And_B.md",
     "type": "file",
     "sha": "",
-    "size": 3279
+    "size": 3259
   },
   {
     "name": "12_Grounding_Bonding_And_Surge.md",
     "path": "12_Grounding_Bonding_And_Surge.md",
     "type": "file",
     "sha": "",
-    "size": 3289
+    "size": 3269
   },
   {
     "name": "13_EPO_And_Safety_Disconnects.md",
     "path": "13_EPO_And_Safety_Disconnects.md",
     "type": "file",
     "sha": "",
-    "size": 3635
+    "size": 3615
   },
   {
     "name": "14_High_Density_48V_HVDC_And_Busbar.md",
     "path": "14_High_Density_48V_HVDC_And_Busbar.md",
     "type": "file",
     "sha": "",
-    "size": 3640
+    "size": 3620
   },
   {
     "name": "15_EPMS_BMS_And_Power_Monitoring.md",
     "path": "15_EPMS_BMS_And_Power_Monitoring.md",
     "type": "file",
     "sha": "",
-    "size": 4468
+    "size": 4448
   },
   {
     "name": "16_Power_Quality_And_Harmonics.md",
     "path": "16_Power_Quality_And_Harmonics.md",
     "type": "file",
     "sha": "",
-    "size": 3225
+    "size": 3205
   },
   {
     "name": "17_Power_Path_Failure_Walks.md",
     "path": "17_Power_Path_Failure_Walks.md",
     "type": "file",
     "sha": "",
-    "size": 3470
+    "size": 3450
   },
   {
     "name": "18_Commissioning_And_IST_Power.md",
     "path": "18_Commissioning_And_IST_Power.md",
     "type": "file",
     "sha": "",
-    "size": 3357
+    "size": 3337
   },
   {
     "name": "2_Transformers.md",
     "path": "2_Transformers.md",
     "type": "file",
     "sha": "",
-    "size": 4095
+    "size": 4075
   },
   {
     "name": "3_MV_And_LV_Switchgear.md",
     "path": "3_MV_And_LV_Switchgear.md",
     "type": "file",
     "sha": "",
-    "size": 4181
+    "size": 4161
   },
   {
     "name": "4_ATS_And_STS.md",
     "path": "4_ATS_And_STS.md",
     "type": "file",
     "sha": "",
-    "size": 3913
+    "size": 3893
   },
   {
     "name": "5_UPS_Topologies.md",
     "path": "5_UPS_Topologies.md",
     "type": "file",
     "sha": "",
-    "size": 4094
+    "size": 4074
   },
   {
     "name": "6_Batteries_And_Energy_Storage.md",
     "path": "6_Batteries_And_Energy_Storage.md",
     "type": "file",
     "sha": "",
-    "size": 3913
+    "size": 3893
   },
   {
     "name": "7_Generators_And_Fuel_Systems.md",
     "path": "7_Generators_And_Fuel_Systems.md",
     "type": "file",
     "sha": "",
-    "size": 3767
+    "size": 3747
   },
   {
     "name": "8_Paralleling_And_Transfer_Sequences.md",
     "path": "8_Paralleling_And_Transfer_Sequences.md",
     "type": "file",
     "sha": "",
-    "size": 3735
+    "size": 3715
   },
   {
     "name": "9_Busway_Vs_Cable_Distribution.md",
     "path": "9_Busway_Vs_Cable_Distribution.md",
     "type": "file",
     "sha": "",
-    "size": 3409
+    "size": 3389
   },
   {
     "name": "README.md",

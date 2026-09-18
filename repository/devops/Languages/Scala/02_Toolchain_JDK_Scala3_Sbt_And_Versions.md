@@ -6,8 +6,6 @@
 
 The **install and version mental model** for day-to-day Scala work: which **JDK** to pin, how **Scala 3** and **Scala 2.13** relate, what **sbt** versus the **Scala CLI** are for, how **Coursier**-style tooling fetches artifacts, and how **CI** should lock the whole stack so “works on my laptop” does not become production entropy. This chapter is about **pins and workflows**, not language syntax.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. Three pins, not one
@@ -183,8 +181,6 @@ scala> System.getProperty("java.version")
 sbt.version=1.9.9
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Binary compatibility and cross-building
@@ -300,8 +296,6 @@ In the REPL, paste small expressions to verify JDK-facing calls before wiring th
 scala> java.lang.Runtime.version.toString
 ```
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -396,8 +390,6 @@ approved: JDK 17 + Scala 2.13.x + sbt 1.9.x → Spark jobs (platform X)
 - Cache and registry strategy works for clean CI agents, not only developer laptops.
 - CI prints JDK and Scala versions on every build for forensic clarity.
 - Libraries that claim multi-line support actually CI-test each declared Scala version.
-
----
 
 ## References
 

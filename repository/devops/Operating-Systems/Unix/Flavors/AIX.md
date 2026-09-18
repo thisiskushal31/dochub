@@ -4,8 +4,6 @@
 
 **AIX** is IBM’s Unix operating system for IBM Power (POWER, PowerPC). It uses **installp** (and **rpm** for some software) for packages, **SMIT** (System Management Interface Tool) for menu-driven admin, and **mksysb** for backup/restore.
 
----
-
 ## Package management
 
 ```bash
@@ -19,8 +17,6 @@ rpm -qa
 rpm -qi package-name
 rpm -ivh package.rpm
 ```
-
----
 
 ## Service and system management
 
@@ -36,8 +32,6 @@ vmstat
 iostat
 ```
 
----
-
 ## Backup: mksysb
 
 ```bash
@@ -46,14 +40,10 @@ mksysb -i /path/to/backup
 # Restore from mksysb (e.g. from install media)
 ```
 
----
-
 ## Summary
 
 - **AIX** = IBM Unix on Power; **installp** and **rpm**; **SMIT** for admin; **mksysb** for backup.
 - **WLM** for workload management; **topas** for monitoring.
-
----
 
 ## Further reading
 

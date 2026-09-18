@@ -70,8 +70,6 @@ Sui transaction flows often involve explicit coin/object handling in PTBs (split
 - Add negative tests for unauthorized calls and invalid transitions.
 - Document and enforce upgrade signer/governance process.
 
----
-
 ## Further reading
 
 - [Gas fees on Sui](https://docs.sui.io/concepts/tokenomics/gas-in-sui)

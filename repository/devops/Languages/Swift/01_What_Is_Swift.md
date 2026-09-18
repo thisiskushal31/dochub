@@ -8,8 +8,6 @@ What **Swift** is as a language—its goals, its open-source home, the platforms
 
 This is orientation with a story, not a brochure and not a WWDC highlight reel. If someone asks “do we write Swift?”, your answer should name *which layer* they mean. You will also leave with the **runtime story**—why Swift *feels* different from Objective-C, Java, or Go—and what **staff interviews** actually probe when they say “Swift experience.”
 
----
-
 ## 1. Concepts
 
 ### 1. A one-sentence job description
@@ -208,8 +206,6 @@ Chapter **24** is the compass. Scope honesty is how this track stays usable.
 
 Swift arrived to make Apple-platform development safer and more modern while **interoperating** with decades of Objective-C and Cocoa APIs. Early Swift sold “you can call UIKit today.” That interop remains a brownfield superpower and a complexity tax (nullability annotations, selector-era APIs, bridging costs). Chapter **15** owns interop depth; here you only need: *Swift was designed to live next to ObjC, not to pretend the past never existed.*
 
----
-
 ## 2. Advanced concepts
 
 ### 1. One language, many products
@@ -372,8 +368,6 @@ Practice saying this out loud until it is boring:
 - Neighbor languages in §1.6 differ on *where* costs show up—not on whether costs exist.
 - Staff who can give this coffee pitch review PRs faster than staff who only recite syntax trivia.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Practice |
@@ -383,8 +377,6 @@ Practice saying this out loud until it is boring:
 | **Security** | Prefer Swift’s explicit optionals/errors at trust boundaries; do not smuggle nil through ObjC-imported APIs unreviewed |
 | **Operations** | Standardize on swift.org / Xcode / container images as *named* channels; document which one CI uses |
 | **Software engineering** | Separate “language style guide” from “UI framework guide”; hire against the interview probes above, not against trivia quizzes |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -401,8 +393,6 @@ Practice saying this out loud until it is boring:
 - Engineers can separate **compiler version** from **language mode** on a real target with evidence.
 - At least one teammate has filled an Evolution reading card this quarter (habit, not trivia).
 - Architecture talk uses the layer table (language / SDK / product)—not “Swift” as a single noun.
-
----
 
 ## References
 

@@ -28,8 +28,6 @@ If a piece of the shell world is missing from your mental model, treat that as a
          Scripting = recipes saved as files (one important subset)
 ```
 
----
-
 ## If you are brand new
 
 Do not memorize every row today. Learn the **questions**:
@@ -48,8 +46,6 @@ echo "login preference: $SHELL"
 ps -p $$ -o args=            # what argv started this process (Unix)
 type pwd; type ls; type cd   # builtin vs external vs alias
 ```
-
----
 
 ## 1. Concepts (basic) — the subset map
 
@@ -257,8 +253,6 @@ Scripting is **not**:
 
 Scripting **does** include: Bash/POSIX/`pwsh`/cmd files, CI run snippets that are effectively scripts, container entrypoint scripts, and sourced libraries used by those scripts.
 
----
-
 ## 2. Advanced concepts — deepen every subset
 
 ### 1. Invocation flags that select subsets (Bash literacy)
@@ -461,7 +455,6 @@ Confusing the emulator with the shell produces wrong tickets (“Terminal is bro
 
 The `#!/usr/bin/env bash` line selects which dialect binary runs an executable script—another subset gate. `env -S` (where supported) can pass multiple arguments; older Unix and BusyBox differ. Windows associations and PowerShell execution policy are the parallel gates on that OS. Chapter **03** deepens shebangs; here: **shebang chooses a dialect subset before your first line runs**.
 
-
 ### Application 1 — Classify any incident in 60 seconds
 
 When something “works on my machine”:
@@ -525,8 +518,6 @@ Know these as **subset recognition** tasks:
 | Ops | Interactive-only assumptions in runbooks? |
 | Delivery | CI shell pin matches Dockerfile shell? |
 
----
-
 ## 4. Staff engineer checklist
 
 - Team can list **invocation modes** (interactive / non-interactive / login / restricted / `-c`) and knows CI is non-interactive.
@@ -549,8 +540,6 @@ Know these as **subset recognition** tasks:
 - Distro `/bin/sh` provider is proven for portable scripts (chapter **20**).
 - Security reviews speak in subset names (“interactive login over SSH”) not “the shell did a thing.”
 
----
-
 ## References
 
 - [GNU Bash manual — Invoking Bash / Interactive shells / Restricted shell](https://www.gnu.org/software/bash/manual/)
@@ -560,7 +549,5 @@ Know these as **subset recognition** tasks:
 - [Windows Commands (cmd)](https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands)
 - [Debian Policy — `/bin/sh`](https://www.debian.org/doc/debian-policy/)
 - [ShellCheck](https://www.shellcheck.net/)
-
----
 
 [← Back to Shell](./README.md)

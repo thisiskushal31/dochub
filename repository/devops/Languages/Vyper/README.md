@@ -10,8 +10,6 @@ This track teaches **Vyper language + compiler/toolchain literacy + testing + se
 
 Vyper is a **first-class Web3 track** beside [Solidity](../Solidity/README.md), [Move](../Move/README.md), and [Cairo](../Cairo/README.md)—same track weight, different VMs and niches.
 
----
-
 ## Why Vyper (vs other Web3 languages)
 
 ### Why choose Vyper vs Solidity
@@ -63,8 +61,6 @@ Staff hire Vyper fluency for five practical pillars:
 
 **New to Vyper?** Start at chapter **01** (what it is / when to pick it), then **00** (install + hello), then **02** onward.
 
----
-
 ## After this track — what you can write
 
 | You can write / do… | What “done” looks like | Spine chapters |
@@ -76,8 +72,6 @@ Staff hire Vyper fluency for five practical pillars:
 | A **security review conversation** | Non-features and assert style named correctly | **14** |
 | A **keep Vyper vs use Solidity** decision | Host and team skill named | **01**, **16** |
 | A **gas-sensible hot path** | Measured gas; bound loops; Storage/calls deliberate | **19**, **07**, **12** |
-
----
 
 ## What to learn next (complement paths)
 
@@ -101,8 +95,6 @@ Vyper usually lands in **EVM smart contracts** that value auditability—often D
 
 Chapter **[16](./16_Where_Vyper_Is_Going_And_Adjacent_Doors.md)** covers where Vyper is headed and how to choose what follows.
 
----
-
 ## Versions and brownfield (default narrative)
 
 **Default for new work: Vyper 0.4.x**, pinned to the patch your CI ships (**0.4.3** in these chapters). Use a version pragma (for example `#pragma version ^0.4.0`). Record **compiler version** and **EVM target** together. **0.3.x** contracts are brownfield literacy—module system and syntax differ.
@@ -119,8 +111,6 @@ vyper --version
 python -c "import vyper; print(vyper.__version__)"
 ```
 
----
-
 ## Chapter structure
 
 Every chapter follows:
@@ -131,8 +121,6 @@ Every chapter follows:
 4. **Staff-level review checklist**
 
 Links live in each chapter’s **References** (official hubs only).
-
----
 
 ## Semantic model (six ideas)
 
@@ -152,14 +140,10 @@ Links live in each chapter’s **References** (official hubs only).
 | Modules/interfaces | Copy-paste instead of composition | **11** |
 | Gas performance | Hot path unmeasured; Storage/calls in user-sized loops | **19** |
 
----
-
 ## How to read this section
 
 **Absolute beginners:** **01 → 00 → 02 → …**  
 If you already know Solidity: **01** (non-features + decision) → **00** → **05–08** → **11** → **14**—do not skip the design differences.
-
----
 
 ## Progression
 
@@ -171,8 +155,6 @@ If you already know Solidity: **01** (non-features + decision) → **00** → **
 | **Composition** | 11 | Interfaces and modules |
 | **Ship / test** | 12 → 13, **18–19** | Compile, deploy, Titanoboa, gas bounds, **efficient gas patterns** |
 | **Security / synthesis** | 14 → 16 | Review habits, roles, next skills |
-
----
 
 ## Chapters
 
@@ -198,8 +180,6 @@ If you already know Solidity: **01** (non-features + decision) → **00** → **
 | 17 | Scoping, declarations, and style | [17_Scoping_Declarations_And_Style.md](./17_Scoping_Declarations_And_Style.md) |
 | 18 | Gas bounds, compiler exceptions, and Venom | [18_Gas_Bounds_Compiler_Exceptions_And_Venom.md](./18_Gas_Bounds_Compiler_Exceptions_And_Venom.md) |
 | 19 | Gas performance and efficient contracts | [19_Gas_Performance_And_Efficient_Contracts.md](./19_Gas_Performance_And_Efficient_Contracts.md) |
-
----
 
 ## Further reading
 

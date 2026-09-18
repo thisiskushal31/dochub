@@ -2,8 +2,6 @@
 
 [← Previous](./19_Security_Permissions_And_Service_Connections.md) · [README](./README.md) · [Next: Best practices →](./21_Best_Practices_And_Delivery_Spectrum.md)
 
----
-
 ## 1. Concepts
 
 End-to-end narrative for a small web API on **Azure App Service** (swap to Container Apps/AKS using [11](./11_Deploy_App_Service_Functions_And_Static_Web.md)–[13](./13_Deploy_Containers_ACR_Container_Apps_And_AKS.md) as needed).
@@ -17,8 +15,6 @@ End-to-end narrative for a small web API on **Azure App Service** (swap to Conta
 - Azure subscription with an App Service (+ staging slot)  
 - Federated **service connection** to the resource group  
 - Environments `staging` and `production` (approval on production)
-
----
 
 ## 2. Advanced concepts — pipeline shape
 
@@ -93,13 +89,9 @@ Replace echo steps with real language build tasks and `AzureWebApp@1` / `AzureRm
 | VMSS | Package or image roll ([12](./12_Deploy_VMs_VMSS_And_Host_Patterns.md)) |
 | IaC | Plan/apply stages ([14](./14_Deploy_IaC_ARM_Bicep_Terraform_Ansible.md)) |
 
----
-
 ## 3. Applications and use cases
 
 Use this lab as the template for every later target: **build once → artifact → environment gates → deploy task**. Boards: create a work item and link the PR (`AB#`).
-
----
 
 ## References
 

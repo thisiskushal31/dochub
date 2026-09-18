@@ -2,8 +2,6 @@
 
 [← Previous](./05_Job_Types_Freestyle_And_Matrix.md) · [README](./README.md) · [Next: First Pipeline →](./07_First_Pipeline_And_UI.md)
 
----
-
 ## 1. Concepts
 
 **Pipeline** is Jenkins’ pipeline-as-code model. Definition lives in a **Jenkinsfile** (usually in Git).
@@ -32,8 +30,6 @@ pipeline {
 
 **Pipeline as Code** means the definition is reviewed like product code, branched with the app, and discoverable via Multibranch.
 
----
-
 ## 2. Advanced concepts
 
 ### Durability & CPS
@@ -48,8 +44,6 @@ Pipeline steps run under a **Continuation Passing Style** engine — some Groovy
 
 Heavy Pipelines need agent capacity and careful stash/archive use — see scaling Pipeline docs.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -59,8 +53,6 @@ Heavy Pipelines need agent capacity and careful stash/archive use — see scalin
 | Complex orchestration | Scripted sections inside Declarative (`script { }`) sparingly |
 
 **Good:** Jenkinsfile in repo + CODEOWNERS. **Bad:** only UI-saved Pipeline script not in SCM.
-
----
 
 ## References
 

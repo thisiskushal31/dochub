@@ -45,8 +45,6 @@ Treat **configuration** as data with validation; avoid scattering **environment*
 - **Systems and operations:** **native** artifacts, repeatable **CI** builds, predictable startup when you avoid unnecessary dynamic loads.
 - **Security:** smaller dependency surface when **stdlib** suffices; explicit **FFI** boundaries; **supply-chain** hygiene for Nimble and external C libraries.
 
----
-
 ## Further reading
 
 - [Nim documentation portal](https://nim-lang.org/documentation.html)

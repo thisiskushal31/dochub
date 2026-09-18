@@ -45,8 +45,6 @@ For **public APIs** and long-lived codebases, aligning with common Nim conventio
 
 The maintained style document goes deeper (line length, indentation, multiline layout, stdlib naming abbreviations). Teams can also turn **style checks** into hints or errors via compiler options when enforcing consistency in CI.
 
----
-
 ## Further reading
 
 - [Language manual](https://nim-lang.org/docs/manual.html)

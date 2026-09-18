@@ -4,146 +4,146 @@
     "path": "1_What_Is_CSharp.md",
     "type": "file",
     "sha": "",
-    "size": 2665
+    "size": 2645
   },
   {
     "name": "10_Classes_And_Objects.md",
     "path": "10_Classes_And_Objects.md",
     "type": "file",
     "sha": "",
-    "size": 2054
+    "size": 2034
   },
   {
     "name": "11_Inheritance_And_Polymorphism.md",
     "path": "11_Inheritance_And_Polymorphism.md",
     "type": "file",
     "sha": "",
-    "size": 2134
+    "size": 2114
   },
   {
     "name": "12_Interfaces_Structs_And_Enums.md",
     "path": "12_Interfaces_Structs_And_Enums.md",
     "type": "file",
     "sha": "",
-    "size": 2308
+    "size": 2288
   },
   {
     "name": "13_Exception_Handling.md",
     "path": "13_Exception_Handling.md",
     "type": "file",
     "sha": "",
-    "size": 2146
+    "size": 2126
   },
   {
     "name": "14_File_IO.md",
     "path": "14_File_IO.md",
     "type": "file",
     "sha": "",
-    "size": 2280
+    "size": 2260
   },
   {
     "name": "15_Namespaces_And_Assemblies.md",
     "path": "15_Namespaces_And_Assemblies.md",
     "type": "file",
     "sha": "",
-    "size": 1934
+    "size": 1914
   },
   {
     "name": "16_Delegates_Events_And_Generics.md",
     "path": "16_Delegates_Events_And_Generics.md",
     "type": "file",
     "sha": "",
-    "size": 2576
+    "size": 2556
   },
   {
     "name": "17_LINQ_And_Async_Await.md",
     "path": "17_LINQ_And_Async_Await.md",
     "type": "file",
     "sha": "",
-    "size": 2434
+    "size": 2414
   },
   {
     "name": "18_NuGet_And_Testing.md",
     "path": "18_NuGet_And_Testing.md",
     "type": "file",
     "sha": "",
-    "size": 2163
+    "size": 2143
   },
   {
     "name": "19_Use_Cases_And_Applications.md",
     "path": "19_Use_Cases_And_Applications.md",
     "type": "file",
     "sha": "",
-    "size": 3508
+    "size": 3478
   },
   {
     "name": "2_Environment_Setup_And_DotNet_SDK.md",
     "path": "2_Environment_Setup_And_DotNet_SDK.md",
     "type": "file",
     "sha": "",
-    "size": 1727
+    "size": 1707
   },
   {
     "name": "20_Security_And_Best_Practices.md",
     "path": "20_Security_And_Best_Practices.md",
     "type": "file",
     "sha": "",
-    "size": 2535
+    "size": 2510
   },
   {
     "name": "3_Program_Structure_And_Basic_Syntax.md",
     "path": "3_Program_Structure_And_Basic_Syntax.md",
     "type": "file",
     "sha": "",
-    "size": 2547
+    "size": 2517
   },
   {
     "name": "4_Data_Types_And_Type_Conversion.md",
     "path": "4_Data_Types_And_Type_Conversion.md",
     "type": "file",
     "sha": "",
-    "size": 2582
+    "size": 2562
   },
   {
     "name": "5_Variables_And_Constants.md",
     "path": "5_Variables_And_Constants.md",
     "type": "file",
     "sha": "",
-    "size": 1775
+    "size": 1755
   },
   {
     "name": "6_Operators.md",
     "path": "6_Operators.md",
     "type": "file",
     "sha": "",
-    "size": 2110
+    "size": 2085
   },
   {
     "name": "7_Control_Flow.md",
     "path": "7_Control_Flow.md",
     "type": "file",
     "sha": "",
-    "size": 2776
+    "size": 2751
   },
   {
     "name": "8_Methods.md",
     "path": "8_Methods.md",
     "type": "file",
     "sha": "",
-    "size": 2171
+    "size": 2151
   },
   {
     "name": "9_Arrays_And_Strings.md",
     "path": "9_Arrays_And_Strings.md",
     "type": "file",
     "sha": "",
-    "size": 3549
+    "size": 3514
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 4523
+    "size": 4508
   }
 ]

@@ -8,8 +8,6 @@ How Tcl treats **strings** as Unicode character sequences, how **`string`** and 
 
 You leave able to choose `string` vs list/`dict` ops, write braced regex that survives substitution, convert at I/O boundaries, and review scripts that mishandle UTF-8 or binary payloads.
 
----
-
 ## 1. Concepts
 
 ### 1. Everything is a string — but commands still interpret
@@ -211,8 +209,6 @@ binary scan $blob "Ia*" n s
 
 When **not** to use `scan`: nested or quoted grammars, HTML/JSON, or hostile input that needs a real parser. Prefer `regexp` for flexible text patterns; prefer `split`/`lassign` when the delimiter grammar is truly simple (ch **06**).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Tcl 9 Unicode and indexing (vs 8.6 literacy)
@@ -295,8 +291,6 @@ If data still lives on a channel, configure the channel (`-encoding`, and in Tcl
 
 For strict intake of UTF-8 files on Tcl 9, prefer an explicit strict profile on the channel so invalid sequences fail instead of silently replacing characters.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | How this chapter shows up |
@@ -313,8 +307,6 @@ Concrete patterns:
 - **Embedded tools:** convertfrom partner encoding once at the API edge; keep internals UTF-8 Tcl strings.
 - **IR / SRE:** `regsub` to redact tokens before pasting into tickets—run on copies, not only on live buffers you still need to hash.
 
----
-
 ## Staff-level review checklist
 
 - Patterns for `regexp`/`regsub` are **braced** (or otherwise safe from substitution).
@@ -326,8 +318,6 @@ Concrete patterns:
 - Tcl 8.6 brownfield paths document encoding assumptions; new code targets Tcl 9 Unicode indexing.
 - Secret scrubbing uses explicit maps/regexes reviewed for false negatives (ch **16**).
 - `format`/`scan` used for **text** layouts; `binary format`/`binary scan` reserved for **byte** layouts—call sites do not blur the two.
-
----
 
 ## References
 

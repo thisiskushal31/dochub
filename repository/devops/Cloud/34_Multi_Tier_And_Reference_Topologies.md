@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [Deploy shapes →](./28_Deployment_Shapes_On_Cloud.md) · [LB →](./23_Load_Balancing_Ingress_And_TLS.md) · [Data →](./32_Managed_Data_And_Databases_On_Cloud.md)
 
----
-
 ## Mental map
 
 ```text
@@ -17,8 +15,6 @@ Users
 ```
 
 *What to notice: “6–7 layers” is still one product: **paths and failure domains**. Cloud products fill slots; they do not invent a new networking physics.*
-
----
 
 ## 1. Concepts — classic tiers on cloud
 
@@ -35,8 +31,6 @@ Users
 **Disconfirm:** Drawing seven boxes in a slide is **not** an architecture if IAM and private networking are missing. Collapsing DB onto the app VM is **not** “simpler production.”
 
 **Confirm:** Which tiers are public? Which are private? What fails if tier 3 dies? If tier 6 dies?
-
----
 
 ## 2. Advanced concepts — reference patterns
 
@@ -84,8 +78,6 @@ Cloud app tiers ↔ on-ramp ↔ colo data or interconnect ([17](./17_Private_Con
 | No health checks on LB | Blackhole deploys |
 | Secrets in app images | Credential leak |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -104,8 +96,6 @@ Cloud app tiers ↔ on-ramp ↔ colo data or interconnect ([17](./17_Private_Con
 - IAM roles per tier, not one Admin  
 
 **Good:** private data, LB health, least privilege per tier. **Bad:** one public VM that is web+DB+CI.
-
----
 
 ## References
 

@@ -65,8 +65,6 @@ let result = h 100   // 202
 
 **Why this matters.** Values and functions are the core of F#. Understanding immutability, scope, partial application, and the difference between pipeline and composition helps you read and write real code. Recursion and first-class functions are the basis for working with lists and domain logic in later topics.
 
----
-
 ## Further reading
 
 - [Values (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/values/)

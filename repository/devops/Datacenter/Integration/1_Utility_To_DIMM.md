@@ -2,8 +2,6 @@
 
 [README](./README.md) · [Next: NIC to MMR →](./2_NIC_To_MMR.md)
 
----
-
 ## Mental map
 
 ![Whole hall layers](../../Assets/Datacenter/Integration/whole-hall-layers.svg)
@@ -27,8 +25,6 @@ Utility intake → transformer → MV/LV switchgear → ATS/STS
 
 Chapter homes: [Electrical](../Electrical/README.md) device encyclopedia; [Compute/14](../Compute/14_Thermal_And_Power_Of_The_Box.md) at the box.
 
----
-
 ## 2. Advanced concepts
 
 ### Independence checkpoints
@@ -48,8 +44,6 @@ A single shared board under “redundant” stickers collapses the walk. Practic
 
 120/208/480 vs 230/400 V; 50/60 Hz—same walk, different nameplates ([10](./10_Units_Voltage_Frequency_Literacy.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -67,8 +61,6 @@ A single shared board under “redundant” stickers collapses the walk. Practic
 - Never stop the walk at “dual cord”  
 
 **Good:** full path literacy. **Bad:** PDU-only thinking.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./13_Image_Update_Automation.md) · [README](./README.md) · [Next: Monitoring →](./15_Monitoring_Events_Metrics_And_Upgrade.md)
 
----
-
 ## 1. Concepts
 
 Two directions:
@@ -15,8 +13,6 @@ Two directions:
 | **Receiver** | In | “Git host calls this URL → reconcile now” |
 
 Without Receivers, Flux still works — it just waits for the next poll interval. Receivers make “push to main → cluster updates” feel immediate.
-
----
 
 ## 2. Advanced concepts
 
@@ -34,8 +30,6 @@ Chat tokens live in Kubernetes Secrets referenced by the Provider — not in Git
 
 Provider type list evolves — check the Providers API when wiring a new system.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -45,8 +39,6 @@ Provider type list evolves — check the Providers API when wiring a new system.
 | Ship events to your bus | Generic webhook Provider |
 
 **Good:** alerts go to the team that owns the fleet. **Bad:** every Successful reconcile in `#general`.
-
----
 
 ## References
 

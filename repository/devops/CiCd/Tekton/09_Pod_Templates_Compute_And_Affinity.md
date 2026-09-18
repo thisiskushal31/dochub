@@ -2,8 +2,6 @@
 
 [← Previous](./08_Auth_ServiceAccounts_And_RBAC.md) · [README](./README.md) · [Next: Matrix →](./10_Matrix_CustomRuns_And_StepActions.md)
 
----
-
 ## 1. Concepts
 
 Runs create Pods. Control shape with:
@@ -32,8 +30,6 @@ spec:
 
 Exact field names follow your API version — copy from current docs/snippets.
 
----
-
 ## 2. Advanced concepts
 
 ### Controller flags / performance
@@ -47,8 +43,6 @@ Tolerations + retry policy for interruptible CI nodes.
 ### Windows
 
 Windows node selectors / scripts — literacy door in ([20](./20_Observability_HA_Debug_And_Windows.md)).
-
----
 
 ## 3. Applications and use cases
 
@@ -65,8 +59,6 @@ Windows node selectors / scripts — literacy door in ([20](./20_Observability_H
 - Affinity assistants considered for shared PVCs  
 
 **Good:** explicit scheduling for heavy Tasks. **Bad:** unbounded parallel PipelineRuns starving the cluster.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./9_Bandwidth_And_Cross_Connect_Lifecycle.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 Leaving or shrinking a cage is a project: **assets**, **data**, **circuits**, **badges**, **contracts**.
@@ -16,8 +14,6 @@ Leaving or shrinking a cage is a project: **assets**, **data**, **circuits**, **
 | Access | Badges removed |
 | Commercial | Exit fees, notice periods ([2](./2_Contract_Capacity.md)) |
 | Evidence | Photos empty cabinet; portal inventory zero |
-
----
 
 ## 2. Advanced concepts
 
@@ -34,8 +30,6 @@ Leaving or shrinking a cage is a project: **assets**, **data**, **circuits**, **
 ### How it connects
 
 Relocation = intake ([8](./8_Dedicated_Metal_Intake.md)) at destination + exit here overlapping. Remote hands for teardown [5](./5_Remote_Hands_Tickets.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -55,8 +49,6 @@ Relocation = intake ([8](./8_Dedicated_Metal_Intake.md)) at destination + exit h
 - Never assume “we stopped using it” ends billing  
 
 **Good:** checklist exit, wipe proof, clean portal. **Bad:** orphan iron; live XC; billing zombies.
-
----
 
 ## References
 

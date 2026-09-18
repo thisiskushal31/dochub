@@ -10,8 +10,6 @@ Picture a restaurant kitchen with one pass window. `async` is a cook who may ste
 
 Treat warnings under complete checking as design signals, not noise to silence.
 
----
-
 ## 1. Concepts
 
 ### 1. `async` functions and `await`
@@ -223,8 +221,6 @@ func runCountdown() async {
 ```
 
 **What just happened.** `for await` is the async cousin of `for-in`. Combine it with task cancellation: breaking out of the loop (or cancelling the task) should stop producers that respect cooperative cancellation.
-
----
 
 ## 2. Advanced concepts
 
@@ -530,8 +526,6 @@ Do **not** block async tasks with old `DispatchSemaphore` “wait on the coopera
 
 **Distributed actors** (`Distributed` module) model actor-like isolation **across** process or network boundaries. This track’s job: know the door exists for multi-node / multi-process designs; do not invent an RPC framework here. Prefer local actors + explicit network APIs unless the team adopts Distributed deliberately with official docs.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -541,8 +535,6 @@ Do **not** block async tasks with old `DispatchSemaphore` “wait on the coopera
 | **Security** | Do not pass secrets through unconstrained `@Sendable` closures logged elsewhere; cancel abandoned auth flows |
 | **Operations** | Timeouts via racing `Task` + cancellation; measure hangs after await, not only CPU; priority for interactive paths only |
 | **Software engineering** | Public APIs prefer `async` over completion handlers; document isolation; migrate diagnostics family-by-family, module-by-module |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -564,8 +556,6 @@ Do **not** block async tasks with old `DispatchSemaphore` “wait on the coopera
 - `@Observable` / `Observations` used with availability literacy; not mixed carelessly with Combine `@Published` for new code.
 - Swift 6 diagnostic families addressed by isolation design, not suppression.
 - Language mode / checking level for the target is intentional and pinned in CI.
-
----
 
 ## References
 

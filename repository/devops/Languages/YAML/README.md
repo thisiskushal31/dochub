@@ -17,8 +17,6 @@ Staff hire YAML fluency for six practical pillars:
 
 **New to YAML?** Start at chapter **01**, then **02–03**, then **06** before you trust “it looked fine in the editor.” After the spine, use **[12](./12_Reading_Unfamiliar_YAML.md)** as the “open a stranger file” drill.
 
----
-
 ## After this track — what you can write
 
 | You can write / do… | What “done” looks like | Spine chapters |
@@ -31,8 +29,6 @@ Staff hire YAML fluency for six practical pillars:
 | A **security review** of a YAML loader | Safe load; size/depth; no secrets in VCS | **10** |
 | **Read a stranger YAML** from an export or another repo | Root shape, docs, tags/anchors, types named aloud | **12** (+ **02–07**) |
 | A **keep YAML vs use JSON/HCL** decision | Host and team skill named | **01**, **09**, **11** |
-
----
 
 ## What to learn next (complement paths)
 
@@ -58,8 +54,6 @@ YAML usually lands inside **another product’s schema**. After this track, pick
 
 Chapter **[11](./11_Where_YAML_Is_Going_And_Adjacent_Doors.md)** covers what follows.
 
----
-
 ## Versions and brownfield (default narrative)
 
 **Default for new work: YAML 1.2** (spec revision **1.2.2**). Prefer **JSON Schema–friendly** typing (or explicit quotes) so `yes`, `no`, `on`, `off`, and country codes like `NO` do not become booleans. Many production stacks still ship **YAML 1.1–oriented** libraries—treat that as brownfield literacy (chapter **06–07**).
@@ -71,8 +65,6 @@ Chapter **[11](./11_Where_YAML_Is_Going_And_Adjacent_Doors.md)** covers what fol
 | JSON-compatible subset | Dual JSON/YAML pipelines | Prefer flow/JSON-like when interchange matters |
 | Multi-document streams (`---`) | Helm, some K8s apply paths | Know document boundaries |
 
----
-
 ## Chapter structure
 
 Every chapter follows:
@@ -83,8 +75,6 @@ Every chapter follows:
 4. **Staff-level review checklist**
 
 Links live in each chapter’s **References** (official hubs only).
-
----
 
 ## Semantic model (six ideas)
 
@@ -104,14 +94,10 @@ Links live in each chapter’s **References** (official hubs only).
 | Safe load | `load` on untrusted input; duplicate-key last-wins | **10** |
 | Host schema | Valid YAML, invalid Deployment/Workflow | **08–09** |
 
----
-
 ## How to read this section
 
 **Absolute beginners:** **01 → 02 → 03 → 04 → …**  
 If you already edit K8s/CI YAML: **01** (identity) → **03** + **07** (typing) → **05** + **10**—do not skip the format traps behind the tool docs.
-
----
 
 ## Progression
 
@@ -123,8 +109,6 @@ If you already edit K8s/CI YAML: **01** (identity) → **03** + **07** (typing) 
 | **Ship / check** | 08 → 10 | Lint, schema, safe load, secrets |
 | **Decode** | **12** | Read any unfamiliar YAML’s structure on sight |
 | **Synthesis** | 09, 11 | Host tools + next skills |
-
----
 
 ## Chapters
 
@@ -142,8 +126,6 @@ If you already edit K8s/CI YAML: **01** (identity) → **03** + **07** (typing) 
 | 10 | Security design and review | [10_Security_Design_And_Review.md](./10_Security_Design_And_Review.md) |
 | 11 | Where YAML is going and adjacent doors | [11_Where_YAML_Is_Going_And_Adjacent_Doors.md](./11_Where_YAML_Is_Going_And_Adjacent_Doors.md) |
 | 12 | Reading unfamiliar YAML | [12_Reading_Unfamiliar_YAML.md](./12_Reading_Unfamiliar_YAML.md) |
-
----
 
 ## Further reading
 

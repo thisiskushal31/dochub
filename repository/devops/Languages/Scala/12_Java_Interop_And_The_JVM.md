@@ -6,8 +6,6 @@
 
 Calling **Java from Scala** and **Scala from Java**, handling **`null` at boundaries**, **collections converters**, **SAM/lambda** interop, and **classpath / JDK** compatibility awareness. Scala is a JVM citizen—most production pain at mixed-language edges is about nulls, types, and runtime versions, not syntax. After this chapter you should wrap Java APIs into `Option`/`Either` and Scala collections at the seam, and expose Java-friendly signatures when Java callers matter.
 
----
-
 ## 1. Concepts
 
 ### 1. Same runtime, different surface
@@ -180,8 +178,6 @@ java.util.List.of("ab", "c").stream().map(mapped).toList
 
 If conversion fails, check the target type is a true SAM and that Scala version / `-Xsource` flags match team expectations. Scala `FunctionN` traits are not identical to every Java functional interface—explicit SAM target types help.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Classpath and binary compatibility
@@ -296,8 +292,6 @@ def readFully(path: String): Either[String, String] =
 
 Scala 3 and 2.13 can interoperate with care (tasty/ TASTy and binary compatibility tooling), but treating them as drop-in interchangeable on one classpath is unsafe. Pin one primary Scala line per artifact; use documented interop strategies for migrations.
 
----
-
 ## 3. Applications and use cases
 
 ### Services and libraries
@@ -354,8 +348,6 @@ def safeMessage(t: Throwable): String =
 - No untrusted reflective load/`setAccessible` shortcuts; SPI/`META-INF/Services` and plugin jars have owners.
 - Case classes at serializer boundaries use owned codecs; no untrusted Java deserialization (chapter 15).
 - Logs/metrics do not exfiltrate `getMessage` / Java-client detail that may hold secrets or PII.
-
----
 
 ## References
 

@@ -6,8 +6,6 @@
 
 Where Scala shows up in real portfolios: **backend services**, **Apache Spark** jobs, and **Kafka-adjacent** tooling. How to decide among those lanes—and when to stay on Java/Kotlin or another stack. This is **placement literacy**—not a full Spark or Kafka course. After you know *which* lane you are in, deepen with chapter **18** (Spark architecture), **19** (Kafka/pipeline architecture), and **20** (DevSecOps threat modeling).
 
----
-
 ## 1. Concepts
 
 ### 1. Why teams pick Scala on the JVM
@@ -210,8 +208,6 @@ Hybrid portfolio sketch:
 
 Each hop has a different owner for SLOs, secrets, and Scala line.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Shared libraries across services and jobs
@@ -258,8 +254,6 @@ def handleRecord(raw: String): HandleResult =
     case Left(_)  => HandleResult.DeadLetter
 ```
 
----
-
 ## 3. Applications and use cases
 
 | Portfolio slice | Engineering focus |
@@ -287,8 +281,6 @@ def handleRecord(raw: String): HandleResult =
 - Cost/capacity owners exist for shuffle-heavy jobs and high-retention topics.
 - Runbooks name which team owns service SLOs vs job failures vs consumer lag.
 - Readers who own the data plane continue to chapters **18–19**; security owners continue to **20**.
-
----
 
 ## References
 

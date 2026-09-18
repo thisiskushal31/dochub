@@ -6,8 +6,6 @@ To compile and run COBOL programs you need a **COBOL compiler** and, on mainfram
 
 **Why a compiler and (on mainframe) JCL?** COBOL is **compiled**, not interpreted: the source you write is turned into machine code (or an intermediate form) by a compiler, and that output is what actually runs. So you need a **compiler** for your platform (e.g. GnuCOBOL on Linux, the system compiler on z/OS). On a mainframe, the operating system runs **jobs** defined by **JCL**: the job says which program to run and which files (DD names) to attach. Without JCL the system would not know which program to load or where the files are. Setting up the environment means having the right compiler and, in mainframe shops, understanding how to submit and run a job.
 
----
-
 ## Compiler and runtime
 
 COBOL source (e.g. `.cbl` or `.cob`) is compiled into an executable or load module. The exact steps depend on the platform:
@@ -18,19 +16,13 @@ COBOL source (e.g. `.cbl` or `.cob`) is compiled into an executable or load modu
 
 Ensure the compiler version matches the dialect (e.g. COBOL 85) expected by your codebase.
 
----
-
 ## JCL (mainframe)
 
 On IBM mainframes, execution is typically driven by JCL. A minimal job specifies the job name, the program to run (e.g. `EXEC PGM=HELLO`), and any data sets (DD cards) the program expects. The program name in JCL must match the `PROGRAM-ID` in the COBOL program. Understanding JCL is necessary to run and debug COBOL batch jobs in that environment.
 
----
-
 ## Editors and tools
 
 You can edit COBOL in any text editor. IDEs such as IBM Rational Developer, Micro Focus Visual COBOL, or VS Code with COBOL extensions provide syntax highlighting, navigation, and integration with compilers and mainframe access. For mainframe development, 3270 emulators and file transfer tools are used to edit and deploy source and to view output.
-
----
 
 ## Further reading
 

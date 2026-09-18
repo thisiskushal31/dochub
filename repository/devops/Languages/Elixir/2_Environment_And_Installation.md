@@ -4,8 +4,6 @@
 
 To run Elixir you need the **Elixir** runtime and the **Erlang/OTP** runtime (the BEAM). This topic covers how to install them, how to use the **interactive shell (IEx)** and run **scripts**, and what to expect from the environment so you can follow the rest of the section and run examples on your machine.
 
----
-
 ## Requirements
 
 Elixir runs on the BEAM, so **Erlang/OTP** must be installed first. Current documentation typically assumes:
@@ -14,8 +12,6 @@ Elixir runs on the BEAM, so **Erlang/OTP** must be installed first. Current docu
 - **Elixir 1.15** or later
 
 Check the official installation page for your OS for the exact minimum versions and recommended builds.
-
----
 
 ## Installing Elixir
 
@@ -34,8 +30,6 @@ erlang
 
 You should see the Elixir and Erlang version lines. If `elixir` or `iex` is not found, fix your PATH so the install directory is included.
 
----
-
 ## Three executables
 
 Once installed, you get three main commands:
@@ -45,8 +39,6 @@ Once installed, you get three main commands:
 - **elixirc** — Compiles **.ex** files into BEAM bytecode (**.beam**). Mix uses this when you run **mix compile**; you rarely call **elixirc** directly. You can also load a script into IEx with **iex script.exs** so the script runs and then you get a shell with the defined modules available.
 
 For learning and for quick automation scripts, **iex** and **elixir** are enough.
-
----
 
 ## Interactive mode (IEx)
 
@@ -69,8 +61,6 @@ To exit IEx, press **Ctrl+C** twice, or type **Ctrl+\** depending on your platfo
 
 IEx is useful for trying types, pattern matching, and one-liners without creating a file.
 
----
-
 ## Running scripts
 
 Put code in a file with a `.exs` extension (e.g. `simple.exs`) and run it with `elixir`:
@@ -87,15 +77,11 @@ elixir simple.exs
 
 Output: `Hello world from Elixir`. No compilation step is required for scripts. For larger applications you will use **Mix** (Topic 19) to create a project and build releases.
 
----
-
 ## What you need for this handbook
 
 - **Learning:** Install Elixir and Erlang, then use **iex** and **elixir** to run the examples in the following topics.
 - **DevOps:** Same install on build agents and deployment targets; use **Mix** and **releases** for production (Topics 19–20, 22).
 - **Security:** Ensure you use a supported Elixir/OTP version and track advisories; see Topic 22.
-
----
 
 ## Further reading
 

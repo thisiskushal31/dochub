@@ -2,8 +2,6 @@
 
 [← Previous](./14_Package_Registries_And_Test_Engine.md) · [README](./README.md) · [Next: Worked example →](./16_Worked_Example_Build_And_Deploy.md)
 
----
-
 ## 1. Concepts
 
 **Buildkite Platform** is the org layer around Pipelines:
@@ -19,8 +17,6 @@
 
 Pipeline templates, build exports, permissions depth, migration: [25](./25_Governance_Permissions_And_Migration.md).
 
----
-
 ## 2. Advanced concepts
 
 ### Least privilege
@@ -35,8 +31,6 @@ Know what can trigger builds. Restrict token scopes.
 
 If coding-agent pipeline features are enabled in your org, keep the same gates (review, OIDC scope, no standing prod keys).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -46,8 +40,6 @@ If coding-agent pipeline features are enabled in your org, keep the same gates (
 | Audit story | Cluster isolation + restricted deploy teams |
 
 **Good:** named owners for clusters and deploy pipelines. **Bad:** org admin tokens in chat logs.
-
----
 
 ## References
 

@@ -4,8 +4,6 @@
 
 This topic answers **what** Dart is, **why** it exists, **where** it runs, and **who** it is for—so you can decide how deep you need to go and which later topics matter for your role.
 
----
-
 ## What is Dart?
 
 **Dart** is a **programming language**. You write text (source code) in files; a **compiler** or **runtime** turns that into something that runs: native machine code (e.g. on phones or desktops), **JavaScript** (in the browser), or code run by the **Dart VM** (e.g. during development or on servers). So:
@@ -14,8 +12,6 @@ This topic answers **what** Dart is, **why** it exists, **where** it runs, and *
 - **As a platform:** Dart gives you a **runtime** (VM or compiled code), **core libraries** (for strings, collections, files, network, async), and **tools** (run, test, analyze, format, compile). You use these to build and run apps.
 
 In one sentence: **Dart is a type-safe, null-safe language and platform for building apps that can run on many platforms (mobile, web, desktop, server) with one codebase or shared logic.**
-
----
 
 ## Why does Dart exist?
 
@@ -27,8 +23,6 @@ Dart was designed for **productivity** and **multi-platform** client development
 - **Type safety and null safety:** The compiler and **analyzer** catch many bugs before you run the program. **Sound null safety** means if the type says “this is not null,” the runtime guarantees it is never null—so whole classes of crashes are removed.
 
 So **why Dart is here in this handbook:** DevOps builds and deploys Flutter and Dart apps; security may review or harden them; backend and tooling teams may write servers or scripts in Dart. Understanding Dart from basics to implementation helps everyone involved in building, shipping, or securing these systems.
-
----
 
 ## Where does Dart run?
 
@@ -44,8 +38,6 @@ Dart runs in several environments:
 
 So you might touch Dart when: **building a Flutter app** (any of the above targets), **running or writing a Dart server**, **writing or maintaining a CLI tool in Dart**, or **reviewing or deploying** any of these. The language is the same; the **libraries** and **APIs** you use depend on the platform (e.g. `dart:io` on native/server, `dart:js_interop` and web APIs on web).
 
----
-
 ## Who is Dart for?
 
 - **App developers:** You use Dart (and Flutter) to build mobile, web, and desktop UIs and the logic behind them. You care about types, null safety, async, classes, and state management.
@@ -54,8 +46,6 @@ So you might touch Dart when: **building a Flutter app** (any of the above targe
 - **Backend / tooling:** You write or maintain servers or CLI tools in Dart. You care about async, core libraries (`dart:io`, `dart:convert`), pub, and deployment (Topics 14, 17, 18, 19, 20, 24).
 
 This section is written so that a **complete beginner** can start at Topic 1 and progress to **advanced** concepts and **implementation**; it also points **each engineering role** to the topics that matter most (see the README “By engineering role” and “How to use this section by goal”).
-
----
 
 ## Technical envelope (for the curious)
 
@@ -67,8 +57,6 @@ This section is written so that a **complete beginner** can start at Topic 1 and
 
 You don’t need to remember this to use Dart; it just explains why Dart feels the way it does (e.g. nullable types are explicit, and the analyzer is part of the workflow).
 
----
-
 ## What you'll learn in the rest of this section
 
 - **Topics 2–4:** Install the SDK, write a minimal program, and use variables and null safety. **Start here if you are a beginner.**
@@ -77,8 +65,6 @@ You don’t need to remember this to use Dart; it just explains why Dart feels t
 - **Topics 14–16:** Async (Futures, Streams, Isolates), null safety in depth, and Effective Dart (style and design). Important for robust, maintainable code.
 - **Topics 17–22:** Core libraries, packages and pub, CLI tools, server and web apps, and interoperability. Needed for implementation and deployment.
 - **Topics 23–24:** Use cases by engineering role and security best practices. Use these to apply everything in your job.
-
----
 
 ## Further reading
 

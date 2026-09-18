@@ -6,8 +6,6 @@
 
 Graphics in R are not just base `plot()` versus **ggplot2**: they are **contracts with readers**. This chapter covers truthful scales, **binning** choices that change conclusions, uncertainty visualization, accessibility (color vision deficiency), reproducible theming, and export pipelines for reports and dashboards. Staff engineers treat plots like APIs: versioned, testable (snapshot tests where appropriate), and aligned to decision thresholds.
 
----
-
 ## 1. Concepts
 
 ### 1. Grammar of graphics mindset
@@ -29,8 +27,6 @@ Scatterplots with millions of points lie by overcrowding. Mitigations: hexbin, d
 ### 5. Color as data encoding
 
 Colorbrewer-style palettes exist because hue-only encoding fails for colorblind readers and grayscale printing. Encode magnitude with **lightness**, not hue alone.
-
----
 
 ## 2. Advanced concepts
 
@@ -54,8 +50,6 @@ Fix **random seeds** for jitter. Capture package versions for ggplot and theme e
 
 Rendering huge ggplot objects can be slow; **pre-aggregate** for dashboards. For automated report generation, benchmark figure compilation inside your CI smoke tests.
 
----
-
 ## 3. Applications and use cases
 
 - **Executive packs:** standard themes, standardized cohort definitions, footnotes with metric definitions.
@@ -72,8 +66,6 @@ plot(mtcars$wt, mtcars$mpg, xlab = "Weight", ylab = "MPG", pch = 16, col = rgb(0
 - Uncertainty is shown when decisions depend on it.
 - Palettes meet accessibility and print constraints.
 - Plot generation is reproducible (device, font, seed where jitter applies).
-
----
 
 ## References
 

@@ -80,8 +80,6 @@ YAML is a superset of a restricted subset of JSON for many parsers: valid JSON i
 
 Using schema validation in CI (e.g. validate all config files or API fixtures against a schema) keeps structure consistent and catches mistakes before deploy.
 
----
-
 ## Further reading
 
 - [JSON Schema (json-schema.org)](https://json-schema.org/)

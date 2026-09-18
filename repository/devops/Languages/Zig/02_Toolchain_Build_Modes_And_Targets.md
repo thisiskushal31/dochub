@@ -8,8 +8,6 @@ How the `zig` toolchain behaves as a **product**: build modes (where safety actu
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. One toolchain, several jobs
@@ -81,8 +79,6 @@ Same source with a different target is a different binary. CI that only builds `
 
 People try to learn Zig by memorizing pointers first, then wonder why production faults “don’t reproduce locally.” Often the answer is mode and target—not a missing semicolon. Get the toolchain contract straight early.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Debug vs ReleaseFast is a bug-class story
@@ -119,8 +115,6 @@ Zig can target **WebAssembly** and many other triples (chapter **19**). Treat WA
 
 A release that cannot answer “which Zig, which mode, which target?” is not a release—it is a mystery blob. Print those three lines in CI logs and keep them beside checksums.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Toolchain role |
@@ -133,8 +127,6 @@ A release that cannot answer “which Zig, which mode, which target?” is not a
 
 **Whole-engineering picture:** mode and target are part of the **contract** with production, not convenience knobs.
 
----
-
 ## 4. Staff-level review checklist
 
 - Dev and release modes are written down (not “whatever the engineer exported”).
@@ -142,8 +134,6 @@ A release that cannot answer “which Zig, which mode, which target?” is not a
 - ReleaseFast (or equivalent) on security-sensitive code has an explicit reason and test story.
 - Cross targets used in production are built and tested in CI—not only native laptop builds.
 - Cache invalidation after pin bumps is understood.
-
----
 
 ## References
 

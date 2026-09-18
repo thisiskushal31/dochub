@@ -6,8 +6,6 @@ The **user interface** is how humans (and scripts) interact with the OS. The **s
 
 **Deep scripting curriculum:** [Languages/Shell](../../Languages/Shell/README.md) — Bash/POSIX/zsh, PowerShell, cmd, versions, and cross-OS command depth.
 
----
-
 ## Kernel vs user interface
 
 The **kernel** does not interact with the user directly. It:
@@ -41,8 +39,6 @@ So the **interface** to the OS is **not** the kernel itself; it is the set of **
   Hardware (CPU, memory, disk, terminal)
 ```
 
----
-
 ## What is the shell?
 
 The **shell** is a **command interpreter**:
@@ -54,8 +50,6 @@ The **shell** is a **command interpreter**:
 
 So the shell is **not** part of the kernel. It is a **user process** that uses the same system calls (fork, exec, open, read, write, pipe, dup) that any program can use. Its job is to turn **text** into **process creation and I/O redirection**.
 
----
-
 ## Command-line interface (CLI) vs graphical (GUI)
 
 | Interface | How the user interacts | Typical use |
@@ -64,8 +58,6 @@ So the shell is **not** part of the kernel. It is a **user process** that uses t
 | **GUI** | Windows, icons, menus, mouse. A **window system** and **desktop environment** (or equivalent) run as user programs and use the kernel for input (keyboard, mouse) and output (display). | Desktops, many end-user applications. |
 
 Both are **user-level**. The kernel provides primitives (input events, framebuffer or graphics API, processes, files). The CLI is central to **automation** because commands and scripts are **repeatable** and **scriptable**; the same interface is used interactively and by programs.
-
----
 
 ## Pipes and redirection (concepts)
 
@@ -77,15 +69,11 @@ The shell connects processes and files using **abstractions** that the kernel pr
 
 So the **shell** orchestrates **process creation** and **file descriptor setup**; the **kernel** provides processes, files, and pipes. The exact syntax (e.g. `|`, `>`, `2>&1`) is shell-specific; the **concepts** (streams, pipe, redirection) are universal.
 
----
-
 ## Why this matters for operating systems
 
 - The **kernel** does not “have” a shell. The shell is a **program** that runs on top of the kernel and uses system calls. Understanding this separates **OS basics** (what the kernel does) from **user-level tools** (what runs in user space).
 - **Automation** and **scripting** rely on the same **interface** (CLI) and the same **primitives** (processes, files, pipes). So the OS design (process model, file model, system calls) directly enables or constrains what the shell and scripts can do.
 - When we study “how the OS works,” we study the kernel and system calls. When we study “how to use the OS,” we study the shell and utilities — but they are **implemented** using the same kernel primitives we already defined (process, file, pipe, etc.).
-
----
 
 ## Summary
 
@@ -95,8 +83,6 @@ So the **shell** orchestrates **process creation** and **file descriptor setup**
 - **Pipes and redirection** = wiring stdin/stdout/stderr to other processes or files. The kernel provides the pipe and file abstractions; the shell wires them.
 
 This is **operating system basics**. How a particular OS’s shell and utilities work (e.g. Bash on Linux, PowerShell on Windows) — syntax, built-ins, scripting — is covered in the [Linux](../Linux/README.md) and [Windows](../Windows/README.md) sections.
-
----
 
 ## Further reading
 

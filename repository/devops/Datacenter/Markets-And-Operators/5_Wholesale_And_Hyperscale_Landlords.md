@@ -2,8 +2,6 @@
 
 [← Previous](./4_Equinix_Class_Interconnection.md) · [README](./README.md) · [Next: Regional colo →](./6_Regional_Colo_And_Telco_DCs.md)
 
----
-
 ## 1. Concepts
 
 **Wholesale / hyperscale landlords** sell large contiguous capacity: powered shells, build-to-suit, campuses for one or few tenants. Examples in kind: Digital Realty wholesale, Equinix xScale-class, Vantage, STACK, QTS, CyrusOne, Compass, AirTrunk (APAC).
@@ -17,8 +15,6 @@ You often bring (or design) more of the **IT fit-out** than in retail colo.
 | Powered shell | Building plant; white space fit-out TBD |
 | Turnkey wholesale | More complete hall product |
 | Campus MW | Multi-building power/fiber campus |
-
----
 
 ## 2. Advanced concepts
 
@@ -43,8 +39,6 @@ Campus internal designs for hyperscale tenants are often confidential—discuss 
 
 AirTrunk-class APAC hyperscale campuses vs US wholesale markets—same kind, different metros ([9](./9_Americas_Hubs.md), [12](./12_APAC_Hubs.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -63,8 +57,6 @@ AirTrunk-class APAC hyperscale campuses vs US wholesale markets—same kind, dif
 - Don’t buy wholesale expecting IBX walk-up XC culture  
 
 **Good:** clear demarc, scheduled power, fiber diversity. **Bad:** retail expectations; secret-free fantasy diagrams; late fit-out surprise.
-
----
 
 ## References
 

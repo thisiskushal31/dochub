@@ -4,84 +4,84 @@
     "path": "1_Leaf_Spine_And_Classic_Three_Tier.md",
     "type": "file",
     "sha": "",
-    "size": 2640
+    "size": 2615
   },
   {
     "name": "10_DNS_NTP_Physical_Placement.md",
     "path": "10_DNS_NTP_Physical_Placement.md",
     "type": "file",
     "sha": "",
-    "size": 2365
+    "size": 2345
   },
   {
     "name": "11_Storage_Network_Separation.md",
     "path": "11_Storage_Network_Separation.md",
     "type": "file",
     "sha": "",
-    "size": 2291
+    "size": 2271
   },
   {
     "name": "12_Fabric_Failure_Walks.md",
     "path": "12_Fabric_Failure_Walks.md",
     "type": "file",
     "sha": "",
-    "size": 2229
+    "size": 2209
   },
   {
     "name": "2_ToR_EoR_MoR.md",
     "path": "2_ToR_EoR_MoR.md",
     "type": "file",
     "sha": "",
-    "size": 2148
+    "size": 2128
   },
   {
     "name": "3_OOB_Management_Network.md",
     "path": "3_OOB_Management_Network.md",
     "type": "file",
     "sha": "",
-    "size": 2280
+    "size": 2260
   },
   {
     "name": "4_Provisioning_Network.md",
     "path": "4_Provisioning_Network.md",
     "type": "file",
     "sha": "",
-    "size": 2257
+    "size": 2237
   },
   {
     "name": "5_MMR_And_Cross_Connect_Physical.md",
     "path": "5_MMR_And_Cross_Connect_Physical.md",
     "type": "file",
     "sha": "",
-    "size": 2488
+    "size": 2468
   },
   {
     "name": "6_Border_And_Edge_Roles.md",
     "path": "6_Border_And_Edge_Roles.md",
     "type": "file",
     "sha": "",
-    "size": 2523
+    "size": 2503
   },
   {
     "name": "7_Bonding_MLAG_And_Dual_Home.md",
     "path": "7_Bonding_MLAG_And_Dual_Home.md",
     "type": "file",
     "sha": "",
-    "size": 2138
+    "size": 2118
   },
   {
     "name": "8_Optics_And_Transceiver_Roles.md",
     "path": "8_Optics_And_Transceiver_Roles.md",
     "type": "file",
     "sha": "",
-    "size": 2016
+    "size": 1996
   },
   {
     "name": "9_Load_Balancer_Appliances.md",
     "path": "9_Load_Balancer_Appliances.md",
     "type": "file",
     "sha": "",
-    "size": 2012
+    "size": 1992
   },
   {
     "name": "README.md",

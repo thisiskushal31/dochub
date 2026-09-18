@@ -6,8 +6,6 @@
 
 Format-level security for YAML: **safe loading**, untrusted input, resource exhaustion classes, secrets in plaintext, and review habits. Defense and review only—no exploit payloads or attack recipes.
 
----
-
 ## 1. Concepts
 
 ### 1. YAML text is not inert once loaded
@@ -47,8 +45,6 @@ Unquoted scalars that become booleans or numbers can bypass checks that assume s
 
 Lenient “last key wins” parsing lets a document show a safe-looking first value and a malicious later value for the same key—or the reverse, depending on consumer. Prefer parsers that **reject duplicates**, and treat duplicates as defects in review even when the tool accepts them.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Loader API literacy
@@ -86,8 +82,6 @@ Pin and hash vendor YAML packs. A compromised values default is still a supply-c
 
 No step-by-step gadgets for parser crashes, no copy-paste bombs, no “weaponize anchors” guides. If you need to test limits, use internal fixtures under controlled lab policy—not public handbook samples.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Security role |
@@ -100,8 +94,6 @@ No step-by-step gadgets for parser crashes, no copy-paste bombs, no “weaponize
 
 **Whole-engineering picture:** YAML security is mostly **loader choice + limits + secrets hygiene**, then host policy.
 
----
-
 ## 4. Staff-level review checklist
 
 - Untrusted input paths use safe/data-only loading.
@@ -111,8 +103,6 @@ No step-by-step gadgets for parser crashes, no copy-paste bombs, no “weaponize
 - No plaintext secrets in Git; scanners gate merges.
 - Security-relevant scalars are typed/quoted honestly (including 1.1-era bool words).
 - Host-level authz review is not skipped because “YAML looked fine.”
-
----
 
 ## References
 

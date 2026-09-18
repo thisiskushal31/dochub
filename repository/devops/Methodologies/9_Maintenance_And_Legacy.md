@@ -8,8 +8,6 @@ Most of the world’s valuable software is **already running**. DevOps that only
 
 SWEBOK calls this **software maintenance**. Syntax for COBOL / Fortran / Perl / PHP / VB lives in [Languages/](../Languages/README.md). Hands-on deploy adapters: [CiCd/18](../CiCd/18_VM_MIG_And_Host_Based_Deploy.md)–[21](../CiCd/21_Compose_And_Swarm_Delivery.md), [CiCd/19](../CiCd/19_Delivery_Spectrum_Legacy_Through_Modern.md).
 
----
-
 ## Types of maintenance
 
 | Type | Meaning | Example |
@@ -20,8 +18,6 @@ SWEBOK calls this **software maintenance**. Syntax for COBOL / Fortran / Perl / 
 | **Preventive** | Reduce future risk | Add CI around a repo that had none |
 
 All four appear in legacy estates. Ignoring adaptive work is how “sudden” compliance failures appear.
-
----
 
 ## The same DevOps questions (legacy edition)
 
@@ -35,8 +31,6 @@ All four appear in legacy estates. Ignoring adaptive work is how “sudden” co
 
 If you cannot answer these, you do not yet have DevOps on that estate — you have hope.
 
----
-
 ## When you meet old VCS and change systems
 
 | System | What you do as DevOps |
@@ -47,8 +41,6 @@ If you cannot answer these, you do not yet have DevOps on that estate — you ha
 | **ChangeMan / mainframe SCM** | Respect enterprise change windows; automate *around* official promote paths |
 
 Never force a workflow that bypasses the **system of record** for regulated promote. Document the real path in a runbook ([7](./7_Docs_And_Runbooks.md)).
-
----
 
 ## Classical brownfield (still “legacy” to cloud-native teams)
 
@@ -62,8 +54,6 @@ Many estates are not mainframes — they are **Jenkins + Linux + Apache/Tomcat +
 
 Strangling toward GitOps/K8s is optional and incremental — not a moral requirement on day one.
 
----
-
 ## Practical playbook for “we can’t rewrite it”
 
 1. **Stabilize delivery** — scripted build, artifact, deploy; even if deploy is SSH + copy.  
@@ -71,8 +61,6 @@ Strangling toward GitOps/K8s is optional and incremental — not a moral require
 3. **Wrap, don’t rewrite** — strangler facade, async sync, API front door ([System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts)).  
 4. **Contain risk** — network segments, least privilege ([Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive), [Security/](../Security/README.md)).  
 5. **Plan retirement** — data escape hatch + date; maintenance without an exit is a career trap.  
-
----
 
 ## Language doors (syntax elsewhere)
 
@@ -84,8 +72,6 @@ Strangling toward GitOps/K8s is optional and incremental — not a moral require
 | Windows line-of-business | VB.NET / VBA tracks |
 
 Learn enough to **read logs and review changes**; you do not need to become a COBOL expert on day one.
-
----
 
 ## Pipelines on legacy
 
@@ -99,8 +85,6 @@ build (or export artifact)
 ```
 
 Map onto [CiCd/1](../CiCd/1_Pipelines_Build_Test_Deploy.md). Full spectrum mindset: [20](./20_Delivery_Reality_Full_Spectrum.md).
-
----
 
 ## Pitfalls
 

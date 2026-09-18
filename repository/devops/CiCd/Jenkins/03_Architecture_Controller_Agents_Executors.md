@@ -2,8 +2,6 @@
 
 [← Previous](./02_Install_Controller_And_LTS.md) · [README](./README.md) · [Next: Configuration surfaces →](./04_Configuration_Surfaces_UI_JCasC_And_Init.md)
 
----
-
 ## 1. Concepts
 
 | Piece | Role |
@@ -23,8 +21,6 @@ Controller
 
 Older docs say “master/slave”; say **controller/agent**.
 
----
-
 ## 2. Advanced concepts
 
 ### Remoting and trust
@@ -39,8 +35,6 @@ Too few executors / wrong labels → queue forever. Handbook covers executor sta
 
 Separate concerns: controller sizing, agent pools by trust tier, external storage for artifacts when needed ([20](./20_Scaling_HA_Backup_And_Monitoring.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -50,8 +44,6 @@ Separate concerns: controller sizing, agent pools by trust tier, external storag
 | High fan-out | K8s cloud agents |
 
 **Good:** labels describe capability (`jdk21`, `docker`, `gpu`). **Bad:** everything runs on controller with 8 executors.
-
----
 
 ## References
 

@@ -8,8 +8,6 @@ How Zig text looks when you open a stranger’s file: comments, imports, identif
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. Comments are for humans (and docs tooling)
@@ -102,8 +100,6 @@ fn maskReady(flags: u32, bit: u5) bool {
 
 **Where you use it.** At ABI/protocol boundaries, prefer **named casts** and explicit widths over “it compiled, ship it.”
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Why explicit widths matter
@@ -147,8 +143,6 @@ zig fmt .
 
 Before debating architecture: read `//!`, list imports, skim `pub`, note integer widths and wrapping ops, *then* dive into bodies.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Why primitives matter |
@@ -161,8 +155,6 @@ Before debating architecture: read `//!`, list imports, skim `pub`, note integer
 
 **Whole-engineering picture:** primitive honesty prevents a large class of FFI and protocol bugs before pointers enter the chat.
 
----
-
 ## 4. Staff-level review checklist
 
 - Public APIs use clear widths at boundaries (`u32`/`u64`/…), not vague habits.
@@ -171,8 +163,6 @@ Before debating architecture: read `//!`, list imports, skim `pub`, note integer
 - `zig fmt` is clean in CI.
 - Casts at protocol edges are explicit and intentional.
 - Imports are minimal and understandable.
-
----
 
 ## References
 

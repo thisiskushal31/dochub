@@ -2,15 +2,11 @@
 
 [README](./README.md) · [Next: ToR EoR MoR →](./2_ToR_EoR_MoR.md)
 
----
-
 ## Mental map
 
 ![Leaf-spine sketch](../../Assets/Datacenter/Fabric-Physical/leaf-spine-concept.svg)
 
 *What to notice: every leaf uplinks to every spine; dual-home servers to a ToR pair. Bring-up jobs: [Setup-And-Bring-Up/4](../Setup-And-Bring-Up/4_Switch_Roles_In_Practice.md).*
-
----
 
 ## 1. Concepts
 
@@ -27,8 +23,6 @@ Protocols (BGP EVPN, STP, …) → [Networks-Deep-Dive](https://github.com/thisi
 ### Where it sits
 
 Leaves at rows ([2](./2_ToR_EoR_MoR.md)); spines in network rows; borders at edge ([6](./6_Border_And_Edge_Roles.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -49,8 +43,6 @@ Dual-home: [7](./7_Bonding_MLAG_And_Dual_Home.md). Optics: [8](./8_Optics_And_Tr
 
 Same topologies worldwide. Hyperscaler internals unpublished—learn principles + your diagrams.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -69,8 +61,6 @@ Same topologies worldwide. Hyperscaler internals unpublished—learn principles 
 - Never assume leaf-spine forgives single NIC hosts  
 
 **Good:** clear domains, dual-home, sized spines. **Bad:** fancy name, single-home; mystery oversubscription.
-
----
 
 ## References
 

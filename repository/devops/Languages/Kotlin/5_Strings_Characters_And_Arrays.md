@@ -107,8 +107,6 @@ val filled = intArrayOf(1, 2, 3)
 
 Arrays are fixed in size; adding or removing elements means creating a new array. For dynamic sequences, prefer lists and other collections, which are covered in a later topic.
 
----
-
 ## Further reading
 
 - [Strings](https://kotlinlang.org/docs/strings.html)

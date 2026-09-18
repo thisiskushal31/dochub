@@ -4,8 +4,6 @@
 
 A **toolchain** is the set of tools that implement the delivery value stream. Foundation courses teach **stages** before brand names. Memorize the stage; pick one tool per stage later.
 
----
-
 ## Classic stage map
 
 ```text
@@ -25,8 +23,6 @@ Plan → Code → Build → Test → Release → Deploy → Operate → Monitor
 | **Monitor** | Metrics, logs, traces, product signals | [Observability/](../Observability/README.md) |
 
 Infra as code, cloud, and containers cut across stages: [IAC/](../IAC/README.md), [Cloud/](../Cloud/README.md), [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive).
-
----
 
 ## Rules for beginners
 

@@ -56,8 +56,6 @@ The total is    27.0000000
 
 **Why this matters.** A clear, consistent structure and `implicit none` in every unit reduce bugs and make it easier for others (and for you later) to understand and modify the code. This is the basis for all subsequent topics.
 
----
-
 ## Further reading
 
 - [Fortran – Basic Syntax (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_basic_syntax.htm)

@@ -2,8 +2,6 @@
 
 [← Previous](./25_Jenkinsfile_JCasC_And_Config_Catalog.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 ### LTS upgrades
@@ -30,13 +28,9 @@ Often to forge CI (GitHub Actions, GitLab CI, …). Map: Freestyle/Pipeline → 
 | Chef/Puppet installs | CM literacy doors |
 | Jenkinsfile Runner / GHA act | Niche; optional literacy |
 
----
-
 ## 2. Advanced concepts
 
 Built-in node migration, detached plugins, and security hardening changes often accompany major LTS jumps — read the upgrade guide for *your* from→to pair.
-
----
 
 ## 3. Applications and use cases
 
@@ -49,8 +43,6 @@ Built-in node migration, detached plugins, and security hardening changes often 
 **Good:** upgrade notes in the change ticket. **Bad:** friday plugin “update all” on the only controller.
 
 **Upstream-only:** every plugin, every solution page, full step reference dump.
-
----
 
 ## References
 

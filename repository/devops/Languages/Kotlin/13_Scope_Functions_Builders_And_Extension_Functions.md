@@ -79,8 +79,6 @@ Type-safe builders use function types with receiver to create DSL-style APIs. A 
 
 Using extensions and scope functions keeps code concise and intent clear. The next topic covers generics, operator overloading, and related type-system features.
 
----
-
 ## Further reading
 
 - [Extensions](https://kotlinlang.org/docs/extensions.html)

@@ -6,8 +6,6 @@
 
 **Delivery engineering** for Ruby: reproducible builds in **CI**, **container** images, process supervision, **health checks**, **observability**, capacity, and incident response. The same practices apply whether you ship a Rails API, a Sidekiq worker, or an internal CLI—platform work is part of software engineering, not a separate craft from “writing Ruby.”
 
----
-
 ## 1. Concepts
 
 ### 1. The deployment unit
@@ -125,8 +123,6 @@ Size Puma **workers** × **threads** against CPU and memory. Rule of thumb: meas
 
 Cost reviews include **RAM per worker** and **YJIT** code cache—Ruby is not the cheapest runtime per request at scale; justify with velocity and ecosystem.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Platform-specific gems in lockfile
@@ -155,8 +151,6 @@ Legacy **Capistrano** uses SSH + releases + `bundle install` on server—know re
 ### 5. Observability agents
 
 APM gems (datadog, scout) add native or pure Ruby instrumentation—account for overhead in load tests.
-
----
 
 ## 3. Applications and use cases
 
@@ -196,8 +190,6 @@ APM gems (datadog, scout) add native or pure Ruby instrumentation—account for 
 - Health checks distinguish dependency failure.
 - Chef/app Ruby versions documented in runbook.
 - SIGTERM graceful shutdown verified under load.
-
----
 
 ## References
 

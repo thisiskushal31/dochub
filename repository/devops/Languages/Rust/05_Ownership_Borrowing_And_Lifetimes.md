@@ -6,8 +6,6 @@
 
 The core memory model that makes Rust distinctive: **ownership rules**, stack versus heap intuition, **move / copy / clone**, shared and mutable **references**, the **slice** type, and **lifetime** intuition including **elision**—so you can explain why dangling references are rejected and how to redesign APIs when the borrow checker complains, without treating the compiler as random.
 
----
-
 ## 1. Concepts
 
 ### 1. The ownership rules
@@ -150,8 +148,6 @@ Languages with unchecked pointers allow returning addresses of stack frames that
 
 The fix is usually to **return an owned value** (`String`) or to take a reference that the **caller** owns and return a sub-borrow tied to that caller’s data. The borrow checker is not being pedantic for sport—it is enforcing validity.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Aliasability XOR mutability
@@ -255,8 +251,6 @@ A trait object carries not only the trait but often a **lifetime bound**: `dyn T
 
 You write the bound when storing or returning trait objects that borrow. If the compiler demands `'static`, it is asking for owned data (or a longer borrow), not for a lifetime annotation ritual. Prefer owned `Box<dyn Trait>` at process-long boundaries; use `dyn Trait + 'a` when zero-copy adapters genuinely borrow caller buffers.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and API design
@@ -300,8 +294,6 @@ You write the bound when storing or returning trait objects that borrow. If the 
 - Tests or examples demonstrate non-dangling use of any returned references.
 - Graphs with `Rc`/`Arc` back-edges use **`Weak`** (or a single-owner redesign); cycles are an explicit leak class.
 - Trait objects that borrow spell **`dyn Trait + 'a`**; process-long objects are `'static` or owned.
-
----
 
 ## References
 

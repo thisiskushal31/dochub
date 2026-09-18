@@ -2,8 +2,6 @@
 
 [← Previous](./23_Troubleshooting_And_Staff_Checklist.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 ### Integrations
@@ -28,13 +26,9 @@ Browser testing, collect test data, rerun failed tests, smarter testing / evals 
 
 CircleCI documents OSS-friendly settings; keep fork secrets off by default.
 
----
-
 ## 2. Advanced concepts
 
 GitHub trigger event options and schedule-trigger migrations from legacy scheduled workflows are brownfield topics — follow current orchestrate guides when upgrading old configs.
-
----
 
 ## 3. Applications and use cases
 
@@ -45,8 +39,6 @@ GitHub trigger event options and schedule-trigger migrations from legacy schedul
 | Cap spend | budgets + right-size classes |
 
 **Good:** integration owners named. **Bad:** every orb notification to `#general`.
-
----
 
 ## References
 

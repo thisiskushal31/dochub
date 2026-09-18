@@ -8,8 +8,6 @@ Where data **lives** for the duration of a call or a transaction: **storage**, *
 
 If types (chapter **06**) are *what* a value is, locations are *where the sticky note is stuck*. Put the note on the wrong surface and you will think you edited the original when you only doodled on a photocopy.
 
----
-
 ## 1. Concepts
 
 ### 1. Four surfaces (one kitchen picture)
@@ -103,8 +101,6 @@ A `bool` in **memory** cannot lock against a callee: they do not share your scra
 
 Anyone can `eth_getStorageAt`. `private` only stops other Solidity contracts from reading the **name**. Secrets do not belong in any of the four locations. Encryption with a key that is also on-chain is theater.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Assignment rules (alias vs copy)
@@ -195,8 +191,6 @@ For an `external` function, Solidity often leaves dynamic arguments in **calldat
 
 `contract C is A, B layout at 42` shifts the whole linearized layout by a base slot (ERC-7201-adjacent). Namespaced storage for proxies belongs here, not as a first-project flourish. Test the slot of `owner` before you ship an upgrade.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -207,8 +201,6 @@ For an `external` function, Solidity often leaves dynamic arguments in **calldat
 | **Operations** | Slot layout documented if anyone reads storage raw |
 | **Software engineering** | Location keywords explicit; no “it compiled” shrugs |
 
----
-
 ## 4. Staff-level review checklist
 
 - Dynamic `external` params use `calldata` unless a write/resize is required.
@@ -217,8 +209,6 @@ For an `external` function, Solidity often leaves dynamic arguments in **calldat
 - Layout order is stable if proxies or slot tooling exist.
 - Comments never claim `private` storage is confidential.
 - Reentrancy locks are storage or transient — not a memory bool.
-
----
 
 ## References
 

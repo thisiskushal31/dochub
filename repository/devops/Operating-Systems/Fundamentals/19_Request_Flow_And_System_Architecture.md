@@ -4,13 +4,9 @@
 
 This topic explains **how a request flows inside any system** — whether the CPU is **x86**, **x64**, **ARM**, or another architecture — and how the **system architecture** (user space, kernel, hardware) is designed so that every request follows a well-defined path. The ideas are **architecture-agnostic**; where the mechanism differs (e.g. trap instruction, privilege levels), we note it.
 
----
-
 ## What “request” and “flow” mean
 
 A **request** is any demand for work that crosses the boundary from **user space** (application) into the **kernel** (OS) or that involves **hardware** (e.g. read from disk, send a packet). The **flow** is the path that request takes: from the moment the application invokes a service (e.g. system call) until the result is back in user space (or the operation is in progress and the process is blocked). Understanding this flow is the same on an ARM server, an x86 laptop, or an x64 data-center machine — only the **mechanisms** (instruction names, registers, exception levels) differ.
-
----
 
 ## System architecture: the layers
 
@@ -52,8 +48,6 @@ Every general-purpose OS is built in **layers**. The CPU runs in at least two **
 - **Hardware:** CPU (with privilege mode and MMU), devices. The kernel programs devices and responds to **interrupts**.
 
 The **architecture** is designed so that **every request** from user space goes through the kernel; there is no “back door.” On x86/x64 this is enforced by **ring 0 (kernel) vs ring 3 (user)**; on ARM by **exception levels (EL0 user, EL1 kernel)**; the principle is the same.
-
----
 
 ## Request flow: system call (synchronous path)
 
@@ -107,8 +101,6 @@ When an application asks the kernel to do something (e.g. read from a file, crea
 
 This path is **synchronous** from the application’s point of view: the thread does not continue until the kernel has finished the call (or blocked it on I/O).
 
----
-
 ## Request flow: I/O and interrupt (asynchronous from hardware)
 
 When the request needs **hardware** (e.g. read from disk, receive a network packet), the kernel programs the **device** and then typically **blocks** the process. The device later signals completion via an **interrupt**. That interrupt is handled entirely in the kernel; the process is woken when data is ready.
@@ -144,8 +136,6 @@ When the request needs **hardware** (e.g. read from disk, receive a network pack
 
 So the **full request flow** when I/O is involved is: **user → trap → kernel subsystem → driver → device → (process blocks) → interrupt → kernel handler → wake process → return from syscall → user**. The same design applies on any system; only the trap instruction, interrupt routing, and driver details are architecture- or OS-specific.
 
----
-
 ## How the architecture differs: x86, x64, ARM
 
 The **flow** (user → trap → kernel → subsystem → driver → hardware, and back) is the same. The **mechanisms** differ by CPU.
@@ -167,8 +157,6 @@ So on **any** system:
 - The kernel **dispatches** by call number, runs the right **subsystem**, and returns with a **trap-return** instruction that restores user mode.
 
 The **architecture is designed** so that this single, controlled path is the only way for user code to access kernel or hardware. That is what makes the “request flow” consistent across x86, x64, ARM, and other architectures.
-
----
 
 ## Example: data transmission (network request flow)
 
@@ -206,16 +194,12 @@ The diagram below shows this path (user space → kernel buffers → network sta
 
 *Image: [ByteByteGo – Data Transmission Between Applications](https://bytebytego.com/guides/how-is-data-transmitted-between-applications/).*
 
----
-
 ## Summary (flow and architecture)
 
 - **Architecture:** All systems use **layers**: user space (unprivileged) → kernel (privileged) → hardware. The CPU enforces this with **privilege levels** (rings or exception levels).
 - **Request flow (system call):** Application → library (sets up call number and args) → **trap instruction** → CPU switches to kernel → kernel entry dispatches to subsystem → subsystem (and possibly driver) does work → **trap return** → back to user. Same idea on **x86, x64, ARM**; only the trap instruction and registers differ.
 - **Request flow (with I/O):** Same as above, but the kernel may **block** the process and wait for an **interrupt** from the device. The interrupt handler completes the I/O and **wakes** the process; then the syscall returns.
 - **Design:** The OS is built so that **every** request from user space goes through this single, controlled path. There is no way for user code to touch hardware or other processes without going through the kernel. That is how “request flow” and “system architecture” work on **any** system — ARM, x86, x64, or others.
-
----
 
 ## Further reading
 

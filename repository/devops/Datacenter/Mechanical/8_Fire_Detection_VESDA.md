@@ -2,8 +2,6 @@
 
 [← Previous](./7_Leak_Detection_And_Fluid_Risk.md) · [README](./README.md) · [Next: Suppression →](./9_Fire_Suppression_Clean_Agent_And_Pre_Action.md)
 
----
-
 ## 1. Concepts
 
 Fire risk in halls is low-frequency, high-consequence. **Detection** aims to find incipient events (overheated cable, smoldering dust, battery abuse) before flames destroy a row.
@@ -22,8 +20,6 @@ Fire risk in halls is low-frequency, high-consequence. **Detection** aims to fin
 | Battery room / UPS special detection | Chemistry-specific |
 
 Detection is not suppression ([9](./9_Fire_Suppression_Clean_Agent_And_Pre_Action.md))—but it often *triggers* suppression logic.
-
----
 
 ## 2. Advanced concepts
 
@@ -58,8 +54,6 @@ HVAC shutdown on fire alarm is common—expect thermal consequences for IT durin
 
 Codes (NFPA, local AHJ, EN) differ on device placement and monitoring. Aspirating is widespread in quality halls globally; do not assume every edge closet has VESDA.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -78,8 +72,6 @@ Codes (NFPA, local AHJ, EN) differ on device placement and monitoring. Aspiratin
 - Never ignore “Alert” as noise without walkdown  
 
 **Good:** early aspirating, tested pipes, strict impairment control. **Bad:** disabled detectors for weeks; dust left as normal.
-
----
 
 ## References
 

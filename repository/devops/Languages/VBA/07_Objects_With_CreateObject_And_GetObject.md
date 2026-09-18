@@ -8,8 +8,6 @@ How VBA treats **objects**: object variables, `Set`, `Nothing`, `With`, early vs
 
 You leave able to declare and assign object variables correctly, choose early vs late binding with eyes open, explain `New` vs `CreateObject`, and treat external Automation as a trust boundary—not a convenience API.
 
----
-
 ## 1. Concepts
 
 ### 1. Objects are references
@@ -98,8 +96,6 @@ Set rng = Nothing
 
 **What just happened:** `Set` binds the cell object; assignment without `Set` fights the default property.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Object lifetime and the host
@@ -148,8 +144,6 @@ CreateObject ProgIDs and available servers differ on Office for Mac. Default han
 
 `CallByName(object, "MemberName", vbMethod|vbGet|vbLet|vbSet, …)` invokes a member by **string name**. Useful for thin late-bound façades; easy to typo and hard to refactor. Prefer early-bound calls when the type is known. Pair with chapter **16** awareness: hostile macros sometimes build member names dynamically—justify every `CallByName` in LOB review.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -164,8 +158,6 @@ Typical legitimate uses of `CreateObject` in reviewed LOB macros: `Scripting.Fil
 
 Anti-patterns: creating Excel from Excel “to be safe,” leaving `Visible = True` instances abandoned, and storing passwords or tokens in Automation calls (secrets never in code—chapter **11** / **15**).
 
----
-
 ## Staff-level review checklist
 
 - Object assignments use `Set`; comparisons use `Is` / `Is Nothing`.
@@ -179,8 +171,6 @@ Anti-patterns: creating Excel from Excel “to be safe,” leaving `Visible = Tr
 - Target Office pin / reference libraries match deployment reality.
 - Cross-app Automation has an owner and a test plan (ch **09**), not a one-off paste.
 - Dynamic late dispatch (`CallByName`) is rare, justified, and typed at the edges—not a substitute for known interfaces.
-
----
 
 ## References
 

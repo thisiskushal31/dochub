@@ -8,8 +8,6 @@ How Zig code is organized once you leave a single file: **functions**, **`pub` v
 
 **Reading lens for every section below:** what you see in the file → what the language means → where you use it at work.
 
----
-
 ## 1. Concepts
 
 ### 1. Functions: what you see, what they are
@@ -141,8 +139,6 @@ When you open an unfamiliar Zig project, do this in order:
 
 You are mapping **contracts** before **cleverness**.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Public surface is a contract (with a bad example)
@@ -203,8 +199,6 @@ pub fn displayName(user: User) ?[]const u8 {
 
 **Where you use it.** Every `pub` that is product API.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | What you do with modules |
@@ -217,8 +211,6 @@ pub fn displayName(user: User) ?[]const u8 {
 
 **Whole-engineering picture:** packaging is how Zig scales past a single heroic file—without losing the ability to read the graph.
 
----
-
 ## 4. Staff-level review checklist
 
 - You can point to the `pub` surface in under a minute.
@@ -227,8 +219,6 @@ pub fn displayName(user: User) ?[]const u8 {
 - Dependencies are pinned and reviewed on bump.
 - New public functions have `///` docs and tests.
 - C `export`s (if any) live in an obvious boundary file.
-
----
 
 ## References
 

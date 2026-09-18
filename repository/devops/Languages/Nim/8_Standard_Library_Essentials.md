@@ -72,8 +72,6 @@ echo parsed
 - For **wrappers**, read the underlying C library’s contract; Nim cannot magically make unsafe C APIs memory-safe.
 - Use the **searchable index** when you know the task (“JSON”, “async”, “os”) but not the module name.
 
----
-
 ## Further reading
 
 ### Navigation and API reference

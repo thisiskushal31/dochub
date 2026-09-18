@@ -2,8 +2,6 @@
 
 [← Previous](./12_Security_Identity_And_Air_Gap.md) · [README](./README.md) · [Next: Notifications →](./14_Notifications_Alerts_And_Receivers.md)
 
----
-
 ## 1. Concepts
 
 Typing new image digests into YAML by hand does not scale. Flux can:
@@ -31,8 +29,6 @@ CI pushes myapp:v1.0.1
 
 Official guide: **production** often tracks patch/CVE tags with full Git history; **staging** may track latest branch builds with sortable tags.
 
----
-
 ## 2. Advanced concepts
 
 ### Markers in YAML
@@ -51,8 +47,6 @@ Policies need tags they can order — see the sortable tags guide. Staging often
 
 Only automate tags that already passed CI. Image automation is not a test suite.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -62,8 +56,6 @@ Only automate tags that already passed CI. Image automation is not a test suite.
 | Fully manual digests | Don’t install image components |
 
 **Good:** every deploy is a Git commit. **Bad:** automate mutable `latest` into production.
-
----
 
 ## References
 

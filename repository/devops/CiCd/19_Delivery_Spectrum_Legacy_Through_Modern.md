@@ -8,8 +8,6 @@ This chapter is the **coverage map** so nothing in that spectrum is “out of sc
 
 **Syllabus guardrail (agents):** `thisiskushal31/plans/SOFTWARE_ENGINEERING_SYLLABUS.md` → Part A → rule **Timeless and full-spectrum coverage**. This file is the CiCd implementation of that rule.
 
----
-
 ## How to read “timeless” here
 
 | Kind of note | What we write |
@@ -20,8 +18,6 @@ This chapter is the **coverage map** so nothing in that spectrum is “out of sc
 | **Version / generation gate** | When a practice assumes a capability (e.g. OIDC federation in CI, Rollout CRDs), say what must exist — like Languages/Python noting “`match` from 3.10+” |
 
 Do **not** frame chapters as “only the current year stack.” Do **not** skip COBOL-era or VM-era paths because they are unfashionable.
-
----
 
 ## Spectrum of deploy targets
 
@@ -49,8 +45,6 @@ Mainframe / proprietary promote
 | Pipeline security / OIDC | [15](./15_Pipeline_Security_And_Gates.md), [Security/5](../Security/5_OIDC_CI_And_Least_Privilege.md) | Security-Deep-Dive |
 | Legacy languages & VCS | [Methodologies/9](../Methodologies/9_Maintenance_And_Legacy.md) | [Languages/](../Languages/README.md) |
 
----
-
 ## Legacy delivery (still in production)
 
 | Reality | DevOps move |
@@ -63,27 +57,19 @@ Mainframe / proprietary promote
 
 Humble/Farley deployment pipeline still holds: every change is a candidate; confidence grows through stages — even if a stage is “mainframe promote job.”
 
----
-
 ## Classic through cloud VM (non-legacy but non-K8s)
 
 Covered in depth in [18](./18_VM_MIG_And_Host_Based_Deploy.md): packages, symlink releases, immutable images, MIG/`maxSurge`/`maxUnavailable`, blue-green pools, ASG refresh.
 
 This is **normal** production for many orgs — treat it as first-class, not a footnote.
 
----
-
 ## Container and GitOps (modern baseline for many teams)
 
 [1](./1_Pipelines_Build_Test_Deploy.md)–[16](./16_Notifications_Webhooks_And_ChatOps.md), tool folders. Same loop; different deploy adapter.
 
----
-
 ## Static and edge
 
 [17](./17_Static_Sites_And_CDN_Deploy.md). Frontend engineers shipping marketing sites, docs, and SPAs need this path as much as API engineers need MIG/K8s.
-
----
 
 ## Assisted delivery (AI-era tooling on the same loop)
 
@@ -99,8 +85,6 @@ Assistants (codegen, bot PRs, policy-bound agents) **amplify** the pipeline — 
 
 ML **model** training/serving pipelines have additional homes ([Data-Science-AI-Deep-Dive](https://github.com/thisiskushal31/Data-Science-AI-Deep-Dive), DE feature tables). **Application** CI/CD that happens to use models still uses this CiCd folder for ship/verify.
 
----
-
 ## One loop, many adapters
 
 ```text
@@ -112,8 +96,6 @@ commit → CI verify ─┼─ VM/MIG/template roll ─────────�
 ```
 
 If you only document the K8s adapter, you have not finished CiCd for this handbook.
-
----
 
 ## Pitfalls
 

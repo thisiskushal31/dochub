@@ -2,8 +2,6 @@
 
 [← Previous](./4_Day_In_The_Life_NOC.md) · [README](./README.md) · [Next: Ticket taxonomy →](./6_Ticket_Taxonomy_And_Escalation.md)
 
----
-
 ## 1. Concepts
 
 The **bare-metal / hypervisor admin** (“hypervisor killer” track consumer) owns BMC, firmware, imaging, OS/hypervisor health—and must still respect hall physics.
@@ -20,8 +18,6 @@ The **bare-metal / hypervisor admin** (“hypervisor killer” track consumer) o
 
 Tracks: Compute, Accelerators, on-ramp 7–11, Provider-Use when colo.
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes
@@ -36,8 +32,6 @@ Tracks: Compute, Accelerators, on-ramp 7–11, Provider-Use when colo.
 ### How it connects
 
 Compute failure walks [Compute/17](../Compute/17_Compute_Failure_Walks.md). Integration PDU/ToR failures. Hypervisor map [Compute/18](../Compute/18_Hypervisor_On_The_Box_Map.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -56,8 +50,6 @@ Compute failure walks [Compute/17](../Compute/17_Compute_Failure_Walks.md). Inte
 - Never dual-cord both PSUs to A “temporarily”  
 
 **Good:** metal pipeline + hall awareness. **Bad:** app-only debugging; USB heroes.
-
----
 
 ## References
 

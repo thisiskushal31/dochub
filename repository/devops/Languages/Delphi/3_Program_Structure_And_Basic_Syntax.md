@@ -4,8 +4,6 @@
 
 A Delphi **program** or **application** is built from a **project file** (**.dpr**) and one or more **units** (**.pas**). Execution starts at the **begin** / **end** block in the project file. This topic describes that structure in depth: the **program** and **library** entry points, **units** (interface, implementation, initialization, finalization), **begin**/ **end** and **semicolons**, **comments**, and **identifiers**. Understanding this structure is essential for reading legacy code and for knowing **load order** and **initialization** when debugging or analyzing binaries.
 
----
-
 ## Project file (.dpr)
 
 The main program is stored in a **.dpr** (Delphi project) file. It has a **program** name, a **uses** clause listing units, and a **begin** / **end** block that runs when the application starts. The **program** name must match the file name (without extension) in many setups.
@@ -23,13 +21,9 @@ end.
 
 The **uses** clause brings in **units** (modules) that provide procedures, functions, and types. Order of units can matter: they are **initialized** in the order they appear (each unit’s **initialization** section runs before the next unit’s). The **begin** ... **end.** (with a **period**) is the main block; the program terminates when execution reaches **end.** In a **GUI** application, the **.dpr** usually does little besides **Application.Initialize**, **Application.CreateForm(...)**, and **Application.Run**; the real logic lives in units and form classes.
 
----
-
 ## Library (.dpr as library or package)
 
 You can also build a **library** (DLL) or a **package** instead of an executable. The **.dpr** then starts with **library** MyDll; or **package** MyPkg; and exposes procedures/functions in **exports**. For **packages** (**.bpl** on Windows), the IDE and compiler manage **requires** and **contains**; the runtime loads **.bpl** files when the main exe uses units from that package. When analyzing a Delphi binary, distinguishing between an **exe** (program) and a **.bpl** (package) or **.dll** (library) helps you understand the module’s role.
-
----
 
 ## Units (.pas) in depth
 
@@ -77,13 +71,9 @@ end.
 - **initialization:** Runs once when the unit is loaded (at program start, in the order of **uses** in the **.dpr** and in the **uses** of other units). Use it to set up global state, register classes, or open resources. If multiple units have **initialization**, the order is defined by the dependency graph (units used by the **.dpr** are initialized first, in order; then their dependencies, etc.).
 - **finalization:** Runs at shutdown (in **reverse** order of initialization). Use it to free resources, unregister, or flush state. If **initialization** raises an exception, **finalization** may still run for units that were successfully initialized; rely on **finalization** for cleanup, not on “last use.”
 
----
-
 ## Circular unit references
 
 A unit **A** cannot **use** a unit **B** if **B** also **use**s **A** in its **interface** section (circular dependency). The compiler will report an error. Common fixes: move the shared declarations to a third unit **C** that both **A** and **B** use, or put one of the **uses** in the **implementation** section of **A** or **B** so that the dependency is one-way at the interface level. When reading legacy code, circular **uses** in **implementation** are allowed (e.g. **A** implementation uses **B**, **B** implementation uses **A**), but circular **interface** uses are not.
-
----
 
 ## Begin and end
 
@@ -98,13 +88,9 @@ end
 
 Semicolons **separate** statements; they do not **terminate** them. So you do **not** put a semicolon after the **end** that closes a **begin** when that **end** is immediately followed by **else** or **until** (otherwise the compiler would treat the **else** or **until** as a new statement). The **end** that closes the **program** or **unit** is followed by a **period** (**end.**).
 
----
-
 ## Semicolons and formatting
 
 **Semicolons** separate statements. They are not required after the **end** of a **begin** block when that **end** is followed by **else** or **until**. Indentation and line breaks are for readability only; the compiler does not rely on them for structure. Consistent style (e.g. **begin** and **end** aligned, body indented) makes code and decompiled code easier to follow.
-
----
 
 ## Comments
 
@@ -120,8 +106,6 @@ x := 1;  (* inline comment *)
 
 Compiler directives (e.g. **{$IFDEF}**) use the same **{ $ ... }** or **(* $ ... *)** syntax; the **$** right after the opening **{** or **(*** makes it a directive rather than a plain comment.
 
----
-
 ## Identifiers and names
 
 **Identifiers** (names for variables, procedures, functions, types, units) start with a letter or underscore and can contain letters, digits, and underscores. Delphi is **case-insensitive** for identifiers: **MyVar** and **myvar** refer to the same symbol. By convention (and for readability in decompiled or shared code):
@@ -134,16 +118,12 @@ Compiler directives (e.g. **{$IFDEF}**) use the same **{ $ ... }** or **(* $ ...
 
 Reserved words (**begin**, **end**, **procedure**, **function**, **var**, **type**, **uses**, etc.) cannot be used as identifiers.
 
----
-
 ## Summary
 
 - The **program** (**.dpr**) has **uses** and a **begin** / **end.** main block; **library** and **package** are alternative entry points for DLLs and packages.
 - **Units** (**.pas**) have **interface** (public API), **implementation** (code and private helpers), and optionally **initialization** / **finalization** (load/unload order matters).
 - **begin** / **end** group statements; **semicolons** separate statements; no semicolon before **else** or **until**.
 - **Comments** use **//**, **(* *)**, or **{ }**. Identifiers are case-insensitive; conventions use **T**, **E**, **I**, **F**, **A** prefixes. Avoid circular **interface** **uses** between units.
-
----
 
 ## Further reading
 

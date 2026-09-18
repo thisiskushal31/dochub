@@ -6,8 +6,6 @@
 
 **JRuby** runs Ruby on the **JVM**: different threading model, Java interop, deployment packaging, and gem compatibility tradeoffs versus MRI. You need this chapter when the stack says “Ruby” but the runtime is Java—or when CPU-bound threads must scale on one process.
 
----
-
 ## 1. Concepts
 
 ### 1. What JRuby is
@@ -81,8 +79,6 @@ On JRuby, **object storage** is primarily **managed by the JVM heap** (young/old
 | Long **pause** times (G1, Parallel old) | Tune pause goal, region size, or evaluate **ZGC** / **Shenandoah** for low-latency estates |
 | High **thread** count | JVM native thread stack memory + context switching; align with DB pool and pool detect |
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Startup time and memory footprint
@@ -144,8 +140,6 @@ Standardize on a **vendor-supported JDK** (Corretto, Temurin, vendor Oracle buil
 - Audit `fork`, `IO.select`, signal handling.
 - Re-benchmark memory (JVM heap + metaspace).
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -178,8 +172,6 @@ Monitor JVM GC logs, not only Ruby logs.
 - Heap and thread pool sizes justified with load tests; JVM GC logs baseline captured.
 - Java interop boundaries reviewed for classloader leaks and JNI lifecycle.
 - **Observability** includes JVM tabs (heap, threads, GC) alongside Ruby request metrics.
-
----
 
 ## References
 

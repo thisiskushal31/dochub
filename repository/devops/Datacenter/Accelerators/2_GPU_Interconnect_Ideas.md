@@ -2,8 +2,6 @@
 
 [← Previous](./1_GPU_Trays_And_Power.md) · [README](./README.md) · [Next: DPU and SmartNIC →](./3_DPU_And_SmartNIC.md)
 
----
-
 ## 1. Concepts
 
 Multi-GPU training/inference often needs **fast GPU-to-GPU** paths beyond ordinary NIC east-west. Vendor technologies (NVLink/NVSwitch-class, Infinity Fabric GPU links, PCIe-only meshes) differ—the *jobs* are topology literacy and failure domains.
@@ -22,8 +20,6 @@ Exact product names and generations churn—read **current** OEM topology for yo
 ### Where it sits
 
 Inside the chassis (board links) and/or as external cables between sleds; east-west still hits leaf/spine for multi-node ([Fabric-Physical](../Fabric-Physical/README.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -53,8 +49,6 @@ Hyperscaler internal GPU fabrics are often unpublished. Learn principles + your 
 
 Same ideas worldwide; which interconnect appears depends on purchased SKU, not metro.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -73,8 +67,6 @@ Same ideas worldwide; which interconnect appears depends on purchased SKU, not m
 - Never assume PCIe-only equals NVLink-class  
 
 **Good:** documented domain, monitored links, matched software. **Bad:** mystery bridges; silent link down; fabric undersized for multi-node.
-
----
 
 ## References
 

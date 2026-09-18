@@ -8,8 +8,6 @@
 
 Pair with **07** (`CreateObject`), **11** (FSO / `Shell` from VBA), and **15–16** (defense and safe reading). This chapter is **not** a greenfield VBScript course.
 
----
-
 ## 1. Concepts
 
 ### 1. VBA vs VBScript (one table)
@@ -108,8 +106,6 @@ Default replacement for WSH/VBScript glue:
 
 Bring from this track: recognition of COM ProgIDs and why “just run this `.vbs`” is a trust decision (**15**). Depth lives in the PowerShell docs (References / chapter **18**).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Encoding, obfuscation literacy (defense only)
@@ -161,8 +157,6 @@ When inventorying brownfield scripts, expand recognition beyond “has a Shell�
 
 Deprecation posture stays primary: recognize → inventory → **PowerShell** (or other supported host). Do not grow new WSH surface area.
 
----
-
 ## 3. Applications and use cases
 
 ### Application
@@ -197,8 +191,6 @@ Deprecation posture stays primary: recognize → inventory → **PowerShell** (o
 | Security | No inventory of script hosts on endpoints |
 | App owner | Undocumented COM automation nobody can migrate |
 
----
-
 ## Staff-level review checklist
 
 - New automation is **not** VBScript unless a time-boxed waiver exists; PowerShell (or other supported host) is the default.
@@ -212,8 +204,6 @@ Deprecation posture stays primary: recognize → inventory → **PowerShell** (o
 - Classic ASP / IE VBScript appears only as historical context, not as a proposed architecture.
 - No obfuscation or evasion techniques are documented as how-to material in team wikis sourced from this chapter.
 - References for migration point at official Microsoft PowerShell and deprecated-features hubs.
-
----
 
 ## References
 

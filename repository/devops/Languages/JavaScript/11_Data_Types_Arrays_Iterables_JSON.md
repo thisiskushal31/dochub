@@ -2,8 +2,6 @@
 
 Beyond primitives and plain objects (topic 4, 7), JavaScript provides **arrays**, **iterables**, **Map/Set**, **Date**, and **JSON** for structured data. This topic covers array creation and methods, iterables and for-of, Map and Set (and WeakMap/WeakSet), Date and time, and JSON serialization.
 
----
-
 ## Arrays
 
 **Arrays** are ordered, integer-keyed collections. Create with **[]** or **new Array(length)**. **length** is the highest index plus one; setting length can truncate or extend. **Array.isArray(x)** detects arrays. Methods: **push**, **pop**, **shift**, **unshift** (mutate); **slice**, **concat** (return new); **indexOf**, **includes**, **find**, **findIndex** (search); **map**, **filter**, **reduce**, **forEach** (iterate). **sort** and **reverse** mutate; **sort** compares by string by default—pass a compare function for numbers. **splice(index, deleteCount, ...items)** inserts/removes in place. Spread **[...arr]** and **Array.from(iterable)** create copies or convert iterables.
@@ -15,13 +13,9 @@ let b = a.map((x) => x * 2);
 let found = a.find((x) => x > 2);
 ```
 
----
-
 ## Iterables and for-of
 
 An **iterable** is an object with a **Symbol.iterator** method that returns an iterator (object with **next()** returning `{ value, done }`). **for...of** consumes iterables (arrays, strings, Map, Set, arguments, NodeLists). **Array.from(iterable)** and spread **[...iterable]** convert iterables to arrays. **Object.keys/values/entries** return arrays, not iterables; use them with for-of on the array. Custom iterables implement **Symbol.iterator** for custom iteration behavior.
-
----
 
 ## Map and Set
 
@@ -35,13 +29,9 @@ let s = new Set([1, 2, 2]);
 s.size; // 2
 ```
 
----
-
 ## Object.keys, values, entries
 
 **Object.keys(obj)** returns an array of own enumerable string keys. **Object.values(obj)** returns values; **Object.entries(obj)** returns [key, value] pairs. Use with **for...of** or **forEach**. For inheritance, use **for...in** (with **hasOwnProperty** if you need only own keys). These are the main way to iterate plain objects in a predictable order (insertion order for string keys in modern engines).
-
----
 
 ## Date and time
 
@@ -53,8 +43,6 @@ d.getFullYear();
 Date.now();
 ```
 
----
-
 ## JSON
 
 **JSON** (JavaScript Object Notation) is a text format for data exchange. **JSON.stringify(value, replacer?, space?)** converts a value to a JSON string; functions, undefined, and symbols are omitted; **toJSON** on objects is used if present. **JSON.parse(string, reviver?)** parses a string to a value. **Reviver** can transform parsed values. Numbers, strings, booleans, null, arrays, and plain objects are supported; Date, Map, Set, and functions are not natively supported (serialize dates as ISO strings and parse them in a reviver). Use JSON for APIs and config; validate/sanitize parsed data.
@@ -64,13 +52,9 @@ let str = JSON.stringify({ a: 1, b: [2, 3] });
 let obj = JSON.parse(str);
 ```
 
----
-
 ## Summary
 
 **Arrays** are ordered collections with **length** and methods (**push**, **map**, **filter**, **reduce**, etc.). **Iterables** work with **for...of**, **Array.from**, and spread. **Map** and **Set** store key–value pairs and unique values; **WeakMap**/ **WeakSet** use weak references. **Object.keys/values/entries** iterate plain objects. **Date** handles timestamps and calendar access; use **Intl** or libraries for formatting. **JSON.stringify** and **JSON.parse** serialize and deserialize data for storage and APIs.
-
----
 
 ## Further reading
 

@@ -8,8 +8,6 @@ Three compiler-adjacent skills staff need after the language spine: **decidabili
 
 Deploy/ABI mechanics remain chapter **12**. Loop bounds in source: chapter **07**. Security advisories habit: chapter **14**. Practical “make the call cheaper and still safe” patterns: chapter **[19](./19_Gas_Performance_And_Efficient_Contracts.md)**.
 
----
-
 ## 1. Concepts
 
 ### 1. Decidability: gas upper bounds as a language goal
@@ -90,8 +88,6 @@ Hold:
 
 Default: **off** in CI unless an explicit eng policy enables it with golden artifacts and a rollback pin.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Designing for boundable gas
@@ -151,8 +147,6 @@ Never enable experimental codegen because a blog post claimed better gas without
 
 Compiler exceptions catch many footguns early; they do not catch bad ACLs or oracle choice. Venom does not make advisories irrelevant—bytecode differences can interact with known issues; inventory the pin and flags you actually deployed (**14**).
 
----
-
 ## 3. Applications and use cases
 
 | Role | Practice |
@@ -164,8 +158,6 @@ Compiler exceptions catch many footguns early; they do not catch bad ACLs or ora
 | **Security** | Treat pipeline flips as bytecode changes requiring re-test / re-verify |
 
 **Smell:** mainnet deploy scripts pass `--venom` because someone copied a local experiment flag into prod Compose.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -179,8 +171,6 @@ Compiler exceptions catch many footguns early; they do not catch bad ACLs or ora
 - Enabling Venom implies fresh tests + verify—not a silent CI flip.
 - Release notes for the pin checked for Venom/flag renames before rollout.
 - Shared EVM metering quirks still cross-checked with [Solidity](../Solidity/README.md) ops literacy when needed.
-
----
 
 ## References
 

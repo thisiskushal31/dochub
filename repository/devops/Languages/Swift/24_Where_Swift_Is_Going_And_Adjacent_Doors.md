@@ -8,8 +8,6 @@ The **compass** for this track: what **00–23** already make you fluent in, **r
 
 You came here for Swift. You should leave able to **write, test, review, and ship** scripts, packages, and Apple-platform apps — and able to say, without panic, “that next topic lives *there*, and this track already gave me the mental model I need to learn it.”
 
----
-
 ## 1. Concepts
 
 ### 1. What “all-in-one” means here
@@ -65,8 +63,6 @@ Read it **after 23** (or skim after **01** so you know the bullseye). Revisit wh
 - someone says “let’s run Swift on Android / Wasm / the server / embedded,”
 - a release note mentions language mode, macros, Observation, ownership, or concurrency defaults,
 - Evolution proposals your team cares about get accepted.
-
----
 
 ## 2. Advanced concepts — direction and richer doors
 
@@ -330,8 +326,6 @@ For each headline, write: **status of claim**, **pin you would demand**, **door 
 
 **Sane direction:** (1) door + dual-ecosystem literacy; (2) migration plan per target; (3) different pins—iOS CI stays.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | How “direction” shows up |
@@ -362,8 +356,6 @@ For each headline, write: **status of claim**, **pin you would demand**, **door 
 
 Use §2.8–2.9 as the **directory** when a teammate names an adjacent topic: one short paragraph of meaning, then the path. Door intake forms in §2.11 stop “science projects” from silently boarding the iOS release train.
 
----
-
 ## 4. Staff-level review checklist
 
 - Team can state what this track **owns** vs **hands off**, and can point to §2.9 for each handoff.
@@ -377,8 +369,6 @@ Use §2.8–2.9 as the **directory** when a teammate names an adjacent topic: on
 - Someone is assigned to read **swift.org blog + Apple release notes** on bumps.
 - Chapter **23** checklist is signed for the system you actually ship; this chapter is the **compass**, not a substitute.
 - Adjacent work (deep SwiftUI design, server product, Shell-heavy CI, other Languages tracks) has a named owner and a door from §2.9.
-
----
 
 ## References
 

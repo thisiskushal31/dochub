@@ -4,8 +4,6 @@
 
 Groovy’s grammar derives from the Java grammar but adds Groovy-specific constructs and allows certain simplifications. This topic covers comments, keywords, identifiers, packages, and imports in enough detail to read and write valid Groovy and to understand how scripts and classes are organized.
 
----
-
 ## 1. Comments
 
 **Single-line comment.** Single-line comments start with **//** and can appear at any position on the line. Everything from **//** to the end of the line is part of the comment.
@@ -55,8 +53,6 @@ class Person {
 println "Hello from the shebang line"
 ```
 
----
-
 ## 2. Keywords
 
 **Reserved keywords.** The following are reserved and cannot be used as variable, field, or method names in general: **abstract**, **assert**, **break**, **case**, **catch**, **class**, **const**, **continue**, **def**, **default**, **do**, **else**, **enum**, **extends**, **final**, **finally**, **for**, **goto**, **if**, **implements**, **import**, **instanceof**, **interface**, **native**, **new**, **null**, **non-sealed**, **package**, **public**, **protected**, **private**, **return**, **static**, **strictfp**, **super**, **switch**, **synchronized**, **this**, **threadsafe**, **throw**, **throws**, **transient**, **try**, **while**. Of these, **const**, **goto**, **strictfp**, and **threadsafe** are not currently used by the language.
@@ -80,8 +76,6 @@ this.in()
 ```
 
 **Other reserved words.** Primitive type names (**boolean**, **char**, **byte**, **short**, **int**, **long**, **float**, **double**) and the literals **null**, **true**, **false** are also reserved in the same way. The same quoted-name trick can be used for methods (e.g. **def "null"() { true }**) but is not recommended.
-
----
 
 ## 3. Identifiers
 
@@ -108,8 +102,6 @@ map."Simpson-${firstname}" = "Homer Simpson"
 assert map.'Simpson-Homer' == "Homer Simpson"
 ```
 
----
-
 ## 4. Package names
 
 Package names work as in Java. Declare the package at the top of the file before any imports or code. Code without a package declaration is in the default package.
@@ -121,8 +113,6 @@ class MyClass { }
 ```
 
 To refer to a class in another package you use its fully qualified name or an import.
-
----
 
 ## 5. Imports
 
@@ -149,13 +139,9 @@ SQLDate sqlDate = new SQLDate(1000L)
 
 **Namespace conflicts.** It is an error to have two imports that resolve to the same simple name, or to declare a type with the same name as an imported type. Inner types can shadow an imported name within their scope.
 
----
-
 ## 6. Scripts versus classes (overview)
 
 A **script** is a file whose top-level statements are compiled into a class that extends **groovy.lang.Script**: the statements are placed in a generated **run** method, and a **main** entry point is generated. A **class** file contains explicit class (or trait, etc.) definitions. A file can contain both a script body and class definitions. Topic 7 describes scripts and classes in detail, including variables, the binding, and **@Field**.
-
----
 
 ## Further reading
 

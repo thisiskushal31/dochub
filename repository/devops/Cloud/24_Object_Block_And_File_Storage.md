@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [Compute →](./18_Compute_Instances_And_Autoscaling.md) · [Secrets/KMS →](./26_Secrets_KMS_And_Encryption.md)
 
----
-
 ## Mental map
 
 ```text
@@ -13,8 +11,6 @@ File    — NFS/SMB-style shares (multi-attach / lift-and-shift)
 ```
 
 *What to notice: picking the wrong family is how databases land on object storage “because S3 is cheap.”*
-
----
 
 ## 1. Concepts
 
@@ -33,8 +29,6 @@ Encryption at rest is default on many clouds; **who holds the key** (platform vs
 **Confirm:** Is this workload object, block, or file? Where does a restore live if the region dies?
 
 Managed SQL, queues, warehouses: **recognize** names in provider chapters; engine depth → [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive). On-prem arrays: [Datacenter/Storage-Physical](../Datacenter/Storage-Physical/README.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -74,8 +68,6 @@ Managed SQL, queues, warehouses: **recognize** names in provider chapters; engin
 | No lifecycle on huge buckets | Bill shock ([20](./20_FinOps_And_Cost_Controls.md)) |
 | DB on object “filesystem” fuse hacks | Corruption / latency |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -94,8 +86,6 @@ Managed SQL, queues, warehouses: **recognize** names in provider chapters; engin
 - Cost tags on large buckets/volumes  
 
 **Good:** private buckets, CMK where required, restore drill. **Bad:** public-read “for the demo” left on.
-
----
 
 ## References
 

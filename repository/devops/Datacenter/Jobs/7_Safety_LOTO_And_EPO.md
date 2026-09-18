@@ -2,15 +2,11 @@
 
 [← Previous](./6_Ticket_Taxonomy_And_Escalation.md) · [README](./README.md) · [Next: Capacity conversation →](./8_Capacity_Conversation.md)
 
----
-
 ## 1. Concepts
 
 **LOTO** (lockout/tagout) isolates energy so people can work. **EPO** sheds defined loads in emergencies. Global jobs; **local code is a variant**—never import another country’s informal habits.
 
 Deep device: [Electrical/13](../Electrical/13_EPO_And_Safety_Disconnects.md). Arc flash literacy via PPE boundaries on gear.
-
----
 
 ## 2. Advanced concepts
 
@@ -31,8 +27,6 @@ Critical facilities day [3](./3_Day_In_The_Life_Critical_Facilities.md). White-s
 
 NFPA 70E (US reference), IEC-based systems elsewhere—follow site posted rules and training.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -50,8 +44,6 @@ NFPA 70E (US reference), IEC-based systems elsewhere—follow site posted rules 
 - Never joke with mushroom buttons  
 
 **Good:** trained, permitted, verified isolation. **Bad:** cowboy breakers; EPO folklore.
-
----
 
 ## References
 

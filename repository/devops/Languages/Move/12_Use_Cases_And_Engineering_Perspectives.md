@@ -50,8 +50,6 @@ Most nontrivial packages lean on the **standard library** (**`Vector`**, **`opti
 
 Use cases are **not** DevOps-only: they span **application security**, **platform reliability**, and **compliance-aware** design where applicable.
 
----
-
 ## Further reading
 
 - [Move on Aptos](https://aptos.dev/move/move-on-aptos)

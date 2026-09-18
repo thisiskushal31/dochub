@@ -8,8 +8,6 @@ How Tcl stores state: **`set`**, **`unset`**, **`append`**, **arrays**, **`globa
 
 Lists and dictionaries (structured values) are chapter **06**. Packages that *export* namespaces are chapter **10**.
 
----
-
 ## 1. Concepts
 
 ### 1. Scalars with `set`
@@ -163,8 +161,6 @@ namespace which -command hello
 | `namespace export` / `import` | Selective command sharing (packages deepen this) |
 | `namespace delete` | Removes a namespace tree |
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Tcl 9 variable resolution (read this if you migrate)
@@ -229,8 +225,6 @@ Deeper introspection is chapter **09**.
 
 `upvar 1` / `uplevel 1` = caller. `#0` = global frame. Off-by-one level bugs are classic in call-by-name helpers—write tests for nested procs.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Pattern |
@@ -241,8 +235,6 @@ Deeper introspection is chapter **09**.
 | **Ops** | Expect scripts share state via globals too freely; namespaces make long suites maintainable. |
 | **SE** | Library authors: `namespace eval`, `variable`, export lists; avoid polluting `::`. |
 
----
-
 ## Staff-level review checklist
 
 - Procs that need globals use `global` / `variable` / `namespace upvar`—not accidental locals.
@@ -251,8 +243,6 @@ Deeper introspection is chapter **09**.
 - `upvar` levels documented or tested; no magic `uplevel` strings built with `$` interpolation.
 - Namespace names are stable and prefixed (`::org::project::…`) for anything shared.
 - `unset` cleanup paths considered for long-running embeds/event loops.
-
----
 
 ## References
 

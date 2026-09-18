@@ -2,8 +2,6 @@
 
 [← Previous](./9_High_Density_And_AI_Ready_White_Space.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 Most white-space injuries and many outages come from **mundane physical failure**: trips, dropped chassis, blocked egress, cardboard in aisles, and foreign objects in airflow paths.
@@ -22,8 +20,6 @@ Most white-space injuries and many outages come from **mundane physical failure*
 ### Where “housekeeping” sits in ops
 
 Daily rounds: trash, tiles seated, doors closed, leak evidence, abandoned packaging, tools left behind.
-
----
 
 ## 2. Advanced concepts
 
@@ -50,8 +46,6 @@ Colo rules often ban cardboard and wood in cages—Smart Hands tickets can rejec
 
 PPE and LOTO details follow local regulation; aisle fire-load rules follow AHJ and landlord. The job—leave the aisle safer than you found it—is universal.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -70,8 +64,6 @@ PPE and LOTO details follow local regulation; aisle fire-load rules follow AHJ a
 - No food/drink; FOD removed  
 
 **Good:** clean sealed aisles, staged unboxing, PPE normal. **Bad:** warehouse-in-the-row; solo deadlift of a GPU server; fiber scraps on the floor.
-
----
 
 ## References
 

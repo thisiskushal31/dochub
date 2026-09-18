@@ -8,8 +8,6 @@ Systems doors beyond the single-threaded happy path: **atomics**, **inline assem
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. Atomics: shared memory with rules
@@ -92,8 +90,6 @@ fn work(io: Io) !void {
 
 Most Zig CLIs never need asm or atomics. You still need to **recognize** them—and recognize **`std.Io`**—when reading systems tools, runtimes, and embedded work.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Single-threaded builds vs atomics
@@ -126,8 +122,6 @@ SIMD (chapter **03**) and asm are both performance escapes. Measure first.
 
 No race-exploitation recipes—only pressure to keep concurrency boring.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Role |
@@ -140,8 +134,6 @@ No race-exploitation recipes—only pressure to keep concurrency boring.
 
 **Whole-engineering picture:** these doors are real—enter them with pin docs and tests, not with nostalgia.
 
----
-
 ## 4. Staff-level review checklist
 
 - Atomics have a named protocol and tests; races are not “temporary.”
@@ -149,8 +141,6 @@ No race-exploitation recipes—only pressure to keep concurrency boring.
 - Wasm/native targets in CI match what you deploy.
 - No new design depends on pre-0.11 language-async tutorials; I/O uses `std.Io` for the pin.
 - Single-threaded builds are documented when used.
-
----
 
 ## References
 

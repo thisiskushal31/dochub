@@ -28,8 +28,6 @@ let length = fetch "https://example.com" |> Async.RunSynchronously
 
 **Why this matters.** Async and task are how F# and .NET handle concurrency for I/O. Using them correctly avoids blocking and improves throughput. In DevOps and services, async HTTP calls, file I/O, and database access are common; this pattern is the standard way to express them in F#.
 
----
-
 ## Further reading
 
 - [Async Expressions (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/async-expressions)

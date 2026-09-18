@@ -2,13 +2,9 @@
 
 [← Previous](./20_Best_Practices_And_When_Not_CircleCI.md) · [README](./README.md) · [Next: YAML catalog →](./22_YAML_And_Configuration_Catalog.md)
 
----
-
 ## 1. Concepts
 
 Use this map to see **which CircleCI feature classes exist** and **where they are taught**. Plan gates and resource class tables evolve — confirm in References. Full config key encyclopedias and every orb README stay upstream.
-
----
 
 ## 2. Advanced concepts — feature inventory
 
@@ -71,13 +67,9 @@ Use this map to see **which CircleCI feature classes exist** and **where they ar
 | Every Server operator runbook version | Pin your Server 4.x docs |
 | Runner Provisioner Helm/KubeVirt encyclopedia | Runner Provisioner guide (preview) |
 
----
-
 ## 3. Applications and use cases
 
 Walk A–E: use / defer / N/A per row.
-
----
 
 ## References
 

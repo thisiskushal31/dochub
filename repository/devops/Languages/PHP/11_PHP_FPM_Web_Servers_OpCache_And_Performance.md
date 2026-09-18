@@ -6,8 +6,6 @@
 
 FPM master/worker architecture, `pm` strategies and queueing before accept, pool directives that bound latency and memory, Nginx/Apache FastCGI timeout alignment, Opcache shared memory, timestamp validation vs immutable deploys, interned strings and eviction, JIT buffer sizing and modes, realpath cache effects, and APCu pitfalls. Later chapters assume you size pools from measured RSS, not guesses.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the PHP [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -26,8 +24,6 @@ The master process spawns workers that accept FastCGI requests from the web serv
 
 Listen backlog: when all workers are busy, new connections queue at the socket; sustained full queues manifest as elevated latency and upstream timeouts—scale workers, speed app, or shed load.
 
----
-
 ### 2. nginx FastCGI (pattern and timeouts)
 
 ```nginx
@@ -42,8 +38,6 @@ location ~ \.php$ {
 Align `fastcgi_read_timeout`, PHP `max_execution_time`, FPM `request_terminate_timeout`, and load balancer idle timeouts so the layer you expect terminates first—otherwise PHP may be SIGKILL’d while a DB transaction continues.
 
 **Apache `proxy_fcgi`:** Same invariants as nginx: `ProxyPassMatch` or `SetHandler` with `unix:` or `tcp:` upstream, `timeout` on the proxy side, and correct `SCRIPT_FILENAME` behavior. Mixed `mod_php` + `proxy_fcgi` estates confuse which `.htaccess` rules apply—document per vhost.
-
----
 
 ### 3. Opcache deep slice
 
@@ -65,19 +59,13 @@ opcache.validate_timestamps=0
 opcache.revalidate_freq=0
 ```
 
----
-
 ### 4. JIT interaction
 
 JIT shares Opcache’s infrastructure (`opcache.jit`, `opcache.jit_buffer_size`). Defaults evolved across PHP 8.x minors—benchmark your workload; web CRUD often gains little; numeric kernels may gain more.
 
----
-
 ### 5. Realpath cache
 
 `realpath_cache_size` and TTL reduce `stat` storms on deep include trees and NFS—tune when profilers show excessive filesystem metadata calls.
-
----
 
 ## 2. Advanced concepts
 
@@ -97,8 +85,6 @@ JIT shares Opcache’s infrastructure (`opcache.jit`, `opcache.jit_buffer_size`)
 
 **`request_slowlog_trace_depth`:** Tune stack depth in slowlogs—too shallow hides ORM frames; too deep logs sensitive argument regions unless scrubbed.
 
----
-
 ## 3. Applications and use cases
 
 - **Capacity:** Measure peak RSS per worker with realistic traffic; set `max_children ≤ (RAM - OS - DB - cache) / RSS_per_worker`.
@@ -106,8 +92,6 @@ JIT shares Opcache’s infrastructure (`opcache.jit`, `opcache.jit_buffer_size`)
 - **Incidents:** Correlate listen queue overflows, 502 spikes, and DB connection exhaustion—they share root causes.
 - **Security:** Strip `X-Powered-By`; disable `expose_php`; Opcache does not mitigate RCE.
 - **Cost:** After PHP minor upgrades, re-measure memory—JIT buffers and engine changes shift profiles.
-
----
 
 ## References
 

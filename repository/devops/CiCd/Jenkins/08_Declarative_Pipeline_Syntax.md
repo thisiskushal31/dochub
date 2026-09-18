@@ -2,8 +2,6 @@
 
 [← Previous](./07_First_Pipeline_And_UI.md) · [README](./README.md) · [Next: Scripted →](./09_Scripted_Pipeline_And_CPS.md)
 
----
-
 ## 1. Concepts
 
 Declarative is the default authoring style for new Pipelines. Mental map (full reference upstream):
@@ -53,8 +51,6 @@ pipeline {
 ```
 
 Use **Snippet Generator** and **Declarative Directive Generator** in the job UI to discover step signatures for installed plugins ([07](./07_First_Pipeline_And_UI.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -118,8 +114,6 @@ Human gates and concurrency control for deploy lanes — use intentionally; long
 
 `environment { TOKEN = credentials('id') }` — never `echo` secrets; prefer masking ([12](./12_Credentials_Secrets_And_Binding.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Syntax focus |
@@ -130,8 +124,6 @@ Human gates and concurrency control for deploy lanes — use intentionally; long
 | Shared org steps | Thin Declarative calling `@Library` ([13](./13_Shared_Libraries_And_Job_DSL.md)) |
 
 **Good:** readable Declarative + library calls. **Bad:** 2,000-line Declarative with nested `script { }` everywhere (that’s Scripted in disguise — [09](./09_Scripted_Pipeline_And_CPS.md)).
-
----
 
 ## References
 

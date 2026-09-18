@@ -6,8 +6,6 @@
 
 Everyday `std` collections—**`Vec`**, **`String`**, **`HashMap`**—and the **iterator** pipeline that transforms them. **Adapters** vs **consumers**, the three iteration modes (`iter` / `iter_mut` / `into_iter`), and **closures** with the `Fn` / `FnMut` / `FnOnce` trait hierarchy. This is the idiomatic core of data processing in Rust services and CLIs.
 
----
-
 ## 1. Concepts
 
 ### 1. `Vec<T>`: owned, growable arrays
@@ -81,8 +79,6 @@ Closures implement one or more of:
 
 Hierarchy: `Fn: FnMut: FnOnce`. Function pointers (`fn(i32) -> i32`) implement all three when signatures match. Generic APIs usually bound `F: FnMut(...)` for map-like callbacks, or `FnOnce` when the closure runs once (as in `unwrap_or_else`).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Fallible iteration
@@ -129,8 +125,6 @@ Beyond `Vec` / `String` / `HashMap`, staff-readable code often uses:
 
 Pick by **access pattern**, not habit. Sorting a `Vec` repeatedly is not a substitute for a `BTreeMap` when you need ordered keys continuously. Document why a non-`Vec` collection appears in a hot path.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -172,8 +166,6 @@ Pick by **access pattern**, not habit. Sorting a `Vec` repeatedly is not a subst
 - Untrusted indices and UTF-8 edges use fallible APIs.
 - Collections exposed across threads meet `Send`/`Sync` requirements (chapter 12).
 - Large inputs streamed; capacities bounded where denial-of-service matters.
-
----
 
 ## References
 

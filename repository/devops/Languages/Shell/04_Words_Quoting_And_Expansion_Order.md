@@ -6,8 +6,6 @@
 
 How a Unix shell turns a command line into **words**, why **quoting** exists, and the **order of expansions** that makes `$var`, globs, and command substitution behave the way they do. Bash and POSIX `sh` share the core model; zsh differs in places; PowerShell uses a different quoting and expansion story—sketched here so you do not paste Bash habits into `pwsh` blindly. Master this chapter and you prevent the most common injection and “it split my filename” bugs before variables and control flow deepen.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. What a “word” is
@@ -118,8 +116,6 @@ Write-Output '$name'        # literal
 ```
 
 Passing arguments to external programs still needs care (native argument marshalling), but the Bash “unquoted `$file` became two arguments” failure mode is a different language bug.
-
----
 
 ## 2. Advanced concepts
 
@@ -232,8 +228,6 @@ done
 
 Bash `shopt -s nullglob` changes unmatched-glob behavior (Bash); do not assume it under `sh`.
 
----
-
 ## 3. Applications and use cases
 
 ### CI scripts and paths with spaces
@@ -306,8 +300,6 @@ log_info() { printf '%s\n' "$*" >&2; }
 - Tests include a path containing spaces on at least one OS you support.
 - Heredocs that must stay literal use a quoted delimiter.
 - No `for f in $(ls)` patterns in new code.
-
----
 
 ## References
 

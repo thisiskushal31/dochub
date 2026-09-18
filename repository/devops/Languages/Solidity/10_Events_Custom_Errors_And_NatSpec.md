@@ -8,8 +8,6 @@ How contracts **talk outward**: **events** (logs), **custom errors** (revert dat
 
 Storage is the truth the EVM keeps. **Events** are how you tell indexers and UIs that the truth changed. **Errors** are how you tell the caller *why* you refused. **NatSpec** is the man page wallets can show a human. Three channels, three jobs.
 
----
-
 ## 1. Concepts
 
 ### 0. One function that uses all three
@@ -134,8 +132,6 @@ Wallets and explorers surface `@notice`. If you write nothing, they surface noth
 
 Do not emit `Success(true)` instead of returning. Do not revert without an error if a wallet should explain why.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. How a log is actually laid out
@@ -187,8 +183,6 @@ Wallets that only know `Error(string)` show a hex blob for custom errors unless 
 
 `@inheritdoc` pulls parent docs. If you change behavior, rewrite `@notice` — inherited lies are worse than no docs. `solc` can emit a NatSpec JSON (`userdoc` / `devdoc`) next to the ABI; that is what some explorers show. It is not enforced at runtime.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -199,8 +193,6 @@ Wallets that only know `Error(string)` show a hex blob for custom errors unless 
 | **Operations** | Monitors subscribe to events; runbooks name them |
 | **Software engineering** | NatSpec required on `external` functions in review |
 
----
-
 ## 4. Staff-level review checklist
 
 - State changes that matter off-chain have **events**.
@@ -209,8 +201,6 @@ Wallets that only know `Error(string)` show a hex blob for custom errors unless 
 - `external`/`public` functions have `@notice` at minimum.
 - No PII or secrets in events.
 - Tests assert events (`expectEmit`) on critical paths.
-
----
 
 ## References
 

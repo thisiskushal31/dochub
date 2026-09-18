@@ -2,8 +2,6 @@
 
 [← Previous](./13_Dynamic_Pipelines_And_Advanced_YAML.md) · [README](./README.md) · [Next: Security →](./15_Security_Access_And_Workspace_Hardening.md)
 
----
-
 ## 1. Concepts
 
 Bitbucket shines next to **Jira**:
@@ -16,8 +14,6 @@ Bitbucket shines next to **Jira**:
 | Atlassian Access / Guard | SSO, enforced 2FA, org policies |
 
 Bitbucket is **not** Jira — Boards-like planning lives in Jira Software. Do not reinvent a second backlog inside Bitbucket issues unless you intentionally choose Cloud’s lighter issue tracker.
-
----
 
 ## 2. Advanced concepts
 
@@ -37,8 +33,6 @@ Apps extend Bitbucket (security scanners, chatops). Govern installs like Azure D
 
 Integrations differ (Application Links). Plan IdP and Jira DC pairing separately ([17](./17_Best_Practices_And_Cloud_Vs_Data_Center.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Team | Pattern |
@@ -47,8 +41,6 @@ Integrations differ (Application Links). Plan IdP and Jira DC pairing separately
 | Platform | Access-enforced SSO; limited app installs |
 
 **Good:** issue key on every production-bound PR. **Bad:** Jira and Bitbucket users with no mapping.
-
----
 
 ## References
 

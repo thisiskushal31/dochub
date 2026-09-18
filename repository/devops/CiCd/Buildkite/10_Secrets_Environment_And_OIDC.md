@@ -2,8 +2,6 @@
 
 [← Previous](./09_Plugins_Artifacts_Cache_And_Annotations.md) · [README](./README.md) · [Next: Dynamic pipelines →](./11_Dynamic_Pipelines_And_Pipeline_Upload.md)
 
----
-
 ## 1. Concepts
 
 Pipelines need credentials for registries, clouds, and deploy targets. Buildkite documents several patterns:
@@ -16,8 +14,6 @@ Pipelines need credentials for registries, clouds, and deploy targets. Buildkite
 | **Pipeline env vars** | Convenient; watch precedence and leakage in logs |
 
 Environment variables can be set in many layers — learn **precedence** so a UI var does not silently override agent policy.
-
----
 
 ## 2. Advanced concepts
 
@@ -33,8 +29,6 @@ Don’t `echo` secrets; don’t put prod credentials on PR pipelines from forks;
 
 Agent hooks can restrict which pipelines may run deploy commands — pair with dedicated deploy pipelines ([12](./12_Deployments_And_Environments.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -44,8 +38,6 @@ Agent hooks can restrict which pipelines may run deploy commands — pair with d
 | Open-source PRs | No prod secrets on those agents |
 
 **Good:** short-lived federation. **Bad:** org-wide AWS key in every agent.
-
----
 
 ## References
 

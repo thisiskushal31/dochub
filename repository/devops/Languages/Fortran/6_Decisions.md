@@ -59,8 +59,6 @@ end select
 
 **Why this matters.** Clear conditionals make the intent of the code obvious and reduce bugs. In numerical code, special cases (e.g. zero denominator, negative input) are often handled with `if` or `select case` near the start of a procedure.
 
----
-
 ## Further reading
 
 - [Fortran – Decisions (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_decisions.htm)

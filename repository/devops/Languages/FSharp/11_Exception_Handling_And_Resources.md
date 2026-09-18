@@ -29,8 +29,6 @@ use stream = System.IO.File.OpenRead "file.txt"
 
 **Why this matters.** In production, unhandled exceptions can crash the process; caught exceptions should be logged and either converted to a Result or re-raised with context. Disposable resources that are not disposed can cause handle leaks and connection exhaustion. Using **use** and consistent exception handling is part of writing reliable F# and .NET code.
 
----
-
 ## Further reading
 
 - [Exception Handling (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/exception-handling/)

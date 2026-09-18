@@ -29,8 +29,6 @@ default:
 
 **Why this matters.** **select** is the glue for channel-based concurrency. Timeouts and context-based cancellation are standard patterns for APIs and services. In DevOps and tooling, you often coordinate multiple I/O operations or wait for the first of several events; **select** with **context** and timeout channels is the idiomatic way. Forgetting to handle **ctx.Done()** or to close channels when producers finish can cause goroutine leaks and stuck programs.
 
----
-
 ## Further reading
 
 - [The Go Programming Language Specification: Select statements](https://go.dev/ref/spec#Select_statements)

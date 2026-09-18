@@ -148,8 +148,6 @@ Bundled standard libraries include **Random** (random number generation), **Stat
 
 **Stylistic conventions.** Julia imposes few rules on names, but these conventions are widely followed: variable names are lowercase, with underscores only when needed for readability. Names of types and modules use capital first letter and CamelCase. Names of functions and macros are lowercase, without underscores. Functions that mutate one or more of their arguments have names ending in `!` (mutating or in-place functions).
 
----
-
 ## Further reading
 
 - [Getting Started](https://docs.julialang.org/en/v1/manual/getting-started/)

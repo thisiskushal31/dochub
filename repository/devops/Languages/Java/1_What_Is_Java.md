@@ -14,8 +14,6 @@ Java is a high-level, object-oriented programming language. When you compile Jav
 
 **Use cases.** Java is used for enterprise and web applications, Android apps, microservices, and DevOps tooling (Jenkins, Maven, Gradle, and many other JVM-based tools). Use cases from software engineering, DevOps/SRE, and security perspectives are covered in later topics in this section.
 
----
-
 ## Further reading
 
 - [TutorialsPoint Java Tutorial](https://www.tutorialspoint.com/java/index.htm)

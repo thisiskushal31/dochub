@@ -2,8 +2,6 @@
 
 [← Previous](./21_CRD_And_CLI_Catalog.md) · [README](./README.md)
 
----
-
 ## 1. Concepts — when something is red
 
 | What you see | Likely meaning | What to check |
@@ -23,8 +21,6 @@
 
 Also use the official [troubleshooting cheatsheet](https://fluxcd.io/flux/cheatsheets/troubleshooting/).
 
----
-
 ## 2. Advanced — a calm order of questions
 
 1. Is the **Source revision** the commit I think it is?  
@@ -36,8 +32,6 @@ Also use the official [troubleshooting cheatsheet](https://fluxcd.io/flux/cheats
 7. On a locked cluster, does the **ServiceAccount** have enough power?  
 
 **Undo button:** Git revert → push → reconcile (or wait for Receiver).
-
----
 
 ## 3. Applications — staff review checklist
 
@@ -57,8 +51,6 @@ Also use the official [troubleshooting cheatsheet](https://fluxcd.io/flux/cheats
 - [ ] Runbook: `flux get`, `flux logs`, Git revert  
 
 **Good:** Git is how you roll forward and back. **Bad:** hotfix only inside the cluster.
-
----
 
 ## References
 

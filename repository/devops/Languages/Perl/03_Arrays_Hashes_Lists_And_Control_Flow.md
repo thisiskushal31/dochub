@@ -6,10 +6,6 @@
 
 **Arrays** (`@foo`), **hashes** (`%bar`), **list assignment**, **slices**, **`foreach`**, **`while`**, **`map`**, **`grep`**, **`sort`**, control-flow idioms, and **failure reporting** (`die`, **`Carp`**, basic **`eval { }`** patterns). Engineering focus: **memory** and **algorithm** choices on large files; **security** focus: never **`eval`** a **string** built from untrusted input (chapter 9).
 
----
-
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -32,8 +28,6 @@ my $last = pop @nums;
 my $n = @nums;
 ```
 
----
-
 ### 2. Hashes (associative arrays)
 
 A **hash** maps string keys to scalars (values can be references). **Fat comma** `=>` is often used for readability; it quotes bareword keys on the left.
@@ -53,8 +47,6 @@ exists $cfg{ssl} or $cfg{ssl} = 1;
 
 **`delete` / `exists`:** **`delete $hash{key}`** removes the entry; **`exists`** tests key presence without creating **autovivified** structures—important before assigning into nested configs built from **untrusted** keys (chapter 7).
 
----
-
 ### 3. Slices
 
 **Array slice** — multiple indices from one array:
@@ -71,8 +63,6 @@ my @vals = @cfg{ 'host', 'port' };
 
 Slices return **lists**; context rules still apply when you assign into scalars vs arrays.
 
----
-
 ### 4. Control flow
 
 **`if` / `unless` / `else`**, **`elsif`** (note spelling). **Postfix** forms save lines but hurt **coverage** readability—pick team style.
@@ -86,8 +76,6 @@ do_something() if $ready;
 **`while` / `until`** — watch **`<>`** line input and **`$.`** (line number) in log-parsing scripts.
 
 **`given` / `when`** — experimental **`smartmatch`** territory; many teams **avoid** it for portability and predictability—use **`if`/`elsif`** chains in new code.
-
----
 
 ### 5. `map` and `grep`
 
@@ -103,8 +91,6 @@ my @lens = map { length $_ } @lines;
 
 **List::Util** (core) supplies **`first`**, **`any`**, **`all`**, **`pairgrep`**, **`shuffle`**, etc.—prefer these over hand-rolled **`grep`** / **`for`** when the intent is a single element or a boolean, so reviews see standard names.
 
----
-
 ### 6. `sort`
 
 **`sort`** defaults to **string** sort. **Numeric** sort requires an explicit block or **`sort { $a <=> $b }`**.
@@ -115,8 +101,6 @@ my @n = sort { $a <=> $b } ( 10, 2, 30 );
 
 **Locale**-aware sorting uses **`sort` with `use locale`**—be explicit when **compliance** requires language rules.
 
----
-
 ### 7. `die`, `exit`, `warn`, and `Carp`
 
 **`die`** throws an exception (unless trapped); in a **main script** it usually exits **non-zero**—pair with a clear **`$!`** or **`$@`** message for **ops** (chapter 11). **`exit N`** is explicit; document **N** in runbooks when not **0** or **1**.
@@ -124,8 +108,6 @@ my @n = sort { $a <=> $b } ( 10, 2, 30 );
 **`Carp`** (**`croak`**, **`confess`**, **`cluck`**) reports failures from a **library’s caller** perspective—prefer **`croak`** over bare **`die`** in reusable modules so stack traces point at the **call site**, not deep internals.
 
 **Exception patterns:** **`eval { ... }`** (block form) catches **`die`** into **`$@`**—idiomatic but easy to get wrong (localize **`$@`**, rethrow after cleanup). CPAN stacks often standardize on **[Try::Tiny](https://metacpan.org/pod/Try::Tiny)** or, on very new Perls, core **`try`/`catch`** where enabled—pick **one** style per repo for reviews.
-
----
 
 ## 2. Advanced concepts
 
@@ -135,16 +117,12 @@ my @n = sort { $a <=> $b } ( 10, 2, 30 );
 
 **Algorithm audits:** **`map`/`grep`** chains are clear to **Perl** natives and opaque to some **static** tools—document intent in **security**-sensitive paths.
 
----
-
 ## 3. Applications and use cases
 
 - **ETL and log aggregation:** **`map`/`grep`/`sort`** on **in-memory** lists—watch **RAM** on large files; **stream** with **`while (<>)`** (chapter 4) for **multi-GB** logs.
 - **CLI tools:** **`shift @ARGV`**, **`Getopt::Long`**-style patterns, and **`die`/`Carp`** (this chapter) for **user-facing** errors in **ops** scripts.
 - **Persistent workers:** **FCGI**/**Plack** workers (chapter 15) must not share **mutable** **global** hashes without **locking**—**race** bugs look like “random” **corruption**.
 - **Caching and serialization:** **`Storable`**/**thaw** in **cache** layers—**never** thaw **untrusted** blobs (chapter 7); **`eval` string** on **user-built** list code is **RCE** (chapter 9).
-
----
 
 ## References
 

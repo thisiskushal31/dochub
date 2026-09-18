@@ -8,8 +8,6 @@ How **VB.NET projects** become **assemblies**, how **project references** and **
 
 Broader NuGet workflows, vulnerability scanning habits, and test-project patterns live primarily in the [C# NuGet and testing](../CSharp/18_NuGet_And_Testing.md) chapter. SDK install and `dotnet` CLI basics: [C# environment setup](../CSharp/2_Environment_Setup_And_DotNet_SDK.md). This chapter is the **VB-facing assembly and dependency map**.
 
----
-
 ## 1. Concepts
 
 ### 1. Assembly = deployable unit of managed code
@@ -89,8 +87,6 @@ VB syntax for conditional compilation exists; the *decision* is product and plat
 | PackageReference / restore / tests | Overview here | [C# NuGet and testing](../CSharp/18_NuGet_And_Testing.md) |
 | Language Options (`Strict` / `Explicit`) | Earlier VB chapters | Security-adjacent discipline in ch **16** |
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Transitive dependencies and surprise surface
@@ -132,8 +128,6 @@ Staff ceiling here: prove CI runs **`dotnet test`** on the VB solution. Deeper p
 
 Exposing internals to a test assembly is common. Review smell: broad friend lists to production apps, or shipping test-friend attributes into release builds without intent. Keep friend assemblies **named and justified**.
 
----
-
 ## 3. Applications and use cases
 
 | Scenario | What “good” looks like |
@@ -145,8 +139,6 @@ Exposing internals to a test assembly is common. Review smell: broad friend list
 | Security review of a VB solution | Package inventory + strong-name policy understanding + no secrets in project |
 
 Wrong hammer: treating NuGet as a dump of blog snippets without ownership of versions or licenses.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -162,8 +154,6 @@ Wrong hammer: treating NuGet as a dump of blog snippets without ownership of ver
 - Document Framework vs modern .NET TFM honestly for ops (runtime install, binding redirects, publish mode).
 - CI runs `dotnet test` (or equivalent) for VB libraries you claim to maintain.
 - Publish mode (FDD / SCD / single-file) is documented for ops—not only “Build → Publish” folklore.
-
----
 
 ## References
 

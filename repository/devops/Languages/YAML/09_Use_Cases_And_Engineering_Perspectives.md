@@ -6,8 +6,6 @@
 
 Where YAML shows up in real estates, what “done” means by role, and **where product-specific implementation lives** (so this folder stays the format spine—not a second Kubernetes book).
 
----
-
 ## 1. Concepts
 
 ### 1. YAML is usually a guest format
@@ -49,8 +47,6 @@ Learn the format here; learn the verbs and fields there.
 
 Teams keep YAML where humans edit daily and ecosystems standardized on it. They keep JSON for interchange APIs. They keep HCL where HashiCorp tooling owns the workflow. Polyglot config estates are normal—discipline is matching format to host.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Polyglot repos
@@ -81,8 +77,6 @@ Helm `values.yaml` is unconstrained YAML until charts define expectations. Platf
 - Render-and-diff in PRs for generated YAML.
 - Explicit ownership: format questions → this track; field questions → host section.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Example |
@@ -95,8 +89,6 @@ Helm `values.yaml` is unconstrained YAML until charts define expectations. Platf
 
 **Whole-engineering picture:** YAML fluency multiplies every host skill; it does not replace them.
 
----
-
 ## 4. Staff-level review checklist
 
 - File’s host schema owner is named in the PR or path convention.
@@ -104,8 +96,6 @@ Helm `values.yaml` is unconstrained YAML until charts define expectations. Platf
 - Cross-links to Cloud-Native / CiCd / IAC are used instead of duplicating manuals here.
 - Role-specific “done” criteria are clear for the change.
 - Next-skill plan exists (chapter **11**) instead of endless syntax debates.
-
----
 
 ## References
 

@@ -21,8 +21,6 @@ groovyConsole
 
 **Relation to Java.** Groovy is designed to feel natural to Java developers. It uses multi-methods (dispatch at runtime by argument types), so the same code can behave differently from Java. **==** in Groovy is equality (**.equals**), not reference identity; use **is** or **===** for identity. Many Java idioms work as-is; topic 8 summarizes the main differences.
 
----
-
 ## Further reading
 
 - [Groovy documentation](https://groovy-lang.org/documentation.html)

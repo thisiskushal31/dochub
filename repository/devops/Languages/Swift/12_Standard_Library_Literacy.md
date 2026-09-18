@@ -8,8 +8,6 @@ Enough of the **Swift standard library** to read and write real code: **Sequence
 
 You do not need every method on `Array`. You need a picture: collections are protocols layered by capability; algorithms are vocabulary; Foundation still owns much of “talk to the OS.” Think of `Sequence` as a conveyor you can walk once, `Collection` as a shelf you can revisit by index, and `RandomAccessCollection` as a shelf with constant-time jumps.
 
----
-
 ## 1. Concepts
 
 ### 1. Numbers, strings, and optionals as stdlib citizens
@@ -161,8 +159,6 @@ print(unique.count)   // 1
 ### 7. Result and Never (literacy)
 
 `Result` carries success/failure as a value (chapter **09**). `Never` is the bottom type for functions that do not return (`fatalError`, infinite park). Seeing `Never` in signatures signals “no success path.”
-
----
 
 ## 2. Advanced concepts
 
@@ -385,8 +381,6 @@ for value in xs { print(value) }
 for (i, value) in xs.enumerated() { print(i, value) }
 ```
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -396,8 +390,6 @@ for (i, value) in xs.enumerated() { print(i, value) }
 | **Security** | Constant-time comparison for secrets is *not* `==` on strings — use platform crypto helpers |
 | **Operations** | Logging: summarize collections (`count`, prefixes), do not dump PII-heavy arrays |
 | **Software engineering** | Generic helpers constrained to `Sequence`/`Collection`; golden JSON tests for CodingKeys / strategies; Hasher review with `==` |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -413,8 +405,6 @@ for (i, value) in xs.enumerated() { print(i, value) }
 - FilePath assumptions match the toolchain pin (System package vs future stdlib); apps often stay on `URL`.
 - String work respects Unicode; byte counts use `utf8` when talking wire size.
 - No C-style index loops or `++` resurrected from old snippets.
-
----
 
 ## References
 

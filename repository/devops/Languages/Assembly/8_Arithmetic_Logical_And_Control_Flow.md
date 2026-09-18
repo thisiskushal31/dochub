@@ -4,8 +4,6 @@
 
 This topic covers **arithmetic** (INC, DEC, ADD, SUB, MUL, DIV), **logical** (AND, OR, XOR, TEST, NOT), and **control flow** (CMP, JMP, conditional jumps, loops). Same format: explanation first, then examples. See **Further reading** for sources.
 
----
-
 ## Arithmetic: INC and DEC
 
 **INC** adds 1 to the operand; **DEC** subtracts 1. Operand can be register or memory. Size can be byte, word, or doubleword.
@@ -15,8 +13,6 @@ inc  eax
 dec  byte [count]
 inc  word [bx]
 ```
-
----
 
 ## ADD and SUB
 
@@ -41,8 +37,6 @@ mov  [res], eax
 ; then sys_write to print res
 ```
 
----
-
 ## MUL and IMUL (multiplication)
 
 **MUL** — Unsigned multiply. One operand (multiplier) is given; the other (multiplicand) is implicit in AL, AX, or EAX. Product goes to AX (byte × byte), DX:AX (word × word), or EDX:EAX (dword × dword).
@@ -54,8 +48,6 @@ mov  al, 10
 mov  dl, 25
 mul  dl        ; product in AX
 ```
-
----
 
 ## DIV and IDIV (division)
 
@@ -72,8 +64,6 @@ div  bl        ; quotient in AL, remainder in AH
 add  al, '0'
 mov  [res], al
 ```
-
----
 
 ## Logical: AND, OR, XOR, TEST, NOT
 
@@ -110,8 +100,6 @@ jz   even_number
 not  eax
 ```
 
----
-
 ## Comparisons and conditional execution: CMP
 
 **CMP** subtracts the second operand from the first and sets flags; it does **not** store the result. Use it before conditional jumps.
@@ -123,8 +111,6 @@ cmp  edx, 10
 jle  loop_body
 ```
 
----
-
 ## Unconditional jump: JMP
 
 **JMP** transfers control to a label. No condition.
@@ -132,8 +118,6 @@ jle  loop_body
 ```asm
 jmp  target_label
 ```
-
----
 
 ## Conditional jumps (overview)
 
@@ -169,8 +153,6 @@ done:
 mov  [largest], ecx
 ```
 
----
-
 ## Loops
 
 **LOOP** decrements **ECX** (or CX in 16-bit) and jumps to the label if the result is not zero. So ECX acts as loop count.
@@ -191,8 +173,6 @@ l1:
    dec  cl
    jnz  l1
 ```
-
----
 
 ## Further reading
 

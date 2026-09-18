@@ -4,8 +4,6 @@
 
 This topic covers **file systems**, **disk scheduling** algorithms, device management, and **buffering vs spooling** — **OS-agnostic**. For the file system as seen by programs (open, read, write, links, mounting), see [File system interface](./17_File_System_Interface.md).
 
----
-
 ## 1. File systems in Operating System
 
 A **file system** is the OS layer that organizes data on **block devices** (disks, SSDs) into **files** and **directories** (or the equivalent) and provides:
@@ -23,8 +21,6 @@ A **file system** is the OS layer that organizes data on **block devices** (disk
 - **Indexed** — An index block (or multiple levels of index) holds pointers to data blocks. Good for random access; index block has fixed size (limits file size unless multi-level).
 
 Modern file systems use variants of **indexed** allocation (e.g. inodes with direct, single-indirect, double-indirect block pointers) and structures (e.g. B-trees) for directories and large files.
-
----
 
 ## 2. Disk scheduling algorithms
 
@@ -85,8 +81,6 @@ The **disk** (or SSD) has a **queue** of I/O requests (read/write at logical blo
 
 Modern systems often use a **combination** (e.g. deadline scheduler, or anticipatory scheduler) and treat SSDs differently (no seek, so FCFS or fairness-oriented).
 
----
-
 ## Device management (concepts)
 
 The OS **device management** includes:
@@ -97,8 +91,6 @@ The OS **device management** includes:
 - **Buffering / caching** — Data is often **buffered** in RAM: writes are acknowledged when they hit the buffer, then flushed to disk later; reads are satisfied from cache when possible. This reduces direct device access and smooths throughput.
 
 **Block devices** vs **character devices:** Block devices (disks) support random access in fixed-size blocks; the OS typically has a **buffer cache** or **page cache** in front of them. Character devices (terminals, keyboards, some sensors) are often stream-oriented; data is read/written in a stream.
-
----
 
 ## 4. Spooling vs Buffering
 
@@ -117,15 +109,11 @@ So: **buffer** = in-memory, short-term smoothing; **spool** = on-disk (or persis
 
 *Image: [Difference between Spooling and Buffering](https://www.geeksforgeeks.org/operating-systems/difference-between-spooling-and-buffering/) (buffering).*
 
----
-
 ## 5. RAID (storage subsystem)
 
 **RAID** (Redundant Array of Independent Disks) is a **storage architecture** that combines multiple physical disks into one or more logical units using **striping**, **mirroring**, and/or **parity**. The OS (or a RAID controller / software stack) sees the result as **block devices** and uses them for file systems and swap. RAID levels and data formats are standardized by the Storage Networking Industry Association (SNIA) in the Common RAID Disk Data Format (DDF); the numbers (0, 1, 2, …) are **identifiers**, not performance or generation metrics.
 
 **Important:** RAID protects against **hard** failures (defective sectors, drive failure) and can recover from them. It does **not** protect against **catastrophic** loss (fire, water) or **soft** errors (user error, software bugs, malware). For valuable data, RAID is one building block; it does **not** replace a **backup** plan.
-
----
 
 ### Core ideas
 
@@ -137,8 +125,6 @@ So: **buffer** = in-memory, short-term smoothing; **spool** = on-disk (or persis
 
 - **Chunk (stripe size)** — The unit of data written to each disk in a stripe. Minimum is often 4 KB; larger chunks can improve sequential I/O, smaller can help random I/O. Chunk size is defined at array creation and affects performance.
 - **Hot spare** — A spare drive attached to the array that is not used for data until a member fails. When a drive fails, the controller (or software stack) can automatically replace it with the hot spare and start a **rebuild**, improving availability without manual intervention.
-
----
 
 ### RAID 0 (striping, no redundancy)
 
@@ -156,8 +142,6 @@ So: **buffer** = in-memory, short-term smoothing; **spool** = on-disk (or persis
   Failure of either disk → entire array lost.
 ```
 
----
-
 ### RAID 1 (mirroring)
 
 **RAID 1** keeps an **exact copy** (mirror) of the data on two or more disks. No striping, no parity. The array is only as large as the **smallest** member.
@@ -174,16 +158,12 @@ So: **buffer** = in-memory, short-term smoothing; **spool** = on-disk (or persis
   One disk can fail; array stays up.
 ```
 
----
-
 ### RAID 2 (bit-level striping with Hamming code)
 
 **RAID 2** uses **bit-level** striping (not block or byte) and **Hamming code** (or similar) for **error correction**, not simple XOR parity. Disks are **synchronized** (spindles in lockstep) so that the same bit positions are under the heads at the same time. Typically only **one** read or write request is in flight at a time.
 
 - **Capacity:** A fraction of raw (e.g. 7 disks might hold 4 disks’ worth of data; the rest are ECC).
 - **Why it is obsolete:** Modern hard drives already include **built-in error correction**. The extra complexity of RAID 2’s external Hamming code adds little benefit over simpler parity-based RAID. **RAID 2 was rarely implemented and is the only original RAID level that is no longer used in practice.** It appears in curricula and historical material (e.g. Thinking Machines’ DataVault, IBM Stretch) but not in current deployments.
-
----
 
 ### RAID 3 (byte-level striping, dedicated parity disk)
 
@@ -202,8 +182,6 @@ So: **buffer** = in-memory, short-term smoothing; **spool** = on-disk (or persis
   P:   P0  P1  P2 ...
 ```
 
----
-
 ### RAID 4 (block-level striping, dedicated parity disk)
 
 **RAID 4** uses **block-level** striping (not byte) with a **single dedicated parity disk**. Each stripe has several **data blocks** (one per data disk) and **one parity block** (always on the same disk).
@@ -213,8 +191,6 @@ So: **buffer** = in-memory, short-term smoothing; **spool** = on-disk (or persis
 - **Performance:** **Random reads** can be good: a read of block A1 needs only the disk that holds A1. **Random writes** are worse: every write updates parity, so the **parity disk** is involved in every write and becomes the **bottleneck**. RAID 5 avoids this by **distributing** parity across all disks.
 - **Advantage over RAID 3:** Block-level access allows **multiple concurrent** I/O requests (e.g. read A1 from disk 0 and B2 from disk 1 at the same time). One advantage of RAID 4 is that it can be **extended online** (add disks) without full parity recomputation if new disks are zero-filled.
 - **Use:** Rare; **RAID 5** (distributed parity) is used instead in practice.
-
----
 
 ### RAID 5 (block-level striping, distributed parity)
 
@@ -234,8 +210,6 @@ So: **buffer** = in-memory, short-term smoothing; **spool** = on-disk (or persis
   One disk can fail; rebuild from remaining data + parity.
 ```
 
----
-
 ### RAID 6 (block-level striping, dual distributed parity)
 
 **RAID 6** extends RAID 5 with a **second** parity block per stripe (often called **P** and **Q**). It tolerates **two** simultaneous drive failures. Minimum **four** disks.
@@ -244,8 +218,6 @@ So: **buffer** = in-memory, short-term smoothing; **spool** = on-disk (or persis
 - **Fault tolerance:** **Two** drive failures. Important when **rebuild time** is long (large disks) and a second failure during rebuild would be catastrophic.
 - **Parity computation:** P is typically XOR (like RAID 5); Q uses a different **erasure code** (e.g. **Reed–Solomon**) so that two missing blocks can be recovered. Q therefore needs more **CPU** (or dedicated hardware). Read performance for **undamaged** data is similar to RAID 5; the extra cost shows mainly on **writes** and during **rebuild**.
 - **Use:** When **availability** and **rebuild safety** matter more than raw capacity and write speed (e.g. large SATA arrays, archival).
-
----
 
 ### Nested RAID (RAID 10, 01, 50, 60)
 
@@ -261,8 +233,6 @@ So: **buffer** = in-memory, short-term smoothing; **spool** = on-disk (or persis
   Survives one failure in Pair0 and one in Pair1.
 ```
 
----
-
 ### Comparison: levels at a glance
 
 | Level | Description | Min disks | Space efficiency | Fault tolerance |
@@ -276,8 +246,6 @@ So: **buffer** = in-memory, short-term smoothing; **spool** = on-disk (or persis
 | **RAID 6** | Block striping + dual distributed parity | 4 | 1 − 2/n | Two failures |
 | **RAID 10** | Stripe of mirrors | 4 | 1/2 | One per mirror pair |
 
----
-
 ### Performance and system implications
 
 - **Stripe size:** Choice of **stripe width** (and chunk size) affects sequential vs random performance and alignment with file system block size. Too small → more overhead; too large → poor small-I/O utilization.
@@ -285,16 +253,12 @@ So: **buffer** = in-memory, short-term smoothing; **spool** = on-disk (or persis
 - **Controller and SSDs:** With **high-speed SSDs**, the **RAID controller** or software stack can become the **bottleneck**; benchmarks show that controller capability matters as much as disk count for peak throughput.
 - **Rebuild:** After a failure, **rebuild** (reconstructing the failed member onto a spare) stresses the remaining disks and can take hours on large drives. During rebuild, a second failure in RAID 5 loses the array; RAID 6 tolerates two failures.
 
----
-
 ### How the OS sees RAID
 
 - **Hardware RAID** — A controller (card or onboard) performs RAID. The OS sees a **single block device** (e.g. `/dev/sda`). The OS does not see individual disks; the driver and firmware handle the array.
 - **Software RAID** — The **OS** (e.g. Linux **mdadm**, Windows Storage Spaces, BSD GEOM, ZFS) combines disks. The OS sees raw disks and creates a **RAID device** (e.g. `/dev/md0`) used for a file system or LVM. Same concepts (striping, mirroring, parity); the **CPU** does the work (or offload to hardware where available).
 
 From the **datacenter** perspective: servers often use **hardware RAID** for boot/system and **software RAID** or **erasure coding** (in distributed storage) for data. RAID is one layer **below** the file system and **above** (or alongside) raw disks.
-
----
 
 ## Summary
 
@@ -305,8 +269,6 @@ From the **datacenter** perspective: servers often use **hardware RAID** for boo
 - **RAID:** Storage subsystem (striping, mirroring, parity). Core concepts include **chunk (stripe size)** (min often 4 KB; affects I/O) and **hot spare** (spare drive for automatic rebuild). Levels 0–6 and nested (10, 50, 60): capacity, space efficiency, fault tolerance, and performance (e.g. small-write penalty, dedicated vs distributed parity) differ by level. RAID 2 is obsolete (built-in drive ECC); 3/4 largely superseded by 5. RAID does not replace backup. OS sees hardware RAID as one block device or software RAID (mdadm, geom, ZFS, Storage Spaces) as a logical device.
 
 This is **operating system basics**. How a particular OS implements file systems (e.g. VFS, ext4, NTFS), disk scheduling, and device drivers is covered in the [Linux](../Linux/README.md) and [Windows](../Windows/README.md) sections.
-
----
 
 ## Further reading
 

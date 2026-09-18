@@ -111,8 +111,6 @@ perl -V:version
 
 The second line prints a compact version line useful for logs and support tickets.
 
----
-
 ## Chapters (what each file is for)
 
 | # | Topic | You will be able to… |
@@ -148,8 +146,6 @@ This keeps the handbook as the primary source while references stay optional val
 Chapters **13–16** are the **deep dive** into how Perl is used as **network client**, **database client**, **HTTP application**, and **C extension** host. They follow the same **prose-first** rule: narrative and guardrails in the chapter body, **References** for upstream POD and MetaCPAN.
 
 **Explicitly not covered here:** **[Raku](https://www.raku.org/)** (a different language and toolchain). For **SQL dialects** and engine operations beyond **DBI** usage, use your engine docs and companion database material.
-
----
 
 ## References
 

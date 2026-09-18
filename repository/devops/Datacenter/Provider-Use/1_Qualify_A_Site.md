@@ -2,8 +2,6 @@
 
 [README](./README.md) · [Next: Contract capacity →](./2_Contract_Capacity.md)
 
----
-
 ## Mental map
 
 ![Site product types](../../Assets/Datacenter/Facility/site-product-types.svg)
@@ -32,8 +30,6 @@
 
 Markets research: [Markets/3](../Markets-And-Operators/3_Research_Any_Operator.md).
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes
@@ -48,8 +44,6 @@ Markets research: [Markets/3](../Markets-And-Operators/3_Research_Any_Operator.m
 ### How it connects
 
 Facility survey on-ramp [../3](../3_Facility_Power_Cooling_And_Rooms.md). Contract next ([2](./2_Contract_Capacity.md)).
-
----
 
 ## 3. Applications and use cases
 
@@ -69,8 +63,6 @@ Facility survey on-ramp [../3](../3_Facility_Power_Cooling_And_Rooms.md). Contra
 - Never sign on Tier sticker alone  
 
 **Good:** scorecard diligence. **Bad:** logo shopping; kW without cool.
-
----
 
 ## References
 

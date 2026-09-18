@@ -2,8 +2,6 @@
 
 [← Previous](./04_First_Flag_SDK_And_Toggle_Loop.md) · [README](./README.md) · [Next: Flags and variants →](./06_Feature_Flags_Variants_And_Strategy_Variants.md)
 
----
-
 ## 1. Concepts
 
 Unleash organizes work so flags are not a flat global soup.
@@ -23,8 +21,6 @@ New instances get a **Default** project. Every project needs **at least one** ac
 - Teams can own projects without sharing every flag  
 
 Open Source commonly centers on a single Default project; Enterprise unlocks multi-project organization at scale.
-
----
 
 ## 2. Advanced concepts
 
@@ -46,8 +42,6 @@ Import/export and instance sync exist for moving definitions between instances (
 
 Connected SDKs register as applications. Use that view to find orphan flags (no consumers) and stale clients on old SDK versions.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -63,8 +57,6 @@ Connected SDKs register as applications. Use that view to find orphan flags (no 
 - Project ownership named in team docs  
 
 **Good:** prod strategies stricter than dev. **Bad:** one environment named `prod` used by local laptops with a prod token.
-
----
 
 ## References
 

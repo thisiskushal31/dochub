@@ -2,8 +2,6 @@
 
 [← GitHub Actions](./README.md) · [Next: Core model →](./02_Core_Model_Workflows_Jobs_Steps_Runners.md)
 
----
-
 ## 1. Concepts
 
 If your code already lives on GitHub, **GitHub Actions** is automation that runs **when something happens in that repo** — a push, a pull request, a schedule, a button click, a call from another workflow, or an external `repository_dispatch`.
@@ -25,8 +23,6 @@ Mental model in one line: **event → workflow run → jobs on runners → steps
 ### Actions vs GitHub Apps
 
 **Actions** = workflow automation inside a repo (CI/CD, repo chores). **GitHub Apps** = long-lived integrations with webhooks, fine-grained permissions, and API identity outside a single workflow run. Use an App when you need durable bot identity across many repos; use Actions when the trigger is “this repo’s delivery loop.”
-
----
 
 ## 2. Advanced concepts
 
@@ -58,8 +54,6 @@ GitOps apply (Flux/Argo) often owns the cluster; Actions often owns **build + at
 | Policy forbids cloud CI / air-gap | On-prem CI or carefully isolated self-hosted + GHES |
 | Only need cluster sync | Flux / Argo CD |
 
----
-
 ## 3. Applications and use cases
 
 | Team | Use Actions for |
@@ -70,8 +64,6 @@ GitOps apply (Flux/Argo) often owns the cluster; Actions often owns **build + at
 | Brownfield | Importer-assisted migration, then delete drift |
 
 **Good:** GitHub is source of truth → Actions is the automation plane. **Bad:** treating Actions as a general-purpose job queue for work that never touches GitHub.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./7_PTP_Grandmaster_And_Time.md) · [README](./README.md) · [Next: Environmental sensors →](./9_Environmental_Sensors_And_PDU_Meters.md)
 
----
-
 ## 1. Concepts
 
 A **serial console server** (terminal server) aggregates RS-232/USB-serial connections from switches, PDUs, firewalls, and legacy appliances so operators get remote consoles without a crash cart visit.
@@ -15,8 +13,6 @@ Treat it as **first-class infrastructure**—not a dusty lab toy.
 Management rack; ports patched to device serial; uplink on **OOB/management** network; dual power preferred; AAA to the org IdP where supported.
 
 Related: crash carts ([White-Space/8](../White-Space/8_Crash_Cart_KVM_And_Serial_Aggregation.md)), BMC for servers ([Compute/10](../Compute/10_BMC_IPMI_And_Redfish_Deep.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -43,8 +39,6 @@ Remote hands can reseat serial cables if elevations document port maps ([White-S
 
 Cisco/OpenGear/Digi/etc. brands differ; jobs identical: aggregate, authenticate, label, monitor.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -63,8 +57,6 @@ Cisco/OpenGear/Digi/etc. brands differ; jobs identical: aggregate, authenticate,
 - Baud cheat-sheet posted  
 
 **Good:** labeled, vaulted, monitored console fabric. **Bad:** mystery RJ45 serial; console server on prod; baud roulette.
-
----
 
 ## References
 

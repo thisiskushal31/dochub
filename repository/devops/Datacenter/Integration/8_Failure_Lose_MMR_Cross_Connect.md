@@ -2,8 +2,6 @@
 
 [← Previous](./7_Failure_Lose_CRAH_Row.md) · [README](./README.md) · [Next: Reading one-line →](./9_Reading_A_One_Line_And_Elevation.md)
 
----
-
 ## 1. Concepts
 
 **Worked failure:** A meet-me cross-connect is cut, dark, or mispatched.
@@ -21,8 +19,6 @@
 
 Single XC; “diverse” in same duct; logical BGP still up briefly then blackhole; wrong ticket to app team.
 
----
-
 ## 2. Advanced concepts
 
 ### Walk order
@@ -34,8 +30,6 @@ Single XC; “diverse” in same duct; logical BGP still up briefly then blackho
 5. Apps only after path confirmed  
 
 Deep: [Fabric-Physical/5](../Fabric-Physical/5_MMR_And_Cross_Connect_Physical.md), [Provider-Use/3](../Provider-Use/3_Order_Interconnect.md), [Provider-Use/9](../Provider-Use/9_Bandwidth_And_Cross_Connect_Lifecycle.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -54,8 +48,6 @@ Deep: [Fabric-Physical/5](../Fabric-Physical/5_MMR_And_Cross_Connect_Physical.md
 - Never cutover on single untested XC  
 
 **Good:** one XC loss is an alert, not an outage. **Bad:** single strand; app restart storms.
-
----
 
 ## References
 

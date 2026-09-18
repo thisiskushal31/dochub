@@ -4,19 +4,13 @@
 
 **Elixir** is a **dynamic, functional** programming language that runs on the **BEAM** (the Erlang virtual machine). It was designed for building **scalable** and **maintainable** applications, with a focus on **concurrency**, **fault tolerance**, and **low latency**. The syntax is clear and consistent, and the language comes with a rich standard library and a build tool (Mix) and package manager (Hex) built in. Because Elixir runs on the BEAM, it reuses Erlang’s decades of work on **distributed**, **soft real-time** systems, which is why it shows up in web backends, real-time apps, embedded/IoT, and DevOps tooling.
 
----
-
 ## The BEAM and why it matters
 
 The **BEAM** (Bogdan/Björn's Erlang Abstract Machine) is the virtual machine that executes both Erlang and Elixir bytecode. It is built for **concurrency** and **reliability**: it runs many lightweight **processes** (often hundreds of thousands) with preemptive scheduling, no shared mutable state, and message passing. When a process crashes, it does not bring down the whole system; **supervisors** can restart it. The BEAM also has built-in support for **distribution**: processes can live on different nodes and communicate the same way. That is why Elixir is a natural fit for backends that need many concurrent connections (e.g. WebSockets, APIs), for systems that must tolerate failures (e.g. "let it crash" and restart), and for distributed or embedded deployments. If you come from a language with threads and shared memory, the shift to "processes and messages" is fundamental: there are no locks; isolation and copying (or reference counting for large data) replace shared state.
 
----
-
 ## Immutability and functional style
 
 In Elixir, **data is immutable**. When you "update" a list or a map, you get a **new** value; the original is unchanged. That has practical consequences: you can pass data to other functions (or other processes) without fear of it being mutated; reasoning about code is easier because values do not change behind your back; and the runtime can reuse structure when building new values (e.g. a new list can share the tail of an old one). There are no classes or objects with mutable fields; you organize code in **modules** (namespaces of functions) and **functions** that take inputs and return outputs. Side effects (I/O, sending messages) are explicit and usually happen at the edges of your logic. For application developers this means writing a lot of small, pure-ish functions and combining them; for DevOps and security it means predictable behaviour and no hidden shared state.
-
----
 
 ## Why Elixir appears in this handbook
 
@@ -30,8 +24,6 @@ Elixir is relevant across engineering roles:
 
 This section takes you from **very beginner** (no prior Elixir) through **advanced** concepts to **implementation and use cases** for these roles.
 
----
-
 ## What you get: language and ecosystem
 
 Elixir provides:
@@ -43,13 +35,9 @@ Elixir provides:
 
 The rest of this section teaches these ideas step by step so you can read, write, and operate Elixir code with confidence.
 
----
-
 ## When to choose Elixir (and when not)
 
 Choose Elixir when you need: high concurrency (many connections or tasks), fault tolerance and clean restarts, real-time or low-latency behaviour, or a single language for app and tooling. It is a strong fit for web backends (Phoenix), real-time systems, and embedded (Nerves). It is less ideal when you need heavy numeric computation (use NIFs or ports to C/Rust), when the team has no time to learn a functional style, or when the ecosystem (e.g. a specific library) is better in another language. For DevOps, even if you do not write Elixir daily, understanding it helps when deploying and debugging Phoenix or Nerves and when writing small scripts or tools on the BEAM.
-
----
 
 ## Further reading
 

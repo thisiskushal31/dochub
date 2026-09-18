@@ -10,8 +10,6 @@
 
 **Format:** Each concept is explained in text first, then illustrated with a **code block** or table where useful. Content is referenced from official or widely used sources; see **Further reading** in each topic and below.
 
----
-
 ## Topics
 
 | # | Topic | File |
@@ -31,8 +29,6 @@
 | 13 | Case studies and hands-on examples | [13_Case_Studies.md](./13_Case_Studies.md) |
 
 **Format:** Each concept is explained in text first, then illustrated with a **code block** or table. **Case studies** (topic 13) follow the same pattern: goal → approach → code → expected behavior, from Hello World to recursion, reading disassembly, and file I/O.
-
----
 
 ## Further reading
 

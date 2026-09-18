@@ -2,8 +2,6 @@
 
 [README](./README.md) · [Next: GPU interconnect →](./2_GPU_Interconnect_Ideas.md)
 
----
-
 ## Mental map
 
 ![GPU power density](../../Assets/Datacenter/Accelerators/gpu-power-density.svg)
@@ -29,8 +27,6 @@
 ### Where it sits
 
 Dense rows / AI-ready zones ([White-Space/9](../White-Space/9_High_Density_And_AI_Ready_White_Space.md)); A+B rack PDUs; often busway feeds ([Electrical/14](../Electrical/14_High_Density_48V_HVDC_And_Busbar.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -65,8 +61,6 @@ Interconnect between GPUs: [2](./2_GPU_Interconnect_Ideas.md). Host CPU/NUMA sti
 
 Same physics; liquid SKU availability differs by colo metro. Cloud GPU instances hide the tray—bare metal does not.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -85,8 +79,6 @@ Same physics; liquid SKU availability differs by colo metro. Cloud GPU instances
 - Never land GPU tray on hope and C13 whips  
 
 **Good:** matched density product, true A+B, liquid ready. **Bad:** brochure kW; single-path power; air-only for DTC tray.
-
----
 
 ## References
 

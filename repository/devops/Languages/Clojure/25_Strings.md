@@ -4,8 +4,6 @@
 
 Strings in Clojure are **Java strings**: double-quoted literals, and the usual Java string API. **str** concatenates and coerces to string; **format** builds formatted strings; **clojure.string** provides split, join, trim, replace, and more. Prefer **clojure.string** and **str** for portability and clarity.
 
----
-
 ## Literals and str
 
 String literals use double quotes. **str** takes any number of arguments, coerces each to string, and concatenates. **nil** becomes the empty string.
@@ -19,8 +17,6 @@ String literals use double quotes. **str** takes any number of arguments, coerce
 ;; => ""
 ```
 
----
-
 ## format
 
 **format** uses **java.lang.String/format** (printf-style) to build strings. The first argument is a format string; the rest are values.
@@ -31,8 +27,6 @@ String literals use double quotes. **str** takes any number of arguments, coerce
 (format "%s: %d" "count" 10)
 ;; => "count: 10"
 ```
-
----
 
 ## clojure.string
 
@@ -50,8 +44,6 @@ String literals use double quotes. **str** takes any number of arguments, coerce
 ;; => "heLLo"
 ```
 
----
-
 ## count and character access
 
 **count** returns the number of characters. **nth** or **get** index into the string (zero-based). For character-by-character processing, **seq** on a string yields a sequence of characters.
@@ -62,8 +54,6 @@ String literals use double quotes. **str** takes any number of arguments, coerce
 (nth "hello" 1)
 ;; => \e
 ```
-
----
 
 ## Further reading
 

@@ -6,8 +6,6 @@
 
 Reuse inside a document: **anchors** (`&`), **aliases** (`*`), and the common **merge key** pattern (`<<`). Powerful for DRY configs—dangerous when they hide control flow or explode memory.
 
----
-
 ## 1. Concepts
 
 ### 1. Anchors name a node
@@ -70,8 +68,6 @@ That shares one node. Merge is specifically about **combining mapping keys**.
 
 If a reviewer cannot find the anchor definition quickly, the alias is a liability. Prefer short, descriptive anchor names.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Anchors are serialization detail
@@ -111,8 +107,6 @@ Some loaders allow `<<: [*a, *b]` with defined override order among sources. If 
 
 Dumping a loaded document may **omit** anchors (inlining) or invent new anchor names. Do not require golden YAML text identity after load/dump unless your tool guarantees canonical form—compare data, not always bytes.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Reuse role |
@@ -125,8 +119,6 @@ Dumping a loaded document may **omit** anchors (inlining) or invent new anchor n
 
 **Whole-engineering picture:** anchors are a **local macro system**. Treat them with the same respect as shared libraries—visibility and blast radius.
 
----
-
 ## 4. Staff-level review checklist
 
 - Every `*` alias resolves to a defined `&` anchor in scope.
@@ -135,8 +127,6 @@ Dumping a loaded document may **omit** anchors (inlining) or invent new anchor n
 - No cyclic alias patterns.
 - Large blast-radius anchors are called out in the PR.
 - Team knows whether the loader supports merge keys as used.
-
----
 
 ## References
 

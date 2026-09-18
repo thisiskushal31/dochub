@@ -18,8 +18,6 @@ Chapter **00** got you into the VBE. Chapter **01** explained where VBA lives. T
 
 Handbook default: **Microsoft 365 Apps VBA on Windows**, every module starts with **`Option Explicit`**.
 
----
-
 ## 1. Concepts
 
 ### 1. Where code can live
@@ -112,8 +110,6 @@ Chapter **03** covers types deeply. Here, the scope rule matters:
 | `m_` or clear module-level prefixes *if* your team standard says so | Mixing three conventions in one project |
 
 Match host events’ required names (`Workbook_Open`, etc.)—those are fixed. Everything else should read like an intentional API.
-
----
 
 ## 2. Advanced concepts
 
@@ -258,8 +254,6 @@ In class modules, **`Friend`** sits between `Public` and `Private`: visible to o
 
 Do not invent event buses inside workbooks for fashion. Prefer direct calls and host events (chapter **12**).
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Modules and procedures in practice |
@@ -271,8 +265,6 @@ Do not invent event buses inside workbooks for fashion. Prefer direct calls and 
 | **Software engineering** | `Option Explicit` everywhere; explicit Public/Private; ByVal defaults for scalars; small ParamArray use. |
 
 **Whole-engineering picture:** the module boundary *is* your API. Visibility and naming are security and maintainability controls, not cosmetics.
-
----
 
 ## Staff-level review checklist
 
@@ -290,8 +282,6 @@ Do not invent event buses inside workbooks for fashion. Prefer direct calls and 
 - `Class_Initialize` / `Class_Terminate` stay thin; Terminate is not a dumping ground for UI or network work.
 - Properties use `Property Get` / `Let` / `Set` with private backing fields; no casual Public fields for mutable LOB state.
 - `Implements` / `Friend` appear only with a named design reason (or are flagged as brownfield literacy).
-
----
 
 ## References
 

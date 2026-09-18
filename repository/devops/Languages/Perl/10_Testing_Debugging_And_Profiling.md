@@ -6,10 +6,6 @@
 
 Core Perl testing workflows (TAP, `Test::More`, `prove`), debugging (`perl -d`), coverage, and profiling. The emphasis is production-like verification: same runtime, same dependencies, and realistic data when measuring behavior.
 
----
-
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -33,8 +29,6 @@ Use deterministic inputs and avoid hidden network dependencies in unit tests.
 
 **Test2 / Test::Builder:** Modern CPAN stacks often use **Test2**-based harnesses (**`Test2::V0`**, etc.) for better diagnostics and **event** control—worth standardizing in **new** repos; **`Test::More`** remains ubiquitous in **legacy** trees.
 
----
-
 ### 2. Running suites with `prove`
 
 `prove` executes TAP tests and aggregates results:
@@ -49,8 +43,6 @@ prove -j4 t/
 
 CI should pin Perl and dependency versions so test outcomes are stable across environments.
 
----
-
 ### 3. Debugging with `perl -d`
 
 The built-in debugger supports breakpoints, stepping, and variable inspection:
@@ -61,21 +53,15 @@ perl -d script.pl
 
 For production issues, reproduce locally with the same Perl version, same module tree, and representative data snapshots.
 
----
-
 ### 4. Coverage and quality gates
 
 Coverage tools (for example `Devel::Cover`) can track lines/branches/subroutines and enforce baseline thresholds for critical paths. Coverage is a signal, not a guarantee; pair it with behavior-oriented tests and edge-case fixtures.
-
----
 
 ### 5. Profiling hot paths
 
 `Devel::NYTProf` is the common profiler for statement-level timing and call costs. Profile release-like builds and realistic workloads; debug-mode assumptions can mislead optimization work.
 
 **`Devel::Cover`:** Line, branch, and condition coverage integrates with **`prove`** via **`PERL5OPT=-MDevel::Cover`** in **CI**—treat thresholds as **signals**; 100% line coverage can still miss **security** edge cases.
-
----
 
 ## 2. Advanced concepts
 
@@ -87,16 +73,12 @@ Coverage tools (for example `Devel::Cover`) can track lines/branches/subroutines
 
 **`$SIG{__DIE__}` / `$SIG{__WARN__}`:** Global handlers change **every** **`die`** / **`warn`** in the process—including inside **`eval`**, **destructors**, and **CPAN** code. They are hard to reason about under **concurrency** and often break **exception** frameworks—prefer **explicit** logging wrappers and **`Carp`** over process-wide magic except in tightly controlled **one-shot** scripts.
 
----
-
 ## 3. Applications and use cases
 
 - **CI gates:** **`prove -lr`** + **`Devel::Cover`** thresholds on **critical** **modules**—**block** merges when **regression** tests for **injection** paths are missing (advanced above).
 - **Production triage:** **`perl -d`** on a **repro** **container** with **same** **`perl -V`** as **prod**—**NYTProf** on **release** builds only, not **DEBUG** **`-DDEBUGGING`** **perl**.
 - **Flaky test hygiene:** **Parallel** **`prove -j`** requires **isolated** **temp** dirs and **no** shared **`$ENV`** **mutation**—classic **CI** **race**.
 - **Release confidence:** **Snapshot** tests for **CLI** **output**—**normalize** **locale**/paths so **pipelines** stay **green**.
-
----
 
 ## References
 

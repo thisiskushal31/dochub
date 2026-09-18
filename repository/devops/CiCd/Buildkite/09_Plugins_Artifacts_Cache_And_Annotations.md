@@ -2,8 +2,6 @@
 
 [← Previous](./08_Workflows_Depends_Matrix_Schedules_And_Blocks.md) · [README](./README.md) · [Next: Secrets →](./10_Secrets_Environment_And_OIDC.md)
 
----
-
 ## 1. Concepts
 
 | Mechanism | Job |
@@ -23,8 +21,6 @@ steps:
 
 Plugins attach under a step’s `plugins:` key — pin versions like other supply-chain inputs ([CiCd/6](../6_Supply_Chain_And_Signing.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### Artifacts vs registries
@@ -39,8 +35,6 @@ Self-hosted: you own cache validity. Hosted: use documented cache volumes where 
 
 Use for deploy summaries, test links, failure context — not for secrets.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -50,8 +44,6 @@ Use for deploy summaries, test links, failure context — not for secrets.
 | Explain deploy | annotation after success |
 
 **Good:** small artifacts. **Bad:** upload `node_modules` every build.
-
----
 
 ## References
 

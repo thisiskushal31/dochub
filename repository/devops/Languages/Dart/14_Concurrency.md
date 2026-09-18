@@ -4,13 +4,9 @@
 
 Real programs wait for **I/O** (network, disk, user input) and sometimes need **parallel** work (e.g. heavy computation without freezing the UI). Dart supports this with **asynchronous** APIs (**Futures**, **Streams**) and **isolates**. This topic explains **why** async exists, **when** to use **async/await**, **Futures**, **Streams**, and **isolates**, and how to avoid common mistakes—so you can write responsive apps and servers from beginner to advanced level.
 
----
-
 ## Why asynchronous code?
 
 If you call a **blocking** function (e.g. “read from the network”), the **entire** program waits until it finishes. In a **single-threaded** environment like Dart’s main isolate, that means the UI freezes or the server cannot handle other requests. **Asynchronous** APIs instead return immediately with a **Future** (or similar) and do the work “in the background”; you **await** the result when you need it. The thread is not blocked, so other code can run (e.g. handling events or other requests). So: use **async** when you have **I/O** or **delayed** work so your program stays responsive.
-
----
 
 ## Async and await (the basics)
 
@@ -31,8 +27,6 @@ void main() async {
 
 **Errors:** Use **try/catch/finally** around **await** to handle failures (e.g. network errors, timeouts). If you do not catch, the error propagates to the caller’s Future and can terminate the isolate if unhandled.
 
----
-
 ## Futures in depth
 
 A **`Future<T>`** represents a value (or error) that will be available **later**. You get Futures from: **async** functions, **`Future.value()`**, **`Future.error()`**, **`Future.delayed()`**, or library APIs (e.g. **`http.get()`**). You can **chain** work with **`.then()`**, **`.catchError()`**, **`.whenComplete()`**, but for readability **async/await** is usually better.
@@ -45,8 +39,6 @@ Future<int> fetchCount() async {
 ```
 
 **When to use:** Use **Futures** for **single** results (one request → one response). Use **async/await** to compose multiple async steps in order. For **multiple** values over time, use **Streams** (see below).
-
----
 
 ## Streams in depth
 
@@ -61,8 +53,6 @@ Future<void> listenToStream(Stream<int> stream) async {
 ```
 
 **When to use:** Use **Streams** when you have **multiple** values over time or **continuous** data (e.g. logs, sensor data, event buses). Use **Futures** for a single delayed value. Creating and transforming streams (**StreamController**, **async\*** generators) is covered in the core libraries and async tutorials.
-
----
 
 ## Isolates (parallelism without shared memory)
 
@@ -85,8 +75,6 @@ void main() async {
 
 **When to use isolates:** Use them for **CPU-bound** work (parsing, image processing, crypto) or when you must keep the **main** isolate free for UI or request handling. For **I/O-bound** work (network, disk), **async/await** and **Futures** are usually enough; isolates do not add much and add complexity (message passing, serialization).
 
----
-
 ## Concurrency model: quick reference
 
 | Need | Use |
@@ -96,8 +84,6 @@ void main() async {
 | Heavy computation or use multiple cores | **Isolates** + **SendPort**/ **ReceivePort** |
 | Don’t block the main thread | **async** for I/O; **isolates** for CPU |
 
----
-
 ## Common pitfalls
 
 - **Forgetting `async`:** If you use **`await`** inside a function, that function must be **`async`**. Otherwise you get a compile error.
@@ -105,15 +91,11 @@ void main() async {
 - **Blocking in the main isolate:** Do not run long **synchronous** loops or heavy computation on the main isolate in a UI or server app; use an **isolate** for that.
 - **Mixing sync and async:** Functions that return **Future** should not block. If you have sync work, do it before or after **await**, or offload to an isolate.
 
----
-
 ## Implementation note (by role)
 
 - **App/Flutter:** Use **async/await** for API calls, file I/O, and timers. Use **Streams** for WebSockets or reactive state. Use **isolates** for heavy parsing or image work so the UI thread stays responsive.
 - **Server/CLI:** Use **async/await** for HTTP and database I/O. Use **Streams** for request bodies or log processing. Use **isolates** for CPU-heavy handlers if needed.
 - **DevOps:** CI scripts that run Dart typically use **async** when calling Dart tools or APIs; ensure scripts **await** completion before exiting or making decisions.
-
----
 
 ## Further reading
 

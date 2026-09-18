@@ -45,8 +45,6 @@ tests = testGroup "Properties"
   ]
 ```
 
----
-
 ## Further reading
 
 - [How to Write a Haskell Program – Testing](https://wiki.haskell.org/How_to_write_a_Haskell_program)

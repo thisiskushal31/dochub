@@ -4,8 +4,6 @@
 
 Recursion in Clojure is either **natural recursion** (a function calling itself) or **tail recursion** via **loop** and **recur**. **recur** must appear in **tail position** (as the last evaluated form) so the compiler can replace the call with a jump and avoid stack growth. Use **recur** for iterative loops and **loop** when you need a recursion point with bindings.
 
----
-
 ## loop and recur
 
 **loop** binds locals like **let** and defines a recursion point. **recur** jumps back to that **loop** (or to the enclosing **fn**) with new argument values. The JVM does not optimize general tail calls, so **recur** is the way to write constant-space loops.
@@ -19,8 +17,6 @@ Recursion in Clojure is either **natural recursion** (a function calling itself)
 
 **recur** must be in tail position: the last expression evaluated in that branch. You cannot nest **recur** inside other forms (e.g. inside **if** only in the branch that is the tail).
 
----
-
 ## Tail-recursive factorial
 
 A typical pattern is to accumulate a result and pass it through **recur** so the recursive call is in tail position.
@@ -33,8 +29,6 @@ A typical pattern is to accumulate a result and pass it through **recur** so the
 ;; => 120
 ```
 
----
-
 ## Function recursion with recur
 
 Inside a **fn** or **defn**, **recur** jumps back to the function with new arguments. The arity must match. Use this for recursive functions that would otherwise blow the stack.
@@ -45,8 +39,6 @@ Inside a **fn** or **defn**, **recur** jumps back to the function with new argum
     (println n)
     (recur (dec n))))
 ```
-
----
 
 ## Further reading
 

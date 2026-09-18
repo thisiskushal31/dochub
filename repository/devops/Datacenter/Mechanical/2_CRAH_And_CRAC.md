@@ -2,8 +2,6 @@
 
 [← Previous](./1_Heat_Load_And_Airflow_Path.md) · [README](./README.md) · [Next: Chillers →](./3_Chillers_Towers_And_Free_Cooling.md)
 
----
-
 ## 1. Concepts
 
 Computer-room air handlers move and condition air for IT. Two names dominate:
@@ -25,8 +23,6 @@ Perimeter of white space, gallery, or in-row; supply into cold aisle / underfloo
 - Cool (and sometimes reheat/dehumidify/humidify)  
 - Filter  
 - Alarm on fan, condensate, filter, temperature, water detection  
-
----
 
 ## 2. Advanced concepts
 
@@ -66,8 +62,6 @@ Redundancy claims need independent power and water/refrigerant paths—same inde
 
 DX vs chilled water mix differs by climate and hall size. Setpoint culture differs by operator; follow site BMS, not a previous employer’s numbers.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -86,8 +80,6 @@ DX vs chilled water mix differs by climate and hall size. Setpoint culture diffe
 - Never block return paths with storage boxes  
 
 **Good:** group control, clean filters, proven N+1. **Bad:** units fighting; unknown serving map; mechanical only on utility.
-
----
 
 ## References
 

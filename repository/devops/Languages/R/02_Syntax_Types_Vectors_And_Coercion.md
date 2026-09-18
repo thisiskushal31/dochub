@@ -6,8 +6,6 @@
 
 R’s **atomic vector** substrate: how almost everything you manipulate is a vector, how **implicit coercion** follows a predictable hierarchy until it surprises you at scale, how **recycling** silently reshapes computations, how **`NA`** interacts with logic (three-valued logic), and how **integer versus double** matters for IDs, joins, and equality. This chapter exists because many production bugs are not “wrong formulas” but **wrong types** and **wrong assumptions about missingness**.
 
----
-
 ## 1. Concepts
 
 ### 1. Atomic types and storage modes
@@ -36,8 +34,6 @@ Almost all arithmetic is elementwise. If two vectors differ in length, R **recyc
 
 Factors are **integer codes plus levels**. They carry modeling semantics (baseline level, ordering) and are a common source of “my levels changed after a join” bugs. Modern practice often stores raw character in data engineering stages and only **casts to factor** at modeling boundaries—whatever your policy, **encode it**, do not improvise per analyst.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Recycling rules and why warnings are not enough
@@ -63,8 +59,6 @@ Never rely on `==` for computed doubles unless you know the algebra. Use **all.e
 ### 6. `match()`, `%in%`, and `merge()` semantics depend on type stability
 
 Join keys must be **compatible types**; unintended coercion can yield **no matches** or **spurious matches**. Staff debugging often starts with `str()`, `sapply(df, class)`, and duplicates checks.
-
----
 
 ## 3. Applications and use cases
 
@@ -92,8 +86,6 @@ safe_ok <- !is.na(ok) & ok
 - Recycling cannot occur unintentionally (explicit lengths or strict CI warning policy).
 - IDs and join keys have a documented representation (**character vs integer** rules).
 - Floating-point comparisons follow a written tolerance or integer-money policy.
-
----
 
 ## References
 

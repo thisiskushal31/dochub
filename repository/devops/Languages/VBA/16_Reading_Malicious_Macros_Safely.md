@@ -10,8 +10,6 @@
 
 Pair with **11–14** (surfaces) and especially **15** (policy controls).
 
----
-
 ## 1. Concepts
 
 ### 1. The non-negotiable workflow rule
@@ -94,8 +92,6 @@ Prefer Microsoft documentation on macro malware behavior, MotW/internet macros, 
 - Apply the same **no enable on endpoint of record** rule.
 - Deeper formula-sheet forensics belong to specialized IR playbooks—not obfuscation lessons here.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Layered inspection vs “I read the code”
@@ -134,8 +130,6 @@ Avoid pasting entire macro bodies into wide chat channels if they contain sensit
 
 Chapter **16** is written for malware, but the same eyes improve LOB PRs: auto-open complexity, Shell/CreateObject/Declare, and “Enable Content” UX that trains users badly. Security and SE share a checklist vocabulary with **15**.
 
----
-
 ## 3. Applications and use cases
 
 ### Application
@@ -168,8 +162,6 @@ Chapter **16** is written for malware, but the same eyes improve LOB PRs: auto-o
 | Ops | Sandbox capacity; clear ticket path |
 | Security | Indicators → detections; users taught to report |
 
----
-
 ## Staff-level review checklist
 
 - Suspicious Office files are **not** macro-enabled on the endpoint of record.
@@ -182,8 +174,6 @@ Chapter **16** is written for malware, but the same eyes improve LOB PRs: auto-o
 - No obfuscation, phishing, or bypass how-tos appear in team notes derived from this chapter.
 - Evidence hashes and handling steps are recorded; wide-chat pastes avoided when sensitive.
 - LOB reviews reuse the same high-signal API checklist as malware triage.
-
----
 
 ## References
 

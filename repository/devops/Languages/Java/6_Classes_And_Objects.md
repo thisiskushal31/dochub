@@ -2,13 +2,9 @@
 
 Java is object-oriented: behavior and state are organized into classes and their instances (objects). This topic covers what classes and objects are, how to declare and use them, instance vs class (static) members, constructors (default, no-arg, parameterized, overloading), methods (signature, return, parameters, overloading, var-args, this), access modifiers and encapsulation, and source-file and declaration rules so you can read and write Java code with precision.
 
----
-
 ## Class and object in brief
 
 A **class** is a type and a blueprint: it defines fields (data) and methods (behavior). A class does not consume memory for its definition; only when you create an **object** (an instance of that class) is memory allocated for that instance’s fields. An **object** is a value of a reference type: it has identity (you can have multiple distinct instances), state (values of its fields), and behavior (methods that operate on that state). Objects are created with `new` and live on the heap; variables hold references to them.
-
----
 
 ## What a class contains
 
@@ -42,8 +38,6 @@ class Dog {
 }
 ```
 
----
-
 ## Declaring and creating objects
 
 Object creation has three conceptual steps: **declaration** (a variable of the class type), **instantiation** (`new`), and **initialization** (a constructor call). The variable holds a reference; the object lives on the heap.
@@ -59,8 +53,6 @@ obj.printDetails();
 ```
 
 A superclass reference can hold a subclass object (e.g. `Animal a = new Dog();`). The compile-time type of `a` is Animal, so only Animal’s members are visible to the compiler; at run time, overridden methods execute the subclass version (polymorphism).
-
----
 
 ## Accessing instance members
 
@@ -89,8 +81,6 @@ public class Puppy {
 }
 ```
 
----
-
 ## Class attributes (fields): declaration, access, modification
 
 Fields are declared with optional modifier, type, and name; they can be initialized at declaration. Access: `objectRef.attributeName` from outside (if visible), or by name (or `this.name`) inside the class. To make a field read-only after construction, declare it `final`; it must be assigned exactly once (in declaration or in every constructor). A `final` field cannot be reassigned; the compiler will report an error if you try. A **blank final** is a final field not initialized at declaration; the compiler then requires that every constructor (and every path through it) assign that field exactly once before any use. This is useful when the value depends on constructor parameters. Final instance fields are useful for immutable objects and for safe publication in concurrent code (once the constructor finishes, the field is visible to other threads without additional synchronization for that reference).
@@ -104,8 +94,6 @@ class Dog {
 }
 // obj.name = "other";  // compile error: final field
 ```
-
----
 
 ## Constructors: purpose and rules
 
@@ -121,8 +109,6 @@ public static void main(String[] args) {
     Main obj_x = new Main();  // constructor runs
 }
 ```
-
----
 
 ## Types of constructors
 
@@ -155,8 +141,6 @@ Student std2 = new Student("Jordan");
 Student std3 = new Student("Paxton", 25);
 ```
 
----
-
 ## Methods: signature, body, return, parameters
 
 A method has a signature: name plus the ordered list of parameter types. Return type and throws clause are not part of the signature but must be consistent for overriding. Method declaration: modifiers, return type, name, parameter list, optional `throws`, and body (or semicolon for abstract). Parameters are passed **by value**: the method receives a copy of the primitive or a copy of the reference. Reassigning the parameter (e.g. `param = new Foo()`) does not change the caller’s variable. For reference types, the copy still points to the same object, so mutating that object (e.g. calling a method that changes its state, or assigning to a field) is visible to the caller. So “Java is pass-by-value” means the reference itself is copied, not that the object is copied. There is no pass-by-reference for variables (you cannot write a method that reassigns the caller’s reference or primitive variable).
@@ -174,8 +158,6 @@ int c = minFunction(a, b);
 
 Void methods are called for their side effects; the call is a statement. Methods that return a value can be used in expressions or assigned.
 
----
-
 ## Method overloading
 
 Overloading is multiple methods in the same class with the same name but different parameter lists (number or types). The compiler selects the method by the arguments at the call site. Return type alone does not distinguish overloads; you cannot have two methods that differ only by return type. Overloading is resolved at **compile time** (static polymorphism): the chosen overload is determined by the **declared types** of the arguments, not their run-time types. The compiler picks the most specific applicable overload (the one whose parameter types are the most specific subtypes of the argument types). If there is no single most specific method (ambiguity), the call is a compile error—e.g. `m(null)` when both `m(String s)` and `m(Integer i)` exist is ambiguous. Widening (e.g. int to long) and boxing (int to Integer) can make overload resolution non-obvious; when in doubt, use explicit casts or avoid overloading with similar parameter types.
@@ -185,8 +167,6 @@ public int addition(int x, int y) { return x + y; }
 public int addition(int x, int y, int z) { return x + y + z; }
 public double addition(double x, double y) { return x + y; }
 ```
-
----
 
 ## The this keyword
 
@@ -200,8 +180,6 @@ Student() {
     this(20);  // calls the constructor above
 }
 ```
-
----
 
 ## Var-args (variable arity)
 
@@ -218,8 +196,6 @@ public static void printMax(double... numbers) {
 printMax(34, 3, 3, 2, 56.5);
 printMax(new double[]{1, 2, 3});
 ```
-
----
 
 ## Access modifiers
 
@@ -240,8 +216,6 @@ public class Logger {
 }
 ```
 
----
-
 ## Encapsulation and data hiding
 
 Encapsulation means bundling state (fields) and behavior (methods) and controlling access. Typical approach: make fields `private` and expose them only through public (or protected) getters and setters. That gives a single place to validate or transform values, change representation later, or make fields read-only (only getters) or write-only (only setters). A fully encapsulated class has no public fields; all external access goes through methods.
@@ -261,8 +235,6 @@ public class EncapTest {
 }
 ```
 
----
-
 ## Source file and declaration rules
 
 - One **public** class per source file; the file name must match that class name (e.g. `Employee.java` for `public class Employee`).
@@ -272,19 +244,13 @@ public class EncapTest {
 
 **Initialization order (recap):** For a class that is first used: (1) static field initializers and static blocks run in order; (2) then when `new` is executed: superclass construction (recursively), then instance field initializers and instance initializer blocks in order, then the constructor body. So the full object (including superclass state) is built before the constructor body runs; that’s why you can pass `this` to another method only after the constructor has started (and the object is allocated), but you must avoid leaking `this` before the constructor finishes (other code might see half-initialized state).
 
----
-
 ## finalize (deprecated)
 
 A method with signature `protected void finalize()` was historically invoked by the garbage collector before reclaiming an object. It is deprecated and unreliable (timing and even invocation are not guaranteed). Do not use it for critical cleanup; use try-with-resources or explicit close methods instead.
 
----
-
 ## Summary
 
 Classes define types and blueprints (fields, constructors, methods); objects are instances created with `new`. Instance members belong to each object; static members belong to the class. Constructors initialize objects; they can be overloaded and can delegate via `this(...)` or `super(...)`. Methods are selected by overload at compile time; parameters are passed by value. Access modifiers and encapsulation (private fields, public getters/setters) control visibility and maintainability. Adhering to one public class per file and package/import order keeps the codebase consistent and compilable.
-
----
 
 ## Further reading
 

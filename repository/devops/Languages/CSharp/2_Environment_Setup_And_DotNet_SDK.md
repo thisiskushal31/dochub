@@ -6,8 +6,6 @@ To build and run C# programs you need the **.NET SDK**. The SDK includes the com
 
 **Why the .NET SDK?** C# source is compiled to IL and run by the .NET runtime. The SDK provides `dotnet new`, `dotnet build`, `dotnet run`, and `dotnet test` so you can scaffold, compile, run, and test from the command line. Without the SDK you cannot build or run C# projects.
 
----
-
 ## Installing the .NET SDK
 
 Install the **.NET SDK** for your operating system from the official .NET download page. Choose the **LTS** (Long Term Support) version for stability. After installation, verify:
@@ -15,8 +13,6 @@ Install the **.NET SDK** for your operating system from the official .NET downlo
 ```bash
 dotnet --version
 ```
-
----
 
 ## Creating and running a project
 
@@ -47,13 +43,9 @@ dotnet restore
 
 The entry point is the `Main` method in `Program.cs` (or the file with the top-level statements).
 
----
-
 ## Project layout
 
 A typical project has a **.csproj** file (project file), **.cs** source files, and optionally **Program.cs** as the entry. Dependencies are listed in the project file or added with `dotnet add package`. Use `dotnet new` templates for console, class library, web API, or other project types.
-
----
 
 ## Further reading
 

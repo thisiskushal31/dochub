@@ -2,8 +2,6 @@
 
 [← Previous](./05_Blue_Green_Strategy.md) · [README](./README.md) · [Next: Traffic →](./07_Traffic_Management.md)
 
----
-
 ## 1. Concepts — strategies Rollouts supports
 
 Argo Rollouts does **not** invent endless named strategies. Officially it supports **two** first-class strategies on a `Rollout`. Industry names like “rolling update” and “recreate” are handled as below.
@@ -26,8 +24,6 @@ Argo Rollouts does **not** invent endless named strategies. Officially it suppor
 | Behavior inside one binary | Feature flags — not a Rollout strategy |
 
 A Rollout has **one** strategy object: either `blueGreen` **or** `canary`, not both.
-
----
 
 ## 2. Advanced concepts — canary step types
 
@@ -173,8 +169,6 @@ Runs while steps advance; failure aborts.
 
 Mimics **Deployment rolling update** using `maxSurge` / `maxUnavailable` only — still a canary strategy object, not a third strategy name.
 
----
-
 ## 3. Applications and use cases — strategy recipes
 
 | Goal | Steps / strategy |
@@ -189,8 +183,6 @@ Mimics **Deployment rolling update** using `maxSurge` / `maxUnavailable` only �
 | Drop-in for Deployment rollingUpdate | Canary with **no** steps |
 
 **Good:** one strategy per Rollout; short step windows; abort tested. **Bad:** claiming 5% traffic with 2 pods and no trafficRouting; mixing scale/weight carelessly.
-
----
 
 ## References
 

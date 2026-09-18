@@ -48,8 +48,6 @@ data StrictPair a b = SP !a !b
 newtype Natural = MakeNatural Integer
 ```
 
----
-
 ## Further reading
 
 - [Haskell 2010 report – Chapter 4 Declarations and bindings](https://haskell.org/onlinereport/haskell2010/haskellch4.html)

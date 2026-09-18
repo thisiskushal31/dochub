@@ -2,8 +2,6 @@
 
 [← Previous](./20_Self_Managed_Admin_Literacy.md) · [README](./README.md) · [Next: Worked example →](./22_Worked_Example_CI_Build_And_Promote.md)
 
----
-
 ## 1. Concepts
 
 Extend GitLab without forking it:
@@ -18,8 +16,6 @@ Extend GitLab without forking it:
 
 CI jobs often call the API with **job tokens** (scoped) or project access tokens — prefer least privilege ([12](./12_Caching_Artifacts_And_Job_Tokens.md)).
 
----
-
 ## 2. Advanced concepts
 
 | Topic | Literacy |
@@ -31,8 +27,6 @@ CI jobs often call the API with **job tokens** (scoped) or project access tokens
 
 **Upstream-only:** full API resource encyclopedia.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -42,8 +36,6 @@ CI jobs often call the API with **job tokens** (scoped) or project access tokens
 | Compliance export | API pagination jobs |
 
 **Good:** automation uses tokens with narrow scopes. **Bad:** personal Owner PATs in shared CI variables.
-
----
 
 ## References
 

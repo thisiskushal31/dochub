@@ -4,8 +4,6 @@
 
 A closure in Groovy is an open, anonymous block of code that can take arguments, return a value, and be assigned to a variable. It may reference variables from its surrounding scope. Closures are instances of **groovy.lang.Closure** and are central to iterations, DSLs, and callbacks. This topic covers syntax, parameters, delegation (this, owner, delegate, resolveStrategy), and common patterns (currying, memoization, composition, method pointers).
 
----
-
 ## 1. Syntax and definition
 
 **Form.** A closure is **{ [closureParameters -> ] statements }**. **closureParameters** is an optional comma-separated list (typed or untyped). When parameters are present, **->** is required to separate them from the body. The body has zero or more statements.
@@ -37,8 +35,6 @@ def isOdd = { int i -> i%2 != 0 }
 assert isOdd(3) == true && isOdd.call(2) == false
 ```
 
----
-
 ## 2. Parameters
 
 **Normal parameters.** Same rules as method parameters: optional type, name, optional default value, comma-separated.
@@ -58,8 +54,6 @@ assert concat1('abc','def') == 'abcdef'
 def multiConcat = { int n, String... args -> args.join('')*n }
 assert multiConcat(2, 'abc','def') == 'abcdefabcdef'
 ```
-
----
 
 ## 3. Delegation: this, owner, delegate
 
@@ -82,8 +76,6 @@ assert upperCasedName() == 'TEAPOT'
 ```
 
 If you do not prefix with **delegate.**, Groovy still resolves **name** on the delegate when the delegation strategy says so.
-
----
 
 ## 4. Delegation strategy (resolveStrategy)
 
@@ -109,13 +101,9 @@ assert p.pretty() == 'My name is Teapot'
 
 With **DELEGATE_ONLY**, if the delegate does not have the property (or a **propertyMissing** hook), you get **MissingPropertyException**. With **DELEGATE_FIRST**, **propertyMissing** on the delegate can handle “missing” properties.
 
----
-
 ## 5. Closures in GStrings
 
 **Eager vs lazy.** **"x = ${x}"** captures the value of **x** when the GString is created. Changing **x** later does not change the GString’s string representation. For lazy evaluation use **"x = ${ -> x }"**; then each time the GString is converted to String, the closure is called and the current **x** is used. Only closures with zero or one parameter are allowed in GString placeholders.
-
----
 
 ## 6. Currying, memoization, composition
 
@@ -139,8 +127,6 @@ assert fib(25) == 75025
 
 **Composition.** **closure1 << closure2** creates a new closure that first applies **closure2** then **closure1**. **closure1 >> closure2** is the reverse. So **(plus2 << times3)(3)** is **plus2(times3(3))** (e.g. 11 if plus2 adds 2 and times3 multiplies by 3).
 
----
-
 ## 7. Method pointer operator
 
 **.&methodName** produces a closure that forwards to the given method on the receiver. Useful for passing a method where a closure is expected. Type is **Closure**; arguments are resolved at runtime (multi-methods).
@@ -152,8 +138,6 @@ assert fun() == 'EXAMPLE'
 ```
 
 In Groovy 3+, **BigInteger.&new** gives a constructor reference; **String.&toUpperCase** gives an instance method reference that takes the receiver as first argument when called.
-
----
 
 ## 8. Trampoline (stack-safe recursion)
 
@@ -169,13 +153,9 @@ factorial = factorial.trampoline()
 assert factorial(1000) != null  // large number without StackOverflowError
 ```
 
----
-
 ## 9. Why this matters for DevOps
 
 Jenkins pipeline steps (e.g. **node { }**, **stage('Build') { }**) and Gradle blocks (e.g. **dependencies { }**) take closures. The **delegate** is set by the runtime so that method calls inside the block (e.g. **implementation '...'**) resolve on the project or dependency handler. Understanding **it**, **delegate**, and **resolveStrategy** helps when writing or debugging Jenkinsfiles and **build.gradle**.
-
----
 
 ## Further reading
 

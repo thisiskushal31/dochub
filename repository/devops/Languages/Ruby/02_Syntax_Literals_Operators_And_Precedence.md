@@ -6,8 +6,6 @@
 
 How Ruby source is built from **literals**, **operators**, and **assignment**; how **truthiness** works; how **precedence** and **parentheses** change meaning; and how **symbols**, **strings**, and **percent literals** show up in real automation and DSL code. This is the vocabulary layer: without it, recipes, Vagrantfiles, and gem code look like opaque punctuation.
 
----
-
 ## 1. Concepts
 
 ### 1. Comments and readability
@@ -143,8 +141,6 @@ first, *rest = [1, 2, 3]
 
 **Safe navigation** `&.` calls a method only if the receiver is not `nil`: `user&.email`.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `===` (case equality)
@@ -187,8 +183,6 @@ Small integers and some symbols may be **immediate** (not heap objects)—do not
 
 `/pat/i` case insensitive; `/pat/m` multiline; `/pat/x` free-spacing. Complex regex on hot paths can dominate CPU—profile and simplify; consider dedicated parsers for logs.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and API contracts
@@ -230,8 +224,6 @@ end
 - Operator precedence in one-liners is obvious or parenthesized.
 - Hash rockets vs label syntax is consistent within a file.
 - Rational/complex literals are intentional, not accidental float noise.
-
----
 
 ## References
 

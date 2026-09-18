@@ -2,8 +2,6 @@
 
 [← Previous](./09_Self_Hosted_Runners_And_Groups.md) · [README](./README.md) · [Next: Actions →](./11_Actions_Marketplace_And_Pinning.md)
 
----
-
 ## 1. Concepts
 
 **Actions Runner Controller (ARC)** runs self-hosted runners as pods on **Kubernetes**, scaling with demand via **runner scale sets**.
@@ -17,8 +15,6 @@ Mental model:
 5. Pods appear for jobs and go away when idle (ephemeral posture).
 
 This chapter is **literacy**, not a Helm ops runbook. Full install/troubleshoot stay in official ARC tutorials.
-
----
 
 ## 2. Advanced concepts
 
@@ -50,8 +46,6 @@ runs-on: [self-hosted, my-arc-pool]
 
 Labels must match the scale set. Pair with runner groups for tenancy.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -63,8 +57,6 @@ Labels must match the scale set. Pair with runner groups for tenancy.
 **Good:** treat ARC as a platform product with owners. **Bad:** install once, never patch runner images or controller.
 
 **Upstream-only:** Helm values encyclopedias, every troubleshooting error code, multi-cluster federation designs.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [Load balancing →](./23_Load_Balancing_Ingress_And_TLS.md) · [Deploy shapes →](./28_Deployment_Shapes_On_Cloud.md)
 
----
-
 ## Mental map
 
 ```text
@@ -13,8 +11,6 @@ User resolver → Authoritative DNS (your zone)
 ```
 
 *What to notice: DNS is how names find entry points; CDN is a **cache and edge** in front of origin—not a replacement for app correctness.*
-
----
 
 ## 1. Concepts
 
@@ -29,8 +25,6 @@ Static site + CDN delivery jobs also live in [CiCd/17](../CiCd/17_Static_Sites_A
 **Disconfirm:** Pointing DNS at a VM public IP is **not** a platform. CDN “everything cached” does **not** fix unauthenticated APIs.
 
 **Confirm:** Who is authoritative for the zone? What is the origin? What is the TTL for cutover?
-
----
 
 ## 2. Advanced concepts
 
@@ -63,8 +57,6 @@ Static site + CDN delivery jobs also live in [CiCd/17](../CiCd/17_Static_Sites_A
 
 WAF/edge protect: [Security/WAF](../Security/WAF/README.md). TLS at LB: [23](./23_Load_Balancing_Ingress_And_TLS.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -83,8 +75,6 @@ WAF/edge protect: [Security/WAF](../Security/WAF/README.md). TLS at LB: [23](./2
 - Cutover TTL plan written  
 
 **Good:** DNS → CDN/LB → private origin. **Bad:** apex A record to one VM forever.
-
----
 
 ## References
 

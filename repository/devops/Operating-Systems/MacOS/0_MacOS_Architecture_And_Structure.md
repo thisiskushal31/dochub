@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Fundamentals](../Fundamentals/README.md). Here: **what macOS is built on**, **what language it's written in**, **how it works** (kernel, scheduling, memory), and **how it integrates with hardware** — so you understand the system at a deep level.
 
----
-
 ## What macOS is built on: Darwin and XNU
 
 **macOS** (and iOS, iPadOS, tvOS, watchOS) sits on top of **Darwin**, the open-source core operating system. **Darwin** includes the kernel, BSD userland, and core libraries; it does **not** include Apple’s proprietary GUI (Quartz, Aqua), application frameworks (Cocoa, SwiftUI), or most bundled apps. So: **Darwin** = kernel + core OS; **macOS** = Darwin + Apple’s graphics, frameworks, and apps.
@@ -20,8 +18,6 @@ So **how macOS exactly works** at the kernel level: **Mach** handles processor a
 
 **References:** [Kernel Architecture Overview (Apple)](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html), [XNU (Wikipedia)](https://en.wikipedia.org/wiki/XNU), [Darwin (Apple)](https://opensource.apple.com/).
 
----
-
 ## What language it's built on
 
 - **XNU kernel:** Primarily **C** and **C++**. The **Mach** and **BSD** code is mostly **C**; **IOKit** and many drivers are **C++**. The open-source XNU repository is approximately **C (~79%)**, **C++ (~9%)**, **Objective-C (~6%)**, plus Assembly and other languages. **IOKit** is the main C++ component (object-oriented driver API).
@@ -31,8 +27,6 @@ So **how macOS exactly works** at the kernel level: **Mach** handles processor a
 So: the **kernel** is **C and C++**; the **rest of the system** uses C, Objective-C, and Swift. When we say "how to integrate with its systems," we mean: use **Mach APIs** (e.g. for VM or IPC), **BSD/POSIX APIs** (files, network, processes), or **IOKit** (for kernel or driver work); from user space, use **system frameworks** and **syscalls** (which go through the BSD layer and down to Mach where needed).
 
 **References:** [apple-oss-distributions/xnu (GitHub)](https://github.com/apple-oss-distributions/xnu), [XNU - Wikipedia](https://en.wikipedia.org/wiki/XNU).
-
----
 
 ## Kernel extensions vs system extensions and DriverKit
 
@@ -48,7 +42,6 @@ So: the **kernel** is **C and C++**; the **rest of the system** uses C, Objectiv
 
 **References:** [System Extensions (Apple)](https://developer.apple.com/system-extensions/), [Installing System Extensions and Drivers (Apple)](https://developer.apple.com/documentation/systemextensions/installing-system-extensions-and-drivers), [FSEvents Programming Guide (Apple)](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/FSEvents_ProgGuide/TechnologyOverview/TechnologyOverview.html).
 
-
 ## How it works: preemption, memory protection, and kernel environment
 
 - **Preemptive multitasking:** The **Mach** scheduler preempts threads; the kernel assigns time slices and switches between threads. No process can monopolize the CPU without the kernel taking it back. This supports **real-time** and responsive behavior.
@@ -57,8 +50,6 @@ So: the **kernel** is **C and C++**; the **rest of the system** uses C, Objectiv
 
 **References:** [Kernel Architecture Overview (Apple)](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html).
 
----
-
 ## How integrated with hardware
 
 - **IOKit** is the main framework for **hardware integration**. Drivers are **IOKit** drivers (or legacy KEXTs): they discover devices (plug and play), handle power management, and expose device interfaces to the rest of the kernel or user space. **DriverKit** (macOS 10.15+) allows some drivers to run in **user space** with restricted IOKit APIs, improving stability and security.
@@ -66,8 +57,6 @@ So: the **kernel** is **C and C++**; the **rest of the system** uses C, Objectiv
 - **Apple Silicon (M1, M2, etc.):** The same XNU kernel runs on **ARM64**. Virtualization uses the **Hypervisor.framework**, which uses hardware **virtualization extensions**; no third-party kernel extensions are required for VMs. Security (e.g. **System Integrity Protection**, **SIP**) and **Secure Enclave** are part of the hardware–OS integration.
 
 **References:** [I/O Kit Fundamentals (Apple)](https://developer.apple.com/library/archive/documentation/DeviceDrivers/Conceptual/IOKitfundamentals/), [Hypervisor framework (Apple)](https://developer.apple.com/documentation/hypervisor).
-
----
 
 ## File system and directory layout (overview)
 
@@ -81,16 +70,12 @@ So: the **kernel** is **C and C++**; the **rest of the system** uses C, Objectiv
 
 **References:** [File System Programming Guide (Apple)](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/), [APFS (Apple)](https://developer.apple.com/documentation/foundation/file_system).
 
----
-
 ## Summary
 
 - **What it's built on:** **Darwin** (open-source core) and **XNU** (hybrid kernel: **Mach** + **BSD** + **IOKit**).
 - **What language:** Kernel = **C** and **C++** (Mach, BSD, IOKit); user space = C, **Objective-C**, **Swift**; shell = **zsh** (default).
 - **How it works:** **Preemptive** multitasking and **memory protection**; Mach handles VM and scheduling; BSD provides processes, files, network, syscalls; IOKit handles drivers and hardware.
 - **How integrated with hardware:** **IOKit** (and DriverKit) for drivers; Mach/BSD use IOKit for device I/O; **Apple Silicon** uses Hypervisor.framework for virtualization and hardware security features.
-
----
 
 ## Further reading
 

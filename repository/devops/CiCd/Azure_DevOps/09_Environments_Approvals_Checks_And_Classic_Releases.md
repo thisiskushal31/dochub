@@ -2,8 +2,6 @@
 
 [← Previous](./08_Templates_Tasks_And_Extensions.md) · [README](./README.md) · [Next: Artifacts →](./10_Artifacts_Feeds_And_Packages.md)
 
----
-
 ## 1. Concepts
 
 An **environment** is a named deployment target in Azure Pipelines (e.g. `staging`, `production`). **Deployment jobs** target environments so you get:
@@ -24,8 +22,6 @@ jobs:
 ```
 
 Align with host-neutral promotion ideas in [CiCd/8](../8_Environments_Promotion_And_Approvals.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -59,7 +55,6 @@ Do not delete classic mid-incident.
 ### Environment permissions
 
 Who can deploy vs who can manage checks — separate from pipeline edit rights ([19](./19_Security_Permissions_And_Service_Connections.md)). Authorize which pipelines may use an environment.
----
 
 ## 3. Applications and use cases
 
@@ -71,8 +66,6 @@ Who can deploy vs who can manage checks — separate from pipeline edit rights (
 | Brownfield classic UI | Keep classic; document owners; plan YAML move |
 
 **Good:** same artifact digest promoted across environments. **Bad:** rebuild for prod “to be safe.”
-
----
 
 ## References
 

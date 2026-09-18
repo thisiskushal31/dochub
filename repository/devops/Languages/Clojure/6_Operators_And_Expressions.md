@@ -4,8 +4,6 @@
 
 In Clojure there are no special infix operators; **operations are function calls**. Arithmetic, comparison, and logical operations use the same form: `(operator operand1 operand2 ...)`. The “operator” is just a function name. Expressions are evaluated from the inside out; the result of one form can be passed as an argument to another.
 
----
-
 ## Arithmetic
 
 **+**, **-**, **\***, and **/** are functions. They take one or more operands. Division of integers yields a fraction (ratio) when the result is not whole; use `quot` for integer division or cast for a float.
@@ -29,8 +27,6 @@ In Clojure there are no special infix operators; **operations are function calls
 
 **mod** returns the remainder; **rem** is remainder with sign of the dividend.
 
----
-
 ## Comparison and equality
 
 **=** tests value equality (numbers, collections, etc.). **==** is numeric equality. **&lt;**, **&lt;=**, **&gt;**, **&gt;=** compare numbers. **not=** is logical negation of `=`.
@@ -46,8 +42,6 @@ In Clojure there are no special infix operators; **operations are function calls
 ;; => true
 ```
 
----
-
 ## Logical
 
 **not** returns the logical negation of its argument (false and nil are false; anything else is true). **and** and **or** are macros: they short-circuit and return the last value they need to evaluate.
@@ -61,13 +55,9 @@ In Clojure there are no special infix operators; **operations are function calls
 ;; => true
 ```
 
----
-
 ## Bitwise
 
 **bit-and**, **bit-or**, **bit-xor**, **bit-not**, and **bit-shift-left** / **bit-shift-right** perform bitwise operations on integers.
-
----
 
 ## Expressions and nesting
 
@@ -77,8 +67,6 @@ Any form can appear as an argument to another. The inner forms are evaluated fir
 (+ (* 2 3) (/ 10 2))
 ;; => 11
 ```
-
----
 
 ## Further reading
 

@@ -8,8 +8,6 @@ Kotlin is a large language with a broad ecosystem (JVM, Android, Multiplatform, 
 
 **Why Kotlin in DevOps and engineering:** **Gradle** build scripts use the Kotlin DSL (`build.gradle.kts`); Android and many JVM projects use Kotlin. It is widely used in backend services and tooling. You will read and write Kotlin when maintaining Gradle builds, JVM stacks, and multiplatform projects. Understanding the language helps with build scripts, automation, and securing dependencies.
 
----
-
 ## How to read this section
 
 Read in **number order** for a single path: **concepts first**, then **use cases**.
@@ -20,8 +18,6 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 - **Advanced language:** Lambdas, scope functions, extension functions, builders, generics, operator overloading, coroutines, exceptions, annotations and reflection.
 - **Interop and tooling:** Java interop, Gradle and build, Android and server-side, Kotlin Multiplatform, Compose Multiplatform, testing.
 - **Use cases:** Where Kotlin appears in practice—Gradle, Android, backend, KMP—and use cases by role (software, DevOps/SRE, security). Implementation topics (23–24) cover DevOps/security and use cases by role.
-
----
 
 ## Topic index: aligned with documentation
 
@@ -36,8 +32,6 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 | **Platforms** | Android and server-side, Kotlin Multiplatform, Compose Multiplatform and testing | 20, 21, 22 |
 | **Use cases** | DevOps and security, use cases by role | 23, 24 |
 
----
-
 ## Learning path: from basics to use cases
 
 | Stage | Topics | What you'll be able to do |
@@ -50,8 +44,6 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 | **Interop and build** | 18 → 19 | Call Java from Kotlin, write and read Gradle Kotlin DSL. |
 | **Platforms** | 20 → 22 | Understand Android, server-side, KMP, and Compose Multiplatform; run tests. |
 | **Use cases** | 23 → 24 | Apply Kotlin in Gradle, Android, backend, KMP; navigate by role; consider DevOps and security. |
-
----
 
 ## Topics
 
@@ -92,8 +84,6 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 | 23 | DevOps, CI, and security | [23_DevOps_CI_And_Security.md](./23_DevOps_CI_And_Security.md) |
 | 24 | Use cases by role | [24_Use_Cases_By_Role.md](./24_Use_Cases_By_Role.md) |
 
----
-
 ## By engineering role
 
 | Role | Focus | Where to go |
@@ -103,21 +93,15 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 | **DevOps / SRE** | Gradle Kotlin DSL, build pipelines, CI for KMP/JVM | 1–3, 7, 19, then 20, 21, 23, 24. |
 | **Security** | Supply chain, dependency audit, secure builds | 19, 23, 24. |
 
----
-
 ## Scope: what's covered and what's not
 
 **Covered:** What Kotlin is, why and how to use it, and where it fits. Syntax, packages, variables, types, strings, arrays, control flow, functions, classes, inheritance, interfaces, null safety, collections, lambdas, scope functions, extension functions, builders, generics, operator overloading, coroutines, exceptions, annotations, reflection, Java interop, Gradle and build tooling, Android and server-side overview, Kotlin Multiplatform, Compose Multiplatform, testing, and use cases from Gradle, Android, backend, KMP, DevOps, and security perspectives. Further reading at the end of each file.
 
 **Not covered in depth here (by design):** Every Android or framework API, and every KMP platform detail, are only introduced or pointed to in Further reading so the section stays focused and navigable.
 
----
-
 ## Sources for this section
 
 Link inventory and scraping plan: **DevOps-Handbook-Source/Languages/scraped/kotlin/kotlin_LINKS.md**. Batches are defined there for scraping the official Kotlin docs (Language and Multiplatform) and merging into the handbook.
-
----
 
 ## Further reading
 

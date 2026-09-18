@@ -92,8 +92,6 @@ proc parsePort(raw: string): int =
 - Log failures with enough context for on-call diagnostics.
 - Prefer deterministic iterator/procedure behavior in critical workflows.
 
----
-
 ## Further reading
 
 - [Tutorial, part 1](https://nim-lang.org/docs/tut1.html)

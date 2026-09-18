@@ -2,8 +2,6 @@
 
 [README](./README.md) · [Next: Intel Xeon →](./2_CPU_Platforms_Intel_Xeon.md)
 
----
-
 ## Mental map
 
 ![Server anatomy](../../Assets/Datacenter/Compute/server-anatomy.svg)
@@ -34,8 +32,6 @@ Mounted in cabinets ([White-Space/1](../White-Space/1_Rack_Standards_And_Form_Fa
 
 OEM **generation + CPU family + board layout** (DIMM slots, PCIe risers, PSU wattage). Mixing generations without SKU discipline creates spares hell ([16](./16_Spares_SKU_Discipline.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes / selection traps
@@ -60,8 +56,6 @@ Form factor → slot budget ([13](./13_NICs_HBAs_And_Slot_Planning.md))
 
 OCP adoption varies by operator. OEM mainstream 19" remains the colo default worldwide. Match landlord cabinet depth and weight limits before PO.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -80,8 +74,6 @@ OCP adoption varies by operator. OEM mainstream 19" remains the colo default wor
 - Never force a chassis into wrong depth rack  
 
 **Good:** SKU-standard fleet, serviceable form, matched cabinet. **Bad:** one-off towers in the hall; GPU in thermally impossible 1U.
-
----
 
 ## References
 

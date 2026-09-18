@@ -8,8 +8,6 @@ The `@` vocabulary you will see in real Zig: **builtin functions**, **casting / 
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. Builtins are compiler-provided
@@ -98,8 +96,6 @@ _ = result;
 
 **Where you use it.** Protocols that must report overflow to the caller.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. You do not need every builtin
@@ -127,8 +123,6 @@ const banner = @embedFile("banner.txt");
 
 Often paired with a `build.zig` step that generates the file (chapter **12**). Great for small assets; bad for secrets.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Builtin / builtin-module role |
@@ -141,8 +135,6 @@ Often paired with a `build.zig` step that generates the file (chapter **12**). G
 
 **Whole-engineering picture:** builtins are how Zig talks to the compiler—read them like operators, not like random library calls.
 
----
-
 ## 4. Staff-level review checklist
 
 - Unknown `@` builtins were looked up for the project’s Zig pin—not guessed.
@@ -150,8 +142,6 @@ Often paired with a `build.zig` step that generates the file (chapter **12**). G
 - `builtin.target` / `is_test` / `single_threaded` branches are readable.
 - Overflow either traps (ordinary ops), wraps (`+%`), or is handled (`@addWithOverflow`)—intentionally.
 - `@setRuntimeSafety(false)` has a written reason when used.
-
----
 
 ## References
 

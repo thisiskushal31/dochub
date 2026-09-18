@@ -2,8 +2,6 @@
 
 [← Previous](./13_Includes_Components_And_CI_Catalog.md) · [README](./README.md) · [Next: Environments →](./15_Environments_Deployments_And_Release.md)
 
----
-
 ## 1. Concepts
 
 **CI/CD variables** are environment variables for jobs — config and secrets.
@@ -31,8 +29,6 @@ deploy:
     - # exchange token with cloud — follow provider how-to
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### Secrets management
@@ -48,8 +44,6 @@ deploy:
 
 Official pages cover AWS/Azure/GCP OIDC setup — cookbooks stay upstream; trust design stays here.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -59,8 +53,6 @@ Official pages cover AWS/Azure/GCP OIDC setup — cookbooks stay upstream; trust
 | Org defaults | Group variables (non-secret) + project secrets |
 
 **Good:** protected + masked + OIDC. **Bad:** long-lived cloud keys in unprotected variables on a public fork-friendly project.
-
----
 
 ## References
 

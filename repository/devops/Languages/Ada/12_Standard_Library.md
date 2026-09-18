@@ -4,8 +4,6 @@
 
 The Ada standard library provides **containers** (vectors, sets, maps), **string** handling (fixed, bounded, unbounded), **dates and times** (calendar and real-time), **file and stream I/O**, and **numerics** (elementary functions, random, complex, vectors/matrices). This topic summarizes the main packages and typical usage.
 
----
-
 ## Containers
 
 Containers are **generic** packages; you instantiate them with an index type and element type (and possibly a comparison or hashing function). **Ada.Containers.Vectors** provides dynamic arrays: **Append**, **Prepend**, **Insert**, **Delete**, element access by index, **Length**, iteration. **Ada.Containers.Doubly_Linked_Lists** and **Ada.Containers.Hashed_Sets**, **Ordered_Sets**, **Hashed_Maps**, **Ordered_Maps** provide lists and key-value or set abstractions. Indefinite containers (e.g. **Vectors** with **String** as element) use **Ada.Containers.Indefinite_*** packages.
@@ -18,8 +16,6 @@ V : Vector := 20 & 10 & 0 & 13;
 V.Append (5);
 ```
 
----
-
 ## Strings
 
 - **Fixed-length** — **String** is **array (Positive range &lt;&gt;) of Character**. Use **Ada.Strings.Fixed** for **Count**, **Index**, **Replace**, **Find_Token**, etc.
@@ -28,14 +24,10 @@ V.Append (5);
 
 **Ada.Strings.Maps** provides character sets and mappings for **Find_Token** and similar operations.
 
----
-
 ## Dates and times
 
 - **Ada.Calendar** — **Time** type, **Clock**, **Split** (into year, month, day, seconds), **Time_Of**. **Ada.Calendar.Formatting** for **Image**, **Time_Of** with components. **delay until** *Time* delays until an absolute time. **Ada.Calendar.Time_Zones** for **UTC_Time_Offset**.
 - **Ada.Real_Time** — **Time**, **Time_Span**, **Clock**, **delay** for real-time delays and timing. No calendar dates; suitable for real-time and high-resolution timing.
-
----
 
 ## Files and streams
 
@@ -44,8 +36,6 @@ V.Append (5);
 - **Direct I/O** — **Ada.Direct_IO** (generic): binary, random access by index.
 - **Stream I/O** — **Ada.Streams** and **Ada.Text_IO.Text_Streams**: read/write composite and indefinite types via streams; supports multiple types in one file.
 
----
-
 ## Numerics
 
 - **Ada.Numerics** — **Pi**, **e**.
@@ -53,8 +43,6 @@ V.Append (5);
 - **Ada.Numerics.Float_Random** — **Generator**, **Reset**, **Random** (0.0 .. 1.0). **Discrete_Random** for discrete types.
 - **Ada.Numerics.Complex_Types** — **Complex**, **Re**, **Im**, **Compose_From_Cartesian**, **Modulus**, **Argument**.
 - **Ada.Numerics.Generic_Real_Arrays** / **Generic_Complex_Arrays** — vector and matrix operations (norm, dot product, inversion, etc.) for real and complex arrays.
-
----
 
 ## Further reading
 

@@ -2,8 +2,6 @@
 
 [← Previous](./14_High_Density_48V_HVDC_And_Busbar.md) · [README](./README.md) · [Next: Harmonics →](./16_Power_Quality_And_Harmonics.md)
 
----
-
 ## 1. Concepts
 
 **Plain language:** EPMS and BMS are the **instrument panels** of the building. EPMS focuses on electricity; BMS on cooling/leaks/temps (and sometimes power too). DCIM is often the **inventory + capacity clipboard** that joins racks to those numbers. Together they feed **reports** that people use to **steer** (allow installs, call facilities, shed load).
@@ -32,8 +30,6 @@ Metering **CTs/PTs** (current/voltage sensors) at boards; UPS/generator controll
 **Disconfirm:** A green overview tile is **not** a dual-path proof. Nameplate kW in DCIM is **not** measured load.
 
 **Confirm:** Which screen tells you minutes of battery left? Which aggregate (peak vs idle) should gate a new rack?
-
----
 
 ## 2. Advanced concepts
 
@@ -68,8 +64,6 @@ If the one-line says 2N but EPMS shows both PDUs on one UPS output meter, believ
 
 Protocols and platforms differ; the job is identical: accurate meters, actionable alarms, tested escalation, preserved history for RCA.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -88,8 +82,6 @@ Protocols and platforms differ; the job is identical: accurate meters, actionabl
 - Never trust a single green overview without drill-down  
 
 **Good:** calibrated meters, clean alarm philosophy, tested pages. **Bad:** forever-inhibited points; decorative DCIM; no history.
-
----
 
 ## References
 

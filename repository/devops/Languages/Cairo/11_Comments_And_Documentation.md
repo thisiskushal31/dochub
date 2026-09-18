@@ -4,8 +4,6 @@
 
 Comments are ignored by the compiler and help readers of the code. Cairo uses line comments and supports item-level and module-level documentation comments for generating or reading docs.
 
----
-
 ## Line comments
 
 Start a comment with **//**. The rest of the line is a comment. For multiple lines, start each line with `//`.
@@ -26,8 +24,6 @@ You can put a comment at the end of a line of code:
 ```cairo
 1 + 4  // return the sum of 1 and 4
 ```
-
----
 
 ## Item-level documentation (///)
 
@@ -55,8 +51,6 @@ fn add(arg1: felt252, arg2: felt252) -> felt252 {
 }
 ```
 
----
-
 ## Module documentation (//!)
 
 Use **//!** to document the module that follows. Place these comments above the module (e.g. above `mod my_module { ... }`) to describe the module’s purpose and usage.
@@ -69,8 +63,6 @@ mod my_module {
     // ...
 }
 ```
-
----
 
 ## Further reading
 

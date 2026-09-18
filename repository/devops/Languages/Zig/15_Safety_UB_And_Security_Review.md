@@ -8,8 +8,6 @@ What Zig actually promises about safety—and what it does not. **Illegal behavi
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. Illegal behavior is real—and comes in two flavors
@@ -81,8 +79,6 @@ const user = try loadUser(id);
 
 Native binaries still leak secrets if you embed them. Pin Zig; verify official downloads per policy.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Mode policy by surface
@@ -124,8 +120,6 @@ Use sparingly.
 
 Safe modes in Zig do not sanitize C (chapter **14**). Review the combined system.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Safety role |
@@ -138,8 +132,6 @@ Safe modes in Zig do not sanitize C (chapter **14**). Review the combined system
 
 **Whole-engineering picture:** Zig safety is **mode + discipline + tests + boundary trust**—not a sticker on the README.
 
----
-
 ## 4. Staff-level review checklist
 
 - Release mode is named and justified for the component.
@@ -149,8 +141,6 @@ Safe modes in Zig do not sanitize C (chapter **14**). Review the combined system
 - Toolchain and deps are pinned and verified.
 - Tests cover failure paths for parsers and allocation failure where relevant.
 - Untrusted input paths have a testing/fuzz story appropriate to risk.
-
----
 
 ## References
 

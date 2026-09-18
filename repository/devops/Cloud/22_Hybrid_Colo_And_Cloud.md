@@ -2,8 +2,6 @@
 
 [← Previous](./21_Akamai_Linode_And_VPS_Kin.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 **Hybrid** means deliberate interfaces between landlord colo / owned halls and tenant clouds—not accidental VPN spaghetti.
@@ -15,8 +13,6 @@
 | On-ramp physical+logical | [17](./17_Private_Connectivity_And_On_Ramps.md) + Provider-Use/7 |
 | Packets/BGP | Networks-Deep-Dive |
 | App delivery | CiCd / Servers / [28](./28_Deployment_Shapes_On_Cloud.md) |
-
----
 
 ## 2. Advanced concepts
 
@@ -42,8 +38,6 @@ Colo MMR ← carriers / IX / peers
 
 Hyperscale internals stay secret ([Datacenter Jobs/12](../Datacenter/Jobs/12_Hyperscale_Ops_Honesty.md)). Document what you *do* control.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -61,8 +55,6 @@ Hyperscale internals stay secret ([Datacenter Jobs/12](../Datacenter/Jobs/12_Hyp
 - Never blur taxonomy in the design doc  
 
 **Good:** explicit hybrid interfaces. **Bad:** hope VPN; one diagram for all logos.
-
----
 
 ## References
 

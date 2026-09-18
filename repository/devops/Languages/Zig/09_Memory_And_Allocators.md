@@ -8,8 +8,6 @@ How Zig makes the **heap visible in source**: pass an allocator, allocate, free,
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. Allocators appear in signatures
@@ -114,8 +112,6 @@ test "dupe frees" {
 
 **Where you use it.** Default for unit tests that touch the heap.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Who owns a returned slice?
@@ -155,8 +151,6 @@ fn work(allocator: std.mem.Allocator) !void {
 
 Globals make embedding and tests painful.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | What you do |
@@ -169,8 +163,6 @@ Globals make embedding and tests painful.
 
 **Whole-engineering picture:** allocator parameters are compile-time documentation of heap policy.
 
----
-
 ## 4. Staff-level review checklist
 
 - Heap APIs take an allocator (or documented arena/context).
@@ -178,8 +170,6 @@ Globals make embedding and tests painful.
 - Tests use `std.testing.allocator` where practical.
 - Returned owned memory documents who frees.
 - No silent global allocators in reusable libraries.
-
----
 
 ## References
 

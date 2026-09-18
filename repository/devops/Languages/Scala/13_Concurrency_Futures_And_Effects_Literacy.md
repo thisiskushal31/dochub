@@ -6,8 +6,6 @@
 
 How **concurrency on the JVM** shows up in Scala: what an **`ExecutionContext`** is, what a **`Future`** represents, how **`map` / `flatMap` / `recover`** compose, how **failures** and **timeouts** behave, and the **blocking** pitfall that starves pools. Actor systems and effect libraries appear only as **placement literacy**—so you can read brownfield code and choose a stack deliberately—not as product manuals.
 
----
-
 ## 1. Concepts
 
 ### 1. Concurrency vs parallelism on the JVM
@@ -242,8 +240,6 @@ Stop and reuse (or stay simple) when you are about to build:
 
 `Future` + clear pools + timeouts is enough for many services. Reach for a mature ecosystem only when you need its **owned** model (actors, structured concurrency, pure effect scheduling)—and budget for hiring, debugging, and ops expertise.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Thread pools as capacity plans
@@ -365,8 +361,6 @@ def withRequestId[A](requestId: String)(body: => Future[A])(using ExecutionConte
 - **`Future.successful` / `failed`**: complete immediately on the caller thread for the value path—still need a context for later transforms.
 - **Mixing `Try` inside and failed futures outside** without a team rule → unreadable error channels.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -417,8 +411,6 @@ def handle(req: Request)(using ExecutionContext): Future[Response] =
 - Actor or effect libraries, if present, are the **one** concurrency story for that service—not layered ad hoc on raw futures everywhere.
 - `Await` appears only at intentional sync boundaries.
 - Correlation IDs (or equivalent) cross async boundaries for traces/logs.
-
----
 
 ## References
 

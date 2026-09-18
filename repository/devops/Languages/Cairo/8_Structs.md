@@ -4,8 +4,6 @@
 
 **Structs** group related data with named fields. Each field has a name and a type. Structs are more flexible than tuples because you refer to fields by name instead of position. This topic covers defining structs, creating instances, field init shorthand, and struct update syntax.
 
----
-
 ## Defining and instantiating a struct
 
 Use the `struct` keyword, then the name, then curly braces with field names and types. Create an instance by giving the struct name and key–value pairs for each field (order does not need to match the definition).
@@ -38,8 +36,6 @@ fn main() {
 
 Access fields with dot notation: `user1.email`. If the instance is mutable, you can assign to a field: `user1.email = "new@example.com";`. The whole instance must be mutable; you cannot make only some fields mutable.
 
----
-
 ## Field init shorthand
 
 When a parameter has the same name as a struct field, you can write just the name instead of `field: variable`.
@@ -49,8 +45,6 @@ fn build_user(email: ByteArray, username: ByteArray) -> User {
     User { active: true, username, email, sign_in_count: 1 }
 }
 ```
-
----
 
 ## Struct update syntax (..)
 
@@ -78,8 +72,6 @@ fn main() {
 }
 ```
 
----
-
 ## An example program using structs
 
 Structs are often used to model domain data and then passed to functions that compute over them. The following example defines a **Rectangle** with width and height, and a function that takes a snapshot of a rectangle and returns its area. The caller keeps ownership of the rectangle; the function only reads it via the snapshot.
@@ -104,8 +96,6 @@ fn main() {
 ```
 
 Converting between custom types (e.g. from one struct to another) is done by implementing the **Into** or **TryInto** trait for your type, so you can call `.into()` or `.try_into()` where conversions are needed.
-
----
 
 ## Method syntax
 
@@ -143,8 +133,6 @@ fn main() {
 
 **Associated functions** (no `self`) live in the same impl; call them with **TraitName::function_name()**, e.g. constructors like `RectangleTrait::new(width, height)` or `RectangleTrait::square(size)`.
 
----
-
 ## Traits on structs
 
 You can derive traits such as **Drop**, **Copy** (only when all fields are Copy), **PartialEq**, and **Debug** on structs. Use them so values can be dropped, copied, or compared as needed.
@@ -158,8 +146,6 @@ struct User {
     sign_in_count: u64,
 }
 ```
-
----
 
 ## Further reading
 

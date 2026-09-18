@@ -4,8 +4,6 @@
 
 Clojure is used where **data transformation**, **concurrency**, and **JVM interop** matter. This topic covers **where** Clojure appears in practice (use cases) and **how** to implement common scenarios (implementation use cases). Understanding both helps you design, operate, or audit Clojure systems.
 
----
-
 ## Use cases: where Clojure is used
 
 | Domain | Typical use | Why Clojure fits |
@@ -16,8 +14,6 @@ Clojure is used where **data transformation**, **concurrency**, and **JVM intero
 | **Financial / trading** | Risk, analytics, order handling | Immutability and clear semantics; interop with Java numeric/queue libs |
 | **Integrations & glue** | Connect existing JVM systems, transform messages | Same runtime as Java; data as maps/vectors; minimal ceremony |
 | **Internal tools & admin** | One-off scripts, admin UIs, report generators | REPL-driven iteration; file I/O, DB, HTTP in one process |
-
----
 
 ## Implementation use case: REST API
 
@@ -48,8 +44,6 @@ Pattern: define routes that map HTTP method and path to a handler function; hand
                    {:port 8080}))
 ```
 
----
-
 ## Implementation use case: Data pipeline (file → transform → output)
 
 Read a file (or stream), transform each line or record with pure functions, and write results. Use **slurp** + **clojure.string/split** for small files, or **line-seq** + **io/reader** for large ones. Keep transforms pure (map, filter, reduce); do I/O at the edges. Validate input or output with **spec** if needed.
@@ -76,8 +70,6 @@ Pattern: read → seq of records → (map transform) → (filter valid?) → wri
           (.write wr (str (pr-str m) "\n")))))))
 ```
 
----
-
 ## Implementation use case: CLI tool
 
 A CLI entry point: parse arguments, then call a function that does I/O or calls an API. Use **deps.edn** with **:main** or **:exec-fn** and run with **clj -M** or **clj -X**. For argument parsing, use a small library or **-main** with a simple positional/flag convention. Exit with **System/exit** and a code for scripts and CI.
@@ -98,8 +90,6 @@ Pattern: **-main** receives **args**; dispatch on first arg (e.g. **run**, **val
       (println "Usage: clj -M -m myapp.cli run <path>")
       (System/exit 1))))
 ```
-
----
 
 ## Implementation use case: Config-driven ETL
 
@@ -124,8 +114,6 @@ Pattern: load config → build connection/pool → (repeatedly or queue consumer
         (write-batch conn (process-batch db batch))))))
 ```
 
----
-
 ## Implementation use case: Background worker or agent
 
 Run work asynchronously so the main thread stays responsive. Use **agents** for independent, ordered updates (e.g. appending to a log or counter); use **future** for one-off async tasks; use **core.async** channels if you need multiple workers and backpressure. For a simple “run this fn in a thread” use **future** or **Thread.**.
@@ -143,8 +131,6 @@ Pattern: **future** for fire-and-forget; **send** or **send-off** to an **agent*
 
 (run-async #(println "Background:" (slurp "data.txt")))
 ```
-
----
 
 ## Implementation use case: Internal admin or ops script
 
@@ -164,8 +150,6 @@ Pattern: parse CLI args or config → (optional) authenticate → fetch data (HT
     (println (fetch-status url))))
 ```
 
----
-
 ## Summary
 
 | Use case | Key topics to lean on |
@@ -178,8 +162,6 @@ Pattern: parse CLI args or config → (optional) authenticate → fetch data (HT
 | Admin/ops script | 26 (file I/O), 17 (Java interop), 33 (libraries) |
 
 Use **spec** or validation at boundaries (config, API body, DB rows); keep transforms pure and side effects at the edges so behavior is testable and predictable.
-
----
 
 ## Further reading
 

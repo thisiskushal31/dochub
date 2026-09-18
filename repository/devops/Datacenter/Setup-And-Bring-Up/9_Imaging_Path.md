@@ -2,8 +2,6 @@
 
 [← Previous](./8_Server_Setup_Playbook.md) · [README](./README.md) · [Next: RAID →](./10_RAID_And_Local_Disk_Setup.md)
 
----
-
 ## Mental map
 
 ```text
@@ -13,8 +11,6 @@ Option C: Ironic / MAAS / Foreman / Tinkerbell orchestration
 ```
 
 Depth survey: [Compute/15](../Compute/15_Imaging_And_Provisioning_At_Scale.md). VLAN jobs: [6](./6_LAN_Segmentation_Jobs.md).
-
----
 
 ## 1. Concepts
 
@@ -27,8 +23,6 @@ Depth survey: [Compute/15](../Compute/15_Imaging_And_Provisioning_At_Scale.md). 
 **Disconfirm:** Imaging success is **not** “production ready” until monitoring, disks, and network prod config land. Cloud-init without inventory identity is **not** enough for DCIM.
 
 **Confirm:** Which path works if the prod NIC cable is unplugged?
-
----
 
 ## 2. Advanced concepts
 
@@ -44,8 +38,6 @@ Classic: PXE Linux → install → register serial/MAC → automation moves swit
 | Port never flipped | Prod with PXE noise |
 | Image unsigned/unpinned | Drift / supply risk |
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -55,8 +47,6 @@ Classic: PXE Linux → install → register serial/MAC → automation moves swit
 | Emergency | Virtual media runbook |
 
 **Staff checklist:** golden image pinned; DHCP scoped; rollback image; BMC console tested.
-
----
 
 ## References
 

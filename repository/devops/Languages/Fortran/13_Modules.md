@@ -29,8 +29,6 @@ end module my_math
 
 **Why this matters.** Modules are the unit of packaging in Fortran. Large projects split into many modules (e.g. one per domain or component). Build systems compile each module once and link the object files. Clear public/private boundaries and minimal module state keep dependencies and behavior understandable. For DevOps, build and test typically operate at the level of modules and the main program.
 
----
-
 ## Further reading
 
 - [Fortran – Modules (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_modules.htm)

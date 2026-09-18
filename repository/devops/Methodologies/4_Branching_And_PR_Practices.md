@@ -6,8 +6,6 @@ Branching policy is a delivery control. Pick a model that matches **release risk
 
 **Host-neutral:** these rules are about **Git** and **CI**. They apply whether the forge is GitHub, GitLab, Bitbucket, Azure DevOps, or another major host. Prefer durable words (**merge request / pull request**, **protected default branch**, **required checks**). When this handbook names a product, it either stays generic or lists the major hosts — never a single forge by default. Tool primers live under [CiCd/](../CiCd/README.md) (Actions, GitLab CI, Bitbucket Pipelines, Azure Pipelines, Jenkins, CircleCI, Buildkite, Tekton, …).
 
----
-
 ## Models compared
 
 | Model | How it works | Fits | Hurts when |
@@ -29,8 +27,6 @@ Branching policy is a delivery control. Pick a model that matches **release risk
 - Risky behavior behind flags ([2_Practices](./2_Practices_And_Workflows.md))  
 
 Use GitFlow only when you truly ship infrequent versioned artifacts and can staff release management.
-
----
 
 ## The confusion: environment *branches* vs environment *lanes*
 
@@ -72,8 +68,6 @@ You do **not** freeze `main` forever. You freeze the **candidate** with a **git 
 
 Staging and GitOps should reference `v1.4.0-rc.20` (or `@sha256:…`), **not** `main`. New commits on trunk do not change what staging is testing. SemVer pre-release / release labels: [semver.org](https://semver.org/) ([CiCd/12](../CiCd/12_Release_Versioning_And_Changelogs.md)).
 
----
-
 ## Practical trunk flow (dev snapshots, RC, release)
 
 Keep the **release line** quiet; use **tags** (not long-lived env branches) as the lanes developers and operators share:
@@ -92,8 +86,6 @@ How pipelines, SemVer image tags, shared DEV (and optional parallel DEVs), and p
 ### When long-lived `dev` / `staging` / `prod` branches are still used
 
 Legacy orgs often keep them. Treat them as **deploy wiring**, not as proof of “what we tested.” Prefer promoting a **digest** (or immutable tag) so staging soak and prod stay the same bytes — see [CiCd/8](../CiCd/8_Environments_Promotion_And_Approvals.md).
-
----
 
 ## PR / MR hygiene
 
@@ -114,8 +106,6 @@ Path ownership examples (names differ by forge: CODEOWNERS-style files, Bitbucke
 /src/payments/**         @org/payments
 ```
 
----
-
 ## Protected branches
 
 On `main` (and release branches) — available on GitHub, GitLab, Bitbucket, Azure DevOps, and similar:
@@ -127,8 +117,6 @@ On `main` (and release branches) — available on GitHub, GitLab, Bitbucket, Azu
 - Block force-push  
 
 Merge queues / merge trains serialize merges so `main` stays green under load (feature name varies by host).
-
----
 
 ## Revert strategy
 
@@ -143,8 +131,6 @@ Bad deploy on main
 
 Progressive delivery reduces how often you need nuclear revert: [CiCd/3](../CiCd/3_Deployment_Strategies.md).
 
----
-
 ## Minimal PR/MR → CI sketch
 
 Host YAML differs; the **jobs** do not. Concept:
@@ -158,8 +144,6 @@ on: open/update PR or MR targeting main
 ```
 
 Wire this in your host’s pipeline file (e.g. Actions workflows, `.gitlab-ci.yml`, `bitbucket-pipelines.yml`, `azure-pipelines.yml`, Jenkinsfile, …). Primers: [CiCd/](../CiCd/README.md). Concepts beat memorizing one vendor’s YAML.
-
----
 
 ## Trade-offs
 

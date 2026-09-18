@@ -4,8 +4,6 @@
 
 The **Array** type from the core library is a collection of elements of the same type. You create and use arrays via the **ArrayTrait**. Because Cairo memory is immutable, array elements cannot be changed after they are written. Arrays behave like **queues**: you can only **append** at the end and **remove** from the front; these operations update pointers rather than overwriting memory cells. This topic covers creating arrays, reading elements, and the **Span** and **array!** macro.
 
----
-
 ## Creating an array
 
 Create an array with `ArrayTrait::new()`. You can optionally specify the element type. Append elements with `append()`.
@@ -28,8 +26,6 @@ let mut arr = ArrayTrait::<u128>::new();
 let mut arr: Array<u128> = ArrayTrait::new();
 ```
 
----
-
 ## Adding and removing elements
 
 **Adding:** Use `append(value)` to add an element at the end.
@@ -48,8 +44,6 @@ fn main() {
     println!("The first value is {}", first_value);
 }
 ```
-
----
 
 ## Reading elements
 
@@ -73,13 +67,9 @@ fn main() {
 
 For `get()`, you typically match on the result and use `.unbox()` to get the value from the box.
 
----
-
 ## Size
 
 Use **`len()`** for the number of elements (returns `usize`). Use **`is_empty()`** to check if the array has no elements.
-
----
 
 ## array! macro
 
@@ -88,8 +78,6 @@ When the values are known at compile time, use the **array!** macro instead of c
 ```cairo
 let arr = array![1, 2, 3, 4, 5];
 ```
-
----
 
 ## Storing multiple types with enums
 
@@ -112,8 +100,6 @@ fn main() {
 }
 ```
 
----
-
 ## Span
 
 **Span** is a read-only view of an **Array**. It provides safe access to elements without modifying the array. All array methods except `append()` are available on `Span`. Call **`span()`** on an array to get its span.
@@ -129,8 +115,6 @@ fn main() {
 ```
 
 Use spans when passing arrays to functions for read-only access so ownership stays with the caller (see **Ownership and references**).
-
----
 
 ## Further reading
 

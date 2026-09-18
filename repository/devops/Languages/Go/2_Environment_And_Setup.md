@@ -53,8 +53,6 @@ govulncheck ./...
 
 Build agents need the Go toolchain (or a Docker image that includes it). Understanding **go mod** and the layout of a Go module (go.mod, go.sum, package directories) helps you script builds, cache dependencies, and troubleshoot failures.
 
----
-
 ## Further reading
 
 - [Download and install Go](https://go.dev/doc/install)

@@ -6,8 +6,6 @@
 
 **Pattern matching** as Scala’s primary way to branch on structure: exhaustiveness, **case classes** and **enums** as algebraic data types (ADTs), **sealed** hierarchies, **guards**, and **partial function** literacy. After classes and collections, this is how idiomatic Scala encodes “valid states only” and handles them safely. After this chapter you should parse external data into ADTs early, match exhaustively on sealed types, and know when guards or wildcards weaken that guarantee.
 
----
-
 ## 1. Concepts
 
 ### 1. `match` is an expression
@@ -165,8 +163,6 @@ val refundedCents: List[Long] =
   events.collect { case Refunded(_, cents) => cents }
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Exhaustiveness vs catch-alls
@@ -275,8 +271,6 @@ def isWarm(c: Color): Boolean = c match
   case Color.Green | Color.Blue => false
 ```
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and domain modeling
@@ -335,8 +329,6 @@ def parseTag(tag: String): Either[String, Color] = tag.toLowerCase match
 - Public ADT changes considered for binary/source compatibility.
 - No side-effect-heavy extractors in hot match paths.
 - Boolean + optional-reason pairs replaced with honest ADTs where illegal states existed.
-
----
 
 ## References
 

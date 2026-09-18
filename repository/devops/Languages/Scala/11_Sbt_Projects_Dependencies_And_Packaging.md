@@ -6,8 +6,6 @@
 
 What **sbt** is, how to read a **`build.sbt`**, pinning **`scalaVersion`**, declaring **`libraryDependencies`**, **multi-project** builds, **test**, **package**, and literacy around **assembly** / **native-packager**—plus resolvers and lock-file habits. This is an operations-minded mental model, not a full plugin manual. After this chapter you should read a multi-module `build.sbt`, choose `%` vs `%%`, run common sbt commands in CI, and know what packaging choices imply for the classpath.
 
----
-
 ## 1. Concepts
 
 ### 1. What sbt is
@@ -167,8 +165,6 @@ sbt "api/package"
 sbt clean
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Plugins live under `project/`
@@ -285,8 +281,6 @@ ThisBuild / javacOptions ++= Seq("--release", "17")
 ThisBuild / scalacOptions ++= Seq("-release", "17")
 ```
 
----
-
 ## 3. Applications and use cases
 
 ### Application services
@@ -336,8 +330,6 @@ sbt -batch -Dsbt.supershell=false clean test package
 - Resolvers approved; credentials never in repo (`~/.sbt` locally, CI secrets in pipeline).
 - `Provided` runtime assumptions match deployment environment.
 - Common CI commands use pinned sbt/JDK; `dependencyTree` / `evicted` available for incidents.
-
----
 
 ## References
 

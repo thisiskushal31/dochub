@@ -2,8 +2,6 @@
 
 [← Previous](./09_Use_Cases_Pitfalls_And_Staff_Checklist.md) · [Argo CD](./README.md) · [Next: Security and troubleshooting →](./11_Security_Tenancy_Hydrator_And_Troubleshooting.md)
 
----
-
 ## 1. Concepts
 
 Chapters 01–09 cover the delivery path. This chapter covers **ownership**, **noisy diffs**, **faster reconcile**, and **keeping the control plane observable and recoverable** — topics that show up the week after the first happy sync.
@@ -69,8 +67,6 @@ If Git is incomplete, restore from export first, then fix Git so the next disast
 
 Deleting an Application can **cascade** and prune cluster resources (finalizers). If Git is broken and manifests cannot render, deletion can get stuck — break-glass options include deleting with cascade disabled and cleaning resources manually. Know the finalizer behavior before “just delete it” in prod.
 
----
-
 ## 2. Advanced concepts
 
 ### Orphaned resources
@@ -93,8 +89,6 @@ Optional UI/readme badges and deep links into the Argo UI help humans; they are 
 
 SSH keys, HTTPS tokens, GitHub Apps, cloud IAM-style creds — all become Secrets in the Argo CD namespace. Rotate them; scope them read-only to GitOps repos; treat the management cluster as a secrets vault for deploy credentials ([08](./08_Secrets_CI_Integration_And_Operations.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Situation | Use |
@@ -105,8 +99,6 @@ SSH keys, HTTPS tokens, GitHub Apps, cloud IAM-style creds — all become Secret
 | On-call never sees sync fail | Notifications + metrics alerts |
 | Management cluster rebuild | Declarative Git + tested `admin export` backup |
 | Migrate from Helm releases to Argo | Understand tracking before prune — orphan/ownership audit first |
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./12_Hyperscale_Ops_Honesty.md) · [README](./README.md) · [Integration theory →](../Integration/11_Aggregate_Telemetry_Reports_And_Steering.md)
 
----
-
 ## 1. Concepts — the practical skill
 
 Most people in DC work are not designing transformers. They are **practical**: they read screens and reports, then **steer**—approve an install, open a ticket class, freeze a deploy, call facilities, order a cross-connect.
@@ -17,8 +15,6 @@ This chapter is that job, step by step. Theory of aggregates: [Integration/11](.
 3. **Who acts?** (facilities / network / compute / landlord hands)
 
 If a dashboard cannot support those three, it is decoration.
-
----
 
 ## 2. Advanced concepts — how to read without getting fooled
 
@@ -79,8 +75,6 @@ Vocabulary: [8](./8_Capacity_Conversation.md).
 | Steering from memory | Attach screenshot/report ID to the decision |
 | Panic on every yellow | Severity + taxonomy first |
 
----
-
 ## 3. Applications and use cases
 
 | Role | Daily steer habit |
@@ -112,8 +106,6 @@ Vocabulary: [8](./8_Capacity_Conversation.md).
 - A monthly PDF nobody owns is **not** a steering system.
 
 **Good:** short real-time pass, weekly peaks, decisions with evidence, verify later. **Bad:** dashboard tourism; nameplate planning; no owner.
-
----
 
 ## References
 

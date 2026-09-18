@@ -8,8 +8,6 @@ How Tcl code grows beyond one file: **`package require` / `package provide`**, *
 
 You leave able to structure a small library (including an ensemble API), read an index or `.tm` module, explain how `require` finds code, mount a zip of scripts cautiously, and review supply-chain and naming risks.
 
----
-
 ## 1. Concepts
 
 ### 1. Why packages exist
@@ -227,8 +225,6 @@ Locale selection interacts with environment variables such as `LANG` / `LC_MESSA
 
 Full catalog layout and plural forms live in the **msgcat** man page and ch **18**’s door checklist—do not invent a second i18n framework beside it without cause.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Dual version worlds (9 vs 8.6)
@@ -346,8 +342,6 @@ Symptoms: `package require` fails in CI but works on a laptop because one enviro
 
 Anything you `zipfs mount` and `source` runs with process privileges. Sign or hash release zips; verify before mount in high-assurance flows. Password-protected zips are obfuscation—not confidentiality. Unmount when done; watch open-channel errors on `unmount`.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -367,8 +361,6 @@ Startup checklist many teams encode once:
 3. Abort if `auto_path` unexpectedly includes world-writable dirs in production.
 4. Only then open sockets or touch credentials.
 
----
-
 ## Staff-level review checklist
 
 - Dependencies declared with `package require` and useful version constraints.
@@ -383,8 +375,6 @@ Startup checklist many teams encode once:
 - `.tm` modules vs `pkgIndex.tcl` discovery documented; module paths treated as trust roots.
 - zipfs mounts (if any) verified/hashed; no secrets relying on zip password “encryption.”
 - Custom `unknown` / auto-load behavior reviewed; critical paths use explicit `package require`.
-
----
 
 ## References
 

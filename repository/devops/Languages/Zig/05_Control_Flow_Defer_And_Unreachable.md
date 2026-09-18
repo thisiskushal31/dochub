@@ -8,8 +8,6 @@ How Zig runs in order: `if`, loops, `switch`, **`defer` / `errdefer`**, and **`u
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. `if` / loops: ordinary, visible branches
@@ -122,8 +120,6 @@ fn digitName(d: u8) []const u8 {
 
 **Where you use it.** After you’ve truly handled all cases—not to silence the compiler in a hurry.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Defer order (LIFO)
@@ -162,8 +158,6 @@ fn die() noreturn {
 
 **What it is.** Function never returns. Keep it honest.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | What you write |
@@ -176,8 +170,6 @@ fn die() noreturn {
 
 **Whole-engineering picture:** `defer` makes cleanup reviewable; `unreachable` must stay true.
 
----
-
 ## 4. Staff-level review checklist
 
 - Acquired resources have `defer` / `errdefer` in the same scope.
@@ -185,8 +177,6 @@ fn die() noreturn {
 - Enum switches at boundaries are exhaustive.
 - Defer order is correct for nested resources.
 - No empty `catch` hiding failures (chapter **07**).
-
----
 
 ## References
 

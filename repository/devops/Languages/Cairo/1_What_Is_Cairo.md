@@ -4,15 +4,11 @@
 
 Cairo is a programming language built for **computational integrity** using mathematical proofs. Programs written in Cairo can prove that they performed a given computation correctly, even when run on untrusted machines—so you can trust the result without re-executing the program. The language is based on **STARK** technology (a modern form of probabilistically checkable proofs): computational claims are turned into constraint systems and then into proofs that can be verified efficiently and with high assurance.
 
----
-
 ## What you can do with Cairo
 
 Cairo enables **verifiable computation**. The main use today is **Starknet**, a Layer 2 scaling solution for Ethereum. In a typical blockchain, every node must re-execute every transaction. Starknet changes this: computations run off-chain, a **prover** produces a STARK proof, and an Ethereum contract **verifies** that proof. Verifying a proof is much cheaper than re-running the computation, so the network can scale while staying secure.
 
 Cairo is not limited to blockchain. Any setting where you need to **prove that a computation was done correctly**—without re-running it—can use Cairo’s verifiable computation.
-
----
 
 ## Cairo from every engineering perspective
 
@@ -28,13 +24,9 @@ The same language and this handbook support multiple engineering roles and appli
 
 Whether you ship contracts, run pipelines, audit code, or build provable systems, the topics in this section are ordered so you can go from basics to the depth you need for your role.
 
----
-
 ## How to use this section
 
 The topics in this section are ordered so you can learn **from basics to smart contracts and other applications**. If you start at topic 1 and work through in order, you will see how to install Cairo, write and run programs, use the core language (variables, functions, structs, enums, modules, traits, errors, tests), then move on to **smart contracts on Starknet** (topic 19) and **use cases and case studies** (topic 21). The **Cairo README** (topic list) has a short **learning path** table that maps “what to read” to “what you’ll be able to do.” Use it to plan your path (e.g. “I want to write a contract” → follow basics and core language, then topic 19, then 21 for examples).
-
----
 
 ## Who this is for
 
@@ -46,8 +38,6 @@ The topics in this section are ordered so you can learn **from basics to smart c
 - **Research and verifiable-systems engineers**: core language and proving (12), advanced features (18), Cairo VM (20), and use cases (21) for provable programs and ZK applications.
 
 The material assumes basic programming (variables, functions, data structures). Experience with Rust helps because Cairo is similar in style, but it is not required.
-
----
 
 ## Further reading
 

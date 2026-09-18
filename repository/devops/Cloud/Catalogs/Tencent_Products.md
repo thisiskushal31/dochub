@@ -4,8 +4,6 @@
 
 *Final choice page for Tencent Cloud. Deeper API: [tencentcloud.com/document](https://www.tencentcloud.com/document/product). China vs intl partitions matter.*
 
----
-
 ## Compute
 
 | Product | What for | When | Why not |
@@ -59,8 +57,6 @@
 | **CLS / Cloud Monitor / APM** | Logs / metrics / traces | Default | — |
 | **TCR** | Container registry | TKE images | — |
 | **TI Platform / Hunyuan APIs** | ML / FM | GenAI + train | DIY TKE only when needed |
-
----
 
 ## How to use
 

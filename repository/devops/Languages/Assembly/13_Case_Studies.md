@@ -4,8 +4,6 @@
 
 This topic gives **hands-on case studies** so you can see **implementation** from very basic to practical: a minimal program, recursion, **reading** disassembly, and file I/O. Each follows the same pattern as the rest of the handbook: **goal** → **approach** → **code** (or disassembly) → **expected behavior**. The same skills apply in **cybersecurity** (reverse engineering, exploit analysis) and **general engineering** (embedded, firmware, kernels, compilers, DSP). Together with topics 1–12, this completes the deep dive from basics to implementation.
 
----
-
 ## Format used in this handbook
 
 For every concept we use:
@@ -14,8 +12,6 @@ For every concept we use:
 2. **Then a code block or visual** — Concrete assembly (or disassembly) that shows the idea so you can see structure, syntax, and flow.
 
 Case studies below are full, runnable (or analyzable) examples. See **Further reading** for more.
-
----
 
 ## Case study 1: Hello World (minimal program and syscalls)
 
@@ -48,8 +44,6 @@ len equ $ - msg
 
 **Expected behavior:** The program prints `Hello, world!` and a newline, then exits with status 0.
 
----
-
 ## Case study 2: Factorial (recursion and stack)
 
 **Goal:** Compute factorial of a small positive integer using a **recursive** procedure. Fact(n) = n × Fact(n−1) for n > 1; Fact(0) = Fact(1) = 1.
@@ -73,8 +67,6 @@ do_calculation:
 ```
 
 **Expected behavior:** Calling with BL = 5 leaves AX = 120 (5!). The recursion stops at BL ≤ 1; each return multiplies the result by the saved n. Stack depth equals n.
-
----
 
 ## Case study 3: Reading a disassembly (interpreting a function)
 
@@ -107,8 +99,6 @@ do_calculation:
 **Interpretation:** One argument (int) in EDI, stored at `[rbp-4]`. If it is ≤ 0, jump to `.L2` and return 1; else call the same function with argument n−1, multiply return value by n, and return. This is the **factorial** pattern: base case 1, recursive case n * fact(n−1). **leave** restores RSP/RBP; **ret** returns to caller.
 
 **Expected behavior:** You can explain the function’s logic and how the stack and registers are used without running the binary.
-
----
 
 ## Case study 4: Writing a file (syscalls: creat, write, close)
 
@@ -150,8 +140,6 @@ _start:
 
 **Expected behavior:** After running, a file `out.txt` exists and contains `Written from assembly` and a newline. This demonstrates the full **create → write → close** sequence used in file handling (topic 11).
 
----
-
 ## Summary: basic to implementation
 
 The Assembly section now covers:
@@ -167,8 +155,6 @@ The Assembly section now covers:
 | **Implementation** | 13 | Case studies: Hello World, factorial, reading disassembly, file write |
 
 Nothing is left out: from very basic to implementation, including case studies.
-
----
 
 ## Further reading
 

@@ -10,8 +10,6 @@
 #import <Foundation/Foundation.h>
 ```
 
----
-
 ## 1. Strings and mutability
 
 ```objc
@@ -21,8 +19,6 @@ NSMutableString *mutable = [NSMutableString stringWithString:immutable];
 ```
 
 Use **`copy`** on **`NSString *`** properties so callers cannot pass **`NSMutableString`** and mutate the backing storage later.
-
----
 
 ## 2. Collections
 
@@ -38,8 +34,6 @@ id obj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
 if (![obj isKindOfClass:[NSDictionary class]]) { /* reject */ }
 ```
 
----
-
 ## 3. JSON serialization
 
 ```objc
@@ -50,8 +44,6 @@ NSData *data = [NSJSONSerialization dataWithJSONObject:payload
 ```
 
 **Reading** options control mutability of containers and number strictness—mismatches cause silent coercion bugs.
-
----
 
 ## 4. NSError
 
@@ -66,8 +58,6 @@ if (!ok) {
 
 Do not base authorization solely on **localized** strings—use **domains** and **codes** for program logic.
 
----
-
 ## 5. Fast enumeration
 
 ```objc
@@ -80,8 +70,6 @@ for (NSString *line in lines) {
 
 Never mutate a container while fast-enumerating it.
 
----
-
 ## 6. Logging (production)
 
 ```objc
@@ -91,8 +79,6 @@ os_log(log, "processed %{public}zu items", (size_t)count);
 ```
 
 Use **public** / **private** markers correctly—never log raw tokens or secrets.
-
----
 
 ## Advanced use cases and implementation
 
@@ -107,8 +93,6 @@ Use **public** / **private** markers correctly—never log raw tokens or secrets
 ```objc
 NSString *s = [NSString localizedStringWithFormat:@"%lld items", (long long)n];
 ```
-
----
 
 ## References
 

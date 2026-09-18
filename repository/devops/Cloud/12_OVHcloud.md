@@ -2,8 +2,6 @@
 
 [← Previous](./11_Huawei_Cloud.md) · [README](./README.md) · [Next: Deutsche Telekom →](./13_Deutsche_Telekom.md) · [Full catalog](./Catalogs/OVH_Products.md) · [Jobs: IAM](./15_Org_IAM_And_Identity_Federation.md)
 
----
-
 ## Mental map — Floor 1 jobs on OVHcloud
 
 | Job | OVH wiring | Depth |
@@ -17,8 +15,6 @@
 | DNS | OVHcloud DNS | [25](./25_DNS_CDN_And_Edge_HTTP.md) |
 | Hosted private | VMware Hosted Private Cloud | [Datacenter/7](../Datacenter/7_VMware_vSphere.md) |
 
----
-
 ## 1. Concepts
 
 **OVHcloud** is a European hyperscaler: **Public Cloud** (OpenStack-based IaaS), **Bare Metal**, **Hosted Private Cloud** (typically VMware), and **Managed Kubernetes Service (MKS)**. Full public cloud — not colo — and **not** AWS with French branding.
@@ -29,14 +25,9 @@ Three estates people mix up ([2](./2_Spectrum_And_When_Which.md)):
 2. **Bare Metal** — vanilla kubeadm is [Kubernetes 7](https://github.com/thisiskushal31/Containerization-Deep-Dive/blob/main/Orchestration/Kubernetes/7_Vanilla_On_Bare_Metal.md).  
 3. **Hosted Private Cloud** — VMware as a service ([Datacenter/2](../Datacenter/2_Ownership_Colo_And_Contracts.md)).
 
----
-
 ## 2. Advanced concepts
 
 EU residency is a common **why**. Terraform: current OVH provider — do not assume AWS resource names ([19](./19_Portals_CLI_And_API_Patterns.md)). LB and deploy knobs still follow Floor 1 jobs ([23](./23_Load_Balancing_Ingress_And_TLS.md), [28](./28_Deployment_Shapes_On_Cloud.md)).
-
----
-
 
 ### How you grant permission on OVHcloud (quick)
 
@@ -54,7 +45,6 @@ Customer IAM users/roles on Public Cloud projects — thinner than hyperscaler I
 | Observability | Native metrics/logs where offered; else DIY/SaaS | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
 | N-tier | [34](./34_Multi_Tier_And_Reference_Topologies.md) | |
 
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -70,8 +60,6 @@ Customer IAM users/roles on Public Cloud projects — thinner than hyperscaler I
 - IAM users/roles; no shared root for CI  
 
 **Good:** estate named + MKS or deliberate metal path. **Bad:** “OVH” without saying Public vs Bare Metal vs VMware.
-
----
 
 ## References
 

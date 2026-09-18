@@ -8,13 +8,9 @@ This is methodology, not a drawing class. AWS and Lean/DevOps guides call the so
 
 Primary references: [AWS Prescriptive Guidance — development value stream mapping](https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-devops-value-stream-mapping/introduction.html), Lean ideas via DevOps Handbook / CALMS **L**.
 
----
-
 ## Why beginners should care
 
 If you only learn CI YAML, you will not see that **three days waiting for review** dominate your lead time. Value stream thinking stops tool-worship and focuses improvement where it matters (Theory of Constraints — [10](./10_Core_Principles_Three_Ways_CALMS.md)).
-
----
 
 ## Simple value stream (example)
 
@@ -34,8 +30,6 @@ For each step, rough measures (Lean DVSM style):
 
 The gap between LT and PT is usually **wait and rework** — your First Way enemy.
 
----
-
 ## Waste to look for (Lean → DevOps)
 
 Foundation vocab often uses **DOWNTIME** (eight Lean wastes). Map them to delivery:
@@ -53,8 +47,6 @@ Foundation vocab often uses **DOWNTIME** (eight Lean wastes). Map them to delive
 
 Also common in our stream maps: **rework** loops (failed deploy → hotfix → redeploy) — see [DORA rework rate](./5_DORA_And_Delivery_Metrics.md).
 
----
-
 ## Working in small batches
 
 DORA lists **working in small batches** as a core capability ([dora.dev/capabilities](https://dora.dev/capabilities/)).
@@ -67,8 +59,6 @@ DORA lists **working in small batches** as a core capability ([dora.dev/capabili
 
 Small batches reduce risk **and** shorten feedback (Second Way).
 
----
-
 ## WIP limits
 
 **Work in progress (WIP) limits** cap how many items are in flight.
@@ -79,15 +69,11 @@ Small batches reduce risk **and** shorten feedback (Second Way).
 
 You do not need a perfect Kanban tool — a shared board and honesty beat software.
 
----
-
 ## Lightweight change approval
 
 DORA finds **lightweight approval** (peer review / pair) outperforms heavyweight external CABs for delivery performance, while still enabling control. Regulated industries can keep compliance **evidence from the pipeline** (signed artifacts, required checks) instead of multi-week committees for every change.
 
 Details in delivery: [CiCd/](../CiCd/README.md). Mindset here: approval should **add information**, not only delay.
-
----
 
 ## How to run a first DVSM (90 minutes)
 
@@ -99,8 +85,6 @@ Details in delivery: [CiCd/](../CiCd/README.md). Mindset here: approval should *
 6. Remeasure.  
 
 Do not boil the ocean. Continuous improvement is the Third Way.
-
----
 
 ## Pitfalls
 

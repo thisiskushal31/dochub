@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [VPC →](./16_VPC_And_Network_Constructs.md) · [DNS/CDN →](./25_DNS_CDN_And_Edge_HTTP.md) · [Deploy shapes →](./28_Deployment_Shapes_On_Cloud.md)
 
----
-
 ## Mental map
 
 ```text
@@ -12,8 +10,6 @@ Client → (optional CDN / global anycast) → Load balancer (L4 or L7 + TLS)
 ```
 
 *What to notice: LB settings (health check, idle timeout, sticky, TLS policy) are **knobs on the same job**. Product names differ; unhealthy targets and wrong certs fail the same way.*
-
----
 
 ## 1. Concepts
 
@@ -43,8 +39,6 @@ A **load balancer** distributes traffic across targets and usually terminates or
 **Confirm:** Is your entry L4 or L7? Who owns the certificate? What fails when all targets are unhealthy?
 
 Packet depth: [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive). Edge HTTP/CDN: [25](./25_DNS_CDN_And_Edge_HTTP.md). WAF products: [Security/WAF](../Security/WAF/README.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -86,8 +80,6 @@ OpenShift **Routes** are a different API ([OpenShift](https://github.com/thisisk
 | Idle timeout too low | WebSocket / long poll drops |
 | Single AZ targets | AZ outage = total outage |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -106,8 +98,6 @@ OpenShift **Routes** are a different API ([OpenShift](https://github.com/thisisk
 - Security filters allow LB → targets only  
 
 **Good:** private targets, proven health, cert automated. **Bad:** public nodes, no health check, cert in a ticket folder.
-
----
 
 ## References
 

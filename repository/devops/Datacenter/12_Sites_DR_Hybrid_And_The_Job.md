@@ -2,8 +2,6 @@
 
 [← Previous](./11_Identity_Access_And_Change.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 One hall is **one site**. Disaster recovery is a **second site** with power, network, identity, data, and a **tested** restore or failover. A second VLAN, a snapshot on the same array, or “we will scale in AWS if something happens” without identity and DNS is not DR.
@@ -19,8 +17,6 @@ Site A (prod)  --replication / backup-->  Site B (DR)
 Hybrid:  Site A  --interconnect-->  Cloud region
          same IdP, same image provenance, explicit DNS
 ```
-
----
 
 ## 2. Advanced concepts
 
@@ -84,8 +80,6 @@ A factory cluster is an **edge site** (small failure domain, GitOps from hub). I
 
 If you cannot complete that list, you are not “on-prem in production”; you are visiting.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -107,8 +101,6 @@ If you cannot complete that list, you are not “on-prem in production”; you a
 - First-week map: cage, BMC, tickets, pages  
 
 **Good:** two buildings, tested DNS failover, independent carriers, IdP at both. **Bad:** snapshot on the same SAN called DR, stretched L2 across a VPN, Outposts assumed to work forever offline, no one knows the remote-hands number at site B.
-
----
 
 ## Go deeper
 

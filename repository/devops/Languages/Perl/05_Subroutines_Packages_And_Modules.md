@@ -6,10 +6,6 @@
 
 **Subroutines** (`sub`), **signatures** (version-gated), **return** context, **`package`**, **`use`**, **`require`**, **`@INC`**, **`Exporter`**, **POD** / **`__DATA__`**, and how **`.pm`** files map to **`Foo::Bar`** namespaces. **Operations** focus: predictable **load order** and **startup** time. **Security** focus: only loading **trusted** paths, **`@INC`** manipulation, and **`%INC`** visibility for audits.
 
----
-
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -38,8 +34,6 @@ Use **`return scalar @items`** or **`return 0+@items`** when you mean “number 
 
 **Subroutine signatures** (`sub foo ($x, $y) { ... }`) are available on recent Perl 5 releases (see **perlsub** and **perlexperiment** for your version). They reduce **`@_`** boilerplate but change **calling** conventions—enable only when your **minimum Perl** and **CI** images match, and avoid mixing signed subs with fragile **prototypes** in the same module without team conventions.
 
----
-
 ### 2. Packages and namespaces
 
 **`package Name;`** switches the **default** namespace for **unqualified** globals and **`sub`** names until the next **`package`** or end of scope (block/file).
@@ -58,8 +52,6 @@ sub trim {
 
 **`__PACKAGE__`** stringifies the current package—useful for logging and **metaprogramming**.
 
----
-
 ### 3. `use` vs `require`
 
 **`use Module LIST`** is **`BEGIN { require Module; Module->import(LIST); }`** at compile time—**fails fast** if missing.
@@ -74,8 +66,6 @@ sub trim {
 
 **`parent` / `base`:** **`use parent 'Foo::Bar'`** sets **`@ISA`** and loads the parent—prefer over **`use base`** in new code unless you rely on **`base`**-specific behavior.
 
----
-
 ### 4. `@INC` and shadowing
 
 `@INC` lists **roots**; **`Module::Name`** maps to **`Module/Name.pm`** under one of those roots **in order**.
@@ -83,8 +73,6 @@ sub trim {
 **Shadowing:** If **`./lib`** precedes system paths and contains a **`JSON.pm`**, you may load the **wrong** **`JSON`**—a **supply-chain** and **security** incident when **`./lib`** is writable by **untrusted** users.
 
 **`use lib 'path'`** prepends for **that** compilation unit—prefer **explicit** project **`lib/`** over global **`PERL5LIB`** in application repos when possible.
-
----
 
 ### 5. Exporter pattern
 
@@ -96,15 +84,11 @@ use List::Util qw( shuffle min max );
 
 **Review** what **`import`** pulls in—**namespace pollution** complicates **static** analysis and **refactoring**.
 
----
-
 ### 6. `__END__`, `__DATA__`, and POD
 
 **`__END__`** and **`__DATA__`** terminate compilation of the main program; lines after **`__DATA__`** are readable via the **`DATA`** filehandle—useful for **small** bundled fixtures, risky when the embedded blob grows without **versioning**. **`__END__`** applies to the whole file after it appears.
 
 **POD** (**Plain Old Documentation**: **`=pod`** … **`=cut`**) is how **modules** ship **`perldoc`**-readable docs. Even internal **`lib/`** trees benefit from **`NAME`**, **`SYNOPSIS`**, and **security** notes in POD—reviewers and **`perldoc Some::Module`** consumers see them before reading implementation.
-
----
 
 ## 2. Advanced concepts
 
@@ -116,16 +100,12 @@ use List::Util qw( shuffle min max );
 
 **Constants:** **`use constant NAME => value`** inlines at compile time—good for **frozen** config; avoid for values that must change at **runtime** without restarting.
 
----
-
 ## 3. Applications and use cases
 
 - **Project `lib/` trees:** **`use lib`** and **`@INC`** order determine which **`JSON`** or **`YAML`** you load—**shadowing** is a **supply-chain** incident when **`./lib`** is **world-writable**.
 - **Plugin and extension hosts:** **`require $pkg`** from **config** demands an **allowlist**—common in **CI** **plugins** and **legacy** **CMS** extensions.
 - **Startup and containers:** **`use`** at **compile** time fails the **whole** process—**missing** **XS** **`.so`** in **slim** images shows up as **exit 255** before **`main`**.
 - **Releases and pinning:** **`use Foo 1.23`** encodes **minimum** **CPAN** versions—keep it aligned with **Carton**/**snapshot** (chapter 6).
-
----
 
 ## References
 

@@ -13,8 +13,6 @@ PPX rewriters extend the compiler with compile-time program transformations. Cus
   (pps ppx_deriving)))
 ```
 
----
-
 ## 1. Metaprogramming (PPX)
 
 PPX rewriters operate on the abstract syntax tree after parsing. Typical uses include derivers that generate boilerplate (encoders, decoders, equality, pretty printers) and syntax extensions that introduce surface syntax desugared to core OCaml.
@@ -28,8 +26,6 @@ PPX executes at build time with full access to your sources. Treat ppx packages 
 type t = A | B [@@deriving eq]
 ```
 
----
-
 ## 2. Custom operators
 
 You can define new operator symbols for domain notation (linear algebra, parsing combinators, and similar). Precedence and associativity follow language rules; document them for readers so expressions are not misread in review.
@@ -39,8 +35,6 @@ let ( +! ) a b = a * 10 + b
 
 let _ = 1 +! 2
 ```
-
----
 
 ## 3. Objects in OCaml (classes, inheritance, row types)
 
@@ -60,8 +54,6 @@ end
 let o = new counter_init 0
 ```
 
----
-
 ## 4. Compiler frontend and backend
 
 The frontend lexes and parses source, runs type inference and checks, and lowers programs to an intermediate representation. The backend optimizes and emits native or bytecode. Miscompilation bugs and flag interactions often surface as backend issues; syntax and type errors as frontend issues.
@@ -71,8 +63,6 @@ The frontend lexes and parses source, runs type inference and checks, and lowers
 ```bash
 ocamlopt -w @a-4 -warn-error +a -c module.ml
 ```
-
----
 
 ## 5. PPX governance and review discipline
 
@@ -88,8 +78,6 @@ This keeps metaprogramming productive without turning compile-time rewrites into
 ```ocaml
 (* Approved PPX list: record in repo policy, e.g. README or SECURITY.md *)
 ```
-
----
 
 ## 6. End-to-end compiler pipeline (frontend → backends)
 
@@ -108,8 +96,6 @@ ocamlopt -dcmm -c module.ml
 # Emit intermediate representation — inspect when tuning hot paths
 ```
 
----
-
 ## 7. Custom operators and objects in real codebases
 
 **Operators** (`+`, `>>=`, or user-defined symbol names) follow fixed **precedence** and **associativity** rules. Domain-specific embedded languages (parsers, linear algebra) often define small sets of operators; document them in module headers so reviewers parse expressions correctly.
@@ -120,8 +106,6 @@ ocamlopt -dcmm -c module.ml
 let f (o : < get : int >) = o#get
 ```
 
----
-
 ## Advanced use cases and implementation
 
 Lock ppx and compiler versions together with the rest of the toolchain—version skew often surfaces as AST or attribute errors in CI.
@@ -131,8 +115,6 @@ If one machine fails to build while others succeed, compare compiler patch level
 ```bash
 opam list --installed | rg 'ppx|ocaml'
 ```
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./5_AWS_Literacy.md) · [README](./README.md) · [Next: Oracle →](./7_Oracle_Cloud.md) · [Full catalog](./Catalogs/Azure_Products.md) · [Jobs: IAM](./15_Org_IAM_And_Identity_Federation.md) · [LB](./23_Load_Balancing_Ingress_And_TLS.md)
 
----
-
 ## Mental map — Floor 1 jobs on Azure
 
 | Job | Azure wiring | Depth |
@@ -19,8 +17,6 @@
 | Registry | ACR | [27](./27_Container_Registries_And_Artifacts.md) |
 | Audit | Activity Log | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
 | Metrics / logs / traces | Azure Monitor + Application Insights; Managed Prometheus / Grafana optional | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
-
----
 
 ## 1. Concepts
 
@@ -60,8 +56,6 @@ App Service and Container Apps are valid production paths ([28](./28_Deployment_
 | Logs / metrics | Azure Monitor / Log Analytics |
 | SQL doors | Azure SQL, Cosmos DB — [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) |
 
----
-
 ## 2. Advanced concepts
 
 ### Network and entry
@@ -85,9 +79,6 @@ Azure Policy and enterprise landing-zone patterns constrain SKUs, locations, and
 | Subscription + RG | Two grouping layers (billing vs lifecycle) |
 | Front Door vs App Gateway | Global entry vs regional L7 — pick by job |
 | Entra is the IdP center | Human identity story is Entra-first |
-
----
-
 
 ### How you grant permission on Azure (quick)
 
@@ -118,7 +109,6 @@ Full job: [15](./15_Org_IAM_And_Identity_Federation.md).
 | Managed Prometheus / Grafana | Azure Monitor managed Prometheus + Managed Grafana | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
 | Full N-tier system | Wire [34](./34_Multi_Tier_And_Reference_Topologies.md) | |
 
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -137,8 +127,6 @@ Full job: [15](./15_Org_IAM_And_Identity_Federation.md).
 - Azure Policy baselines on  
 
 **Good:** workload identity + private AKS or private VM nodes. **Bad:** subscription Owner SP with a secret in GitHub, public SSH on every VM.
-
----
 
 ## References
 

@@ -6,8 +6,6 @@
 
 **Study order:** Work through the sections below in order (1. OS Basics → 2. Process Management → 3. Process Synchronization → 4. Deadlock → 5. Multithreading → 6. Memory Management → 7. Disk/I/O → 8. Additional topics). Use the **concept index** to find where a specific topic (e.g. context switch, RAG, page replacement) is covered.
 
----
-
 ## Study path
 
 ### 1. OS Basics
@@ -72,8 +70,6 @@ These topics are part of a full OS course. Study them after the sections above o
 | **Request flow and system architecture** | [19_Request_Flow_And_System_Architecture](./19_Request_Flow_And_System_Architecture.md) | How a request flows in **any** system (x86, x64, ARM): user → trap → kernel → subsystem → driver → hardware; architecture layers; I/O and interrupt path |
 | **Virtualization, hypervisors, and datacenter** | [20_Virtualization_Hypervisors_And_Datacenter](./20_Virtualization_Hypervisors_And_Datacenter.md) | Type 1 vs Type 2 hypervisors; CPU and memory virtualization; how the datacenter shares and divides CPU and memory; I/O and storage (concepts only; platform config in Linux, Windows, Unix, macOS) |
 
----
-
 ## Concept index
 
 Use this list to find where a concept is explained.
@@ -111,8 +107,6 @@ Use this list to find where a concept is explained.
 | Protection, access control, authentication, authorization | [18_Protection_And_Security](./18_Protection_And_Security.md) |
 | Request flow (user → kernel → driver → hardware), x86/x64/ARM | [19_Request_Flow_And_System_Architecture](./19_Request_Flow_And_System_Architecture.md) |
 
----
-
 ## Quick reference: all topic files by number
 
 | # | Topic | Description |
@@ -137,8 +131,6 @@ Use this list to find where a concept is explained.
 | 18 | [Protection and security](./18_Protection_And_Security.md) | Protection vs security, access control, threats |
 | 19 | [Request flow and system architecture](./19_Request_Flow_And_System_Architecture.md) | Request flow (any system); architecture layers |
 | 20 | [Virtualization, hypervisors, and datacenter](./20_Virtualization_Hypervisors_And_Datacenter.md) | Hypervisors; CPU/memory virtualization; datacenter shared CPU and memory |
-
----
 
 ## Topics comparison: what’s covered vs common syllabi
 
@@ -178,8 +170,6 @@ Below is a checklist of topics that often appear in OS fundamentals courses and 
 | **Virtualization (hypervisors, datacenter, CPU/memory division)** | Covered | 20 |
 
 **Summary:** All topics in the table above are **covered** in the numbered Fundamentals files. Content is **OS-agnostic**. For extra reading or alternative explanations, see **Further reading** below.
-
----
 
 ## Further reading
 

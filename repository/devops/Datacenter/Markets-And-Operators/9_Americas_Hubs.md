@@ -2,8 +2,6 @@
 
 [← Previous](./8_Tenant_Cloud_Vs_Landlord.md) · [README](./README.md) · [Next: Europe/UK →](./10_Europe_UK_Hubs.md)
 
----
-
 ## 1. Concepts
 
 Key Americas interconnection and capacity hubs (illustrative, not exhaustive):
@@ -18,8 +16,6 @@ Key Americas interconnection and capacity hubs (illustrative, not exhaustive):
 | **Toronto / Montreal** | Canada hubs |
 
 Operators in kind: Equinix, Digital Realty, CoreSite-class, Cologix, Flexential, plus wholesale names—see syllabus index.
-
----
 
 ## 2. Advanced concepts
 
@@ -37,8 +33,6 @@ Taxonomy [1](./1_Operator_Taxonomy.md), research [3](./3_Research_Any_Operator.m
 ### Honesty
 
 No street-level hyperscale maps. Region/AZ codes for AWS/GCP/Azure live in Cloud docs.
-
----
 
 ## 3. Applications and use cases
 
@@ -58,8 +52,6 @@ No street-level hyperscale maps. Region/AZ codes for AWS/GCP/Azure live in Cloud
 - Don’t treat “Virginia” as one failure domain  
 
 **Good:** building-specific diligence. **Bad:** metro-name magic; one campus as “the US.”
-
----
 
 ## References
 

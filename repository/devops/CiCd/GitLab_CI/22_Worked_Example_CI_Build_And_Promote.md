@@ -2,8 +2,6 @@
 
 [← Previous](./21_API_Webhooks_And_Integrations.md) · [README](./README.md) · [Next: Best practices →](./23_Best_Practices_And_When_Not_GitLab.md)
 
----
-
 ## 1. Concepts — lab goal
 
 On a real GitLab project (personal namespace or group sandbox):
@@ -17,8 +15,6 @@ On a real GitLab project (personal namespace or group sandbox):
 
 Do not skip the digest.
 
----
-
 ## 2. Advanced — stretch
 
 | Stretch | Chapter |
@@ -30,8 +26,6 @@ Do not skip the digest.
 | SAST/secret detection include | [17](./17_Security_Scanning_And_Compliance_Literacy.md) |
 | Agent / Flux handoff | [18](./18_Agent_Auto_DevOps_And_Infrastructure.md) |
 
----
-
 ## 3. Applications and use cases
 
 | Checkpoint | Evidence |
@@ -42,8 +36,6 @@ Do not skip the digest.
 | Reuse | Project YAML calls pinned component |
 
 **Good:** lab becomes the team template. **Bad:** only green test with `:latest` in prod.
-
----
 
 ## References
 

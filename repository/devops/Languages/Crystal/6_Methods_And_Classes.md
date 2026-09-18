@@ -6,8 +6,6 @@
 
 **Why classes and methods?** Classes group data and operations into one type; methods are the operations. You use them to model domains, avoid repetition, and structure programs. Type inference and overloading let you write clear code without redundant type annotations.
 
----
-
 ## Methods
 
 Define a method with **def** and **end**. Arguments can have default values and type restrictions. The last expression in the method is its return value; you can use **return** explicitly.
@@ -20,8 +18,6 @@ end
 puts add(1, 2)
 puts add(1)
 ```
-
----
 
 ## Classes and instance variables
 
@@ -41,13 +37,9 @@ g = Greeter.new("Crystal")
 puts g.greet
 ```
 
----
-
 ## new, initialize, and allocate
 
 When you call `ClassName.new(...)`, the compiler allocates an object and calls **initialize** with the arguments. You can define **initialize** with parameters that assign directly to instance variables using the `@name` parameter shorthand.
-
----
 
 ## Overloading and type restrictions
 
@@ -62,8 +54,6 @@ def double(x : String)
   x + x
 end
 ```
-
----
 
 ## Class methods and visibility
 
@@ -80,8 +70,6 @@ class Counter
   end
 end
 ```
-
----
 
 ## Further reading
 

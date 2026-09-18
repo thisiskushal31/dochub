@@ -65,8 +65,6 @@ You can try Kotlin in the browser at the Kotlin Playground (play.kotlinlang.org)
 
 Install Kotlin by installing IntelliJ IDEA (for JVM, multiplatform, or general Kotlin) or Android Studio (for Android). Choose a project type that matches your goal: JVM console app, backend with Java or Spring/Ktor, Kotlin Multiplatform, or Android. Create a `.kt` file with `main`, run it from the IDE or with Gradle/Maven, and you are ready to learn the language. A typical Gradle project uses `src/main/kotlin/` and `src/test/kotlin/`; the Kotlin plugin compiles and runs your code. For a quick try without installing, use the Kotlin Playground in the browser. The following topics take you through syntax, types, control flow, functions, classes, null safety, and more, so you can use Kotlin for Gradle scripts, Android, backend services, and multiplatform apps from an engineering and DevOps perspective.
 
----
-
 ## Further reading
 
 - [Getting started with Kotlin](https://kotlinlang.org/docs/getting-started.html)

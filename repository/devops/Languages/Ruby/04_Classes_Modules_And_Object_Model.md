@@ -6,8 +6,6 @@
 
 How Ruby organizes behavior: **classes**, **modules**, **inheritance**, **mixins**, **`self`**, **constants**, and **visibility**. This is the core object model you need before metaprogramming, frameworks, and infrastructure DSLs—everything in Ruby is an object, and classes are objects too.
 
----
-
 ## 1. Concepts
 
 ### 1. Everything is an object
@@ -140,8 +138,6 @@ end
 
 `class << obj` opens the eigenclass for bulk singleton methods. Rails and Chef use eigenclasses heavily for per-object behavior.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Method lookup order
@@ -224,8 +220,6 @@ Deep `Child < Parent < GrandParent` trees break when subclasses violate **Liskov
 
 Prefer **modules** for cross-cutting behavior (`Serializable`, `Identifiable`) and **small classes** for entities. Rails STI and deep model hierarchies are a known debt magnet—justify them in design docs.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and API design
@@ -265,8 +259,6 @@ Cookbooks and Vagrantfiles use the same object model: blocks, `self` rebinding, 
 - Equality/`hash` contract verified for objects used as hash keys.
 - Subclasses do not narrow method contracts in ways that break callers.
 - Service objects have single responsibility and explicit dependencies.
-
----
 
 ## References
 

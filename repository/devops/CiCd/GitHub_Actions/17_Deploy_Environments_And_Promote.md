@@ -2,8 +2,6 @@
 
 [← Previous](./16_Security_Hardening_Permissions_And_Forks.md) · [README](./README.md) · [Next: Monitor →](./18_Monitor_Metrics_And_Billing_Literacy.md)
 
----
-
 ## 1. Concepts
 
 Deployment in Actions is usually:
@@ -24,8 +22,6 @@ jobs:
 ```
 
 Cross-host promote ideas: [CiCd/8](../8_Environments_Promotion_And_Approvals.md), [CiCd/24](../24_Workflow_Automation_Beyond_PR_CI.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -52,8 +48,6 @@ Generate provenance at build; verify before prod promote; optionally enforce wit
 
 Build on RC tags → promote digest to prod release channel — see [CiCd/12](../12_Release_Versioning_And_Changelogs.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -63,8 +57,6 @@ Build on RC tags → promote digest to prod release channel — see [CiCd/12](..
 | Regulated | custom protection rule App + attestations |
 
 **Good:** same bits in staging and prod. **Bad:** `docker build` again on the release tag and hope.
-
----
 
 ## References
 

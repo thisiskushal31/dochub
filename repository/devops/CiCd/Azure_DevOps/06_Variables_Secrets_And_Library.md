@@ -2,8 +2,6 @@
 
 [← Previous](./05_Agents_Hosted_And_Self_Hosted.md) · [README](./README.md) · [Next: Triggers →](./07_Triggers_Stages_Jobs_And_Strategies.md)
 
----
-
 ## 1. Concepts
 
 | Surface | Use |
@@ -24,8 +22,6 @@ variables:
 
 Never commit secrets to YAML. Prefer **federated service connections** over storing cloud passwords in variables ([19](./19_Security_Permissions_And_Service_Connections.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### Runtime vs compile-time
@@ -44,8 +40,6 @@ OAuth token for the job identity against Azure DevOps APIs (push packages, scrip
 
 Classic releases had their own variable scopes per stage. YAML maps that to stage/job-level `variables` plus environments.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -55,8 +49,6 @@ Classic releases had their own variable scopes per stage. YAML maps that to stag
 | Signing cert | Secure file + install task |
 
 **Good:** secrets in Key Vault / secret vars; plain config in Git. **Bad:** subscription owner keys in plain pipeline variables.
-
----
 
 ## References
 

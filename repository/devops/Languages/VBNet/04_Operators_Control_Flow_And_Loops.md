@@ -16,8 +16,6 @@ Chapter **[03](./03_Types_Variables_And_Option_Directives.md)** gave types and O
 
 Handbook default: **Strict On**; Boolean logic uses **short-circuit** operators unless you have a rare, documented reason.
 
----
-
 ## 1. Concepts
 
 ### 1. `If` blocks
@@ -146,8 +144,6 @@ Dim path As String = If(useBackup, backupPath, primaryPath)
 
 The `If` **operator** (two- or three-argument forms) is not the `If` **statement**. Prefer it for small expressions; don’t nest into unreadability.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Integer division and overflow
@@ -201,8 +197,6 @@ Async streaming (`IAsyncEnumerable`) is a later door in chapter **11**—ordinar
 
 VBA developers moving here should re-learn **short-circuit operators** and Strict conversions. VBA `And`/`Or` folklore does not transfer safely—see [VBA control flow](../VBA/04_Control_Flow_And_Loops.md) for the other dialect’s rules.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How control flow shows up |
@@ -215,8 +209,6 @@ VBA developers moving here should re-learn **short-circuit operators** and Stric
 
 **Whole-engineering picture:** control flow is where policy becomes bits—fail-open `Case Else` is an incident waiting for a new enum value.
 
----
-
 ## 4. Staff-level review checklist
 
 - Boolean logic uses **`AndAlso` / `OrElse`** for short-circuit safety.
@@ -228,8 +220,6 @@ VBA developers moving here should re-learn **short-circuit operators** and Stric
 - Desktop/service code avoids busy-wait CPU spin.
 - Nested control flow deeper than team limit is extracted to named procedures.
 - Custom `Iterator`/`Yield` sequences are intentional; side effects during enumeration are reviewed.
-
----
 
 ## References
 

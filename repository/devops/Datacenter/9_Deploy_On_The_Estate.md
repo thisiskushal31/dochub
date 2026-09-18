@@ -2,8 +2,6 @@
 
 [← Previous](./8_Other_Hypervisors_And_Private_IaaS.md) · [README](./README.md) · [Next: Clusters →](./10_Clusters_On_Prem.md)
 
----
-
 ## 1. Concepts
 
 On-prem delivery is still **build → store → deploy → verify → rollback**. The target is a host, a VM pool, an appliance, or a cluster — not a cloud MIG unless you wrapped one. Pipeline grain: [CiCd/](../CiCd/README.md). VM/MIG patterns that also apply in clouds: [CiCd/18](../CiCd/18_VM_MIG_And_Host_Based_Deploy.md). Spectrum including mainframe and classic: [CiCd/19](../CiCd/19_Delivery_Spectrum_Legacy_Through_Modern.md).
@@ -20,8 +18,6 @@ On-prem delivery is still **build → store → deploy → verify → rollback**
 Config management of guests: [Automation/](../Automation/README.md). Web tier on the host: [Servers/](../Servers/README.md). Do not duplicate Ansible here.
 
 Change windows, CAB, and remote-hands runbooks are **part of the deploy**, not an afterthought.
-
----
 
 ## 2. Advanced concepts
 
@@ -55,8 +51,6 @@ A rolling replace that needs +20% RAM fails when the cluster is packed. HA admis
 
 Promote on z/OS is not a VM clone. Keep a door to that runbook ([CiCd/19](../CiCd/19_Delivery_Spectrum_Legacy_Through_Modern.md), [Methodologies/9](../Methodologies/9_Maintenance_And_Legacy.md)). The hall still supplies power and a network to the I/O cage.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -78,8 +72,6 @@ Promote on z/OS is not a VM clone. Keep a door to that runbook ([CiCd/19](../CiC
 - Remote-hands SOP if the deploy needs a human in the cage  
 
 **Good:** template versions in CI, VIP health on the app port, tested rollback. **Bad:** SSH git pull as prod, golden VM cloned 200 times by hand, deploy during generator test, no rollback image.
-
----
 
 ## Go deeper
 

@@ -2,8 +2,6 @@
 
 [← Previous](./03_Architecture_And_Controllers.md) · [README](./README.md) · [Next: First reconcile →](./05_First_Reconcile_And_Day1_Loop.md)
 
----
-
 ## 1. Concepts
 
 You need two things:
@@ -51,8 +49,6 @@ It is **safe to re-run** (idempotent) — including for many upgrades. Guides ex
 
 The **Flux Operator** uses a `FluxInstance` object to install and upgrade Flux declaratively. It can sync from **Git, OCI, or Bucket**, which helps **Gitless** setups where production clusters should not call Git. See [fluxoperator.dev](https://fluxoperator.dev/) and the Flux install index. You can migrate from CLI bootstrap later if you start classic.
 
----
-
 ## 2. Advanced concepts
 
 ### Customize bootstrap
@@ -75,8 +71,6 @@ Production: bot identity, minimum token scopes, rotate deploy keys ([12](./12_Se
 
 Documented flows exist. Test upgrades on staging. Before uninstall, understand prune — Flux may delete managed apps when torn down ([15](./15_Monitoring_Events_Metrics_And_Upgrade.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -87,8 +81,6 @@ Documented flows exist. Test upgrades on staging. Before uninstall, understand p
 | Shared cluster with teams | Bootstrap + multitenancy patches |
 
 **Good:** the fleet path is reviewable Git; bot owns the deploy key. **Bad:** one human’s PAT forever.
-
----
 
 ## References
 

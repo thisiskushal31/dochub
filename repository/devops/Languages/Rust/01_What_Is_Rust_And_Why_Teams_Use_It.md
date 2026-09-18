@@ -6,8 +6,6 @@
 
 What Rust is as a language and platform, how its safety model differs from garbage-collected and unchecked-memory languages, why engineering teams adopt it, what costs to budget for, and where Rust shows up in real systems—CLIs, agents, infrastructure, networking, and embedded—so you can decide when it is the right tool and what “safe by default” actually means in practice.
 
----
-
 ## 1. Concepts
 
 ### 1. Language identity
@@ -90,8 +88,6 @@ You do not need to write Rust daily to encounter it: incident response, SBOM rev
 
 Choosing Rust is rarely “replace the whole company stack”; it is often “put Rust where memory bugs or performance ceilings hurt most.”
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Safe, unsafe, and undefined behavior
@@ -125,8 +121,6 @@ Saying no is a staff skill. Forcing Rust into every service creates compile-time
 - **Dependency sprawl** — Cargo makes pulling crates easy; supply-chain and MSRV discipline lag.
 - **Async fashion** — marking everything `async` without a runtime and cancellation story.
 - **C++ habits in Rust syntax** — excessive `clone()`, shared mutable state via interior mutability everywhere, or large `unsafe` regions “to make it compile.”
-
----
 
 ## 3. Applications and use cases
 
@@ -169,8 +163,6 @@ Saying no is a staff skill. Forcing Rust into every service creates compile-time
 - **Unsafe and FFI inventory** is known or confirmed absent; policy for new `unsafe` is written.
 - Success metrics (defect class reduction, p99, binary size, ops toil) are defined before a rewrite expands.
 - Exit criteria exist for **not** using Rust when a managed language meets the bar.
-
----
 
 ## References
 

@@ -48,8 +48,6 @@ On **Sui**, **`key`** (with **`store`**) describes **objects** with unique IDs; 
 - **Security:** Private pack/unpack prevents arbitrary minting or tearing apart invariants from outside.
 - **Operations:** Published modules fix the set of struct types clients and indexers must handle.
 
----
-
 ## Further reading
 
 - [The Move Book — Structs and Resources](https://move-language.github.io/move/structs-and-resources.html)

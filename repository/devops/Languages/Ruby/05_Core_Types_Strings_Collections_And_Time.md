@@ -6,8 +6,6 @@
 
 The built-in types you touch in every script: **String**, **Symbol**, **Array**, **Hash**, **Range**, **Regexp**, numeric types, and **Time**. How they behave (mutable vs frozen, key equality, encoding), how indexing and slicing work, and how mistakes at these boundaries cause production bugs in automation, APIs, and cookbooks.
 
----
-
 ## 1. Concepts
 
 ### 1. Strings: mutable text with encoding
@@ -117,8 +115,6 @@ Always log **UTC** in distributed systems; convert for display only.
 
 **`nil`** is the absence of an object reference. **`true`** and **`false`** are the only falsey values in conditionals. Methods like `nil?`, `empty?`, and `zero?` make intent explicit.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. String frozen literal pragma
@@ -177,8 +173,6 @@ Wall-clock time without zone is a recurring production bug. Pick one rule per sy
 - **Store UTC**, display in local zone at UI.
 - Use **`Time.utc`** or `Time.zone` (ActiveSupport) consistently—never mix bare `Time.now` and UTC in the same persistence layer.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and data modeling
@@ -217,8 +211,6 @@ enabled = ActiveModel::Type::Boolean.new.cast(node['app']['enabled'])
 - No silent `nil` from `[]` on required config—use `fetch` or validation.
 - Time logged in UTC with zone documented for humans.
 - Floats not used for money or version ordering without formatting rules.
-
----
 
 ## References
 

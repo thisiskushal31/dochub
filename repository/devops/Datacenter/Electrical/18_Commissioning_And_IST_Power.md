@@ -2,8 +2,6 @@
 
 [← Previous](./17_Power_Path_Failure_Walks.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 **Commissioning** proves the electrical system was installed and operates as designed—component tests through integrated tests. **IST (integrated systems testing)** runs the plant as a whole: utility loss, generator start, UPS behavior, transfers, and often mechanical together.
@@ -17,8 +15,6 @@ Design → install → component Cx → subsystem Cx → IST → steady operatio
 ```
 
 Ops inherits the artifacts: sequence docs, setpoints, alarm lists, as-built one-lines.
-
----
 
 ## 2. Advanced concepts
 
@@ -55,8 +51,6 @@ Mechanical IST belongs with [Mechanical](../Mechanical/README.md). Full building
 
 Cx scripts cite local codes and owner standards (Uptime, company playbooks). The jobs—prove start, transfer, runtime, alarms, as-builts—are universal.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -75,8 +69,6 @@ Cx scripts cite local codes and owner standards (Uptime, company playbooks). The
 - Never declare done because LEDs are green once  
 
 **Good:** integrated test report, trained operators, living documents. **Bad:** Cx binder shelf-ware; production is the first IST.
-
----
 
 ## References
 

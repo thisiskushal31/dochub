@@ -2,8 +2,6 @@
 
 [← Previous](./04_Configuration_Surfaces_UI_JCasC_And_Init.md) · [README](./README.md) · [Next: Pipeline core →](./06_Pipeline_Core_And_Jenkinsfile.md)
 
----
-
 ## 1. Concepts
 
 Jenkins **items** are not only Pipelines.
@@ -38,8 +36,6 @@ pipeline {
 }
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### Matrix / multi-config
@@ -54,8 +50,6 @@ List views, sectioned views, folders — organize hundreds of jobs. Folders inhe
 
 Handbook “using” chapter covers aborting builds, referencing projects by name, search — operational literacy for large controllers.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -65,8 +59,6 @@ Handbook “using” chapter covers aborting builds, referencing projects by nam
 | Org standard | Folder + shared library Pipelines |
 
 **Good:** name jobs/folders by ownership. **Bad:** flat 2,000 Freestyle jobs with copied steps.
-
----
 
 ## References
 

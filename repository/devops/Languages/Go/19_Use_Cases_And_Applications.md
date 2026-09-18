@@ -29,8 +29,6 @@ From **DevOps** you use Go for custom tooling, operators, and automation; from *
 
 **Why this matters.** Seeing use cases and roles together helps you decide when Go is a fit and how to use it from coding to deployment. The language and toolchain are the same across services, tooling, and CLIs; the context (DevOps, security, backend) determines how you build, deploy, and harden it.
 
----
-
 ## Further reading
 
 - [Why Go – Use Cases](https://go.dev/solutions/use-cases/)

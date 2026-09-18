@@ -8,8 +8,6 @@ How Zig models **data you can see in source**: structs, enums, unions, opaque ty
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. Structs
@@ -131,8 +129,6 @@ extern fn db_close(c: *DbConn) void;
 
 **Where you use it.** FFI wrappers: expose `*DbConn` safely without letting Zig code poke struct fields that belong to C.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `extern struct` for C layout
@@ -180,8 +176,6 @@ const EntryKind = enum { file, dir, symlink };
 
 **Where you use it.** Any domain where only some combinations are real.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | What you build |
@@ -194,8 +188,6 @@ const EntryKind = enum { file, dir, symlink };
 
 **Whole-engineering picture:** data modeling is how Zig stays readable under audit—types carry the story.
 
----
-
 ## 4. Staff-level review checklist
 
 - You can point at each `?T` and say why absence is normal (not an error).
@@ -203,8 +195,6 @@ const EntryKind = enum { file, dir, symlink };
 - C-facing structs use `extern` / documented layout.
 - Public enums are switched exhaustively at boundaries.
 - Structs that own heap memory have an obvious `deinit` or arena story.
-
----
 
 ## References
 

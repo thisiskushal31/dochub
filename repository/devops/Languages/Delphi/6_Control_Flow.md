@@ -4,8 +4,6 @@
 
 Control flow in Delphi is expressed with **if** / **then** / **else**, **case** / **of**, and loops: **for**, **while**, **repeat** / **until**, and **for-in** (for collections). Compound statements use **begin** / **end**. Conditions must be **Boolean** expressions. This topic goes deep on each construct, when to use which, and **Exit**, **Break**, **Continue**, and **Abort**.
 
----
-
 ## If / then / else
 
 **if** condition **then** statement; optionally **else** statement. For multiple statements in one branch, use **begin** / **end**. There is no semicolon before **else**.
@@ -23,8 +21,6 @@ begin
 end;
 ```
 
----
-
 ## Case statement
 
 **case** expression **of** value-list : statement ; ... **end**. The expression must be of an **ordinal** type (integer, character, or enumeration). Each value or range is followed by a colon and one statement (or a **begin** / **end** block). An **else** branch can handle any value not listed.
@@ -38,8 +34,6 @@ else
   WriteLn('Other');
 end;
 ```
-
----
 
 ## For loop
 
@@ -57,8 +51,6 @@ begin
 end;
 ```
 
----
-
 ## While loop
 
 **while** condition **do** statement. The condition is tested before each iteration; the loop runs zero or more times.
@@ -71,8 +63,6 @@ begin
 end;
 ```
 
----
-
 ## Repeat / until
 
 **repeat** statements **until** condition; The body runs at least once; the condition is checked at the end of each iteration. Unlike **while**, the condition is for **termination** (loop exits when condition is true).
@@ -83,8 +73,6 @@ repeat
   Process(Input);
 until Input = '';
 ```
-
----
 
 ## For-in loop
 
@@ -106,8 +94,6 @@ begin
 end;
 ```
 
----
-
 ## Break and Continue
 
 - **Break** — exits the innermost **for**, **while**, or **repeat** loop.
@@ -115,15 +101,11 @@ end;
 
 Use them to avoid deeply nested **if** logic. In **repeat**/ **until**, **Continue** jumps to the **until** condition.
 
----
-
 ## Exit, Abort, RunError
 
 - **Exit** — leaves the current procedure or function immediately. In a function, the return value is whatever **Result** holds at that point.
 - **Abort** — raises a silent **EAbort** exception that is often caught by the VCL (e.g. button click handlers) to cancel an operation without showing an error. Do not use for general error handling.
 - **RunError** — halts the program with an error code (legacy; prefer exceptions for error reporting).
-
----
 
 ## When to use which
 
@@ -138,15 +120,11 @@ Use them to avoid deeply nested **if** logic. In **repeat**/ **until**, **Contin
 | Leave loop early | **Break** or **Exit** (procedure) |
 | Skip to next iteration | **Continue** |
 
----
-
 ## Summary
 
 - **if** / **then** / **else** for branches; no semicolon before **else**. **case** / **of** for ordinal values or ranges.
 - **for** / **to** / **downto** for counted loops; **for-in** for strings, arrays, and enumerables; **while** / **do** and **repeat** / **until** for conditional loops.
 - **Break** and **Continue** for early exit or skip; **Exit** to leave the routine. Use **begin** / **end** for multiple statements in any branch or loop body.
-
----
 
 ## Further reading
 

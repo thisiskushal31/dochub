@@ -2,8 +2,6 @@
 
 [← Previous](./24_Troubleshooting_And_Staff_Checklist.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 Beyond the five named services, Azure DevOps includes **cross-cutting platform surfaces** every org admin and tech lead should know:
@@ -22,8 +20,6 @@ Beyond the five named services, Azure DevOps includes **cross-cutting platform s
 | **REST / CLI / integrate** | Automate org ops; prefer Entra tokens over PATs |
 
 These are part of “what Azure DevOps offers,” not optional footnotes.
-
----
 
 ## 2. Advanced concepts
 
@@ -68,8 +64,6 @@ Use Azure DevOps REST API + `az devops` for project scaffolding, policy as code,
 
 Pipelines also documents targets such as **Azure SQL** deployments and **Azure Stack** estates — same pattern as other Azure tasks: service connection → task/script → environment gate. Add to your spectrum table when those estates exist ([21](./21_Best_Practices_And_Delivery_Spectrum.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -80,8 +74,6 @@ Pipelines also documents targets such as **Azure SQL** deployments and **Azure S
 | Cost control | Right-size parallel jobs; retire unused Advanced Security repos |
 
 **Good:** one platform team owns org policies, billing alerts, and audit sinks. **Bad:** every project invents dashboards and PAT sprawl.
-
----
 
 ## References
 

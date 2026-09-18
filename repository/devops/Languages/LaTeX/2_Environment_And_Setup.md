@@ -87,8 +87,6 @@ Keeping the main `.tex` and the main `.bib` in the project root makes it easy to
 
 After you can compile a minimal document, proceed to **Document structure and basics** to add a preamble, sections, title, and abstract. For build options (latexmk, multiple engines, and when to use which) see **Compilation and toolchains**.
 
----
-
 ## Further reading
 
 - [Getting LaTeX](https://latex-project.org/get/)

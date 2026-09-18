@@ -8,8 +8,6 @@
 
 When something is not allowed, Solidity does not throw an exception you catch three frames up and log. It **reverts**: the storage changes from *this call* are undone, and the caller sees a typed error (if you wrote one). That is the language’s idea of “no.”
 
----
-
 ## 1. Concepts
 
 ### 0. A tiny cashier that says no clearly
@@ -147,8 +145,6 @@ try token.transfer(to, amt) returns (bool ok) {
 
 `try` only wraps **external** calls (and `new`). It does not catch errors inside your own internal functions. Catching and *continuing* after a failed token transfer is how you silently lose user funds—usually you should revert.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Two revert families: `Error(string)` vs `Panic(uint256)` vs custom
@@ -243,8 +239,6 @@ if (!ok) revert SendFailed();
 
 If you ignore `ok`, their state (if any) may have reverted while yours did not. That is the core of several chapter **15** / **18** bugs.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -255,8 +249,6 @@ If you ignore `ok`, their state (if any) may have reverted while yours did not. 
 | **Operations** | Runbooks map error selectors to human meaning |
 | **Software engineering** | Tests cover revert paths, not only happy paths |
 
----
-
 ## 4. Staff-level review checklist
 
 - User-facing failures use **custom errors** (or short requires), not `assert`.
@@ -265,8 +257,6 @@ If you ignore `ok`, their state (if any) may have reverted while yours did not. 
 - `try/catch` does not swallow failures that should abort the tx.
 - Tests use `expectRevert` with the **specific** error.
 - Brownfield 0.7 files are not copied forward with silent wrap.
-
----
 
 ## References
 

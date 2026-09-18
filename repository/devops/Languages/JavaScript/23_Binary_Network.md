@@ -2,8 +2,6 @@
 
 This topic covers **binary data** in the browser (**ArrayBuffer**, **TypedArray**, **DataView**, **Blob**, **File**, **FileReader**, **TextEncoder**/ **TextDecoder**) and **network requests**: **fetch**, **FormData**, **AbortController**, **CORS**, **URL**, **XMLHttpRequest**, **WebSocket**, and **Server-Sent Events**.
 
----
-
 ## ArrayBuffer and TypedArray
 
 **ArrayBuffer** is a raw fixed-length buffer of bytes. You do not access it directly; use a **view**. **Uint8Array**, **Int32Array**, **Float64Array**, etc. are **typed array** views over an ArrayBuffer (shared buffer, typed element size). **new Uint8Array(length)** allocates buffer and view; **new Uint8Array(buffer, byteOffset, length)** views a region. **DataView** gives byte-level access (getUint8, setInt32, etc.) with endianness. Use for binary protocols, file format parsing, or WebGL/canvas pixel data.
@@ -14,13 +12,9 @@ let view = new Uint8Array(buffer);
 view[0] = 255;
 ```
 
----
-
 ## Blob and File
 
 **Blob** represents immutable raw data (optional **type** MIME). **new Blob([parts], { type })**; **parts** can be strings, Blobs, ArrayBuffers. **File** extends Blob with **name** and **lastModified**; created by **<input type="file">** or **new File([parts], name, options)**. **blob.slice()** creates a sub-Blob. **blob.arrayBuffer()**, **blob.text()**, **blob.stream()** (async) read the content. Use Blob for in-memory binary data and **URL.createObjectURL(blob)** for preview or download.
-
----
 
 ## FileReader and TextEncoder/TextDecoder
 
@@ -33,8 +27,6 @@ let decoder = new TextDecoder();
 decoder.decode(bytes);
 ```
 
----
-
 ## Fetch API
 
 **fetch(url, options)** returns a **Promise<Response>**. **options**: **method**, **headers**, **body** (string, FormData, Blob, ArrayBuffer), **mode** (cors, no-cors, same-origin), **credentials** (include, same-origin, omit), **cache**, **redirect**. **response.ok** is true for 2xx; **response.status**, **response.headers**. **response.json()**, **response.text()**, **response.blob()**, **response.arrayBuffer()** return promises with the body. **fetch** does not reject on HTTP errors (4xx/5xx); check **response.ok** or **response.status**. Use **AbortController** to cancel in-flight requests.
@@ -46,19 +38,13 @@ if (res.ok) {
 }
 ```
 
----
-
 ## FormData, AbortController, CORS
 
 **FormData** builds multipart/form-data: **formData.append(key, value)** or **formData.append(key, file, filename)**; pass as **body** in fetch. Use for file uploads and form submission. **AbortController**: create **controller**, pass **controller.signal** in fetch options; **controller.abort()** cancels the request. **CORS**: cross-origin requests require the server to send **Access-Control-Allow-Origin** (and optionally **Credentials**, **Methods**, **Headers**). Preflight (**OPTIONS**) is sent for non-simple requests. Same-origin requests have no CORS; cross-origin without correct headers is blocked by the browser.
 
----
-
 ## URL and XMLHttpRequest
 
 **URL** (or **URLSearchParams**): **new URL(str)** or **new URL(path, base)**; **url.searchParams.get(name)**; **url.pathname**, **url.origin**. **XMLHttpRequest** is the legacy API: **open(method, url)**, **send(body)**, **onload**, **onerror**, **responseType** (json, text, arraybuffer), **setRequestHeader**. Prefer **fetch** for new code; XHR is still used for upload progress (**upload.onprogress**) or older environments.
-
----
 
 ## WebSocket and Server-Sent Events
 
@@ -70,13 +56,9 @@ ws.onmessage = (e) => console.log(e.data);
 ws.send("hello");
 ```
 
----
-
 ## Summary
 
 **ArrayBuffer**, **TypedArray**, and **DataView** handle binary data; **Blob** and **File** represent blobs and user files; **FileReader** and **TextEncoder**/ **TextDecoder** convert between text and binary. **fetch** is the modern API for HTTP; **FormData** for forms and uploads; **AbortController** for cancellation; **CORS** for cross-origin. **URL**/ **URLSearchParams** parse and build URLs. **XMLHttpRequest** is legacy. **WebSocket** is full-duplex; **EventSource** is server-sent events for one-way streams.
-
----
 
 ## Further reading
 

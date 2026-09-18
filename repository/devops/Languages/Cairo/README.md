@@ -8,8 +8,6 @@
 
 This section covers Cairo from beginner to advanced: getting started (installation, Hello World, proving a prime), common concepts (variables, data types, functions, comments, control flow), collections (arrays, dictionaries), ownership and references, structs (including an example program and method syntax), enums and pattern matching (match, if let, while let), modules (packages, crates, paths, use, separating files), generic types and traits, error handling, testing, closures, advanced features (custom data structures, smart pointers, deref, associated items, operator overloading, hashes, macros, inlining, printing, arithmetic circuits, oracles), smart contracts on Starknet (types, storage, functions, events, ABI, interactions, serialization, advanced patterns, security, testing, static analysis, appendix), and the Cairo VM plus appendix (architecture, memory, execution, builtins, hints, runner, tracer, keywords, operators, derivable traits, prelude, error messages, development tools). Topic 21 covers **use cases** (verifiable computation, Starknet apps, DevOps, security) and **case studies** (prime prover, voting contract, ERC20-style token).
 
----
-
 ## Learning path: from basics to smart contracts and applications
 
 If you are new to Cairo and want to **write smart contracts or other Cairo applications**, follow the topics in order. The section is structured so you build understanding step by step:
@@ -36,8 +34,6 @@ If you are new to Cairo and want to **write smart contracts or other Cairo appli
 | **Smart contract / protocol engineer** | 1–19, 21 | Ship and maintain Starknet contracts (DeFi, NFTs, governance); use components, upgradeability, L1–L2. |
 | **Research / verifiable-systems engineer** | 1–12, 18, 20–21 | Design provable programs, understand VM and builtins (20), and apply oracles and circuits (18). |
 
----
-
 ## Topics
 
 | # | Topic | File |
@@ -63,8 +59,6 @@ If you are new to Cairo and want to **write smart contracts or other Cairo appli
 | 19 | Smart contracts on Starknet | [19_Smart_Contracts_On_Starknet.md](./19_Smart_Contracts_On_Starknet.md) |
 | 20 | Cairo VM and appendix | [20_Cairo_VM_And_Appendix.md](./20_Cairo_VM_And_Appendix.md) |
 | 21 | Use cases and case studies | [21_Use_Cases_And_Case_Studies.md](./21_Use_Cases_And_Case_Studies.md) |
-
----
 
 ## Further reading
 

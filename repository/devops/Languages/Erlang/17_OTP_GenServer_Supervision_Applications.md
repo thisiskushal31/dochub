@@ -39,8 +39,6 @@ handle_cast({free, Ch}, Chs) ->
 
 **Why this matters.** OTP is how you build production systems: gen_server for stateful services, supervisors for resilience, applications for structure and releases. Understanding these three is enough to read and extend most Erlang and Elixir codebases.
 
----
-
 ## Further reading
 
 - [OTP Design Principles](https://www.erlang.org/doc/system/design_principles)

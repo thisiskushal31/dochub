@@ -2,8 +2,6 @@
 
 [← Previous](./8_Fire_Detection_VESDA.md) · [README](./README.md) · [Next: Humidity and water →](./10_Humidity_Water_Treatment_And_Plumbing.md)
 
----
-
 ## 1. Concepts
 
 **Suppression** removes heat, oxygen, or chemical reaction—or applies water in a controlled way. IT halls prefer strategies that limit collateral water damage.
@@ -21,8 +19,6 @@ Brand names change; use **listed agent + design concentration** language.
 ### Where it sits
 
 Agent cylinders in a dedicated room; nozzles in white space; pre-action valves in fire riser rooms; abort switches where provided; integration to FACP.
-
----
 
 ## 2. Advanced concepts
 
@@ -49,8 +45,6 @@ Detection ([8](./8_Fire_Detection_VESDA.md)) arms logic. EPO ([Electrical/13](..
 
 Agent approvals, environmental rules, and AHJ preferences differ. Some regions restrict certain legacy agents. Always follow current site documentation—not a 2012 training memory.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -69,8 +63,6 @@ Agent approvals, environmental rules, and AHJ preferences differ. Some regions r
 - Never use EPO/suppress as a joke or power cycle  
 
 **Good:** maintained agent system or pre-action, drilled egress, integrity kept. **Bad:** wet pipe over servers without need; chronic door props; unknown abort behavior.
-
----
 
 ## References
 

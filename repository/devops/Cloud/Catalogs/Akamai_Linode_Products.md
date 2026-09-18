@@ -4,8 +4,6 @@
 
 *Final choice page for **Linode (Akamai Cloud Computing)** and close VPS kin (DigitalOcean, Vultr, Hetzner, etc.). Thinner catalogs than hyperscalers—still what / when / why not. Deeper API: [linode.com/docs](https://www.linode.com/docs/).*
 
----
-
 ## Linode / Akamai Cloud Computing
 
 | Product | What for | When | Why not |
@@ -33,8 +31,6 @@
 | **Managed K8s on kin** | Kube without hyperscaler | Small clusters | Need EKS/GKE/AKS ecosystem |
 
 **When VPS kin:** small surface, price clarity, fewer IAM concepts. **Why not:** multi-account landing zones, deep FM catalogs, regulated shared-responsibility paperwork that names a hyperscaler.
-
----
 
 ## How to use
 

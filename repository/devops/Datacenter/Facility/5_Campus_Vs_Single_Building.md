@@ -2,8 +2,6 @@
 
 [← Previous](./4_Cage_Cabinet_Suite_And_Hands.md) · [README](./README.md) · [Next: Site selection →](./6_Climate_Grid_And_Site_Selection.md)
 
----
-
 ## 1. Concepts
 
 | Shape | Traits |
@@ -12,8 +10,6 @@
 | **Campus** | Multiple buildings; shared or split plant; dark fiber; phased MW |
 
 Wholesale campuses often sell powered shells across phases ([Markets/5](../Markets-And-Operators/5_Wholesale_And_Hyperscale_Landlords.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -28,8 +24,6 @@ Wholesale campuses often sell powered shells across phases ([Markets/5](../Marke
 ### How it connects
 
 Site selection [6](./6_Climate_Grid_And_Site_Selection.md). DR on-ramp [../12](../12_Sites_DR_Hybrid_And_The_Job.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -46,8 +40,6 @@ Site selection [6](./6_Climate_Grid_And_Site_Selection.md). DR on-ramp [../12](.
 - Never equate campus marketing with AZ math  
 
 **Good:** independence proven across buildings. **Bad:** shared SPOF renamed “campus.”
-
----
 
 ## References
 

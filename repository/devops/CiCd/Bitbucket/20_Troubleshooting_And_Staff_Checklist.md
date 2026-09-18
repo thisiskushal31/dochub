@@ -2,8 +2,6 @@
 
 [← Previous](./19_YAML_And_Configuration_Catalog.md) · [README](./README.md) · [Next: Snippets & search →](./21_Snippets_Search_Code_Insights_And_Wiki.md)
 
----
-
 ## 1. Concepts — frequent failures
 
 | Symptom | Likely cause | Where |
@@ -17,8 +15,6 @@
 | Minutes exhausted | Plan limits; large `size:` multipliers | [01](./01_What_Is_Bitbucket.md), [08](./08_Triggers_Steps_Stages_Parallel.md) |
 | `4x`/`8x` rejected | Needs Standard or Premium | [08](./08_Triggers_Steps_Stages_Parallel.md) |
 
----
-
 ## 2. Advanced concepts — debug moves
 
 - Open **Pipelines** → run → step **logs**; confirm image and script.  
@@ -27,8 +23,6 @@
 - For runners: connectivity, labels, disk.  
 - Dynamic pipelines: inspect generated config in logs.  
 - Rerun failed steps only when artifacts are still within retention (Atlassian documents a retention window for artifacts).
-
----
 
 ## 3. Applications and use cases — staff checklist
 
@@ -43,8 +37,6 @@
 - Workspace admins named; Access/SSO and required 2SV considered for enterprise  
 - Rollback / previous digest path known  
 - Plan gates known: minutes, LFS, step sizes `4x+`, Premium admin controls  
-
----
 
 ## References
 

@@ -34,8 +34,6 @@ Save as `hello.lua` and run with `lua hello.lua`. In interactive mode, run `lua 
 
 Use cases span the whole engineering spectrum: **application and product**—configuration and behavior scripts, plugins, extension APIs; **systems and embedded**—scripting inside C/C++ programs, custom DSLs, resource-constrained environments; **game and tooling**—in-engine logic, modding, protocol dissectors, automation; **security**—sandboxed script execution, validation, and safe subsets; **DevOps and infrastructure**—Nginx/OpenResty, Redis, HAProxy, deployment and tuning. Whatever your domain, a solid grasp of the language and its embedding model (topics 2, 14, 15, 16) helps you read, write, and integrate Lua safely.
 
----
-
 ## Further reading
 
 - [Lua 5.5 Reference Manual](https://www.lua.org/manual/5.5/)

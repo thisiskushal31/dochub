@@ -6,10 +6,6 @@
 
 **Sigils** (`$`, `@`, `%`), **scalar** vs **list context**, **undef**, truthiness, core **operators**, **quoting** mechanisms, and the lexical **`my`** vs package **`our`** distinction. Advanced topics include **prototypes** (why libraries use them sparingly) and **feature** pragmas. Without context, Perl looks like noisy punctuation; with it, data flow becomes predictable.
 
----
-
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -27,8 +23,6 @@ my $count = 10;
 my @items = qw(apple banana);
 my %price = ( apple => 120, banana => 90 );
 ```
-
----
 
 ### 2. Scalar vs list context (the central rule)
 
@@ -53,8 +47,6 @@ my @parts  = localtime $epoch;          # list of fields
 
 **Why it matters in operations:** subtle context bugs show up when you **return** values from subroutines or **assign** to **`my ($x)`** vs **`my $x`**. Code review should flag “list vs scalar” on hot paths.
 
----
-
 ### 3. `undef`, truth, and comparison
 
 **`undef`** is the “no value” scalar. Uninitialized scalars are **`undef`**. Warnings often catch **use of uninitialized value**—keep **`use warnings`** on.
@@ -78,8 +70,6 @@ Mixing them silently **coerces** types in ways that confuse audits—pick the ri
 
 **`chomp`:** Removes trailing record separators from **`$_`** or a named scalar—almost always call it on **input lines** before parsing so comparisons and hashes behave predictably.
 
----
-
 ### 4. Operators (overview)
 
 **Arithmetic:** `+`, `-`, `*`, `/`, `%`, `**`. **String:** `.` concatenation, `x` repetition.
@@ -91,8 +81,6 @@ Mixing them silently **coerces** types in ways that confuse audits—pick the ri
 **Assignment** can be compound: `+=`, `.=`, `//=`.
 
 Exhaustive tables and precedence rules live in **`perlop`**; for handbook work, **parenthesize** when precedence is not obvious—reviews and **static analyzers** thank you.
-
----
 
 ### 5. Quoting and interpolation
 
@@ -110,8 +98,6 @@ my @toks = qw{ one two three };
 
 **Here-documents** (`<<'EOF'` / `<<"EOF"`) build multi-line strings—common in generated configs; ensure **closing** token is alone on the line and watch **indentation** on older Perls.
 
----
-
 ### 6. Lexical scope with `my`
 
 **`my`** declares **lexical** variables visible from the declaration to the end of the enclosing **block**, **file**, or **`eval`**. They are **not** package globals—this is what you want for almost all new code.
@@ -127,15 +113,11 @@ my @toks = qw{ one two three };
 
 **State variables** (`use feature 'state'` or `use 5.010`) give **persistent** lexicals across calls—use when you need **memoization** without package globals.
 
----
-
 ### 7. Prototypes (read carefully)
 
 **Subroutine prototypes** (`sub foo ($$) { ... }`) exist mainly for **compile-time** argument checking and **optional** syntactic sugar. They **do not** validate **types** like a static language; they interact badly with **references** and **&sub** calling conventions.
 
 **Rule:** avoid inventing new prototypes in application code unless you know why a **CPAN**-style API needs them. Mis-prototyped subs confuse **maintainers** and **static** tooling.
-
----
 
 ## 2. Advanced concepts
 
@@ -147,16 +129,12 @@ my @toks = qw{ one two three };
 
 **Tooling:** **`Perl::Critic`** and **`perltidy`** enforce house style; wire them in **CI** for repos large enough to justify **bike-shed** automation.
 
----
-
 ## 3. Applications and use cases
 
 - **Log and metrics glue:** **Context** bugs (`return @arr` in **scalar** context) show up in **parsers** and **exporters**—catch with **`use warnings`** and **code review** on **sub** returns.
 - **API and config layers:** **`//`** vs **`||`**, **`eq`** vs **`==`**, and **Unicode** boundaries matter for **identifiers**, **sort keys**, and **auth** comparisons—pair with chapter 4 for **encoding**.
 - **Generated YAML/JSON/K8s:** **Here-doc** terminators break **templated** deploys; **lint** generated Perl or avoid heredocs for **short** payloads.
 - **Legacy interop:** **`our`** and **prototypes** appear in **old** CPAN-style code—know enough to **refactor** toward **`my`** and **explicit** APIs without breaking **callers**.
-
----
 
 ## References
 

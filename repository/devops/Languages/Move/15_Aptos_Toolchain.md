@@ -121,8 +121,6 @@ For upgrades, align with Aptos package policy model (compatible/immutable constr
 - missing resource registration assumptions in tests
 - dependency API drift after unpinned updates
 
----
-
 ## Further reading
 
 - [Aptos — Build](https://aptos.dev/build)

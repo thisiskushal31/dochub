@@ -2,8 +2,6 @@
 
 [← Previous](./08_Workflows_Requires_Filters_Matrix_And_Triggers.md) · [README](./README.md) · [Next: Orbs →](./10_Orbs_Use_And_Author_Literacy.md)
 
----
-
 ## 1. Concepts
 
 | Mechanism | Job |
@@ -15,15 +13,11 @@
 
 Key caches on lockfiles (`checksum "package-lock.json"`). Workspaces are not a substitute for artifact registries for release bits ([CiCd/4](../4_Artifacts_And_Registries.md)).
 
----
-
 ## 2. Advanced concepts
 
 Cache misses and corrupt caches cause mystery failures — know how to bust keys. Don’t cache secrets.
 
 Large artifacts cost storage/transfer — prefer registries for releases; keep pipeline artifacts small.
-
----
 
 ## 3. Applications and use cases
 
@@ -34,8 +28,6 @@ Large artifacts cost storage/transfer — prefer registries for releases; keep p
 | Share test report | store_test_results + artifacts |
 
 **Good:** narrow cache paths. **Bad:** cache entire home directory.
-
----
 
 ## References
 

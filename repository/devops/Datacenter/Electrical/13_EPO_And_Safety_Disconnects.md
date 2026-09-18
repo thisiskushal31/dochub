@@ -2,8 +2,6 @@
 
 [← Previous](./12_Grounding_Bonding_And_Surge.md) · [README](./README.md) · [Next: High density →](./14_High_Density_48V_HVDC_And_Busbar.md)
 
----
-
 ## 1. Concepts
 
 **EPO (emergency power off)** is a control that sheds power to defined loads in an emergency—fire, flood, life safety, or procedure-driven shutdown. **Safety disconnects** are the lockable isolation points used for LOTO so people can work without unexpected energization.
@@ -20,8 +18,6 @@ These are not “big red myth buttons for IT reboots.” Wrong use is a hall-wid
 | Fire system interfaces | May trigger power actions per code/design |
 
 **Critical:** what EPO drops varies by site. Some drop IT; some drop mechanical; some drop both; some are zone-based. Read **this** site’s matrix.
-
----
 
 ## 2. Advanced concepts
 
@@ -52,8 +48,6 @@ Dual-feed gear needs **all** sources locked out. UPS output can remain live when
 
 US NEC/NFPA EPO expectations for IT rooms have evolved; many modern designs minimize casual EPO in white space. IEC markets use different emergency switching language. Always follow posted site procedure over imported habits.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -72,8 +66,6 @@ US NEC/NFPA EPO expectations for IT rooms have evolved; many modern designs mini
 - Never use EPO as a remote power cycle  
 
 **Good:** clear authority, labeled zones, full-source LOTO. **Bad:** unlabeled mushroom buttons; “we hit EPO to kill the row”; incomplete lockout.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./2_CPU_Platforms_Intel_Xeon.md) · [README](./README.md) · [Next: ARM and others →](./4_CPU_Platforms_ARM_And_Others.md)
 
----
-
 ## 1. Concepts
 
 **AMD EPYC** is the other major x86 server CPU line. Generations (Rome, Milan, Genoa, Bergamo, Turin-class, …) change core density, memory channels, PCIe gen, and chiplet layout.
@@ -28,8 +26,6 @@ You do not need to recite die maps—you need to **read OEM NUMA and population 
 | TDP options | Cooling/PSU |
 | Infinity Fabric behavior | Dual-socket and IO locality ([6](./6_CPU_Interconnect_Ideas.md)) |
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes
@@ -50,8 +46,6 @@ Same allocation model as Intel at the *job* level ([9](./9_Allocation_Model_Sock
 
 Widely available in OEM and bare-metal clouds (OVH, Hetzner-class, etc.). Validate OS certification for your distro/hypervisor.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -70,8 +64,6 @@ Widely available in OEM and bare-metal clouds (OVH, Hetzner-class, etc.). Valida
 - Never mix DIMM sizes carelessly across channels  
 
 **Good:** balanced channels, topology-aware apps, gen-locked spares. **Bad:** Xeon habits on EPYC boards; ignoring NPS/NUMA settings.
-
----
 
 ## References
 

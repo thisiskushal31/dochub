@@ -2,8 +2,6 @@
 
 [← Previous](./19_Operator_Platform_Config.md) · [README](./README.md) · [Next: Worked example →](./21_Worked_Example_Build_Test_Push.md)
 
----
-
 ## 1. Concepts
 
 Operating Tekton means watching controllers **and** Runs:
@@ -30,8 +28,6 @@ tkn pipelinerun logs <name> -f
 
 Cluster internals (scheduler, CNI, CSI) stay in [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) — this chapter is Tekton’s ops surface.
 
----
-
 ## 2. Advanced concepts
 
 ### Metrics and alerting
@@ -54,8 +50,6 @@ Prefer re-run from pinned Git over live Pod hacking. Breakpoint-on-failure featu
 
 PAC adds tracing, profiling, informer-cache, multi-controller metrics — platform literacy when PAC is in the critical path ([13](./13_Pipelines_As_Code.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -73,8 +67,6 @@ PAC adds tracing, profiling, informer-cache, multi-controller metrics — platfo
 - Pruner + metrics together (ops completeness)  
 
 **Good:** alerts on controller health and queue depth. **Bad:** no prune and no metrics until etcd pages.
-
----
 
 ## References
 

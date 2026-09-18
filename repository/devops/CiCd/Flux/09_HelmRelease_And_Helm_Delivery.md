@@ -2,8 +2,6 @@
 
 [← Previous](./08_Kustomization_Controller.md) · [README](./README.md) · [Next: Repo structure →](./10_Repository_Structure_Tenancy_And_Multi_Cluster.md)
 
----
-
 ## 1. Concepts
 
 Helm is still Helm. Flux’s **HelmRelease** object says: *“This chart, these values, keep the release matching Git.”*
@@ -33,8 +31,6 @@ spec:
 
 Charts can also come from Git or OCI — see the HelmRelease reference for `chartRef` / chart template shapes.
 
----
-
 ## 2. Advanced concepts
 
 ### Where values come from
@@ -60,8 +56,6 @@ Also common: `dependsOn`, `serviceAccountName` (impersonation), `kubeConfig` (re
 
 Kubernetes Jobs are awkward to update in place. Flux’s running-jobs use-case uses **separate Kustomizations** (pre → app → post) with `dependsOn`, `wait`, and often `force` on Jobs — see that guide rather than overloading Helm hooks alone.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -72,8 +66,6 @@ Kubernetes Jobs are awkward to update in place. Flux’s running-jobs use-case u
 | Ordered bring-up | dependsOn CRDs/operators first |
 
 **Good:** pin chart versions; encrypt secret values. **Bad:** unbounded version ranges in prod; TLS keys in plain `values:`.
-
----
 
 ## References
 

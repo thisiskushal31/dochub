@@ -54,8 +54,6 @@ Kotlin was developed by JetBrains and first released publicly in 2011. It was de
 
 Kotlin is often chosen over Java for new code on the JVM or Android because it reduces boilerplate and encodes common patterns directly in the language. Where Java requires verbose getters, setters, and constructors, Kotlin offers data classes and primary constructors. Where Java uses nullable reference types without type-level distinction, Kotlin uses nullable types (`T?`) so that nullability is explicit and the compiler can enforce checks. Kotlin has no raw types; generics are used consistently. Checked exceptions are not declared in Kotlin; error handling is typically done with return types or exceptions as in many modern languages. Extension functions let you add methods to existing types without inheritance. Smart casts and the `when` expression simplify branching and pattern-like logic. For build scripts, the Gradle Kotlin DSL offers the same expressiveness and IDE support as Kotlin application code. All of this runs on the same JVM as Java, so teams can adopt Kotlin incrementally and keep using Java libraries and tooling.
 
----
-
 ## Further reading
 
 - [Kotlin documentation](https://kotlinlang.org/docs/home.html)

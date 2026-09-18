@@ -20,8 +20,6 @@ F# is **statically typed**: every value and expression has a type, and the compi
 
 **Why this matters.** Type inference and generics reduce boilerplate while keeping safety. When the compiler reports a type error, it usually points at a mismatch or an ambiguous use; adding a local annotation or fixing the expression resolves it. Understanding type syntax (tuple **\***, function **->**, array **[]**, generic **'a**) is necessary for reading signatures and for records, discriminated unions, and pattern matching in later topics.
 
----
-
 ## Further reading
 
 - [F# Types (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/fsharp-types)

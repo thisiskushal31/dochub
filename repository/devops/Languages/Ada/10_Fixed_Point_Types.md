@@ -4,8 +4,6 @@
 
 Fixed-point types represent values as scaled integers: no exponent, fixed step between representable values. They are used when floating-point is unsuitable (e.g. financial decimal precision, or targets without a floating-point unit). Ada supports **decimal** fixed-point (scale is a power of ten) and **ordinary (binary)** fixed-point (arbitrary delta, typically implemented with a power-of-two scale).
 
----
-
 ## Decimal fixed-point types
 
 **Decimal fixed-point** types use a **delta** that must be a **power of 10** (e.g. 0.01, 0.1) and a **digits** value for the number of decimal digits. Values are conceptually integers scaled by the delta; useful for money and other decimal-oriented data.
@@ -24,8 +22,6 @@ type Decimal is delta 10.0 ** (-2) digits 3;
 
 Assigning a value that cannot be represented exactly (e.g. 0.1 to a type with **delta 1.0**) is a compile-time or runtime error.
 
----
-
 ## Ordinary (binary) fixed-point types
 
 **Ordinary fixed-point** types use an arbitrary **delta** and an explicit **range**. The implementation typically uses a power-of-two scale internally. Useful for signal processing and embedded systems where a floating-point unit is absent or expensive.
@@ -36,15 +32,11 @@ Syntax: **type Name is delta** *delta_value* **range** *low* .. *high*;
 type T_Inv_Trig is delta 0.0005 range -Pi/2.0 .. Pi/2.0;
 ```
 
----
-
 ## Fixed-point vs floating-point
 
 - **No exponent** — Fixed-point has no exponent; the range of representable magnitudes is fixed. Very small values (e.g. 0.005 when delta is 0.01) may become zero when stored or after operations. Floating-point keeps small values by changing the exponent.
 - **Predictable scaling** — Decimal fixed-point avoids binary rounding issues that can be undesirable in finance.
 - **Machine model** — Fixed-point arithmetic is usually implemented with integer registers and instructions, which can be faster or lower-power on targets without hardware floating-point.
-
----
 
 ## Further reading
 

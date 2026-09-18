@@ -2,8 +2,6 @@
 
 [← Previous](./6_CPU_Interconnect_Ideas.md) · [README](./README.md) · [Next: Population and NUMA →](./8_Memory_Population_And_NUMA.md)
 
----
-
 ## 1. Concepts
 
 Server memory is organized as **DIMMs** on **channels** owned by memory controllers in the CPU/IOD. Getting type and channel count wrong is the fastest way to leave performance on the table—or fail POST.
@@ -27,8 +25,6 @@ Server memory is organized as **DIMMs** on **channels** owned by memory controll
 | Rank | Organization affecting timing/capacity |
 | Speed (MT/s) | Negotiated downward if mixed/populated heavily |
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes
@@ -49,8 +45,6 @@ Population rules and NUMA: [8](./8_Memory_Population_And_NUMA.md). BMC reports D
 
 Same JEDEC families worldwide. OEM validated DIMM lists matter for support—stick to **qualified** parts for production fleets.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -69,8 +63,6 @@ Same JEDEC families worldwide. OEM validated DIMM lists matter for support—sti
 - Never mix random retail DIMMs into servers  
 
 **Good:** qualified identical sets, full-channel balance. **Bad:** one fat DIMM per CPU; mixed bins; ignoring OEM QVL.
-
----
 
 ## References
 

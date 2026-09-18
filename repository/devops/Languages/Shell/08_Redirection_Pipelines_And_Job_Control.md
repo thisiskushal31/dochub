@@ -6,8 +6,6 @@
 
 How shells connect **standard streams** to files and other commands: file-descriptor redirection, pipelines, here-documents and here-strings, background jobs, and common signals. Bash (and POSIX `sh`) treat the pipeline as a **text** stream between processes. PowerShell’s pipeline is a deliberate contrast—**objects** flow between cmdlets. After this chapter you should redirect stderr safely, know pipeline exit-status pitfalls, and avoid confusing Unix job control with Windows process management.
 
----
-
 ## 1. Concepts
 
 ### 1. Three standard streams
@@ -91,8 +89,6 @@ Scripts rarely use interactive job control; operators use it constantly. Product
 ### 6. PowerShell contrast (preview)
 
 In Bash/POSIX, `|` moves **bytes of text**. In PowerShell, `|` moves **.NET objects** between cmdlets—properties survive without reparsing columns. That is not “better redirection”; it is a different composition model. Chapter 12 deepens PowerShell; here the point is: do not assume Unix pipeline habits transfer unchanged to `pwsh`.
-
----
 
 ## 2. Advanced concepts
 
@@ -223,8 +219,6 @@ Stdout to a terminal is often line-buffered; stdout to a pipe may be fully buffe
 
 `command &` / `wait` is fine for a handful of sibling tasks in a script. It is the wrong abstraction for fleet workloads—use systemd units, Kubernetes Jobs, Windows services, or a workflow engine. Mixing shell background jobs with container PID 1 responsibilities is a common source of unreaped children and ignored `SIGTERM`.
 
----
-
 ## 3. Applications and use cases
 
 ### Application and build tooling
@@ -289,8 +283,6 @@ Kernel and OS admin depth for shells lives beside this track—for Linux process
 - Do background jobs always `wait` (or get supervised) so failures are not lost?
 - Are secrets excluded from merged CI logs?
 - Is PowerShell automation using object pipelines on purpose—not forcing everything through text parse?
-
----
 
 ## References
 

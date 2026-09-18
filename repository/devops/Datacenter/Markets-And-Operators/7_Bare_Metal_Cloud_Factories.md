@@ -2,8 +2,6 @@
 
 [← Previous](./6_Regional_Colo_And_Telco_DCs.md) · [README](./README.md) · [Next: Tenant cloud vs landlord →](./8_Tenant_Cloud_Vs_Landlord.md)
 
----
-
 ## 1. Concepts
 
 **Bare-metal cloud** operators (OVHcloud, Hetzner, Leaseweb-class, and kin) sell **servers you rent**; they own the iron and usually the hall plant. You get OS/BMC-ish access via their portal/API—not a colo cage key.
@@ -20,8 +18,6 @@ This is not Equinix Smart Hands, and not a multi-tenant hypervisor VPS (though s
 | Interconnect | Their network product, not your MMR XC shopping |
 
 Intake job: [Provider-Use/8](../Provider-Use/8_Dedicated_Metal_Intake.md). API/SKU depth → Cloud later.
-
----
 
 ## 2. Advanced concepts
 
@@ -42,8 +38,6 @@ Taxonomy: [1](./1_Operator_Taxonomy.md). Physics still Electrical–Compute. Ind
 
 EU strength (Hetzner/OVH home markets) vs expanding regions—check current region maps officially.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -62,8 +56,6 @@ EU strength (Hetzner/OVH home markets) vs expanding regions—check current regi
 - Don’t file Equinix-style XC tickets on Hetzner  
 
 **Good:** SKU-first, region-clear, portal fluency. **Bad:** colo expectations; ignoring factory cooling constraints on custom cards.
-
----
 
 ## References
 

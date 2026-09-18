@@ -2,8 +2,6 @@
 
 [← Previous](./17_Deploy_Environments_And_Promote.md) · [README](./README.md) · [Next: Worked example →](./19_Worked_Example_CI_Build_And_Promote.md)
 
----
-
 ## 1. Concepts
 
 Operate Actions like a product:
@@ -17,8 +15,6 @@ Operate Actions like a product:
 | Queue / concurrency pressure | Jobs waiting; plan concurrency caps |
 
 Notifications can subscribe you to workflow outcomes you care about — without spamming the whole org.
-
----
 
 ## 2. Advanced concepts
 
@@ -48,8 +44,6 @@ Enable step/runner debug logging when ordinary logs are not enough. Condition-ex
 
 `GITHUB_TOKEN` and REST API rate limits, Docker Hub pulls from self-hosted runners, etc., show up as flaky CI that isn’t “Actions broken.”
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Practice |
@@ -59,8 +53,6 @@ Enable step/runner debug logging when ordinary logs are not enough. Condition-ex
 | Capacity | Watch queue time before buying larger runners |
 
 **Good:** owners for noisy workflows. **Bad:** ignoring minute burn until Finance pages you.
-
----
 
 ## References
 

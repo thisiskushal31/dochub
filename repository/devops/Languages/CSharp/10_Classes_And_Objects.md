@@ -6,8 +6,6 @@
 
 **Why classes?** They model entities (e.g. Order, Customer) and group related data and operations. Encapsulation keeps internal state consistent and allows you to change implementation without breaking callers.
 
----
-
 ## Declaring a class and creating objects
 
 A class is declared with **class**, a name, and a body. **Fields** hold data; **methods** define behavior. Use **new** to create an instance. The **constructor** is a special method that runs when the object is created.
@@ -31,8 +29,6 @@ var car = new Car("Tesla", 2024);
 car.Display();
 ```
 
----
-
 ## Properties
 
 **Properties** expose data with get/set accessors. They can have logic (validation, computed values) and support **init** (set only during object initializer), **get** only, or **private set**.
@@ -50,13 +46,9 @@ class Person
 }
 ```
 
----
-
 ## Access modifiers
 
 **public** members are visible everywhere. **private** members are visible only inside the type. **protected** is visible in derived classes. **internal** is visible within the same assembly. Use the most restrictive modifier that allows the intended access.
-
----
 
 ## Further reading
 

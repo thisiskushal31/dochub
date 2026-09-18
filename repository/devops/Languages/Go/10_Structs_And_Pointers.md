@@ -32,8 +32,6 @@ type Reader struct {
 
 **Why this matters.** Structs and pointers are the basis for most data structures and APIs. Passing **\*T** avoids copying and allows the callee to mutate. Embedded structs and interfaces let you compose behavior (e.g. embed **sync.Mutex** for locking). In DevOps and services, config structs, request/response types, and internal state are typically structs; pointers are used for optional fields and for sharing mutable state under a lock.
 
----
-
 ## Further reading
 
 - [The Go Programming Language Specification: Struct types](https://go.dev/ref/spec#Struct_types)

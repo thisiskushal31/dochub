@@ -2,8 +2,6 @@
 
 [← Previous](./04_First_Pipeline_And_Project_Setup.md) · [README](./README.md) · [Next: Variables →](./06_Variables_Secrets_And_Library.md)
 
----
-
 ## 1. Concepts
 
 Jobs run on **agents** from an **agent pool**.
@@ -23,8 +21,6 @@ pool: MyPrivatePool        # self-hosted pool name
 ```
 
 Parallelism is a billing/capacity concern on Services; self-hosted needs you to size machines and keep them healthy.
-
----
 
 ## 2. Advanced concepts
 
@@ -49,8 +45,6 @@ Self-hosted: patch OS, rotate credentials, don’t leave build artifacts world-r
 
 Jobs can run inside a container on the agent (`container:`). Useful for reproducible toolchains; networking and Docker-in-Docker caveats apply.
 
----
-
 ## 3. Applications and use cases
 
 | Estate | Pattern |
@@ -60,8 +54,6 @@ Jobs can run inside a container on the agent (`container:`). Useful for reproduc
 | Bursty load | VMSS agent pools |
 
 **Good:** prod deploy agents scoped and monitored. **Bad:** shared dirty self-hosted agent used for untrusted PR forks without isolation.
-
----
 
 ## References
 

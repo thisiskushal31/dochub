@@ -2,8 +2,6 @@
 
 [← Previous](./05_First_Pipeline_And_Enablement.md) · [README](./README.md) · [Next: Secrets →](./07_Variables_Secrets_And_OIDC.md)
 
----
-
 ## 1. Concepts
 
 By default, steps run on **Atlassian-hosted** infrastructure as Docker containers. **Self-hosted runners** execute steps on your machines/VMs when you need private network access, special hardware, or OS options (Linux Docker/shell, Windows, macOS — as supported).
@@ -18,8 +16,6 @@ By default, steps run on **Atlassian-hosted** infrastructure as Docker container
 ```
 
 Labels must match a registered runner.
-
----
 
 ## 2. Advanced concepts
 
@@ -40,8 +36,6 @@ Treat runners like CI agents: patch OS, rotate credentials, isolate prod-capable
 
 Register at workspace scale for shared capacity; restrict which repos can use sensitive runners.
 
----
-
 ## 3. Applications and use cases
 
 | Estate | Pattern |
@@ -51,8 +45,6 @@ Register at workspace scale for shared capacity; restrict which repos can use se
 | iOS | macOS runner (where offered) |
 
 **Good:** labeled pools with clear owners. **Bad:** one privileged runner for all PR forks without isolation.
-
----
 
 ## References
 

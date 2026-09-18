@@ -53,8 +53,6 @@ Kotlin can be built with Maven using the **kotlin-maven-plugin**. You define the
 
 **Dokka** generates API documentation from KDoc comments and supports mixed Kotlin/Java projects and multiple output formats. Integrate it via the Dokka Gradle plugin so that docs are built and published as part of the release process. From a DevOps perspective, keep the Kotlin and Gradle versions consistent across local, CI, and deployment; pin the Kotlin version in the build so that builds are reproducible. Use Gradle’s dependency verification and lockfiles where appropriate to ensure the same binary dependencies are resolved everywhere. The next topic covers Android, server-side, and JVM use cases.
 
----
-
 ## Further reading
 
 - [Gradle](https://kotlinlang.org/docs/gradle.html)

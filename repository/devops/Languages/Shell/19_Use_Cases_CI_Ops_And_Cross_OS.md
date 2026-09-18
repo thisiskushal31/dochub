@@ -6,8 +6,6 @@
 
 Where shell earns its keep in **whole-engineering** work: GitHub Actions (and similar) shell steps, install/bootstrap scripts, ops glue jobs, and the decision of **Bash vs PowerShell vs WSL**. This chapter synthesizes dialects and commands from earlier chapters into placement guidance—not a full CI product manual.
 
----
-
 ## 1. Concepts
 
 ### 1. Shell as glue, not the product
@@ -91,8 +89,6 @@ Rules:
 2. Quoting and allowlists (chapter 18)  
 3. Timeouts and idempotency  
 4. Emit machine-readable summaries for humans and bots  
-
----
 
 ## 2. Advanced concepts
 
@@ -223,8 +219,6 @@ When migrating batch → PowerShell or Bash 3.2 → 5, use explicit paths (`scri
 
 Spinning WSL for every tiny Windows job is slow. Prefer native `pwsh` when the task is Windows-shaped. Prefer Linux runners for Linux-shaped builds instead of “Windows + WSL” as a default.
 
----
-
 ## 3. Applications and use cases
 
 ### Platform engineering
@@ -288,7 +282,6 @@ Linux scripting context: [`../../Operating-Systems/Linux/9_Shell_And_Scripting.m
 - Self-hosted runner hygiene addressed when applicable.
 - Make/task-runner recipes inherit strict shell flags where used.
 - Polyglot one-files avoided; dual wrappers preferred.
----
 
 ## References
 

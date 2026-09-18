@@ -57,8 +57,6 @@ Julia can be **embedded** in C (or other languages that can call C): the embeddi
 
 When you operate Julia in production or in shared research infrastructure, treat it like any other runtime: reproducible environment, controlled dependencies, and clear deployment path. The project and manifest files are the contract for what runs; keep them under version control and review changes as part of your release and security process.
 
----
-
 ## Further reading
 
 - [Creating Packages](https://pkgdocs.julialang.org/dev/creating-packages/)

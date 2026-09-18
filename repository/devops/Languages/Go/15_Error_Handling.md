@@ -30,8 +30,6 @@ if errors.Is(err, io.EOF) {
 
 **Why this matters.** Consistent error handling makes code predictable and debuggable. Wrapping with **%w** preserves the chain for **errors.Is** and **errors.As**. In DevOps and security, avoid exposing internal paths or stack traces in error messages to clients; log details server-side and return safe messages. Use **errors.Is** and **errors.As** instead of direct comparison when using wrapped errors.
 
----
-
 ## Further reading
 
 - [The Go Programming Language Specification: Errors](https://go.dev/ref/spec#Errors)

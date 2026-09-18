@@ -2,8 +2,6 @@
 
 [← Previous](./13_NICs_HBAs_And_Slot_Planning.md) · [README](./README.md) · [Next: Imaging →](./15_Imaging_And_Provisioning_At_Scale.md)
 
----
-
 ## 1. Concepts
 
 The server converts almost all watts to heat. **PSU redundancy**, **inlet temperature**, and **derating** decide whether the box runs at nameplate or throttles.
@@ -26,8 +24,6 @@ The server converts almost all watts to heat. **PSU redundancy**, **inlet temper
 | Throttle | CPU/GPU clocks drop |
 | Derating | High altitude / high inlet → less allowed wattage |
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes
@@ -48,8 +44,6 @@ Hall cooling: [Mechanical](../Mechanical/README.md). Density budgets: [White-Spa
 
 Altitude derating matters in high metros. Ambient policies differ by operator ASHRAE class targets.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -68,8 +62,6 @@ Altitude derating matters in high metros. Ambient policies differ by operator AS
 - Never run production with known failed PSU “until next window” without risk accept  
 
 **Good:** true PSU redundancy, measured draw, cool inlets. **Bad:** nameplate packing; single-path PSUs; ignored fan alerts.
-
----
 
 ## References
 

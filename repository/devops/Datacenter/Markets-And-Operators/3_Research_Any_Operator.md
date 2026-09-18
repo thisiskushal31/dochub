@@ -2,8 +2,6 @@
 
 [← Previous](./2_How_Operators_Build_And_Run_Halls.md) · [README](./README.md) · [Next: Equinix-class →](./4_Equinix_Class_Interconnection.md)
 
----
-
 ## 1. Concepts
 
 Goal: faced with an unfamiliar logo, **classify**, estimate metro prominence, name architecture shape, and name the durable jobs—without claiming a complete building directory of Earth.
@@ -25,8 +23,6 @@ Goal: faced with an unfamiliar logo, **classify**, estimate metro prominence, na
 | Financial / ownership (if material)? | Risk |
 
 Add the logo to the **syllabus living index** the same session when possible.
-
----
 
 ## 2. Advanced concepts
 
@@ -52,8 +48,6 @@ Regional chapters [9](./9_Americas_Hubs.md)–[15](./15_Latin_America_And_Other_
 
 Language and disclosure differ; checklist is universal.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -72,8 +66,6 @@ Language and disclosure differ; checklist is universal.
 - Index updated  
 
 **Good:** checklist-driven, indexed, humble about secrets. **Bad:** brochure belief; phone-book cosplay; one press release.
-
----
 
 ## References
 

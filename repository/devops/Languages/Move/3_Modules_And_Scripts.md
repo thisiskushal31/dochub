@@ -56,8 +56,6 @@ On **Aptos**, scripts remain common for composing several module calls in one tx
 - **Security:** Visibility (`public`, `public(friend)`, internal) and module boundaries limit who can touch state.
 - **Operations:** Publish modules once; scripts or client-built PTBs change frequently without republishing.
 
----
-
 ## Further reading
 
 - [The Move Book — Modules and Scripts](https://move-language.github.io/move/modules-and-scripts.html)

@@ -2,8 +2,6 @@
 
 This topic covers **animation** (Bezier curves, CSS animations, JavaScript animations), **Web Components** (custom elements, Shadow DOM, template, slots, styling, events), and **regular expressions** (patterns, character classes, quantifiers, groups, lookahead, and common pitfalls).
 
----
-
 ## Animation: Bezier and CSS/JS
 
 **Bezier curves** define easing: **cubic-bezier(x1, y1, x2, y2)** in CSS or as timing functions. **CSS animations**: **@keyframes** and **animation** (name, duration, timing-function, delay, iteration-count, direction, fill-mode). **animationstart**, **animationend**, **animationiteration** events. **JavaScript animations**: update properties (e.g. **transform**, **opacity**) in a loop, ideally with **requestAnimationFrame(callback)** so the browser syncs with repaints. Avoid **setInterval** for animation; **requestAnimationFrame** is the standard. For complex sequences, use **Web Animations API** (**element.animate()**) or animation libraries.
@@ -15,8 +13,6 @@ function animate() {
 }
 requestAnimationFrame(animate);
 ```
-
----
 
 ## Web Components: custom elements and Shadow DOM
 
@@ -32,8 +28,6 @@ class MyEl extends HTMLElement {
 customElements.define("my-el", MyEl);
 ```
 
----
-
 ## Regular expressions: patterns and flags
 
 **Regular expressions** match patterns in strings. Create with **/pattern/flags** or **new RegExp("pattern", "flags")**. Flags: **g** (global, all matches), **i** (ignore case), **m** (multiline, ^/$ per line), **s** (dotAll, . matches newline), **u** (Unicode), **y** (sticky). **str.match(re)** returns matches (array or null); **str.replace(re, replacement)** replaces; **str.search(re)** returns index or -1; **str.split(re)** splits. **re.exec(str)** returns one match and updates **re.lastIndex** when **g** or **y**. **re.test(str)** returns boolean.
@@ -44,25 +38,17 @@ let re = /hello/gi;
 "a1b2".replace(/\d/g, "-");
 ```
 
----
-
 ## Character classes, quantifiers, anchors
 
 **Character classes**: **\d** (digit), **\w** (word), **\s** (whitespace); **\D**, **\W**, **\S** negated; **[abc]**, **[a-z]**, **[^x]** (negated). **Unicode**: **\p{...}** with **u** flag (e.g. **\p{L}** for letters). **Anchors**: **^** (start), **$** (end); with **m**, they match line start/end. **\b** is word boundary. **Quantifiers**: **+** (1+), ***** (0+), **?** (0 or 1), **{n}**, **{n,}**, **{n,m}**. **?** after a quantifier makes it lazy (e.g. **.*?**). **Escaping**: **\** for special chars (e.g. **\.**, **\\**).
-
----
 
 ## Groups, backreferences, lookahead
 
 **Capturing groups**: **(...)** capture and are available as **$1**, **$2** in replace or **match[1]**, **match[2]**. **Non-capturing**: **(?:...)**. **Backreferences**: **\1**, **\2** in the pattern (or **\k<name>** for named groups). **Named groups**: **(?<name>...)** and **match.groups.name**. **Lookahead**: **(?=...)** (positive), **(?!...)** (negative); match position, not characters. **Lookbehind**: **(?<=...)** / **(?<!...)** (supported in modern JS). Use for validation (e.g. password rules) or complex finds. **Catastrophic backtracking**: nested quantifiers on overlapping alternations can hang; simplify the pattern or avoid unbounded repetition over ambiguous parts.
 
----
-
 ## Summary
 
 **Animation**: **requestAnimationFrame** for JS-driven animation; CSS **@keyframes** and **animation** for declarative; Bezier for easing. **Web Components**: **customElements.define** and **HTMLElement** subclasses; **attachShadow** for encapsulation; **<template>** and **<slot>** for structure; **:host** and **::slotted** for styling. **Regular expressions**: **/pattern/flags**, **match**/ **replace**/ **test**/ **exec**; character classes, quantifiers, anchors, groups, backreferences, lookahead/lookbehind; **u** flag for Unicode; avoid catastrophic backtracking.
-
----
 
 ## Further reading
 

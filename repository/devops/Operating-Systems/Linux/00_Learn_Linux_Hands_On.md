@@ -6,8 +6,6 @@
 
 This page ties the handbook to a **hands-on learning path** so you can do that. Use it as your **practical companion**: read a topic here, then do the corresponding tutorials on a VM or machine.
 
----
-
 ## How to use this (hands-on workflow)
 
 1. **Get a lab** — Install a Linux distro (RHEL, CentOS, Rocky, Alma, Fedora, Ubuntu, or Debian) on bare metal or in a VM (VirtualBox, KVM, or VMware). See [Introduction and basics](./1_Introduction_And_Basics.md) and [Virtualization on Linux](./14_Virtualization_On_Linux.md).
@@ -16,8 +14,6 @@ This page ties the handbook to a **hands-on learning path** so you can do that. 
 4. **Repeat** — Move through sections in order or jump to what you need; the goal is to make the commands and behaviors automatic.
 
 The handbook content is drawn from multiple sources and merged into one place. The table below maps **handbook topics** to a structured hands-on curriculum and to specific tutorial links. One such curriculum is the [Beginner’s Guide for Linux](https://www.tecmint.com/free-online-linux-learning-guide-for-beginners/) (commands, package management, LVM, RAID, services, security, scripting); you can use it as a reference. Each topic file’s **Further reading** lists additional tutorial links.
-
----
 
 ## Handbook topic → hands-on mapping
 
@@ -40,8 +36,6 @@ Use this table to go from a **handbook topic** to **hands-on links** where you c
 | Services & systemd | Services, startup | [chkconfig and systemctl](https://www.tecmint.com/chkconfig-command-examples/) · [Stop/disable unwanted services](https://www.tecmint.com/remove-unwanted-services-from-linux/) · [Manage systemd](https://www.tecmint.com/manage-services-using-systemd-and-systemctl-in-linux/) · [Startup process](https://www.tecmint.com/linux-boot-process-and-manage-services/). [guide](https://www.tecmint.com/free-online-linux-learning-guide-for-beginners/#section-12). |
 | Security & hardening | Security, firewall, SSH | Hardening, secure SSH, GRUB password, SSH/MOTD banners, Lynis, [ACLs](https://www.tecmint.com/secure-files-directories-using-acls-in-linux/), SELinux, IPTables, FirewallD, UFW. [guide](https://www.tecmint.com/free-online-linux-learning-guide-for-beginners/#section-13). |
 | [Distributions](./Distributions/README.md) | Distro-specific packages | Yum/RPM (RHEL, CentOS, Fedora), APT/DPKG (Debian, Ubuntu), Zypper (SUSE), DNF. Handbook: [Distributions](./Distributions/README.md). |
-
----
 
 ## External guide — section index
 
@@ -71,8 +65,6 @@ Below is the **section index** of one [Beginner’s Guide for Linux](https://www
 | 20 | Free Linux books | Cheat sheet; GNU/Linux advanced administration; securing & optimizing; patch management; hands-on guide; Linux Bible; Linux from Scratch; shell scripting cookbook; Bash guide. |
 | 21 | Certifications | RHCSA, LFCS, LFCE preparation guides. |
 
----
-
 ## Hands-on habits
 
 - **Run every command** — Don’t just read; type (or paste) and run. See success and error messages.
@@ -80,8 +72,6 @@ Below is the **section index** of one [Beginner’s Guide for Linux](https://www
 - **Use one VM per “role”** — e.g. one for LVM/RAID, one for Services/firewall, one for scripting. Snapshots help.
 - **Keep notes** — Commands that worked, mistakes, and fixes. Reuse them later.
 - **Combine with handbook** — When a tutorial says “create an LVM,” read [Storage advanced: LVM](./12_Storage_Advanced_LVM_ACLs.md) for the concepts and options, then do the steps in the linked tutorial.
-
----
 
 ## Summary
 

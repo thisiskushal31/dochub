@@ -2,8 +2,6 @@
 
 [← Previous](./18_Worked_Example_Bootstrap_And_App.md) · [README](./README.md) · [Next: Coverage map →](./20_Feature_And_Configuration_Coverage_Map.md)
 
----
-
 ## 1. Concepts — defaults that age well
 
 | Do | Don’t |
@@ -17,8 +15,6 @@
 | Scope drift `ignore` rules (e.g. HPA) | Leave `force: true` on forever |
 | Add Flagger only with metrics + a traffic provider | “Canary everything” with no SLOs |
 
----
-
 ## 2. Advanced — when Flux is the wrong tool (for now)
 
 | Situation | Better fit |
@@ -31,8 +27,6 @@
 
 Flux vs Argo CD is about **how your platform likes to work**, not which logo is “more GitOps.”
 
----
-
 ## 3. Applications and use cases
 
 | Decision | Ask yourself |
@@ -41,8 +35,6 @@ Flux vs Argo CD is about **how your platform likes to work**, not which logo is 
 | Image automation? | Are those tags already CI-tested? |
 | Flagger? | Do we have metrics and one traffic standard? |
 | Operator? | Do we need declarative OCI/Gitless installs? |
-
----
 
 ## References
 

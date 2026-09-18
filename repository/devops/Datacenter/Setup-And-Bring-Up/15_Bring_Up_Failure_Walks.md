@@ -2,8 +2,6 @@
 
 [← Previous](./14_Role_Playbooks_Bring_Up_Week.md) · [README](./README.md)
 
----
-
 ## Mental map
 
 ```text
@@ -11,8 +9,6 @@ Symptom → which plane? → physical or config? → roll back last change → v
 ```
 
 Worked hall failures: [Integration/](../Integration/README.md).
-
----
 
 ## 1. Concepts — common bring-up breaks
 
@@ -29,8 +25,6 @@ Worked hall failures: [Integration/](../Integration/README.md).
 
 **Confirm:** Pick one walk and name the plane it lives on.
 
----
-
 ## 2. Advanced concepts
 
 ### Operator experience
@@ -45,8 +39,6 @@ Change calendar prevents overlapping border + PXE storms. Photograph before/afte
 | No RACI for port flip | Dual ownership tickets |
 | Skipping pilot image | Don’t 100× a broken golden |
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -58,8 +50,6 @@ Change calendar prevents overlapping border + PXE storms. Photograph before/afte
 **Staff checklist:** runbooks linked from tickets; dual-path verified before declaring “done”; Integration walks practiced.
 
 **Good:** deliberate failure tests. **Bad:** hope as HA strategy.
-
----
 
 ## References
 

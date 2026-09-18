@@ -6,8 +6,6 @@
 
 Document streams (`---` / `...`), `%YAML` / `%TAG` directives, and the practical difference between **YAML 1.2** (default narrative) and **YAML 1.1** (brownfield). Pin for new work: **1.2.2**.
 
----
-
 ## 1. Concepts
 
 ### 1. One file, one or more documents
@@ -48,8 +46,6 @@ The same characters can load differently under **1.1** vs **1.2** schemas—espe
 |------|-------|
 | **1.2 / 1.2.2** | Prefer for new configs and modern parsers |
 | **1.1** | Expect more aggressive implicit typing; quote liberally |
-
----
 
 ## 2. Advanced concepts
 
@@ -94,8 +90,6 @@ A missing `%YAML` directive does **not** mean “undefined.” It means “whate
 
 A stream with no nodes / only directives can be a footgun for “apply everything in this path” scripts. Prefer explicit empty mapping `{}` when a placeholder file must exist.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Version/doc role |
@@ -108,8 +102,6 @@ A stream with no nodes / only directives can be a footgun for “apply everythin
 
 **Whole-engineering picture:** document markers and version pins are **release metadata** for config, not cosmetics.
 
----
-
 ## 4. Staff-level review checklist
 
 - Host accepts single-doc vs multi-doc as used in the file.
@@ -117,8 +109,6 @@ A stream with no nodes / only directives can be a footgun for “apply everythin
 - Ambiguous scalars quoted when supporting 1.1-era loaders.
 - Parser library version is pinned in CI/CD images.
 - Migration from 1.1→1.2 includes type snapshot tests for critical fields.
-
----
 
 ## References
 

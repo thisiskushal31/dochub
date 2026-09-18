@@ -11,8 +11,6 @@ If you are new to Objective-C, start here. This chapter answers: **what** the la
 // Thin object layer on C — messages resolved by libobjc (see §1–3)
 ```
 
----
-
 ## 1. What Objective-C is (in one stack)
 
 Objective-C is a thin object layer on **C**. Lexically and syntactically it still looks like C in many places; **objects** live on the heap, and behavior is invoked by **sending messages**. The **Objective-C runtime** (`libobjc`) implements dynamic dispatch: at runtime it maps **receiver + selector → implementation**, with caching so steady-state performance is predictable.
@@ -23,8 +21,6 @@ Objective-C is a thin object layer on **C**. Lexically and syntactically it stil
 NSString *s = @"demo";
 NSUInteger n = [s length]; /* objc_msgSend → implementation at runtime */
 ```
-
----
 
 ## 2. What lands in a binary (why you care)
 
@@ -39,8 +35,6 @@ That layout is where **symbolication**, **binary diffing**, and **reverse engine
 nm -gU ./MyBinary 2>/dev/null | head
 strings ./MyBinary | rg -i 'objc|Foundation' | head
 ```
-
----
 
 ## 3. Toolchain pieces
 
@@ -57,8 +51,6 @@ Pin **Xcode major**, **SDK**, and **deployment target** across laptops and CI. D
 xcrun --find clang
 xcodebuild -version
 ```
-
----
 
 ## 4. Minimal program (command line)
 
@@ -86,8 +78,6 @@ xcrun clang -fobjc-arc -framework Foundation main.m -o hello
 
 **`xcrun`** selects **clang** from the same default toolchain as Xcode’s command-line environment.
 
----
-
 ## 5. CI and reproducibility
 
 **`xcodebuild`** drives schemes and targets without the GUI. Typical inputs to document for pipelines:
@@ -100,8 +90,6 @@ xcodebuild -scheme MyApp -configuration Release -destination 'platform=iOS Simul
 
 Store **metadata next to artifacts**: Xcode version, SDK name, git commit, and binary UUIDs. That is how you prove whether a “works only in CI” failure is environmental or a real defect—and how incident response replays a build.
 
----
-
 ## 6. Engineering and security notes
 
 - Do not commit **signing identities**, **API keys**, or **secrets** in the repo; inject them in CI.
@@ -111,8 +99,6 @@ Store **metadata next to artifacts**: Xcode version, SDK name, git commit, and b
 # Never commit secrets — inject via CI environment / Xcode Cloud
 # export API_KEY="$(security find-generic-password -s MyApp -w)"  # local dev only
 ```
-
----
 
 ## Advanced use cases and implementation
 
@@ -126,8 +112,6 @@ Store **metadata next to artifacts**: Xcode version, SDK name, git commit, and b
 dwarfdump --uuid MyApp.app/MyApp
 codesign -dv --verbose=4 MyApp.app
 ```
-
----
 
 ## References
 

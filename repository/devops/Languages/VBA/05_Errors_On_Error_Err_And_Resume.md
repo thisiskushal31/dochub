@@ -17,8 +17,6 @@ Chapter **04** covered normal control flow. This chapter is what happens when th
 
 Handbook default: **structured handlers**, visible failures, no silent `Resume Next` blankets.
 
----
-
 ## 1. Concepts
 
 ### 1. What an “error” means here
@@ -107,8 +105,6 @@ Retry only when the failure is transient *and* you understand side effects. Blin
 ### 6. `On Error GoTo 0`
 
 Disables the current procedure’s error handler (restores default halt behavior for that procedure). Use it after a tight `Resume Next` probe to avoid leaving the procedure in “ignore everything” mode.
-
----
 
 ## 2. Advanced concepts
 
@@ -200,8 +196,6 @@ Excel cells can hold **error values** (`#N/A`, `#VALUE!`, …). Those are not th
 
 `IIf(condition, truePart, falsePart)` **evaluates both branches**. It is a tiny expression helper, not a safe substitute for `If…Then` when a branch has side effects or can raise. Prefer real `If` blocks in LOB code.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Errors in practice |
@@ -213,8 +207,6 @@ Excel cells can hold **error values** (`#N/A`, `#VALUE!`, …). Those are not th
 | **Software engineering** | `Resume Next` only in tight probes; Public APIs either succeed or raise/report clearly. |
 
 **Whole-engineering picture:** error handling is product behavior. Silent continue is not resilience—it is undefined state.
-
----
 
 ## Staff-level review checklist
 
@@ -229,8 +221,6 @@ Excel cells can hold **error values** (`#N/A`, `#VALUE!`, …). Those are not th
 - Macro security / MotW issues documented separately from runtime handlers (**15**).
 - Compile-clean project; handlers not used as a substitute for `Option Explicit`.
 - Break/trap settings considered when reproducing user-only failures.
-
----
 
 ## References
 

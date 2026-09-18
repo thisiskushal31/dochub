@@ -8,8 +8,6 @@ How **DevSecOps** readers threat-model **Scala/JVM services** and **data platfor
 
 Audience: security engineers, platform/SRE, staff engineers, and application owners who share one review bar.
 
----
-
 ## 1. Concepts
 
 ### 1. What threat modeling is for (and is not)
@@ -85,8 +83,6 @@ Not every Scala binary needs the same rigor. Classify the data and exposure firs
 | Multi-tenant secrets / crypto material | Highest bar: isolated CI, signed artifacts, dual control on ACL changes |
 
 Threat models that treat a public marketing API and a PII Spark job as the same checklist waste time on one and under-protect the other.
-
----
 
 ## 2. Advanced concepts
 
@@ -208,8 +204,6 @@ Prefer verifiable controls:
 - Red-team or tabletop notes for “poisoned model” and “stolen CI token” scenarios at least annually for high-impact systems
 
 “We use TLS” without a version-pinned config review is not evidence.
-
----
 
 ## 3. Applications and use cases
 
@@ -380,8 +374,6 @@ Anti-patterns to reject in review:
 - “Version range `1.+` so we stay secure automatically”
 - “Logging the whole consumer record helps debugging in prod”
 
----
-
 ## 4. Staff-level review checklist (DevSecOps)
 
 Use this in design reviews, production readiness, and incident follow-ups.
@@ -422,8 +414,6 @@ Use this in design reviews, production readiness, and incident follow-ups.
 - Audit logs for admin and authz failures retained per policy.
 - Runbooks cover credential rotation, poisoned artifact revocation, and cluster isolation.
 - On-call can answer: what version/SHA is running, which identity it uses, which data it can touch.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./14_Variables_Secrets_And_OIDC.md) · [README](./README.md) · [Next: Packages →](./16_Packages_Container_Registry_And_Dependency_Proxy.md)
 
----
-
 ## 1. Concepts
 
 An **environment** is a deployment target (staging, production, …) with history, variables, and optional protection.
@@ -24,8 +22,6 @@ deploy_prod:
 
 **Review apps** spin ephemeral environments per MR — powerful and costly; own cleanup.
 
----
-
 ## 2. Advanced concepts
 
 ### Protection & serialization
@@ -45,8 +41,6 @@ Many teams stop at “write digest into Git/OCI and let Flux/Argo reconcile” (
 
 Feature flag tooling exists in GitLab — literacy door; deep flag product comparison stays with [Unleash/](../Unleash/README.md) etc. when that’s the system of record.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -56,8 +50,6 @@ Feature flag tooling exists in GitLab — literacy door; deep flag product compa
 | MR demos | Review apps with TTL/cleanup |
 
 **Good:** same bits in staging and prod. **Bad:** `latest` tag race as a release process.
-
----
 
 ## References
 

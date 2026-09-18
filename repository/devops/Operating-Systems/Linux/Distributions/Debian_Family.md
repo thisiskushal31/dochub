@@ -4,8 +4,6 @@
 
 This covers **Debian-based** distributions: **Debian**, **Ubuntu** (and its official flavors), **Linux Mint**, **Pop!_OS**, etc. They share the **deb** package format and **apt** as the primary package manager. This section goes **in depth**: repository configuration, apt workflow, snap vs apt, AppArmor, systemd, and logging so you can administer any of these distros confidently.
 
----
-
 ## Relationship
 
 | Distro | Role | Release model |
@@ -15,8 +13,6 @@ This covers **Debian-based** distributions: **Debian**, **Ubuntu** (and its offi
 | **Mint, Pop!_OS** | Based on Ubuntu (or Debian). | Follow upstream. |
 
 Debian’s **stable** branch is the basis for Ubuntu LTS and many servers. **testing** and **unstable** (sid) are used by developers and advanced users. Ubuntu adds its own repositories and release cycle on top of Debian packages.
-
----
 
 ## Package management: apt and dpkg
 
@@ -101,8 +97,6 @@ sudo dpkg --configure -a         # Configure all unpacked packages
 sudo dpkg --configure package-name
 ```
 
----
-
 ## Repository configuration (sources.list)
 
 Repositories are defined in **/etc/apt/sources.list** and in files under **/etc/apt/sources.list.d/** (one file per repo or PPA). Each line has:
@@ -145,8 +139,6 @@ sudo apt unhold package-name
 # Or in /etc/apt/preferences (pin by priority)
 ```
 
----
-
 ## Snap vs apt (Ubuntu)
 
 **snap** is a separate packaging format and runtime. Snap packages are confined and auto-update. On Ubuntu, both **apt** (deb) and **snap** are available.
@@ -170,8 +162,6 @@ snap set core proxy.http="http://proxy:3128"
 
 Snap store and daemon can be disabled or removed if you want a pure deb/apt system; many server deployments use only apt.
 
----
-
 ## AppArmor (Mandatory Access Control)
 
 **AppArmor** is the default MAC on Ubuntu and Debian. Profiles restrict what a process can do (files, capabilities, network). Profiles are in `/etc/apparmor.d/`.
@@ -193,8 +183,6 @@ sudo systemctl reload apparmor
 
 **When something is denied:** Check `dmesg` or `journalctl` for `APPARMOR` messages. Adjust the profile in `/etc/apparmor.d/` (or add a local override in `/etc/apparmor.d/local/`) and reload.
 
----
-
 ## Systemd and logging
 
 **systemd** is used for services and targets (same as RHEL family). Unit files: `/usr/lib/systemd/system/`, overrides in `/etc/systemd/system/`.
@@ -215,8 +203,6 @@ journalctl -f
 journalctl -p err --since today
 ```
 
----
-
 ## Summary
 
 - **Debian family** = Debian + Ubuntu + derivatives; **apt** (high-level) and **dpkg** (low-level); **deb** packages.
@@ -225,8 +211,6 @@ journalctl -p err --since today
 - **Ubuntu:** **snap** available alongside apt; use apt for server/predictability unless you need snap-specific features.
 - **AppArmor:** MAC; `aa-status`, `aa-complain`, `aa-enforce`; profiles in `/etc/apparmor.d/`.
 - **Services and logs:** systemd, journalctl (and rsyslog).
-
----
 
 ## Further reading
 

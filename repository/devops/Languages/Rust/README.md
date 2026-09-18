@@ -6,8 +6,6 @@ Rust is a **systems programming language** that prioritizes **memory safety** an
 
 This track teaches Rust as **systems work**: language and type system, software design, APIs and library boundaries, data and I/O, quality (tests, Clippy, rustfmt), security and supply chain, reliability and observability, performance and binary size, packaging and delivery (Cargo, crates.io, containers), and operations—**not** only as a syntax tour.
 
----
-
 ## Versions, editions, and which documentation to read
 
 Rust releases on a **six-week train**: **stable**, **beta**, and **nightly** channels, managed with **rustup**. Language and library behavior are tied to the **stable** toolchain you pin in CI and production.
@@ -22,8 +20,6 @@ cargo --version
 rustup show
 ```
 
----
-
 ## Chapter structure
 
 Chapters `01`–`20` follow a consistent body shape:
@@ -35,8 +31,6 @@ Chapters `01`–`20` follow a consistent body shape:
 
 Links live in each chapter’s **References** section.
 
----
-
 ## Semantic model (why Rust feels different)
 
 - **Ownership:** each value has one owner; when the owner goes out of scope, the value is dropped deterministically.
@@ -44,8 +38,6 @@ Links live in each chapter’s **References** section.
 - **Lifetimes:** names that relate borrows to how long data lives; often inferred, sometimes written explicitly at API boundaries.
 - **Traits:** shared behavior implemented for types; the backbone of generics and the standard library.
 - **Safe by default, `unsafe` by exception:** safe Rust forbids undefined behavior the type system can prevent; `unsafe` is a deliberate, reviewable escape hatch for FFI and low-level work.
-
----
 
 ## Beginner to advanced progression
 
@@ -57,8 +49,6 @@ Links live in each chapter’s **References** section.
 | Production engineering | 15–20 | Tests/Miri/fuzz/snapshots, release tiers/portable CPU flags, supply chain, where Rust fits (CLI→embedded→WASM) and what frameworks are, tracing/diagnostics/`RUST_BACKTRACE`, competency map. |
 
 Suggested order: **01 → 07**, then **08 → 11**, then **12 → 14**, then **15 → 20**. Revisit **05** for borrow-checker and `Drop` incidents; **07** before designing APIs; **03/04** before inventing macros; **13** before adopting an async runtime or HTTP framework; **14** before owning `unsafe`/FFI; **17** before untrusted deps or network-facing binaries; **18** before `no_std`/WASM bets; **19** before shipping service logging/metrics.
-
----
 
 ## Chapters
 
@@ -85,16 +75,12 @@ Suggested order: **01 → 07**, then **08 → 11**, then **12 → 14**, then **1
 | 19 | Production: CI, containers, tracing/metrics | [19](./19_Production_CI_Containers_And_Observability.md) |
 | 20 | Whole-engineering wrap and staff checklist | [20](./20_Whole_Engineering_Wrap_And_Staff_Checklist.md) |
 
----
-
 ## Deep-study workflow
 
 1. Read each chapter with a **notebook of invariants** for your org (edition, MSRV if declared, feature flags, `unsafe` inventory, async runtime choice).
 2. After chapters **04–07**, rewrite a small script from another language into Rust and note where ownership forced a redesign.
 3. After chapters **11–13**, build one CLI that shells out or opens sockets and one small async fetch—measure compile time and binary size.
 4. After chapters **15–19**, wire `cargo test`, Clippy, rustfmt, and dependency review into CI the way you would for any production language.
-
----
 
 ## Further reading
 
@@ -107,8 +93,6 @@ Suggested order: **01 → 07**, then **08 → 11**, then **12 → 14**, then **1
 - [Asynchronous Programming in Rust (Async Book)](https://rust-lang.github.io/async-book/)
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
 - [The Embedded Rust Book](https://doc.rust-lang.org/stable/embedded-book/)
-
----
 
 ## References (hub links)
 

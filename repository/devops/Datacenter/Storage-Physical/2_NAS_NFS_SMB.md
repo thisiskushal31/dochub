@@ -2,8 +2,6 @@
 
 [← Previous](./1_DAS_Local_Disks_And_RAID.md) · [README](./README.md) · [Next: SAN FC →](./3_SAN_Fibre_Channel.md)
 
----
-
 ## 1. Concepts
 
 **NAS** exports **files** over the network (NFS, SMB/CIFS). Hypervisors use NFS datastores; Kubernetes uses NFS CSI; users use home/project shares.
@@ -20,8 +18,6 @@ Filer heads or SDS gateways in storage racks; dual NICs to storage or general fa
 | **SMB** | Windows, some backup, mixed estates |
 
 Engine internals → [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) not required for path literacy here.
-
----
 
 ## 2. Advanced concepts
 
@@ -47,8 +43,6 @@ IP storage paths share Ethernet failure domains with [4](./4_SAN_iSCSI_And_NVMe_
 
 Same protocols; AD/LDAP integration patterns differ by org. Export policy discipline is universal.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -67,8 +61,6 @@ Same protocols; AD/LDAP integration patterns differ by org. Export policy discip
 - Never put etcd on high-latency NFS without measuring  
 
 **Good:** HA exports, isolated net, tested restore. **Bad:** single IP filer; snaps as only backup; noisy neighbor VLAN.
-
----
 
 ## References
 

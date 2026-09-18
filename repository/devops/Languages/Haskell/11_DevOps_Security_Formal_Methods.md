@@ -12,8 +12,6 @@ Haskell appears in DevOps and security mainly as the implementation language for
 
 **Where Haskell is not the focus.** Many DevOps workflows are not written in Haskell; they call out to Haskell binaries or use Haskell-based tools as black boxes. The value is in being able to build, test, and reason about those tools when they are part of your stack. Use the handbook’s build (9) and testing (10) topics to set up CI and to interpret build or test failures.
 
----
-
 ## Further reading
 
 - [GHC User's Guide](https://www.haskell.org/ghc/docs/latest/html/users_guide/)

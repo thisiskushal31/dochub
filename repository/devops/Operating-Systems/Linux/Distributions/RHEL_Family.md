@@ -4,8 +4,6 @@
 
 This covers **Red Hat–based** distributions: **RHEL** (Red Hat Enterprise Linux), **CentOS** (and Stream), **Fedora** (upstream), **Rocky Linux**, and **AlmaLinux**. They share the **rpm** package format and **dnf**/ **yum** as the primary package manager. This section goes **in depth**: repositories, subscription, SELinux, firewalld, systemd, logging, and tuning so you can administer any of these distros confidently.
 
----
-
 ## Relationship between distros
 
 | Distro | Role | Release model |
@@ -16,8 +14,6 @@ This covers **Red Hat–based** distributions: **RHEL** (Red Hat Enterprise Linu
 | **Rocky Linux / AlmaLinux** | Free, binary-compatible rebuilds of RHEL. | Follows RHEL releases. |
 
 Fedora is where new packages and kernel features land first; RHEL stabilizes a subset for long-term support. Rocky and Alma provide the same binaries as RHEL without Red Hat subscription. CentOS Stream sits between Fedora and RHEL and is used to prepare the next RHEL minor release.
-
----
 
 ## Package management: dnf and yum
 
@@ -106,8 +102,6 @@ rpm -qa gpg-pubkey*            # List imported GPG keys
 rpm --rebuilddb                # Rebuild RPM DB in /var/lib/rpm
 ```
 
----
-
 ## Repository configuration
 
 Repositories are defined by `.repo` files under `/etc/yum.repos.d/` (and `/etc/dnf/dnf.conf` can set global options). Each repo has a unique `[id]`, `baseurl` or `mirrorlist`, and optionally `gpgcheck` and `enabled`.
@@ -143,8 +137,6 @@ clean_requirements_on_remove=True
 best=True
 ```
 
----
-
 ## RHEL subscription (RHEL only)
 
 On **RHEL**, you need to attach a subscription to get access to official repos and support. Rocky, Alma, Fedora, and CentOS Stream do not use subscription-manager for repo access.
@@ -166,8 +158,6 @@ sudo subscription-manager status
 # Refresh after attaching (enable repos, update metadata)
 sudo subscription-manager refresh
 ```
-
----
 
 ## SELinux (Mandatory Access Control)
 
@@ -216,8 +206,6 @@ sudo audit2allow -a -M mymodule
 sudo semodule -i mymodule.pp
 ```
 
----
-
 ## Firewalld (dynamic firewall)
 
 **firewalld** manages **nftables** (or iptables) with a zone-based model. Each zone has a default policy and a set of allowed Services/ports. Interfaces and sources are assigned to zones (e.g. `public`, `dmz`, `trusted`).
@@ -265,8 +253,6 @@ sudo firewall-cmd --zone=trusted --add-interface=eth1
 sudo firewall-cmd --zone=public --add-source=192.168.2.0/24 --permanent
 ```
 
----
-
 ## Systemd (services and targets)
 
 All RHEL-family distros use **systemd**. Unit files live in `/usr/lib/systemd/system/` (vendor) and `/etc/systemd/system/` (overrides and custom).
@@ -303,8 +289,6 @@ sudo systemctl isolate rescue.target   # Single-user maintenance
 
 **Logs:** See “Logging” below.
 
----
-
 ## Logging
 
 - **systemd journal** — Primary log store. Query with `journalctl`.
@@ -323,8 +307,6 @@ journalctl -o short-iso
 
 **Persistent journal** — By default the journal may be volatile. To persist: create `/etc/systemd/journald.conf.d/persist.conf` with `Storage=persistent`, then restart `systemd-journald`.
 
----
-
 ## Kernel and system tuning (sysctl)
 
 Runtime kernel parameters are under `/proc/sys/` and can be set with **sysctl**. Persistent config: `/etc/sysctl.conf` or files in `/etc/sysctl.d/`.
@@ -339,8 +321,6 @@ sudo sysctl -p /etc/sysctl.d/99-tuning.conf
 
 Common tuning: `vm.swappiness`, `net.ipv4.tcp_fin_timeout`, `net.core.somaxconn`, `fs.file-max`. See RHEL tuning guide in Further reading.
 
----
-
 ## Summary
 
 - **RHEL family** = Fedora (upstream), RHEL (enterprise + subscription), CentOS Stream (rolling), Rocky/Alma (free RHEL rebuilds).
@@ -351,8 +331,6 @@ Common tuning: `vm.swappiness`, `net.ipv4.tcp_fin_timeout`, `net.core.somaxconn`
 - **systemd:** Services and targets; overrides in `/etc/systemd/system/`.
 - **Logs:** **journalctl** and optionally **rsyslog** to `/var/log/`.
 - **Tuning:** **sysctl** and `/etc/sysctl.d/`.
-
----
 
 ## Further reading
 

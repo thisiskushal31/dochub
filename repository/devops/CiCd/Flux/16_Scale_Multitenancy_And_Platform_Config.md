@@ -2,8 +2,6 @@
 
 [← Previous](./15_Monitoring_Events_Metrics_And_Upgrade.md) · [README](./README.md) · [Next: Flagger →](./17_Flagger_Progressive_Delivery.md)
 
----
-
 ## 1. Concepts — who is allowed to do what
 
 By default Flux controllers are very powerful (effectively cluster-admin). That is fine on a **trusted single-tenant** cluster. On a **shared** cluster it is dangerous.
@@ -25,8 +23,6 @@ Typical bootstrap patches:
 
 Copy exact YAML from the [multitenancy guide](https://fluxcd.io/flux/installation/configuration/multitenancy/) — don’t trust memory.
 
----
-
 ## 2. Advanced concepts — when one Flux is not enough
 
 | Problem | Direction |
@@ -41,8 +37,6 @@ Copy exact YAML from the [multitenancy guide](https://fluxcd.io/flux/installatio
 
 Tune from **metrics**, not folklore. Cloud integration pages cover AWS/Azure/GCP identity and registries.
 
----
-
 ## 3. Applications and use cases
 
 | Symptom | What to try |
@@ -52,8 +46,6 @@ Tune from **metrics**, not folklore. Cloud integration pages cover AWS/Azure/GCP
 | Team A uses Team B’s GitRepository | Enable no-cross-namespace-refs |
 
 **Good:** capacity tested with realistic object counts. **Bad:** default resources forever on a huge fleet; lockdown without teaching tenants about SAs.
-
----
 
 ## References
 

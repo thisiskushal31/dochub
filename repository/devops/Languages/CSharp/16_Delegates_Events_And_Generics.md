@@ -6,8 +6,6 @@
 
 **Why delegates?** They allow passing behavior as a value (e.g. to sort, filter, or callback). **Why events?** They implement the publish-subscribe pattern: the publisher raises an event without knowing the subscribers. **Why generics?** They give you one implementation that works for any type (e.g. `List<int>`, `List<string>`) with full type checking.
 
----
-
 ## Delegates
 
 Declare a **delegate** type with a signature; then create instances that refer to methods matching that signature. Invoke the delegate like a method. `Func<T>` and **Action** are built-in delegate types for common signatures.
@@ -21,8 +19,6 @@ int result = op(1, 2);
 
 Func<int, int, int> add = Add;
 ```
-
----
 
 ## Events
 
@@ -42,8 +38,6 @@ class Publisher
 publisher.OnDone += (s, e) => Console.WriteLine("Done");
 ```
 
----
-
 ## Generics
 
 **Generic** types and methods have **type parameters** (e.g. **T**). The same code works for any type; the compiler enforces consistency. **Constraints** (e.g. **where T : IComparable**) restrict the type parameter.
@@ -57,8 +51,6 @@ class Box<T>
 int GetMax<T>(T a, T b) where T : IComparable<T> =>
     a.CompareTo(b) >= 0 ? a : b;
 ```
-
----
 
 ## Further reading
 

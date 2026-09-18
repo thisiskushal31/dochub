@@ -2,8 +2,6 @@
 
 [← Previous](./4_Rack_BMC_And_Provisioning.md) · [README](./README.md) · [Next: Storage →](./6_Storage_Backup_And_Restore.md)
 
----
-
 ## Mental map
 
 ![Hall planes](../Assets/Datacenter/Setup-And-Bring-Up/hall-planes-map.svg)
@@ -39,8 +37,6 @@ Kubernetes `type: LoadBalancer` does **nothing** without MetalLB, BGP, NSX/AVI, 
 | **Classic three-tier** | Access–aggregation–core | Brownfield; spanning-tree stories |
 
 L2 domains that span **buildings** are how you get interesting outages. Prefer L3 to the rack; stretch VLAN only with a written reason (some storage and some clusters still demand it).
-
----
 
 ## 2. Advanced concepts
 
@@ -87,8 +83,6 @@ LACP to two ToRs (MLAG/vPC/MCLAG or L3 with two default paths). Know whether a T
 
 Many halls are IPv4-only by inertia. Dual-stack is fine if DHCP/RA, DNS, and LB are dual-stack **together**. Half-done dual-stack is an outage generator.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -109,8 +103,6 @@ Many halls are IPv4-only by inertia. Dual-stack is fine if DHCP/RA, DNS, and LB 
 - Storage fabric named (Ethernet vs FC vs both)  
 
 **Good:** L3 to the leaf, OOB isolated, BGP runbook, second carrier in the MMR. **Bad:** one default gateway, BMC on VLAN 1, stretched L2 to DR, MetalLB in L2 mode across two buildings.
-
----
 
 ## Go deeper
 

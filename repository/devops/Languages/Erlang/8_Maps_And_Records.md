@@ -40,8 +40,6 @@ get_name(#person{name = N}) ->
 
 **When to use which.** Use **maps** for flexible, runtime-shaped data, options, and JSON-like structures. Use **records** when you have a fixed set of fields, need compile-time checks, or interoperate with code that already uses records.
 
----
-
 ## Further reading
 
 - [Data Types](https://www.erlang.org/doc/system/data_types) (map, record)

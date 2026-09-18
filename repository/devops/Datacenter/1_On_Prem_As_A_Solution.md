@@ -2,8 +2,6 @@
 
 [← How to read](./0_How_To_Read_And_Quality_Bar.md) · [README](./README.md) · [Next: Ownership and colo →](./2_Ownership_Colo_And_Contracts.md)
 
----
-
 ## Mental map
 
 ![Whole hall layers](../Assets/Datacenter/Integration/whole-hall-layers.svg)
@@ -56,8 +54,6 @@ Local kind/minikube remain learning tools, not production on-prem.
 
 A working on-prem solution is **all** of: power that survives a feed loss, a network that can fail a ToR, disks you can restore onto **other** disks, an identity for humans and machines, a way to image a dead box, and a change process. Skipping the building and jumping to Helm is how you get a cluster that cannot boot after a PDU trip.
 
----
-
 ## 2. Advanced concepts
 
 ### Failure domains are physical
@@ -96,8 +92,6 @@ Hybrid usually fails on **identity and DNS**, not on YAML. If a process in colo 
 
 Disconnected does not mean “we turned off the NIC.” It means: how images enter (media, sneakernet registry), how firmware and OS patches enter, how time is sourced, how certificates renew, how you still **restore**. OpenShift documents restricted/disconnected installs; kubeadm needs a mirror. Pretending the cluster is air-gapped while CI pulls Docker Hub is a finding.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -125,8 +119,6 @@ Disconnected does not mean “we turned off the NIC.” It means: how images ent
 **Confirm:** Name three physical failure domains you would write in a runbook. What do you buy instead of an API quota when you need more capacity?
 
 New to the vocabulary? Start at [0](./0_How_To_Read_And_Quality_Bar.md) · [0b](./0b_Equipment_In_Plain_Language.md).
-
----
 
 ## Go deeper
 

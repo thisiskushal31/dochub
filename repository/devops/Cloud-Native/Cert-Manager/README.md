@@ -2,8 +2,6 @@
 
 [← Back to Cloud-Native](../README.md) · [CNCF everyday tools](../4_CNCF_Everyday_Tools.md)
 
----
-
 ## 1. Concepts
 
 **cert-manager** is a Kubernetes controller that **requests, stores, and renews TLS certificates** so humans are not copying PEMs into Secrets by hand.
@@ -25,8 +23,6 @@ K8s depth: [Containerization-Deep-Dive](https://github.com/thisiskushal31/Contai
 **Disconfirm:** An Ingress with `tls:` lines is **not** a renewal plan unless something (cert-manager or an operator) fills and refreshes that Secret.
 
 **Confirm:** Issuer vs ClusterIssuer—which one can many namespaces share?
-
----
 
 ## 2. Advanced concepts
 
@@ -62,8 +58,6 @@ Either way: renewals rewrite the Secret; pods/Ingress must pick up new material 
 | Rate limited | Hit LE prod too often during debug |
 | Secret empty / stale | Wrong `secretName`; another controller overwrites |
 | Works in one NS only | Used Issuer instead of ClusterIssuer |
-
----
 
 ## 3. Applications and use cases
 
@@ -127,8 +121,6 @@ spec:
 - Copy-pasting a cert into a Secret once is **not** ops.
 
 **Good:** Ready Issuers, tested renewals, monitored expiry. **Bad:** silent manual PEMs; prod ACME as debug loop.
-
----
 
 ## References
 

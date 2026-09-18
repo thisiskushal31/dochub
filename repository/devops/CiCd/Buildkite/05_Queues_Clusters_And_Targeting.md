@@ -2,8 +2,6 @@
 
 [← Previous](./04_Agents_Self_Hosted_And_Hosted.md) · [README](./README.md) · [Next: YAML →](./06_Pipeline_YAML_And_Step_Types.md)
 
----
-
 ## 1. Concepts
 
 | Object | Job |
@@ -27,8 +25,6 @@ steps:
 
 Default org setup creates several queues (including hosted linux/macos shapes). Pipelines run only on agents in their assigned cluster.
 
----
-
 ## 2. Advanced concepts
 
 ### Self-hosted vs hosted queues
@@ -45,8 +41,6 @@ Queues can be paused. Queue wait-time metrics and deeper cluster insights may be
 
 Within a matching queue, agents that recently finished work are preferred (warm caches). Still treat each job as potentially on a fresh machine.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -56,8 +50,6 @@ Within a matching queue, agents that recently finished work are preferred (warm 
 | Prod deploy only | Restricted queue + team permissions |
 
 **Good:** step-level `agents:` for special hardware. **Bad:** one mega-queue for everything including prod.
-
----
 
 ## References
 

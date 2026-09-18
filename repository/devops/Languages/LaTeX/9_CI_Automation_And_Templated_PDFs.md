@@ -63,8 +63,6 @@ Automate LaTeX builds when:
 
 Using latexmk (or a single script that runs the correct engine and bibliography steps) keeps the automation simple and consistent with local development.
 
----
-
 ## Further reading
 
 - [GitHub — latex-action](https://github.com/marketplace/actions/latex-action)

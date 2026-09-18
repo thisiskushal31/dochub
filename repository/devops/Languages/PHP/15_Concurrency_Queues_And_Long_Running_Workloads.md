@@ -6,8 +6,6 @@
 
 Why FPM workers are not a general thread pool, fibers as cooperative concurrency, `pcntl` and process forking constraints under web SAPIs, optional `parallel` threading in CLI, queue delivery semantics (at-least-once, idempotency), backoff and DLQs, cron overlap, and graceful shutdown under systemd. Later chapters assume timeouts are composed across broker, worker, DB, and HTTP layers.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the PHP [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -15,8 +13,6 @@ Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3
 ### 1. Request-bound PHP vs background workers
 
 Offload CPU/I/O heavy work to queue consumers running CLI PHP under supervisord, systemd, Kubernetes Jobs, or framework supervisors (Horizon, Messenger workers). Web requests stay within tight latency budgets; workers can run longer with different `memory_limit` and restart policies.
-
----
 
 ### 2. Fibers
 
@@ -35,37 +31,25 @@ var_dump($fiber->start());
 var_dump($fiber->resume());
 ```
 
----
-
 ### 3. Processes (`pcntl`)
 
 Forking and signal control require CLI SAPI and enabled `pcntl`. Forking inside FPM workers is unsafe and usually disabled—use separate processes.
-
----
 
 ### 4. `parallel` extension
 
 Optional real threading for specialized CLI workloads—not universally available.
 
----
-
 ### 5. Queue semantics
 
 Brokers typically deliver at least once—consumers must be idempotent (dedupe keys, transactional outbox, or broker idempotency tokens).
-
----
 
 ### 6. Cron overlap
 
 Use `flock` or mutexes to prevent overlapping cron invocations when runtime exceeds the schedule period.
 
----
-
 ### 7. Transactional outbox (pattern)
 
 When the database commit and the enqueue must align, write an **outbox row** in the same transaction as business data; a separate relay process publishes to the broker. This avoids “DB committed, message lost” or “message sent, DB rolled back” races that plain `dispatch()` after `commit()` still exhibits under crashes.
-
----
 
 ## 2. Advanced concepts
 
@@ -83,8 +67,6 @@ When the database commit and the enqueue must align, write an **outbox row** in 
 
 **pcntl_async_signals:** In CLI workers, async signal dispatch interacts with blocking I/O—test shutdown while blocked on Redis `BLPOP` or similar.
 
----
-
 ## 3. Applications and use cases
 
 - **SRE:** Alert on queue age p95, DLQ depth, consumer crash loops.
@@ -92,8 +74,6 @@ When the database commit and the enqueue must align, write an **outbox row** in 
 - **Cost:** Autoscale consumers on lag, not CPU alone.
 - **Compliance:** Encrypt sensitive job payloads at rest if required; audit enqueue permissions.
 - **Framework ops:** Horizon/Messenger/Action Scheduler—learn each tool’s metrics and restart semantics.
-
----
 
 ## References
 

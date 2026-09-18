@@ -14,8 +14,6 @@ Most TypeScript in the wild is **object shapes**: configs, DTOs, options bags, d
 
 Handbook default: **TS 5.9.x**, **`strict`: true**.
 
----
-
 ## 1. Concepts
 
 ### 1. Object types are contracts on properties
@@ -166,8 +164,6 @@ const next = { ...prev, count: prev.count + 1 }; // new object — fine often; h
 
 Deepen in chapter **13**.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Interface vs type — staff heuristic
@@ -277,8 +273,6 @@ declare global {
 
 Review question: does runtime set `__APP_BUILD__`? If not, delete the merge.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Object types in practice |
@@ -291,8 +285,6 @@ Review question: does runtime set `__APP_BUILD__`? If not, delete the merge.
 
 **Whole-engineering picture:** object types are how organizations **agree on data**. Merging, optionality, and index signatures are where silent disagreement sneaks in.
 
----
-
 ## Staff-level review checklist
 
 - Public shapes use `interface` or `type` consistently within the package.
@@ -304,8 +296,6 @@ Review question: does runtime set `__APP_BUILD__`? If not, delete the merge.
 - `exactOptionalPropertyTypes` interactions understood if the flag is on.
 - No `{}` or open `any` index as a substitute for modeling.
 - Hot paths: aware of object/`{...spread}` allocation vs intentional in-place updates (ch **13**).
-
----
 
 ## References
 

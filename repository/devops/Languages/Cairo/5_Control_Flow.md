@@ -4,8 +4,6 @@
 
 Control flow lets you run different code depending on conditions and repeat code with loops. Cairo provides **if** expressions and three loop forms: **loop**, **while**, and **for**. Conditions in `if` and `while` must be of type **bool**. This topic covers branching, loops, break and continue, and using `if` in a `let` expression.
 
----
-
 ## if expressions
 
 An `if` expression runs one block when the condition is true and optionally an `else` block when it is false. The condition must be a `bool`. Cairo does not convert numbers to booleans: you cannot use `if number` with a numeric `number`; use an explicit comparison (e.g. `if number != 0`). If you write `if number` the compiler may infer `number` as bool and then reject a numeric literal.
@@ -56,8 +54,6 @@ fn main() {
 }
 ```
 
----
-
 ## loop
 
 The `loop` keyword runs a block of code repeatedly until you break out. Use `break` to stop and optionally return a value; use `continue` to skip to the next iteration. Cairo uses a **gas meter** to limit execution: gas is a unit of computation cost, and when it runs out the program stops. For executables with loops you run with `--available-gas=<value>` (e.g. `scarb execute --available-gas=20000000`). This is especially important for Starknet contracts, where infinite loops must be prevented.
@@ -98,8 +94,6 @@ fn main() {
 }
 ```
 
----
-
 ## while
 
 A `while` loop runs while its condition is true. The condition must be `bool`.
@@ -117,8 +111,6 @@ fn main() {
     println!("LIFTOFF!!!");
 }
 ```
-
----
 
 ## for
 
@@ -147,13 +139,9 @@ fn main() {
 }
 ```
 
----
-
 ## Loops and recursion
 
 In Cairo, loops and recursive functions are closely related: loops are compiled in a similar way to recursion. Both can express repetition; choose based on readability. For example, a loop that breaks when a condition is met can be written as a recursive function that calls itself until the condition holds.
-
----
 
 ## Further reading
 

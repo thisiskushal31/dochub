@@ -2,8 +2,6 @@
 
 [← Previous](./10_Humidity_Water_Treatment_And_Plumbing.md) · [README](./README.md) · [Next: Commissioning →](./12_Commissioning_Mechanical.md)
 
----
-
 ## 1. Concepts
 
 A **mechanical failure walk** traces heat and fluid when a component fails—what alarms fire, what IT feels, and what humans do.
@@ -19,8 +17,6 @@ Pair with electrical walks ([Electrical/17](../Electrical/17_Power_Path_Failure_
 5. Auto actions (start lag CRAH, cutover)  
 6. Human actions if auto fails  
 7. Interaction with power (fans/pumps on generator?)  
-
----
 
 ## 2. Advanced concepts
 
@@ -49,8 +45,6 @@ Pair with electrical walks ([Electrical/17](../Electrical/17_Power_Path_Failure_
 
 Jobs/NOC taxonomy: [Jobs](../Jobs/README.md). Multi-domain narratives: [Integration](../Integration/README.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -69,8 +63,6 @@ Jobs/NOC taxonomy: [Jobs](../Jobs/README.md). Multi-domain narratives: [Integrat
 - Never prop doors during known mechanical work  
 
 **Good:** written walks with time estimates and alarm IDs. **Bad:** first containment+chiller dual failure is live production.
-
----
 
 ## References
 

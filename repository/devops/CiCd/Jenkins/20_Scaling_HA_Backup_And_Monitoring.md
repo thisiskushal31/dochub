@@ -2,8 +2,6 @@
 
 [← Previous](./19_Managing_Tools_Nodes_Users_And_System.md) · [README](./README.md) · [Next: CLI/API →](./21_Blue_Ocean_CLI_And_Remote_API.md)
 
----
-
 ## 1. Concepts
 
 Operating Jenkins in earnest means treating the controller like production software:
@@ -19,8 +17,6 @@ Operating Jenkins in earnest means treating the controller like production softw
 | **HA patterns** | Documented approaches evolve — confirm for your LTS |
 | **K8s admin** | Controller on K8s + agent clouds |
 | **FIPS / hardened** | Profile literacy where required |
-
----
 
 ## 2. Advanced concepts
 
@@ -70,8 +66,6 @@ Viewing logs, obtaining thread dumps, support bundles ([26](./26_Migrate_LTS_Upg
 
 System administration docs cover service units and CM tools — literacy doors for classical estates.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -82,8 +76,6 @@ System administration docs cover service units and CM tools — literacy doors f
 | Internet-facing | TLS proxy + security axes ([16](./16_Security_Folders_RBAC_And_Hardening.md)) |
 
 **Good:** ops runbooks owned by platform. **Bad:** single controller disk full from artifacts; agents offline behind a misconfigured proxy.
-
----
 
 ## References
 

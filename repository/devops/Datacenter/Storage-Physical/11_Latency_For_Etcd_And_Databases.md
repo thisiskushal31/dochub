@@ -2,8 +2,6 @@
 
 [← Previous](./10_Encryption_And_Key_Custody.md) · [README](./README.md) · [Next: Failure walks →](./12_Storage_Failure_Walks.md)
 
----
-
 ## 1. Concepts
 
 Some workloads are **latency-sensitive to disk and fsync**: etcd, consensus stores, classic RDBMS commit paths. A “fine for files” NFS or congested iSCSI path can strand a whole Kubernetes control plane.
@@ -19,8 +17,6 @@ Some workloads are **latency-sensitive to disk and fsync**: etcd, consensus stor
 | Slow HDDs for WAL | Pain |
 
 Engine tuning → Databases-Deep-Dive / Containerization. This chapter is **hall path honesty**.
-
----
 
 ## 2. Advanced concepts
 
@@ -41,8 +37,6 @@ Prefer local NVMe for etcd/WAL when possible ([1](./1_DAS_Local_Disks_And_RAID.m
 
 Physics of RTT does not care about metro marketing. Stretch clusters need math, not hope.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -61,8 +55,6 @@ Physics of RTT does not care about metro marketing. Stretch clusters need math, 
 - Never put etcd on cross-metro sync NFS  
 
 **Good:** local fast media for consensus; measured paths. **Bad:** etcd on busy NFS; averages-only dashboards.
-
----
 
 ## References
 

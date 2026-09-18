@@ -58,8 +58,6 @@ end program ops_demo
 
 **Why this matters.** In scientific code, mixing integer and real in division is a frequent source of wrong results. Relational and logical operators are the basis for conditionals and loops; getting precedence right avoids subtle logic errors.
 
----
-
 ## Further reading
 
 - [Fortran – Operators (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_operators.htm)

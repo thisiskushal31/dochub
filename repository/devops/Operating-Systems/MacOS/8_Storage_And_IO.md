@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Fundamentals: Storage and I/O](../Fundamentals/10_Storage_And_IO.md). Here: **macOS file systems** (**APFS**, **HFS+**), **directory layout**, and **commands** (`diskutil`, `df`, `du`).
 
----
-
 ## File system: APFS and HFS+
 
 **APFS (Apple File System)** is the default on macOS (since High Sierra). It is **copy-on-write**, **checksummed**, and supports **snapshots**, **clones**, **encryption**, and **space sharing**:
@@ -17,8 +15,6 @@
 **HFS+ (Mac OS Extended)** is the legacy default; still supported for compatibility (e.g. external drives, Time Machine on some configs). New installs use APFS for the boot volume.
 
 **References:** [APFS (Apple)](https://developer.apple.com/documentation/foundation/file_system), [APFS Container and Volumes (Eclectic Light)](https://eclecticlight.co/2024/04/02/apfs-containers-and-volumes/), [Apple File System Reference (PDF)](https://developer.apple.com/support/downloads/Apple-File-System-Reference.pdf).
-
----
 
 ## Directory layout (recap)
 
@@ -33,8 +29,6 @@
 | `/usr`         | BSD userland (bin, lib); often read-only     |
 | `/var`         | Variable data (logs, caches, vm swapfiles)  |
 | `~/Library`    | Per-user app support, Caches, Preferences    |
-
----
 
 ## Commands
 
@@ -66,15 +60,11 @@ df -h
 du -sh /Users/*/Library
 ```
 
----
-
 ## Summary
 
 - **File system:** **APFS** (containers, volumes, snapshots, CoW); **HFS+** legacy.
 - **Layout:** `/System`, `/Library`, `/Applications`, `/Users`, `/var`, `~/Library`.
 - **Commands:** **`diskutil list`**, **`diskutil apfs list`**, **`diskutil info`**, **`df -h`**, **`du -sh`**.
-
----
 
 ## Further reading
 

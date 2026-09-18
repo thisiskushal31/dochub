@@ -4,8 +4,6 @@
 
 This topic covers **what assembly language is**, **setting up a Linux/NASM environment**, and the **basic structure** of an assembly program: sections, statements, and a minimal **Hello World** example. The material follows the same pattern as the rest of the handbook: text first, then code. Content is drawn from standard assembly tutorials and the NASM manual; see **Further reading**.
 
----
-
 ## What is assembly language?
 
 A **processor** only executes **machine language**: binary instructions (ones and zeros). **Assembly language** is a human-readable form of those instructions: each **mnemonic** (e.g. `mov`, `add`) corresponds to one or more **opcodes**. An **assembler** (e.g. NASM, GAS, MASM) translates assembly source into object or executable code.
@@ -18,8 +16,6 @@ Assembly is **tied to a specific processor family** (e.g. Intel 32-bit, x86-64, 
 - How instructions are executed and how data is represented.
 - Writing or analyzing low-level code (shellcode, drivers, boot code).
 
----
-
 ## Basic hardware concepts
 
 The main internal hardware of a PC includes the **processor**, **memory**, and **registers**. Registers hold data and addresses; the processor fetches instructions from memory, decodes them, and executes them. Data sizes you will see:
@@ -29,8 +25,6 @@ The main internal hardware of a PC includes the **processor**, **memory**, and *
 - **Quadword** — 8 bytes  
 
 Numbers are often in **binary** or **hexadecimal**; negative integers are usually in **two’s complement** form.
-
----
 
 ## Environment setup (NASM on Linux)
 
@@ -51,8 +45,6 @@ If you see a path (e.g. `/usr/bin/nasm`), NASM is installed. Otherwise install i
 - A text editor and terminal
 
 On many systems, installing “development tools” or “build-essential” provides NASM and `ld`.
-
----
 
 ## Program structure: sections
 
@@ -82,8 +74,6 @@ _start:
    ; instructions here
 ```
 
----
-
 ## Statement format and comments
 
 A typical assembly **statement** has the form:
@@ -103,8 +93,6 @@ A typical assembly **statement** has the form:
 ; This is a full-line comment
 mov eax, 1    ; comment after instruction
 ```
-
----
 
 ## Hello World example
 
@@ -141,8 +129,6 @@ ld -m elf_i386 -s -o hello hello.o
 
 Output: `Hello, world!`
 
----
-
 ## Memory segments (overview)
 
 A **segmented** view of memory (typical in 32-bit tutorials) divides the program into:
@@ -152,8 +138,6 @@ A **segmented** view of memory (typical in 32-bit tutorials) divides the program
 - **Stack segment** — Stack for local data and return addresses; grows downward; `SS` and `ESP` (or `SP`) point into it.
 
 The assembler and linker place sections into appropriate segments; the OS sets up segment registers when loading the program.
-
----
 
 ## Further reading
 

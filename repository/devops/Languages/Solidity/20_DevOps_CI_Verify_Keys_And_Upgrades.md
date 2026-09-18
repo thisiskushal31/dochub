@@ -8,8 +8,6 @@ How contracts **leave the laptop**: deterministic **CI**, **deploy scripts**, **
 
 Shipping a contract is not `git push` and a vibe. It is a **tuple**: this source, this compiler, this bytecode, this ABI, these constructor args, this address, this verified page, these keys. If any piece is “I think so,” you do not yet know what is live.
 
----
-
 ## 1. Concepts
 
 ### 1. The release is a tuple
@@ -98,8 +96,6 @@ OpenZeppelin Upgrades plugins exist so you do not invent this. Literacy, not a m
 
 CREATE2 factories need the same change control: salt + init code are production config.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Determinism (bytecode identity)
@@ -165,8 +161,6 @@ Record: factory address, salt, init-code hash, resulting address. A “we redepl
 
 Explorer verification is not a vibe. It means: given Standard JSON (or equivalent), `solc` reproduces **runtime bytecode** matching `eth_getCode` (metadata policy agreed). Constructor args used at deploy are recorded and match. Linked library addresses match. If any of those drift, you have a “verified” badge on the wrong program.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -177,8 +171,6 @@ Explorer verification is not a vibe. It means: given Standard JSON (or equivalen
 | **Operations** | Runbook: deploy, verify, smoke call, monitor events |
 | **Software engineering** | Scripts reviewed like Solidity; no one-off Remix mainnet clicks |
 
----
-
 ## 4. Staff-level review checklist
 
 - CI pins `solc`, runs tests, and fails on warnings you claim to ban.
@@ -188,8 +180,6 @@ Explorer verification is not a vibe. It means: given Standard JSON (or equivalen
 - Admin is multisig/hardware (or accepted risk is written).
 - If a proxy exists: layout tests, initializer lockdown, timelock.
 - If no proxy: README does not claim “we can just upgrade.”
-
----
 
 ## References
 

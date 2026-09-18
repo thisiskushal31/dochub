@@ -2,8 +2,6 @@
 
 [← Back to Security](../README.md) · [Gate chain](../4_Security_Gate_Chain.md) · [Compliance topic](../2_Compliance_And_Threat_Mitigation.md)
 
----
-
 ## 1. Concepts
 
 A **WAF** inspects **HTTP(S)** traffic to your app and blocks or challenges requests that look like common web attacks (SQLi, XSS, path traversal, bots, …)—**at the edge or reverse proxy**, after TLS is terminated (or with TLS inspection).
@@ -25,8 +23,6 @@ A **WAF** inspects **HTTP(S)** traffic to your app and blocks or challenges requ
 | **Appliance / commercial** | F5, Imperva, … | Enterprise edge |
 
 This handbook **includes open-source WAF** as a first-class DevOps option—not only “turn on the cloud checkbox.”
-
----
 
 ## 2. Advanced concepts
 
@@ -66,8 +62,6 @@ Ingress / Gateway class choice: [Cloud-Native/4](../../Cloud-Native/4_CNCF_Every
 | WAF as only control | Vulnerable code still ships |
 | No change process for rules | Emergency disables become permanent |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -98,8 +92,6 @@ Ingress / Gateway class choice: [Cloud-Native/4](../../Cloud-Native/4_CNCF_Every
 - Open-source WAF is **not** “less real” than cloud WAF—ops cost differs, job is the same class.
 
 **Good:** tuned rules, logged decisions, staged rollout. **Bad:** default block with no owners; WAF theater with no upstream gates.
-
----
 
 ## References
 

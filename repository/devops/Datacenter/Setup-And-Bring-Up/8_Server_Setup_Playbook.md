@@ -2,8 +2,6 @@
 
 [← Previous](./7_OOB_BMC_Plane_Bring_Up.md) · [README](./README.md) · [Next: Imaging →](./9_Imaging_Path.md)
 
----
-
 ## Mental map
 
 ```text
@@ -17,8 +15,6 @@ Rails seated → PSU A→PDU A, PSU B→PDU B
 ![Rack / servers](../../Assets/Datacenter/Compute/rack-server-front.jpg)
 
 *What to notice: dense 19″ iron, front serviceability—confirm your SKU’s PSU and NIC layout on the rear. Plate: Wikimedia Foundation servers photo used as hall context (review vs your OEM).*
-
----
 
 ## 1. Concepts
 
@@ -35,8 +31,6 @@ Rails seated → PSU A→PDU A, PSU B→PDU B
 
 **Confirm:** List the four cables you expect on a dual-homed dual-PSU box (min).
 
----
-
 ## 2. Advanced concepts
 
 ### Operator experience
@@ -51,13 +45,9 @@ Photograph rear after dress. Match NIC PCIe bifurcation to OEM guide. Don’t im
 | Secure Boot mismatch | Install fails |
 | Wrong boot device | Loops PXE forever |
 
----
-
 ## 3. Applications
 
 **Staff checklist:** DCIM complete; BMC ping; A/B power LED; link on both NICs; firmware baseline; hand off to imaging ([9](./9_Imaging_Path.md)).
-
----
 
 ## References
 

@@ -58,8 +58,6 @@ list_max([Head|Rest], Result_so_far) ->
 
 **Why this matters.** Pattern matching and guards give you declarative control flow and data destructuring. The same rules apply in `receive` for messages, so process logic stays consistent and predictable. Mastering them is necessary for both sequential and concurrent Erlang.
 
----
-
 ## Further reading
 
 - [Expressions](https://www.erlang.org/doc/system/expressions) (pattern matching, guards)

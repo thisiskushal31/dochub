@@ -2,8 +2,6 @@
 
 [← Previous](./9_Imaging_Path.md) · [README](./README.md) · [Next: Storage network →](./11_Storage_Network_And_Array_Bring_Up.md)
 
----
-
 ## Mental map
 
 ![RAID concept](../../Assets/Datacenter/Setup-And-Bring-Up/raid-concept.svg)
@@ -15,8 +13,6 @@
 *What to notice: physical trays ≠ the volume the installer sees; pick level before first format.*
 
 Encyclopedia: [Storage-Physical/1](../Storage-Physical/1_DAS_Local_Disks_And_RAID.md).
-
----
 
 ## 1. Concepts
 
@@ -41,8 +37,6 @@ Encyclopedia: [Storage-Physical/1](../Storage-Physical/1_DAS_Local_Disks_And_RAI
 
 **Confirm:** When do you choose JBOD over RAID 6 for cluster data?
 
----
-
 ## 2. Advanced concepts
 
 ### Operator experience
@@ -57,8 +51,6 @@ Write-back without battery is a power-loss footgun. Scrub/patrol reads catch sil
 | Rebuild on degraded array under load | Second failure |
 | Mixed firmware drives | Unstable VD |
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -68,8 +60,6 @@ Write-back without battery is a power-loss footgun. Scrub/patrol reads catch sil
 | Petabyte shelf | Prefer SDS/erasure ([13](./13_Petabyte_Capacity_Thinking.md)) |
 
 **Staff checklist:** level chosen; cache policy; hot-spare; DCIM updated; alert on degraded VD.
-
----
 
 ## References
 

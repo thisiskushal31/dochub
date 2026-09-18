@@ -8,8 +8,6 @@ How TypeScript types **asynchronous work**: `Promise<T>`, `async`/`await`, rejec
 
 You leave able to type async APIs honestly, cancel in-flight work, and keep rejections from becoming silent production incidents.
 
----
-
 ## 1. Concepts
 
 ### 1. Promises are values about the future
@@ -135,8 +133,6 @@ for (const r of results) {
 ```
 
 **What just happened:** failures became data; one rejection did not skip the sibling outcome.
-
----
 
 ## 2. Advanced concepts
 
@@ -303,8 +299,6 @@ async function load(url: string, ms: number): Promise<string> {
 
 **What just happened:** timeout aborts the fetch; work is cooperative, not merely raced.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -323,8 +317,6 @@ Shutdown sketch:
 4. `await` in-flight with a hard timeout.
 5. Exit with code based on drain success.
 
----
-
 ## Staff-level review checklist
 
 - Async functions declare honest `Promise<…>` fulfill types.
@@ -341,13 +333,9 @@ Shutdown sketch:
 - Chunked I/O uses `AsyncIterable` / `for await` (or generators) with honest element types—not “buffer everything then `any`.”
 - After this chapter, readers are pointed at **13** (what waiting/work costs on the machine)—not only more syntax.
 
----
-
 ## Next
 
 Chapter **13** is the senior “money” chapter in beginner language: **work vs wait**, event-loop blocking, hot paths, and what `async` actually buys. Read it before optimizing for style alone.
-
----
 
 ## References
 

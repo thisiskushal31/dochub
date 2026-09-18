@@ -4,8 +4,6 @@
 
 Conditional statements change the execution path based on conditions that evaluate to true or false. Conditions are used in **IF**, **EVALUATE**, and in **PERFORM** (e.g. UNTIL, with WHEN). Condition types include relation (comparison), sign, class (numeric/alphabetic), condition-name (88-level), negated, and combined (AND/OR).
 
----
-
 ## IF statement
 
 **IF** evaluates a condition. When the condition is true, the statements under the IF are executed; when false, control goes to **ELSE** (if present) or past **END-IF**. Use **END-IF** to end the IF block; it is preferred over using a period when you have multiple or nested IFs. **Nested IF** means an IF block inside another IF; nesting can be deep, but readability suffers if overused.
@@ -23,8 +21,6 @@ Conditional statements change the execution path based on conditions that evalua
        END-IF.
 ```
 
----
-
 ## Relation, sign, and class conditions
 
 **Relation condition** compares two operands using operators such as `>`, `<`, `=`, `>=`, `<=`, `<>` (or the words GREATER THAN, LESS THAN, EQUAL TO, etc.). **Sign condition** tests whether a numeric item is POSITIVE, NEGATIVE, or ZERO. **Class condition** tests whether data is NUMERIC or ALPHABETIC. These can be combined with AND/OR and NOT.
@@ -34,8 +30,6 @@ Conditional statements change the execution path based on conditions that evalua
            DISPLAY 'Valid'
        END-IF.
 ```
-
----
 
 ## EVALUATE
 
@@ -51,8 +45,6 @@ Conditional statements change the execution path based on conditions that evalua
                DISPLAY 'Other'
        END-EVALUATE.
 ```
-
----
 
 ## Condition-name (88-level)
 
@@ -76,8 +68,6 @@ An **88-level** entry defines a **condition name**: a name that is true when the
                WHEN OTHER    DISPLAY '?'
            END-EVALUATE.
 ```
-
----
 
 ## Further reading
 

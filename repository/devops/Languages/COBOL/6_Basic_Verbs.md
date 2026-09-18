@@ -6,8 +6,6 @@
 
 **Why these verbs?** COBOL avoids generic "assign" or "print": each action has a clear verb. **ACCEPT** and **DISPLAY** are for simple I/O (keyboard/SYSIN, screen/SYSOUT). **MOVE** is the main way to copy or set data; the compiler applies conversion and padding from the receiving field's picture. **ADD/SUBTRACT/MULTIPLY/DIVIDE** make arithmetic explicit and readable (e.g. ADD A TO B); **COMPUTE** is for formulas (e.g. COMPUTE X = (A + B) * C). Use ADD/SUBTRACT when you are doing one operation; use COMPUTE when the expression has multiple operators. **INITIALIZE** clears a group or field to defaults in one statement instead of many MOVE ZEROS or MOVE SPACES.
 
----
-
 ## Input and output: ACCEPT and DISPLAY
 
 **ACCEPT** reads data into a data item. The source can be the user (or SYSIN when run under JCL) or the system (e.g. date, time) using the FROM phrase. **DISPLAY** sends data to the output device (or SYSOUT). Both operate on one or more identifiers or literals.
@@ -24,8 +22,6 @@
            STOP RUN.
 ```
 
----
-
 ## MOVE
 
 **MOVE** copies data from a sending item to one or more receiving items. Movement follows standard COBOL rules: numeric to numeric, alphanumeric to alphanumeric, and so on. Conversion and truncation or padding depend on the receiving picture. MOVE CORRESPONDING moves subordinate items whose names match between group items.
@@ -36,8 +32,6 @@
            MOVE ZEROS TO WS-COUNTER.
 ```
 
----
-
 ## INITIALIZE
 
 **INITIALIZE** sets a group or elementary item to default values: numeric items to zero, alphabetic/alphanumeric to spaces, unless overridden. **REPLACING** can set specific categories (e.g. NUMERIC DATA BY 12345, ALPHABETIC DATA BY 'X'). Items with RENAME clause cannot be initialized.
@@ -46,8 +40,6 @@
            INITIALIZE WS-NAME, WS-ADDRESS.
            INITIALIZE WS-ID REPLACING NUMERIC DATA BY 12345.
 ```
-
----
 
 ## Arithmetic: ADD, SUBTRACT, MULTIPLY, DIVIDE, COMPUTE
 
@@ -64,8 +56,6 @@
            COMPUTE WS-RESULT = (WS-A + WS-B) * WS-C
                ROUNDED ON SIZE ERROR MOVE ZERO TO WS-RESULT.
 ```
-
----
 
 ## Further reading
 

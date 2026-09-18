@@ -4,8 +4,6 @@
 
 This topic goes deeper into **how a machine goes from power-on to a running OS** — firmware, bootloader, and kernel load. It is OS-agnostic but uses common PC terminology (BIOS, UEFI, MBR, GPT). Understanding this is essential for how the OS integrates with the hardware at startup.
 
----
-
 ## High-level sequence
 
 1. **Power on** → CPU starts at a fixed address; **firmware** runs.
@@ -15,16 +13,12 @@ This topic goes deeper into **how a machine goes from power-on to a running OS**
 5. **Kernel** runs: sets up MMU, interrupts, drivers, mounts root filesystem, starts **init** (PID 1).
 6. **Init** starts services and user space; the system is up.
 
----
-
 ## Firmware: BIOS vs UEFI
 
 - **BIOS (Basic Input/Output System)** — Legacy. Runs in 16-bit mode; reads the **first sector** of the boot disk (512 bytes — the **MBR**, Master Boot Record), which contains a small **boot loader** (or its first stage). Limited to 2 TB disks and simple partition layout.
 - **UEFI (Unified Extensible Firmware Interface)** — Modern. Runs in 32/64-bit; looks for a **EFI System Partition** (ESP) and loads a **EFI application** (e.g. `bootx64.efi`). Supports GPT disks, secure boot, and larger code.
 
 The firmware’s job is to **find and run the next stage** (boot loader or EFI app); it does not load the OS kernel itself.
-
----
 
 ## Boot loader
 
@@ -37,8 +31,6 @@ The **boot loader** is a small program (often in the first sector or in a file o
 
 So the boot loader bridges **firmware** and **kernel**; it is not part of the kernel. It is often OS-specific (e.g. GRUB for Linux, bootmgr for Windows).
 
----
-
 ## Kernel startup
 
 Once the kernel gets control:
@@ -49,15 +41,11 @@ Once the kernel gets control:
 - It **mounts the root file system** (from initrd first, then from real disk after drivers load).
 - It starts the **first user process** (init, systemd, etc.) with PID 1. From then on, the kernel is **event-driven** (system calls, interrupts, exceptions).
 
----
-
 ## Summary
 
 - **Firmware** (BIOS/UEFI) → **boot loader** (MBR/ESP) → **kernel** → **init**. Each stage loads and passes control to the next.
 - **Boot loader** is tiny and OS-specific; it loads the kernel and initrd and jumps to the kernel.
 - **Kernel** initializes hardware and software subsystems, mounts root, and starts init. After that, the OS runs in response to events.
-
----
 
 ## Further reading
 

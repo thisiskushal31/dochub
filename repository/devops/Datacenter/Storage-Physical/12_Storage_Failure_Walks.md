@@ -2,13 +2,9 @@
 
 [← Previous](./11_Latency_For_Etcd_And_Databases.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 Walk storage incidents from **path → fabric → controller/OSD → media → restore**. Pair with compute and fabric walks.
-
----
 
 ## 2. Advanced concepts
 
@@ -37,8 +33,6 @@ Walk storage incidents from **path → fabric → controller/OSD → media → r
 
 Fabric walks: [Fabric-Physical/12](../Fabric-Physical/12_Fabric_Failure_Walks.md). Power loss during write: Electrical + controller cache policy. Roles: [Jobs](../Jobs/README.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -57,8 +51,6 @@ Fabric walks: [Fabric-Physical/12](../Fabric-Physical/12_Fabric_Failure_Walks.md
 - Never skip restore evidence in RCA  
 
 **Good:** tested path pulls + restore drills. **Bad:** first restore is the disaster; ignored failed path.
-
----
 
 ## References
 

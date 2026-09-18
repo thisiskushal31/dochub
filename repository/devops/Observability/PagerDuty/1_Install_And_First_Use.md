@@ -2,8 +2,6 @@
 
 [← PagerDuty](./README.md)
 
----
-
 ## 1. Concepts
 
 Minimal path:
@@ -16,8 +14,6 @@ Minimal path:
 
 **Disconfirm:** Routing everything to one person 24×7 is **not** a schedule.
 
----
-
 ## 2. First checklist
 
 | Step | Done when |
@@ -28,8 +24,6 @@ Minimal path:
 | Noise review | Flappy alert fixed or retuned |
 
 Practice depth: [Methodologies/3](../../Methodologies/3_Team_Patterns_SRE_Incident.md).
-
----
 
 ## References
 

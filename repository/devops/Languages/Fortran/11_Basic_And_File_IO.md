@@ -38,8 +38,6 @@ close(u)
 
 **Why this matters.** Robust I/O checks open/read/write status and handles errors. On clusters, paths may be relative to the job's working directory; use environment variables or config for paths when needed. Safe handling of user-provided file names (e.g. no path traversal) is part of secure deployment.
 
----
-
 ## Further reading
 
 - [Fortran – Basic Input Output (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_basic_input_output.htm)

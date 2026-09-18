@@ -54,8 +54,6 @@ If two Kotlin functions have the same name and the same JVM signature (e.g. due 
 
 Using these rules and annotations keeps Java and Kotlin code working together without surprises. The next topic covers Gradle and build tooling for Kotlin projects.
 
----
-
 ## Further reading
 
 - [Calling Java from Kotlin](https://kotlinlang.org/docs/java-interop.html)

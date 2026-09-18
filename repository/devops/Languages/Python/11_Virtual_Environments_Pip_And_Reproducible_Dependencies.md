@@ -6,8 +6,6 @@
 
 **venv**, **`pip`**, **requirements** and **constraints**, **hashes**, **indexes** and **extra-index-url**, **editable** installs, **PEP 517** builds, and CI patterns—supply-chain and reproducibility for engineering teams.
 
----
-
 ## 1. Concepts
 
 ### 1. Virtual environments
@@ -36,8 +34,6 @@
 
 **`pyproject.toml`** declares **build-system.requires** and backend—failed installs often trace to missing **build** deps (e.g. **setuptools**, **wheel**, **cmake**-using packages).
 
----
-
 ## 2. Advanced concepts
 
 **Platform markers** in requirements: **`sys_platform`**, **`python_version`**, **`platform_machine`** for **arm64** vs **amd64** wheels.
@@ -45,8 +41,6 @@
 **Manylinux** / **musl** wheel tags affect **Alpine** containers—expect **sdist** builds or use **glibc**-based images.
 
 **Virtualenv vs venv:** **virtualenv** adds speed and pypy features; **venv** is stdlib and usually enough.
-
----
 
 ## 3. Applications and use cases
 
@@ -62,8 +56,6 @@ python -m pip install -U pip
 python -m pip install -r requirements.txt
 python -m pip check
 ```
-
----
 
 ## References
 

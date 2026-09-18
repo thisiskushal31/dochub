@@ -6,8 +6,6 @@
 
 How **`cargo test`** organizes unit and integration tests, how **`#[cfg(test)]`** keeps test-only code out of release builds, how **Clippy**, **rustfmt**, and **rustdoc** raise the quality floor, how **doctests** keep examples honest, and how to wire these into **CI quality gates**. After this chapter you should treat format + lint + test + doc as one pipeline, not optional local taste.
 
----
-
 ## 1. Concepts
 
 ### 1. `cargo test` — unit and integration
@@ -132,8 +130,6 @@ A typical merge gate for Rust crates:
 
 Pin **rustup toolchain** (file or CI image digest) so gates match developer machines. Cache `target/` carefully; still run fmt/clippy on clean policy when supply-chain or toolchain bumps.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Feature matrices and `cfg`
@@ -240,8 +236,6 @@ Caution:
 
 For day-to-day reading and review, install **rust-analyzer** (the official LSP implementation distributed via rustup/editor extensions) so jump-to-definition, find-references, and inline diagnostics match the pinned toolchain. Treat the IDE as a navigation aid: Cargo/`rustc`/Clippy in CI remain the source of truth. This handbook does not teach editor setup—use the rust-analyzer manual when wiring a new machine.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -285,8 +279,6 @@ For day-to-day reading and review, install **rust-analyzer** (the official LSP i
 - `#[allow(clippy::…)]` has a justification comment; no repo-wide allow of broad groups without ADR.
 - Flaky tests are fixed or quarantined with owners—not silently ignored.
 - Contributors can run the same three commands locally before push; rust-analyzer recommended for navigation.
-
----
 
 ## References
 

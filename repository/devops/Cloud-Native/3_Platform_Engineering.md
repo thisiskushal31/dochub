@@ -2,8 +2,6 @@
 
 [← Back to Cloud-Native](./README.md) · [Backstage →](./Backstage/README.md) · [CNCF everyday tools](./4_CNCF_Everyday_Tools.md)
 
----
-
 ## 1. Concepts
 
 **Platform engineering** builds **internal products** so product teams can ship on a **paved road**: golden paths for repo → CI → environments → observe → operate—without each team reinventing Kubernetes, IAM, and DNS.
@@ -25,8 +23,6 @@ Related delivery loop: [CiCd/](../CiCd/README.md). Culture: [Methodologies/](../
 **Disconfirm:** Giving every team a raw kubeconfig is **not** a platform. A wiki of YAML snippets is **not** self-service.
 
 **Confirm:** Who is the platform’s user? What is one golden path you would offer first?
-
----
 
 ## 2. Advanced concepts
 
@@ -59,8 +55,6 @@ Teams may still leave the road (escape hatches)—but the **default** should be 
 
 Cloud tenant how-to: [Cloud/15–22](../Cloud/README.md). Metal/colo literacy when the platform sits on halls: [Datacenter/](../Datacenter/README.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -90,8 +84,6 @@ Cloud tenant how-to: [Cloud/15–22](../Cloud/README.md). Metal/colo literacy wh
 - Blocking all `kubectl` without a working self-service path is **not** enablement.
 
 **Good:** versioned golden paths, clear users, measured adoption. **Bad:** ticket-driven snowflakes forever; portal theater.
-
----
 
 ## References
 

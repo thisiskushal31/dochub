@@ -2,8 +2,6 @@
 
 [← Previous](./3_Power_Density_And_Floor_Loading.md) · [README](./README.md) · [Next: Fiber MPO/MTP →](./5_Structured_Cabling_Fiber_MPO_MTP.md)
 
----
-
 ## 1. Concepts
 
 **Structured cabling** is the permanent and semi-permanent copper plant that connects racks to network rooms—not a spaghetti of random patch cords from ToR to every server forever (though short server patches still exist).
@@ -22,8 +20,6 @@ Categories (Cat5e/6/6A/…) set bandwidth and alien-crosstalk expectations. For 
 ### Where it sits
 
 From server NIC or ToR → cabinet managers → aisle tray → MDA/IDA/HDA rooms (TIA language) → core/leaf as designed. Protocol depth: [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive). Physical switch roles: [Fabric-Physical](../Fabric-Physical/README.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -54,8 +50,6 @@ PoE (if used for cameras/APs/phones—not typical server NICs) needs power budge
 
 TIA-568 vs ISO/IEC 11801 naming differs; categories map. Color codes for jackets may be site-specific—learn local legend.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -74,8 +68,6 @@ TIA-568 vs ISO/IEC 11801 naming differs; categories map. Color codes for jackets
 - Keep certification PDFs for the run  
 
 **Good:** certified links, short quality patches, labels. **Bad:** unlabeled spaghetti; category roulette; crushed cords under doors.
-
----
 
 ## References
 

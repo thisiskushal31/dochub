@@ -18,8 +18,6 @@ Chapter **00** is the hands-on smoke check (`tclsh`, hello, patchlevel). This ch
 
 Handbook default for *new* scripts: **Tcl 9.0.x**. Much of the industrial world still runs **8.6**—you will see why that matters.
 
----
-
 ## 1. Concepts
 
 ### 1. What Tcl is (plain language)
@@ -362,8 +360,6 @@ If you can point at each box and say what your ticket is touching, you are no lo
 | Embedding / C API | Chapter **14** |
 | Security review of glue | Chapter **16** |
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Interpreter object ≠ OS process
@@ -403,8 +399,6 @@ The Concepts table (section **5.6**) is enough for day one. Under review pressur
 
 Staff question in incidents: “Which row of the map is stuck—**read**, **child wait**, or **event wait**?” That triage beats guessing at language syntax.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How this chapter’s picture shows up |
@@ -422,8 +416,6 @@ Staff question in incidents: “Which row of the map is stuck—**read**, **chil
 strace -e trace=openat,write,execve -f tclsh hello.tcl 2>&1 | head -n 40
 ```
 
----
-
 ## Staff-level review checklist
 
 - Newcomers can explain Tcl in one minute: **embeddable command language**, **strings**, **substitute then dispatch**.
@@ -433,8 +425,6 @@ strace -e trace=openat,write,execve -f tclsh hello.tcl 2>&1 | head -n 40
 - Nobody confuses “invalid command name” in laptop `tclsh` with a language bug when the command is **host-specific**.
 - History literacy is enough to explain **why Expect/Tk exist** and **why 8.6 still appears**.
 - Newcomers can map common verbs (`puts`, `open`/`gets`, `exec`, `socket`, `cd`, `glob`/`file`, Expect `spawn`) to **write / open+read / fork+execve / socket / chdir / stat+readdir / pty**—at least one level deep.
-
----
 
 ## References
 

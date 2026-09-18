@@ -48,8 +48,6 @@ filter (>0) [-1,0,1]  -- [1]
 
 **Modules.** A file usually starts with `module ModName (exports) where`. If the header is omitted, it is as if `module Main(main) where`. The module name is a dot-separated sequence of constructor-style identifiers (e.g. `Data.List`). See topic 6 for exports and imports.
 
----
-
 ## Further reading
 
 - [Haskell 2010 report – Chapter 2 Lexical structure](https://haskell.org/onlinereport/haskell2010/haskellch2.html)

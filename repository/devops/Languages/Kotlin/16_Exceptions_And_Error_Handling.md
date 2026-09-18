@@ -81,8 +81,6 @@ loop@ for (i in 1..3) { for (j in 1..3) { if (j == 2) break@loop } }
 
 These rules keep control flow predictable when mixing lambdas, loops, and early returns. The next topic covers annotations, reflection, and KDoc.
 
----
-
 ## Further reading
 
 - [Exceptions](https://kotlinlang.org/docs/exceptions.html)

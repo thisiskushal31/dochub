@@ -4,8 +4,6 @@
 
 This topic covers **process**, **Process Control Block (PCB)** / Process Table, and **states of a process** in an **OS-agnostic** way: no platform-specific commands or APIs.
 
----
-
 ## 1. Introduction of Process Management / Process in Operating System
 
 ### What is a process?
@@ -18,8 +16,6 @@ A **process** is an instance of a program that is being executed. Concretely, it
 4. **Resources** — Open files, network connections, allocated devices, child processes, etc. The kernel tracks these so it can clean up when the process exits.
 
 Important: **one program (one executable file) can correspond to many processes.** Each time you “run” the program, the OS creates a new process with its own PCB, address space, and resources.
-
----
 
 ## 2. Process Control Block (PCB) / Process Table
 
@@ -54,8 +50,6 @@ The **Process Control Block** (also called **task control block**, **process des
 - **Pointers for debugging** — e.g. to support ptrace-style tools.
 
 The PCB is the **single source of truth** for “this process.” When the process is not running, the CPU state (PC, registers) is also saved in the PCB (or in a kernel stack associated with it) so that when the process is scheduled again, the kernel can restore that state and resume execution.
-
----
 
 ## 3. States of a Process
 
@@ -100,8 +94,6 @@ The **seven-state model** adds Suspend Ready and Suspend Blocked (processes swap
 
 No transition goes directly from **Waiting** to **Running**. A process that becomes ready must wait in the ready queue until the scheduler picks it. This separation (wait queues vs ready queue) is fundamental to how the kernel manages blocking and scheduling.
 
----
-
 ## Context switch
 
 When the kernel decides to stop running process A and start running process B, it must:
@@ -117,8 +109,6 @@ The **dispatcher** is the kernel code that performs this switch. The **cost** of
 
 - **Voluntary:** The running process gives up the CPU by making a **blocking** system call (e.g. read() that waits for I/O). The kernel puts it in Waiting and chooses another process from Ready.
 - **Involuntary (preemptive):** The kernel takes the CPU away (e.g. on a timer interrupt). The process is moved to Ready; the kernel chooses another process. The process did not ask to stop; this is **preemption**.
-
----
 
 ## Process creation and termination
 
@@ -137,8 +127,6 @@ The exact API (fork+exec vs CreateProcess vs spawn) is OS-specific; the *concept
 2. The parent can **wait** (e.g. wait()) to “reap” the child: the kernel returns the exit status and then **frees the child’s PCB**. Until then, the child remains a zombie.
 3. If the parent exits before reaping, the kernel may **reparent** the zombie to a designated process (e.g. init, PID 1), which is responsible for reaping.
 
----
-
 ## Summary
 
 - A **process** is a program in execution: code + current CPU state + address space + resources. The kernel represents it with a **Process Control Block (PCB)**.
@@ -148,8 +136,6 @@ The exact API (fork+exec vs CreateProcess vs spawn) is OS-specific; the *concept
 - **Creation:** New PCB, new/copied address space, resources. **Termination:** Process exits; PCB stays as zombie until parent reaps.
 
 All of this is **operating system basics** — independent of whether the OS is Linux, Windows, or another. How a particular OS implements PCBs, state names, and system calls is covered in the [Linux](../Linux/README.md) and [Windows](../Windows/README.md) sections.
-
----
 
 ## Further reading
 

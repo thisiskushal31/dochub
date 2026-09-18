@@ -2,8 +2,6 @@
 
 [← Previous](./16_Scale_Multitenancy_And_Platform_Config.md) · [README](./README.md) · [Next: Worked example →](./18_Worked_Example_Bootstrap_And_App.md)
 
----
-
 ## 1. Concepts
 
 **Flux** makes the cluster match Git.  
@@ -48,8 +46,6 @@ Rough fail time ≈ `interval * threshold`.
 
 Install Flagger with Flux (GitOps the install) or Helm — see Flagger docs.
 
----
-
 ## 2. Advanced concepts
 
 ### Analysis loop
@@ -68,8 +64,6 @@ Istio, Linkerd, Gateway API, NGINX, Contour, Traefik, … — standardize on **o
 
 Same problem space, different CRDs — [Argo_Rollouts/](../Argo_Rollouts/README.md), [CiCd/9](../9_Progressive_Delivery_Controllers.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -80,8 +74,6 @@ Same problem space, different CRDs — [Argo_Rollouts/](../Argo_Rollouts/README.
 | Hotfix now | Time-boxed `skipAnalysis` |
 
 **Good:** Flagger + Flux with clear metric owners. **Bad:** canaries on everything with no metrics.
-
----
 
 ## References
 

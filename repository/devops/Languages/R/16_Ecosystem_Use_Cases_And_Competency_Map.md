@@ -6,8 +6,6 @@
 
 Where R wins strategically: **statistics-forward workflows**, **reporting**, **research operationalization**, and **interfaces** to databases and cloud stores. Where teams commonly complement R with **Python**, **SQL/dbt**, **Spark**, or **Java services**. This chapter maps **roles** (analyst → scientist → data engineer → platform) to expected competencies and clarifies migration pathways without rewriting mathematics incorrectly.
 
----
-
 ## 1. Concepts
 
 ### 1. Strength clusters
@@ -27,8 +25,6 @@ Common mature splits:
 ### 3. Community artifacts that shape engineering reality
 
 CRAN policy encourages quality but constrains release cadence; Posit stack tooling shapes enterprise workflows; Bioconductor defines parallel ecosystem governance for life sciences.
-
----
 
 ## 2. Advanced concepts
 
@@ -55,8 +51,6 @@ Teams standardize on Linux containers for production even when analysts use macO
 
 It might mean **scheduled reports**, **APIs**, **Shiny apps**, or **batch scoring**. Each has different failure modes; don’t import Shiny’s memory model into batch jobs or vice versa.
 
----
-
 ## 3. Applications and use cases
 
 - **Regulated research:** R remains if methods and validation are built there; export is documentation + code, not vibes.
@@ -77,8 +71,6 @@ It might mean **scheduled reports**, **APIs**, **Shiny apps**, or **batch scorin
 - Migration projects include differential testing and rollback metrics.
 - Production patterns match the actual serving architecture (batch vs API vs app).
 - Cross-language boundaries have explicit data contracts and SLAs.
-
----
 
 ## References
 

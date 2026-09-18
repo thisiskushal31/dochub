@@ -2,8 +2,6 @@
 
 [← Previous](./12_APAC_Hubs.md) · [README](./README.md) · [Next: India →](./14_India_Market.md)
 
----
-
 ## 1. Concepts
 
 China is a **separate market shape**: domestic colo/IDC operators, telco halls, and cloud stacks (Alibaba, Tencent, Huawei Cloud/HCS) with distinct compliance and interconnect realities.
@@ -16,8 +14,6 @@ China is a **separate market shape**: domestic colo/IDC operators, telco halls, 
 | Global colo | Limited/partner models—research before assuming Equinix-like access |
 
 Living index: syllabus Part E China seed.
-
----
 
 ## 2. Advanced concepts
 
@@ -35,8 +31,6 @@ Tenant cloud vs landlord [8](./8_Tenant_Cloud_Vs_Landlord.md). Cloud SKU literac
 ### Honesty
 
 Market and policy change—re-verify officially per project. No invented regulatory advice; involve counsel for compliance.
-
----
 
 ## 3. Applications and use cases
 
@@ -56,8 +50,6 @@ Market and policy change—re-verify officially per project. No invented regulat
 - Don’t copy-paste Ashburn design into Shanghai  
 
 **Good:** China-specific architecture, local operators researched. **Bad:** assume Equinix defaults; ignore policy; stale region lists.
-
----
 
 ## References
 

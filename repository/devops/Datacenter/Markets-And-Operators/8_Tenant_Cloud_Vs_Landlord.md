@@ -2,8 +2,6 @@
 
 [← Previous](./7_Bare_Metal_Cloud_Factories.md) · [README](./README.md) · [Next: Americas →](./9_Americas_Hubs.md)
 
----
-
 ## 1. Concepts
 
 Same electrons and photons; **different products**:
@@ -17,8 +15,6 @@ Same electrons and photons; **different products**:
 | Handbook home | `Datacenter/` + Provider-Use | `Cloud/` (advanced after DC batches) |
 
 **Akamai Linode**, DigitalOcean, Vultr = tenant clouds. Their halls exist, but you do not buy Smart Hands there as the primary motion.
-
----
 
 ## 2. Advanced concepts
 
@@ -39,8 +35,6 @@ On-ramp into colo: [Provider-Use/7](../Provider-Use/7_Land_Cloud_On_Ramp.md). Hy
 
 Every major market has both landlords and cloud regions—choose per job, not per hype.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -59,8 +53,6 @@ Every major market has both landlords and cloud regions—choose per job, not pe
 - Spell Equinix; don’t peer it with Linode  
 
 **Good:** clean split of jobs and homes. **Bad:** logo soup; plant chapters under Cloud; UI tours as architecture.
-
----
 
 ## References
 

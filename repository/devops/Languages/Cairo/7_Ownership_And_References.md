@@ -4,8 +4,6 @@
 
 Cairo uses a **linear type system**: every value must be used exactly once. "Used" means either **moved** (e.g. passed to a function) or **destroyed**. Destruction can happen when a variable goes out of scope, when a struct is destructured, or explicitly with `destruct()`. This ensures that memory is never written twice and that execution is provable. Ownership in Cairo applies to **variables** (not values): a value can be referred to by many variables because the value itself is immutable; the compiler ensures that constant variables are not accidentally modified. This topic covers variable scope, moving, the **Copy** and **Drop** traits, and **snapshots** and **references** so you can pass values without giving up ownership.
 
----
-
 ## Variable scope and moving
 
 A variable is valid from its declaration until the end of its scope. Passing a value to a function **moves** it: the original variable is no longer valid. Passing the same variable again is a compile error unless the type implements **Copy**.
@@ -22,8 +20,6 @@ fn main() {
     // foo(arr);  // Error: variable was previously moved
 }
 ```
-
----
 
 ## Copy trait
 
@@ -48,8 +44,6 @@ fn main() {
 fn foo(p: Point) {}
 ```
 
----
-
 ## Drop and Destruct
 
 Values must be destroyed when they go out of scope. **Drop** is a no-op destruction: the type can be discarded without special handling. Most types can derive Drop. **Destruct** is used when destruction has a side effect (e.g. **Felt252Dict** must be "squashed" for provability). Types that contain a dictionary cannot derive Drop and must implement or derive Destruct so that when they go out of scope, the dictionary is squashed.
@@ -63,8 +57,6 @@ fn main() {
     A {};
 }
 ```
-
----
 
 ## Snapshots (@)
 
@@ -91,8 +83,6 @@ fn calculate_area(rec: @Rectangle) -> u64 {
 
 You cannot assign through a snapshot; the compiler rejects modifications to snapshot values.
 
----
-
 ## Mutable references (ref)
 
 To let a function mutate a value while the caller keeps ownership, pass a **mutable reference** with **ref**. The parameter is written `ref name: Type`. The variable must be declared with `mut`. The value is effectively passed in and returned implicitly so the caller still owns it.
@@ -118,8 +108,6 @@ fn flip(ref rec: Rectangle) {
 }
 ```
 
----
-
 ## Returning multiple values
 
 You can return several values as a tuple to give ownership back to the caller (e.g. return the same array plus a computed value):
@@ -139,8 +127,6 @@ fn calculate_length(arr: Array<u128>) -> (Array<u128>, usize) {
 
 For read-only or in-place mutation, prefer snapshots and `ref` instead of passing and returning by value.
 
----
-
 ## clone
 
 To duplicate an **Array** (or other non-Copy type), use **clone()**. This allocates and copies data.
@@ -152,8 +138,6 @@ fn main() {
     let arr2 = arr1.clone();
 }
 ```
-
----
 
 ## Further reading
 

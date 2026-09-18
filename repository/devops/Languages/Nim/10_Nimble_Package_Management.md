@@ -38,8 +38,6 @@ nimble test
 
 The distribution also includes **`atlas`**, which clones dependencies under a project’s **`deps/`** tree (layout configurable), keeps an **`atlas.config`**, and **patches `nim.cfg`** with **`--path`** entries so **`nim c`** sees vendored sources—**without** invoking the compiler for builds itself. It understands **Nimble metadata**, supports **linking** sibling projects, **lockfiles** (**`pin`** / **`rep`**), and optional **virtual Nim** installs. Use it when that workflow fits; otherwise stay on pure **Nimble** to reduce moving parts.
 
----
-
 ## Further reading
 
 - [Nim documentation portal](https://nim-lang.org/documentation.html)

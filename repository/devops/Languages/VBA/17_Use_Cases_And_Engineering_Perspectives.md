@@ -8,8 +8,6 @@
 
 Default narrative remains **VBA in Microsoft 365 Apps on Windows** under enterprise macro policy (**15**). VBScript is brownfield only (**14**).
 
----
-
 ## 1. Concepts
 
 ### 1. What you can write (track outcomes)
@@ -104,8 +102,6 @@ Track through **15–16** with **11–14** as surface literacy → ASR/AMSI offi
 
 Interview prompts that work: “How would you distribute an `.xlsm` under internet-macro blocking?” and “What do you look for before enabling macros on a sample?”
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Ownership and bus factor
@@ -133,8 +129,6 @@ Literacy hosts (**09**): each expands COM and social-engineering surface (especi
 | Users outside Windows desktop Office | Rising |
 | Critical path depends on one workbook | True |
 | Migration spike estimated | Smaller than another year of break/fix |
-
----
 
 ## 3. Applications and use cases
 
@@ -170,8 +164,6 @@ Literacy hosts (**09**): each expands COM and social-engineering surface (especi
 | Security | Tabletop with MotW + ASR + safe analysis |
 | App owner | Exit criteria when VBA stops fitting |
 
----
-
 ## Staff-level review checklist
 
 - Deliverable matches a README “what you can write” row—including the security column.
@@ -184,8 +176,6 @@ Literacy hosts (**09**): each expands COM and social-engineering surface (especi
 - Ownership, source provenance, and bus factor addressed.
 - Hiring/interview signals align with the four README pillars—not only demo macros.
 - Adjacent doors named when the next increment leaves desktop VBA (**18**).
-
----
 
 ## References
 

@@ -6,8 +6,6 @@
 
 **cmd.exe** builtins, **`.bat` / `.cmd`** script mechanics, and the control-flow you still meet in brownfield Windows estates: `IF`, `FOR`, `SETLOCAL` / `ENDLOCAL`, `CALL`, and delayed expansion. The handbook stance is clear: **prefer PowerShell 7** (`pwsh`) for new automation; keep batch literacy for maintenance, installers, and legacy hooks that have not moved yet.
 
----
-
 ## 1. Concepts
 
 ### 1. What cmd is
@@ -119,8 +117,6 @@ ENDLOCAL & EXIT /B %RC%
 
 Patterns to notice: `@ECHO OFF`, quoting `SET "VAR=value"`, `%~dp0`, `CALL`, and propagating `%ERRORLEVEL%` across `ENDLOCAL`.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `SETLOCAL`, error levels, and `EXIT /B`
@@ -221,8 +217,6 @@ Labels (`:section`) plus `GOTO` are the historical control-flow style. Prefer `C
 
 Installers often expect a `.cmd` working directory and environment. Keep side effects localized with `SETLOCAL`, restore directories with `PUSHD`/`POPD`, and never assume the user’s interactive `cd` state.
 
----
-
 ## 3. Applications and use cases
 
 ### Application installers
@@ -280,8 +274,6 @@ There is no pleasant unit-test culture around cmd. Prefer characterization tests
 - Are `ERRORLEVEL` checks correct (remember `IF ERRORLEVEL` semantics)?
 - Any untrusted input interpolated into the command line?
 - Migration plan recorded for lingering `.cmd` in production paths?
-
----
 
 ## References
 

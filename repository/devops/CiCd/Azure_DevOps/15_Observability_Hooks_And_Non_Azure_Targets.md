@@ -2,8 +2,6 @@
 
 [← Previous](./14_Deploy_IaC_ARM_Bicep_Terraform_Ansible.md) · [README](./README.md) · [Next: Boards →](./16_Azure_Boards.md)
 
----
-
 ## 1. Concepts
 
 Pipelines should **emit signals** and can deploy **beyond Azure**.
@@ -15,8 +13,6 @@ Pipelines should **emit signals** and can deploy **beyond Azure**.
 | Azure Monitor / App Insights | Post-deploy checks; alert hooks (deep observability → [Observability/](../../Observability/README.md)) |
 | Non-Azure clouds | Service connections / OIDC to AWS/GCP; generic SSH/K8s |
 | GitOps handoff | Push image + open PR / commit digest; CD elsewhere |
-
----
 
 ## 2. Advanced concepts
 
@@ -44,8 +40,6 @@ Still valid: deploy to non-Azure datacenters via self-hosted agents ([12](./12_D
 
 Assistants (including Azure DevOps MCP-style helpers) may draft YAML or queries; the **same gates** apply — PR review, environments, least privilege. No bypass of policy because a tool wrote the file.
 
----
-
 ## 3. Applications and use cases
 
 | Scenario | Approach |
@@ -55,8 +49,6 @@ Assistants (including Azure DevOps MCP-style helpers) may draft YAML or queries;
 | Nightly synthetic | Scheduled pipeline + results publish |
 
 **Good:** deploy stage fails closed on failed smoke. **Bad:** green build while prod 5xx ignored.
-
----
 
 ## References
 

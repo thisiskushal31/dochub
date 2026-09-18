@@ -2,8 +2,6 @@
 
 [← Previous](./02_Install_Pipelines_And_Operator.md) · [README](./README.md) · [Next: First run →](./04_First_Task_And_PipelineRun.md)
 
----
-
 ## 1. Concepts
 
 | Resource | Role |
@@ -43,8 +41,6 @@ spec:
 
 Pipelines reference Tasks by name (or remote resolver — [11](./11_Resolvers_Bundles_And_Remote_Resources.md)) and declare `params` / `workspaces` bindings at PipelineRun time.
 
----
-
 ## 2. Advanced concepts
 
 ### Status and retries
@@ -59,8 +55,6 @@ Extension points beyond plain Tasks ([10](./10_Matrix_CustomRuns_And_StepActions
 
 Older resource types are deprecated — prefer workspaces + results + OCI artifacts ([07](./07_Workspaces_Artifacts_And_Volumes.md), [25](./25_Migrate_Versioning_And_Extras.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -70,8 +64,6 @@ Older resource types are deprecated — prefer workspaces + results + OCI artifa
 | Shared org steps | Catalog Task refs |
 
 **Good:** small Tasks composed in Pipelines. **Bad:** one 40-step Task that nobody reuses.
-
----
 
 ## References
 

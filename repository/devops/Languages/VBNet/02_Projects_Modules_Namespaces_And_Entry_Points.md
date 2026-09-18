@@ -16,8 +16,6 @@ Chapter **[00](./00_First_Steps_SDK_DotNet_And_Hello.md)** got hello running. Ch
 
 Handbook default: **SDK-style projects** on modern .NET; Framework 4.x as labeled brownfield.
 
----
-
 ## 1. Concepts
 
 ### 1. The project is the unit of build
@@ -130,8 +128,6 @@ Libraries (`OutputType` library) **do not** need `Main`. If you find `Main` in a
 
 Wrong mental model: “namespace = DLL.” Right model: **many namespaces per assembly**, and sometimes the reverse across packaging choices.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. TFMs: modern .NET vs Framework
@@ -186,8 +182,6 @@ Enterprise solutions often mix languages:
 | IIS / web | Different project SDK—literacy door, not this chapter’s spine |
 | Office | **Not VB.NET**—see [VBA](../VBA/README.md) |
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How project structure shows up |
@@ -200,8 +194,6 @@ Enterprise solutions often mix languages:
 
 **Whole-engineering picture:** if you cannot point to the entry project and TFM, you cannot reason about runtime support or blast radius.
 
----
-
 ## 4. Staff-level review checklist
 
 - `.vbproj` TFM is explicit and matches the support policy.
@@ -212,8 +204,6 @@ Enterprise solutions often mix languages:
 - SDK-style vs legacy project format is recognized before “quick edits.”
 - Public API surface is intentional (`Public` vs `Friend`).
 - Cross-links to [C# SDK setup](../CSharp/2_Environment_Setup_And_DotNet_SDK.md) used for shared tooling questions.
-
----
 
 ## References
 

@@ -6,8 +6,6 @@
 
 Running R in the real world: **GitHub Actions / GitLab CI / Jenkins** patterns, **Docker** images, **orchestrated** jobs (Airflow, Prefect, cron), **observability** (logs, metrics, row counts), and service patterns (**Plumber** APIs, **Shiny** behind reverse proxies). The focus is operability: idempotency, retries, exit codes, and runbooks.
 
----
-
 ## 1. Concepts
 
 ### 1. Job contract
@@ -29,8 +27,6 @@ Pass parameters as environment variables and/or flags; write structured logs (JS
 ### 5. API services with R
 
 **Plumber** turns functions into HTTP endpoints. Treat it like any microservice: health checks, graceful shutdown, request size limits, and auth. **Shiny** is stateful; scale horizontally with sticky sessions and shared nothing or shared external state.
-
----
 
 ## 2. Advanced concepts
 
@@ -54,8 +50,6 @@ If your job uses `parallel` AND linked BLAS threads, you can **oversubscribe CPU
 
 Model deployments benefit from traffic splitting and rollback—often coordinated outside R, but R artifacts must be versioned accordingly.
 
----
-
 ## 3. Applications and use cases
 
 - **Nightly ETL + modeling:** scheduled container task with metrics exported to Prometheus/OpenTelemetry via sidecar or push gateway patterns.
@@ -77,8 +71,6 @@ cat(sprintf("job_start %s args=%s\n", Sys.time(), paste(args, collapse = " ")))
 - Containers pin R version + OS deps + lockfile restore path.
 - Parallelism policy avoids BLAS/thread oversubscription.
 - Production services include auth, limits, and health checks appropriate to exposure.
-
----
 
 ## References
 

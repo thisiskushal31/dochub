@@ -4,48 +4,48 @@
     "path": "1_What_Is_Julia.md",
     "type": "file",
     "sha": "",
-    "size": 9262
+    "size": 9257
   },
   {
     "name": "2_Syntax_And_REPL.md",
     "path": "2_Syntax_And_REPL.md",
     "type": "file",
     "sha": "",
-    "size": 23458
+    "size": 23453
   },
   {
     "name": "3_Advanced_Concepts.md",
     "path": "3_Advanced_Concepts.md",
     "type": "file",
     "sha": "",
-    "size": 15728
+    "size": 15723
   },
   {
     "name": "4_Packages_And_Environments.md",
     "path": "4_Packages_And_Environments.md",
     "type": "file",
     "sha": "",
-    "size": 7219
+    "size": 7214
   },
   {
     "name": "5_Use_Data_Pipelines_HPC_Research.md",
     "path": "5_Use_Data_Pipelines_HPC_Research.md",
     "type": "file",
     "sha": "",
-    "size": 12553
+    "size": 12543
   },
   {
     "name": "6_Deployment_And_Ops.md",
     "path": "6_Deployment_And_Ops.md",
     "type": "file",
     "sha": "",
-    "size": 8382
+    "size": 8377
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 8060
+    "size": 8020
   }
 ]

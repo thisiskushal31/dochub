@@ -10,7 +10,7 @@
         "path": "Datadog/README.md",
         "type": "file",
         "sha": "",
-        "size": 481
+        "size": 2388
       }
     ]
   },
@@ -25,7 +25,7 @@
         "path": "Elastic/README.md",
         "type": "file",
         "sha": "",
-        "size": 489
+        "size": 2631
       }
     ]
   },
@@ -40,7 +40,22 @@
         "path": "Grafana/README.md",
         "type": "file",
         "sha": "",
-        "size": 483
+        "size": 2563
+      }
+    ]
+  },
+  {
+    "name": "Jaeger",
+    "path": "Jaeger",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Jaeger/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2173
       }
     ]
   },
@@ -55,7 +70,7 @@
         "path": "Loki/README.md",
         "type": "file",
         "sha": "",
-        "size": 1762
+        "size": 2313
       }
     ]
   },
@@ -70,7 +85,7 @@
         "path": "New_Relic/README.md",
         "type": "file",
         "sha": "",
-        "size": 483
+        "size": 2186
       }
     ]
   },
@@ -85,7 +100,7 @@
         "path": "OpenTelemetry/README.md",
         "type": "file",
         "sha": "",
-        "size": 527
+        "size": 2793
       }
     ]
   },
@@ -100,14 +115,14 @@
         "path": "PagerDuty/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 890
+        "size": 875
       },
       {
         "name": "README.md",
         "path": "PagerDuty/README.md",
         "type": "file",
         "sha": "",
-        "size": 1957
+        "size": 2373
       }
     ]
   },
@@ -122,36 +137,58 @@
         "path": "Prometheus/README.md",
         "type": "file",
         "sha": "",
-        "size": 503
+        "size": 2894
       }
     ]
+  },
+  {
+    "name": "Tempo",
+    "path": "Tempo",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Tempo/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2094
+      }
+    ]
+  },
+  {
+    "name": "0_How_To_Read.md",
+    "path": "0_How_To_Read.md",
+    "type": "file",
+    "sha": "",
+    "size": 4182
   },
   {
     "name": "1_Monitoring_And_Metrics.md",
     "path": "1_Monitoring_And_Metrics.md",
     "type": "file",
     "sha": "",
-    "size": 236
+    "size": 5178
   },
   {
     "name": "2_Logging_And_Tracing.md",
     "path": "2_Logging_And_Tracing.md",
     "type": "file",
     "sha": "",
-    "size": 341
+    "size": 5075
   },
   {
     "name": "3_Observability_Tools.md",
     "path": "3_Observability_Tools.md",
     "type": "file",
     "sha": "",
-    "size": 1750
+    "size": 3992
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2108
+    "size": 3418
   }
 ]

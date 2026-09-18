@@ -4,8 +4,6 @@
 
 Cairo uses an **immutable memory model**: once a memory cell is written, it is not overwritten, only read. Variables are **immutable by default**. You can make a variable mutable with `mut`. This topic covers variables, constants, shadowing, and the main data types: scalars (felt, integers, bool, strings) and compounds (tuples, fixed-size arrays). Cairo is **statically typed**: the types of all variables must be known at compile time; the compiler often infers them, and you can use conversion methods (e.g. `try_into()`) when you need to specify the target type.
 
----
-
 ## Variables and mutability
 
 When a variable is immutable, once a value is bound to a name you cannot change that value. Assigning again to the same name causes a compile error. The compiler message will be something like "Cannot assign to an immutable variable." Getting compile-time errors for immutability helps prevent bugs where one part of the code assumes a value never changes while another part changes it.
@@ -34,8 +32,6 @@ fn main() {
 
 Under the hood, the *value* in a cell is immutable, but the *variable* can be bound to a different cell. Assigning to a mutable variable is equivalent to redeclaring it to refer to another value in another memory cell; the compiler handles that and the keyword `mut` makes the intent clear. At the Cairo level the variable is not redeclared, so its type cannot change when using `mut`.
 
----
-
 ## Constants
 
 Constants are always immutable: you cannot use `mut` with them. Declare them with `const` instead of `let`, and the type of the value must be annotated. They may only be set to a constant expression, not to something computed at runtime. Constants can only be declared in the global scope, so they are useful for values that many parts of the program need. By convention, names are uppercase with underscores.
@@ -53,8 +49,6 @@ const BOOL_FIXED_SIZE_ARRAY: [bool; 2] = [true, false];
 ```
 
 Constants are valid for the entire time a program runs within their scope. Naming hardcoded values as constants conveys meaning and gives a single place to update if the value changes.
-
----
 
 ## Shadowing
 
@@ -86,8 +80,6 @@ fn main() {
 ```
 
 If you used `mut` and then assigned e.g. `x = 5_u8`, the compiler would report that it expected `u64` but found `u8`.
-
----
 
 ## Scalar types
 
@@ -137,8 +129,6 @@ fn main() {
 }
 ```
 
----
-
 ## Compound types
 
 ### Tuples
@@ -183,8 +173,6 @@ fn main() {
 }
 ```
 
----
-
 ## Type conversion
 
 Use the **Into** and **TryInto** traits. When the conversion cannot fail (e.g. smaller to larger integer), use `.into()` and annotate the target type. When it can fail (e.g. larger to smaller), use `.try_into().unwrap()`.
@@ -198,8 +186,6 @@ fn main() {
     let my_u32: u32 = my_felt252.try_into().unwrap();
 }
 ```
-
----
 
 ## Further reading
 

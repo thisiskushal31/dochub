@@ -8,8 +8,6 @@ How VBA reaches the filesystem and process environment: **FileSystemObject (FSO)
 
 Framing for staff and defenders: these APIs enable legitimate LOB import/export and also appear in hostile macros. This chapter teaches **what they are and how to review them**—not how to build malware, bypass controls, or weaponize launchers. Policy depth is chapter **15**; safe sample reading is **16**. Object creation mechanics are chapter **07**.
 
----
-
 ## 1. Concepts
 
 ### 1. Path discipline first
@@ -142,8 +140,6 @@ End Sub
 
 **What just happened:** path anchored next to the workbook; existence checked; stream closed; references released.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `ThisWorkbook.Path` vs empty path
@@ -235,8 +231,6 @@ Staff rules:
 - **Never** use them to instruct credential UI abuse, password-field stuffing, or bypass of security prompts—out of scope and reject in review.
 - For desktop RPA-style needs, point to managed doors (Power Automate / chapter **18**), not ad-hoc keystrokes in LOB macros.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -248,8 +242,6 @@ Staff rules:
 | **Software engineering** | One I/O helper module; errors surfaced (ch **05**); no copy-paste Kill patterns |
 
 Legitimate: nightly export to a finance share, reading a version.json beside an add-in, expanding `%TEMP%` for a scratch CSV you delete after. Not legitimate: downloading and running binaries—out of scope and review-reject.
-
----
 
 ## Staff-level review checklist
 
@@ -267,8 +259,6 @@ Legitimate: nightly export to a finance share, reading a version.json beside an 
 - Temp artifacts are deleted; failures do not leave partial sensitive files world-readable.
 - Unsaved workbook empty-`Path` cases handled.
 - Behavior aligns with org macro and ASR policy (ch **15**)—not “works on my laptop” alone.
-
----
 
 ## References
 

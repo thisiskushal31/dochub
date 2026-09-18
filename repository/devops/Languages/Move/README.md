@@ -13,8 +13,6 @@ This section is a **deep dive** into **Move**: factually correct, standalone, an
 
 **Where you use it:** Move is used to write and audit smart contracts and dapps on Aptos and Sui—from application design and systems (VM, toolchains) to security (verification, auditing) and operations (deploy, run). The use-cases and comparison topics cover when to choose which platform.
 
----
-
 ## How to read this section
 
 Read in **number order** for a single path: **basics first**, then **language core**, then **advanced and implementation**, then **Aptos and Sui in depth**, then **comparison**.
@@ -23,8 +21,6 @@ Read in **number order** for a single path: **basics first**, then **language co
 - **Move on Aptos (13–19):** Overview and when to use, account model and storage, toolchain, Block-STM and parallel execution, framework and stdlib, security and formal verification, Aptos use cases and patterns.
 - **Move on Sui (20–27):** Overview and when to use, object model, toolchain, Programmable Transaction Blocks, dynamic fields, entry functions and module initializers, security and gas model, Sui use cases and patterns.
 - **Wrap-up (28):** Comparison and choosing a platform.
-
----
 
 ## Topic index
 
@@ -63,8 +59,6 @@ Read in **number order** for a single path: **basics first**, then **language co
 | **Wrap-up** | | |
 | 28 | Comparison and choosing a platform | [28_Comparison_And_Choosing_A_Platform.md](./28_Comparison_And_Choosing_A_Platform.md) |
 
----
-
 ## Learning path
 
 | Stage | Topics | What you'll be able to do |
@@ -73,8 +67,6 @@ Read in **number order** for a single path: **basics first**, then **language co
 | **Move on Aptos** | 13 → 19 | Use Aptos in depth: account model and storage, toolchain, Block-STM, framework, security and verification, Aptos use cases and patterns. |
 | **Move on Sui** | 20 → 27 | Use Sui in depth: object model, toolchain, PTBs, dynamic fields, entry and init, security and gas, Sui use cases and patterns. |
 | **Wrap-up** | 28 | Compare Aptos vs Sui and choose a platform. |
-
----
 
 ## Further reading
 

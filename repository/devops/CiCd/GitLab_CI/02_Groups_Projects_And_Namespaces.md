@@ -2,8 +2,6 @@
 
 [← Previous](./01_What_Is_GitLab.md) · [README](./README.md) · [Next: SCM and MRs →](./03_SCM_Merge_Requests_And_Code_Review.md)
 
----
-
 ## 1. Concepts
 
 | Concept | Plain meaning |
@@ -13,8 +11,6 @@
 | **Namespace** | URL/path owner — user or group path that owns projects |
 
 CI inherits context from the project (and can use group/instance runners and variables). Permissions (Guest → Owner roles, plus custom roles on higher tiers) decide who can merge, run pipelines, or manage runners.
-
----
 
 ## 2. Advanced concepts
 
@@ -39,8 +35,6 @@ CI inherits context from the project (and can use group/instance runners and var
 
 SaaS has free-user / push limits and compute-minute concepts — confirm current subscription and CI minutes docs; don’t hard-code folklore numbers into policy.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -50,8 +44,6 @@ SaaS has free-user / push limits and compute-minute concepts — confirm current
 | Contractor access | Tight project membership; no group Owner |
 
 **Good:** group structure mirrors ownership. **Bad:** flat hundreds of projects with duplicated variables and no runner strategy.
-
----
 
 ## References
 

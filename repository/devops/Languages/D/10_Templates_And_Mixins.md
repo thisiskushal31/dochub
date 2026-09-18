@@ -6,8 +6,6 @@
 
 **Why templates?** They provide type-safe generics (e.g. containers, algorithms) and compile-time introspection. **Why mixins?** They generate repetitive or boilerplate code from a template and keep the source DRY.
 
----
-
 ## Templates
 
 A **template** is declared with **template** and a name; it can take **type** parameters, **value** parameters, or **alias** parameters. Instantiating the template with arguments produces a type or function. **static if** and **is** expressions allow conditional compilation inside templates.
@@ -20,8 +18,6 @@ template Max(T)
 alias maxInt = Max!int.max;
 int m = maxInt(1, 2);
 ```
-
----
 
 ## Template mixins
 
@@ -37,13 +33,9 @@ mixin template Counted()
 class C { mixin Counted!; }
 ```
 
----
-
 ## Constraints and specialization
 
 **template constraints** (e.g. **is(T : int)** or **if (isNumeric!T)**) restrict which types can instantiate a template. **static if** branches allow different code paths per instantiation. This enables trait-based and concept-style generic code.
-
----
 
 ## Further reading
 

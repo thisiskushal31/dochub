@@ -2,8 +2,6 @@
 
 [← Previous](./20_Feature_And_Configuration_Coverage_Map.md) · [README](./README.md) · [Next: Troubleshooting →](./22_Troubleshooting_And_Staff_Checklist.md)
 
----
-
 ## 1. Concepts — objects you will create
 
 Check what your cluster actually serves: `kubectl api-resources | grep toolkit.fluxcd`.
@@ -32,8 +30,6 @@ Chart source, `values` / `valuesFrom`, install/upgrade/test/rollback, `driftDete
 
 `url`, `ref`, `secretRef`, `provider`, `verification`, `ignore`, `sparseCheckout`, `include`, proxy, `suspend`.
 
----
-
 ## 2. Advanced — CLI verbs
 
 | Intent | Commands (see CLI docs for flags) |
@@ -45,8 +41,6 @@ Chart source, `values` / `valuesFrom`, install/upgrade/test/rollback, `driftDete
 | OCI | `flux push artifact`, `flux pull artifact` |
 | Local substitute | `flux envsubst` |
 
----
-
 ## 3. Applications and use cases
 
 | Task | Start here |
@@ -56,8 +50,6 @@ Chart source, `values` / `valuesFrom`, install/upgrade/test/rollback, `driftDete
 | CI | Pin CLI version; prefer check/reconcile |
 
 Full man pages and OpenAPI stay upstream.
-
----
 
 ## References
 

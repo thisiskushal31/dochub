@@ -2,8 +2,6 @@
 
 [← Previous](./25_Migrate_Versioning_And_Extras.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 Tekton’s durable job is often **build and attest**. **Promote and sync** frequently belong to GitOps:
@@ -38,13 +36,9 @@ Tekton PipelineRun → image@sha256:… (+ attestation)
 
 Tekton does not erase those paths — it is one modern control plane when you already run Kubernetes well. **Durable jobs** (build, attest, promote, verify, rollback) outlive any one CI product name.
 
----
-
 ## 2. Advanced concepts
 
 Write digests into Git (or an OCI registry source) from a final Pipeline Task with a **narrow** SA. CD controllers should **verify** Chains attestations when policy requires it.
-
----
 
 ## 3. Applications and use cases
 
@@ -55,8 +49,6 @@ Write digests into Git (or an OCI registry source) from a final Pipeline Task wi
 | Policy gate | Admission verifies signature before sync |
 
 **Good:** one digest, many envs. **Bad:** rebuild per environment with different flags.
-
----
 
 ## References
 

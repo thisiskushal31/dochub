@@ -6,8 +6,6 @@
 
 How **gems** are declared, installed, and locked for **reproducible** builds: **Gemfile**, **Gemfile.lock**, **`bundle install`**, groups, platforms, native extensions, private gem servers, and CI/deploy patterns—the Ruby equivalent of pip+venv or Composer lockfiles.
 
----
-
 ## 1. Concepts
 
 ### 1. RubyGems workflow
@@ -97,8 +95,6 @@ Native gems compile per platform—ARM builders need compilers or prebuilt gems.
 
 Gems declaring **`extensions`** build native code at install. Images need `build-essential`, `ruby-dev`, and libraries (e.g. `libyaml-dev`, `libssl-dev`). Use **`bundle config build.<gem> --with-openssl-dir=...`** when headers live in non-standard paths.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `path` and `git` gems
@@ -158,8 +154,6 @@ gem 'billing', path: 'gems/billing'
 
 Path gems accelerate monorepo dev; publish internal gems to private registry for reproducible external builds or use consistent monorepo CI that bundles all paths.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and release engineering
@@ -198,8 +192,6 @@ git diff --exit-code Gemfile.lock
 - Native extension build deps listed in Dockerfile/docs.
 - Private gem credentials from secret store, not git.
 - `bundle exec` used in systemd/cron/Kubernetes entrypoints.
-
----
 
 ## References
 

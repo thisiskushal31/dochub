@@ -4,13 +4,9 @@
 
 **Prerequisite:** [Fundamentals: User interface and the shell](../Fundamentals/11_User_Interface_And_Shell.md). Here: **user and group management**, **privilege elevation** (sudo), and **job scheduling** (cron, at) on Linux — with commands for DevOps and automation.
 
----
-
 ## Users and groups
 
 Linux is **multi-user**. Each user has a **UID** (user ID) and belongs to a **primary group** (GID) and optionally **supplementary groups**. User and group info live in `/etc/passwd` and `/etc/group` (or in LDAP/SSSD in enterprise). The kernel uses numeric IDs; names are for humans.
-
----
 
 ## User and group management commands
 
@@ -43,8 +39,6 @@ getent group groupname
 cat /etc/passwd
 cat /etc/group
 ```
-
----
 
 ## Privilege elevation: sudo and su
 
@@ -88,8 +82,6 @@ sudo visudo                             # Edit /etc/sudoers
 | `-l newname` | New login name |
 | `-L` / `-U` | Lock / unlock password |
 | `-d dir -m` | Move home to new path (move contents) |
-
----
 
 ## Job scheduling: cron and at
 
@@ -175,7 +167,6 @@ To **find** a specific user’s crontab:
 Do not edit the spool files directly; the cron daemon may overwrite them. Use `crontab -u <username> -e` as root to edit another user’s crontab.
 **System crontabs:** `/etc/crontab` and `/etc/cron.d/` add a **user** field before the command (e.g. `0 2 * * * root /path/to/script`). Scripts in `/etc/cron.hourly/`, `cron.daily/`, `cron.weekly/`, `cron.monthly/` run on a fixed schedule. Restrict users via `/etc/cron.deny` (and `/etc/cron.allow` if present).
 
-
 **at** — Run a command once at a specified time.
 
 ```bash
@@ -183,8 +174,6 @@ echo "/path/to/script.sh" | at 02:00 tomorrow
 atq                                     # List jobs
 atrm job_id                             # Remove job
 ```
-
----
 
 ## Monitor user activity (psacct / acct)
 
@@ -222,8 +211,6 @@ lastb
 
 Rotate the accounting file via logrotate (e.g. `/etc/logrotate.d/psacct`) so `/var/account/pacct` does not grow unbounded.
 
----
-
 ## Shutdown and reboot
 
 ```bash
@@ -241,16 +228,12 @@ sudo shutdown -r now
 sudo shutdown -c
 ```
 
----
-
 ## Summary
 
 - **Users/groups:** `useradd`, `usermod`, `userdel`, `passwd`, `chage`, `groupadd`, `gpasswd`; inspect with `id`, `getent`. **Activity:** `psacct`/`acct` provide `ac`, `sa`, `lastcomm`, `last`/`lastb` for login and command auditing.
 - **Privilege:** `sudo`, `su`, `visudo`.
 - **Scheduling:** `crontab -e` for recurring jobs; `at` for one-time jobs.
 - **Shutdown/reboot:** `shutdown`, `halt`, `poweroff`, `reboot`.
-
----
 
 ## Further reading
 

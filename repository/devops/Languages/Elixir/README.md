@@ -4,8 +4,6 @@
 
 **What this language does and why it's here:** Elixir is a dynamic, functional language built on the BEAM (Erlang VM). It gives you concurrency, fault tolerance, and distribution from Erlang/OTP, with a clear syntax and a strong standard library. In a DevOps and engineering context, Elixir powers Phoenix web apps and APIs, Nerves for embedded/IoT, and tooling that benefits from the BEAM. This section is a deep dive: it goes from **very basic** (what Elixir is, installation, basic types) through **advanced** (processes, OTP, Mix) to **use-case driven** (what you can do with the language, security and DevOps), and ends with a **reference** (standard library modules).
 
----
-
 ## How to read this section
 
 Read in **number order** for a single path from beginner to advanced to use cases.
@@ -17,8 +15,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 - **Topics 19–20 (Build and runtime):** Mix projects, OTP (agents, GenServer, supervision). How to build and run applications.
 - **Topics 21–22 (Use cases and security):** What you can do with Elixir (by role and goal) and how to run it safely in production. Read these when you want to see where the language fits and how to harden it.
 - **Topic 23 (Reference):** Standard library modules—what each module is and when to use it. Use this when you need to look something up; it does not teach the language.
-
----
 
 ## Learning path: from basics to use cases
 
@@ -32,8 +28,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | **Use cases and applications** | 21 | See what you can do with Elixir: application and web, scripts and CLI, tooling, data and formats, by role. |
 | **Security and DevOps** | 22 | Apply security and DevOps practices: config and secrets, input validation, supply chain, releases, and hardening. |
 | **Standard library reference** | 23 | Look up any standard library module: what it is, when to use it, and how it fits use cases and security. |
-
----
 
 ## Topics (in order)
 
@@ -70,8 +64,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | **23: Reference** |
 | 23 | Standard library modules reference | [23_Standard_Library_Modules_Reference.md](./23_Standard_Library_Modules_Reference.md) |
 
----
-
 ## By engineering role
 
 | Role | Focus | Where to go |
@@ -81,8 +73,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | **Security** | Secure config, supply chain, hardening | Core 9–10, errors 16, then **21**, **22**; **23** for config, System, File, Path. |
 | **Embedded / IoT (Nerves)** | Firmware, OTA, device ops | 2, 17–20, then **21**, **22**. |
 | **Backend / tooling** | Services, scripts, concurrency | 5–12, 17–20, then **21**; **23** for Enum, Stream, File, System. |
-
----
 
 ## Further reading
 

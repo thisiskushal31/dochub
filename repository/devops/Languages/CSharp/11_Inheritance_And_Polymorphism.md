@@ -6,8 +6,6 @@
 
 **Why inheritance?** It promotes reuse: common behavior lives in a base class, and derived classes add or specialize. **Why polymorphism?** Callers can depend on the base type and work with any derived type; new derived types can be added without changing existing code.
 
----
-
 ## Base and derived classes
 
 A class declares a base with **: BaseClassName**. The derived class has access to **public** and **protected** members of the base. Use **base** to call the base constructor or base methods. A class can inherit from only one base class.
@@ -24,8 +22,6 @@ class Dog : Animal
 }
 ```
 
----
-
 ## Virtual and override
 
 **virtual** methods can be **override**n in derived classes. When the method is called on a variable of the base type that refers to a derived instance, the overridden implementation runs. **sealed** prevents further override.
@@ -34,8 +30,6 @@ class Dog : Animal
 Animal a = new Dog();
 a.Speak();  // Woof
 ```
-
----
 
 ## Abstract classes
 
@@ -47,8 +41,6 @@ abstract class Shape
     public abstract double Area();
 }
 ```
-
----
 
 ## Further reading
 

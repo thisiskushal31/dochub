@@ -4,8 +4,6 @@
 
 SRE (Site Reliability Engineering) is not a job title you paste on ops. It is a way to run services with **error budgets**, **toil reduction**, and **incident discipline**. This file is the DevOps/SRE overlap — enough to run on-call without pretending this is the full Google SRE corpus.
 
----
-
 ## SRE practices DevOps must know
 
 | Idea | Meaning |
@@ -18,8 +16,6 @@ SRE (Site Reliability Engineering) is not a job title you paste on ops. It is a 
 
 Observability implements SLIs: [Observability/1](../Observability/1_Monitoring_And_Metrics.md). Design trade-offs: [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts).
 
----
-
 ## On-call rotations
 
 Goals: **human sustainability** + **fast mitigation**.
@@ -31,8 +27,6 @@ Goals: **human sustainability** + **fast mitigation**.
 | Handoff | Written: open incidents, risky deploys, watch items |
 | Page only actionable alerts | If humans ignore pages, you already lost |
 | Compensation / time back | Burnout is a reliability risk |
-
----
 
 ## Incident response (roles)
 
@@ -52,8 +46,6 @@ Severity (example language — tune to your org):
 - **SEV3** — degraded / limited impact — business hours OK  
 
 Mitigation beats root-cause during the fire. Root-cause lives in the postmortem ([1_Culture](./1_DevOps_Culture_And_Collaboration.md)).
-
----
 
 ## On-call tooling (literacy, not vendor cert)
 
@@ -81,16 +73,12 @@ Alert fires (Prometheus / cloud monitor / synthetic)
   → postmortem + runbook update
 ```
 
----
-
 ## Knowledge sharing during and after
 
 - Runbooks linked from the alert ([7_Docs_And_Runbooks](./7_Docs_And_Runbooks.md))  
 - Incident channel named clearly (`inc-YYYY-MM-DD-service`)  
 - After: blameless postmortem with owned actions ([1](./1_DevOps_Culture_And_Collaboration.md))  
 - MTTR feeds DORA ([5](./5_DORA_And_Delivery_Metrics.md))  
-
----
 
 ## Resilience and chaos engineering (literacy)
 
@@ -105,8 +93,6 @@ Beginner rules:
 - Goal is Third Way learning ([10](./10_Core_Principles_Three_Ways_CALMS.md)), not breaking things for sport.  
 
 Deep tooling and experiments can wait until Observability and platform maturity exist.
-
----
 
 ## Pitfalls
 

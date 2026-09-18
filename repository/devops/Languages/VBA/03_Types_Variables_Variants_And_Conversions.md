@@ -18,8 +18,6 @@ Chapter **02** gave you modules and `Option Explicit`. This chapter is the **dat
 
 Handbook default: **declare real types**; convert at boundaries; Variants only with a reason.
 
----
-
 ## 1. Concepts
 
 ### 1. Intrinsic types you will actually use
@@ -157,8 +155,6 @@ Debug.Print LBound(days), UBound(days)
 
 Chapter **06** pairs arrays with `Split` / `Join`.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `TypeName` and `VarType`
@@ -234,8 +230,6 @@ End Sub
 
 **When not to use:** if the “struct” keeps growing methods, invariants, or object fields you mutate carefully—graduate to a class (chapter **02**). UDTs are values, not objects: no `New`, no `Property Get` on the type itself, and assignment copies fields. Nested objects inside UDTs have sharp edges—keep UDTs simple.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Types in practice |
@@ -247,8 +241,6 @@ End Sub
 | **Software engineering** | Public APIs take/return concrete types; document Variant only when unavoidable. |
 
 **Whole-engineering picture:** Types are how you keep macros *movable*. Variants are how you talk to Office—not how you abandon structure.
-
----
 
 ## Staff-level review checklist
 
@@ -264,8 +256,6 @@ End Sub
 - Default property reliance avoided—explicit `.Value` / `.Value2` in Excel code.
 - `TypeName`/`VarType` used for diagnostics or true unions—not spaghetti control flow.
 - Public Functions document return types and do not silently return Empty on failure without a contract (pair with **05**).
-
----
 
 ## References
 

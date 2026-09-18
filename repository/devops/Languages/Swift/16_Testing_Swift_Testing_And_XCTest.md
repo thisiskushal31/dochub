@@ -10,8 +10,6 @@ Tests are executable documentation of behavior. Prefer clear assertions and dete
 
 Picture tests as **fire drills**: you pull the alarm on purpose to prove the door locks. If you cannot make the computer fail on purpose, you do not yet know the door is locked.
 
----
-
 ## 1. Concepts
 
 ### 1. Swift Testing — default for new work
@@ -247,8 +245,6 @@ func softThenHard() throws {
 
 **What just happened.** One failed `#expect` can leave later expects still useful in the report. A failed `#require` ends the test — use it for setup that must exist. Mixing them poorly (requiring trivia, expecting preconditions) makes failures noisy.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Parallel vs serialized
@@ -383,8 +379,6 @@ Coverage numbers highlight *untested paths*; they do not prove correctness. Chas
 6. Keep UI / snapshot hosts on XCTest until your toolchain story says otherwise.
 7. Update CI filters/plans so both runners stay visible in the same job matrix if mixed.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -394,8 +388,6 @@ Coverage numbers highlight *untested paths*; they do not prove correctness. Chas
 | **Security** | Negative tests for authz/validation; never commit live secrets for fixtures; redacted attachments |
 | **Operations** | CI pins Xcode/Swift; publishes failure logs; separates smoke vs full via test plans/filters; quarantine has owners |
 | **Software engineering** | New tests in Swift Testing; XCTest left for legacy/UI; flake PRs reviewed seriously; coverage is a flashlight |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -411,8 +403,6 @@ Coverage numbers highlight *untested paths*; they do not prove correctness. Chas
 - Flaky tests follow quarantine policy (ticket, owner, expiry) — not ignored.
 - Snapshot testing treated as a deliberate door with env pins — not a default for every change.
 - Coverage used as a signal for gaps, not a merge gate vanity metric.
-
----
 
 ## References
 

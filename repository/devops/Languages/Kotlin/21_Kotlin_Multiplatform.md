@@ -36,8 +36,6 @@ Directory layout typically follows source set names: **`src/commonMain/kotlin`**
 
 KMP supports Android, iOS, desktop (JVM), server (JVM), Kotlin/JS, Kotlin/Wasm, and other Kotlin/Native targets (watchOS, tvOS, etc.). Stability levels vary: Android, iOS, JVM (desktop and server), and Kotlin/JS are **stable** for the core KMP technology; Kotlin/Wasm and some native targets are **beta** or **alpha**. Compose Multiplatform has its own stability per platform (e.g. Android, iOS, desktop stable; Wasm beta). Check the official platform stability page when choosing targets. The next topic covers Compose Multiplatform and testing in more detail.
 
----
-
 ## Further reading
 
 - [Get started with Kotlin Multiplatform](https://kotlinlang.org/docs/multiplatform/get-started.html)

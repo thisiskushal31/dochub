@@ -2,8 +2,6 @@
 
 Control flow decides which code runs and how often. This topic covers conditionals (`if`, `else`, `else if`, ternary `? :`), the `switch` statement, and loops (`while`, `do...while`, `for`), plus `break`, `continue`, and labels. These constructs are the same in the browser and in Node.js.
 
----
-
 ## Conditionals: if, else, else if
 
 The **if** statement runs a block of code only when a condition is truthy. The condition is evaluated and converted to boolean (see “Truthy and falsy” below).
@@ -23,13 +21,9 @@ if (age >= 18) {
 
 Any expression can be the condition: comparisons, function calls, or variables. The block runs only when the condition’s value is truthy.
 
----
-
 ## Truthy and falsy
 
 In boolean context (e.g. `if (x)`, `while (x)`, condition of `? :`), values are converted to boolean. **Falsy** values become `false`: `0`, `-0`, `""`, `null`, `undefined`, `NaN`. All other values are **truthy** (e.g. non-zero numbers, non-empty strings, `"0"`, objects, arrays). So `if (count)` is false only when `count` is `0` (or another falsy value); `if (name)` is false when `name` is the empty string. Relying on truthiness is idiomatic but be explicit when you need to distinguish `0` from “not set” (e.g. `if (value !== undefined && value !== null)` or use nullish coalescing).
-
----
 
 ## Ternary operator (conditional ? :)
 
@@ -41,8 +35,6 @@ let status = age >= 18 ? "adult" : "minor";
 ```
 
 Multiple ternaries can be chained (e.g. `a ? x : b ? y : z`), but deep nesting hurts readability; consider `if/else if` or a lookup instead. Do not put **break** or **continue** inside a ternary—they are statements and cannot be used where an expression is expected.
-
----
 
 ## switch statement
 
@@ -65,8 +57,6 @@ switch (key) {
 
 Both `switch` and `case` can use expressions (e.g. `switch (+input)`, `case x + 1`). Type matters: if the value is a string (e.g. from `prompt`), a `case` with a number will never match. Use `break` (or `return`) in each case unless fall-through is intended; add a comment when you deliberately omit `break`. **Reference types:** Comparison is by reference for objects, so `switch (obj)` will only match a `case` that is the same object reference, not a deep-equal object. For discriminating by a property, use `switch (obj.type)` or an `if/else` chain.
 
----
-
 ## while loop
 
 The **while** loop runs a block repeatedly while its condition is truthy. The condition is checked **before** each iteration. If the condition is false at the start, the body never runs. Ensure the condition eventually becomes falsy (or use `break`), or the loop runs forever.
@@ -81,8 +71,6 @@ while (i < 3) {
 
 Any expression is allowed as the condition; it is converted to boolean. A single-statement body can be written without braces, but braces are usually clearer.
 
----
-
 ## do...while loop
 
 The **do...while** loop runs the body once, then checks the condition. If the condition is truthy, it runs again. So the body runs **at least once**. Use it when the first iteration must run before the condition can be evaluated (e.g. reading input until valid).
@@ -93,8 +81,6 @@ do {
   n = Number(prompt("Enter a number > 100", ""));
 } while (n <= 100 && n);
 ```
-
----
 
 ## for loop
 
@@ -107,8 +93,6 @@ for (let i = 0; i < 3; i++) {
 ```
 
 Any of the three parts can be omitted. Omitting the condition (e.g. `for (;;)`) gives an infinite loop, which you exit with `break`. The **two semicolons are required** even when parts are omitted (e.g. `for (; i < n;)`). An empty body is valid (e.g. `for (let i = 0; i < arr.length; i++);` runs only the step); use a block with a comment if intent is to delay or iterate for side effects. **Variable scope:** Declaring the loop variable in `begin` with `let` or `const` (e.g. `for (let i = 0; ...)`) confines it to the loop; each iteration gets a fresh binding in the case of `let` in the head, which matters when creating closures (e.g. callbacks) inside the loop.
-
----
 
 ## break and continue
 
@@ -124,8 +108,6 @@ for (let i = 0; i < 10; i++) {
 ```
 
 `break` and `continue` cannot be used inside a ternary or other expression-only context; they are statements.
-
----
 
 ## Labels for break and continue
 
@@ -143,8 +125,6 @@ console.log("Done");
 
 Without the label, `break` would only exit the inner loop. You cannot jump arbitrarily to a label; `break`/`continue` must be used in the normal control flow of the labeled construct.
 
----
-
 ## Choosing the right construct
 
 - **if/else:** Multiple mutually exclusive conditions or complex branching.
@@ -155,13 +135,9 @@ Without the label, `break` would only exit the inner loop. You cannot jump arbit
 - **for:** Counted or index-based loops when you have a clear start, condition, and step.
 - **break/continue:** Early exit from a loop or skip to the next iteration; use labels only when breaking out of nested loops.
 
----
-
 ## Summary
 
 **Conditionals:** `if`, `else`, and `else if` run blocks based on truthy conditions. The ternary operator `condition ? a : b` returns one of two values. **Truthy/falsy** conversion applies in conditions; falsy values are `0`, `""`, `null`, `undefined`, `NaN`. **switch** compares with `===` and uses `case`/`default` and `break`. **Loops:** `while` and `do...while` repeat while a condition is truthy; `for (begin; condition; step)` is for counted loops. **break** exits a loop (or switch); **continue** skips to the next iteration. **Labels** let `break`/`continue` target an outer loop. Use the construct that best expresses intent and keeps code readable.
-
----
 
 ## Further reading
 

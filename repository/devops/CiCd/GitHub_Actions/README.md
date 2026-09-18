@@ -21,7 +21,6 @@ Someone who knows nothing about Actions should leave able to:
 - Promote by **image digest**; hand off to GitOps when that is the platform path  
 - Find **every** product offering (hosted/larger/self-hosted/ARC, OIDC, attestations, Importer, …) in the [coverage map](./21_Feature_And_Configuration_Coverage_Map.md) — paid or free — then open the chapter  
 
-
 ### Chapter structure
 
 Each numbered chapter: **Concepts → Advanced → Applications/use cases → References** (official docs only).
@@ -38,8 +37,6 @@ Each numbered chapter: **Concepts → Advanced → Applications/use cases → Re
 | Craft & catalogs | [18](./18_Monitor_Metrics_And_Billing_Literacy.md)–[24](./24_Migrate_Packages_And_Extras.md) | Ops; lab; judgment; inventory |
 
 Suggested order: **01 → 24**. After **05**, jump to **19** if you learn by building.
-
----
 
 ## Chapters
 

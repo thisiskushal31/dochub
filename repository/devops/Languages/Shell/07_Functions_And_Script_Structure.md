@@ -6,8 +6,6 @@
 
 How to structure Bash and POSIX-oriented scripts with **functions**, **`local`**, **`return`**, and a readable file layout (usage, mains, helpers). Brief **PowerShell** function notes keep cross-OS teams aligned. You leave able to write scripts that are reviewable modules—not one long unindented blob—and to know which function features are Bash-only versus portable.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. What a shell function is
@@ -152,8 +150,6 @@ Get-Greeting -Name "Ada"
 
 PowerShell functions use **param blocks**, advanced functions with `[CmdletBinding()]`, and pipeline `process` blocks. Scopes differ from Bash `local`. Prefer `pwsh` **7.x** for new cross-platform modules; Windows PowerShell **5.1** remains common for built-in Windows-only modules—state the edition in the script header.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Subshell functions and isolation
@@ -256,8 +252,6 @@ For POSIX `sh`, keep remaining args in `"$@"` after `shift` instead of arrays.
 
 Design libraries so unit-style checks can invoke one function without deploying the world.
 
----
-
 ## 3. Applications and use cases
 
 ### Shared library snippets
@@ -349,8 +343,6 @@ File size heuristic: when a script exceeds ~200–300 lines without function bou
 - ShellCheck (and PSScriptAnalyzer where relevant) is clean on new helpers.
 - Logging helpers never print secret values by default.
 - Libraries are side-effect free at source time.
-
----
 
 ## References
 

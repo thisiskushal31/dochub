@@ -8,8 +8,6 @@ Enough of the **Excel object model** to write and review staff macros: `Applicat
 
 You leave able to navigate the hierarchy without recorder folklore, mutate cells by reference, and flag macros that thrash the UI or hide calculation side effects. Deeper security policy lives in chapter **15**; object/`Set` mechanics in chapter **07**.
 
----
-
 ## 1. Concepts
 
 ### 1. The hierarchy in one glance
@@ -127,8 +125,6 @@ End Sub
 ```
 
 **What just happened:** no Activate, no Select—direct write on a named sheet in `ThisWorkbook`.
-
----
 
 ## 2. Advanced concepts
 
@@ -272,8 +268,6 @@ Staff rules:
 - Tear down pending `OnTime` on workbook close / add-in unload so Excel does not call into a closed project.
 - Do not use `OnTime` to dodge policy, MotW, or user consent—chapter **15** wins.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -285,8 +279,6 @@ Staff rules:
 | **Software engineering** | Kill Select/Activate in review; centralize last-row/table helpers; `Option Explicit` (ch **02**) |
 
 Excel-only tasks should stay in Excel. Spawning Word or Outlook from a sheet belongs in chapter **09** with a clear product reason.
-
----
 
 ## Staff-level review checklist
 
@@ -307,8 +299,6 @@ Excel-only tasks should stay in Excel. Spawning Word or Outlook from a sheet bel
 - Errors do not leave Application toggles wrong (ch **05**).
 - External Automation uses chapter **07** discipline if Excel is created from outside.
 - Macro-enabled distribution follows org signing/policy (ch **15**).
-
----
 
 ## References
 

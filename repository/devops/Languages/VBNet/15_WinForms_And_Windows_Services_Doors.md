@@ -8,8 +8,6 @@ A **door**, not a designer textbook: where **VB.NET** still shows up in **Window
 
 Designer depth, control galleries, and full service-recovery encyclopedias live in product docs. Shared SDK literacy: [C# environment setup](../CSharp/2_Environment_Setup_And_DotNet_SDK.md). Office macros are not this world—[VBA](../VBA/README.md).
 
----
-
 ## 1. Concepts
 
 ### 1. Why these doors matter for staff
@@ -59,8 +57,6 @@ Modern .NET prefers **Worker Service** / generic host patterns; brownfield Frame
 - Services often over-privilege; demand **least privilege** accounts and scoped network rights.
 - Auto-start services expand **persistence** surface—inventory and owners matter.
 - Dependencies (NuGet, COM, native) still apply—chs **13–14**, **16**.
-
----
 
 ## 2. Advanced concepts
 
@@ -112,8 +108,6 @@ You are done with this chapter when you can, from a repo and a runbook alone:
 
 You are **not** expected to memorize the WinForms designer property grid.
 
----
-
 ## 3. Applications and use cases
 
 | Still fits | Migrate when |
@@ -124,8 +118,6 @@ You are **not** expected to memorize the WinForms designer property grid.
 | Owned Windows Service with clear account | LocalSystem + Excel Automation “because reporting” |
 
 Success for this door: you can **classify** the project, name TFM and install channel, and point modernizers at the right next track—not paint every form control from memory.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -139,8 +131,6 @@ Success for this door: you can **classify** the project, name TFM and install ch
 - Review config secret handling (ch **16**)—connection strings in cleartext `app.config` are a finding.
 - Plan migration as product risk (UI + COM + printers), not “convert language only.”
 - Cross-link shared SDK/NuGet depth to the [C# track](../CSharp/README.md) when the question is platform, not VB syntax.
-
----
 
 ## References
 

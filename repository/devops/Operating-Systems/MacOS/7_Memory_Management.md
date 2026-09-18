@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Fundamentals: Memory management](../Fundamentals/9_Memory_Management.md). Here: **how macOS implements** memory — **Mach virtual memory**, **address spaces**, **VM objects**, and **tools** (`vm_stat`, Activity Monitor).
 
----
-
 ## How the system does it (deep level)
 
 **Virtual memory:** XNU’s VM system comes from **Mach**. Physical memory is treated as a **cache** for virtual memory. Each **task** (address space) has a **map** of **virtual memory regions**; each region is backed by a **VM object** (or **memory object**). VM objects can be backed by:
@@ -18,8 +16,6 @@
 **Protection and inheritance:** Map entries have **protection** (read/write/execute) and **inheritance** (shared, copy-on-write, none for child). This is how `fork()` gets copy-on-write semantics for the child’s address space.
 
 **References:** [Memory and Virtual Memory (Apple Kernel Programming Guide)](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/vm/vm.html), [Mach VM (Wikipedia)](https://en.wikipedia.org/wiki/Mach_(kernel)#Memory_management).
-
----
 
 ## Commands and tools
 
@@ -42,14 +38,10 @@ memory_pressure
 top -l 1 -o mem
 ```
 
----
-
 ## Summary
 
 - **Model:** **Mach VM** — address spaces, VM objects, pmap; demand paging, swap.
 - **Tools:** **`vm_stat`**, **`memory_pressure`**, **Activity Monitor**, **`vmmap`**, **`top`**.
-
----
 
 ## Further reading
 

@@ -2,8 +2,6 @@
 
 [← Previous](./02_Architecture_Server_SDK_Edge_And_APIs.md) · [README](./README.md) · [Next: First flag →](./04_First_Flag_SDK_And_Toggle_Loop.md)
 
----
-
 ## 1. Concepts
 
 You can run Unleash in three **server** hosting models (plan-dependent):
@@ -24,8 +22,6 @@ All paths still teach the same objects: projects, environments, flags, tokens, S
 - HTTPS at the edge (ingress / reverse proxy); configure Unleash for secure cookies / public URL as docs require  
 
 Docker Compose in the Unleash repo is the usual lab path; production needs durable Postgres, backups, resource limits, and upgrade discipline ([18](./18_Scale_Upgrade_Operate_And_Troubleshoot.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -55,8 +51,6 @@ OSS vs Enterprise capability gaps (multi-project, change requests, SSO depth, SC
 
 Terminate TLS at the load balancer or configure the app for HTTPS. Mixed-content Admin UI and insecure cookie flags are common first-week bugs — follow current deploy HTTPS guidance.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -73,8 +67,6 @@ Terminate TLS at the load balancer or configure the app for HTTPS. Mixed-content
 - Upgrade channel owned ([18](./18_Scale_Upgrade_Operate_And_Troubleshoot.md))  
 
 **Good:** lab on Compose, prod on managed Postgres + Edge. **Bad:** single Docker volume as only backup of flag history.
-
----
 
 ## References
 

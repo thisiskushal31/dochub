@@ -4,15 +4,11 @@
 
 This topic ties the **whole handbook** to **real work**: what you actually do with Dart and Flutter from **very beginner** through **advanced** to **implementation**, and how that maps to **application**, **DevOps**, **security**, and **backend/tooling** roles. Use it to see the big picture and to choose which topics to read next for your goal.
 
----
-
 ## How to read this topic
 
 - **If you are new:** Read “Application and Flutter development” and “Learning path by level” so you see where you are going. Then follow the topic order in the README (1 → 2 → 3 → …).
 - **If you have a role:** Jump to your role’s section and use the “Concrete workflow” and “Topics to prioritize” to focus your reading and implementation.
 - **If you are implementing something:** Use “Implementation checklist” and the “Further reading” at the end of each handbook topic.
-
----
 
 ## Application and Flutter development
 
@@ -31,8 +27,6 @@ This topic ties the **whole handbook** to **real work**: what you actually do wi
 
 **Topics to prioritize:** 3–8, 10–12, 14, 17–18, 21–24.
 
----
-
 ## DevOps and CI/CD
 
 **Focus:** Building, testing, signing, and deploying **Flutter** and **Dart** apps and services.
@@ -49,8 +43,6 @@ This topic ties the **whole handbook** to **real work**: what you actually do wi
 
 **Topics to prioritize:** 2, 18, 19, 20, 21, 24.
 
----
-
 ## Security
 
 **Focus:** Hardening Dart/Flutter apps, managing **supply chain** risk, and using **interop** safely.
@@ -65,8 +57,6 @@ This topic ties the **whole handbook** to **real work**: what you actually do wi
 4. **Hardening and ops:** Topic 24 (Security and best practices). Apply checklist: type system, analysis, dependencies, secrets, network, interop, platform, build and deploy.
 
 **Topics to prioritize:** 4, 15–16, 18, 22, 24.
-
----
 
 ## Backend and tooling
 
@@ -84,8 +74,6 @@ This topic ties the **whole handbook** to **real work**: what you actually do wi
 
 **Topics to prioritize:** 8, 14, 17–20, 22, 24.
 
----
-
 ## Learning path by level
 
 | Level | You can… | Next focus |
@@ -95,8 +83,6 @@ This topic ties the **whole handbook** to **real work**: what you actually do wi
 | **Intermediate** | Use async, streams, libraries, pub, write small apps or scripts | Topics 15–18, 20–21 |
 | **Advanced** | Design APIs, use isolates, interop, optimize and harden | Topics 19, 22–24 and official docs |
 
----
-
 ## Implementation checklist (cross-role)
 
 - **SDK and env:** Correct Dart/Flutter version in CI and local; **dart --version** / **flutter --version** match **pubspec**.
@@ -104,8 +90,6 @@ This topic ties the **whole handbook** to **real work**: what you actually do wi
 - **Quality:** **dart analyze** and **dart test** (or Flutter equivalents) in CI; fix or document lint exceptions.
 - **Secrets:** No secrets in repo; use env or secret managers; Topic 24.
 - **Build/deploy:** Build artifact (exe, web, or Flutter build) produced and deployed with a clear, repeatable process; Topic 20–21, 24.
-
----
 
 ## Summary table (by role)
 
@@ -115,8 +99,6 @@ This topic ties the **whole handbook** to **real work**: what you actually do wi
 | **DevOps / CI-CD** | Build, test, pub, deploy, release, advisories | 2, 18–21, 24 |
 | **Security** | Null safety, deps, advisories, interop, hardening | 4, 15–16, 18, 22, 24 |
 | **Backend / tooling** | Servers, CLI, async, dart:io, compile, deploy | 8, 14, 17–20, 22, 24 |
-
----
 
 ## Further reading
 

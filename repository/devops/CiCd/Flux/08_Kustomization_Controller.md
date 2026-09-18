@@ -2,8 +2,6 @@
 
 [← Previous](./07_ExternalArtifact_And_ArtifactGenerator.md) · [README](./README.md) · [Next: HelmRelease →](./09_HelmRelease_And_Helm_Delivery.md)
 
----
-
 ## 1. Concepts
 
 A Flux **Kustomization** answers: *“Take this folder from that Source, build it, put it on the cluster, and keep it there.”*
@@ -39,8 +37,6 @@ spec:
 ```
 
 If this succeeds, status shows the Git/OCI **revision** applied and an **inventory** of owned objects.
-
----
 
 ## 2. Advanced concepts
 
@@ -95,8 +91,6 @@ If you set both `kubeConfig` and `serviceAccountName`, Flux logs into the remote
 
 `suspend: true` stops applies and drift fixes until you clear it.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -110,8 +104,6 @@ If you set both `kubeConfig` and `serviceAccountName`, Flux logs into the remote
 **Good:** small Kustomizations with clear owners; rare `force`. **Bad:** one giant Kustomization for everything; `force: true` left on forever; ignore rules with no `target`.
 
 Field-by-field encyclopedia: [Kustomization API](https://fluxcd.io/flux/components/kustomize/kustomizations/).
-
----
 
 ## References
 

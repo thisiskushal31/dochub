@@ -8,8 +8,6 @@ A **competency map** for chapters **00–25** and the **command catalog 27–32*
 
 **Beginner path starts at 00.** Absolute first-timers open chapter **00** (terminal, shell vs scripting, first commands) before **01**. After **01**, read **22** (shell subsets) so “shell” is never mistaken for only “scripting.” Complete **27–32** (command encyclopedia + terminal/eras/distros) **before** final sign-off here—command fluency across OS eras is not optional. Do not skip **00** because the track “looks advanced.”
 
----
-
 ## 1. Concepts
 
 ### 1. Competency map (chapters → outcomes)
@@ -78,8 +76,6 @@ Shell remains appropriate for **glue**, **bootstraps**, and **thin CI**.
 ### 5. Invariants notebook (staff habit)
 
 Per product, record: supported OS matrix; Bash major; `sh` provider (`dash`?); PowerShell edition; whether Alpine/BusyBox is in scope; CI `shell:` defaults; secret injection path; analyzer pins; WSL/Git Bash/Coreutils policy on Windows.
-
----
 
 ## 2. Advanced concepts
 
@@ -176,8 +172,6 @@ Rate 1–5 per block (doorway **00**, foundations, dialects, Windows, production
 ### 10. Relationship to other language tracks
 
 Shell glue often calls Python/Go/Java tools. This track owns the **wrapper contract** (status, quoting, OS matrix). It does not own those languages’ internals—hand off deliberately rather than reimplementing business logic in Bash.
-
----
 
 ## 3. Applications and use cases
 
@@ -318,8 +312,6 @@ Security: no eval/iex; no curl|sh; secrets not on argv
 OS truth: GNU ≠ BSD ≠ BusyBox ≠ Git Bash; matrix or silence
 Graduate: business logic leaves shell
 ```
-
----
 
 ## References
 

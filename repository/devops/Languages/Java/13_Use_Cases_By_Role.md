@@ -2,8 +2,6 @@
 
 Java is used across software development, DevOps/SRE, and security. This topic maps **engineering roles** to the handbook topics and to concrete use cases so you can focus on what matters for your role: what to read first, what to build or operate, and how Java shows up in practice.
 
----
-
 ## How to use this topic
 
 This section is a **role-based index** into the Java handbook. Each role has:
@@ -13,8 +11,6 @@ This section is a **role-based index** into the Java handbook. Each role has:
 - **Use cases** — Typical tasks or contexts where Java appears for that role.
 
 Use it to plan your path (e.g. “I’m in DevOps, I need build and Jenkins”) or to look up “who cares about this?” when you are in a specific topic (e.g. JVM options in topic 11 matter most to SREs and operators).
-
----
 
 ## Software / backend engineer
 
@@ -29,8 +25,6 @@ Use it to plan your path (e.g. “I’m in DevOps, I need build and Jenkins”) 
 - **Building and testing:** Maven or Gradle (11) define how the project is built and tested. You run the same commands locally and in CI; understanding POM and lifecycle helps you add dependencies, plugins, and test configuration.
 - **Microservices and APIs:** Java is common for REST/gRPC services (often with frameworks like Spring Boot). The handbook’s language and JVM basics (1–11) underpin that; pipelines (12) build and deploy the service. Security (12) and dependency hygiene apply to the service’s code and dependencies.
 
----
-
 ## DevOps / SRE
 
 **Primary focus:** Automating build, test, and deployment; running and tuning Java services in production. You need to understand how Java is built (Maven/Gradle, artifacts), how it runs (JVM, heap, GC), and how it is put into pipelines (Jenkins, Jenkinsfile). You may write or maintain pipeline code and runbooks; you rarely write the core application logic but you need enough Java and JVM knowledge to debug builds, interpret logs, and tune the runtime.
@@ -43,8 +37,6 @@ Use it to plan your path (e.g. “I’m in DevOps, I need build and Jenkins”) 
 - **Build and dependencies:** Run `mvn package` or `gradle build` in the pipeline; understand POM and dependency resolution (11) so you can fix version conflicts, add exclusions, or adjust the build. Build caching (e.g. Maven local repo in a volume) speeds up repeated runs.
 - **Running and tuning Java in production:** Use JVM options (11): heap size (-Xms, -Xmx), GC choice, metaspace limit, and OOM heap dumps. Interpret thread dumps and GC logs when debugging stalls or memory issues. In containers, set heap and resource limits so the JVM and orchestrator align.
 - **Observability and runbooks:** Correlate JVM behavior (GC, threads) with metrics and logs. Document how to build, deploy, and restart the service and how to capture heap dumps or thread dumps when needed.
-
----
 
 ## Security / cybersecurity
 
@@ -59,8 +51,6 @@ Use it to plan your path (e.g. “I’m in DevOps, I need build and Jenkins”) 
 - **Dependency and supply-chain security:** Use dependency scanning (e.g. OWASP Dependency-Check, Snyk) in the pipeline (12) to find known CVEs in Maven/Gradle dependencies. Fail or warn on high/critical findings; track and remediate. Use SBOM generation where required for compliance or vulnerability management. Understand POM and dependency scope (11) so you can reason about what is included in the artifact and what is only used at build/test time.
 - **Security review:** When reviewing Java code or pipelines, check: input handling, use of credentials, dependency list and versions, and pipeline permissions. The handbook topics above give the vocabulary and context for those checks.
 
----
-
 ## Cross-cutting use cases
 
 Some use cases span roles:
@@ -69,13 +59,9 @@ Some use cases span roles:
 - **Build and release:** Developers change POM/Gradle and code; DevOps own the pipeline (12) and release process; security ensures the pipeline and dependencies are scanned and controlled.
 - **Production incidents:** SREs use JVM and GC knowledge (11) and sometimes concurrency (9) to interpret thread dumps and memory issues; developers may need to change code or dependencies based on findings; security may be involved if the incident has a security impact.
 
----
-
 ## Summary
 
 **Software/backend:** Focus on 1–10 and 11—language, OOP, collections, concurrency, build—and 12 when contributing to CI/CD. **DevOps/SRE:** Focus on 1–2, 11, and 12—run and build Java, JVM basics, Jenkins Pipeline—and 9 when debugging concurrency. **Security:** Focus on 8, 11, and 12—safe coding, dependencies, pipeline and supply-chain security—and 6–7 or 9 when reviewing design or concurrency. Use this topic as a map to the rest of the Java section by role and task.
-
----
 
 ## Further reading
 

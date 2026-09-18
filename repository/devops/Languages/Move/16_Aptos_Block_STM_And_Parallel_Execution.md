@@ -88,8 +88,6 @@ A hot global counter is valid logic, but not parallel-friendly under heavy load.
 - validate latency SLOs under contention spikes
 - align incident runbooks with throughput degradation scenarios
 
----
-
 ## Further reading
 
 - [Aptos — Execution (Block-STM overview)](https://aptos.dev/en/network/blockchain/execution)

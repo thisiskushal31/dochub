@@ -2,8 +2,6 @@
 
 [← Previous](./2_NAS_NFS_SMB.md) · [README](./README.md) · [Next: iSCSI and NVMe-oF →](./4_SAN_iSCSI_And_NVMe_oF.md)
 
----
-
 ## 1. Concepts
 
 **Fibre Channel (FC)** SAN presents **block** devices (LUNs) over a dedicated fabric of HBAs, switches/directors, and array ports. Still common in enterprise halls beside Ethernet storage.
@@ -21,8 +19,6 @@
 ### Where it sits
 
 Often dual independent fabrics (A/B)—same independence idea as power A/B.
-
----
 
 ## 2. Advanced concepts
 
@@ -48,8 +44,6 @@ Physical optics/cabling: [White-Space/5](../White-Space/5_Structured_Cabling_Fib
 
 Brocade/Cisco-class fabrics dominate historically; ops jobs (zone, dual fabric, multipath) transfer.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -68,8 +62,6 @@ Brocade/Cisco-class fabrics dominate historically; ops jobs (zone, dual fabric, 
 - Never “open zone any-any” in prod  
 
 **Good:** dual fabric, tight zones, multipath green. **Bad:** single fabric; sprawling zones; path failover never tested.
-
----
 
 ## References
 

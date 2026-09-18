@@ -12,8 +12,6 @@ open Option
 let doubled o = bind o (fun n -> Some (n * 2))
 ```
 
----
-
 ## 1. Options
 
 `option` represents a value that may be missing (`None`) or present (`Some x`). It avoids sentinel values like `-1` or empty strings that hide errors.
@@ -31,8 +29,6 @@ let doubled s =
   Some (n * 2)
 ```
 
----
-
 ## 2. Arrays
 
 Arrays are mutable, fixed-length, and offer constant-time indexing. Use them for random access or dense buffers (parsing into slots, image rows). Validate indices on untrusted input—out-of-range access raises an exception.
@@ -44,8 +40,6 @@ let a = [| 1; 2; 3 |] in
 a.(1) <- 99
 ```
 
----
-
 ## 3. Bigarray (buffers and FFI)
 
 **Bigarray** provides multi-dimensional arrays and **views** over **memory** with **kind** and **layout** control (`float32`, `int8`, etc.). They are the standard way to hold **binary** payloads that **cross** the C boundary or map **mmap**’d files. Lifetime rules follow **chapter 5**: if C **frees** memory, OCaml must not keep a Bigarray view pointing at it.
@@ -55,8 +49,6 @@ open Bigarray
 
 let m = Array2.create float32 c_layout 10 10
 ```
-
----
 
 ## 4. Maps and sets
 
@@ -69,8 +61,6 @@ module M = Map.Make (String)
 
 let m = M.singleton "k" 1 |> M.add "j" 2
 ```
-
----
 
 ## 5. Hash tables
 
@@ -86,8 +76,6 @@ Hashtbl.add h "a" 1;
 Hashtbl.find_opt h "a"
 ```
 
----
-
 ## 6. Queues, stacks, and worklists
 
 **Queue** and **Stack** modules provide **mutable** amortized structures for **FIFO** and **LIFO** worklists. They are ideal for **BFS**, **scheduler** queues, and **parser** stacks when you need **O(1)** push/pop at known ends. For **parallel** access, wrap in a **mutex** or use **domain-local** instances; do not share a bare `Queue.t` across domains.
@@ -98,8 +86,6 @@ Queue.push 1 q;
 Queue.pop q
 ```
 
----
-
 ## 7. Sequences
 
 `Seq` represents lazy streams: elements compute on demand. Useful for large inputs where building a full list would spike memory.
@@ -108,8 +94,6 @@ Queue.pop q
 let naturals = Seq.unfold (fun n -> Some (n, n + 1)) 0
 let first10 = naturals |> Seq.take 10 |> List.of_seq
 ```
-
----
 
 ## 8. Memoization
 
@@ -129,8 +113,6 @@ let memo =
         v
 ```
 
----
-
 ## 9. Monads in practice
 
 Types with `return` and `bind` sequence computations that carry extra context: errors (`result`, `Option`), or deferred I/O (Lwt, Async). Recognizing the pattern simplifies reading service code built from chained binds rather than nested callbacks.
@@ -146,8 +128,6 @@ let pipeline x =
   Ok b
 ```
 
----
-
 ## 10. Weak, ephemerons, and GC-aware caches
 
 **Weak** pointers do not keep values alive; **ephemeron** tables pair keys and values with **GC**-aware semantics so **values** can be collected when keys disappear—useful for **memoization** that must not retain **unbounded** memory. Still cap **size** for **DoS** resistance: an attacker can force distinct keys and exhaust memory if the cache grows without **eviction**.
@@ -157,8 +137,6 @@ let pipeline x =
 let w = Weak.create 1 in
 Weak.set w 0 (Some (ref 42))
 ```
-
----
 
 ## 11. Container choice by workload shape
 
@@ -175,8 +153,6 @@ For services under adversarial input, include worst-case behavior in the choice:
 (* Ordered map + bounded hashtable + Seq pipeline — pick by access pattern *)
 let sum_seq xs = Seq.fold_left ( + ) 0 xs
 ```
-
----
 
 ## 12. Monad pattern: signature, laws, and concrete schedulers
 
@@ -197,8 +173,6 @@ module type Monad = sig
 end
 ```
 
----
-
 ## Advanced use cases and implementation
 
 Do not build cryptographic protocols on top of generic maps or hashtables without constant-time discipline where the threat model requires it—use vetted crypto libraries.
@@ -209,8 +183,6 @@ Profile before replacing lists with arrays everywhere; allocation patterns and G
 (* Security-sensitive compare: use crypto libs, not Hashtbl for secrets *)
 let ok a b = if String.equal a b then Ok () else Error `mismatch
 ```
-
----
 
 ## References
 

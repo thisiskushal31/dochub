@@ -6,8 +6,6 @@
 
 `$_SERVER` / `$_ENV` / `$_FILES` reliability boundaries, reserved interfaces/classes (`Throwable`, `Stringable`, enums, weak references), and reflection-driven framework mechanics. This chapter targets staff-level debugging: why behavior differs across SAPIs, why metadata-heavy boot phases get slow, and where implicit runtime contracts break.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases**.
 
 ## 1. Concepts
@@ -23,13 +21,9 @@ The superglobal set includes:
 
 Do not treat all keys as always present. SAPI, proxy, and config determine availability.
 
----
-
 ### 2. `$_SERVER` and trust
 
 `$_SERVER` mixes transport facts, process details, and proxy-forwarded headers. Security-sensitive fields (client IP, host, scheme) must come from trusted edge policy, not arbitrary header pass-through.
-
----
 
 ### 3. Reserved interfaces and classes
 
@@ -43,15 +37,11 @@ Important runtime contracts:
 
 Knowing these lets you read framework internals and extension docs faster than searching symbols ad hoc.
 
----
-
 ### 4. Reflection basics
 
 Reflection provides runtime metadata for classes, methods, parameters, attributes, and types. Frameworks use it for routing, DI autowiring, serializers, and validators.
 
 Reflection is powerful but expensive during cold start; production stacks often cache reflected metadata.
-
----
 
 ## 2. Advanced concepts
 
@@ -63,8 +53,6 @@ Reflection is powerful but expensive during cold start; production stacks often 
 
 **Type reflection nuance:** Union/intersection types appear as composite reflection objects; custom tooling must handle both or silently drop constraints.
 
----
-
 ## 3. Applications and use cases
 
 - **Framework boot tuning:** Cache route/DI metadata produced via reflection.
@@ -72,8 +60,6 @@ Reflection is powerful but expensive during cold start; production stacks often 
 - **Platform diagnostics:** Dump key `$_SERVER` entries in a sanitized diagnostics endpoint to resolve proxy/header confusion.
 - **Codegen/tooling:** Build API docs or SDK stubs from reflected signatures and attributes.
 - **Long-lived runtimes:** Prefer weak maps for ephemeral per-request attachments to shared service instances.
-
----
 
 ## References
 

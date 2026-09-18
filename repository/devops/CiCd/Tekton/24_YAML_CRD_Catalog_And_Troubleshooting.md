@@ -2,8 +2,6 @@
 
 [← Previous](./23_Feature_And_Offering_Coverage_Map.md) · [README](./README.md) · [Next: Migrate →](./25_Migrate_Versioning_And_Extras.md)
 
----
-
 ## 1. Concepts — surfaces you configure
 
 | Surface | Typical objects | Chapter |
@@ -31,8 +29,6 @@ spec:
   workspaces: []
 ```
 
----
-
 ## 2. Advanced — troubleshooting playbook
 
 | Symptom | Likely cause | Look at |
@@ -50,8 +46,6 @@ spec:
 | Chains not signing | Chains install/config / SA to registry | [17](./17_Chains_Supply_Chain_Security.md) |
 | Matrix storm | Too many combinations | [10](./10_Matrix_CustomRuns_And_StepActions.md) |
 
----
-
 ## 3. Applications — staff checklist
 
 - Pipelines version pinned; Operator/GitOps for platform config  
@@ -63,8 +57,6 @@ spec:
 - Controllers monitored  
 
 Full inventory: [23](./23_Feature_And_Offering_Coverage_Map.md).
-
----
 
 ## References
 

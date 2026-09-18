@@ -6,8 +6,6 @@
 
 What the **`unsafe`** keyword means (programmer-asserted invariants, not a free-for-all), how **raw pointers**, **FFI (`extern "C"`)**, and **`MaybeUninit`** fit, what **soundness** requires, and how teams **minimize unsafe surface** while still using it where systems work demands it. After this chapter you should review `unsafe` as a trust boundary—never claim it is “forbidden,” and never treat it as ordinary Rust.
 
----
-
 ## 1. Concepts
 
 ### 1. What `unsafe` means
@@ -116,8 +114,6 @@ Staff practice:
 - Prefer battle-tested crates for common unsafe patterns over home-grown atomics/FFI
 - Use `#![forbid(unsafe_code)]` in crates that must stay pure safe; allowlist crates that own the boundary
 - Count and review every `unsafe` block in code review—same severity class as auth changes
-
----
 
 ## 2. Advanced concepts
 
@@ -252,8 +248,6 @@ Here is the idea of each rule, in plain language:
 
 Practical habit: every `unsafe` block says *why* it is sound; tests that hit that path run under **Miri** when you own the unsafe (chapter 15). “It did not crash in release” is not a proof. For the full deep dive, read the **Rustonomicon** via References—this section is only so you know what kind of promises you are making.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -296,8 +290,6 @@ Practical habit: every `unsafe` block says *why* it is sound; tests that hit tha
 - `forbid(unsafe_code)` applied where the crate should stay pure; inventory exists where not.
 - Reviewers treat new `unsafe` like a security change, not a style nit.
 - Safety comments say, in plain language, which rules from section 15 this block is upholding—not “trust me, it’s fine.”
-
----
 
 ## References
 

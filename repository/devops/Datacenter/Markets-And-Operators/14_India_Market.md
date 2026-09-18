@@ -2,8 +2,6 @@
 
 [← Previous](./13_China_Market.md) · [README](./README.md) · [Next: LatAm and other →](./15_Latin_America_And_Other_Hubs.md)
 
----
-
 ## 1. Concepts
 
 India is a **peer market** in this curriculum—not the center of gravity, not an afterthought.
@@ -16,8 +14,6 @@ India is a **peer market** in this curriculum—not the center of gravity, not a
 | Tenant cloud | AWS ap-south-1/2, GCP asia-south*, Azure India, Oracle/IBM |
 
 Mumbai and other metros differ—building-level diligence still applies.
-
----
 
 ## 2. Advanced concepts
 
@@ -35,8 +31,6 @@ Qualify sites [Provider-Use/1](../Provider-Use/1_Qualify_A_Site.md). Cloud chapt
 ### Honesty
 
 No invented street maps of campuses. Use official IBX/region/operator pages.
-
----
 
 ## 3. Applications and use cases
 
@@ -56,8 +50,6 @@ No invented street maps of campuses. Use official IBX/region/operator pages.
 - Don’t center the whole handbook on India—or erase it  
 
 **Good:** peer-quality diligence, multi-operator shortlist. **Bad:** Mumbai-as-one; ignore regional champions; stale MB lists.
-
----
 
 ## References
 

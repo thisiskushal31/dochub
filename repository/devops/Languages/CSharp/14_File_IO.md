@@ -6,8 +6,6 @@ File I/O is done through **System.IO**: **File**, **FileInfo**, **Directory**, *
 
 **Why File and streams?** **File** is convenient for small files or one-shot read/write. **StreamReader**/**StreamWriter** and **FileStream** give control over buffering, encoding, and large files. **Path** and **Directory** keep path and directory logic correct across platforms.
 
----
-
 ## Reading and writing files
 
 **File.ReadAllText** and **File.WriteAllText** read or write a whole file as a string. **File.ReadAllLines** and **File.WriteAllLines** work with lines. **File.Exists** checks existence before reading. Specify encoding when needed (e.g. **Encoding.UTF8**).
@@ -21,8 +19,6 @@ File.WriteAllText("out.txt", "Hello, C#");
 string[] lines = File.ReadAllLines("data.txt");
 File.WriteAllLines("out.txt", lines);
 ```
-
----
 
 ## Streams
 
@@ -40,8 +36,6 @@ using (var writer = new StreamWriter("out.txt"))
     writer.WriteLine("Line");
 ```
 
----
-
 ## Path and directory
 
 **Path.Combine** builds paths correctly for the platform. **Path.GetFileName**, **Path.GetDirectoryName**, and similar methods avoid string manipulation. **Directory.CreateDirectory**, **Directory.GetFiles**, and **Directory.GetDirectories** handle directory operations.
@@ -51,8 +45,6 @@ string path = Path.Combine(folder, "file.txt");
 if (!Directory.Exists(folder))
     Directory.CreateDirectory(folder);
 ```
-
----
 
 ## Further reading
 

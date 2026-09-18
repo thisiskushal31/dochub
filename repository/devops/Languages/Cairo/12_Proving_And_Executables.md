@@ -4,8 +4,6 @@
 
 Cairo programs can be run as **executables** and their execution can be **proved** so that anyone can verify the result without re-running the program. This topic summarizes executable targets in Scarb, running with inputs, and generating and verifying proofs (e.g. with the Stwo prover).
 
----
-
 ## Executable target in Scarb
 
 In **Scarb.toml**, an executable is declared with **[[target.executable]]**. You give it a name and the function that serves as the entry point (e.g. `package_name::module_name::main`). The entry point in code is marked with **#[executable]**.
@@ -47,8 +45,6 @@ fn main(input: u32) -> bool {
 }
 ```
 
----
-
 ## Running an executable
 
 Use **scarb execute** and pass inputs with **--arguments**. The program runs and produces an execution trace; artifacts (e.g. public/private inputs, trace, memory) are written under the target directory.
@@ -58,8 +54,6 @@ scarb execute -p prime_prover --print-program-output --arguments 17
 ```
 
 Output reflects the program result (e.g. 1 for true). For invalid or out-of-range inputs you can **panic** so that no valid proof is produced for that run.
-
----
 
 ## Generating a proof
 
@@ -71,8 +65,6 @@ scarb prove --execution-id 1
 
 This produces a proof file that can be verified off-chain or on-chain.
 
----
-
 ## Verifying a proof
 
 Verification checks that the proof matches the claimed execution (e.g. public inputs and output) without re-running the program.
@@ -83,13 +75,9 @@ scarb verify --execution-id 1
 
 Successful verification confirms that the computation was performed correctly for the given inputs.
 
----
-
 ## Summary
 
 Executable targets and **#[executable]** define the entry point for running and proving. **scarb execute** runs the program with given arguments; **scarb prove** and **scarb verify** generate and verify proofs. Panicking on invalid input prevents generating a proof for that execution.
-
----
 
 ## Further reading
 

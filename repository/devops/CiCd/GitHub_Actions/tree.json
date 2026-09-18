@@ -4,174 +4,174 @@
     "path": "01_What_Is_GitHub_Actions.md",
     "type": "file",
     "sha": "",
-    "size": 4029
+    "size": 4009
   },
   {
     "name": "02_Core_Model_Workflows_Jobs_Steps_Runners.md",
     "path": "02_Core_Model_Workflows_Jobs_Steps_Runners.md",
     "type": "file",
     "sha": "",
-    "size": 3116
+    "size": 3096
   },
   {
     "name": "03_First_Workflow_And_Actions_UI.md",
     "path": "03_First_Workflow_And_Actions_UI.md",
     "type": "file",
     "sha": "",
-    "size": 2875
+    "size": 2855
   },
   {
     "name": "04_Workflow_Syntax_Mental_Model.md",
     "path": "04_Workflow_Syntax_Mental_Model.md",
     "type": "file",
     "sha": "",
-    "size": 3311
+    "size": 3291
   },
   {
     "name": "05_Events_And_Triggers.md",
     "path": "05_Events_And_Triggers.md",
     "type": "file",
     "sha": "",
-    "size": 3207
+    "size": 3187
   },
   {
     "name": "06_Jobs_Needs_Concurrency_And_Matrix.md",
     "path": "06_Jobs_Needs_Concurrency_And_Matrix.md",
     "type": "file",
     "sha": "",
-    "size": 3072
+    "size": 3052
   },
   {
     "name": "07_Contexts_Expressions_And_Variables.md",
     "path": "07_Contexts_Expressions_And_Variables.md",
     "type": "file",
     "sha": "",
-    "size": 2800
+    "size": 2780
   },
   {
     "name": "08_GitHub_Hosted_Runners.md",
     "path": "08_GitHub_Hosted_Runners.md",
     "type": "file",
     "sha": "",
-    "size": 3238
+    "size": 3218
   },
   {
     "name": "09_Self_Hosted_Runners_And_Groups.md",
     "path": "09_Self_Hosted_Runners_And_Groups.md",
     "type": "file",
     "sha": "",
-    "size": 2788
+    "size": 2768
   },
   {
     "name": "10_Actions_Runner_Controller_ARC.md",
     "path": "10_Actions_Runner_Controller_ARC.md",
     "type": "file",
     "sha": "",
-    "size": 2563
+    "size": 2543
   },
   {
     "name": "11_Actions_Marketplace_And_Pinning.md",
     "path": "11_Actions_Marketplace_And_Pinning.md",
     "type": "file",
     "sha": "",
-    "size": 2435
+    "size": 2415
   },
   {
     "name": "12_Caches_And_Artifacts.md",
     "path": "12_Caches_And_Artifacts.md",
     "type": "file",
     "sha": "",
-    "size": 2563
+    "size": 2543
   },
   {
     "name": "13_Reusable_Workflows_And_Composites.md",
     "path": "13_Reusable_Workflows_And_Composites.md",
     "type": "file",
     "sha": "",
-    "size": 3535
+    "size": 3515
   },
   {
     "name": "14_Secrets_Variables_And_Environments.md",
     "path": "14_Secrets_Variables_And_Environments.md",
     "type": "file",
     "sha": "",
-    "size": 2977
+    "size": 2957
   },
   {
     "name": "15_OIDC_And_Cloud_Federation.md",
     "path": "15_OIDC_And_Cloud_Federation.md",
     "type": "file",
     "sha": "",
-    "size": 2891
+    "size": 2871
   },
   {
     "name": "16_Security_Hardening_Permissions_And_Forks.md",
     "path": "16_Security_Hardening_Permissions_And_Forks.md",
     "type": "file",
     "sha": "",
-    "size": 3217
+    "size": 3197
   },
   {
     "name": "17_Deploy_Environments_And_Promote.md",
     "path": "17_Deploy_Environments_And_Promote.md",
     "type": "file",
     "sha": "",
-    "size": 2850
+    "size": 2830
   },
   {
     "name": "18_Monitor_Metrics_And_Billing_Literacy.md",
     "path": "18_Monitor_Metrics_And_Billing_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 2776
+    "size": 2756
   },
   {
     "name": "19_Worked_Example_CI_Build_And_Promote.md",
     "path": "19_Worked_Example_CI_Build_And_Promote.md",
     "type": "file",
     "sha": "",
-    "size": 2708
+    "size": 2688
   },
   {
     "name": "20_Best_Practices_And_When_Not_Actions.md",
     "path": "20_Best_Practices_And_When_Not_Actions.md",
     "type": "file",
     "sha": "",
-    "size": 2091
+    "size": 2071
   },
   {
     "name": "21_Feature_And_Configuration_Coverage_Map.md",
     "path": "21_Feature_And_Configuration_Coverage_Map.md",
     "type": "file",
     "sha": "",
-    "size": 19563
+    "size": 19543
   },
   {
     "name": "22_YAML_And_Configuration_Catalog.md",
     "path": "22_YAML_And_Configuration_Catalog.md",
     "type": "file",
     "sha": "",
-    "size": 2718
+    "size": 2698
   },
   {
     "name": "23_Troubleshooting_And_Staff_Checklist.md",
     "path": "23_Troubleshooting_And_Staff_Checklist.md",
     "type": "file",
     "sha": "",
-    "size": 2925
+    "size": 2905
   },
   {
     "name": "24_Migrate_Packages_And_Extras.md",
     "path": "24_Migrate_Packages_And_Extras.md",
     "type": "file",
     "sha": "",
-    "size": 3019
+    "size": 2999
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 5733
+    "size": 5727
   }
 ]

@@ -31,8 +31,6 @@ myprog: $(OBJS)
 
 **Why this matters for DevOps.** CI/CD for Fortran typically runs the build (make or CMake) in a container or on a runner with the required compiler and libraries. Build failures and test failures must be reproducible; consistent use of flags and dependencies (and documenting them) helps. Style and debugging practices reduce defects and speed up maintenance.
 
----
-
 ## Further reading
 
 - [Fortran – Program Libraries (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_program_libraries.htm)

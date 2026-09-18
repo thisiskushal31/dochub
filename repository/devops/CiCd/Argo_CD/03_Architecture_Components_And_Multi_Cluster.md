@@ -2,8 +2,6 @@
 
 [← Previous](./02_Core_Concepts_Applications_Sync_And_Health.md) · [Argo CD](./README.md) · [Next: Install →](./04_Install_Access_And_First_Application.md)
 
----
-
 ## 1. Concepts
 
 Argo CD runs as a set of Kubernetes components (usually in an `argocd` namespace). You do not need every internal detail to ship an app, but you do need the control-plane shape so incidents and scale decisions make sense.
@@ -35,8 +33,6 @@ Argo CD runs as a set of Kubernetes components (usually in an `argocd` namespace
 - **Remote clusters** — register another cluster’s API with credentials; Applications set that server as destination. One Argo CD instance can manage many clusters.
 
 Platform pattern: **management cluster** runs Argo CD; **workload clusters** receive apps. Smaller teams often run Argo CD on the same cluster as the apps until multi-tenancy or blast-radius concerns force a split.
-
----
 
 ## 2. Advanced concepts
 
@@ -76,8 +72,6 @@ HA installs and official sizing guidance exist for large estates; treat “one t
 
 Anyone who can change Argo CD’s cluster secrets (repo credentials, cluster kubeconfigs) or bypass Projects can effectively deploy. Harden the `argocd` namespace like a production control plane: RBAC, network policy, SSO instead of shared admin, audited upgrades.
 
----
-
 ## 3. Applications and use cases
 
 | Situation | Architectural choice |
@@ -87,8 +81,6 @@ Anyone who can change Argo CD’s cluster secrets (repo credentials, cluster kub
 | Regulated prod | Manual sync or sync windows; separate Projects for prod destinations; no shared admin password |
 | Edge / many identical clusters | One Argo CD + ApplicationSet cluster generator (or hub-and-spoke design) |
 | Air-gapped | Mirror images and Helm/OCI; plan repo access; core vs full depends on whether UI is required |
-
----
 
 ## References
 

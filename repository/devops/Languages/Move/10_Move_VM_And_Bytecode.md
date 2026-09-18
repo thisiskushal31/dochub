@@ -47,8 +47,6 @@ If **`Holding`** were given **drop** incorrectly while still used as a **key** r
 - **VM upgrades:** hard forks or restarts may invalidate caches; ops must coordinate node and tooling versions.
 - **Determinism:** same tx + same state view → reproducible outcome—important for debugging and audits.
 
----
-
 ## Further reading
 
 - [Move on Aptos](https://aptos.dev/move/move-on-aptos)

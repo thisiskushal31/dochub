@@ -4,8 +4,6 @@
 
 Go has **if**, **for**, and **switch** for control flow. There is no **while** or **do-while**; **for** is used for all loops and can have a condition only (like a while), a classic init/condition/post form, or a **range** clause. **if** and **switch** can include an optional **simple statement** (often a short variable declaration) before the condition. Braces are **required** around the body; there are no parentheses around the condition. This section covers the syntax and common patterns so you can write clear, idiomatic control flow.
 
----
-
 ## Statement grammar and terminating statements
 
 ```
@@ -17,8 +15,6 @@ SimpleStmt = EmptyStmt | ExpressionStmt | SendStmt | IncDecStmt | Assignment | S
 ```
 
 A **terminating statement** interrupts the regular flow of control in a block. Terminating: "return" or "goto"; call to `panic`; block whose list ends in a terminating statement; "if" with both branches terminating (and else present); "for" with no condition, no referring "break", and body terminating; "switch" with every case (including default) ending in terminating or "fallthrough", default present, no referring "break"; "select" with every case terminating and no referring "break". A statement list ends in a terminating statement if its final non-empty statement is terminating.
-
----
 
 **Why control flow matters.** Conditionals and loops are how you branch and iterate. Go’s design (no parentheses, mandatory braces, **for** as the only loop) keeps style consistent and avoids common bugs (e.g. dangling else). The **range** form is the usual way to iterate over slices, maps, strings, and channels.
 
@@ -93,8 +89,6 @@ default:
 **break and continue.** **break** terminates the innermost **for**, **switch**, or **select**. **continue** applies only to **for** loops. Both accept an optional **label** on an enclosing **for**, **switch**, or **select** so you can break out of nested loops or skip to the next iteration of an outer loop.
 
 **Why this matters.** Control flow is the backbone of every program. Using **range** for iteration and avoiding unnecessary **else** keeps code readable. In DevOps scripts and services, **for** loops and **switch** on errors or flags are common; understanding the exact syntax (init statement, scope of variables) avoids subtle bugs.
-
----
 
 ## Further reading
 

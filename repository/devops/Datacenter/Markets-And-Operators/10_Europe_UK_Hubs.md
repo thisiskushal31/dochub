@@ -2,8 +2,6 @@
 
 [← Previous](./9_Americas_Hubs.md) · [README](./README.md) · [Next: MEA →](./11_Middle_East_And_Africa_Hubs.md)
 
----
-
 ## 1. Concepts
 
 Major EU/UK hubs (illustrative):
@@ -18,8 +16,6 @@ Major EU/UK hubs (illustrative):
 | **Nordics** | Power/climate; growing AI/capacity story |
 
 Operators in kind: Equinix, Digital Realty/Interxion, Telehouse, regional (Virtus, Data4, atNorth, …), bare-metal (OVH/Hetzner home markets).
-
----
 
 ## 2. Advanced concepts
 
@@ -37,8 +33,6 @@ Bare-metal factories [7](./7_Bare_Metal_Cloud_Factories.md). Equinix-class [4](.
 ### Honesty
 
 Campus internals unpublished. Use official IBX/region lists.
-
----
 
 ## 3. Applications and use cases
 
@@ -58,8 +52,6 @@ Campus internals unpublished. Use official IBX/region lists.
 - Don’t assume AMS peering equals every Amsterdam postcode  
 
 **Good:** hub chosen for peers+cloud+law. **Bad:** EU-as-one; ignoring power queues.
-
----
 
 ## References
 

@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Fundamentals: Process and PCB](../Fundamentals/2_Process_And_PCB.md). Here: **how Linux** represents processes (task_struct, /proc), creates them (fork/clone, exec), and how to inspect and control them with **commands**.
 
----
-
 ## What is a process?
 
 A **process** is an instance of a running program. It includes:
@@ -16,8 +14,6 @@ A **process** is an instance of a running program. It includes:
 - **Resources** (open files, file descriptors, environment)
 
 One program (e.g. `/usr/bin/Nginx`) can be run many times → many processes.
-
----
 
 ## Process Control Block (PCB)
 
@@ -32,8 +28,6 @@ The kernel keeps a **Process Control Block** (PCB) for each process. It typicall
 | I/O | Open file descriptors, current directory |
 
 The PCB is the in-kernel “record” the OS uses to schedule and manage the process.
-
----
 
 ### How Linux exposes the PCB: /proc and task_struct
 
@@ -73,8 +67,6 @@ ls -l /proc/1234/fd
 
 Understanding `/proc` helps when debugging what a process is doing or why it is using so much memory.
 
----
-
 ## States of a process
 
 A process moves between states; the exact names depend on the OS. A common model:
@@ -93,14 +85,10 @@ A process moves between states; the exact names depend on the OS. A common model
 | **Waiting / Blocked** | Waiting for an event (I/O, signal, lock). |
 | **Terminated** | Finished; may stay as “zombie” until parent reaps it. |
 
----
-
 ## Process creation and termination
 
 - **Creation:** On Linux, new processes are usually created by **fork** (clone of the caller) then **exec** (load a new program). The shell runs your command by forking and then exec’ing the program.
 - **Termination:** Process exits (e.g. `exit()`) or is killed by a signal (e.g. `SIGKILL`, `SIGTERM`). The parent can **wait** to collect the exit status and release the PCB (reap the zombie).
-
----
 
 ## Context switch
 
@@ -111,8 +99,6 @@ When the kernel switches the CPU from one process to another, it:
 3. Resumes execution of that process.
 
 This is a **context switch**. It has a cost (cache effects, kernel overhead), so the scheduler tries to balance responsiveness and throughput.
-
----
 
 ## Essential Linux commands for process management
 
@@ -155,8 +141,6 @@ lsof -i :80
 ss -tlnp | grep :80
 ```
 
----
-
 ## More Linux process commands (by use case)
 
 ```bash
@@ -189,8 +173,6 @@ kill -CONT <PID>  # resume
 ps -u username
 pgrep -u username nginx
 ```
-
----
 
 ## Hands-on: top, ps, kill, and lsof
 
@@ -298,8 +280,6 @@ lsof +D /path              # Files under directory (e.g. what’s using a mount)
 kill -9 $(lsof -t -u tecmint)   # Kill all processes of user (use with care)
 ```
 
----
-
 ## Reading ps and top output
 
 **ps** and **top** show the same underlying data (from `/proc`); the columns are the key to understanding what a process is doing.
@@ -338,8 +318,6 @@ Here, PID 1230 is the nginx master (parent 1 = init/systemd); 1234 is a worker c
 
 Prefer **SIGTERM** first so the process can exit cleanly; use **SIGKILL** only if necessary.
 
----
-
 ## Summary
 
 - A **process** is a program in execution with its own memory and resources.
@@ -347,8 +325,6 @@ Prefer **SIGTERM** first so the process can exit cleanly; use **SIGKILL** only i
 - States: New → Ready ⇄ Running → Waiting → Terminated (and zombie until reaped).
 - **Context switch** = saving one process’s context and restoring another’s.
 - Linux: `ps`, `top`, `pstree`, `kill`, `nice`/`renice`, `pgrep`, `lsof`/`ss` are the core commands for inspection and control.
-
----
 
 ## Further reading
 

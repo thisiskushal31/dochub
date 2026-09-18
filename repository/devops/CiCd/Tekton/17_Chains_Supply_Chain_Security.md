@@ -2,8 +2,6 @@
 
 [← Previous](./16_Dashboard.md) · [README](./README.md) · [Next: Results →](./18_Results_And_Pruner.md)
 
----
-
 ## 1. Concepts
 
 **Tekton Chains** watches TaskRuns/PipelineRuns and produces **signatures and attestations** for artifacts (commonly OCI images), often as **SLSA provenance**, integrating with **Sigstore** and verifiers in CD.
@@ -28,8 +26,6 @@ PipelineRun (build-push)
   verifier rejects unsigned digests
 ```
 
----
-
 ## 2. Advanced concepts
 
 | Topic | Literacy |
@@ -43,8 +39,6 @@ PipelineRun (build-push)
 | Experimental flags | Pin; do not enable casually in prod |
 
 Install Chains via release or Operator (`TektonChain`). Version-align with Pipelines.
-
----
 
 ## 3. Applications and use cases
 
@@ -62,8 +56,6 @@ Install Chains via release or Operator (`TektonChain`). Version-align with Pipel
 - Unsigned `:latest` banned in prod  
 
 **Good:** sign once at build; verify at deploy. **Bad:** signatures nobody checks.
-
----
 
 ## References
 

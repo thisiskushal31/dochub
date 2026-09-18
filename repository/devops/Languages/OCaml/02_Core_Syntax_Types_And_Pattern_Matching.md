@@ -11,8 +11,6 @@ The core language: how expressions and bindings work, the usual types, algebraic
 let demo xs = match xs with [] -> None | x :: _ -> Some x
 ```
 
----
-
 ## 1. Expressions and `let`
 
 Almost everything is an expression with a type. A top-level binding gives a name to a value:
@@ -30,8 +28,6 @@ x * x + y * y
 ```
 
 There is no separate “statement” layer: side-effecting code returns `unit`, written `()`, and functions that exist only for effects have type like `string -> unit`.
-
----
 
 ## 2. Functions: values, currying, partial application
 
@@ -53,8 +49,6 @@ The pipe operator `|>` passes the left-hand value as the last argument to the fu
 let doubled = [1; 2; 3] |> List.map (fun x -> x * 2)
 ```
 
----
-
 ## 3. Basic types
 
 Common scalar types include `int`, `float`, `bool`, `char`, and `string`. Float literals need a decimal point; float operators have a dot (`+.`, `*.`). **`string`** values are **immutable** sequences of bytes used as text in typical code; **`bytes`** is the **mutable** byte buffer type when you need in-place updates before I/O or parsing. Use **`String`** / **`Bytes`** module functions instead of manual bounds logic when possible.
@@ -66,8 +60,6 @@ let greeting = "Hello, " ^ "world"
 ```
 
 Polymorphism appears when the type checker generalizes a function to work for many types, shown as type variables like `'a` in the toplevel.
-
----
 
 ## 4. Tuples and records
 
@@ -88,8 +80,6 @@ let shifted = { origin with x = 1. }
 ```
 
 Records are the usual way to name structured data in APIs; tuples are fine for small private returns.
-
----
 
 ## 5. Variants and pattern matching
 
@@ -113,8 +103,6 @@ match Some 3 with
 | Some n -> n * 2
 ```
 
----
-
 ## 6. Lists and recursion
 
 Lists are singly linked, immutable sequences. The empty list is `[]`; `head :: tail` prepends one element.
@@ -136,8 +124,6 @@ let length lst = length_acc 0 lst
 
 `for` and `while` exist but are secondary; recursion and higher-order iterators cover most control flow.
 
----
-
 ## 7. Higher-order functions
 
 Functions that take or return functions let you factor repetition. `List.map`, `List.filter`, and `List.fold_left` are the workhorses:
@@ -147,8 +133,6 @@ let squares = List.map (fun x -> x * x) [1; 2; 3; 4]
 ```
 
 In pipelines and parsers, building small combinators keeps each step testable.
-
----
 
 ## 8. Labelled and optional arguments
 
@@ -161,8 +145,6 @@ let q = divide ~numerator:10 ~denominator:2
 ```
 
 **Optional** arguments use `?` and usually default inside the function. They reduce boilerplate for flags and configuration objects.
-
----
 
 ## 9. Imperative pieces: refs, arrays, loops
 
@@ -177,8 +159,6 @@ counter := !counter + 1;
 **Arrays** are fixed-length and mutable; good when you need index access or tight integration with C buffers. **Mutable record fields** are declared with `mutable`.
 
 `for` and `while` loops are available when an imperative loop is clearer than recursion. Long-running services still benefit from keeping mutable state small and well-scoped so reasoning and testing stay easy.
-
----
 
 ## 10. `option` and `result`
 
@@ -200,8 +180,6 @@ let safe_div_e x y =
 
 At module boundaries, `result` makes error paths explicit and composable—important for reliable automation and security-sensitive parsing.
 
----
-
 ## 11. Exceptions (briefly)
 
 Exceptions (`raise`, `try … with …`) exist for truly exceptional cases or interop. Uncaught exceptions crash the program or thread. For expected failures (bad input, missing files), `result` or `option` keeps control flow visible to the type checker and to reviewers.
@@ -212,8 +190,6 @@ let head = function [] -> failwith "empty" | x :: _ -> x
 let safe_head xs =
   try Some (head xs) with Failure _ -> None
 ```
-
----
 
 ## 12. Polymorphic variants (when you need open unions)
 
@@ -228,8 +204,6 @@ Trade-offs: error messages can be harder to read, and you must still design boun
 let ok : [> `Ok ] = `Ok
 let parse : [ `Ok | `Err of string ] -> string = function `Ok -> "ok" | `Err e -> e
 ```
-
----
 
 ## 13. The value restriction (why some `let`-bound “functions” are not polymorphic)
 
@@ -246,8 +220,6 @@ let id x = x
 (* id often generalizes to 'a -> 'a because it is syntactically a function *)
 ```
 
----
-
 ## 14. Guards, nested patterns, and `as`
 
 Patterns can be **nested** (e.g. matching a pair and a variant inside it) and use **`when`** guards for extra boolean conditions. Guards are **not** exhaustiveness-checked in the same way as pattern heads—the compiler may warn that a match is not exhaustive if a guard could exclude cases. Prefer **thin** guards; heavy logic in `when` obscures control flow for reviewers.
@@ -261,8 +233,6 @@ let classify = function
   | None as none -> ("none", none)
 ```
 
----
-
 ## 15. Sequencing, `unit`, and `begin`/`end`
 
 `e1; e2` evaluates `e1` for its side effect (typically `unit`), then `e2`. The **semicolon** is not “statement separator” in the C sense; it is an operator on expressions where the left side must be `unit` in strict style (or you use `ignore`). **`begin`/`end`** are just parentheses for readability around large `if` or sequence expressions.
@@ -274,8 +244,6 @@ let bump r =
   r := !r + 1;
   Printf.printf "now %d\n" !r
 ```
-
----
 
 ## 16. Structural equality vs physical equality
 
@@ -291,8 +259,6 @@ assert (a = b);
 assert (a != b)
 (* physical: two distinct ref cells *)
 ```
-
----
 
 ## 17. Pattern-matching diagnostics: exhaustive, redundant, fragile
 
@@ -310,8 +276,6 @@ type t = A | B | C
 
 let f = function A -> 0 | B -> 1
 ```
-
----
 
 ## 18. Recursion, folds, and cost model
 
@@ -332,8 +296,6 @@ let sum xs = List.fold_left ( + ) 0 xs
 (* List.fold_left (fun acc x -> acc @ [ x ]) [] xs *)
 ```
 
----
-
 ## 19. Labelled and optional argument edge cases
 
 Labelled arguments improve readability but can surprise during partial application when some labels are omitted. Optional arguments (`?x`) are represented as options under the hood and become concrete only when supplied or defaulted.
@@ -352,8 +314,6 @@ let greet ?(title = "Mr.") name = Printf.sprintf "%s %s" title name
 let hi = greet ~title:"Dr." "Jones"
 ```
 
----
-
 ## 20. Type-driven refactoring discipline
 
 A practical deep OCaml workflow is to let type errors guide refactors:
@@ -371,8 +331,6 @@ type status = Idle | Running | Done
 let show = function Idle -> "…" | Running -> "…" | Done -> "…"
 ```
 
----
-
 ## 21. Conditionals, `exn`, and why not “error-shaped” return values
 
 **`if … then … else …`** is an expression: both branches must have compatible types, and there is no `else`-less form—use `if cond then x else ()` when the “false” path is `unit`.
@@ -386,8 +344,6 @@ let parse_int s =
   try Ok (int_of_string s) with Failure _ -> Error "not an int"
 ```
 
----
-
 ## 22. Quoted string literals
 
 Beyond `"..."`, OCaml supports **quoted strings** where delimiters avoid escaping (e.g. `{| ... |}` and `{delim| ... |delim}`). Use them for **regexes**, **paths**, **JSON** snippets, or any text heavy with backslashes and quotes—readability beats manual escaping in reviews.
@@ -396,8 +352,6 @@ Beyond `"..."`, OCaml supports **quoted strings** where delimiters avoid escapin
 let path = {|C:\Users\dev\project|}
 let json = {|{"ok": true}|}
 ```
-
----
 
 ## 23. Records: punning, `with`, and disambiguation
 
@@ -415,8 +369,6 @@ let moved p dx = { p with x = p.x +. dx }
 let norm { x; y } = sqrt (x *. x +. y *. y)
 ```
 
----
-
 ## 24. Lazy computations (`Lazy.t`)
 
 **`lazy (expr)`** defers evaluation; **`Lazy.force`** runs the computation once and **memoizes** the result. Use for expensive pure work that might not be needed, or to break dependency cycles in data structures—avoid lazy **effects** unless you document evaluation order (effects run at force time, not at lazy creation).
@@ -431,8 +383,6 @@ let v = Lazy.force expensive
 let w = Lazy.force expensive
 (* print_endline runs once *)
 ```
-
----
 
 ## 25. Exceptions beyond `raise` and `try`
 
@@ -452,8 +402,6 @@ let assoc_opt k xs =
   | exception Not_found -> None
   | v -> Some v
 ```
-
----
 
 ## 26. Generalized algebraic datatypes (GADTs)—what they buy you
 
@@ -476,8 +424,6 @@ let eval : type a. a expr -> a = function
   | Add (a, b) -> eval a + eval b
 ```
 
----
-
 ## Advanced use cases and implementation
 
 **API design:** Use `result` at boundaries between subsystems; keep exceptions for invariant violations that should never happen if the rest of the code is correct. Log or map errors with stable codes for operations, not only human strings.
@@ -492,8 +438,6 @@ type err = [ `Invalid | `TooLarge ]
 let parse_config s : (_, [> err ]) result =
   if String.length s > 10_000 then Error `TooLarge else Ok s
 ```
-
----
 
 ## References
 

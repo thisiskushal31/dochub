@@ -2,8 +2,6 @@
 
 [← Previous](./13_Petabyte_Capacity_Thinking.md) · [README](./README.md) · [Next: Failure walks →](./15_Bring_Up_Failure_Walks.md)
 
----
-
 ## Mental map
 
 ```text
@@ -13,8 +11,6 @@ Facilities / hands     Network eng          Bare-metal           Storage
 ```
 
 Role index: [Jobs/1](../Jobs/1_Role_Map.md).
-
----
 
 ## 1. Concepts — who does what during bring-up
 
@@ -31,8 +27,6 @@ Role index: [Jobs/1](../Jobs/1_Role_Map.md).
 
 **Confirm:** Who owns the switchport VLAN flip after imaging?
 
----
-
 ## 2. Advanced — sample daily rhythm (bring-up)
 
 | Day | Network | Bare-metal | Hands |
@@ -47,13 +41,9 @@ Role index: [Jobs/1](../Jobs/1_Role_Map.md).
 
 Stand-ups beat chat sprawl during bring-up. Freeze unrelated hall changes. Keep a single shared elevation + VLAN matrix as source of truth.
 
----
-
 ## 3. Applications
 
 **Staff checklist:** RACI for VLAN flip; shared DCIM; end-of-day photo evidence; NOC informed of new SNMP targets.
-
----
 
 ## References
 

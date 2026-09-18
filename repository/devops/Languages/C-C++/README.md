@@ -12,8 +12,6 @@
 
 **Format:** Each concept is explained in **text first**, then illustrated with a **code block** so you can write and reason about C in an easy, readable way. Content is standalone and descriptive; see **Further reading** in each topic and below.
 
----
-
 ## Topics
 
 | # | Topic | File |
@@ -34,8 +32,6 @@
 | 14 | C++ templates, STL, exceptions, and more | [14_C++_Templates_STL_Exceptions_And_More.md](./14_C++_Templates_STL_Exceptions_And_More.md) |
 | 15 | Use cases: cybersecurity and engineering | [15_Use_Cases_Cybersecurity_And_Engineering.md](./15_Use_Cases_Cybersecurity_And_Engineering.md) |
 | 16 | Case studies and hands-on examples | [16_Case_Studies.md](./16_Case_Studies.md) |
-
----
 
 ## Further reading
 

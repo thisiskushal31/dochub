@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Fundamentals: Memory management](../Fundamentals/9_Memory_Management.md). Here: how **Unix** and Unix-like systems manage memory — at the **system level** — and which commands to use.
 
----
-
 ## How the system does it (deep level)
 
 Unix and Unix-like kernels use **virtual memory**: each process has an address space; the kernel maps **pages** to physical RAM or to **swap** (a partition or file). Implementation details differ by OS; **FreeBSD** is a well-documented example (see [FreeBSD Architecture Handbook: Virtual Memory System](https://docs.freebsd.org/en/books/arch-handbook/vm/)).
@@ -18,8 +16,6 @@ Unix and Unix-like kernels use **virtual memory**: each process has an address s
 
 **References:** [FreeBSD Architecture Handbook: Chapter 7 – Virtual Memory System](https://docs.freebsd.org/en/books/arch-handbook/vm/) — vm_page_t, paging queues, VM objects, pageout daemon, tuning.
 
----
-
 ## Memory on Unix (commands and concepts)
 
 Unix uses **virtual memory**: each process has an address space; the kernel maps pages to physical RAM or **swap**. **Swap** is a partition or file used when RAM is full. **vmstat** shows memory, swap, and paging activity; **top** and **ps** show per-process usage.
@@ -28,8 +24,6 @@ Unix uses **virtual memory**: each process has an address space; the kernel maps
 
 *Image: [ByteByteGo – Types of Memory and Storage](https://bytebytego.com/guides/types-of-memory-and-storage/).*
 
----
-
 ## Paging and segmentation
 
 **Paging** (fixed-size pages) is used on modern Unix and Unix-like systems; **segmentation** is less common. **Page replacement** (e.g. LRU-like) is handled by the kernel. No user command directly controls the algorithm; you tune **swap** size and **sysctl** (BSD) or **/proc/sys/vm** (Linux) for behavior.
@@ -37,8 +31,6 @@ Unix uses **virtual memory**: each process has an address space; the kernel maps
 ![Paging vs segmentation](../../Assets/Operating-Systems/Bytebytego_Paging_vs_Segmentation.png)
 
 *Image: [ByteByteGo – Paging vs Segmentation](https://bytebytego.com/guides/what-are-the-differences-between-paging-and-segmentation/).*
-
----
 
 ## Commands
 
@@ -52,14 +44,10 @@ free -h   # Linux
 ps -o pid,rss,vsz,comm -p <pid>
 ```
 
----
-
 ## Summary
 
 - **Virtual memory** and **swap**; **vmstat**, **top**, **free**, **ps** for inspection.
 - **Paging** is standard; **segmentation** rare on modern Unix.
-
----
 
 ## Further reading
 

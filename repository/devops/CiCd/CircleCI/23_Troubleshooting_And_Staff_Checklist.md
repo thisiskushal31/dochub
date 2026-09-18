@@ -2,8 +2,6 @@
 
 [← Previous](./22_YAML_And_Configuration_Catalog.md) · [README](./README.md) · [Next: Extras →](./24_Integrations_Migrate_Plans_And_Extras.md)
 
----
-
 ## 1. Concepts — frequent failures
 
 | Symptom | Likely cause | Where |
@@ -19,8 +17,6 @@
 | Policy rejects config | Org config policies | [16](./16_Security_Permissions_SSO_And_Policies.md) |
 | Runner job pending | resource_class mismatch | [07](./07_Self_Hosted_Runners.md) |
 
----
-
 ## 2. Advanced concepts — debug moves
 
 - Open failed **step** log; confirm image and command.  
@@ -28,8 +24,6 @@
 - SSH into job when safe.  
 - Check Insights for systemic flakes.  
 - Confirm which context names the workflow actually requested.
-
----
 
 ## 3. Applications and use cases — staff checklist
 
@@ -42,8 +36,6 @@
 - Cloud vs Server choice documented  
 - One release-gating model chosen (approval vs Smart Deployments vs release agent)  
 - Rollback / previous digest path known  
-
----
 
 ## References
 

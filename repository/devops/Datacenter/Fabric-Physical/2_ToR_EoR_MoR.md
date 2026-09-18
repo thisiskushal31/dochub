@@ -2,8 +2,6 @@
 
 [← Previous](./1_Leaf_Spine_And_Classic_Three_Tier.md) · [README](./README.md) · [Next: OOB →](./3_OOB_Management_Network.md)
 
----
-
 ## 1. Concepts
 
 Where the first switch sits relative to servers:
@@ -17,8 +15,6 @@ Where the first switch sits relative to servers:
 ### Where it sits
 
 Cabinet U reserved for switches; dual ToR common for dual-home; power from A/B PDUs; uplinks via optics ([8](./8_Optics_And_Transceiver_Roles.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -40,8 +36,6 @@ Cabling: [White-Space/4](../White-Space/4_Structured_Cabling_Copper.md)–[6](..
 
 ToR dominates dense modern halls; EoR remains in some enterprise copper plants. Pick per cable plant and density—not fashion alone.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -60,8 +54,6 @@ ToR dominates dense modern halls; EoR remains in some enterprise copper plants. 
 - Never land both uplinks in one physical switch pretending HA  
 
 **Good:** dual ToR, short known media, A/B power. **Bad:** one ToR; DAC over length; unlabeled A/B.
-
----
 
 ## References
 

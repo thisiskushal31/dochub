@@ -2,8 +2,6 @@
 
 [← Previous](./11_Deploy_App_Service_Functions_And_Static_Web.md) · [README](./README.md) · [Next: Containers →](./13_Deploy_Containers_ACR_Container_Apps_And_AKS.md)
 
----
-
 ## 1. Concepts
 
 Not everything is App Service. Azure still runs **IaaS** fleets — and Pipelines must reach them.
@@ -17,8 +15,6 @@ Not everything is App Service. Azure still runs **IaaS** fleets — and Pipeline
 | **On-prem VM behind hybrid** | Self-hosted agent in the network ([05](./05_Agents_Hosted_And_Self_Hosted.md)) |
 
 Host-neutral framing: [CiCd/18](../18_VM_MIG_And_Host_Based_Deploy.md). Azure Load Balancer / availability is cloud literacy ([Cloud/4](../../Cloud/4_Azure_Literacy.md)) — Pipelines assumes the LB already fronts healthy instances.
-
----
 
 ## 2. Advanced concepts
 
@@ -38,8 +34,6 @@ Brownfield: copy files, stop service, start service. Encode as scripts/tasks wit
 
 Pipelines does not “configure HA” by itself — IaC creates the HA shape; Pipelines ships bits to instances. Know the difference so you don’t “fix HA” by deploying twice to one VM.
 
----
-
 ## 3. Applications and use cases
 
 | Estate | Approach |
@@ -49,8 +43,6 @@ Pipelines does not “configure HA” by itself — IaC creates the HA shape; Pi
 | Hybrid DC + Azure | Agent in DC; same YAML stages |
 
 **Good:** golden image + roll. **Bad:** manual RDP as the release process.
-
----
 
 ## References
 

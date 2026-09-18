@@ -2,8 +2,6 @@
 
 [← Previous](./9_Interview_Pack.md) · [README](./README.md) · [Next: Foreign site docs →](./11_Reading_Foreign_Site_Docs.md)
 
----
-
 ## 1. Concepts
 
 Common progressions (not ladders-as-destiny):
@@ -18,8 +16,6 @@ Common progressions (not ladders-as-destiny):
 | **Cross** | Tech who learns Compute; admin who learns hall |
 
 Role map: [1](./1_Role_Map.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -40,8 +36,6 @@ Learning staircase in Datacenter README. Interview pack [9](./9_Interview_Pack.m
 
 Titles differ (facility engineer vs critical facilities); jobs rhyme.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -59,8 +53,6 @@ Titles differ (facility engineer vs critical facilities); jobs rhyme.
 - Never gatekeep on one OEM brand  
 
 **Good:** deliberate path + portable literacy. **Bad:** title chasing; brand lock-in.
-
----
 
 ## References
 

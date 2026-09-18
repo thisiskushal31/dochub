@@ -6,8 +6,6 @@ CI jobs that can push images or deploy are high-value identities. Prefer **short
 
 Delivery context: [CiCd/15](../CiCd/15_Pipeline_Security_And_Gates.md), [CiCd/13](../CiCd/13_Config_Secrets_And_Env_Parity.md). Cloud map: [Cloud/](../Cloud/README.md). App runtime secrets: [Vault/](./Vault/README.md).
 
----
-
 ## The anti-pattern
 
 ```text
@@ -21,8 +19,6 @@ Replace with **OIDC federation**: the CI platform issues a per-job identity toke
 
 GitHub documents this pattern for Actions (and the same idea exists for GitLab, Azure DevOps, etc.): [OpenID Connect in Actions](https://docs.github.com/en/actions/concepts/security/openid-connect).
 
----
-
 ## How OIDC from CI works (generic)
 
 ```text
@@ -33,8 +29,6 @@ GitHub documents this pattern for Actions (and the same idea exists for GitLab, 
 5. Job deploys or pushes; creds expire
 ```
 
----
-
 ## Cloud mappings (literacy)
 
 | Cloud | Typical mechanism | CI side |
@@ -44,8 +38,6 @@ GitHub documents this pattern for Actions (and the same idea exists for GitLab, 
 | **Azure** | Federated credentials on Entra app / managed identity | Official Azure login actions with federated credential |
 
 Always follow **current** cloud + CI vendor docs for claim names and exact YAML — they evolve. The durable rule: **condition the trust on tight subject/claims**, not “any token from GitHub.”
-
----
 
 ## Illustrative GitHub Actions shape (AWS-style)
 
@@ -67,8 +59,6 @@ jobs:
 
 Pin action versions/SHAs in real pipelines. Mirror the pattern for GCP/Azure with their login actions.
 
----
-
 ## Least privilege for pipeline roles
 
 | Job intent | Role should allow | Role should NOT allow |
@@ -79,8 +69,6 @@ Pin action versions/SHAs in real pipelines. Mirror the pattern for GCP/Azure wit
 | Terraform apply | Scoped apply after approval | Same role on every PR |
 
 Separate **plan** vs **apply** identities when you can. Separate **staging** vs **production** roles. PR workflows must not assume production roles ([CiCd/8](../CiCd/8_Environments_Promotion_And_Approvals.md)).
-
----
 
 ## Workload identity on clusters (entry)
 
@@ -94,8 +82,6 @@ When jobs or pods run *in* Kubernetes and need cloud APIs:
 
 Same idea as CI OIDC: **no node-wide keys** in every pod. Depth: [Cloud/](../Cloud/README.md) + Containerization.
 
----
-
 ## Migration checklist
 
 1. Inventory CI secrets that are cloud keys / SA JSON.  
@@ -103,8 +89,6 @@ Same idea as CI OIDC: **no node-wide keys** in every pod. Depth: [Cloud/](../Clo
 3. Tighten claim conditions (repo + environment/ref).  
 4. Remove static keys; rotate anything that ever lived in CI.  
 5. Quarterly audit: remaining long-lived CI secrets, over-broad roles, unused trust entries.  
-
----
 
 ## Pitfalls
 

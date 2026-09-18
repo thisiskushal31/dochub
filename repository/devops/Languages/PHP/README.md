@@ -59,8 +59,6 @@ php --ini
 
 The second command shows which **`php.ini`** files are loaded for that binary—essential when a setting “should” apply but does not.
 
----
-
 ## Chapters (what each file is for)
 
 | # | Topic | You will be able to… |
@@ -94,8 +92,6 @@ The second command shows which **`php.ini`** files are loaded for that binary—
 3. Cross-link: types and OOP → Composer autoload → web input → PDO → FPM/Opcache → CI → security → workers → migration (chapter **17** maps these to roles). Finish with **22** for PSR/OTEL/ICU/FPM edge cases that appear in reviews and incidents.
 4. Use the reference lists only when you need version-specific wording or exhaustive function tables; match the **PHP minor** you ship.
 
----
-
 ## Further reading
 
 - [PHP Manual (English)](https://www.php.net/manual/en/index.php)
@@ -104,8 +100,6 @@ The second command shows which **`php.ini`** files are loaded for that binary—
 - [OpenTelemetry — PHP](https://opentelemetry.io/docs/languages/php/)
 - [W3Techs — PHP usage context](https://w3techs.com/technologies/details/pl-php)
 - [W3Techs — server-side language overview](https://w3techs.com/technologies/overview/programming_language/all)
-
----
 
 ## References
 

@@ -2,13 +2,9 @@
 
 **Node.js** is a JavaScript runtime built on the V8 engine. It runs outside the browser and provides APIs for the file system, network, and the OS. **npm** (Node Package Manager) is the default package manager for Node: it installs dependencies, runs scripts, and publishes packages. This topic covers running JavaScript with Node, the module system (CommonJS and ES modules), `process` and environment variables, npm and **package.json**, and how Node is used in DevOps, tooling, and automation.
 
----
-
 ## Node.js runtime
 
 Node executes JavaScript in a single process. It is **non-blocking** and **event-driven**: I/O (files, network) is asynchronous, so the thread is not blocked waiting for results. That allows one process to handle many concurrent operations. Node does **not** provide the browser DOM or `window`; it provides **global** objects such as **process** and (in CommonJS) **require**. Use Node for servers, CLI tools, build scripts, and automation. Run a file with **node script.js** (or **node script.mjs** for ES modules). The **Node REPL** (run `node` with no file) lets you type expressions and run them interactively.
-
----
 
 ## Module system: CommonJS and ES modules
 
@@ -24,13 +20,9 @@ import fs from "fs";
 export const foo = 1;
 ```
 
----
-
 ## process and environment
 
 The **process** object is global in Node. **process.env** holds environment variables (e.g. **process.env.NODE_ENV**, **process.env.PATH**). **process.argv** is an array of command-line arguments (first two are `node` and the script path). **process.exit(code)** exits the process (0 for success, non-zero for failure); useful for CLI tools and scripts. **process.cwd()** returns the current working directory. Uncaught exceptions and unhandled promise rejections can be handled with **process.on('uncaughtException')** and **process.on('unhandledRejection')** for logging or graceful shutdown—fix the root cause rather than relying on these.
-
----
 
 ## npm and package.json
 
@@ -49,25 +41,17 @@ The **process** object is global in Node. **process.env** holds environment vari
 }
 ```
 
----
-
 ## Common Node APIs for tooling
 
 **fs** (file system): **fs.readFileSync**, **fs.writeFileSync** for synchronous reads/writes; **fs.promises.readFile**, **fs.promises.writeFile** for promise-based async. Use async in servers and scripts to avoid blocking. **path**: **path.join**, **path.resolve**, **path.basename** for cross-platform paths. **child_process**: **exec** / **execSync** run a shell command and buffer output; **spawn** starts a process with streams (stdout/stderr) and is better for long-running or large output. Use **execSync** for simple one-off commands in scripts; for async use **exec** with a callback or the promise-based **util.promisify(require('child_process').exec)**. Pass **env** and **cwd** when you need a specific environment or working directory. In DevOps scripts, always check the exit code (or promise rejection) and call **process.exit(1)** on failure so CI and callers detect errors. **http** / **https**: create servers or make requests; in practice many projects use **fetch** (available in recent Node) or libraries like **axios**. For DevOps and automation, **fs**, **path**, **process**, and **child_process** are used constantly.
-
----
 
 ## Node in DevOps and automation
 
 Node is widely used for **build tooling** (e.g. Webpack, Vite, ESLint), **CLI tools** (Create React App, Angular CLI, custom scripts), **servers** (APIs, BFFs), and **automation** (scripts that read config, call APIs, or run shell commands). Scripts can read **process.env** for configuration (e.g. `NODE_ENV`, `API_URL`), exit with **process.exit(1)** on failure so CI fails the job, and use **fs** and **path** to process files. Keeping dependencies minimal and using **devDependencies** for build-only packages keeps production installs small. Lockfiles and reproducible installs are important for CI and security.
 
----
-
 ## Summary
 
 **Node.js** runs JavaScript outside the browser with APIs for files, network, and the OS. Use **node script.js** to run a file. **CommonJS** (`require`/`module.exports`) and **ES modules** (`import`/`export`) are both supported; choose one per project or use the appropriate file extension. **process** provides **env**, **argv**, **exit**, and **cwd**. **npm** and **package.json** manage dependencies and scripts; use **npm run** for defined scripts. **fs**, **path**, and **child_process** are core for file and shell operations in tooling and automation. Node is a standard choice for DevOps scripts, build pipelines, and server-side JavaScript.
-
----
 
 ## Further reading
 

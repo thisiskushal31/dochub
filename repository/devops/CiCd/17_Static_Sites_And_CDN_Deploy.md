@@ -6,8 +6,6 @@ Many “apps” you will ship are **static**: HTML/CSS/JS (or a SSG output). The
 
 Spectrum context: [19](./19_Delivery_Spectrum_Legacy_Through_Modern.md). Servers/CDN doors: [Servers/](../Servers/README.md), [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive).
 
----
-
 ## Durable job (timeless)
 
 ```text
@@ -18,8 +16,6 @@ Source → build static tree → store versioned artifact
 ```
 
 Vendors change (S3, GCS, Azure Blob, GitHub Pages, Netlify, Cloudflare Pages, …). The **jobs** do not: produce a directory of files, put them on an origin, control cache, prove the URL works.
-
----
 
 ## Pipeline stages
 
@@ -34,8 +30,6 @@ Vendors change (S3, GCS, Azure Blob, GitHub Pages, Netlify, Cloudflare Pages, �
 
 **Build once:** the same `dist/` (or tarball digest) goes to staging and prod origins — do not rebuild “for production” with different flags unless that is an explicit, tested matrix ([4](./4_Artifacts_And_Registries.md)).
 
----
-
 ## Cache strategy (the hard part)
 
 | Approach | When |
@@ -46,8 +40,6 @@ Vendors change (S3, GCS, Azure Blob, GitHub Pages, Netlify, Cloudflare Pages, �
 
 Cloud CDN-style systems document that invalidation is eventually consistent and rate-limited; prefer versioning over blanket purge ([Google Cloud CDN invalidation overview](https://cloud.google.com/cdn/docs/cache-invalidation-overview) as one vendor’s rules — others rhyme).
 
----
-
 ## Origins and front doors (examples, not fashion)
 
 | Pattern | Meaning |
@@ -57,8 +49,6 @@ Cloud CDN-style systems document that invalidation is eventually consistent and 
 | **Hybrid** | Static assets on CDN; API on VMs/containers ([18](./18_VM_MIG_And_Host_Based_Deploy.md), K8s chapters) |
 
 TLS, DNS, and WAF sit in Networks / Security / Servers — CI’s job is to publish the right files and fail if smoke fails.
-
----
 
 ## Illustrative deploy shape
 
@@ -75,13 +65,9 @@ aws s3 sync ./dist "s3://${BUCKET}/" --delete   # or gsutil -m rsync, az storage
 
 Use OIDC to the cloud — not immortal access keys ([Security/5](../Security/5_OIDC_CI_And_Least_Privilege.md)).
 
----
-
 ## Preview environments
 
 PR → ephemeral bucket/subdomain or host “deploy preview” is Continuous Delivery for frontends: review the **same build pipeline** before merging. Tear down on PR close.
-
----
 
 ## Pitfalls
 

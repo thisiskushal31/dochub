@@ -4,8 +4,6 @@
 
 **What this language does and why it's here:** Erlang is a concurrent, functional language that runs on the BEAM VM. It was designed for fault-tolerant, distributed systems (telecom, messaging, databases). Elixir compiles to Erlang and uses the same runtime. In a DevOps and engineering context, Erlang underpins RabbitMQ, CouchDB, and many high-availability systems; understanding Erlang helps with operating BEAM-based infrastructure, protocol security, and building reliable distributed services. This section is a deep dive: it goes from **very basic** (what Erlang is, installation, types) through **advanced** (processes, OTP, Rebar3) to **use-case driven** (where and how to use it, security and DevOps).
 
----
-
 ## Erlang vs Erlang/OTP vs “System”
 
 It’s easy to see “Erlang,” “Erlang/OTP,” and “system” and wonder what each means. Here’s the distinction:
@@ -25,8 +23,6 @@ It’s easy to see “Erlang,” “Erlang/OTP,” and “system” and wonder w
 
 In short: **Erlang** is the language; **Erlang/OTP** is the language plus the platform (VM + OTP); **system** refers to the **official system documentation** we used to build this section.
 
----
-
 ## How to read this section
 
 Read in **number order** for a single path from beginner to advanced to use cases.
@@ -37,8 +33,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 - **Topics 13–15 (Concurrency and I/O):** Processes and message passing, registered processes and distribution, IO and the file system.
 - **Topics 16–17 (Build and runtime):** Rebar3 and projects, OTP (gen_server, supervision, applications). How to build and run applications.
 - **Topics 18–19 (Use cases and security):** What you can do with Erlang (by role and goal) and how to run it safely in production.
-
----
 
 ## Learning path: from basics to use cases
 
@@ -51,8 +45,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | **Build and OTP** | 16 → 17 | Create Rebar3 projects and use OTP (gen_server, supervisors, applications, releases). |
 | **Use cases and applications** | 18 | See where Erlang is used: messaging, databases, telecom, DevOps, and by engineering role. |
 | **Security and DevOps** | 19 | Apply security and DevOps practices: config, cookies, TLS distribution, supply chain, hardening. |
-
----
 
 ## Topics (in order)
 
@@ -84,8 +76,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | 18 | Use cases and applications | [18_Use_Cases_And_Applications.md](./18_Use_Cases_And_Applications.md) |
 | 19 | Security and DevOps | [19_Security_And_DevOps.md](./19_Security_And_DevOps.md) |
 
----
-
 ## By engineering role
 
 | Role | Focus | Where to go |
@@ -94,8 +84,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | **DevOps / SRE** | Build, releases, deploy, operate | 2, 15–17, then **18**, **19**. |
 | **Security** | Secure config, distribution, supply chain | 8–9, 12, 14, then **18**, **19**. |
 | **Embedded / systems** | BEAM on devices, Nerves-related | 2, 13–14, 16–17, **18**, **19**. |
-
----
 
 ## Scope: what's covered and what's not
 
@@ -112,8 +100,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 - **Embedded / Nerves** — Running on devices, OTA updates; use cases (topic 18) point there; see Embedded Systems User's Guide and Nerves.
 
 If you need one of these, use the “Further reading” links in the relevant topic or the list below.
-
----
 
 ## Further reading
 

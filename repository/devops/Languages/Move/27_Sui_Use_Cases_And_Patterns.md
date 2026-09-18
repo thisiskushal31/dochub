@@ -87,8 +87,6 @@ Reconsider Sui if your system is fundamentally account-ledger centric and your t
 - **Security model:** capability/object custody maturity in your team?
 - **Operations:** readiness for Sui-specific publish/upgrade and PTB client workflows?
 
----
-
 ## Further reading
 
 - [Sui developer guides](https://docs.sui.io/guides)

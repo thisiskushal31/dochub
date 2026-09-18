@@ -8,8 +8,6 @@
 
 These names look like magic globals in JavaScript. They are not “the environment.” They are **this call**, **this transaction**, and **this block** — filled in by the EVM for the duration of the execution.
 
----
-
 ## 1. Concepts
 
 ### 0. One contract that uses the globals you will actually type
@@ -120,8 +118,6 @@ bytes32 id = keccak256(abi.encode(msg.sender, n));
 // encode (not encodePacked) when you need unambiguous field boundaries
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. The full global surface (so you stop guessing)
@@ -209,8 +205,6 @@ Do not branch on “if lots of gas remain, do extra work” as a safety check. C
 
 `keccak256` of empty bytes is a fixed constant (`c5d2…`); people accidentally use it as a “null” sentinel — document if you do.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Use of globals |
@@ -221,8 +215,6 @@ Do not branch on “if lots of gas remain, do extra work” as a safety check. C
 | **Operations** | Tests set time via cheatcodes (`vm.warp`)—chapter **17** |
 | **Software engineering** | Named constants for ether/time; no magic `10**18` scattered 40 times |
 
----
-
 ## 4. Staff-level review checklist
 
 - No `tx.origin` in authorization.
@@ -231,8 +223,6 @@ Do not branch on “if lots of gas remain, do extra work” as a safety check. C
 - Signatures include **chain id** (or equivalent domain).
 - `msg.value` only on functions that are intentionally `payable`.
 - New code uses `block.prevrandao`, not `block.difficulty` / `now`.
-
----
 
 ## References
 

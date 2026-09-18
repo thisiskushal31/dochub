@@ -20,8 +20,6 @@ This chapter answers: **what is on the list?** Depth chapters answer **how does 
 
 Columns: **G** = Linux GNU · **B** = macOS BSD · **BB** = BusyBox · **PS** = PowerShell analog exists · **C** = cmd analog · **Depth** = chapter for extreme coverage.
 
----
-
 ## If you are brand new
 
 1. The shell **runs commands**. Some are **builtins** (inside Bash); others are **external programs** on `PATH`.
@@ -47,8 +45,6 @@ Get-Command ls, Get-ChildItem |
 #   If ls is Alias -> Get-ChildItem, you are NOT running Unix /bin/ls
 #   Prefer full cmdlet names in scripts (chapter 31)
 ```
-
----
 
 ## 1. Concepts
 
@@ -140,8 +136,6 @@ When the table says **G** (Linux GNU), refine with chapter **20**/**32**:
 | **BB-alp** | Alpine BusyBox applets + ash |
 | **legacy** | Old enterprise images: prefer `netstat`/`ifconfig`/`service` fallbacks |
 
----
-
 ## 2. Atlas — Bash / POSIX builtins
 
 | Command | Job (one line) | G | B | BB | PS | C | Depth |
@@ -208,8 +202,6 @@ When the table says **G** (Linux GNU), refine with chapter **20**/**32**:
 
 \*macOS stock Bash 3.2: no `mapfile`; use loops. Homebrew Bash 5: Y.
 
----
-
 ## 3. Atlas — files, paths, processes (coreutils + findutils)
 
 | Command | Job | G | B | BB | PS | C | Depth |
@@ -250,8 +242,6 @@ When the table says **G** (Linux GNU), refine with chapter **20**/**32**:
 
 \*macOS: `realpath` may need coreutils/Homebrew; `readlink -f` is GNU-leaning.
 
----
-
 ## 4. Atlas — text and data shaping
 
 | Command | Job | G | B | BB | PS | C | Depth |
@@ -284,8 +274,6 @@ When the table says **G** (Linux GNU), refine with chapter **20**/**32**:
 | `jq` | JSON query/filter | Y* | Y* | N* | `ConvertFrom-Json` | N | **24** |
 
 \*Often package-installed, not base image.
-
----
 
 ## 5. Atlas — identity, time, environment, disks, system
 
@@ -321,8 +309,6 @@ When the table says **G** (Linux GNU), refine with chapter **20**/**32**:
 
 \*Often GNU coreutils / Homebrew on macOS.
 
----
-
 ## 6. Atlas — archives, checksums, transfer, remote shell
 
 | Command | Job | G | B | BB | PS | C | Depth |
@@ -341,8 +327,6 @@ When the table says **G** (Linux GNU), refine with chapter **20**/**32**:
 | `scp` / `sftp` | Remote copy | Y | Y | P | `scp` / WinSCP | N | **30** |
 | `rsync` | Efficient sync | Y* | Y* | N | N | N | **30** |
 
----
-
 ## 7. Atlas — network / process recon (ops + security literacy)
 
 | Command | Job | Depth |
@@ -355,8 +339,6 @@ When the table says **G** (Linux GNU), refine with chapter **20**/**32**:
 | `nmap` | Port scan (install; policy-bound) | **25** (literacy only) |
 | `tcpdump` / `Wireshark` | Capture (privilege) | OS/security tracks |
 | `Get-NetTCPConnection` | PS socket view | **25**, **31** |
-
----
 
 ## 8. Atlas — PowerShell high-traffic cmdlets (summary)
 
@@ -377,8 +359,6 @@ Full named-parameter depth: chapter **31**. Families:
 | Command discovery | `Get-Command`, `Get-Help`, `Get-Alias` | **31**, **28** |
 | Modules | `Import-Module`, `Get-Module` | **31** |
 | Dangerous | `Invoke-Expression` | **31**, **18** |
-
----
 
 ## 9. Atlas — cmd.exe builtins
 
@@ -414,8 +394,6 @@ Full named-parameter depth: chapter **31**. Families:
 | `TITLE` | Window title | **31** |
 | `TYPE` | Print file | **31**, **15** |
 | `VER` / `VERIFY` / `VOL` | Version / verify / volume | **31** |
-
----
 
 ## 10. Advanced concepts
 
@@ -498,8 +476,6 @@ Already covered in family tables above: primary file/text/identity tools. These 
 | `vi` / `vim` / `nano` | Edit files | Prefer non-interactive `sed`/`Set-Content` in CI |
 | `tmux` / `screen` | Multiplex terminals | Host layer (**32**)—not a dialect |
 
----
-
 ## 11. Applications
 
 - **Onboarding:** Print this chapter’s family list; tick commands the team actually uses in CI.
@@ -517,8 +493,6 @@ Already covered in family tables above: primary file/text/identity tools. These 
 - No automation depends on interactive-only builtins (`bind`, completion) without fallback.
 - Brownfield estates have legacy networking/service command fallbacks documented.
 
----
-
 ## References
 
 - [GNU coreutils documentation](https://www.gnu.org/software/coreutils/manual/)
@@ -529,7 +503,5 @@ Already covered in family tables above: primary file/text/identity tools. These 
 - [jq manual](https://jqlang.github.io/jq/manual/)
 - [BusyBox](https://busybox.net/)
 - [Debian Policy](https://www.debian.org/doc/debian-policy/)
-
----
 
 [← Back to Shell](./README.md)

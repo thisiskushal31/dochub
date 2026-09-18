@@ -4,8 +4,6 @@
 
 Clojure runs on the JVM and uses **Java’s exception system**. You can **throw** exceptions and **catch** them with **try** and **catch**. Prefer **ex-info** and **ex-data** for structured errors: throw a map with details and catch by type or data so callers can handle failures without parsing messages.
 
----
-
 ## try, catch, finally
 
 **try** wraps one or more expressions. **catch** clauses specify an exception type and a binding; the body runs when that type is thrown. **finally** runs after the try (and any catch), for cleanup. The value of the try is the last expression in the try body or in the matching catch.
@@ -19,8 +17,6 @@ Clojure runs on the JVM and uses **Java’s exception system**. You can **throw*
   (finally
     (println "cleanup")))
 ```
-
----
 
 ## throw and ex-info
 
@@ -41,13 +37,9 @@ In a catch:
     (throw e)))
 ```
 
----
-
 ## Avoid swallowing exceptions
 
 Catch only what you can handle; rethrow or wrap otherwise. Log or record before rethrowing so failures are visible. In libraries, prefer **ex-info** and document the keys in **ex-data** so callers can react programmatically.
-
----
 
 ## Further reading
 

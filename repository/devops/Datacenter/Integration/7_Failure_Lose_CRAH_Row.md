@@ -2,8 +2,6 @@
 
 [← Previous](./6_Failure_Lose_ToR.md) · [README](./README.md) · [Next: Lose MMR XC →](./8_Failure_Lose_MMR_Cross_Connect.md)
 
----
-
 ## 1. Concepts
 
 **Worked failure:** One or more CRAHs serving a row fail, or chilled-water capacity to that zone drops.
@@ -21,8 +19,6 @@
 
 Already at N; doors propped; no inlet sensors; liquid CDU fail with zero air backup.
 
----
-
 ## 2. Advanced concepts
 
 ### Walk order
@@ -34,8 +30,6 @@ Already at N; doors propped; no inlet sensors; liquid CDU fail with zero air bac
 5. Start lag units / reduce load / fix plant  
 
 Deep: [Mechanical/11](../Mechanical/11_Mechanical_Failure_Walks.md), [Mechanical/2](../Mechanical/2_CRAH_And_CRAC.md). Combine with power loss of mechanical on generator ([1](./1_Utility_To_DIMM.md)).
-
----
 
 ## 3. Applications and use cases
 
@@ -54,8 +48,6 @@ Deep: [Mechanical/11](../Mechanical/11_Mechanical_Failure_Walks.md), [Mechanical
 - Never prop containment during heat events  
 
 **Good:** zone holds on N+1. **Bad:** silent heat; door props; surprise GPU shutdown.
-
----
 
 ## References
 

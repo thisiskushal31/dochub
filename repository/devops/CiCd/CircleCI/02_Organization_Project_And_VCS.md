@@ -2,8 +2,6 @@
 
 [← Previous](./01_What_Is_CircleCI.md) · [README](./README.md) · [Next: Create project →](./03_Create_Project_Config_And_View_Pipelines.md)
 
----
-
 ## 1. Concepts
 
 | Layer | Meaning |
@@ -23,8 +21,6 @@ Without a connected repo (or equivalent), there is nothing for CircleCI to build
 
 Org admins invite collaborators so they can see projects and contribute config — pair with roles ([16](./16_Security_Permissions_SSO_And_Policies.md)).
 
----
-
 ## 2. Advanced concepts
 
 GitHub App vs older OAuth/GitHub Checks differences matter for triggers and permissions — follow the in-app path for your integration type when setting up.
@@ -35,8 +31,6 @@ A pipeline has a **config source** (where `.circleci/config.yml` lives) and a **
 
 Stop building / rename org-repo mappings carefully — docs cover rename and delete flows under security guides.
 
----
-
 ## 3. Applications and use cases
 
 | Shape | Pattern |
@@ -46,8 +40,6 @@ Stop building / rename org-repo mappings carefully — docs cover rename and del
 | Agency / multi-client | Separate orgs or strict project isolation |
 
 **Good:** least privilege on VCS app install. **Bad:** org-wide secrets on every project by default.
-
----
 
 ## References
 

@@ -6,8 +6,6 @@ Sorting or merging data is common in business applications. **Internal sort** is
 
 **Why internal SORT?** Reports and batch jobs often need records in a specific order (e.g. by customer id, by date). You could use an external sort utility and then run your program on the sorted file, but then you have two steps and extra files. The **SORT** verb lets the same program read an unsorted input file, sort by one or more keys (ascending or descending), and write a sorted output file. One program, one job; the sort is part of the application. Use it when the next step in your logic needs sorted data (e.g. control-break reporting, merging, or deduplication by key).
 
----
-
 ## SORT verb
 
 **SORT** takes the work file and sorts it by one or more keys in ascending or descending order. **USING** identifies the input file; **GIVING** identifies the output file. The work file must be described with an **SD** (sort description) entry; its record layout must be compatible with the input and output records. Key fields are named in **ON ASCENDING KEY** and **ON DESCENDING KEY**.
@@ -41,13 +39,9 @@ Sorting or merging data is common in business applications. **Internal sort** is
            STOP RUN.
 ```
 
----
-
 ## What SORT does
 
 SORT opens the work file in I-O mode, the input file in INPUT mode, and the output file in OUTPUT mode. It moves records from the input file to the work file, sorts the work file by the specified key(s), then writes the sorted records to the output file. Finally it closes the input and output files and releases the work file. The input and output files need not have the same physical organization; only the record layouts must match the work file.
-
----
 
 ## Further reading
 

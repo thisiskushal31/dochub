@@ -8,8 +8,6 @@
 
 SPM is the standard way to build libraries and tools outside (and inside) Xcode. App projects may still be `.xcodeproj`-first (chapter **18**); libraries and CLI tools should be fluent in packages. Think of a package as a **shipping crate**: targets are compartments, products are the labeled goods customers can buy, and `Package.resolved` is the packing list of exact versions that went in this shipment.
 
----
-
 ## 1. Concepts
 
 ### 1. Lab — full `Package.swift` (executable + library + tests)
@@ -150,8 +148,6 @@ public func normalize(_ s: String) -> String { scrub(s) }
 ```
 
 **What just happened.** Clients `import ExampleKit` and never see `ExampleInternals`. That is how you keep the crate labeled while the packing foam stays inside. Pair with `package` access (chapter **11**) so helpers are not forced `public`.
-
----
 
 ## 2. Advanced concepts
 
@@ -382,8 +378,6 @@ Wrong mirror config → wrong bytes with a familiar version string
 
 **Habit.** Document mirror maps next to toolchain pins. Rotate registry credentials. Never treat “it resolved” as “it is the artifact security reviewed.” Binary checksums still apply when you fetch zips.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -393,8 +387,6 @@ Wrong mirror config → wrong bytes with a familiar version string
 | **Security** | Audit new deps, binary checksums (`compute-checksum`), and plugins; least privilege for build tools; mirror/registry ownership clear |
 | **Operations** | Cache SPM artifacts carefully; invalidate on toolchain bump; trait matrix in CI; conflict resolution documented |
 | **Software engineering** | Thin public products; internal targets + `package` access; Xcode and CLI share pins |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -412,8 +404,6 @@ Wrong mirror config → wrong bytes with a familiar version string
 - No unexplained `unsafeFlags` on library products.
 - Plugin/macro trust questions answered before merge.
 - Consumer trait requirements documented and covered in CI.
-
----
 
 ## References
 

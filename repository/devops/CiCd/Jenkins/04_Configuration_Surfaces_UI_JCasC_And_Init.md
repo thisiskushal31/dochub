@@ -2,8 +2,6 @@
 
 [← Previous](./03_Architecture_Controller_Agents_Executors.md) · [README](./README.md) · [Next: Job types →](./05_Job_Types_Freestyle_And_Matrix.md)
 
----
-
 ## 1. Concepts
 
 Jenkins is configured through **several equivalent surfaces**. Staff who only know the UI miss half the product — and cannot rebuild a controller after disk loss.
@@ -66,8 +64,6 @@ Jenkins.instance.save()
 
 The controller’s state directory: job configs, build history metadata, secrets, plugins, casc overlays. Back this up ([20](./20_Scaling_HA_Backup_And_Monitoring.md)); treat agent workspaces as ephemeral.
 
----
-
 ## 2. Advanced concepts
 
 ### Config as code loop
@@ -107,8 +103,6 @@ Arbitrary Groovy on the controller — break-glass only; treat as root shell. Pa
 | Feature flags | System properties |
 | Job scaffolding at scale | Job DSL / REST ([13](./13_Shared_Libraries_And_Job_DSL.md), [21](./21_Blue_Ocean_CLI_And_Remote_API.md)) |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -119,8 +113,6 @@ Arbitrary Groovy on the controller — break-glass only; treat as root shell. Pa
 | Multi-env | Same casc shape; env-specific overlays |
 
 **Good:** controller config in Git with tested apply. **Bad:** irreproducible UI clicks with no export.
-
----
 
 ## References
 

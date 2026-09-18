@@ -6,8 +6,6 @@
 
 **Why macros?** They remove boilerplate (e.g. generating getters/setters, serialization) and let you build DSLs that expand at compile time. **Why C bindings?** Many system and legacy libraries are in C; Crystal’s built-in bindings give you typed, direct calls and the ability to pass structs, callbacks, and pointers.
 
----
-
 ## Macros: basics
 
 A **macro** is defined with **macro** and **end**. Arguments are AST nodes. Inside the macro you use **`{{ ... }}`** to paste nodes into the generated code. Macro code runs at compile time; only the generated code runs at runtime.
@@ -26,13 +24,9 @@ class Foo
 end
 ```
 
----
-
 ## Macro methods and hooks
 
 The **Crystal::Macros** module provides methods on AST nodes: **id**, **string**, **symbol**, **type**, and utilities like **parse_type** (parse a type from a string). **Macro hooks** run at specific compile-time events: **method_added**, **inherited**, **included**, **extended**, **method_missing**, and **finished** (after parsing). Use them to generate code when a method or type is defined or when a method is not found (e.g. for delegation).
-
----
 
 ## Compile-time flags and annotations
 
@@ -45,8 +39,6 @@ The **Crystal::Macros** module provides methods on AST nodes: **id**, **string**
   # debug code
 {% end %}
 ```
-
----
 
 ## C bindings: lib and fun
 
@@ -63,13 +55,9 @@ LibM.cos(0.0)
 
 You can map a Crystal name to a different C name: **fun crystal_name = c_name(...)**. Variadic C functions use **...** in the signature. For opaque C types, use **Void*** or a struct with **@[Extern]**.
 
----
-
 ## C bindings: structs, enums, callbacks
 
 Within a **lib**, you can define **struct** and **union** with **@[Extern]** so layout matches C. **enum** maps to C enums. **fun** can take a **Proc** type for callbacks. The **to_unsafe** method is used when passing Crystal data to C (e.g. **String#to_unsafe** for **Char***). The **crystal_lib** tool can generate bindings from C headers.
-
----
 
 ## Further reading
 

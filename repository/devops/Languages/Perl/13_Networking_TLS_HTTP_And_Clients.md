@@ -6,10 +6,6 @@
 
 How Perl programs open **TCP** and **TLS** connections, speak **HTTP** to APIs and mirrors, and fail in ways **operations** and **security** teams care about: **timeouts**, **certificate validation**, **SSRF**, **proxies**, and **encoding** at the wire. It assumes you finished **chapter 9** (process and I/O boundaries) and **chapter 4** (bytes vs characters).
 
----
-
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -21,8 +17,6 @@ Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3
 **Operations:** **Firewall** rules, **security groups**, and **NAT** affect Perl the same as any language—timeouts manifest as **hung** workers if you block forever on **`read`**. Set **explicit** timeouts where the module allows it, or use **`alarm`** / **`sigaction`** with care (not always safe inside **XS**), or an event loop (**`AnyEvent`**, **`IO::Async`**) for concurrent I/O.
 
 **Security:** **Binding** to **`0.0.0.0`** exposes services unintentionally; **reverse shells** in incident data often use tiny **socket** scripts—correlate with **egress** policy.
-
----
 
 ### 2. TLS with `IO::Socket::SSL`
 
@@ -36,8 +30,6 @@ Most “HTTPS” and **TLS-wrapped** TCP in Perl goes through **`IO::Socket::SSL
 
 **`Net::SSLeay`** sits under many stacks—**CVEs** in **OpenSSL** are your **patch** cycle, not only **Perl**.
 
----
-
 ### 3. HTTP clients: `HTTP::Tiny` and `LWP`
 
 **`HTTP::Tiny`** (core) is small, **dependency-light**, and sufficient for many **internal** JSON calls and **health checks**. It supports **timeouts**, **proxies**, and **HTTPS** when **`IO::Socket::SSL`** is available.
@@ -48,15 +40,11 @@ Most “HTTPS” and **TLS-wrapped** TCP in Perl goes through **`IO::Socket::SSL
 
 **Request bodies:** For **JSON**, build bytes with **`encode_json`** (or **`JSON::PP`**) and set **`Content-Type`**; for **multipart**, use a maintained form builder (**`HTTP::Request::Common`**, framework helpers)—do not hand-roll boundaries.
 
----
-
 ### 4. Proxies, environment variables, and air gaps
 
 **`HTTP_PROXY`** / **`NO_PROXY`** are honored by many clients—**CI** and **cron** often inherit them unexpectedly. **Air-gapped** builds need **explicit** mirror URLs (chapter 6) and **no_proxy** for **metadata** endpoints that must stay **internal**.
 
 **Authentication** to proxies (**407**) should use **vaulted** credentials, not **literal** URLs with passwords in **logs**.
-
----
 
 ### 5. SSRF and URL handling
 
@@ -66,13 +54,9 @@ When a Perl script **fetches** a URL built from **user** or **config** input:
 - **Allowlist** **schemes** (**`https`** only where possible); block **`file:`**, **`gopher:`**, **`dict:`**, and **internal** IP ranges if the use case is **server-side** fetch.
 - **DNS rebinding** and **link-local** addresses are **out-of-band** concerns—network policy complements code.
 
----
-
 ### 6. Core networking pods
 
 Perl’s **`perlfunc`** documents **`socket`**, **`connect`**, **`bind`**, **`listen`**, **`accept`**, **`getaddrinfo`** (with **`Socket`**). High-concurrency servers are usually **CPAN** or **framework** territory; this chapter stays at **client** and **small service** depth.
-
----
 
 ## 2. Advanced concepts
 
@@ -82,16 +66,12 @@ Perl’s **`perlfunc`** documents **`socket`**, **`connect`**, **`bind`**, **`li
 
 **Performance:** For **high** QPS **HTTP**, **XS**-backed clients and **keep-alive** pools matter; profile before rewriting **glue** in another language.
 
----
-
 ## 3. Applications and use cases
 
 - **Internal APIs and service mesh:** **HTTP::Tiny**/**LWP** calls to **localhost** sidecars—document **mTLS** **termination** so **audits** do not flag **plain** **HTTP** incorrectly.
 - **CPAN and mirrors:** **HTTPS** to **cpan.org** / **MetaCPAN**—**CA** bundles in **minimal** **images** (chapter 6); **corporate** **inspect** **roots** in **`SSL_CERT_FILE`**.
 - **Webhook receivers and outbound integrations:** **SSRF** **allowlists** when **URLs** come from **tickets** or **user** **config**—pair with **chapter** **15** for **request** **validation**.
 - **Legacy mail/FTP/LDAP glue:** Still common in **ops** **automation**—**TLS** **verify** and **timeouts** apply **equally** (advanced above).
-
----
 
 ## References
 

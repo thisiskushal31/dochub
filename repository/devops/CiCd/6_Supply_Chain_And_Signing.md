@@ -6,8 +6,6 @@ Shipping fast is useless if you cannot say **what** you shipped and **whether it
 
 Gate placement overview: [Security/4_Security_Gate_Chain.md](../Security/4_Security_Gate_Chain.md). Artifacts: [4](./4_Artifacts_And_Registries.md).
 
----
-
 ## Three related artifacts (do not conflate)
 
 | Artifact | Answers | Notes |
@@ -17,8 +15,6 @@ Gate placement overview: [Security/4_Security_Gate_Chain.md](../Security/4_Secur
 | **Provenance** | *How* was it built (source, recipe, builder)? | SLSA Build track; often an in-toto attestation |
 
 SLSA FAQ: SBOMs and provenance operate at different abstraction levels — both useful; provenance does not replace an SBOM and vice versa.
-
----
 
 ## SBOM basics
 
@@ -39,8 +35,6 @@ grype sbom:sbom.spdx.json --fail-on high
 
 Image scan in this handbook: [Security/Trivy](../Security/Trivy/README.md) (another scanner; same *job*).
 
----
-
 ## Signing and Sigstore / Cosign
 
 **Sigstore** provides a widely used path for signing software artifacts with **short-lived certificates** bound to OIDC identities (e.g. CI workflow identity), plus a transparency log (**Rekor**). **Cosign** is the common CLI for signing/verifying container images and attestations, typically storing signatures/attestations alongside the image in the OCI registry.
@@ -51,8 +45,6 @@ Durable practice:
 - **Verify at deploy** (admission policy, GitOps verify, or deploy job) — signing without verification is theater.  
 
 Cosign historically supported SBOM “attachments”; project guidance moved to **attestations** (in-toto) rather than deprecated attachment APIs — prefer `cosign attest` / verify-attestation style flows in current docs.
-
----
 
 ## SLSA Build levels
 
@@ -69,8 +61,6 @@ Levels describe increasing guarantees. Meeting a level means satisfying that lev
 
 Provenance commonly travels as **in-toto** attestations; SLSA defines *what* must be trustworthy for a level; in-toto is a vehicle for the statements (per SLSA FAQ).
 
----
-
 ## Where this sits in the pipeline
 
 ```text
@@ -85,8 +75,6 @@ Policy examples (organizational, not universal law):
 - Reject critical CVEs above a threshold unless exception recorded  
 - Require provenance from *your* builder identity  
 
----
-
 ## End-to-end mental model
 
 ```text
@@ -96,8 +84,6 @@ Policy examples (organizational, not universal law):
 4. Registry holds D + signatures/attestations
 5. Deploy verifies signature + policy, then runs D
 ```
-
----
 
 ## Pitfalls
 

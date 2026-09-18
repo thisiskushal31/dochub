@@ -8,8 +8,6 @@ A **competency map** and **sign-off list** for the Solidity track. Use it after 
 
 If chapter **00** was “I changed a greeting,” this page is “I could explain that greeting — and a vault, a pin, a test, and a key — to the person who has to live with it.”
 
----
-
 ## 1. Concepts — what “fluent” means here
 
 You are fluent when you can:
@@ -24,8 +22,6 @@ You are fluent when you can:
 8. Say **no** to a proxy, a custom ERC-20, or an assembly block that has no reason.
 
 Remix-only fluency is chapter **00**. Staff fluency is this list.
-
----
 
 ## 2. Advanced concepts — brownfield you must still survive
 
@@ -71,8 +67,6 @@ If you cannot derive those, re-read **11–16**, **18**, **20**, and **21** — 
 | `pragma experimental ABIEncoderV2` | default on 0.8 |
 | `CALLCODE` | do not use; `DELEGATECALL` if you meant a proxy |
 
----
-
 ## 3. Applications — sign-off by lens
 
 | Lens | You can show |
@@ -84,8 +78,6 @@ If you cannot derive those, re-read **11–16**, **18**, **20**, and **21** — 
 | **Software engineering** | Tests (unit + fuzz or invariant), fmt, denied warnings, pinned deps |
 
 Deep-study leftovers from the README: if you skipped the labs, do them before signing.
-
----
 
 ## 4. Staff-level review checklist (track sign-off)
 
@@ -130,8 +122,6 @@ Deep-study leftovers from the README: if you skipped the labs, do them before si
 - Assembly (if any) is justified, tested, and extra-reviewed.
 
 When the boxes that apply to *your* system are checked, the track has done its job for **shipping contracts**. For **where the platform is moving** and what to hand off next, sign chapter **24** as well. Revisit **02** on every compiler bump, **18** on every value-moving PR, **20** on every mainnet push, and **24** on every hard-fork or L2/AA decision.
-
----
 
 ## References
 

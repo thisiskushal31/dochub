@@ -8,8 +8,6 @@ How **gas** is spent, what the **optimizer** and **via-IR** change, what **metad
 
 Gas is not a personality trait of your contract. It is a receipt: you asked the EVM to do work, it charged you. The optimizer and via-IR change *which* work it does. Metadata is the little passport stapled to the bytecode so explorers can match your source. All three belong in the same config sentence, not in folklore.
 
----
-
 ## 1. Concepts
 
 ### 1. Gas is a budget for EVM work
@@ -61,8 +59,6 @@ If you compile with metadata and verify without (or different content), verifica
 ### 6. 63/64 gas forwarding
 
 A call keeps 1/64 of remaining gas and forwards the rest. A callee cannot consume *literally* all of the caller’s gas. This is not an access-control mechanism. It *does* mean a carefully gas-stipended `transfer` (2300) is a different beast from a full `call`.
-
----
 
 ## 2. Advanced concepts
 
@@ -167,8 +163,6 @@ Before your bytecode runs, the protocol charges roughly:
 
 A “failed” tx that reverts still pays intrinsic + execution gas used. Empty revert data does not refund the call.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -179,8 +173,6 @@ A “failed” tx that reverts still pays intrinsic + execution gas used. Empty 
 | **Operations** | Verify JSON matches compile JSON; metadata consistent |
 | **Software engineering** | Gas reports in CI as a diff, not a vanity number |
 
----
-
 ## 4. Staff-level review checklist
 
 - `foundry.toml` / Hardhat `solidity` settings name **optimizer, runs, viaIR, evmVersion**.
@@ -188,8 +180,6 @@ A “failed” tx that reverts still pays intrinsic + execution gas used. Empty 
 - Gas-sensitive changes include a **before/after** report.
 - No experimental codegen on the release pin.
 - Metadata policy is explicit (on and reproducible).
-
----
 
 ## References
 

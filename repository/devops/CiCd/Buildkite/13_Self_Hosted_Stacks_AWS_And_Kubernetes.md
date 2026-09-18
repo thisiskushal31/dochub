@@ -2,8 +2,6 @@
 
 [← Previous](./12_Deployments_And_Environments.md) · [README](./README.md) · [Next: Packages & Test Engine →](./14_Package_Registries_And_Test_Engine.md)
 
----
-
 ## 1. Concepts
 
 Running one agent by hand does not scale. Buildkite’s mainstream self-host patterns:
@@ -15,8 +13,6 @@ Running one agent by hand does not scale. Buildkite’s mainstream self-host pat
 | **GCP / Azure self-hosted** | Cloud install guides for agents on those clouds |
 
 Both still use the same Pipelines control plane and YAML — only how agents appear changes. Manual install OS matrix and hooks: [22](./22_Agent_Hooks_Lifecycle_And_Install_Spectrum.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -34,8 +30,6 @@ If you do not need VPC residency, prefer Buildkite hosted queues and skip this o
 
 Related ops depth for K8s/AWS lives in Containerization / Cloud folders — this chapter is Buildkite literacy only.
 
----
-
 ## 3. Applications and use cases
 
 | Estate | Pattern |
@@ -45,8 +39,6 @@ Related ops depth for K8s/AWS lives in Containerization / Cloud folders — this
 | Mixed | Separate queues per stack |
 
 **Good:** capacity alarms; drain before upgrades. **Bad:** undocumented golden AMI nobody can rebuild.
-
----
 
 ## References
 

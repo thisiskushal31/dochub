@@ -4,8 +4,6 @@
 
 ChatOps means using chat (Slack, Teams) as a **visibility and coordination surface** for delivery and incidents — not as an unauthenticated production control plane.
 
----
-
 ## What to notify
 
 | Event | Why chat |
@@ -18,8 +16,6 @@ ChatOps means using chat (Slack, Teams) as a **visibility and coordination surfa
 
 Noise kills ChatOps. Prefer **deploy and incident** channels over every unit-test flake.
 
----
-
 ## Channel conventions
 
 | Channel | Purpose |
@@ -29,8 +25,6 @@ Noise kills ChatOps. Prefer **deploy and incident** channels over every unit-tes
 | Team `#eng-payments` | Optional service-specific noise |
 
 Pin: link to dashboard, runbook index, severity definitions.
-
----
 
 ## Webhook shape (redacted example)
 
@@ -53,8 +47,6 @@ CI → Slack incoming webhook (concept):
 
 Wire this from GitHub Actions / GitLab / Jenkins notify steps — details in CiCd tool folders when filled. Concept: **one message, links to pipeline + commit + dashboard**.
 
----
-
 ## ChatOps patterns
 
 | Pattern | OK? | Notes |
@@ -73,8 +65,6 @@ Wire this from GitHub Actions / GitLab / Jenkins notify steps — details in CiC
 
 Prefer: GitHub/GitLab **environment protection rules**, break-glass documented in runbooks, chat only for *notification*.
 
----
-
 ## Bridging paging → chat
 
 ```text
@@ -85,16 +75,12 @@ Alert → PagerDuty/Opsgenie → page human
 
 Useful for awareness; the **ack still happens in the pager tool** so MTTR timestamps stay clean ([5_DORA](./5_DORA_And_Delivery_Metrics.md)).
 
----
-
 ## Bot noise control
 
 - Thread replies under one deploy message  
 - Rate-limit flapping alerts  
 - Separate `#deploys-staging` if prod channel drowns  
 - Mute personal CI failure spam; keep it on the PR  
-
----
 
 ## Pitfalls
 

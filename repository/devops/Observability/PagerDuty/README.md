@@ -1,8 +1,6 @@
 # PagerDuty
 
-[← Back to Observability](../README.md) · [SRE / on-call practice](../../Methodologies/3_Team_Patterns_SRE_Incident.md)
-
----
+[← Back to Observability](../README.md) · [SRE / on-call practice](../../Methodologies/3_Team_Patterns_SRE_Incident.md) · [Tools index](../3_Observability_Tools.md) · [Metrics / alerts](../1_Monitoring_And_Metrics.md)
 
 ## 1. Concepts
 
@@ -12,13 +10,15 @@
 
 Practice (schedules, blameless, fatigue) lives in [Methodologies/3](../../Methodologies/3_Team_Patterns_SRE_Incident.md). This folder is **product literacy**.
 
+**What for:** Route and escalate actionable alerts to humans.  
+**When:** You have alerts worth waking someone (Prometheus, Grafana, Datadog, cloud alarms, …).  
+**Why not:** Using PD as a metrics database; paging on every warning without SLOs ([1](../1_Monitoring_And_Metrics.md)).
+
 First use: [1_Install_And_First_Use](./1_Install_And_First_Use.md).
 
 **Disconfirm:** More pages is **not** better reliability. PagerDuty is **not** your metrics database.
 
 **Confirm:** What is the difference between an alert and an incident?
-
----
 
 ## 2. Advanced concepts
 
@@ -32,8 +32,6 @@ First use: [1_Install_And_First_Use](./1_Install_And_First_Use.md).
 
 Map alert severity to urgency carefully. Actionable pages only.
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -44,10 +42,8 @@ Map alert severity to urgency carefully. Actionable pages only.
 
 **Staff checklist:** clear urgency rules; secondary escalation; runbook links on services; review unacked pages weekly.
 
----
-
 ## References
 
 - [PagerDuty docs](https://www.pagerduty.com/docs/)  
 - [Methodologies/3](../../Methodologies/3_Team_Patterns_SRE_Incident.md)  
-- [Observability tools index](../3_Observability_Tools.md)  
+- [Observability tools index](../3_Observability_Tools.md) · [1 Monitoring](../1_Monitoring_And_Metrics.md)  

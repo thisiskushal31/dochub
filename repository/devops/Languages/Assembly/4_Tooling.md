@@ -4,8 +4,6 @@
 
 Analysis of binaries and shellcode relies on **disassemblers** and **debuggers** that present **assembly** (and often **decompiled** code). This topic summarizes common tools and how they show assembly; see each project’s or vendor’s documentation for details.
 
----
-
 ## Disassemblers
 
 A **disassembler** turns **machine code** (bytes) into **assembly** (mnemonics and operands). It does not run the program; it interprets the instruction set (x86, ARM, etc.) and, optionally, applies **symbols** and **control-flow analysis**.
@@ -19,8 +17,6 @@ A **disassembler** turns **machine code** (bytes) into **assembly** (mnemonics a
 
 **Presentation:** Disassembly is usually shown as a **listing** (address, bytes, mnemonic, operands) and/or a **control-flow graph** (basic blocks and edges). Some tools show **pseudocode** (decompiled C) alongside assembly; the assembly view remains the ground truth for instruction-level analysis.
 
----
-
 ## Debuggers
 
 A **debugger** runs the program and shows **assembly** at the current instruction pointer (and elsewhere). You can set breakpoints, step, inspect registers and memory; essential for **dynamic analysis** and **exploit development**.
@@ -33,8 +29,6 @@ A **debugger** runs the program and shows **assembly** at the current instructio
 
 **Presentation:** The **current instruction** is highlighted; **registers** and **stack** are shown in panels. You can switch between **Intel** and **AT&T** syntax in many tools (e.g. GDB `set disassembly-flavor`). Stepping “into” a `call` or “over” it changes how you follow control flow.
 
----
-
 ## Assemblers (when you write assembly)
 
 When you **write** assembly (e.g. shellcode, patches, or small utilities), you use an **assembler**:
@@ -46,8 +40,6 @@ When you **write** assembly (e.g. shellcode, patches, or small utilities), you u
 
 The **syntax** (Intel vs AT&T, directive names) is specific to each assembler; the **instruction set** is defined by the CPU vendor (Intel/AMD, ARM).
 
----
-
 ## How tools present assembly
 
 - **Address** — Virtual address or file offset of the instruction.
@@ -58,8 +50,6 @@ The **syntax** (Intel vs AT&T, directive names) is specific to each assembler; t
 - **Graph view** — Basic blocks as nodes, jumps/calls as edges; helps see branches and loops.
 
 Choosing **Intel** vs **AT&T** is preference and target (Windows/tutorials often Intel; GNU/Unix often AT&T). For **x86/x64**, Intel syntax matches the processor manuals; for **ARM**, toolchain docs define the syntax.
-
----
 
 ## Further reading
 

@@ -2,8 +2,6 @@
 
 [README](./README.md) · [Next: How operators build →](./2_How_Operators_Build_And_Run_Halls.md)
 
----
-
 ## Mental map
 
 ![Site product types](../../Assets/Datacenter/Facility/site-product-types.svg)
@@ -30,8 +28,6 @@ Not every “data center company” sells the same product. Classify the logo be
 
 **Equinix** is interconnection colo (plus wholesale-class products)—not a VPS peer of Linode. Living logo list: syllabus Part E.
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes of bad classification
@@ -51,8 +47,6 @@ Research method: [3](./3_Research_Any_Operator.md). Architecture shapes: [16](./
 
 Same kinds worldwide; which kind dominates a metro differs (Ashburn interconnection vs some markets that are wholesale-heavy).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -71,8 +65,6 @@ Same kinds worldwide; which kind dominates a metro differs (Ashburn interconnect
 - Never say Equinox  
 
 **Good:** taxonomy-first, then metro research. **Bad:** logo salad; Linode≈Equinix; Tier as personality.
-
----
 
 ## References
 

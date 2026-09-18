@@ -4,8 +4,6 @@
 
 Clojure code is distributed as **libraries** (JARs) identified by **group/artifact** and version. You declare dependencies in **deps.edn** (**:deps**) or **Leiningen** (**project.clj**); the tool resolves and downloads them. **require** or **use** loads a library’s namespaces. The Clojure ecosystem includes data formats (JSON, XML, CSV), HTTP clients, database drivers, and many domain-specific libraries.
 
----
-
 ## Adding dependencies
 
 In **deps.edn**, add a map under **:deps**. The key is a symbol **org.clojure/clojure** or **com.example/lib**; the value is **{:mvn/version "1.0.0"}** for Maven Central (or **:git/url** and **:sha** for Git deps).
@@ -17,8 +15,6 @@ In **deps.edn**, add a map under **:deps**. The key is a symbol **org.clojure/cl
 ```
 
 The CLI (and Leiningen) resolve and download artifacts. **:aliases** can add **:extra-deps** for dev or test only.
-
----
 
 ## Requiring namespaces
 
@@ -34,13 +30,9 @@ The CLI (and Leiningen) resolve and download artifacts. **:aliases** can add **:
 ;; => ["a" "b" "c"]
 ```
 
----
-
 ## Common libraries
 
 **clojure.data.json** — JSON read/write. **clojure.data.xml** — XML parse/emit. **clojure.data.csv** — CSV. **clojure.java.jdbc** / **next.jdbc** — JDBC. **clj-http**, **hato** — HTTP client. **ring**, **compojure**, **reitit** — web. **integrant**, **mount** — component/state lifecycle. Check **clojars.org** and **github.com/clojure** for official and community libraries.
-
----
 
 ## Further reading
 

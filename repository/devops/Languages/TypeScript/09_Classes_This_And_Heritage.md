@@ -8,8 +8,6 @@ How TypeScript types **classes**: fields, constructors, `public` / `private` / `
 
 You leave able to choose class vs plain object/factory, keep `this` sound under callbacks, and review heritage trees that fight structural typing.
 
----
-
 ## 1. Concepts
 
 ### 1. Classes are values and types
@@ -174,8 +172,6 @@ const row = { id, name }; // not: new Row(id, name) millions of times without me
 
 Deepen in chapter **13**.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `this` parameters and typing methods
@@ -338,8 +334,6 @@ class MemoryRepo implements Repo {
 
 **What just happened:** `implements` only checks the instance shape—it does not generate methods.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -351,8 +345,6 @@ class MemoryRepo implements Repo {
 | **Software engineering** | Prefer interfaces for contracts; classes for stateful lifecycle; keep heritage shallow |
 
 Staff preference in many TS codebases: **functions + modules** for logic, classes when the domain has clear identity + lifecycle. Neither is ideology—match the runtime host (React class components are legacy; Node services may still be class-shaped).
-
----
 
 ## Staff-level review checklist
 
@@ -369,8 +361,6 @@ Staff preference in many TS codebases: **functions + modules** for logic, classe
 - `using` / `Disposable` only when runtime + CI pins support them; otherwise `try`/`finally` stays honest.
 - Class field / target semantics verified after compiler upgrades.
 - Hot paths avoid needless per-iteration `new` when a plain object/pool suffices (ch **13**).
-
----
 
 ## References
 

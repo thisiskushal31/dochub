@@ -6,8 +6,6 @@
 
 **Why LINQ?** It expresses filtering, projection, and aggregation in a readable, composable way and works over in-memory collections, EF Core, and other providers. **Why async/await?** I/O-bound work (HTTP, file, database) can run without blocking threads; the async method returns a task and continues when the operation completes.
 
----
-
 ## LINQ query and method syntax
 
 Query syntax looks like SQL; method syntax uses extension methods. Both produce the same result. Common operators: **Where**, **Select**, **OrderBy**, **GroupBy**, **Join**, **First**, **Single**, **Any**, **Count**, **Sum**.
@@ -18,8 +16,6 @@ var evens = from n in numbers where n % 2 == 0 select n;
 var evens2 = numbers.Where(n => n % 2 == 0);
 var sum = numbers.Sum();
 ```
-
----
 
 ## async and await
 
@@ -35,13 +31,9 @@ async Task<string> FetchAsync()
 await FetchAsync();
 ```
 
----
-
 ## Async best practices
 
 Avoid **async void** except for event handlers. Prefer **ConfigureAwait(false)** in library code when you do not need the original context. Do not block on tasks with **.Result** or **.Wait()** in async contexts; use **await** instead.
-
----
 
 ## Further reading
 

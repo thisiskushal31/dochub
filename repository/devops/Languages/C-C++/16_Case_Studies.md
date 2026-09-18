@@ -4,8 +4,6 @@
 
 This topic gives **hands-on case studies** so you can see C **implementation** from basic to practical. Each example follows the same pattern: **goal** → **approach** → **code** → **expected behavior**. The format is text first, then a code block, so you can write and read C in an easy, consistent way.
 
----
-
 ## Case study 1: Hello World
 
 **Goal:** Print a message to the console and exit successfully.
@@ -22,8 +20,6 @@ int main(void) {
 ```
 
 **Expected behavior:** The program prints `Hello, World!` and a newline, then exits with status 0.
-
----
 
 ## Case study 2: Factorial (recursion)
 
@@ -46,8 +42,6 @@ int main(void) {
 ```
 
 **Expected behavior:** Output is **120** (5!).
-
----
 
 ## Case study 3: Swap with pointers
 
@@ -73,8 +67,6 @@ int main(void) {
 ```
 
 **Expected behavior:** Output is **2 1**.
-
----
 
 ## Case study 4: Read a file line by line
 
@@ -103,8 +95,6 @@ int main(void) {
 
 **Expected behavior:** Each line of `input.txt` is printed. If the file is missing, an error is printed and the program returns 1.
 
----
-
 ## Case study 5: Dynamic array (malloc and free)
 
 **Goal:** Allocate an array of integers on the **heap**, fill it, sum the elements, then **free** the memory.
@@ -132,8 +122,6 @@ int main(void) {
 
 **Expected behavior:** Output is **15** (1+2+3+4+5). No leak: **free** is called once.
 
----
-
 ## Summary
 
 | Case study | Concepts used |
@@ -145,8 +133,6 @@ int main(void) {
 | Dynamic array | malloc, free, pointer as array |
 
 These examples are building blocks for larger programs. The same patterns (functions, pointers, file I/O, dynamic allocation) appear across cybersecurity and engineering codebases.
-
----
 
 ## Further reading
 

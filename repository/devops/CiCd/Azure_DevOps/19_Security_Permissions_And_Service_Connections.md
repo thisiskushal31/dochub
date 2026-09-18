@@ -2,8 +2,6 @@
 
 [← Previous](./18_Azure_Test_Plans.md) · [README](./README.md) · [Next: Worked example →](./20_Worked_Example_Build_And_Deploy.md)
 
----
-
 ## 1. Concepts
 
 Three layers:
@@ -17,8 +15,6 @@ Three layers:
 **Service connections** are how Pipelines authenticates to Azure and other systems. Prefer **workload identity federation** (federated credentials) over long-lived client secrets ([Security/5](../../Security/5_OIDC_CI_And_Least_Privilege.md)).
 
 Org hardening overview: [Make your Azure DevOps secure](https://learn.microsoft.com/en-us/azure/devops/organizations/security/security-overview).
-
----
 
 ## 2. Advanced concepts
 
@@ -85,8 +81,6 @@ AD/NTLM/Entra hybrid auth; federation options differ — plan with identity. Sam
 
 Repos, branches, pipelines, releases, environments, variable groups, secure files, feeds, wikis — each has a security dialog. Default is collaborative; **Deny** and custom groups tighten when needed.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -98,8 +92,6 @@ Repos, branches, pipelines, releases, environments, variable groups, secure file
 | API automation | Entra app / managed identity; PATs only if unavoidable |
 
 **Good:** separate prod connection; audit on; Advanced Security on default branch. **Bad:** one subscription Owner connection; PAT in a README.
-
----
 
 ## References
 

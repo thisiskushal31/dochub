@@ -2,8 +2,6 @@
 
 [← Previous](./4_ATS_And_STS.md) · [README](./README.md) · [Next: Batteries →](./6_Batteries_And_Energy_Storage.md)
 
----
-
 ## 1. Concepts
 
 An **uninterruptible power supply (UPS)** bridges the gap between utility loss and generator steady power—and conditions power for IT. The topology tells you what happens on a sag, a surge, and a full outage.
@@ -34,8 +32,6 @@ Batteries or other energy store on the DC link ([6](./6_Batteries_And_Energy_Sto
 | **Runtime** | Minutes at stated load—not at empty hall |
 | **Redundancy** | N, N+1 modules, or 2N UPS plants on A/B |
 | **Efficiency** | Heat you must cool; eco modes raise efficiency |
-
----
 
 ## 2. Advanced concepts
 
@@ -72,8 +68,6 @@ A brochure “online UPS” that lives in eco mode is an ops fact, not a sticker
 
 Voltage/frequency follow the site (208/480 60 Hz vs 400 V 50 Hz). Three-phase in, three-phase out is normal for hall UPS; rack gear may see single-phase branch circuits from PDUs.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -92,8 +86,6 @@ Voltage/frequency follow the site (208/480 60 Hz vs 400 V 50 Hz). Three-phase in
 - Alarms integrated to NOC ([15](./15_EPMS_BMS_And_Power_Monitoring.md))  
 
 **Good:** double-conversion (or proven eco), tested bypass, clear A/B plants. **Bad:** unknown eco; both “redundant” UPS on one input breaker.
-
----
 
 ## References
 

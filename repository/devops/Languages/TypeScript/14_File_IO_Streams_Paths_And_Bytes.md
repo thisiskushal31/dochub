@@ -8,8 +8,6 @@ This is a **pillar** chapter: how typed Node programs **read and write files saf
 
 You leave able to write tooling that does not corrupt files on crash mid-write and that types bytes without `as any`.
 
----
-
 ## 1. Concepts
 
 ### 1. Files are bytes; strings are decoded views
@@ -139,8 +137,6 @@ async function bump(file: string): Promise<void> {
 ```
 
 **What just happened:** bytes → string → `unknown` → narrow → write. No `as Config` shortcut.
-
----
 
 ## 2. Advanced concepts
 
@@ -409,8 +405,6 @@ async function readUtf8(path: string, signal?: AbortSignal): Promise<string> {
 
 Callers then switch on `AppError.code` without re-parsing Node errno at every layer (ch **11**).
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -461,8 +455,6 @@ TOCTOU races exist (file grows after `stat`)—for hostile inputs open and read 
 | Reserved names | Windows `CON` / `NUL`—validate user filenames |
 | Line endings | `.gitattributes` for text fixtures; normalize when hashing text |
 
----
-
 ## Staff-level review checklist
 
 - Text vs binary chosen explicitly; UTF-8 default for text.
@@ -477,8 +469,6 @@ TOCTOU races exist (file grows after `stat`)—for hostile inputs open and read 
 - Symlink following policy intentional for copy/walk.
 - Buffer/Uint8Array conversions explicit under TS 5.9.x—no `as any`.
 - JSON from disk treated as `unknown` until validated (ch **11**).
-
----
 
 ## References
 

@@ -4,8 +4,6 @@
 
 Records can have runtime-determined size, discriminants (fixed per object), and variant parts (different sets of fields depending on a discriminant). These features support flexible, safe data structures without resorting to unchecked unions.
 
----
-
 ## Dynamically sized record types
 
 Record object size does not have to be known at compile time. For example, the size can depend on a function result or a constant computed at elaboration. All objects of that type will then have the same size (the one determined when the type was elaborated). This is a **definite** type (you can declare unconstrained arrays of it only when the size is known in that scope).
@@ -18,8 +16,6 @@ type Growable_Stack is record
    Len   : Natural;
 end record;
 ```
-
----
 
 ## Records with discriminants
 
@@ -35,8 +31,6 @@ S : Growable_Stack := (Max_Len => 128, Items => (1, 2, 3, 4, others => <>), Len 
 ```
 
 Discriminants are specified in aggregates and are read via dot notation like other components. If you give discriminants defaults (e.g. **Natural := 0**), you can declare **P : Point;** and use the defaults. You cannot modify a discriminant after initialization. A type with a discriminant (and no default) cannot be used as an array element type when the size would be unknown.
-
----
 
 ## Variant records
 
@@ -55,8 +49,6 @@ end record;
 ```
 
 Variant records are similar to sum types in functional languages (e.g. OCaml, Haskell); the discriminant is the “tag”. Compared to C/C++ unions, variant records are safer because the discriminant is explicit and misuse is checked at runtime. They are useful for expression trees, message types, and other data that can take several shapes.
-
----
 
 ## Further reading
 

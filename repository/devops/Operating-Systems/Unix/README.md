@@ -2,8 +2,6 @@
 
 **How Unix and Unix-like systems implement OS fundamentals.** Assume you have read [Fundamentals](../Fundamentals/README.md). Here we cover the **Unix kernel**, process model, file hierarchy, shell, and **commands and tools** for DevOps — including **Unix flavors** (BSD, Solaris, AIX, HP-UX) in the [Flavors](./Flavors/README.md) folder. Linux is **Unix-like** (same philosophy, POSIX) but not derived from original Unix source; for Linux distros (Fedora, Ubuntu, etc.), see [Linux Distributions](../Linux/Distributions/README.md).
 
----
-
 ## Where Unix implements OS fundamentals
 
 Same format as [Linux](../Linux/README.md) and [Windows](../Windows/README.md): each row maps a **concept** to **how Unix does it** and the **topic** where it is covered. Implementation details vary by flavor (BSD, Solaris, AIX, HP-UX); see [Flavors](./Flavors/README.md) for flavor-specific commands and tools.
@@ -24,8 +22,6 @@ Same format as [Linux](../Linux/README.md) and [Windows](../Windows/README.md): 
 | **Security** | SSH, file permissions, firewall (pf, ipfilter); MAC (e.g. TrustedBSD); flavor-specific | [Users, networking, logging, and security](./10_Users_Networking_Logging_And_Security.md), [Flavors](./Flavors/README.md) |
 
 **Factual basis:** The “How the system does it (deep level)” sections in the topic files are drawn from **official or authoritative documentation**, not assumed or generic. Where possible, the text cites the source: e.g. **FreeBSD Architecture Handbook** ([Virtual Memory System](https://docs.freebsd.org/en/books/arch-handbook/vm/)), **FreeBSD** scheduler docs (runqueue(9), ULE), **POSIX** (semaphores, shared memory), **Microsoft Learn** (Windows scheduling and memory). Implementation details **vary by Unix flavor** (BSD vs Solaris vs AIX vs HP-UX); the handbook uses FreeBSD and POSIX as concrete references and points to [Flavors](./Flavors/README.md) for flavor-specific commands and paths.
-
----
 
 ## Topics
 

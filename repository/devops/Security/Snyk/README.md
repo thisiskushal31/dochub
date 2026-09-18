@@ -2,8 +2,6 @@
 
 [← Back to Security](../README.md) · [Gate chain](../4_Security_Gate_Chain.md)
 
----
-
 ## 1. Concepts
 
 **Snyk** is a commercial (with free tiers) platform for **SCA**, container, and IaC scanning—developer-friendly PR checks and fix PRs for dependency upgrades.
@@ -13,8 +11,6 @@
 **Disconfirm:** A Snyk “fix PR” is **not** automatically safe—review breaking changes. Snyk is **not** DAST ([ZAP](../ZAP/README.md)).
 
 **Confirm:** Which artifact does SCA inspect (source lockfile vs built image)?
-
----
 
 ## 2. Advanced concepts
 
@@ -27,8 +23,6 @@
 
 Org policy: fail on severity × reachability; monitor vs gate. Don’t run three SCA tools as hard gates without triage ownership.
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -38,8 +32,6 @@ Org policy: fail on severity × reachability; monitor vs gate. Don’t run three
 | Fix cadence | Batch Dependabot/Snyk PRs weekly |
 
 **Staff checklist:** one primary SCA gate; license awareness; pin CI orb/action versions.
-
----
 
 ## References
 

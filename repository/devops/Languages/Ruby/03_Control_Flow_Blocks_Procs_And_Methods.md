@@ -6,8 +6,6 @@
 
 How Ruby chooses what runs next: **if/unless**, **case**, loops, **iterators**, and **blocks**; how **methods** are defined and called; how **procs** and **lambdas** differ; and how **method lookup** behaves at a level you need for DSLs and libraries. Control flow in Ruby is expression-oriented—almost every construct returns a value.
 
----
-
 ## 1. Concepts
 
 ### 1. `if`, `elsif`, `else`
@@ -139,8 +137,6 @@ A method can `yield` to the caller’s block without naming a proc. `block_given
 - `rescue` without class catches `StandardError` and subclasses (not `Exception` root in general).
 - Bare `rescue` swallows too much in production—rescue specific types and re-raise or log.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Short-circuit evaluation
@@ -233,8 +229,6 @@ Framework code often stores blocks as procs and calls them later (callbacks, `af
 
 For expected failures (validation, 404), prefer returning a **result** struct or monad-style object rather than raising—exceptions are for exceptional paths. Raising in hot loops is slow and obscures control flow in metrics.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and API design
@@ -287,8 +281,6 @@ The block is the task body; `sh` is provided by Rake.
 - `rescue` clauses are specific; `ensure` closes resources.
 - Public methods document keyword vs positional contracts.
 - No silent empty `rescue` in CI or Chef convergence code.
-
----
 
 ## References
 

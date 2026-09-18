@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [IAM →](./15_Org_IAM_And_Identity_Federation.md) · [VPC →](./16_VPC_And_Network_Constructs.md) · [FinOps →](./20_FinOps_And_Cost_Controls.md)
 
----
-
 ## Mental map
 
 ```text
@@ -16,8 +14,6 @@ Guardrails: SCPs / org policies / Azure Policy — outer fence
 ```
 
 *What to notice: a landing zone is a **repeatable baseline**, not a one-time console tour.*
-
----
 
 ## 1. Concepts
 
@@ -39,8 +35,6 @@ A **landing zone** is how you create many isolation units with the same:
 **Confirm:** What can an app admin *not* do? Where do audit logs land? How is a new env requested?
 
 Vendor accelerators (Control Tower, Azure landing zones, Fabric) are **examples**—encode the jobs, don’t worship the brand.
-
----
 
 ## 2. Advanced concepts
 
@@ -67,8 +61,6 @@ Hub VPC / shared services + spokes ([16](./16_VPC_And_Network_Constructs.md)); p
 | Sandbox without spend cap | Bill shock |
 | Break-glass = daily Admin | Landing zone fiction |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -86,8 +78,6 @@ Hub VPC / shared services + spokes ([16](./16_VPC_And_Network_Constructs.md)); p
 - New-env path is a ticket/pipeline, not tribal knowledge  
 
 **Good:** baseline as code + fences. **Bad:** snowflake accounts; trails off “to save money.”
-
----
 
 ## References
 

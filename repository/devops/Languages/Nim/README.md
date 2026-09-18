@@ -12,8 +12,6 @@ Nim is **free software** (MIT license). The built-in library is split into **pur
 
 **How each topic is written:** The **body** explains what the chapter is about, **why** it matters, and **how** to think about it in real engineering—**text first**, with small examples only where they clarify a rule. **Exhaustive** API tables, **every** pragma, and **flag-by-flag** compiler listings stay in the **official documentation** linked in **Further reading** at the end of each file (and in the hub below)—that is the **reference** layer; this tree is the **guided context** layer.
 
----
-
 ## Topics
 
 | # | Topic | File |
@@ -36,8 +34,6 @@ Nim is **free software** (MIT license). The built-in library is split into **pur
 | 16 | Choosing Nim and engineering trade-offs | [16_Choosing_Nim_And_Engineering_Tradeoffs.md](./16_Choosing_Nim_And_Engineering_Tradeoffs.md) |
 
 Start with **1** if you are new to the language; later files assume the earlier ones. Individual pages combine explanation, deeper detail, practical workflow, and engineering perspective as needed.
-
----
 
 ## Further reading
 

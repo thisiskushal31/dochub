@@ -2,8 +2,6 @@
 
 [← Previous](./15_Latin_America_And_Other_Hubs.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 What each operator class **generally runs**—enough to orient, not enough to forge blueprints.
@@ -21,8 +19,6 @@ What each operator class **generally runs**—enough to orient, not enough to fo
 | **Edge** | Micro footprint; limited plant depth |
 
 Device truth remains Electrical–Fabric. This is **product shape**.
-
----
 
 ## 2. Advanced concepts
 
@@ -43,8 +39,6 @@ Taxonomy [1](./1_Operator_Taxonomy.md). Integration diagrams later ([Integration
 
 Shapes transfer; implementations differ by metro chapter.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -63,8 +57,6 @@ Shapes transfer; implementations differ by metro chapter.
 - Never deliver fake floor plans as confidence  
 
 **Good:** class-accurate expectations. **Bad:** one diagram for all operators; hyperscale fanfic.
-
----
 
 ## References
 

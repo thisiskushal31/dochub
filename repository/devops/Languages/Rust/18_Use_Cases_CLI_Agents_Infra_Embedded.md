@@ -6,8 +6,6 @@
 
 Where Rust shows up in real engineering portfolios: **CLI tools**, **observability and security agents**, **cloud-native sidecars**, **embedded / `no_std`**, and carefully scoped **WebAssembly**. How Rust sits beside **Go** and **C** in infrastructure stacks, and how to **read** other people’s Rust when you inherit a repo. This is a domain map, not a framework tour.
 
----
-
 ## 1. Concepts
 
 ### 1. Why these domains choose Rust
@@ -113,8 +111,6 @@ When joining a brownfield crate:
 
 Ownership-heavy APIs are often clearer once you find the **owned vs borrowed** convention at module boundaries.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Rust beside Go and C
@@ -168,8 +164,6 @@ Reiterate for staff review: the steady-state agent loop should not run as root �
 
 If you ship an HTTP API, a game, or a desktop UI, you will likely pick a **framework**—a ready-made structure for that kind of app. That choice sits *above* the language track: this chapter helps you decide whether Rust fits the domain (CLI, agent, sidecar, chip, WASM); chapter 13’s short list helps you judge a framework before you marry it. Write the choice down in the product README, and keep your core logic testable without booting the whole stack. Learn the framework from its own official book.
 
----
-
 ## 3. Applications and use cases + staff checklist
 
 ### Software engineering
@@ -208,8 +202,6 @@ If you ship an HTTP API, a game, or a desktop UI, you will likely pick a **frame
 - Interop with Go/C is process- or ABI-documented.
 - WASM (if any) distinguishes unknown-host vs WASI-class needs; **host** limits/capabilities documented; triples re-verified on toolchain bumps.
 - Web/game/GUI framework (if any) chosen with an explicit rubric—not as a stand-in for language competence.
-
----
 
 ## References
 

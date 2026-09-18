@@ -54,8 +54,6 @@ pong() ->
 
 **Why this matters.** Processes and message passing are the core concurrency model. OTP behaviours (gen_server, gen_statem) wrap the spawn/receive/link pattern and give you a standard structure; understanding the raw primitives helps you debug and reason about concurrent and distributed systems.
 
----
-
 ## Further reading
 
 - [Processes](https://www.erlang.org/doc/system/ref_man_processes)

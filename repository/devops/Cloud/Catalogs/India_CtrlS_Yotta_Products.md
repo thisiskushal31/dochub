@@ -4,8 +4,6 @@
 
 *Final choice page for India regional cloud / colo-adjacent offerings from **CtrlS** and **Yotta**. SKUs are thinner and more contract-shaped than hyperscalers—still decide with what / when / why not. Deeper detail: vendor portals and your MSA.*
 
----
-
 ## How to read this catalog
 
 | Shape | What it is | When | Why not |
@@ -18,8 +16,6 @@
 | **Connectivity / IX / cloud on-ramp** | Cross-connect, MPLS, partner interconnect | Hybrid to hyperscaler or enterprise WAN | VPN-only labs |
 
 Plant literacy (halls, power, cages): [Datacenter/](../../Datacenter/README.md). Tenant API habits still map to Floor 1 jobs.
-
----
 
 ## CtrlS — typical product families
 
@@ -35,8 +31,6 @@ Plant literacy (halls, power, cages): [Datacenter/](../../Datacenter/README.md).
 
 Exact SKU names move with marketing—map your quote to the **family** row above, then pin the contract SKU in runbooks.
 
----
-
 ## Yotta — typical product families
 
 | Family | What for | When | Why not |
@@ -49,8 +43,6 @@ Exact SKU names move with marketing—map your quote to the **family** row above
 | **Connectivity / fabric / on-ramps** | Hybrid | Colo↔cloud↔enterprise | No hybrid need |
 | **AI / GPU clusters** | Accelerators | Local train/serve | API-only GenAI |
 
----
-
 ## Choose matrix (India decision)
 
 | Situation | Prefer | Avoid |
@@ -60,8 +52,6 @@ Exact SKU names move with marketing—map your quote to the **family** row above
 | You already run metal in their hall | Colo + your hypervisor / kube (Datacenter + Containerization) | Buying IaaS twice for same racks |
 | Need Bedrock/Vertex/Azure OpenAI catalog | Hyperscaler AI chapter [33](../33_AI_And_ML_Platforms_On_Cloud.md) | Expecting identical FM SKUs on regional cloud |
 | DR in India only | Regional cloud or dual-hall colo | Single hall “DR” |
-
----
 
 ## How to use
 

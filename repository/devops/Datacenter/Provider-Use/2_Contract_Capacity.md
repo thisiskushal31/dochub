@@ -2,8 +2,6 @@
 
 [← Previous](./1_Qualify_A_Site.md) · [README](./README.md) · [Next: Order interconnect →](./3_Order_Interconnect.md)
 
----
-
 ## 1. Concepts
 
 Contract the **space/power product** clearly:
@@ -18,8 +16,6 @@ Contract the **space/power product** clearly:
 | **Cross-connect rights** | Often separate orderables |
 
 On-ramp contracts survey: [../2_Ownership_Colo_And_Contracts.md](../2_Ownership_Colo_And_Contracts.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -36,8 +32,6 @@ On-ramp contracts survey: [../2_Ownership_Colo_And_Contracts.md](../2_Ownership_
 ### How it connects
 
 Density reality: [White-Space/3](../White-Space/3_Power_Density_And_Floor_Loading.md). Electrical landing: [Electrical/11](../Electrical/11_Rack_PDU_A_And_B.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -57,8 +51,6 @@ Density reality: [White-Space/3](../White-Space/3_Power_Density_And_Floor_Loadin
 - Never verbal-only power promises  
 
 **Good:** written kW/A+B/hands/exit. **Bad:** handshake power; unlimited hands myth.
-
----
 
 ## References
 

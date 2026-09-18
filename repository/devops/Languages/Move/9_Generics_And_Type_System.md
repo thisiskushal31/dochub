@@ -54,8 +54,6 @@ Link to [Abilities](./5_Abilities.md) for conditional abilities on generic struc
 - **Systems:** Monomorphized or runtime-instantiated per chain implementation; still verified once per module graph.
 - **Security:** Constraints prevent generic code from copying resources accidentally.
 
----
-
 ## Further reading
 
 - [The Move Book — Generics](https://move-language.github.io/move/generics.html)

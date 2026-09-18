@@ -16,8 +16,6 @@ Chapter **[04](./04_Operators_Control_Flow_And_Loops.md)** covered flow. Strings
 
 Handbook default: **`ByVal` unless mutation of the caller’s variable is the point**; prefer overloads over boolean flag soup.
 
----
-
 ## 1. Concepts
 
 ### 1. `Sub` vs `Function`
@@ -144,8 +142,6 @@ End Function
 
 `Overloads` keyword clarifies intent when mixing with `Overrides` / shadows in inheritance hierarchies—use team conventions consistently.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Expression-bodied members literacy
@@ -176,8 +172,6 @@ Name reuse across inheritance uses `Overrides` / `Overridable` / `Shadows`. Wron
 
 VBA `ByRef` defaults and `Variant` parameters are a different contract—see [VBA modules/procedures](../VBA/02_Modules_Procedures_Option_Explicit_And_Scope.md). In VB.NET, assume **`ByVal` default** and typed parameters under Strict.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How procedures show up |
@@ -190,8 +184,6 @@ VBA `ByRef` defaults and `Variant` parameters are a different contract—see [VB
 
 **Whole-engineering picture:** procedure boundaries are your abstraction budget—`ByRef` and optional defaults silently couple callers across time.
 
----
-
 ## 4. Staff-level review checklist
 
 - New APIs default to **`ByVal`**; `ByRef` has a one-line justification.
@@ -202,8 +194,6 @@ VBA `ByRef` defaults and `Variant` parameters are a different contract—see [VB
 - Overloads are unambiguous at call sites under `Option Strict On`.
 - `Async Sub` is limited to event-handler shapes when async appears.
 - Public surface doesn’t expose mutable `Public` fields casually—properties or methods with intent.
-
----
 
 ## References
 

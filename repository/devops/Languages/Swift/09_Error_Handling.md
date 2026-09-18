@@ -8,8 +8,6 @@
 
 Swift treats recoverable failure as part of the type signature. Do not make force-try (`try!`) a habit — it converts failure into a crash. Picture errors as **labeled packages** on a conveyor: the type on the label tells the next station what to do; an unlabeled crash is a fire alarm, not a delivery.
 
----
-
 ## 1. Concepts
 
 ### 1. Errors are values that conform to `Error`
@@ -247,8 +245,6 @@ func valueOrThrow(_ n: Int?) throws -> Int {
 
 **What just happened.** Crashing is correct when continuing would corrupt unrecoverable state. Crashing because a JSON field was missing trains force-quit culture. Prefer `throw` for anything an operator or client might fix.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Typed throws (modern literacy)
@@ -444,8 +440,6 @@ Avoid using errors for ordinary control flow that is not failure (e.g. end-of-st
 
 Presentation via `LocalizedError.errorDescription` is for humans at the edge — never put tokens in those strings. Prefer closed error cases for logic; localize at the UI boundary.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -457,8 +451,6 @@ Presentation via `LocalizedError.errorDescription` is for humans at the edge —
 | **Software engineering** | Public APIs document thrown error types; tests assert cases, not only “threw something”; ban empty `catch` without justification; document when `fatalError` is intentional |
 
 Completion-handler APIs often surface `(Value?, Error?)`. Prefer migrating to `async throws` or a single `Result` rather than the ambiguous both-non-nil / both-nil cases.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -473,8 +465,6 @@ Completion-handler APIs often surface `(Value?, Error?)`. Prefer migrating to `a
 - Cancellation rethrown or mapped to an explicit cancel case (see chapter **10**).
 - `fatalError` / `Never` for true impossibilities; user/input failures use `throw`.
 - `defer` cleans up on throwing paths.
-
----
 
 ## References
 

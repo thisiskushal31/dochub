@@ -2,8 +2,6 @@
 
 [← Previous](./25_Governance_Permissions_And_Migration.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 ### APIs
@@ -41,15 +39,11 @@ Codify pipelines, teams, clusters, and related resources for reviewable org chan
 | **VS Code extension** | Editor convenience |
 | **Emojis / accessibility** | Product UX details |
 
----
-
 ## 2. Advanced concepts
 
 OAuth device/token exchange flows exist for some API clients — follow current API auth docs.
 
 GraphQL descriptions under `apis/` are generated encyclopedia — public handbook points here; do not paste the schema into notes.
-
----
 
 ## 3. Applications and use cases
 
@@ -60,8 +54,6 @@ GraphQL descriptions under `apis/` are generated encyclopedia — public handboo
 | Local “retry upload” | agent CLI `pipeline upload` |
 
 **Good:** token inventory with owners. **Bad:** org-admin token in CI logs.
-
----
 
 ## References
 

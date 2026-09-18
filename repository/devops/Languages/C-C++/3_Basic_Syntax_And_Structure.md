@@ -4,8 +4,6 @@
 
 This topic covers **basic C syntax** and **program structure**: statements, comments, tokens, identifiers, and the form of a typical C program. Each concept is explained in text first, then shown with short code blocks so you can write C in a clear, easy format.
 
----
-
 ## Program structure
 
 A C program is made of:
@@ -28,8 +26,6 @@ int main(void) {
 
 Here, **`#include <stdio.h>`** pulls in the standard I/O declarations (e.g. **printf**). For what each common header provides (**&lt;stdlib.h&gt;** for malloc, **&lt;string.h&gt;** for strlen, etc.), see **Preprocessor and file I/O** (topic 12). The `main` function has one statement that prints `x` and one that returns 0.
 
----
-
 ## Statements and semicolons
 
 A **statement** is a complete instruction. In C, statements end with **`;`**. Missing semicolons cause compile errors.
@@ -50,8 +46,6 @@ Multiple statements can be grouped in **blocks** with **`{ }`**. Variables decla
 /* y is not visible here */
 ```
 
----
-
 ## Comments
 
 **Comments** are ignored by the compiler. Use them to document intent.
@@ -67,8 +61,6 @@ Multiple statements can be grouped in **blocks** with **`{ }`**. Variables decla
 
 int n = 0;  /* inline comment */
 ```
-
----
 
 ## Tokens and identifiers
 
@@ -86,8 +78,6 @@ int _value;
 int max_count_2;   /* valid */
 /* int 2bad;       invalid: cannot start with digit */
 ```
-
----
 
 ## The main function
 
@@ -108,8 +98,6 @@ int main(int argc, char *argv[]) {
    return 0;
 }
 ```
-
----
 
 ## printf and format specifiers
 
@@ -133,8 +121,6 @@ printf("x = %d, d = %f\n", x, d);
 printf("char: %c\n", 'A');
 ```
 
----
-
 ## Basic syntax rules (summary)
 
 | Element | Rule |
@@ -146,8 +132,6 @@ printf("char: %c\n", 'A');
 | Case | C is case-sensitive |
 
 These rules apply everywhere in C; the next topics add **data types**, **operators**, and **control flow** using the same syntax.
-
----
 
 ## Further reading
 

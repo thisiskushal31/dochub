@@ -4,15 +4,11 @@
 
 This covers **Arch-based** distributions: **Arch Linux**, **Manjaro**, **EndeavourOS**. They use **pacman** as the package manager and follow a **rolling release** model: there are no fixed “versions”; you get continuous updates. This section goes **in depth**: pacman, repository configuration, AUR, init, and maintenance so you can run and administer these distros confidently.
 
----
-
 ## Rolling release and philosophy
 
 - **Rolling release** — No major “upgrade” step; you regularly run `pacman -Syu` and get the latest packages. Breakage, when it happens, is usually due to config or manual changes, not a big dist-upgrade.
 - **Arch** — Minimal base; you add what you need. Config is done by editing files; the Arch Wiki is the primary reference.
 - **Manjaro / EndeavourOS** — Preconfigured installers and desktops; Manjaro may hold packages briefly for testing. Same pacman and AUR underneath.
-
----
 
 ## Package management: pacman
 
@@ -54,8 +50,6 @@ Include = /etc/pacman.d/mirrorlist
 
 Mirrors are listed in **/etc/pacman.d/mirrorlist** (one URL per line). After editing, run `pacman -Syu`.
 
----
-
 ## Arch User Repository (AUR)
 
 The **AUR** holds **PKGBUILD** scripts (and sometimes patches) that build packages not in the official repos. You don’t install “from” the AUR directly; you use a **helper** (e.g. **yay**, **paru**) that downloads the PKGBUILD, runs `makepkg`, and installs the resulting package with pacman.
@@ -83,8 +77,6 @@ makepkg -si    # -s install deps, -i install the built package
 
 **Safety:** AUR packages are user-submitted. Check the PKGBUILD and comments before building; prefer official repos when possible.
 
----
-
 ## Systemd and services
 
 Arch and most derivatives use **systemd**. Same commands as elsewhere:
@@ -97,15 +89,11 @@ sudo systemctl status nginx
 
 **Logs:** `journalctl -b -u Nginx`, `journalctl -f`, etc.
 
----
-
 ## Maintenance and troubleshooting
 
 - **After kernel update:** Reboot or at least reload drivers; if you use DKMS modules (e.g. nvidia), they rebuild on kernel update.
 - **Pacman lock:** If another pacman is running, wait. If a previous run crashed, remove `/var/lib/pacman/db.lck` and run again.
 - **Broken deps:** `pacman -Syu` may report conflicts. Read the message; sometimes you need to remove a conflicting package or install a replacement (e.g. provided by the community). Arch Wiki has “Fixing broken packages” and “Downgrading packages”.
-
----
 
 ## Summary
 
@@ -113,8 +101,6 @@ sudo systemctl status nginx
 - **Config:** `/etc/pacman.conf`, `/etc/pacman.d/mirrorlist`; always run `pacman -Syu` regularly.
 - **Manjaro/EndeavourOS** = Arch-based with easier install; same pacman and AUR.
 - **Services and logs:** systemd, journalctl.
-
----
 
 ## Further reading
 

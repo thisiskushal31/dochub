@@ -142,8 +142,6 @@ On the JVM, Kotlin compiles interface members with bodies to default methods. Yo
 
 Using inheritance and interfaces well keeps type hierarchies clear and avoids leaking uninitialized state. The next topic covers null safety, which affects how you design APIs and handle optional values across these types.
 
----
-
 ## Further reading
 
 - [Inheritance](https://kotlinlang.org/docs/inheritance.html)

@@ -36,8 +36,6 @@ go test -race ./...
 go build -race -o app .
 ```
 
----
-
 ## Further reading
 
 - [The Go Programming Language Specification: Go statements](https://go.dev/ref/spec#Go_statements)

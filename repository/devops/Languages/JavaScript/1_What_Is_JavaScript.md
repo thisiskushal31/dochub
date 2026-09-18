@@ -2,21 +2,15 @@
 
 JavaScript is a programming language that was created to add behavior to web pages. Programs written in it are called **scripts**: they are delivered and run as plain text and do not require a separate compile step. Today JavaScript runs not only in the browser but on servers, in tooling, and on many devices that have a **JavaScript engine**. This topic answers what the language is, why it exists, where it runs, and how it fits into the broader engineering picture—from basics for someone with no prior exposure to the role it plays in front-end, backend, and DevOps.
 
----
-
 ## What is JavaScript?
 
 JavaScript was designed to make web pages interactive. Scripts are typically embedded in or linked from HTML and run when the page loads (or when events occur). The language is **interpreted**: the engine reads the source and executes it. In practice, modern engines also compile code to machine code for speed, but from the developer’s perspective there is no separate “compile” step; you edit text and the environment runs it.
 
 The name “JavaScript” is historical; the language is not a variant of Java. It has its own standard, **ECMAScript**, which defines the syntax and core behavior. Implementations (browser engines, Node.js) follow this standard and add environment-specific APIs (e.g. DOM in the browser, `fs` in Node). The standard is versioned (ES3, ES5, ES2015/ES6, ES2016–ES2024, etc.); new features are added over time (e.g. `let`/`const`, arrow functions, classes, modules, `async`/`await`). Engines support a certain set of features; "ES6 support" or "ES2020" refers to which part of the standard is implemented. For very old environments you may need to transpile (e.g. Babel) or polyfill.
 
----
-
 ## Scripts and execution
 
 A script is just text. You write it in a file or inside a `<script>` tag in HTML. The engine parses the text, compiles or interprets it, and runs it. That makes iteration fast: change the code, reload (or rerun), and see the result. There is no separate binary to build or ship; the same script can run in any environment that supports the same ECMAScript version and the APIs you use (e.g. DOM, Node modules).
-
----
 
 ## Where JavaScript runs: the engine
 
@@ -32,8 +26,6 @@ Knowing the engine name (e.g. V8) helps when reading documentation or compatibil
 
 **Single-threaded execution and the event loop.** JavaScript runs one block of code at a time on a single thread. When you wait for I/O (e.g. a network response, a timer), the engine does not block the thread; it registers a callback and continues. When the I/O completes, the callback is scheduled to run. The **event loop** is the mechanism that takes tasks from a queue and runs them one after another. So asynchronous behavior (timers, fetch, promises) is cooperative: no threads, but non-blocking. That has implications for exception handling (errors in a callback run in that callback’s turn; they are not caught by a `try/catch` that wrapped the call that *scheduled* the callback).
 
----
-
 ## What in-browser JavaScript can do
 
 In the browser, JavaScript can:
@@ -44,8 +36,6 @@ In the browser, JavaScript can:
 - **Remember data on the client:** Use storage APIs (e.g. `localStorage`, `sessionStorage`, cookies) within the limits imposed by the browser.
 
 So in-browser JavaScript is focused on the page, the user, and the server the page came from. It is a “safe” language in the sense that it does not give arbitrary low-level access to the machine; the engine and the browser restrict what scripts can do.
-
----
 
 ## What in-browser JavaScript cannot do
 
@@ -60,8 +50,6 @@ These limits apply to JavaScript running in the browser. In other environments (
 
 **Security from an engineering perspective.** In-browser JavaScript is a common attack surface. **Cross-site scripting (XSS)** occurs when untrusted data is inserted into the page and executed as script; mitigation involves escaping output, Content-Security-Policy headers, and avoiding `eval` or innerHTML with user input. **Injection** (e.g. into `eval`, `new Function`, or DOM APIs) can run arbitrary code. Same-origin policy and CORS constrain cross-origin data and scripts. When you use JavaScript for DevOps tooling or Node backends, the same language rules apply, but the process has OS-level access, so dependency supply chain (npm), input validation, and least privilege matter for security.
 
----
-
 ## What makes JavaScript widely used
 
 Several factors explain its widespread use:
@@ -75,8 +63,6 @@ So JavaScript is used for front-end UIs, for server-side and serverless backends
 
 **When to use browser vs Node.** Use the **browser** when the goal is to drive a web page: UI, user interaction, and talking to your own (or third-party) APIs. Use **Node.js** when the goal is to run scripts on a machine or server: file system, processes, long-running services, or CLI tools. The same language and many of the same patterns (promises, async/await, modules) apply in both; the difference is the set of globals and APIs (e.g. `window` and `Document` vs `process` and `require`). Hybrid setups (e.g. Electron, React Native) expose a subset of APIs so one codebase can target different environments.
 
----
-
 ## Languages that compile or transpile to JavaScript
 
 The syntax and semantics of JavaScript do not fit every team or every problem. Many languages **transpile** (compile) to JavaScript so that code runs in the same environments (browser, Node) while the developer writes in another language. Examples:
@@ -86,13 +72,9 @@ The syntax and semantics of JavaScript do not fit every team or every problem. M
 
 Even when using such a language, understanding JavaScript is important: the runtime is JavaScript, debugging often involves generated JS, and interoperability with existing JavaScript libraries is central.
 
----
-
 ## Summary
 
 JavaScript is a scripting language created for the web and now used in browsers, on servers, and in tooling. Scripts are plain text and are executed by a JavaScript engine (e.g. V8, SpiderMonkey). In the browser, JavaScript can manipulate the page, handle events, and talk to the server, but it is restricted by the same-origin policy and security rules. Its position as the default browser language and its use in Node.js and elsewhere make it relevant across software engineering, DevOps, and security. Other languages that transpile to JavaScript (e.g. TypeScript) rely on this same runtime and ecosystem.
-
----
 
 ## Further reading
 

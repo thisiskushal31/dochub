@@ -6,8 +6,6 @@ Deploying is not finishing. Continuous Delivery expects **evidence** the new ver
 
 Related: strategies ([3](./3_Deployment_Strategies.md)), observability ([Observability/](../Observability/README.md)), DORA recovery ([Methodologies/5](../Methodologies/5_DORA_And_Delivery_Metrics.md)).
 
----
-
 ## Verification layers
 
 | Layer | What it checks | When |
@@ -21,8 +19,6 @@ Related: strategies ([3](./3_Deployment_Strategies.md)), observability ([Observa
 Google Cloud Deploy’s “verify” phase is one product example of **orchestrated post-deploy tests** that fail the rollout when checks fail — the *idea* (verify as a first-class stage) is portable.
 
 Kubernetes readiness proves “pod accepts traffic,” not “business journey works.” Use both.
-
----
 
 ## Smoke vs synthetic vs canary
 
@@ -38,8 +34,6 @@ Deploy digest
 - **Synthetics:** catch “it’s up but checkout is broken” after the deploy job is green.
 
 Tool literacy (examples, not endorsements): k6 (load/API scripts), Playwright/Cypress (browser e2e in CI or smoke), curl/httpie health scripts, vendor synthetic products. Pick what your stack can run reliably.
-
----
 
 ## Minimal smoke job shape
 
@@ -63,8 +57,6 @@ Fail the stage on non-zero exit. Tie the same checks to auto-rollback when your 
 
 DAST against preview envs (when appropriate): [Security/ZAP](../Security/ZAP/README.md).
 
----
-
 ## Rollback vs roll-forward
 
 | Option | Meaning | Prefer when |
@@ -74,8 +66,6 @@ DAST against preview envs (when appropriate): [Security/ZAP](../Security/ZAP/REA
 | **Flag off** | Disable the feature without binary change | Change was flag-gated ([3](./3_Deployment_Strategies.md)) |
 
 Rollback must redeploy a **stored digest**, not “rebuild main from yesterday and hope.”
-
----
 
 ## Rollback decision tree
 
@@ -94,8 +84,6 @@ Verify failed or SLO burning after deploy?
 **Auto-rollback** when: smoke/canary fail closed, rollback is tested, schema allows.  
 **Human gate** when: data repair risk, multi-service partial deploy, ambiguous metrics (SRE canary guidance: avoid acting on noisy whole-service signals alone).
 
----
-
 ## Promotion gates
 
 ```text
@@ -108,8 +96,6 @@ DEV / preview  →  staging  →  prod
 
 Each promote moves the **same artifact** ([4](./4_Artifacts_And_Registries.md)). Add manual approval only where Continuous Delivery policy requires it — not as a substitute for automation.
 
----
-
 ## Link to observability
 
 - Annotate deploys on dashboards (change events).  
@@ -117,8 +103,6 @@ Each promote moves the **same artifact** ([4](./4_Artifacts_And_Registries.md)).
 - Feed canary dimensions (version/track labels) into metrics.
 
 Deeper: [Observability/](../Observability/README.md).
-
----
 
 ## Pitfalls
 

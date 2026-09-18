@@ -6,10 +6,6 @@
 
 Cron and minimal environments, systemd timers, containers, exit codes, logging to stdout/stderr, file locking, and idempotent jobs. Reliability topics include timeouts, retries with backoff, and dead-letter handling for failed runs.
 
----
-
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -31,25 +27,17 @@ Always capture **stderr**; Perl **warnings** often land there while the script s
 
 **`MAILTO`, timezone, locale:** **`cron`** emails **stderr** when **`MAILTO`** is set—many teams disable mail and rely on **logs** instead; ensure your **log shipper** still sees **stderr**. **`TZ`** may differ from **interactive** shells—set **`TZ=UTC`** (or your canonical zone) in the **wrapper** for reproducible timestamps. **`LC_*`** affects **`sort`**, **`sprintf`** of numbers, and some **regex** classes—pin locale in **CI** to match **production** when comparisons matter (see **perllocale**).
 
----
-
 ### 2. Exit codes and monitoring
 
 Convention: **0** means success; non-zero means failure. Orchestrators and Nagios-style checks key off exit status. **`die`** exits non-zero; document expected codes in runbooks when scripts distinguish failure modes (e.g. 2 = bad config, 3 = upstream timeout).
-
----
 
 ### 3. Locking
 
 Use **`flock`** on a dedicated lockfile to prevent overlapping cron invocations when a job can run longer than its schedule. On NFS, **`flock`** semantics may be unreliable — use **`File::NFSLock`**, a database advisory lock, or a lease in Redis/etcd for distributed schedulers.
 
----
-
 ### 4. Containers
 
 Ship one **Perl** minor per image; record **`perl -V`** in build logs. Prefer read-only root filesystems and writable volumes only where needed. Health checks should exercise real dependencies (database, queue), not only “process is alive.”
-
----
 
 ## 2. Advanced concepts
 
@@ -61,16 +49,12 @@ Ship one **Perl** minor per image; record **`perl -V`** in build logs. Prefer re
 
 **Resource limits:** **`LimitNOFILE`**, **`MemoryMax=`**, and **cgroup** settings apply to **`perl`** the same as any binary—raise **fd** limits when scripts open many **sockets** or **temp** files.
 
----
-
 ## 3. Applications and use cases
 
 - **Nightly reports and batch:** **Cron** **wrappers** with **absolute** **`perl`**, **`flock`**, **stderr** to **logs**—**warnings** on **stderr** with **exit 0** still need **alerting** rules.
 - **Kubernetes CronJob:** **Idempotent** **jobs**—**no** **exactly-once** without **external** **lease**; **duplicate** **pods** are **normal** under **retry**.
 - **systemd timers:** **Replace** **cron** for **dependency** ordering and **journald** **integration**—document **`PERL5LIB`** in **unit** **files** (concepts above).
 - **Cross-platform deploys:** Same **script** on **Linux** **containers** and **Windows** **runners**—**perlport** + **path** discipline (References).
-
----
 
 ## References
 

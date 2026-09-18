@@ -2,8 +2,6 @@
 
 [← Previous](./6_Optics_DAC_AOC_Transceivers.md) · [README](./README.md) · [Next: Serial console servers →](./8_Serial_Console_Servers.md)
 
----
-
 ## 1. Concepts
 
 Some halls need **accurate, traceable time**—trading, telco, regulated workloads, distributed databases. **PTP** (Precision Time Protocol, IEEE 1588) and related stacks discipline clocks far tighter than NTP alone.
@@ -20,8 +18,6 @@ A **grandmaster** (GM) is the time source appliance (often GNSS/GPS-fed) that th
 | Host NICs with hardware timestamping | Servers that need ns-class sync |
 
 Not every datacenter has this—recognize when you are in a timing-critical environment.
-
----
 
 ## 2. Advanced concepts
 
@@ -47,8 +43,6 @@ Network equipment must support the chosen PTP profile. Fabric physical roles sti
 
 GNSS visibility, regulatory profiles (telecom/power/finance), and antenna permissions differ by site. Dual-GM and multi-constellation are common hardening patterns.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -67,8 +61,6 @@ GNSS visibility, regulatory profiles (telecom/power/finance), and antenna permis
 - Never treat consumer GPS USB dongles as GM  
 
 **Good:** redundant GM, monitored lock/holdover, PTP-aware path. **Bad:** single GM; NTP hope for ns apps; antenna afterthought.
-
----
 
 ## References
 

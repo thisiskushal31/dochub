@@ -61,8 +61,6 @@ For **native** debugging, use **debug-info builds** (compiler and linker flags) 
 - Design **logs and metrics** for on-call use; Nim does not replace your observability backend.
 - For **security-sensitive** code, add tests at **FFI boundaries** and under **multiple `--mm`** modes if you support them.
 
----
-
 ## Further reading
 
 - [Tools overview](https://nim-lang.org/docs/tools.html)

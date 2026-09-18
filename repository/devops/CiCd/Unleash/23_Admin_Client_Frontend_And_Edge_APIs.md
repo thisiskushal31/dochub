@@ -2,8 +2,6 @@
 
 [← Previous](./22_Config_Catalog_Migrate_And_Spectrum.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 This chapter is the **full HTTP surface** Unleash publishes (OpenAPI **v8.0.3** for server APIs; Edge **v20.4.0**). You do not need to install or open Swagger first: every documented endpoint is listed below with method, path, and purpose.
@@ -29,8 +27,6 @@ SDK *methods* (what apps call) live in [09](./09_SDKs_Backend_Frontend_And_OpenF
 | Frontend API | 4 |
 | Edge API | 14 |
 | Admin API | 376 |
-
----
 
 ## 2. Advanced concepts
 
@@ -63,7 +59,6 @@ Base: `/api/frontend`. Returns **evaluated** flags for a context (query or POST 
 | `POST` | `/api/frontend/client/metrics` | Register client usage metrics |
 | `POST` | `/api/frontend/client/register` | Register a client SDK |
 
-
 ### Edge API
 
 Edge speaks Client + Frontend compatible routes, plus extras: POST features, frontend `/all`, per-flag frontend GET/POST, bulk metrics.
@@ -91,7 +86,6 @@ Edge speaks Client + Frontend compatible routes, plus extras: POST features, fro
 | `POST` | `/api/frontend/client/register` | frontend_register_client |
 | `GET` | `/api/frontend/features/{feature_name}` | frontend_get_feature |
 | `POST` | `/api/frontend/features/{feature_name}` | frontend_post_feature |
-
 
 Edge-adjacent Admin/client routes also appear under Admin **Unleash Edge** (streaming, heartbeats, token issue/validate) — listed in the Admin catalog below.
 
@@ -647,12 +641,9 @@ Tag index: API tokens (5) · Addons (6) · Admin UI (8) · Archive (4) · Auth (
 | `DELETE` | `/api/admin/user-admin/{id}` | Delete a user |
 | `DELETE` | `/api/admin/user-admin/scim-users` | Delete all SCIM users |
 
-
 ### What this is not
 
 Request/response JSON schemas, error codes per status, and generated examples still live in OpenAPI — they drift every minor release. The **operation list** is the literacy you need before generating a client.
-
----
 
 ## 3. Applications and use cases
 
@@ -671,8 +662,6 @@ Request/response JSON schemas, error codes per status, and generated examples st
 - Treat this list as the contract; confirm schema on `/docs/openapi.json` for your version  
 
 **Good:** backend SDK on Client API; humans/automation on Admin. **Bad:** `curl` Admin from every microservice on each request.
-
----
 
 ## References
 

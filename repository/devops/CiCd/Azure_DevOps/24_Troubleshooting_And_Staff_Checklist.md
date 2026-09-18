@@ -2,8 +2,6 @@
 
 [← Previous](./23_YAML_And_Task_Configuration_Catalog.md) · [README](./README.md) · [Next: Platform management →](./25_Platform_Management_Wiki_Analytics_Billing_Audit.md)
 
----
-
 ## 1. Concepts — frequent failures
 
 | Symptom | Likely cause | Where to look |
@@ -16,8 +14,6 @@
 | Classic release weirdness | UI definition drift | [09](./09_Environments_Approvals_Checks_And_Classic_Releases.md) |
 | PR not blocked | Branch policy missing build validation | [17](./17_Azure_Repos_Git_And_TFVC.md) |
 
----
-
 ## 2. Advanced concepts — debug moves
 
 - Re-run failed job with **system diagnostics** / verbose logs when needed.  
@@ -25,8 +21,6 @@
 - For Azure failures: check activity log + service connection identity role assignments.  
 - Template compile errors: expand templates locally or use editor validation.  
 - Server-only: verify version feature gates and agent compatibility.
-
----
 
 ## 3. Applications and use cases — staff checklist
 
@@ -44,8 +38,6 @@
 - Spectrum row chosen deliberately (App Service vs VM vs AKS vs GitOps) — [21](./21_Best_Practices_And_Delivery_Spectrum.md)  
 - Boards/Repos/Test Plans enabled only if the team actually uses them  
 - Rollback path known (slot swap, previous revision, previous image digest, IaC revert)
-
----
 
 ## References
 

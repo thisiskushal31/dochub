@@ -2,8 +2,6 @@
 
 [← Previous](./01_What_Is_Flux_And_GitOps_Toolkit.md) · [README](./README.md) · [Next: Architecture →](./03_Architecture_And_Controllers.md)
 
----
-
 ## 1. Concepts
 
 Think of Flux as two steps that repeat forever:
@@ -55,8 +53,6 @@ spec:
 
 Flux re-checks Sources on an **interval**, and can react sooner via **webhooks** ([14](./14_Notifications_Alerts_And_Receivers.md)). When the Source gets a new revision, delivery objects apply it — usually right away, not only when their own timer fires.
 
----
-
 ## 2. Advanced concepts
 
 ### Gitless GitOps
@@ -79,8 +75,6 @@ Setting `suspend: true` pauses work on that object. Use for break-glass; don’t
 
 After a successful apply, Flux can detect someone changed the cluster out of band and put it back (Kustomize path uses server-side apply; Helm has its own drift modes — [08](./08_Kustomization_Controller.md), [09](./09_HelmRelease_And_Helm_Delivery.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Need | Start with |
@@ -91,8 +85,6 @@ After a successful apply, Flux can detect someone changed the cluster out of ban
 | Faster than waiting for the poll | Receiver webhook |
 
 **Good:** pin tags/digests on purpose. **Bad:** always track mutable `latest`.
-
----
 
 ## References
 

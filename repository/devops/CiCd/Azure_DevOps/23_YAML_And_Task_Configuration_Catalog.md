@@ -2,8 +2,6 @@
 
 [← Previous](./22_Feature_And_Configuration_Coverage_Map.md) · [README](./README.md) · [Next: Troubleshooting →](./24_Troubleshooting_And_Staff_Checklist.md)
 
----
-
 ## 1. Concepts — configuration surfaces
 
 | Surface | What you set |
@@ -19,8 +17,6 @@
 | Feeds | Azure Artifacts permissions, upstreams, retention |
 
 Exact keys: [YAML schema](https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema) for your agent/task versions — this catalog names **kinds** of knobs.
-
----
 
 ## 2. Advanced concepts — task families (deploy)
 
@@ -44,13 +40,9 @@ Exact keys: [YAML schema](https://learn.microsoft.com/en-us/azure/devops/pipelin
 | Staging | Auto deploy on `main`; federated connection |
 | Prod | Approvals; separate connection; digest pins |
 
----
-
 ## 3. Applications and use cases
 
 Use as a PR checklist: every non-default YAML block should have a one-line reason.
-
----
 
 ## References
 

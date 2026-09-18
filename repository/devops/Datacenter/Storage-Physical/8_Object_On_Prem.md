@@ -2,8 +2,6 @@
 
 [← Previous](./7_Software_Defined_Ceph_vSAN_Kin.md) · [README](./README.md) · [Next: Snapshots vs backups →](./9_Snapshots_Vs_Backups_Vs_Replication.md)
 
----
-
 ## 1. Concepts
 
 **Object storage** (S3-compatible APIs: Ceph RGW, MinIO-class, appliance object) stores objects by key in buckets—ideal for backups, artifacts, data lakes landing, and cloud-like apps on-prem.
@@ -13,8 +11,6 @@
 Gateway nodes + disk pools (often same SDS); load-balanced HTTPS endpoints; sometimes dedicated object appliances.
 
 Engine/API depth can live with data platforms; this chapter is **hall placement and durability**.
-
----
 
 ## 2. Advanced concepts
 
@@ -40,8 +36,6 @@ DNS/LB placement: [Fabric-Physical/9](../Fabric-Physical/9_Load_Balancer_Applian
 
 S3 API dialect quirks exist—certify backup tools against *your* gateway. Durability jobs identical.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -60,8 +54,6 @@ S3 API dialect quirks exist—certify backup tools against *your* gateway. Durab
 - Never confuse local object with offsite backup  
 
 **Good:** HA gateways, versioning/lock, offsite copy. **Bad:** single MinIO VM as “backup”; keys in images; one-site only.
-
----
 
 ## References
 

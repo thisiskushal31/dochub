@@ -8,8 +8,6 @@ A **role map** for the Vyper track: what contract engineers, security reviewers,
 
 This is ecosystem **literacy**, not a product manual for any pool, DEX, or vault brand. Shared EVM breadth: [Solidity](../Solidity/README.md). Clients: [TypeScript](../TypeScript/README.md) / [JavaScript](../JavaScript/README.md). Next doors: chapter **[16](./16_Where_Vyper_Is_Going_And_Adjacent_Doors.md)**.
 
----
-
 ## 1. Concepts
 
 ### 1. What you can do after this track
@@ -113,8 +111,6 @@ Healthy polyglot posture:
 
 Wrong-hammer smell: “we wrote a Vyper contract because we like Python” for a problem that should be a cron job and a database.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Polyglot EVM repos are normal
@@ -160,8 +156,6 @@ Unifying on one language can be right when:
 
 It is wrong when the only driver is aesthetics. Keep the risk budget explicit in the RFC.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Vyper angle |
@@ -177,8 +171,6 @@ Cross-link Solidity use-case chapters when the question is token standards bread
 
 **Whole-engineering picture:** Vyper is a **component language** in many orgs—not an all-or-nothing religion.
 
----
-
 ## 4. Staff-level review checklist
 
 - Role “done” definitions agreed for the project.
@@ -191,8 +183,6 @@ Cross-link Solidity use-case chapters when the question is token standards bread
 - Brownfield Brownie/0.3.x called out if present.
 - Titanoboa (or documented exception) gates Vyper PRs.
 - Next-skill plan exists (chapter **16**) instead of endless syntax drilling.
-
----
 
 ## References
 

@@ -8,8 +8,6 @@ A **defense and review** posture for Tcl automation: **`eval` / double evaluatio
 
 Default narrative: **Tcl 9.0.x** behavior, with **8.6** brownfield called out where security-relevant defaults differ (encoding, path habits). Pair with chapters **03** (substitution), **08** (`exec`/channels), **10** (packages), **12** (interps), and **15** (Expect).
 
----
-
 ## 1. Concepts
 
 ### 1. Threat model for Tcl scripts (one breath)
@@ -119,8 +117,6 @@ Literacy—not a full sandbox course:
 - Aliases back into a trusted master interp must not reintroduce confused-deputy holes.
 - For true multi-tenant hostility, combine restricted interps with OS containers/VMs and least-privilege accounts.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Substitution is the root mechanism
@@ -212,8 +208,6 @@ Respond with containment, rotation, and root-cause on the trust boundary—not w
 - Secrets: inject late, log never, rotate on spill.
 - Pin packages; read-only install trees in prod images.
 
----
-
 ## 3. Applications and use cases
 
 ### Operations
@@ -257,8 +251,6 @@ Respond with containment, rotation, and root-cause on the trust boundary—not w
 
 Use severity to drive conversation; still require fixes for block-level issues.
 
----
-
 ## Staff-level review checklist
 
 - Untrusted input never reaches `eval` / `subst` / dynamic `source` without a proven validator.
@@ -271,8 +263,6 @@ Use severity to drive conversation; still require fixes for block-level issues.
 - Privileged automation runs on least-privilege accounts with audited access to modify scripts.
 - Tcl 9 vs 8.6 differences considered for encoding/path validation on brownfield hosts.
 - No “test credentials” left in examples that match production patterns.
-
----
 
 ## References
 

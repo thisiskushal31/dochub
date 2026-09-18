@@ -2,8 +2,6 @@
 
 [← Previous](./11_Reading_Foreign_Site_Docs.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 Hyperscale / large cloud DC ops use the **same physics vocabulary** (power, cool, fabric, failure domains) with **different tooling, automation, and secrecy**.
@@ -16,8 +14,6 @@ Hyperscale / large cloud DC ops use the **same physics vocabulary** (power, cool
 | Shared incident *classes* | Their internal dashboards |
 
 Markets: [Markets/8](../Markets-And-Operators/8_Tenant_Cloud_Vs_Landlord.md), [Markets/16](../Markets-And-Operators/16_Architecture_Shapes_By_Operator_Class.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -38,8 +34,6 @@ Integration walks, taxonomy, capacity conversation, safety culture, dual-path th
 
 Every hyperscaler differs; honesty rule is universal: **no fanfic floor plans**.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -57,8 +51,6 @@ Every hyperscaler differs; honesty rule is universal: **no fanfic floor plans**.
 - Never draw fake UPS rooms for AWS  
 
 **Good:** portable vocabulary + humility. **Bad:** invented internals; colo metaphors forced onto API clouds.
-
----
 
 ## References
 

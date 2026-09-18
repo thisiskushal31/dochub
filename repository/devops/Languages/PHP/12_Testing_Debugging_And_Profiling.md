@@ -6,8 +6,6 @@
 
 Test pyramid tradeoffs for PHP services, PHPUnit configuration and bootstrap order, parallel test execution pitfalls, static analysis level ramps, Xdebug modes (debug vs profile vs coverage) and why they must stay off production pools, lightweight profilers, and OpenTelemetry-style tracing concerns. Later chapters tie CI gates to Composer scripts and deploy hygiene.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the PHP [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -20,37 +18,25 @@ Unit tests isolate classes with doubles; integration tests hit databases, queues
 php vendor/bin/phpunit --testsuite unit
 ```
 
----
-
 ### 2. Static analysis
 
 PHPStan and Psalm infer types beyond runtime checks. Baseline files track legacy debt intentionally; raising levels without fixing noise hides regressions. Run analyzers on the same PHP minor as production.
-
----
 
 ### 3. Xdebug
 
 Xdebug provides step debugging, profiling (cachegrind), and coverage collection. Enabling it in FPM multiplies latency and memory—use separate debug images or toggleable builds. Never ship Xdebug-enabled pools to customer-facing tiers.
 
----
-
 ### 4. Profiling alternatives
 
 Sampling profilers (SPX, Excimer-based tools) reduce overhead for staging mirrors. Always profile with Opcache settings similar to production—debug settings distort results.
-
----
 
 ### 5. Observability
 
 Logs, metrics, and traces complement tests. Propagate trace context through nginx, PHP, and outbound HTTP clients; align span names with route names for SLO dashboards.
 
----
-
 ### 6. Contract and integration tests
 
 HTTP-layer contract tests (Pact-style) and schema-driven API tests catch mismatches between PHP services and consumers without booting browsers. They complement PHPUnit: use them when multiple teams ship independently.
-
----
 
 ## 2. Advanced concepts
 
@@ -68,8 +54,6 @@ HTTP-layer contract tests (Pact-style) and schema-driven API tests catch mismatc
 
 **Environment isolation:** Tests must not read real `.env` from disk accidentally—use `phpunit.xml` `env` entries and fail CI if `APP_ENV=production` slips into test bootstrap.
 
----
-
 ## 3. Applications and use cases
 
 - **CI gates:** Require unit + static analysis + `composer audit` on default branch merges.
@@ -77,8 +61,6 @@ HTTP-layer contract tests (Pact-style) and schema-driven API tests catch mismatc
 - **On-call:** Reproduce with same env vars and feature flags; avoid copying production secrets into laptops—use synthetic data.
 - **Performance budgets:** Synthetic checks for p95 route latency catch ORM regressions early.
 - **Security:** Redact Authorization headers and cookies from debug dumps shared in tickets.
-
----
 
 ## References
 

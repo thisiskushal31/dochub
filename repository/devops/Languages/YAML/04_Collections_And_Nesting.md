@@ -6,8 +6,6 @@
 
 How mappings and sequences nest into real configs: lists of maps, maps of lists, nested objects, empty nodes, and reading order for large files. Builds on chapter **02**.
 
----
-
 ## 1. Concepts
 
 ### 1. Trees of three primitives
@@ -64,8 +62,6 @@ env: {}
 
 Use explicit empties when the host distinguishes “absent key” from “present but empty.”
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Mixed indent bugs
@@ -105,8 +101,6 @@ You can mix styles: a block mapping whose value is a flow sequence, etc. Keep mi
 
 Older examples use mapping-as-set (keys with null values) or ordered-map encodings. Modern infra hosts almost always want ordinary maps and sequences. Do not invent set encodings unless the host schema says so.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Nesting role |
@@ -119,8 +113,6 @@ Older examples use mapping-as-set (keys with null values) or ordered-map encodin
 
 **Whole-engineering picture:** nesting skill is **reading speed**—the ability to see the tree the tool will load.
 
----
-
 ## 4. Staff-level review checklist
 
 - Every `-` list item’s children are indented under that item.
@@ -128,8 +120,6 @@ Older examples use mapping-as-set (keys with null values) or ordered-map encodin
 - Empty vs omitted fields are intentional.
 - Sequence order matters only where the host defines order semantics.
 - Deep copy-paste nests are flagged for anchors/generators or split files.
-
----
 
 ## References
 

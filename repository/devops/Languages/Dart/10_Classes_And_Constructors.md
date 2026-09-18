@@ -4,8 +4,6 @@
 
 **Classes** are blueprints for **objects**: they define **state** (instance variables) and **behavior** (methods). In Dart, every object is an instance of a class, and all classes (except **Null**) inherit from **Object**. You create instances with **constructors**. This topic covers the main constructor kinds—**generative**, **named**, **constant**, **factory**, and **redirecting**—and when to use each so you can model data and behavior in a clear, reusable way.
 
----
-
 ## Declaring a class
 
 Define a class with **`class`**, instance variables, and methods. Use **`.`** to access members; use **`?.`** when the receiver might be null.
@@ -27,8 +25,6 @@ class Point {
 var p = Point(2, 2);
 double d = p.distanceTo(Point(4, 4));
 ```
-
----
 
 ## Constructors
 
@@ -70,13 +66,9 @@ class Logger {
 
 **Redirecting constructors** delegate to another constructor in the same class using **`: this(...)`** in the initializer list.
 
----
-
 ## Instance variables
 
 Instance variables can be **final** (set once, often by the constructor). They are **nullable** or non-nullable like any other variable. If not initialized, non-nullable instance variables must be set in the constructor initializer list or body before the constructor completes.
-
----
 
 ## Further reading
 

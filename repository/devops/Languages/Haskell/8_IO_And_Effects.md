@@ -47,8 +47,6 @@ sequence_ = foldr (>>) (return ())
 putStr s = sequence_ (map putChar s)
 ```
 
----
-
 ## Further reading
 
 - [Haskell 2010 report – I/O and standard types](https://haskell.org/onlinereport/haskell2010/)

@@ -2,8 +2,6 @@
 
 [← Previous](./06_First_Pipeline_And_CI_UI.md) · [README](./README.md) · [Next: Rules →](./08_Rules_Workflow_And_Pipeline_Types.md)
 
----
-
 ## 1. Concepts
 
 `.gitlab-ci.yml` is YAML. Order of most keywords does not matter unless documented otherwise. Mental map:
@@ -34,8 +32,6 @@ build:
 ```
 
 Use the [CI/CD YAML reference](https://docs.gitlab.com/ci/yaml/) when implementing — this chapter is the map, not the dump. Expressions exist for dynamic config ([08](./08_Rules_Workflow_And_Pipeline_Types.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -76,8 +72,6 @@ CI/CD **expressions** (and related dynamic helpers under `ci/functions` docs) ma
 
 YAML optimization docs cover anchors, `!reference`, and related techniques — use for readability, not cleverness.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Focus |
@@ -87,8 +81,6 @@ YAML optimization docs cover anchors, `!reference`, and related techniques — u
 | Safety | Explicit `rules`; protected vars |
 
 **Good:** linted YAML with boring structure. **Bad:** copy-pasting a 2,000-line enterprise YAML without knowing which keywords you rely on.
-
----
 
 ## References
 

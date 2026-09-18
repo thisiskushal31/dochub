@@ -8,8 +8,6 @@ How Vyper expresses **branching**, **bounded loops**, **assertions**, and relate
 
 Pin: **Vyper 0.4.x** (**0.4.3**). Shared EVM revert mindset overlaps [Solidity](../Solidity/README.md); Vyper’s missing `while (true)` culture is intentional (chapter **01**). Gas-bound literacy: chapter **18**. Function decorators in depth: chapter **08**.
 
----
-
 ## 1. Concepts
 
 ### 1. `if` / `elif` / `else`
@@ -108,8 +106,6 @@ Evaluation order of `log` arguments is **undefined**—compute side-effecting ar
 
 These keep **gas and control flow** in the auditable set (chapter **18**).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Gas bounding as a design requirement
@@ -154,8 +150,6 @@ Extremely clever boolean nesting rarely pays for audit time. Prefer readable `if
 
 Match `for` syntax (`for i: T in ...`) and exception styles to **0.4.x** docs. Brownfield **0.3.x** may differ; don’t mix dialects in one file during a port.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Control-flow habit |
@@ -167,8 +161,6 @@ Match `for` syntax (`for i: T in ...`) and exception styles to **0.4.x** docs. B
 | **SE** | PR template asks “loop bound?” on any new `for`. |
 
 **Whole-engineering picture:** control flow is where **product rules become gas and safety**.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -184,8 +176,6 @@ Match `for` syntax (`for i: T in ...`) and exception styles to **0.4.x** docs. B
 - Boundary tests cover zero, one, max, and over-max.
 - `__default__` behavior (payable vs revert) matches product intent for plain ETH transfers.
 - Silent branches that change authority or balances also log events.
-
----
 
 ## References
 

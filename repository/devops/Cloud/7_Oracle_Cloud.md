@@ -2,8 +2,6 @@
 
 [← Previous](./6_Azure_Literacy.md) · [README](./README.md) · [Next: IBM →](./8_IBM_Cloud.md) · [Full catalog](./Catalogs/OCI_Products.md) · [Jobs: IAM](./15_Org_IAM_And_Identity_Federation.md)
 
----
-
 ## Mental map — Floor 1 jobs on OCI
 
 | Job | OCI wiring | Depth |
@@ -18,15 +16,11 @@
 | Registry / K8s | OCIR; **OKE** | [27](./27_Container_Registries_And_Artifacts.md), [3](./3_Managed_Kubernetes.md) |
 | Secrets | Vault | [26](./26_Secrets_KMS_And_Encryption.md) |
 
----
-
 ## 1. Concepts
 
 **Oracle Cloud Infrastructure (OCI)** is Oracle’s public IaaS/PaaS. Isolation is a **tenancy** with **compartments** (IAM + quota + blast-radius folders — closer to GCP folders than Azure RGs). Networking is a **VCN** (≈ VPC). Managed Kubernetes is **OKE**.
 
 Oracle estates often show up because of **databases** (Autonomous DB, Exadata Cloud) next to app VMs — not as a default greenfield for startups.
-
----
 
 ## 2. Advanced concepts
 
@@ -35,9 +29,6 @@ Oracle estates often show up because of **databases** (Autonomous DB, Exadata Cl
 IAM policies are **compartment-scoped sentences** (`Allow group X to manage instance-family in compartment Y`). Federation (SAML/OIDC) for humans; instance principals / dynamic groups for machines ([15](./15_Org_IAM_And_Identity_Federation.md)).
 
 FastConnect is the private circuit analog of Direct Connect / ExpressRoute / Interconnect ([17](./17_Private_Connectivity_And_On_Ramps.md)). Deploy shapes: [28](./28_Deployment_Shapes_On_Cloud.md).
-
----
-
 
 ### How you grant permission on OCI (quick)
 
@@ -55,7 +46,6 @@ Compartment → IAM **policy sentence** (`Allow group X to … in compartment Y`
 | Observability | OCI Monitoring / Logging / Logging Analytics (current docs) | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
 | N-tier | [34](./34_Multi_Tier_And_Reference_Topologies.md) | |
 
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -72,8 +62,6 @@ Compartment → IAM **policy sentence** (`Allow group X to … in compartment Y`
 - FastConnect diversity if hybrid  
 
 **Good:** compartment-per-env, OKE + OCIR. **Bad:** everything in `root` compartment, admin keys on instances.
-
----
 
 ## References
 

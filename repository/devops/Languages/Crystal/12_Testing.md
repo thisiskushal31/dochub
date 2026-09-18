@@ -6,8 +6,6 @@ Crystal ships with a **spec** module for tests. You write **spec**s (examples an
 
 **Why testing?** Tests document behavior and catch regressions. When you run `crystal spec`, the compiler runs the test files and reports pass or fail. In DevOps, CI runs the same command so every commit is checked before merge or deploy.
 
----
-
 ## Writing specs
 
 Require **spec** and use **describe** and **it** to group and name examples. Use **expect(...).to eq(...)** or **should**-style assertions to check values and exceptions.
@@ -28,8 +26,6 @@ describe "Calculator" do
 end
 ```
 
----
-
 ## Running specs
 
 Run all spec files in the project (convention: files under **spec/** or named **\*_spec.cr**):
@@ -44,13 +40,9 @@ Run a single file or directory:
 crystal spec spec/my_spec.cr
 ```
 
----
-
 ## CI integration
 
 Add a step to your CI pipeline that installs Crystal, runs **shards install**, then **crystal spec**. Optionally run with **--release** to catch release-build issues. See the Crystal CI guide for GitHub Actions, CircleCI, and others.
-
----
 
 ## Further reading
 

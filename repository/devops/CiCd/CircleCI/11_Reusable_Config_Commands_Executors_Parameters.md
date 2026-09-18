@@ -2,8 +2,6 @@
 
 [← Previous](./10_Orbs_Use_And_Author_Literacy.md) · [README](./README.md) · [Next: Contexts →](./12_Contexts_Env_Vars_And_Secrets.md)
 
----
-
 ## 1. Concepts
 
 `version: 2.1` lets you define reusable elements **inside** one project (without a published orb):
@@ -38,8 +36,6 @@ jobs:
 
 Use `circleci config process` to see expanded YAML ([18](./18_Server_CLI_API_And_Toolkit.md)).
 
----
-
 ## 2. Advanced concepts
 
 Naming rules: start with a letter; lowercase, digits, `_`, `-` only (per reusable config reference).
@@ -47,8 +43,6 @@ Naming rules: start with a letter; lowercase, digits, `_`, `-` only (per reusabl
 Pipeline parameters enable selecting workflows ([08](./08_Workflows_Requires_Filters_Matrix_And_Triggers.md)).
 
 When reuse crosses many repos, prefer **orbs** ([10](./10_Orbs_Use_And_Author_Literacy.md)).
-
----
 
 ## 3. Applications and use cases
 
@@ -59,8 +53,6 @@ When reuse crosses many repos, prefer **orbs** ([10](./10_Orbs_Use_And_Author_Li
 | Multi-repo standard | orb |
 
 **Good:** processed config reviewed in PRs when complex. **Bad:** deep nesting nobody can expand mentally.
-
----
 
 ## References
 

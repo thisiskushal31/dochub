@@ -24,8 +24,6 @@ printfn "%d" c.Value
 
 **Why this matters.** F# code that calls C# or implements plugins often uses classes and interfaces. Keeping OOP at the edges and using functional types and modules in the core keeps F# code maintainable. In security and DevOps, understanding how F# types map to .NET helps when auditing or serializing objects.
 
----
-
 ## Further reading
 
 - [Classes (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/classes)

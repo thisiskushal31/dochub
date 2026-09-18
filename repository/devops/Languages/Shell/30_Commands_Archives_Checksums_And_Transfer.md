@@ -8,8 +8,6 @@ Extreme depth for **packaging**, **integrity**, and **moving bytes**: `tar`/`gzi
 
 This is **command literacy for DevOps glue**—not a full SSH server administration course (see Operating-Systems companions for host hardening depth).
 
----
-
 ## If you are brand new
 
 ```bash
@@ -30,8 +28,6 @@ Invoke-WebRequest -Uri 'https://example.invalid/file.zip' -OutFile file.zip
 # Breakdown: Compress-Archive makes .zip (not tar.gz); Get-FileHash is the checksum analog
 ```
 
----
-
 ## 1. Concepts
 
 ### 1. Three jobs
@@ -51,8 +47,6 @@ Invoke-WebRequest -Uri 'https://example.invalid/file.zip' -OutFile file.zip
 | SHA-256 | `sha256sum` | `shasum -a 256` | P | `Get-FileHash` | `certutil -hashfile` |
 | HTTP | `curl`/`wget` | `curl` | `wget` applet often | `Invoke-WebRequest` | N |
 | SSH/SCP | OpenSSH | OpenSSH | dropbear/P | OpenSSH optional | N |
-
----
 
 ## 2. `tar` in extreme depth
 
@@ -127,8 +121,6 @@ Compress-Archive -Path .\dir\* -DestinationPath bundle.zip
 Expand-Archive -Path bundle.zip -DestinationPath .\out
 ```
 
----
-
 ## 3. Compressors — `gzip` and friends
 
 ```bash
@@ -146,8 +138,6 @@ gzip -d file.gz
 
 BusyBox may ship only gzip-level support. Pin compressor availability in images.
 
----
-
 ## 4. `zip` / `unzip`
 
 ```bash
@@ -162,8 +152,6 @@ unzip bundle.zip -d out
 | `Expand-Archive` | Extracts |
 
 **Note:** `Compress-Archive` is not a drop-in for every Unix `zip` flag (compression level, symlinks).
-
----
 
 ## 5. Checksums and encoding
 
@@ -217,8 +205,6 @@ base64 --decode                   # check local man (BSD uses -D/-d variance)
 | `base64 -d` | often `base64 -D` or `-d` | `[Convert]::FromBase64String` |
 
 **Staff:** do not use base64 as encryption. Embedding secrets in scripts is still a secret leak (chapter **18**).
-
----
 
 ## 6. `curl` and `wget` in depth
 
@@ -280,8 +266,6 @@ BusyBox `wget` is a **subset**—no guarantee of GNU long options.
 - Avoid `curl … | bash` (chapter **18**, **21**).
 - Validate TLS; do not casually `-k`/`--insecure` in production.
 
----
-
 ## 7. `ssh` / `scp` / `sftp` / `rsync` (command literacy)
 
 ### `ssh`
@@ -328,8 +312,6 @@ rsync -azP ./src/ ./dest/
 
 Often not in minimal images—pin installation.
 
----
-
 ## 8. Advanced concepts
 
 ### 1. Verify-then-extract pipeline
@@ -375,8 +357,6 @@ Reject archives that write outside destination (`../`). Tooling and review both 
 | Advanced | `rsync -a`, SSH `BatchMode`, BusyBox flag gaps |
 | Staff | Same pipeline on Ubuntu, Alpine, macOS, Windows (`pwsh`) |
 
----
-
 ## 9. Applications
 
 ### CI dependency fetch
@@ -401,8 +381,6 @@ Prefer `.zip` via PowerShell on Windows agents; `.tar.gz` on Linux; document bot
 - `rsync --delete` requires explicit review.
 - SSH CI uses keys + `BatchMode`; host key policy documented.
 
----
-
 ## References
 
 - [GNU tar documentation](https://www.gnu.org/software/tar/manual/)
@@ -410,7 +388,5 @@ Prefer `.zip` via PowerShell on Windows agents; `.tar.gz` on Linux; document bot
 - [curl book / man page](https://curl.se/docs/)
 - [OpenSSH documentation](https://www.openssh.com/manual.html)
 - [Compress-Archive / Expand-Archive / Get-FileHash / Invoke-WebRequest](https://learn.microsoft.com/powershell/)
-
----
 
 [← Back to Shell](./README.md)

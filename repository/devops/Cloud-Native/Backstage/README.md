@@ -2,8 +2,6 @@
 
 [← Back to Cloud-Native](../README.md) · [Platform engineering](../3_Platform_Engineering.md) · [CNCF everyday tools](../4_CNCF_Everyday_Tools.md)
 
----
-
 ## 1. Concepts
 
 **Backstage** is an open-source **internal developer portal (IDP)** framework (CNCF). Teams use it as a **catalog + scaffolder + docs** front door so engineers discover services and create them on a **paved road**—not as a second Kubernetes.
@@ -27,8 +25,6 @@ Platform framing: [3](../3_Platform_Engineering.md). Delivery engines stay in [C
 **Disconfirm:** Backstage is **not** a deploy tool. Publishing a catalog entry does **not** ship traffic.
 
 **Confirm:** What three jobs does an IDP usually cover (discover, create, document)?
-
----
 
 ## 2. Advanced concepts
 
@@ -60,8 +56,6 @@ Platform framing: [3](../3_Platform_Engineering.md). Delivery engines stay in [C
 | Cost | Backstage is a product you run (or buy hosted); treat it like production |
 | Security | Templates must not bake secrets; least privilege to cloud/Git tokens |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -91,8 +85,6 @@ Platform framing: [3](../3_Platform_Engineering.md). Delivery engines stay in [C
 - “We installed Backstage” is **not** platform engineering done.
 
 **Good:** Git-backed catalog, maintained templates, clear owners. **Bad:** empty catalog; secret-laden templates; portal as sole deploy button.
-
----
 
 ## References
 

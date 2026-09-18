@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Users, groups, and scheduling](./10_Users_Groups_And_Scheduling.md), [Networking and firewall](./11_Networking_And_Firewall.md). Here: **mandatory access control (SELinux, AppArmor)**, **PAM (authentication)**, **SSH hardening**, and **audit (auditd)** from the operating-system perspective. For full security and DevSecOps, see the handbook’s Security section; this topic ties OS mechanisms to daily admin tasks.
 
----
-
 ## Mandatory access control (MAC): SELinux and AppArmor
 
 **Discretionary access control (DAC)** — Owner and permissions (rwx, ugo) decide access; the owner can change them. **Mandatory access control (MAC)** — The kernel enforces a **policy** that restricts what processes can do (files, ports, capabilities) regardless of ownership. Even root can be denied.
@@ -66,8 +64,6 @@ sudo systemctl reload apparmor
 
 **Distro detail:** See [Distributions: Debian family](./Distributions/Debian_Family.md) for AppArmor in depth.
 
----
-
 ## PAM (Pluggable Authentication Modules)
 
 **PAM** is the layer between applications and authentication mechanisms (passwords, LDAP, keys, MFA). When you log in (console, SSH, sudo), the program (login, sshd, sudo) calls PAM, which runs a stack of **modules** defined in `/etc/pam.d/`.
@@ -90,8 +86,6 @@ cat /etc/pam.d/sudo
 
 **Why it matters:** Broken PAM config can lock you out (e.g. wrong `pam_sss.so` or typo). Always keep a root console or recovery access when changing PAM. For LDAP/AD integration, see SSSD and distro docs.
 
----
-
 ## SSH hardening (OS perspective)
 
 SSH is the main remote-administration interface. From the OS view, you care about **which binary**, **config**, and **keys**.
@@ -113,8 +107,6 @@ AllowUsers admin deploy
 **Keys:** User keys in `~/.ssh/authorized_keys`; server host keys in `/etc/ssh/ssh_host_*`. Use `ssh-keygen` for key generation and `ssh-copy-id` to deploy.
 
 **Audit:** Check auth logs for failures: `journalctl -u sshd` or `grep "Failed\|Accepted" /var/log/secure` (or auth.log). Use **fail2ban** or **pam_faillock** to limit brute force; see distro and Security section.
-
----
 
 ## Audit (auditd)
 
@@ -140,16 +132,12 @@ sudo ausearch -ui 1000
 
 **SELinux:** Denials are logged as AVC events; `ausearch -m avc` and `audit2allow` are used to inspect and (carefully) allow new behavior.
 
----
-
 ## Summary
 
 - **MAC:** **SELinux** (RHEL) or **AppArmor** (Debian/Ubuntu) enforce policy; use `getenforce`/`setenforce` or `aa-status`/`aa-enforce`; fix contexts or profiles when access is wrongly denied.
 - **PAM:** Authentication stack in `/etc/pam.d/`; **limits** in `/etc/Security/limits.conf`; changes apply at next login.
 - **SSH:** Harden `/etc/ssh/sshd_config` (e.g. no root login, key-only), protect `authorized_keys` and host keys; monitor auth logs.
 - **Audit:** **auditd** and **ausearch** for compliance and forensics; AVC logs for SELinux.
-
----
 
 ## Further reading
 

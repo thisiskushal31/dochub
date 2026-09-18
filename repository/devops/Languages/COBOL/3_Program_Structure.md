@@ -6,8 +6,6 @@ A COBOL program is organized into **divisions**, **sections**, **paragraphs**, *
 
 **Why four divisions?** COBOL was designed so that anyone opening a program could quickly find what they need: **IDENTIFICATION** tells you which program this is; **ENVIRONMENT** tells you which files and machines it depends on (so operators and deployers know the setup); **DATA** defines every variable and record layout in one place (so you see all data before any logic); **PROCEDURE** holds the step-by-step logic. Reading top to bottom, you go from "what program is this?" → "what does it connect to?" → "what data does it use?" → "what does it do?" That order makes it easier to maintain and debug large business programs.
 
----
-
 ## Hierarchy
 
 **Sections** are logical subdivisions of program logic; a section is a collection of paragraphs. **Paragraphs** are subdivisions of a section or division: a name followed by a period, then zero or more sentences or entries. **Sentences** are one or more statements and appear in the PROCEDURE DIVISION; a sentence ends with a period. **Statements** are single COBOL instructions that perform processing. **Characters** are the smallest unit and are not subdivided.
@@ -23,8 +21,6 @@ In the PROCEDURE DIVISION, a paragraph can contain a sentence made of several st
            DISPLAY WS-ID
            .
 ```
-
----
 
 ## The four divisions
 
@@ -74,8 +70,6 @@ In the PROCEDURE DIVISION, a paragraph can contain a sentence made of several st
            DISPLAY 'Executing COBOL program using JCL'.
            STOP RUN.
 ```
-
----
 
 ## Further reading
 

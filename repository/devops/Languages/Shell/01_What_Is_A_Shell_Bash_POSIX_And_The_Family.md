@@ -17,8 +17,6 @@ Interactive typing and scripts use the **same** shell language. Scripts are not 
 
 **Shell has many subsets—not only scripting.** Modes (interactive, login, restricted), dialects (Bash, `sh`, zsh, PowerShell, cmd, …), surfaces (builtins, aliases, functions, externals), composition (pipelines, subshells), configuration (profiles/rc), and hosting (SSH, CI, containers, cron) are all subsets of “shell.” Chapter **22** inventories them in extreme depth; this chapter gives the family map so those subsets have somewhere to hang.
 
----
-
 ## If you are brand new
 
 Today you will **type commands** at a prompt and press Enter. That is already using a shell.
@@ -56,8 +54,6 @@ Get-ChildItem
 ```
 
 You do not need to memorize every dialect today. You need one habit: **name which shell you mean**.
-
----
 
 ## 1. Concepts (basic)
 
@@ -305,8 +301,6 @@ Get-Process -Id $PID | Select-Object ProcessName
 | `$0` inside `sh -c` | Often shows as `sh`—useful identity hint |
 | `$PID` (PowerShell) | Current process id |
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Dialect vs userland
@@ -448,8 +442,6 @@ Shell is powerful because it runs whatever you ask. Beginner safety rules that s
 
 Deeper injection and secrets work lives in later security chapters; the category lesson is: **trust the file and the dialect, not the hype**.
 
----
-
 ## 3. Applications and use cases
 
 ### CI and release pipelines
@@ -549,8 +541,6 @@ echo "dialect-aware glue"
 - Can a brand-new teammate tell **shell (category)** from **scripting (saved recipes)** after reading this chapter?
 - Can they name at least the subset families in §2b (modes, dialects, surfaces, composition, execute vs source, config, hosts)—and know chapter **22** owns the full inventory?
 - Do they know chapter **27** is the Master Command Atlas (commands ≠ only `jq`/`ss`)?
-
----
 
 ## References
 

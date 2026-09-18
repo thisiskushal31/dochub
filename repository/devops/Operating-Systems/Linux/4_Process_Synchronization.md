@@ -4,16 +4,12 @@
 
 **Prerequisite:** [Fundamentals: Process synchronization](../Fundamentals/6_Process_Synchronization.md). Here: **how Linux** provides synchronization (futex, POSIX semaphores, file locks, pipes, IPC) and **commands** (e.g. FIFOs, lsof).
 
----
-
 ## Race condition and critical section
 
 - **Critical section** — Code that uses shared data or resources; only one process (or thread) should be in it at a time.
 - **Race condition** — Two or more processes in (or entering) the critical section at once; outcome is non-deterministic and often wrong.
 
 Synchronization aims to ensure **mutual exclusion**: at most one process in the critical section.
-
----
 
 ## Requirements for a solution
 
@@ -22,8 +18,6 @@ A good solution to the critical-section problem usually provides:
 1. **Mutual exclusion** — Only one process in the critical section at a time.
 2. **Progress** — If no process is in the critical section and some want to enter, one of them eventually gets in.
 3. **Bounded waiting** — A process that wants to enter will eventually do so after a bounded number of others have entered (no starvation).
-
----
 
 ## Synchronization primitives (concepts)
 
@@ -35,16 +29,12 @@ A good solution to the critical-section problem usually provides:
 
 Classic algorithms (Peterson’s, Dekker’s, Bakery) show that mutual exclusion can be done in software, but real systems use hardware support (e.g. atomic instructions) and OS primitives (mutex, semaphore).
 
----
-
 ## Mutex vs semaphore (brief)
 
 - **Mutex** — One owner; often used for mutual exclusion only; the same thread must lock and unlock.
 - **Semaphore** — No “owner”; any process can do V; can be used for counting (e.g. number of free slots) or signaling between processes.
 
 So: use a **mutex** for simple “one at a time” critical sections; use a **semaphore** when you need counting or cross-process signaling.
-
----
 
 ## Classical IPC problems
 
@@ -58,8 +48,6 @@ These are textbook examples of synchronization:
 
 They illustrate design choices (fairness, starvation, deadlock) when coordinating processes.
 
----
-
 ## Inter-Process Communication (IPC)
 
 Processes can coordinate or pass data via:
@@ -71,8 +59,6 @@ Processes can coordinate or pass data via:
 - **Sockets** — Network or Unix domain; used for services and RPC.
 
 Linux provides all of these; choice depends on latency, throughput, and complexity.
-
----
 
 ## Linux: mutexes, semaphores, and IPC
 
@@ -106,8 +92,6 @@ cat myfifo                # reader; receives "hello"
 
 **How Linux implements mutex in kernel: futex** — User-space mutexes (e.g. pthread mutex) often use **futex** (fast userspace mutex): a shared integer in user memory plus the **futex** system call. When the lock is contended, the kernel blocks the thread and wakes it when the lock is released. This keeps the fast path in user space and only involves the kernel when blocking is needed.
 
----
-
 ## Summary
 
 - **Critical section** = code using shared data; **race condition** = unsynchronized concurrent access.
@@ -116,8 +100,6 @@ cat myfifo                # reader; receives "hello"
 - Classical problems: producer–consumer, readers–writers, dining philosophers.
 - **IPC**: shared memory + locks, message passing (pipes, sockets), signals.
 - On Linux: pthread mutex, POSIX semaphores, `flock`, pipes, FIFOs, shared memory, message queues.
-
----
 
 ## Further reading
 

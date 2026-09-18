@@ -8,8 +8,6 @@ Enough **UI framework literacy** to read app PRs, know which stack you are looki
 
 If you need pixel-perfect SwiftUI, open Apple’s SwiftUI docs. This chapter teaches **when each surface appears**, **who owns state**, **NavigationStack path typing**, **hosting bridges**, **previews vs CI**, a **Dynamic Type glance**, and a concrete **“how to review a SwiftUI PR”** checklist.
 
----
-
 ## 1. Concepts
 
 ### 1. Three surfaces, three jobs
@@ -260,8 +258,6 @@ This is **not** an a11y craft course. Review glance only:
 
 Use Apple’s accessibility docs for the craft. In this track: **fail a PR that clearly clips at accessibility sizes** when the change touched that layout—or require a follow-up issue with an owner.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Hybrid apps are normal
@@ -350,8 +346,6 @@ Dynamic Type glance: [ ] ok  [ ] issue filed
 CI proof:      [ ] xcodebuild test on pinned sim  [ ] preview only (insufficient)
 ```
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Practice |
@@ -361,8 +355,6 @@ CI proof:      [ ] xcodebuild test on pinned sim  [ ] preview only (insufficient
 | **Security** | Secrets and tokens never in view literals; auth state owned by a service, not `@State` strings in git |
 | **Operations** | Document “UI test job” vs “unit-only job” so on-call knows what a red build means |
 | **Software engineering** | PR checklist above; Observation migration when touching models |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -378,8 +370,6 @@ CI proof:      [ ] xcodebuild test on pinned sim  [ ] preview only (insufficient
 - “How to review a SwiftUI PR” checklist is used (or an org equivalent).
 - Nobody treats this handbook chapter as a substitute for Apple’s SwiftUI/UIKit design docs.
 - Brownfield UIKit is improved at the edges — not big-bang rewritten without a migration plan.
-
----
 
 ## References
 

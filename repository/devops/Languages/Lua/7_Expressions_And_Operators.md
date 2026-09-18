@@ -46,8 +46,6 @@ a = { [f(1)] = g; "x", "y"; x = 1, f(x), [30] = 23; 45 }
 
 assigns `t[1]="x"`, `t[2]="y"`, `t.x=1`, `t[3]=f(x)`, `t[30]=23`, `t[4]=45`. Field order is undefined. If the last field is a single expression that returns multiple values, all of them are added as consecutive integer keys.
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §3.4 Expressions](https://www.lua.org/manual/5.5/manual.html#3.4)

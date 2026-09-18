@@ -6,8 +6,6 @@
 
 Ops and security **recon literacy** with beginner-clear explanations: how `ss` / `netstat` (from chapter **23**) fit real workflows; `lsof -i` flag meanings; `ps` / `pgrep` / `kill`; common `curl -v` / `-I` flags; PowerShell `Get-NetTCPConnection`, `Get-Process`, `Test-NetConnection` with parameters explained; living-off-the-land awareness (what defenders and attackers both look for—**literacy, not exploits**); WSL host-vs-guest port views; and BusyBox gaps. Expand every flag cluster before you run it.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. Recon as a workflow, not a meme
@@ -354,8 +352,6 @@ Recon runbooks for IoT/edge must list the **actual** applet set. Chapter **20** 
 - Unauthorized scanning and exploitation are out of scope; obtain written permission.  
 - Shared jump hosts: your recon output may be visible in shell history—prefer careful hygiene (later security chapter).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Connecting the toolkit end-to-end
@@ -425,8 +421,6 @@ Invoke-WebRequest -Uri https://example.com -Method Head -MaximumRedirection 0 -E
 
 Prefer official docs for auth and certificate parameters; never disable TLS validation in production scripts without an explicit risk acceptance.
 
----
-
 ## 3. Applications and use cases
 
 ### Incident: service down
@@ -464,8 +458,6 @@ Prefer official docs for auth and certificate parameters; never disable TLS vali
 - `kill` / `Stop-Process` usage follows change control on shared production.  
 - LOL content stays literacy-focused; no exploit recipes in internal handbooks.  
 - Authorization to probe is explicit for non-owned systems.
-
----
 
 ## References
 

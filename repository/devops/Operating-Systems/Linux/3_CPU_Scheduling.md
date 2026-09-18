@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Fundamentals: CPU scheduling](../Fundamentals/4_CPU_Scheduling.md). Here: **how Linux** schedules (CFS — Completely Fair Scheduler, nice, real-time classes) and the **commands** to inspect and influence priority.
 
----
-
 ## Why CPU scheduling?
 
 With one or a few CPUs and many processes, the OS must:
@@ -15,8 +13,6 @@ With one or a few CPUs and many processes, the OS must:
 
 The **scheduler** implements the policy; the **dispatcher** does the actual switch.
 
----
-
 ## Preemptive vs non-preemptive scheduling
 
 | Type | Idea | When the OS can switch |
@@ -25,8 +21,6 @@ The **scheduler** implements the policy; the **dispatcher** does the actual swit
 | **Preemptive** | Kernel can take CPU away from a running process. | On timer interrupt, I/O completion, or higher-priority wake-up. |
 
 Most general-purpose systems (including Linux) use **preemptive** scheduling so that one process cannot monopolize the CPU.
-
----
 
 ## Scheduling criteria
 
@@ -39,8 +33,6 @@ Typical goals:
 - **Fairness** — No process is starved.
 
 Different algorithms trade off these goals (e.g. batch vs interactive).
-
----
 
 ## Common scheduling algorithms (concepts)
 
@@ -55,8 +47,6 @@ Different algorithms trade off these goals (e.g. batch vs interactive).
 
 Linux uses **priority-based**, **multiqueue** schedulers (CFS — Completely Fair Scheduler — in the default kernel) with time slices and nice values.
 
----
-
 ## Dispatcher vs scheduler
 
 - **Scheduler** — Decides *which* process runs next (policy).
@@ -64,14 +54,10 @@ Linux uses **priority-based**, **multiqueue** schedulers (CFS — Completely Fai
 
 The work the dispatcher does is part of the **context switch** cost.
 
----
-
 ## Starvation and aging
 
 - **Starvation** — A process never (or rarely) gets the CPU because others are always preferred (e.g. in pure priority scheduling).
 - **Aging** — Increase priority of waiting processes over time so that long-waiting jobs eventually get a chance. Many OSs use something like this to avoid starvation.
-
----
 
 ## Linux: priorities, nice, and policies
 
@@ -93,8 +79,6 @@ chrt -p <PID>
 ps -o pid,ni,cls,comm -p <PID>
 ```
 
----
-
 ## Summary
 
 - The **scheduler** picks the next process to run; the **dispatcher** performs the context switch.
@@ -102,8 +86,6 @@ ps -o pid,ni,cls,comm -p <PID>
 - Classic algorithms: FCFS, SJF, Round Robin, Priority; real systems use **multilevel** and **priority-based** schemes (e.g. Linux CFS).
 - **Starvation** = a process rarely runs; **aging** helps prevent it.
 - On Linux: **nice** and **renice** adjust priority; **chrt** and **ps** show policy and priority.
-
----
 
 ## Further reading
 

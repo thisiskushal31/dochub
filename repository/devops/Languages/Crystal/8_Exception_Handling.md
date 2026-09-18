@@ -6,8 +6,6 @@ Errors that break the normal flow are represented by **exceptions**. You **raise
 
 **Why exceptions?** They separate “what went wrong” from “what to do about it.” You can raise in deep call stacks and handle at a higher level, or let the program exit with a clear message. For expected cases (e.g. “not found”), returning `nil` or a result type is often better; reserve exceptions for unexpected or unrecoverable failures.
 
----
-
 ## raise and rescue
 
 **raise** throws an exception (optionally with a message or custom type). **rescue** catches it; you can restrict by exception type. **ensure** runs whether or not an exception was raised (e.g. to close resources).
@@ -27,8 +25,6 @@ ensure
 end
 ```
 
----
-
 ## Exception types
 
 **Exception** is the base type. Standard subtypes include **ArgumentError**, **KeyError**, **IO::Error**, and others. Rescue a specific type to handle only that kind of error.
@@ -42,8 +38,6 @@ rescue ex : KeyError
   puts "missing key: #{ex.key}"
 end
 ```
-
----
 
 ## Retry and ensure
 
@@ -59,8 +53,6 @@ ensure
   close_connection
 end
 ```
-
----
 
 ## Further reading
 

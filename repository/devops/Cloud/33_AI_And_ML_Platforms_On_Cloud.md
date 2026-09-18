@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [Serverless →](./31_Serverless_Functions_And_Containers.md) · [Deploy shapes →](./28_Deployment_Shapes_On_Cloud.md) · [CiCd/22 MLOps](../CiCd/22_MLOps_And_AI_System_Delivery.md)
 
----
-
 ## Mental map
 
 ```text
@@ -15,8 +13,6 @@ AI workload spectrum (same as delivery spectrum, different artifacts)
 ```
 
 *What to notice: Cloud literacy is **which product family**. Model science → [Data-Science-AI-Deep-Dive](https://github.com/thisiskushal31/Data-Science-AI-Deep-Dive). Delivery loop → [CiCd/22](../CiCd/22_MLOps_And_AI_System_Delivery.md).*
-
----
 
 ## 1. Concepts — product families
 
@@ -40,8 +36,6 @@ AI workload spectrum (same as delivery spectrum, different artifacts)
 **Disconfirm:** “We use AI” is **not** a platform choice. Bedrock is **not** SageMaker. Calling OpenAI from a VM is **not** Azure OpenAI governance.
 
 **Confirm:** Are you consuming a **hosted FM API** or **operating training/serving infra**? Where do prompts, tools, and PII go (IAM + network)?
-
----
 
 ## 2. Advanced concepts
 
@@ -81,8 +75,6 @@ AI workload spectrum (same as delivery spectrum, different artifacts)
 | One huge prompt with secrets | Leak via logs/providers |
 | K8s for a single Chat Completions proxy | Ops tax without benefit |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -102,8 +94,6 @@ AI workload spectrum (same as delivery spectrum, different artifacts)
 - Door to DS/AI and CiCd/22 for depth  
 
 **Good:** managed FM for product features; platform for custom models; K8s GPU when needed. **Bad:** ungoverned keys to a public model API; GPU nodes with Owner role.
-
----
 
 ## References
 

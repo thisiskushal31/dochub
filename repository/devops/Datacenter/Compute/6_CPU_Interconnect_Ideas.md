@@ -2,8 +2,6 @@
 
 [← Previous](./5_Chipset_PCIe_And_Platform_IO.md) · [README](./README.md) · [Next: Memory DIMM types →](./7_Memory_DIMM_Types_And_Channels.md)
 
----
-
 ## 1. Concepts
 
 In multi-socket servers, CPUs talk over a **coherent interconnect**. Names differ; the *job* is the same: move cache lines and I/O ownership between sockets with non-uniform latency.
@@ -19,8 +17,6 @@ You rarely configure link PHY details—you **place memory, IRQs, and processes*
 ### Where it sits
 
 Between sockets on the motherboard; also between chiplets *inside* a package (still looks like NUMA or CCD domains to software).
-
----
 
 ## 2. Advanced concepts
 
@@ -47,8 +43,6 @@ Hypervisor CPU affinity and SR-IOV locality matter ([18](./18_Hypervisor_On_The_
 
 Exact hop counts and link speeds are generation-specific—read OEM topology diagrams for your SKU. This chapter teaches the **idea**, not a fake universal diagram.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -67,8 +61,6 @@ Exact hop counts and link speeds are generation-specific—read OEM topology dia
 - Never invent interconnect tuning without OEM guidance  
 
 **Good:** topology-aware placement, balanced memory. **Bad:** cross-socket chatter by default; “it’s dual socket so twice as fast” without locality.
-
----
 
 ## References
 

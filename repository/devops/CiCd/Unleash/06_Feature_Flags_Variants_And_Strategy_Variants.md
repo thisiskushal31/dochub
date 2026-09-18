@@ -2,8 +2,6 @@
 
 [← Previous](./05_Projects_Environments_And_Applications.md) · [README](./README.md) · [Next: Strategies →](./07_Activation_Strategies_Stickiness_And_Custom.md)
 
----
-
 ## 1. Concepts
 
 A **feature flag** lives in a project and has **per-environment** activation strategies.
@@ -30,8 +28,6 @@ Flags answer “on/off.” **Strategy variants** answer “which version of on?�
 Classic use: A/B test checkout copy; experiment model prompts; multi-armed UI.
 
 Environment-level **feature flag variants** are **deprecated**; use **strategy variants** for new work.
-
----
 
 ## 2. Advanced concepts
 
@@ -60,8 +56,6 @@ blue.fast-checkout.64         # good: matches a project naming pattern
 newThing2_final_FINAL         # bad: no owner, no meaning
 ```
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -79,8 +73,6 @@ newThing2_final_FINAL         # bad: no owner, no meaning
 - Unknown-flags list checked for typos  
 
 **Good:** variant payload is a public enum. **Bad:** payload embeds API keys.
-
----
 
 ## References
 

@@ -42,8 +42,6 @@ Julia is used wherever numerical or scientific computing meets a need for both e
 
 This section follows four pillars. **What is it** (this topic): definition, history, why Julia, comparison, how you run it. **Basic concepts** (Topic 2): syntax, REPL, variables, types, numbers, operators, functions, arrays, tuples, strings, control flow, dicts and sets, missing values, date/time, I/O, scoping, docstrings, modules, CLI, standard libraries—everything to write your first script. **Advanced concepts** (Topic 3): type system in depth, composite types and constructors, conversion and promotion, interfaces, multiple dispatch, metaprogramming, performance, C/Fortran FFI, memory and GC, debugging and profiling, world age. **Use cases** (Topics 4–6): packages and environments, testing, parallel and distributed computing, running external programs, networking, environment variables, data pipelines, HPC, research, DevOps, security, deployment, workflow tips, OS variation, embedding, and ops. Together, every manual topic is covered so no stone is left unturned.
 
----
-
 ## Further reading
 
 - [Julia documentation](https://docs.julialang.org/)

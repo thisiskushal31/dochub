@@ -8,8 +8,6 @@ Workbook and document **events**, classic **Auto_Open / Auto_Close** literacy, *
 
 You leave able to place open/close logic in the right module, inventory auto-run entry points in review, and explain why “just open it” is not a safe analysis plan (chapter **16**). Security policy names live in chapter **15**; Excel/Word OM context in **08–09**.
 
----
-
 ## 1. Concepts
 
 ### 1. Events are callbacks from the host
@@ -99,8 +97,6 @@ End Sub
 ```
 
 **What just happened:** open event delegates to shared code and surfaces failure without pretending to be a security boundary.
-
----
 
 ## 2. Advanced concepts
 
@@ -192,8 +188,6 @@ Also inventory: ribbon/on-action macros, shape-assigned macros, `Worksheet_Activ
 
 Ancient sheets may use Excel 4.0 macro sheets as auto-run cousins. Out of scope for writing; in scope for security literacy in chapters **15–16**. Do not revive XLM for new work.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -205,8 +199,6 @@ Ancient sheets may use Excel 4.0 macro sheets as auto-run cousins. Out of scope 
 | **Software engineering** | Thin handlers; shared `Init*`/`Teardown*`; tests open files under macro-enabled and disabled pins |
 
 Good open work: stamp a version cell, verify required sheets exist, set calculation mode with restore on close. Bad open work: silent network calls with secrets, process launches, or fake “decrypt” UX—reject in review.
-
----
 
 ## Staff-level review checklist
 
@@ -223,8 +215,6 @@ Good open work: stamp a version cell, verify required sheets exist, set calculat
 - No reliance on macros for authentication or confidentiality (ch **10**, **15**).
 - Analysis of unknown files does not start with “enable macros” on a trusted workstation (ch **16**).
 - Org policy (MotW, Trusted Locations, ASR) acknowledged—not worked around.
-
----
 
 ## References
 

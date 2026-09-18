@@ -4,8 +4,6 @@
 
 Clojure uses **Java’s** regular expressions. Literal regex patterns are written with **#"..."** (e.g. **#"\d+"**). **re-pattern** builds a pattern from a string; **re-find**, **re-matches**, and **re-seq** perform matching; **clojure.string/replace** and **replace-first** take patterns. Escape in **#"..."** with backslash; in strings, double the backslash for the regex engine.
 
----
-
 ## Literal patterns and re-pattern
 
 **#"pattern"** is a **java.util.regex.Pattern**. **re-pattern** builds a pattern from a string (useful when the pattern is dynamic).
@@ -16,8 +14,6 @@ Clojure uses **Java’s** regular expressions. Literal regex patterns are writte
 (re-pattern "\\d+")
 ;; same, from string (backslash escaped in string)
 ```
-
----
 
 ## re-find, re-matches, re-seq
 
@@ -32,8 +28,6 @@ Clojure uses **Java’s** regular expressions. Literal regex patterns are writte
 ;; => ("1" "22" "333")
 ```
 
----
-
 ## replace and replace-first
 
 **clojure.string/replace** replaces every match; **replace-first** replaces only the first. The replacement can be a string (use **$1**, **$2** for groups) or a function that receives the match and groups.
@@ -45,8 +39,6 @@ Clojure uses **Java’s** regular expressions. Literal regex patterns are writte
 (s/replace-first "hello world" #"hello" "Hi")
 ;; => "Hi world"
 ```
-
----
 
 ## Further reading
 

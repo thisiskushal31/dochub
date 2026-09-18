@@ -4,8 +4,6 @@
 
 This topic covers the Groovy toolchain (groovyc, groovydoc, groovysh, groovyConsole), the Grape dependency manager for scripts, and IDE integration. These tools support compiling, documenting, experimenting, and scripting with Groovy from the command line and from your editor.
 
----
-
 ## 1. groovyc – the Groovy compiler
 
 **groovyc** compiles Groovy sources to JVM bytecode. It plays the same role as **javac** for Java. By default it writes **.class** files next to the source (or in the current directory). Common options:
@@ -31,8 +29,6 @@ groovyc --encoding utf-8 script.groovy
 groovyc -j A.groovy B.java
 ```
 
----
-
 ## 2. groovydoc – documentation generator
 
 **groovydoc** generates HTML documentation from Groovy (and Java) source, similar to Javadoc. Invocation:
@@ -49,8 +45,6 @@ groovydoc -d build/docs -sourcepath src/main/groovy -windowtitle "My API" org.ex
 
 Gradle and Maven have plugins that wrap groovydoc; use them in larger projects so documentation is part of the build.
 
----
-
 ## 3. groovysh – REPL-like shell
 
 **groovysh** is an interactive shell where you type Groovy statements and see results. Useful for trying expressions, checking syntax, or quick experiments. No file is required.
@@ -61,8 +55,6 @@ groovysh
 
 Inside the shell you can run statements, define variables and closures, and inspect values. For script-like dependency resolution you can use **Grape.grab(...)** from **groovy.grape.Grape** (e.g. **Grape.grab(group:'org.springframework', module:'spring-orm', version:'5.2.8.RELEASE')**).
 
----
-
 ## 4. groovyConsole – Swing console
 
 **groovyConsole** opens a graphical window with an editor pane and an output pane. You type or paste Groovy code and run it. Handy for snippets and for debugging without the command line.
@@ -70,8 +62,6 @@ Inside the shell you can run statements, define variables and closures, and insp
 ```bash
 groovyConsole
 ```
-
----
 
 ## 5. Grape – dependency manager for scripts
 
@@ -99,13 +89,9 @@ grape uninstall <group> <module> <version>
 
 **Logging.** **-Dgroovy.grape.report.downloads=true** prints resolve and download activity.
 
----
-
 ## 6. IDE integration
 
 Groovy is supported by common IDEs via plugins (e.g. Groovy-Eclipse, IntelliJ Groovy plugin). Features typically include syntax highlighting, completion, refactoring, run/debug of scripts and classes, and Gradle/Maven integration. Install the plugin for your IDE and point it at your JDK and Groovy (or use the Gradle/Maven plugin to supply Groovy). This gives you a consistent experience when editing Jenkinsfiles, **build.gradle**, or standalone Groovy projects.
-
----
 
 ## Further reading
 

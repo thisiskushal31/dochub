@@ -6,8 +6,6 @@
 
 How teams **verify** Ruby code: unit and integration tests, test doubles, the **`debug`** debugger, logging for diagnosis, and quality gates in review and CI. The goal is reliable automation and cookbooks—not achieving 100% coverage for its own sake.
 
----
-
 ## 1. Concepts
 
 ### 1. Why testing matters in Ruby
@@ -118,8 +116,6 @@ Or treat warnings as errors in CI with **`Warning[:deprecated] = :raise`** patte
 
 **SimpleCov** gem wraps tests to report line coverage. Coverage guides gaps; high percentage does not imply good tests.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Flaky tests and time
@@ -166,8 +162,6 @@ Static typing does not replace tests—it catches whole classes of nil and arity
 
 **rantly** / **Hypothesis-style** generators find edge cases in pure functions. **Mutation testing** (mutant gem) verifies tests actually assert behavior—expensive; run on critical billing/auth modules.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and quality gates
@@ -201,8 +195,6 @@ Fail build on warnings if team policy requires.
 - No `binding.irb` / `debugger` left in merged code.
 - CI uses `bundle exec` and committed lockfile.
 - Integration tier exists for critical paths (deploy script, gem CLI).
-
----
 
 ## References
 

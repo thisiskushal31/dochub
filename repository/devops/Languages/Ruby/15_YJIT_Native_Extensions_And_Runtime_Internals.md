@@ -6,8 +6,6 @@
 
 How MRI speeds up hot code with **YJIT**, what **native extensions** are and how they fail in CI/containers, and a practical map of **runtime internals** staff encounter when debugging build and deploy issues—not a full VM implementation course.
 
----
-
 ## 1. Concepts
 
 ### 1. Interpreted baseline and JIT
@@ -87,8 +85,6 @@ The **C API** (`VALUE`, `rb_define_method`, `RB_FUNCALL`) lets C programs host R
 
 MRI’s parser is **parse.y** historically; **Prism** is a portable parser library used toward unified tooling (formatters, linters). Operational impact today: syntax errors and Ruby version support in tools—not something you configure at deploy.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. YJIT exit reasons
@@ -137,8 +133,6 @@ Products embedding `ruby_init` + `ruby_run` carry VM lifecycle complexity—unlo
 
 Treat this API as **CRuby-specific**; JRuby/TruffleRuby will not reproduce the same instruction stream. Use in CI sparingly (compile cost); never depend on exact insn names across Ruby minors without pinning.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and platform teams
@@ -174,8 +168,6 @@ Chef ships vendored Ruby and many compiled deps—do not assume your laptop’s 
 - YJIT enablement has memory and latency validation.
 - No compiler toolchain in production runtime image unless required.
 - Extension build failures reproduced locally with same Ruby headers.
-
----
 
 ## References
 

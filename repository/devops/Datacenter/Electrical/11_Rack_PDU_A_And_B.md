@@ -2,8 +2,6 @@
 
 [← Previous](./10_Floor_And_Row_PDUs.md) · [README](./README.md) · [Next: Grounding →](./12_Grounding_Bonding_And_Surge.md)
 
----
-
 ## 1. Concepts
 
 **Rack PDUs** (power distribution units / “power strips” at datacenter grade) mount in the cabinet and present outlets to server PSUs. **A and B** means two PDUs fed from independent upstream paths so a dual-PSU server survives loss of one side.
@@ -23,8 +21,6 @@ Vertical (0U) or horizontal in the rack; inlets from whips; outlets to C13/C19 (
 | **Outlet-metered switched** | Billing-grade / chargeback detail |
 
 Switched PDUs are powerful and dangerous: a wrong click is an outage.
-
----
 
 ## 2. Advanced concepts
 
@@ -64,8 +60,6 @@ BMC/OS may report PSU redundancy lost—treat as priority when A or B path degra
 - **208 V** single/three-phase vs **230/400 V**  
 - Three-phase rack PDUs for dense rows—phase balance becomes an ops job  
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -84,8 +78,6 @@ BMC/OS may report PSU redundancy lost—treat as priority when A or B path degra
 - Single-PSU devices documented as N risk or on STS bus  
 
 **Good:** balanced A/B, metered, dual-cord discipline. **Bad:** both cords in A; switched PDU with shared admin password; 20 A circuit at 19 A idle + boot storm.
-
----
 
 ## References
 

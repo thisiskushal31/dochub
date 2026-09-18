@@ -23,8 +23,6 @@ find "$HOME/file-lab" -type f -name '*.txt' -print
 # find PATH -type f = only files; -name glob; -print paths
 ```
 
----
-
 ## 1. Concepts
 
 ### 1. Mental model: shell vs userland
@@ -475,8 +473,6 @@ Remove-Item -LiteralPath $buildDir -Recurse -Force -WhatIf
 
 **Answer:** show what a recursive forced delete would remove, without deleting yet (`-WhatIf`).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Version and userland gates
@@ -687,8 +683,6 @@ find "$ROOT" -type f -name '*.tmp' -print0 | xargs -0 rm -f --
 | `-print0` / `xargs -0` | Weird filenames |
 | `rm -f --` | Force + end-of-options |
 
----
-
 ## 3. Applications and use cases
 
 ### CI workspace hygiene
@@ -729,8 +723,6 @@ Linux process/file admin context: [`../../Operating-Systems/Linux/9_Shell_And_Sc
 - Can a beginner decode `ls -la`, `mkdir -p`, `cp -r`, `rm -rf`, `find … -type f`, and `ps aux` letter by letter?
 - Are `ln`/`install`/`dd`/`truncate` uses justified and OS-gated where BusyBox/BSD differ?
 - Is the team using atlas **27** so file commands are not reinvented ad hoc?
-
----
 
 ## References
 

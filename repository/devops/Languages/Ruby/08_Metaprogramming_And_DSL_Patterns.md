@@ -6,8 +6,6 @@
 
 How Ruby code can **define**, **modify**, and **intercept** behavior at runtime: hooks like **`method_missing`**, **`define_method`**, **`class_eval`**, **`Module#prepend`**, **reflection**, and how **DSLs** (Chef, Rake, Rails declarations) are built on blocks and `self`. This chapter is what separates “I can read Ruby syntax” from “I can read any cookbook or internal framework.”
 
----
-
 ## 1. Concepts
 
 ### 1. Introspection: seeing objects
@@ -87,8 +85,6 @@ A **Binding** captures a scope. **`eval(str, binding)`** runs code in that scope
 
 Modules can define constants at runtime. **`autoload :Name, 'path'`** loads on first reference—how Rails and large gems manage load time.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Refinements vs monkey patches
@@ -151,8 +147,6 @@ end
 
 `describe`, `let`, and `it` are methods that build classes and examples at load time—same family as Chef resources, different domain.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and framework design
@@ -191,8 +185,6 @@ Pattern: outer method creates builder object → `instance_eval` on block → in
 - Monkey patches are scoped, owned, and covered by tests.
 - DSL blocks document available methods and required properties.
 - `method_missing` implementations call `super` when appropriate.
-
----
 
 ## References
 

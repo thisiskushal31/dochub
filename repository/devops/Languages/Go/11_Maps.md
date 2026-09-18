@@ -28,8 +28,6 @@ for k, v := range m {
 
 **Why this matters.** Maps are ubiquitous for lookup and grouping. Always use the two-value form when you need to distinguish “key missing” from “value is zero”. Never write to a nil map. In DevOps and services, maps are used for env-based config, headers, query params, and in-memory caches; thread safety requires a mutex or concurrent map (e.g. **sync.Map**) if multiple goroutines write.
 
----
-
 ## Further reading
 
 - [The Go Programming Language Specification: Map types](https://go.dev/ref/spec#Map_types)

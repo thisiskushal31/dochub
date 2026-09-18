@@ -18,8 +18,6 @@ Handbook default for new work: **TypeScript 5.9.x** with **`strict`: true**. Dis
 
 Today’s picture: *one package + one compiler + something that prints*. Fuzzy PATH here makes every later chapter feel cursed.
 
----
-
 ## 1. Concepts
 
 ### 1. What you are about to start
@@ -146,8 +144,6 @@ Feeling the **red squiggle as a process exit** is the point of this track.
 
 Prefer **`npx tsc`** / npm scripts over a random global. Chapter **02** turns this into a real `tsconfig.json`.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Local vs global `tsc`
@@ -192,8 +188,6 @@ Jobs fail when:
 
 Always install deps and print `tsc -v` / `node -v` in the job log.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How first steps show up |
@@ -206,8 +200,6 @@ Always install deps and print `tsc -v` / `node -v` in the job log.
 
 **Whole-engineering picture:** hello is the reproducibility gate. Narrowing, errors, and file I/O reviews all assume you can name the `tsc` that will check the change.
 
----
-
 ## Staff-level review checklist
 
 - Runbook / README states **exact `tsc -v`** (5.9.x pin) for the package.
@@ -218,8 +210,6 @@ Always install deps and print `tsc -v` / `node -v` in the job log.
 - Emitted `.js` is inspected once so **erasure** is not a myth.
 - Editor TypeScript version is aligned when diagnostics disagree with CI.
 - Brownfield repos with older `tsc` are **labeled**—not tested only on a laptop’s 5.9.
-
----
 
 ## References
 

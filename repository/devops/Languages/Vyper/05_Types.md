@@ -8,8 +8,6 @@ The type vocabulary for honest Vyper on **0.4.x** (**0.4.3**): value types, refe
 
 Solidity’s value/reference story is a useful parallel in [Solidity](../Solidity/README.md); names and defaults differ—do not copy-paste assumptions.
 
----
-
 ## 1. Concepts
 
 ### 1. Why types are a security control
@@ -153,8 +151,6 @@ If product needs “list all users,” store an explicit index.
 
 Empty / zero defaults (`0`, `False`, `empty(...)`, zero address) are normal. Authorization bugs appear when “unset” is treated as “open.” Initialization and `assert` patterns must treat zero as a **domain** question.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. ABI types vs storage types
@@ -191,8 +187,6 @@ Because decimals may require `--enable-decimals`, treat that flag like part of t
 
 Prefer boring types auditors have seen when value at risk is high. Adopt newer typing features when they clarify interfaces—not to impress.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Type discipline |
@@ -204,8 +198,6 @@ Prefer boring types auditors have seen when value at risk is high. Adopt newer t
 | **SE** | Code review checklists include “unit + type + conversion + bound” as one item. |
 
 **Whole-engineering picture:** types are how intent becomes **machine-checkable agreement** across app, chain, and clients.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -219,8 +211,6 @@ Prefer boring types auditors have seen when value at risk is high. Adopt newer t
 - ABI-breaking type changes are versioned for consumers.
 - Zero/default values are interpreted deliberately in auth and config paths.
 - Team can explain decimal vs wei choice in one sentence for each money field.
-
----
 
 ## References
 

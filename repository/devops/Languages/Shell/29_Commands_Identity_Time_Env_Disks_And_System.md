@@ -6,8 +6,6 @@
 
 Extreme depth for the **identity / time / environment / disk / system** command family from the atlas (**27**): who you are, what time it is, what environment you inherited, how much disk you have, and how the host identifies itself. File CRUD and text tools live in **14**/**15**; archives/transfer in **30**.
 
----
-
 ## If you are brand new
 
 ```bash
@@ -33,8 +31,6 @@ Get-ChildItem Env: | Select-Object -First 10
 # Breakdown: Get-Date is a cmdlet; Env: is a PowerShell drive of environment vars
 ```
 
----
-
 ## 1. Concepts
 
 ### 1. Why this family matters in DevOps
@@ -58,8 +54,6 @@ CI failures that look like “logic bugs” are often:
 | Env | `env`/`printenv` | same | same | `$env:` / `Env:` drive | `SET` |
 | OS id | `uname` | same | same | `$PSVersionTable` | `VER` |
 | Disk | `df`/`du` | BSD flags | subset | `Get-PSDrive`/`Get-Volume` | limited |
-
----
 
 ## 2. Identity commands in depth
 
@@ -112,8 +106,6 @@ Literacy for shared hosts and bastions. Automation usually needs `id`, not `pink
 
 **Windows:** `whoami /groups`, `query user`.
 
----
-
 ## 3. Time — `date` in depth
 
 ### Baby steps
@@ -160,8 +152,6 @@ TIME /T
 
 **Pitfalls:** locale affects month names; set `LC_ALL=C` for stable parseable output in logs. Timezones in containers often default to UTC—document that.
 
----
-
 ## 4. Environment — `env` / `printenv`
 
 ### `printenv`
@@ -200,8 +190,6 @@ SET LOCALVAR=value
 ```
 
 **Staff:** never dump full `env` to public CI logs (secrets). Prefer named `printenv VAR`.
-
----
 
 ## 5. System identity — `uname` / `hostname` / `nproc` / `tty` / `uptime`
 
@@ -257,8 +245,6 @@ uptime
 
 `tty` fails non-interactively (no TTY)—expected in CI. `hostid` is historic; do not use for security identity.
 
----
-
 ## 6. Disks — `df` / `du` in depth
 
 ### `df` — filesystem free space
@@ -304,8 +290,6 @@ Get-ChildItem -Recurse | Measure-Object -Property Length -Sum
 ```
 
 **BusyBox:** fewer long options; prove on Alpine images.
-
----
 
 ## 7. Process helpers — `sleep` / `timeout` / `nice` / `nohup` / `true` / `false` / `yes` / `seq` / `expr`
 
@@ -382,8 +366,6 @@ seq -w 1 10       # equal width
 - **`stdbuf`:** line-buffer pipelines (GNU)—debugging stuck pipes.
 - **`stty`:** terminal modes; rare in CI; do not assume TTY.
 
----
-
 ## 8. Advanced concepts
 
 ### 1. Container identity surprises
@@ -439,8 +421,6 @@ env -i PATH="/usr/bin:/bin" HOME="$HOME" bash --noprofile --norc -c 'command -v 
 | Advanced | `env -i`, GNU vs BSD `date`, `df -i`, `timeout` |
 | Staff | Hermetic CI preflight on Debian + Alpine + macOS + Windows |
 
----
-
 ## 9. Applications
 
 ### CI preflight snippet
@@ -479,14 +459,10 @@ du -x -h --max-depth=1 /var 2>/dev/null | sort -h
 - Container user (`id`) matches volume permissions story.
 - `sleep` in CI is intentional (flaky retries reviewed).
 
----
-
 ## References
 
 - [GNU coreutils — date, df, du, env, uname, timeout, …](https://www.gnu.org/software/coreutils/manual/)
 - [POSIX date / df / id / uname](https://pubs.opengroup.org/onlinepubs/9699919799/)
 - [PowerShell Get-Date / about_Environment_Variables](https://learn.microsoft.com/powershell/)
-
----
 
 [← Back to Shell](./README.md)

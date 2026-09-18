@@ -6,8 +6,6 @@
 
 How Rust shares behavior and abstracts over types: **traits**, **trait bounds**, **`where` clauses**, **`impl Trait`**, common **`std` traits**, **generics**, **lifetime parameters** on functions and structs, and the difference between **`dyn Trait`** (dynamic dispatch) and **`impl Trait`** (static dispatch). This chapter builds on ownership/lifetimes (05) and prepares for iterators (09) and module-scale API design (10).
 
----
-
 ## 1. Concepts
 
 ### 1. Traits: shared behavior
@@ -111,8 +109,6 @@ struct View<'a> {
 ```
 
 `View<'a>` cannot outlive the data behind `'a`. This appears at parser and zero-copy API boundaries. Prefer owned fields (`String`, `Vec<u8>`) in long-lived or returned domain objects unless performance requires borrowing.
-
----
 
 ## 2. Advanced concepts
 
@@ -261,8 +257,6 @@ You may implement a trait for a type only if **your crate** defines the trait **
 
 Thin rule for reviews: if the compiler cites orphan/coherence, the fix is almost always a newtype or moving the trait—not `unsafe` or a dependency hack.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and API design
@@ -305,8 +299,6 @@ Thin rule for reviews: if the compiler cites orphan/coherence, the fix is almost
 - `#[must_use]` applied where discarding a return is a bug; `Result` not ignored at call sites.
 - `Sized` / `?Sized`, `Copy` vs `Clone`, and `Send`/`Sync` bounds match the API’s real constraints.
 - Derived traits match domain semantics (`Eq` only when total equality holds).
-
----
 
 ## References
 

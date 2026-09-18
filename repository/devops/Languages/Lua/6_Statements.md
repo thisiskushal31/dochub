@@ -54,8 +54,6 @@ A function call can be used as a statement; all returned values are discarded. U
 
 A variable with the `<close>` attribute is closed when it goes out of scope: on normal block exit, break/goto/return, or error. Closing means calling the value’s `__close` metamethod with the value as first argument and, if the exit was due to an error, the error object as second argument. The value must have a `__close` metamethod or be a false value (nil/false are not closed). Several to-be-closed variables are closed in reverse order of declaration. If a coroutine yields and is never resumed (or ends with an error), variables in scope at yield may never be closed; `coroutine.close` or finalizers can be used to clean up.
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §3.3 Statements](https://www.lua.org/manual/5.5/manual.html#3.3)

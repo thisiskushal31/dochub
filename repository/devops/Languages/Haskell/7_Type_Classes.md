@@ -39,8 +39,6 @@ instance Functor Tree where
   fmap f (Branch l r) = Branch (fmap f l) (fmap f r)
 ```
 
----
-
 ## Further reading
 
 - [Haskell 2010 report – Type classes and instances](https://haskell.org/onlinereport/haskell2010/haskellch4.html)

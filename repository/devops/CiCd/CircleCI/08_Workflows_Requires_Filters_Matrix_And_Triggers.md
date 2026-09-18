@@ -2,8 +2,6 @@
 
 [← Previous](./07_Self_Hosted_Runners.md) · [README](./README.md) · [Next: Caches →](./09_Caches_Workspaces_And_Artifacts.md)
 
----
-
 ## 1. Concepts
 
 **Workflows** decide which jobs run and their dependencies.
@@ -33,8 +31,6 @@ workflows:
 | **Schedule triggers** | Cron-like pipelines |
 | **VCS / custom webhooks** | Push, PR, and custom events |
 
----
-
 ## 2. Advanced concepts
 
 ### Pipeline parameters
@@ -53,8 +49,6 @@ Configure careful reruns for infra flakes — don’t mask real test failures.
 
 Advanced projects can use multiple configuration files / pipelines — keep ownership clear.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Shape |
@@ -65,8 +59,6 @@ Advanced projects can use multiple configuration files / pipelines — keep owne
 | Human promote | approval job |
 
 **Good:** fail-fast test before expensive build. **Bad:** deploy job with no branch filter.
-
----
 
 ## References
 

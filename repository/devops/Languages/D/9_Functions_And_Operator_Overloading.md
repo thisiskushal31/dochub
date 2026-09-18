@@ -6,8 +6,6 @@
 
 **Why function attributes?** **pure** and **nothrow** enable optimization and static checking; **@safe** restricts to memory-safe operations. **Why overloading?** It allows user types to participate in expressions (e.g. **a + b**) with clear semantics.
 
----
-
 ## Function declaration and parameters
 
 Functions have a signature and a body. **ref** and **out** pass by reference; **lazy** defers evaluation of an argument. **Variadic** functions accept a variable number of arguments. **Default** parameter values allow omitting trailing arguments.
@@ -17,8 +15,6 @@ int add(int a, int b) { return a + b; }
 void swap(ref int a, ref int b) { int t = a; a = b; b = t; }
 void log(string msg, bool verbose = false) { ... }
 ```
-
----
 
 ## Attributes and contracts
 
@@ -30,8 +26,6 @@ pure nothrow int square(int x)
     return x * x;
 }
 ```
-
----
 
 ## Operator overloading
 
@@ -47,8 +41,6 @@ struct Vec2
     }
 }
 ```
-
----
 
 ## Further reading
 

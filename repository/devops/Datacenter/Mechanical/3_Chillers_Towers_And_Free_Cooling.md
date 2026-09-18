@@ -2,8 +2,6 @@
 
 [← Previous](./2_CRAH_And_CRAC.md) · [README](./README.md) · [Next: Containment →](./4_Containment_Hot_And_Cold_Aisle.md)
 
----
-
 ## 1. Concepts
 
 The **central plant** rejects heat from CRAHs (and liquid CDUs) to the outdoors.
@@ -27,8 +25,6 @@ Chiller yard/roof/plant room; towers outdoors; pipes to white-space CRAHs. Ops l
 | **Air-side economizer** | Bring filtered outdoor air (with humidity control) |
 | **Water-side economizer** | Use cold ambient via towers/heat exchangers to chill water without full chiller load |
 | **Seasonal / climate-bound** | Nordics ≠ tropics; deserts trade water vs power |
-
----
 
 ## 2. Advanced concepts
 
@@ -68,8 +64,6 @@ Generator sizing must include plant motors ([Electrical/7](../Electrical/7_Gener
 - **Hot-humid:** dehumidification + tower chemistry stress  
 - **Coastal:** corrosion and salt air on outdoor gear  
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -88,8 +82,6 @@ Generator sizing must include plant motors ([Electrical/7](../Electrical/7_Gener
 - Never close isolation valves without tagging and BMS update  
 
 **Good:** tested N+1, clean water chemistry, proven economizer changeover. **Bad:** all chillers at 95% on a mild day; unknown tower chemistry.
-
----
 
 ## References
 

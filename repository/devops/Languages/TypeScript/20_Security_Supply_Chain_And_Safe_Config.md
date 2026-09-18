@@ -8,8 +8,6 @@ A **defense and review** posture for TypeScript / Node work: **dependency and `@
 
 Default narrative: **TypeScript 5.9.x**, **`strict`: true**. Pair with chapters **11** (errors at boundaries), **14** (file trust), **17** (declarations), and **18** (tests that prove redaction).
 
----
-
 ## 1. Concepts
 
 ### 1. Threat model in one breath
@@ -103,8 +101,6 @@ Chapter **13** habits for security:
 - Restrict paths (no unexpected `../` into secret dirs) per your app’s path policy.
 - Separate **public** config from **secret** config in types (`Omit` secrets from loggable views—chapter **16**).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Lockfile, CI, and “works on my machine” installs
@@ -195,8 +191,6 @@ When a secret may have leaked via a TypeScript script or CI log:
 
 Do not treat “it was only a staging key” as closure without policy confirmation.
 
----
-
 ## 3. Applications and use cases
 
 ### Application
@@ -235,8 +229,6 @@ Do not treat “it was only a staging key” as closure without policy confirmat
 | **Files** | Trust path + parse unknown; avoid eval of file contents |
 | **Speed** | `skipLibCheck` ≠ audited deps; abort wasteful work on invalid input early |
 
----
-
 ## 4. Staff-level review checklist
 
 - Lockfile updated deliberately; CI installs from it.
@@ -250,8 +242,6 @@ Do not treat “it was only a staging key” as closure without policy confirmat
 - Config loaded without `eval` / dynamic code execution.
 - Threat notes for auth, crypto, and file-write PRs.
 - Default pin **TS 5.9.x** + `strict` for new work.
-
----
 
 ## References
 

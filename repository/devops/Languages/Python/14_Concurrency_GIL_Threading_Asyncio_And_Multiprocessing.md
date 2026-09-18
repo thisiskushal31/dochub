@@ -6,8 +6,6 @@
 
 The **GIL** in CPython, **threading** for overlapping **I/O**, **asyncio** for cooperative **I/O**, **multiprocessing** for **CPU** parallelism, **subprocess** isolation, and **`asyncio.to_thread`**—choosing models under latency, throughput, and operational constraints.
 
----
-
 ## 1. Concepts
 
 ### 1. GIL
@@ -30,8 +28,6 @@ The **global interpreter lock** allows one thread to execute Python **bytecode**
 
 **`subprocess.run([...], check=True, timeout=...)`** with **argv list**—no **shell=True** with untrusted input.
 
----
-
 ## 2. Advanced concepts
 
 **`asyncio.to_thread`** runs blocking functions in a **default thread pool** without freezing the loop.
@@ -41,8 +37,6 @@ The **global interpreter lock** allows one thread to execute Python **bytecode**
 **Executors:** **`ThreadPoolExecutor`**, **`ProcessPoolExecutor`** integrate blocking CPU work with async via **`loop.run_in_executor`**.
 
 **Cancellation:** **Task.cancel** raises **CancelledError** at **await** points—design cleanup with **`try/finally`** and **asyncio.shield** where needed.
-
----
 
 ## 3. Applications and use cases
 
@@ -65,16 +59,12 @@ async def mock_fetch(u: str) -> str:
 asyncio.run(fetch_all(["http://a", "http://b"]))
 ```
 
----
-
 ## Staff-level review checklist
 
 - Every outbound I/O call has timeout, retry policy, and cancellation behavior.
 - No blocking call appears on async hot paths without `to_thread` / executor offload.
 - CPU-heavy steps are isolated into process pools or native workers.
 - Worker count and queue bounds are explicit and monitored.
-
----
 
 ## References
 

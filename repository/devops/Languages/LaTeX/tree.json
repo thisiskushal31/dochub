@@ -4,76 +4,76 @@
     "path": "1_What_Is_LaTeX.md",
     "type": "file",
     "sha": "",
-    "size": 5098
+    "size": 5093
   },
   {
     "name": "10_Use_Cases_And_Engineering_Perspective.md",
     "path": "10_Use_Cases_And_Engineering_Perspective.md",
     "type": "file",
     "sha": "",
-    "size": 6348
+    "size": 6343
   },
   {
     "name": "2_Environment_And_Setup.md",
     "path": "2_Environment_And_Setup.md",
     "type": "file",
     "sha": "",
-    "size": 4991
+    "size": 4986
   },
   {
     "name": "3_Document_Structure_And_Basics.md",
     "path": "3_Document_Structure_And_Basics.md",
     "type": "file",
     "sha": "",
-    "size": 7516
+    "size": 7511
   },
   {
     "name": "4_Commands_Environments_And_Packages.md",
     "path": "4_Commands_Environments_And_Packages.md",
     "type": "file",
     "sha": "",
-    "size": 8044
+    "size": 8039
   },
   {
     "name": "5_Mathematics.md",
     "path": "5_Mathematics.md",
     "type": "file",
     "sha": "",
-    "size": 7417
+    "size": 7412
   },
   {
     "name": "6_Tables_And_Figures.md",
     "path": "6_Tables_And_Figures.md",
     "type": "file",
     "sha": "",
-    "size": 7947
+    "size": 7942
   },
   {
     "name": "7_Cross_References_And_Bibliography.md",
     "path": "7_Cross_References_And_Bibliography.md",
     "type": "file",
     "sha": "",
-    "size": 6245
+    "size": 6240
   },
   {
     "name": "8_Compilation_And_Toolchains.md",
     "path": "8_Compilation_And_Toolchains.md",
     "type": "file",
     "sha": "",
-    "size": 4067
+    "size": 4062
   },
   {
     "name": "9_CI_Automation_And_Templated_PDFs.md",
     "path": "9_CI_Automation_And_Templated_PDFs.md",
     "type": "file",
     "sha": "",
-    "size": 4713
+    "size": 4708
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 5619
+    "size": 5594
   }
 ]

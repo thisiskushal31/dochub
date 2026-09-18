@@ -6,8 +6,6 @@
 
 **Hands-on:** For a step-by-step path (install a distro, boot process, run commands on a VM), see [Learn Linux — hands-on](./00_Learn_Linux_Hands_On.md).
 
----
-
 ## The Linux kernel: monolithic and modular
 
 Linux uses a **monolithic kernel**: process, memory, file systems, device drivers, and network stack run in kernel space. The kernel is **modular**: many drivers are **loadable kernel modules (LKMs)** — load/unload with `insmod`, `rmmod`, `modprobe` without rebooting. **Kernel version:** `uname -r`. For full OS/kernel theory see [Fundamentals: Kernel and OS architecture](../Fundamentals/1_Kernel_And_OS_Architecture.md).
@@ -54,8 +52,6 @@ sudo update-initramfs -u   # Debian/Ubuntu; on RHEL: dracut --force
 
 **Why this matters:** In containers and minimal systems you often need specific modules (e.g. `overlay`, `veth`, `nf_nat`) loaded on the host. Knowing `lsmod` and `modprobe` lets you verify and fix missing support.
 
----
-
 ## Recap: OS and kernel (concepts)
 
 The OS is a program that runs all the time. It:
@@ -78,8 +74,6 @@ Conceptually, the stack looks like this:
     +------------------------------------------+
 ```
 
----
-
 ## How users interact with the OS
 
 Users and scripts interact with the OS mainly in two ways:
@@ -90,8 +84,6 @@ Users and scripts interact with the OS mainly in two ways:
 | **GUI** (Graphical User Interface) | Windows, icons, menus. | Desktop environments (GNOME, KDE), Windows Explorer, macOS Finder |
 
 In DevOps and servers, the **CLI** is primary: automation, SSH, containers, and pipelines all rely on shell commands.
-
----
 
 ## Main components: Kernel and Shell
 
@@ -106,8 +98,6 @@ So when you run a command in a terminal, the **shell** parses it and uses **syst
 
 *Image: [ByteByteGo – How Do Computer Programs Run?](https://bytebytego.com/guides/how-do-computer-programs-run/).*
 
----
-
 ## Goals of an operating system
 
 **Primary:** convenient and safe program execution, resource management, user convenience.
@@ -115,8 +105,6 @@ So when you run a command in a terminal, the **shell** parses it and uses **syst
 **Secondary:** reliability, efficient use of CPU/memory/I/O, modularity, ease of debugging.
 
 For DevOps, the OS must be scriptable (CLI), stable under load, and manageable remotely—which is why Linux is so common on servers and in containers.
-
----
 
 ## Types of operating systems
 
@@ -129,8 +117,6 @@ For DevOps, the OS must be scriptable (CLI), stable under load, and manageable r
 | Distributed | Systems across many machines appear as one. | Clusters, clouds, microservices. |
 
 Linux and Windows are **multitasking, multiprogramming** systems.
-
----
 
 ## What happens when you turn on the computer (boot process)
 
@@ -220,8 +206,6 @@ systemd-analyze critical-chain
 
 See [Learn Linux — hands-on](./00_Learn_Linux_Hands_On.md) for full service and startup management.
 
----
-
 ## System calls
 
 **System calls** are the interface between user programs and the kernel. When a program needs to read a file, create a process, or allocate memory, it does so via a system call. The kernel then performs the operation and returns a result.
@@ -282,8 +266,6 @@ close(3) = 0
 
 This shows that `ls` opened `/tmp` (fd 3), read directory entries, wrote to stdout (fd 1), and closed the directory. Understanding this helps with debugging permission errors, missing files, or I/O bottlenecks.
 
----
-
 ## Linux directory structure and important paths (hands-on)
 
 **Concepts:** In Linux, *everything is a file* (or a process). Files fall into: **general files** (regular data: documents, binaries); **directory files** (contain other files); **device files** (in `/dev`, interface to drivers). Key directories:
@@ -309,8 +291,6 @@ This shows that `ls` opened `/tmp` (fd 3), read directory entries, wrote to stdo
 
 **Important files (hands-on):** `/etc/fstab` (mount points), `/etc/passwd` (user info), `/etc/hosts` (hostname→IP), `/etc/resolv.conf` (DNS), `/etc/crontab` (scheduled tasks), `/proc/cpuinfo`, `/proc/meminfo`, `/proc/mounts`, `/var/log/` (logs). See [Storage and I/O](./8_Storage_And_IO.md) for a fuller FHS and file-by-file description.
 
----
-
 ## Common operating systems (and why Linux in DevOps)
 
 | OS | Typical use |
@@ -321,8 +301,6 @@ This shows that `ls` opened `/tmp` (fd 3), read directory entries, wrote to stdo
 | **Unix** | Legacy and some enterprise servers. |
 
 Linux dominates in DevOps because it is open, scriptable, lightweight, and runs everywhere (bare metal, VMs, containers).
-
----
 
 ## Essential Linux commands for OS basics
 
@@ -358,8 +336,6 @@ free -h
 nproc
 ```
 
----
-
 ## More system inspection commands
 
 ```bash
@@ -383,8 +359,6 @@ dmesg | tail
 dmesg -w
 ```
 
----
-
 ## Summary
 
 - The OS is the layer between hardware and user/apps; it manages resources and provides the execution environment.
@@ -393,8 +367,6 @@ dmesg -w
 - **System calls** are how programs use kernel services.
 - **Boot**: firmware → boot loader → kernel → init (e.g. systemd) → services and login.
 - For DevOps, Linux is the default choice on servers and in containers; knowing these basics helps with scripting, debugging, and automation.
-
----
 
 ## Further reading
 

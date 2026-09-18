@@ -2,8 +2,6 @@
 
 [← Previous](./17_Security_Privacy_And_Compliance.md) · [README](./README.md) · [Next: Worked example →](./19_Worked_Example_Gradual_Rollout_In_CI_CD.md)
 
----
-
 ## 1. Concepts
 
 Day-2 Unleash is mostly **boring platform ops**:
@@ -17,8 +15,6 @@ Day-2 Unleash is mostly **boring platform ops**:
 | **Troubleshoot** | Toggle lag, token mismatch, context missing, SDK skew |
 
 Resource limits cap flags, strategies, constraints, segments, tokens, projects, environments (OSS: **1 project, 2 environments**, not overridable). Enterprise raises ceilings (e.g. 50k flags, 500 projects). Self-host can override most via `UNLEASH_*_LIMIT` env vars — prefer talking to Unleash rather than silently raising.
-
----
 
 ## 2. Advanced concepts
 
@@ -50,8 +46,6 @@ Read breaking changes; upgrade Edge and server as a pair when required; pin imag
 
 Postgres is the SoR for self-host. Test restore. Cloud customers still need export discipline for catastrophic vendor/project mistakes.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -68,8 +62,6 @@ Postgres is the SoR for self-host. Test restore. Cloud customers still need expo
 - On-call knows kill-switch path  
 
 **Good:** Edge absorbs SDK storms. **Bad:** vertical-scale only the server forever.
-
----
 
 ## References
 

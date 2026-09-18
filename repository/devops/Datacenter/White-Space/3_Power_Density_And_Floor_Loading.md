@@ -2,8 +2,6 @@
 
 [← Previous](./2_Cabinet_Airflow_And_Chimneys.md) · [README](./README.md) · [Next: Copper cabling →](./4_Structured_Cabling_Copper.md)
 
----
-
 ## 1. Concepts
 
 **Power density** (kW per rack / per sq ft) and **floor loading** (psf or kN/m²) are the two physical budgets that kill GPU dreams.
@@ -32,8 +30,6 @@ Electrical landing: [Electrical/11](../Electrical/11_Rack_PDU_A_And_B.md), [Elec
 
 Lease docs, site manuals, structural drawings, and colo order forms—not Slack folklore.
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes
@@ -57,8 +53,6 @@ PO of dense gear → check kW + voltage/phase + cooling type + floor loading + a
 
 Seismic zones (Japan, California, NZ, etc.) change bracing requirements. Units: learn both psf and metric. Skills transfer; stamped limits are local.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -77,8 +71,6 @@ Seismic zones (Japan, California, NZ, etc.) change bracing requirements. Units: 
 - Never “temporary” overload a circuit for a cluster bring-up  
 
 **Good:** matched electrical+mechanical+structural budgets. **Bad:** nameplate packing; overweight liquid door on light tile; hope-based density.
-
----
 
 ## References
 

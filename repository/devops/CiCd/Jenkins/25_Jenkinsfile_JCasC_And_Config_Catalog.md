@@ -2,8 +2,6 @@
 
 [← Previous](./24_Feature_And_Offering_Coverage_Map.md) · [README](./README.md) · [Next: Migrate →](./26_Migrate_LTS_Upgrades_And_Extras.md)
 
----
-
 ## 1. Concepts — surfaces you configure
 
 | Surface | Typical files / UI | Chapter |
@@ -60,8 +58,6 @@ tool:
 
 SCM → build environment → build steps → post-build actions → “Restrict where” → triggers. Prefer migrating logic to Pipeline over deepening Freestyle forever ([05](./05_Job_Types_Freestyle_And_Matrix.md)).
 
----
-
 ## 2. Advanced — troubleshooting playbook
 
 | Symptom | Likely cause | Look at |
@@ -77,8 +73,6 @@ SCM → build environment → build steps → post-build actions → “Restrict
 | CSRF / 403 on API | Crumb / token | [21](./21_Blue_Ocean_CLI_And_Remote_API.md) |
 | Multibranch no jobs | SCM creds / filters | [10](./10_Multibranch_And_Organization_Folders.md) |
 | UI hang | Thread contention | Thread dump; support bundle |
-
----
 
 ## 3. Applications — staff checklist
 
@@ -96,8 +90,6 @@ SCM → build environment → build steps → post-build actions → “Restrict
 **Good:** fix in Git (Jenkinsfile/JCasC). **Bad:** irreproducible UI-only prod.
 
 Full inventory: [24](./24_Feature_And_Offering_Coverage_Map.md).
-
----
 
 ## References
 

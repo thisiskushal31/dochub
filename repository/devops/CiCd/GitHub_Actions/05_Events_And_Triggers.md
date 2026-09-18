@@ -2,8 +2,6 @@
 
 [← Previous](./04_Workflow_Syntax_Mental_Model.md) · [README](./README.md) · [Next: Jobs →](./06_Jobs_Needs_Concurrency_And_Matrix.md)
 
----
-
 ## 1. Concepts
 
 `on:` decides **when** a workflow can start. Common families:
@@ -34,8 +32,6 @@ on:
 
 Activity `types:` (opened, synchronize, …) and branch/tag/path filters refine noise. Full catalog: [events that trigger workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows).
 
----
-
 ## 2. Advanced concepts
 
 ### `pull_request` vs `pull_request_target`
@@ -59,8 +55,6 @@ Chaining via `workflow_run` is powerful and easy to recurse. Prefer explicit `wo
 
 Repos storms can hit trigger and queue limits (per-repo event rates, runs queued per 10s). Confirm [limits](https://docs.github.com/en/actions/reference/limits) when automating bursts.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Trigger |
@@ -72,8 +66,6 @@ Repos storms can hit trigger and queue limits (per-repo event rates, runs queued
 | Org standard | caller `pull_request` → `uses:` reusable |
 
 **Good:** filters match intent. **Bad:** every push to every branch runs a 30-minute matrix.
-
----
 
 ## References
 

@@ -32,8 +32,6 @@
 
 **Order of evaluation.** Package-level initialization order follows dependencies. In an expression, the order of evaluation of operands and function calls is not specified except: (1) logical operators **&&** and **||** short-circuit; (2) in an assignment, the left-hand side is evaluated before the right; (3) in a call, the function value and arguments are evaluated in the usual left-to-right order, and the call runs after they are evaluated. So **f(a(), b())** may evaluate **a()** then **b()** or **b()** then **a()**; the function value **f** is evaluated before the arguments.
 
----
-
 ## Operators
 
 Operators combine operands into expressions.
@@ -147,8 +145,6 @@ For an operand `x` of type `T`, the address operation `&x` generates a pointer o
 
 For an operand `ch` of channel type, the value of the receive operation `<-ch` is the value received from the channel `ch`. The channel direction must permit receive operations, and the type of the receive operation is the element type of the channel. The expression blocks until a value is available. Receiving from a `nil` channel blocks forever. A receive operation on a closed channel can always proceed immediately, yielding the element type's zero value after any previously sent values have been received. The form `x, ok = <-ch` (or `:=` or `var`) yields an additional untyped boolean; `ok` is `true` if the value was delivered by a successful send, `false` if it is a zero value because the channel is closed and empty.
 
----
-
 ## Conversions
 
 A conversion changes the type of an expression to the type specified by the conversion. An explicit conversion is an expression of the form `T(x)` where `T` is a type and `x` is an expression that can be converted to type `T`.
@@ -171,8 +167,6 @@ Struct tags are ignored when comparing struct types for identity for the purpose
 
 **Slice to array or array pointer:** Converting a slice to an array yields an array containing the elements of the underlying array of the slice. Converting a slice to an array pointer yields a pointer to the underlying array. If the length of the slice is less than the length of the array, a run-time panic occurs.
 
----
-
 ## Constant expressions
 
 Constant expressions may contain only constant operands and are evaluated at compile time.
@@ -194,8 +188,6 @@ const Four int8 = Huge >> 98  // Four == 4
 
 The divisor of a constant division or remainder operation must not be zero. The values of typed constants must always be accurately representable by values of the constant type. The mask used by the unary bitwise complement operator `^` matches the rule for non-constants: all 1s for unsigned constants, -1 for signed and untyped constants.
 
----
-
 ## Order of evaluation
 
 At package level, initialization dependencies determine the evaluation order of individual initialization expressions in variable declarations. Otherwise, when evaluating the operands of an expression, assignment, or return statement, all function calls, method calls, receive operations, and binary logical operations are evaluated in lexical left-to-right order.
@@ -210,8 +202,6 @@ m := map[int]int{a: 1, a: 2}  // m may be {2: 1} or {2: 2}: evaluation order bet
 ```
 
 At package level, initialization dependencies override the left-to-right rule for individual initialization expressions, but not for operands within each expression. Floating-point operations within a single expression are evaluated according to the associativity of the operators. Explicit parentheses affect the evaluation by overriding the default associativity.
-
----
 
 **Arithmetic (summary).** The arithmetic operators **+**, **-**, **\***, **/** apply to numeric types; **+** also applies to strings (concatenation). **%** is remainder for integers. For integers, **/** truncates toward zero. The shift operators **<<** and **>>** apply to integers (the right operand must be non-negative). For signed integers, **>>** is an arithmetic shift. Increment and decrement (**++**, **--**) are statements, not expressions: you write `x++`, not use `x++` inside another expression. Operands must be of the same type (or one untyped constant that is assignable to the other).
 
@@ -246,8 +236,6 @@ v, ok := <-ch      // receive with comma-ok
 ```
 
 **Why this matters.** Correct use of operators and expressions is the basis for conditionals, loops, and function bodies. Understanding comparison (what is comparable, what is not) prevents invalid code and clarifies when you need to compare field-by-field or use reflection. In security-sensitive code, avoid relying on implementation-defined behavior (e.g. integer overflow is well-defined in Go but can still cause logic errors).
-
----
 
 ## Further reading
 

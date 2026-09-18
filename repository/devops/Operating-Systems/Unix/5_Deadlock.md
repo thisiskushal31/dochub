@@ -4,13 +4,9 @@
 
 **Prerequisite:** [Fundamentals: Deadlock](../Fundamentals/7_Deadlock.md). Here: how **deadlock** appears on Unix and how to detect or prevent it in your code (lock ordering, timeouts).
 
----
-
 ## How the system handles deadlock (deep level)
 
 The kernel does **not** detect or break user-level deadlocks. When a thread **blocks** on a lock (e.g. **sem_wait**, **pthread_mutex_lock**, or **flock**), it is put in a **sleep** state on a wait queue; the kernel has no notion of a wait cycle. So **deadlock avoidance** is the application's responsibility: **lock ordering**, **trylock** with timeout, or design that avoids circular wait. As an admin you can **observe** (e.g. `ps` for state **D**, or **kdump**/kernel debugger) and **recover** by terminating a process.
-
----
 
 ## Deadlock on Unix (concepts and commands)
 
@@ -19,8 +15,6 @@ Deadlock occurs when two or more processes (or threads) wait for each other’s 
 ![Deadlock: conditions, prevention, and recovery](../../Assets/Operating-Systems/Bytebytego_Deadlock.png)
 
 *Image: [ByteByteGo – What is a Deadlock?](https://bytebytego.com/guides/what-is-a-deadlock/).*
-
----
 
 ## Finding blocked processes
 
@@ -32,14 +26,10 @@ ps aux | awk '$8 ~ /D/'
 # On BSD: kdump, or kernel debugger
 ```
 
----
-
 ## Summary
 
 - **Deadlock** = circular wait; prevent with lock ordering and timeouts.
 - On Unix: **file locks**, **pthread mutexes**, **semaphores**; use **trylock** and consistent ordering.
-
----
 
 ## Further reading
 

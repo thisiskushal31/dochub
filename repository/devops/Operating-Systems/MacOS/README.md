@@ -2,8 +2,6 @@
 
 **How macOS implements OS fundamentals.** Assume you have read [Fundamentals](../Fundamentals/README.md). macOS is built on **Darwin** (open-source core) and the **XNU kernel** (Mach + BSD + IOKit). Here we cover **architecture** (what it's built on, languages, hardware integration), **file system** (APFS), **services** (launchd), **processes**, **memory**, **storage**, **virtualization** (Hypervisor.framework), **event logging** (Unified Logging), **security**, and **advanced** topics — with commands and references to official Apple and cybersecurity documentation.
 
----
-
 ## Where macOS implements OS fundamentals
 
 Same format as [Linux](../Linux/README.md), [Windows](../Windows/README.md), and [Unix](../Unix/README.md). Each row maps a **concept** to **how macOS does it** and the **topic** where it is covered.
@@ -28,8 +26,6 @@ Same format as [Linux](../Linux/README.md), [Windows](../Windows/README.md), and
 
 **Factual basis:** Content is drawn from **Apple Developer Documentation** (Kernel Programming Guide, File System Programming Guide, launchd, Hypervisor, Unified Logging), **XNU open source** ([apple-oss-distributions/xnu](https://github.com/apple-oss-distributions/xnu)), and **Security/forensics** sources (e.g. HackTricks macOS, CyberArk, Eclectic Light, forensic APFS references) where they document internals. Links are cited in topic files and **Further reading**.
 
----
-
 ## Topics
 
 | # | Topic | Description |
@@ -46,8 +42,6 @@ Same format as [Linux](../Linux/README.md), [Windows](../Windows/README.md), and
 | 9 | [Shell and scripting](./9_Shell_And_Scripting.md) | zsh (default), bash, sh, scripting |
 | 10 | [Users, networking, logging, and security](./10_Users_Networking_Logging_And_Security.md) | launchd/launchctl, networking, **Unified Logging** (log stream, log show), security (SIP, Gatekeeper, **Keychain**, certificates, MDM), **package management** (Homebrew, pkgutil, installer), **defaults** and **xattr**; references to cybersecurity docs |
 | 11 | [Storage advanced and virtualization](./11_Storage_Advanced_And_Virtualization.md) | APFS snapshots, diskutil advanced; **Hypervisor.framework**, **Virtualization.framework** (Apple Silicon) |
-
----
 
 ## Adding topics
 

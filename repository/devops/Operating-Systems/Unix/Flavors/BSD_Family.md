@@ -4,8 +4,6 @@
 
 The **BSD family** are open-source Unix descendants (from UC Berkeley’s BSD). They share a common heritage but have different kernels and focus: **FreeBSD** (performance, servers), **OpenBSD** (security, correctness), **NetBSD** (portability). They use **pkg** (binary packages) and **ports** (source-based) for software.
 
----
-
 ## Relationship
 
 | Flavor | Focus | Typical use |
@@ -13,8 +11,6 @@ The **BSD family** are open-source Unix descendants (from UC Berkeley’s BSD). 
 | **FreeBSD** | Performance, ZFS, jails, networking | Servers, storage, networking appliances. |
 | **OpenBSD** | Security, audit, minimal attack surface | Security-focused servers, firewalls (pf). |
 | **NetBSD** | Portability (many architectures) | Embedded, research, cross-build. |
-
----
 
 ## Package management: pkg and ports
 
@@ -37,8 +33,6 @@ cd /usr/ports/category/port
 make install clean
 ```
 
----
-
 ## Service management (rc.d)
 
 BSD uses **rc.d** scripts and **rc.conf** (not systemd):
@@ -54,15 +48,11 @@ service -e              # List enabled services
 # nginx_enable="YES"
 ```
 
----
-
 ## Summary
 
 - **BSD family** = FreeBSD, OpenBSD, NetBSD; **pkg** (binary) and **ports** (source).
 - **Services:** rc.d, `service`; config in **rc.conf**.
 - **FreeBSD:** ZFS, jails; **OpenBSD:** pf firewall, emphasis on security; **NetBSD:** portability.
-
----
 
 ## Further reading
 

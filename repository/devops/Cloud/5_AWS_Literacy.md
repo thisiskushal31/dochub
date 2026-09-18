@@ -2,8 +2,6 @@
 
 [← Previous](./4_GCP_Literacy.md) · [README](./README.md) · [Next: Azure →](./6_Azure_Literacy.md) · [Full catalog](./Catalogs/AWS_Products.md) · [Jobs: IAM](./15_Org_IAM_And_Identity_Federation.md) · [LB](./23_Load_Balancing_Ingress_And_TLS.md)
 
----
-
 ## Mental map — Floor 1 jobs on AWS
 
 | Job | AWS wiring | Depth |
@@ -19,8 +17,6 @@
 | Registry | ECR | [27](./27_Container_Registries_And_Artifacts.md) |
 | Audit | CloudTrail | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
 | Metrics / logs / traces | CloudWatch + X-Ray; AMP + Managed Grafana optional | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
-
----
 
 ## 1. Concepts
 
@@ -60,8 +56,6 @@ ECS vs EKS is an org choice ([28](./28_Deployment_Shapes_On_Cloud.md)). If you n
 | Logs / metrics | CloudWatch |
 | SQL / warehouse doors | RDS, DynamoDB, Redshift — [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) |
 
----
-
 ## 2. Advanced concepts
 
 ### Network and entry
@@ -85,9 +79,6 @@ Service Control Policies cap what even account admins can do (deny leaving the o
 | Account = blast radius | Heavier multi-account culture than single-project shops |
 | ALB vs NLB settings | Health checks, idle timeout, sticky — job knobs differ from GCP HTTP LB UI |
 | Global services | IAM/R53/CloudFront mental model ≠ regional VPC |
-
----
-
 
 ### How you grant permission on AWS (quick)
 
@@ -118,7 +109,6 @@ Full job: [15](./15_Org_IAM_And_Identity_Federation.md).
 | Managed Prometheus / Grafana | AMP + Amazon Managed Grafana | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
 | Full N-tier system | Wire [34](./34_Multi_Tier_And_Reference_Topologies.md) | |
 
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -137,8 +127,6 @@ Full job: [15](./15_Org_IAM_And_Identity_Federation.md).
 - SCPs on for outer fence  
 
 **Good:** org + Identity Center + OIDC roles. **Bad:** root keys, one account, `AdministratorAccess` on the node instance profile.
-
----
 
 ## References
 

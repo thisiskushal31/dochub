@@ -2,8 +2,6 @@
 
 [← Previous](./10_BMC_IPMI_And_Redfish_Deep.md) · [README](./README.md) · [Next: Boot paths →](./12_Boot_UEFI_RAID_NVMe_SAN.md)
 
----
-
 ## 1. Concepts
 
 A server is a stack of firmware: **BIOS/UEFI**, **BMC**, **NIC**, **storage/HBA**, **backplane**, sometimes **PSU** and **drive** firmware. A **firmware train** is the tested combination your fleet standardizes on.
@@ -13,8 +11,6 @@ A server is a stack of firmware: **BIOS/UEFI**, **BMC**, **NIC**, **storage/HBA*
 ### Where it sits
 
 Images delivered via OEM portal/Redfish; applied in maintenance windows; recorded in CMDB.
-
----
 
 ## 2. Advanced concepts
 
@@ -46,8 +42,6 @@ Boot order and media: [12](./12_Boot_UEFI_RAID_NVMe_SAN.md). Imaging pipelines m
 
 OEM tooling differs; signing and Secure Boot key management follow org PKI. Same jobs worldwide.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -66,8 +60,6 @@ OEM tooling differs; signing and Secure Boot key management follow org PKI. Same
 - Never “latest from website” ad-hoc on production  
 
 **Good:** signed trains, soak, drift detection. **Bad:** snowflake firmware; Secure Boot surprises; untested BMC flash at scale.
-
----
 
 ## References
 

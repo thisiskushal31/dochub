@@ -2,8 +2,6 @@
 
 [← Previous](./5_Gateway_Border_Firewall_Boxes.md) · [README](./README.md) · [Next: OOB/BMC →](./7_OOB_BMC_Plane_Bring_Up.md)
 
----
-
 ## Mental map
 
 ```text
@@ -24,8 +22,6 @@ flowchart LR
   PXE --> Install --> Prod
 ```
 
----
-
 ## 1. Concepts
 
 **Segmentation** is how one cable plant serves many trust and boot jobs without mixing them.
@@ -42,8 +38,6 @@ flowchart LR
 
 **Confirm:** Who flips the switchport from provisioning to prod—network eng or automation?
 
----
-
 ## 2. Advanced concepts
 
 ### Operator experience (verify locally)
@@ -58,8 +52,6 @@ Common pattern: untagged/access provisioning VLAN with DHCP helpers → image �
 | Forgot port flip | Server “works” in prod with PXE options still present |
 | No helper on new leaf | PXE timeout |
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -68,8 +60,6 @@ Common pattern: untagged/access provisioning VLAN with DHCP helpers → image �
 | Break-glass | Virtual media via BMC when PXE plane down ([9](./9_Imaging_Path.md)) |
 
 **Staff checklist:** VLAN matrix owned; DHCP scopes per plane; port-flip runbook; Integration with imaging.
-
----
 
 ## References
 

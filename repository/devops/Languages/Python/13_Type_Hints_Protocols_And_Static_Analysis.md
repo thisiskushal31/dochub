@@ -6,8 +6,6 @@
 
 **Gradual typing**, **`typing`** essentials, **`Protocol`** (structural subtyping), **`TypedDict`**, **`Literal`**, **`Final`**, **`TypeVar`**, **`Generic`**, **PEP 695** type parameters (syntax on 3.12+), and running **mypy** / **Pyright** / **ruff** in CI—design-time safety without pretending types replace tests or security review.
 
----
-
 ## 1. Concepts
 
 ### 1. What annotations are
@@ -34,8 +32,6 @@ Annotations are **expressions** attached to parameters, returns, and (with **`__
 
 **Any** disables checking for that value; use sparingly at FFI boundaries. **object** is “some object”—often paired with isinstance.
 
----
-
 ## 2. Advanced concepts
 
 **Variance:** **`list` is invariant** (cannot substitute **`list[Child]`** where **`list[Parent]`** expected); **`Sequence` is covariant** in its type parameter for immutable reading patterns.
@@ -43,8 +39,6 @@ Annotations are **expressions** attached to parameters, returns, and (with **`__
 **Overload** declarations describe multiple signatures for one implementation—common in wrappers.
 
 **Type parameters** on functions/classes (**`def f[T](x: T) -> T`**) reduce boilerplate on modern Python.
-
----
 
 ## 3. Applications and use cases
 
@@ -64,16 +58,12 @@ def slurp(r: Readable) -> bytes:
     return r.read()
 ```
 
----
-
 ## Staff-level review checklist
 
 - Enforce one checker baseline per repo (for example Pyright strict in core packages, relaxed in adapters).
 - Track `Any` count and `# type: ignore` growth as engineering debt.
 - Type external boundaries first: HTTP payloads, env vars, message queues, ORM rows.
 - Require typed public APIs for shared internal libraries.
-
----
 
 ## References
 

@@ -6,8 +6,6 @@
 
 Absolute first contact with a **terminal**: what the window is, what the **prompt** means, how to type a command and press Enter, how to read success output versus error text, and how **shell** differs from **scripting** in a beginner mental model. You run first commands (`pwd`, `ls`, `cd`, `echo`, `cat`), learn arguments versus flags, create a one-line script, make it executable, and run it. Windows beginners get PowerShell parallels. Mistakes and a hard security rule about pasting unknown download-and-run snippets close the basics before later chapters deepen the language.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. What a terminal is
@@ -390,8 +388,6 @@ Safer habits:
 
 Treat unsolicited “just paste this” installers as hostile until proven otherwise. Chapter **18** deepens injection and trust; this chapter only needs the red flag.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Working directory is per shell session
@@ -436,8 +432,6 @@ GNU `ls` (Linux), BSD `ls` (macOS), BusyBox `ls`, and PowerShell’s `ls` alias 
 
 Do not paste a Windows path into a Linux shell unchanged. Cross the bridge deliberately (WSL `wslpath` later; for now, stay inside one world per terminal).
 
----
-
 ## 3. Applications and use cases
 
 ### Onboarding lab (15 minutes)
@@ -471,8 +465,6 @@ Have learners speak aloud: “command, flag, argument” for every line before p
 - They know `Get-Location` / `Get-ChildItem` on Windows.  
 - They refuse unsolicited pipe-to-shell installers.  
 - Lab notes record OS + shell (`bash`/`zsh`/`pwsh`) for the machine they used.
-
----
 
 ## References
 

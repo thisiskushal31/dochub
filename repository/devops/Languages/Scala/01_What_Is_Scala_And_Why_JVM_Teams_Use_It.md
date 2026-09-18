@@ -6,8 +6,6 @@
 
 What Scala is as a language and platform choice: a **statically typed** blend of **object-oriented** and **functional** programming that compiles to the **JVM**, why teams adopt it for services and data platforms, what it costs in skill and toolchain complexity, and when another language is the better fit. This is placement literacy—not a syntax tour. Later chapters teach syntax, types, and builds; here you learn when Scala is the right bet and what “a Scala team” actually means.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. What Scala is
@@ -164,8 +162,6 @@ What to notice:
 - `s"…"` is string interpolation.
 - `Unit` is the “no useful return value” type (side-effecting `println`).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Scala 3 versus Scala 2 as product lines
@@ -271,8 +267,6 @@ Prefer another language when:
 | “We’ll use Scala 3 in the app and whatever Spark needs in the same module.” | Separate modules/repos; do not pretend one process has two Scala stdlibs. |
 | “Types replace tests.” | Types shrink bug classes; you still test behavior and integrations. |
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and architecture
@@ -353,8 +347,6 @@ test "$actual" = "$expected"
 - Is there an exit or dual-language plan if the org standardizes on Java/Kotlin later?
 - Are public module APIs boring enough for Java interop and future maintainers?
 - Is over-abstracted type-level code rejected unless it has a clear product payoff?
-
----
 
 ## References
 

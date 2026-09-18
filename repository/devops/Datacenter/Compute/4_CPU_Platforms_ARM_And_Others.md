@@ -2,8 +2,6 @@
 
 [← Previous](./3_CPU_Platforms_AMD_EPYC.md) · [README](./README.md) · [Next: Chipset and PCIe →](./5_Chipset_PCIe_And_Platform_IO.md)
 
----
-
 ## 1. Concepts
 
 **ARM server CPUs** (Ampere-class, cloud Axion/Graviton-class literacy, other Neoverse designs) appear in halls as OEM servers and in clouds as instance families. **Others** include specialty (POWER remnants, RISC-V experiments)—treat as exceptions with the same platform questions.
@@ -20,8 +18,6 @@
 ### Same checklist as x86
 
 Socket/board, memory type, PCIe, TDP, BMC/firmware, OS certification, NUMA (often single-socket high core).
-
----
 
 ## 2. Advanced concepts
 
@@ -47,8 +43,6 @@ Cloud ARM SKUs change names often—learn the *pattern* (Neoverse generations, m
 
 Availability of OEM ARM iron differs by region. Software ecosystem readiness matters more than socket folklore.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -67,8 +61,6 @@ Availability of OEM ARM iron differs by region. Software ecosystem readiness mat
 - Never silently schedule amd64 pods on ARM nodes  
 
 **Good:** intentional ARM pool with certified stack. **Bad:** “it’s Linux” assumptions; surprise arch in production.
-
----
 
 ## References
 

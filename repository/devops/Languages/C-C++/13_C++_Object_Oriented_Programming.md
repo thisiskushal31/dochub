@@ -4,8 +4,6 @@
 
 This topic covers the **object-oriented** part of **C++**: **classes and objects**, the **four pillars** (encapsulation, abstraction, inheritance, polymorphism), **constructors and destructors**, **this**, and **references**. C++ builds on C (topics 1–12) by adding these features so you can model data and behavior together. Each concept is explained in text first, then with code blocks so you can write and read C++ in a clear way.
 
----
-
 ## From C structs to C++ classes
 
 In C, **structs** hold data; you pass them to functions that operate on them. In C++, a **class** bundles **data** (member variables) and **behavior** (member functions) into one type. An **object** is an instance of a class. Classes are the core of C++ OOP: they give you **encapsulation** (hiding implementation) and a place to attach **constructors**, **destructors**, and **inheritance**.
@@ -84,8 +82,6 @@ int main() {
 
 Here, `Student` is a class with public members; `Employee` is an object with **state** (name, salary), **behavior** (displayDetails), and **encapsulation** (private data accessed via getters/setters).
 
----
-
 ## Encapsulation: public, private, protected
 
 **Encapsulation** means controlling who can see or change the internals of a class. C++ uses **access specifiers**:
@@ -128,8 +124,6 @@ int main() {
 
 `name` is private; external code cannot access it directly. Only `getName()` and `setName()` provide controlled access, which keeps data consistent and hides implementation details.
 
----
-
 ## Abstraction (pure virtual functions)
 
 **Abstraction** means exposing only what is necessary and hiding implementation details. In C++, you achieve it with **abstract classes**: classes that have at least one **pure virtual function** (`= 0`). You cannot create objects of an abstract class; derived classes must implement the pure virtual functions. This defines a common interface while leaving the "how" to each derived class.
@@ -171,8 +165,6 @@ int main() {
 
 `Shape::area() = 0` makes `Shape` abstract. Callers use the `Shape*` interface; the real logic (rectangle area) is hidden inside `Rectangle`. That is abstraction: same interface, implementation in derived classes.
 
----
-
 ## Constructors and destructors
 
 A **constructor** is a special member function that runs when an object is **created**. It has the same name as the class and no return type. It is used to initialize member variables and acquire resources. A **destructor** runs when an object is **destroyed** (e.g. when it goes out of scope or is deleted). It has the name `~ClassName()` and is used to release resources (close files, free memory).
@@ -199,8 +191,6 @@ int main() {
 ```
 
 The constructor allocates `data`; the destructor frees it. This **RAII** pattern (resource acquisition in initialization) is central in C++: resources are tied to object lifetime, so you avoid leaks and use-after-free when used correctly.
-
----
 
 ## Inheritance
 
@@ -276,8 +266,6 @@ public:
 
 `Circle` and `Rectangle` inherit from `Shape` and override `area()`. Declaring `area()` as **virtual** in the base means that when you call it through a **base pointer or reference**, the **derived** version runs (runtime polymorphism).
 
----
-
 ## Polymorphism (virtual functions)
 
 **Polymorphism** means “one interface, many implementations.” C++ supports **compile-time polymorphism** (e.g. function overloading, operator overloading) and **runtime polymorphism** (virtual functions and overriding). When a base class declares a function **virtual**, the derived class can **override** it; calls through a **pointer or reference to the base** then invoke the **derived** implementation. That is **dynamic dispatch** (runtime choice based on the actual object type).
@@ -339,8 +327,6 @@ int main() {
 
 **Override keyword:** In derived classes, use **`override`** on virtual function redefinitions so the compiler checks that the base really has a matching virtual function.
 
----
-
 ## The this pointer
 
 Inside a member function, **`this`** is a pointer to the current object. You use it when a parameter or local variable shadows a member name, or when you need to pass the object’s address (e.g. to another function or to return a reference to the object).
@@ -357,8 +343,6 @@ public:
 ```
 
 Here `this->value` refers to the member; `value` alone would be the parameter.
-
----
 
 ## References (C++)
 
@@ -380,8 +364,6 @@ int main() {
 
 Passing by reference avoids copying and lets the function modify the caller’s variables. For read-only use, use **const reference** (`const int&`) to avoid copies without allowing modification.
 
----
-
 ## Summary: C++ OOP at a glance
 
 | Concept | What it does |
@@ -398,8 +380,6 @@ Passing by reference avoids copying and lets the function modify the caller’s 
 | **References** | Aliases; used for parameters and returns without copying. |
 
 C++ OOP is used everywhere: game engines, browsers, system libraries, and security-sensitive code. Understanding classes, inheritance, and polymorphism helps you read and audit C++ codebases and reason about object lifetimes and virtual dispatch.
-
----
 
 ## Further reading
 

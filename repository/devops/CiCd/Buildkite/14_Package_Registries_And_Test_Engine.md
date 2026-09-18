@@ -2,8 +2,6 @@
 
 [← Previous](./13_Self_Hosted_Stacks_AWS_And_Kubernetes.md) · [README](./README.md) · [Next: Platform →](./15_Platform_Teams_SSO_And_Governance.md)
 
----
-
 ## 1. Concepts
 
 Buildkite is more than Pipelines. Two sibling surfaces show up in real orgs:
@@ -24,15 +22,11 @@ Collects test results from runners; surfaces duration, flakiness, pass rates; **
 
 Neither replaces a full artifacts or testing textbook — map durable jobs to [CiCd/4](../4_Artifacts_And_Registries.md) and your quality practices.
 
----
-
 ## 2. Advanced concepts
 
 Legacy plans may need Package Registries enabled in org settings — confirm for your account. Ecosystem setup differs per format; start from Package Registries getting-started, then the ecosystem page you need.
 
 Test collection uses language collectors / JUnit import / plugins — pin versions and keep tokens scoped.
-
----
 
 ## 3. Applications and use cases
 
@@ -43,8 +37,6 @@ Test collection uses language collectors / JUnit import / plugins — pin versio
 | Only need CI orchestration | Pipelines alone is fine |
 
 **Good:** registry + digest promote. **Bad:** treating Test Engine dashboards as a substitute for failing the build on real failures.
-
----
 
 ## References
 

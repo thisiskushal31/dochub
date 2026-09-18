@@ -6,8 +6,6 @@
 
 How Rust models data and control flow over that data: **structs** (named fields, tuple structs, unit structs), **enums** (including the shapes of `Option` and `Result`), **methods** via `impl`, and **pattern matching** (`match`, `if let`, `while let`) with **exhaustive** checking. After ownership (chapters 04–05), this is the core of domain modeling and API design in idiomatic Rust.
 
----
-
 ## 1. Concepts
 
 ### 1. Named-field structs
@@ -134,8 +132,6 @@ These forms are sugar for `match` with one interesting arm and a silent discard 
 
 Patterns appear beyond `match`: `let`, function parameters, and `for` loops can destructure structs, tuples, and enum variants. `ref` / `ref mut` (and modern binding modes) control whether bindings borrow or move. In current editions, match ergonomics often auto-borrow in ways that feel natural; when the compiler complains about moves, revisit whether you need `&` on the scrutinee or explicit borrows in patterns.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Visibility of fields and variants
@@ -230,8 +226,6 @@ impl Client<Connected> {
 
 Callers cannot call `send` until `connect` has produced `Client<Connected>`. Combine with newtypes for IDs/handles carried across states. Cost: more types and `impl` blocks; payoff: invariants enforced without scattered `if !ready` checks. Prefer enums with exhaustive `match` when states are data-carrying variants handled in one place; prefer typestate when **methods themselves** must disappear in illegal phases.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and domain modeling
@@ -274,8 +268,6 @@ Callers cannot call `send` until `connect` has produced `Client<Connected>`. Com
 - Builders: consuming vs `&mut self` style chosen deliberately; `build` validates invariants.
 - Typestate used only where illegal method calls are a real risk—not ceremony for simple CRUD types.
 - `Option`/`Result` shapes used instead of sentinels at module edges.
-
----
 
 ## References
 

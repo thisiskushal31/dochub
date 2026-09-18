@@ -2,8 +2,6 @@
 
 [← Previous](./8_Serial_Console_Servers.md) · [README](./README.md) · [Next: Failure and spares →](./10_Accelerator_Failure_And_Spares.md)
 
----
-
 ## 1. Concepts
 
 **Environmental sensors** (temp/humidity/leak/door) and **metered PDUs** turn white-space physics into data for EPMS/DCIM/NOC.
@@ -23,8 +21,6 @@ They are small devices with outsized incident value—especially in dense GPU ro
 ### Where it sits
 
 Sensor pods at aisle ends / rack tops; PDU network on OOB; aggregated in BMS/EPMS/DCIM ([Electrical/15](../Electrical/15_EPMS_BMS_And_Power_Monitoring.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -46,8 +42,6 @@ GPU bring-up must watch PDU meters live ([1](./1_GPU_Trays_And_Power.md)). Mecha
 
 Wired Modbus/SNMP vs wireless meshes—reliability and battery ops differ. Prefer monitored, powered sensors for critical halls.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -66,8 +60,6 @@ Wired Modbus/SNMP vs wireless meshes—reliability and battery ops differ. Prefe
 - Never disable alarming “temporarily” without ticket  
 
 **Good:** calibrated placement, clean alerts, metered A/B. **Bad:** exhaust-as-inlet; dead sensors; decorative DCIM.
-
----
 
 ## References
 

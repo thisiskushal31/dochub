@@ -76,8 +76,6 @@ For high-scale systems, combine:
 - Test deletion/update edge cases to avoid orphaned or unreachable state.
 - Monitor gas behavior for high-churn field operations.
 
----
-
 ## Further reading
 
 - [Dynamic (Object) fields](https://docs.sui.io/build/programming-with-objects/ch5-dynamic-fields)

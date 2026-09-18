@@ -4,13 +4,9 @@
 
 When you reverse engineer a binary, the disassembler shows **control flow**, **function boundaries**, and **how arguments and return values are passed**. This topic summarizes **how to read disassembly** (prologue/epilogue, stack frame) and **calling conventions** (x86-64 and ARM). Details come from common ABI documents and processor manuals; see **Further reading**.
 
----
-
 ## Why calling conventions matter
 
 A **calling convention** defines how the caller passes arguments (registers and/or stack), who cleans the stack, which registers are **caller-saved** vs **callee-saved**, and where the return value goes. Without this, you cannot reliably identify parameters and locals in disassembly or write correct shellcode/patches.
-
----
 
 ## x86-64: typical prologue and epilogue
 
@@ -44,8 +40,6 @@ ret
 
 `leave` (equivalent to `mov rsp, rbp`; `pop rbp`) is often used in the epilogue. **Tail calls** or optimizations may omit a full frame (no RBP save); the compiler may use RSP-relative addressing only.
 
----
-
 ## x86-64: common calling conventions (Linux/Windows)
 
 **System V AMD64 ABI (Linux, macOS):**
@@ -66,8 +60,6 @@ ret
 
 When reading disassembly, look for **mov** into RDI/RSI/… or RCX/RDX/… before `call` to see arguments; **mov** into RAX before `ret` (or after the call) for return value.
 
----
-
 ## Control flow in disassembly
 
 - **Unconditional jump:** `jmp` — next instruction is at the target.
@@ -76,8 +68,6 @@ When reading disassembly, look for **mov** into RDI/RSI/… or RCX/RDX/… befor
 - **Loop:** `loop` (decrements RCX/ECX, jumps if non-zero) or a sequence of `dec`/`cmp` + `jcc`.
 
 Identifying **basic blocks** (single entry, single exit) and **edges** (jumps/calls/returns) gives you the **control-flow graph** that tools like IDA or Ghidra show.
-
----
 
 ## Stack layout (conceptual)
 
@@ -89,8 +79,6 @@ After a `call`, the stack (growing down) typically looks like:
 
 RBP (if used) points to the saved RBP; locals are at negative offset from RBP (e.g. `[rbp-8]`), arguments (when passed on stack) at positive offset above the return address. This layout is defined by the ABI and used by debuggers and reverse-engineering tools.
 
----
-
 ## ARM: brief convention note
 
 On **ARM64 (AArch64)**:
@@ -101,8 +89,6 @@ On **ARM64 (AArch64)**:
 - **Callee-saved:** X19–X28, FP (X29), SP.
 
 LR holds the return address; a function that calls others typically saves LR (and callee-saved regs) in the prologue and restores them in the epilogue. ARM’s official documentation and the ARM64 ABI documents define this precisely.
-
----
 
 ## Further reading
 

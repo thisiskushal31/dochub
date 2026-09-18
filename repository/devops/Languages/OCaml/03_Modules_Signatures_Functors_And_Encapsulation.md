@@ -12,8 +12,6 @@ module M : sig val run : unit -> unit end = struct
 end
 ```
 
----
-
 ## 1. The problem modules solve
 
 As code grows, you need **boundaries**: what is public, what is private, and how to swap implementations without changing every call site. OCaml modules are not an afterthought—they are the primary unit of **compilation** and **abstraction**. You can type-check a module against an **interface** (signature) before linking it with the rest of the program.
@@ -24,8 +22,6 @@ module type Api = sig
   val hash_password : string -> string
 end
 ```
-
----
 
 ## 2. Structures and signatures
 
@@ -50,8 +46,6 @@ end
 ```
 
 Clients of `IntCounter` can use `make`, `bump`, and `read`, but they **cannot** treat `t` as `int` unless the signature exposes it. That is **representation hiding**: you can enforce invariants (e.g. “counter is never negative”) inside the module.
-
----
 
 ## 3. Functors
 
@@ -79,8 +73,6 @@ module StringSet = Set.Make (StringOrd)
 
 Functors are resolved at **compile time**: the whole instantiation is checked. The cost is sometimes more complex build graphs and steeper learning for newcomers; the benefit is strong guarantees about **which** operations exist on abstract types.
 
----
-
 ## 4. First-class modules
 
 Sometimes you need to **choose** a module implementation at **runtime** (for example a plugin or a configuration-driven backend). **First-class modules** pack a module together with its signature into a value you can pass around. You unpack them with `match` and use the operations inside.
@@ -106,8 +98,6 @@ end
 let packed : (module STORAGE) = (module Mem)
 ```
 
----
-
 ## 5. Encapsulation and security review
 
 Small signatures with **explicit** I/O and network operations are easier to audit than “god modules” that export everything. **Private** types mean callers cannot forge values that violate your rules—important for **configuration**, **credentials**, or **capabilities** represented as abstract types.
@@ -125,8 +115,6 @@ end = struct
 end
 ```
 
----
-
 ## 6. Libraries and dune
 
 In dune, a **library** is a named unit of compilation with a **public name** used by other packages and a **modules** field (or default module list). Executables **depend** on libraries by name. The **filesystem layout** usually mirrors module names: `lib/foo.ml` for module `Foo`, or `lib/foo/` with multiple `*.ml` files.
@@ -143,8 +131,6 @@ Splitting code into **libraries** matters for:
  (public_name mylib)
  (libraries unix))
 ```
-
----
 
 ## 7. `include`, module aliases, and sharing constraints
 
@@ -168,8 +154,6 @@ module Extend (X : S) = struct
 end
 ```
 
----
-
 ## 8. Functor example: `Map.Make` and `Set.Make`
 
 The standard library functors `Map.Make` and `Set.Make` take a module describing **ordered keys** (`type t` and `compare`). The output module has **abstract** map/set types and operations that are **correct by construction** with respect to that order. **Wrong** compare functions (e.g. inconsistent with `=`) break internal invariants—treat `compare` as part of your **security** and **correctness** contract, especially for keys derived from user input.
@@ -181,8 +165,6 @@ module M = Map.Make (String)
 
 let m = M.empty |> M.add "k" 1
 ```
-
----
 
 ## 9. Signature evolution and compatibility strategy
 
@@ -213,8 +195,6 @@ end = struct
 end
 ```
 
----
-
 ## 10. One unit per file, interfaces, and namespace discipline
 
 Most projects map **one `.ml` file** to **one compilation unit**; an optional **`.mli`** beside it is the **public interface** for that unit. Anything not listed in the `.mli` stays implementation-private. **dune** ties units into **libraries**; consumers import modules by **library** name, not by raw filename.
@@ -239,8 +219,6 @@ end = struct
 end
 ```
 
----
-
 ## 11. Advanced classes and modules together (when OO appears)
 
 Some codebases **mix** the **module** system with **objects**: e.g. a functor builds a family of classes, or a module hides a private class implementation behind a small signature. Reasons include **GUI** toolkits, **plugin** APIs designed around objects, or **legacy** layers you cannot rewrite overnight.
@@ -256,8 +234,6 @@ class counter_init x = object
     n
 end
 ```
-
----
 
 ## Advanced use cases and implementation
 
@@ -277,8 +253,6 @@ module Test (X : ID) = struct
   let round_trip x = X.id x
 end
 ```
-
----
 
 ## References
 

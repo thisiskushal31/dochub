@@ -20,8 +20,6 @@ Fortran provides strong support for **numeric** types (integer and real with sel
 
 **Why this matters.** In HPC and scientific code, real kind and integer kind choices affect correctness and performance. Using consistent character lengths and trim/len_trim avoids formatting and parsing bugs. These types are the basis for arrays and I/O in the following topics.
 
----
-
 ## Further reading
 
 - [Fortran – Numbers (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_numbers.htm)

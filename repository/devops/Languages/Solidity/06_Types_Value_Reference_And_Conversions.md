@@ -8,8 +8,6 @@ Solidity’s **type system**: value types vs reference types, default zeros, con
 
 There is no `null` and no `undefined`. An unset address is not “missing” — it is the **zero address**, a real value, and a famous source of “we forgot to set the owner.”
 
----
-
 ## 1. Concepts
 
 ### 1. Everything is typed; zeros are real values
@@ -132,8 +130,6 @@ function add(Wad a, Wad b) internal pure returns (Wad) {
 
 Solidity has no `float`. “18 decimals” means: store `amount * 10**18` as `uint256` (or a `Wad` UDT). Multiplication of two wads needs a scale divide (`mulWad` / `mulDiv`) or you overflow / mis-scale. Division truncates — specify rounding. Libraries (OZ `Math.mulDiv`, solmate-style `FixedPointMathLib`) exist so you do not invent 512-bit intermediates wrong. Document the scale next to every money type.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Integer sizes, packing, and cleanup
@@ -183,8 +179,6 @@ Enums encode as `uint8` unless they need more (ABI). Out-of-range `enum` convers
 
 `Hello h = Hello(addr)` does not check that `addr` has Hello’s code. It is a compile-time cast. The first call will do whatever lives there. ERC-165 / an allowlist is how you raise that confidence; the type system will not.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -195,8 +189,6 @@ Enums encode as `uint8` unless they need more (ABI). Out-of-range `enum` convers
 | **Operations** | ABI JSON is what clients generate from—keep it in artifacts |
 | **Software engineering** | No silent `uint`/`int` mixes; name units in NatSpec |
 
----
-
 ## 4. Staff-level review checklist
 
 - No unexplained downcasts (`uint256` → `uint8` / `uint128`).
@@ -204,8 +196,6 @@ Enums encode as `uint8` unless they need more (ABI). Out-of-range `enum` convers
 - `string` in storage is justified, not copied from a tutorial.
 - `address(0)` checked where an address is configuration.
 - Interface types used at call sites instead of everything being `address`.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./2_Day_In_The_Life_Colo_Tech.md) · [README](./README.md) · [Next: NOC →](./4_Day_In_The_Life_NOC.md)
 
----
-
 ## 1. Concepts
 
 **Critical facilities** owns the plant: UPS, generators, chillers, sequences, capacity, IST leftovers.
@@ -20,8 +18,6 @@
 
 Tracks: Electrical + Mechanical deep; Integration power/cooling walks.
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes
@@ -36,8 +32,6 @@ Tracks: Electrical + Mechanical deep; Integration power/cooling walks.
 ### How it connects
 
 Commissioning [Electrical/18](../Electrical/18_Commissioning_And_IST_Power.md), [Mechanical/12](../Mechanical/12_Commissioning_Mechanical.md). Safety [7](./7_Safety_LOTO_And_EPO.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -56,8 +50,6 @@ Commissioning [Electrical/18](../Electrical/18_Commissioning_And_IST_Power.md), 
 - Never disable auto-start casually  
 
 **Good:** tested plant, communicated windows. **Bad:** tribal transfers; silent inhibits.
-
----
 
 ## References
 

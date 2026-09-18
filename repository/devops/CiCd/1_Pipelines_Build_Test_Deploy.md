@@ -6,8 +6,6 @@ This is the handbook’s **core delivery narrative**. Vocabulary (CI vs Continuo
 
 Primary pattern: the **deployment pipeline** (Humble & Farley, *Continuous Delivery*; Farley’s earlier “Deployment Pipeline” write-up). Every commit is a release candidate that gains confidence by passing a sequence of automated stages.
 
----
-
 ## The loop (end to end)
 
 ```text
@@ -24,8 +22,6 @@ Commit / PR
 Gate detail (order of security checks): [Security/4_Security_Gate_Chain.md](../Security/4_Security_Gate_Chain.md).  
 Artifacts: [4](./4_Artifacts_And_Registries.md). Verify/rollback: [5](./5_Verify_Rollback_And_Synthetic_Tests.md). Signing: [6](./6_Supply_Chain_And_Signing.md). Schema: [7](./7_DB_Migrations_In_Pipelines.md). Strategies: [3](./3_Deployment_Strategies.md).
 
----
-
 ## Deployment pipeline stages (conceptual)
 
 | Stage | Job | Failure means |
@@ -40,8 +36,6 @@ Artifacts: [4](./4_Artifacts_And_Registries.md). Verify/rollback: [5](./5_Verify
 
 Humble & Farley’s guidance: prefer **parallel short stages** over a long serial chain so lead time stays short while confidence still rises.
 
----
-
 ## Build once
 
 Anti-pattern: rebuild “for staging” then again “for production.” That breaks the guarantee that what you tested is what you run.
@@ -51,8 +45,6 @@ Correct pattern ([4](./4_Artifacts_And_Registries.md)):
 1. Build **one** artifact from the commit.  
 2. Identify it by **content digest** (e.g. container `@sha256:…`), not a mutable `:latest` tag alone.  
 3. Deploy/promote **that digest** through environments.
-
----
 
 ## Pipeline as code
 
@@ -64,8 +56,6 @@ Store pipeline definition next to the product (Jenkinsfile, GitHub Actions workf
 
 Tool map: [2_CI_CD_Tools.md](./2_CI_CD_Tools.md).
 
----
-
 ## CI vs CD wiring (practical)
 
 | You want… | Pipeline behavior |
@@ -75,8 +65,6 @@ Tool map: [2_CI_CD_Tools.md](./2_CI_CD_Tools.md).
 | **Continuous Deployment** | Every green path **automatically** ships to production (needs strong tests + progressive delivery + fast rollback) |
 
 Many excellent teams stop at Continuous Delivery. That is not a failure — see [Methodologies/13](../Methodologies/13_Continuous_Everything.md).
-
----
 
 ## Environments and promotion
 
@@ -92,8 +80,6 @@ Rules of thumb:
 - Config/secrets differ by environment; the **binary/image** should not.  
 - Database changes must be compatible across overlapping app versions during rollout ([7](./7_DB_Migrations_In_Pipelines.md), Fowler blue-green + parallel change).
 
----
-
 ## Feedback when something fails later
 
 If a bug escapes to exploratory testing or production:
@@ -102,8 +88,6 @@ If a bug escapes to exploratory testing or production:
 - Do not only “add a manual checklist”
 
 That is the Second Way applied to pipelines ([Methodologies/10](../Methodologies/10_Core_Principles_Three_Ways_CALMS.md)).
-
----
 
 ## Beginner path
 

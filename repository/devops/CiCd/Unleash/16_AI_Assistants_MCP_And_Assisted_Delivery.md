@@ -2,8 +2,6 @@
 
 [← Previous](./15_Integrations_Terraform_Webhooks_And_Chatops.md) · [README](./README.md) · [Next: Security →](./17_Security_Privacy_And_Compliance.md)
 
----
-
 ## 1. Concepts
 
 Unleash documents integrations with **coding assistants** and an **MCP server** so agents can help create/manage flags inside guardrails. Treat this as **assisted delivery literacy**, not a requirement to run Unleash.
@@ -17,8 +15,6 @@ Surfaces you may see:
 | **Flags for AI features** | Gate model prompts, providers, or risky AI paths in *your* product |
 
 Same rule as humans: **prod exposure needs governance** ([13](./13_Change_Requests_Release_Management_And_Governance.md)). An agent with an admin token is still an admin.
-
----
 
 ## 2. Advanced concepts
 
@@ -42,8 +38,6 @@ Do not store proprietary prompts as the only copy inside a public frontend flag 
 
 Assisted delivery sits on the same spectrum as forge CI and GitOps ([22](./22_Config_Catalog_Migrate_And_Spectrum.md), Methodologies assisted-modern doors). Flags remain the behavior control plane.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -59,8 +53,6 @@ Assisted delivery sits on the same spectrum as forge CI and GitOps ([22](./22_Co
 - AI feature flags owned like any release flag  
 
 **Good:** agent opens draft change request. **Bad:** agent holds org admin token in a shared chat.
-
----
 
 ## References
 

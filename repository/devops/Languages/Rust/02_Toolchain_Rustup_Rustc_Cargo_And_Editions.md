@@ -6,8 +6,6 @@
 
 How the Rust toolchain fits together: **rustup** for installing and switching compilers, **channels** (stable, beta, nightly), **rustc** as the compiler, **Cargo** as the build and package front-end, optional **components** (Clippy, rustfmt, rust-src), **editions** versus compiler versions, and the **MSRV** idea—plus a high-level install picture for Linux, macOS, and Windows so local machines and CI agree on what “Rust” means.
 
----
-
 ## 1. Concepts
 
 ### 1. The toolchain stack
@@ -122,8 +120,6 @@ rustc -vV
 cargo -vV
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Toolchain files and override precedence
@@ -231,8 +227,6 @@ Air-gapped networks need a mirrored rustup dist server or vendored toolchain tar
 - Borrow/drop-sensitive tests run; any `if let` → `match` rewrites from migration are checked for *intended* temporary extent.
 - Edition Guide Rust 2024 index consulted for items not listed here (there are additional 2024 changes beyond this staff shortlist).
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -270,8 +264,6 @@ Air-gapped networks need a mirrored rustup dist server or vendored toolchain tar
 - Nightly/`feature` usage is inventoried or forbidden.
 - Install path for Linux/macOS/Windows (or “Linux CI only”) is written for new hires.
 - Linker/build-essential (or MSVC Build Tools) prerequisites are listed—Rust is not only `rustup` on bare OS images.
-
----
 
 ## References
 

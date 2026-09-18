@@ -101,8 +101,6 @@ A **conditional expression** has the form `condition ? true_val : false_val`. Th
 
 Tools typically allow automatic conversion between compatible types (e.g. number or bool to string when a string is expected). When types are incompatible, the tool reports an error and you must change the expression. Equality checks usually do not perform conversion.
 
----
-
 ## Further reading
 
 - [Terraform: Expressions](https://developer.hashicorp.com/terraform/language/expressions)

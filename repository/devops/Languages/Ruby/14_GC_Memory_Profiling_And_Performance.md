@@ -6,8 +6,6 @@
 
 How **MRI** manages memory and garbage collection, how to **observe** heap behavior, and how to profile CPU and allocation hot spots in automation and services. Performance work on Ruby starts with the GC and object lifecycle—not premature micro-optimizations.
 
----
-
 ## 1. Concepts
 
 ### 1. Objects and the heap
@@ -80,8 +78,6 @@ Process.rss   # resident set size where available
 
 Compare RSS to `GC.stat` during leak investigations; native extensions allocate **outside** Ruby heap.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Write barriers and promotion
@@ -138,8 +134,6 @@ High **allocation rate** causes frequent minor GC even when live heap is small�
 
 Memory-based worker restart gems exist because Ruby processes grow. Prefer fixing leak; use restart as safety valve with alerting—not silent infinite restart without investigation.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and performance culture
@@ -178,8 +172,6 @@ Chef Client and long-lived daemons: restart policies (systemd `Restart=`, cron) 
 - No unbounded global collections in request/agent loops.
 - Native gems reviewed for off-heap memory (libcurl, openssl buffers).
 - Major GC pauses documented in runbooks for latency-sensitive services.
-
----
 
 ## References
 

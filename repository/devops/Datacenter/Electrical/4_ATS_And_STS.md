@@ -2,8 +2,6 @@
 
 [← Previous](./3_MV_And_LV_Switchgear.md) · [README](./README.md) · [Next: UPS topologies →](./5_UPS_Topologies.md)
 
----
-
 ## 1. Concepts
 
 Transfer switches choose **which source** feeds a load: utility vs generator, UPS vs bypass, or source A vs source B.
@@ -24,8 +22,6 @@ Manual bypass switches → maintenance path around UPS
 ```
 
 Not every site has STS. Many dual-cord servers skip STS and rely on **A+B rack PDUs** into dual PSUs ([11](./11_Rack_PDU_A_And_B.md)). STS appears when you need a single-cord critical bus or automatic preferred-source selection at the UPS output.
-
----
 
 ## 2. Advanced concepts
 
@@ -63,8 +59,6 @@ Not every site has STS. Many dual-cord servers skip STS and rely on **A+B rack P
 | STS + single bus | Single-cord devices supported | STS is itself a critical device |
 | Mix | Common in brownfield | Easy to misunderstand during incidents |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -83,8 +77,6 @@ Not every site has STS. Many dual-cord servers skip STS and rely on **A+B rack P
 - Never force-transfer outside procedure  
 
 **Good:** tested automatic transfer with logged results. **Bad:** bypass permanent; dual cords in one whip.
-
----
 
 ## References
 

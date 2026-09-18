@@ -18,8 +18,6 @@ Handbook default for new work: **current Visual Basic on .NET** (language ~**17.
 
 Today’s picture: *one SDK + one `.vbproj` + something that prints*. Fuzzy PATH here makes every later chapter feel cursed.
 
----
-
 ## 1. Concepts
 
 ### 1. What you are about to start
@@ -156,8 +154,6 @@ On Windows:
 
 You can still open the same folder in a terminal and run `dotnet build` if an SDK is installed—useful for CI parity.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. SDK vs runtime vs language
@@ -213,8 +209,6 @@ Always print `dotnet --version` / `--list-sdks` at the start of the build job.
 
 VS Code / Cursor + C# Dev Kit (or equivalent) can edit VB and invoke `dotnet`. IntelliSense quality varies; **CI `dotnet build`** remains the contract. Do not equate “editor is quiet” with “project builds.”
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How first steps show up |
@@ -227,8 +221,6 @@ VS Code / Cursor + C# Dev Kit (or equivalent) can edit VB and invoke `dotnet`. I
 
 **Whole-engineering picture:** hello is the reproducibility gate. Types, procedures, and collections reviews all assume you can name the SDK that will compile the change.
 
----
-
 ## 4. Staff-level review checklist
 
 - Runbook / README states how to get **`dotnet`** and prints expected SDK band.
@@ -240,8 +232,6 @@ VS Code / Cursor + C# Dev Kit (or equivalent) can edit VB and invoke `dotnet`. I
 - VBA / Office macro work is not mixed into this repo’s “VB” mental model—link [VBA](../VBA/README.md) when needed.
 - Laptop SDK drift vs CI is treated as a defect, not a personality trait.
 - When a language feature “is missing,” reviewers check **LangVersion** / SDK pin before blaming VB.
-
----
 
 ## References
 

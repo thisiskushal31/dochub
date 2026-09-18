@@ -6,8 +6,6 @@ An **artifact** is the deployable output of a build: container image, binary, pa
 
 Industry practice (MinimumCD immutable-artifact guidance; OCI/container CD norms): **build once, promote the same immutable identifier** through environments.
 
----
-
 ## Immutable artifacts
 
 | Rule | Meaning |
@@ -19,8 +17,6 @@ Industry practice (MinimumCD immutable-artifact guidance; OCI/container CD norms
 | Traceability | Link digest → commit → pipeline run → (ideally) provenance ([6](./6_Supply_Chain_And_Signing.md)) |
 
 Anti-pattern: “works in staging” after a **second** production build with different dependency resolution or base layers.
-
----
 
 ## Diagram: build → registry → environments
 
@@ -42,8 +38,6 @@ Anti-pattern: “works in staging” after a **second** production build with di
 
 Tags (`:v1.2.3`, `:staging`) are **pointers**. Digests are **content addresses**. Pin deploys to digests; use tags for humans and promotion metadata.
 
----
-
 ## Registry types (literacy)
 
 | Kind | Examples (names change; role doesn’t) | Used for |
@@ -53,8 +47,6 @@ Tags (`:v1.2.3`, `:staging`) are **pointers**. Digests are **content addresses**
 | **Generic / binary** | Object storage + checksums, Artifactory/Nexus generic repos | Zips, native binaries |
 
 Language package deep-dives: [Languages/](../Languages/README.md). Container runtime depth: [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive).
-
----
 
 ## Promotion pattern
 
@@ -83,21 +75,15 @@ v1.4.0-rc.1 → :1.4.0-rc.1        (staging soak)
 
 Often: shared **build** pipeline on git tags + Image Updater / promote job — see [24](./24_Workflow_Automation_Beyond_PR_CI.md). Wire it on your host (GitHub Actions, GitLab CI, Bitbucket Pipelines, Azure Pipelines, Jenkins, CircleCI, Buildkite, Tekton, …).
 
----
-
 ## Auth in CI (prefer OIDC)
 
 Prefer **OIDC federated login** from the CI provider to the cloud/registry (short-lived tokens) over long-lived robot passwords in secrets. Exact wiring is vendor-specific; the durable rule is: **no immortal registry keys in pipeline YAML**.
-
----
 
 ## Retention and garbage collection
 
 - Keep digests needed for **rollback** and audit.  
 - GC untagged/ephemeral builds on a policy.  
 - Do not delete the digest still referenced by prod GitOps or the last known-good release record.
-
----
 
 ## Copy-paste shape (illustrative)
 
@@ -113,8 +99,6 @@ echo "Deploy this: $REGISTRY/$IMAGE@$DIGEST"
 ```
 
 OIDC login examples differ by cloud (AWS, GCP, Azure, GHCR). Follow current provider docs when you implement a specific stack.
-
----
 
 ## Pitfalls
 

@@ -8,8 +8,6 @@
 
 Foundation is not the standard library. On Apple platforms it is deep and battle-tested; on Linux you depend on **corelibs** with intentional gaps. Always know which platform your package claims to support. Picture Foundation as the city’s utilities — water, power, roads — while the stdlib is the grammar you speak at home.
 
----
-
 ## 1. Concepts
 
 ### 1. `URL`, files, and FileManager
@@ -223,8 +221,6 @@ func readTempJSON(at url: URL) throws -> Data {
 
 **What just happened.** Atomic writes reduce torn files. UUID directories keep parallel tests honest. Always plan cleanup (`removeItem`) for temp trees in tests and CLIs — disks fill quietly in CI.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Darwin Foundation vs swift-corelibs-Foundation
@@ -413,8 +409,6 @@ func makeSession() -> URLSession {
 
 Collapsing all three into one `Error` string is how support tickets become archaeology.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -424,8 +418,6 @@ Collapsing all three into one `Error` string is how support tickets become archa
 | **Security** | ATS / TLS defaults matter on Apple; do not disable without review; no secrets in logs of `Data`; path traversal awareness |
 | **Operations** | Timeouts on network; size limits on `Data(contentsOf:)`; temp download files moved/cleaned; locale pinned in tests |
 | **Software engineering** | One shared encoder config; snapshot tests for JSON golden files; Linux CI proves claimed APIs; read Combine samples without pasting them |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -440,8 +432,6 @@ Collapsing all three into one `Error` string is how support tickets become archa
 - NotificationCenter is not the app-wide event bus without a clear reason.
 - `AttributedString` used only when rich text is required.
 - Formatters/locale behavior documented at API edges.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./16_Security_Permissions_SSO_And_Policies.md) · [README](./README.md) · [Next: Server & CLI →](./18_Server_CLI_API_And_Toolkit.md)
 
----
-
 ## 1. Concepts
 
 | Surface | Job |
@@ -17,15 +15,11 @@
 
 Parallelism ≠ concurrency ([01](./01_What_Is_CircleCI.md)).
 
----
-
 ## 2. Advanced concepts
 
 CLI helpers exist to split tests. Store test results for UI. Optimize carefully — don’t disable failing tests to go green.
 
 Credit usage and resource classes interact — right-size before buying more concurrency ([24](./24_Integrations_Migrate_Plans_And_Extras.md)).
-
----
 
 ## 3. Applications and use cases
 
@@ -36,8 +30,6 @@ Credit usage and resource classes interact — right-size before buying more con
 | Cost control | smaller resource_class; less DLC abuse |
 
 **Good:** measure before scaling. **Bad:** max parallelism on a 10-second suite.
-
----
 
 ## References
 

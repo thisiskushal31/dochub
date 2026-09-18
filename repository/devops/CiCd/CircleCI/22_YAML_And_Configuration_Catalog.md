@@ -2,8 +2,6 @@
 
 [← Previous](./21_Feature_And_Configuration_Coverage_Map.md) · [README](./README.md) · [Next: Troubleshooting →](./23_Troubleshooting_And_Staff_Checklist.md)
 
----
-
 ## 1. Concepts — configuration surfaces
 
 | Surface | What you set |
@@ -20,8 +18,6 @@
 
 Exact keys: [configuration reference](https://circleci.com/docs/reference/configuration-reference/).
 
----
-
 ## 2. Advanced concepts — good defaults
 
 | Env | Lean toward |
@@ -30,13 +26,9 @@ Exact keys: [configuration reference](https://circleci.com/docs/reference/config
 | Staging | Auto deploy on `main`; OIDC |
 | Prod | approval; restricted context; pinned orbs |
 
----
-
 ## 3. Applications and use cases
 
 PR checklist: every non-default block needs a one-line reason.
-
----
 
 ## References
 

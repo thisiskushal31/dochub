@@ -2,8 +2,6 @@
 
 [← Back to Security](../README.md) · [Gate chain](../4_Security_Gate_Chain.md) · [IAC](../../IAC/README.md)
 
----
-
 ## 1. Concepts
 
 **Checkov** scans **Infrastructure as Code** (Terraform, CloudFormation, Kubernetes, Helm, Dockerfiles, …) for misconfigurations before apply.
@@ -14,8 +12,6 @@
 
 **Confirm:** When should Checkov run relative to `terraform apply`?
 
----
-
 ## 2. Advanced concepts
 
 | Concern | Practice |
@@ -24,8 +20,6 @@
 | Skip / suppress | Require justification comments |
 | Soft vs hard fail | Warn on PR; hard fail on main for critical checks |
 | Overlap | [Trivy config](../Trivy/README.md), [OPA](../OPA/README.md)—pick primary |
-
----
 
 ## 3. Applications
 
@@ -36,8 +30,6 @@
 | GitOps | Policy before merge to env branch |
 
 **Staff checklist:** tune skips; don’t drown in CIS noise; block known-dangerous defaults (0.0.0.0/0 SSH, privileged).
-
----
 
 ## References
 

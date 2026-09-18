@@ -16,8 +16,6 @@ Generics on functions arrive hard in chapter **08**; this chapter is the non-gen
 
 Handbook default: **TS 5.9.x**, **`strict`: true**.
 
----
-
 ## 1. Concepts
 
 ### 1. Functions as checked contracts
@@ -152,8 +150,6 @@ for (const row of rows) {
 
 Deepen in chapter **13**.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Parameter bivariance history (literacy)
@@ -218,8 +214,6 @@ Annotate the **pattern’s type**, not each binding separately. Optional fields 
 
 If overloads or a wide union make the implementation a maze of runtime branches, split into named functions (`readText` / `readBytes`). Types should clarify call sites—not excuse a single kitchen-sink routine.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Functions in practice |
@@ -232,8 +226,6 @@ If overloads or a wide union make the implementation a maze of runtime branches,
 
 **Whole-engineering picture:** the function boundary *is* the API. Strict parameters and honest returns are cheaper than runtime archaeology.
 
----
-
 ## Staff-level review checklist
 
 - No implicit `any` parameters on exported functions.
@@ -245,8 +237,6 @@ If overloads or a wide union make the implementation a maze of runtime branches,
 - Optional vs `| undefined` matches documented call ergonomics.
 - `this`-typing used where unbound functions are passed around.
 - Hot paths avoid needless `async` and per-iteration closure/alloc churn (ch **13**).
-
----
 
 ## References
 

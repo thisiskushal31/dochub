@@ -2,8 +2,6 @@
 
 [← Previous](./10_Secrets_Environment_And_OIDC.md) · [README](./README.md) · [Next: Deployments →](./12_Deployments_And_Environments.md)
 
----
-
 ## 1. Concepts
 
 **Dynamic pipelines** generate YAML/JSON at build time and upload it into the **same** build with `buildkite-agent pipeline upload`. Each uploaded step becomes its own job (possibly on different agents).
@@ -25,8 +23,6 @@ steps:
   - command: "buildkite-agent pipeline upload .buildkite/pipeline.yml"
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### Insertion order
@@ -41,8 +37,6 @@ Monorepo path intelligence, generated matrices, org policy injection. Still revi
 
 Prefer documented change-detection helpers when you only need “build what changed” without a full generator.
 
----
-
 ## 3. Applications and use cases
 
 | Estate | Pattern |
@@ -51,8 +45,6 @@ Prefer documented change-detection helpers when you only need “build what chan
 | Small repo | Static `.buildkite/pipeline.yml` is enough |
 
 **Good:** generator checked in and tested. **Bad:** opaque generation only one person understands.
-
----
 
 ## References
 

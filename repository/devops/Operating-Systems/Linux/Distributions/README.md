@@ -4,16 +4,12 @@
 
 **Where to put Fedora, CentOS, and other Linux flavors.** The [Linux](../README.md) section above covers the **kernel and common userland** (commands, process, memory, storage, shell) that apply across most distributions. This folder covers **distribution-specific** topics: package managers, release cycles, and commands or configs that differ by distro.
 
----
-
 ## Why a separate Distributions folder?
 
 - **Linux** = kernel + common tools (GNU coreutils, procps, etc.). Commands like `ps`, `bash`, `systemd` are shared.
 - **Distributions** = how that stack is **packaged and delivered**: different **package managers** (apt vs dnf vs zypper), **init systems** (systemd is common but not universal), **release models** (rolling vs fixed), and **vendor tools** (subscription-manager on RHEL, snap on Ubuntu).
 
 Put anything that is **specific to one distro or distro family** here.
-
----
 
 ## Structure (suggested)
 
@@ -28,8 +24,6 @@ Put anything that is **specific to one distro or distro family** here.
 
 Create a new `.md` file (or subfolder with README) for each distro/family you want to document. Link it from this README.
 
----
-
 ## Official documentation (by distro)
 
 | Distro / family | Official documentation |
@@ -40,8 +34,6 @@ Create a new `.md` file (or subfolder with README) for each distro/family you wa
 | openSUSE, SUSE | [openSUSE](https://doc.opensuse.org/), [SUSE](https://documentation.suse.com/) |
 | Alpine | [Alpine wiki](https://wiki.alpinelinux.org/), [Alpine docs](https://docs.alpinelinux.org/) |
 
----
-
 ## Quick reference: package managers by distro
 
 | Distro / family | Package manager (primary) | Command examples |
@@ -51,8 +43,6 @@ Create a new `.md` file (or subfolder with README) for each distro/family you wa
 | Arch, Manjaro | pacman | `pacman -S pkg`, `pacman -Syu` |
 | openSUSE | zypper | `zypper install pkg`, `zypper update` |
 | Alpine | apk | `apk add pkg`, `apk update`, `apk --no-cache add pkg` (containers) |
-
----
 
 ## Adding a new distribution
 

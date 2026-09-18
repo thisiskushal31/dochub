@@ -2,8 +2,6 @@
 
 [← Previous](./06_Canary_Strategy_And_Steps.md) · [README](./README.md) · [Next: Analysis →](./08_Analysis_And_Metric_Providers.md)
 
----
-
 ## 1. Concepts
 
 **Traffic management** shapes the data plane so canary weight is real traffic share (or header-based routing, mirroring), not only pod counts.
@@ -33,8 +31,6 @@ New traffic managers: **plugin**, not core.
 
 Getting-started guides exist per provider under official docs (Istio, NGINX, ALB, Ambassador, SMI, App Mesh, mixed).
 
----
-
 ## 2. Advanced concepts
 
 Techniques: raw percentage · **header-based routing** (`setHeaderRoute`) · **mirroring** (`setMirrorRoute`, shadow traffic) · **`managedRoutes`** precedence when Rollouts owns extra routes above manual ones.
@@ -44,8 +40,6 @@ Provider choice is a **platform** decision — one primary mesh/ingress family p
 **AWS App Mesh** appears in official getting-started guides alongside other providers — treat it as a traffic-integration option in the same class; confirm current support on your Rollouts version.
 
 Plugins for traffic and steps keep core small. Pin plugin versions with the controller. Gateway API–style routing typically arrives via **traffic router plugins**.
-
----
 
 ## 3. Applications and use cases
 
@@ -57,8 +51,6 @@ Plugins for traffic and steps keep core small. Pin plugin versions with the cont
 | Two layers (edge + mesh) | Mixed providers carefully |
 
 **Good:** platform-owned traffic config; Rollout only declares weights. **Bad:** every app invents a different ingress controller.
-
----
 
 ## References
 

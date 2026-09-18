@@ -4,8 +4,6 @@
 
 **Control flow** is how your program decides **what to do next**: run one block of code or another (branches), repeat a block (loops), or handle errors (exceptions). This topic covers **if/else**, **switch**, **for**, **for-in**, **while**, **do-while**, **break/continue**, **try/catch/throw**, and **assert**. In Dart, every **condition** must be a **boolean** expression (**`true`** or **`false`**); there is no automatic conversion from numbers or strings to bool.
 
----
-
 ## If and else
 
 `if` and optional `else if` / `else` run one branch based on a condition:
@@ -32,8 +30,6 @@ if (pair case [int x, int y]) {
 }
 ```
 
----
-
 ## Switch
 
 `switch` evaluates a value against several **patterns**. Each `case` is a pattern; when one matches, its body runs. Non-empty cases do not fall through; no `break` is needed. Use `default` or a wildcard pattern for the fallback.
@@ -50,8 +46,6 @@ switch (command) {
 ```
 
 **When to use switch:** Use **switch** when you are choosing among **many** possible values or patterns (e.g. command names, enum values, or shapes of data). Each **case** is a pattern; the first match runs and then exits (no fall-through). Use **`case _:`** or **`default`** for the fallback. Switch can also be used as an **expression** when every case produces a value (e.g. **`var x = switch (v) { ... };`**).
-
----
 
 ## For loops
 
@@ -73,8 +67,6 @@ for (final item in collection) {
 
 **When to use for vs for-in:** Use **C-style for** when you need the **index** (e.g. **`for (var i = 0; i < list.length; i++)`**) or a custom start/step/end. Use **for-in** when you only need **each element** and not the index—it is simpler and less error-prone (e.g. **`for (final item in list)`**). You can use **patterns** in for-in to destructure elements (e.g. **`for (final (k, v) in map.entries)`**).
 
----
-
 ## While and do-while
 
 `while` tests the condition before each iteration; `do-while` runs the body once then tests the condition:
@@ -89,13 +81,9 @@ do {
 } while (!done);
 ```
 
----
-
 ## Break and continue
 
 **`break`** exits the innermost loop or switch. **`continue`** skips the rest of the current iteration and continues the loop.
-
----
 
 ## Exceptions
 
@@ -123,13 +111,9 @@ try {
 
 **`finally`** runs after the try and any catch, whether or not an exception was thrown. Use it for cleanup (e.g. closing a file or connection). **When to throw:** Prefer types that implement **`Exception`** or **`Error`** so callers can catch by type. Use **`rethrow`** when you log or handle an exception but want the caller to handle it as well.
 
----
-
 ## Assert
 
 **`assert(condition)`** throws if the condition is false. Assertions are **enabled only in debug mode**; production builds ignore them. Use asserts for **invariants** during development (e.g. “this list is never empty here”); do **not** use them for runtime error handling that users might hit—use **exceptions** and **checks** instead.
-
----
 
 ## Summary for beginners
 
@@ -137,8 +121,6 @@ try {
 - **Loops:** **for** when you need an index; **for-in** when you only need each element; **while** when you do not know the count in advance; **do-while** when the body must run at least once.
 - **break** exits the loop or switch; **continue** skips to the next iteration.
 - **Exceptions:** **try/catch** to handle errors; **throw** to signal errors; **finally** for cleanup. Use **assert** only for development-time checks.
-
----
 
 ## Further reading
 

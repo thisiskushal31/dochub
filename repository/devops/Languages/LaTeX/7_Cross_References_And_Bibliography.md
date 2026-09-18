@@ -101,8 +101,6 @@ Build sequence: `pdflatex` → `biber` (on the main file base name) → `pdflate
 - **BibTeX + natbib:** Mature, many journal `.bst` styles, simple pipeline. Good when a publisher supplies a .bst or when you do not need advanced features.
 - **biblatex + Biber:** More flexible styling, Unicode, multiple bibliographies, and finer control. Preferred for new projects and when you need modern bibliography features.
 
----
-
 ## Further reading
 
 - [Overleaf — Bibliography management with biblatex](https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex)

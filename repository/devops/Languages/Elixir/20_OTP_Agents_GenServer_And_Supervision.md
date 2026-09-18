@@ -4,8 +4,6 @@
 
 **OTP** (Open Telecom Platform) is the set of libraries and patterns that make Erlang/Elixir systems fault-tolerant and observable. This topic introduces **Agents** (simple shared state), **GenServer** (request–reply and cast, with state), and **supervision trees** so you can read and operate production Elixir and Phoenix applications and understand how failures are contained and restarted.
 
----
-
 ## Agents (simple state)
 
 An **Agent** is a process that holds a single value. You **get** and **update** that value with **Agent.get/3** and **Agent.update/3** (or **Agent.get_and_update/3**). Agents are useful for simple shared state (e.g. a cache or a counter) without the full GenServer callback API. They run under a supervisor when part of an application so that if the agent crashes, the supervisor can restart it.
@@ -18,8 +16,6 @@ Agent.get(pid, & &1)
 ```
 
 For request–reply with more structure or for many operations, **GenServer** is the standard.
-
----
 
 ## GenServer (client–server)
 
@@ -41,19 +37,13 @@ GenServer.call(pid, :get)
 
 **call** blocks the caller until the server replies; **cast** does not. Use **call** when the client needs the result; use **cast** for notifications. Callbacks return a tuple: **handle_call** returns **{:reply, reply_value, new_state}** or **{:noreply, new_state}** (and you send the reply yourself later); **handle_cast** returns **{:noreply, new_state}**. **handle_info/2** handles all other messages (e.g. **:timeout**, messages from **Process.send_after** or other processes). **init/1** returns **{:ok, state}** or **{:stop, reason}**. Choosing **call** vs **cast** vs **info** affects backpressure and fault propagation—relevant for reliability and for not overloading a process.
 
----
-
 ## Supervision trees
 
 A **supervisor** is a process that starts and monitors **child** processes. If a child terminates, the supervisor can **restart** it (according to a **restart strategy**: one_for_one, rest_for_one, one_for_all). The supervisor itself can be a child of another supervisor, forming a **supervision tree**. Applications typically have one top-level supervisor that starts the main services; when you **start** an application, that tree is started. “Let it crash” means: do not try to handle every error inside the process; let it exit and let the supervisor restart it so the process state is reset and the system recovers. For DevOps, understanding the tree (e.g. via **Observer** or documentation) helps when debugging outages and tuning restart strategies.
 
----
-
 ## Dynamic supervisors and registries
 
 **DynamicSupervisor** starts children on demand (e.g. one process per connection or per job). **Registry** provides a name–pid mapping so you can send messages to a process by name (e.g. **Registry.lookup/2** then **send**). Together they support patterns like “one GenServer per user” or “pool of workers.” Phoenix uses them for channels and presence. When operating such systems, be aware of how many dynamic children can be created and how they are cleaned up to avoid leaks.
-
----
 
 ## Further reading
 

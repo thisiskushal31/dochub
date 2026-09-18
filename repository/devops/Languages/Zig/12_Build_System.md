@@ -8,8 +8,6 @@
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. When you need `build.zig` (and when you do not)
@@ -110,8 +108,6 @@ _ = enable_foo; // often passed into a module as a compile-time option
 
 **Where you use it.** Release vs debug feature sets. Document every option used in production: meaning, default, who may change it.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Dependency and module wiring
@@ -162,8 +158,6 @@ CI should fail loudly when a required system lib is missing.
 
 A release recipe includes: Zig version, `build.zig` options, target, dependency set (hashes + fingerprints), mode. If you cannot recreate the binary from those, you have folklore—not release engineering.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Build-system role |
@@ -176,8 +170,6 @@ A release recipe includes: Zig version, `build.zig` options, target, dependency 
 
 **Whole-engineering picture:** `build.zig` is the **ops interface** to the language.
 
----
-
 ## 4. Staff-level review checklist
 
 - README documents canonical `zig build` invocations (including test).
@@ -186,8 +178,6 @@ A release recipe includes: Zig version, `build.zig` options, target, dependency 
 - Custom steps have names humans use.
 - Pin bump process includes cleaning/rebuilding caches (and re-fetching packages).
 - New C headers enter via `addTranslateC` (or documented equivalent), not ad-hoc `@cImport`.
-
----
 
 ## References
 

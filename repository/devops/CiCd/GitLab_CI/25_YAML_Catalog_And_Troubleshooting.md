@@ -2,8 +2,6 @@
 
 [← Previous](./24_Feature_And_Offering_Coverage_Map.md) · [README](./README.md) · [Next: Extras →](./26_Migrate_Plans_And_Extras.md)
 
----
-
 ## 1. Concepts — surfaces you edit
 
 | Surface | Where |
@@ -23,8 +21,6 @@ Job: `script`, `run`, `rules`, `needs`, `cache`, `artifacts`, `tags`, `environme
 
 Full list: [YAML reference](https://docs.gitlab.com/ci/yaml/).
 
----
-
 ## 2. Advanced — troubleshooting playbook
 
 | Symptom | Likely cause | Look at |
@@ -37,8 +33,6 @@ Full list: [YAML reference](https://docs.gitlab.com/ci/yaml/).
 | Double pipelines | Branch + MR both on | `workflow:rules` |
 | Component not found | Version/pin/path | Component ref; Catalog |
 | Deploy not gated | Env not protected | Protected environments |
-
----
 
 ## 3. Applications — staff checklist
 
@@ -53,8 +47,6 @@ Full list: [YAML reference](https://docs.gitlab.com/ci/yaml/).
 - Security scanner findings have triage owners (if enabled)
 
 **Good:** fix in Git. **Bad:** retry until green without root cause.
-
----
 
 ## References
 

@@ -2,15 +2,11 @@
 
 [← Previous](./03_SCM_Merge_Requests_And_Code_Review.md) · [README](./README.md) · [Next: CI core model →](./05_CI_Core_Model_Pipelines_Jobs_Stages.md)
 
----
-
 ## 1. Concepts
 
 GitLab planning surfaces (issues, epics, boards, milestones, iterations, work items, OKRs on some tiers) sit **beside** delivery — they are not CI. This chapter is a **door**: enough to navigate and link MRs/pipelines to work, not a project-management course.
 
 Typical loop: issue/epic → MR → pipeline → deploy → close work item.
-
----
 
 ## 2. Advanced concepts
 
@@ -25,8 +21,6 @@ Typical loop: issue/epic → MR → pipeline → deploy → close work item.
 
 Planning features vary heavily by **Premium/Ultimate**. Treat docs cards as the source of truth.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -35,8 +29,6 @@ Planning features vary heavily by **Premium/Ultimate**. Treat docs cards as the 
 | Platform squad | Don’t rebuild Jira inside GitLab unless the org commits |
 
 **Good:** thin planning in GitLab if code already lives here. **Bad:** forcing every PMO process into GitLab when the org’s system of record is elsewhere.
-
----
 
 ## References
 

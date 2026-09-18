@@ -10,8 +10,6 @@ What OCaml is as a language and runtime, why teams adopt it, how the pieces fit 
 (* Everything below is illustrated with concrete toolchain and project snippets. *)
 ```
 
----
-
 ## 1. What OCaml is
 
 OCaml belongs to the ML family of languages. Computation is expressed as **values** and **expressions** that evaluate to values. The compiler performs **static type checking**: types are known at compile time, and the implementation infers most types so you do not repeat them everywhere. That combination catches many mistakes before execution and keeps refactors safer than in untyped scripting languages.
@@ -23,8 +21,6 @@ let x = 1
 let y = x + 1
 (* x stays 1: bindings are immutable unless you use ref/array *)
 ```
-
----
 
 ## 2. Why it is used
 
@@ -40,8 +36,6 @@ In security and operations, you meet OCaml when you maintain or audit **native b
 (* Typical domains: compilers, analyzers, infra tools — same language, same toolchain *)
 let classify_project name = Printf.sprintf "Reviewing: %s" name
 ```
-
----
 
 ## 3. How compilation works (two targets)
 
@@ -59,8 +53,6 @@ Both paths share the same **front-end** (parsing, type checking). The **back-end
 ocamlopt -c module.ml -o module.cmx
 ocamlc -c module.ml -o module.cmo
 ```
-
----
 
 ## 4. Artifacts you will see on disk
 
@@ -81,8 +73,6 @@ If you see a build failure mentioning a missing `.cmi`, the dependency order or 
 find _build -name '*.cmi' | head
 ```
 
----
-
 ## 5. Toolchain roles
 
 **opam** is the package manager. It installs **compiler versions** and **libraries** into a **switch** (an isolated prefix). You can have multiple switches on one machine: one per project or one per team policy. That is how you pin OCaml 5.1 versus 4.14 for different codebases.
@@ -97,8 +87,6 @@ find _build -name '*.cmi' | head
 opam switch list
 which ocamlopt dune
 ```
-
----
 
 ## 6. Minimal project layout and first build
 
@@ -136,8 +124,6 @@ The public name controls the installed binary name; the internal name `main` mat
 
 **Standalone executables (manual “batch” model):** a `.ml` file can be compiled with **`ocamlc`** / **`ocamlopt`** to a binary; **`Sys.argv`** holds command-line arguments. In real projects **dune** drives the same idea: an **`executable`** stanza names the entry module and the produced binary. The toplevel **`;;`** terminators are for interactive use; in source files they are optional and mostly used when pasting snippets.
 
----
-
 ## 7. Reproducibility and CI
 
 To make CI match developer machines:
@@ -154,8 +140,6 @@ dune --version
 opam list --short --installed ocaml-base-compiler
 ```
 
----
-
 ## 8. Build-failure taxonomy for real projects
 
 When a build fails, classify the failure first; this saves hours of random fixes:
@@ -171,8 +155,6 @@ Cross-platform teams should check **architecture** (`arm64` vs `x86_64`), **libc
 # Classify quickly: is it resolution, compile, link, or runtime?
 dune build 2>&1 | head -40
 ```
-
----
 
 ## 9. Minimum viable onboarding (install → switch → tooling)
 
@@ -192,8 +174,6 @@ opam install . --deps-only -y
 dune build @runtest
 ```
 
----
-
 ## Advanced use cases and implementation
 
 Container images for CI often preinstall opam and a compiler. Mount the project, run `opam install . --deps-only` (or your project’s documented install path), then `dune build` and `dune runtest`. Cache the opam switch directory only when the lockfile and base image tag are part of the cache key; otherwise you get flaky failures.
@@ -204,8 +184,6 @@ RUN opam update && opam install . --deps-only
 RUN dune build --profile release
 RUN dune runtest
 ```
-
----
 
 ## References
 

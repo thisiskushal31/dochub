@@ -6,8 +6,6 @@
 
 Turning raw tables into analysis-ready datasets: **filtering**, **mutating**, **grouped aggregation**, **joins**, and reshaping between **wide** and **long** forms. The engineering core is not dplyr verbs—it is **invariant preservation**: keys, cardinalities, units, and business definitions must survive each step. This chapter names the failure modes that create silent wrong dashboards: **many-to-many joins**, **duplicate keys**, **unit mixing**, and **non-idempotent** “fix-ups.”
 
----
-
 ## 1. Concepts
 
 ### 1. Tidy versus pragmatic rectangularity
@@ -35,8 +33,6 @@ Pivoting is central to visualization and some statistical formats. The operation
 
 Rolling means, lags, and leads are time-series bread-and-butter—and **leakage machines** if misaligned to event times. Define **alignment** (right-closed windows? inclusive endpoints?) in writing.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Why `merge()` and dplyr joins still disagree sometimes
@@ -63,8 +59,6 @@ After major transforms, assert invariants like:
 
 For large in-memory tables, `data.table` can reduce both time and memory—at the cost of a steeper learning curve. Choose per workload; do not mix idioms in the same layer without boundaries.
 
----
-
 ## 3. Applications and use cases
 
 - **Finance/risk:** reconciliation gates after every join and aggregation layer.
@@ -85,8 +79,6 @@ if (after_n < before_n) warning("row shrink — verify join type")
 - Cardinality and row-count deltas are monitored automatically.
 - Window and lag definitions are leak-tested with synthetic cases.
 - Transform layers are idempotent or explicitly incremental with documented state.
-
----
 
 ## References
 

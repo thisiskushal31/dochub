@@ -2,8 +2,6 @@
 
 [← Back to Security](../README.md) · [Gate chain](../4_Security_Gate_Chain.md)
 
----
-
 ## 1. Concepts
 
 **SonarQube** (and SonarCloud) is a **quality + security** platform: static analysis, coverage gates, duplication, and issue tracking with a quality-gate pass/fail for CI.
@@ -16,8 +14,6 @@ Kickoff primary SAST/quality example alongside [ZAP](../ZAP/README.md) for DAST.
 
 **Confirm:** What does a “quality gate” decide in CI?
 
----
-
 ## 2. Advanced concepts
 
 | Surface | Job |
@@ -29,8 +25,6 @@ Kickoff primary SAST/quality example alongside [ZAP](../ZAP/README.md) for DAST.
 
 New-code focus reduces “fix the ocean” fatigue. Pair with [Semgrep](../Semgrep/README.md) / [CodeQL](../CodeQL/README.md) if you want rule engines outside Sonar’s model.
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -40,8 +34,6 @@ New-code focus reduces “fix the ocean” fatigue. Pair with [Semgrep](../Semgr
 | Monorepo | Separate projects / monorepo mode per docs |
 
 **Staff checklist:** gate on **new code**; own triage SLAs; don’t disable rules silently; keep scanner version pinned in CI.
-
----
 
 ## References
 

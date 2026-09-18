@@ -12,8 +12,6 @@ Fortran (from **Formula Translation**) is a general-purpose, **imperative** prog
 
 **What are the use cases.** Fortran is used for: **weather and climate modeling** (atmospheric and oceanic models); **physics simulations** (fluid dynamics, particle, structural); **computational finance** (pricing, risk); **numerical libraries** (linear algebra, ODEs/PDEs); and **legacy scientific code** that continues to be extended. It is less common for general-purpose apps, web backends, or when ecosystem and hiring favor other languages; but where performance and existing Fortran investment matter, it stays relevant. From a **software engineering** perspective you design programs with modules and procedures; from a **DevOps** perspective you build, package, and run Fortran on HPC clusters; from a **security** perspective you care about supply chain (compilers, libraries), data handling, and hardening of research and HPC environments.
 
----
-
 ## Further reading
 
 - [Fortran – Overview (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_overview.htm)

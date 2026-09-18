@@ -44,8 +44,6 @@ Table indexing uses **raw equality**: `t[i]` and `t[j]` refer to the same elemen
 
 The library function `type(v)` returns a string naming the type of `v` (`"nil"`, `"boolean"`, `"number"`, `"string"`, `"function"`, `"userdata"`, `"thread"`, `"table"`). This is useful for validation and debugging.
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §2.1 Values and Types](https://www.lua.org/manual/5.5/manual.html#2.1)

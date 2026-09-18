@@ -2,8 +2,6 @@
 
 [← Previous](./08_Analysis_And_Metric_Providers.md) · [README](./README.md) · [Next: GitOps & migrate →](./10_GitOps_Helm_Kustomize_And_Migrating.md)
 
----
-
 ## 1. Concepts
 
 Beyond blue-green and canary steps, Rollouts offers supporting features:
@@ -18,8 +16,6 @@ Beyond blue-green and canary steps, Rollouts offers supporting features:
 | **Scale down aborted RS** | Control how aborted canary ReplicaSets are scaled down |
 | **Rollback window** | Limits / behavior around undo to prior revisions |
 | **Anti-affinity** | Prefer not co-locating stable and canary pods |
-
----
 
 ## 2. Advanced concepts
 
@@ -39,8 +35,6 @@ Apps that must know “am I canary?” read injected labels via Downward API —
 
 `kubectl argo rollouts undo` and revision history interact with rollback window settings. Prefer Git revert of the digest when GitOps owns desired state, then let the Rollout progress — keep Git and cluster aligned ([10](./10_GitOps_Helm_Kustomize_And_Migrating.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Need | Feature |
@@ -49,8 +43,6 @@ Apps that must know “am I canary?” read injected labels via Downward API —
 | Scale with load during canary | HPA support literacy |
 | Canary-aware app config | Ephemeral metadata |
 | Abort cleanup policy | Scaledown aborted RS |
-
----
 
 ## References
 

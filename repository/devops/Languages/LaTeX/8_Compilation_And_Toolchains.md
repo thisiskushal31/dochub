@@ -86,8 +86,6 @@ BibTeX adds `.bbl` (formatted bibliography) and `.blg` (BibTeX log). Biber adds 
 
 In CI and automation, standardizing on one engine (often pdfLaTeX) simplifies the pipeline; switch to XeLaTeX or LuaLaTeX only when the document or fonts require it.
 
----
-
 ## Further reading
 
 - [latexmk documentation](https://ctan.org/pkg/latexmk)

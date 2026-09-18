@@ -49,8 +49,6 @@ Security scanners, policy engines, and audit logs often output JSON. When you se
 
 **Where implementation lives.** How you *use* JSON in a specific stack—parsing and generating in JavaScript, Python, or Go; wiring it into CI pipelines; or reading Terraform state—is covered in the handbook sections for those technologies. This JSON section explains how JSON works (grammar, semantics, validation, security of the format). For implementation in context, see: **CiCd** (pipelines, job config, API payloads), **IAC** (Terraform state, provider config), **Cloud-Native** (Kubernetes, APIs), **Languages/JavaScript** (package.json, `JSON.parse`/`JSON.stringify`, npm). Format-level security and semantics (duplicate keys, injection when parsed, size/depth) and advanced behavior (numbers, Unicode, I-JSON, variants) are covered later in this section.
 
----
-
 ## Further reading
 
 - [CiCd](../../CiCd/README.md) — Pipeline and job configs, API payloads

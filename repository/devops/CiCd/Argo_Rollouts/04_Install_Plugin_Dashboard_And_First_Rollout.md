@@ -2,8 +2,6 @@
 
 [← Previous](./03_Architecture_And_Controller.md) · [README](./README.md) · [Next: Blue-green →](./05_Blue_Green_Strategy.md)
 
----
-
 ## 1. Concepts
 
 ### Install controller (lab shape)
@@ -49,8 +47,6 @@ Canary-first labs: `setWeight` + `pause` steps without mesh — understand repli
 
 Convert Deployment → Rollout (apiVersion/kind/strategy) or use `workloadRef` ([10](./10_GitOps_Helm_Kustomize_And_Migrating.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### Controller in every cluster
@@ -65,8 +61,6 @@ Read release notes; CRD changes need care. Keep plugin version roughly aligned w
 
 Teams need rights to Rollouts, AnalysisRuns, Experiments, and to patch Services / mesh CRs the controller uses. Least privilege per namespace.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Path |
@@ -74,8 +68,6 @@ Teams need rights to Rollouts, AnalysisRuns, Experiments, and to patch Services 
 | Learn | Non-prod cluster; blue-green with manual promote; then canary + Prometheus analysis |
 | Platform | Pin version; dashboard optional; notifications later ([11](./11_Notifications_Metrics_And_Kubectl_Plugin.md)) |
 | With Argo CD | Install Rollouts on destination clusters; GitOps owns Rollout manifests |
-
----
 
 ## References
 

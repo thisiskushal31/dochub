@@ -4,8 +4,6 @@
 
 Ada and SPARK are used in two major **safety-critical** domains where **certification** and **standards** define the process: **airborne (avionics)** and **railway**. This topic covers both in depth: regulatory context, structure of the standards, design assurance and safety integrity levels, tool qualification, how Ada and SPARK map to objectives, and the role of AdaCore tools and run-times.
 
----
-
 ## Part 1 — Airborne software (avionics)
 
 ### 1.1 Regulatory and standards context
@@ -100,8 +98,6 @@ Usage is consistent with DO-333; certification credit for formal proofs is summa
 
 The airborne booklet’s **Summary** chapter contains tables that map **each technology (Ada, SPARK, each tool)** to **DO-178C/ED-12C objectives** (Tables A-1 through A-7 and FM/OO objectives) and to **DO-330 tool qualification**. Use cases are distinguished: **1a** (traditional Ada, no OOT), **1b** (with OOT / DO-332), **2** (SPARK / formal methods, DO-333). Tables A-8 (Configuration Management), A-9 (Quality Assurance), and A-10 (Certification Liaison) are independent of AdaCore technologies and remain the responsibility of the project.
 
----
-
 ## Part 2 — Railway software
 
 ### 2.1 Regulatory and standards context
@@ -178,8 +174,6 @@ EN 50128 sub-clause 6.7 addresses **support tools and languages**. When a tool i
 - **SPARK** — Formal proof can support satisfaction of verification and assurance objectives and can reduce the testing burden while maintaining or increasing confidence.
 - **Long-lived, high-assurance systems** — EN 50128 targets “sound software engineering practices for long-lived large-scale high-assurance systems”; Ada’s design (packages, strong typing, readability, maintainability) aligns with that goal.
 
----
-
 ## Summary table
 
 | Aspect | Airborne | Railway |
@@ -191,8 +185,6 @@ EN 50128 sub-clause 6.7 addresses **support tools and languages**. When a tool i
 | **OOT / related** | DO-332; Ada addresses OOT and related techniques | Annex A/B tables; Ada and coding standards |
 | **Ada/SPARK role** | Coding, design, verification; proof and reduced testing with SPARK | Generic software development, verification, testing; analyzable code and proof with SPARK |
 | **Typical systems** | Flight control, engine control, avionics | ATP, interlocking, TCMS, level crossing, CTC |
-
----
 
 ## Further reading
 

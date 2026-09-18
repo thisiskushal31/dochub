@@ -4,8 +4,6 @@
 
 *Final choice page for Microsoft Azure. Deeper API: [learn.microsoft.com/azure](https://learn.microsoft.com/azure/).*
 
----
-
 ## Compute
 
 | Product | What for | When | Why not |
@@ -121,8 +119,6 @@
 | **IoT Hub / Central / Edge** | Devices | IoT | — |
 | **Media Services** | Video | Streaming | Blob+CDN |
 | **Migration tools (Migrate, DMS, …)** | Move to Azure | Migrations | Rewrite |
-
----
 
 ## How to use
 

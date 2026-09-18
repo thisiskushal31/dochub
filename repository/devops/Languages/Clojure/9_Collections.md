@@ -4,8 +4,6 @@
 
 Clojure’s **collections** are **immutable** and **persistent**: “updates” produce new values while sharing structure where possible. The main collection types are **lists**, **vectors**, **sets**, and **maps**. Each has literal syntax and a rich set of functions for access and transformation.
 
----
-
 ## Lists
 
 A **list** is a sequential collection. Literal lists in parentheses are read as **calls** unless **quoted**. Use the **list** function or **quote** `'(1 2 3)` for data. Lists are **linked**; adding at the front is O(1). **first** and **rest** (or **next**) are the main accessors; **conj** adds at the front.
@@ -21,8 +19,6 @@ A **list** is a sequential collection. Literal lists in parentheses are read as 
 ;; => (1 2 3)
 ```
 
----
-
 ## Vectors
 
 **Vectors** are ordered, indexed collections. Literal form: `[1 2 3]`. Indexed access with **nth** or **get** is efficient. **conj** adds at the **end**. Vectors are the usual choice when you need order and index-based access.
@@ -34,8 +30,6 @@ A **list** is a sequential collection. Literal lists in parentheses are read as 
 (conj [1 2] 3)
 ;; => [1 2 3]
 ```
-
----
 
 ## Sets
 
@@ -50,8 +44,6 @@ A **list** is a sequential collection. Literal lists in parentheses are read as 
 (conj #{1 2} 2)
 ;; => #{1 2}
 ```
-
----
 
 ## Maps
 
@@ -73,13 +65,9 @@ A **list** is a sequential collection. Literal lists in parentheses are read as 
 
 **hash-map** and **sorted-map** construct maps; **sorted-map-by** takes a comparator.
 
----
-
 ## Shared abstraction
 
 Many functions work across collection types: **seq**, **first**, **rest**, **conj**, **count**, **empty?**. The **sequence abstraction** (topic 10) unifies iteration. Prefer functions that work on the abstraction (e.g. **map**, **filter**, **reduce**) so code works with any sequence.
-
----
 
 ## Further reading
 

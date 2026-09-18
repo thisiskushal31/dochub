@@ -2,8 +2,6 @@
 
 [← Previous](./7_Land_Cloud_On_Ramp.md) · [README](./README.md) · [Next: XC lifecycle →](./9_Bandwidth_And_Cross_Connect_Lifecycle.md)
 
----
-
 ## 1. Concepts
 
 Two intake shapes share “dedicated servers” language:
@@ -23,8 +21,6 @@ Two intake shapes share “dedicated servers” language:
 
 API SKU depth for bare-metal clouds → Cloud later.
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes
@@ -40,8 +36,6 @@ API SKU depth for bare-metal clouds → Cloud later.
 ### How it connects
 
 White-space safety [White-Space/10](../White-Space/10_White_Space_Safety_And_Housekeeping.md). Hands tickets [5](./5_Remote_Hands_Tickets.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -61,8 +55,6 @@ White-space safety [White-Space/10](../White-Space/10_White_Space_Safety_And_Hou
 - Never leave untagged chassis in cage  
 
 **Good:** ready hall, tagged, imaged, documented. **Bad:** iron before power; mystery serials; wrong support path.
-
----
 
 ## References
 

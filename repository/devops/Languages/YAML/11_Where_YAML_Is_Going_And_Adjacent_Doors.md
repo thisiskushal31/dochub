@@ -6,8 +6,6 @@
 
 Why YAML **persists**, how it sits beside **JSON** and **HCL**, what you can already do after chapters **01–10** and **12**, and **what to learn next**—for practitioners learning or revising the format.
 
----
-
 ## 1. Concepts
 
 ### 1. What this track already owns
@@ -64,8 +62,6 @@ Human editability, ecosystem defaults (K8s, CI, Ansible), and comment support ke
 
 Stay when the host is YAML-native and the team can maintain quoting/lint discipline. Move work to generators (Helm, Kustomize, CDK) when copy-paste and anchors become the product.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. How to choose what to learn next
@@ -117,8 +113,6 @@ Helm, Kustomize, Jsonnet, CDK for Kubernetes—emit YAML; review rendered output
 | Unsafe load “for convenience” | Safe load + explicit code for objects |
 | One mega-file of anchors | Generator or split documents |
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Next-skill use |
@@ -131,8 +125,6 @@ Helm, Kustomize, Jsonnet, CDK for Kubernetes—emit YAML; review rendered output
 
 **Whole-engineering picture:** finish format literacy, then go deep on **one host**—that is the career path.
 
----
-
 ## 4. Staff-level review checklist
 
 - Learner can explain YAML vs JSON vs HCL in one minute.
@@ -140,8 +132,6 @@ Helm, Kustomize, Jsonnet, CDK for Kubernetes—emit YAML; review rendered output
 - Parser pin + quoting policy travel with the team to that host.
 - Generators are considered before alias graphs become unreviewable.
 - Security habits from **10** are not dropped when learning K8s/CI fields.
-
----
 
 ## References
 

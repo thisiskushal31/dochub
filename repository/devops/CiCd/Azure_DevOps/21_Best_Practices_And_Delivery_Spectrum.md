@@ -2,8 +2,6 @@
 
 [← Previous](./20_Worked_Example_Build_And_Deploy.md) · [README](./README.md) · [Next: Coverage map →](./22_Feature_And_Configuration_Coverage_Map.md)
 
----
-
 ## 1. Concepts — how to manage the product
 
 Managing Azure DevOps well means treating it as a **delivery control plane**: org design, permissions, pipelines, and artifacts — not a pile of unrelated portals.
@@ -17,8 +15,6 @@ Managing Azure DevOps well means treating it as a **delivery control plane**: or
 - **Templates (`extends`)** as the paved road  
 - Immutable **digests/versions** promoted unchanged  
 - Platform surfaces owned: wiki, dashboards, audit, billing ([25](./25_Platform_Management_Wiki_Analytics_Billing_Audit.md))  
-
----
 
 ## 2. Advanced concepts
 
@@ -116,13 +112,9 @@ Wiki + dashboards + notifications: [25](./25_Platform_Management_Wiki_Analytics_
 
 GitHub-native teams with no Azure need; pure GitOps CD already solved; org standardized on another forge ([CiCd/2](../2_CI_CD_Tools.md)).
 
----
-
 ## 3. Applications and use cases
 
 Staff review: walk sections A–F; mark use / defer / N/A. For each deploy estate you run, pick a spectrum row and confirm YAML, connection, environment, and artifact story exist.
-
----
 
 ## References
 

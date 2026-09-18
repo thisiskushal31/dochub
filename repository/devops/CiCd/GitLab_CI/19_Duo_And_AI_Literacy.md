@@ -2,15 +2,11 @@
 
 [← Previous](./18_Agent_Auto_DevOps_And_Infrastructure.md) · [README](./README.md) · [Next: Admin →](./20_Self_Managed_Admin_Literacy.md)
 
----
-
 ## 1. Concepts
 
 **GitLab Duo** (and related Agent Platform surfaces) adds AI-assisted coding, chat, MR review help, and pipeline-adjacent assistance. Treat it as **assisted delivery on the same gated loop** — not a bypass of `rules`, approvals, or protected environments.
 
 Availability is often **add-on / tier gated**. Confirm subscription docs; don’t invent packing.
-
----
 
 ## 2. Advanced concepts
 
@@ -24,8 +20,6 @@ Availability is often **add-on / tier gated**. Confirm subscription docs; don’
 
 Keep CI as source of truth for verify: Duo may draft YAML; **lint + pipeline + CODEOWNERS** still ship it.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -34,8 +28,6 @@ Keep CI as source of truth for verify: Duo may draft YAML; **lint + pipeline + C
 | Enterprise | Decide data boundaries before enabling |
 
 **Good:** AI behind the same merge and deploy gates. **Bad:** pasting Duo output into prod deploy jobs unreviewed.
-
----
 
 ## References
 

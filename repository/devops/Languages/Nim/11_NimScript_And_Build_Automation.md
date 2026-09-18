@@ -58,8 +58,6 @@ Package projects often combine **Nimble** metadata with NimScript tasks. Keep au
 - Document which **skip flags** CI uses so local and pipeline behavior match.
 - When a module “works in app code but not in `.nims`,” assume **VM limitations** or **FFI** first.
 
----
-
 ## Further reading
 
 - [NimScript overview](https://nim-lang.org/docs/nims.html)

@@ -6,8 +6,6 @@
 
 Stdlib surfaces for **structured data** (JSON, YAML, CSV), **command-line interfaces** (`OptionParser`), and **logging** (`Logger`)—the backbone of ops scripts, exporters, and internal CLIs. Focus is on correct parsing, safe defaults, and operability—not every stdlib module.
 
----
-
 ## 1. Concepts
 
 ### 1. JSON: `require 'json'`
@@ -108,8 +106,6 @@ File.write('/etc/app.conf', template.result(binding))
 
 **`Benchmark.measure { work }`** and **`Benchmark.bm`** compare blocks in scripts. For production profiling use dedicated tools (chapter 14).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. JSON and numeric precision
@@ -157,8 +153,6 @@ end
 
 Subclass `Logger` or use **`SemanticLogger`** / **`Ougai`** for JSON logs in production. Include `duration_ms`, `user_id` (non-PII id), `trace_id` as key-value—not interpolated strings only.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -193,8 +187,6 @@ Subclass `Logger` or use **`SemanticLogger`** / **`Ougai`** for JSON logs in pro
 - CLI documents required env vars and exit codes.
 - Logs go to stdout/stderr in containers (12-factor).
 - Secrets never logged—even in DEBUG without redaction policy.
-
----
 
 ## References
 

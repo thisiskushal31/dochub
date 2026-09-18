@@ -2,8 +2,6 @@
 
 [← Previous](./13_Pipelines_As_Code.md) · [README](./README.md) · [Next: CLI →](./15_CLI_tkn.md)
 
----
-
 ## 1. Concepts
 
 **Tekton Catalog** holds community (and org) Tasks/Pipelines. **Hub** is the discovery/UI/API surface for finding them.
@@ -25,8 +23,6 @@ taskRef:
 
 Prefer building an **internal catalog** Git repo for org standards; treat public Hub as ingredients you pin and review.
 
----
-
 ## 2. Advanced concepts
 
 ### Contracts / bundles
@@ -40,8 +36,6 @@ Catalog Tasks version folders (0.1, 0.9, …). Read changelogs before bumping.
 ### Upstream-only
 
 This track will **not** document every Hub Task — open Hub for the Task you adopt.
-
----
 
 ## 3. Applications and use cases
 
@@ -58,8 +52,6 @@ This track will **not** document every Hub Task — open Hub for the Task you ad
 - Bundle contracts used when you need immutable Task sets  
 
 **Good:** reviewed pins. **Bad:** unpinned Hub `latest` in prod.
-
----
 
 ## References
 

@@ -6,10 +6,6 @@
 
 **Scalar references** (`\`), **dereferencing** (`${}`, `@{`, `%{`), **anonymous** arrays and hashes, **nested** structures, and **autovivification**. **Advanced:** **typeglobs** and **symbol tables** (enough to read **legacy**). **Security:** **deep** structures from **YAML** or **Storable** without **validation** are **object injection** risks.
 
----
-
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the Perl [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -31,8 +27,6 @@ my $ar = [ 1, 2, 3 ];
 my $hr = { a => 1, b => 2 };
 ```
 
----
-
 ### 2. Dereferencing
 
 **Syntax** options exist—pick one style per codebase for **readability**:
@@ -51,8 +45,6 @@ $ar->[0] = 7;
 
 **`ref`:** Returns the **referent** type string (**`ARRAY`**, **`HASH`**, **`SCALAR`**, **`Regexp`**, **`CODE`**, etc.) or **`undef`** for non-references—use in **validation** before deep traversal of **JSON**/**YAML** trees.
 
----
-
 ### 3. Nested structures
 
 **Array of arrays** (tables), **hash of hashes** (configs), **mixed** trees—**references** are the **glue**.
@@ -66,8 +58,6 @@ my $rows = [
 
 **Autovivification:** **Assigning** through a **deep** path **creates** intermediate **hashes**/**arrays**—convenient but can **hide** bugs when **keys** come from **user** input (**unbounded** memory).
 
----
-
 ### 4. Copying vs aliasing
 
 **Slices** and **`@_`** **alias**—**subtle** **mutation** bugs when passing **hash**/**array** **elements**.
@@ -75,8 +65,6 @@ my $rows = [
 **Deep cloning** needs **`dclone`** from **`Storable`** or equivalent—**assignment** copies **top** level only for **references**.
 
 **`no autovivification`:** The **`autovivification`** pragma (CPAN) or careful **`exists`** checks can stop accidental deep tree growth when probing **optional** config keys—reduces **DoS-by-config** shapes in hostile inputs.
-
----
 
 ## 2. Advanced concepts
 
@@ -90,16 +78,12 @@ my $rows = [
 
 **Typeglobs** `*foo` — **symbol table** entries bundling **SCALAR**, **ARRAY**, **HASH**, **CODE**—**legacy** **OO** and **`local *foo`** tricks; **read** **old** code, **avoid** writing new **glob** magic without **strong** reason.
 
----
-
 ## 3. Applications and use cases
 
 - **REST/JSON APIs:** **`decode_json`** → **nested** **refs**—**validate** **`ref`** and **structure** before **dereferencing** in **auth** and **payment** paths.
 - **Config and feature flags:** **Autovivification** from **untrusted** keys is **DoS-by-memory**—use **`exists`** / **`no autovivification`** (advanced above) for **optional** subtrees.
 - **Shared caches:** **`weaken`** **cycles** in **in-process** **graphs**; **Storable** **thaw** only **trusted** **blobs** in **Redis**/**memcached** **values**.
 - **Observability:** **`Data::Dumper`** in **debug** logs—**redact** **secrets**; never **round-trip** **Dumper** output as **data**.
-
----
 
 ## References
 

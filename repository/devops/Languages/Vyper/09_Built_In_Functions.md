@@ -10,8 +10,6 @@ Built-ins are not “extra Python.” They are the language’s deliberate surfa
 
 Shared call/value-transfer depth for the EVM lives in the [Solidity](../Solidity/README.md) track; stay here for Vyper’s names and defaults. Security posture for these hotspots continues in chapter **[14](./14_Security_Design_And_Review.md)**.
 
----
-
 ## 1. Concepts
 
 ### 1. Built-ins are the EVM door
@@ -106,8 +104,6 @@ data: Bytes[68] = abi_encode(a, b, method_id=method_id("transfer(address,uint256
 
 Use these when building calldata or unpacking return blobs. They keep client stacks aligned with the same ABI story as chapter **[12](./12_Compiling_Deploying_And_ABI.md)**. Prefer them over hand-rolled padding.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Review hotspots (named carefully)
@@ -159,8 +155,6 @@ For any PR that touches chain-interaction built-ins, attach a three-line invento
 
 That inventory is often enough for a reviewer to start—without a demo of failure modes.
 
----
-
 ## 3. Applications and use cases
 
 | Role | How built-ins show up |
@@ -175,8 +169,6 @@ That inventory is often enough for a reviewer to start—without a demo of failu
 
 **Smell:** `unsafe_*` with no comment and no proof obligation in the PR description.
 
----
-
 ## 4. Staff-level review checklist
 
 - Every `send` / value-bearing call has an explicit failure story.
@@ -190,8 +182,6 @@ That inventory is often enough for a reviewer to start—without a demo of failu
 - Compiler pin is **0.4.x** (or justified brownfield) so built-in semantics match docs.
 - Declared events preferred over `raw_log` unless justified.
 - Factory salts and implementation addresses appear in release notes.
-
----
 
 ## References
 

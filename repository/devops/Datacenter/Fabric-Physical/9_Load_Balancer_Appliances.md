@@ -2,8 +2,6 @@
 
 [← Previous](./8_Optics_And_Transceiver_Roles.md) · [README](./README.md) · [Next: DNS and NTP →](./10_DNS_NTP_Physical_Placement.md)
 
----
-
 ## 1. Concepts
 
 **Hardware or appliance load balancers** (and ADC pairs) terminate VIPs physically in the hall—power, HA cables, and VLAN placement matter as much as pool config.
@@ -13,8 +11,6 @@ Software/L7 detail can live with Servers/app docs; this chapter is **box placeme
 ### Where it sits
 
 Network or DMZ racks; dual power; dual-homed to leaves/firewalls; sometimes one-arm vs two-arm designs; sync link between HA peers.
-
----
 
 ## 2. Advanced concepts
 
@@ -40,8 +36,6 @@ DNS points at VIPs ([10](./10_DNS_NTP_Physical_Placement.md)). Cloud LB is Cloud
 
 F5/Citrix/A10/HAProxy appliances/VMs—form differs; HA and dual-home jobs transfer.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -60,8 +54,6 @@ F5/Citrix/A10/HAProxy appliances/VMs—form differs; HA and dual-home jobs trans
 - Never run single LB for tier-1 without risk accept  
 
 **Good:** dual LB, tested failover, clear VIP map. **Bad:** one box; HA twins on one ToR; ignored sync alarms.
-
----
 
 ## References
 

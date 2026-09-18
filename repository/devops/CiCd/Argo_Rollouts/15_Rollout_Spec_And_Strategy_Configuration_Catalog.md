@@ -2,8 +2,6 @@
 
 [← Previous](./14_Feature_And_Configuration_Coverage_Map.md) · [README](./README.md) · [Next: Troubleshooting →](./16_Troubleshooting_And_Staff_Checklist.md)
 
----
-
 ## 1. Concepts — configuration surfaces
 
 | Surface | What you set |
@@ -17,8 +15,6 @@
 | workloadRef | Reference Deployment pod template |
 
 Exact fields: official [Rollout specification](https://argoproj.github.io/argo-rollouts/features/specification/) for your version — this catalog names the **kinds** of knobs.
-
----
 
 ## 2. Advanced concepts — strategy knobs checklist
 
@@ -48,13 +44,9 @@ Provider type · query · interval · count · successCondition · failureCondit
 | Staging | Auto steps + analysis; abort on fail |
 | Prod | trafficRouting if available; strict analysis; short pauses; GitOps digests |
 
----
-
 ## 3. Applications and use cases
 
 Use this chapter as a review checklist against a Rollout PR: every non-default field should have a one-line reason.
-
----
 
 ## References
 

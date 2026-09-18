@@ -46,8 +46,6 @@ cabal test
 stack test
 ```
 
----
-
 ## Further reading
 
 - [Cabal – Overview and quick start](https://www.haskell.org/cabal/)

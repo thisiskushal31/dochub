@@ -6,8 +6,6 @@
 
 What PHP is as a language and runtime, how the Zend Engine turns source into executing opcodes, how different SAPIs change lifetime and globals, how Opcache and JIT sit on top of compilation, how extensions and `php.ini` layers actually control behavior, and how to run a minimal strict script you can repeat in CI or on a server. Later chapters assume you reason about worker reuse, shared memory, INI changeability modes, and why “the same code” differs across binaries.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the PHP [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -21,8 +19,6 @@ Under the hood, reference implementations compile source to **Zend opcodes** exe
 A **JIT** (when enabled) may translate hot regions of opcode into native code. For typical I/O-bound web requests, **Opcache** (shared bytecode) usually dominates wins; JIT helps more on CPU-bound userland loops. Treat any performance story as measurement-first.
 
 For engineering, separate three layers mentally: the **repository** (PHP source + Composer packages), the **binary** (`php`, `php-fpm`, Apache-embedded build), and the **stack** (`php.ini` + FPM pool + web server + OS packages). Production “PHP bugs” often sit in the stack layer.
-
----
 
 ### 2. SAPIs: where the same `.php` file runs differently
 
@@ -40,8 +36,6 @@ php -r 'echo PHP_SAPI, PHP_EOL;'
 
 `PHP_SAPI` identifies the active interface for that invocation.
 
----
-
 ### 3. Compilation lifecycle: parse, compile, optimize, execute
 
 For a cold file, the engine roughly: tokenize and parse into an AST, compile to opcodes (an **op_array** per function/file), run optimization passes, then execute. `include`, `require`, and autoloaders trigger additional compile steps on demand.
@@ -51,8 +45,6 @@ Opcache stores **shared** bytecode so workers avoid recompiling unchanged files.
 **Interned strings** live in Opcache shared memory (`opcache.interned_strings_buffer`): identical string literals across many files deduplicate, reducing per-request allocations. Trimming this buffer too aggressively increases heap churn.
 
 The **maximum accelerated files** setting maps to an internal prime-sized hash table bucket count; setting it too low causes unnecessary evictions and recompilation storms under large codebases.
-
----
 
 ### 4. Extensions: native code on the critical path
 
@@ -66,8 +58,6 @@ php --ri opcache
 ```
 
 `php --ri <ext>` prints extension-specific `php.ini` directives and build metadata.
-
----
 
 ### 5. `php.ini`: layers, modes, and who can override what
 
@@ -83,8 +73,6 @@ Lists the loaded `php.ini` and scanned `.d` snippets for **this** binary. Rememb
 
 **.user.ini** files (where supported) apply to PHP under CGI/FPM-style setups with a **`user_ini.filename`** and **`user_ini.cache_ttl`** delay—changes are not always immediate, which confuses debugging.
 
----
-
 ### 6. Toolchain pieces (extended)
 
 | Piece | Role |
@@ -97,8 +85,6 @@ Lists the loaded `php.ini` and scanned `.d` snippets for **this** binary. Rememb
 | PHPUnit, PHPStan, Psalm, Rector | Quality and migration tooling in CI. |
 
 Pin **minor** PHP versions deliberately: deprecations become errors across majors; extension ABIs move with minors.
-
----
 
 ### 7. Strict baseline and first script
 
@@ -117,13 +103,9 @@ echo greet('PHP'), PHP_EOL;
 
 Omit the closing `?>` in files that contain only PHP to prevent accidental whitespace in HTTP output.
 
----
-
 ### 8. Shebang, permissions, invocation
 
 `#!/usr/bin/env php` respects `PATH`; pinned containers may use absolute interpreter paths. Prefer `php script.php` in automation so logs show the interpreter explicitly.
-
----
 
 ### 9. CLI switches (operations-oriented)
 
@@ -137,8 +119,6 @@ Omit the closing `?>` in files that contain only PHP to prevent accidental white
 | `-S host:port` | Built-in server. |
 | `-r 'code'` | Inline code (shell quoting pitfalls). |
 | `-z ext.so` | Load Zend extension (rare in ops; debugging). |
-
----
 
 ### 10. One HTTP request through FPM (end-to-end mental model)
 
@@ -154,13 +134,9 @@ Tracing a single request builds staff intuition for where time and memory go:
 
 Staff questions this model answers: “Why did deploy not pick up code?” (Opcache + no reload). “Why 502 only under load?” (workers saturated or DB pool). “Why memory grows?” (static caches in workers, not `$_GET`).
 
----
-
 ### 11. Executor state (light touch)
 
 You do not need C internals to operate PHP, but one idea explains many extensions and errors: each request runs in an **executor** context with an **active symbol table**, **current scope**, and **return value** slot. Extensions that manipulate “EG” (executor globals) or override handlers can change how errors surface. When debugging obscure extension crashes, knowing that **core** and **ext** share one process helps you escalate to **valgrind**, **ASan**, or vendor core dumps rather than chasing PHP syntax.
-
----
 
 ## 2. Advanced concepts
 
@@ -178,8 +154,6 @@ You do not need C internals to operate PHP, but one idea explains many extension
 
 **Multiple FPM pools:** Separate pools isolate `open_basedir`, `pm.max_children`, and `slowlog` per application tier—prefer this over one giant pool with divergent `php_admin_value` needs.
 
----
-
 ## 3. Applications and use cases
 
 - **On-call templates:** Capture `php -v`, `php --ini`, `php -m`, active pool name, Opcache `validate_timestamps`, and container image digest. Most “language” incidents are binary or INI drift, not business logic.
@@ -188,8 +162,6 @@ You do not need C internals to operate PHP, but one idea explains many extension
 - **Security baselines:** Split dev vs prod INI; forbid `display_errors` and `expose_php` on edge pools; use `php_admin_value` for `disable_functions` where policy allows.
 - **Capacity:** Measure RSS per worker under mixed traffic before setting `pm.max_children`; Opcache shared memory reduces compile cost but not peak request heap.
 - **Audits:** Inventory `dl()`, `shell_exec`, `exec`, `passthru`, `proc_open`, `popen`, `assert` usage, and any `eval` (chapter 8).
-
----
 
 ## References
 

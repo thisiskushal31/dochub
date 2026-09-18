@@ -6,8 +6,6 @@
 
 Where Python dominates (**web APIs**, **data**, **ML engineering**, **automation**, **CLI**, **notebooks**), how **Django**, **Flask**, **FastAPI** fit architecturally, and a **staff-level checklist** mapping language chapters to responsibilities—without replacing framework documentation.
 
----
-
 ## 1. Concepts
 
 ### 1. Web and APIs
@@ -30,23 +28,17 @@ Where Python dominates (**web APIs**, **data**, **ML engineering**, **automation
 
 Depth comes from **stdlib** fluency, **packaging**, **operations**, and **reading production code**—not from collecting syntax features alone.
 
----
-
 ## 2. Advanced concepts
 
 **Greenlet**-based stacks monkey-patch stdlib—know before mixing with **asyncio**.
 
 **Embedded Python** and **C extensions** tie releases to **ABI** and **wheel** tags—upgrade planning is cross-team.
 
----
-
 ## 3. Applications and use cases
 
 - **Staff engineer:** standardize **logging**, **typing** gates, **async** boundaries, and **import** layout across services.
 - **Security:** own **dependency** update policy and **SBOM** exports for regulated customers.
 - **Product:** choose frameworks by **team skill**, **latency** targets, and **async** ecosystem maturity—not benchmarks alone.
-
----
 
 ## Competency checklist
 
@@ -60,16 +52,12 @@ Depth comes from **stdlib** fluency, **packaging**, **operations**, and **readin
 - **Tests** and **profiles** (**16**).
 - **Delivery** (**17**).
 
----
-
 ## Engineering role progression
 
 - **Beginner:** syntax, functions, files, exceptions, virtual environments.
 - **Intermediate:** packaging, imports, testing, logging, basic concurrency.
 - **Advanced:** typing strategy, async/process architecture, performance profiling, supply-chain controls.
 - **Staff:** org-wide standards for runtime versions, dependency governance, observability, and migration programs.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./17_Flagger_Progressive_Delivery.md) · [README](./README.md) · [Next: Best practices →](./19_Best_Practices_And_When_Not_Flux.md)
 
----
-
 ## 1. Concepts — what you will build
 
 Goal: a disposable cluster where **a Git commit** creates and updates an app — no routine `kubectl apply`.
@@ -29,8 +27,6 @@ Goal: a disposable cluster where **a Git commit** creates and updates an app —
 | One HelmRelease | Helm path ([09](./09_HelmRelease_And_Helm_Delivery.md)) |
 | Flagger tutorial on your mesh | Progressive delivery ([17](./17_Flagger_Progressive_Delivery.md)) |
 
----
-
 ## 2. Advanced — definition of done
 
 You can answer:
@@ -38,8 +34,6 @@ You can answer:
 - Which **Git commit** is live right now?  
 - How do I **undo** (Git revert + reconcile)?  
 - Which optional controllers did I enable, and who owns them?
-
----
 
 ## 3. Applications and use cases
 
@@ -51,8 +45,6 @@ You can answer:
 | Recover | Revert restored the previous version |
 
 **Good:** your notes become the team runbook. **Bad:** a one-off demo with no repo left behind.
-
----
 
 ## References
 

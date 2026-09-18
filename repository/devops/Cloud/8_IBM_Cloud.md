@@ -2,8 +2,6 @@
 
 [← Previous](./7_Oracle_Cloud.md) · [README](./README.md) · [Next: Alibaba →](./9_Alibaba_Cloud.md) · [Full catalog](./Catalogs/IBM_Products.md) · [Jobs: IAM](./15_Org_IAM_And_Identity_Federation.md)
 
----
-
 ## Mental map — Floor 1 jobs on IBM Cloud
 
 | Job | IBM wiring | Depth |
@@ -16,8 +14,6 @@
 | K8s | **IKS** (vanilla) / **ROKS** (OpenShift) | [3](./3_Managed_Kubernetes.md) |
 | Registry | Container Registry | [27](./27_Container_Registries_And_Artifacts.md) |
 
----
-
 ## 1. Concepts
 
 **IBM Cloud** has two historical planes: **classic** (older, VLAN-centric) and **VPC** (current). New work should be **VPC gen2** unless brownfield classic forces you.
@@ -29,16 +25,11 @@
 
 IBM also sells **satellite** / on-prem-adjacent patterns. That is hybrid ([22](./22_Hybrid_Colo_And_Cloud.md)), not “a VPC in Dallas.”
 
----
-
 ## 2. Advanced concepts
 
 ROKS vs IKS is the same fork as ARO vs AKS: OpenShift API (Routes, Operators, SCC) vs vanilla Kubernetes ([28](./28_Deployment_Shapes_On_Cloud.md)). Do not assume Helm charts that need `LoadBalancer` + hostPath drop onto ROKS unchanged ([23](./23_Load_Balancing_Ingress_And_TLS.md)).
 
 Classic vs VPC migrations fail when Terraform still talks classic APIs ([19](./19_Portals_CLI_And_API_Patterns.md)). PowerVS / zCloud / bare metal are **not** interchangeable with a VPC kube worker.
-
----
-
 
 ### How you grant permission on IBM Cloud (quick)
 
@@ -56,7 +47,6 @@ Classic vs VPC migrations fail when Terraform still talks classic APIs ([19](./1
 | Observability | IBM Cloud Monitoring / Log Analysis (current docs) | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
 | N-tier | [34](./34_Multi_Tier_And_Reference_Topologies.md) | |
 
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -73,8 +63,6 @@ Classic vs VPC migrations fail when Terraform still talks classic APIs ([19](./1
 - Private VPC subnets for workers  
 
 **Good:** VPC + IKS/ROKS named + IAM groups. **Bad:** classic leftovers + OpenShift charts on IKS.
-
----
 
 ## References
 

@@ -6,8 +6,6 @@ How CI **executes** work: definitions in Git, where jobs run, how you stay fast 
 
 Tool-specific syntax: folders under [2](./2_CI_CD_Tools.md).
 
----
-
 ## Pipeline as code
 
 Store workflow definitions in the repo (`Jenkinsfile`, `.github/workflows/*.yml`, `.gitlab-ci.yml`, Tekton YAML, Buildkite pipelines, …).
@@ -21,8 +19,6 @@ Store workflow definitions in the repo (`Jenkinsfile`, `.github/workflows/*.yml`
 
 Anti-pattern: only clicking a GUI job that nobody can recreate after a year.
 
----
-
 ## Runners and agents
 
 | Model | Meaning |
@@ -31,8 +27,6 @@ Anti-pattern: only clicking a GUI job that nobody can recreate after a year.
 | **Self-hosted / agents** | Your machines/K8s pods (Jenkins agents, Buildkite agents, Actions self-hosted, Tekton on cluster) |
 
 Choose self-hosted when you need private network access, GPUs, stricter data boundaries, or custom tooling. Harden them: ephemeral where possible, least privilege, patch cadence — compromised runners equal compromised supply chain ([15](./15_Pipeline_Security_And_Gates.md), [6](./6_Supply_Chain_And_Signing.md)).
-
----
 
 ## Caching
 
@@ -45,8 +39,6 @@ Choose self-hosted when you need private network access, GPUs, stricter data bou
 
 Caching that serves **stale** wrong artifacts is worse than a slow clean build. Prefer correctness keys over maximum hit rate.
 
----
-
 ## Matrix / parallel builds
 
 Run the same job across dimensions: OS, language version, browser, architecture.
@@ -56,8 +48,6 @@ test × (node 20, 22) × (ubuntu, macos)  → parallel jobs → join gate
 ```
 
 Keeps the commit stage honest across supported platforms without serial hours.
-
----
 
 ## Fan-out / fan-in
 
@@ -72,13 +62,9 @@ commit ───┼─ unit (matrix)
 
 Fail fast on cheap jobs; don’t wait for e2e to learn the linter failed.
 
----
-
 ## Monorepo note
 
 Large repos need **path filters** or **project-graph affected** runs so you don’t rebuild the world every PR — see [14](./14_Monorepo_And_Multi_Repo_CI.md).
-
----
 
 ## Pitfalls
 

@@ -6,8 +6,6 @@
 
 How Scala teams raise the quality floor: **test frameworks at literacy level** (ScalaTest and MUnit roles), the idea of **property-based tests**, **style guide** expectations, **Scaladoc** for public APIs, and **CI quality gates** that keep format, compile, and test honest. After this chapter you should treat tests + style + docs as one pipeline, not optional local taste.
 
----
-
 ## 1. Concepts
 
 ### 1. Why testing looks different in Scala
@@ -220,8 +218,6 @@ sbt -batch scalafmtCheckAll   # if the repo adopts a formatter plugin
 sbt -batch doc                # when publishing or gating Scaladoc
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Test parallelism and flakes
@@ -357,8 +353,6 @@ Security-relevant Scala code needs regressions that stay green forever:
 
 One failing security regression should block merge the same way a broken money invariant does.
 
----
-
 ## 3. Applications and use cases
 
 | Context | Practice |
@@ -389,8 +383,6 @@ One failing security regression should block merge the same way a broken money i
 - Snapshots/goldens cannot silently rewrite in CI.
 - Test fixtures contain no real secrets or production PII.
 - Local developers can run the same gate commands CI runs.
-
----
 
 ## References
 

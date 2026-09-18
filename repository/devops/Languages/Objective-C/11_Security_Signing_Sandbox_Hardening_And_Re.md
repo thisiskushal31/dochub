@@ -10,8 +10,6 @@
 codesign -s "Developer ID Application: …" -f --timestamp --options runtime MyTool
 ```
 
----
-
 ## 1. Signing and distribution
 
 Binaries are signed with identities tied to teams and provisioning. **Developer ID** distribution outside the Mac App Store often requires **notarization** and **stapled** tickets. Objective-C and Swift share the same pipeline—language does not relax signing policy.
@@ -19,8 +17,6 @@ Binaries are signed with identities tied to teams and provisioning. **Developer 
 ```bash
 xcrun notarytool submit MyTool.zip --wait --keychain-profile AC_NOTARY
 ```
-
----
 
 ## 2. Sandbox and entitlements
 
@@ -34,8 +30,6 @@ xcrun notarytool submit MyTool.zip --wait --keychain-profile AC_NOTARY
 <true/>
 ```
 
----
-
 ## 3. Hardened runtime
 
 **Hardened Runtime** restricts JIT, unsigned executable memory, and certain **dyld** behaviors unless explicitly entitled. Debug and CI profiles sometimes need different flags than production—document the delta so support builds do not ship relaxed settings accidentally.
@@ -43,8 +37,6 @@ xcrun notarytool submit MyTool.zip --wait --keychain-profile AC_NOTARY
 ```bash
 codesign -dv --entitlements :- MyApp.app
 ```
-
----
 
 ## 4. Objective-C metadata and RE
 
@@ -54,8 +46,6 @@ codesign -dv --entitlements :- MyApp.app
 otool -ov MyBinary | head -80
 class-dump MyBinary 2>/dev/null | head
 ```
-
----
 
 ## Advanced use cases and implementation
 
@@ -70,8 +60,6 @@ class-dump MyBinary 2>/dev/null | head
 ```bash
 csrutil status
 ```
-
----
 
 ## References
 

@@ -63,8 +63,6 @@ The **Test** standard library (`using Test`) provides unit testing. **`@test exp
 
 For reproducible builds, commit `Project.toml` and `Manifest.toml`. In CI, run `julia -e 'using Pkg; Pkg.instantiate()'` (or the equivalent in your build step) in the project directory so the same dependency versions are installed. Lockfiles (the manifest) prevent dependency drift and make audits and security reviews tractable. When you operate or secure Julia projects, treat the manifest as the source of truth for what code runs; check it for vulnerable or unexpected dependencies.
 
----
-
 ## Further reading
 
 - [Code Loading](https://docs.julialang.org/en/v1/manual/code-loading/)

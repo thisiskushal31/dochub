@@ -69,8 +69,6 @@ Formal verification stacks exist on Aptos-oriented workflows; this topic stays *
 
 Run **`move test`** in CI, record compiler versions in release notes, and segment **admin keys** from **deploy keys** where policy allows.
 
----
-
 ## Further reading
 
 - [The Move Book — Signer](https://move-language.github.io/move/signer.html)

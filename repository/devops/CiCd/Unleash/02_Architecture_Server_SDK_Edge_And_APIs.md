@@ -2,8 +2,6 @@
 
 [← Previous](./01_What_Is_Unleash_And_Feature_Flags.md) · [README](./README.md) · [Next: Install →](./03_Install_Hosting_And_Configuration.md)
 
----
-
 ## 1. Concepts
 
 Unleash is built so **flag evaluation is fast and private**: SDKs (or Edge) evaluate against **cached configuration**. Your request path does not wait on the Unleash database for every `isEnabled`.
@@ -34,8 +32,6 @@ Backend evaluation is in-process (nanoseconds once cached). Config updates propa
 
 Every documented HTTP operation (Client 5, Frontend 4, Edge 14, Admin 376 as of OpenAPI v8.0.3) is listed in [23](./23_Admin_Client_Frontend_And_Edge_APIs.md). SDK method names live in [09](./09_SDKs_Backend_Frontend_And_OpenFeature.md).
 
----
-
 ## 2. Advanced concepts
 
 ### Privacy shape
@@ -58,8 +54,6 @@ Admin UI / Terraform  →  Unleash server
 
 Small labs often point SDKs straight at the server. Production estates usually put **Edge** in front for fan-out, caching, and frontend exposure without opening Admin/Client broadly.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -76,8 +70,6 @@ Small labs often point SDKs straight at the server. Production estates usually p
 - Prefer Edge over Proxy for new frontend paths  
 
 **Good:** evaluate locally, sync definitions. **Bad:** HTTP round-trip to Unleash on every business request.
-
----
 
 ## References
 

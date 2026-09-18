@@ -81,8 +81,6 @@ Lambdas and anonymous functions capture variables from the outer scope. The clos
 
 Using higher-order functions and lambdas is central to Kotlin’s collection API and to many library APIs. The next topic covers extension functions and scope functions, which build on these ideas.
 
----
-
 ## Further reading
 
 - [Higher-order functions and lambdas](https://kotlinlang.org/docs/lambdas.html)

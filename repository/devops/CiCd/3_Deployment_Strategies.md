@@ -8,8 +8,6 @@ These patterns apply on **VMs/MIGs and load balancers** as well as Kubernetes �
 
 Vocabulary: deploy (put bits in an environment) vs **release** (users see the change) — feature flags decouple them ([Methodologies/2](../Methodologies/2_Practices_And_Workflows.md)).
 
----
-
 ## Strategy comparison
 
 | Strategy | Idea | Typical rollback | Cost / notes |
@@ -22,8 +20,6 @@ Vocabulary: deploy (put bits in an environment) vs **release** (users see the ch
 
 Progressive delivery = controlled, often automated, increase of exposure (canary steps, analysis, pause, promote) — implemented by controllers like Argo Rollouts / Flagger on Kubernetes, or by mesh/gateway weight rules. Controller deep-dive: [9_Progressive_Delivery_Controllers.md](./9_Progressive_Delivery_Controllers.md).
 
----
-
 ## Rolling update (Kubernetes baseline)
 
 Kubernetes `Deployment` default strategy is **RollingUpdate**:
@@ -33,8 +29,6 @@ Kubernetes `Deployment` default strategy is **RollingUpdate**:
 - `kubectl rollout undo` uses retained ReplicaSet history (`revisionHistoryLimit`)
 
 Rolling replaces pods gradually; it does **not** by itself give precise *traffic* percentages the way a weighted gateway route does.
-
----
 
 ## Blue-green (Fowler / Continuous Delivery)
 
@@ -47,8 +41,6 @@ Martin Fowler’s summary (aligned with Humble & Farley’s Continuous Delivery 
 
 **Database caveat (Fowler):** schema changes that only work with one app version break the switch. Separate schema deploy from app upgrade — expand schema so **both** app versions work, then upgrade app, then contract old schema later ([7](./7_DB_Migrations_In_Pipelines.md), [Parallel Change](https://martinfowler.com/bliki/ParallelChange.html)).
 
----
-
 ## Canary
 
 Kubernetes docs describe a common pattern: **stable** and **canary** Deployments sharing a Service (label subsets), tuning replica counts to approximate traffic share. For precise splits, use Gateway API / ingress **weighted backends** (or a progressive-delivery controller).
@@ -60,8 +52,6 @@ Google SRE canarying guidance (workbook):
 - Synthetic / black-box checks help when user traffic is noisy
 
 Post-deploy verify layer: [5](./5_Verify_Rollback_And_Synthetic_Tests.md).
-
----
 
 ## Feature flags
 
@@ -76,8 +66,6 @@ Flags are **not** a substitute for CI quality. Prefer flags + progressive delive
 
 Tool entry in this handbook: [Unleash/](./Unleash/README.md) (one product among many).
 
----
-
 ## Choosing
 
 | Constraint | Prefer |
@@ -87,8 +75,6 @@ Tool entry in this handbook: [Unleash/](./Unleash/README.md) (one product among 
 | Need early production signal with limited blast radius | Canary + analysis |
 | Need “ship code Monday, expose Friday” | Flags |
 | Shared DB + zero downtime | Rolling/canary/blue-green **plus** expand/contract migrations |
-
----
 
 ## Pitfalls
 

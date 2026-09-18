@@ -2,8 +2,6 @@
 
 [← Previous](./10_Repository_Structure_Tenancy_And_Multi_Cluster.md) · [README](./README.md) · [Next: Security →](./12_Security_Identity_And_Air_Gap.md)
 
----
-
 ## 1. Concepts
 
 **Private Git is not encryption.** If a Secret’s `data` is readable in the repo, it is already leaked to everyone with clone access (and to backups, forks, CI logs).
@@ -27,8 +25,6 @@ spec:
       name: sops-keys       # or use cloud KMS + workload identity
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### SOPS vs Sealed Secrets
@@ -47,8 +43,6 @@ Prefer cloud KMS + workload identity over long-lived private keys on laptops ([1
 
 Docs cover fleet-wide decryption helpers — powerful; treat like production keys.
 
----
-
 ## 3. Applications and use cases
 
 | Estate | Typical choice |
@@ -58,8 +52,6 @@ Docs cover fleet-wide decryption helpers — powerful; treat like production key
 | Central Vault | External Secrets + Flux for the rest |
 
 **Good:** ciphertext in Git; keys in KMS. **Bad:** “it’s a private repo, we’re fine.”
-
----
 
 ## References
 

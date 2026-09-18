@@ -26,8 +26,6 @@ Fortran is used where **numeric performance**, **scientific libraries**, and **e
 
 **Why this matters.** Seeing use cases and roles together helps you decide when Fortran is relevant, how to use it (from coding to deploying), and what to harden. The language and build are the same whether you are writing a kernel, maintaining a model, or operating cluster infrastructure; the context (DevOps, security, research) determines how you build, deploy, and protect it.
 
----
-
 ## Further reading
 
 - [Fortran – Useful Resources (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_useful_resources.htm)

@@ -12,8 +12,6 @@ eval "$(opam env)"
 dune build
 ```
 
----
-
 ## 1. What opam does
 
 **opam** is the package manager for OCaml. It does two jobs at once:
@@ -29,8 +27,6 @@ Everything for one toolchain lives in an **opam switch**. A switch is a director
 opam switch create myproj ocaml-base-compiler.5.2.1
 opam install dune
 ```
-
----
 
 ## 2. Project metadata: `.opam` files and `dune-project`
 
@@ -55,8 +51,6 @@ depends: [
 build: [["dune" "build" "-p" name "-j" jobs]]
 ```
 
----
-
 ## 3. What dune does
 
 **dune** reads:
@@ -78,8 +72,6 @@ It computes a **dependency graph** between modules and **invokes** `ocamlopt` or
  (libraries lwt lwt.unix))
 ```
 
----
-
 ## 4. Reproducible installs: lockfiles
 
 **opam** can lock **dependency resolution** so that every machine resolves the same package versions. Workflows vary by team:
@@ -88,8 +80,6 @@ It computes a **dependency graph** between modules and **invokes** `ocamlopt` or
 - CI runs `opam install` using that lockfile so **transitive** dependencies do not drift.
 
 **Containers** and **Nix** flakes can further pin **system** libraries (C headers, `pkg-config`) that your **FFI** bindings need. For security audits, **you must know** which **package versions** shipped in a **release** artifact—lockfiles and image tags are the source of truth.
-
----
 
 ## 5. CI pipeline shape
 
@@ -115,8 +105,6 @@ dune build --profile release
 dune runtest
 ```
 
----
-
 ## 6. Release engineering and native binaries
 
 Native executables **link** **system** dynamic libraries (e.g. `libc`, OpenSSL). **Release** artifacts should note:
@@ -131,8 +119,6 @@ file _build/default/bin/server.exe
 # otool -L … / ldd … on the installed binary
 ```
 
----
-
 ## Advanced use cases and implementation
 
 **Monorepos:** dune **workspaces** can span multiple directories; **vendored** dependencies live under a predictable path. **Security** policy may require **scanning** vendored C code like any other third-party dependency.
@@ -143,8 +129,6 @@ file _build/default/bin/server.exe
 ;; dune-workspace — multiple roots / vendored trees (illustrative)
 (lang dune 3.0)
 ```
-
----
 
 ## 7. opam pins, variables, and local packages
 
@@ -157,8 +141,6 @@ Installing from the **project root** with `opam install . --deps-only` (or simil
 ```bash
 opam pin add mypkg.dev git+https://github.com/org/mypkg#abc123
 ```
-
----
 
 ## 8. Dune: profiles, contexts, and workspaces
 
@@ -178,8 +160,6 @@ A **`dune-workspace`** file can define multiple **packages** or roots in a **mon
   (flags (:standard -O3))))
 ```
 
----
-
 ## 9. Developer ergonomics: REPL and incremental failure modes
 
 `dune utop` (or `utop` with the right libs loaded) gives a **REPL** against your **library** dependencies—faster than ad hoc test binaries for exploring APIs.
@@ -189,8 +169,6 @@ When **incremental** builds behave oddly after **interface** changes, `dune clea
 ```bash
 dune utop
 ```
-
----
 
 ## 10. Deterministic CI at scale
 
@@ -207,8 +185,6 @@ If any one layer floats, two CI jobs with the same source commit can produce dif
 key: opam-lock-${{ hashFiles('**/*.opam.lock') }}-img-${{ env.BASE_IMAGE_DIGEST }}
 ```
 
----
-
 ## 11. Day-one opam and project bootstrap (dependencies, compiler pin)
 
 **Workflow shape:** initialise opam → create or activate a **switch** with the required **compiler** version → `opam install` **platform** tools (dune, utop, formatter, LSP) as team policy → in the repo, `opam install . --deps-only` (or your lockfile-driven equivalent) → `dune build` / `dune runtest`. Document the exact commands in `README` so CI and humans share one path.
@@ -224,8 +200,6 @@ git clone https://github.com/org/proj && cd proj
 opam switch create . --deps-only
 dune build @all @runtest
 ```
-
----
 
 ## References
 

@@ -6,8 +6,6 @@
 
 How Scala organizes types and behavior: **classes**, **objects**, **companions**, **traits** (mixins), **case classes**, and **enums** (Scala 3). This is the domain-modeling toolkit you need before collections, pattern matching, and packaging—Scala’s OOP and FP styles share one type system. After this chapter you should choose the right shape for a type, know when companions and mixins help, and spot equality and initialization footguns in review.
 
----
-
 ## 1. Concepts
 
 ### 1. Classes hold state and methods
@@ -158,8 +156,6 @@ case object Busy2 extends Status2
 case class Failed2(reason: String) extends Status2
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Construction, `new`, and opaque factories
@@ -269,8 +265,6 @@ class Worker(env: String) extends Configured(env):
 
 Read both shapes; migrate deliberately, not casually.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and domain modeling
@@ -333,8 +327,6 @@ case class Credentials(user: String, secret: String):
 - No secrets in derived `toString`; logging redaction considered.
 - Scala 2 sealed hierarchies documented if the module cannot use Scala 3 enums yet.
 - Private constructors + companion parsers for types with invariants.
-
----
 
 ## References
 

@@ -6,8 +6,6 @@ Classical DevOps glues machines with **shell** (and Python/PowerShell) long befo
 
 Language depth: [Languages/Shell](../Languages/Shell/README.md). Classical CI using scripts: [CiCd/20](../CiCd/20_Classical_Jenkins_Host_And_Web_Deploy.md). Config management at scale: [Ansible/](./Ansible/README.md).
 
----
-
 ## Where scripting sits in delivery
 
 ```text
@@ -17,8 +15,6 @@ OR Ansible playbook → idempotent multi-host (preferred for fleets)
 ```
 
 Scripts in **Git**, invoked by the pipeline — not tribal knowledge on one bastion.
-
----
 
 ## Durable practices
 
@@ -30,8 +26,6 @@ Scripts in **Git**, invoked by the pipeline — not tribal knowledge on one bast
 | Idempotent where possible | Re-run safe; or move to Ansible modules |
 | Log usefully | Enough for [CiCd/16](../CiCd/16_Notifications_Webhooks_And_ChatOps.md) |
 
----
-
 ## Orchestration ladder
 
 | Level | Tool |
@@ -41,8 +35,6 @@ Scripts in **Git**, invoked by the pipeline — not tribal knowledge on one bast
 | Event / workflow products | Outside this folder’s primary scope — prefer CI + Ansible + CiCd notifications |
 
 n8n-style workflow SaaS is **not** a substitute for CI gates; agentic demos still need the same verify/promote discipline ([CiCd/19](../CiCd/19_Delivery_Spectrum_Legacy_Through_Modern.md)).
-
----
 
 ## Pitfalls
 

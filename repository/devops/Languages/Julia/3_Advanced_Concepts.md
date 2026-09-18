@@ -90,8 +90,6 @@ When you define a new method or type at run time (e.g. in the REPL or via `eval`
 
 Once you understand these concepts, you can read and write Julia that is both idiomatic and fast, and you can navigate type hierarchies, method lists, constructors, interfaces, and macro-heavy code in the ecosystem.
 
----
-
 ## Further reading
 
 - [Types](https://docs.julialang.org/en/v1/manual/types/)

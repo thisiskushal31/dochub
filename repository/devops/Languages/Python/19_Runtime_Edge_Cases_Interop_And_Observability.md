@@ -6,8 +6,6 @@
 
 Topics that usually surface at staff and platform levels after teams already know syntax and frameworks: **free-threaded CPython** readiness, **subinterpreters**, **C-extension ABI** constraints, **observability** (traces/logs/metrics correlation), and release/version governance for multi-service Python estates.
 
----
-
 ## 1. Concepts
 
 ### 1. Free-threaded CPython and GIL-optional builds
@@ -54,8 +52,6 @@ A Python platform should define:
 
 Without this, teams drift into incompatible runtime and package baselines.
 
----
-
 ## 2. Advanced concepts
 
 **Concurrency model interplay:** free-threading, subinterpreters, multiprocessing, and asyncio solve different bottlenecks; selecting by benchmark alone causes regressions in reliability and maintainability.
@@ -63,8 +59,6 @@ Without this, teams drift into incompatible runtime and package baselines.
 **Observability cost controls:** always-on high-cardinality tracing or logging can create cost incidents; sampling and cardinality guardrails are part of production design.
 
 **Native extension risk:** incident triage for crashy services may require stack traces from native frames, not just Python tracebacks.
-
----
 
 ## 3. Applications and use cases
 
@@ -82,8 +76,6 @@ print("python:", sys.version)
 print("executable:", sys.executable)
 print("platform:", platform.platform())
 ```
-
----
 
 ## References
 

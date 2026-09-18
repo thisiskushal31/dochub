@@ -153,8 +153,6 @@ A practical rule: run one realistic load scenario and one realistic incident dri
 - **Sui track:** [20](./20_Move_On_Sui_Overview.md) → **27**.
 - **Language core:** [1](./1_What_Is_Move.md) → **12** if you skipped it.
 
----
-
 ## Further reading
 
 - [Move on Aptos](https://aptos.dev/move/move-on-aptos)

@@ -4,8 +4,6 @@
 
 Ordered controls from commit to runtime so delivery stays fast **and** gated. CI/CD map (links into this chain): [CiCd/15_Pipeline_Security_And_Gates.md](../CiCd/15_Pipeline_Security_And_Gates.md). Supply chain detail: [CiCd/6](../CiCd/6_Supply_Chain_And_Signing.md). Full AppSec program depth: [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive).
 
----
-
 ## Chain (recommended order)
 
 ```text
@@ -23,8 +21,6 @@ Ordered controls from commit to runtime so delivery stays fast **and** gated. CI
 
 Earlier gates should be **faster**; expensive checks parallelize or run on merge/promote paths so the commit stage stays short ([CiCd/1](../CiCd/1_Pipelines_Build_Test_Deploy.md), [CiCd/11](../CiCd/11_Pipeline_As_Code_Runners_Caching_Matrix.md)).
 
----
-
 ## When each gate runs
 
 | Gate | PR | Main / release | Preview / staging | Prod admit |
@@ -37,8 +33,6 @@ Earlier gates should be **faster**; expensive checks parallelize or run on merge
 | SBOM / sign | On publish | On publish | Verify optional | Verify required |
 | DAST | — | — | Selected apps | — |
 | Smoke / canary | — | — | Required | Required ([CiCd/5](../CiCd/5_Verify_Rollback_And_Synthetic_Tests.md)) |
-
----
 
 ## Tool → stage → fix owner
 
@@ -54,8 +48,6 @@ Earlier gates should be **faster**; expensive checks parallelize or run on merge
 | Runtime secrets | [Vault](./Vault/README.md) | Platform + app |
 | CI cloud identity | [5_OIDC_CI_And_Least_Privilege](./5_OIDC_CI_And_Least_Privilege.md) | Platform |
 
----
-
 ## Fail closed vs fail open
 
 | Policy | Use |
@@ -64,8 +56,6 @@ Earlier gates should be **faster**; expensive checks parallelize or run on merge
 | **Fail open + track** | New rules in learn mode; low severity with ticket SLA |
 
 Write thresholds down. Infinite warnings are not controls.
-
----
 
 ## Pitfalls
 

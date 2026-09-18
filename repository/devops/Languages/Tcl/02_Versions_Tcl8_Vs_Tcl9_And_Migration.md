@@ -8,8 +8,6 @@ How to think about **Tcl 8.6** (brownfield literacy) versus **Tcl 9.0.x** (handb
 
 Pin reality with `info patchlevel` (chapter **00**). This chapter is about *behavior differences*, not changelog tourism.
 
----
-
 ## 1. Concepts
 
 ### 1. Two lines you must name
@@ -132,8 +130,6 @@ if {[package vsatisfies [package provide Tcl] 9.0-]} {
 
 Exact file names vary by TEA/nmake; the point for script owners is: **one `pkgIndex.tcl` may need two branches**, and copying an 8.6 `.so` into a 9 tree will not work.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. More script-visible incompatibilities
@@ -181,8 +177,6 @@ Keep migration tickets in engineering language (encoding, paths, Unicode, extens
 - Do not rewrite working 8.6 appliance scripts in a laptop-only Tcl 9 dialect without a deployment plan.
 - Do not migrate C extensions by copying object files between majors.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Migration reality |
@@ -192,8 +186,6 @@ Keep migration tickets in engineering language (encoding, paths, Unicode, extens
 | **Security** | Dropping implicit tilde expansion removes a class of path surprises; strict encoding fails closed on garbage. |
 | **Ops** | Expect + 8.6 bastions may lag; keep a compatibility matrix per jump host. |
 | **SE** | CI should matrix **8.6 and 9** while dual support lasts; print patchlevel in artifacts. |
-
----
 
 ## Staff-level review checklist
 
@@ -206,8 +198,6 @@ Keep migration tickets in engineering language (encoding, paths, Unicode, extens
 - Namespace code uses `::` / `variable` / `global` correctly under Tcl 9 resolution rules.
 - Binary packages rebuilt for Tcl 9; `pkgIndex.tcl` dual-path reviewed if supporting both majors.
 - Rollback plan exists for appliance/embed cutovers.
-
----
 
 ## References
 

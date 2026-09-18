@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [IAM →](./15_Org_IAM_And_Identity_Federation.md) · [Storage →](./24_Object_Block_And_File_Storage.md)
 
----
-
 ## Mental map
 
 ```text
@@ -13,8 +11,6 @@ CI / app      →  reads via identity (role/SA), not baked files
 ```
 
 *What to notice: encryption without access control is theater; access without audit is hope.*
-
----
 
 ## 1. Concepts
 
@@ -30,8 +26,6 @@ App runtime secrets in clusters also touch Vault / external secrets — [Securit
 **Disconfirm:** Base64 in Kubernetes Secrets is **not** encryption. “SSE enabled” with a shared platform key does **not** always meet residency/CMK requirements.
 
 **Confirm:** Who can `GetSecret`? Who can use the CMK? How does CI get a short-lived credential?
-
----
 
 ## 2. Advanced concepts
 
@@ -61,8 +55,6 @@ App runtime secrets in clusters also touch Vault / external secrets — [Securit
 | CMK deleted / disabled | Data unreadable (intentional or outage) |
 | No rotation | Leak window unbounded |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -80,8 +72,6 @@ App runtime secrets in clusters also touch Vault / external secrets — [Securit
 - Audit logs on secret access ([30](./30_Cloud_Observability_And_Audit_Doors.md))  
 
 **Good:** OIDC + secrets API + CMK where required. **Bad:** `.env` in the repo; admin key in CI.
-
----
 
 ## References
 

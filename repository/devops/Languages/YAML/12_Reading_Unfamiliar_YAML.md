@@ -8,8 +8,6 @@ How to open a **YAML file you did not write**—exported by a cloud console, emi
 
 Prerequisites: chapters **01–07** for the pieces; this chapter assembles them into a reading habit.
 
----
-
 ## 1. Concepts
 
 ### 1. Decode before you debate product fields
@@ -108,8 +106,6 @@ Decode aloud:
 
 You still do not know what `apiVersion` means for a product—but you know the **tree and types**.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Fingerprints of generated YAML
@@ -168,8 +164,6 @@ Take any exported YAML (cloud console, CI “download config”, Helm `template`
 
 If you can fill that card, this track did its job.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Decode use |
@@ -182,8 +176,6 @@ If you can fill that card, this track did its job.
 
 **Whole-engineering picture:** a stranger YAML becomes **readable data** first; then you open the right host section for field meaning.
 
----
-
 ## 4. Staff-level review checklist
 
 - Reader can classify root shape and document count in under a minute.
@@ -193,8 +185,6 @@ If you can fill that card, this track did its job.
 - Template vs rendered YAML is distinguished.
 - Language-specific tags trigger a safe-load conversation.
 - Unknown keys are routed to host schema—not treated as “invalid YAML” by default.
-
----
 
 ## References
 

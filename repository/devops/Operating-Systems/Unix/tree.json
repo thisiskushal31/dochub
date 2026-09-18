@@ -10,35 +10,35 @@
         "path": "Flavors/AIX.md",
         "type": "file",
         "sha": "",
-        "size": 1402
+        "size": 1377
       },
       {
         "name": "BSD_Family.md",
         "path": "Flavors/BSD_Family.md",
         "type": "file",
         "sha": "",
-        "size": 1952
+        "size": 1927
       },
       {
         "name": "HP_UX.md",
         "path": "Flavors/HP_UX.md",
         "type": "file",
         "sha": "",
-        "size": 1284
+        "size": 1264
       },
       {
         "name": "README.md",
         "path": "Flavors/README.md",
         "type": "file",
         "sha": "",
-        "size": 2516
+        "size": 2496
       },
       {
         "name": "Solaris_illumos.md",
         "path": "Flavors/Solaris_illumos.md",
         "type": "file",
         "sha": "",
-        "size": 1500
+        "size": 1475
       }
     ]
   },
@@ -47,76 +47,76 @@
     "path": "1_Introduction_And_Basics.md",
     "type": "file",
     "sha": "",
-    "size": 3784
+    "size": 3744
   },
   {
     "name": "10_Users_Networking_Logging_And_Security.md",
     "path": "10_Users_Networking_Logging_And_Security.md",
     "type": "file",
     "sha": "",
-    "size": 4548
+    "size": 4518
   },
   {
     "name": "2_Process_Management.md",
     "path": "2_Process_Management.md",
     "type": "file",
     "sha": "",
-    "size": 1671
+    "size": 1646
   },
   {
     "name": "3_CPU_Scheduling.md",
     "path": "3_CPU_Scheduling.md",
     "type": "file",
     "sha": "",
-    "size": 4341
+    "size": 4316
   },
   {
     "name": "4_Process_Synchronization.md",
     "path": "4_Process_Synchronization.md",
     "type": "file",
     "sha": "",
-    "size": 4571
+    "size": 4546
   },
   {
     "name": "5_Deadlock.md",
     "path": "5_Deadlock.md",
     "type": "file",
     "sha": "",
-    "size": 2041
+    "size": 2016
   },
   {
     "name": "6_Multithreading.md",
     "path": "6_Multithreading.md",
     "type": "file",
     "sha": "",
-    "size": 2483
+    "size": 2458
   },
   {
     "name": "7_Memory_Management.md",
     "path": "7_Memory_Management.md",
     "type": "file",
     "sha": "",
-    "size": 5076
+    "size": 5046
   },
   {
     "name": "8_Storage_And_IO.md",
     "path": "8_Storage_And_IO.md",
     "type": "file",
     "sha": "",
-    "size": 4609
+    "size": 4584
   },
   {
     "name": "9_Shell_And_Scripting.md",
     "path": "9_Shell_And_Scripting.md",
     "type": "file",
     "sha": "",
-    "size": 1954
+    "size": 1929
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 5717
+    "size": 5707
   }
 ]

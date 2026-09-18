@@ -2,8 +2,6 @@
 
 [← Previous](./22_Worked_Example_CI_Build_And_Promote.md) · [README](./README.md) · [Next: Coverage map →](./24_Feature_And_Offering_Coverage_Map.md)
 
----
-
 ## 1. Concepts — defaults that age well
 
 | Do | Don’t |
@@ -18,8 +16,6 @@
 | Own runners & schedules | Orphan privileged runners / silent cron failures |
 | GitOps for cluster apply | Unbounded kubectl from every pipeline |
 
----
-
 ## 2. Advanced — when *not* (or not only) GitLab CI
 
 | Situation | Better fit |
@@ -29,8 +25,6 @@
 | Only need cluster sync | Flux/Argo — GitLab builds images |
 | Org refuses GitLab product | Don’t force SCM migration for CI alone |
 
----
-
 ## 3. Applications and use cases
 
 | Decision | Ask |
@@ -38,8 +32,6 @@
 | Adopt GitLab CI? | Is GitLab (or external-repo CI) the system of record? |
 | Self-managed runners? | Who patches and isolates them? |
 | Components? | Who versions the paved road? |
-
----
 
 ## References
 

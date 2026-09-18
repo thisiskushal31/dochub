@@ -6,8 +6,6 @@
 
 Binary **float** representation, **rounding** and **accumulation** error, **Decimal** contexts, **quantize**, **Fraction**, and engineering choices for **metrics**, **science**, and **money**.
 
----
-
 ## 1. Concepts
 
 ### 1. Binary floating point
@@ -30,8 +28,6 @@ Each **+ − × ÷** rounds to nearest representable **float**; repeated operati
 
 **Fraction** holds exact rationals; numerators/denominators can grow large—great for ratios, not always for storage.
 
----
-
 ## 2. Advanced concepts
 
 **Context** is thread-local; **async** tasks may need **`localcontext()`** for isolated precision during a calculation burst.
@@ -39,8 +35,6 @@ Each **+ − × ÷** rounds to nearest representable **float**; repeated operati
 **JSON** numbers are typically parsed as **float**—exchange monetary values as **integer minor units** or **decimal strings** with schema validation.
 
 **NumPy** **float64** aligns with Python **float** semantics for many teams—still not arbitrary precision.
-
----
 
 ## 3. Applications and use cases
 
@@ -56,8 +50,6 @@ price = Decimal("19.99")
 tax_rate = Decimal("0.075")
 tax = (price * tax_rate).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
 ```
-
----
 
 ## References
 

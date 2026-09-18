@@ -6,8 +6,6 @@
 
 The **import** machinery: **`sys.modules`**, **`sys.path`**, **namespace packages**, **relative imports**, **`__init__.py`**, **`__path__`**, **`python -m`**, **`__main__`**, **`__spec__`**, **bytecode** caches, and **shadowing** risks. This is where packaging bugs, security issues, and “wrong file executed” incidents originate.
 
----
-
 ## 1. Concepts
 
 ### 1. Modules
@@ -38,8 +36,6 @@ A **package** is a module with a **`__path__`** attribute, usually a directory. 
 
 **`__pycache__/module.version.pyc`** caches bytecode. Stale or mixed-Python-version trees can cause odd failures—usually fixed by clean builds and one Python minor per venv.
 
----
-
 ## 2. Advanced concepts
 
 **Import hooks** (**`sys.meta_path`**, **`importlib`**) let frameworks load from zip, remote sources, or encrypted stores—application code rarely needs this.
@@ -49,8 +45,6 @@ A **package** is a module with a **`__path__`** attribute, usually a directory. 
 **Circular imports:** module A imports B which imports A—sometimes unavoidable; mitigate by local imports inside functions or restructuring layers.
 
 **`-I` isolated mode** omits **user site** from **`sys.path`** by default—reduces surprise imports in automation.
-
----
 
 ## 3. Applications and use cases
 
@@ -72,8 +66,6 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 ```
-
----
 
 ## References
 

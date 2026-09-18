@@ -8,8 +8,6 @@
 
 Default language narrative remains **Tcl 9.0.x**. Expect itself often appears on **older hosts** (classic **Expect 5.45.x** line on **Tcl 8.6** appliances). Always pin what your image actually runs and verify compatibility before assuming a greenfield Tcl 9 + Expect stack.
 
----
-
 ## 1. Concepts
 
 ### 1. What Expect is
@@ -170,8 +168,6 @@ This handbook does **not** teach credential stuffing, password spraying, or bypa
 
 This handbook does not teach DejaGnu end-to-end. Know it exists when you inherit GCC/binutils-style or embedded test farms that speak `runtest`. Official DejaGnu docs are the next stop (References).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Version and host reality (Tcl 9 vs Expect deployments)
@@ -274,8 +270,6 @@ When you open a DejaGnu tree, expect roughly:
 
 Your job in a PR may be a single `.exp` case. Apply the same timeout/EOF/secret rules. Framework wiring changes deserve a reviewer who has run `runtest` on that farm once.
 
----
-
 ## 3. Applications and use cases
 
 ### Operations
@@ -318,8 +312,6 @@ A change-automation Expect job is acceptable when:
 - Rollback or safe failure mode is documented for partial applies.
 - Ownership and on-call path are listed in the repo README.
 
----
-
 ## Staff-level review checklist
 
 - Expect is justified—no adequate non-interactive API.
@@ -334,8 +326,6 @@ A change-automation Expect job is acceptable when:
 - Retries are bounded; failures surface actionable buffers.
 - No credential-stuffing or unauthorized access patterns—authorized automation only.
 - DejaGnu/tool-farm changes link to official DejaGnu docs when framework-specific.
-
----
 
 ## References
 

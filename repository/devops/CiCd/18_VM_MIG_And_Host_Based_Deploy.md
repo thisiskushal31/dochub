@@ -6,8 +6,6 @@ A large share of production still runs on **virtual machines**: a handful of hos
 
 Config management of hosts: [Automation/](../Automation/README.md) (Ansible, etc.). Image baking: Packer/IAC when you get there. Spectrum: [19](./19_Delivery_Spectrum_Legacy_Through_Modern.md).
 
----
-
 ## Durable jobs (timeless)
 
 | Job | Meaning on VMs |
@@ -20,8 +18,6 @@ Config management of hosts: [Automation/](../Automation/README.md) (Ansible, etc
 
 Fowler **blue-green** was described for dual environments and a router switch — it applies cleanly to two VM pools or two MIGs, not only to containers ([Blue Green Deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html)).
 
----
-
 ## Topology ladder
 
 ```text
@@ -33,8 +29,6 @@ Single VM (legacy / small)
 
 All of these can sit behind the **same CI loop** ([1](./1_Pipelines_Build_Test_Deploy.md)): CI builds → stores artifact → deploy job updates fleet → verify.
 
----
-
 ## Artifact styles on hosts
 
 | Style | Pipeline produces | Deploy does |
@@ -45,8 +39,6 @@ All of these can sit behind the **same CI loop** ([1](./1_Pipelines_Build_Test_D
 | **Container on VM** | Image digest | Docker/Podman compose or unit pulls digest |
 
 Prefer **immutable images or packages** over “SSH and git pull on prod” ([4](./4_Artifacts_And_Registries.md), [13](./13_Config_Secrets_And_Env_Parity.md)).
-
----
 
 ## Managed instance groups / autoscaling groups
 
@@ -72,8 +64,6 @@ CI builds app → bakes image OR publishes package
   → on failure: roll back to previous template
 ```
 
----
-
 ## Small VM fleets (no MIG yet)
 
 | Pattern | Notes |
@@ -85,13 +75,9 @@ CI builds app → bakes image OR publishes package
 
 Always keep **previous artifact** for rollback ([5](./5_Verify_Rollback_And_Synthetic_Tests.md)).
 
----
-
 ## Overlap with schema and stateful disks
 
 Rolling VMs with local state is harder than stateless app tiers. Prefer external DB/disk; use expand/contract for schema ([7](./7_DB_Migrations_In_Pipelines.md)). Stateful MIG policies exist but raise operational cost — know before you choose them.
-
----
 
 ## Illustrative outline (MIG)
 
@@ -105,8 +91,6 @@ Rolling VMs with local state is harder than stateless app tiers. Prefer external
 ```
 
 Exact flags follow current cloud docs; the sequence is durable.
-
----
 
 ## Pitfalls
 

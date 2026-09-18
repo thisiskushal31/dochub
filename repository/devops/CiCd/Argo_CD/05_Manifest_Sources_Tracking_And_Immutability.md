@@ -2,8 +2,6 @@
 
 [← Previous](./04_Install_Access_And_First_Application.md) · [Argo CD](./README.md) · [Next: Sync and Projects →](./06_Sync_Policies_Waves_Projects_And_RBAC.md)
 
----
-
 ## 1. Concepts
 
 Argo CD does not invent a new templating language. It **renders** Kubernetes manifests from tools you already use, then syncs the result.
@@ -62,8 +60,6 @@ gitops/
 
 Each overlay path becomes an Application (or an ApplicationSet output).
 
----
-
 ## 2. Advanced concepts
 
 ### Immutability traps
@@ -100,8 +96,6 @@ Useful when the chart lives upstream and values live in your org repo. Complexit
 
 Some teams commit **fully rendered** YAML to Git (after Helm/Kustomize) so reviews show exact cluster objects. Argo CD’s **source hydrator** (beta on recent versions) can automate pushing hydrated manifests before sync. Optional maturity step — see [11](./11_Security_Tenancy_Hydrator_And_Troubleshooting.md).
 
----
-
 ## 3. Applications and use cases
 
 | Team need | Source approach |
@@ -123,8 +117,6 @@ CI builds image@sha256:abc
 ```
 
 Same artifact, different Git paths — not “rebuild for prod” ([4](../4_Artifacts_And_Registries.md)).
-
----
 
 ## References
 

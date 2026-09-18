@@ -26,8 +26,6 @@ Erlang is used where **concurrency**, **fault tolerance**, and **distribution** 
 
 **Why this matters.** Seeing use cases and roles together helps you decide when to choose Erlang, how to use it (from coding to deploying), and what to harden (security and DevOps). The language and OTP are the same whether you are writing a broker, a backend, or tooling; the context (DevOps, security, embedded) determines how you build, deploy, and operate it.
 
----
-
 ## Further reading
 
 - [RabbitMQ](https://www.rabbitmq.com/documentation.html)

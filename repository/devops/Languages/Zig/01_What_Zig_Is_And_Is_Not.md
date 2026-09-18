@@ -10,8 +10,6 @@ Default narrative: **Zig 0.16.x** (pin **0.16.0**). Sibling systems tracks: [C/C
 
 **Lens:** what you see as a user of the language → what Zig is → what it’s for → where you’ll use it.
 
----
-
 ## 1. Concepts
 
 ### 1. What Zig is (plain language)
@@ -79,8 +77,6 @@ You will learn Zig in layers:
 
 If you only memorize syntax, you will miss the point. Zig’s “human readability” comes from **making the dangerous parts look dangerous**.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Zig vs C
@@ -131,8 +127,6 @@ Also correct “Zig has no undefined behavior.” Zig has **illegal behavior**; 
 
 Zig **0.16.x** is the default narrative here. Older trees (**0.14**, **0.15**) appear in the wild. Before you “just upgrade,” read release notes for your pin and re-run tests. Tracking `master` in production without policy is a process failure, not a flex.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How this chapter shows up at work |
@@ -145,8 +139,6 @@ Zig **0.16.x** is the default narrative here. Older trees (**0.14**, **0.15**) a
 
 **Whole-engineering picture:** language choice is **safety model + interop + staffing + pin discipline**—not fashion.
 
----
-
 ## 4. Staff-level review checklist
 
 - The adoption reason is named (C interop, comptime, cross-compile, team skill)—not “trending.”
@@ -154,8 +146,6 @@ Zig **0.16.x** is the default narrative here. Older trees (**0.14**, **0.15**) a
 - Toolchain pin policy exists before nontrivial code lands.
 - Bun or other Zig-built products are not confused with “we know Zig.”
 - A one-paragraph comparison to C and Rust exists for the project.
-
----
 
 ## References
 

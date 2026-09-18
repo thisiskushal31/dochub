@@ -2,8 +2,6 @@
 
 [← Previous](./9_Reading_A_One_Line_And_Elevation.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 Skills transfer across metros when units are fluent:
@@ -17,8 +15,6 @@ Skills transfer across metros when units are fluent:
 | Electrical | V, A, Hz | 120/208/480 (60 Hz) vs 230/400/415 (50 Hz) |
 | Airflow | CFM, m³/h | CRAH talk |
 | Optic | dBm | DOM |
-
----
 
 ## 2. Advanced concepts
 
@@ -39,8 +35,6 @@ Electrical global variants throughout Electrical track; Mechanical tons/ASHRAE; 
 
 Public region docs won’t teach you their bus voltages—learn principles; read *your* landlord SKU.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -58,8 +52,6 @@ Public region docs won’t teach you their bus voltages—learn principles; read
 - Never ship 60 Hz-only gear to 50 Hz halls blindly  
 
 **Good:** unit-fluent, site-specific checks. **Bad:** US defaults everywhere; kVA/kW mush.
-
----
 
 ## References
 

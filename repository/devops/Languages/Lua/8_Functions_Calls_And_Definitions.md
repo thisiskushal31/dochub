@@ -30,8 +30,6 @@ Function calls and vararg expressions can produce multiple values (multires expr
 
 Examples: `print(x, (f()))` prints x and the first result of `f()`. `x, y, z = f()` assigns the first three results (or nil if fewer). `local x = ...` in a variadic function takes the first vararg. `return x, f()` returns x plus all results of `f()`.
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §3.4.10 Function Calls](https://www.lua.org/manual/5.5/manual.html#3.4.10)

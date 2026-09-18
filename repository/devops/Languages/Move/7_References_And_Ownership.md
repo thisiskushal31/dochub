@@ -44,8 +44,6 @@ Global borrows follow the same field rules but **cannot escape** the function; s
 
 **Systems:** Ephemeral references keep serialized state simple. **Security:** Resource reads through **`&`** cannot copy non-**copy** types. **Application:** Prefer returning **values** or **IDs**, not interior pointers, across module boundaries when designing APIs.
 
----
-
 ## Further reading
 
 - [The Move Book — References](https://move-language.github.io/move/references.html)

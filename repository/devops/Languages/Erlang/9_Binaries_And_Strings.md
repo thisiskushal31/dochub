@@ -36,8 +36,6 @@
 
 **Why this matters.** Binaries are the right type for I/O, sockets, and file content; the bit syntax is the main tool for protocol implementation. Strings-as-lists are common in Erlang; knowing both forms avoids confusion when reading code or interfacing with libraries. Choosing the right representation (list vs binary, Latin-1 vs UTF-8) affects correctness and performance.
 
----
-
 ## Further reading
 
 - [Data Types](https://www.erlang.org/doc/system/data_types) (bit strings, binaries, string)

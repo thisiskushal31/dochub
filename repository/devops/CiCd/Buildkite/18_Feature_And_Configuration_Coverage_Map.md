@@ -2,13 +2,9 @@
 
 [← Previous](./17_Best_Practices_And_When_Not_Buildkite.md) · [README](./README.md) · [Next: YAML catalog →](./19_YAML_And_Configuration_Catalog.md)
 
----
-
 ## 1. Concepts
 
 Use this map to see **which Buildkite feature classes exist** and **where they are taught**. Plan gates evolve — confirm in References when implementing. GraphQL field encyclopedias and every package-ecosystem click-path stay upstream — literacy here, not a paste of the schema.
-
----
 
 ## 2. Advanced concepts — feature inventory
 
@@ -75,13 +71,9 @@ Use this map to see **which Buildkite feature classes exist** and **where they a
 | Every plugin’s README | Pin and read the plugin you adopt |
 | Agent CLI flag encyclopedia | Agent CLI reference |
 
----
-
 ## 3. Applications and use cases
 
 Walk A–F for a platform checklist: use / defer / N/A per row.
-
----
 
 ## References
 

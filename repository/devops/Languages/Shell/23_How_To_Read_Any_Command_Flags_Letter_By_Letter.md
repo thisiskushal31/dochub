@@ -6,8 +6,6 @@
 
 How to decode opaque flag clusters such as `ss -tulpn` and `netstat -tulpn` without memorizing blobs. You learn the pattern **command + short flags + long options + operands**, expand every letter into a meaning table, and practice on `ss`, `netstat`, `ls -la`, `ps aux`, `chmod 755`, and `tar -xzf`. You also learn how to discover flags yourself with `--help`, `man`, and PowerShell `Get-Help`. The teaching habit is permanent: **never memorize opaque blobs—expand them**. Security notes cover process-owner disclosure from `-p` on shared hosts.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. The pattern: command + short flags + long options + operands
@@ -317,8 +315,6 @@ Flags like `ss -p` / `netstat -p` reveal **which process** owns a socket. On a s
 
 Treat process listings and listening ports as **sensitive inventory**, not decorative logs.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Short vs long options mapping
@@ -377,8 +373,6 @@ ls -- -weirdname
 
 `--` ends option parsing. Decode habit: if an operand starts with `-`, look for `--`.
 
----
-
 ## 3. Applications and use cases
 
 ### Ops incident: “what is listening?”
@@ -416,8 +410,6 @@ Network/process recon workflows reuse these expansions in full ops/security cont
 - No staff member is required to memorize `tulpn` as a word.  
 - Evidence tickets scrub sensitive `-p` / `ps` output when leaving the trust boundary.  
 - New engineers demonstrate decoding `ss -tulpn`, `ps aux`, `tar -xzf`, and `chmod 755` live.
-
----
 
 ## References
 

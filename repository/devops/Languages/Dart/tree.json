@@ -4,174 +4,174 @@
     "path": "1_What_Is_Dart.md",
     "type": "file",
     "sha": "",
-    "size": 6252
+    "size": 6217
   },
   {
     "name": "10_Classes_And_Constructors.md",
     "path": "10_Classes_And_Constructors.md",
     "type": "file",
     "sha": "",
-    "size": 2835
+    "size": 2815
   },
   {
     "name": "11_Methods_Inheritance_And_Mixins.md",
     "path": "11_Methods_Inheritance_And_Mixins.md",
     "type": "file",
     "sha": "",
-    "size": 3120
+    "size": 3090
   },
   {
     "name": "12_Enums_Extensions_And_Extension_Types.md",
     "path": "12_Enums_Extensions_And_Extension_Types.md",
     "type": "file",
     "sha": "",
-    "size": 2535
+    "size": 2510
   },
   {
     "name": "13_Patterns_And_Metadata.md",
     "path": "13_Patterns_And_Metadata.md",
     "type": "file",
     "sha": "",
-    "size": 2448
+    "size": 2418
   },
   {
     "name": "14_Concurrency.md",
     "path": "14_Concurrency.md",
     "type": "file",
     "sha": "",
-    "size": 7048
+    "size": 7003
   },
   {
     "name": "15_Null_Safety_In_Depth.md",
     "path": "15_Null_Safety_In_Depth.md",
     "type": "file",
     "sha": "",
-    "size": 2986
+    "size": 2951
   },
   {
     "name": "16_Effective_Dart.md",
     "path": "16_Effective_Dart.md",
     "type": "file",
     "sha": "",
-    "size": 3014
+    "size": 2989
   },
   {
     "name": "17_Core_Libraries.md",
     "path": "17_Core_Libraries.md",
     "type": "file",
     "sha": "",
-    "size": 3664
+    "size": 3624
   },
   {
     "name": "18_Packages_And_Pub.md",
     "path": "18_Packages_And_Pub.md",
     "type": "file",
     "sha": "",
-    "size": 2962
+    "size": 2927
   },
   {
     "name": "19_SDK_And_Command_Line_Tools.md",
     "path": "19_SDK_And_Command_Line_Tools.md",
     "type": "file",
     "sha": "",
-    "size": 3105
+    "size": 3060
   },
   {
     "name": "2_Environment_And_SDK.md",
     "path": "2_Environment_And_SDK.md",
     "type": "file",
     "sha": "",
-    "size": 6468
+    "size": 6423
   },
   {
     "name": "20_Server_And_Command_Line_Apps.md",
     "path": "20_Server_And_Command_Line_Apps.md",
     "type": "file",
     "sha": "",
-    "size": 2815
+    "size": 2790
   },
   {
     "name": "21_Web_Apps_And_Deployment.md",
     "path": "21_Web_Apps_And_Deployment.md",
     "type": "file",
     "sha": "",
-    "size": 2604
+    "size": 2574
   },
   {
     "name": "22_Interoperability.md",
     "path": "22_Interoperability.md",
     "type": "file",
     "sha": "",
-    "size": 3058
+    "size": 3028
   },
   {
     "name": "23_Use_Cases_And_Applications.md",
     "path": "23_Use_Cases_And_Applications.md",
     "type": "file",
     "sha": "",
-    "size": 8937
+    "size": 8892
   },
   {
     "name": "24_Security_And_Best_Practices.md",
     "path": "24_Security_And_Best_Practices.md",
     "type": "file",
     "sha": "",
-    "size": 8763
+    "size": 8713
   },
   {
     "name": "3_Program_Structure_And_Basic_Syntax.md",
     "path": "3_Program_Structure_And_Basic_Syntax.md",
     "type": "file",
     "sha": "",
-    "size": 6854
+    "size": 6809
   },
   {
     "name": "4_Variables_And_Null_Safety.md",
     "path": "4_Variables_And_Null_Safety.md",
     "type": "file",
     "sha": "",
-    "size": 7804
+    "size": 7754
   },
   {
     "name": "5_Types.md",
     "path": "5_Types.md",
     "type": "file",
     "sha": "",
-    "size": 6176
+    "size": 6126
   },
   {
     "name": "6_Operators.md",
     "path": "6_Operators.md",
     "type": "file",
     "sha": "",
-    "size": 3243
+    "size": 3198
   },
   {
     "name": "7_Control_Flow.md",
     "path": "7_Control_Flow.md",
     "type": "file",
     "sha": "",
-    "size": 5504
+    "size": 5459
   },
   {
     "name": "8_Functions.md",
     "path": "8_Functions.md",
     "type": "file",
     "sha": "",
-    "size": 4184
+    "size": 4144
   },
   {
     "name": "9_Libraries_And_Imports.md",
     "path": "9_Libraries_And_Imports.md",
     "type": "file",
     "sha": "",
-    "size": 2194
+    "size": 2164
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 8331
+    "size": 8296
   }
 ]

@@ -13,8 +13,6 @@ Each topic file is self-contained. References are collected in Further reading a
 
 **Why Julia in DevOps and security:** Julia targets **scientific and numerical computing** and is used in HPC, data science, and research pipelines. When you operate or secure data-heavy or research infrastructure, Julia codebases and environments may appear; understanding the language helps with scripting, automation, dependency audits, and reviewing code.
 
----
-
 ## The four pillars
 
 | Pillar | What it covers | Where |
@@ -24,13 +22,9 @@ Each topic file is self-contained. References are collected in Further reading a
 | **Advanced concepts** | Type system in depth, multiple dispatch, constructors & composite types, conversion & promotion, interfaces, metaprogramming, performance, C/Fortran FFI, memory & GC, debugging & profiling | [3_Advanced_Concepts.md](./3_Advanced_Concepts.md) |
 | **Use cases** | Data pipelines, HPC, research; parallel & distributed computing; running external programs; networking & streams; use cases by context and by role; deployment and ops | [4_Packages_And_Environments.md](./4_Packages_And_Environments.md), [5_Use_Data_Pipelines_HPC_Research.md](./5_Use_Data_Pipelines_HPC_Research.md), [6_Deployment_And_Ops.md](./6_Deployment_And_Ops.md) |
 
----
-
 ## How to read this section
 
 Read in **number order** for a single path: **What is it (1)** → **Basic concepts (2)** → **Advanced concepts (3)** → **Implementation and use cases (4, 5, 6)**.
-
----
 
 ## Topic index
 
@@ -42,8 +36,6 @@ Read in **number order** for a single path: **What is it (1)** → **Basic conce
 | 4 | Packages and environments | [4_Packages_And_Environments.md](./4_Packages_And_Environments.md) |
 | 5 | Data pipelines, HPC, and use cases | [5_Use_Data_Pipelines_HPC_Research.md](./5_Use_Data_Pipelines_HPC_Research.md) |
 | 6 | Deployment and ops | [6_Deployment_And_Ops.md](./6_Deployment_And_Ops.md) |
-
----
 
 ## Complete topic coverage (no stone unturned)
 
@@ -95,8 +87,6 @@ Every manual and ecosystem topic is covered in this section. Below, “Manual”
 | **Use cases by context** (simulation, data science, HPC, DevOps, security) | 5 |
 | **Use cases by role** (software, DevOps, security, research) | 5, README |
 
----
-
 ## Learning path: from basics to use cases
 
 | Stage | Topics | What you'll be able to do |
@@ -105,8 +95,6 @@ Every manual and ecosystem topic is covered in this section. Below, “Manual”
 | **Basic concepts** | 2 | Write and run scripts: variables, types, functions, arrays, strings, control flow, I/O, scoping, docstrings, REPL, CLI. |
 | **Advanced concepts** | 3 | Use the type system deliberately, define methods and constructors, use metaprogramming, write performant code, call C/Fortran, reason about memory and debugging. |
 | **Implementation & use cases** | 4 → 6 | Manage packages and environments, run tests, use parallel and distributed computing, run external programs and use networking, deploy and operate Julia, and apply use cases by context and role. |
-
----
 
 ## By engineering role
 
@@ -117,15 +105,11 @@ Every manual and ecosystem topic is covered in this section. Below, “Manual”
 | **Security / cybersecurity** | Dependency audit, supply chain, securing run environments | 4, 5, 6. |
 | **Research / HPC** | Parallel and distributed computing, cluster jobs, reproducibility | 3, 5, 6. |
 
----
-
 ## Scope: what's covered and what's not
 
 **Covered here:** The full Julia language and ecosystem in depth—what it is (1); all basic concepts (2); all advanced concepts (3); packages, environments, testing (4); data pipelines, HPC, parallelism, external programs, networking, use cases (5); deployment and ops (6). Further reading at the end of each file points to the official manual for each topic.
 
 **Implementation in context (by design):** Running Julia inside a specific stack—e.g. exact CI job config, Terraform, or Kubernetes—is covered in the handbook sections for those technologies (CiCd, IAC, Cloud-Native). This section is the single place for how the *language* and its ecosystem work.
-
----
 
 ## Further reading
 

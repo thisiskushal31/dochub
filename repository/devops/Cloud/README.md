@@ -44,15 +44,11 @@ Floor 3   Kin / hybrid         →  21–22 (VPS kin; hybrid colo+cloud)
 | **Providers (apply)** | [4](./4_GCP_Literacy.md)–[14](./14_CtrlS_And_Yotta.md) | IAM quick + choose-your-deploy; full SKU choose → [Catalogs/](./Catalogs/README.md) |
 | Kin / hybrid | [21](./21_Akamai_Linode_And_VPS_Kin.md)–[22](./22_Hybrid_Colo_And_Cloud.md) | VPS ≠ colo; hybrid interfaces |
 
----
-
 ## Floor −1 — How to read
 
 | # | File | Focus |
 |---|------|--------|
 | 0 | [How to read](./0_How_To_Read.md) | Same job / different wiring; quality bar; first-week path |
-
----
 
 ## Floor 0 — Foundations
 
@@ -61,8 +57,6 @@ Floor 3   Kin / hybrid         →  21–22 (VPS kin; hybrid colo+cloud)
 | 1 | [Shared cloud concepts](./1_Shared_Cloud_Concepts.md) | Regions, shared responsibility, wide term map |
 | 2 | [Spectrum and when which](./2_Spectrum_And_When_Which.md) | Which *kind* of cloud |
 | 3 | [Managed Kubernetes](./3_Managed_Kubernetes.md) | GKE/EKS/AKS/ACK/… and ROSA/ARO/ROKS as SKUs |
-
----
 
 ## Floor 1 — Tenant jobs (concept once, name maps everywhere)
 
@@ -89,8 +83,6 @@ Floor 3   Kin / hybrid         →  21–22 (VPS kin; hybrid colo+cloud)
 
 *(Chapters 21–22 live on Floor 3 but keep their numbers.)*
 
----
-
 ## Floor 2 — Provider solutions (apply Floor 1)
 
 | # | File | Focus | Full catalog (what / when / why not) |
@@ -107,8 +99,6 @@ Floor 3   Kin / hybrid         →  21–22 (VPS kin; hybrid colo+cloud)
 | 13 | [Deutsche Telekom](./13_Deutsche_Telekom.md) | Open Telekom Cloud, T-Systems | [OTC products](./Catalogs/OTC_Products.md) |
 | 14 | [CtrlS and Yotta](./14_CtrlS_And_Yotta.md) | India colo / hosted private / regional cloud | [India products](./Catalogs/India_CtrlS_Yotta_Products.md) |
 
----
-
 ## Floor 3 — Kin / hybrid
 
 | # | File | Focus |
@@ -116,13 +106,9 @@ Floor 3   Kin / hybrid         →  21–22 (VPS kin; hybrid colo+cloud)
 | 21 | [Akamai Linode and VPS kin](./21_Akamai_Linode_And_VPS_Kin.md) | Tenant VPS ≠ colo — catalog: [Linode & VPS kin](./Catalogs/Akamai_Linode_Products.md) |
 | 22 | [Hybrid colo and cloud](./22_Hybrid_Colo_And_Cloud.md) | Interfaces across Datacenter + Cloud |
 
----
-
 ## Product catalogs (final choose surface)
 
 [Catalogs/](./Catalogs/README.md) — every primary SKU/family with **what for · when · why not**. Click vendor docs from those pages only when you need API depth.
-
----
 
 ## Cross-links
 

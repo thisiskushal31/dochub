@@ -6,8 +6,6 @@
 
 The decision map before the syntax chapters: **what** YAML is, **why** it won config surfaces, how it compares to **JSON**, **XML**, and **HCL**, and when to pick YAML for a file versus another format. Default narrative: **YAML 1.2** (revision **1.2.2**).
 
----
-
 ## 1. Concepts
 
 ### 1. What YAML is (plain language)
@@ -54,8 +52,6 @@ The tradeoff is complexity: the same friendliness that helps humans introduces *
 > Hand-edited tree of maps, lists, and leaves → parser + schema → native data → tool behavior.
 
 Hold: **indentation is structure**, **typing depends on schema/version**, **validation is separate from parsing**.
-
----
 
 ## 2. Advanced concepts
 
@@ -113,8 +109,6 @@ Two dumps of the same data can look different and still be equivalent. Two loads
 
 YAML’s model is a **graph of tagged nodes** (with anchors allowing shared structure), presented as a character stream. You do not need the full formal chapters to edit configs—but this explains aliases, tags, and why “same meaning, different spelling” exists.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How this chapter shows up |
@@ -127,8 +121,6 @@ YAML’s model is a **graph of tagged nodes** (with anchors allowing shared stru
 
 **Whole-engineering picture:** YAML is the **edit surface**; the product contract is still the host API or schema.
 
----
-
 ## 4. Staff-level review checklist
 
 - The file’s job is named: human config vs interchange vs tool-required format.
@@ -136,8 +128,6 @@ YAML’s model is a **graph of tagged nodes** (with anchors allowing shared stru
 - JSON/HCL alternatives were considered where the host allows choice.
 - Readers are pointed to **02+** for syntax and **10** before loading untrusted input.
 - Host schema ownership is clear (who defines valid keys)—not “whatever parses.”
-
----
 
 ## References
 

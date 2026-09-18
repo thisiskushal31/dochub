@@ -2,8 +2,6 @@
 
 [← Previous](./09_Environments_Approvals_Checks_And_Classic_Releases.md) · [README](./README.md) · [Next: App Service deploy →](./11_Deploy_App_Service_Functions_And_Static_Web.md)
 
----
-
 ## 1. Concepts
 
 Two related but different ideas:
@@ -19,8 +17,6 @@ Also common: push **container images** to **Azure Container Registry** (or other
 build job → publish pipeline artifact / push package / push image@digest
   → deploy job downloads or pulls that exact bit
 ```
-
----
 
 ## 2. Advanced concepts
 
@@ -40,8 +36,6 @@ Feeds can include **upstream sources** (nuget.org, npmjs) with caching and contr
 
 Publishing symbols for .NET debugging is a common Artifacts-adjacent pattern — know it exists for Windows estates.
 
----
-
 ## 3. Applications and use cases
 
 | Output | Store |
@@ -52,8 +46,6 @@ Publishing symbols for .NET debugging is a common Artifacts-adjacent pattern —
 | Mixed | Feed for libraries + ACR for runtime image |
 
 **Good:** promote by digest/version immutably. **Bad:** “latest” tags as the only prod pointer.
-
----
 
 ## References
 

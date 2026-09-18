@@ -4,13 +4,9 @@
 
 Assembly language is a family of **low-level languages** that map closely to a CPU’s **machine code**. In **cybersecurity** you read or write it (disassembler output, shellcode, exploits); in **general engineering** (embedded, firmware, kernels, compilers, DSP) you read or write it for timing, size, or correctness. This topic covers **x86/x64** and **ARM** basics: what assembly is, registers, common instructions, and addressing. All of this is standard, documented material; see **Further reading** for official references.
 
----
-
 ## What assembly is
 
 Assembly languages produce **object code** for a specific processor family. Each **instruction** is a **mnemonic** (e.g. `mov`, `add`) that corresponds to one or more **opcodes** (bytes the CPU executes). There is no single “Assembly” language: **x86/x64** (Intel/AMD), **ARM** (including AArch64), and **MIPS** each have their own instruction set and syntax. Compilers often emit assembly as an intermediate step; disassemblers show you that same level when analyzing binaries.
-
----
 
 ## x86/x64: registers
 
@@ -36,8 +32,6 @@ mov  eax, 1234h    ; 32-bit: value 0x1234 into EAX
 mov  rbx, rax      ; 64-bit: copy RAX into RBX
 ```
 
----
-
 ## x86/x64: syntax (Intel vs AT&T)
 
 Two common syntaxes:
@@ -54,8 +48,6 @@ Two common syntaxes:
 | `mov eax, [ebx+ecx*4+off]` | `movl off(%ebx,%ecx,4), %eax`  |
 
 Size in AT&T is often in the mnemonic (`movl` = long/32-bit). In Intel syntax, size can be inferred from the register (e.g. `eax` = 32-bit) or specified (e.g. `byte ptr [esi]`).
-
----
 
 ## x86/x64: common instructions
 
@@ -77,8 +69,6 @@ cmp   eax, 0
 jz    label_zero    ; jump if zero (ZF set)
 ```
 
----
-
 ## x86/x64: addressing modes
 
 Memory operands are often in square brackets. Common forms (Intel syntax):
@@ -92,8 +82,6 @@ Memory operands are often in square brackets. Common forms (Intel syntax):
 
 NASM uses the same idea; it requires square brackets for memory references and does not store variable types (you must indicate size when it’s not clear from the register). See the NASM manual for exact syntax and directives.
 
----
-
 ## Execution modes (x86/x64)
 
 x86 supports several execution modes; which instructions and addressing you see depends on the mode:
@@ -106,8 +94,6 @@ x86 supports several execution modes; which instructions and addressing you see 
 
 Disassembly is usually **long mode** (64-bit) or **32-bit protected mode** on desktop/Server; embedded and boot code may be real or protected mode.
 
----
-
 ## ARM (AArch32 / AArch64) in brief
 
 ARM is a different architecture: **load-store**, **fixed-width instructions** (32-bit in AArch32/AArch64 base), **general-purpose registers** R0–R15 (AArch32) or X0–X30/W0–W30 (AArch64). **PC** is the program counter; **SP** is stack pointer; **LR** (link register) holds return address. Conditional execution (e.g. `ADDNE`) and barrel shifter in operands are typical. ARM has its own calling conventions (e.g. R0–R3 / X0–X7 for first arguments). For full instruction set and assembly syntax, ARM’s official documentation is the reference.
@@ -119,8 +105,6 @@ add   x0, x1, x2    ; x0 = x1 + x2
 cmp   x0, #0
 b.eq  label_zero    ; branch if equal (zero)
 ```
-
----
 
 ## Further reading
 

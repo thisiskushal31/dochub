@@ -4,8 +4,6 @@
 
 Dart can interoperate with **C**, **Java/Kotlin**, **Objective-C/Swift**, and **JavaScript**. Use **C interop** (FFI) for native libraries and performance; **Java/Kotlin** and **Objective-C/Swift** for Android and iOS when using Flutter or embedding Dart; **JavaScript interop** for the web and Node. Each has a different API and tooling; choose based on platform and use case.
 
----
-
 ## C interop (FFI)
 
 **Dart FFI** (Foreign Function Interface) lets you call **C** code from Dart. You declare C functions and types in Dart and use **`dart:ffi`** to load dynamic libraries and invoke them. Use for existing C libraries, performance-critical code, or system APIs. Memory and lifetime are your responsibility; avoid leaking or double-freeing.
@@ -23,25 +21,17 @@ void main() {
 }
 ```
 
----
-
 ## Java and Kotlin (Android)
 
 On **Android**, Flutter embeds the Dart engine and can call into **Java** or **Kotlin** via **platform channels** or **FFI**-style bindings where supported. Use **platform channels** for high-level messaging between Dart and the host; use generated or hand-written bindings when you need direct JNI-style calls. Follow Flutter’s Android interop docs and plugin guidelines.
-
----
 
 ## Objective-C and Swift (iOS/macOS)
 
 On **iOS** and **macOS**, Dart can call **Objective-C** and **Swift** through the same embedding and channel mechanisms as on Android. Use **platform channels** for app-level integration; use **Objective-C/Swift interop** APIs when generating or writing bindings to system or third-party frameworks. Follow Flutter’s iOS/macOS interop documentation.
 
----
-
 ## JavaScript interop (web)
 
 On the **web**, Dart compiles to JavaScript and must interoperate with the **DOM** and **JavaScript** APIs. **`dart:js_interop`** and **`package:web`** provide typed, safe interop: you expose Dart types to JS and use JS types and APIs from Dart. Avoid **`dart:html`** for new code; prefer **`dart:js_interop`** and **package:web**. Use for DOM manipulation, **fetch**, **Web Workers**, and third-party JS libraries.
-
----
 
 ## Choosing an approach
 
@@ -49,8 +39,6 @@ On the **web**, Dart compiles to JavaScript and must interoperate with the **DOM
 - **Java/Kotlin:** Android plugins and host integration; use platform channels or official interop.
 - **Objective-C/Swift:** iOS/macOS plugins and host integration; use platform channels or official interop.
 - **JavaScript:** Web only; use **dart:js_interop** and **package:web** for type-safe, maintainable code.
-
----
 
 ## Further reading
 

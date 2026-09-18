@@ -2,8 +2,6 @@
 
 [← Previous](./10_Clusters_On_Prem.md) · [README](./README.md) · [Next: Sites and DR →](./12_Sites_DR_Hybrid_And_The_Job.md)
 
----
-
 ## 1. Concepts
 
 On-prem identity is **not cloud IAM**. Humans come from an IdP (often **Active Directory** / LDAP / Entra joined to AD). Machines come from join, certificates, or service accounts you created. There is no IRSA until you build a cousin.
@@ -25,8 +23,6 @@ Pipeline secrets and OIDC-to-**cloud** remain [Security/](../Security/README.md)
 | **OS** | SSH certs or WinRM + AD; sudo roles | Console via BMC |
 | **Cluster** | OIDC to the same IdP; no shared `kubeconfig` | Break-glass user in etcd, audited |
 | **Network gear** | TACACS/RADIUS + AD | Local account in a sealed envelope |
-
----
 
 ## 2. Advanced concepts
 
@@ -67,8 +63,6 @@ Syslog/SIEM for BMC, network, vCenter, OS, cluster audit. Clocks aligned ([5](./
 
 Vendors in white space: escort, no photography of screens, no personal USB. Remote hands: your SOP, not theirs invented at 3am.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -91,8 +85,6 @@ Vendors in white space: escort, no photography of screens, no personal USB. Remo
 - Audit: who did what on BMC/hypervisor/OS  
 
 **Good:** one IdP, jump+MFA, roles, BMC inventory, change windows. **Bad:** `admin/admin` on iDRAC, kubeconfig in Slack, vCenter Administrator for everyone, AD as a single VM on the NAS you also back up to.
-
----
 
 ## Go deeper
 

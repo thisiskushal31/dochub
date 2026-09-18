@@ -2,8 +2,6 @@
 
 [← Previous](./12_Caching_Artifacts_And_Job_Tokens.md) · [README](./README.md) · [Next: Variables →](./14_Variables_Secrets_And_OIDC.md)
 
----
-
 ## 1. Concepts
 
 Stop copy-pasting CI into every project.
@@ -24,8 +22,6 @@ include:
 
 Pin component versions. Bumping is a platform change.
 
----
-
 ## 2. Advanced concepts
 
 ### Components vs templates
@@ -40,8 +36,6 @@ Typed inputs make components configurable without forking YAML ([inputs docs](ht
 
 Central components project + Catalog (where available) + CODEOWNERS on the components repo.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -51,8 +45,6 @@ Central components project + Catalog (where available) + CODEOWNERS on the compo
 | Break glass | Temporary local job — then delete |
 
 **Good:** versioned components. **Bad:** `@main` style moving targets for production pipelines.
-
----
 
 ## References
 

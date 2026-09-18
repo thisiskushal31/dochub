@@ -6,8 +6,6 @@
 
 How a YAML document is laid out on the page: indentation, mappings, sequences, flow vs block styles, comments, and the tokens that make structure legal. After this you should open a `.yaml` / `.yml` file and know what nests under what.
 
----
-
 ## 1. Concepts
 
 ### 1. Indentation is structure
@@ -72,8 +70,6 @@ A document can be a single scalar, a single mapping, or a single sequence at the
 apiVersion: v1
 kind: ConfigMap
 ```
-
----
 
 ## 2. Advanced concepts
 
@@ -147,8 +143,6 @@ YAML is Unicode. Prefer **UTF-8** files. Line breaks may be normalized during pr
 
 Different spellings can load to the same data (block vs flow, quoted vs plain string that stays a string). Diff noise is not always semantic change—validate loaded trees when reviewing formatter PRs.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Syntax role |
@@ -161,8 +155,6 @@ Different spellings can load to the same data (block vs flow, quoted vs plain st
 
 **Whole-engineering picture:** syntax mistakes present as “tool rejected the object,” not as compiler stack traces—teach structure so ops and app teams share a vocabulary.
 
----
-
 ## 4. Staff-level review checklist
 
 - Indentation uses spaces only; width is consistent in the file.
@@ -173,8 +165,6 @@ Different spellings can load to the same data (block vs flow, quoted vs plain st
 - Comments do not attempt to “configure” behavior—the data does.
 - Templated files are identified as templates, not raw YAML.
 - Exotic `?` keys appear only with a clear reason.
-
----
 
 ## References
 

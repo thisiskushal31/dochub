@@ -2,8 +2,6 @@
 
 [README](./README.md) · [0b glossary →](./0b_Equipment_In_Plain_Language.md) · [0c whole-hall map →](./0c_Whole_Hall_Mental_Map.md) · [On-ramp 1 →](./1_On_Prem_As_A_Solution.md)
 
----
-
 ## 1. Concepts — who this is for
 
 You do **not** need to be an electrician, mechanical engineer, or network PE to learn this track. You need curiosity and patience. Every deep chapter assumes you may be meeting the word for the first time.
@@ -28,8 +26,6 @@ You do **not** need to be an electrician, mechanical engineer, or network PE to 
 | 4 | [Setup-And-Bring-Up/1](./Setup-And-Bring-Up/1_Hall_Network_Mental_Map.md) (planes) + [Integration/11](./Integration/11_Aggregate_Telemetry_Reports_And_Steering.md) |
 | 5–7 | On-ramp [4](./4_Rack_BMC_And_Provisioning.md)–[6](./6_Storage_Backup_And_Restore.md) or Setup [2](./Setup-And-Bring-Up/2_Crate_To_Live_Rack.md)–[8](./Setup-And-Bring-Up/8_Server_Setup_Playbook.md) |
 | Later | Deep tracks by role ([Jobs/1](./Jobs/1_Role_Map.md)) |
-
----
 
 ## 2. Quality bar (what “good” means in these articles)
 
@@ -57,8 +53,6 @@ Every Datacenter article aims for this bar. If a chapter fails it, that is a bug
 
 If you only memorize names, you will fail on the floor. If you can **trace a path** and **spot a fake redundancy**, you are learning.
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -79,8 +73,6 @@ If you only memorize names, you will fail on the floor. If you can **trace a pat
 - This track is **not** a PE license course.  
 - This track is **not** “memorize every OEM model.”  
 - Cloud IAM chapters live in [Cloud/](../Cloud/README.md)—not here.
-
----
 
 ## References
 

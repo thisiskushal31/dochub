@@ -8,8 +8,6 @@
 
 You leave able to decide form vs worksheet UI vs external app, read a simple form + code-behind shape, and reject “password UserForm” as a security control. Language structure still rests on chapter **02**; host data still rests on **08–09**.
 
----
-
 ## 1. Concepts
 
 ### 1. What a UserForm is
@@ -100,8 +98,6 @@ Jumping to a UserForm for a single Yes/No is noise. Stacking ten nested `InputBo
 
 Agree where form values land: named cells, a Table row, document variables, or a call into a pure procedure that returns a typed result. Avoid writing to `ActiveCell` from OK handlers—the active cell may not be where the operator thinks (chapter **08**). Prefer `ThisWorkbook` / `ThisDocument` anchors.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Initialization events
@@ -154,8 +150,6 @@ Tab order, accelerator keys, and caption localization matter for real users. Thi
 
 TextBox content is text. Parse numbers/dates with explicit conversion and locale awareness (chapter **03** / **06**). Do not pass raw `.Text` into SQL-like constructions or Shell command lines (chapter **11**)—forms are an untrusted input edge even when the operator is friendly.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -167,8 +161,6 @@ TextBox content is text. Parse numbers/dates with explicit conversion and locale
 | **Software engineering** | Thin events; named controls; reusable validators; `Option Explicit` (ch **02**) |
 
 Good fit: “Export parameters” dialog, “pick fiscal period,” “confirm destructive cleanup.” Bad fit: fake login walls, entire CRUD apps, or exfil UX—review under **15–16**.
-
----
 
 ## Staff-level review checklist
 
@@ -182,8 +174,6 @@ Good fit: “Export parameters” dialog, “pick fiscal period,” “confirm d
 - Platform pin includes Windows desktop VBA (not Excel on the web).
 - Alternative M365 doors considered when cloud/mobile matters (ch **18**).
 - Macro security policy still applies—forms do not bypass MotW/ASR (ch **15**).
-
----
 
 ## References
 

@@ -4,8 +4,6 @@
 
 Groovy is the primary language for Jenkins scripted pipelines (Jenkinsfile) and for Gradle build scripts (build.gradle). This topic goes into how Groovy is used in both: script structure, steps, delegates, and the commands you run so you can read, write, and debug pipeline and build code.
 
----
-
 ## 1. Jenkins pipelines
 
 **Jenkinsfile as script.** A Jenkinsfile is typically a Groovy script. Jenkins compiles and runs it in a context where global variables (e.g. **env**, **params**, **currentBuild**, **stages**, **steps**) and step methods (e.g. **node**, **stage**, **sh**, **git**, **echo**, **input**, **fileExists**) are available. The script’s binding and these globals are how you interact with the pipeline runtime.
@@ -35,8 +33,6 @@ node {
 **Steps and closures.** Many steps take a single closure. The closure body is executed in a context where further step names (e.g. **sh**, **bat**) are available. Understanding that these are Groovy closures (with **delegate** set by Jenkins) explains why **sh 'cmd'** and **echo "msg"** work without an explicit object.
 
 **Commands.** Pipelines run inside Jenkins; you do not run **groovy** on the Jenkinsfile yourself. You edit the Jenkinsfile in version control; Jenkins runs it when the pipeline is triggered. For local syntax or script checks you can run **groovy -e "..."** or **groovy Jenkinsfile** if your environment has no Jenkins-specific globals (many calls will fail, but syntax and basic Groovy behavior can be checked).
-
----
 
 ## 2. Gradle build scripts
 
@@ -73,13 +69,9 @@ dependencies {
 
 **Groovy version in Gradle.** The Groovy version used to compile and run **build.gradle** and any Groovy source in the project is usually set by the **groovy** or **gradle** plugin (e.g. in **build.gradle**: **dependencies { implementation 'org.codehaus.groovy:groovy:3.0.9' }** or via the plugin). Check **./gradlew dependencies** or the plugin documentation to see which Groovy version is in use for security and compatibility.
 
----
-
 ## 3. Why this matters
 
 As a DevOps or SRE engineer you will edit Jenkinsfiles and **build.gradle**. Both are Groovy scripts with specific delegates and globals. Understanding that (1) closures are blocks passed to methods, (2) the delegate is set so that method names inside the closure resolve to the right object, and (3) scripted Jenkins uses the binding for shared variables makes it easier to debug and extend. Security (e.g. not passing unchecked input to **sh**, securing who can change pipelines) is covered in topic 15.
-
----
 
 ## Further reading
 

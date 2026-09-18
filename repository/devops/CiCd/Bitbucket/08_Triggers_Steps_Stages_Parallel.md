@@ -2,8 +2,6 @@
 
 [← Previous](./07_Variables_Secrets_And_OIDC.md) · [README](./README.md) · [Next: Caches →](./09_Caches_Artifacts_And_Services.md)
 
----
-
 ## 1. Concepts
 
 ### Pipeline start conditions
@@ -113,8 +111,6 @@ pipelines:
               - npm run lint
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### Manual steps
@@ -129,8 +125,6 @@ Know which step options fail the pipeline vs allow continuation — don’t soft
 
 Step duration limits exist. Use `size:` for heavier jobs (minutes scale with size; **`4x+` needs Standard or Premium**). Parallel steps each consume their own minutes. Split long work; don’t upload whole `node_modules` as artifacts.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Shape |
@@ -141,8 +135,6 @@ Step duration limits exist. Use `size:` for heavier jobs (minutes scale with siz
 | Promote | Custom/manual deployment ([16](./16_Worked_Example_Build_And_Deploy.md)) |
 
 **Good:** fail-fast test before expensive deploy. **Bad:** one mega-step that always deploys.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./4_FPGA_And_IPU.md) · [README](./README.md) · [Next: Optics →](./6_Optics_DAC_AOC_Transceivers.md)
 
----
-
 ## 1. Concepts
 
 Accelerators often use **HBM** (High Bandwidth Memory) stacked on-package—not the DDR DIMMs in host slots. Host DRAM and HBM are different pools with different failure and thermal stories.
@@ -19,8 +17,6 @@ Accelerators often use **HBM** (High Bandwidth Memory) stacked on-package—not 
 ### Where it sits
 
 On the accelerator package; cooled with the GPU/FPGA thermal solution (air or liquid). Not field-replaceable like a DIMM in most SKUs—**GPU/tray RMA** replaces HBM.
-
----
 
 ## 2. Advanced concepts
 
@@ -46,8 +42,6 @@ NUMA/CPU locality still affects staging performance ([Compute/8](../Compute/8_Me
 
 Same HBM physics; capacity points differ by GPU generation. Cloud exposes device memory as instance limits—bare metal exposes OEM error logs.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -66,8 +60,6 @@ Same HBM physics; capacity points differ by GPU generation. Cloud exposes device
 - Capture vendor log evidence for RMA  
 
 **Good:** clear memory architecture diagram per SKU. **Bad:** DIMM folklore applied to GPUs; ignoring device ECC; undersized host staging.
-
----
 
 ## References
 

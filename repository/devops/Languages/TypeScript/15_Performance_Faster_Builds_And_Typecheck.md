@@ -12,8 +12,6 @@ Pins: **TypeScript 5.9.x**, **`strict`: true**. Cross-links: generics cost (**08
 
 You leave able to speed up typecheck deliberately—without turning off safety or confusing “faster `tsc`” with “faster Node.”
 
----
-
 ## 1. Concepts
 
 ### 1. Two clocks, two dashboards
@@ -153,8 +151,6 @@ npx tsc -p tsconfig.json --extendedDiagnostics --noEmit
 ```
 
 **What just happened:** second run should benefit from incremental if enabled; diagnostics show where time went.
-
----
 
 ## 2. Advanced concepts
 
@@ -382,8 +378,6 @@ Prefer transforming once, reusing buffers for binary protocols, and avoiding JSO
 
 Fix the first true cause; do not disable `strict` to green the build.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -425,8 +419,6 @@ Agree as a team:
 
 Drift between “green in VS Code” and “red in CI” usually means different `tsconfig` (solution vs package) or different TypeScript versions—pin both.
 
----
-
 ## Staff-level review checklist
 
 - Which clock is being optimized is explicit (compile vs runtime).
@@ -442,8 +434,6 @@ Drift between “green in VS Code” and “red in CI” usually means different
 - Hot paths: no sync fs; abort plumbed; early validation before I/O.
 - TypeScript version pin included in cache keys.
 - Speed wins do not regress `strict` or reintroduce `any` culture (ch **11**).
-
----
 
 ## References
 

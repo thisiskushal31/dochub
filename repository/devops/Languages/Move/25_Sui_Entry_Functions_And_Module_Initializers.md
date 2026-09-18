@@ -82,8 +82,6 @@ Instead of writing ad-hoc scripts per action, you typically:
 2. compose calls via PTBs from wallet/client side,
 3. enforce policy through objects/capabilities and function visibility.
 
----
-
 ## Further reading
 
 - [Sui Move concepts — Entry functions](https://docs.sui.io/concepts/sui-move-concepts#entry-functions)

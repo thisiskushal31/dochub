@@ -12,8 +12,6 @@ Staff hire TypeScript for three practical pillars this track stressed: **errors 
 
 **Reader payoff:** after this chapter you should name **what you can write today** with TypeScript alone, and **which official door** to open next (React, Next, Nest, …) without confusing those doors with this language track. The concrete routing table lives in chapter **22** and the [README](./README.md#after-this-track--what-you-can-write).
 
----
-
 ## 1. Concepts
 
 ### 1. Why teams reach for TypeScript
@@ -140,8 +138,6 @@ Use this as a self-check before chasing frameworks. If you cannot tick a row, re
 
 **What this track does *not* claim you can write yet:** production React component architecture, Next.js routing/RSC/deployment, Nest module graphs, or a bundler from scratch. Those are **complement** skills—chapter **22** names the official next reads so TypeScript stays the foundation underneath them.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Brownfield gravity
@@ -229,8 +225,6 @@ Platform should not invent types for every product field. Product should not for
 | Lib | Breaking `.d.ts` in a patch | Major bump or compat shim |
 | Ops script | Secrets in the script body | Env/vault + chapter **20** |
 
----
-
 ## 3. Applications and use cases
 
 ### Application engineering
@@ -281,8 +275,6 @@ Platform should not invent types for every product field. Product should not for
 | Library author | `.d.ts` + semver (**17**) | Publishing + API Extractor-style docs as needed |
 | JS-weak | Stay on **03–12**; add [JavaScript](../JavaScript/README.md) | DOM/React only after JS comfort |
 
----
-
 ## 4. Staff-level review checklist
 
 - Reader (or mentee) can name **one artifact** they can ship from the capstone table—not only “I know interfaces.”
@@ -296,8 +288,6 @@ Platform should not invent types for every product field. Product should not for
 - UI changes keep DOM libs out of Node packages.
 - Library changes consider declaration consumers.
 - Clever mapped/conditional types justified—or simplified.
-
----
 
 ## References
 

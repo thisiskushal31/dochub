@@ -4,8 +4,6 @@
 
 This topic covers **structures** (structs), **unions**, and **typedef** in C. They let you define **custom types** that group or share data. Each concept is explained in text first, then with code blocks.
 
----
-
 ## Structures (struct)
 
 A **structure** is a type that groups one or more **members** (fields) of possibly different types. You define it with **`struct name { ... };`**. Use the **dot operator (`.`)** to access members when you have a struct value; use **`->`** when you have a pointer to a struct (`ptr->member` is shorthand for `(*ptr).member`). Structs are used for records, messages, and data that belong together.
@@ -29,8 +27,6 @@ struct Point q = { 1, 2 };
 struct Point r = { .x = 10, .y = 20 };
 ```
 
----
-
 ## Pointers to structures
 
 When you have a **pointer to a struct**, use **`->`** to access members: `ptr->member` is the same as `(*ptr).member`.
@@ -41,8 +37,6 @@ struct Point *ptr = &pt;
 printf("%d %d\n", ptr->x, ptr->y);
 ptr->x = 7;
 ```
-
----
 
 ## Structures and functions
 
@@ -61,8 +55,6 @@ int main(void) {
    return 0;
 }
 ```
-
----
 
 ## Unions
 
@@ -84,8 +76,6 @@ printf("%f\n", u.d);
 
 Reading a union member other than the one last written is allowed in C but you must keep track of which member is “active” yourself (or use a tagged union: struct with an enum and a union).
 
----
-
 ## Bit fields
 
 A **bit field** is a struct member that specifies its width in bits. Used for packed flags, hardware registers, or protocol headers. The type must be an integer type; the number after the colon is the width.
@@ -101,13 +91,9 @@ f.a = 1;
 f.b = 5;
 ```
 
----
-
 ## Structure padding and packing
 
 The compiler may insert **padding** bytes between struct members so that each member is **aligned** for the hardware (e.g. a 4-byte int starts at an address divisible by 4). The total size of a struct can be larger than the sum of its members. **`#pragma pack(n)`** (or compiler-specific attributes) can reduce padding for packed layouts (e.g. network packets); use with care for portability and alignment.
-
----
 
 ## Flexible array member (C99)
 
@@ -122,8 +108,6 @@ struct Buffer *b = malloc(sizeof(struct Buffer) + 100);
 b->len = 100;
 ```
 
----
-
 ## Self-referential structures
 
 A struct can contain a **pointer** to a struct of the same type. This is used for **linked lists**, trees, and other dynamic data structures. The struct name must be used before the closing **`}`**, so the pointer is declared as **`struct name *next;`**.
@@ -136,8 +120,6 @@ struct Node {
 struct Node a = { 1, NULL }, b = { 2, NULL };
 a.next = &b;
 ```
-
----
 
 ## Anonymous structure and union (C11)
 
@@ -155,13 +137,9 @@ struct Wrapper w;
 w.i = 42;
 ```
 
----
-
 ## Lookup tables
 
 A **lookup table** maps a value (e.g. an index or key) to another value or action. In C you often use an **array** (index → value), an **array of function pointers** (index → function to call), or a **switch** with dense **case** labels. Useful for parsers, state machines, and dispatch by type or opcode.
-
----
 
 ## Enumeration (enum)
 
@@ -174,8 +152,6 @@ enum Status { OK = 0, ERROR = -1 };
 enum Color c = GREEN;
 printf("%d\n", c);
 ```
-
----
 
 ## typedef
 
@@ -200,8 +176,6 @@ typedef struct {
 Point p = { 1, 2 };
 ```
 
----
-
 ## Summary
 
 - **struct** groups multiple members; access with **`.`** or **`->`** (for pointers).
@@ -210,8 +184,6 @@ Point p = { 1, 2 };
 - **Structure padding** aligns members; **nested structures** (struct as member); **flexible array member** (last member **`type name[];`**) for variable-length structs; **self-referential** structs (e.g. **struct Node *next**) enable linked lists; **anonymous** struct/union (C11); **lookup tables** (arrays or function pointers for dispatch).
 - **enum** defines named integer constants for states or options.
 - **typedef** gives a type a new name; often used with structs for shorter, clearer code.
-
----
 
 ## Further reading
 

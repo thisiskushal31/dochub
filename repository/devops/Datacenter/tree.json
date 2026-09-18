@@ -10,70 +10,70 @@
         "path": "Accelerators/1_GPU_Trays_And_Power.md",
         "type": "file",
         "sha": "",
-        "size": 3679
+        "size": 3659
       },
       {
         "name": "10_Accelerator_Failure_And_Spares.md",
         "path": "Accelerators/10_Accelerator_Failure_And_Spares.md",
         "type": "file",
         "sha": "",
-        "size": 2941
+        "size": 2921
       },
       {
         "name": "2_GPU_Interconnect_Ideas.md",
         "path": "Accelerators/2_GPU_Interconnect_Ideas.md",
         "type": "file",
         "sha": "",
-        "size": 3081
+        "size": 3061
       },
       {
         "name": "3_DPU_And_SmartNIC.md",
         "path": "Accelerators/3_DPU_And_SmartNIC.md",
         "type": "file",
         "sha": "",
-        "size": 2742
+        "size": 2722
       },
       {
         "name": "4_FPGA_And_IPU.md",
         "path": "Accelerators/4_FPGA_And_IPU.md",
         "type": "file",
         "sha": "",
-        "size": 2699
+        "size": 2679
       },
       {
         "name": "5_HBM_And_Accelerator_Memory.md",
         "path": "Accelerators/5_HBM_And_Accelerator_Memory.md",
         "type": "file",
         "sha": "",
-        "size": 2777
+        "size": 2757
       },
       {
         "name": "6_Optics_DAC_AOC_Transceivers.md",
         "path": "Accelerators/6_Optics_DAC_AOC_Transceivers.md",
         "type": "file",
         "sha": "",
-        "size": 2631
+        "size": 2611
       },
       {
         "name": "7_PTP_Grandmaster_And_Time.md",
         "path": "Accelerators/7_PTP_Grandmaster_And_Time.md",
         "type": "file",
         "sha": "",
-        "size": 2716
+        "size": 2696
       },
       {
         "name": "8_Serial_Console_Servers.md",
         "path": "Accelerators/8_Serial_Console_Servers.md",
         "type": "file",
         "sha": "",
-        "size": 2452
+        "size": 2432
       },
       {
         "name": "9_Environmental_Sensors_And_PDU_Meters.md",
         "path": "Accelerators/9_Environmental_Sensors_And_PDU_Meters.md",
         "type": "file",
         "sha": "",
-        "size": 2696
+        "size": 2676
       },
       {
         "name": "README.md",
@@ -95,126 +95,126 @@
         "path": "Compute/1_Server_Form_Factors.md",
         "type": "file",
         "sha": "",
-        "size": 3392
+        "size": 3372
       },
       {
         "name": "10_BMC_IPMI_And_Redfish_Deep.md",
         "path": "Compute/10_BMC_IPMI_And_Redfish_Deep.md",
         "type": "file",
         "sha": "",
-        "size": 2863
+        "size": 2843
       },
       {
         "name": "11_Firmware_Trains_And_Secure_Boot.md",
         "path": "Compute/11_Firmware_Trains_And_Secure_Boot.md",
         "type": "file",
         "sha": "",
-        "size": 2615
+        "size": 2595
       },
       {
         "name": "12_Boot_UEFI_RAID_NVMe_SAN.md",
         "path": "Compute/12_Boot_UEFI_RAID_NVMe_SAN.md",
         "type": "file",
         "sha": "",
-        "size": 2699
+        "size": 2679
       },
       {
         "name": "13_NICs_HBAs_And_Slot_Planning.md",
         "path": "Compute/13_NICs_HBAs_And_Slot_Planning.md",
         "type": "file",
         "sha": "",
-        "size": 2579
+        "size": 2559
       },
       {
         "name": "14_Thermal_And_Power_Of_The_Box.md",
         "path": "Compute/14_Thermal_And_Power_Of_The_Box.md",
         "type": "file",
         "sha": "",
-        "size": 2727
+        "size": 2707
       },
       {
         "name": "15_Imaging_And_Provisioning_At_Scale.md",
         "path": "Compute/15_Imaging_And_Provisioning_At_Scale.md",
         "type": "file",
         "sha": "",
-        "size": 3345
+        "size": 3320
       },
       {
         "name": "16_Spares_SKU_Discipline.md",
         "path": "Compute/16_Spares_SKU_Discipline.md",
         "type": "file",
         "sha": "",
-        "size": 2576
+        "size": 2556
       },
       {
         "name": "17_Compute_Failure_Walks.md",
         "path": "Compute/17_Compute_Failure_Walks.md",
         "type": "file",
         "sha": "",
-        "size": 2685
+        "size": 2665
       },
       {
         "name": "18_Hypervisor_On_The_Box_Map.md",
         "path": "Compute/18_Hypervisor_On_The_Box_Map.md",
         "type": "file",
         "sha": "",
-        "size": 3079
+        "size": 3059
       },
       {
         "name": "2_CPU_Platforms_Intel_Xeon.md",
         "path": "Compute/2_CPU_Platforms_Intel_Xeon.md",
         "type": "file",
         "sha": "",
-        "size": 3275
+        "size": 3255
       },
       {
         "name": "3_CPU_Platforms_AMD_EPYC.md",
         "path": "Compute/3_CPU_Platforms_AMD_EPYC.md",
         "type": "file",
         "sha": "",
-        "size": 2969
+        "size": 2949
       },
       {
         "name": "4_CPU_Platforms_ARM_And_Others.md",
         "path": "Compute/4_CPU_Platforms_ARM_And_Others.md",
         "type": "file",
         "sha": "",
-        "size": 3031
+        "size": 3011
       },
       {
         "name": "5_Chipset_PCIe_And_Platform_IO.md",
         "path": "Compute/5_Chipset_PCIe_And_Platform_IO.md",
         "type": "file",
         "sha": "",
-        "size": 2694
+        "size": 2674
       },
       {
         "name": "6_CPU_Interconnect_Ideas.md",
         "path": "Compute/6_CPU_Interconnect_Ideas.md",
         "type": "file",
         "sha": "",
-        "size": 2840
+        "size": 2820
       },
       {
         "name": "7_Memory_DIMM_Types_And_Channels.md",
         "path": "Compute/7_Memory_DIMM_Types_And_Channels.md",
         "type": "file",
         "sha": "",
-        "size": 2704
+        "size": 2684
       },
       {
         "name": "8_Memory_Population_And_NUMA.md",
         "path": "Compute/8_Memory_Population_And_NUMA.md",
         "type": "file",
         "sha": "",
-        "size": 2834
+        "size": 2814
       },
       {
         "name": "9_Allocation_Model_Socket_To_DIMM.md",
         "path": "Compute/9_Allocation_Model_Socket_To_DIMM.md",
         "type": "file",
         "sha": "",
-        "size": 2847
+        "size": 2827
       },
       {
         "name": "README.md",
@@ -236,126 +236,126 @@
         "path": "Electrical/1_Utility_Intake_And_Service_Entrance.md",
         "type": "file",
         "sha": "",
-        "size": 6128
+        "size": 6108
       },
       {
         "name": "10_Floor_And_Row_PDUs.md",
         "path": "Electrical/10_Floor_And_Row_PDUs.md",
         "type": "file",
         "sha": "",
-        "size": 3068
+        "size": 3048
       },
       {
         "name": "11_Rack_PDU_A_And_B.md",
         "path": "Electrical/11_Rack_PDU_A_And_B.md",
         "type": "file",
         "sha": "",
-        "size": 3279
+        "size": 3259
       },
       {
         "name": "12_Grounding_Bonding_And_Surge.md",
         "path": "Electrical/12_Grounding_Bonding_And_Surge.md",
         "type": "file",
         "sha": "",
-        "size": 3289
+        "size": 3269
       },
       {
         "name": "13_EPO_And_Safety_Disconnects.md",
         "path": "Electrical/13_EPO_And_Safety_Disconnects.md",
         "type": "file",
         "sha": "",
-        "size": 3635
+        "size": 3615
       },
       {
         "name": "14_High_Density_48V_HVDC_And_Busbar.md",
         "path": "Electrical/14_High_Density_48V_HVDC_And_Busbar.md",
         "type": "file",
         "sha": "",
-        "size": 3640
+        "size": 3620
       },
       {
         "name": "15_EPMS_BMS_And_Power_Monitoring.md",
         "path": "Electrical/15_EPMS_BMS_And_Power_Monitoring.md",
         "type": "file",
         "sha": "",
-        "size": 4468
+        "size": 4448
       },
       {
         "name": "16_Power_Quality_And_Harmonics.md",
         "path": "Electrical/16_Power_Quality_And_Harmonics.md",
         "type": "file",
         "sha": "",
-        "size": 3225
+        "size": 3205
       },
       {
         "name": "17_Power_Path_Failure_Walks.md",
         "path": "Electrical/17_Power_Path_Failure_Walks.md",
         "type": "file",
         "sha": "",
-        "size": 3470
+        "size": 3450
       },
       {
         "name": "18_Commissioning_And_IST_Power.md",
         "path": "Electrical/18_Commissioning_And_IST_Power.md",
         "type": "file",
         "sha": "",
-        "size": 3357
+        "size": 3337
       },
       {
         "name": "2_Transformers.md",
         "path": "Electrical/2_Transformers.md",
         "type": "file",
         "sha": "",
-        "size": 4095
+        "size": 4075
       },
       {
         "name": "3_MV_And_LV_Switchgear.md",
         "path": "Electrical/3_MV_And_LV_Switchgear.md",
         "type": "file",
         "sha": "",
-        "size": 4181
+        "size": 4161
       },
       {
         "name": "4_ATS_And_STS.md",
         "path": "Electrical/4_ATS_And_STS.md",
         "type": "file",
         "sha": "",
-        "size": 3913
+        "size": 3893
       },
       {
         "name": "5_UPS_Topologies.md",
         "path": "Electrical/5_UPS_Topologies.md",
         "type": "file",
         "sha": "",
-        "size": 4094
+        "size": 4074
       },
       {
         "name": "6_Batteries_And_Energy_Storage.md",
         "path": "Electrical/6_Batteries_And_Energy_Storage.md",
         "type": "file",
         "sha": "",
-        "size": 3913
+        "size": 3893
       },
       {
         "name": "7_Generators_And_Fuel_Systems.md",
         "path": "Electrical/7_Generators_And_Fuel_Systems.md",
         "type": "file",
         "sha": "",
-        "size": 3767
+        "size": 3747
       },
       {
         "name": "8_Paralleling_And_Transfer_Sequences.md",
         "path": "Electrical/8_Paralleling_And_Transfer_Sequences.md",
         "type": "file",
         "sha": "",
-        "size": 3735
+        "size": 3715
       },
       {
         "name": "9_Busway_Vs_Cable_Distribution.md",
         "path": "Electrical/9_Busway_Vs_Cable_Distribution.md",
         "type": "file",
         "sha": "",
-        "size": 3409
+        "size": 3389
       },
       {
         "name": "README.md",
@@ -377,84 +377,84 @@
         "path": "Fabric-Physical/1_Leaf_Spine_And_Classic_Three_Tier.md",
         "type": "file",
         "sha": "",
-        "size": 2640
+        "size": 2615
       },
       {
         "name": "10_DNS_NTP_Physical_Placement.md",
         "path": "Fabric-Physical/10_DNS_NTP_Physical_Placement.md",
         "type": "file",
         "sha": "",
-        "size": 2365
+        "size": 2345
       },
       {
         "name": "11_Storage_Network_Separation.md",
         "path": "Fabric-Physical/11_Storage_Network_Separation.md",
         "type": "file",
         "sha": "",
-        "size": 2291
+        "size": 2271
       },
       {
         "name": "12_Fabric_Failure_Walks.md",
         "path": "Fabric-Physical/12_Fabric_Failure_Walks.md",
         "type": "file",
         "sha": "",
-        "size": 2229
+        "size": 2209
       },
       {
         "name": "2_ToR_EoR_MoR.md",
         "path": "Fabric-Physical/2_ToR_EoR_MoR.md",
         "type": "file",
         "sha": "",
-        "size": 2148
+        "size": 2128
       },
       {
         "name": "3_OOB_Management_Network.md",
         "path": "Fabric-Physical/3_OOB_Management_Network.md",
         "type": "file",
         "sha": "",
-        "size": 2280
+        "size": 2260
       },
       {
         "name": "4_Provisioning_Network.md",
         "path": "Fabric-Physical/4_Provisioning_Network.md",
         "type": "file",
         "sha": "",
-        "size": 2257
+        "size": 2237
       },
       {
         "name": "5_MMR_And_Cross_Connect_Physical.md",
         "path": "Fabric-Physical/5_MMR_And_Cross_Connect_Physical.md",
         "type": "file",
         "sha": "",
-        "size": 2488
+        "size": 2468
       },
       {
         "name": "6_Border_And_Edge_Roles.md",
         "path": "Fabric-Physical/6_Border_And_Edge_Roles.md",
         "type": "file",
         "sha": "",
-        "size": 2523
+        "size": 2503
       },
       {
         "name": "7_Bonding_MLAG_And_Dual_Home.md",
         "path": "Fabric-Physical/7_Bonding_MLAG_And_Dual_Home.md",
         "type": "file",
         "sha": "",
-        "size": 2138
+        "size": 2118
       },
       {
         "name": "8_Optics_And_Transceiver_Roles.md",
         "path": "Fabric-Physical/8_Optics_And_Transceiver_Roles.md",
         "type": "file",
         "sha": "",
-        "size": 2016
+        "size": 1996
       },
       {
         "name": "9_Load_Balancer_Appliances.md",
         "path": "Fabric-Physical/9_Load_Balancer_Appliances.md",
         "type": "file",
         "sha": "",
-        "size": 2012
+        "size": 1992
       },
       {
         "name": "README.md",
@@ -476,42 +476,42 @@
         "path": "Facility/1_Site_Types_And_Products.md",
         "type": "file",
         "sha": "",
-        "size": 2287
+        "size": 2267
       },
       {
         "name": "2_Tiers_Ratings_And_Concurrent_Maintainability.md",
         "path": "Facility/2_Tiers_Ratings_And_Concurrent_Maintainability.md",
         "type": "file",
         "sha": "",
-        "size": 1777
+        "size": 1757
       },
       {
         "name": "3_Rooms_Campus_And_Adjacencies.md",
         "path": "Facility/3_Rooms_Campus_And_Adjacencies.md",
         "type": "file",
         "sha": "",
-        "size": 1685
+        "size": 1665
       },
       {
         "name": "4_Cage_Cabinet_Suite_And_Hands.md",
         "path": "Facility/4_Cage_Cabinet_Suite_And_Hands.md",
         "type": "file",
         "sha": "",
-        "size": 1678
+        "size": 1658
       },
       {
         "name": "5_Campus_Vs_Single_Building.md",
         "path": "Facility/5_Campus_Vs_Single_Building.md",
         "type": "file",
         "sha": "",
-        "size": 1591
+        "size": 1571
       },
       {
         "name": "6_Climate_Grid_And_Site_Selection.md",
         "path": "Facility/6_Climate_Grid_And_Site_Selection.md",
         "type": "file",
         "sha": "",
-        "size": 1681
+        "size": 1661
       },
       {
         "name": "README.md",
@@ -533,77 +533,77 @@
         "path": "Integration/1_Utility_To_DIMM.md",
         "type": "file",
         "sha": "",
-        "size": 2497
+        "size": 2477
       },
       {
         "name": "10_Units_Voltage_Frequency_Literacy.md",
         "path": "Integration/10_Units_Voltage_Frequency_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 2003
+        "size": 1983
       },
       {
         "name": "11_Aggregate_Telemetry_Reports_And_Steering.md",
         "path": "Integration/11_Aggregate_Telemetry_Reports_And_Steering.md",
         "type": "file",
         "sha": "",
-        "size": 7831
+        "size": 7811
       },
       {
         "name": "2_NIC_To_MMR.md",
         "path": "Integration/2_NIC_To_MMR.md",
         "type": "file",
         "sha": "",
-        "size": 1956
+        "size": 1936
       },
       {
         "name": "3_Disk_To_Array_To_Host.md",
         "path": "Integration/3_Disk_To_Array_To_Host.md",
         "type": "file",
         "sha": "",
-        "size": 1891
+        "size": 1871
       },
       {
         "name": "4_OOB_Plane_Walk.md",
         "path": "Integration/4_OOB_Plane_Walk.md",
         "type": "file",
         "sha": "",
-        "size": 1890
+        "size": 1870
       },
       {
         "name": "5_Failure_Lose_PDU_A.md",
         "path": "Integration/5_Failure_Lose_PDU_A.md",
         "type": "file",
         "sha": "",
-        "size": 1893
+        "size": 1873
       },
       {
         "name": "6_Failure_Lose_ToR.md",
         "path": "Integration/6_Failure_Lose_ToR.md",
         "type": "file",
         "sha": "",
-        "size": 1712
+        "size": 1692
       },
       {
         "name": "7_Failure_Lose_CRAH_Row.md",
         "path": "Integration/7_Failure_Lose_CRAH_Row.md",
         "type": "file",
         "sha": "",
-        "size": 1882
+        "size": 1862
       },
       {
         "name": "8_Failure_Lose_MMR_Cross_Connect.md",
         "path": "Integration/8_Failure_Lose_MMR_Cross_Connect.md",
         "type": "file",
         "sha": "",
-        "size": 1922
+        "size": 1902
       },
       {
         "name": "9_Reading_A_One_Line_And_Elevation.md",
         "path": "Integration/9_Reading_A_One_Line_And_Elevation.md",
         "type": "file",
         "sha": "",
-        "size": 1855
+        "size": 1835
       },
       {
         "name": "README.md",
@@ -625,91 +625,91 @@
         "path": "Jobs/1_Role_Map.md",
         "type": "file",
         "sha": "",
-        "size": 3189
+        "size": 3170
       },
       {
         "name": "10_Career_Paths.md",
         "path": "Jobs/10_Career_Paths.md",
         "type": "file",
         "sha": "",
-        "size": 2040
+        "size": 2020
       },
       {
         "name": "11_Reading_Foreign_Site_Docs.md",
         "path": "Jobs/11_Reading_Foreign_Site_Docs.md",
         "type": "file",
         "sha": "",
-        "size": 2161
+        "size": 2141
       },
       {
         "name": "12_Hyperscale_Ops_Honesty.md",
         "path": "Jobs/12_Hyperscale_Ops_Honesty.md",
         "type": "file",
         "sha": "",
-        "size": 2334
+        "size": 2314
       },
       {
         "name": "13_Reading_Dashboards_Reports_And_Steering.md",
         "path": "Jobs/13_Reading_Dashboards_Reports_And_Steering.md",
         "type": "file",
         "sha": "",
-        "size": 5192
+        "size": 5172
       },
       {
         "name": "2_Day_In_The_Life_Colo_Tech.md",
         "path": "Jobs/2_Day_In_The_Life_Colo_Tech.md",
         "type": "file",
         "sha": "",
-        "size": 1930
+        "size": 1910
       },
       {
         "name": "3_Day_In_The_Life_Critical_Facilities.md",
         "path": "Jobs/3_Day_In_The_Life_Critical_Facilities.md",
         "type": "file",
         "sha": "",
-        "size": 1953
+        "size": 1933
       },
       {
         "name": "4_Day_In_The_Life_NOC.md",
         "path": "Jobs/4_Day_In_The_Life_NOC.md",
         "type": "file",
         "sha": "",
-        "size": 1848
+        "size": 1828
       },
       {
         "name": "5_Day_In_The_Life_Bare_Metal_Admin.md",
         "path": "Jobs/5_Day_In_The_Life_Bare_Metal_Admin.md",
         "type": "file",
         "sha": "",
-        "size": 2061
+        "size": 2041
       },
       {
         "name": "6_Ticket_Taxonomy_And_Escalation.md",
         "path": "Jobs/6_Ticket_Taxonomy_And_Escalation.md",
         "type": "file",
         "sha": "",
-        "size": 1949
+        "size": 1929
       },
       {
         "name": "7_Safety_LOTO_And_EPO.md",
         "path": "Jobs/7_Safety_LOTO_And_EPO.md",
         "type": "file",
         "sha": "",
-        "size": 2057
+        "size": 2037
       },
       {
         "name": "8_Capacity_Conversation.md",
         "path": "Jobs/8_Capacity_Conversation.md",
         "type": "file",
         "sha": "",
-        "size": 1942
+        "size": 1922
       },
       {
         "name": "9_Interview_Pack.md",
         "path": "Jobs/9_Interview_Pack.md",
         "type": "file",
         "sha": "",
-        "size": 2049
+        "size": 2029
       },
       {
         "name": "README.md",
@@ -731,112 +731,112 @@
         "path": "Markets-And-Operators/1_Operator_Taxonomy.md",
         "type": "file",
         "sha": "",
-        "size": 3348
+        "size": 3328
       },
       {
         "name": "10_Europe_UK_Hubs.md",
         "path": "Markets-And-Operators/10_Europe_UK_Hubs.md",
         "type": "file",
         "sha": "",
-        "size": 2059
+        "size": 2039
       },
       {
         "name": "11_Middle_East_And_Africa_Hubs.md",
         "path": "Markets-And-Operators/11_Middle_East_And_Africa_Hubs.md",
         "type": "file",
         "sha": "",
-        "size": 2154
+        "size": 2134
       },
       {
         "name": "12_APAC_Hubs.md",
         "path": "Markets-And-Operators/12_APAC_Hubs.md",
         "type": "file",
         "sha": "",
-        "size": 2082
+        "size": 2062
       },
       {
         "name": "13_China_Market.md",
         "path": "Markets-And-Operators/13_China_Market.md",
         "type": "file",
         "sha": "",
-        "size": 2291
+        "size": 2271
       },
       {
         "name": "14_India_Market.md",
         "path": "Markets-And-Operators/14_India_Market.md",
         "type": "file",
         "sha": "",
-        "size": 2255
+        "size": 2235
       },
       {
         "name": "15_Latin_America_And_Other_Hubs.md",
         "path": "Markets-And-Operators/15_Latin_America_And_Other_Hubs.md",
         "type": "file",
         "sha": "",
-        "size": 2211
+        "size": 2191
       },
       {
         "name": "16_Architecture_Shapes_By_Operator_Class.md",
         "path": "Markets-And-Operators/16_Architecture_Shapes_By_Operator_Class.md",
         "type": "file",
         "sha": "",
-        "size": 2448
+        "size": 2428
       },
       {
         "name": "2_How_Operators_Build_And_Run_Halls.md",
         "path": "Markets-And-Operators/2_How_Operators_Build_And_Run_Halls.md",
         "type": "file",
         "sha": "",
-        "size": 2864
+        "size": 2844
       },
       {
         "name": "3_Research_Any_Operator.md",
         "path": "Markets-And-Operators/3_Research_Any_Operator.md",
         "type": "file",
         "sha": "",
-        "size": 2828
+        "size": 2808
       },
       {
         "name": "4_Equinix_Class_Interconnection.md",
         "path": "Markets-And-Operators/4_Equinix_Class_Interconnection.md",
         "type": "file",
         "sha": "",
-        "size": 2821
+        "size": 2801
       },
       {
         "name": "5_Wholesale_And_Hyperscale_Landlords.md",
         "path": "Markets-And-Operators/5_Wholesale_And_Hyperscale_Landlords.md",
         "type": "file",
         "sha": "",
-        "size": 2630
+        "size": 2610
       },
       {
         "name": "6_Regional_Colo_And_Telco_DCs.md",
         "path": "Markets-And-Operators/6_Regional_Colo_And_Telco_DCs.md",
         "type": "file",
         "sha": "",
-        "size": 2518
+        "size": 2498
       },
       {
         "name": "7_Bare_Metal_Cloud_Factories.md",
         "path": "Markets-And-Operators/7_Bare_Metal_Cloud_Factories.md",
         "type": "file",
         "sha": "",
-        "size": 2367
+        "size": 2347
       },
       {
         "name": "8_Tenant_Cloud_Vs_Landlord.md",
         "path": "Markets-And-Operators/8_Tenant_Cloud_Vs_Landlord.md",
         "type": "file",
         "sha": "",
-        "size": 2328
+        "size": 2308
       },
       {
         "name": "9_Americas_Hubs.md",
         "path": "Markets-And-Operators/9_Americas_Hubs.md",
         "type": "file",
         "sha": "",
-        "size": 2225
+        "size": 2205
       },
       {
         "name": "README.md",
@@ -858,84 +858,84 @@
         "path": "Mechanical/1_Heat_Load_And_Airflow_Path.md",
         "type": "file",
         "sha": "",
-        "size": 4438
+        "size": 4418
       },
       {
         "name": "10_Humidity_Water_Treatment_And_Plumbing.md",
         "path": "Mechanical/10_Humidity_Water_Treatment_And_Plumbing.md",
         "type": "file",
         "sha": "",
-        "size": 3515
+        "size": 3495
       },
       {
         "name": "11_Mechanical_Failure_Walks.md",
         "path": "Mechanical/11_Mechanical_Failure_Walks.md",
         "type": "file",
         "sha": "",
-        "size": 3278
+        "size": 3258
       },
       {
         "name": "12_Commissioning_Mechanical.md",
         "path": "Mechanical/12_Commissioning_Mechanical.md",
         "type": "file",
         "sha": "",
-        "size": 3249
+        "size": 3229
       },
       {
         "name": "2_CRAH_And_CRAC.md",
         "path": "Mechanical/2_CRAH_And_CRAC.md",
         "type": "file",
         "sha": "",
-        "size": 3614
+        "size": 3594
       },
       {
         "name": "3_Chillers_Towers_And_Free_Cooling.md",
         "path": "Mechanical/3_Chillers_Towers_And_Free_Cooling.md",
         "type": "file",
         "sha": "",
-        "size": 3676
+        "size": 3656
       },
       {
         "name": "4_Containment_Hot_And_Cold_Aisle.md",
         "path": "Mechanical/4_Containment_Hot_And_Cold_Aisle.md",
         "type": "file",
         "sha": "",
-        "size": 3092
+        "size": 3072
       },
       {
         "name": "5_Raised_Floor_Vs_Slab.md",
         "path": "Mechanical/5_Raised_Floor_Vs_Slab.md",
         "type": "file",
         "sha": "",
-        "size": 3238
+        "size": 3218
       },
       {
         "name": "6_Liquid_Cooling_Rear_Door_And_Direct_To_Chip.md",
         "path": "Mechanical/6_Liquid_Cooling_Rear_Door_And_Direct_To_Chip.md",
         "type": "file",
         "sha": "",
-        "size": 3591
+        "size": 3571
       },
       {
         "name": "7_Leak_Detection_And_Fluid_Risk.md",
         "path": "Mechanical/7_Leak_Detection_And_Fluid_Risk.md",
         "type": "file",
         "sha": "",
-        "size": 3309
+        "size": 3289
       },
       {
         "name": "8_Fire_Detection_VESDA.md",
         "path": "Mechanical/8_Fire_Detection_VESDA.md",
         "type": "file",
         "sha": "",
-        "size": 3349
+        "size": 3329
       },
       {
         "name": "9_Fire_Suppression_Clean_Agent_And_Pre_Action.md",
         "path": "Mechanical/9_Fire_Suppression_Clean_Agent_And_Pre_Action.md",
         "type": "file",
         "sha": "",
-        "size": 3520
+        "size": 3500
       },
       {
         "name": "README.md",
@@ -957,70 +957,70 @@
         "path": "Provider-Use/1_Qualify_A_Site.md",
         "type": "file",
         "sha": "",
-        "size": 2521
+        "size": 2501
       },
       {
         "name": "10_Exit_Relocation_And_Decommission.md",
         "path": "Provider-Use/10_Exit_Relocation_And_Decommission.md",
         "type": "file",
         "sha": "",
-        "size": 1970
+        "size": 1950
       },
       {
         "name": "2_Contract_Capacity.md",
         "path": "Provider-Use/2_Contract_Capacity.md",
         "type": "file",
         "sha": "",
-        "size": 2021
+        "size": 2001
       },
       {
         "name": "3_Order_Interconnect.md",
         "path": "Provider-Use/3_Order_Interconnect.md",
         "type": "file",
         "sha": "",
-        "size": 2002
+        "size": 1982
       },
       {
         "name": "4_Access_Badges_And_Change_Windows.md",
         "path": "Provider-Use/4_Access_Badges_And_Change_Windows.md",
         "type": "file",
         "sha": "",
-        "size": 1959
+        "size": 1939
       },
       {
         "name": "5_Remote_Hands_Tickets.md",
         "path": "Provider-Use/5_Remote_Hands_Tickets.md",
         "type": "file",
         "sha": "",
-        "size": 2118
+        "size": 2098
       },
       {
         "name": "6_Customer_Portal_Patterns.md",
         "path": "Provider-Use/6_Customer_Portal_Patterns.md",
         "type": "file",
         "sha": "",
-        "size": 1893
+        "size": 1873
       },
       {
         "name": "7_Land_Cloud_On_Ramp.md",
         "path": "Provider-Use/7_Land_Cloud_On_Ramp.md",
         "type": "file",
         "sha": "",
-        "size": 2197
+        "size": 2177
       },
       {
         "name": "8_Dedicated_Metal_Intake.md",
         "path": "Provider-Use/8_Dedicated_Metal_Intake.md",
         "type": "file",
         "sha": "",
-        "size": 2211
+        "size": 2191
       },
       {
         "name": "9_Bandwidth_And_Cross_Connect_Lifecycle.md",
         "path": "Provider-Use/9_Bandwidth_And_Cross_Connect_Lifecycle.md",
         "type": "file",
         "sha": "",
-        "size": 2039
+        "size": 2019
       },
       {
         "name": "README.md",
@@ -1042,105 +1042,105 @@
         "path": "Setup-And-Bring-Up/1_Hall_Network_Mental_Map.md",
         "type": "file",
         "sha": "",
-        "size": 3109
+        "size": 3084
       },
       {
         "name": "10_RAID_And_Local_Disk_Setup.md",
         "path": "Setup-And-Bring-Up/10_RAID_And_Local_Disk_Setup.md",
         "type": "file",
         "sha": "",
-        "size": 2462
+        "size": 2437
       },
       {
         "name": "11_Storage_Network_And_Array_Bring_Up.md",
         "path": "Setup-And-Bring-Up/11_Storage_Network_And_Array_Bring_Up.md",
         "type": "file",
         "sha": "",
-        "size": 2076
+        "size": 2051
       },
       {
         "name": "12_WLAN_And_AP_Lab_Office_Edge.md",
         "path": "Setup-And-Bring-Up/12_WLAN_And_AP_Lab_Office_Edge.md",
         "type": "file",
         "sha": "",
-        "size": 2747
+        "size": 2722
       },
       {
         "name": "13_Petabyte_Capacity_Thinking.md",
         "path": "Setup-And-Bring-Up/13_Petabyte_Capacity_Thinking.md",
         "type": "file",
         "sha": "",
-        "size": 2138
+        "size": 2113
       },
       {
         "name": "14_Role_Playbooks_Bring_Up_Week.md",
         "path": "Setup-And-Bring-Up/14_Role_Playbooks_Bring_Up_Week.md",
         "type": "file",
         "sha": "",
-        "size": 2538
+        "size": 2513
       },
       {
         "name": "15_Bring_Up_Failure_Walks.md",
         "path": "Setup-And-Bring-Up/15_Bring_Up_Failure_Walks.md",
         "type": "file",
         "sha": "",
-        "size": 2195
+        "size": 2170
       },
       {
         "name": "2_Crate_To_Live_Rack.md",
         "path": "Setup-And-Bring-Up/2_Crate_To_Live_Rack.md",
         "type": "file",
         "sha": "",
-        "size": 2266
+        "size": 2241
       },
       {
         "name": "3_Structured_Cabling_Bring_Up.md",
         "path": "Setup-And-Bring-Up/3_Structured_Cabling_Bring_Up.md",
         "type": "file",
         "sha": "",
-        "size": 2098
+        "size": 2073
       },
       {
         "name": "4_Switch_Roles_In_Practice.md",
         "path": "Setup-And-Bring-Up/4_Switch_Roles_In_Practice.md",
         "type": "file",
         "sha": "",
-        "size": 2659
+        "size": 2634
       },
       {
         "name": "5_Gateway_Border_Firewall_Boxes.md",
         "path": "Setup-And-Bring-Up/5_Gateway_Border_Firewall_Boxes.md",
         "type": "file",
         "sha": "",
-        "size": 2346
+        "size": 2321
       },
       {
         "name": "6_LAN_Segmentation_Jobs.md",
         "path": "Setup-And-Bring-Up/6_LAN_Segmentation_Jobs.md",
         "type": "file",
         "sha": "",
-        "size": 2223
+        "size": 2198
       },
       {
         "name": "7_OOB_BMC_Plane_Bring_Up.md",
         "path": "Setup-And-Bring-Up/7_OOB_BMC_Plane_Bring_Up.md",
         "type": "file",
         "sha": "",
-        "size": 1866
+        "size": 1841
       },
       {
         "name": "8_Server_Setup_Playbook.md",
         "path": "Setup-And-Bring-Up/8_Server_Setup_Playbook.md",
         "type": "file",
         "sha": "",
-        "size": 2017
+        "size": 1992
       },
       {
         "name": "9_Imaging_Path.md",
         "path": "Setup-And-Bring-Up/9_Imaging_Path.md",
         "type": "file",
         "sha": "",
-        "size": 1966
+        "size": 1941
       },
       {
         "name": "README.md",
@@ -1162,84 +1162,84 @@
         "path": "Storage-Physical/1_DAS_Local_Disks_And_RAID.md",
         "type": "file",
         "sha": "",
-        "size": 2667
+        "size": 2642
       },
       {
         "name": "10_Encryption_And_Key_Custody.md",
         "path": "Storage-Physical/10_Encryption_And_Key_Custody.md",
         "type": "file",
         "sha": "",
-        "size": 2565
+        "size": 2545
       },
       {
         "name": "11_Latency_For_Etcd_And_Databases.md",
         "path": "Storage-Physical/11_Latency_For_Etcd_And_Databases.md",
         "type": "file",
         "sha": "",
-        "size": 2215
+        "size": 2195
       },
       {
         "name": "12_Storage_Failure_Walks.md",
         "path": "Storage-Physical/12_Storage_Failure_Walks.md",
         "type": "file",
         "sha": "",
-        "size": 2131
+        "size": 2111
       },
       {
         "name": "2_NAS_NFS_SMB.md",
         "path": "Storage-Physical/2_NAS_NFS_SMB.md",
         "type": "file",
         "sha": "",
-        "size": 2549
+        "size": 2529
       },
       {
         "name": "3_SAN_Fibre_Channel.md",
         "path": "Storage-Physical/3_SAN_Fibre_Channel.md",
         "type": "file",
         "sha": "",
-        "size": 2404
+        "size": 2384
       },
       {
         "name": "4_SAN_iSCSI_And_NVMe_oF.md",
         "path": "Storage-Physical/4_SAN_iSCSI_And_NVMe_oF.md",
         "type": "file",
         "sha": "",
-        "size": 2325
+        "size": 2305
       },
       {
         "name": "5_HBA_HCA_And_Multipath.md",
         "path": "Storage-Physical/5_HBA_HCA_And_Multipath.md",
         "type": "file",
         "sha": "",
-        "size": 2188
+        "size": 2168
       },
       {
         "name": "6_Array_Controllers_And_Shelves.md",
         "path": "Storage-Physical/6_Array_Controllers_And_Shelves.md",
         "type": "file",
         "sha": "",
-        "size": 2451
+        "size": 2431
       },
       {
         "name": "7_Software_Defined_Ceph_vSAN_Kin.md",
         "path": "Storage-Physical/7_Software_Defined_Ceph_vSAN_Kin.md",
         "type": "file",
         "sha": "",
-        "size": 2475
+        "size": 2455
       },
       {
         "name": "8_Object_On_Prem.md",
         "path": "Storage-Physical/8_Object_On_Prem.md",
         "type": "file",
         "sha": "",
-        "size": 2360
+        "size": 2340
       },
       {
         "name": "9_Snapshots_Vs_Backups_Vs_Replication.md",
         "path": "Storage-Physical/9_Snapshots_Vs_Backups_Vs_Replication.md",
         "type": "file",
         "sha": "",
-        "size": 2534
+        "size": 2514
       },
       {
         "name": "README.md",
@@ -1261,70 +1261,70 @@
         "path": "White-Space/1_Rack_Standards_And_Form_Factors.md",
         "type": "file",
         "sha": "",
-        "size": 3687
+        "size": 3667
       },
       {
         "name": "10_White_Space_Safety_And_Housekeeping.md",
         "path": "White-Space/10_White_Space_Safety_And_Housekeeping.md",
         "type": "file",
         "sha": "",
-        "size": 2988
+        "size": 2968
       },
       {
         "name": "2_Cabinet_Airflow_And_Chimneys.md",
         "path": "White-Space/2_Cabinet_Airflow_And_Chimneys.md",
         "type": "file",
         "sha": "",
-        "size": 2911
+        "size": 2891
       },
       {
         "name": "3_Power_Density_And_Floor_Loading.md",
         "path": "White-Space/3_Power_Density_And_Floor_Loading.md",
         "type": "file",
         "sha": "",
-        "size": 3007
+        "size": 2987
       },
       {
         "name": "4_Structured_Cabling_Copper.md",
         "path": "White-Space/4_Structured_Cabling_Copper.md",
         "type": "file",
         "sha": "",
-        "size": 3251
+        "size": 3231
       },
       {
         "name": "5_Structured_Cabling_Fiber_MPO_MTP.md",
         "path": "White-Space/5_Structured_Cabling_Fiber_MPO_MTP.md",
         "type": "file",
         "sha": "",
-        "size": 3198
+        "size": 3178
       },
       {
         "name": "6_Cable_Management_And_Pathways.md",
         "path": "White-Space/6_Cable_Management_And_Pathways.md",
         "type": "file",
         "sha": "",
-        "size": 3055
+        "size": 3035
       },
       {
         "name": "7_Asset_Tags_Serials_And_Elevations.md",
         "path": "White-Space/7_Asset_Tags_Serials_And_Elevations.md",
         "type": "file",
         "sha": "",
-        "size": 2817
+        "size": 2797
       },
       {
         "name": "8_Crash_Cart_KVM_And_Serial_Aggregation.md",
         "path": "White-Space/8_Crash_Cart_KVM_And_Serial_Aggregation.md",
         "type": "file",
         "sha": "",
-        "size": 2879
+        "size": 2859
       },
       {
         "name": "9_High_Density_And_AI_Ready_White_Space.md",
         "path": "White-Space/9_High_Density_And_AI_Ready_White_Space.md",
         "type": "file",
         "sha": "",
-        "size": 3105
+        "size": 3085
       },
       {
         "name": "README.md",
@@ -1340,111 +1340,111 @@
     "path": "0_How_To_Read_And_Quality_Bar.md",
     "type": "file",
     "sha": "",
-    "size": 4536
+    "size": 4516
   },
   {
     "name": "0b_Equipment_In_Plain_Language.md",
     "path": "0b_Equipment_In_Plain_Language.md",
     "type": "file",
     "sha": "",
-    "size": 7768
+    "size": 7718
   },
   {
     "name": "0c_Whole_Hall_Mental_Map.md",
     "path": "0c_Whole_Hall_Mental_Map.md",
     "type": "file",
     "sha": "",
-    "size": 3057
+    "size": 3032
   },
   {
     "name": "1_On_Prem_As_A_Solution.md",
     "path": "1_On_Prem_As_A_Solution.md",
     "type": "file",
     "sha": "",
-    "size": 10299
+    "size": 10279
   },
   {
     "name": "10_Clusters_On_Prem.md",
     "path": "10_Clusters_On_Prem.md",
     "type": "file",
     "sha": "",
-    "size": 6629
+    "size": 6609
   },
   {
     "name": "11_Identity_Access_And_Change.md",
     "path": "11_Identity_Access_And_Change.md",
     "type": "file",
     "sha": "",
-    "size": 5578
+    "size": 5558
   },
   {
     "name": "12_Sites_DR_Hybrid_And_The_Job.md",
     "path": "12_Sites_DR_Hybrid_And_The_Job.md",
     "type": "file",
     "sha": "",
-    "size": 6190
+    "size": 6170
   },
   {
     "name": "2_Ownership_Colo_And_Contracts.md",
     "path": "2_Ownership_Colo_And_Contracts.md",
     "type": "file",
     "sha": "",
-    "size": 6665
+    "size": 6645
   },
   {
     "name": "3_Facility_Power_Cooling_And_Rooms.md",
     "path": "3_Facility_Power_Cooling_And_Rooms.md",
     "type": "file",
     "sha": "",
-    "size": 6696
+    "size": 6676
   },
   {
     "name": "4_Rack_BMC_And_Provisioning.md",
     "path": "4_Rack_BMC_And_Provisioning.md",
     "type": "file",
     "sha": "",
-    "size": 5789
+    "size": 5769
   },
   {
     "name": "5_Fabric_Cross_Connect_And_OOB.md",
     "path": "5_Fabric_Cross_Connect_And_OOB.md",
     "type": "file",
     "sha": "",
-    "size": 5914
+    "size": 5894
   },
   {
     "name": "6_Storage_Backup_And_Restore.md",
     "path": "6_Storage_Backup_And_Restore.md",
     "type": "file",
     "sha": "",
-    "size": 5759
+    "size": 5739
   },
   {
     "name": "7_VMware_vSphere.md",
     "path": "7_VMware_vSphere.md",
     "type": "file",
     "sha": "",
-    "size": 6464
+    "size": 6444
   },
   {
     "name": "8_Other_Hypervisors_And_Private_IaaS.md",
     "path": "8_Other_Hypervisors_And_Private_IaaS.md",
     "type": "file",
     "sha": "",
-    "size": 5989
+    "size": 5969
   },
   {
     "name": "9_Deploy_On_The_Estate.md",
     "path": "9_Deploy_On_The_Estate.md",
     "type": "file",
     "sha": "",
-    "size": 5456
+    "size": 5436
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 8583
+    "size": 8563
   }
 ]

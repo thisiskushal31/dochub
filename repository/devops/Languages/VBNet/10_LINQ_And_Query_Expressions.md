@@ -8,8 +8,6 @@
 
 You leave able to read both syntaxes, predict when queries run, and avoid accidental multiple enumeration and N+1 database patterns.
 
----
-
 ## 1. Concepts
 
 ### 1. LINQ is language-integrated query over sequences
@@ -77,8 +75,6 @@ Implications:
 ### 5. Immediate execution
 
 `ToList`, `ToArray`, `ToDictionary`, and many aggregates force execution. Use them when you need a stable snapshot or to avoid repeated enumeration—but do not materialize huge sequences without need.
-
----
 
 ## 2. Advanced concepts
 
@@ -160,8 +156,6 @@ Staff ceiling: **read and review** this syntax; know it maps to `System.Xml.Linq
 
 LINQ over `IQueryable` often means **Entity Framework** (or similar). ADO.NET command/parameter APIs still appear under older LOB. This track’s rule: **parameterize**; keep queries translatable; treat connection strings as secrets (**16**). Full EF modeling belongs in product docs / the C# track’s data doors—not a second database encyclopedia here.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -173,8 +167,6 @@ LINQ over `IQueryable` often means **Entity Framework** (or similar). ADO.NET co
 | **Software engineering** | Consistent syntax style; pure predicates; materialize at clear boundaries |
 
 LINQ is not a substitute for proper indexing and query plans on the database side.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -190,8 +182,6 @@ LINQ is not a substitute for proper indexing and query plans on the database sid
 - Parallel LINQ used only with measured need and correct ordering/exception handling.
 - XML literals/axis usage is intentional and reviewable; trust boundaries still validate input.
 - Data access uses parameterized APIs / provider-safe `IQueryable`—not string-concat SQL.
-
----
 
 ## References
 

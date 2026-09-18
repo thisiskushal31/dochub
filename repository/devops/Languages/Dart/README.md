@@ -6,8 +6,6 @@
 
 **How this section is organized:** (1) **Very basic** — Topics 1–4: what Dart is, environment and SDK, program structure and syntax, variables and null safety. (2) **Core language** — Topics 5–8: types, operators, control flow, functions. (3) **Structuring code** — Topics 9–13: libraries, classes and constructors, methods and mixins, enums and extensions, patterns and metadata. (4) **Concurrency and quality** — Topics 14–16: async and isolates, null safety in depth, Effective Dart. (5) **Libraries, tools, and platforms** — Topics 17–22: core libraries, packages and pub, SDK and CLI tools, server and CLI apps, web apps, interoperability. (6) **Implementation and use cases** — Topics 23–24: use cases and applications (by engineering perspective) and security and best practices.
 
----
-
 ## For complete beginners
 
 If you have never written Dart (or little code at all), start here:
@@ -19,8 +17,6 @@ If you have never written Dart (or little code at all), start here:
 
 Each topic builds on the previous ones. **Text is always first**; **code blocks** are there to show exactly what the text describes. If a concept is new, read the paragraph above the code, then look at the code, then read the next paragraph. For **implementation** (e.g. building a server or a Flutter app), use the later topics (17–22) and the **Use cases and applications** (23) and **Security and best practices** (24) for your engineering role.
 
----
-
 ## How to use this section by goal
 
 | Your goal | Where to start | Then read |
@@ -30,8 +26,6 @@ Each topic builds on the previous ones. **Text is always first**; **code blocks*
 | **I need to run or automate Dart/Flutter builds** | 2 (SDK), 18 (pub), 19 (CLI tools) | 20–21 (server, web deploy), 23–24. |
 | **I care about security or auditing Dart** | 4, 15 (null safety), 18 (advisories, deps) | 22 (interop), 24 (security). |
 | **I build backends or CLI tools in Dart** | 1–8, 14 (async), 17 (core libs) | 18–20, 22–24. |
-
----
 
 ## Learning path: from basics to implementation
 
@@ -43,8 +37,6 @@ Each topic builds on the previous ones. **Text is always first**; **code blocks*
 | **Concurrency and quality** | 14 → 15 → 16 | Use async/await, futures, streams, isolates; apply null-safety and Effective Dart. |
 | **Libraries, tools, platforms** | 17 → 18 → 19 → 20 → 21 → 22 | Use core libraries, pub, CLI tools, server and web apps, and interop. |
 | **Implementation and use cases** | 23 → 24 | Apply Dart from software, DevOps, and security perspectives; follow security best practices. |
-
----
 
 ## Topics
 
@@ -75,8 +67,6 @@ Each topic builds on the previous ones. **Text is always first**; **code blocks*
 | 23 | Use cases and applications | [23_Use_Cases_And_Applications.md](./23_Use_Cases_And_Applications.md) |
 | 24 | Security and best practices | [24_Security_And_Best_Practices.md](./24_Security_And_Best_Practices.md) |
 
----
-
 ## By engineering role
 
 | Role | Focus | Key topics |
@@ -86,13 +76,9 @@ Each topic builds on the previous ones. **Text is always first**; **code blocks*
 | **Security** | App hardening, dependency and supply chain | 4 (null safety), 15, 18 (pub, advisories), 22 (interop), 23, 24 |
 | **Backend / tooling** | Servers, scripts, CLI, automation | 8 (functions), 14 (async), 17 (libraries), 19–20, 22, 23 |
 
----
-
 ## Coverage
 
 This section covers the Dart language and ecosystem from basics through implementation: introduction and SDK (1–2), syntax and core language (3–8), structuring code with libraries and OOP (9–13), concurrency and quality (14–16), core libraries and pub (17–18), tools and platforms (19–22), and use cases and security (23–24). It aligns with the structure of the official Dart docs (language, core libraries, Effective Dart, packages, development, interop, tools) and is written for application, DevOps, security, and backend perspectives.
-
----
 
 ## Further reading
 

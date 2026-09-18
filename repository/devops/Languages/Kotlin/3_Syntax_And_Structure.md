@@ -92,8 +92,6 @@ Consistent style makes code easier to read and maintain. Common conventions incl
 
 Following these conventions makes it easier for others (and your future self) to work with the code, and it aligns with what many Kotlin projects and style guides expect. The next topics cover variables, types, control flow, and functions in detail.
 
----
-
 ## Further reading
 
 - [Packages and imports](https://kotlinlang.org/docs/packages.html)

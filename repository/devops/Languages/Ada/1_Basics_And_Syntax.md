@@ -4,13 +4,9 @@
 
 This topic covers the foundation: program structure, the imperative core (conditionals, loops, case), declarative regions, and conditional expressions. Ada clearly separates **statements** (which do something) from **expressions** (which produce a value).
 
----
-
 ## Role of the language
 
 Ada is a multi-paradigm language; its **core** is a simple, coherent procedural/imperative language similar to C or Pascal. An important distinction from C is that **statements and expressions are strictly separate**: if you use an expression where a statement is required (or the reverse), the program does not compile. That supports a useful style—expressions deliver values and avoid side effects—and prevents mistakes such as using `=` instead of `:=` in an assignment.
-
----
 
 ## Hello world
 
@@ -38,8 +34,6 @@ end Greet;
 
 Comments start with `--` and run to the end of the line. There is no multi-line comment; use `--` on each line.
 
----
-
 ## If / then / else / elsif
 
 The **if** statement has a Boolean condition, a **then** part, and optionally **else** and **elsif** parts. It is terminated by **end if**.
@@ -55,8 +49,6 @@ end if;
 ```
 
 The **in** operator tests whether a scalar value is in a range and returns a Boolean (e.g. `N in 1 .. 10`). Ada uses **elsif** (one word), not `else if`. The explicit **end if** avoids the "dangling else" problem.
-
----
 
 ## Loops
 
@@ -100,8 +92,6 @@ end loop;
 
 In Ada the condition must be a Boolean value, not an integer treated as true/false.
 
----
-
 ## Case statement
 
 **case** selects one branch based on a discrete expression. Every possible value must be covered by exactly one branch (checked at compile time). Branches can list single values, ranges, or combinations separated by **|**. The **others** branch covers any remaining values. There is no fall-through (no **break** needed).
@@ -115,8 +105,6 @@ case N is
    when others      => Put_Line ("not in 0..360");
 end case;
 ```
-
----
 
 ## Declarative regions and block statement
 
@@ -132,8 +120,6 @@ end;
 ```
 
 The **&** operator concatenates strings. After the block, `Name` is out of scope.
-
----
 
 ## If and case expressions (Ada 2012)
 
@@ -154,13 +140,9 @@ Put_Line (case I is
           when 2 | 4 | 6 | 8 | 10 => "Even");
 ```
 
----
-
 ## Attributes
 
 Attributes are built-in operations on types or values, written with an apostrophe: **Type'Attribute** or **Object'Attribute**. Examples: **Integer'Image (X)** converts an integer to a String; **Integer'Last** is the maximum value; **Arr'Range** is the index range of an array; **Arr'First**, **Arr'Last**, **Arr'Length** give bounds and length.
-
----
 
 ## Further reading
 

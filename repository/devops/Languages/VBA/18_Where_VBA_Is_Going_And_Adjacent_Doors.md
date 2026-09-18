@@ -8,8 +8,6 @@ The **compass** for this track: what **00–17** already make you fluent in, whi
 
 You came here for VBA inside Office. You should leave able to **write, review, and govern** macros—and able to say where the next deep topic lives without turning every problem into another `.xlsm`.
 
----
-
 ## 1. Concepts
 
 ### 1. What this track already owns
@@ -70,8 +68,6 @@ Read after **17** (or skim early so you know the bullseye). Revisit when:
 - internet-macro blocking breaks an email distribution habit,
 - VBScript FoD / deprecation shows up on image builds,
 - cloud Excel users outnumber Windows desktop VBA users.
-
----
 
 ## 2. Advanced concepts
 
@@ -178,8 +174,6 @@ When you adopt a door:
 3. Re-run security questions for the new host’s trust model.
 4. Retire dual sources of truth (same process in VBA **and** an unmaintained flow).
 
----
-
 ## 3. Applications and use cases
 
 ### Application
@@ -212,8 +206,6 @@ When you adopt a door:
 - Combine intentionally: OM macro for interactive desktop residue, Power Automate for cross-SaaS, PowerShell for OS, Scripts for cloud Excel.
 - Avoid duplicate ownership of one business process in three tools with no source of truth.
 
----
-
 ## Staff-level review checklist
 
 - Team agrees a change stays in-bullseye or explicitly opens a named door (Scripts, Add-ins, Automate, PowerShell, VB.NET, Open XML).
@@ -226,8 +218,6 @@ When you adopt a door:
 - No attempt to make this PR a full TypeScript, .NET, or RPA textbook.
 - Hostile-content handling still follows **16** if samples are involved.
 - Owner can name the next official index after merge.
-
----
 
 ## References
 

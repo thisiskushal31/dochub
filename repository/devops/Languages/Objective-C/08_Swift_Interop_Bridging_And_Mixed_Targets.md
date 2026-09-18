@@ -11,8 +11,6 @@
 #import <Foundation/Foundation.h>
 ```
 
----
-
 ## 1. Bridging header (Swift consumes Objective-C)
 
 Example **`MyApp-Bridging-Header.h`**:
@@ -23,8 +21,6 @@ Example **`MyApp-Bridging-Header.h`**:
 ```
 
 Keep this **minimal**—every import expands what Swift sees and adds compile cost.
-
----
 
 ## 2. Objective-C API surface for Swift
 
@@ -42,8 +38,6 @@ NS_ASSUME_NONNULL_END
 
 **Nullability** and **lightweight generics** on Objective-C headers directly shape Swift **optionals** and collection types.
 
----
-
 ## 3. Swift exposed to Objective-C (conceptual)
 
 Swift types need **`@objc`** or **`@objcMembers`** where appropriate, and Objective-C–compatible method signatures at the boundary. The build emits **`ModuleName-Swift.h`** for **`.m`** files in the same target.
@@ -56,8 +50,6 @@ Pin **`SWIFT_VERSION`** and generated header settings in projects checked into V
 }
 ```
 
----
-
 ## 4. CI checklist for mixed targets
 
 - Clean **DerivedData** when generated headers look wrong.
@@ -68,8 +60,6 @@ Pin **`SWIFT_VERSION`** and generated header settings in projects checked into V
 rm -rf ~/Library/Developer/Xcode/DerivedData/MyApp-*
 xcodebuild -scheme MyApp -destination 'platform=iOS Simulator,name=iPhone 16' clean build
 ```
-
----
 
 ## Advanced use cases and implementation
 
@@ -89,8 +79,6 @@ xcodebuild -scheme MyApp -destination 'platform=iOS Simulator,name=iPhone 16' cl
     NS_SWIFT_NAME(login(user:password:));
 @end
 ```
-
----
 
 ## References
 

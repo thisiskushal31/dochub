@@ -6,8 +6,6 @@ Control flow directs execution based on conditions and loops. Crystal provides *
 
 **Why these constructs?** They match common patterns: branch on a condition (if/case), repeat while a condition holds (while), or skip/exit a loop (break/next). Crystal avoids C-style for; use `while` or range iteration instead.
 
----
-
 ## if and unless
 
 **if** runs a block when the condition is truthy; **else** and **elsif** extend it. **unless** is the opposite: run when the condition is falsey.
@@ -26,8 +24,6 @@ unless done
 end
 ```
 
----
-
 ## case
 
 **case** compares one value against several alternatives. Use **when** for values or types; **else** for the default. It is often clearer than long if/elsif chains.
@@ -45,8 +41,6 @@ else
 end
 ```
 
----
-
 ## while and until
 
 **while** runs the body while the condition is truthy; **until** runs while it is falsey. Use **break** to exit the loop and **next** to skip to the next iteration.
@@ -60,8 +54,6 @@ while i < 10
 end
 ```
 
----
-
 ## Truthy and falsey
 
 Only `nil` and `false` are falsey. The number `0`, empty strings, and empty arrays are truthy. This is important for conditionals and short-circuit evaluation.
@@ -71,8 +63,6 @@ if str
   puts str
 end
 ```
-
----
 
 ## Further reading
 

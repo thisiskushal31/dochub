@@ -2,8 +2,6 @@
 
 [← Previous](./10_RAID_And_Local_Disk_Setup.md) · [README](./README.md) · [Next: WLAN/AP →](./12_WLAN_And_AP_Lab_Office_Edge.md)
 
----
-
 ## Mental map
 
 ```text
@@ -15,8 +13,6 @@ Host HBA/NIC ──► storage fabric (FC switch or Ethernet VLAN)
 ```
 
 Paths: [Storage-Physical/3–5](../Storage-Physical/README.md). Separation: [Fabric-Physical/11](../Fabric-Physical/11_Storage_Network_Separation.md).
-
----
 
 ## 1. Concepts
 
@@ -32,8 +28,6 @@ Paths: [Storage-Physical/3–5](../Storage-Physical/README.md). Separation: [Fab
 
 **Confirm:** What two identifiers must match for a host to see a LUN (FC vs iSCSI)?
 
----
-
 ## 2. Advanced concepts
 
 ### Operator experience
@@ -48,8 +42,6 @@ Bring fabric up before hosts scream “no path.” Document controller ownership
 | Wrong zone | Invisible LUN |
 | Snapshot ≠ backup | Ransomware surprise ([Storage 9](../Storage-Physical/9_Snapshots_Vs_Backups_Vs_Replication.md)) |
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -58,8 +50,6 @@ Bring fabric up before hosts scream “no path.” Document controller ownership
 | DB | Latency class known ([Storage 11](../Storage-Physical/11_Latency_For_Etcd_And_Databases.md)) |
 
 **Staff checklist:** dual fabric; zones reviewed; multipath -ll OK; alerts on path down; backup independent of array snapshot.
-
----
 
 ## References
 

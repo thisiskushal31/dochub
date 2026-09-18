@@ -2,8 +2,6 @@
 
 [← Previous](./6_Batteries_And_Energy_Storage.md) · [README](./README.md) · [Next: Paralleling →](./8_Paralleling_And_Transfer_Sequences.md)
 
----
-
 ## 1. Concepts
 
 **Generators** (gensets) replace utility power for sustained outages. UPS covers seconds-to-minutes; generators cover hours-to-days—*if* fuel, start systems, and transfer logic work.
@@ -28,8 +26,6 @@
 | **Load bank** | Artificial load for testing without IT risk |
 
 Fuel is usually **diesel** for large halls; natural gas and other fuels appear by region and emissions rules. Same job: energy on site when the grid is gone.
-
----
 
 ## 2. Advanced concepts
 
@@ -67,8 +63,6 @@ Mechanical plant often starts on generator too—cooling load is part of sizing.
 
 Noise, emissions, and fuel sulfur rules differ (EU, California, India cities, Middle East). Roof vs yard placement follows climate and neighbors. Skills transfer; permits do not.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -87,8 +81,6 @@ Noise, emissions, and fuel sulfur rules differ (EU, California, India cities, Mi
 - Never disable auto-start “temporarily” without ticket and restoration check  
 
 **Good:** loaded tests, clean fuel, cooling sized for IT+mech. **Bad:** no-load monthly starts only; unknown fuel age; IT-only sizing.
-
----
 
 ## References
 

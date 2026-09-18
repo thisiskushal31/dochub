@@ -6,8 +6,6 @@
 
 **Why traits?** They allow templates to adapt to different types (e.g. "does this type have a method X?"). **Why exceptions?** They separate error paths from normal flow and propagate failures up the call stack. **Why unittest blocks?** They keep tests next to the code and run in debug/testing builds.
 
----
-
 ## Traits
 
 **__traits** **(identifier**, **args)** returns information at compile time: **getMember**, **getOverloads**, **isAbstractClass**, **hasMember**, **getVirtualMethods**, and many more. **std.traits** wraps common patterns (e.g. **isIntegral**, **isMutable**).
@@ -16,8 +14,6 @@
 static assert(__traits(hasMember, MyClass, "name"));
 static assert(is(ReturnType!foo == int));
 ```
-
----
 
 ## Exceptions
 
@@ -38,8 +34,6 @@ finally
 }
 ```
 
----
-
 ## Unit tests
 
 **unittest** blocks contain test code; they are compiled in when **-unittest** is passed and executed before **main**. **assert** checks conditions; failed asserts report the location. Use **dub test** or **dmd -unittest -run** to run tests.
@@ -51,8 +45,6 @@ unittest
     assert(div(10, 2) == 5);
 }
 ```
-
----
 
 ## Further reading
 

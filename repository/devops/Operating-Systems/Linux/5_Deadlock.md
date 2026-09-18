@@ -6,8 +6,6 @@
 
 A **deadlock** occurs when two or more processes (or threads) are each waiting for a resource held by another, so none can make progress. This topic defines deadlock, explains how to prevent or detect it, and briefly covers recovery and the Banker’s algorithm.
 
----
-
 ## What is deadlock?
 
 **Deadlock** — A set of processes is deadlocked if every process in the set is waiting for an event or resource that only another process in the set can provide. None of them can proceed.
@@ -17,8 +15,6 @@ Example: Process A holds resource 1 and wants resource 2; Process B holds resour
 ![Deadlock: conditions, prevention, and recovery](../../Assets/Operating-Systems/Bytebytego_Deadlock.png)
 
 *Image: [ByteByteGo – What is a Deadlock?](https://bytebytego.com/guides/what-is-a-deadlock/).*
-
----
 
 ## Necessary conditions for deadlock
 
@@ -33,8 +29,6 @@ All four must hold for a deadlock to be possible (Coffman conditions):
 
 If we break any one of these, deadlock can be prevented (in theory). In practice, prevention is often hard; detection and recovery or avoidance (e.g. Banker’s) are used.
 
----
-
 ## Deadlock vs starvation vs livelock
 
 | Term | Meaning |
@@ -42,8 +36,6 @@ If we break any one of these, deadlock can be prevented (in theory). In practice
 | **Deadlock** | Processes block forever, each waiting for another in the set. |
 | **Starvation** | A process is repeatedly denied resources (e.g. CPU) so it never (or rarely) runs; others keep getting preference. |
 | **Livelock** | Processes keep changing state but make no real progress (e.g. two processes repeatedly yielding to each other). |
-
----
 
 ## Handling deadlocks: overview
 
@@ -56,8 +48,6 @@ If we break any one of these, deadlock can be prevented (in theory). In practice
 
 Many systems use a mix: prevention where easy (e.g. lock ordering), detection and recovery where prevention is too costly.
 
----
-
 ## Resource Allocation Graph (RAG)
 
 The **resource allocation graph** has:
@@ -67,8 +57,6 @@ The **resource allocation graph** has:
 - **Assignment** edge: resource → process (process holds it).
 
 A **cycle** in the graph is a necessary condition for deadlock (assuming single-instance resources). For multi-instance resources, cycle + no way to satisfy all requests implies deadlock.
-
----
 
 ## Banker’s algorithm (avoidance)
 
@@ -80,8 +68,6 @@ The **Banker’s algorithm** is a deadlock-**avoidance** method:
 
 It avoids deadlock but requires known max needs and can be conservative (denies some requests that would not actually deadlock).
 
----
-
 ## Deadlock detection and recovery
 
 **Detection:** Build the wait-for graph (who is waiting for whom). If there is a cycle, there is a deadlock. Run this periodically or on each request.
@@ -90,8 +76,6 @@ It avoids deadlock but requires known max needs and can be conservative (denies 
 
 - **Abort** one or more deadlocked processes (simplest; may need restart).
 - **Preempt** resources: take a resource from a process (rollback or retry) and give it to another so the system can progress.
-
----
 
 ## Linux: finding and dealing with deadlocks
 
@@ -113,8 +97,6 @@ lsof -p <PID>
 
 Prevention in your own code: use a **consistent lock ordering**, avoid holding multiple locks when possible, use timeouts (e.g. trylock) where appropriate.
 
----
-
 ## Summary
 
 - **Deadlock** = set of processes each waiting for another in the set; no one can proceed.
@@ -122,8 +104,6 @@ Prevention in your own code: use a **consistent lock ordering**, avoid holding m
 - **Handling**: prevention (break one condition), avoidance (Banker’s), detection + recovery.
 - **RAG** models who holds and who wants what; cycles indicate possible deadlock.
 - On Linux: look for “D” state, use `strace`, `lsof`; in code, use lock ordering and trylock/timeouts.
-
----
 
 ## Further reading
 

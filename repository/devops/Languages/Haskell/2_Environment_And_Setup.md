@@ -23,8 +23,6 @@ cabal --version
 
 **Recommendation.** Use GHCup to install GHC, Cabal, Stack, and the Haskell Language Server so you can manage versions and keep the toolchain up to date without conflicting with system packages.
 
----
-
 ## Further reading
 
 - [GHC User's Guide – Introduction](https://www.haskell.org/ghc/docs/latest/html/users_guide/intro.html)

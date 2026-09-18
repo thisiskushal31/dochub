@@ -4,139 +4,139 @@
     "path": "00_First_Steps_Tclsh_And_Hello.md",
     "type": "file",
     "sha": "",
-    "size": 13655
+    "size": 13630
   },
   {
     "name": "01_What_Is_Tcl_And_Where_It_Lives.md",
     "path": "01_What_Is_Tcl_And_Where_It_Lives.md",
     "type": "file",
     "sha": "",
-    "size": 26601
+    "size": 26576
   },
   {
     "name": "02_Versions_Tcl8_Vs_Tcl9_And_Migration.md",
     "path": "02_Versions_Tcl8_Vs_Tcl9_And_Migration.md",
     "type": "file",
     "sha": "",
-    "size": 11756
+    "size": 11731
   },
   {
     "name": "03_Syntax_Words_Substitution_And_Quoting.md",
     "path": "03_Syntax_Words_Substitution_And_Quoting.md",
     "type": "file",
     "sha": "",
-    "size": 12221
+    "size": 12196
   },
   {
     "name": "04_Variables_Arrays_Namespaces_And_Scope.md",
     "path": "04_Variables_Arrays_Namespaces_And_Scope.md",
     "type": "file",
     "sha": "",
-    "size": 9090
+    "size": 9065
   },
   {
     "name": "05_Control_Flow_Procs_And_Return.md",
     "path": "05_Control_Flow_Procs_And_Return.md",
     "type": "file",
     "sha": "",
-    "size": 12726
+    "size": 12701
   },
   {
     "name": "06_Lists_And_Dictionaries.md",
     "path": "06_Lists_And_Dictionaries.md",
     "type": "file",
     "sha": "",
-    "size": 12578
+    "size": 12553
   },
   {
     "name": "07_Strings_Regex_Encoding_And_Unicode.md",
     "path": "07_Strings_Regex_Encoding_And_Unicode.md",
     "type": "file",
     "sha": "",
-    "size": 16688
+    "size": 16663
   },
   {
     "name": "08_Files_Channels_Exec_And_Environment.md",
     "path": "08_Files_Channels_Exec_And_Environment.md",
     "type": "file",
     "sha": "",
-    "size": 18951
+    "size": 18926
   },
   {
     "name": "09_Errors_Catch_Trace_And_Introspection.md",
     "path": "09_Errors_Catch_Trace_And_Introspection.md",
     "type": "file",
     "sha": "",
-    "size": 13800
+    "size": 13775
   },
   {
     "name": "10_Packages_Namespaces_And_Libraries.md",
     "path": "10_Packages_Namespaces_And_Libraries.md",
     "type": "file",
     "sha": "",
-    "size": 18278
+    "size": 18253
   },
   {
     "name": "11_Event_Loop_Sockets_And_Async_IO.md",
     "path": "11_Event_Loop_Sockets_And_Async_IO.md",
     "type": "file",
     "sha": "",
-    "size": 13088
+    "size": 13063
   },
   {
     "name": "12_Coroutines_Threads_And_Child_Interps.md",
     "path": "12_Coroutines_Threads_And_Child_Interps.md",
     "type": "file",
     "sha": "",
-    "size": 11439
+    "size": 11414
   },
   {
     "name": "13_Tk_Surface_Literacy.md",
     "path": "13_Tk_Surface_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 13704
+    "size": 13679
   },
   {
     "name": "14_C_API_Embedding_And_Extensions.md",
     "path": "14_C_API_Embedding_And_Extensions.md",
     "type": "file",
     "sha": "",
-    "size": 12574
+    "size": 12549
   },
   {
     "name": "15_Expect_Interactive_Automation.md",
     "path": "15_Expect_Interactive_Automation.md",
     "type": "file",
     "sha": "",
-    "size": 15906
+    "size": 15881
   },
   {
     "name": "16_Security_Review_Of_Tcl_Automation.md",
     "path": "16_Security_Review_Of_Tcl_Automation.md",
     "type": "file",
     "sha": "",
-    "size": 13425
+    "size": 13400
   },
   {
     "name": "17_Use_Cases_And_Engineering_Perspectives.md",
     "path": "17_Use_Cases_And_Engineering_Perspectives.md",
     "type": "file",
     "sha": "",
-    "size": 11518
+    "size": 11493
   },
   {
     "name": "18_Where_Tcl_Is_Going_And_Adjacent_Doors.md",
     "path": "18_Where_Tcl_Is_Going_And_Adjacent_Doors.md",
     "type": "file",
     "sha": "",
-    "size": 16392
+    "size": 16367
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 8130
+    "size": 8095
   }
 ]

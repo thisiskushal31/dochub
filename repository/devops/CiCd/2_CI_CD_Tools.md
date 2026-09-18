@@ -6,8 +6,6 @@ Tools change. **Categories and jobs** do not. Use this file to pick the right *k
 
 Core loop: [1_Pipelines_Build_Test_Deploy.md](./1_Pipelines_Build_Test_Deploy.md). Full concept map: [README](./README.md).
 
----
-
 ## Two halves of “CI/CD tooling”
 
 | Half | Job | Tools in this handbook |
@@ -21,8 +19,6 @@ OpenGitOps ([opengitops.dev](https://opengitops.dev/)): declarative, versioned/i
 
 Classic **push CD**: CI applies once with cluster creds.  
 **GitOps pull CD**: in-cluster agent reconciles ongoing drift.
-
----
 
 ## Tool folders
 
@@ -41,8 +37,6 @@ Classic **push CD**: CI applies once with cluster creds.
 | Argo Rollouts | [Argo_Rollouts/](./Argo_Rollouts/README.md) | Progressive delivery |
 | Unleash | [Unleash/](./Unleash/README.md) | Feature flags, strategies, Edge, SDK methods, Admin/Client/Frontend/Edge APIs, OpenFeature, governance |
 
----
-
 ## Shared capabilities
 
 | Capability | Why | Concept |
@@ -52,8 +46,6 @@ Classic **push CD**: CI applies once with cluster creds.
 | OIDC / short-lived cloud auth | No immortal keys in CI | [Security/5](../Security/5_OIDC_CI_And_Least_Privilege.md) |
 | Environments / approvals | Continuous Delivery gates | [8](./8_Environments_Promotion_And_Approvals.md) |
 | Notifications | Failures reach owners | [16](./16_Notifications_Webhooks_And_ChatOps.md) |
-
----
 
 ## Choosing without fashion
 
@@ -71,8 +63,6 @@ Classic **push CD**: CI applies once with cluster creds.
 **Ops note:** Jenkins asks you to run a controller (plugins, HA, backups). GitHub-hosted Actions shifts that burden to the platform. Prefer the lower-ops default when it fits; do not abandon a working Jenkins platform for fashion alone.
 
 Related-repo depth: [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive).
-
----
 
 ## Pitfalls
 

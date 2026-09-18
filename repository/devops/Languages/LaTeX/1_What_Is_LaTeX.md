@@ -53,8 +53,6 @@ Typical use cases include:
 
 In DevOps and security contexts, LaTeX often appears when teams need **programmatic or templated PDF generation**, version-controlled document source, or consistent formatting for official deliverables. Understanding LaTeX helps you read existing `.tex` files, maintain document pipelines, and integrate PDF builds into CI and automation.
 
----
-
 ## Further reading
 
 - [LaTeX Project — Documentation](https://latex-project.org/help/documentation/)

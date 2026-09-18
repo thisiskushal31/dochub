@@ -4,8 +4,6 @@
 
 R is a language and environment for **statistical computing** and **graphics**. In engineering organizations it appears as **batch analytics**, **research replication**, **regulated reporting**, **internal APIs** (Plumber), **interactive apps** (Shiny), and **notebook/report pipelines** (RMarkdown/Quarto-class workflows). This track teaches R as **systems work**: language semantics, data contracts, statistical workflow rigor, dependency governance, security boundaries, and operations—**not** only as a syntax tour.
 
----
-
 ## R versions, CRAN, and which documentation to read
 
 R development follows **major.minor.patch** releases. The **R-release** and **R-devel** branches on CRAN are the usual reference points: **R-devel** is the development tree; your organization should pin a **supported R minor** for production and match **Bioconductor** releases if you use them (Bioconductor versions are **tied to an R version**). Online manuals are published for `r-release` and `r-devel` (for example `r-devel` manual paths are common in deep links). When you read a manual page, ensure it matches the R you run; language-level behavior and defaults can differ across minors.
@@ -18,8 +16,6 @@ Rscript --version
 Rscript -e "print(R.version); print(R.version.string); sessionInfo()"
 ```
 
----
-
 ## Chapter structure
 
 Chapters `01`–`16` follow a consistent body shape:
@@ -31,8 +27,6 @@ Chapters `01`–`16` follow a consistent body shape:
 
 **Guardrails:** body text is standalone; code appears only where it clarifies behavior; links live in each chapter’s **References** section; no internal source-map files in the learner-facing handbook.
 
----
-
 ## Semantic model (why R feels different from “a normal scripting language”)
 
 - **Vectorized core:** most operations are array operations; recycling is a language feature and a footgun.
@@ -41,8 +35,6 @@ Chapters `01`–`16` follow a consistent body shape:
 - **Environments:** scoping and mutable environments underpin packages, namespaces, and closures.
 - **Copy-on-modify with reference counting:** since **R 4.0.0**, reference counting refines when data can be modified in place versus copied (older **NAMED** heuristics were coarser). Memory and performance are still about **measured** behavior, not slogans.
 - **Two repository worlds:** **CRAN** and **Bioconductor** are different release and compatibility planes—do not treat them as interchangeable.
-
----
 
 ## Beginner to advanced progression
 
@@ -54,8 +46,6 @@ Chapters `01`–`16` follow a consistent body shape:
 | Strategy | 16 | Ecosystem positioning, migration, competency expectations. |
 
 Suggested order: **01 → 10**, then **11 → 15**, then **16**.
-
----
 
 ## Chapters
 
@@ -78,16 +68,12 @@ Suggested order: **01 → 10**, then **11 → 15**, then **16**.
 | 15 | Automation, CI/CD, and operations | [15](./15_Automation_CI_CD_And_Operations.md) |
 | 16 | Ecosystem, use cases, and competency map | [16](./16_Ecosystem_Use_Cases_And_Competency_Map.md) |
 
----
-
 ## Deep-study workflow
 
 1. Read each chapter with a **notebook of invariants** for your org (NA policy, ID types, factor policy, TZ policy, join cardinality checks).
 2. After chapters 06–08, write **contract tests** on a real upstream extract (sanitized).
 3. After chapters 09–10, run a **leakage review** on one real modeling workflow using your actual join keys and timestamps.
 4. After chapters 11–15, stand up a **minimal CI job** that restores packages and runs tests on a clean runner.
-
----
 
 ## Further reading
 
@@ -98,8 +84,6 @@ Suggested order: **01 → 10**, then **11 → 15**, then **16**.
 - [R Installation and Administration](https://cran.r-project.org/doc/manuals/r-devel/R-admin.html)
 - [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-devel/R-exts.html)
 - [R Data Import/Export](https://cran.r-project.org/doc/manuals/r-devel/R-data.html)
-
----
 
 ## References (hub links)
 

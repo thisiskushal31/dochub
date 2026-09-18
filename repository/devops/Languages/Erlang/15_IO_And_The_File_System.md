@@ -28,8 +28,6 @@ end.
 
 **Why this matters for DevOps and security.** Config and secrets are often read from files or environment variables at startup. Handling `{error, Reason}` and failing fast with a clear message makes deployment easier. Safe path handling and least-privilege file permissions reduce the impact of misconfiguration or compromise.
 
----
-
 ## Further reading
 
 - [io](https://www.erlang.org/doc/apps/stdlib/io)

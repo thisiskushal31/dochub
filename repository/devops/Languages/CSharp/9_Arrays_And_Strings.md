@@ -6,8 +6,6 @@
 
 **Why arrays?** They store multiple values under one name and allow index-based access. **Why immutable strings?** Immutability simplifies reasoning and threading; operations that “change” a string typically return a new string.
 
----
-
 ## Declaring and initializing arrays
 
 Declare an array with a data type followed by **[]** and the array name. Declaration alone does not allocate memory; initialize with **new** and a size or with an initializer list. Arrays are reference types, so **new** allocates the elements. You can omit the size when an initializer list is provided. Unassigned elements are initialized to default values (e.g. zero for numeric types).
@@ -17,8 +15,6 @@ int[] n = new int[10];
 int[] numbers = new int[] { 1, 2, 3 };
 string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
 ```
-
----
 
 ## Accessing and iterating
 
@@ -33,8 +29,6 @@ foreach (int value in numbers)
     Console.WriteLine(value);
 ```
 
----
-
 ## Sorting and copying
 
 **Array.Sort** sorts elements in ascending order. For descending order, sort then call **Array.Reverse**. Use **Array.Copy** or **Array.Clone** to copy to another array.
@@ -45,8 +39,6 @@ Array.Sort(values);
 Array.Reverse(values);
 ```
 
----
-
 ## Multidimensional and jagged arrays
 
 **Multidimensional** arrays (e.g. **int[,]**) have a fixed rank; **jagged** arrays (e.g. **string[][]**) are arrays of arrays and can have different lengths per row.
@@ -55,8 +47,6 @@ Array.Reverse(values);
 int[,] grid = new int[2, 3];
 string[][] jagged = new string[2][];
 ```
-
----
 
 ## Strings
 
@@ -73,8 +63,6 @@ string path = @"C:\Folder\File.txt";
 string msg = $"Value: {x}";
 ```
 
----
-
 ## StringBuilder
 
 For many concatenations or modifications, **System.Text.StringBuilder** is more efficient than repeated string operations, because it avoids creating many intermediate strings.
@@ -85,8 +73,6 @@ sb.Append("Hello");
 sb.AppendLine(" World");
 string result = sb.ToString();
 ```
-
----
 
 ## Further reading
 

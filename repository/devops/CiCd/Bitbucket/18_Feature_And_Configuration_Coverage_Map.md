@@ -2,13 +2,9 @@
 
 [← Previous](./17_Best_Practices_And_Cloud_Vs_Data_Center.md) · [README](./README.md) · [Next: YAML catalog →](./19_YAML_And_Configuration_Catalog.md)
 
----
-
 ## 1. Concepts
 
 Use this map to see **which Bitbucket feature classes exist** and **where they are taught**. YAML keys and plan gates evolve — confirm in References when implementing.
-
----
 
 ## 2. Advanced concepts — feature inventory
 
@@ -57,13 +53,9 @@ Use this map to see **which Bitbucket feature classes exist** and **where they a
 | Writing custom pipes / Forge merge checks | Contributor/extensibility docs |
 | Bitbucket Data Center admin / Bamboo | DC docs; CI choice in [17](./17_Best_Practices_And_Cloud_Vs_Data_Center.md) |
 
----
-
 ## 3. Applications and use cases
 
 Walk A–C for a platform checklist: use / defer / N/A per row.
-
----
 
 ## References
 

@@ -4,8 +4,6 @@
 
 **Generics** let you write code that works over many types without duplication. **Traits** define shared behavior (method signatures) that types can implement. Together they support reusable, type-safe APIs. This topic covers generic functions and structs, trait bounds, and defining and implementing traits.
 
----
-
 ## Generic functions
 
 Declare type parameters in angle brackets. Use **trait bounds** so the compiler knows what operations are allowed (e.g. **Drop**, **Copy**, **PartialOrd**). Use **impl TraitName: Trait&lt;T&gt;** or the **+Trait&lt;T&gt;** shorthand for anonymous bounds.
@@ -26,8 +24,6 @@ fn smallest_element<T, +PartialOrd<T>, +Copy<T>, +Drop<T>>(list: @Array<T>) -> T
 }
 ```
 
----
-
 ## Generic structs and enums
 
 Structs and enums can take type parameters. **Option&lt;T&gt;** and **Result&lt;T, E&gt;** are generic. When a generic type must be dropped, all of its type parameters must implement **Drop** (or you derive **Drop** when possible).
@@ -44,8 +40,6 @@ struct Wallet2<T, U> {
     address: U,
 }
 ```
-
----
 
 ## Defining and implementing traits
 
@@ -72,8 +66,6 @@ impl NewsArticleSummary of Summary<NewsArticle> {
 ```
 
 Use **#[generate_trait]** on an impl to let the compiler generate the trait definition when you only need one implementation.
-
----
 
 ## Further reading
 

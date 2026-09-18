@@ -10,8 +10,6 @@ Spark jobs are **remote code execution by design** on provisioned cluster resour
 
 **Scala version policy for Spark:** match the **cluster’s Scala line**. Spark distributions historically pin **2.12** or **2.13**; do not compile jobs against a different binary line than the cluster ships. Local Scala 3 services and Spark job repos often diverge on purpose.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. What Spark is architecturally
@@ -243,8 +241,6 @@ Spark exposes hundreds of configs. Staff-level literacy is knowing **which class
 
 Change configs with a hypothesis and a before/after metric. Copy-pasting a “fast Spark” gist from chat is not architecture.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Driver vs executor failure modes
@@ -360,8 +356,6 @@ Local mode hides Kerberos/IAM, real network shuffle, and concurrent tenancy. Do 
 
 Shuffle-heavy joins, unnecessary `repartition`, over-wide caches, and always-on streaming triggers are budget decisions. Pair every performance ticket with a cost owner and a “good enough” latency SLO. Premature gold-layer recomputation every hour when daily suffices is a product bug wearing an engineering costume.
 
----
-
 ## 3. Applications and use cases
 
 ### Data engineering
@@ -462,8 +456,6 @@ Hybrid portfolio sketch:
 - Metrics: duration, failure, shuffle, streaming trigger health, cost owner named.
 - Test pyramid includes pure Scala + version-pinned Spark CI; staging covers auth.
 - Config changes cite hypothesis and rollback; no unexplained “tuning dumps.”
-
----
 
 ## References
 

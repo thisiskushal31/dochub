@@ -20,8 +20,6 @@ JSON (JavaScript Object Notation) is a lightweight, text-based data interchange 
 
 **What this section covers.** After this introduction, the section goes as follows. **Topic 2** explains the grammar and structure in full: values, objects, arrays, strings, numbers, literals, whitespace, encoding, duplicate keys, member order, and every edge case so you can write and read any valid JSON. **Topic 3** covers parsing versus validation, JSON Schema in depth, and tooling so you know when text is well-formed and when it matches the shape you expect. **Topic 4** describes where JSON appears (APIs, config, CI/CD, infrastructure, packages, security) and what it typically represents in each context so you can recognize and interpret real-world JSON. **Topic 5** covers format-level security and semantics: parsing errors, duplicate keys, injection and prototype pollution, size and depth, and validation of untrusted input. **Topic 6** goes into advanced behavior: number precision, Unicode in depth, I-JSON, variants (JSON5, JSONC, JSON Lines), streaming versus DOM parsing, MIME and file extension, and JSON Pointer and Patch. When you are done with these files, you will understand exactly how JSON works from the ground up and how to use it safely and correctly in any environment.
 
----
-
 ## Further reading
 
 - [Introducing JSON (json.org)](https://www.json.org/json-en.html)

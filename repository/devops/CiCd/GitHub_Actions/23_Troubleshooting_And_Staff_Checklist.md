@@ -2,8 +2,6 @@
 
 [← Previous](./22_YAML_And_Configuration_Catalog.md) · [README](./README.md) · [Next: Extras →](./24_Migrate_Packages_And_Extras.md)
 
----
-
 ## 1. Concepts — playbook
 
 | Symptom | Likely cause | Look at |
@@ -22,8 +20,6 @@
 
 Enable debug logging when stuck ([18](./18_Monitor_Metrics_And_Billing_Literacy.md)). Use the run visualization graph and condition-expression logs for `if:` mysteries.
 
----
-
 ## 2. Advanced — ordered questions
 
 1. Did the **event** match (and is the workflow file on that ref)?  
@@ -31,8 +27,6 @@ Enable debug logging when stuck ([18](./18_Monitor_Metrics_And_Billing_Literacy.
 3. Is a **runner** listening with those labels / group policy?  
 4. Did we pin the **action** / reusable workflow we think we did?  
 5. Are we under **limits** (minutes, concurrency, matrix, API)?  
-
----
 
 ## 3. Applications — staff checklist
 
@@ -49,8 +43,6 @@ Enable debug logging when stuck ([18](./18_Monitor_Metrics_And_Billing_Literacy.
 - Limits and billing watched before they page Finance
 
 **Good:** fix in Git. **Bad:** “re-run until green” without root cause.
-
----
 
 ## References
 

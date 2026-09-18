@@ -8,8 +8,6 @@ What belongs in a **`.sol` file**, why **SPDX** and **`pragma`** come first, how
 
 A `.sol` file is a compilation unit, not “the thing you deploy.” Think of it as a chapter in a book: header, imports, then one main character (the contract) unless you have a good reason for a crowd.
 
----
-
 ## 1. Concepts
 
 ### 1. A source file is a compilation unit, not a deployable
@@ -82,8 +80,6 @@ error NotReady(); // reusable custom error
 
 File-level `constant` is inlined. It is not contract storage. That is how you share a number without paying a slot.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. SPDX in generated and flattened files
@@ -127,8 +123,6 @@ Official style guide is the tie-breaker for naming and layout nits.
 
 Older files may show `pragma experimental ABIEncoderV2;` or SMT pragmas. On 0.8, ABI coder v2 is default. Do not copy experimental pragmas from blog posts without knowing what they enable (SMT is chapter **19**).
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -139,8 +133,6 @@ Older files may show `pragma experimental ABIEncoderV2;` or SMT pragmas. On 0.8,
 | **Operations** | Flatten/verify pipeline keeps SPDX |
 | **Software engineering** | License chosen once; imports named; no junk files in `src/` |
 
----
-
 ## 4. Staff-level review checklist
 
 - Every shipped `.sol` has **SPDX** and a **0.8.x pragma**.
@@ -148,8 +140,6 @@ Older files may show `pragma experimental ABIEncoderV2;` or SMT pragmas. On 0.8,
 - Remappings resolve to **vendored / locked** directories.
 - Public types used across packages live in **interface files**, not hidden inside a fat contract file.
 - No file relies on Remix “auto import” that CI cannot see.
-
----
 
 ## References
 

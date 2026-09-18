@@ -4,8 +4,6 @@
 
 *Final choice page for AWS. Deeper API: [AWS docs](https://docs.aws.amazon.com/).*
 
----
-
 ## Compute
 
 | Product | What for | When | Why not |
@@ -141,8 +139,6 @@
 | **Media Services / Elemental** | Video pipelines | Streaming media | Simple files → S3+CloudFront |
 | **WorkSpaces / AppStream** | VDI / streamed apps | Managed desktops | Laptop fleet OK |
 | **GameLift** | Game servers | Multiplayer hosting | Custom EC2/EKS |
-
----
 
 ## How to use this page
 

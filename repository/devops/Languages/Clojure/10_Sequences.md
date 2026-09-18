@@ -4,8 +4,6 @@
 
 The **sequence** abstraction is a uniform way to traverse and transform collections. Many Clojure functions produce or consume **seqs**: a logical list of elements with **first** and **rest**. Collections can be turned into a seq with **seq**; **lazy sequences** defer computation until the values are needed.
 
----
-
 ## seq
 
 **seq** returns a sequence view over a collection, or **nil** if the collection is empty. **first** returns the first element; **rest** (or **next**) returns the rest. So you can walk any collection with **first** and **rest**.
@@ -20,8 +18,6 @@ The **sequence** abstraction is a uniform way to traverse and transform collecti
 (seq [])
 ;; => nil
 ```
-
----
 
 ## map, filter, reduce
 
@@ -38,8 +34,6 @@ The **sequence** abstraction is a uniform way to traverse and transform collecti
 ;; => [1 2 3]
 ```
 
----
-
 ## Lazy sequences
 
 Many sequence functions (e.g. **map**, **filter**, **range**) return **lazy sequences**: elements are computed only when consumed. That allows infinite or large sequences without building them all in memory. **take** and **take-while** limit how much is realized.
@@ -50,8 +44,6 @@ Many sequence functions (e.g. **map**, **filter**, **range**) return **lazy sequ
 (take-while #(< % 5) (range))
 ;; => (0 1 2 3 4)
 ```
-
----
 
 ## Other sequence functions
 
@@ -65,8 +57,6 @@ Many sequence functions (e.g. **map**, **filter**, **range**) return **lazy sequ
 (into [] (map inc [1 2 3]))
 ;; => [2 3 4]
 ```
-
----
 
 ## Further reading
 

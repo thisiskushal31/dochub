@@ -9,8 +9,6 @@ OIDC / least privilege from CI: [Security/5_OIDC_CI_And_Least_Privilege.md](../S
 Signing/SBOM: [6](./6_Supply_Chain_And_Signing.md).  
 Mindset: [Methodologies/14](../Methodologies/14_DevSecOps_Mindset.md).
 
----
-
 ## Where gates run
 
 ```text
@@ -31,8 +29,6 @@ Runtime ── WAF/runtime controls (ops) — not a substitute for earlier gates
 
 Shift-left: find issues near the author. Shift-right: verify in real environments ([5](./5_Verify_Rollback_And_Synthetic_Tests.md)).
 
----
-
 ## Gate → handbook home
 
 | Gate | CiCd role | Security folder / topic |
@@ -46,8 +42,6 @@ Shift-left: find issues near the author. Shift-right: verify in real environment
 | DAST | Preview/staging | [ZAP](../Security/ZAP/README.md) |
 | Runtime secrets | App deploy | [Vault](../Security/Vault/README.md), [13](./13_Config_Secrets_And_Env_Parity.md) |
 
----
-
 ## Policy choices
 
 | Mode | Meaning |
@@ -57,8 +51,6 @@ Shift-left: find issues near the author. Shift-right: verify in real environment
 
 Document severity thresholds. “Warn forever” is not a gate.
 
----
-
 ## CI identity is part of the attack surface
 
 Pipelines that can push to prod registries or clusters are high-value targets:
@@ -66,8 +58,6 @@ Pipelines that can push to prod registries or clusters are high-value targets:
 - Prefer **OIDC** over long-lived cloud keys  
 - Scope tokens to environment and repository  
 - Lock down self-hosted runners ([11](./11_Pipeline_As_Code_Runners_Caching_Matrix.md))  
-
----
 
 ## Pitfalls
 

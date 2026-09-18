@@ -2,8 +2,6 @@
 
 [← Back to Cloud-Native](../README.md) · [OPA (general policy)](../../Security/OPA/README.md) · [CNCF everyday tools](../4_CNCF_Everyday_Tools.md)
 
----
-
 ## 1. Concepts
 
 **Kyverno** is a **Kubernetes-native policy engine** (CNCF). It admits, mutates, generates, and verifies cluster resources using policies that feel like Kubernetes YAML—plus **CEL**-based policy types in current releases.
@@ -25,8 +23,6 @@ vs [OPA](../../Security/OPA/README.md) / Gatekeeper: OPA is a general Rego engin
 **Disconfirm:** Installing Kyverno with zero policies does **nothing**. Kyverno is **not** a network WAF ([WAF](../../Security/WAF/README.md)).
 
 **Confirm:** Name one validate vs one mutate use case.
-
----
 
 ## 2. Advanced concepts
 
@@ -59,8 +55,6 @@ vs [OPA](../../Security/OPA/README.md) / Gatekeeper: OPA is a general Rego engin
 | Over-strict overnight | Break platform addons; teams force exceptions |
 | Legacy-only policies | Upgrade debt when old APIs remove |
 | No reporting sink | Blind to audit failures |
-
----
 
 ## 3. Applications and use cases
 
@@ -111,8 +105,6 @@ spec:
 - A PolicyException forever is **not** a control.
 
 **Good:** Git-versioned CEL policies, tested, audited, then enforced. **Bad:** undocumented ClusterPolicy sprawl; fail-open ignored.
-
----
 
 ## References
 

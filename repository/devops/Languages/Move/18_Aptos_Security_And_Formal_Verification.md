@@ -93,8 +93,6 @@ fun assert_owner(account: &signer, expected: address) {
 
 Simple guards are not enough alone, but they anchor larger policy flows.
 
----
-
 ## Further reading
 
 - [Move Prover](https://github.com/move-language/move/tree/main/language/move-prover)

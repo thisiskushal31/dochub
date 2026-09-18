@@ -58,8 +58,6 @@ lists:foldl(fun(X, Acc) -> Acc + X end, 0, [1, 2, 3, 4]).
 
 **Why this matters.** Recursion is the standard way to express iteration in Erlang; tail recursion keeps it efficient for long lists. Higher-order functions and the `lists` module give you reusable patterns (map, filter, fold) and make code shorter and clearer. Before writing a custom list function, check if `lists` already provides it.
 
----
-
 ## Further reading
 
 - [Functions](https://www.erlang.org/doc/system/functions) (tail recursion)

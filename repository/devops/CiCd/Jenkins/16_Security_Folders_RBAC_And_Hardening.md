@@ -2,8 +2,6 @@
 
 [← Previous](./15_Artifacts_Fingerprints_And_Promotions.md) · [README](./README.md) · [Next: Plugins →](./17_Plugins_Update_Center_And_Hygiene.md)
 
----
-
 ## 1. Concepts
 
 Jenkins security is **several axes** — turning on “a password” is not enough.
@@ -37,8 +35,6 @@ jenkins:
 
 Prefer matrix/role/folder strategies in real multi-team estates — the snippet only shows “do not leave open.”
 
----
-
 ## 2. Advanced concepts
 
 ### Permissions and strategies
@@ -69,8 +65,6 @@ Don’t print credentials; watch plugins that dump env. Pair with [12](./12_Cred
 
 Terminate TLS at nginx/Apache/…; preserve WebSocket for agents ([20](./20_Scaling_HA_Backup_And_Monitoring.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -81,8 +75,6 @@ Terminate TLS at nginx/Apache/…; preserve WebSocket for agents ([20](./20_Scal
 | Break-glass | Documented admin path; monitored Script Console use |
 
 **Good:** defense in depth documented and tested. **Bad:** “Anyone can do anything” left from a lab; Script Approval stamped “allow all.”
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./22_Worked_Example_Pipeline_Build_And_Deploy.md) · [README](./README.md) · [Next: Coverage map →](./24_Feature_And_Offering_Coverage_Map.md)
 
----
-
 ## 1. Concepts — defaults that age well
 
 | Do | Don’t |
@@ -20,8 +18,6 @@
 
 Official using/pipeline best-practice pages reinforce these themes.
 
----
-
 ## 2. Advanced — when *not* (or not only) Jenkins
 
 | Situation | Better fit |
@@ -34,8 +30,6 @@ Official using/pipeline best-practice pages reinforce these themes.
 
 Keep Jenkins when you need deep on-prem control, classical estates, or existing plugin investments — improve it; don’t abandon fashionably without a plan ([CiCd/20](../20_Classical_Jenkins_Host_And_Web_Deploy.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Decision | Ask |
@@ -43,8 +37,6 @@ Keep Jenkins when you need deep on-prem control, classical estates, or existing 
 | Keep Jenkins? | Do we own controller ops for real? |
 | Shared libraries? | Who versions the paved road? |
 | One controller vs many? | Blast radius vs cost |
-
----
 
 ## References
 

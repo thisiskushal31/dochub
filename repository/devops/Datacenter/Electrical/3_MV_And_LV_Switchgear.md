@@ -2,8 +2,6 @@
 
 [← Previous](./2_Transformers.md) · [README](./README.md) · [Next: ATS and STS →](./4_ATS_And_STS.md)
 
----
-
 ## 1. Concepts
 
 **Switchgear** is the assembly of breakers, bus, and controls that **connects, protects, and isolates** power paths. Medium-voltage (MV) gear handles site intake and large distribution; low-voltage (LV) gear feeds UPS, mechanical plant, and IT boards.
@@ -27,8 +25,6 @@ This is not a rack PDU. This is the room where a wrong breaker pull blacks out a
 | **Selectivity / coordination** | Downstream trip before upstream—or everything goes dark |
 | **Arc flash / PPE boundaries** | Who may open doors; labeled approach limits |
 | **Draw-out vs fixed** | Maintainability without full shutdown (design-dependent) |
-
----
 
 ## 2. Advanced concepts
 
@@ -65,8 +61,6 @@ EPO and safety disconnects relate here ([13](./13_EPO_And_Safety_Disconnects.md)
 
 IEC and ANSI/IEEE gear look different; bolt patterns and IP ratings differ. Procedure culture differs more than physics: LOTO, permit-to-work, and who holds keys are local. Transfer the *jobs*; do not transfer informal habits from another metro.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -85,8 +79,6 @@ IEC and ANSI/IEEE gear look different; bolt patterns and IP ratings differ. Proc
 - Never operate unlabeled or “temporary” unmarked gear  
 
 **Good:** coordinated settings, clear labeling, main-tie-main procedures drilled. **Bad:** shared unlabeled breakers; “we always rack this one” tribal knowledge.
-
----
 
 ## References
 

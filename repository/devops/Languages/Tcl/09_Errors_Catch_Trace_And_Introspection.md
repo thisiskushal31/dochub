@@ -8,8 +8,6 @@ How Tcl reports failure and how you recover: **`catch`**, **`error`**, **`try`**
 
 You leave able to structure error handling without swallowing bugs, classify failures for ops, measure hot scripts without cargo-cult timing, and use introspection in review instead of guesswork.
 
----
-
 ## 1. Concepts
 
 ### 1. Errors are return codes, not only strings
@@ -203,8 +201,6 @@ history info 10
 
 For scripted diagnostics prefer `info` / logging / explicit procs over replaying shell history.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Options dict discipline
@@ -287,8 +283,6 @@ Avoid dumping full `array get env` or entire `info body` of auth procs into tick
 - Comparing across machines or load averages is meaningless without recording `info patchlevel` and a fixed dataset.
 - Prefer fixing algorithmic complexity (list vs repeated string concat, unnecessary `eval`) over shaving a microsecond from a cold CLI tool.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Use |
@@ -300,8 +294,6 @@ Avoid dumping full `array get env` or entire `info body` of auth procs into tick
 | **Software engineering** | Test suites intentionally `catch` expected errors; `info` used in debug CLIs; `time` for hot-path claims |
 
 Embedded hosts often surface Tcl errors to a parent C API—stable `errorCode` lists are kinder than free-form strings (ch **14**).
-
----
 
 ## Staff-level review checklist
 
@@ -315,8 +307,6 @@ Embedded hosts often surface Tcl errors to a parent C API—stable `errorCode` l
 - Brownfield scripts that only set `errorInfo` scraping still work under `try` migration.
 - Hot-path claims in PRs include a `time` comparison (or a clear reason I/O/`exec` dominates).
 - No production logic depends on interactive `history` / `!!` shortcuts.
-
----
 
 ## References
 

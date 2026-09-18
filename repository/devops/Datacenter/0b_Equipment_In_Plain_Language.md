@@ -2,15 +2,11 @@
 
 [← How to read](./0_How_To_Read_And_Quality_Bar.md) · [0c whole-hall map](./0c_Whole_Hall_Mental_Map.md) · [README](./README.md) · [On-ramp 1 →](./1_On_Prem_As_A_Solution.md)
 
----
-
 ## Mental map
 
 ![Whole hall layers](../Assets/Datacenter/Integration/whole-hall-layers.svg)
 
 *What to notice: jargon below names pieces **inside** these layers. If a word feels foggy, find which layer it belongs to first.*
-
----
 
 ## 1. Concepts — the building as a machine
 
@@ -22,8 +18,6 @@ Think of the hall as four machines working together:
 4. **People/process machine** — badges, tickets, screens, change windows  
 
 If any one fails hard, software fails—even if the code is perfect. Full folder map: [0c](./0c_Whole_Hall_Mental_Map.md).
-
----
 
 ## 2. Power path (street → chip)
 
@@ -56,8 +50,6 @@ Street power → transform → protect/switch → UPS+battery → (generator if 
 
 Deep track: [Electrical/](./Electrical/README.md). Walk: [Integration/1](./Integration/1_Utility_To_DIMM.md).
 
----
-
 ## 3. Cooling path (chips → outdoors)
 
 ![Heat airflow](../Assets/Datacenter/Mechanical/heat-airflow-loop.svg)
@@ -80,8 +72,6 @@ Computers turn almost all electricity into **heat**. Cooling moves that heat awa
 
 Deep track: [Mechanical/](./Mechanical/README.md).
 
----
-
 ## 4. White space and the rack
 
 ![Rack elevation](../Assets/Datacenter/White-Space/rack-elevation-sketch.svg)
@@ -95,8 +85,6 @@ Deep track: [Mechanical/](./Mechanical/README.md).
 | **ToR** | Switch at top of rack | First hop for server network |
 
 Deep: [White-Space/](./White-Space/README.md).
-
----
 
 ## 5. Network path (server → world)
 
@@ -113,8 +101,6 @@ Deep: [White-Space/](./White-Space/README.md).
 
 Deep: [Fabric-Physical/](./Fabric-Physical/README.md). Walk: [Integration/2](./Integration/2_NIC_To_MMR.md).
 
----
-
 ## 6. Storage in one breath
 
 | Name | Plain meaning |
@@ -126,8 +112,6 @@ Deep: [Fabric-Physical/](./Fabric-Physical/README.md). Walk: [Integration/2](./I
 | **Backup** | Independent copy you can restore after disaster/ransomware |
 
 Deep: [Storage-Physical/](./Storage-Physical/README.md).
-
----
 
 ## 7. Screens that steer the hall (preview)
 
@@ -141,8 +125,6 @@ People do not only walk the floor. They **watch aggregated numbers** and **steer
 | **NOC** | Humans watching alarms and escalating |
 
 Full treatment: [Integration/11](./Integration/11_Aggregate_Telemetry_Reports_And_Steering.md), [Jobs/13](./Jobs/13_Reading_Dashboards_Reports_And_Steering.md).
-
----
 
 ## 8. Applications
 
@@ -163,8 +145,6 @@ Full treatment: [Integration/11](./Integration/11_Aggregate_Telemetry_Reports_An
 
 - Equinix is **not** the same kind of company as Linode ([Markets](./Markets-And-Operators/README.md)).  
 - A green LED wall is **not** proof of dual path independence.
-
----
 
 ## References
 

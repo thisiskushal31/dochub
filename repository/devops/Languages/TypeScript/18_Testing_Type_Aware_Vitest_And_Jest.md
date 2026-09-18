@@ -10,8 +10,6 @@ Official hubs for runners: **vitest.dev** and **jestjs.io**. This is not a snaps
 
 Picture tests as **fire drills**: you force failure on purpose to prove guards, parsers, and abort paths lock. If you cannot make the typechecker and the runner disagree on purpose, you do not yet own the boundary.
 
----
-
 ## 1. Concepts
 
 ### 1. What “type-aware testing” means
@@ -148,8 +146,6 @@ Chapter **12** discipline in tests:
 - Fake timers only with an explicit policy—hidden timers are flake factories.
 - No fire-and-forget promises inside tests without `await` or explicit orphan tracking.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Dual pipeline: transpile vs typecheck
@@ -215,8 +211,6 @@ Libraries that emit `.d.ts` (chapter **17**) should include a **consumer smoke**
 | “Abort cancels work” | Yes — timing/async |
 | “Dependency is not malware” | Out of scope for unit tests (chapter **20**) |
 
----
-
 ## 3. Applications and use cases
 
 ### Application
@@ -255,8 +249,6 @@ Libraries that emit `.d.ts` (chapter **17**) should include a **consumer smoke**
 | **Files** | Path edge cases, encoding, partial reads |
 | **Speed** | Abort early; avoid accidental `O(n²)` in hot helpers under test fixtures |
 
----
-
 ## 4. Staff-level review checklist
 
 - CI runs **`tsc` (or equivalent)** and the test runner—not only one.
@@ -269,8 +261,6 @@ Libraries that emit `.d.ts` (chapter **17**) should include a **consumer smoke**
 - Type-level tests for public mapped/omit APIs when regressions would be silent.
 - Flakes quarantined with expiry, not ignored forever.
 - Runner and `typescript` versions pinned; docs link official Vitest/Jest hubs.
-
----
 
 ## References
 

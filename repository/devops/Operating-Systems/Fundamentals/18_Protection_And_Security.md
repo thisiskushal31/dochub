@@ -4,16 +4,12 @@
 
 This topic covers **protection** (controlling which processes can access which resources) and **security** (defending against threats and misuse). Both are OS-agnostic concepts. How specific OSs implement them (e.g. SELinux, Windows ACLs) is in the [Linux](../Linux/README.md) and [Windows](../Windows/README.md) sections.
 
----
-
 ## Protection vs security
 
 - **Protection** — **Internal** mechanism: the OS ensures that one process (or user) cannot access another’s resources without permission. Examples: memory isolation (each process has its own address space), file permissions (owner/group/others), capability checks on system calls.
 - **Security** — Broader: defending the system from **threats** (malware, unauthorized access, privilege escalation, denial of service). Protection is one tool; others include authentication, encryption, auditing, and policy (e.g. least privilege).
 
 So: **protection** is how the OS enforces *who can do what*; **security** is how we design and harden the system against abuse.
-
----
 
 ## Access control (concepts)
 
@@ -27,16 +23,12 @@ The OS enforces **access control** on resources (files, devices, network ports):
 
 **Mandatory Access Control (MAC)** — A **system-wide policy** (e.g. labels, roles) decides access; users and owners cannot override it. Used in high-security environments (e.g. SELinux, AppArmor on Linux).
 
----
-
 ## Authentication and authorization
 
 - **Authentication** — Verifying *who* someone is (e.g. password, key, certificate). The OS (or a service) checks credentials and establishes a **session** or **security context** (user ID, groups).
 - **Authorization** — Deciding *what* that identity is allowed to do. The OS uses **access control** (permissions, ACLs, MAC) to allow or deny operations.
 
 So: **authenticate** first (who are you?), then **authorize** on each action (are you allowed to do this?).
-
----
 
 ## Security threats (overview)
 
@@ -49,16 +41,12 @@ So: **authenticate** first (who are you?), then **authorize** on each action (ar
 
 The OS cannot prevent all threats; it provides **mechanisms** (permissions, isolation, auditing) and **policies** (how to configure them) so that the system can be secured.
 
----
-
 ## Summary
 
 - **Protection** = internal mechanism (who can access what); **security** = defending against threats.
 - **Access control:** identity + policy + check; **DAC** (owner decides) vs **MAC** (system policy).
 - **Authentication** = verifying identity; **authorization** = allowing/denying actions.
 - **Threats:** privilege escalation, unauthorized access, malware, DoS; the OS provides mechanisms (isolation, permissions, auditing) to mitigate them.
-
----
 
 ## Further reading
 

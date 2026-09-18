@@ -4,8 +4,6 @@
 
 This topic covers **virtualization** and **hypervisors** in an **OS-agnostic** way: how VMs get CPU, memory, and I/O; how the datacenter shares and divides resources. Platform-specific setup (e.g. KVM on Linux, Hyper-V on Windows) is in [Linux](../Linux/14_Virtualization_On_Linux.md) and [Windows](../Windows/4_Virtualization_And_Storage_Advanced.md).
 
----
-
 ## 1. What is virtualization?
 
 **Virtualization** means running one or more **guest** operating systems (or workloads) on top of a **host**. Each guest believes it has its own CPU(s), RAM, and disks. In reality, a **virtualization layer** (the **hypervisor** or host kernel) **multiplexes** physical hardware and presents each guest with **virtual** resources.
@@ -26,8 +24,6 @@ This topic covers **virtualization** and **hypervisors** in an **OS-agnostic** w
   └─────────────────────────────────────────────────────────────────┘
 ```
 
----
-
 ## 2. Type 1 vs Type 2 hypervisors
 
 | Type | Runs on | Examples | Typical use |
@@ -37,8 +33,6 @@ This topic covers **virtualization** and **hypervisors** in an **OS-agnostic** w
 
 - **Type 1:** The hypervisor is the “OS” that boots; it owns CPU, memory, and devices and runs guests in VMs. Lowest overhead; used in datacenters.
 - **Type 2:** The host OS (e.g. Windows, Linux) runs normally; a **VMM (Virtual Machine Monitor)** app creates VMs. More overhead but easy to install and use on a single machine.
-
----
 
 ## 3. CPU virtualization
 
@@ -60,8 +54,6 @@ The CPU must run guest code in a way that:
 
 The hypervisor **schedules** vCPUs onto physical CPUs (cores): each vCPU is a thread or process that the host scheduler runs. So “shared CPU” in the datacenter means: many vCPUs from many VMs are time-sliced on a smaller number of physical cores.
 
----
-
 ## 4. Memory virtualization
 
 Each VM has a **guest physical address space** (what the guest OS thinks is “physical” RAM). The hypervisor maps **guest physical** → **machine physical** (real RAM).
@@ -75,8 +67,6 @@ Each VM has a **guest physical address space** (what the guest OS thinks is “p
 
 So in the datacenter: **memory division** = each VM gets a slice of machine RAM (or an overcommitted slice), enforced by the hypervisor via EPT/NPT and optionally balloon/swap.
 
----
-
 ## 5. I/O and devices
 
 Guests usually do **not** own real disks or NICs. The hypervisor (or host) gives each VM **virtual** devices:
@@ -86,8 +76,6 @@ Guests usually do **not** own real disks or NICs. The hypervisor (or host) gives
 - **Pass-through / SR-IOV:** A real device (or a VF) is assigned to one VM; guest drivers talk to hardware directly. Lowest latency, used for high I/O workloads.
 
 Storage is often a **virtual disk** (file or LUN) presented as a block device to the guest. The hypervisor translates guest block I/O to reads/writes to that file or LUN.
-
----
 
 ## 6. Datacenter perspective: shared CPU and memory
 
@@ -100,8 +88,6 @@ In a **datacenter**, a single physical server runs many VMs (or containers). Key
 
 So “how the datacenter works” at this level: **one physical box** → **hypervisor** → **many VMs**, each with a share of CPU time, a slice of RAM, and virtual disks/NICs. Configuration and tooling (how many vCPUs, how much RAM, which disk, which network) are **per platform** (Linux/KVM, VMware, Hyper-V, etc.).
 
----
-
 ## Summary
 
 - **Virtualization** = one or more guests (VMs) on a host; the hypervisor multiplexes hardware.
@@ -112,8 +98,6 @@ So “how the datacenter works” at this level: **one physical box** → **hype
 - **Datacenter:** One server runs many VMs; CPU and memory are shared/divided by the hypervisor; storage and network are virtualized and often shared.
 
 For **how** to configure and use virtualization and RAID on a specific OS, see [Linux: Virtualization](../Linux/14_Virtualization_On_Linux.md), [Linux: Storage advanced (incl. RAID)](../Linux/12_Storage_Advanced_LVM_ACLs.md), and [Windows: Virtualization and storage advanced](../Windows/4_Virtualization_And_Storage_Advanced.md).
-
----
 
 ## Further reading
 

@@ -22,8 +22,6 @@ Lua code usually starts when the host (e.g. the standalone `lua` program or an e
 
 Lua also has a **warning** system (e.g. **warn**). Warnings do not change program execution; they typically produce a message. Behavior can be customized from C (e.g. **lua_setwarnf**).
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §2.3 Error Handling](https://www.lua.org/manual/5.5/manual.html#2.3)

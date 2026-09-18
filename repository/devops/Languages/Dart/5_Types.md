@@ -4,13 +4,9 @@
 
 Dart is **type safe**: every variable has a type, and the type system ensures values match. Type annotations are **optional** for local variables because of **type inference**. This topic walks through the **built-in types** you will use every day—numbers, strings, booleans, lists, sets, maps, and records—and when to use each. It also briefly explains the roles of **Object**, **dynamic**, **void**, and **Never** so you can read APIs and error messages confidently.
 
----
-
 ## Why types matter
 
 Types tell the **compiler** and **you** what kind of data a variable holds. That lets the compiler catch mistakes (e.g. passing a string where a number is expected) and enables **autocomplete** and **refactoring** in editors. In Dart, once a variable has a type (by inference or annotation), you cannot assign a value of a different type unless it is a **subtype** (e.g. **`int`** is a subtype of **`num`**). So types are both a safety net and documentation.
-
----
 
 ## Numbers
 
@@ -28,8 +24,6 @@ n += 2.5;  // num can hold both int and double.
 
 **When to use which:** Use **`int`** for whole numbers (counts, indices, IDs). Use **`double`** for decimals (prices, coordinates, ratios). Use **`num`** when a variable might hold either (e.g. a generic “number” from user input or an API). Convert between strings and numbers with **`int.parse()`**, **`double.parse()`**, and **`toString()`** when you read or display data.
 
----
-
 ## Strings
 
 Strings are **`String`** values. You can use single or double quotes. Interpolation: `$variable` or `${expression}`. Multiline strings use triple quotes.
@@ -46,13 +40,9 @@ string
 
 Strings are **immutable**: methods like **`toUpperCase()`** return a *new* string; they do not change the original. **When to use:** Single or double quotes are equivalent; pick one style and stick to it. Use **`$variable`** or **`${expression}`** for interpolation. Use **triple quotes** for multiline text. Use the **`r`** prefix when you need a **raw** string (e.g. **`r'Raw \n'`** keeps the backslash and **n** literal).
 
----
-
 ## Booleans
 
 Only **`bool`** values **`true`** and **`false`** are allowed in **conditions** (e.g. **`if (done)`**). Unlike in some other languages, there is **no** automatic conversion from numbers or strings to bool—so **`if (1)`** is not valid; you must write something like **`if (count > 0)`**.
-
----
 
 ## Lists
 
@@ -67,8 +57,6 @@ list[1] = 1;
 
 **When to use:** Lists are **ordered** and allow **duplicates**; use them for sequences (e.g. a list of names, a queue of tasks). Access by **index** with **`list[i]`**; indices start at **0**. Use **`const [1, 2, 3]`** when the list never changes so the compiler can optimize.
 
----
-
 ## Sets
 
 **`Set`** is an unordered collection of unique elements. Literals use curly braces. Empty sets need a type: `<String>{}` (plain `{}` is a map).
@@ -80,8 +68,6 @@ var halogens = {'fluorine', 'chlorine', 'bromine'};
 var names = <String>{};
 ```
 
----
-
 ## Maps
 
 **`Map`** associates keys with values. Literals use `key: value` inside `{}`. Keys and values can be any type.
@@ -92,8 +78,6 @@ var nobleGases = {2: 'helium', 10: 'neon'};
 ```
 
 **When to use:** Maps associate **keys** with **values**; use them for lookups (e.g. **id → user**, **key → config**). Keys and values can be any type. Empty map: **`{}`** or **`<String, int>{}`** when you need a typed empty map.
-
----
 
 ## Records
 
@@ -108,8 +92,6 @@ int x = named.x;
 
 **When to use:** Records (Dart 3+) are for **grouping a few values** without defining a class—e.g. returning **multiple** values from a function or holding a **pair** of (key, value). Use a **class** when you need methods, a name, or many fields; use a **record** when you need a small, anonymous bundle of values.
 
----
-
 ## Type system roles
 
 - **`Object`** — supertype of all classes except `Null`.
@@ -119,8 +101,6 @@ int x = named.x;
 - **`Never`** — indicates an expression never completes (e.g. always throws).
 
 **Generics** let you parameterize types: **`List<int>`** (list of integers), **`Map<String, int>`** (map from string to int). That way the compiler and tools know what is inside the collection. **Typedefs** and the full type system (subtyping, inference) are in the language specification; for daily use, stick to the built-in types and **`List<T>`** / **`Map<K,V>`** and you will be set.
-
----
 
 ## Further reading
 

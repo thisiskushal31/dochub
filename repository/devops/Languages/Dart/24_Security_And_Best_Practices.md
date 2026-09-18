@@ -4,8 +4,6 @@
 
 Security and maintainability for Dart and Flutter span **language use**, **dependencies**, **build and deployment**, and **platform** guidelines. This topic gives you **concrete** checks and practices so you can implement them regardless of role—application, DevOps, security, or backend. Apply these across the full lifecycle: development, CI, and production.
 
----
-
 ## Use the type system and null safety
 
 **Why:** Sound null safety and static types catch many bugs before run time and make code easier to reason about and refactor.
@@ -19,8 +17,6 @@ Security and maintainability for Dart and Flutter span **language use**, **depen
 
 **Implementation:** Run **dart analyze**; fix “nullable type used where non-nullable required” and “invalid null assertion” by adding checks, defaults (**`??`**), or correct types. Enable the **recommended** lint set so **avoid_dynamic_calls** and similar rules are on.
 
----
-
 ## Static analysis and linting
 
 **Why:** The analyzer catches type errors, null misuse, and many logic bugs; lints enforce style and safe patterns so the codebase stays consistent and secure.
@@ -33,8 +29,6 @@ Security and maintainability for Dart and Flutter span **language use**, **depen
 - In CI, **fail the build** on analyzer errors so insecure or brittle code is not merged.
 
 **Implementation:** Add a CI step that runs **dart analyze** (and optionally **dart format --set-exit-if-changed**). Document any intentional lint exceptions with a comment and an issue reference.
-
----
 
 ## Dependencies and supply chain
 
@@ -50,8 +44,6 @@ Security and maintainability for Dart and Flutter span **language use**, **depen
 
 **Implementation:** In CI, run **dart pub get** from lockfile; run **dart pub outdated** and/or an advisory check (script or tool). In security-sensitive projects, require that high/critical advisories are resolved before release.
 
----
-
 ## Secrets and configuration
 
 **Why:** Secrets in source or in logs lead to compromise. Configuration should be explicit and auditable.
@@ -63,8 +55,6 @@ Security and maintainability for Dart and Flutter span **language use**, **depen
 - Do not log or print secrets; sanitize **error messages** and **logs** so they do not leak tokens or PII.
 
 **Implementation:** Document where secrets come from (env var names, secret manager paths). In CI, use the platform’s secret store; never echo secrets. For Flutter signing, use CI secrets or a dedicated signing service.
-
----
 
 ## Network and I/O
 
@@ -78,8 +68,6 @@ Security and maintainability for Dart and Flutter span **language use**, **depen
 
 **Implementation:** Wrap HTTP calls in **try/catch**; set **ConnectionTimeout** and **ReceiveTimeout**; validate response shape and size before use. In servers, limit request size and use safe parsing (e.g. **dart:convert** with bounded input).
 
----
-
 ## Interop and native code
 
 **Why:** FFI and platform channels cross trust boundaries; bugs there can cause crashes or security issues.
@@ -92,8 +80,6 @@ Security and maintainability for Dart and Flutter span **language use**, **depen
 
 **Implementation:** When adding or reviewing FFI or platform channel code, document what data is passed and who is responsible for validation. Run tests that cover error and boundary cases.
 
----
-
 ## Flutter and platform security
 
 **Why:** Mobile and web have platform-specific security models; ignoring them can lead to data leakage or privilege escalation.
@@ -105,8 +91,6 @@ Security and maintainability for Dart and Flutter span **language use**, **depen
 - Keep **Flutter** and **Dart** SDKs and **plugins** updated so you get security and bug fixes.
 
 **Implementation:** Review **AndroidManifest.xml** and **Info.plist** (or equivalent) for permissions and entitlements. Enable **ProGuard/R8** for release Android builds. Use **dart pub outdated** and Flutter upgrade process regularly.
-
----
 
 ## Build and deployment
 
@@ -121,8 +105,6 @@ Security and maintainability for Dart and Flutter span **language use**, **depen
 
 **Implementation:** CI pipeline: checkout → **dart pub get** → **dart analyze** → **dart test** → build → sign (if applicable) → deploy. Store signing keys in secret manager; inject into CI only when needed. Document the exact SDK and dependency versions used for each release.
 
----
-
 ## Checklist (quick reference)
 
 - **Types and null safety:** No unnecessary **dynamic** or **!**; use promotion and **?** correctly.
@@ -133,8 +115,6 @@ Security and maintainability for Dart and Flutter span **language use**, **depen
 - **Interop:** Validate at boundary; prefer typed interop; document responsibilities.
 - **Platform:** Minimum permissions; ProGuard/R8 (Android); entitlements and ATS (iOS); CSP and HTTPS (web).
 - **Build/deploy:** Reproducible build; analyze and test in CI; sign with protected keys; document versions.
-
----
 
 ## Further reading
 

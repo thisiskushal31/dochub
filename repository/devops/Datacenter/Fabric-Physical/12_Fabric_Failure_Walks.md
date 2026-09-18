@@ -2,13 +2,9 @@
 
 [← Previous](./11_Storage_Network_Separation.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 Walk network incidents from **host NIC → ToR → spine → border/MMR**, and separately **OOB**, before blaming applications.
-
----
 
 ## 2. Advanced concepts
 
@@ -37,8 +33,6 @@ Walk network incidents from **host NIC → ToR → spine → border/MMR**, and s
 
 Storage walks: [Storage-Physical/12](../Storage-Physical/12_Storage_Failure_Walks.md). Power: [Electrical/17](../Electrical/17_Power_Path_Failure_Walks.md). Integration narratives: [Integration](../Integration/README.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -57,8 +51,6 @@ Storage walks: [Storage-Physical/12](../Storage-Physical/12_Storage_Failure_Walk
 - Never restart BGP as step 1 for a dark optic  
 
 **Good:** layered walks, evidence from DOM/LACP first. **Bad:** app restart storms; ignored failed ToR; single XC surprise.
-
----
 
 ## References
 

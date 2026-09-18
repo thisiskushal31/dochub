@@ -108,8 +108,6 @@ The grammar is strict by design. **Double-quoted keys and strings** remove ambig
 - **Hex or octal** — Numbers like `0x1a` or `0o12` are not valid JSON; the format allows only decimal.
 - **Invalid escape sequences** — In a string, only `\"` `\\` `\/` `\b` `\f` `\n` `\r` `\t` and `\uXXXX` (four hex digits) are valid. Sequences like `\'`, `\x41`, or `\u12` (too few digits) are invalid and cause parse errors.
 
----
-
 ## Further reading
 
 - [RFC 8259 – JSON Grammar](https://datatracker.ietf.org/doc/html/rfc8259#section-2)

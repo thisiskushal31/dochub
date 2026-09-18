@@ -8,8 +8,6 @@ Tcl’s **event-driven** runtime: **`after`**, **`vwait`**, **`fileevent`**, **`
 
 You leave able to write non-blocking channel logic without busy-waiting, stand up simple client/server sockets, fetch URLs with correct token cleanup, and review hung `vwait` / missed-event bugs.
 
----
-
 ## 1. Concepts
 
 ### 1. One thread, many events
@@ -172,8 +170,6 @@ set later [clock add $now 15 minutes]
 
 Use `clock` for schedules and timeouts; use `after` for “run this callback later.” Parsing human dates needs explicit `-format` / locale awareness—ambiguous scans are a production footgun.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Nested event loops and re-entrancy
@@ -262,8 +258,6 @@ A blocking `exec` inside a `fileevent` handler stalls every client. Prefer:
 - a worker thread/process (ch **12**), or
 - `exec` only during startup/shutdown outside the hot loop.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Application |
@@ -276,8 +270,6 @@ A blocking `exec` inside a `fileevent` handler stalls every client. Prefer:
 
 EDA tools and network equipment CLIs often expose Tcl with socket/event hooks—staff modify handlers more often than they rewrite the loop.
 
----
-
 ## Staff-level review checklist
 
 - Callbacks built with `list` / bracing so arguments are correct at fire time.
@@ -289,8 +281,6 @@ EDA tools and network equipment CLIs often expose Tcl with socket/event hooks—
 - `http` tokens cleaned up; timeouts and size limits set for untrusted endpoints.
 - HTTP body encoding/binary intent reviewed; cookiejar only enabled deliberately (Tcl 9).
 - Shutdown wakes `vwait` and closes listeners.
-
----
 
 ## References
 

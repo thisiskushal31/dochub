@@ -8,8 +8,6 @@ Tcl’s structured data: **lists** (ordered collections that are still strings a
 
 If you remember one rule: **build lists with list commands**, not with hand-joined spaces.
 
----
-
 ## 1. Concepts
 
 ### 1. What a list is
@@ -247,8 +245,6 @@ puts [lsort [dict keys $db]]
 
 Immutable-style updates (`dict set` returns new value when used as a function of a value) keep data flow obvious—assign back to the variable.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Canonicalization and shimmering
@@ -315,8 +311,6 @@ For large structures, prefer dict/list algorithms (`lmap`, `lsort`, dict ops) ov
 
 Lists protect boundaries only if you **built** them correctly. Converting untrusted text with naive `split` and then `{*}` into `exec` is still dangerous—validate and escape at the `exec` boundary (chapter **08**, **16**).
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Pattern |
@@ -327,8 +321,6 @@ Lists protect boundaries only if you **built** them correctly. Converting untrus
 | **Ops** | Inventory scripts: dict of host → attributes; `dict for` over reports. |
 | **SE** | Public library APIs should take/return **dicts** (or well-documented lists), not require callers to `upvar` arrays, unless matching historical interfaces. |
 
----
-
 ## Staff-level review checklist
 
 - Lists built with `list`/`lappend`/`lmap`, not `"$a $b"` concatenation, when elements may contain whitespace.
@@ -338,8 +330,6 @@ Lists protect boundaries only if you **built** them correctly. Converting untrus
 - Comparisons of dicts/lists use structured operations, not brittle string equality.
 - `split`/`join` call sites note delimiter limitations, empty-field behavior, and path/`argv` keep-as-list rules.
 - Empty-list cases (`glob`, searches) handled explicitly on Tcl 9.
-
----
 
 ## References
 

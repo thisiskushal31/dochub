@@ -2,8 +2,6 @@
 
 [← Previous](./10_Matrix_CustomRuns_And_StepActions.md) · [README](./README.md) · [Next: Triggers →](./12_Triggers_EventListeners_And_Interceptors.md)
 
----
-
 ## 1. Concepts
 
 Instead of copying Task YAML into every namespace, **resolvers** fetch remote definitions:
@@ -30,8 +28,6 @@ taskRef:
 
 **Resolution** project + Pipelines resolver docs cover enablement and contracts ([tekton.dev resolution](https://tekton.dev/docs/pipelines/resolution/)).
 
----
-
 ## 2. Advanced concepts
 
 ### Pin revisions
@@ -45,8 +41,6 @@ Combine resolvers with admission / trusted resource policies so only approved so
 ### Air-gap
 
 Prefetch bundles into a private registry; use bundle resolver against the mirror.
-
----
 
 ## 3. Applications and use cases
 
@@ -63,8 +57,6 @@ Prefetch bundles into a private registry; use bundle resolver against the mirror
 - Air-gap mirror if required  
 
 **Good:** pinned remote refs. **Bad:** resolve `latest` from the public internet on every Run.
-
----
 
 ## References
 

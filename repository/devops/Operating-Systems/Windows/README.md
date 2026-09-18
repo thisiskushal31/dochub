@@ -32,8 +32,6 @@
 | 4 | [Virtualization and storage advanced](./4_Virtualization_And_Storage_Advanced.md) | Hyper-V and VirtualBox on Windows; Storage Spaces (software RAID-like) |
 | 5 | [Event logs, security, and WSL](./5_Event_Logs_Security_And_WSL.md) | Windows Event Log (Get-WinEvent, wevtutil); Group Policy, Defender, audit; WSL 2 in depth for DevOps |
 
----
-
 ## Adding topics
 
 New Windows topics can be added as numbered files and linked from this README. Community-maintained.

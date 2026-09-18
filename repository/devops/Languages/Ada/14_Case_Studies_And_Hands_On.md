@@ -4,8 +4,6 @@
 
 This topic gives **hands-on examples** and **case studies** so you can see the **implementation**, **format**, and **thought process** behind Ada code. Each example follows the same pattern: **concept or goal** → **approach** → **code** → **expected behavior**. The same pattern is used across all language sections in this handbook: define the concept, then illustrate with a code block or diagram so nothing is left vague.
 
----
-
 ## Format used in this handbook
 
 For every concept we use:
@@ -14,8 +12,6 @@ For every concept we use:
 2. **Then a code block or visual** — Concrete Ada code (or diagram) that shows the idea so you can see structure, syntax, and flow.
 
 That way you always get both the explanation and something you can read or run. The case studies below are full, runnable examples drawn from the Intro to Ada labs.
-
----
 
 ## Case study 1: Hello World (imperative entry point)
 
@@ -35,8 +31,6 @@ end Main;
 ```
 
 **Expected behavior:** Running the program prints `Hello World!` and exits.
-
----
 
 ## Case study 2: Greetings (procedure with parameter)
 
@@ -71,8 +65,6 @@ end Main;
 
 **Expected behavior:** For input `John`, output is `Hello John!`. For `Joanna`, output is `Hello Joanna!`.
 
----
-
 ## Case study 3: Classify number (if / elsif / else)
 
 **Goal:** Given an integer, classify it as positive, negative, or zero and display the result.
@@ -99,8 +91,6 @@ end Classify_Number;
 ```
 
 **Expected behavior:** Input `0` → `Zero`; `1` or `99999` → `Positive`; `-1` or `-99999` → `Negative`.
-
----
 
 ## Case study 4: Display numbers in range (loops and bounds)
 
@@ -133,8 +123,6 @@ end Display_Numbers;
 ```
 
 **Expected behavior:** For `1 5` or `5 1`, the program prints the numbers 1, 2, 3, 4, 5 (one per line). For `-5 -1`, it prints -5 through -1. The range is always from the smaller to the larger bound.
-
----
 
 ## Case study 5: Months package (spec, body, constants)
 
@@ -194,8 +182,6 @@ end Months;
 
 **Expected behavior:** Calling `Display_Months` prints a list of all 12 month names under the heading "Months:".
 
----
-
 ## Case study 6: Operations package (functions and child package)
 
 **Goal:** A package that provides four integer operations (Add, Subtract, Multiply, Divide) and a child package `Operations.Test` with a `Display (A, B)` procedure that shows all four operations for a given pair.
@@ -241,13 +227,9 @@ end Operations;
 
 **Expected behavior:** `Add (100, 2) = 102`, `Subtract (100, 2) = 98`, `Multiply (100, 2) = 200`, `Divide (100, 2) = 50`. `Display (10, 5)` prints a line showing all four operations for 10 and 5.
 
----
-
 ## More labs and solutions
 
 The learn.adacore.com **Introduction to Ada** course has a matching **Laboratories** document with exercises (and solutions) for: Imperative Language, Subprograms, Modular Programming, Strongly Typed Language, Records, Arrays, More About Types, Privacy, Generics, Exceptions, Tasking, Design by Contracts, Object Oriented Programming, and Standard Library (Containers, Dates & Times, Strings, Numerics). Each lab follows the same pattern: goal, steps, requirements, starter code, and expected I/O. The case studies above show the **format** and **thought process**; the full lab set gives more hands-on practice.
-
----
 
 ## Further reading
 

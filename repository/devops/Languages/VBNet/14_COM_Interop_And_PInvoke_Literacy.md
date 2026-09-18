@@ -8,8 +8,6 @@
 
 Office **VBA** macros are a different host and trust story—see the [VBA track](../VBA/README.md). Shared .NET runtime setup: [C# SDK chapter](../CSharp/2_Environment_Setup_And_DotNet_SDK.md). This chapter does **not** provide evasion, injection, or malware recipes.
 
----
-
 ## 1. Concepts
 
 ### 1. Two escape hatches off “pure managed”
@@ -78,8 +76,6 @@ This is **detection and maintenance literacy**, not a bypass guide. Prefer reduc
 
 Syntax familiarity does not mean the same security model. A VB.NET Windows service that `CreateObject`s Excel is not “just like a macro”—it is an **unattended automation** design with ops and licensing consequences.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. RCW lifetime and “Excel won’t quit”
@@ -114,8 +110,6 @@ Keep COM and P/Invoke behind a **small adapter project** with a managed-facing A
 
 Smell: `DllImport` and `CreateObject` sprinkled through button click handlers.
 
----
-
 ## 3. Applications and use cases
 
 | Legitimate door | Honest alternative when possible |
@@ -126,8 +120,6 @@ Smell: `DllImport` and `CreateObject` sprinkled through button click handlers.
 | Migrating VB6 COM-heavy LOB | Incremental; inventory ProgIds; plan bitness |
 
 Wrong hammer: embedding unbounded Automation and native calls in the same UI event handlers with no adapter layer.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -141,8 +133,6 @@ Wrong hammer: embedding unbounded Automation and native calls in the same UI eve
 - Do not treat strong naming or “it’s internal” as a substitute for reducing native/COM surface.
 - Separate VBA macro incidents ([VBA track](../VBA/README.md)) from VB.NET interop reviews—different hosts.
 - Never expand review into malware authoring, ASR bypass, or evasion how-tos—reduce and contain only.
-
----
 
 ## References
 

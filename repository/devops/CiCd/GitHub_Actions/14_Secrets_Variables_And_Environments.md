@@ -2,8 +2,6 @@
 
 [← Previous](./13_Reusable_Workflows_And_Composites.md) · [README](./README.md) · [Next: OIDC →](./15_OIDC_And_Cloud_Federation.md)
 
----
-
 ## 1. Concepts
 
 | Kind | Use for | Scopes |
@@ -24,8 +22,6 @@ jobs:
 ```
 
 Org secrets can be restricted to selected repositories. Environment secrets only exist for jobs that declare that `environment:`.
-
----
 
 ## 2. Advanced concepts
 
@@ -52,8 +48,6 @@ Gate approval wait has an upper bound (docs cite **30 days** — confirm live).
 
 `secrets: inherit` vs explicit secret mapping — be intentional so service repos don’t silently gain prod secrets.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -63,8 +57,6 @@ Gate approval wait has an upper bound (docs cite **30 days** — confirm live).
 | Cloud auth | OIDC ([15](./15_OIDC_And_Cloud_Federation.md)) |
 
 **Good:** env-scoped secrets + reviewers on production. **Bad:** one repo secret used for every environment with no gate.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [Next: Store a repository →](./02_Workspace_Project_Repo_And_Access.md)
 
----
-
 ## 1. Concepts
 
 If you are new to delivery tools: **CI/CD** means automating build, test, and deploy when code changes — the durable loop in [CiCd/1](../1_Pipelines_Build_Test_Deploy.md). **Bitbucket** is Atlassian’s place to **host Git repositories** and collaborate (pull requests, permissions). On **Bitbucket Cloud**, **Pipelines** is the built-in CI/CD that runs those automations from a file in the repo.
@@ -65,8 +63,6 @@ Plan tiers (Free / Standard / Premium) change **minutes**, **LFS**, and **admin 
 | Self-managed Bitbucket expecting Pipelines | Data Center ≠ Pipelines; plan Bamboo/Jenkins |
 | Need a different forge | [GitLab_CI/](../GitLab_CI/README.md), [Azure_DevOps/](../Azure_DevOps/README.md), … |
 
----
-
 ## 2. Advanced concepts
 
 ### Pipelines in one sentence
@@ -76,8 +72,6 @@ Steps run in **Docker containers** (Atlassian-hosted or your **runners**). You p
 ### Naming this folder
 
 Public path `Bitbucket/` is the CiCd tool home; content covers the **Bitbucket product**, with Pipelines as the delivery engine.
-
----
 
 ## 3. Applications and use cases
 
@@ -89,8 +83,6 @@ Public path `Bitbucket/` is the CiCd tool home; content covers the **Bitbucket p
 | SE learning delivery | Forge-native CI mapped to the universal loop |
 
 **Good:** Pipelines YAML in Git; merge checks require green builds on protected branches. **Bad:** assuming Cloud Premium controls exist unchanged on Data Center.
-
----
 
 ## References
 

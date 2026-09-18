@@ -8,8 +8,6 @@ How TypeScript learns about **JavaScript that was not written in TypeScript**: *
 
 Declarations are a **contract for the typechecker**. They do not ship runtime behavior. Wrong `.d.ts` is a false sense of safety—especially at trust boundaries (chapter **11**) and in dependency graphs (chapter **20**).
 
----
-
 ## 1. Concepts
 
 ### 1. What a declaration file is
@@ -132,8 +130,6 @@ For libraries:
 
 Point `package.json` **`types`** / **`exports`** at the emitted entry `.d.ts` so consumers resolve correctly under modern Node resolution.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Declaration merging
@@ -239,8 +235,6 @@ Staff habits:
 - Use JSDoc + `checkJs` to **buy time** and find bugs; plan renames to `.ts` / `.tsx` for long-lived packages (migration playbook: chapter **22**).
 - `allowJs` without `checkJs` still lets JS participate in the program for emit/interop—it is not the same as type safety.
 
----
-
 ## 3. Applications and use cases
 
 ### Application
@@ -274,8 +268,6 @@ Staff habits:
 | Lib eng | Missing `types` entry → consumers fall back to DT or any |
 | Sec / ops | Stale `@types` disagree with runtime CVE-fixed package |
 
----
-
 ## 4. Staff-level review checklist
 
 - Prefer in-package types over `@types` when both exist—remove duplicates.
@@ -289,8 +281,6 @@ Staff habits:
 - No Source/scrape paths or random blog stubs checked in as “official” types.
 - `allowJs` / `checkJs` / JSDoc used deliberately for gradual JS typing; `@ts-expect-error` preferred over ignore; rename plan for long-lived code.
 - TS **5.9.x** + `strict` for new declaration-emitting packages.
-
----
 
 ## References
 

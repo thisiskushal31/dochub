@@ -2,8 +2,6 @@
 
 [← Previous](./3_Chillers_Towers_And_Free_Cooling.md) · [README](./README.md) · [Next: Raised floor vs slab →](./5_Raised_Floor_Vs_Slab.md)
 
----
-
 ## 1. Concepts
 
 **Containment** physically separates cold supply from hot return so air goes through IT, not around it.
@@ -22,8 +20,6 @@ Doors, roofs, blanking, brushes at rack and aisle; sometimes drop-ceiling return
 ### Why it exists
 
 Without containment, raising CRAH fan speed mostly increases **bypass and mixing**. With containment, the same tons cool more kW.
-
----
 
 ## 2. Advanced concepts
 
@@ -52,8 +48,6 @@ Liquid RDHX ([6](./6_Liquid_Cooling_Rear_Door_And_Direct_To_Chip.md)) changes ex
 
 Same physics worldwide. Some operators standardize HAC for high density; others CAC. Learn the site’s standard before “fixing” a row.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -72,8 +66,6 @@ Same physics worldwide. Some operators standardize HAC for high density; others 
 - Never remove a containment panel for “temporary cable” permanently  
 
 **Good:** sealed aisles, closed doors, matched rack facing. **Bad:** containment theater with open roofs and missing blanking.
-
----
 
 ## References
 

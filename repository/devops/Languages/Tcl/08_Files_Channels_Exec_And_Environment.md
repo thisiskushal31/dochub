@@ -8,8 +8,6 @@ How Tcl talks to the filesystem and other processes: **`file`** and **`glob`**, 
 
 You leave able to write scripts that open files safely, configure encodings, transfer bytes without reinventing copy loops, parse CLI args for tools, run external programs without accidental shells, and review path/`exec` injection smells.
 
----
-
 ## 1. Concepts
 
 ### 1. Paths with `file` — not string concatenation
@@ -273,8 +271,6 @@ foreach arg $argv {
 
 Pair with ch **00** for the first `tclsh script.tcl …` smoke check, and with ch **16** when arguments influence `open` / `exec` / network targets.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Tcl 9 path and home literacy vs 8.6
@@ -349,8 +345,6 @@ Snapshot the env you need into a small dict; do not mutate `::env` globally in l
 - Tools that take paths from argv without `file normalize` + allowlist / jail checks.
 - Forgetting that `argv0` can be a relative path—resolve when comparing to `info script` or when locating sibling assets.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Patterns |
@@ -362,8 +356,6 @@ Snapshot the env you need into a small dict; do not mutate `::env` globally in l
 | **Software engineering** | Thin Tcl facades over CLI tools with stable argument vectors and pinned encodings |
 
 Expect (ch **15**) builds on channels and process control—this chapter is the non-interactive foundation those automations still rely on for file drops and helper binaries.
-
----
 
 ## Staff-level review checklist
 
@@ -379,8 +371,6 @@ Expect (ch **15**) builds on channels and process control—this chapter is the 
 - `cd` avoided in library code; cwd mutations documented if required.
 - `env` mutations scoped and restored when touching `PATH` / locale.
 - Tcl 9 `file home` / tilde migration considered for 8.6 ports.
-
----
 
 ## References
 

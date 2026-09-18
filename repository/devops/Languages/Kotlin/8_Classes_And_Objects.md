@@ -123,8 +123,6 @@ An **abstract class** cannot be instantiated directly; it is meant to be subclas
 
 Understanding classes, constructors, and objects is the basis for object-oriented structure in Kotlin. The next topic covers inheritance, interfaces, and abstract classes; after that, null safety and then collections and functional style.
 
----
-
 ## Further reading
 
 - [Classes](https://kotlinlang.org/docs/classes.html)

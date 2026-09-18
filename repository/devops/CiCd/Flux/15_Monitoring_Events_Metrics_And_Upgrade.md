@@ -2,8 +2,6 @@
 
 [← Previous](./14_Notifications_Alerts_And_Receivers.md) · [README](./README.md) · [Next: Scale →](./16_Scale_Multitenancy_And_Platform_Config.md)
 
----
-
 ## 1. Concepts
 
 Operate Flux like any other cluster service — watch whether it is doing its job.
@@ -19,8 +17,6 @@ Operate Flux like any other cluster service — watch whether it is doing its jo
 
 Alert when something stays **Not Ready** too long — not only when a Pod crashes.
 
----
-
 ## 2. Advanced concepts
 
 ### Upgrades
@@ -35,8 +31,6 @@ Read uninstall docs before you run them. Prune may remove apps Flux managed.
 
 Flux GitHub Action and E2E guides help pipelines assert GitOps health — pin CLI versions.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -46,8 +40,6 @@ Flux GitHub Action and E2E guides help pipelines assert GitOps health — pin CL
 | Incident | conditions → events → logs → Git revision → revert |
 
 **Good:** Flux health on the platform dashboard. **Bad:** discovering Failed Sources only when users complain.
-
----
 
 ## References
 

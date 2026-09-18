@@ -25,8 +25,6 @@ A metatable is an ordinary table. Keys are strings with two leading underscores 
 
 Other keys used by Lua: **__gc** (finalizer), **__close** (to-be-closed), **__mode** (weak table), **__name** (used by tostring and error messages). Add all needed metamethods to a table before using it as a metatable; set the metatable on the object right after creation so that **__gc** and others work as intended.
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §2.4 Metatables and Metamethods](https://www.lua.org/manual/5.5/manual.html#2.4)

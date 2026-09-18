@@ -2,8 +2,6 @@
 
 [← Previous](./4_OOB_Plane_Walk.md) · [README](./README.md) · [Next: Lose ToR →](./6_Failure_Lose_ToR.md)
 
----
-
 ## 1. Concepts
 
 **Worked failure:** Rack PDU A (or its upstream floor PDU/breaker) opens.
@@ -21,8 +19,6 @@
 
 Both PSUs in A; both ToRs on A; “redundant” UPS that isn’t.
 
----
-
 ## 2. Advanced concepts
 
 ### Walk order
@@ -38,8 +34,6 @@ Deep device: [Electrical/11](../Electrical/11_Rack_PDU_A_And_B.md), [Electrical/
 ### How it connects
 
 Tabletop with [6](./6_Failure_Lose_ToR.md) (combined power+net). Jobs escalation: [Jobs/6](../Jobs/6_Ticket_Taxonomy_And_Escalation.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -58,8 +52,6 @@ Tabletop with [6](./6_Failure_Lose_ToR.md) (combined power+net). Jobs escalation
 - Never “fix” by moving both cords to B permanently  
 
 **Good:** hosts ignore PDU A loss. **Bad:** silent single-path; chaos reboots.
-
----
 
 ## References
 

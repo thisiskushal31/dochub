@@ -2,8 +2,6 @@
 
 [← Previous](./12_Caches_And_Artifacts.md) · [README](./README.md) · [Next: Secrets →](./14_Secrets_Variables_And_Environments.md)
 
----
-
 ## 1. Concepts
 
 Stop copy-pasting CI YAML into every service repo.
@@ -53,8 +51,6 @@ Reusable **steps** (often `.github/actions/<name>/action.yml`) when you need a l
 
 Orgs can offer **templates** for “new workflow” scaffolding. **YAML anchors/aliases** reduce duplication *inside one file*. Cross-repo standards still belong in `workflow_call`.
 
----
-
 ## 2. Advanced concepts
 
 ### Sharing scope
@@ -83,8 +79,6 @@ Cloud trust can key off **`job_workflow_ref`** (the *called* reusable workflow r
 
 Same road for data-plane workers with different inputs ([CiCd/24](../24_Workflow_Automation_Beyond_PR_CI.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -94,8 +88,6 @@ Same road for data-plane workers with different inputs ([CiCd/24](../24_Workflow
 | Compliant deploy | Reusable deploy + OIDC trust on `job_workflow_ref` |
 
 **Good:** versioned paved road with CODEOWNERS. **Bad:** `@main` on reusable workflows; eighty divergent CI files.
-
----
 
 ## References
 

@@ -52,8 +52,6 @@ Scalar examples hide complexity: **strings**, **references**, and **custom types
 - Add **integration tests** at every interop seam.
 - For **JS**, verify **target runtime** version (for example **globalThis** expectations on older Node).
 
----
-
 ## Further reading
 
 - [Backend integration](https://nim-lang.org/docs/backends.html)

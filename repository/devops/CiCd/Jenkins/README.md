@@ -35,8 +35,6 @@ Each numbered chapter: **Concepts → Advanced → Applications/use cases → Re
 
 Suggested order: **01 → 26**. After **07**, jump to **22** if you learn by building.
 
----
-
 ## Chapters
 
 | # | File | Focus |

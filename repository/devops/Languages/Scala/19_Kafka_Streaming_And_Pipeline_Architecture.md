@@ -8,8 +8,6 @@
 
 This chapter is **pipeline architecture literacy**, not a broker operations runbook and not a substitute for chapter 17’s placement cheatsheet.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. What Kafka is
@@ -191,8 +189,6 @@ entity changelog topic:   compaction by key; readers rebuild state
 ### 8. Consumer group assignment intuition
 
 Partitions are assigned to members of a group. More consumers than partitions yields idle members. Fewer consumers than partitions stacks multiple partitions per member. Scaling throughput usually means **more partitions** (planned ahead—repartitioning is operational work) plus more consumers, not only larger heaps.
-
----
 
 ## 2. Advanced concepts
 
@@ -425,8 +421,6 @@ On topics that carry PII or regulated data:
 
 **Offset reset / replay** is not a free ops convenience. Replaying a retained PII topic can re-exfiltrate data into new sinks, amplify integrity bugs (double side effects), and bypass “we already processed that.” Require **approval + audit** for resets outside a documented reprocess runbook: who asked, which group/topic/partitions, time window, and which sinks were frozen or made idempotent.
 
----
-
 ## 3. Applications and use cases
 
 ### Data engineering
@@ -539,8 +533,6 @@ Portfolio sketch:
 - Client and (if Spark) connector versions pinned to platform-approved lines.
 - Runbooks: replay, stuck partition, DLQ drain, credential rotation.
 - Produce authorization treated as a trust boundary for downstream consumers.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./19_Duo_And_AI_Literacy.md) · [README](./README.md) · [Next: API →](./21_API_Webhooks_And_Integrations.md)
 
----
-
 ## 1. Concepts
 
 If you run **GitLab Self-Managed**, someone owns install, upgrade, backup, auth, scaling, and runner fleets. This chapter is a **door** into admin docs — not Omnibus/Helm runbooks.
@@ -18,8 +16,6 @@ If you run **GitLab Self-Managed**, someone owns install, upgrade, backup, auth,
 
 CI depends on admin choices: runner capacity, object storage for artifacts, container registry backend, outbound network for pulls.
 
----
-
 ## 2. Advanced concepts
 
 | Topic | Why CI cares |
@@ -32,8 +28,6 @@ CI depends on admin choices: runner capacity, object storage for artifacts, cont
 
 **Upstream-only:** every administration page and every ref-arch BOM.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -42,8 +36,6 @@ CI depends on admin choices: runner capacity, object storage for artifacts, cont
 | SaaS-only org | Skim this chapter; focus CI chapters |
 
 **Good:** admin + CI platform as one ownership story. **Bad:** app teams registering privileged runners with no patching owner.
-
----
 
 ## References
 

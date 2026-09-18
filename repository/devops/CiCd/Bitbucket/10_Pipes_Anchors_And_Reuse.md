@@ -2,8 +2,6 @@
 
 [← Previous](./09_Caches_Artifacts_And_Services.md) · [README](./README.md) · [Next: Deployments →](./11_Deployments_And_Environments.md)
 
----
-
 ## 1. Concepts
 
 **Pipes** are packaged actions (often from Atlassian or partners) invoked from a step — analogous to GitHub Actions or Azure tasks. **YAML anchors** reuse fragments inside one file. **Child pipelines** call other pipelines.
@@ -21,8 +19,6 @@
 
 Pin pipe versions.
 
----
-
 ## 2. Advanced concepts
 
 ### Paved road
@@ -39,8 +35,6 @@ Anchors: same-repo DRY. Pipes: cross-repo, versioned, Marketplace-visible. Child
 
 Third-party pipes are code execution in your build — review publishers like other CI plugins ([CiCd/6](../6_Supply_Chain_And_Signing.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -50,8 +44,6 @@ Third-party pipes are code execution in your build — review publishers like ot
 | Org CI standard | Shared pipe + required merge checks |
 
 **Good:** pin majors; read release notes. **Bad:** floating `@latest` pipes on prod deploys.
-
----
 
 ## References
 

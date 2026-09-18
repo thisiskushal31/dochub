@@ -4,13 +4,9 @@
 
 **Protocols** are Elixir’s mechanism for **polymorphic** behavior: one interface (a set of functions) with different implementations per type. Built-in protocols include **Enumerable**, **String.Chars** (for interpolation and `to_string`), **Inspect** (for IEx and debugging), and **Collectable** (for building collections with `into`). This topic explains how to use protocols and how to implement one for your own types (e.g. structs) so they work with the standard library and with pattern matching.
 
----
-
 ## What protocols are
 
 A protocol defines a set of function signatures (name and arity). Any type (usually a struct) can implement the protocol by providing those functions. When you call a protocol function, the implementation is chosen at runtime based on the type of the first argument. So one function name can behave differently for different data types—polymorphism without classes.
-
----
 
 ## Example: implementing a protocol for a struct
 
@@ -32,13 +28,9 @@ to_string(%User{name: "Alice", email: "a@b.com"})
 
 Other common protocols: **Inspect** (for pretty-printing in IEx and logs), **Enumerable** (for Enum and Stream), **Collectable** (for `into`). The protocol documentation lists the required callbacks.
 
----
-
 ## Protocols and structs
 
 Structs are the typical type used with protocols because they have a single “type” (the struct module). You can also implement protocols for built-in types (e.g. for a custom Inspect for a tuple) in limited cases. When you define a struct that should work with Enum, Inspect, or string interpolation, add the corresponding `defimpl` in the same project.
-
----
 
 ## Built-in protocols
 
@@ -49,8 +41,6 @@ Structs are the typical type used with protocols because they have a single “t
 - **List.Chars** — `to_charlist/1`; used when a charlist is required.
 
 Implementing these for your structs makes them behave like built-in types in pipelines, logging, and debugging—useful for application and DevOps tooling.
-
----
 
 ## Further reading
 

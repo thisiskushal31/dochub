@@ -8,8 +8,6 @@ Zig’s systems superpower: **talk to C without a separate FFI language**. How t
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. Why C interop is first-class
@@ -129,8 +127,6 @@ export fn tool_free(ptr: ?[*]u8) void {
 
 **Where you use it.** Put flags in the build file—tribal `CFLAGS` in a shell profile are not a build system.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Trust boundaries
@@ -158,8 +154,6 @@ Linking libc vs freestanding changes available APIs (chapter **02**). Assuming P
 
 Focus on buffer lengths, ownership of returned pointers, error mapping, and whether ReleaseFast Zig + unsafe C is acceptable for the threat model (chapter **15**).
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Interop role |
@@ -172,8 +166,6 @@ Focus on buffer lengths, ownership of returned pointers, error mapping, and whet
 
 **Whole-engineering picture:** interop is how Zig joins the existing world instead of demanding a greenfield planet.
 
----
-
 ## 4. Staff-level review checklist
 
 - New 0.16 code uses `addTranslateC` (or documented equivalent)—not new `@cImport` islands.
@@ -182,8 +174,6 @@ Focus on buffer lengths, ownership of returned pointers, error mapping, and whet
 - Extern layouts for shared structs are explicit and tested.
 - Exported symbols that are product API are smoke-tested from C or another FFI caller.
 - Trust level of C dependencies is stated (internal / vendor / untrusted).
-
----
 
 ## References
 

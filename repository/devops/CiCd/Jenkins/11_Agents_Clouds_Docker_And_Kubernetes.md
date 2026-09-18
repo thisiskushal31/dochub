@@ -2,8 +2,6 @@
 
 [← Previous](./10_Multibranch_And_Organization_Folders.md) · [README](./README.md) · [Next: Credentials →](./12_Credentials_Secrets_And_Binding.md)
 
----
-
 ## 1. Concepts
 
 Agents execute work. Controllers schedule and show UI — they should not be your build farm ([03](./03_Architecture_Controller_Agents_Executors.md)).
@@ -46,8 +44,6 @@ agent {
 
 Kubernetes: prefer pod templates configured on the cloud (UI/JCasC); Pipeline can also use `agent { kubernetes { … } }` when the Kubernetes plugin is installed — copy the snippet from your controller’s snippet generator for the exact syntax your plugin version expects.
 
----
-
 ## 2. Advanced concepts
 
 ### Cloud templates
@@ -81,8 +77,6 @@ At scale, externalizing build records/artifacts storage appears in using docs �
 
 Inbound agents behind NAT need correct reverse-proxy WebSocket / remoting settings ([20](./20_Scaling_HA_Backup_And_Monitoring.md)). Offline agents → queue starvation ([25](./25_Jenkinsfile_JCasC_And_Config_Catalog.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -93,8 +87,6 @@ Inbound agents behind NAT need correct reverse-proxy WebSocket / remoting settin
 | Regulated / air-gap | Permanent agents; no public cloud plugins |
 
 **Good:** ephemeral agents for untrusted code; labels owned by platform. **Bad:** privileged Docker socket on shared PR agents; builds on built-in node.
-
----
 
 ## References
 

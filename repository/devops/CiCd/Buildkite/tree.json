@@ -4,188 +4,188 @@
     "path": "01_What_Is_Buildkite.md",
     "type": "file",
     "sha": "",
-    "size": 3612
+    "size": 3592
   },
   {
     "name": "02_Organization_Teams_And_Clusters.md",
     "path": "02_Organization_Teams_And_Clusters.md",
     "type": "file",
     "sha": "",
-    "size": 2040
+    "size": 2020
   },
   {
     "name": "03_Create_Pipeline_Connect_Git_And_View_Builds.md",
     "path": "03_Create_Pipeline_Connect_Git_And_View_Builds.md",
     "type": "file",
     "sha": "",
-    "size": 2968
+    "size": 2948
   },
   {
     "name": "04_Agents_Self_Hosted_And_Hosted.md",
     "path": "04_Agents_Self_Hosted_And_Hosted.md",
     "type": "file",
     "sha": "",
-    "size": 2428
+    "size": 2408
   },
   {
     "name": "05_Queues_Clusters_And_Targeting.md",
     "path": "05_Queues_Clusters_And_Targeting.md",
     "type": "file",
     "sha": "",
-    "size": 2073
+    "size": 2053
   },
   {
     "name": "06_Pipeline_YAML_And_Step_Types.md",
     "path": "06_Pipeline_YAML_And_Step_Types.md",
     "type": "file",
     "sha": "",
-    "size": 2216
+    "size": 2196
   },
   {
     "name": "07_Templates_And_First_Pipeline_Yml.md",
     "path": "07_Templates_And_First_Pipeline_Yml.md",
     "type": "file",
     "sha": "",
-    "size": 2334
+    "size": 2314
   },
   {
     "name": "08_Workflows_Depends_Matrix_Schedules_And_Blocks.md",
     "path": "08_Workflows_Depends_Matrix_Schedules_And_Blocks.md",
     "type": "file",
     "sha": "",
-    "size": 2146
+    "size": 2126
   },
   {
     "name": "09_Plugins_Artifacts_Cache_And_Annotations.md",
     "path": "09_Plugins_Artifacts_Cache_And_Annotations.md",
     "type": "file",
     "sha": "",
-    "size": 1897
+    "size": 1877
   },
   {
     "name": "10_Secrets_Environment_And_OIDC.md",
     "path": "10_Secrets_Environment_And_OIDC.md",
     "type": "file",
     "sha": "",
-    "size": 2328
+    "size": 2308
   },
   {
     "name": "11_Dynamic_Pipelines_And_Pipeline_Upload.md",
     "path": "11_Dynamic_Pipelines_And_Pipeline_Upload.md",
     "type": "file",
     "sha": "",
-    "size": 2002
+    "size": 1982
   },
   {
     "name": "12_Deployments_And_Environments.md",
     "path": "12_Deployments_And_Environments.md",
     "type": "file",
     "sha": "",
-    "size": 2932
+    "size": 2912
   },
   {
     "name": "13_Self_Hosted_Stacks_AWS_And_Kubernetes.md",
     "path": "13_Self_Hosted_Stacks_AWS_And_Kubernetes.md",
     "type": "file",
     "sha": "",
-    "size": 2432
+    "size": 2412
   },
   {
     "name": "14_Package_Registries_And_Test_Engine.md",
     "path": "14_Package_Registries_And_Test_Engine.md",
     "type": "file",
     "sha": "",
-    "size": 2410
+    "size": 2390
   },
   {
     "name": "15_Platform_Teams_SSO_And_Governance.md",
     "path": "15_Platform_Teams_SSO_And_Governance.md",
     "type": "file",
     "sha": "",
-    "size": 1862
+    "size": 1842
   },
   {
     "name": "16_Worked_Example_Build_And_Deploy.md",
     "path": "16_Worked_Example_Build_And_Deploy.md",
     "type": "file",
     "sha": "",
-    "size": 2007
+    "size": 1987
   },
   {
     "name": "17_Best_Practices_And_When_Not_Buildkite.md",
     "path": "17_Best_Practices_And_When_Not_Buildkite.md",
     "type": "file",
     "sha": "",
-    "size": 1640
+    "size": 1620
   },
   {
     "name": "18_Feature_And_Configuration_Coverage_Map.md",
     "path": "18_Feature_And_Configuration_Coverage_Map.md",
     "type": "file",
     "sha": "",
-    "size": 3667
+    "size": 3647
   },
   {
     "name": "19_YAML_And_Configuration_Catalog.md",
     "path": "19_YAML_And_Configuration_Catalog.md",
     "type": "file",
     "sha": "",
-    "size": 1865
+    "size": 1845
   },
   {
     "name": "20_Troubleshooting_And_Staff_Checklist.md",
     "path": "20_Troubleshooting_And_Staff_Checklist.md",
     "type": "file",
     "sha": "",
-    "size": 2603
+    "size": 2583
   },
   {
     "name": "21_Source_Control_Providers_And_Code_Access.md",
     "path": "21_Source_Control_Providers_And_Code_Access.md",
     "type": "file",
     "sha": "",
-    "size": 2494
+    "size": 2474
   },
   {
     "name": "22_Agent_Hooks_Lifecycle_And_Install_Spectrum.md",
     "path": "22_Agent_Hooks_Lifecycle_And_Install_Spectrum.md",
     "type": "file",
     "sha": "",
-    "size": 3265
+    "size": 3245
   },
   {
     "name": "23_Hosted_Agent_Operations.md",
     "path": "23_Hosted_Agent_Operations.md",
     "type": "file",
     "sha": "",
-    "size": 2589
+    "size": 2569
   },
   {
     "name": "24_Integrations_Notifications_Observability_And_Insights.md",
     "path": "24_Integrations_Notifications_Observability_And_Insights.md",
     "type": "file",
     "sha": "",
-    "size": 2339
+    "size": 2319
   },
   {
     "name": "25_Governance_Permissions_And_Migration.md",
     "path": "25_Governance_Permissions_And_Migration.md",
     "type": "file",
     "sha": "",
-    "size": 2350
+    "size": 2330
   },
   {
     "name": "26_APIs_CLI_Terraform_And_Platform_Extras.md",
     "path": "26_APIs_CLI_Terraform_And_Platform_Extras.md",
     "type": "file",
     "sha": "",
-    "size": 2555
+    "size": 2535
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 5733
+    "size": 5728
   }
 ]

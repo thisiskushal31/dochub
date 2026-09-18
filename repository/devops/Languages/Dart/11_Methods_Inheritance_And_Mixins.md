@@ -4,8 +4,6 @@
 
 Classes do not only hold data—they define **methods** (instance and static) and can **extend** one superclass and **implement** multiple interfaces. **Mixins** let you reuse a chunk of behavior in many class hierarchies without the limits of single inheritance. **Abstract** classes and methods define a **contract** that concrete subclasses must fulfill. This topic explains **when** to use each so you can structure and reuse behavior clearly from intermediate to advanced level.
 
----
-
 ## Instance and static methods
 
 **Instance methods** operate on the current instance and can access `this`. **Static methods** (and static variables) belong to the class and do not have access to `this`. Call static members on the class: `ClassName.staticMethod()`.
@@ -17,8 +15,6 @@ class Counter {
   static int maxCount = 100;
 }
 ```
-
----
 
 ## Extending a class
 
@@ -36,8 +32,6 @@ class Dog extends Animal {
 
 Constructors are not inherited. Subclass constructors must call a superclass constructor (e.g. `super()` or `super.named()`) in the initializer list or implicitly if the superclass has a default constructor.
 
----
-
 ## Abstract classes
 
 **Abstract classes** cannot be instantiated. They can declare **abstract methods** (no body); subclasses must implement them. Abstract classes can still have concrete methods and fields.
@@ -54,13 +48,9 @@ class Circle extends Shape {
 }
 ```
 
----
-
 ## Interfaces
 
 Every class implicitly defines an **interface**. Use **`implements`** to implement one or more interfaces (classes). You must then provide implementations for every member of those interfaces. Use `implements` when you want to fulfill a contract without inheriting implementation.
-
----
 
 ## Mixins
 
@@ -77,8 +67,6 @@ class Musician extends Performer with Musical {}
 ```
 
 If a mixin needs members that the using class must provide, declare **abstract** methods in the mixin; any class that uses the mixin must implement them. You can restrict which types can use a mixin with **`on`** (e.g. `mixin A on B { }`).
-
----
 
 ## Further reading
 

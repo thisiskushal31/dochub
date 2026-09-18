@@ -2,8 +2,6 @@
 
 [← Previous](./3_SAN_Fibre_Channel.md) · [README](./README.md) · [Next: HBA and multipath →](./5_HBA_HCA_And_Multipath.md)
 
----
-
 ## 1. Concepts
 
 **iSCSI** and **NVMe over Fabrics (NVMe-oF)** deliver **block** storage over Ethernet (and NVMe-oF also over other fabrics). They replace or complement FC in many greenfield halls.
@@ -19,8 +17,6 @@
 ### Where it sits
 
 Host NICs (or DPU) → dedicated storage VLAN/VRF or fabric → target portals on array/SDS gateway.
-
----
 
 ## 2. Advanced concepts
 
@@ -42,8 +38,6 @@ Separation: [Fabric-Physical/11](../Fabric-Physical/11_Storage_Network_Separatio
 
 Same IP storage ideas worldwide. RDMA needs capable NICs/switches—don’t assume every leaf supports it.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -62,8 +56,6 @@ Same IP storage ideas worldwide. RDMA needs capable NICs/switches—don’t assu
 - Never run cluster quorum disks on best-effort Wi-Fi-grade paths  
 
 **Good:** isolated Ethernet storage, multipath, tested failovers. **Bad:** iSCSI on default VLAN; single portal; MTU folklore.
-
----
 
 ## References
 

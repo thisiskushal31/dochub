@@ -2,8 +2,6 @@
 
 [← Previous](./06_Pipeline_Core_And_Jenkinsfile.md) · [README](./README.md) · [Next: Declarative syntax →](./08_Declarative_Pipeline_Syntax.md)
 
----
-
 ## 1. Concepts
 
 1. Ensure an **agent** with a matching label (or Docker agent).  
@@ -31,8 +29,6 @@ Classic UI: New Item → Pipeline → Pipeline script from SCM.
 
 Official Guided Tour and language tutorials (Java, Node, Python, …) are on-ramps — same Pipeline shape; language cookbooks stay thin here.
 
----
-
 ## 2. Advanced concepts
 
 ### Replay and restart
@@ -47,8 +43,6 @@ Aborting / killing hung builds — know executor cleanup ([using docs](https://w
 
 UI helpers emit Declarative/Scripted snippets from installed plugins — great for discovery; still commit reviewed code.
 
----
-
 ## 3. Applications and use cases
 
 | Checkpoint | Evidence |
@@ -58,8 +52,6 @@ UI helpers emit Declarative/Scripted snippets from installed plugins — great f
 | Agent isolation | Build did not use controller executors |
 
 **Good:** change via MR/PR to Jenkinsfile. **Bad:** edit script only in job config forever.
-
----
 
 ## References
 

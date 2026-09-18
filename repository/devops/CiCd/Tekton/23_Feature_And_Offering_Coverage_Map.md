@@ -2,8 +2,6 @@
 
 [← Previous](./22_Best_Practices_And_When_Not_Tekton.md) · [README](./README.md) · [Next: Catalog →](./24_YAML_CRD_Catalog_And_Troubleshooting.md)
 
----
-
 ## 1. Concepts
 
 Final **product + configuration map** for Tekton. The ecosystem is Pipelines plus supporting projects. This track covers **every major offering class**; Hub Task encyclopedias, full OpenAPI dumps, and contributor guides stay upstream.
@@ -60,8 +58,6 @@ flowchart TB
   OP --> T & TRIG & CH & RESAPI & PRU & DASH
   OBS --> P
 ```
-
----
 
 ## 2. Advanced — full offering inventory
 
@@ -246,7 +242,6 @@ flowchart TB
 
 ### O. Intentionally upstream
 
-
 | Surface | Why |
 |---------|-----|
 | Every Task/Pipeline on Hub/Catalog | Pin and read what you install |
@@ -258,13 +253,9 @@ flowchart TB
 | Dashboard localization / installer internals | Upstream |
 | Central TLS *test plans* | Distro QA docs |
 
----
-
 ## 3. Applications and use cases
 
 Walk **A–L** for your platform: **use / later / N/A**. Production gaps in auth (C), prune/Results (I), and Chains (H) beat collecting more Hub Tasks.
-
----
 
 ## References
 

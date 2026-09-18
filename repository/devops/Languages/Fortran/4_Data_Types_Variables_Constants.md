@@ -61,8 +61,6 @@ integer, parameter :: max_size = 100
 
 **Why this matters.** Correct types and explicit declarations prevent subtle bugs (e.g. integer division when you meant real, or a typo creating an unintended variable). In scientific code, choosing the right real kind is important for precision and reproducibility.
 
----
-
 ## Further reading
 
 - [Fortran – Data Types (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_data_types.htm)

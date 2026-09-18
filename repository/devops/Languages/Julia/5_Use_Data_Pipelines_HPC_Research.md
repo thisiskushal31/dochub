@@ -44,8 +44,6 @@ Julia reads **environment variables** via **`ENV`**: `ENV["VAR_NAME"]` returns t
 
 On HPC systems, Julia jobs are often run as batch jobs: the scheduler allocates nodes, and Julia is started with the right number of processes (and possibly threads). Cluster managers and packages can integrate with schedulers (e.g. to spawn workers on assigned nodes). Reproducibility is important: use a manifest and, if needed, a fixed Julia version. Resource limits (memory, CPU, wall time) should be set at the scheduler level. When you operate or secure such environments, ensure that job submission, environment activation, and dependency installation follow a consistent and auditable path; avoid ad-hoc installs or mutable global environments in production.
 
----
-
 ## Use cases: what Julia is used for
 
 The following sections describe **use cases** of Julia: where and why the language is used in practice. Use this to recognize contexts (simulation, data science, HPC, DevOps, security) and to map topics to your role.
@@ -77,8 +75,6 @@ Julia appears wherever numerical or scientific computing meets a need for both e
 - **Research / HPC** — Use parallel and distributed computing for cluster jobs; pin Julia version and manifest for reproducibility. Set resource limits at the scheduler level and avoid mutable global environments in production runs.
 
 **Where implementation lives.** How you run Julia in a specific stack—exact CI job config, Terraform, or Kubernetes—is covered in the handbook sections for those technologies (CiCd, IAC, Cloud-Native). This section explains how the language and its concurrency model work and where Julia fits in the engineering landscape.
-
----
 
 ## Further reading
 

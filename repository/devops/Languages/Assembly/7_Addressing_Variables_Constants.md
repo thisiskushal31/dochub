@@ -4,8 +4,6 @@
 
 This topic covers **addressing modes** (where operands come from), **variables** (reserving and initializing memory), and **constants** in NASM-style assembly. Text first, then code. See **Further reading** for sources.
 
----
-
 ## Addressing modes (overview)
 
 Instructions need **operands**. The way an operand is specified is the **addressing mode**.
@@ -17,8 +15,6 @@ Instructions need **operands**. The way an operand is specified is the **address
 - **Direct-offset / indexed** — Address = base + offset or base + index (e.g. `mov al, [table+2]` or `[ebx+ecx*4]`).
 
 Processing between registers is fastest; memory access is slower and uses the data segment (e.g. DS) and effective address.
-
----
 
 ## Register and immediate addressing
 
@@ -35,8 +31,6 @@ add  ecx, edx
 mov  eax, 45h
 add  byte [value], 65
 ```
-
----
 
 ## Direct and direct-offset memory addressing
 
@@ -56,8 +50,6 @@ mov  cl, [byte_table + 2]    ; 3rd element
 mov  cx, [word_table + 3]   ; 4th word (byte offset 3 for word array depends on layout)
 ```
 
----
-
 ## Indirect memory addressing
 
 Address is in a register (e.g. EBX, EBP, ESI, EDI). Used for arrays and pointers: load base address, then use register to index.
@@ -70,8 +62,6 @@ mov  [ebx], 110        ; first word
 add  ebx, 2
 mov  [ebx], 123        ; second word
 ```
-
----
 
 ## The MOV instruction and type specifiers
 
@@ -93,8 +83,6 @@ Example:
 ```asm
 mov  dword [ebx], 110   ; store 32-bit 110 at [ebx]
 ```
-
----
 
 ## Variables: initialized data (define directives)
 
@@ -120,8 +108,6 @@ real4     dd  1.234
 
 Characters are stored as ASCII (or UTF-8); numbers in little-endian; negatives in two’s complement; floats in the format the assembler supports.
 
----
-
 ## Variables: uninitialized data (reserve directives)
 
 In **.bss** (or .data), use **reserve** directives to allocate space without initial value (loader typically zero-fills):
@@ -142,8 +128,6 @@ buf   resb  64
 count resd  1
 ```
 
----
-
 ## Multiple initializations: TIMES
 
 **TIMES** repeats a definition or reservation.
@@ -152,8 +136,6 @@ count resd  1
 stars  times 9 db '*'
 marks  times 9 dw 0
 ```
-
----
 
 ## Constants: EQU, %assign, %define
 
@@ -183,8 +165,6 @@ mov  ecx, TOTAL_STUDENTS
 ; ...
 mov  eax, PTR    ; expands to [ebp+4]
 ```
-
----
 
 ## Further reading
 

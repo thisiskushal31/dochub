@@ -8,8 +8,6 @@ Why “Linux” is **not one shell environment**: the **interactive** shell, the
 
 OS companion for Linux admin context (not a duplicate of this curriculum): [`../../Operating-Systems/Linux/9_Shell_And_Scripting.md`](../../Operating-Systems/Linux/9_Shell_And_Scripting.md).
 
----
-
 ## 1. Concepts
 
 ### 1. Three axes people collapse into “the shell”
@@ -101,8 +99,6 @@ Installing Bash fixes the **language**. It does **not** automatically replace Bu
 4. Only then talk about Bash **version**.
 
 That order prevents 80% of “but it works on my Linux” arguments.
-
----
 
 ## 2. Advanced concepts
 
@@ -295,8 +291,6 @@ CI cells covering this pin: _______
 
 Fill one card per base image. Attach to the service ADR.
 
----
-
 ## 3. Applications and use cases
 
 ### DevOps: CI matrix honesty
@@ -428,8 +422,6 @@ Linux admin and command context: [`../../Operating-Systems/Linux/9_Shell_And_Scr
 - Security runbooks name target `/bin/sh`, not “bash on Linux.”  
 - Distroless: absence of shell documented (debug via ephemeral containers).  
 - OS companion consulted for Linux admin context when needed; dialect depth stays here.
-
----
 
 ## References
 

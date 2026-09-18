@@ -6,8 +6,6 @@
 
 How **OS threads**, **shared-state synchronization**, and **message passing** work in the standard library; what **`Send`** and **`Sync`** mean; how **interior mutability** (`Cell`, `RefCell`) fits; and why **safe Rust prevents data races** without making deadlocks or logic bugs impossible. After this chapter you should choose between channels and locks deliberately and review concurrent code for ownership across thread boundaries.
 
----
-
 ## 1. Concepts
 
 ### 1. Threads are OS threads
@@ -119,8 +117,6 @@ fn config() -> &'static str {
 
 These types encode “initialize at most once” in the type system. **`static mut`** requires `unsafe` on every access, races easily under concurrency, and is almost never the right teaching default. If initialization can fail, surface `Result` from an explicit init function rather than panicking inside a hidden lazy path without a policy.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Scoped threads and lifetimes
@@ -204,8 +200,6 @@ Staff policy choices (pick one per subsystem and document it):
 
 Do **not** habitually `.unwrap()` poison as “it will never happen,” and do not silently `into_inner()` without repair. Poison is a signal that a concurrent panic already violated an invariant; recovery without validation is hoping. Pair poison policy with the panic-across-threads policy in §10.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -246,8 +240,6 @@ Do **not** habitually `.unwrap()` poison as “it will never happen,” and do n
 - Application code does not hand-roll **`park`/`unpark`** protocols when channels or `Condvar` suffice.
 - Data-race freedom is not confused with deadlock freedom.
 - Sync primitives default to `std` unless a documented, measured exception exists.
-
----
 
 ## References
 

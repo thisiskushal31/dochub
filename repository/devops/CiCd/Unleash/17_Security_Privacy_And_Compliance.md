@@ -2,8 +2,6 @@
 
 [← Previous](./16_AI_Assistants_MCP_And_Assisted_Delivery.md) · [README](./README.md) · [Next: Operate →](./18_Scale_Upgrade_Operate_And_Troubleshoot.md)
 
----
-
 ## 1. Concepts
 
 Feature flags are a **production control plane**. Security work covers:
@@ -17,8 +15,6 @@ Feature flags are a **production control plane**. Security work covers:
 | **Change control** | Change requests, audit/events |
 
 Architecture intent: evaluation happens in your runtime; Unleash distributes definitions. Still: **you** choose what context to send and what payloads to store.
-
----
 
 ## 2. Advanced concepts
 
@@ -42,8 +38,6 @@ Frontend API CORS defaults to `*` — restrict origins per environment so random
 
 Operational controls exist to signal degraded admin or freeze changes — know them before incident week.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -60,8 +54,6 @@ Operational controls exist to signal degraded admin or freeze changes — know t
 - Frontend flags never sole authz  
 
 **Good:** kill switch for risky processing. **Bad:** “security through obscurity” flag name hiding an open Admin token.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./13_Shared_Libraries_And_Job_DSL.md) · [README](./README.md) · [Next: Artifacts →](./15_Artifacts_Fingerprints_And_Promotions.md)
 
----
-
 ## 1. Concepts
 
 What starts a build:
@@ -32,8 +30,6 @@ pipeline {
 }
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### Quiet period
@@ -48,8 +44,6 @@ Validate payloads; don’t expose unauthenticated trigger URLs with tokens in th
 
 Still taught in host-based programs ([18](./18_Classical_Host_And_Web_Deploy.md)). Use `H` hash for load spreading.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -59,8 +53,6 @@ Still taught in host-based programs ([18](./18_Classical_Host_And_Web_Deploy.md)
 | Air-gap SCM | Poll SCM + bastion agent |
 
 **Good:** webhook-first. **Bad:** polling every minute across thousands of jobs.
-
----
 
 ## References
 

@@ -4,8 +4,6 @@
 
 **Destructuring** binds names to parts of a data structure by describing its shape (e.g. “first element”, “key :a”). **Threading macros** rewrite nested calls into a linear pipeline so each step passes its result into the next. Both make code shorter and easier to read.
 
----
-
 ## Sequential destructuring
 
 In **let**, **defn** parameters, or **for**, you can use a **vector** on the left side that mirrors the **shape** of the value. Elements are bound by position. **&** plus a name binds the rest to a sequence.
@@ -28,8 +26,6 @@ Nested structures can be destructured recursively:
 ;; => [5 10 10 20]
 ```
 
----
-
 ## Associative destructuring
 
 For **maps** you use a **map** on the left: keys are the pattern, symbols are the bindings. **:keys** pulls keyword keys into locals; **:as** binds the whole map; **:or** gives defaults when a key is missing.
@@ -45,8 +41,6 @@ For **maps** you use a **map** on the left: keys are the pattern, symbols are th
 ```
 
 **:strs** and **:syms** work for string and symbol keys.
-
----
 
 ## Thread-first (->) and thread-last (->>)
 
@@ -66,8 +60,6 @@ For **maps** you use a **map** on the left: keys are the pattern, symbols are th
 
 Use **->** for data (maps, “subject” as first arg); use **->>** for sequences (collection as last arg to map/filter etc.).
 
----
-
 ## as->
 
 **as->** binds a name for the threaded value so you can place it explicitly in the next form (e.g. not first or last).
@@ -78,8 +70,6 @@ Use **->** for data (maps, “subject” as first arg); use **->>** for sequence
   (reduce + x))
 ;; => 9
 ```
-
----
 
 ## Further reading
 

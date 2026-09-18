@@ -8,8 +8,6 @@ This is a **pillar** chapter: how production TypeScript code **fails safely**. Y
 
 You leave able to design failure modes that CI can enforce and on-call can read.
 
----
-
 ## 1. Concepts
 
 ### 1. Types do not catch runtime failures
@@ -214,8 +212,6 @@ try {
 ```
 
 **What just happened:** `any` disabled the guardrail the language gave you.
-
----
 
 ## 2. Advanced concepts
 
@@ -457,8 +453,6 @@ function run(cmd: Cmd): Result<string, AppError> {
 
 If `assertNever` returns `never`, the `return` is for types; runtime never continues. Alternatively throw inside `default` only.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -485,8 +479,6 @@ Whole-engineering review narrative:
 4. On `Err`, print code/message, `exitCode = 1`.
 5. On `Ok`, start runtime; unexpected throws bubble to top-level handler that logs and exits.
 
----
-
 ## Staff-level review checklist
 
 - `catch` variables are `unknown` (or equivalent strict); no `any`.
@@ -504,8 +496,6 @@ Whole-engineering review narrative:
 - React/UI render failures routed to chapter **19** / react.dev—boundaries are not a substitute for typed `catch` / Results.
 - `instanceof` on custom `Error` subclasses verified under the project `target`.
 - Unhandled rejection hooks / CLI exit codes considered.
-
----
 
 ## References
 

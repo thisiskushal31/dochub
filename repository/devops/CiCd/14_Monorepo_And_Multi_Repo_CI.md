@@ -6,8 +6,6 @@ Repo layout changes how you **select what to build/test/deploy**. Wrong selectio
 
 Runners/caching basics: [11](./11_Pipeline_As_Code_Runners_Caching_Matrix.md).
 
----
-
 ## Two layouts
 
 | Layout | CI challenge |
@@ -16,8 +14,6 @@ Runners/caching basics: [11](./11_Pipeline_As_Code_Runners_Caching_Matrix.md).
 | **Monorepo** | One clone; risk of rebuilding *everything* every PR; need affected-project selection |
 
 Neither is universally “more DevOps.” Delivery still needs small batches, fast feedback, and clear ownership ([Methodologies/16](../Methodologies/16_Roles_Teams_And_Platforms.md)).
-
----
 
 ## Path filters (simple monorepo)
 
@@ -30,8 +26,6 @@ apps/web/** changed  → run web pipeline
 
 Works when packages don’t share deep dependency graphs. **Misses** transitive dependents (change a shared lib → consumers should rebuild).
 
----
-
 ## Project-graph “affected” (scale)
 
 Tools such as **Nx** (and similar monorepo task runners) build a **project graph** from imports/config, diff the PR, and run tasks only on **affected** projects and dependents (`nx affected`).
@@ -43,8 +37,6 @@ Pair with:
 
 Path filters alone drift; graph-aware selection tracks real dependencies (Nx docs: affected + CI best practices).
 
----
-
 ## Multi-repo coordination
 
 | Need | Pattern |
@@ -53,15 +45,11 @@ Path filters alone drift; graph-aware selection tracks real dependencies (Nx doc
 | API compatibility | Consumer-driven contracts in CI ([10](./10_Testing_In_The_Pipeline.md)) |
 | Atomic multi-service release | Release train ID, or GitOps umbrella commit, or carefully ordered promotes ([8](./8_Environments_Promotion_And_Approvals.md)) |
 
----
-
 ## What always stays true
 
 - Build **immutable** artifacts per shippable unit  
 - Don’t skip tests for “unrelated” packages if the graph says they depend on the change  
 - Keep commit-stage feedback fast — monorepo is not an excuse for 2-hour mandatory walls  
-
----
 
 ## Pitfalls
 

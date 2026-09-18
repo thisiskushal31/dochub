@@ -4,8 +4,6 @@
 
 **Operators** are symbols that perform an operation on one or two values (e.g. **`+`**, **`==`**, **`&&`**). Dart supports arithmetic, comparison, logical, bitwise, assignment, and special operators (null-aware, cascade, spread). This topic summarizes the main operators and **when** to use them; **precedence** and **associativity** follow the language grammar—use parentheses when it makes intent clearer. Many operators can be **overridden** in classes (Topic 10–11).
 
----
-
 ## Arithmetic
 
 `+`, `-`, `*`, `/`, `%`, and for integers `~/` (truncating division). Unary: `-expr`, `++expr`, `expr++`, `--expr`, `expr--`.
@@ -17,8 +15,6 @@ var a = 1;
 a++;
 assert(a == 2);
 ```
-
----
 
 ## Equality and comparison
 
@@ -34,8 +30,6 @@ if (o is String) {
 var s = o as String;
 ```
 
----
-
 ## Logical
 
 `!expr` (negation), `&&` (and), `||` (or). Conditions require boolean expressions; no implicit conversion from other types.
@@ -45,8 +39,6 @@ if (done && count > 0) {
   // ...
 }
 ```
-
----
 
 ## Null-aware and conditional
 
@@ -64,8 +56,6 @@ var len = nullableString!.length;  // Throws if null.
 
 **Conditional expression:** `condition ? expr1 : expr2` evaluates one of the two expressions.
 
----
-
 ## Cascade
 
 **`..`** and **`?..`** apply a sequence of operations on the same object without repeating the target. The result is the object itself (not the result of the last call).
@@ -77,13 +67,9 @@ var buffer = StringBuffer()
   ..write('World');
 ```
 
----
-
 ## Assignment
 
 `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `~/=`, and bitwise/compound assignments. Assignment is an expression; it evaluates to the assigned value.
-
----
 
 ## Spread
 
@@ -94,13 +80,9 @@ var list = [1, 2, ...more];
 var list2 = [1, 2, ...?nullableList];
 ```
 
----
-
 ## Precedence
 
 Operator precedence (highest to lowest) is roughly: postfix (`!`, `++`, `[]`, `.`, `?.`), unary prefix (`-`, `!`, `~`, `++`, `--`, `await`), multiplicative (`*`, `/`, `%`, `~/`), additive (`+`, `-`), shift, bitwise, relational and type test, equality, logical AND, logical OR, if-null, conditional, cascade, assignment. Use parentheses when it improves readability or when in doubt. **Summary:** Use **`?.`** and **`??`** with nullable values; use **`..`** to chain operations on the same object; use **`...`** / **`...?`** in list/map literals to spread elements. For full precedence, see the language specification.
-
----
 
 ## Further reading
 

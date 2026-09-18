@@ -8,8 +8,6 @@ The **twelve syntax rules** that define Tcl—taught so a newcomer can *see* wha
 
 Chapter **01** gave the Linux + lifecycle picture. This chapter is the **microscope on one command**. Wrong quoting is the #1 Tcl bug class—master this before trusting any clever one-liner.
 
----
-
 ## 1. Concepts
 
 ### 0. From script bytes to a finished command (slow motion)
@@ -233,8 +231,6 @@ set args [list World]
 greet {*}$args
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Double evaluation (the classic footgun)
@@ -285,8 +281,6 @@ Stricter `${…}` nesting and array-index escaping can break old generated code 
 
 `subst` reprocesses a string for `$` / `[]` / backslash with optional control flags. It is a sharp tool—chapter **09**/security material covers safer patterns. Do not reach for `subst` to fix quoting you do not understand; fix the quoting.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Where syntax rules decide outcomes |
@@ -297,8 +291,6 @@ Stricter `${…}` nesting and array-index escaping can break old generated code 
 | **Ops** | Expect `send`/`expect` patterns mixed with Tcl substitution—brace regexes and patterns deliberately. |
 | **SE** | Code review checklists should include “braces on `expr`/`if`/`while` bodies” as a default nits. |
 
----
-
 ## Staff-level review checklist
 
 - `expr`, `if`, `while`, `for`, `proc` bodies use **braces** unless there is a documented reason not to.
@@ -307,8 +299,6 @@ Stricter `${…}` nesting and array-index escaping can break old generated code 
 - `{*}` is used when splicing argv/flag lists; reviewers confirm the spliced value is a **proper list**.
 - Comments after commands use `;#` (or a real newline), not a bare mid-command `#` expecting comment semantics.
 - Reviewers can explain why `"$x"` vs `$x` vs `{ $x }` was chosen at each call site that matters.
-
----
 
 ## References
 

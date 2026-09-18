@@ -10,8 +10,6 @@ Default for new work: **Vyper 0.4.x** (pin **0.4.3**). Prefer `#pragma version ^
 
 Today’s win is **toolchain smoke**: a pinned compiler answers you. Deploy, Titanoboa suites, and security review come later (chapters **03**, **12–14**).
 
----
-
 ## 1. Concepts
 
 ### 1. What you are installing
@@ -115,8 +113,6 @@ Deploy and ABI ownership deepen in chapter **12**. Testing defaults to **Titanob
 | CLI + Titanoboa + Brownie door | **[03](./03_Toolchain_Vyper_Titanoboa_Brownie.md)** |
 | Shared call/storage machine depth | [Solidity](../Solidity/README.md) |
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Compiler vs Python runtime
@@ -167,8 +163,6 @@ Common footgun: system Python has one Vyper; project venv has another; CI has a 
 
 Skip gas micro-tuning, experimental codegen, and exotic create helpers until the hello path is boring. Premature toolchain cleverness hides the pin story you need for everything else.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How first steps show up |
@@ -180,8 +174,6 @@ Skip gas micro-tuning, experimental codegen, and exotic create helpers until the
 | **SE** | Onboarding checklist: install → version → compile hello → open chapter **01** for design intent. |
 
 **Whole-engineering picture:** a working hello is a **toolchain smoke test** and a shared vocabulary for later reviews—not a product milestone.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -195,8 +187,6 @@ Skip gas micro-tuning, experimental codegen, and exotic create helpers until the
 - Nobody treats “compiles” as “safe to hold funds.”
 - Project lockfile / requirements pin exists before the second contract lands.
 - Browser IDE compiles are not the sole source of release bytecode.
-
----
 
 ## References
 

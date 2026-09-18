@@ -18,8 +18,6 @@ Go is a **general-purpose**, **statically typed**, **compiled** programming lang
 
 **Relation to C and other languages.** Go is often compared to C: it compiles to native code and gives control over layout and performance in a simpler language. Unlike C, Go has garbage collection, no pointer arithmetic in the safe subset, and built-in concurrency and strings. It avoids C++-style complexity (no inheritance, templates in the old sense); instead it uses composition, interfaces, and generics (type parameters) for reuse and abstraction.
 
----
-
 ## Further reading
 
 - [The Go Programming Language Specification](https://go.dev/ref/spec)

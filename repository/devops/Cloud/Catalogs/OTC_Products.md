@@ -4,8 +4,6 @@
 
 *Final choice page for Open Telekom Cloud (T-Systems / Deutsche Telekom). Sovereign/EU positioning matters. Deeper API: [docs.otc.t-systems.com](https://docs.otc.t-systems.com/).*
 
----
-
 ## Compute
 
 | Product | What for | When | Why not |
@@ -56,8 +54,6 @@
 | **T-Systems managed / private offers** | Contracted private | Sovereign contracts | Self-serve OTC enough |
 
 **When OTC vs hyperscaler:** EU/sovereign procurement, Telekom relationship, or existing OTC landing zone. **Why not:** team already deep on AWS/Azure/GCP *and* no residency constraint—don't dual-stack for sport.
-
----
 
 ## How to use
 

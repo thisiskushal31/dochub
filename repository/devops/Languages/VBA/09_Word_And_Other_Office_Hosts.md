@@ -8,8 +8,6 @@
 
 You leave able to read Word macros without drowning in the entire OM, know what each sibling host is *for*, and review cross-app automation as an intentional systems choice—not a recorder accident.
 
----
-
 ## 1. Concepts
 
 ### 1. Word’s hierarchy (mental model)
@@ -107,8 +105,6 @@ End Sub
 
 **What just happened:** document content mutated without selecting anything in the UI.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Templates vs documents
@@ -202,8 +198,6 @@ If the template still uses free-text placeholders, document the exact tokens as 
 
 Export-to-PDF from Word/Excel is a common LOB finish step. The macro that creates the PDF still needed trust to run; the PDF itself is not a VBA host. Keep distribution formats honest in ops docs.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -215,8 +209,6 @@ Export-to-PDF from Word/Excel is a common LOB finish step. The macro that create
 | **Software engineering** | Templates hold shared code; documents hold data; events documented (ch **12**) |
 
 Legitimate patterns: invoice letter from Excel row, export range to a Word table, PowerPoint KPI deck from a verified sheet. Illegitimate patterns are out of scope—reviewers use chapters **15–16**.
-
----
 
 ## Staff-level review checklist
 
@@ -233,8 +225,6 @@ Legitimate patterns: invoice letter from Excel row, export range to a Word table
 - Auto-open handlers are inventoried and justified (ch **12**, **15**).
 - No secrets in document variables or Automation payloads.
 - Error paths still `Quit`/release external apps (ch **05**, **07**).
-
----
 
 ## References
 

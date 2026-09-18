@@ -6,8 +6,6 @@
 
 **Objects**, **names**, **namespaces**, **scopes**, **classes**, **methods**, **inheritance** and **MRO**, **privacy conventions**, **iterators**, **generators**, **generator expressions**, and **`dataclass`** basics—how frameworks and async runtimes build on these mechanisms.
 
----
-
 ## 1. Concepts
 
 ### 1. Names and objects
@@ -42,8 +40,6 @@ Assignment **binds** a name to an object; multiple names can **alias** one mutab
 
 **`@dataclass`** generates **`__init__`**, **repr**, comparisons—watch **mutable defaults** (same rule as functions: use **`field(default_factory=...)`**).
 
----
-
 ## 2. Advanced concepts
 
 **`__slots__`:** fixed attribute set, lower memory, faster attribute access; interacts with multiple inheritance carefully.
@@ -51,8 +47,6 @@ Assignment **binds** a name to an object; multiple names can **alias** one mutab
 **Protocols** (structural typing) and **ABC** (nominal) appear in chapter 13—runtime **isinstance** checks against **ABC** registrations.
 
 **Weak references:** **`weakref`** for graphs and caches without preventing GC—chapter 10.
-
----
 
 ## 3. Applications and use cases
 
@@ -84,8 +78,6 @@ class Counter:
         self.n += 1
         return self.n
 ```
-
----
 
 ## References
 

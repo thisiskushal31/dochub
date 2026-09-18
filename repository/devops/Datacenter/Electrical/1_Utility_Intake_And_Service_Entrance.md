@@ -2,8 +2,6 @@
 
 [README](./README.md) · [Next: Transformers →](./2_Transformers.md)
 
----
-
 ## Mental map
 
 ![Power path street to chip](../../Assets/Datacenter/Electrical/power-path-street-to-chip.svg)
@@ -45,8 +43,6 @@ Voltage at the fence varies by metro: North America often **medium voltage** int
 - **Power factor** — utility may bill or limit reactive power  
 - **Redundant service** — marketing word; ask *where the two paths join*
 
----
-
 ## 2. Advanced concepts
 
 ### Independence is a drawing, not a sticker
@@ -84,8 +80,6 @@ Utility grid → (utility XFMR) → service entrance / main switchgear
 
 Generators usually parallel or transfer at switchgear **after** or **beside** utility—not “at the rack.”
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -105,8 +99,6 @@ Generators usually parallel or transfer at switchgear **after** or **beside** ut
 - Never treat “dual cord” at the rack as proof of dual utility  
 
 **Good:** one-line reviewed, dual-feed independence understood, generator test on calendar. **Bad:** assuming two PDU colors mean two substations; ignoring dig risk on a shared duct.
-
----
 
 ## References
 

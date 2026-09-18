@@ -2,8 +2,6 @@
 
 [← Previous](./12_WLAN_And_AP_Lab_Office_Edge.md) · [README](./README.md) · [Next: Role playbooks →](./14_Role_Playbooks_Bring_Up_Week.md)
 
----
-
 ## Mental map
 
 ```text
@@ -13,8 +11,6 @@ raw disks → protection (RAID/erasure/replicas) → filesystem overhead → usa
 ```
 
 SDS: [Storage-Physical/7](../Storage-Physical/7_Software_Defined_Ceph_vSAN_Kin.md). Object: [8](../Storage-Physical/8_Object_On_Prem.md).
-
----
 
 ## 1. Concepts
 
@@ -30,8 +26,6 @@ SDS: [Storage-Physical/7](../Storage-Physical/7_Software_Defined_Ceph_vSAN_Kin.m
 
 **Confirm:** Name two things besides disks that gate petabyte growth.
 
----
-
 ## 2. Advanced concepts
 
 ### Operator experience
@@ -46,8 +40,6 @@ usable ≈ raw / replication_factor   (replicas)
 rebuild_time ≈ (disk_size / rebuild_throughput) * risk_window
 ```
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -57,8 +49,6 @@ rebuild_time ≈ (disk_size / rebuild_throughput) * risk_window
 | Growth | Add shelves in failure-domain-aware chunks |
 
 **Staff checklist:** usable capacity model; power/cooling signed; network rebuild budget; backup independent of primary.
-
----
 
 ## References
 

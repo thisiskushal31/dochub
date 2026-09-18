@@ -2,8 +2,6 @@
 
 [← Previous](./02_Workspace_Project_Repo_And_Access.md) · [README](./README.md) · [Next: Pipelines model →](./04_Pipelines_Mental_Model_And_YAML.md)
 
----
-
 ## 1. Concepts
 
 Bitbucket’s change-control trio:
@@ -15,8 +13,6 @@ Bitbucket’s change-control trio:
 | **Pull requests** | Review UI; default reviewers; merge strategies |
 
 Together they protect `main` the way GitHub branch protection or Azure Repos policies do.
-
----
 
 ## 2. Advanced concepts
 
@@ -61,8 +57,6 @@ On Free/Standard you can **recommend** checks. **Premium** can **enforce** them 
 
 PR pipelines should report commit status so merge checks can require green builds ([08](./08_Triggers_Steps_Stages_Parallel.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -72,8 +66,6 @@ PR pipelines should report commit status so merge checks can require green build
 | Monorepo | Same checks; path-filtered pipelines still must satisfy “builds” wisely |
 
 **Good:** checks required, not only suggested, on production branches. **Bad:** optional checks everyone clicks through.
-
----
 
 ## References
 

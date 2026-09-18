@@ -6,8 +6,6 @@
 
 PowerShell as a **first-class scripting language** for Windows and cross-platform agents: cmdlets, **object** pipelines, providers, modules, error action preferences, and the practical differences between **Windows PowerShell 5.1** and **PowerShell 7.x** (`pwsh`). This is not a full .NET course—only the scripting surface DevOps and whole-engineering teams need to automate safely beside Bash.
 
----
-
 ## 1. Concepts
 
 ### 1. What PowerShell is (and is not)
@@ -88,8 +86,6 @@ Execution policy on Windows can block unsigned local scripts—ops concern; use 
 | Registry provider | Yes | Yes on Windows | N/A | Limited `reg` | N/A |
 | Cross-OS scripts | Limited | **Yes** | **Yes** | No | Unix |
 | Built into Windows | Yes | Install/winget/MSI | Install | Yes | WSL/Git Bash |
-
----
 
 ## 2. Advanced concepts
 
@@ -206,8 +202,6 @@ Strict mode catches uninitialized variables and some invalid references—use it
 
 `$PROFILE` scripts customize interactive sessions. CI and services should use `-NoProfile` unless a deliberate shared profile is part of the hardened image. Profile-dependent automation is the PowerShell cousin of relying on `.zshrc`.
 
----
-
 ## 3. Applications and use cases
 
 ### Windows server and workstation automation
@@ -266,8 +260,6 @@ Windows command landscape: [`../../Operating-Systems/Windows/1_Windows_Commands_
 - Aliases avoided in committed scripts?
 - `Invoke-Expression` absent unless extraordinarily justified?
 - Execution policy and signing story documented for Windows hosts?
-
----
 
 ## References
 

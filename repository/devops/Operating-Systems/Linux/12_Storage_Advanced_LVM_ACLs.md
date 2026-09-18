@@ -6,8 +6,6 @@
 
 **Hands-on:** To create and extend LVM, set up RAID, and use ACLs on a lab system, follow [Learn Linux — hands-on](./00_Learn_Linux_Hands_On.md).
 
----
-
 ## LVM (Logical Volume Manager)
 
 LVM adds a layer between **physical disks** and **file systems**: **Physical Volumes (PV)** → **Volume Groups (VG)** → **Logical Volumes (LV)**. File systems are created on LVs. You can resize LVs (and often VGs) without repartitioning. **Concepts:** A **Physical Extent (PE)** is the smallest allocatable unit in a VG (default 4 MB); you can set a different PE size when creating the VG (e.g. `-s 32M`). The VG can be extended by adding PVs; LVs can be extended (or reduced, with care) within free space in the VG.
@@ -108,8 +106,6 @@ mount /dev/vg_thin/thin_vol1 /mnt/client1
 lvextend -L +15G /dev/vg_thin/tp_pool
 ```
 
----
-
 ## Mount by UUID or label
 
 Use **UUID** or **label** in `/etc/fstab` so mounts survive device name changes (e.g. after adding disks).
@@ -124,8 +120,6 @@ lsblk -f
 # LABEL=mydata  /data  ext4  defaults  0 2
 mount -a   # Mount all in fstab
 ```
-
----
 
 ## ACLs (Access Control Lists)
 
@@ -148,8 +142,6 @@ setfacl -x u:alice /path/to/file
 setfacl -b /path/to/file   # Remove all ACLs
 ```
 
----
-
 ## Setgid and collaboration directories
 
 - **setgid on directory** — New files created in the directory inherit the directory’s **group**. Useful for shared folders (e.g. `/opt/team` with group `devs`).
@@ -163,8 +155,6 @@ chgrp devs /opt/shared
 # Check
 ls -ld /opt/shared   # drwxrwsr-x  ...  devs  ...
 ```
-
----
 
 ## RAID on Linux (software RAID with mdadm)
 
@@ -267,8 +257,6 @@ sudo mount /dev/md0 /mnt/data
 
 So **how RAID is configured on Linux**: use **mdadm** to create/assemble/stop **MD** devices; put filesystems or LVM on them; persist assembly via **mdadm.conf** and **fstab**. For **how RAID works** (levels, striping, parity), see [Fundamentals: Storage and I/O — RAID](../Fundamentals/10_Storage_And_IO.md#5-raid-storage-subsystem).
 
----
-
 ## NFS and CIFS (network mounts)
 
 **NFS** (Network File System — Linux/Unix):
@@ -287,8 +275,6 @@ sudo mount -t cifs //server/share /mnt -o username=user,password=pass
 # Or use credentials file; add to fstab for persistence
 ```
 
----
-
 ## Summary
 
 - **LVM:** `pvcreate`, `vgcreate`, `lvcreate`, `lvextend`, `resize2fs`/`xfs_growfs`; list with `pvs`, `vgs`, `lvs`.
@@ -297,8 +283,6 @@ sudo mount -t cifs //server/share /mnt -o username=user,password=pass
 - **ACLs:** `setfacl`, `getfacl` for per-user/per-group permissions.
 - **Setgid dirs:** `chmod g+s` so new files inherit group; good for shared dirs.
 - **Network:** NFS (`mount -t nfs`), CIFS (`mount -t cifs`) for remote filesystems.
-
----
 
 ## Further reading
 

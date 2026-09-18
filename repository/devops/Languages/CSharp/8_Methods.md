@@ -6,8 +6,6 @@
 
 **Why methods?** They encapsulate behavior, avoid duplication, and make the call site readable. Overloading lets you provide the same logical operation for different parameter types or counts without inventing new names.
 
----
-
 ## Defining and calling methods
 
 Define a method with a return type, name, and parameter list. The body is a block of statements. **return** exits the method and optionally returns a value. Call a method by name with arguments; the same method can be called multiple times from different places. For methods that do not use instance data, **static** allows calling them without an object (e.g. **Main** and helper methods in the same class).
@@ -31,8 +29,6 @@ static void Main(string[] args)
 }
 ```
 
----
-
 ## Parameters and return values
 
 Parameters are passed by value by default (a copy of the value). Use **ref** to pass by reference so the method can modify the variable. Use **out** when the method must assign a value to the parameter. **params** allows a variable number of arguments.
@@ -44,8 +40,6 @@ bool TryParse(string s, out int result)
 }
 ```
 
----
-
 ## Default and named arguments
 
 Parameters can have default values. Callers can omit those arguments or use **named arguments** to specify parameters by name.
@@ -56,8 +50,6 @@ void Log(string message, bool toFile = false) { }
 Log("Hi");
 Log("Hi", toFile: true);
 ```
-
----
 
 ## Further reading
 

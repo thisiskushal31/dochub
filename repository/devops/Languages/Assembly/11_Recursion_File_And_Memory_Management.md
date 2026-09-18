@@ -4,8 +4,6 @@
 
 This topic covers **recursive procedures**, **file handling** (open, read, write, close, lseek) via Linux system calls, and **dynamic memory** with **sys_brk**. Same format: text first, then code. See **Further reading** for sources.
 
----
-
 ## Recursion
 
 A **recursive procedure** calls itself (direct recursion) or calls another procedure that eventually calls it (indirect). You must have a **base case** that stops the recursion; otherwise the stack grows until it overflows.
@@ -28,13 +26,9 @@ do_calculation:
 
 The **call** pushes the return address; each recursive call uses more stack. Registers (e.g. BL) that must survive the call are often saved on the stack or restored as in the example (dec bl before call, inc bl after).
 
----
-
 ## File streams and descriptors
 
 Linux treats I/O as **streams of bytes**. The three standard streams have fixed **file descriptors**: **stdin = 0**, **stdout = 1**, **stderr = 2**. When you **open** or **create** a file, the kernel returns a **file descriptor** (small integer) used for subsequent read/write/close. A **file pointer** is the byte offset for the next read or write; it advances automatically and can be changed with **lseek**.
-
----
 
 ## File-handling system calls (int 0x80, 32-bit)
 
@@ -97,8 +91,6 @@ int  0x80
 ; close, then sys_write info to stdout
 ```
 
----
-
 ## Dynamic memory: sys_brk
 
 **sys_brk** (EAX=45) sets the **program break**: the end of the process’s data segment. Passing 0 in EBX returns the current break in EAX. Passing a new address in EBX asks the kernel to set the break to that value (often current break + size). So you get “dynamic” space by: get current break (brk(0)), add desired size, call brk again with the new value; use the returned (or previous) address as your buffer. On error, EAX may hold a negative error code.
@@ -123,8 +115,6 @@ std
 rep  stosd        ; fill with zeros (backward)
 cld
 ```
-
----
 
 ## Further reading
 

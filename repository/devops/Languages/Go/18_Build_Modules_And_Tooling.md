@@ -33,8 +33,6 @@ govulncheck ./...
 
 **Why this matters.** The **go** command is the single entry point for build, test, and dependency management. Modules make builds reproducible and avoid the old GOPATH layout. In DevOps, you use **go build** in Dockerfiles and CI to produce binaries, **go test** for quality gates, and **go mod** to keep dependencies up to date and auditable. Cross-compilation (**GOOS=linux GOARCH=amd64 go build**) produces binaries for other platforms without a separate toolchain.
 
----
-
 ## Further reading
 
 - [Command Documentation: go](https://pkg.go.dev/cmd/go)

@@ -2,8 +2,6 @@
 
 [← Previous](./1_Utility_Intake_And_Service_Entrance.md) · [README](./README.md) · [Next: Switchgear →](./3_MV_And_LV_Switchgear.md)
 
----
-
 ## 1. Concepts
 
 A **transformer** steps voltage up or down and often provides galvanic isolation between primary and secondary. In a datacenter power path it is the bridge between utility/MV plant and the LV boards that feed UPS and IT distribution.
@@ -29,8 +27,6 @@ A **transformer** steps voltage up or down and often provides galvanic isolation
 | **K-factor / harmonic-rated** | Built for non-linear IT loads |
 
 IT loads are **switch-mode supplies**—they draw current in pulses. Undersized or wrong-type transformers run hot and can distort voltage for everyone on that secondary.
-
----
 
 ## 2. Advanced concepts
 
@@ -66,8 +62,6 @@ Grounding of the secondary (solidly grounded wye, etc.) ties into [12](./12_Grou
 
 Same device job worldwide. Nameplates differ: **11 kV / 22 kV / 33 kV** primaries; secondaries **400 V**, **480 V**, **208 V**. Always read the one-line and the nameplate—do not assume US 480 V language in Frankfurt or Mumbai.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -86,8 +80,6 @@ Same device job worldwide. Nameplates differ: **11 kV / 22 kV / 33 kV** primarie
 - Never “just bump the tap” without facilities procedure  
 
 **Good:** separate A/B transformers with independent secondaries. **Bad:** one hot XFMR feeding both “redundant” UPS inputs.
-
----
 
 ## References
 

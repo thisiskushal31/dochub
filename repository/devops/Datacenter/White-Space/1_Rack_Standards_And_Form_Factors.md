@@ -2,8 +2,6 @@
 
 [README](./README.md) · [Next: Cabinet airflow →](./2_Cabinet_Airflow_And_Chimneys.md)
 
----
-
 ## Mental map
 
 ![Rack elevation sketch](../../Assets/Datacenter/White-Space/rack-elevation-sketch.svg)
@@ -38,8 +36,6 @@ White space is organized around **racks** (open frames) and **cabinets** (enclos
 
 Bolted or braced to slab/raised floor; aligned in hot/cold aisles; bonded to ground ([Electrical/12](../Electrical/12_Grounding_Bonding_And_Surge.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes / install traps
@@ -65,8 +61,6 @@ Cabinet → rack PDUs ([Electrical/11](../Electrical/11_Rack_PDU_A_And_B.md))
 
 EIA-310 / IEC 60297 families are the global 19" story. OCP deployments are operator-specific. Always match **this site’s** standard cabinet SKU in colo (landlord may mandate make/model).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -85,8 +79,6 @@ EIA-310 / IEC 60297 families are the global 19" story. OCP deployments are opera
 - Never force a chassis “because it almost fits”  
 
 **Good:** standard SKU, labeled U, correct rail kits. **Bad:** mixed depths, unmarked U, floating unbonded frames.
-
----
 
 ## References
 

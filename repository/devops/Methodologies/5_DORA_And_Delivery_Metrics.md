@@ -8,8 +8,6 @@ DORA metrics answer: **are we getting better at delivering software?** They are 
 
 Related capabilities (what to *do*, not only measure): [dora.dev/capabilities](https://dora.dev/capabilities/).
 
----
-
 ## The five metrics (current DORA model)
 
 DORA groups metrics into **throughput** (how fast you deliver) and **instability** (how often delivery hurts).
@@ -35,8 +33,6 @@ Older materials say **MTTR** (mean time to restore) as the fourth key. Current D
 
 **Rework rate** is easy to miss: it captures the “hidden tax” of firefighting deploys that never show up if you only celebrate frequency.
 
----
-
 ## Lead time vs cycle time (do not mix them up)
 
 | Term | Typical meaning in delivery talk |
@@ -46,8 +42,6 @@ Older materials say **MTTR** (mean time to restore) as the fourth key. Current D
 | **Lead time** (broader Lean) | Sometimes idea/request → done — longer than DORA change lead time |
 
 When someone says “our lead time is two weeks,” ask: **from which clock start?** For DORA comparisons, use **commit → production** as on [dora.dev](https://dora.dev/guides/dora-metrics/).
-
----
 
 ## SPACE (complement, not a replacement)
 
@@ -65,8 +59,6 @@ Do not cargo-cult a single “elite” screenshot from an old report. Direction 
 
 A team that deploys hourly but breaks prod half the time is not “winning.” A regulated team that deploys weekly with low fail rate, fast recovery, and low rework can still be excellent *for their constraints*.
 
----
-
 ## How tools feed the metrics
 
 ```text
@@ -83,8 +75,6 @@ Deployment rework rate   ← unplanned deploys tagged to incidents ÷ all deploy
 
 You do not need a perfect data warehouse on day one. Start with honest tags on deploys and incidents; automate later.
 
----
-
 ## Using metrics for improvement (not blame)
 
 **Good uses**
@@ -99,8 +89,6 @@ You do not need a perfect data warehouse on day one. Start with honest tags on d
 - Punishing honest paging (hides failure, fakes recovery)  
 - Optimizing only frequency (shipping junk faster)  
 
----
-
 ## Anti-patterns
 
 | Anti-pattern | Reality check |
@@ -109,8 +97,6 @@ You do not need a perfect data warehouse on day one. Start with honest tags on d
 | Hiding failures as “config tweaks” | Tag rollbacks and SEVs honestly |
 | “Never deploy on Friday” as only control | Prefer verify + rollback; freezes are a crutch |
 | Ignoring rework while celebrating throughput | Firefighting is still instability |
-
----
 
 ## Complements (brief)
 

@@ -2,8 +2,6 @@
 
 [← Previous](./21_Source_Control_Providers_And_Code_Access.md) · [README](./README.md) · [Next: Hosted agent ops →](./23_Hosted_Agent_Operations.md)
 
----
-
 ## 1. Concepts
 
 ### Lifecycle
@@ -31,8 +29,6 @@ Polyglot hooks (non-shell) are supported on recent agent versions — confirm mi
 
 Official install paths include **Linux**, **macOS**, **Windows**, **Docker**, plus cloud guides for **AWS**, **GCP**, **Azure**. Autoscaling stacks: [13](./13_Self_Hosted_Stacks_AWS_And_Kubernetes.md).
 
----
-
 ## 2. Advanced concepts
 
 ### Useful jobs for hooks
@@ -54,8 +50,6 @@ Cluster **agent tokens** and (where used) job acquisition tokens — rotate; nev
 
 Day-to-day: `buildkite-agent start`, `pipeline upload`, `artifact`, `annotate`, `oidc`, … Full reference lives in agent CLI docs ([26](./26_APIs_CLI_Terraform_And_Platform_Extras.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Estate | Pattern |
@@ -65,8 +59,6 @@ Day-to-day: `buildkite-agent start`, `pipeline upload`, `artifact`, `annotate`, 
 | Shared org policy | Plugin or global hook, not copy-paste in every pipeline |
 
 **Good:** hooks in version control / golden images. **Bad:** one-off edits on a long-lived agent nobody rebuilds.
-
----
 
 ## References
 

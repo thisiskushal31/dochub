@@ -4,244 +4,244 @@
     "path": "1_What_Is_Clojure.md",
     "type": "file",
     "sha": "",
-    "size": 3357
+    "size": 3332
   },
   {
     "name": "10_Sequences.md",
     "path": "10_Sequences.md",
     "type": "file",
     "sha": "",
-    "size": 2124
+    "size": 2099
   },
   {
     "name": "11_Namespaces_And_Project_Structure.md",
     "path": "11_Namespaces_And_Project_Structure.md",
     "type": "file",
     "sha": "",
-    "size": 2071
+    "size": 2046
   },
   {
     "name": "12_Exception_Handling.md",
     "path": "12_Exception_Handling.md",
     "type": "file",
     "sha": "",
-    "size": 1683
+    "size": 1663
   },
   {
     "name": "13_Destructuring_And_Threading_Macros.md",
     "path": "13_Destructuring_And_Threading_Macros.md",
     "type": "file",
     "sha": "",
-    "size": 2338
+    "size": 2313
   },
   {
     "name": "14_Metadata_And_Reader_Conditionals.md",
     "path": "14_Metadata_And_Reader_Conditionals.md",
     "type": "file",
     "sha": "",
-    "size": 1847
+    "size": 1827
   },
   {
     "name": "15_Concurrency.md",
     "path": "15_Concurrency.md",
     "type": "file",
     "sha": "",
-    "size": 2645
+    "size": 2615
   },
   {
     "name": "16_Macros.md",
     "path": "16_Macros.md",
     "type": "file",
     "sha": "",
-    "size": 2013
+    "size": 1988
   },
   {
     "name": "17_Java_Interop_And_Deployment.md",
     "path": "17_Java_Interop_And_Deployment.md",
     "type": "file",
     "sha": "",
-    "size": 2054
+    "size": 2034
   },
   {
     "name": "18_Testing.md",
     "path": "18_Testing.md",
     "type": "file",
     "sha": "",
-    "size": 1911
+    "size": 1891
   },
   {
     "name": "19_Tools_Deps_And_Build.md",
     "path": "19_Tools_Deps_And_Build.md",
     "type": "file",
     "sha": "",
-    "size": 1786
+    "size": 1766
   },
   {
     "name": "2_Getting_Started.md",
     "path": "2_Getting_Started.md",
     "type": "file",
     "sha": "",
-    "size": 2813
+    "size": 2788
   },
   {
     "name": "20_Spec_And_Validation.md",
     "path": "20_Spec_And_Validation.md",
     "type": "file",
     "sha": "",
-    "size": 1819
+    "size": 1799
   },
   {
     "name": "21_Use_Cases_And_Applications.md",
     "path": "21_Use_Cases_And_Applications.md",
     "type": "file",
     "sha": "",
-    "size": 8146
+    "size": 8101
   },
   {
     "name": "22_Security_Pitfalls_And_Best_Practices.md",
     "path": "22_Security_Pitfalls_And_Best_Practices.md",
     "type": "file",
     "sha": "",
-    "size": 2969
+    "size": 2949
   },
   {
     "name": "23_Numbers.md",
     "path": "23_Numbers.md",
     "type": "file",
     "sha": "",
-    "size": 1627
+    "size": 1607
   },
   {
     "name": "24_Recursion.md",
     "path": "24_Recursion.md",
     "type": "file",
     "sha": "",
-    "size": 1620
+    "size": 1600
   },
   {
     "name": "25_Strings.md",
     "path": "25_Strings.md",
     "type": "file",
     "sha": "",
-    "size": 1792
+    "size": 1767
   },
   {
     "name": "26_File_IO.md",
     "path": "26_File_IO.md",
     "type": "file",
     "sha": "",
-    "size": 1939
+    "size": 1914
   },
   {
     "name": "27_Regular_Expressions.md",
     "path": "27_Regular_Expressions.md",
     "type": "file",
     "sha": "",
-    "size": 1660
+    "size": 1640
   },
   {
     "name": "28_Predicates.md",
     "path": "28_Predicates.md",
     "type": "file",
     "sha": "",
-    "size": 1561
+    "size": 1541
   },
   {
     "name": "29_Date_And_Time.md",
     "path": "29_Date_And_Time.md",
     "type": "file",
     "sha": "",
-    "size": 1598
+    "size": 1583
   },
   {
     "name": "3_Basic_Syntax_And_REPL.md",
     "path": "3_Basic_Syntax_And_REPL.md",
     "type": "file",
     "sha": "",
-    "size": 2854
+    "size": 2819
   },
   {
     "name": "30_StructMaps.md",
     "path": "30_StructMaps.md",
     "type": "file",
     "sha": "",
-    "size": 1893
+    "size": 1868
   },
   {
     "name": "31_Equality_And_Comparators.md",
     "path": "31_Equality_And_Comparators.md",
     "type": "file",
     "sha": "",
-    "size": 2550
+    "size": 2520
   },
   {
     "name": "32_Databases.md",
     "path": "32_Databases.md",
     "type": "file",
     "sha": "",
-    "size": 2207
+    "size": 2182
   },
   {
     "name": "33_Libraries.md",
     "path": "33_Libraries.md",
     "type": "file",
     "sha": "",
-    "size": 2004
+    "size": 1984
   },
   {
     "name": "34_Dev_Startup_Time.md",
     "path": "34_Dev_Startup_Time.md",
     "type": "file",
     "sha": "",
-    "size": 2253
+    "size": 2233
   },
   {
     "name": "4_Data_Types_And_Literals.md",
     "path": "4_Data_Types_And_Literals.md",
     "type": "file",
     "sha": "",
-    "size": 2140
+    "size": 2110
   },
   {
     "name": "5_Variables_And_Bindings.md",
     "path": "5_Variables_And_Bindings.md",
     "type": "file",
     "sha": "",
-    "size": 1922
+    "size": 1897
   },
   {
     "name": "6_Operators_And_Expressions.md",
     "path": "6_Operators_And_Expressions.md",
     "type": "file",
     "sha": "",
-    "size": 1926
+    "size": 1896
   },
   {
     "name": "7_Control_Flow.md",
     "path": "7_Control_Flow.md",
     "type": "file",
     "sha": "",
-    "size": 2561
+    "size": 2526
   },
   {
     "name": "8_Functions.md",
     "path": "8_Functions.md",
     "type": "file",
     "sha": "",
-    "size": 2257
+    "size": 2232
   },
   {
     "name": "9_Collections.md",
     "path": "9_Collections.md",
     "type": "file",
     "sha": "",
-    "size": 2478
+    "size": 2448
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 5311
+    "size": 5296
   }
 ]

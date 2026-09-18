@@ -10,8 +10,6 @@ Assumes **Solidity 0.8.x** / snapshot **0.8.36**.
 
 Remix is the microscope: you watch one contract live. Foundry and Hardhat are the workshop: the same compile, a hundred times, with tests. `solc` is the engine inside all three. You are allowed to love Remix and still refuse to release from it.
 
----
-
 ## 1. Concepts
 
 ### 1. What must exist in any serious workflow
@@ -132,8 +130,6 @@ Choose Hardhat when the team already lives in TypeScript, needs those plugins, o
 | **cast** | Shell client |
 | Explorer **verify** APIs | Source attestation (chapter **20**) |
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Standard JSON is the real compiler API
@@ -193,8 +189,6 @@ cast index address <key> 0
 
 Those commands are how you connect chapters **12** / **14** / **21** to a live address.
 
----
-
 ## 3. Applications and use cases
 
 | Situation | Practical default |
@@ -205,8 +199,6 @@ Those commands are how you connect chapters **12** / **14** / **21** to a live a
 | Incident: “what did this selector do?” | `cast` / explorer + ABI |
 | Regulated release | Pinned solc + locked deps + verify |
 
----
-
 ## 4. Staff-level review checklist
 
 - Repo documents **how to compile and test in one page** (Foundry, Hardhat, or both).
@@ -215,8 +207,6 @@ Those commands are how you connect chapters **12** / **14** / **21** to a live a
 - Install instructions for CI do not depend on an unpinned nightly or a raw pipe-to-shell on shared runners.
 - If both Foundry and Hardhat exist, **each** has a stated job (fuzz vs TS integration)—not two drifting sources of truth.
 - Remappings / npm lockfile are reviewed like application code.
-
----
 
 ## References
 

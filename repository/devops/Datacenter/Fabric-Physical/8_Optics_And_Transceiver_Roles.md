@@ -2,8 +2,6 @@
 
 [← Previous](./7_Bonding_MLAG_And_Dual_Home.md) · [README](./README.md) · [Next: Load balancers →](./9_Load_Balancer_Appliances.md)
 
----
-
 ## 1. Concepts
 
 Fabric optics are operational inventory: **right form factor, right reach, right coding, clean faces, spared**. Device-level DAC/AOC/transceiver literacy: [Accelerators/6](../Accelerators/6_Optics_DAC_AOC_Transceivers.md). Structured fiber: [White-Space/5](../White-Space/5_Structured_Cabling_Fiber_MPO_MTP.md).
@@ -16,8 +14,6 @@ Fabric optics are operational inventory: **right form factor, right reach, right
 | Leaf↔spine | AOC or SR/DR optics + MMF/SMF |
 | Border/long | LR/ER SMF |
 | Breakout | 400G→4×100G etc. |
-
----
 
 ## 2. Advanced concepts
 
@@ -39,8 +35,6 @@ Sparing kits per speed tier; CMDB of optic SKUs; clean/inspect before RMA. GPU c
 
 Same form factors; vendor allowlists differ. Keep site-approved BOM.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -59,8 +53,6 @@ Same form factors; vendor allowlists differ. Keep site-approved BOM.
 - Never “any QSFP” from a drawer  
 
 **Good:** allowlisted optics, DOM alerts, labeled plant. **Bad:** dusty random optics; zero spares; unknown breakout maps.
-
----
 
 ## References
 

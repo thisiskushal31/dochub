@@ -2,8 +2,6 @@
 
 [← Previous](./7_Generators_And_Fuel_Systems.md) · [README](./README.md) · [Next: Busway vs cable →](./9_Busway_Vs_Cable_Distribution.md)
 
----
-
 ## 1. Concepts
 
 **Paralleling** connects multiple generators (or sources) onto a common bus with synchronized voltage, frequency, and phase. **Transfer sequences** are the timed steps from utility → UPS → generator → back to utility without stranding IT.
@@ -25,8 +23,6 @@ Paralleling switchgear / generator control panels in the electrical plant; seque
 7. On utility return: qualify utility → retransfer → cool-down → stop gensets  
 
 Timers and interlocks make or break this list.
-
----
 
 ## 2. Advanced concepts
 
@@ -60,8 +56,6 @@ Tier/Rated language assumes you can take a generator or path out **without** dro
 
 Controller brands differ; the jobs do not: start, sync, share, transfer, retransfer, log. Always use **this site’s** sequence document during incidents.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -80,8 +74,6 @@ Controller brands differ; the jobs do not: start, sync, share, transfer, retrans
 - Never “bump sync” experimentally on a live bus  
 
 **Good:** drilled sequences, logged tests, auto restored. **Bad:** tribal manual tricks; untested retransfer; N gensets for N load with no spare.
-
----
 
 ## References
 

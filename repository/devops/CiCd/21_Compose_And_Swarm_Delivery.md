@@ -4,8 +4,6 @@
 
 Before (or beside) Kubernetes, many teams deliver with **Docker Compose** (single host / small stacks) and **Docker Swarm** (multi-node services, rolling updates). Classical DevOps courses (LinuxWorld and similar) teach these heavily. Depth of engines: [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive). This file is the **CI/CD adapter**.
 
----
-
 ## Where they sit on the spectrum
 
 ```text
@@ -16,8 +14,6 @@ Kubernetes + GitOps      →  [9], Argo/Flux
 ```
 
 Same pipeline loop ([1](./1_Pipelines_Build_Test_Deploy.md)): build image → push digest → update stack definition → roll → verify.
-
----
 
 ## Docker Compose (delivery view)
 
@@ -31,8 +27,6 @@ Same pipeline loop ([1](./1_Pipelines_Build_Test_Deploy.md)): build image → pu
 | **Multi-tier labs** | Web + MySQL/MariaDB + reverse proxy — common classical project shape |
 
 **Startup order:** `depends_on` waits for start, not readiness — use healthchecks. Named volumes for DB data; backups are still your problem.
-
----
 
 ## Docker Swarm (delivery view)
 
@@ -48,8 +42,6 @@ CI publishes `registry/app@sha256:…`, updates the stack file or service image,
 
 Swarm is **not** dead for every org; treat it as a real adapter until you migrate. Do not skip it in an open handbook that claims classical coverage.
 
----
-
 ## Pipeline sketch
 
 ```text
@@ -64,13 +56,9 @@ CD:
 
 Prefer **immutable digests** over `:latest` ([4](./4_Artifacts_And_Registries.md)).
 
----
-
 ## Content trust / signing (classical Docker)
 
 Older curricula emphasize **Docker Content Trust** (Notary) and registry signing. Modern related path is Sigstore/cosign ([6](./6_Supply_Chain_And_Signing.md)). Mentally map: **sign what you push; verify what you run** — mechanism names change.
-
----
 
 ## When to choose what
 
@@ -79,8 +67,6 @@ Older curricula emphasize **Docker Content Trust** (Notary) and registry signing
 | One box, few services, learning multi-tier | Compose |
 | Small multi-node without K8s ops budget | Swarm |
 | Large platform, CRDs, progressive delivery controllers | Kubernetes ([9](./9_Progressive_Delivery_Controllers.md)) |
-
----
 
 ## Pitfalls
 

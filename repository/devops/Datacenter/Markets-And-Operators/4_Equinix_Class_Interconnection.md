@@ -2,8 +2,6 @@
 
 [← Previous](./3_Research_Any_Operator.md) · [README](./README.md) · [Next: Wholesale landlords →](./5_Wholesale_And_Hyperscale_Landlords.md)
 
----
-
 ## 1. Concepts
 
 **Equinix** (spelling matters) is the archetype of **carrier-neutral interconnection colo**: retail IBX-style halls, dense MMR ecosystems, remote hands, and interconnection products (cross-connects, metro, Fabric-class).
@@ -21,8 +19,6 @@ Peers in spirit include Digital Realty (incl. Interxion in EU), CoreSite-class U
 | **xScale / wholesale-class** | Larger footprints for hyperscale-ish tenants |
 
 Durable order/access jobs: [Provider-Use](../Provider-Use/README.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -44,8 +40,6 @@ Physical MMR: [Fabric-Physical/5](../Fabric-Physical/5_MMR_And_Cross_Connect_Phy
 
 IBX metro coverage is wide but not infinite—always check the specific IBX and carriers present.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -64,8 +58,6 @@ IBX metro coverage is wide but not infinite—always check the specific IBX and 
 - Don’t treat Fabric portal as plant encyclopedia  
 
 **Good:** interconnection-first site choice, dual XC, clear hands scope. **Bad:** Equinox; assuming every city has same ecosystem; unlimited hands myth.
-
----
 
 ## References
 

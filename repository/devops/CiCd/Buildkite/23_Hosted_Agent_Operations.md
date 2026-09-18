@@ -2,8 +2,6 @@
 
 [← Previous](./22_Agent_Hooks_Lifecycle_And_Install_Spectrum.md) · [README](./README.md) · [Next: Integrations →](./24_Integrations_Notifications_Observability_And_Insights.md)
 
----
-
 ## 1. Concepts
 
 **Buildkite hosted agents** run ephemeral VMs/containers Buildkite provisions for each job on a **hosted queue** ([04](./04_Agents_Self_Hosted_And_Hosted.md), [05](./05_Queues_Clusters_And_Targeting.md)).
@@ -19,8 +17,6 @@
 | **Terminal / desktop access** | Debug paths for hosted jobs (use sparingly; treat as privileged) |
 | **Pipeline migration** | Moving self-hosted pipelines onto hosted queues |
 
----
-
 ## 2. Advanced concepts
 
 ### Plan gates
@@ -35,8 +31,6 @@ Hosted queues live in a **cluster**; caches, secrets, and registries for that cl
 
 Private package mirrors only reachable from your VPC, specialized GPUs you own, or strict “code never on vendor compute” policies → self-hosted ([13](./13_Self_Hosted_Stacks_AWS_And_Kubernetes.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -46,8 +40,6 @@ Private package mirrors only reachable from your VPC, specialized GPUs you own, 
 | Debug flaky hosted job | Terminal access per policy |
 
 **Good:** ephemeral by default; secrets via Buildkite secrets or OIDC. **Bad:** treating hosted debug shells as bastions.
-
----
 
 ## References
 

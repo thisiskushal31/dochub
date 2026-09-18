@@ -2,8 +2,6 @@
 
 [← Previous](./01_What_Is_Argo_CD_And_Why_GitOps.md) · [Argo CD](./README.md) · [Next: Architecture →](./03_Architecture_Components_And_Multi_Cluster.md)
 
----
-
 ## 1. Concepts
 
 ### Application
@@ -61,8 +59,6 @@ An Application whose manifests are *other* Application (and Project) manifests. 
 
 A controller that **generates** Applications from **generators** (list of clusters, git directories, pull requests, SCM providers, and more). Use when maintaining dozens of near-identical Applications by hand does not scale ([07](./07_ApplicationSets_App_Of_Apps_And_Scale.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### Sync is not “kubectl apply once”
@@ -92,8 +88,6 @@ Argo CD labels/annotates managed resources so it knows what it owns. Understandi
 
 Application deletion can cascade (finalizers) and **prune** cluster resources depending on policy. It does **not** delete container images from your registry. Treat Application delete as “remove desired state from this cluster,” not “unpublish the artifact.”
 
----
-
 ## 3. Applications and use cases
 
 | Scenario | Concept that matters |
@@ -114,8 +108,6 @@ Application deletion can cascade (finalizers) and **prune** cluster resources de
 - **Prune** — delete resources removed from Git  
 - **ApplicationSet** — generate many Applications  
 - **App-of-Apps** — parent Application of Applications  
-
----
 
 ## References
 

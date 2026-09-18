@@ -48,8 +48,6 @@ isLeaf (Leaf _) = True
 isLeaf _ = False
 ```
 
----
-
 ## Further reading
 
 - [Haskell 2010 report – Chapter 5 Modules](https://haskell.org/onlinereport/haskell2010/haskellch5.html)

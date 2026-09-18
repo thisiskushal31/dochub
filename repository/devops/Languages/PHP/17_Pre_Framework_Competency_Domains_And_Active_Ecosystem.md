@@ -6,8 +6,6 @@
 
 **Why staff engineers learn the language and runtime before framework manuals**, how to partition PHP work into **domains** (HTTP, CLI, data, security, packaging, performance, CMS vs application stacks), what the **public web footprint** and **vendor surveys** imply about where PHP actually runs in 2025–2026, and a **competency checklist** you can use to audit yourself or a team before owning Laravel, Symfony, or WordPress in production. Framework chapters assume this baseline.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the PHP [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -23,8 +21,6 @@ Frameworks (Laravel, Symfony, WordPress core APIs, Drupal’s kernel, etc.) **co
 A staff engineer who jumps straight to “how do I configure Horizon” without knowing **FPM worker reuse**, **Opcache timestamp validation**, or **PDO persistent connection pitfalls** will mis-debug incidents: symptoms look like “Laravel is slow” when the root cause is pool saturation or missing indexes.
 
 **Rule of thumb:** Read chapters **01–11** and this file **before** treating framework docs as the source of truth for production behavior.
-
----
 
 ### 2. Domain map: where PHP work splits
 
@@ -46,8 +42,6 @@ Use this grid when scoping ownership, on-call runbooks, and interview loops.
 
 Framework-specific routing, ORM configuration, and admin UX sit **on top** of these domains.
 
----
-
 ### 3. Where PHP actually shows up (footprint + surveys)
 
 PHP remains one of the most deployed server-side languages on the public web: usage indexes that crawl large samples of sites consistently report **PHP as the majority share among sites that disclose a server-side language**, with **WordPress** accounting for a very large slice of all websites and an outsized fraction of PHP’s visibility. That shapes hiring, security monitoring, and legacy surface area—even if your employer builds only greenfield APIs.
@@ -61,8 +55,6 @@ Implications for staff:
 - **EOL PHP** persists in the long tail; migration projects are a core staff skill.
 
 **Finance, healthcare, public sector:** PHP appears in billing portals, patient-facing tools, and citizen services—audit expectations (PCI, HIPAA analogues, data residency) apply to **session storage**, **upload retention**, and **log redaction** the same as for any other language; framework choice does not relax controls.
-
----
 
 ### 4. Application stacks you should name (before reading framework docs)
 
@@ -87,13 +79,9 @@ Implications for staff:
 
 You do not need to master every framework—but you **do** need to recognize which **domain risks** apply: plugin RCE vs Composer dependency confusion vs long-lived worker memory.
 
----
-
 ### 4b. Platform ↔ product handoff (contract)
 
 Platform teams should publish: supported PHP minors, extension list, FPM pool defaults, Opcache policy, and ingress timeout values. Product teams should publish: required `ext-*`, `composer.lock` update cadence, queue worker topology, and session store. Incidents happen when either side assumes the other’s contract—encode it in a **single internal doc** or service catalog entry, not only in Terraform variables.
-
----
 
 ### 5. Competency checklist (pre-framework bar)
 
@@ -132,8 +120,6 @@ Treat each item as pass/fail for “I can own production PHP.”
 - Diff `composer.lock` between releases; interpret `composer audit` output.
 - Name three non-Composer packages that still need CVE tracking (OS `php-*` extensions, nginx, glibc, etc.).
 
----
-
 ## 2. Advanced concepts
 
 **Framework documentation vs runtime truth:** Frameworks document *their* abstractions; when docs say “flush cache,” you must know whether that means Opcache, Redis, Symfony cache pools, Laravel `config:Cache`, or WordPress object cache—different failure modes.
@@ -146,8 +132,6 @@ Treat each item as pass/fail for “I can own production PHP.”
 
 **Regulated environments:** Banking and healthcare still ship PHP; audits care about **session fixation**, **deserialization**, **SBOM**, and **evidence of patch cadence**—framework marketing does not substitute for control mapping (chapter 14).
 
----
-
 ## 3. Applications and use cases
 
 - **Staffing interviews:** Pair “explain FPM” with “debug 502 after deploy” scenarios; reject candidates who only know artisan commands.
@@ -155,8 +139,6 @@ Treat each item as pass/fail for “I can own production PHP.”
 - **Security monitoring:** WordPress-heavy estates need plugin CVE feeds; Symfony/Laravel estates need Composer advisory integration—different tooling defaults.
 - **Cost:** Shared hosting PHP vs K8s PHP changes autoscaling and logging strategy; staff should price both models when advising product.
 - **Training paths:** Week one — chapters 1–4 + 9; week two — 7, 10, 11, 14; week three — framework-specific deep dives with this checklist as exit criteria.
-
----
 
 ## References
 

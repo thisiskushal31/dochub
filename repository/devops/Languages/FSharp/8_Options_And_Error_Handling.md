@@ -33,8 +33,6 @@ with :? System.FormatException as e ->
 
 **Why this matters.** Options and Result make failure and absence part of the type system. That reduces null and “forgot to check” bugs. In services and scripts, combining option/Result with logging and clear error messages improves debuggability and security (e.g. not leaking internals in error output). The Option and Result modules are standard tools for composing optional and fallible operations.
 
----
-
 ## Further reading
 
 - [Options (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/options)

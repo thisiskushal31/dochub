@@ -73,8 +73,6 @@ Three comment styles are supported:
 
 Configuration files must be UTF-8 encoded. Delimiters (braces, equals, quotes) are ASCII, but identifiers, comments, and string values may contain non-ASCII characters. Both Unix (LF) and Windows (CRLF) line endings are accepted; Unix-style is idiomatic and formatters may normalize to LF.
 
----
-
 ## Further reading
 
 - [Terraform: Configuration Syntax](https://developer.hashicorp.com/terraform/language/syntax/configuration)

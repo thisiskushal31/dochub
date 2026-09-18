@@ -28,8 +28,6 @@ Kotlin is a strong fit for server-side applications: it is expressive, scales we
 
 Beyond Android and server backends, Kotlin on the JVM is used for desktop applications, CLI tools, and libraries consumed by Java or other JVM languages. The same language features apply: null safety, coroutines (where the runtime supports them), data classes, and seamless Java interop. Choose Kotlin when you want a more concise and safe language on the JVM while keeping access to the whole Java ecosystem. The next topic covers Kotlin Multiplatform, which extends code sharing beyond the JVM to iOS, desktop, and web.
 
----
-
 ## Further reading
 
 - [Kotlin for server-side](https://kotlinlang.org/docs/server-overview.html)

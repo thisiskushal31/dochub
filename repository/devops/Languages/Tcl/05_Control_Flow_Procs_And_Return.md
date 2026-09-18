@@ -6,8 +6,6 @@
 
 How Tcl makes decisions and repeats work: **`if`**, **`switch`**, **`while`**, **`for`**, **`foreach`**, **`incr`**, how **`proc`** defines commands, what **`return`** codes mean, a glance at **`apply`**, **`expr` discipline** (with **`::tcl::mathop`**), and **`tailcall`** literacy. Bodies are just words—usually **braced**—so chapter **03** quoting rules apply everywhere here. Default: **Tcl 9.0.x**.
 
----
-
 ## 1. Concepts
 
 ### 1. `if`
@@ -225,8 +223,6 @@ puts [::tcl::mathop::+ 10 20]
 
 Staff literacy: recognize `::tcl::mathop::+` in a PR as intentional—not a typo for `expr`. Do not mix styles randomly inside one proc.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Why bracing is non-negotiable here
@@ -340,8 +336,6 @@ Contrast: `return [handle ready {*}$args]` from `init` also works for this tiny 
 - Remember: nothing in the caller runs *after* a successful `tailcall`.
 - Pair with chapter **09** when errors must surface from the *replacement* command’s context.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Pattern |
@@ -351,8 +345,6 @@ Contrast: `return [handle ready {*}$args]` from `init` also works for this tiny 
 | **Security** | `expr` in conditions must not interpolate untrusted strings without bracing and validation. |
 | **Ops** | Expect flows are control-heavy; timeouts/`break` interactions need clear proc boundaries. |
 | **SE** | Small procs with explicit `return -code error` beat giant monolith scripts for testability. |
-
----
 
 ## Staff-level review checklist
 
@@ -365,8 +357,6 @@ Contrast: `return [handle ready {*}$args]` from `init` also works for this tiny 
 - `apply` used for local callbacks—not as an obfuscation layer.
 - `expr` call sites are **braced**; mathop (`::tcl::mathop`) used deliberately when chosen over `expr`.
 - `tailcall` is rare, commented, and actually in tail position (no “code after” illusions).
-
----
 
 ## References
 

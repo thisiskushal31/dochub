@@ -6,8 +6,6 @@
 
 How YAML decides **what type** a node is: tags, non-specific tags, and the three **recommended schemas** in YAML 1.2 (Failsafe, JSON, Core)—with enough resolution detail to predict loader behavior. Also: explicit tags, local/application tags, and doors like `!!binary` / timestamps.
 
----
-
 ## 1. Concepts
 
 ### 1. Tags are type labels
@@ -55,8 +53,6 @@ count: "10"   # only when the host expects string; else use number deliberately
 ```
 
 Use real numbers/bools when the host schema wants numbers/bools—honesty over quoting everything by habit.
-
----
 
 ## 2. Advanced concepts
 
@@ -126,8 +122,6 @@ YAML type resolution ≠ Kubernetes/Action/Ansible acceptance. Chapter **08** ow
 
 CI often loads YAML → JSON-compatible data → JSON Schema. Design configs to survive that path: avoid relying on YAML-only constructs the bridge drops or rejects.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Typing role |
@@ -140,8 +134,6 @@ CI often loads YAML → JSON-compatible data → JSON Schema. Design configs to 
 
 **Whole-engineering picture:** typing is where format literacy meets **product correctness**.
 
----
-
 ## 4. Staff-level review checklist
 
 - Team knows whether the loader behaves like **Core**, **JSON**, or **1.1-flavored** resolution.
@@ -150,8 +142,6 @@ CI often loads YAML → JSON-compatible data → JSON Schema. Design configs to 
 - No custom application tags in ordinary infra manifests.
 - Hex/octal/inf/nan plains are intentional integers/floats—or quoted.
 - Critical keys have tests or dry-runs that assert loaded types.
-
----
 
 ## References
 

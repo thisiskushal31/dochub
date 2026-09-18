@@ -4,8 +4,6 @@
 
 Groovy supports both scripts (files of statements and optionally methods) and classes. This topic explains how scripts are compiled, how the **run** method and binding work, how variables and methods behave, and how JEP 445–style scripts differ, so you can reason about Jenkinsfiles and Gradle build scripts.
 
----
-
 ## 1. Motivation for scripts
 
 In Java, executable code must live inside a class and a **public static void main(String[])** method. In Groovy you can write a file that is just statements; the compiler wraps them in a script class. So the following is valid and equivalent to a class with **main** calling **run**:
@@ -13,8 +11,6 @@ In Java, executable code must live inside a class and a **public static void mai
 ```groovy
 println 'Groovy world!'
 ```
-
----
 
 ## 2. Script class compilation
 
@@ -45,8 +41,6 @@ class Main extends Script {
 
 Statements not inside a method or class (“loose” statements) are assembled in order into **run**. Method definitions are copied onto the script class. Line numbers are preserved in bytecode so stack traces match the source.
 
----
-
 ## 3. Methods in scripts
 
 You can define methods at the top level. They become methods of the generated script class. You can mix loose statements and method definitions; loose statements are still collected into **run** in order.
@@ -57,8 +51,6 @@ int fib(int n) {
 }
 assert fib(10) == 89
 ```
-
----
 
 ## 4. Variables in scripts: local vs binding vs @Field
 
@@ -80,8 +72,6 @@ c = 3
 @Field def d = 4
 ```
 
----
-
 ## 5. Convenience variations: custom main or run
 
 Normally you must not define your own **main** or **run** because the compiler generates them. Exceptions (so you can add annotations or match a specific form):
@@ -97,8 +87,6 @@ static main(args) {
     println 'Groovy world!'
 }
 ```
-
----
 
 ## 6. JEP 445 compatible scripts (Groovy 5)
 
@@ -130,21 +118,15 @@ def (foo, bar) = ['Foo', 'Bar']
 
 Multi-assignment at top level becomes separate field definitions. For script-like behavior with binding and **Script** base class, use the traditional script form or the no-arg **run** convenience form instead of JEP 445.
 
----
-
 ## 7. Classes in the same file
 
 A **.groovy** file can contain one or more class (or trait, etc.) definitions. It can also contain a script body. Execution of the file runs the script body (the generated **run**); classes are available for use by the script or by other code. Scripts and classes in the same file follow the same package and import rules.
-
----
 
 ## 8. Why this matters for DevOps
 
 In **Jenkins**, a Jenkinsfile is usually a script. Variables you set without **def** (e.g. **env.BRANCH_NAME**) or that the pipeline provides (e.g. **params**) are typically in the binding or provided by the pipeline context. Knowing that declared variables are local to **run** and undeclared ones are in the binding helps when sharing state between **stage** blocks or with the host.
 
 In **Gradle**, **build.gradle** is evaluated as a script whose **delegate** is set to the **Project**. Top-level method calls (e.g. **apply**, **dependencies**) are invoked on the project. Closure blocks (e.g. **dependencies { }**) have their **delegate** set so that **implementation**, **testImplementation**, etc. resolve correctly. Script variables and the binding are less prominent than in Jenkins but the same rules apply.
-
----
 
 ## Further reading
 

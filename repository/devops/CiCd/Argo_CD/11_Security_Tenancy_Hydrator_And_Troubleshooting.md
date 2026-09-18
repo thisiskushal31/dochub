@@ -2,8 +2,6 @@
 
 [← Previous](./10_Ownership_Diffing_Webhooks_And_Observability.md) · [Argo CD](./README.md) · [Next: Website example →](./12_Worked_Example_Simple_Website_GitOps.md)
 
----
-
 ## 1. Concepts
 
 ### Security model (what to remember)
@@ -57,8 +55,6 @@ Cost: commit-server component, push credentials to Git, hydration lag, and anoth
 
 Override health Lua (or equivalent) for CRDs Argo does not understand. Without that, Applications can stay **Progressing** forever (Ingress controllers that never fill `loadBalancer` status; SealedSecrets; custom operators). Resource actions add UI/API verbs (restart, …) for operators — useful, also an RBAC surface.
 
----
-
 ## 2. Advanced concepts
 
 ### mTLS and internal hardening
@@ -77,8 +73,6 @@ Operational freezes: sync windows, or skipping reconcile on selected Application
 
 Argo CD 2.x → 3.x and minor upgrades change defaults (tracking, ApplicationSet behavior, hydrator, impersonation maturity). **Pin the version**, read **from→to upgrade guides**, and test on a non-prod management cluster. Do not treat `stable` floating manifests as production policy forever.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Feature |
@@ -89,8 +83,6 @@ Argo CD 2.x → 3.x and minor upgrades change defaults (tracking, ApplicationSet
 | Only signed commits to prod | Source integrity / GPG verification |
 | CRD never goes Healthy | Custom health |
 | SSO groups → who can sync | Dex/OIDC + RBAC + Project roles |
-
----
 
 ## Troubleshooting playbook
 
@@ -106,8 +98,6 @@ Argo CD 2.x → 3.x and minor upgrades change defaults (tracking, ApplicationSet
 | Image never updates | Git still old digest; Image Updater not installed/configured | Trace CI → GitOps commit path ([08](./08_Secrets_CI_Integration_And_Operations.md)) |
 | Two tools fight ownership | Label tracking clash | Switch to annotation tracking; audit instance labels |
 
----
-
 ## Staff checklist (additions to [09](./09_Use_Cases_Pitfalls_And_Staff_Checklist.md))
 
 - Resource tracking method understood (annotation preferred for multi-tool clusters)  
@@ -117,8 +107,6 @@ Argo CD 2.x → 3.x and minor upgrades change defaults (tracking, ApplicationSet
 - Apps-in-any-namespace / impersonation / hydrator only if intentionally enabled and Project-mapped  
 - Upgrade notes read for current minor; version pinned  
 - Custom health for critical CRDs that otherwise stick Progressing  
-
----
 
 ## References
 

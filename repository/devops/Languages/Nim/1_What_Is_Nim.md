@@ -68,8 +68,6 @@ when isMainModule:
 
 Understanding Nim supports both **building reliable tools** and **safely analyzing unfamiliar artifacts**.
 
----
-
 ## Further reading
 
 - [Nim documentation portal](https://nim-lang.org/documentation.html)

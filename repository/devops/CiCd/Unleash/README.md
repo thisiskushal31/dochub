@@ -34,8 +34,6 @@ Each numbered chapter: **Concepts → Advanced → Applications/use cases → Re
 
 Suggested order: **01 → 23**. After **04**, jump to **19** if you learn by building.
 
----
-
 ## Chapters
 
 | # | File | Focus |
@@ -65,8 +63,6 @@ Suggested order: **01 → 23**. After **04**, jump to **19** if you learn by bui
 | 23 | [Admin, Client, Frontend, Edge APIs](./23_Admin_Client_Frontend_And_Edge_APIs.md) | Every documented HTTP endpoint |
 
 Start: [01](./01_What_Is_Unleash_And_Feature_Flags.md).
-
----
 
 ## Pipeline relationship
 

@@ -6,8 +6,6 @@
 
 How Scala defines and passes behavior: **`def` methods**, function values, **lambdas**, **higher-order** functions, literacy-level **currying** and **by-name** parameters, and **extension methods** in Scala 3. This is the bridge from “expressions and types” to reusable APIs and collections-style code. Aim to leave this chapter able to read any `map`/`filter` pipeline and any multi-parameter-list DSL shape.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. Methods with `def`
@@ -160,8 +158,6 @@ def normalizeEmails(raw: List[String]): List[String] =
   raw.map(clean).filter(_.nonEmpty)
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. By-name parameters (brief)
@@ -308,8 +304,6 @@ scala> :type List(1, 2, 3).map
 
 `:type` on a partially applied method helps decode library DSLs.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -417,8 +411,6 @@ def partitionOk(rows: List[String]): (List[Int], List[String]) =
 - No unsafe capture of mutable state into concurrent or delayed callbacks.
 - Named arguments used when multiple parameters share a type.
 - Higher-order helpers used for retries/metrics do not swallow errors silently.
-
----
 
 ## References
 

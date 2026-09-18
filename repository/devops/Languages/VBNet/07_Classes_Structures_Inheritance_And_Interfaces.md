@@ -8,8 +8,6 @@ How VB.NET shapes types: **`Class`**, **`Structure`**, inheritance (`Inherits`, 
 
 You leave able to read a type hierarchy, choose class vs structure honestly, and review shared state and interface seams without confusing VB.NET with [Office VBA](../VBA/README.md). Parallel OOP depth for the same CLR lives in [C# classes](../CSharp/10_Classes_And_Objects.md) and [inheritance](../CSharp/11_Inheritance_And_Polymorphism.md).
 
----
-
 ## 1. Concepts
 
 ### 1. Class vs Structure
@@ -108,8 +106,6 @@ End Class
 
 `Partial Class` / `Partial Structure` / `Partial Interface` (where supported) split one type across files. WinForms / designer code often lives in a generated partial; your logic stays in the other. Do not put secrets or policy in generated partials you cannot review in PRs.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Overloads, shadows, and name resolution
@@ -140,8 +136,6 @@ Optional capabilities (`IDisposable`, logging, metrics) are usually better as in
 
 Reference types default to reference equality unless you override `Equals` / `GetHashCode` (or use records-style patterns elsewhere). Structures get value-ish field equality by default but custom equality still needs care for collections and dictionaries. Do not use mutable structures as dictionary keys.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -153,8 +147,6 @@ Reference types default to reference equality unless you override `Equals` / `Ge
 | **Software engineering** | Shallow `Inherits`; prefer `Implements` for contracts; review `Shadows` and mutable `Structure` as smells |
 
 When modernizing toward C#, the same CLR types map closely—see [C# interfaces, structs, and enums](../CSharp/12_Interfaces_Structs_And_Enums.md). VBA’s `Class` modules are a different host model ([VBA objects](../VBA/07_Objects_With_CreateObject_And_GetObject.md)).
-
----
 
 ## 4. Staff-level review checklist
 
@@ -168,8 +160,6 @@ When modernizing toward C#, the same CLR types map closely—see [C# interfaces,
 - Constructors validate invariants; invalid objects do not escape.
 - Boxing of structures through interfaces understood on hot or mutable paths.
 - Target framework (modern .NET vs Framework 4.x) matches interface/language features used.
-
----
 
 ## References
 

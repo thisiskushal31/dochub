@@ -6,8 +6,6 @@
 
 **Why properties?** They provide a uniform way to query or modify state (e.g. array length) without exposing implementation. **Why attributes?** They express constraints (e.g. `pure`, `nothrow`) and guide optimization and safety.
 
----
-
 ## Basic and built-in types
 
 Integral types include **bool**, **byte**, **ubyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**. Floating-point types are **float**, **double**, **real**. **void** denotes no value; **size_t** and **ptrdiff_t** are common for sizes and pointer difference. Character types **char**, **wchar**, **dchar** represent UTF code units.
@@ -18,8 +16,6 @@ double d = 3.14;
 bool flag = true;
 ```
 
----
-
 ## Type constructors and qualifiers
 
 **const**, **immutable**, and **shared** qualify how data may be modified. **Pointers** and **arrays** are built from element types. User-defined types are **struct**, **class**, **interface**, **enum**. Type aliases use **alias** or **typedef**.
@@ -29,13 +25,9 @@ immutable int[] arr;
 const(char)[] str;
 ```
 
----
-
 ## Properties
 
 Many types and expressions have **properties**: e.g. `.length` for arrays, `.ptr` for the underlying pointer, `.sizeof` for type size. Property syntax allows reading (and sometimes writing) without a method call. User-defined properties are implemented with **property** functions.
-
----
 
 ## Attributes and pragmas
 
@@ -44,8 +36,6 @@ Many types and expressions have **properties**: e.g. `.length` for arrays, `.ptr
 ```d
 @safe pure nothrow int add(int a, int b) { return a + b; }
 ```
-
----
 
 ## Further reading
 

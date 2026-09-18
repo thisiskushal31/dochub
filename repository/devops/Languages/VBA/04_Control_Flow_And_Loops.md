@@ -18,8 +18,6 @@ Chapters **02–03** gave you procedures and types. Errors that interrupt flow a
 
 Handbook default: **structured control flow**, readable conditions, no clever `GoTo` graphs in new LOB code.
 
----
-
 ## 1. Concepts
 
 ### 1. `If` / `ElseIf` / `Else`
@@ -149,8 +147,6 @@ Early exit is fine for **search**. Multiple exits scattered through mutation-hea
 
 Also exist: `Exit Sub`, `Exit Function`—pair with error-handling discipline in **05**.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `GoTo` — legacy literacy, modern avoidance
@@ -206,8 +202,6 @@ The recorder emits `Select` / `Activate` / `GoTo`-ish navigation soup. Staff rew
 
 without selecting cells for every operation (chapter **08**).
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Control flow in practice |
@@ -219,8 +213,6 @@ without selecting cells for every operation (chapter **08**).
 | **Software engineering** | Flat conditionals; Select Case for status codes; GoTo only for error labels. |
 
 **Whole-engineering picture:** control flow is where macros become trustworthy processes—or endless recorders. Bounds and branches are part of the contract.
-
----
 
 ## Staff-level review checklist
 
@@ -234,8 +226,6 @@ without selecting cells for every operation (chapter **08**).
 - Recorded `Select`/`Activate` noise rewritten toward direct references where practical.
 - Case Else / Else paths handle unknowns—no silent fall-through in LOB paths.
 - Nested loop counters named on `Next` for clarity.
-
----
 
 ## References
 

@@ -48,8 +48,6 @@ For hard **latency** work, Nim can **eliminate** redundant RC operations and exp
 - **Benchmark** allocation-heavy paths under the **same** mode you ship; **`refc`** vs **`orc`** can change tail latency profiles.
 - **Profile** realistic workloads, not only microbenchmarks.
 
----
-
 ## Further reading
 
 - [Nim memory management](https://nim-lang.org/docs/mm.html)

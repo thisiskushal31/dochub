@@ -2,8 +2,6 @@
 
 [← Previous](./18_Feature_And_Configuration_Coverage_Map.md) · [README](./README.md) · [Next: Troubleshooting →](./20_Troubleshooting_And_Staff_Checklist.md)
 
----
-
 ## 1. Concepts — configuration surfaces
 
 | Surface | What you set |
@@ -20,8 +18,6 @@
 
 Exact keys: [configuration reference](https://support.atlassian.com/bitbucket-cloud/docs/bitbucket-pipelines-configuration-reference/) for your features/plan.
 
----
-
 ## 2. Advanced concepts — good defaults
 
 | Env | Lean toward |
@@ -30,13 +26,9 @@ Exact keys: [configuration reference](https://support.atlassian.com/bitbucket-cl
 | Staging | Auto deploy on `main`; OIDC |
 | Prod | Manual step; deployment permissions; pinned pipes |
 
----
-
 ## 3. Applications and use cases
 
 PR checklist: every non-default YAML block needs a one-line reason.
-
----
 
 ## References
 

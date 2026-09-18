@@ -58,8 +58,6 @@ end do
 
 **Why this matters.** Loops are central to array and numerical code. Using `do` with correct bounds and stride, and `exit`/`cycle` where appropriate, keeps behavior clear and avoids infinite loops or off-by-one errors.
 
----
-
 ## Further reading
 
 - [Fortran – Loops (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_loops.htm)

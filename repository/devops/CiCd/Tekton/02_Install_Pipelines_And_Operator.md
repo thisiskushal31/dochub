@@ -2,8 +2,6 @@
 
 [← Previous](./01_What_Is_Tekton.md) · [README](./README.md) · [Next: Core model →](./03_Core_Model_Tasks_Pipelines_Runs.md)
 
----
-
 ## 1. Concepts
 
 Install **Tekton Pipelines** first (the core CRDs and controllers). Add Triggers, Dashboard, Chains, Results, Pruner, Pipelines-as-Code as needed.
@@ -23,8 +21,6 @@ kubectl get pods -n tekton-pipelines
 ```
 
 Confirm CRDs: `tasks.tekton.dev`, `pipelines.tekton.dev`, `taskruns.tekton.dev`, `pipelineruns.tekton.dev`.
-
----
 
 ## 2. Advanced concepts
 
@@ -48,8 +44,6 @@ After install, Pipelines exposes **additional configuration options** (feature g
 
 Pipelines support Windows node literacy ([20](./20_Observability_HA_Debug_And_Windows.md)) — optional for most Linux platforms.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -59,8 +53,6 @@ Pipelines support Windows node literacy ([20](./20_Observability_HA_Debug_And_Wi
 | Add webhooks later | Install Triggers after core is healthy |
 
 **Good:** documented versions + smoke TaskRun. **Bad:** apply `latest` on Friday with no rollback.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./01_What_Is_Argo_Rollouts_And_Progressive_Delivery.md) · [README](./README.md) · [Next: Architecture →](./03_Architecture_And_Controller.md)
 
----
-
 ## 1. Concepts
 
 | Term | Meaning |
@@ -20,8 +18,6 @@
 Without traffic routing, canary weight is approximately a **replica ratio**. With traffic routing, weight can be a true **traffic percentage**.
 
 Analysis is **optional**. You can pause and promote manually via CLI or API and still get progressive structure.
-
----
 
 ## 2. Advanced concepts
 
@@ -47,8 +43,6 @@ Experiments run limited ReplicaSets for a duration (or until stopped), optionall
 
 New **metric**, **traffic**, and **canary step** integrations are expected as **plugins**, not core PRs. Core stays stable; extensions live outside.
 
----
-
 ## 3. Applications and use cases
 
 | Scenario | Concept that matters |
@@ -57,8 +51,6 @@ New **metric**, **traffic**, and **canary step** integrations are expected as **
 | Synced in Argo CD but users still on old | Rollout paused or analysis running — check Rollout status, not only Application |
 | Smoke on preview before cutover | Blue-green `previewService` plus promote |
 | A/B baseline comparison | Experiment plus Analysis |
-
----
 
 ## References
 

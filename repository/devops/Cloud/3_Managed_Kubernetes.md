@@ -2,8 +2,6 @@
 
 [← Previous](./2_Spectrum_And_When_Which.md) · [README](./README.md) · [Suggested next: IAM jobs →](./15_Org_IAM_And_Identity_Federation.md) · [Or provider: GCP →](./4_GCP_Literacy.md)
 
----
-
 ## 1. Concepts
 
 **Managed Kubernetes** as a *cloud product* means the provider runs the **control plane**. You get an API endpoint and credentials. You still run **workloads**, and often still run **nodes** (unless you pick Autopilot / EKS Auto Mode / similar).
@@ -36,8 +34,6 @@ IAM bindings, cluster RBAC, network policy, image provenance, node/OS upgrades (
 
 Control-plane availability and patching (within their SLA), the Kubernetes API endpoint, and (on Autopilot/Auto Mode) more of the node lifecycle.
 
----
-
 ## 2. Advanced concepts
 
 ### Identity into the cluster (so you do not paste keys)
@@ -60,8 +56,6 @@ Do not put cloud keys in Secrets for Pods that only need to talk to the same clo
 
 Managed control planes upgrade on a **channel** or by you clicking a version. Nodes lag unless you automate. Treat upgrades as a delivery event ([CiCd/](../CiCd/README.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -79,8 +73,6 @@ Managed control planes upgrade on a **channel** or by you clicking a version. No
 - Cluster-admin bindings inventory  
 
 **Good:** private nodes, WI/IRSA, version skew policy. **Bad:** public nodes, node instance profile with Owner, cluster-admin bound to the CI robot forever.
-
----
 
 ## References
 

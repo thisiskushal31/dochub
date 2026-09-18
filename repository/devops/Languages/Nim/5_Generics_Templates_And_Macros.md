@@ -39,8 +39,6 @@ Heavy metaprogramming benefits from **`nim check`**, good **IDE integration** (*
 - Keep macro APIs **narrow** and **documented**; avoid macro “frameworks” without strong tests.
 - Prefer **readability** and **auditability** over cleverness—especially in compliance-heavy environments.
 
----
-
 ## Further reading
 
 - [Tutorial, part 2](https://nim-lang.org/docs/tut2.html)

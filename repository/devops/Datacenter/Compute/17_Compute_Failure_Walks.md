@@ -2,15 +2,11 @@
 
 [← Previous](./16_Spares_SKU_Discipline.md) · [README](./README.md) · [Next: Hypervisor map →](./18_Hypervisor_On_The_Box_Map.md)
 
----
-
 ## 1. Concepts
 
 A **compute failure walk** traces a dead or sick node from symptom → BMC/sensors → hardware layer → hall dependencies (power/cool/net).
 
 Method matches electrical/mechanical walks: name the object, expected alarms, blast radius, human action.
-
----
 
 ## 2. Advanced concepts
 
@@ -39,8 +35,6 @@ Method matches electrical/mechanical walks: name the object, expected alarms, bl
 
 Power: [Electrical/17](../Electrical/17_Power_Path_Failure_Walks.md). Cooling: [Mechanical/11](../Mechanical/11_Mechanical_Failure_Walks.md). Fabric: Fabric-Physical failure chapters (Batch 6). Roles: [Jobs](../Jobs/README.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -59,8 +53,6 @@ Power: [Electrical/17](../Electrical/17_Power_Path_Failure_Walks.md). Cooling: [
 - Never power-cycle clusters as first step without blast-radius check  
 
 **Good:** layered walks, evidence-first. **Bad:** reimage as culture; ignore BMC SEL; blame “software” for lost PDU A.
-
----
 
 ## References
 

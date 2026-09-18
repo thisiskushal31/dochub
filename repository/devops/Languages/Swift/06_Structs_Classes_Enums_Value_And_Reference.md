@@ -8,8 +8,6 @@
 
 Most model data in modern Swift is a struct or an enum. Classes exist for identity, inheritance, and Objective-C/UIKit-shaped lifetimes — not as the default “bag of fields.” Noncopyable types exist for **unique resources**; they are not a new default for app DTOs.
 
----
-
 ## 1. Concepts
 
 ### 1. Structures (value types)
@@ -140,8 +138,6 @@ Raw-value enums (`String`, `Int`, …) are useful for stable wire/config tags. R
 | Unique OS resource (fd, exclusive token) | `struct: ~Copyable` (when API exists) | One owner; borrow/consume at calls |
 
 Choose **value** unless you need shared mutable identity, inheritance, or a framework that requires a class. Choose **noncopyable** only when copying would be meaningless or dangerous.
-
----
 
 ## 2. Advanced concepts
 
@@ -463,8 +459,6 @@ func eval(_ e: Expr) -> Int {
 - `indirect` boxes the recursive case so the enum’s layout can be finite.
 - Reach for this for ASTs and trees; do not invent recursive enums for flat DTOs.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -476,8 +470,6 @@ func eval(_ e: Expr) -> Int {
 | **Software engineering** | Default to `struct` + `enum`; justify every new `class` in the PR; justify every `~Copyable` harder; synthesize Equatable/Hashable when field equality is the truth |
 
 In concurrent code, value types composed of `Sendable` pieces cross task boundaries more easily than open classes with mutable stored properties (chapter **10**). Noncopyable + concurrency needs deliberate design—do not invent it casually in an app feature PR.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -495,8 +487,6 @@ In concurrent code, value types composed of `Sendable` pieces cross task boundar
 - `consume` / consuming methods are used deliberately; no use-after-move.
 - `===` vs `==` is correct at call sites; Hashable/`==` pairs stay coherent.
 - Recursive enums use `indirect` when needed; inheritance depth stays shallow.
-
----
 
 ## References
 

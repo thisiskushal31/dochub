@@ -54,8 +54,6 @@ On the JVM you need a scope to start coroutines. In application code you often u
 
 Coroutines integrate with callback-based APIs via **`suspendCoroutine`** or **`suspendCancellableCoroutine`**, and with futures via **`Future.await()`** in kotlinx.coroutines. The next topic covers exceptions and error handling, including how uncaught exceptions in coroutines are handled.
 
----
-
 ## Further reading
 
 - [Coroutines overview](https://kotlinlang.org/docs/coroutines-overview.html)

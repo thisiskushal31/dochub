@@ -2,8 +2,6 @@
 
 [← Previous](./11_API_Tokens_Keys_And_Service_Accounts.md) · [README](./README.md) · [Next: Change requests →](./13_Change_Requests_Release_Management_And_Governance.md)
 
----
-
 ## 1. Concepts
 
 Human access to Unleash is separate from **SDK tokens** ([11](./11_API_Tokens_Keys_And_Service_Accounts.md)). Identity work has three layers:
@@ -24,8 +22,6 @@ Unleash applies roles at two levels:
 2. **Project** — flags, change requests, project-scoped tokens, collaboration mode.
 
 Predefined **root** roles (all versions): **Admin**, **Editor**, **Viewer**. Enterprise adds **project** Owner/Member, **custom root/project roles**, and **user groups**. Custom roles are how you grant change-request approve/apply/skip without making everyone Admin ([13](./13_Change_Requests_Release_Management_And_Governance.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -51,8 +47,6 @@ Project **collaboration mode** (private/protected) and **public signup / invite 
 
 Core flag evaluation works in OSS with basic root roles. SSO, SCIM, project/custom roles, and advanced audit retention are Enterprise surfaces — plan identity with the offering you actually run ([22](./22_Config_Catalog_Migrate_And_Spectrum.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -71,8 +65,6 @@ Core flag evaluation works in OSS with basic root roles. SSO, SCIM, project/cust
 - Invite links and public signup reviewed  
 
 **Good:** IdP groups → Unleash groups → project roles. **Bad:** everyone Root Admin “so flags move faster.”
-
----
 
 ## References
 

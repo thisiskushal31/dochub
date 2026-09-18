@@ -6,8 +6,6 @@
 
 Where Ruby fits in **software engineering** end to end: product web stacks, libraries and gems, batch and integration workloads, infrastructure DSLs, and staff-level **competency** expectations. DevOps is one column in this map—not the whole table.
 
----
-
 ## 1. Concepts
 
 ### 1. Engineering domains Ruby touches
@@ -94,8 +92,6 @@ Chapters **08**, **16–18**, **20**, **22**: metaprogramming governance, runtim
 - **Kubernetes / Terraform** → Cloud-Native / IAC
 - **Exhaustive MRI API** → official docs + References per chapter
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Polyglot organizations
@@ -113,8 +109,6 @@ Ruby is **BSD-2-Clause**; each gem has its own license—FOSSA/Snyk scans in CI.
 ### 4. Staying current
 
 Ruby **NEWS** per minor, Ruby security mailing list, RubyGems CVE posts. Plan **yearly minor upgrades** with full test suite and staging soak.
-
----
 
 ## 3. Applications and use cases
 
@@ -142,8 +136,6 @@ Ruby **NEWS** per minor, Ruby security mailing list, RubyGems CVE posts. Plan **
 - New services default to **locked Bundler**, tests, and security audit in CI.
 - Framework and language reviews are both scheduled for internet-facing apps.
 - Competency map attached to onboarding—not “read a tutorial and ship.”
-
----
 
 ## References
 

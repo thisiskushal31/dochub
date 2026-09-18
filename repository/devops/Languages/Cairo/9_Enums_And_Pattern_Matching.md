@@ -4,8 +4,6 @@
 
 **Enums** define a type by listing its possible **variants**. Each variant can optionally carry data. Enums are used for fixed sets of related values and for optional or result types. This topic covers defining enums, variants with and without data, and using them with the **match** construct.
 
----
-
 ## Defining enums
 
 Use `enum` and name the type; list variants inside braces. By convention, the enum and its variants use PascalCase.
@@ -24,8 +22,6 @@ fn main() {
     let direction = Direction::North;
 }
 ```
-
----
 
 ## Variants with data
 
@@ -55,8 +51,6 @@ enum Message {
 }
 ```
 
----
-
 ## Option
 
 The standard **Option** type represents an optional value: either **Some: T** (a value of type T) or **None**.
@@ -69,8 +63,6 @@ enum Option<T> {
 ```
 
 Use it for computations that might not produce a value (e.g. searching an array). **Result** is used for fallible operations and is covered in error handling.
-
----
 
 ## Match
 
@@ -107,8 +99,6 @@ fn main() {
 
 Use **_** as a catch-all pattern that matches anything and does not bind. Use **|** to match multiple patterns in one arm: `Coin::Dime | Coin::Quarter => true`. You can match tuples and integers (with restrictions: arms must cover contiguous segments; the first arm must start at 0).
 
----
-
 ## if let and while let
 
 **if let** matches one pattern and ignores the rest, so you avoid a full `match` when you only care about one case. You can add **else** for the non-matching case.
@@ -125,13 +115,9 @@ fn main() {
 
 **while let** loops while a pattern matches (e.g. `while let Some(value) = arr.pop_front() { sum += value; }`). **let else** does refutable pattern matching in a `let`; the **else** block must diverge (e.g. `return`, `panic!`) when the pattern does not match.
 
----
-
 ## Traits for enums
 
 You can implement traits for your enums (e.g. **Drop**, **Copy** when all variant data is Copy) and define methods that work on the enum. The **match** inside the implementation chooses behavior per variant.
-
----
 
 ## Further reading
 

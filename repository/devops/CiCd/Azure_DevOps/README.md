@@ -65,8 +65,6 @@ Suggested order: **01 → 25**. After **04**, jump to **20** if you learn by bui
 | Host-neutral schedule / promote | [CiCd/24](../24_Workflow_Automation_Beyond_PR_CI.md) |
 | This product end-to-end | Chapters **01–25** below |
 
----
-
 ## Chapters
 
 | # | File | Focus |

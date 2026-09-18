@@ -2,8 +2,6 @@
 
 [← Previous](./16_Control_Plane_Configuration_Catalog.md) · [Argo CD](./README.md) · [Next: Platform extras →](./18_Platform_Ingress_HA_UI_And_Extras.md)
 
----
-
 ## 1. Concepts — every way Argo CD gets manifests
 
 | Source type | How you point Application at it | Typical use |
@@ -31,8 +29,6 @@ Tool detection chooses Helm vs Kustomize vs directory from filesystem cues unles
 | Helm repo / OCI creds | Separate secrets; `passCredentials` carefully with Helm |
 
 Store as declarative Secrets (encrypted). Test `argocd repo add` in lab; commit the Secret manifest for prod.
-
----
 
 ## 2. Advanced concepts — per-tool configuration catalog
 
@@ -99,8 +95,6 @@ Example pattern: source 0 = Helm chart from upstream OCI; source 1 = Git repo of
 
 Import existing cluster resources into an Application’s management (migration aid). After import, Git must become the source of truth or you recreate dual-ownership pain.
 
----
-
 ## 3. Applications and use cases
 
 | Scenario | Source choice |
@@ -120,8 +114,6 @@ Import existing cluster resources into an Application’s management (migration 
 | Values files reviewed in PRs | Only UI Helm parameter overrides forever |
 | Separate GitOps repo | Digests committed to app repo causing rebuild loops |
 | CMP with platform SLOs | Every team invents a plugin |
-
----
 
 ## References
 

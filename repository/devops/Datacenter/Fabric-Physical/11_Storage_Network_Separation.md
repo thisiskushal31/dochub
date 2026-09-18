@@ -2,8 +2,6 @@
 
 [← Previous](./10_DNS_NTP_Physical_Placement.md) · [README](./README.md) · [Next: Fabric failure walks →](./12_Fabric_Failure_Walks.md)
 
----
-
 ## 1. Concepts
 
 Storage traffic (FC fabrics, iSCSI/NVMe-oF Ethernet, replication) needs **known isolation** from general east-west and user traffic—dedicated fabrics, VLANs/VRFs, QoS, or all three.
@@ -20,8 +18,6 @@ Storage traffic (FC fabrics, iSCSI/NVMe-oF Ethernet, replication) needs **known 
 ### Where it sits
 
 Separate switches or VRFs; host vNICs/HBAs mapped intentionally; monitoring distinct.
-
----
 
 ## 2. Advanced concepts
 
@@ -43,8 +39,6 @@ Storage path chapters: [Storage-Physical](../Storage-Physical/README.md). Leaf-s
 
 Same jobs; some estates fully converge with careful QoS—only with measurement and expertise.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -63,8 +57,6 @@ Same jobs; some estates fully converge with careful QoS—only with measurement 
 - Never “temporarily” bridge storage to prod for convenience  
 
 **Good:** real isolation, dual paths, measured. **Bad:** VLAN theater; storage+vMotion+users fighting; single leaf.
-
----
 
 ## References
 

@@ -6,8 +6,6 @@
 
 How SAPIs populate superglobals, how `Content-Type` drives body parsing, file upload mechanics and temporary storage, session save handlers and locking, cookie security attributes, CSRF mitigations for browser sessions, and threat-model notes for SSRF via outbound fetches triggered by user URLs. Later chapters assume authorization never depends on client-supplied identifiers alone.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the PHP [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -33,15 +31,11 @@ Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3
 
 **`variables_order` and `request_order`:** These `php.ini` directives control whether `ENV`, `GET`, `POST`, `COOKIE`, `SERVER` populate `$_REQUEST` and in what precedence. Relying on `$_REQUEST` for authentication or authorization is fragile—different hosts merge differently.
 
----
-
 ### 2. Body parsing and `php://input`
 
 `application/json` bodies are not automatically parsed into superglobals—frameworks read raw input once. `php://input` is not always rewindable for POST in all configurations—design single-pass readers.
 
 **`application/x-www-form-urlencoded` vs `multipart/form-data`:** The engine parses the former into `$_POST` (subject to `max_input_vars`—hitting the limit silently drops later fields, a subtle auth-bypass and data-loss class). Multipart carries files plus fields; each part has its own headers (`Content-Disposition`, optional `filename`). **Staff check:** log `max_input_vars` in prod and load-test forms with many fields.
-
----
 
 ### 3. File uploads
 
@@ -63,8 +57,6 @@ if (!move_uploaded_file($tmp, $dest)) {
 }
 ```
 
----
-
 ### 4. Sessions: fixation, hijack, storage
 
 `session_start` loads state keyed by session ID (cookie by default). Regenerate ID on privilege elevation. Session files on NFS, Redis, or databases change locking and scalability—file sessions can serialize all requests for a user on a single worker if locking is strict.
@@ -81,27 +73,19 @@ if (!move_uploaded_file($tmp, $dest)) {
 
 **Locking:** Custom handlers must define read/write semantics; Redis handlers differ on whether concurrent requests for one session block—this shapes perceived “hangs” under parallel XHR.
 
----
-
 ### 5. Cookies: flags and prefixes
 
 `HttpOnly`, `Secure`, `SameSite`, path/domain scope, and `__Host-` prefix rules reduce theft and CSRF. Short-lived access tokens plus refresh flows reduce window of abuse.
 
----
-
 ### 6. CSRF for cookie-backed sessions
 
 Synchronizer tokens or double-submit cookies protect state-changing browser forms. Bearer-token APIs are not subject to the same browser-driven CSRF model—threat models differ; still validate origin where relevant.
-
----
 
 ### 7. Output buffering, headers, and `header()`
 
 `header()` must run before any body bytes are sent. Warning output, BOM-prefixed includes, or accidental whitespace before `<?php` in required files cause “headers already sent” fatals—common when debugging with `var_dump` left in templates. `output_buffering` in `php.ini` masks some mistakes in development but should not be relied on as a production strategy.
 
 Staff should know whether the app sets **`Content-Type`** explicitly for JSON APIs, whether **`Cache-Control`** on authenticated routes prevents CDN caching of private data, and whether **`Set-Cookie`** attributes are duplicated by both PHP and the reverse proxy (misconfiguration doubles cookies or drops flags).
-
----
 
 ## 2. Advanced concepts
 
@@ -113,8 +97,6 @@ Staff should know whether the app sets **`Content-Type`** explicitly for JSON AP
 
 **HTTP/2 and multiplexing:** Head-of-line blocking differs from HTTP/1.1—timeouts and cancellation semantics change at the edge.
 
----
-
 ## 3. Applications and use cases
 
 - **AppSec testing:** IDOR on every resource id; mass assignment on JSON bodies; open redirect on `next` parameters.
@@ -122,8 +104,6 @@ Staff should know whether the app sets **`Content-Type`** explicitly for JSON AP
 - **Multi-region:** Sticky sessions vs shared Redis—document failover behavior.
 - **Compliance:** Session lifetime policies, re-auth for sensitive actions, rotation logging.
 - **API hardening:** Rate limits at edge; JSON schema validation; unexpected field rejection.
-
----
 
 ## References
 

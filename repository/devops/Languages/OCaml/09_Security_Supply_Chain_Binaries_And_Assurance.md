@@ -10,8 +10,6 @@ How package dependencies, native binaries, and FFI affect threat modeling; where
 opam list --installed
 ```
 
----
-
 ## 1. Supply chain (opam and beyond)
 
 Packages install from opam repositories and sometimes from pinned git URLs. Risks include package name confusion, compromised maintainer accounts, and transitive dependencies you never directly reviewed. Mitigations include lockfiles, minimal CI images, vendoring policy for air-gapped or regulated environments, internal package mirrors, and inventories of what shipped in each release (SBOM-style).
@@ -22,8 +20,6 @@ Packages install from opam repositories and sometimes from pinned git URLs. Risk
 sha256sum opam.lock
 ```
 
----
-
 ## 2. Native binaries and triage
 
 Release artifacts are native executables. Symbols, build IDs, and linked shared libraries matter for incident response the same way they do for C or Rust. Stripping debug symbols reduces casual reverse-engineering surface but does not remove secrets embedded in strings—never rely on compilation for secrecy.
@@ -31,8 +27,6 @@ Release artifacts are native executables. Symbols, build IDs, and linked shared 
 ```bash
 otool -L ./_build/default/bin/myexe  # macOS; use ldd on Linux
 ```
-
----
 
 ## 3. FFI and memory safety
 
@@ -46,8 +40,6 @@ Pure OCaml benefits from GC and static typing. FFI reintroduces C-class bugs: bu
   (cflags :standard -fstack-protector-strong)))
 ```
 
----
-
 ## 4. Assurance and formal methods
 
 Major proof assistants and verification tools are implemented in OCaml or embed OCaml ASTs. Adopting verified components binds you to toolchain choices (extraction targets, proof maintenance)—coordinate with security architecture and release management, not only application owners.
@@ -55,8 +47,6 @@ Major proof assistants and verification tools are implemented in OCaml or embed 
 ```ocaml
 (* Assurance tooling often manipulates Parsetree/Typedtree — treat compiler pin as policy *)
 ```
-
----
 
 ## 5. Threat-model checklist for OCaml services
 
@@ -76,8 +66,6 @@ ppx_at_build: [ppx_deriving_yojson]
 ffi: [libc.so, libssl.so]
 ```
 
----
-
 ## 6. Coordinated disclosure and advisory streams
 
 The ecosystem maintains a **security advisory database** for open-source packages and tools. **Low-impact** or historical issues may be recorded with public pull requests; **high-impact** issues are reported through a **private** channel coordinated with the **Security Response Team**, which may **embargo** fixes when severity and reach warrant it—similar disclosure norms to other language foundations.
@@ -89,8 +77,6 @@ Engineering teams should **subscribe** to the **public security-announcement** c
 opam update && opam upgrade pkgname --working-dir
 ```
 
----
-
 ## Advanced use cases and implementation
 
 Automate lockfile refresh in CI with human review gates—same pattern as other language ecosystems.
@@ -100,8 +86,6 @@ Treat compiler plugins and ppx rewriters as build-time code execution: pin versi
 ```bash
 opam pin ppx_deriving 1.0 --no-action
 ```
-
----
 
 ## References
 

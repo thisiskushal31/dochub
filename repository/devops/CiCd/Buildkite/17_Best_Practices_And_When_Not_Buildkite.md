@@ -2,8 +2,6 @@
 
 [← Previous](./16_Worked_Example_Build_And_Deploy.md) · [README](./README.md) · [Next: Coverage map →](./18_Feature_And_Configuration_Coverage_Map.md)
 
----
-
 ## 1. Concepts — management checklist
 
 - Pipeline YAML in Git; pin plugins  
@@ -14,8 +12,6 @@
 - Teams + SSO for enterprise access  
 - Know hosted vs self-hosted ops cost  
 
----
-
 ## 2. Advanced concepts — spectrum
 
 | Job | Buildkite angle | Elsewhere if needed |
@@ -24,8 +20,6 @@
 | K8s ship | Agents + kubectl/helm | Containerization / Argo |
 | Classical Jenkins estate | Don’t force rewrite | [Jenkins/](../Jenkins/README.md) |
 | Forge-native only | Prefer forge CI | GitHub/GitLab/Bitbucket tracks |
-
----
 
 ## 3. Applications and use cases — when not
 
@@ -36,8 +30,6 @@
 | Team already standardized elsewhere | Don’t add a second control plane without cause |
 
 Staff review: walk [18](./18_Feature_And_Configuration_Coverage_Map.md); mark use / defer / N/A.
-
----
 
 ## References
 

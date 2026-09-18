@@ -4,8 +4,6 @@
 
 Clojure has **global bindings** (vars, created with `def`) and **local bindings** (e.g. `let`, function parameters). **Vars** hold a root value and can be dynamically rebound for a scope; **let** creates immutable locals. There is no “assign to variable” in the traditional sense; you bind names to values in a scope.
 
----
-
 ## def — global vars
 
 **def** creates or updates a **var** in the current namespace. The var has a **root binding** visible to all code. By convention, vars are not reassigned; they hold constant or configuration values.
@@ -16,8 +14,6 @@ Clojure has **global bindings** (vars, created with `def`) and **local bindings*
 ```
 
 After evaluation, `app-name` refers to the string `"MyApp"` and `max-retries` to `3`. Using `def` for mutable state is possible but discouraged; use atoms or other reference types instead (topic 15).
-
----
 
 ## let — local bindings
 
@@ -39,8 +35,6 @@ You can nest `let` or use a later binding to refer to an earlier one in the same
 ;; => 3
 ```
 
----
-
 ## Function parameters
 
 Function parameters are **local bindings** for the duration of the call. They are defined in the parameter vector of `defn` (or `fn`).
@@ -52,13 +46,9 @@ Function parameters are **local bindings** for the duration of the call. They ar
 
 Here `x` and `y` are bound to the arguments when `add` is called.
 
----
-
 ## Scope and shadowing
 
 Bindings are **lexically scoped**. A inner `let` can **shadow** an outer binding by reusing the same name; the inner binding is visible only inside that let. Vars are visible in the namespace unless shadowed by a local.
-
----
 
 ## Further reading
 

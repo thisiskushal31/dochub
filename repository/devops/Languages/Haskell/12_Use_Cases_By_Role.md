@@ -12,8 +12,6 @@ Haskell is used across software engineering, DevOps/SRE, security, and research.
 
 **Cross-cutting.** Regardless of role, use the README’s topic index and “By engineering role” table to jump to the right depth. Use “Further reading” at the end of each topic to go deeper without cluttering the main narrative. For hands-on practice, create a small project with `cabal init` or `stack new`, add a dependency and a test, and run it locally and (for DevOps) in a CI job.
 
----
-
 ## Further reading
 
 - [Haskell documentation](https://www.haskell.org/documentation/)

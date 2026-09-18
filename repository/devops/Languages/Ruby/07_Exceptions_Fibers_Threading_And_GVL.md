@@ -6,8 +6,6 @@
 
 How Ruby handles **failure** (`raise`, `rescue`, `ensure`), how **exceptions** are classified, and how **fibers** and **threads** interact with **MRI’s global VM lock (GVL)**. You need this to design web servers, background jobs, and shared services—and to debug latency spikes, connection pool exhaustion, and swallowed errors in any long-running process.
 
----
-
 ## 1. Concepts
 
 ### 1. Exception hierarchy
@@ -105,8 +103,6 @@ t.join
 
 The stdlib **`timeout`** gem pattern is discouraged for production—timeouts can fire unpredictably with threads. Prefer socket **`read_timeout`**, HTTP client timeouts, and explicit cancellation policies.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `rescue Exception` is almost always wrong
@@ -167,8 +163,6 @@ Ruby 3+ allows registering schedulers for non-blocking I/O (async gems). Ecosyst
 
 **Staff checks:** profile clone cost; forbid `move` then accidental reuse; cap ractor count like any worker pool; treat ractor errors like thread errors (supervision, logging). See official docs for **constants** and **class/module instance variables** restrictions in non-main ractors.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and architecture
@@ -220,8 +214,6 @@ Document thread model in runbooks: “Puma workers = processes; threads per work
 - Timeouts applied at I/O boundaries, not only `Timeout.timeout`.
 - Background thread errors are observed (join, handler, or monitoring).
 - If **Ractor** is used: message boundaries are explicit; no reuse after `move: true`; clone cost measured under production-sized payloads.
-
----
 
 ## References
 

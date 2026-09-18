@@ -6,8 +6,6 @@
 
 A **thread** is a flow of execution within a process. One process can have many threads that share the process’s memory and resources but have their own stack and register state. This topic covers thread concepts, user vs kernel threads, multithreading models, and how this shows up in Linux.
 
----
-
 ## Thread vs process
 
 | Concept | Process | Thread |
@@ -23,8 +21,6 @@ Threads allow concurrency inside one process (e.g. one thread for I/O, another f
 
 *Image: [ByteByteGo – Process vs Thread: Key Differences](https://bytebytego.com/guides/what-is-the-difference-between-process-and-thread/).*
 
----
-
 ## User-level vs kernel-level threads
 
 | Type | Managed by | Pros | Cons |
@@ -33,8 +29,6 @@ Threads allow concurrency inside one process (e.g. one thread for I/O, another f
 | **Kernel-level** | Kernel (scheduler sees threads). | Blocking in one thread does not block others; can use multiple CPUs. | Heavier create/switch; kernel involvement. |
 
 Many modern OSs (including Linux) use a **1:1 model**: each user thread is a kernel schedulable entity (kernel thread). So you get kernel-level benefits with a user API (e.g. pthreads).
-
----
 
 ## Multithreading models
 
@@ -46,16 +40,12 @@ Many modern OSs (including Linux) use a **1:1 model**: each user thread is a ker
 
 Linux exposes 1:1; other models are sometimes implemented in user-space libraries or runtimes.
 
----
-
 ## Benefits of multithreading
 
 - **Responsiveness** — One thread can block on I/O while others keep the program responsive (e.g. GUI).
 - **Resource sharing** — Threads share memory and files by default; no need for IPC for in-process data.
 - **Economy** — Creating and switching threads is cheaper than processes.
 - **Scalability** — On multi-CPU systems, threads can run in parallel and use more cores.
-
----
 
 ## Linux: threads and pthreads
 
@@ -75,8 +65,6 @@ cat /proc/<PID>/status | grep Threads
 
 Example (conceptual) in C: create threads with `pthread_create`, join with `pthread_join`, protect shared data with `pthread_mutex_lock`/`unlock`.
 
----
-
 ## Summary
 
 - **Thread** = execution flow inside a process; shares process memory; has own stack and registers.
@@ -84,8 +72,6 @@ Example (conceptual) in C: create threads with `pthread_create`, join with `pthr
 - **Models**: many-to-one, one-to-one, many-to-many; Linux uses 1:1.
 - Benefits: responsiveness, sharing, economy, scalability.
 - On Linux: threads are visible in `ps -T`, `top -H`, `/proc/<PID>/status`; programming via **pthreads**.
-
----
 
 ## Further reading
 

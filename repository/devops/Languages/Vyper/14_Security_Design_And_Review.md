@@ -8,8 +8,6 @@ How to **review** Vyper systems on **0.4.x** (pin **0.4.3**): intentional langua
 
 Shared EVM bug classes (oracle trust, signature replay, upgrade admin) also appear in the [Solidity](../Solidity/README.md) security chapters. Use those for machine-level depth; use this chapter for Vyper-shaped expectations.
 
----
-
 ## 1. Concepts
 
 ### 1. Design constraints are security features
@@ -106,8 +104,6 @@ Shipping Vyper does not exempt you from compiler CVEs. Chapter **18** covers `Co
 
 If a finding needs a proof of concept, keep it **minimal, private to the audit process**, and focused on demonstrating the invariant break—not on teaching weaponization. These chapters stay on the review side of that line.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Modules and confused deputies
@@ -148,8 +144,6 @@ Track remediations to tests (**13**) and to compiler/verify notes (**12**, **18*
 
 Mixed Vyper + Solidity systems need one threat model at the **ABI boundary**. Do not assume Vyper’s non-features protect a Solidity peripheral that holds the upgrade key. Point Solidity-side chapters at [Solidity](../Solidity/README.md); keep Vyper-shaped expectations here.
 
----
-
 ## 3. Applications and use cases
 
 | Role | Security “done” |
@@ -161,8 +155,6 @@ Mixed Vyper + Solidity systems need one threat model at the **ABI boundary**. Do
 | **Client engineer** | Does not treat “Vyper” as a substitute for simulating txs |
 
 **Smell:** “We’re safe because it’s Vyper.” Safe is a property of **this** bytecode, config, and process.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -179,8 +171,6 @@ Mixed Vyper + Solidity systems need one threat model at the **ABI boundary**. Do
 - Tests cover auth failures (**13**); verify story exists (**12**).
 - Upgrade/proxy/layout assumptions written if applicable.
 - Findings phrased as invariant breaks—not exploit tutorials.
-
----
 
 ## References
 

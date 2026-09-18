@@ -2,8 +2,6 @@
 
 [← Previous](./12_Deploy_VMs_VMSS_And_Host_Patterns.md) · [README](./README.md) · [Next: IaC →](./14_Deploy_IaC_ARM_Bicep_Terraform_Ansible.md)
 
----
-
 ## 1. Concepts
 
 Container delivery from Azure Pipelines:
@@ -21,8 +19,6 @@ CI builds image → push ACR (tag + digest)
 ```
 
 Deep Docker/Kubernetes craft → Containerization Deep Dive. Here: **Pipelines wiring**.
-
----
 
 ## 2. Advanced concepts
 
@@ -51,8 +47,6 @@ Deploy from source, Dockerfile, or existing image. Good middle ground when you w
 
 Prefer AKS ↔ ACR integration via managed identity over long-lived pull secrets in YAML.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Choose |
@@ -62,8 +56,6 @@ Prefer AKS ↔ ACR integration via managed identity over long-lived pull secrets
 | Strict GitOps | Pipelines → ACR; Argo/Flux sync |
 
 **Good:** digest in GitOps values / manifest. **Bad:** `kubectl apply` from CI with floating tags and no authz boundary.
-
----
 
 ## References
 

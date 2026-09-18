@@ -2,8 +2,6 @@
 
 [← Previous](./5_HBA_HCA_And_Multipath.md) · [README](./README.md) · [Next: SDS →](./7_Software_Defined_Ceph_vSAN_Kin.md)
 
----
-
 ## 1. Concepts
 
 A classic **disk array** is dual (or more) **controllers** plus **shelves** of drives. Controllers own caches, RAID/erasure, host ports; shelves are just capacity with expanders—until you lose the wrong path.
@@ -11,8 +9,6 @@ A classic **disk array** is dual (or more) **controllers** plus **shelves** of d
 ### Where it sits
 
 Storage racks with serious power/cooling; dual power cords; host ports to FC/Ethernet; backend SAS/NVMe shelves daisy-chained per OEM rules.
-
----
 
 ## 2. Advanced concepts
 
@@ -42,8 +38,6 @@ Host multipath must match controller pathing ([5](./5_HBA_HCA_And_Multipath.md))
 
 NetApp/Dell/HPE/Pure/IBM-class products differ; jobs—dual ctrl, shelf discipline, NDUs, spares—transfer.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -62,8 +56,6 @@ NetApp/Dell/HPE/Pure/IBM-class products differ; jobs—dual ctrl, shelf discipli
 - Never break both daisy-chain paths at once  
 
 **Good:** dual-ctrl healthy, documented shelves, tested NDUs. **Bad:** forever degraded mode; mystery expanders; pull two drives in one RAID set blindly.
-
----
 
 ## References
 

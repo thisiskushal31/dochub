@@ -4,13 +4,9 @@
 
 **Prerequisite:** [Fundamentals: Process and PCB](../Fundamentals/2_Process_And_PCB.md). Here: how **Unix** implements processes — commands and tools on BSD, Solaris, and Unix-like systems.
 
----
-
 ## Process model on Unix
 
 A **process** is a program in execution: address space, file descriptors, and one or more threads of control. Unix created the **fork/exec** model: `fork()` duplicates the process; `exec()` replaces the program image. Process state is visible via **ps**, **top**, and in **/proc** (Linux) or **/proc** (Solaris) or **sysctl** and **procfs** (BSD).
-
----
 
 ## Inspecting processes
 
@@ -39,8 +35,6 @@ disown
 wait
 ```
 
----
-
 ## Signals and killing processes
 
 Unix uses **signals** for process control: **SIGTERM** (15) for graceful exit, **SIGKILL** (9) for force kill.
@@ -53,15 +47,11 @@ killall processname
 pkill -f "pattern"
 ```
 
----
-
 ## Summary
 
 - **Process** = program in execution; **fork/exec** is the Unix model.
 - **ps**, **pgrep**, **pstree** to inspect; **kill**, **killall**, **pkill** to send signals.
 - **SIGTERM** (graceful) vs **SIGKILL** (force).
-
----
 
 ## Further reading
 

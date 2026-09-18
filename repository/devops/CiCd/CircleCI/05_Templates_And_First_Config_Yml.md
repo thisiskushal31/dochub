@@ -2,8 +2,6 @@
 
 [← Previous](./04_Config_Mental_Model_Jobs_Steps_Workflows.md) · [README](./README.md) · [Next: Executors →](./06_Managed_Executors_And_Resource_Classes.md)
 
----
-
 ## 1. Concepts
 
 These skeletons match CircleCI’s hello-world / quickstart shapes. Replace commands with your stack. Pin image tags.
@@ -72,13 +70,9 @@ Docs include language-oriented getting-started pages (JavaScript, Python, Go, �
 
 More workflow patterns: [08](./08_Workflows_Requires_Filters_Matrix_And_Triggers.md). Lab: [19](./19_Worked_Example_Build_And_Deploy.md).
 
----
-
 ## 2. Advanced concepts
 
 Convenience images (`cimg/…`) are maintained with lifecycle/support policies — prefer current supported tags; don’t rely on forgotten majors.
-
----
 
 ## 3. Applications and use cases
 
@@ -89,8 +83,6 @@ Convenience images (`cimg/…`) are maintained with lifecycle/support policies �
 | Teach workflows | `requires` between jobs |
 
 **Verify:** workflow map shows job order; artifacts downloadable when stored.
-
----
 
 ## References
 

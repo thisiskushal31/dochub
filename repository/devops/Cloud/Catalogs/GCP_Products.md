@@ -4,8 +4,6 @@
 
 *Final choice page for Google Cloud. Deeper API: [cloud.google.com/docs](https://cloud.google.com/docs).*
 
----
-
 ## Compute
 
 | Product | What for | When | Why not |
@@ -111,8 +109,6 @@
 | **Workspace APIs** | Docs/mail integration | Those apps | — |
 | **Anthos/GDC** | Hybrid | Regulated edge | Pure SaaS |
 | **Migrate to Virtual Machines / Containers** | Migration | Rehost/replatform | Rewrite |
-
----
 
 ## How to use
 

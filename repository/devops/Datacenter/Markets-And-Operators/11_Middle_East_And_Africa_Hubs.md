@@ -2,8 +2,6 @@
 
 [← Previous](./10_Europe_UK_Hubs.md) · [README](./README.md) · [Next: APAC →](./12_APAC_Hubs.md)
 
----
-
 ## 1. Concepts
 
 MEA capacity and interconnect are growing quickly. Illustrative hubs:
@@ -17,8 +15,6 @@ MEA capacity and interconnect are growing quickly. Illustrative hubs:
 | **Broader Africa** | Africa Data Centres, Raxio, MainOne/MDXi-class, national players |
 
 Climate and power (water, heat rejection, grid) shape mechanical design—same jobs as Mechanical track, different stress.
-
----
 
 ## 2. Advanced concepts
 
@@ -36,8 +32,6 @@ Taxonomy [1](./1_Operator_Taxonomy.md), research [3](./3_Research_Any_Operator.m
 ### Honesty
 
 Avoid invented campus maps. Prefer official operator and cloud region docs.
-
----
 
 ## 3. Applications and use cases
 
@@ -57,8 +51,6 @@ Avoid invented campus maps. Prefer official operator and cloud region docs.
 - Don’t treat MEA as one latency blob  
 
 **Good:** country-specific design, verified openings. **Bad:** brochure MW; ignoring water/power; one-city-for-continent.
-
----
 
 ## References
 

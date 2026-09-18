@@ -6,8 +6,6 @@
 
 R as a **data interface** language: delimited text, Excel, semi-structured formats, and databases. The engineering problem is not “read a file” but **encode contracts** (schema, null policy, time zones, encodings), **handle drift**, and **operate connections safely** (timeouts, retries, least privilege, SQL injection discipline via parameterization in your DBI layer). This is where most “works in the notebook” pipelines die in production.
 
----
-
 ## 1. Concepts
 
 ### 1. Text delimited I/O: parsing is a security and correctness boundary
@@ -34,8 +32,6 @@ Nested JSON is natural in APIs; flattening to a data frame is a design choice wi
 
 Many modern stacks move files through **Arrow/Parquet** for speed and cross-language sharing. R’s place in the ecosystem is often as **analytic consumer** of Parquet written by Spark/dbt; know your **partitioning** and **schema evolution** policy.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Time zones and instants
@@ -58,8 +54,6 @@ R holds many tables in memory. For large pulls, use **chunked reads**, **server-
 
 **SQL injection** is still possible if you interpolate user content into SQL strings. Use parameter binding. For file paths, block `..` traversal and restrict to allowlisted directories in multi-tenant or shared environments.
 
----
-
 ## 3. Applications and use cases
 
 - **Nightly warehouse extract:** chunked read, validate schema, write Parquet/CSV artifacts with metadata sidecars.
@@ -78,8 +72,6 @@ stopifnot(setequal(intersect(required, names(df)), required))
 - Timezone and encoding policy is explicit and tested.
 - DB access uses least privilege, timeouts, and parameterization.
 - Drift metrics exist for early detection of upstream breakage.
-
----
 
 ## References
 

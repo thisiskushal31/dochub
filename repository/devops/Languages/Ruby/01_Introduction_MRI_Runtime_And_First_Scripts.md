@@ -6,8 +6,6 @@
 
 What “Ruby” means in practice (usually **MRI**), how the interpreter starts and exits, how **interactive** mode differs from **script** mode, how **arguments** reach your program, how **encoding** and **shebangs** behave, and how **version** choice ties to support policy and documentation. Enough to answer: what is this language, why teams use it, how you run your first program, and where it shows up in engineering work—from zero prior Ruby knowledge.
 
----
-
 ## 1. Concepts
 
 ### 1. Language versus implementation
@@ -86,8 +84,6 @@ In Ruby, you work with **objects**. You send **messages** to objects; methods ha
 
 That model explains why you see chains like `"hello".upcase` and why Chef resources look like method calls with blocks—under the hood they are Ruby messages and blocks building a configuration tree.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `$LOAD_PATH` and loading code
@@ -126,8 +122,6 @@ Architecture reviews should name which model applies—globals that “work in c
 ### 7. Interpreter flags that change semantics
 
 Beyond `-w`: **`RUBYOPT`** injects flags globally; **`--disable-gems`** and **`--disable-all`** affect boot in minimal images. Document flags in systemd units and Kubernetes manifests so debugging matches production.
-
----
 
 ## 3. Applications and use cases
 
@@ -191,8 +185,6 @@ puts "Hello, #{name}"
 - No undocumented reliance on a developer’s global gems (`bundle exec` in automation).
 - Shebang + PATH strategy is explicit for cron, systemd, and containers.
 - Security-sensitive hosts do not mix root and ad-hoc `gem install`.
-
----
 
 ## References
 

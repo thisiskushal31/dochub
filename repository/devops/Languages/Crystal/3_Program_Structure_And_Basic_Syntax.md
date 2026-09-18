@@ -6,8 +6,6 @@ A Crystal program is the **entire source** given to the compiler. Source must be
 
 **Why no main?** Crystal follows a script-like model: top-level code is executed in order. Methods, types, and constants defined at top level are visible across the file and, when required, to other files. That keeps small programs simple; for larger ones you organize code into types and `require` other files.
 
----
-
 ## Top-level scope
 
 Definitions outside any class or module live in the **top-level scope**: methods, constants, and type definitions. Top-level methods can be called from anywhere in the file. Local variables at top level are **file-local** and are not visible inside method bodies.
@@ -19,8 +17,6 @@ end
 
 puts greet("Crystal")
 ```
-
----
 
 ## Comments and documenting code
 
@@ -35,8 +31,6 @@ def greet(name)
 end
 ```
 
----
-
 ## Requiring files
 
 Use `require` to load another file or library. Standard library and Shards are required by path or name; the compiler resolves them. Requiring makes top-level definitions from that file available.
@@ -47,8 +41,6 @@ require "json"
 data = JSON.parse("{\"a\": 1}")
 ```
 
----
-
 ## The program entry
 
 Execution starts at the top of the main file and proceeds through top-level expressions and method calls. No special entry function is needed.
@@ -56,8 +48,6 @@ Execution starts at the top of the main file and proceeds through top-level expr
 ```crystal
 puts "Hello, World!"
 ```
-
----
 
 ## Further reading
 

@@ -6,8 +6,6 @@
 
 Bash features that go **beyond** POSIX `sh`: `[[ … ]]`, indexed and associative arrays, process substitution, namerefs, `|&`, `mapfile`/`readarray`, case-modifying expansions, and related helpers. Every construct is marked **added in**, **present on Bash 3.2**, or **missing on 3.2 / POSIX**. Default narrative is **Bash 5.x**; stock macOS **Bash 3.2** and `#!/bin/sh` (dash/BusyBox) are brownfield traps. After this chapter you should choose Bash deliberately—or refuse extensions under portable `sh`.
 
----
-
 ## 1. Concepts
 
 ### 1. Why Bash extensions exist
@@ -94,8 +92,6 @@ If the shebang is `sh`, treat the following as forbidden unless you have proven 
 - Bash-only `echo` flags—prefer `printf`
 
 ShellCheck with `shell=sh` is the mechanical enforcer; chapter 17 covers tooling.
-
----
 
 ## 2. Advanced concepts
 
@@ -229,8 +225,6 @@ fi
 
 Failing fast beats half-working shims that hide assoc-array usage behind slow temp files—unless you intentionally maintain a 3.2-compatible path for macOS stock Bash.
 
----
-
 ## 3. Applications and use cases
 
 ### Linux CI and servers (Bash 5.x)
@@ -289,8 +283,6 @@ Break-glass scripts on unknown appliances should avoid Bash 4+ features unless y
 - No Bashisms in container `#!/bin/sh` entrypoints?
 - Untrusted input never becomes a nameref or `eval` target?
 - Process substitution not assumed available under `sh` or exotic `/dev/fd`-less environments?
-
----
 
 ## References
 

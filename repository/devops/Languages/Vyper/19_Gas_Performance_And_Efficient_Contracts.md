@@ -15,8 +15,6 @@ By the end you should be able to:
 
 Pin: **Vyper 0.4.x** (**0.4.3**). Security still wins over micro-optimizations that obscure intent (chapter **14**).
 
----
-
 ## 1. Concepts
 
 ### 1. What “performance” means on the EVM
@@ -78,8 +76,6 @@ In source (and/or CLI / Standard JSON):
 ```
 
 CI, verify-on-explorer, and audit bytecode must use the **same** optimize mode. Switching `gas` → `codesize` can change both deploy cost and runtime cost—re-benchmark.
-
----
 
 ## 2. Advanced concepts
 
@@ -155,8 +151,6 @@ Composition should reduce *human* complexity without multiplying *on-chain* roun
 | Micro-optimize names while leaving O(n) external calls | Wrong bottleneck |
 | Copy Solidity assembly tricks into mental design | Vyper has no inline assembly—by design |
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Performance habit |
@@ -168,8 +162,6 @@ Composition should reduce *human* complexity without multiplying *on-chain* roun
 | **SE** | PR template: “worst-case gas story + measured number” for hot entrypoints |
 
 **Example staff story:** a vault `harvest` that loops over every strategy ever added will eventually brick. Fix shape: bound per-tx work, or checkpoint/paginate—not “buy more gas.”
-
----
 
 ## 4. Staff-level review checklist
 
@@ -183,8 +175,6 @@ Composition should reduce *human* complexity without multiplying *on-chain* roun
 - Security checks were not deleted “for gas.”
 - After Vyper or EVM bumps, gas for top entrypoints is re-checked.
 - Venom / experimental codegen only with explicit policy (**18**).
-
----
 
 ## References
 

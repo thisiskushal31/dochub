@@ -4,8 +4,6 @@
 
 **Metadata** is a map of information attached to a symbol or collection. It does not affect value equality and is used for documentation (**:doc**), type hints, and tooling. **Reader conditionals** allow different code to be read depending on the **platform** (Clojure vs ClojureScript) or **feature flags**, so one codebase can target multiple environments.
 
----
-
 ## Metadata
 
 Metadata is a **map** attached to an object. Literal metadata is written with **^** before the form. **:doc** is the standard key for documentation; **:arglists** documents function parameters. **with-meta** and **meta** attach and read metadata at runtime.
@@ -22,8 +20,6 @@ Metadata is a **map** attached to an object. Literal metadata is written with **
 
 **^:key** is shorthand for **^{:key true}**. Type hints use **^Class** (e.g. **^String**) for performance.
 
----
-
 ## Reader conditionals
 
 **#?** reads one of several expressions depending on the current **reader target**. **:clj** is Clojure (JVM), **:cljs** is ClojureScript. Only the matching branch is read; the rest are discarded.
@@ -39,13 +35,9 @@ Metadata is a **map** attached to an object. Literal metadata is written with **
 #?@(:clj  [(:require [clojure.java.io :as io])])
 ```
 
----
-
 ## Feature expressions
 
 Reader conditionals can also key on **features** (e.g. **:default**). This supports optional or alternate code paths at read time without runtime conditionals.
-
----
 
 ## Further reading
 

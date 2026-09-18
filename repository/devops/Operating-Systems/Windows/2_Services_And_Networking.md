@@ -4,13 +4,9 @@
 
 On Windows, **services** are long-running programs that run in the background (often before a user logs in). **Networking** is configured and inspected via GUI, cmd, or PowerShell. This topic covers managing services and common networking tasks from the command line for DevOps and automation.
 
----
-
 ## Windows services
 
 A **Windows service** runs in the background under the Service Control Manager (SCM). Services start at boot (or on demand), run under a specific account, and have no interactive desktop.
-
----
 
 ## Managing services: Command Prompt and PowerShell
 
@@ -49,8 +45,6 @@ Get-Service -Name "ServiceName" -DependentServices
 Set-Service -Name "ServiceName" -StartupType Automatic
 ```
 
----
-
 ## Networking: essential commands
 
 **Command Prompt:**
@@ -86,8 +80,6 @@ Get-NetTCPConnection -State Listen
 netstat -an
 ```
 
----
-
 ## Firewall (Windows Defender Firewall)
 
 From PowerShell (admin):
@@ -113,8 +105,6 @@ Enable-NetFirewallRule -DisplayGroup "Windows Remote Management"
 Remove-NetFirewallRule -DisplayName "Allow HTTP"
 ```
 
----
-
 ## Cross-platform workflows (Linux + Windows)
 
 In mixed environments (e.g. CI/CD, hybrid cloud):
@@ -130,16 +120,12 @@ Get-Service sshd
 # From Linux: ssh user@windows-host "powershell -Command \"Get-Service\""
 ```
 
----
-
 ## Summary
 
 - **Services**: managed with `sc` (cmd) or `Get-Service`, `Start-Service`, `Stop-Service`, `Set-Service` (PowerShell).
 - **Networking**: `ipconfig`, `ping`, `nslookup`, `netstat` (cmd); `Get-NetIPConfiguration`, `Test-NetConnection`, `Resolve-DnsName`, `Get-NetTCPConnection` (PowerShell).
 - **Firewall**: `Get-NetFirewallProfile`, `Get-NetFirewallRule`, `New-NetFirewallRule` (PowerShell, admin).
 - **Cross-platform**: Use PowerShell 7, WSL, SSH, or containers to align Windows with Linux-based DevOps workflows.
-
----
 
 ## More Windows administration (reference)
 
@@ -152,8 +138,6 @@ For deeper administration, use these in PowerShell (often require admin):
 - **Event log:** See [Event logs, security, and WSL](./5_Event_Logs_Security_And_WSL.md) for **Get-WinEvent**, **wevtutil**, and Security/System/Application logs.
 
 See [PowerShell documentation](https://docs.microsoft.com/en-us/powershell/) and [SS64 PowerShell](https://ss64.com/ps/) for a full A–Z command reference.
-
----
 
 ## Further reading
 

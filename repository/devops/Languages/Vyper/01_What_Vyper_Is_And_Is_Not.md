@@ -10,8 +10,6 @@ Chapter **[00](./00_First_Steps_Install_And_Hello.md)** is install + hello. This
 
 Default for new work: **Vyper 0.4.x** (pin **0.4.3**). Shared call/storage mechanics: [Solidity](../Solidity/README.md). Non-EVM tracks: [Move](../Move/README.md), [Cairo](../Cairo/README.md).
 
----
-
 ## 1. Concepts
 
 ### 1. What Vyper is (plain language)
@@ -97,8 +95,6 @@ When a Solidity-trained engineer asks “where is the modifier?”, the staff an
 | “The only safe EVM language” | Safety is design + review + ops; Solidity can be careful too |
 | A substitute for EVM literacy | Same machine; see [Solidity](../Solidity/README.md) for shared depth |
 | A substitute for Move / Cairo / Solana Rust | Different VMs—complement tracks, not drop-in replacements |
-
----
 
 ## 2. Advanced concepts
 
@@ -267,8 +263,6 @@ Unhealthy patterns: rewriting a reviewed Vyper core mid-incident “so we can us
 | **13–14** | Tests and review |
 | **15–16** | Roles and adjacent doors |
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How identity shows up |
@@ -280,8 +274,6 @@ Unhealthy patterns: rewriting a reviewed Vyper core mid-incident “so we can us
 | **SE** | Interview: can they explain intentional omissions and the decision tree without framing omissions as bugs? Can they name one case where Solidity wins? |
 
 **Whole-engineering picture:** naming Vyper correctly prevents the wrong reuse pattern, the wrong review checklist, the wrong “just rewrite it in Solidity” impulse, and the wrong “we’ll use Move instead” confusion when the chain is still EVM.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -297,8 +289,6 @@ Unhealthy patterns: rewriting a reviewed Vyper core mid-incident “so we can us
 - Security reviews do not treat Vyper as automatically safe.
 - Version band (**0.4.x** vs **0.3.x**) is identified before a thorough review.
 - Product choice cites auditability / team skill / existing estate—not hype.
-
----
 
 ## References
 

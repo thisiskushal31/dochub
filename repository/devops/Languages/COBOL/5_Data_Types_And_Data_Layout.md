@@ -4,8 +4,6 @@
 
 Data in COBOL is described in the **DATA DIVISION** using **level numbers**, **data names**, the **PICTURE (PIC) clause**, and optionally the **VALUE clause**. Level numbers show hierarchy (record, group, elementary); the picture clause defines type and size. Data names must be defined before use in the PROCEDURE DIVISION and cannot be reserved words.
 
----
-
 ## Level numbers and data names
 
 **Why level numbers?** COBOL data is hierarchical: a record (01) contains groups (05, 10, …), and groups contain fields. The **level number** tells the compiler which item is the parent and which are children. That way you can MOVE or reference the whole record, or a group, or a single field. Without levels you could not describe "customer record made of name, address, and account" in a consistent way. **01** is always the top (a record or standalone item); **02–49** show deeper nesting; **66**, **77**, and **88** have special meanings (RENAMES, standalone, condition-name).
@@ -26,8 +24,6 @@ Data names must be user-defined; they reference memory where data is stored. Val
            05 WS-COUNTRY      PIC X(15) VALUE 'INDIA'.
 ```
 
----
-
 ## Picture clause
 
 **Why PICTURE?** The compiler has to know how much storage to reserve and how to interpret the bytes (digits, letters, decimals, signs). The **PICTURE** clause does that: `9(5)` means five numeric digits, `X(20)` means 20 characters of any kind, `S9(4)V99` means signed numeric with two decimal places. Without a picture the compiler would not know the size or type of a field. Every elementary (non-group) item that holds data needs a PICTURE.
@@ -36,13 +32,9 @@ The **PICTURE (PIC) clause** defines **data type**, **sign**, and **decimal posi
 
 Common examples: `PIC 9(5)` — 5-digit numeric; `PIC S9(4)V99` — signed numeric with 2 decimal places; `PIC X(25)` — 25-character alphanumeric; `PIC A(10)` — 10-character alphabetic.
 
----
-
 ## Value clause
 
 The **VALUE clause** assigns an initial value to a data item in WORKING-STORAGE or LOCAL-STORAGE. The value must match the category and picture of the item (e.g. numeric literal for numeric picture, nonnumeric literal for alphanumeric). It is optional; if omitted, initial content is undefined unless the implementation defines it.
-
----
 
 ## REDEFINES clause
 
@@ -58,8 +50,6 @@ The **VALUE clause** assigns an initial value to a data item in WORKING-STORAGE 
        01 WS-DATE2 REDEFINES WS-DATE1 PIC 9(8).
 ```
 
----
-
 ## RENAMES clause (level 66)
 
 **Why use RENAMES?** Sometimes you want to refer to several consecutive fields as one unit (e.g. to MOVE them together or compare them) without defining a new group with its own level numbers. **RENAMES** gives a single name to a range of existing items (e.g. "from WS-A through WS-B"). Use it when you need a shortcut to a slice of a group without changing the original layout.
@@ -74,15 +64,11 @@ The **VALUE clause** assigns an initial value to a data item in WORKING-STORAGE 
        66 WS-PART RENAMES WS-A THRU WS-B.
 ```
 
----
-
 ## USAGE clause
 
 **Why use USAGE?** By default, numeric data is stored in **DISPLAY** (character) form: each digit is a character. That is easy to read in dumps but uses more space and is slower for arithmetic. **COMP** (binary) and **COMP-3** (packed decimal) store numbers in a compact, machine-friendly form: less storage, faster math, and (for COMP-3) exact decimal handling. Use **DISPLAY** when the field is mainly for input/output or display; use **COMP** or **COMP-3** for counters, amounts, and fields used in calculations. The choice affects size, performance, and compatibility with mainframe file layouts.
 
 **USAGE** specifies how data is represented in storage: **DISPLAY** (default, character), **COMP** / **COMP-4** (binary), **COMP-3** (packed decimal), **BINARY** (binary integer). The choice affects size and performance.
-
----
 
 ## COPY statement
 
@@ -95,8 +81,6 @@ The **VALUE clause** assigns an initial value to a data item in WORKING-STORAGE 
        WORKING-STORAGE SECTION.
            COPY RECORD-LAYOUT.
 ```
-
----
 
 ## Further reading
 

@@ -2,8 +2,6 @@
 
 [← Previous](./12_Credentials_Secrets_And_Binding.md) · [README](./README.md) · [Next: Triggers →](./14_Triggers_Webhooks_Poll_SCM_And_Timers.md)
 
----
-
 ## 1. Concepts
 
 ### Shared Libraries (Pipeline paved road)
@@ -62,8 +60,6 @@ pipelineJob('payments/ci') {
 }
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### Library trust
@@ -78,8 +74,6 @@ Library code hits CPS rules; unit-test libraries; document public `vars` steps a
 
 `library identifier: '…', retriever: …` — advanced; prefer configured libraries.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -89,8 +83,6 @@ Library code hits CPS rules; unit-test libraries; document public `vars` steps a
 | Enforce agent labels | Library wraps `node`/`agent` choices |
 
 **Good:** versioned library + CODEOWNERS. **Bad:** `@Library('my-org@main')` floating forever.
-
----
 
 ## References
 

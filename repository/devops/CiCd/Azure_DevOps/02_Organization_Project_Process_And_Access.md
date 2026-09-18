@@ -2,8 +2,6 @@
 
 [← Previous](./01_What_Is_Azure_DevOps.md) · [README](./README.md) · [Next: Pipelines model →](./03_Pipelines_Mental_Model_YAML_And_Classic.md)
 
----
-
 ## 1. Concepts
 
 | Layer | Meaning |
@@ -18,8 +16,6 @@ Create an organization once; create projects for product boundaries (or one larg
 **Access levels** (Services): Stakeholder / Basic / Basic + Test Plans / Visual Studio subscriber — control which features a user can use (especially Test Plans). Permissions are separate from access levels.
 
 **CLI entry:** `az devops` (Azure CLI extension) and `az pipelines` for automation; Cloud Shell can run the same against your org. Deep Azure resource CLI stays in [Cloud/4](../../Cloud/4_Azure_Literacy.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -54,8 +50,6 @@ Access levels and parallel jobs are org billing concerns — capacity planning l
 
 Collections replace some org semantics; you manage SQL and application tiers. Map “collection ≈ org-ish” when reading SaaS docs.
 
----
-
 ## 3. Applications and use cases
 
 | Use | Pattern |
@@ -65,8 +59,6 @@ Collections replace some org semantics; you manage SQL and application tiers. Ma
 | External contractors | Stakeholder or limited group; no service connection admin |
 
 **Good:** document who owns org vs project admin. **Bad:** every engineer is Project Collection Administrator.
-
----
 
 ## References
 

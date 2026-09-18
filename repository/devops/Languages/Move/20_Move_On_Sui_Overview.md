@@ -97,8 +97,6 @@ Prefer Sui when your product is naturally object-oriented and benefits from:
 - **Security:** define ownership transitions, capability custody, and upgrade governance.
 - **Operations:** pin toolchain versions, formalize publish/upgrade runbooks, monitor gas and storage behavior.
 
----
-
 ## Further reading
 
 - [Build with Move (Sui)](https://docs.sui.io/build/move)

@@ -6,8 +6,6 @@
 
 How values are categorized at compile time vs runtime, when the engine coerces scalars, how `declare(strict_types=1)` redraws boundaries between your code and the rest of the world, how comparisons and bitwise/string operators behave with user input, and where static analyzers must compensate for runtime permissiveness. Later chapters assume you never confuse **type declarations** with **validation** of HTTP or JSON.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the PHP [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -17,8 +15,6 @@ Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3
 PHP combines dynamic typing with optional static hints on parameters, returns, properties, and constants. Categories you will read in modern code include `int`, `float`, `bool`, `string`, `array`, `object`, iterable and callable pseudo-types, `void`, `never`, `null`, `false`/`true` stand-alone types (in unions), `mixed`, union types (`A|B`), and intersection object types (`Countable&Iterator`). Enumerations are separate nominal types (chapter 5).
 
 Hints are enforced at runtime at boundaries (with nuances below), but many internal operations still coerce. A parameter typed `int` can receive a numeric string from another file without `strict_types`; with `strict_types` in the **caller** compilation unit, the same call may throw `TypeError`.
-
----
 
 ### 2. `strict_types`: caller file, not callee magic
 
@@ -38,8 +34,6 @@ takes_int(5);
 
 Crossing from strict application code into a legacy package that expects coercions is a recurring integration pain: wrap at the boundary with explicit casts only after validation.
 
----
-
 ### 3. Comparisons: `==`, `===`, `<=>`, and `match`
 
 Loose equality applies type juggling rules that have surprised generations of developers. Strict equality compares both type and value. The spaceship operator `<=>` returns `-1`, `0`, or `1` for ordering sorts.
@@ -57,21 +51,15 @@ var_dump($token === 0);  // strict — false
 
 For secrets, nonces, and MACs, use `hash_equals` for timing-safe equality of strings, not `===` on raw timing-sensitive compares you built ad hoc.
 
----
-
 ### 4. Integers, floats, and precision policy
 
 Integers are fixed-width per platform (`PHP_INT_MAX`). Overflow wraps for `int` math. BCMath and GMP extensions provide decimal and big-integer arithmetic—use them for money and large counters, not floats.
 
 Floats follow IEEE 754; never compare floats with `==` for business thresholds—use epsilon comparisons or integer minor units (cents).
 
----
-
 ### 5. Strings, encoding, and the byte model
 
 Strings are byte sequences. `strlen` counts bytes; multibyte-aware functions live in `mbstring`. HTTP parameters are bytes labeled by `Content-Type` and charset—treat decoding as an explicit step (chapter 4).
-
----
 
 ### 6. Arrays: lists, maps, packing, unpacking
 
@@ -89,8 +77,6 @@ foreach ($row as $k => $v) {
 
 Large nested arrays as untyped DTOs create audit blind spots—typed value objects document shape.
 
----
-
 ### 7. Operators: null coalesce, Elvis, nullsafe, precedence
 
 `??` returns the first defined, non-null operand; it does not warn on undefined indices combined with null coalesce patterns. `?:` treats `0` and `''` as falsy—wrong default for legitimate zero values.
@@ -99,13 +85,9 @@ Large nested arrays as untyped DTOs create audit blind spots—typed value objec
 
 Bitwise operators appear in flags and packed protocols—sign extension on `>>` with negative ints surprises readers from other languages.
 
----
-
 ### 8. `readonly`, `const`, and immutability surface
 
 `readonly` properties cannot be reassigned after construction. Class `const` and enum cases give named immutable values. These patterns matter when services are reused in FPM workers—mutable service fields leak cross-request state if misused.
-
----
 
 ### 9. Array keys: numeric strings, order, and `list`
 
@@ -113,21 +95,15 @@ Array keys are either integers or strings. A string key that looks like an integ
 
 `list()` / `[$a, $b] = ...` assigns by **position**; mismatched arity throws in PHP 7+ in strict unpacking scenarios—validate row shape before destructuring query results.
 
----
-
 ### 10. `callable`, `Closure`, and invokable objects
 
 A value is “callable” if it is a function name string, `Class::method` array or string form, a `Closure`, or an object with `__invoke`. Userland type hints of `callable` accept all of these; static analysis struggles with callables built from strings—prefer typed interfaces for security-sensitive dispatch (no user-controlled function names).
 
 First-class callable syntax `strlen(...)` produces a `Closure` wrapping the referenced callable—useful for arrays passed to `array_map`, still dangerous if the underlying function is attacker-chosen.
 
----
-
 ### 11. `void`, `never`, and control flow
 
 `void` means no usable return value; `never` means the function **does not return** (it always throws or exits). Mis-hinting breaks static analysis and reader expectations for middleware stacks and early-exit guards.
-
----
 
 ## 2. Advanced concepts
 
@@ -149,8 +125,6 @@ First-class callable syntax `strlen(...)` produces a `Closure` wrapping the refe
 
 **String increment (`++`):** Alphanumeric string increment has alphabet rules unlike numeric increment—legacy code paths that relied on `"aa"++` for IDs are fragile and audit-worthy.
 
----
-
 ## 3. Applications and use cases
 
 - **HTTP inputs:** Parse with `filter_input`, `filter_var`, dedicated validators—never `(int)$_GET['id']` as an authorization check.
@@ -161,8 +135,6 @@ First-class callable syntax `strlen(...)` produces a `Closure` wrapping the refe
 - **Performance:** Avoid accidental float contagion in tight loops; prefer integers for counters; profile before micro-optimizing.
 - **Upgrades:** Run CI with `error_reporting=E_ALL` on staging images; fix deprecations around null, strings, and resource→object migrations early.
 - **Code review grep:** `==` outside tests, `(array)` casts on objects, and `callable` parameters fed from `$_GET`/`$_POST` deserve extra scrutiny.
-
----
 
 ## References
 

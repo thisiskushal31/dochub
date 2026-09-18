@@ -2,8 +2,6 @@
 
 [← Previous](./9_Fire_Suppression_Clean_Agent_And_Pre_Action.md) · [README](./README.md) · [Next: Failure walks →](./11_Mechanical_Failure_Walks.md)
 
----
-
 ## 1. Concepts
 
 IT cares about **humidity** because electrostatic discharge (too dry) and condensation/corrosion (too wet) both kill hardware. **Water treatment** keeps chillers, towers, and humidifiers from destroying themselves—and then the hall.
@@ -29,8 +27,6 @@ IT cares about **humidity** because electrostatic discharge (too dry) and conden
 ### Where plumbing sits
 
 Domestic water to humidifiers; makeup to towers; drains from condensate; rarely, process water for specialty systems. Drains and shutoffs are incident tools ([7](./7_Leak_Detection_And_Fluid_Risk.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -58,8 +54,6 @@ Liquid cooling chemistry is part of [6](./6_Liquid_Cooling_Rear_Door_And_Direct_
 
 Desert sites fight dryness; tropics fight moisture; cold climates fight condensation when outdoor air economizers are used. Same jobs: measure, control, treat water, drain correctly.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -78,8 +72,6 @@ Desert sites fight dryness; tropics fight moisture; cold climates fight condensa
 - Never bypass water treatment “for a week” silently  
 
 **Good:** stable RH in envelope, clean towers, documented fluid chemistry. **Bad:** humidifier floods; desert ESD season ignored; tower basin science fiction.
-
----
 
 ## References
 

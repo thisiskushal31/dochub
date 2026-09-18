@@ -2,8 +2,6 @@
 
 [← Previous](./6_Liquid_Cooling_Rear_Door_And_Direct_To_Chip.md) · [README](./README.md) · [Next: VESDA →](./8_Fire_Detection_VESDA.md)
 
----
-
 ## 1. Concepts
 
 Water and coolant next to electronics is normal in halls—and a top physical risk. **Leak detection** finds fluid early; **response** limits damage.
@@ -28,8 +26,6 @@ Water and coolant next to electronics is normal in halls—and a top physical ri
 | Condensate pan switches | In units |
 | Camera / rounds | Supplemental, not a substitute |
 | BMS alarms | Aggregation and paging |
-
----
 
 ## 2. Advanced concepts
 
@@ -64,8 +60,6 @@ Liquid cooling ([6](./6_Liquid_Cooling_Rear_Door_And_Direct_To_Chip.md)) raises 
 
 Monsoon, roof design, and pipe routing differ. Detection physics does not.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -84,8 +78,6 @@ Monsoon, roof design, and pipe routing differ. Detection physics does not.
 - Never step into standing water near PDUs  
 
 **Good:** early detect, fast isolate, dry procedures. **Bad:** inhibited ropes; liquid racks with no tray; power-on while wet.
-
----
 
 ## References
 

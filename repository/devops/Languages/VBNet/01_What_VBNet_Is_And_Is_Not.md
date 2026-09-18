@@ -16,8 +16,6 @@ Chapter **[00](./00_First_Steps_SDK_DotNet_And_Hello.md)** is the hands-on smoke
 
 Handbook default for *new* work: **Visual Basic on modern .NET** (VB ~**17.x** with VS **2022/2026**-era tooling). **.NET Framework 4.x** is brownfield literacy.
 
----
-
 ## 1. Concepts
 
 ### 1. What VB.NET is (plain language)
@@ -98,8 +96,6 @@ What VB.NET is *usually not* hired to do alone today:
 
 Prefer C# chapters when the question is “how do NuGet and TFMs work in general?” Prefer this track when the question is “what does this `.vb` file mean?”
 
----
-
 ## 2. Advanced concepts
 
 ### 1. VBA ≠ VB.NET (do not collapse them)
@@ -149,8 +145,6 @@ Pin literacy around **current Visual Basic on .NET** as shipped with recent Visu
 
 Microsoft’s support story for **.NET runtimes** and for **Visual Studio** is what ops and security care about. An app can compile in VB and still be **out of support** because its **TFM** or host OS is. Language romance does not extend patch windows.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How identity shows up |
@@ -163,8 +157,6 @@ Microsoft’s support story for **.NET runtimes** and for **Visual Studio** is w
 
 **Whole-engineering picture:** naming the language correctly prevents the wrong runbook, the wrong sandbox, and the wrong modernization plan.
 
----
-
 ## 4. Staff-level review checklist
 
 - Speakers can explain **VB.NET = .NET language** in one sentence without mentioning Excel.
@@ -175,8 +167,6 @@ Microsoft’s support story for **.NET runtimes** and for **Visual Studio** is w
 - Brownfield Framework apps are inventoried by **runtime support**, not nostalgia.
 - Docs and tickets say **VB.NET** or **Visual Basic (.NET)** when that is meant—never bare “VB” in mixed estates.
 - Security reviews pick the right control plane (macros vs assemblies).
-
----
 
 ## References
 

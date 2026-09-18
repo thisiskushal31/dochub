@@ -6,8 +6,6 @@
 
 Reproducibility beyond “I ran it twice”: **project-local libraries**, **lockfiles**, **cache behavior**, and the reality that **renv tracks R package state but cannot magically pin OS libraries**. You will also see **rig** (install/switch R versions) discussed in R circles because teams frequently need multiple **minor R versions** aligned to CRAN/Bioconductor release matrices.
 
----
-
 ## 1. Concepts
 
 ### 1. What `renv` solves
@@ -28,8 +26,6 @@ R version selection (you still need images/rig/conda policy), system libraries (
 
 Even with renv, attach `sessionInfo()` output (or a structured equivalent) to critical artifacts for forensic diffing.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Bioconductor + renv alignment
@@ -47,8 +43,6 @@ Many mature teams treat **Docker image digest** as the true reproducibility anch
 ### 4. Deterministic builds vs deterministic science
 
 Reproducible numerics across CPUs may still drift slightly due to BLAS threading/order—define acceptable tolerance for “same result.”
-
----
 
 ## 3. Applications and use cases
 
@@ -70,8 +64,6 @@ print(sessionInfo())
 - R minor version policy matches CRAN/Bioc constraints.
 - CI proves `restore()` from cold cache periodically.
 - Artifact metadata includes R + packages + data snapshot pointers.
-
----
 
 ## References
 

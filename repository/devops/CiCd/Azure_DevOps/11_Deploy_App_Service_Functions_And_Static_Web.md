@@ -2,8 +2,6 @@
 
 [← Previous](./10_Artifacts_Feeds_And_Packages.md) · [README](./README.md) · [Next: VMs →](./12_Deploy_VMs_VMSS_And_Host_Patterns.md)
 
----
-
 ## 1. Concepts
 
 This chapter covers **PaaS web** targets you drive from Azure Pipelines — the most common “deploy to Azure” path for websites and APIs.
@@ -20,8 +18,6 @@ This chapter covers **PaaS web** targets you drive from Azure Pipelines — the 
 Durable pattern: build → publish zip or image **digest** → deploy task with ARM **service connection** → smoke → (optional) swap.
 
 Platform internals (SKU, ASE, networking): [Cloud/4](../../Cloud/4_Azure_Literacy.md). Here: **how Pipelines ships**.
-
----
 
 ## 2. Advanced concepts
 
@@ -45,8 +41,6 @@ SWA pipelines build frontend and deploy to Azure’s static hosting + optional m
 
 App settings / Key Vault references belong in Azure config, not baked into the zip when avoidable ([CiCd/13](../13_Config_Secrets_And_Env_Parity.md)).
 
----
-
 ## 3. Applications and use cases
 
 | App shape | Path |
@@ -57,8 +51,6 @@ App settings / Key Vault references belong in Azure config, not baked into the z
 | Containerized web without K8s | Web App for Containers or [13](./13_Deploy_Containers_ACR_Container_Apps_And_AKS.md) |
 
 **Good:** staging slot + approval environment. **Bad:** FTP deploy as the paved road.
-
----
 
 ## References
 

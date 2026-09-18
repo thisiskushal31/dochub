@@ -4,8 +4,6 @@
 
 Tools do not create DevOps. **Shared ownership of the path from commit to production** does. Culture is the agreement about who feels pain when something breaks — and how you learn without fear.
 
----
-
 ## What “DevOps culture” means in practice
 
 | Principle | Day-to-day signal |
@@ -21,8 +19,6 @@ If your org still has a ticket queue for every config change and a separate “o
 
 Principles behind this: [10 — Three Ways / CALMS](./10_Core_Principles_Three_Ways_CALMS.md). Research link: [DORA — generative organizational culture](https://dora.dev/capabilities/generative-organizational-culture/).
 
----
-
 ## Westrum culture types (used in DORA research)
 
 Sociologist Ron Westrum described how organizations process information. DORA found **generative** (high-trust) culture predicts better software delivery performance.
@@ -35,8 +31,6 @@ Sociologist Ron Westrum described how organizations process information. DORA fo
 
 Generative behaviors to practice: high cooperation, train messengers (don’t punish bad news), share risks, encourage bridging across teams, failure → inquiry, implement novelty. Blameless postmortems below are the generative failure response — not “nobody is responsible for negligence.”
 
----
-
 ## Shared ownership
 
 **Before:** Dev writes code → Ops deploys → Ops pages at 3am → Dev says “works in staging.”  
@@ -47,8 +41,6 @@ Practical moves:
 - Service teams own the pipeline definition for their apps (platform provides paved roads).  
 - On-call includes people who can change the code (or a clear escalation to them).  
 - Definition of Done includes “observable and rollback-ready,” not only “merged.”
-
----
 
 ## Blameless postmortems
 
@@ -89,8 +81,6 @@ A postmortem answers: **what happened**, **what we learned**, **what we will cha
 
 Accountability still exists: repeated reckless bypass of gates, ignoring known risks, or lying in timelines is a management issue. Blameless is about **learning from complex system failure**, not amnesty for everything.
 
----
-
 ## Collaboration patterns that matter for delivery
 
 | Pattern | Use when | Avoid when |
@@ -100,15 +90,11 @@ Accountability still exists: repeated reckless bypass of gates, ignoring known r
 | **Guilds / chapters** | Cross-team standards (security, reliability) | Endless meetings with no decision rights |
 | **ChatOps visibility** | Fast awareness of deploys/incidents | Approving prod with no audit trail ([6_ChatOps](./6_ChatOps_And_Notifications.md)) |
 
----
-
 ## Continuous learning
 
 - Budget time for fixing toil discovered in incidents.  
 - Rotate “improvement” work into sprints (gates, tests, docs).  
 - Teach the delivery loop to new SEs via [0_SE_Learning_DevOps_Start_Here](./0_SE_Learning_DevOps_Start_Here.md).
-
----
 
 ## Pitfalls
 
@@ -118,8 +104,6 @@ Accountability still exists: repeated reckless bypass of gates, ignoring known r
 | Postmortems that never close actions | Track actions like product bugs |
 | Blame culture → hidden outages | Reward early escalation and honesty |
 | Platform team as human CI | Self-service + guardrails |
-
----
 
 ## Trade-offs
 

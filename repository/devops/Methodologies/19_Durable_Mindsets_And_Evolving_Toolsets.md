@@ -10,8 +10,6 @@ Depth for any named product lives in linked handbook / related homes. This file 
 
 **Primary references (principles, not fashion):** [DORA capabilities](https://dora.dev/capabilities/) (incl. platform engineering), [DORA AI Capabilities Model](https://cloud.google.com/blog/products/ai-machine-learning/introducing-doras-inaugural-ai-capabilities-model), Three Ways ([IT Revolution](https://itrevolution.com/articles/the-three-ways-principles-underpinning-devops/)). Industry reports illustrate the same ideas; prefer dora.dev and the Handbook lineage when blogs disagree.
 
----
-
 ## The narrative (read this once)
 
 ```text
@@ -24,8 +22,6 @@ Assisted delivery, platforms, and automation **amplify** whatever system you alr
 
 **Full deploy-target spectrum** (mainframe → classical VM/Jenkins → Compose/Swarm → static/CDN → K8s → AI systems): mindset in [20](./20_Delivery_Reality_Full_Spectrum.md); adapters in [CiCd/19](../CiCd/19_Delivery_Spectrum_Legacy_Through_Modern.md). Syllabus Part A rule *Timeless and full-spectrum coverage* is the agent guardrail across Deep-Dives.
 
----
-
 ## Rule for beginners
 
 ```text
@@ -35,8 +31,6 @@ Assisted delivery, platforms, and automation **amplify** whatever system you alr
 ```
 
 If assistants, GitOps, or an IDP arrive before CI, tests, and ownership, you get **faster chaos**.
-
----
 
 ## Durable mindsets (how we think)
 
@@ -107,8 +101,6 @@ Separate deploy from release; limit blast radius (flags, canaries, analysis). Mo
 
 Continuously manage flow and value ([18](./18_Value_Stream_Management.md)); organize with stream-aligned and platform teams ([16](./16_Roles_Teams_And_Platforms.md)).
 
----
-
 ## Evolving toolsets (examples — replace rows as the industry moves)
 
 Learn the **mindset column** first. Treat the **examples** as current illustrations, not forever brands.
@@ -130,8 +122,6 @@ Learn the **mindset column** first. Treat the **examples** as current illustrati
 
 When you replace a tool, update the example cell — **do not rewrite the mindset**.
 
----
-
 ## How this plugs into the Three Ways
 
 | Way | Durable boost | Failure mode |
@@ -139,8 +129,6 @@ When you replace a tool, update the example cell — **do not rewrite the mindse
 | **Flow** | Golden paths, desired-state sync, assisted drafts | Mega-changes; platform as ticket hell |
 | **Feedback** | Unified telemetry, correlated signals, canary analysis | Noise; unsupervised auto-remediation |
 | **Learning** | Game days; assisted drafts of postmortems *reviewed by humans* | Skipping learning; no automation policy |
-
----
 
 ## Adoption checklist (copy)
 
@@ -150,8 +138,6 @@ When you replace a tool, update the example cell — **do not rewrite the mindse
 - [ ] Rollback / blast radius defined before autonomy in prod  
 - [ ] DORA (+ DevEx signal) measured before and after  
 - [ ] One owner for the capability — not “everyone’s side project”  
-
----
 
 ## Pitfalls
 

@@ -2,8 +2,6 @@
 
 [← Back to Security](../README.md) · [CiCd supply chain](../../CiCd/6_Supply_Chain_And_Signing.md) · [Gate chain](../4_Security_Gate_Chain.md)
 
----
-
 ## 1. Concepts
 
 **Cosign** (Sigstore) **signs and verifies** container images (and other artifacts) so a cluster or promote step can prove the bits came from a trusted identity.
@@ -13,8 +11,6 @@
 **Disconfirm:** A signature does **not** mean the image is vulnerability-free. Tag mutability can still confuse humans—pin **digests**.
 
 **Confirm:** What identifier should policy verify (tag or digest)?
-
----
 
 ## 2. Advanced concepts
 
@@ -27,8 +23,6 @@
 
 OIDC from CI: [5](../5_OIDC_CI_And_Least_Privilege.md).
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -38,8 +32,6 @@ OIDC from CI: [5](../5_OIDC_CI_And_Least_Privilege.md).
 | GitOps | Desired state pins digest; admission verifies cosign |
 
 **Staff checklist:** sign digests; document trusted identities; verify in prod path; rehearse key/identity loss recovery.
-
----
 
 ## References
 

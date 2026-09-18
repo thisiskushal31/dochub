@@ -2,8 +2,6 @@
 
 [← Previous](./10_Actions_Runner_Controller_ARC.md) · [README](./README.md) · [Next: Caches →](./12_Caches_And_Artifacts.md)
 
----
-
 ## 1. Concepts
 
 An **action** is a reusable packaged unit invoked with `uses:`:
@@ -27,8 +25,6 @@ Sources: official `actions/*`, Marketplace, your org’s actions, or a path in t
 
 Prefer SHA pins for high-trust paths; automate updates (Dependabot/Renovate) with review.
 
----
-
 ## 2. Advanced concepts
 
 ### Action types
@@ -49,8 +45,6 @@ Read the action’s source, permissions it requests, and whether it shells out t
 
 Some actions document breaking changes across majors. Pinning `@main` is almost always wrong for production workflows.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Practice |
@@ -62,8 +56,6 @@ Some actions document breaking changes across majors. Pinning `@main` is almost 
 **Good:** small allowlist of actions. **Bad:** random Marketplace action with `permissions: write-all` copied from a blog.
 
 **Upstream-only:** Marketplace encyclopedia.
-
----
 
 ## References
 

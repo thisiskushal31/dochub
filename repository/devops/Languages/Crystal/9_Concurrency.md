@@ -6,8 +6,6 @@ Crystal uses **fibers** (lightweight, cooperative units) and **channels** for co
 
 **Why fibers and channels?** Fibers are cheap (small stack, many can exist); channels avoid shared state by passing data between fibers. That reduces race conditions and deadlocks. Use concurrency for I/O-bound work (HTTP, DB, file); for CPU-bound parallelism you need a different approach (e.g. multiple processes or a multithreaded runtime).
 
----
-
 ## spawn and fibers
 
 **spawn** creates a new fiber that runs the given call in the background. The program does not wait for it unless you explicitly synchronize (e.g. with a channel or a join mechanism).
@@ -21,8 +19,6 @@ end
 puts "main continues"
 sleep 2
 ```
-
----
 
 ## Channel
 
@@ -39,19 +35,13 @@ value = ch.receive
 puts value
 ```
 
----
-
 ## Concurrency and I/O
 
 Fibers are well-suited to I/O: while one fiber waits on I/O, others can run. Use channels to coordinate results (e.g. one fiber reads, another processes). For CPU-bound parallelism you need a multithreaded runtime and careful design.
 
----
-
 ## Performance notes
 
 **Concurrency vs parallelism:** Crystal gives you concurrency (many logical tasks) on one thread, not parallelism (multiple cores) by default. The GC is concurrent (mark-and-sweep) so collection does not stop the world as long as in single-threaded mode. For throughput on I/O-heavy services, fibers and the event loop are usually enough. When optimizing, profile with **--release** and use value types (structs) and fewer allocations where it matters.
-
----
 
 ## Further reading
 

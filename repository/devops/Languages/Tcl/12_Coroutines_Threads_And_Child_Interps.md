@@ -8,8 +8,6 @@ Three ways Tcl scales concurrency and isolation: **coroutines** (`coroutine` / `
 
 You leave able to structure async flows without nested `vwait` hell, sandbox untrusted scripts at the interp boundary, and know when OS threads are (and are not) the right tool.
 
----
-
 ## 1. Concepts
 
 ### 1. Why three mechanisms?
@@ -122,8 +120,6 @@ Mental model:
 
 This handbook stops at the door: enough to recognize Thread code in the wild and know isolation boundaries. Deep pool design belongs to the Thread man pages and your platform constraints.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Coroutine + event loop pitfalls
@@ -201,8 +197,6 @@ When Thread is present:
 - One owner for each socket/channel; do not “just” use the same channel from two threads.
 - Shut down workers explicitly on process exit so joins do not race destructors.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -215,8 +209,6 @@ When Thread is present:
 
 Expect (ch **15**) historically interacts with the event loop; combining Expect, coroutines, and custom `vwait` needs explicit design—do not stack them accidentally.
 
----
-
 ## Staff-level review checklist
 
 - Coroutines: lifecycle clear (create/resume/finalize); `fileevent` handlers cleared; errors handled at resume points.
@@ -227,8 +219,6 @@ Expect (ch **15**) historically interacts with the event loop; combining Expect,
 - Thread use justified; messaging API used; no assumed shared Tcl vars across threads.
 - `bgerror` / error paths defined for workers and children.
 - Build ships the Thread package only if code `package require`s it—CI verifies presence/absence.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Back to Cloud-Native](./README.md) · [Platform engineering →](./3_Platform_Engineering.md)
 
----
-
 ## 1. Concepts — what “everyday” means
 
 After you have a working Kubernetes API, most teams still need a **small set of add-ons** so apps can get TLS, publish DNS names, and (later) sit behind a platform catalog. Those jobs show up in almost every production cluster—even when the CNCF landscape looks endless.
@@ -39,8 +37,6 @@ You do **not** install the whole landscape on day one. Install when a **job** ap
 
 Depth for kubeadm / OpenShift / managed K8s: [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive). Named cloud SKUs: [Cloud/](../Cloud/README.md). Hall / metal: [Datacenter/](../Datacenter/README.md).
 
----
-
 ## 2. Advanced concepts — how the edge pieces fit
 
 ```text
@@ -64,8 +60,6 @@ Ingress / Gateway class choice (NGINX, Contour, Gateway API): literacy here; pro
 ### Global / estate variants
 
 Same jobs on EKS/GKE/AKS, OpenShift Routes, or bare metal + MetalLB. Provider DNS (Route53, Cloud DNS, Azure DNS, Cloudflare) changes **credentials**, not the ExternalDNS *job*. Private ACME / corporate CA changes **Issuer type**, not the Certificate *job*.
-
----
 
 ## 3. Applications and use cases
 
@@ -95,8 +89,6 @@ Same jobs on EKS/GKE/AKS, OpenShift Routes, or bare metal + MetalLB. Provider DN
 - “CNCF graduated” is **not** a reason to install a tool with no job.
 
 **Good:** job-driven install; renewals tested; DNS ownership clear. **Bad:** landscape tourism; manual Secrets forever; three DNS controllers fighting.
-
----
 
 ## References
 

@@ -41,8 +41,6 @@ func sum(vals ...int) int {
 
 **Why this matters.** Functions and their signatures define the API of a package. Returning **error** as the last value is the standard way to report failures. Variadic functions and function values support flexible APIs (e.g. **fmt.Printf**, **http.HandlerFunc**). In DevOps and services, most logic is in functions that take context and dependencies and return results and errors; clear signatures and consistent error handling make code maintainable and testable.
 
----
-
 ## Further reading
 
 - [The Go Programming Language Specification: Function declarations](https://go.dev/ref/spec#Function_declarations)

@@ -6,8 +6,6 @@ A deployment pipeline is only as trustworthy as the **automated checks** that ga
 
 Vocabulary: [Methodologies/13](../Methodologies/13_Continuous_Everything.md). Continuous testing idea: [Methodologies/2](../Methodologies/2_Practices_And_Workflows.md).
 
----
-
 ## Map tests to pipeline stages
 
 Humble & Farley’s pipeline puts **fast** feedback first, then broader suites on the same artifact:
@@ -20,8 +18,6 @@ Humble & Farley’s pipeline puts **fast** feedback first, then broader suites o
 | **Prod** | Synthetics, canary analysis | Real traffic signals ([5](./5_Verify_Rollback_And_Synthetic_Tests.md)) |
 
 Most defects should be caught by **unit** tests; escaping bugs should drive *earlier* test improvements (pipeline feedback loop).
-
----
 
 ## Test kinds (DevOps literacy)
 
@@ -36,8 +32,6 @@ Most defects should be caught by **unit** tests; escaping bugs should drive *ear
 
 Browser e2e product depth may live in [Tooling Quality-And-Testing](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive); here you wire them as **jobs**.
 
----
-
 ## Flakes and gates
 
 | Problem | Practice |
@@ -47,8 +41,6 @@ Browser e2e product depth may live in [Tooling Quality-And-Testing](https://gith
 | “We’ll test in staging manually” | Manual exploratory is additive, not the only gate |
 
 Fail the pipeline when a required suite fails (**fail closed** for release-blocking tests).
-
----
 
 ## Illustrative job shape
 
@@ -72,8 +64,6 @@ jobs:
 ```
 
 Same **artifact** under test from build onward ([4](./4_Artifacts_And_Registries.md)).
-
----
 
 ## Pitfalls
 

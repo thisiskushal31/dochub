@@ -8,8 +8,6 @@ How TypeScript **parameterizes** types and functions so one implementation works
 
 You leave able to write a generic helper that preserves the caller’s type, constrain it to what the body needs, and review APIs that over-genericize or under-constrain.
 
----
-
 ## 1. Concepts
 
 ### 1. Why generics exist
@@ -131,8 +129,6 @@ function identity<T>(x: T): T {
 ```
 
 Deepen runtime habits in chapter **13**; deepen compile-cost habits in chapter **15**.
-
----
 
 ## 2. Advanced concepts
 
@@ -304,8 +300,6 @@ const u = setField({ id: "1", email: "a@b.c" }, "email", "x@y.z");
 
 **What just happened:** the constraint made the third argument track the property type—no cast required.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -323,8 +317,6 @@ Typical staff review questions:
 3. Will inference work for the common call?
 4. Are we about to pay compile-time cost for a one-off abstraction?
 
----
-
 ## Staff-level review checklist
 
 - New generics exist to relate inputs/outputs—not as ceremony over `any`.
@@ -341,8 +333,6 @@ Typical staff review questions:
 - `in` / `out` variance annotations left to libraries/DOM unless the team owns that API surface.
 - Compile-time cost considered for hot shared packages (ch **15**).
 - Remember: generics add **zero** runtime cost from `T` itself; measure JS work in ch **13**, `tsc` cost in ch **15**.
-
----
 
 ## References
 

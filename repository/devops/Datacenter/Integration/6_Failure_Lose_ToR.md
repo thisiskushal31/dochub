@@ -2,8 +2,6 @@
 
 [← Previous](./5_Failure_Lose_PDU_A.md) · [README](./README.md) · [Next: Lose CRAH →](./7_Failure_Lose_CRAH_Row.md)
 
----
-
 ## 1. Concepts
 
 **Worked failure:** Top-of-rack switch A dies (power, crash, or uplink isolation).
@@ -21,8 +19,6 @@
 
 Both NICs to ToR A; MLAG pair on one PDU; storage and prod sharing the dead box.
 
----
-
 ## 2. Advanced concepts
 
 ### Walk order
@@ -34,8 +30,6 @@ Both NICs to ToR A; MLAG pair on one PDU; storage and prod sharing the dead box.
 5. Replace/RMA with spare optics ready  
 
 Deep: [Fabric-Physical/7](../Fabric-Physical/7_Bonding_MLAG_And_Dual_Home.md), [Fabric-Physical/12](../Fabric-Physical/12_Fabric_Failure_Walks.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -54,8 +48,6 @@ Deep: [Fabric-Physical/7](../Fabric-Physical/7_Bonding_MLAG_And_Dual_Home.md), [
 - Never bond two ports on one ToR as “HA”  
 
 **Good:** rack stays reachable. **Bad:** whole rack dark; fake bond.
-
----
 
 ## References
 

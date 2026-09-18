@@ -111,8 +111,6 @@ Treat package policy as security-critical configuration, not build trivia.
 - Simulate transactions before publish/upgrade in CI pipelines.
 - Keep rollback and emergency freeze procedures aligned with package policy.
 
----
-
 ## Further reading
 
 - [Move Book — Global storage structure](https://move-language.github.io/move/global-storage-structure.html)

@@ -2,8 +2,6 @@
 
 [← Previous](./08_Context_Constraints_And_Segments.md) · [README](./README.md) · [Next: Edge →](./10_Edge_Proxy_And_Streaming.md)
 
----
-
 ## 1. Concepts
 
 Unleash ships official **backend** and **frontend** SDKs. HTTP endpoints those SDKs call are in [23](./23_Admin_Client_Frontend_And_Edge_APIs.md). This chapter is the **method surface** apps call — you do not need to open each language’s GitHub README first.
@@ -41,8 +39,6 @@ OpenFeature is a **vendor-neutral wrapper** over that contract. Unleash still ev
 ### Client specification
 
 Official backends honor a shared **client specification** so a 10% rollout hits the same users across languages. Spec files **01–22**: simple examples, user-with-id, gradual rollout (user / session / random), remote address, multiple strategies, variants, constraints, flexible rollout, constraint edge cases, custom stickiness, operators, semver operators, global constraints, strategy variants, dependent features, UTF-8 flag names, delta API hydration/events, regex operators, CIDR operators.
-
----
 
 ## 2. Advanced concepts
 
@@ -189,8 +185,6 @@ If the flag is missing, disabled, or payload type mismatches → **default value
 
 Cold start + poll: bootstrap, Edge, or (PHP/Next) request-scoped Frontend mode. Do not spawn a backend SDK **per request**. Node: singleton. Java/.NET: DI singleton. Go: `Initialize` once, `Close` on shutdown.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -212,8 +206,6 @@ Cold start + poll: bootstrap, Edge, or (PHP/Next) request-scoped Frontend mode. 
 - OpenFeature only where multi-provider risk exists — know what you lose  
 
 **Good:** one evaluation model across services. **Bad:** ad-hoc REST to Admin API from the request path; `new Unleash()` inside a handler.
-
----
 
 ## References
 

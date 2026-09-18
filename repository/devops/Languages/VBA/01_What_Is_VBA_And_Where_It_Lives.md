@@ -17,8 +17,6 @@ Chapter **00** is the hands-on smoke check (VBE, hello, `.xlsm`). This chapter i
 
 Handbook default for *new* work: **Microsoft 365 Apps VBA on Windows**.
 
----
-
 ## 1. Concepts
 
 ### 1. What VBA is (plain language)
@@ -100,8 +98,6 @@ Honest reasons—none of which require nostalgia:
 
 The complementary truth: **new cross-platform or cloud-first work** should evaluate Office Scripts, Office Add-ins, Power Automate, or a real service—chapter **18** is the compass.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. VBA vs VBScript vs VB.NET vs Office Scripts
@@ -161,8 +157,6 @@ From the track README—keep them visible:
 4. Automation APIs are a **trust boundary** (**07**, **11**, **15**).
 5. Security is **policy + runtime**, not vibes (**15–16**).
 
----
-
 ## 3. Applications and use cases
 
 | Angle | VBA’s place in practice |
@@ -174,8 +168,6 @@ From the track README—keep them visible:
 | **Software engineering** | Modules with explicit contracts, error handling, reviews—same discipline as other LOB code. |
 
 **Whole-engineering picture:** choose VBA when the **host is the right platform**. Choose another door when cloud, cross-platform, or OS-wide automation is the real requirement.
-
----
 
 ## Staff-level review checklist
 
@@ -189,8 +181,6 @@ From the track README—keep them visible:
 - Object-model dependency acknowledged (this is not portable “pure VB” code).
 - Chapter **00** doorway completed before deep syntax investment.
 - Track pillars (language, host surface, I/O, security) reflected in the project’s Definition of Done.
-
----
 
 ## References
 

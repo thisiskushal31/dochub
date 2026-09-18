@@ -4,8 +4,6 @@
 
 This topic covers **decision making** (`if`, `else`, `switch`) and **loops** (`for`, `while`, `do-while`) in C. Each construct is explained in text first, then with code blocks so you can write clear, readable C.
 
----
-
 ## if and if-else
 
 **`if`** executes a statement or block only when a condition is true (non-zero). **`else`** gives an alternative when the condition is false.
@@ -30,8 +28,6 @@ else
    printf("5 or less\n");
 ```
 
----
-
 ## switch
 
 **`switch`** chooses one of several cases based on the value of an integer (or character) expression. **`break`** exits the switch; without it, execution **falls through** to the next case. C has no “range” syntax for case labels; to handle a range of values, use **fall-through** (e.g. `case 1: case 2: case 3:` for 1–3) or **if-else**.
@@ -55,8 +51,6 @@ switch (grade) {
 
 **Fall-through** is sometimes used on purpose (e.g. several cases doing the same thing), but usually you want `break` after each case.
 
----
-
 ## for loop
 
 **`for`** has three parts: **initialization**, **condition**, and **update**. The body runs while the condition is true.
@@ -78,8 +72,6 @@ for (int j = 10; j >= 0; j -= 2) {
 /* 10 8 6 4 2 0 */
 ```
 
----
-
 ## while loop
 
 **`while`** tests the condition **before** each iteration. If the condition is false at the start, the body never runs.
@@ -91,8 +83,6 @@ while (n < 3) {
    n++;
 }
 ```
-
----
 
 ## do-while loop
 
@@ -109,8 +99,6 @@ printf("\n");
 
 **For vs while:** Use **for** when you have a clear loop variable and init/update; use **while** when the condition is more general or the update is not a simple step. Both are equivalent in power; choose for readability.
 
----
-
 ## break and continue
 
 - **`break`** — Exits the innermost **switch**, **for**, **while**, or **do-while** immediately.
@@ -125,8 +113,6 @@ for (int i = 0; i < 10; i++) {
 printf("\n");   /* 0 1 2 4 5 6 */
 ```
 
----
-
 ## goto statement
 
 **`goto label;`** jumps to a **label** (an identifier followed by a colon) in the same function. Labels are placed before a statement. **goto** is rarely needed; **break**, **continue**, and structured loops are usually clearer. It is sometimes used to leave nested loops or for centralized cleanup. Use sparingly to keep code readable.
@@ -139,8 +125,6 @@ printf("\n");   /* 0 1 2 4 5 6 */
 cleanup:
    /* release resources */
 ```
-
----
 
 ## Nested loops
 
@@ -157,8 +141,6 @@ for (int row = 0; row < 2; row++) {
    (1,0) (1,1) (1,2) */
 ```
 
----
-
 ## Summary
 
 | Construct | Use |
@@ -173,8 +155,6 @@ for (int row = 0; row < 2; row++) {
 | `goto label` | Jump to label in same function (use sparingly) |
 | **Switch range** | Use fall-through `case 1: case 2: case 3:` or if-else (no range syntax in C) |
 | **Infinite loop** | `for (;;)` or `while (1)`; exit with break/return |
-
----
 
 ## Further reading
 

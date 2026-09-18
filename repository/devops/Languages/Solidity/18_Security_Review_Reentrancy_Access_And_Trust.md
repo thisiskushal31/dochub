@@ -8,8 +8,6 @@ How to **review** Solidity systems: trust boundaries, **access control**, **reen
 
 The useful question is not “could a genius break this?” It is: **who is allowed to do this, what do we update first, and what do we believe about the outside world?** If you can answer those three in a PR comment, you are already reviewing.
 
----
-
 ## 1. Concepts
 
 ### 1. The caller is not your friend
@@ -105,8 +103,6 @@ A raw `keccak256(abi.encodePacked(who, amt))` signed blob is how replays and amb
 
 If funds depend on these, the design is incomplete. Use a dedicated randomness/oracle assumption and write it in the threat model.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Reentrancy, named precisely
@@ -191,8 +187,6 @@ An abandoned `solc` or an unpinned OZ major is a security finding (chapters **02
 
 Step-by-step “how to drain X,” copy-paste attacker contracts aimed at live addresses, and weaponized PoCs. Reviewers describe **what to look for** and **how to structure safe code**. They do not publish ammunition.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Review habit |
@@ -202,8 +196,6 @@ Step-by-step “how to drain X,” copy-paste attacker contracts aimed at live a
 | **Security** | Threat model lists oracles, admins, upgrades, tokens |
 | **Operations** | Admin keys in custody, not in a laptop keystore |
 | **Software engineering** | Findings tracked to tests; no “we’ll fix after launch” on auth |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -216,8 +208,6 @@ Step-by-step “how to drain X,” copy-paste attacker contracts aimed at live a
 - Oracle/admin/upgrade trust is explicit.
 - No untrusted `delegatecall`.
 - Tests cover unauthorized callers and failed external calls.
-
----
 
 ## References
 

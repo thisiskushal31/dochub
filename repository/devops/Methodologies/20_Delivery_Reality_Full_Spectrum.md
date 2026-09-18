@@ -8,8 +8,6 @@ DevOps is not a single stack. It is a **posture** — small batches, automated v
 
 This file is the **mindset**. Hand-on adapters live in [CiCd/](../CiCd/README.md) (especially [19](../CiCd/19_Delivery_Spectrum_Legacy_Through_Modern.md), [20](../CiCd/20_Classical_Jenkins_Host_And_Web_Deploy.md)–[23](../CiCd/23_Classical_DevOps_Stack_Map.md), [22](../CiCd/22_MLOps_And_AI_System_Delivery.md)).
 
----
-
 ## One mindset, many estates
 
 ```text
@@ -32,15 +30,11 @@ Same questions on every estate:
 | ML / AI systems (single or distributed) | Model registry, eval gates, serve/monitor | [CiCd/22](../CiCd/22_MLOps_And_AI_System_Delivery.md) |
 | Assisted coding on the loop | Same gates; small batches; human accountability | [19](./19_Durable_Mindsets_And_Evolving_Toolsets.md) |
 
----
-
 ## Why this floor exists on the staircase
 
 Without it, readers finish Three Ways and assume “real DevOps” only means the newest orchestrator. Fintech and enterprises still run COBOL and change windows. Classical training (Jenkins, Ansible, Compose/Swarm) still matches a huge share of jobs. AI serving is still **delivery** — promote an artifact, verify, observe.
 
 Climb: foundations → habits → **then** apply on the estate you actually have → then amplify.
-
----
 
 ## How to use this floor
 
@@ -49,8 +43,6 @@ Climb: foundations → habits → **then** apply on the estate you actually have
 3. Pick the CiCd adapter that matches — do not force K8s rituals onto a regulated mainframe promote.  
 4. Measure with DORA *inside* real constraints ([5](./5_DORA_And_Delivery_Metrics.md)).  
 5. Improve the constraint ([10](./10_Core_Principles_Three_Ways_CALMS.md)), not the fashion.
-
----
 
 ## Pitfalls
 

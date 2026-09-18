@@ -4,153 +4,153 @@
     "path": "1_What_Is_Cairo.md",
     "type": "file",
     "sha": "",
-    "size": 5172
+    "size": 5147
   },
   {
     "name": "10_Dictionaries.md",
     "path": "10_Dictionaries.md",
     "type": "file",
     "sha": "",
-    "size": 2692
+    "size": 2667
   },
   {
     "name": "11_Comments_And_Documentation.md",
     "path": "11_Comments_And_Documentation.md",
     "type": "file",
     "sha": "",
-    "size": 1885
+    "size": 1865
   },
   {
     "name": "12_Proving_And_Executables.md",
     "path": "12_Proving_And_Executables.md",
     "type": "file",
     "sha": "",
-    "size": 2920
+    "size": 2890
   },
   {
     "name": "13_Modules_Packages_And_Crates.md",
     "path": "13_Modules_Packages_And_Crates.md",
     "type": "file",
     "sha": "",
-    "size": 4728
+    "size": 4698
   },
   {
     "name": "14_Generic_Types_And_Traits.md",
     "path": "14_Generic_Types_And_Traits.md",
     "type": "file",
     "sha": "",
-    "size": 2621
+    "size": 2601
   },
   {
     "name": "15_Error_Handling.md",
     "path": "15_Error_Handling.md",
     "type": "file",
     "sha": "",
-    "size": 2644
+    "size": 2619
   },
   {
     "name": "16_Testing.md",
     "path": "16_Testing.md",
     "type": "file",
     "sha": "",
-    "size": 2011
+    "size": 1991
   },
   {
     "name": "17_Closures.md",
     "path": "17_Closures.md",
     "type": "file",
     "sha": "",
-    "size": 1390
+    "size": 1370
   },
   {
     "name": "18_Advanced_Cairo_Features.md",
     "path": "18_Advanced_Cairo_Features.md",
     "type": "file",
     "sha": "",
-    "size": 6312
+    "size": 6247
   },
   {
     "name": "19_Smart_Contracts_On_Starknet.md",
     "path": "19_Smart_Contracts_On_Starknet.md",
     "type": "file",
     "sha": "",
-    "size": 12278
+    "size": 12168
   },
   {
     "name": "2_Getting_Started.md",
     "path": "2_Getting_Started.md",
     "type": "file",
     "sha": "",
-    "size": 4107
+    "size": 4082
   },
   {
     "name": "20_Cairo_VM_And_Appendix.md",
     "path": "20_Cairo_VM_And_Appendix.md",
     "type": "file",
     "sha": "",
-    "size": 8335
+    "size": 8255
   },
   {
     "name": "21_Use_Cases_And_Case_Studies.md",
     "path": "21_Use_Cases_And_Case_Studies.md",
     "type": "file",
     "sha": "",
-    "size": 13894
+    "size": 13834
   },
   {
     "name": "3_Variables_And_Data_Types.md",
     "path": "3_Variables_And_Data_Types.md",
     "type": "file",
     "sha": "",
-    "size": 8272
+    "size": 8237
   },
   {
     "name": "4_Functions.md",
     "path": "4_Functions.md",
     "type": "file",
     "sha": "",
-    "size": 4262
+    "size": 4232
   },
   {
     "name": "5_Control_Flow.md",
     "path": "5_Control_Flow.md",
     "type": "file",
     "sha": "",
-    "size": 4258
+    "size": 4228
   },
   {
     "name": "6_Arrays_And_Collections.md",
     "path": "6_Arrays_And_Collections.md",
     "type": "file",
     "sha": "",
-    "size": 3942
+    "size": 3902
   },
   {
     "name": "7_Ownership_And_References.md",
     "path": "7_Ownership_And_References.md",
     "type": "file",
     "sha": "",
-    "size": 4865
+    "size": 4825
   },
   {
     "name": "8_Structs.md",
     "path": "8_Structs.md",
     "type": "file",
     "sha": "",
-    "size": 5288
+    "size": 5253
   },
   {
     "name": "9_Enums_And_Pattern_Matching.md",
     "path": "9_Enums_And_Pattern_Matching.md",
     "type": "file",
     "sha": "",
-    "size": 3650
+    "size": 3615
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 7037
+    "size": 7022
   }
 ]

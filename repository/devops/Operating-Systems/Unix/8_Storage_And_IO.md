@@ -4,13 +4,9 @@
 
 **Prerequisite:** [Fundamentals: Storage and I/O](../Fundamentals/10_Storage_And_IO.md). Here: **file systems**, **disk**, and **I/O** on Unix — **df**, **du**, **iostat**, **mount**, and FHS.
 
----
-
 ## File systems on Unix
 
 Unix abstracts storage as a **file system**: a hierarchy of files and directories. **Mount points** attach a device or network share to the tree. Common file systems: **UFS** (BSD), **ZFS** (Solaris, FreeBSD), **ext4** (Linux). **df** shows disk usage; **du** shows directory usage; **mount** lists mounted file systems.
-
----
 
 ## Commands
 
@@ -27,8 +23,6 @@ cat /etc/fstab   # or /etc/vfstab on Solaris
 # I/O stats (if iostat available)
 iostat -x 1 5
 ```
-
----
 
 ## RAID on Unix
 
@@ -90,15 +84,11 @@ ZFS also supports **mirror** vdevs (RAID 1–like) and **striped** (RAID 0–lik
 
 So **how RAID runs on Unix**: use **GEOM** (BSD) or **ZFS raidz/mirror** (Solaris/illumos/FreeBSD) for software RAID; or rely on **hardware RAID** and use the single block device the controller presents. For **RAID levels** (0, 1, 2, 3, 4, 5, 6, 10), see [Fundamentals: Storage and I/O — RAID](../Fundamentals/10_Storage_And_IO.md#5-raid-storage-subsystem).
 
----
-
 ## Summary
 
 - **File system** = hierarchy; **mount** attaches volumes.
 - **df**, **du**, **mount**, **iostat** for inspection and tuning.
 - **RAID on Unix:** **BSD** — GEOM **gmirror** (RAID 1), **gstripe** (RAID 0). **Solaris/illumos** — ZFS **raidz1** (RAID-5–like), **raidz2** (RAID-6–like), **mirror**. Hardware RAID = single disk to the OS.
-
----
 
 ## Further reading
 

@@ -4,13 +4,9 @@
 
 This topic describes **where C and C++ appear** in **cybersecurity** and **general engineering**, and how the language’s features (pointers, memory model, speed) make it the right choice. Content is explained in text first; see **Further reading** for deeper links.
 
----
-
 ## Why C and C++ show up everywhere
 
 C was designed for **system programming** and **produces code that runs nearly as fast as assembly**. It gives **direct control over memory and hardware**, so it is used wherever **performance**, **determinism**, or **portability** to many platforms matters. C++ keeps that performance and adds **abstractions** (classes, templates, STL), so it dominates in large, performance-critical applications. Together they cover **operating systems**, **compilers**, **drivers**, **embedded**, **browsers**, **games**, and **security-critical** code.
-
----
 
 ## Cybersecurity
 
@@ -23,8 +19,6 @@ C was designed for **system programming** and **produces code that runs nearly a
 
 **Key idea:** C’s **lack of automatic bounds checking** and **explicit memory management** are what make it fast and portable, but they also make mistakes (buffer overflows, dangling pointers) possible. Security work in C means understanding and defending against those failure modes.
 
----
-
 ## General engineering
 
 | Use case | How C/C++ fits |
@@ -35,8 +29,6 @@ C was designed for **system programming** and **produces code that runs nearly a
 | **Databases and storage** | Many databases and storage engines are C/C++ for performance and control over I/O and memory. |
 | **Networking and infrastructure** | Stacks, proxies, and infrastructure tools (e.g. parts of Kubernetes, Envoy) are often C/C++. |
 | **Games and high-performance apps** | Game engines and latency-sensitive applications are typically C++ for performance and reuse (STL, libraries). |
-
----
 
 ## Applications of C (summary from tutorials)
 
@@ -51,8 +43,6 @@ C is commonly used in:
 - Modern programs (databases, interpreters, utilities)
 
 All of these benefit from C’s **efficiency**, **portability**, and **direct hardware interaction**. C++ builds on this with **OOP** and **generic programming** for larger, more abstract systems (browsers, game engines, trading systems).
-
----
 
 ## C++ interview questions
 
@@ -103,8 +93,6 @@ A **mutable** data member can be modified inside **const** member functions. Use
 **8. How can pointer arithmetic lead to undefined behavior?**  
 Incrementing or decrementing a pointer outside the bounds of the array it points into (including one past the end for certain operations) is undefined. Dereferencing such a pointer is also undefined. Always keep pointer arithmetic within the allocated range.
 
----
-
 ## C++ programming examples and use cases
 
 Writing and reading C++ programs is a common way to learn and to prepare for interviews. **C++ programming examples** are often grouped by use case: from basic I/O and arithmetic to control flow, patterns, functions, arrays, strings, OOP, STL, file handling, and exceptions. These double as **practice use cases** and as a **curriculum** for self-study.
@@ -132,8 +120,6 @@ Writing and reading C++ programs is a common way to learn and to prepare for int
 
 Using these categories, you can target **use cases** such as "learn basics," "prepare for interviews," or "practice OOP/STL." For full lists and code, see the link below in **Further reading**.
 
----
-
 ## Summary table
 
 | Domain | C / C++ role |
@@ -146,8 +132,6 @@ Using these categories, you can target **use cases** such as "learn basics," "pr
 | **Applications** | Browsers, games, HPC, trading |
 
 Learning C (and then C++) gives you a **foundation** for both security work and systems/embedded engineering. The same language that powers most of the world’s infrastructure is also the one you will read when analyzing binaries and hunting bugs.
-
----
 
 ## Further reading
 

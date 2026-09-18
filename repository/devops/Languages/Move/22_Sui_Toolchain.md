@@ -106,8 +106,6 @@ sui move test
 - Treating shared-object performance as an afterthought.
 - Deferring upgrade governance design until after first release.
 
----
-
 ## Further reading
 
 - [Sui — Build with Move](https://docs.sui.io/build/move)

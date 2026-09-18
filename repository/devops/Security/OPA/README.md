@@ -2,8 +2,6 @@
 
 [← Back to Security](../README.md) · [Gate chain](../4_Security_Gate_Chain.md)
 
----
-
 ## 1. Concepts
 
 **OPA** is a general **policy-as-code** engine. You write policies in **Rego**; services ask OPA “is this allowed?” for APIs, CI, or Kubernetes admission (often via Gatekeeper).
@@ -16,8 +14,6 @@ Related: [Checkov](../Checkov/README.md) (IaC scanner), [Kyverno](../../Cloud-Na
 
 **Confirm:** Where does policy decision happen for cluster admits vs Terraform PRs?
 
----
-
 ## 2. Advanced concepts
 
 | Pattern | Use |
@@ -29,8 +25,6 @@ Related: [Checkov](../Checkov/README.md) (IaC scanner), [Kyverno](../../Cloud-Na
 
 Test policies like code. Keep deny messages actionable for developers.
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -40,8 +34,6 @@ Test policies like code. Keep deny messages actionable for developers.
 | Signed images | Admit only cosign-verified digests ([Cosign](../Cosign/README.md)) |
 
 **Staff checklist:** unit-test Rego; stage policies in warn→deny; document exceptions; own policy repo versioning.
-
----
 
 ## References
 

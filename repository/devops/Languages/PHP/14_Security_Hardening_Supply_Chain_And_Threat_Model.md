@@ -6,8 +6,6 @@
 
 Defense-in-depth from `php.ini` through FPM pools to application patterns: injection families, deserialization and template engines, SSRF, mass assignment, upload abuse, Composer and extension supply chain, container hardening, and STRIDE-oriented review prompts. Later chapters are cumulative with HTTP input and PDO material.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the PHP [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -22,8 +20,6 @@ Production-oriented starting points (tune per org):
 - `open_basedir` where maintainable; test thoroughly—extensions may partially honor it
 - `disable_functions` for unused shell primitives; verify bypass paths (`mail`, ImageMagick delegates, FFI)
 - `zend.exception_ignore_args` where stack traces might leak secrets
-
----
 
 ### 2. Injection taxonomy
 
@@ -41,25 +37,17 @@ Production-oriented starting points (tune per org):
 
 **Image and document pipelines** — ImageMagick, GD, and PDF libraries have had critical issues on malicious inputs; run converters in isolated workers with resource limits, not inline in web requests when possible.
 
----
-
 ### 3. XSS, CSRF, SSRF
 
 Output encoding per context; CSP to limit blast radius. CSRF mitigations for cookie sessions (`SameSite`, tokens). SSRF via user-controlled URLs in HTTP clients and streams—block metadata IP ranges, enforce allowlists where feasible.
-
----
 
 ### 4. Uploads and traversal
 
 Content sniffing, random storage names, no execution bit on upload volumes, path normalization to reject `../` sequences in any user-influenced path component.
 
----
-
 ### 5. Supply chain
 
 Composer: `composer audit`, lockfile review, `allow-plugins` governance, private mirrors, reproducible installs. Extensions: track distro CVEs separately—`composer audit` does not cover `php-*` OS packages. WordPress plugins and themes are full code deployments—treat updates like application releases.
-
----
 
 ### 6. Secrets
 
@@ -75,8 +63,6 @@ if ($dbUrl === false || $dbUrl === '') {
 }
 ```
 
----
-
 ## 2. Advanced concepts
 
 **Row-level security** — database-enforced filters as last line when app bugs bypass WHERE clauses.
@@ -87,8 +73,6 @@ if ($dbUrl === false || $dbUrl === '') {
 
 **Container escape class** — read-only rootfs, non-root user, seccomp/AppArmor profiles, no CAP_SYS_ADMIN—PHP is not the only layer.
 
----
-
 ## 3. Applications and use cases
 
 - **Threat modeling:** STRIDE per surface (admin, webhook, upload, export, GraphQL).
@@ -97,8 +81,6 @@ if ($dbUrl === false || $dbUrl === '') {
 - **IR:** Preserve lockfile, image digest, access logs with correlation IDs; rotate credentials if RCE suspected.
 - **Purple team:** Attempt `disable_functions` bypasses and unexpected stream wrappers.
 - **Dependency confusion:** Internal package names must be pinned to private registries; verify `composer.lock` dist URLs in CI point to trusted hosts only.
-
----
 
 ## References
 

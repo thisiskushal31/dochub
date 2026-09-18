@@ -62,8 +62,6 @@ list_length([_First | Rest]) ->
 
 **Why this matters.** Tuples give you fixed, known shapes for messages and results; lists are the default collection and the representation of text. Recursion over `[H|T]` is the basis for most list processing and for the behaviour of the `lists` module. Understanding both is essential for reading and writing Erlang.
 
----
-
 ## Further reading
 
 - [Data Types](https://www.erlang.org/doc/system/data_types) (tuple, list, string)

@@ -6,8 +6,6 @@
 
 **Static analysis and tests** for shell automation: **ShellCheck** in CI, light literacy for **bats** / **shunit**-style harnesses, and **PSScriptAnalyzer** for PowerShell. Stick to documented tools and flags—do not invent APIs. Pair with robust-script habits (chapter 16) and security review (chapter 18).
 
----
-
 ## 1. Concepts
 
 ### 1. Why shell needs gates
@@ -107,8 +105,6 @@ lint (shellcheck) → lint (psscriptanalyzer if *.ps1) → unit/smoke → (optio
 ```
 
 Matrix ideas: `ubuntu` Bash 5, `macos` Bash (Homebrew or stock—**name which**), `windows-latest` `pwsh`. Do not claim portability you do not test.
-
----
 
 ## 2. Advanced concepts
 
@@ -272,8 +268,6 @@ Running ShellCheck inside the same Alpine image you ship can catch shebang/`ash`
 
 Brownfield: generate a one-time baseline of open findings, file tickets for Warning-level debt, and forbid new Errors. Track suppression count as a metric; rising disables without fixes is a smell.
 
----
-
 ## 3. Applications and use cases
 
 ### Repository bootstrap
@@ -340,8 +334,6 @@ Shell as part of OS operator tooling: [`../../Operating-Systems/Fundamentals/11_
 - Pre-commit optional; CI mandatory.
 - Analyzer versions pinned and visible in image/SBOM notes.
 - bats/shunit/Pester adopted only with official docs—no homemade APIs claimed as upstream.
-
----
 
 ## References
 

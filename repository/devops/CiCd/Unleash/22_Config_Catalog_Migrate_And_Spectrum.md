@@ -2,8 +2,6 @@
 
 [← Previous](./21_Feature_And_Offering_Coverage_Map.md) · [README](./README.md) · [Next: HTTP APIs →](./23_Admin_Client_Frontend_And_Edge_APIs.md)
 
----
-
 ## 1. Concepts
 
 This chapter is the **index + doors** page: where settings live, how migrations feel, and how Unleash sits beside the rest of delivery.
@@ -29,8 +27,6 @@ This chapter is the **index + doors** page: where settings live, how migrations 
 Open Source covers the flag core. Enterprise adds multi-project depth, SSO/SCIM maturity, change requests, advanced Edge, and governance features teams expect at scale. Design process substitutes if you stay OSS.
 
 Docs mark features with a **plan** (OSS vs Enterprise) and a **minimum version**. **BETA** means the contract may change or be gated to selected customers — 404 on your instance is expected, not a broken SDK. Unleash, Edge, and SDKs version **independently** (semver). Cloud is continuous; self-host upgrades are yours ([18](./18_Scale_Upgrade_Operate_And_Troubleshoot.md)). OSS Unleash source is **AGPLv3 from v8.0**; Docker images stay Apache-2.0. **Pro** is not offered. Edge OSS is LTS with a documented EOL — plan Enterprise Edge ([10](./10_Edge_Proxy_And_Streaming.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -61,8 +57,6 @@ See official migration guides for checklists.
 
 Unleash does not replace CI or GitOps — it sits **after** the binary is (or will be) deployed.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -78,8 +72,6 @@ Unleash does not replace CI or GitOps — it sits **after** the binary is (or wi
 - Spectrum doors linked from team runbooks  
 
 **Good:** Unleash + Rollouts + GitOps each with one job. **Bad:** expecting flags to canary pods.
-
----
 
 ## References
 

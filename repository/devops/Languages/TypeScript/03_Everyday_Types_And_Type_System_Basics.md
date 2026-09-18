@@ -16,8 +16,6 @@ Generics, mapped types, and declaration files come later. This chapter is the **
 
 Handbook default: **TS 5.9.x**, **`strict`: true**.
 
----
-
 ## 1. Concepts
 
 ### 1. Types describe values
@@ -162,8 +160,6 @@ const ids = rows.map((r) => r.id).filter((id) => id > 0);
 
 Deepen in chapter **13** (runtime performance).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Inference limits
@@ -244,8 +240,6 @@ const raw: unknown = JSON.parse('{"a":1}');
 
 Parsing returns a value the checker cannot trust. Type it as **`unknown`** (or validate into a type). Casting parse results is one of the most common strict-mode bypasses in the wild.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Everyday types in practice |
@@ -257,8 +251,6 @@ Parsing returns a value the checker cannot trust. Type it as **`unknown`** (or v
 | **SE** | Shared type aliases become the glossary of the domain. |
 
 **Whole-engineering picture:** everyday types are how teams **name reality**. Bad names (`data: any`) become permanent fog; precise primitives and shapes make reviews possible.
-
----
 
 ## Staff-level review checklist
 
@@ -273,8 +265,6 @@ Parsing returns a value the checker cannot trust. Type it as **`unknown`** (or v
 - `JSON.parse` results are not trusted as typed domain objects without a validator.
 - Dictionary/`Record` uses consider `noUncheckedIndexedAccess` if enabled.
 - Hot-path array work: aware of copy vs index and `map`/`filter` allocation; deepen in ch **13**.
-
----
 
 ## References
 

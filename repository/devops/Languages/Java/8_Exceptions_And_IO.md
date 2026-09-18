@@ -2,13 +2,9 @@
 
 Exception handling lets you deal with failures without crashing the program: you catch exceptions, clean up, and optionally recover. I/O in Java is stream-based: byte streams for binary data and character streams for text. This topic covers the exception hierarchy (checked vs unchecked vs errors), try-catch-finally, try-with-resources, throw and throws, custom exceptions, and the core I/O model (InputStream/OutputStream, Reader/Writer, file and standard streams, and basic directory operations).
 
----
-
 ## What is an exception?
 
 An **exception** is an event that disrupts normal control flow during execution—for example invalid input, missing file, broken network, or programming errors like index out of bounds. When an exception is thrown, the current path of execution stops and the runtime looks for a handler (catch block). The call stack is **unwound**: the current method exits without returning normally, and the JVM looks at the caller, then the caller’s caller, and so on, until it finds a try-catch that can handle the exception type. If none is found up the call stack, the thread terminates (and the JVM may exit if it was the main thread and the exception is not caught). Handling exceptions lets you log, clean up resources, and either recover or fail in a controlled way instead of abrupt termination. **Exception propagation** is this process of unwinding and searching for a handler; any code in the try after the throw, and any code in the calling methods that follows the call, is skipped until a catch (or finally) is reached.
-
----
 
 ## Exception hierarchy
 
@@ -18,8 +14,6 @@ The root is **Throwable**. Two main subclasses:
 - **Exception** — The branch used for catchable exceptional conditions. **RuntimeException** and its subclasses are **unchecked**: the compiler does not require you to handle or declare them. All other **Exception** subclasses are **checked**: the compiler enforces that they are either caught or declared in a `throws` clause.
 
 So: **checked** = must handle or declare; **unchecked** = RuntimeException and subclasses; **Error** = do not rely on catching.
-
----
 
 ## Checked exceptions
 
@@ -34,8 +28,6 @@ FileReader fr = new FileReader(file);  // compile error: unreported FileNotFound
 
 Correct: catch it or add `throws FileNotFoundException` (or a supertype like `IOException`) to the method signature.
 
----
-
 ## Unchecked exceptions (runtime exceptions)
 
 **RuntimeException** and its subclasses (e.g. NullPointerException, ArrayIndexOutOfBoundsException, IllegalArgumentException, NumberFormatException) are unchecked. The compiler does not require you to catch or declare them. They often indicate programming bugs (invalid arguments, null dereference, bad index). You can still catch them when it makes sense (e.g. validating input and converting to a clean error response).
@@ -44,8 +36,6 @@ Correct: catch it or add `throws FileNotFoundException` (or a supertype like `IO
 int[] num = {1, 2, 3, 4};
 System.out.println(num[5]);  // throws ArrayIndexOutOfBoundsException at run time
 ```
-
----
 
 ## Catching exceptions: try and catch
 
@@ -64,8 +54,6 @@ System.out.println("Out of the block");
 ```
 
 If the thrown exception is not assignable to any catch type, it propagates to the caller.
-
----
 
 ## Multiple catch blocks
 
@@ -86,8 +74,6 @@ try {
 
 Since Java 7 you can catch multiple types in one block: `catch (IOException | FileNotFoundException ex) { ... }`. The variable `ex` is effectively final.
 
----
-
 ## The finally block
 
 A **finally** block can follow the last catch. It runs after the try (and the matching catch, if any), whether an exception was thrown or not. It runs even when the try or catch returns (after the return value is computed but before the method actually returns), or when break/continue is used. Use finally for cleanup that must run in all cases (closing streams, releasing locks). If an exception is thrown in finally, it replaces or suppresses any previous exception and propagates.
@@ -104,8 +90,6 @@ try {
 ```
 
 Rules: try must have at least one of catch or finally; no code between try, catch, and finally blocks. **try-finally without catch:** You can write `try { ... } finally { ... }` with no catch. The finally still runs when the try exits (normally or by exception); then the exception continues to propagate. This is useful when you only need cleanup and don’t want to handle the exception locally. If the finally block throws, that exception replaces (or suppresses) the original one when propagating.
-
----
 
 ## try-with-resources
 
@@ -125,13 +109,9 @@ try (FileReader fr = new FileReader("E://file.txt")) {
 
 You can combine try-with-resources with catch and finally. The resource is closed before any catch or finally runs. Prefer try-with-resources over manual close in finally for streams and connections.
 
----
-
 ## Declaring exceptions: throws
 
 If a method throws a **checked** exception and does not catch it, the method must declare it with **throws** in its signature. Example: `public void deposit(double amount) throws RemoteException`. The caller then must handle or declare that exception. **throws** lists the checked exceptions the method may throw; it does not throw them itself—that is done with **throw**. A method can declare multiple exceptions: `throws IOException, SQLException`.
-
----
 
 ## Throwing exceptions: throw
 
@@ -147,8 +127,6 @@ public void withdraw(double amount) throws InsufficientFundsException {
 }
 ```
 
----
-
 ## Throwable methods
 
 Common methods on Throwable (and thus on Exception/Error):
@@ -160,8 +138,6 @@ Common methods on Throwable (and thus on Exception/Error):
 - **getStackTrace()** — Array of stack trace elements for programmatic use.
 
 Use these in catch blocks to log or report errors.
-
----
 
 ## Custom (user-defined) exceptions
 
@@ -177,13 +153,9 @@ public class InsufficientFundsException extends Exception {
 
 Use when you need a distinct type for the caller to handle or when you want to carry extra state. For a checked exception, extend Exception; for an unchecked one, extend RuntimeException.
 
----
-
 ## Streams and I/O overview
 
 Java I/O is based on **streams**: a sequence of data. **InputStream** and **OutputStream** work with bytes (8-bit); **Reader** and **Writer** work with characters (16-bit Unicode). Sources and destinations include files, network sockets, and in-memory buffers. The **java.io** package contains the classic stream classes; **java.nio** (and **java.nio.file**) offer channels and buffers and are preferred for many new designs. Here we focus on the stream model and the most common file and standard I/O classes.
-
----
 
 ## Byte streams: FileInputStream and FileOutputStream
 
@@ -201,8 +173,6 @@ try (FileInputStream in = new FileInputStream("input.txt");
 
 Copying byte-by-byte is slow; for real code use buffered streams (BufferedInputStream/BufferedOutputStream) or buffer arrays. **Buffered streams:** BufferedInputStream wraps an InputStream and reads in chunks into an internal buffer; read() then serves from that buffer, reducing system calls. BufferedOutputStream batches writes. Use them when you do many small reads or writes (e.g. character-by-character or line-by-line). For bulk copy, reading into a byte array (e.g. 8 KB) and writing it out is often enough. **When to use byte vs character streams:** Use byte streams (InputStream/OutputStream) for binary data (images, serialized objects, raw bytes). Use character streams (Reader/Writer) for text, so the platform encoding is applied and you work in char/String; specify a charset explicitly (e.g. StandardCharsets.UTF_8) when you need a particular encoding.
 
----
-
 ## Character streams: FileReader and FileWriter
 
 **FileReader** and **FileWriter** read and write characters (using the default or specified charset). They wrap byte streams but work in terms of char. Use them for text files when you want character semantics (e.g. line boundaries, encoding). API is similar: read() returns a character as int or -1; write(int) writes one character; there are read(char[]) and write(char[]) variants.
@@ -218,8 +188,6 @@ try (FileReader in = new FileReader("input.txt");
 ```
 
 For better performance and line-oriented APIs, wrap in **BufferedReader**/BufferedWriter (e.g. BufferedReader’s readLine()).
-
----
 
 ## Standard streams
 
@@ -237,8 +205,6 @@ do {
     System.out.print(c);
 } while (c != 'q');
 ```
-
----
 
 ## File and directory operations
 
@@ -264,25 +230,17 @@ for (String path : paths) {
 
 For more powerful path and file operations (create, copy, move, walk tree), use **java.nio.file** (Path, Files).
 
----
-
 ## IOException hierarchy and common exceptions
 
 **IOException** is the main checked exception for I/O. Common subclasses: **FileNotFoundException** (file missing or cannot be opened for read), **EOFException** (end of stream reached unexpectedly during read), **UnsupportedEncodingException** (invalid charset name). **SocketException**, **UnknownHostException** appear in networking. For general programming: **NullPointerException** (dereferencing null), **ArrayIndexOutOfBoundsException** (invalid index), **IllegalArgumentException** (bad argument to a method), **IllegalStateException** (object state doesn’t allow the operation), **ClassCastException** (invalid cast at run time), **NumberFormatException** (parsing a non-numeric string). Knowing which are checked vs unchecked helps you decide whether to catch, declare, or let them propagate.
-
----
 
 ## Exception handling in I/O
 
 Most I/O operations throw **IOException** (checked). Subclasses include FileNotFoundException, EOFException. You must catch or declare them. Prefer try-with-resources so streams are closed even when an exception occurs; otherwise a throw in the try can skip your manual close in finally. Catching IOException (or a specific subclass) around file and stream code is standard.
 
----
-
 ## Summary
 
 Exceptions are Throwable; Errors are severe, Exception is catchable. Checked exceptions must be caught or declared; unchecked (RuntimeException) need not. Use try-catch-finally to handle and clean up; use try-with-resources for AutoCloseable streams. throw throws an exception; throws declares checked exceptions. Custom exceptions extend Exception or RuntimeException. I/O is stream-based: byte streams (InputStream/OutputStream) for binary data, character streams (Reader/Writer) for text. FileInputStream/FileOutputStream and FileReader/FileWriter are the basic file streams; standard I/O uses System.in/out/err. The File class supports path and directory operations; for richer file handling use java.nio.file.
-
----
 
 ## Further reading
 

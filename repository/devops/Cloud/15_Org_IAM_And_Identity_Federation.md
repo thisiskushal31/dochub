@@ -2,8 +2,6 @@
 
 [← Previous](./14_CtrlS_And_Yotta.md) · [README](./README.md) · [Next: VPC constructs →](./16_VPC_And_Network_Constructs.md) · [Landing zones →](./29_Landing_Zones_And_Org_Guardrails.md)
 
----
-
 ## Mental map
 
 ```text
@@ -14,8 +12,6 @@ Org policies / SCPs  ──►  outer fence (even admins cannot exceed)
 ```
 
 *What to notice: “IAM” is the **permission job**. Every cloud has one; the verbs and UIs differ. This chapter teaches the job + how you grant on each major. Provider chapters apply it to that estate.*
-
----
 
 ## 1. Concepts
 
@@ -41,8 +37,6 @@ Tenant cloud control starts with **who can do what** in which isolation boundary
 **Disconfirm:** Creating an IAM **user** with access keys for every engineer is **not** “enterprise IAM.” Copying `Owner` / `AdministratorAccess` “temporarily” is how temporary becomes forever.
 
 **Confirm:** What is your blast unit? How does a human get in without a long-lived key? How does CI deploy without one?
-
----
 
 ## 2. Advanced concepts — how you grant on each cloud
 
@@ -139,8 +133,6 @@ There is no universal “export IAM JSON and import.” You **re-encode the job*
 | No SCPs/org policies | Guardrail gaps |
 | Node instance profile used by every pod | Any pod steals cloud power |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -159,8 +151,6 @@ There is no universal “export IAM JSON and import.” You **re-encode the job*
 - Can explain grant steps on your primary cloud without opening a blog  
 
 **Good:** org hierarchy + federation + least-privilege deploy roles. **Bad:** root keys; one account forever; `AdministratorAccess` on the node role.
-
----
 
 ## References
 

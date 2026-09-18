@@ -2,8 +2,6 @@
 
 [← Previous](./3_Structured_Cabling_Bring_Up.md) · [README](./README.md) · [Next: Gateway/border →](./5_Gateway_Border_Firewall_Boxes.md)
 
----
-
 ## Mental map
 
 ![Leaf-spine sketch](../../Assets/Datacenter/Fabric-Physical/leaf-spine-concept.svg)
@@ -20,8 +18,6 @@ Server NICs ──► ToR leaf pair (A/B)
 Spine ──► border / firewall / MMR
 ```
 
----
-
 ## 1. Concepts
 
 | Role | Physical job | First config literacy |
@@ -36,8 +32,6 @@ Protocol depth (STP, BGP EVPN): Networks-Deep-Dive. Physical encyclopedia: [Fabr
 **Disconfirm:** Two NICs into **one** ToR is **not** dual-homed. Spine and leaf on the same PDU pair is **not** diversity.
 
 **Confirm:** How many spines does each leaf need uplinks to in a classic leaf-spine?
-
----
 
 ## 2. Advanced concepts
 
@@ -54,8 +48,6 @@ Dual ToR + dual PDU is the repeated floor pattern. Spines at opposite ends / div
 5. Server-facing VLANs or L3 interfaces  
 6. Save config + backup off-box  
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -64,8 +56,6 @@ Dual ToR + dual PDU is the repeated floor pattern. Spines at opposite ends / div
 | Brownfield | Document which ports are still access VLAN for PXE |
 
 **Good:** leaf pair, diverse power, uplinks to all spines. **Bad:** single ToR “temporary forever.”
-
----
 
 ## References
 

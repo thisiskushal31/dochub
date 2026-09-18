@@ -38,8 +38,6 @@ take 5 (map (^2) [0..])  -- [0,1,4,9,16]
 [ (x,y) | x <- [1,2], y <- [3,4], x < y ]
 ```
 
----
-
 ## Further reading
 
 - [Haskell 2010 report – Expressions](https://haskell.org/onlinereport/haskell2010/haskellch3.html)

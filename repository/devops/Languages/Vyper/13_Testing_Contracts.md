@@ -8,8 +8,6 @@ How to **prove** Vyper contracts behave: **Titanoboa** as the modern default, **
 
 Testing here means state, events, reverts, and deploy configuration—not a DeFi strategy backtest. Shared EVM testing culture (fuzz mental model, fork caution) overlaps the [Solidity](../Solidity/README.md) track; the runner names below are Vyper’s. Toolchain map: chapter **[03](./03_Toolchain_Vyper_Titanoboa_Brownie.md)**. Artifacts under test: chapter **[12](./12_Compiling_Deploying_And_ABI.md)**.
 
----
-
 ## 1. Concepts
 
 ### 1. What “done” means for a Vyper test
@@ -93,8 +91,6 @@ Lockfile must pin **both** `vyper` and the test runner. Titanoboa should not sil
 
 Clients in [TypeScript](../TypeScript/README.md) / [JavaScript](../JavaScript/README.md) may have separate ABI tests—those consume artifacts from this pipeline, they do not replace it.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Property and fuzz thinking (light)
@@ -158,8 +154,6 @@ When green locally and red in CI, check in order:
 
 Most “flaky Vyper” stories are environment stories.
 
----
-
 ## 3. Applications and use cases
 
 | Role | Testing focus |
@@ -174,8 +168,6 @@ Most “flaky Vyper” stories are environment stories.
 
 **Smell:** fork tests are the only coverage for ACL. Unit-test auth without a network.
 
----
-
 ## 4. Staff-level review checklist
 
 - Titanoboa (or documented Brownie) suite runs in CI on every PR.
@@ -188,8 +180,6 @@ Most “flaky Vyper” stories are environment stories.
 - Fork/mainnet tests are policy-gated, not silent PR blockers.
 - No production private keys in CI.
 - ABI artifacts used by clients come from the same pipeline.
-
----
 
 ## References
 

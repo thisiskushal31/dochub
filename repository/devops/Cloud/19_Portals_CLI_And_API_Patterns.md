@@ -2,8 +2,6 @@
 
 [← Previous](./18_Compute_Instances_And_Autoscaling.md) · [README](./README.md) · [Next: FinOps →](./20_FinOps_And_Cost_Controls.md) · [IAM →](./15_Org_IAM_And_Identity_Federation.md)
 
----
-
 ## Mental map
 
 ```text
@@ -14,8 +12,6 @@ IaC     →  lasting resources ([IAC/](../IAC/README.md))
 ```
 
 *What to notice: UIs change; **objects and APIs** are what transfer across clouds.*
-
----
 
 ## 1. Concepts
 
@@ -35,8 +31,6 @@ Colo portals are a different product ([Datacenter Provider-Use/6](../Datacenter/
 **Disconfirm:** Clicking prod together in a meeting is **not** change management. Long-lived access keys in a laptop profile are **not** SSO.
 
 **Confirm:** How does your CLI authenticate? Where does a lasting VPC live (IaC vs portal)?
-
----
 
 ## 2. Advanced concepts
 
@@ -58,8 +52,6 @@ Learn Floor 1 jobs (IAM, VPC, LB, …) then find the object in each portal. Mult
 
 OIDC for CI [15](./15_Org_IAM_And_Identity_Federation.md). IaC modules own repeatability. Landing baselines [29](./29_Landing_Zones_And_Org_Guardrails.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -77,8 +69,6 @@ OIDC for CI [15](./15_Org_IAM_And_Identity_Federation.md). IaC modules own repea
 - Never paste access keys into chat  
 
 **Good:** IaC + SSO CLI. **Bad:** click-ops estate; shared access keys.
-
----
 
 ## References
 

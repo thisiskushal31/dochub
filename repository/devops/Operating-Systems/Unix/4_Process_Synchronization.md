@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Fundamentals: Process synchronization](../Fundamentals/6_Process_Synchronization.md). Here: **IPC** on Unix — at the **system level** — and the commands/APIs you use.
 
----
-
 ## How the system does it (deep level)
 
 Unix offers several synchronization and IPC mechanisms; the **kernel** is involved in all of them so that blocking and waking are consistent with the scheduler.
@@ -20,13 +18,9 @@ Unix offers several synchronization and IPC mechanisms; the **kernel** is involv
 
 **References:** [POSIX sem_overview (semaphores)](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/semaphore.h.html), [shm_overview (Linux man)](https://man7.org/linux/man-pages/man7/shm_overview.7.html) — concepts apply across POSIX systems.
 
----
-
 ## IPC on Unix (commands and APIs)
 
 Unix provides **pipes** (anonymous), **FIFOs** (named pipes), **System V** and **POSIX** semaphores and shared memory, **signals**, and **sockets**. **Pipes** and **FIFOs** are common for producer-consumer; **semaphores** and **shared memory** for structured synchronization.
-
----
 
 ## Pipes and FIFOs
 
@@ -40,15 +34,11 @@ echo "data" > myfifo &
 cat myfifo
 ```
 
----
-
 ## Summary
 
 - **Pipes** (|) and **FIFOs** (mkfifo) for byte streams.
 - **Semaphores** and **shared memory** via POSIX or System V APIs (C).
 - **Signals** for simple notifications.
-
----
 
 ## Further reading
 

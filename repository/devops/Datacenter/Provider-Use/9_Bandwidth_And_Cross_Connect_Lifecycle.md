@@ -2,8 +2,6 @@
 
 [← Previous](./8_Dedicated_Metal_Intake.md) · [README](./README.md) · [Next: Exit →](./10_Exit_Relocation_And_Decommission.md)
 
----
-
 ## 1. Concepts
 
 Interconnect is not fire-and-forget. Manage **lead times**, **diversity**, **tests**, **LOA renewals**, **bandwidth changes**, and **decommission**.
@@ -16,8 +14,6 @@ Interconnect is not fire-and-forget. Manage **lead times**, **diversity**, **tes
 | Change | Speed upgrade, move panel |
 | Renew | LOA/contracts |
 | Exit | Remove XC, update diagrams |
-
----
 
 ## 2. Advanced concepts
 
@@ -34,8 +30,6 @@ Interconnect is not fire-and-forget. Manage **lead times**, **diversity**, **tes
 ### How it connects
 
 Portal inventory [6](./6_Customer_Portal_Patterns.md). Fabric physical [Fabric-Physical/5](../Fabric-Physical/5_MMR_And_Cross_Connect_Physical.md). Cloud on-ramp couples logical+physical ([7](./7_Land_Cloud_On_Ramp.md)).
-
----
 
 ## 3. Applications and use cases
 
@@ -55,8 +49,6 @@ Portal inventory [6](./6_Customer_Portal_Patterns.md). Fabric physical [Fabric-P
 - Never leave “temporary” XC undocumented  
 
 **Good:** living circuit inventory, calendared renewals. **Bad:** spreadsheet from install day; surprise LOA; orphan XCs.
-
----
 
 ## References
 

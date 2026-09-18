@@ -4,8 +4,6 @@
 
 Clojure is a **functional** language: functions are first-class values, and you define, compose, and pass them. **defn** defines a named function; **fn** defines an anonymous function. Functions can take zero or more arguments, support **variadic** parameters, and can return other functions (**higher-order** functions).
 
----
-
 ## Defining a function with defn
 
 **defn** takes a name, an optional docstring, a **parameter vector**, and a **body**. The body can be multiple expressions; the last value is returned.
@@ -27,8 +25,6 @@ Parameters are positional. Multiple arities are supported by listing additional 
   ([x y & more] (reduce + (cons x (cons y more)))))
 ```
 
----
-
 ## Anonymous functions with fn
 
 **fn** creates an anonymous function. It has the same shape as defn (without the name): parameter vector and body. You can assign it to a var or pass it directly.
@@ -45,8 +41,6 @@ The shorthand **#(...)** is a reader macro for a simple anonymous function: **%*
 ;; => (2 4 6)
 ```
 
----
-
 ## Variadic functions
 
 A parameter name prefixed with **&** collects the remaining arguments into a sequence. That parameter is the last in the vector.
@@ -58,8 +52,6 @@ A parameter name prefixed with **&** collects the remaining arguments into a seq
 (sum 1 2 3 4)
 ;; => 10
 ```
-
----
 
 ## Higher-order functions
 
@@ -80,8 +72,6 @@ Functions that take or return functions are **higher-order**. **map**, **filter*
 (apply str ["a" "b" "c"])
 ;; => "abc"
 ```
-
----
 
 ## Further reading
 

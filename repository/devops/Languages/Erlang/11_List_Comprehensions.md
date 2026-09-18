@@ -36,8 +36,6 @@ sort([Pivot|T]) ->
 
 **Why this matters.** List comprehensions give a compact, declarative way to express “build a list from these sources under these conditions.” They are often clearer than manual recursion or multiple `lists:map`/`filter` steps for simple transformations.
 
----
-
 ## Further reading
 
 - [List Comprehensions](https://www.erlang.org/doc/system/list_comprehensions) (Programming Examples)

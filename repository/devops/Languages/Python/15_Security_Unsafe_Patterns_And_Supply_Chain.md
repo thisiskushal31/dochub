@@ -6,8 +6,6 @@
 
 **pickle**, **YAML**, **`eval`/`exec`**, **SSTI** surfaces, **subprocess** and **shell injection**, **path traversal**, **SSRF** patterns, **dependency** risk on **PyPI**, and **secrets** handling—defensive engineering for application and platform code.
 
----
-
 ## 1. Concepts
 
 ### 1. pickle
@@ -46,15 +44,11 @@ Templating engines (**Jinja2**) with **user-authored** templates can become code
 
 **`secrets` module** for tokens; **compare_digest** for constant-time comparisons of ASCII secrets when applicable.
 
----
-
 ## 2. Advanced concepts
 
 **XML:** **defusedxml** or parser flags that disable **XXE** and **billion laughs** when parsing untrusted XML.
 
 **Temp files:** **`tempfile`** with appropriate **mode**; avoid predictable paths for security-sensitive data.
-
----
 
 ## 3. Applications and use cases
 
@@ -73,16 +67,12 @@ ok = hmac.compare_digest(provided_token.encode(), expected_token.encode())
 subprocess.run(["/usr/bin/git", "status"], check=True, timeout=30, capture_output=True)
 ```
 
----
-
 ## Staff-level review checklist
 
 - Banlist enforced in code review and linting (`eval`, unsafe deserializers, shell string interpolation).
 - Dependency updates follow policy: pin, review changelog, run security and regression tests.
 - Secrets policy includes rotation cadence and redaction tests for logs.
 - Threat models exist for upload, template, and URL-fetch features.
-
----
 
 ## References
 

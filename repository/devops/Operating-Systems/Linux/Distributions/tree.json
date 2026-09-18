@@ -4,41 +4,41 @@
     "path": "Alpine.md",
     "type": "file",
     "sha": "",
-    "size": 5069
+    "size": 5034
   },
   {
     "name": "Arch_Family.md",
     "path": "Arch_Family.md",
     "type": "file",
     "sha": "",
-    "size": 4564
+    "size": 4529
   },
   {
     "name": "Debian_Family.md",
     "path": "Debian_Family.md",
     "type": "file",
     "sha": "",
-    "size": 10015
+    "size": 9975
   },
   {
     "name": "openSUSE_SUSE.md",
     "path": "openSUSE_SUSE.md",
     "type": "file",
     "sha": "",
-    "size": 4187
+    "size": 4152
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3731
+    "size": 3706
   },
   {
     "name": "RHEL_Family.md",
     "path": "RHEL_Family.md",
     "type": "file",
     "sha": "",
-    "size": 12970
+    "size": 12915
   }
 ]

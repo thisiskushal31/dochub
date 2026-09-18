@@ -6,8 +6,6 @@ This topic covers **C++ concepts** beyond core OOP: **templates**, **STL** (cont
 
 **C++ basics (recap):** Data types, variables, operators, control flow, loops, functions, and arrays in C++ follow the same ideas as in C (topics 2–8). C++ adds: **bool** (and `<cstdbool>` or built-in), **references** (topic 13), **std::cin / std::cout** for I/O (see below), **new/delete** (below), and **std::string** (this topic). Pointers (topic 9) apply in C++; **new** and **delete** replace malloc/free for object allocation.
 
----
-
 ## Basic I/O in C++ (cin, cout)
 
 In C++, **std::cin** and **std::cout** (from `<iostream>`) are used for keyboard input and console output. The stream operators **>>** and **<<** replace `scanf` and `printf`. Use **std::endl** or **'\\n'** for newline.
@@ -27,8 +25,6 @@ int main() {
 }
 ```
 
----
-
 ## new and delete (dynamic memory in C++)
 
 In C++, **new** allocates memory for a single object or an array; **delete** (or **delete[]** for arrays) frees it. Unlike C’s malloc/free, **new** calls the constructor and **delete** calls the destructor. Prefer **smart pointers** (below) over raw new/delete when possible.
@@ -46,8 +42,6 @@ int main() {
     return 0;
 }
 ```
-
----
 
 ## Templates
 
@@ -76,8 +70,6 @@ int main() {
    return 0;
 }
 ```
-
----
 
 ## STL (Standard Template Library)
 
@@ -135,8 +127,6 @@ int main() {
 }
 ```
 
----
-
 ## Exceptions
 
 **Exceptions** let you signal and handle errors across call stacks. You **throw** an value (often an exception object) and **catch** it in a caller. Use **try** / **catch**; optionally **catch (...)** for any exception. Destructors are still run during stack unwinding (RAII stays valid).
@@ -159,8 +149,6 @@ int main() {
    return 0;
 }
 ```
-
----
 
 ## File handling in C++
 
@@ -187,8 +175,6 @@ int main() {
 }
 ```
 
----
-
 ## Multithreading in C++
 
 C++11 introduced **std::thread** (from `<thread>`). Create a thread with a callable (function, lambda, or function object); use **join()** to wait for it to finish or **detach()** to let it run independently. Use **std::mutex** and **std::lock_guard** (from `<mutex>`) to protect shared data.
@@ -211,8 +197,6 @@ int main() {
 }
 ```
 
----
-
 ## Multiple and multilevel inheritance
 
 C++ allows **multiple inheritance**: a class can inherit from more than one base. **Multilevel inheritance** is a chain (A → B → C). Multiple inheritance can lead to ambiguity (same name from two bases) or the **diamond problem**; **virtual inheritance** is used to share a single base subobject.
@@ -227,8 +211,6 @@ class Bv : virtual public A {};
 class Cv : virtual public A {};
 class Dv : public Bv, public Cv {};  // Dv has one A subobject
 ```
-
----
 
 ## Structures, unions, and enumerations in C++
 
@@ -249,8 +231,6 @@ int main() {
 }
 ```
 
----
-
 ## Static members
 
 A **static data member** is shared by all objects of the class; there is one copy. A **static member function** does not have a **this** pointer; it can access only static members. They are declared with **static** and defined (for data) outside the class.
@@ -264,8 +244,6 @@ public:
 };
 int Counter::count = 0;
 ```
-
----
 
 ## Abstract classes and pure virtual functions
 
@@ -285,8 +263,6 @@ public:
 };
 ```
 
----
-
 ## Virtual destructor
 
 When you **delete** an object through a **base pointer**, the base destructor must be **virtual** so that the **derived** destructor runs. Otherwise you get undefined behavior (e.g. only the base destructor runs). If a class is meant to be used polymorphically (base pointer/reference), give the base a **virtual destructor**.
@@ -303,8 +279,6 @@ public:
 };
 ```
 
----
-
 ## Smart pointers
 
 **Smart pointers** manage ownership and avoid leaks and use-after-free. **std::unique_ptr** owns a single object; it cannot be copied. **std::shared_ptr** shares ownership with a reference count. Use them instead of raw **new** / **delete** when possible. **std::make_unique** and **std::make_shared** are preferred for creation.
@@ -318,8 +292,6 @@ int main() {
    return 0;
 }
 ```
-
----
 
 ## Namespaces
 
@@ -340,8 +312,6 @@ int main() {
 }
 ```
 
----
-
 ## Function overloading
 
 C++ allows **function overloading**: multiple functions with the **same name** but different **parameter lists** (number or types of parameters). The compiler chooses the right one from the arguments. This is a core C++ feature (not available in C).
@@ -360,8 +330,6 @@ int main() {
    return 0;
 }
 ```
-
----
 
 ## Operator overloading
 
@@ -387,8 +355,6 @@ int main() {
 }
 ```
 
----
-
 ## Friend functions
 
 A **friend** function or class is allowed to access **private** and **protected** members of the class that declares it. Friends are declared inside the class with the **friend** keyword and defined outside. They are often used for **operator overloading** when the operator needs two operands (e.g. `operator+(a, b)`) or when a non-member needs direct access to internals.
@@ -402,8 +368,6 @@ public:
 };
 int get_value(const Box& b) { return b.value; }
 ```
-
----
 
 ## Lambda expressions
 
@@ -427,8 +391,6 @@ int main() {
 }
 ```
 
----
-
 ## Copy constructor
 
 The **copy constructor** creates an object from another object of the same type. It has the signature **`ClassName(const ClassName& other)`**. The compiler generates one by default (memberwise copy). Define your own when you need deep copy or when the default would be wrong (e.g. pointers, resources). Copy assignment **operator=** is similar; together with the destructor they form the **rule of three** (or five with move constructor/assignment).
@@ -442,8 +404,6 @@ public:
    ~Wrapper() { delete ptr; }
 };
 ```
-
----
 
 ## Inline functions, default arguments, and nullptr
 
@@ -464,8 +424,6 @@ int* p = nullptr;
 if (p != nullptr) { /* use p */ }
 ```
 
----
-
 ## C++ strings and range-based for
 
 **std::string** (from **&lt;string&gt;**) is the C++ string type: dynamic, no manual `'\0'` management, and supports operators like `+`, `==`, and `<<`. The **range-based for** loop (**`for (element : range)`**) iterates over every element in a range (e.g. a container or string).
@@ -482,8 +440,6 @@ int main() {
    return 0;
 }
 ```
-
----
 
 ## Further reading
 

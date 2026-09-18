@@ -6,8 +6,6 @@
 
 How R packages actually load: **`library()` versus `require()`**, **`NAMESPACE`** exports and imports, **`::`** qualification, **`Depends` / `Imports` / `Suggests`** in `DESCRIPTION`, and why **search path order** creates “function masking” incidents. This chapter also introduces **Bioconductor** as a parallel ecosystem with its own release cadence—teams doing genomics/bioinformatics treat it as a first-class dependency plane, not “just more CRAN.”
 
----
-
 ## 1. Concepts
 
 ### 1. Packages are versioned deployable units
@@ -34,8 +32,6 @@ Mis-declared dependencies cause “works on my laptop because I attached tidyver
 
 You will see **`export()`**, **`import()`**, **`importFrom()`**, **`S3method()`** registrations for S3 generics, and hooks used when packages interact with **S4** (`methods` package). Incorrect namespace wiring yields “object not found” or broken dispatch at runtime even though `devtools::load_all()` seemed fine locally.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. S3 method registration
@@ -58,8 +54,6 @@ Many CRAN packages compile C/C++/Fortran. That ties you to **toolchains** (Windo
 
 Teams use **`pak`** and **`remotes::install_*`** to install from Git remotes. This is powerful for internal forks and a supply-chain risk if refs are not pinned. Treat Git SHA pins like dependency versions.
 
----
-
 ## 3. Applications and use cases
 
 - **Internal package:** move shared analytics helpers out of copy-paste scripts.
@@ -77,8 +71,6 @@ stats::median(c(1, 2, NA), na.rm = TRUE)
 - Masking risks are mitigated with `::` and controlled `library()` order.
 - Bioconductor/CRAN/Git sources are policy-controlled and pin-compatible.
 - Compiled packages are covered in CI for every deployment platform.
-
----
 
 ## References
 

@@ -25,14 +25,14 @@
         "path": "Atlantis/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 1098
+        "size": 1083
       },
       {
         "name": "README.md",
         "path": "Atlantis/README.md",
         "type": "file",
         "sha": "",
-        "size": 1779
+        "size": 1759
       }
     ]
   },
@@ -92,7 +92,7 @@
         "path": "OpenTofu/README.md",
         "type": "file",
         "sha": "",
-        "size": 1758
+        "size": 1738
       }
     ]
   },
@@ -107,7 +107,7 @@
         "path": "Packer/README.md",
         "type": "file",
         "sha": "",
-        "size": 1781
+        "size": 1761
       }
     ]
   },

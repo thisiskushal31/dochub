@@ -2,8 +2,6 @@
 
 [README](./README.md) · [Next: CRAH and CRAC →](./2_CRAH_And_CRAC.md)
 
----
-
 ## Mental map
 
 ![Heat and airflow loop](../../Assets/Datacenter/Mechanical/heat-airflow-loop.svg)
@@ -43,8 +41,6 @@ Blanking panels, brush strips, and cable openings decide whether the designed pa
 
 Heat is born in the rack ([White-Space](../White-Space/README.md), [Compute](../Compute/README.md)). Removal gear is CRAH/CRAC ([2](./2_CRAH_And_CRAC.md)), plant ([3](./3_Chillers_Towers_And_Free_Cooling.md)), or liquid ([6](./6_Liquid_Cooling_Rear_Door_And_Direct_To_Chip.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### Ratings language
@@ -78,8 +74,6 @@ Electrical path failure can kill fans/pumps ([Electrical](../Electrical/README.m
 
 Desert dry bulb, tropical humidity, and Nordic free cooling change *how* heat is rejected ([3](./3_Chillers_Towers_And_Free_Cooling.md)). The airflow *job* in the hall stays the same.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -98,8 +92,6 @@ Desert dry bulb, tropical humidity, and Nordic free cooling change *how* heat is
 - Never “open a tile for airflow” as a permanent fix  
 
 **Good:** sealed path, measured inlets in range, heat budget matches cooling. **Bad:** Swiss-cheese floor, no blanking, 20 kW in a 5 kW airflow design.
-
----
 
 ## References
 

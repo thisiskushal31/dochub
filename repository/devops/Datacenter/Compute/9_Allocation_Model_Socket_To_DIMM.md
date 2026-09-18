@@ -2,8 +2,6 @@
 
 [← Previous](./8_Memory_Population_And_NUMA.md) · [README](./README.md) · [Next: BMC and Redfish →](./10_BMC_IPMI_And_Redfish_Deep.md)
 
----
-
 ## 1. Concepts
 
 This is the **mental model** that replaces brand trivia:
@@ -28,8 +26,6 @@ When something is “slow,” walk this diagram before guessing software.
 | Cache | False sharing, noisy neighbors |
 | Channel/DIMM | Imbalance, failed DIMM |
 | PCIe | Under-slotted NIC/GPU |
-
----
 
 ## 2. Advanced concepts
 
@@ -59,8 +55,6 @@ CPU chapters [2](./2_CPU_Platforms_Intel_Xeon.md)–[4](./4_CPU_Platforms_ARM_An
 
 Diagram labels change; the walk order does not.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -79,8 +73,6 @@ Diagram labels change; the walk order does not.
 - Update one-pager on BIOS NUMA mode changes  
 
 **Good:** shared allocation model across bare-metal and virt teams. **Bad:** each engineer owns a different folklore map.
-
----
 
 ## References
 

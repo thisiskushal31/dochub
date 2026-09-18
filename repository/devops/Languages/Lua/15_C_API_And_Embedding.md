@@ -41,8 +41,6 @@ C code that might yield (e.g. when calling back into Lua that yields) must use *
 
 The host chooses which standard libraries to load. **luaL_openlibs** opens all; **luaL_openselectedlibs** opens a subset (basic, package, coroutine, string, table, math, I/O, OS, debug, etc.). The standalone interpreter opens all. Embedded hosts often omit or replace I/O and OS and may restrict debug.
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §4 The Application Program Interface](https://www.lua.org/manual/5.5/manual.html#4)

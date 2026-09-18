@@ -10,7 +10,7 @@
         "path": "Backstage/README.md",
         "type": "file",
         "sha": "",
-        "size": 4297
+        "size": 4277
       }
     ]
   },
@@ -25,7 +25,7 @@
         "path": "Cert-Manager/README.md",
         "type": "file",
         "sha": "",
-        "size": 4997
+        "size": 4977
       }
     ]
   },
@@ -40,7 +40,7 @@
         "path": "ExternalDNS/README.md",
         "type": "file",
         "sha": "",
-        "size": 4608
+        "size": 4588
       }
     ]
   },
@@ -100,7 +100,7 @@
         "path": "Kyverno/README.md",
         "type": "file",
         "sha": "",
-        "size": 4776
+        "size": 4756
       }
     ]
   },
@@ -138,14 +138,14 @@
     "path": "3_Platform_Engineering.md",
     "type": "file",
     "sha": "",
-    "size": 4234
+    "size": 4214
   },
   {
     "name": "4_CNCF_Everyday_Tools.md",
     "path": "4_CNCF_Everyday_Tools.md",
     "type": "file",
     "sha": "",
-    "size": 5812
+    "size": 5792
   },
   {
     "name": "README.md",

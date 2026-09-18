@@ -4,16 +4,12 @@
 
 **Where to put FreeBSD, Solaris, AIX, HP-UX, and other Unix variants.** The [Unix](../README.md) section above covers the **kernel and common concepts** (process, memory, shell, POSIX) that apply across Unix and Unix-like systems. This folder covers **flavor-specific** topics: package managers, service management, and commands or configs that differ by variant.
 
----
-
 ## Why a separate Flavors folder?
 
 - **Unix (generic)** = shared concepts: POSIX, process model, file hierarchy, shell, signals. Commands like `ps`, `kill`, `cron` are similar across variants.
 - **Flavors** = how each **variant** is packaged and administered: different **package systems** (pkg vs IPS vs installp vs swinstall), **init/service** (rc.d, smf, System V), and **vendor tools** (SMIT, YaST-like tools, ZFS, DTrace).
 
 Put anything **specific to one Unix flavor or family** here.
-
----
 
 ## Structure
 
@@ -27,8 +23,6 @@ Put anything **specific to one Unix flavor or family** here.
 
 Create a new `.md` file for each flavor or family. Link it from this README.
 
----
-
 ## Quick reference: package and service management by flavor
 
 | Flavor / family | Package manager | Service / init | Notes |
@@ -37,8 +31,6 @@ Create a new `.md` file for each flavor or family. Link it from this README.
 | Solaris, illumos | pkg (IPS) | smf (svcadm) | ZFS, DTrace, zones. |
 | AIX | installp, rpm | System V rc | SMIT, WLM, mksysb. |
 | HP-UX | swinstall | SAM, init | PA-RISC, Itanium. |
-
----
 
 ## Adding a new flavor
 

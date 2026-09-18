@@ -8,8 +8,6 @@
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. What “comptime” means in plain language
@@ -74,8 +72,6 @@ fn pageSize() usize {
 
 You do not need every reflection builtin on day one—you need that boundary.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Compile-time control flow with build options
@@ -112,8 +108,6 @@ Heavy specialization duplicates machine code and can slow CI. Measure when size 
 
 When comptime fails, read the error carefully—type mismatch or “not comptime-known.” Resist quick fixes that push work to runtime and lose the static guarantee you wanted.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Comptime role |
@@ -126,8 +120,6 @@ When comptime fails, read the error carefully—type mismatch or “not comptime
 
 **Whole-engineering picture:** comptime moves checks **left**—into `zig build`—where failures are cheap.
 
----
-
 ## 4. Staff-level review checklist
 
 - Comptime code is readable and named; not a puzzle contest.
@@ -135,8 +127,6 @@ When comptime fails, read the error carefully—type mismatch or “not comptime
 - Build options driving comptime specialization are listed for operators.
 - Heavy specialization has a reason (perf, safety, target)—not novelty.
 - Public APIs do not require callers to understand private type magic.
-
----
 
 ## References
 

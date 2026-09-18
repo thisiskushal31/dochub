@@ -6,8 +6,6 @@
 
 Making shell automation **fail closed**: Bash `set -euo pipefail`, exit-status discipline, **traps** for cleanup, and PowerShell **`$ErrorActionPreference`** / **try-catch**. Includes what is Bash-only vs POSIX, and version gates (Bash 3.2 vs 4+/5, Windows PowerShell 5.1 vs PowerShell 7).
 
----
-
 ## 1. Concepts
 
 ### 1. Exit status is the contract
@@ -159,8 +157,6 @@ param(
 )
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `set -e` is subtle (read before preaching)
@@ -256,8 +252,6 @@ A Bash script with strict mode invoked from `pwsh` still uses Bash rules—ensur
 
 Batch `IF ERRORLEVEL` is not equivalent to Bash strict mode. Keep `.cmd` as launchers; put robustness in `pwsh` or Bash (chapter 13).
 
----
-
 ## 3. Applications and use cases
 
 ### CI scripts
@@ -303,8 +297,6 @@ Signal and process session context on Linux: [`../../Operating-Systems/Linux/9_S
 - `set -x` / verbose modes scrubbed of secrets.
 - Background work has `wait`/kill policy.
 - Failure-path tests or at least dry-run characterization exist.
-
----
 
 ## References
 

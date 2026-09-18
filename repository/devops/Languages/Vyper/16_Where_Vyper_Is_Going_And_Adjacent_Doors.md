@@ -8,8 +8,6 @@ Why Vyper **persists** on the EVM, how it sits beside the **Solidity** path, whe
 
 You should leave able to **maintain and review** Vyper contracts on **0.4.x** and pick a next skill without pretending every problem is another `.vy` file.
 
----
-
 ## 1. Concepts
 
 ### 1. What this track already owns
@@ -125,8 +123,6 @@ Python-like syntax does not make contracts into servers. Missing Solidity featur
 | Mixed ABI boundaries are clean | Entire org standardizes on one Solidity toolchain |
 | Decision tree in **01** still points here | Deploy target left the EVM family |
 
----
-
 ## 2. Advanced concepts
 
 ### 1. How to choose what to learn next
@@ -225,8 +221,6 @@ Then pick **one** next path and finish its starting step before stacking three c
 | Skipping clients | Users never call your Python; they call ABI |
 | Rewriting a healthy Vyper core “for Foundry” without a staffing plan | Adapters at the edge; keep the audited core |
 
----
-
 ## 3. Applications and use cases
 
 | Situation | Adjacent door |
@@ -237,8 +231,6 @@ Then pick **one** next path and finish its starting step before stacking three c
 | Incident: “which compiler built this?” | Ops inventory from **12** / **14** / **18** |
 | Language choice debate | **01** decision tree + this chapter’s stay/reconsider table |
 | New chain is Move/Cairo | Open that Languages track; do not force `.vy` |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -251,8 +243,6 @@ Then pick **one** next path and finish its starting step before stacking three c
 - Client ABI ownership assigned.
 - Compiler advisory subscription/inventory exists for production pins.
 - Track scope respected: no pretending this is every EVM or every Web3 skill.
-
----
 
 ## References
 

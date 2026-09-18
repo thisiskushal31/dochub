@@ -2,8 +2,6 @@
 
 [← Previous](./16_Worked_Example_Build_And_Deploy.md) · [README](./README.md) · [Next: Coverage map →](./18_Feature_And_Configuration_Coverage_Map.md)
 
----
-
 ## 1. Concepts — managing Bitbucket
 
 Prefer:
@@ -16,8 +14,6 @@ Prefer:
 - API tokens / access tokens — not long-lived passwords in repos  
 - Jira keys for traceability when Atlassian is the work system  
 - Know Free vs Standard vs Premium **capability** gates (minutes, LFS, admin controls)  
-
----
 
 ## 2. Advanced concepts
 
@@ -58,13 +54,9 @@ Static → PaaS → containers → VMs → GitOps handoff ([12](./12_Deploy_Targ
 
 GitHub/GitLab already SoR; need DC Git without accepting Bamboo/Jenkins; team standardized elsewhere ([CiCd/2](../2_CI_CD_Tools.md)).
 
----
-
 ## 3. Applications and use cases
 
 Staff review: walk A–C; mark use / defer / N/A for Premium features and DC CI choice.
-
----
 
 ## References
 

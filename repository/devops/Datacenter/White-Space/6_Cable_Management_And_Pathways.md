@@ -2,8 +2,6 @@
 
 [← Previous](./5_Structured_Cabling_Fiber_MPO_MTP.md) · [README](./README.md) · [Next: Asset tags →](./7_Asset_Tags_Serials_And_Elevations.md)
 
----
-
 ## 1. Concepts
 
 **Cable management** is how copper, fiber, and power share space without crushing, EMI chaos, or unblockable airflow. **Pathways** are the trays, baskets, ladders, and underfloor routes that carry them.
@@ -27,8 +25,6 @@
 | Underfloor | Legacy / mixed |
 | Overhead | Modern dense halls |
 | Conduit | Protected/fire-stopped routes |
-
----
 
 ## 2. Advanced concepts
 
@@ -58,8 +54,6 @@ Busway vs cable power ([Electrical/9](../Electrical/9_Busway_Vs_Cable_Distributi
 
 Fill ratios and firestop products follow local code. The jobs—protect bend radius, separate energy, leave service loops labeled—are universal.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -78,8 +72,6 @@ Fill ratios and firestop products follow local code. The jobs—protect bend rad
 - Firestops restored after wall penetrations  
 
 **Good:** dressed, labeled, serviceable pathways. **Bad:** bird’s nests; abandoned live-looking cords; fiber zip-tied to death.
-
----
 
 ## References
 

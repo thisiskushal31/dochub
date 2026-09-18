@@ -46,8 +46,6 @@ Run **govulncheck** from your module root (where **go.mod** is). It uses the Go 
 
 **Why this matters.** Go’s design (static binary, no JVM, explicit errors) reduces some attack surface, but you still must manage secrets, dependencies, and deployment safely. Applying these practices helps you operate Go-based systems reliably and securely in production and in automation.
 
----
-
 ## Further reading
 
 - [Why Go – Security](https://go.dev/solutions/security/)

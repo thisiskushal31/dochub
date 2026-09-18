@@ -17,8 +17,6 @@ Chapters **02–05** built procedures, types, flow, and errors. This chapter is 
 
 Handbook default: **explicit conversions**, **bounded loops**, Dictionary when you need keyed lookup—not nested Collections of mystery Variants.
 
----
-
 ## 1. Concepts
 
 ### 1. Strings — the core verbs
@@ -179,8 +177,6 @@ Early binding (`Dim map As Scripting.Dictionary`) is fine when the reference is 
 
 **Security note:** `CreateObject` is an Automation surface. Using it for `Scripting.Dictionary` / `Scripting.FileSystemObject` is common LOB—still list it in reviews. Do not treat this chapter as permission to spawn arbitrary progids.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Binary vs text compare — and `StrComp`
@@ -278,8 +274,6 @@ Store UTC vs local only with an explicit policy—VBA `Now` is local machine tim
 
 Often interchangeable in comparisons; `vbNullString` is idiomatic in API Declare worlds (**13**). For business code, consistency matters more than micro-difference.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Strings / dates / maps in practice |
@@ -291,8 +285,6 @@ Often interchangeable in comparisons; `vbNullString` is idiomatic in API Declare
 | **Software engineering** | Trim/Split at edges; typed interiors; Exists checks instead of error-driven Collection key probes when practical. |
 
 **Whole-engineering picture:** most macro bugs are string/date edge cases wearing Range clothing. Normalize early; format late.
-
----
 
 ## Staff-level review checklist
 
@@ -307,8 +299,6 @@ Often interchangeable in comparisons; `vbNullString` is idiomatic in API Declare
 - Dictionary created with documented binding; `Exists` used; `CompareMode` set before keys when needed.
 - `CreateObject("Scripting.Dictionary")` accepted only as known LOB—other progids scrutinized (**07**, **15**).
 - Large string builds avoid quadratic `&` patterns without need.
-
----
 
 ## References
 

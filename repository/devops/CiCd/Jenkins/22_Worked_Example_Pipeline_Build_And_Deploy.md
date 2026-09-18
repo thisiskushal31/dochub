@@ -2,8 +2,6 @@
 
 [← Previous](./21_Blue_Ocean_CLI_And_Remote_API.md) · [README](./README.md) · [Next: Best practices →](./23_Best_Practices_And_When_Not_Jenkins.md)
 
----
-
 ## 1. Concepts — lab goal
 
 1. Install LTS controller; set built-in executors to **0**; add a labeled agent (Docker or SSH).  
@@ -58,8 +56,6 @@ pipeline {
 
 Promote the **same** fingerprinted artifact; don’t rebuild for “prod.”
 
----
-
 ## 2. Advanced — stretch
 
 | Stretch | Chapter |
@@ -82,8 +78,6 @@ unclassified:
     url: "http://localhost:8080/"
 ```
 
----
-
 ## 3. Applications and use cases
 
 | Checkpoint | Evidence |
@@ -94,8 +88,6 @@ unclassified:
 | Config | JCasC snippet committed |
 
 **Good:** lab becomes platform template. **Bad:** only Freestyle on controller with secrets in job XML.
-
----
 
 ## References
 

@@ -4,8 +4,6 @@
 
 CI builds continuously. **Releases** name what customers and operators can pin, roll back to, and discuss. Wire versioning into the pipeline so tags, artifacts, and notes stay consistent.
 
----
-
 ## Semantic Versioning (SemVer 2.0.0)
 
 **Learn the canonical rules on the official site:** [https://semver.org/](https://semver.org/) (Semantic Versioning 2.0.0). This chapter applies those rules to delivery; the site is the source of truth for MAJOR/MINOR/PATCH, pre-release, and build metadata.
@@ -21,8 +19,6 @@ For artifacts with a public API (libraries, many services):
 Pre-release labels (`1.0.0-alpha.1`, `1.0.0-rc.20`) and build metadata are defined in the [SemVer spec](https://semver.org/). Apps that are not libraries still benefit from **immutable, ordered** versions (CalVer or SemVer-like) tied to digests ([4](./4_Artifacts_And_Registries.md)).
 
 CI/CD wiring is **host-neutral**: the same SemVer tags and image digests work on GitHub, GitLab, Bitbucket, Azure DevOps, Jenkins, CircleCI, Buildkite, Tekton, and kin ([2](./2_CI_CD_Tools.md)).
-
----
 
 ## Git tags and artifacts
 
@@ -63,8 +59,6 @@ approve rc.21 → retag SAME digest → :1.4.0 (+ git tag v1.4.0) → prod
 
 Annotated tags (`git tag -a vX.Y.Z -m "…"`) feed release notes and ChatOps ([16](./16_Notifications_Webhooks_And_ChatOps.md)).
 
----
-
 ## Changelogs vs release notes
 
 [Keep a Changelog](https://keepachangelog.com/):
@@ -73,8 +67,6 @@ Annotated tags (`git tag -a vX.Y.Z -m "…"`) feed release notes and ChatOps ([1
 - **Release notes** — announcement for one version (often derived from the changelog)
 
 Automation (Conventional Commits + tools like semantic-release, release-please, Changesets, git-cliff) can **draft** version bumps and notes from commits. Treat drafts as starting points — commit messages and user-facing changelog entries serve different audiences.
-
----
 
 ## Conventional Commits (CI use)
 
@@ -86,8 +78,6 @@ Structured commits (`feat:`, `fix:`, `BREAKING CHANGE:`) let CI:
 
 Useful when the team agrees on the convention; not mandatory for Continuous Delivery.
 
----
-
 ## Pipeline responsibilities
 
 | Step | Owner |
@@ -96,8 +86,6 @@ Useful when the team agrees on the convention; not mandatory for Continuous Deli
 | Tag immutability | Never move a released tag |
 | Notes published with artifact | CI release job |
 | Link version → digest → commit | Release metadata / provenance ([6](./6_Supply_Chain_And_Signing.md)) |
-
----
 
 ## Pitfalls
 

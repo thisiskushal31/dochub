@@ -8,8 +8,6 @@ How contracts **call** each other (`call`, `staticcall`, `delegatecall`), how **
 
 Calling another contract is not `fetch`. It is “pause my code, run theirs, maybe send coins, then continue — or undo me if they explode.” The three verbs (`call`, `staticcall`, `delegatecall`) differ in *whose storage* and *who `msg.sender` is*. Mix them up and you either brick a proxy or hand someone your filing cabinet.
 
----
-
 ## 1. Concepts
 
 ### 1. A Solidity call is not HTTP
@@ -128,8 +126,6 @@ Child c = new Child{value: 1 ether}(arg);
 
 **CREATE2** (`new Child{salt: s}(...)`) makes the address depend on deployer, salt, and init code hash—predictable before deploy. Useful for counterfactual wallets and factories. Also means **init code is part of the address**: change the constructor and the address changes (or you collide with a different bytecode at the same address if you are sloppy with salts—review literacy, chapter **20**).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. The `CALL` family, precisely
@@ -215,8 +211,6 @@ Some old tokens omit `returns (bool)`. High-level `IERC20.transfer` may revert o
 
 Scheduled for severe restriction / removal of its useful effects. Cancun (EIP-6780) already neutered same-tx-only destruction for most uses. Do not design new systems around it. Treat remaining uses as brownfield.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -227,8 +221,6 @@ Scheduled for severe restriction / removal of its useful effects. Cancun (EIP-67
 | **Operations** | Factories and salts recorded; no surprise CREATE2 |
 | **Software engineering** | Value-moving paths have tests for revert-on-failed-send |
 
----
-
 ## 4. Staff-level review checklist
 
 - ETH out uses `call` + success check + CEI (or a reviewed library), not stipend folklore.
@@ -237,8 +229,6 @@ Scheduled for severe restriction / removal of its useful effects. Cancun (EIP-67
 - High-level calls preferred; low-level `call` always inspects `ok`.
 - Accounting does not assume `balance == sum(credits)`.
 - CREATE2 salts and init code are under change control.
-
----
 
 ## References
 

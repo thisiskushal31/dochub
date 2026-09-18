@@ -16,8 +16,6 @@ Types are erased. At runtime you are running **JavaScript** on **Node** (or a br
 
 Read this soon after chapter **12** (async). File I/O details are chapter **14**. Come back here whenever a handler “feels slow.”
 
----
-
 ## 1. Concepts
 
 ### 1. The two clocks (say which one you mean)
@@ -212,8 +210,6 @@ for (const u of users) names2.push(u.name);
 
 Clarity wins until measurement says otherwise. Seniors still write `map` every day—they just know when not to.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. How to see where time went (measure before opinions)
@@ -314,8 +310,6 @@ Workers add complexity. Earn them with measurements.
 | **Files (14)** | Stream big files; async I/O on hot paths |
 | **Builds (15)** | Separate clock—don’t confuse with runtime |
 
----
-
 ## 3. Applications and use cases
 
 | Angle | What “machine performance” looks like |
@@ -335,8 +329,6 @@ Workers add complexity. Earn them with measurements.
 3. chapters **13** / **15** — files/bytes without blocking the world.
 4. chapter **16** — when CI/`tsc` is the pain, not the API.
 
----
-
 ## Staff-level review checklist
 
 - Ticket names **runtime** vs **compile** clock.
@@ -351,8 +343,6 @@ Workers add complexity. Earn them with measurements.
 - Types used to encode safe APIs—not as a substitute for measurement.
 - Language-construct costs considered on hot paths (loops, allocs, sync I/O)—not only “add more async.”
 - Core-chapter “Runtime cost” seeds are treated as review vocabulary, not optional trivia.
-
----
 
 ## References
 

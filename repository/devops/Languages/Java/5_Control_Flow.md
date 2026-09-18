@@ -2,13 +2,9 @@
 
 Control flow statements determine the order in which statements run: conditionals choose between branches, and loops repeat a block. This topic covers decision-making (if, if-else, if-else-if ladder, nested if), the switch statement (including types, fall-through, and default), all loop forms (for, enhanced for, while, do-while), and the loop-control statements break and continue.
 
----
-
 ## Decision making and conditions
 
 Decision-making structures evaluate one or more boolean expressions and execute different code paths depending on the result. The condition must be of type boolean; Java does not treat numbers or references as truthy or falsy. Execution is top-to-bottom: the first condition that evaluates to true runs its block, and the rest are skipped. An optional else runs when no previous condition is true.
-
----
 
 ## The if statement
 
@@ -19,8 +15,6 @@ if (x < 20) {
     System.out.print("This is if statement");
 }
 ```
-
----
 
 ## The if-else statement
 
@@ -34,8 +28,6 @@ if (x < 20) {
     System.out.print("This is else statement");  // This runs
 }
 ```
-
----
 
 ## The if-else if-else ladder
 
@@ -53,8 +45,6 @@ if (x == 10) {
     System.out.print("This is else statement");
 }
 ```
-
----
 
 ## Nested if and if-else
 
@@ -75,8 +65,6 @@ if (x >= y) {
 }
 ```
 
----
-
 ## Rules for if-else
 
 - The condition must be a boolean expression (true/false).
@@ -85,8 +73,6 @@ if (x >= y) {
 - else must immediately follow an if or else if (no “dangling else” ambiguity: else binds to the nearest unmatched if).
 - Single-statement bodies may omit braces; multiple statements require a block in `{ }`.
 - Nested if and if-else are allowed in any branch.
-
----
 
 ## The switch statement
 
@@ -151,8 +137,6 @@ switch (month) {
 }
 ```
 
----
-
 ## The conditional (ternary) operator
 
 The ternary operator `condition ? valueIfTrue : valueIfFalse` chooses one of two expressions based on a boolean condition. The condition is evaluated first; only one of the two branches is evaluated. Often used for short conditionals and initializations.
@@ -163,16 +147,12 @@ int b = (a == 10) ? 20 : 30;   // b is 20
 int c = (a == 1) ? 20 : 30;    // c is 30
 ```
 
----
-
 ## When to use which loop
 
 - **for** — When the number of iterations is known or you have a clear initialization, condition, and update (e.g. index from 0 to length-1).
 - **Enhanced for (for-each)** — When you only need to iterate over all elements of an array or Iterable, without an index.
 - **while** — When the condition is checked before the first iteration; the body may run zero times.
 - **do-while** — When the body must run at least once and the condition is checked after each iteration.
-
----
 
 ## The for loop
 
@@ -217,8 +197,6 @@ for (int num = 1; num <= 10; num++) {
 }
 ```
 
----
-
 ## The enhanced for (for-each) loop
 
 The enhanced for loop iterates over an array or any Iterable (e.g. List) without an explicit index. Syntax: `for (ElementType variable : arrayOrIterable) { ... }`. The variable is the current element; it is read-only in the sense that reassigning it does not change the array or collection. Compatible with arrays and types that implement `Iterable`.
@@ -241,8 +219,6 @@ for (Integer x : list) {
 ```
 
 You cannot use the enhanced for to replace elements by index or to remove/add elements in a collection during iteration; use an index-based for loop or an iterator for that.
-
----
 
 ## The while loop
 
@@ -269,8 +245,6 @@ while (true) {
 }
 ```
 
----
-
 ## The do-while loop
 
 The do-while loop is exit-controlled: the body runs first, then the condition is evaluated. So the body runs at least once. The condition is at the end, after the closing brace, followed by a semicolon.
@@ -295,8 +269,6 @@ do {
     index++;
 } while (index < 5);
 ```
-
----
 
 ## The break statement
 
@@ -346,8 +318,6 @@ switch (day) {
 }
 ```
 
----
-
 ## The continue statement
 
 Continue skips the rest of the current iteration and starts the next one. In a for loop, control goes to the update part, then the condition is re-evaluated. In while and do-while, control goes directly to the condition (while) or to the condition at the end (do-while).
@@ -382,8 +352,6 @@ for (int i = 1; i <= 10; i++) {
 }
 ```
 
----
-
 ## Labeled break and continue
 
 Labels name a statement (usually a loop). You put a label before the statement followed by a colon (e.g. `outer:`). Then `break label;` exits the labeled statement, and `continue label;` skips to the next iteration of the labeled loop. This is used to exit or continue an outer loop from inside a nested loop, when a plain break or continue would only affect the innermost loop.
@@ -411,8 +379,6 @@ for (int i = 0; i < 3; i++) {
 
 The label must be on a statement that contains the break or continue; you cannot jump to an arbitrary label elsewhere in the method.
 
----
-
 ## Summary table
 
 | Construct      | When condition is checked | Minimum iterations |
@@ -425,8 +391,6 @@ The label must be on a statement that contains the break or continue; you cannot
 | do-while       | After each iteration      | 1                    |
 | break          | —                         | Exits loop/switch    |
 | continue       | —                         | Skips to next iteration |
-
----
 
 ## Further reading
 

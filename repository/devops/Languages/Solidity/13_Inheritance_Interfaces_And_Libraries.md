@@ -8,8 +8,6 @@ How contracts **compose**: **inheritance** (including C3 linearization), **`abst
 
 Inheritance is not a Java classpath. It is “glue these storage slots and functions into **one** address.” Interfaces are “I promise this menu.” Libraries are “shared tools” — usually *copied into you*, sometimes *delegatecalled*.
 
----
-
 ## 1. Concepts
 
 ### 1. Inheritance merges code and storage
@@ -151,8 +149,6 @@ Internal/pure libraries are the usual choice. External libraries need a deployed
 
 `super.foo()` calls the **next** contract in the linearized order, not “my parent’s parent” in source order. With multiple inheritance, read the linearization (`solc` can print it) before you rely on `super`.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Diamond inheritance and C3 (worked)
@@ -212,8 +208,6 @@ Runtime bytecode must stay under **24576 bytes** (24 KiB) on Ethereum L1. Hit it
 
 Import **Ownable**, **ReentrancyGuard**, **ERC20** when you need those exact semantics. Read the version’s changelog (v4 vs v5 — constructors vs `_disableInitializers`, custom errors, etc.). Do not copy-paste a 2018 Ownable from memory.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -224,8 +218,6 @@ Import **Ownable**, **ReentrancyGuard**, **ERC20** when you need those exact sem
 | **Operations** | Linked library addresses recorded if you use external libraries |
 | **Software engineering** | One reason per parent; interfaces in `I*.sol` |
 
----
-
 ## 4. Staff-level review checklist
 
 - Inheritance graph fits on one slide; linearization is understood.
@@ -234,8 +226,6 @@ Import **Ownable**, **ReentrancyGuard**, **ERC20** when you need those exact sem
 - Libraries are `internal` unless a link reason is written down.
 - OZ (or similar) version is **pinned** and matches tests.
 - `super` usage matches C3, not “the class I see above in the file.”
-
----
 
 ## References
 

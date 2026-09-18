@@ -90,8 +90,6 @@ tailrec fun findFixPoint(x: Double = 1.0): Double =
 
 The next topics cover classes, null safety, and collections; many of the patterns there use functions as parameters (lambdas), which are covered in a later topic.
 
----
-
 ## Further reading
 
 - [Functions](https://kotlinlang.org/docs/functions.html)

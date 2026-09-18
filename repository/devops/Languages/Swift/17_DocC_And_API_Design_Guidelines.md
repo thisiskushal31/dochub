@@ -10,8 +10,6 @@ Public API is a promise. Names, argument labels, and doc comments are how that p
 
 You finish this chapter when you can: name a call site that violates the Guidelines, sketch a `.docc` catalog layout, link a symbol from an article, and describe how CI fails a PR that ships silent `public` API.
 
----
-
 ## 1. Concepts
 
 ### 1. API Design Guidelines — core taste
@@ -332,8 +330,6 @@ public func magic(_ x: Int) -> Int { nextWireID(x) }
 
 Document migration notes in DocC articles for major shifts (concurrency adoption, error model changes). Update `<doc:MigrationGuide>` in the same PR as the deprecation when the blast radius is team-wide.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Guidelines details worth enforcing in review
@@ -414,8 +410,6 @@ Public? If yes, /// present?    [ ] yes  [ ] make internal  [ ] fix docs
 DocC link from article?         [ ] yes  [ ] n/a  [ ] add
 ```
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -433,8 +427,6 @@ DocC link from article?         [ ] yes  [ ] n/a  [ ] add
 3. **Concurrency migration** → MigrationGuide article + `@available` renames in one release train.
 4. **Brownfield silent `public`** → close access or document before the next consumer copies misuse.
 
----
-
 ## 4. Staff-level review checklist
 
 - New `public`/`open` symbols include meaningful `///` documentation.
@@ -449,8 +441,6 @@ DocC link from article?         [ ] yes  [ ] n/a  [ ] add
 - Examples in docs are realistic and log-safe.
 - SPM DocC plugin (if used) is **pinned** and discoverable via `swift package plugin --list`.
 - “Docs later” waivers have owners and issues — not vibes.
-
----
 
 ## References
 

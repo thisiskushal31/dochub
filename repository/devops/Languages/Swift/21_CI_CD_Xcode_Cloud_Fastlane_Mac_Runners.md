@@ -8,8 +8,6 @@ How Swift **apps and packages** get built, tested, and released in automation: r
 
 Chapter **18** named schemes; chapter **20** is the deep **signing / privacy / secrets** spine. This chapter is the train that moves without a laptop babysitter—still inject secrets, never commit them.
 
----
-
 ## 1. Concepts
 
 ### 1. Three roles — do not collapse them
@@ -66,8 +64,6 @@ Staff-quality trains separate:
 4. **TestFlight gate** — build processed; assigned to a **group**; smoke on device before store.
 
 A green PR job that never archives can still hide signing breakage until release day — schedule a periodic **archive dry-run**.
-
----
 
 ## 2. Advanced concepts
 
@@ -526,8 +522,6 @@ When CI is red, walk this order before rewriting product code:
 | ASCII locale on the bot | `LANG` / `LC_ALL` = UTF-8 |
 | Every push uploads to TestFlight | Tags / `workflow_dispatch` for distribute |
 
----
-
 ### 10. Lab — reproduce the CI contract locally
 
 ```bash
@@ -547,8 +541,6 @@ bundle exec fastlane pr
 
 **What just happened:** if local green and CI red, you are looking at **pin / secret / cache** drift—not a heisenbug in `body`.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Practice |
@@ -558,8 +550,6 @@ bundle exec fastlane pr
 | **Security** | OIDC/short-lived tokens where the vendor supports them; least-privilege ASC keys |
 | **Operations** | Dashboard: which lane is red; Xcode pin in the failure Slack message; triage order posted |
 | **Software engineering** | Same lane locally: `bundle exec fastlane pr` documented for reproduction |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -579,8 +569,6 @@ bundle exec fastlane pr
 - macOS outside-store shipping has a **notarization + staple** story when required (or Xcode Cloud notarize post-action documented).
 - Failure triage order is known to on-call (pins before product archaeology).
 - Package-only projects are not wasting macOS minutes without reason.
-
----
 
 ## References
 

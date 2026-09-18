@@ -6,8 +6,6 @@
 
 **Syntax errors** vs **exceptions**, **`try`/`except`/`else`/`finally`**, **exception chaining**, **exception groups** and **`except*`**, **notes**, **context managers** (**`with`**), and **`contextlib`** patterns—foundation for reliable services, transactions, and clear production logs.
 
----
-
 ## 1. Concepts
 
 ### 1. Syntax errors
@@ -42,8 +40,6 @@
 
 **`contextlib.closing`**, **`suppress`**, **`ExitStack`**, **`asynccontextmanager`** compose cleanup for complex setups.
 
----
-
 ## 2. Advanced concepts
 
 **`__suppress_context__`** and traceback formatting interact with nested errors—logging frameworks should use **`logging.exception`** or **`exc_info=True`**.
@@ -51,8 +47,6 @@
 **ResourceWarning** indicates reliance on **GC** for **`close()`**—fix with explicit **with** or **`close()`** in **`finally`**.
 
 **`try`/`finally` without `except`** is valid—ensure **`finally`** does not raise a second exception that masks the first.
-
----
 
 ## 3. Applications and use cases
 
@@ -79,8 +73,6 @@ except ValueError as e:
     e.add_note("stage=parse_config")
     raise
 ```
-
----
 
 ## References
 

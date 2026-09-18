@@ -2,8 +2,6 @@
 
 [← Previous](./3_Day_In_The_Life_Critical_Facilities.md) · [README](./README.md) · [Next: Bare-metal admin →](./5_Day_In_The_Life_Bare_Metal_Admin.md)
 
----
-
 ## 1. Concepts
 
 The **NOC** correlates alarms across facility, network, and customer IT—and escalates to the right owner fast.
@@ -17,8 +15,6 @@ The **NOC** correlates alarms across facility, network, and customer IT—and es
 | Comms | Bridge calls; maintenance notices |
 | Escalate | Facilities / network / compute / security |
 | Document | Timeline for RCA |
-
----
 
 ## 2. Advanced concepts
 
@@ -34,8 +30,6 @@ The **NOC** correlates alarms across facility, network, and customer IT—and es
 ### How it connects
 
 Integration failure chapters. EPMS [Electrical/15](../Electrical/15_EPMS_BMS_And_Power_Monitoring.md). Provider portals for colo tenants.
-
----
 
 ## 3. Applications and use cases
 
@@ -54,8 +48,6 @@ Integration failure chapters. EPMS [Electrical/15](../Electrical/15_EPMS_BMS_And
 - Never page everyone for every SNMP flap  
 
 **Good:** calm triage, right owner, clean timeline. **Bad:** reboot culture; ignored facility notices.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./8_Failure_Lose_MMR_Cross_Connect.md) · [README](./README.md) · [Next: Units literacy →](./10_Units_Voltage_Frequency_Literacy.md)
 
----
-
 ## 1. Concepts
 
 Two documents unlock most hall conversations:
@@ -14,8 +12,6 @@ Two documents unlock most hall conversations:
 | **Rack elevation** | U positions, devices, often power/network ports |
 
 Jobs chapter for foreign sites: [Jobs/11](../Jobs/11_Reading_Foreign_Site_Docs.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -43,8 +39,6 @@ Jobs chapter for foreign sites: [Jobs/11](../Jobs/11_Reading_Foreign_Site_Docs.m
 | Elevation drift | Wrong hands U |
 | One-line marketing redraw | Fake independence |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -62,8 +56,6 @@ Jobs chapter for foreign sites: [Jobs/11](../Jobs/11_Reading_Foreign_Site_Docs.m
 - Never LOTO from memory alone  
 
 **Good:** living as-builts. **Bad:** 2018 PDF faith; tribal U numbers.
-
----
 
 ## References
 

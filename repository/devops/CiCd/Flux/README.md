@@ -45,8 +45,6 @@ Each chapter: **Concepts** (plain language) → **Advanced** (real knobs) → **
 
 Suggested order: **01 → 22**. After **05**, you can jump to **18** if you learn by building.
 
----
-
 ## Chapters
 
 | # | File | Focus |

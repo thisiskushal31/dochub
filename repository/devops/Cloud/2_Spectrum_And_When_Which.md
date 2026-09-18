@@ -2,8 +2,6 @@
 
 [← Previous](./1_Shared_Cloud_Concepts.md) · [README](./README.md) · [Next: Managed Kubernetes →](./3_Managed_Kubernetes.md) · [Deploy shapes →](./28_Deployment_Shapes_On_Cloud.md)
 
----
-
 ## 1. Concepts
 
 Cloud literacy is **which kind of cloud you buy**, not a fashion contest. Delivery still has the same jobs: build, store, deploy, verify, rollback ([CiCd/19](../CiCd/19_Delivery_Spectrum_Legacy_Through_Modern.md)).
@@ -33,8 +31,6 @@ Installing kubeadm, OpenShift IPI, or Rancher is **not** this folder: [Kubernete
 
 ECS (AWS) is an orchestrator that is **not** Kubernetes. Valid. Do not translate every ECS service into a Deployment as a moral duty.
 
----
-
 ## 2. Advanced concepts
 
 ### Dual-run is a program
@@ -52,8 +48,6 @@ Multi-cloud that works is **OIDC and artifact digest**, not “Terraform module 
 ### IaC still applies
 
 VMs and managed clusters should be declared ([IAC/](../IAC/README.md)). Click-ops on the control plane is how the second cluster drifts.
-
----
 
 ## 3. Applications and use cases
 
@@ -74,8 +68,6 @@ VMs and managed clusters should be declared ([IAC/](../IAC/README.md)). Click-op
 - Cost tags (or rack U / kW in colo)  
 
 **Good:** paved GKE plus a documented exception. **Bad:** every team picks a different home and calls it “multi-cloud strategy.”
-
----
 
 ## References
 

@@ -6,8 +6,6 @@
 
 Reading and writing **files**, traversing directories, running **subprocesses** safely, and opening **network** connections with the stdlib. These are the daily tools of automation scripts, CI helpers, and agents—where permission mistakes and shell injection become incidents.
 
----
-
 ## 1. Concepts
 
 ### 1. `File` and `IO` — paths and handles
@@ -103,8 +101,6 @@ Set **timeouts**, **SSL options**, and validate certificates in production—not
 
 Operational pitfall: DNS answers **change** during failovers; cache TTLs at app level only when you understand stale-read risk. Pair with connect **timeouts** from chapter 12—slow DNS looks like “Ruby hung” in logs.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Non-blocking and buffering
@@ -146,8 +142,6 @@ Coordinate parent/child with pipes; read stderr separately to avoid deadlock whe
 ### 10. HTTP keep-alive and connection reuse
 
 `Net::HTTP` can reuse connections when using persistent object—reduces TLS handshake overhead. Set timeouts per request; idle connections may be closed by load balancers.
-
----
 
 ## 3. Applications and use cases
 
@@ -197,8 +191,6 @@ abort "unhealthy #{res.code}" unless res.is_a?(Net::HTTPSuccess)
 - HTTP has timeouts and TLS policy documented.
 - File encoding specified for text logs and exports.
 - Tempfiles do not leak secrets to world-readable `/tmp` without `chmod`.
-
----
 
 ## References
 

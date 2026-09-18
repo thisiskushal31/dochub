@@ -2,8 +2,6 @@
 
 [← Previous](./14_Secrets_Variables_And_Environments.md) · [README](./README.md) · [Next: Security →](./16_Security_Hardening_Permissions_And_Forks.md)
 
----
-
 ## 1. Concepts
 
 **OpenID Connect (OIDC)** lets a job request a short-lived token from GitHub’s OIDC provider and exchange it at AWS/Azure/GCP/Vault/… for cloud credentials. No long-lived access key in Actions secrets.
@@ -23,8 +21,6 @@ jobs:
 ```
 
 Cloud side: trust policy matches JWT **claims** (`sub`, `repository`, `aud`, …).
-
----
 
 ## 2. Advanced concepts
 
@@ -52,8 +48,6 @@ OIDC behavior for Dependabot and similar actors has documented nuances — don�
 
 Actions themselves can authenticate with OIDC when designed for it — useful for private tooling.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -63,8 +57,6 @@ Actions themselves can authenticate with OIDC when designed for it — useful fo
 | Replace static keys | Rotate keys out after OIDC works |
 
 **Good:** least-privilege roles + claim conditions as tight as operations allow. **Bad:** `*` trust on every repo and every ref.
-
----
 
 ## References
 

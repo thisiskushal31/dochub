@@ -6,8 +6,6 @@ Scala is a **statically typed** language for the **JVM** that combines **object-
 
 This track teaches Scala as **systems work**: language semantics (Scala **3** first, with **Scala 2** called out where brownfield still matters), **sbt** and dependency discipline, Java/JVM boundaries, testing and quality, security and supply chain, packaging and operations, data-engineering and streaming **architecture**, and DevSecOps threat modeling—**not** only as a syntax tour or a DevOps-only checklist.
 
----
-
 ## Scala versions, JVM, and which documentation to read
 
 Scala releases as **Scala 3.x** (current default narrative) and the long-lived **Scala 2.13** line still common in Spark and older services. Behavior, standard library details, and idioms differ across those lines. Pin a **Scala version** and a **JDK** in CI and production images; record both in diagnostics.
@@ -21,8 +19,6 @@ sbt -Dsbt.version -version
 sbt "show scalaVersion"
 ```
 
----
-
 ## Chapter structure
 
 Chapters `01`–`21` follow a consistent body shape:
@@ -34,8 +30,6 @@ Chapters `01`–`21` follow a consistent body shape:
 
 Links live in each chapter’s **References** section (official hubs only).
 
----
-
 ## Semantic model (why Scala feels different)
 
 - **Everything is an expression:** `if`, blocks, and `match` produce values; side effects are explicit choices, not the only style.
@@ -43,8 +37,6 @@ Links live in each chapter’s **References** section (official hubs only).
 - **JVM citizen:** bytecode, classpath, and Java libraries are first-class; Scala-specific features compile down to JVM-friendly shapes.
 - **Implicits → givens (Scala 3):** contextual parameters evolved; brownfield code still shows `implicit`—know both when reading.
 - **Collections and Option:** prefer explicit absence (`Option`) and immutable defaults over null-driven control flow in new Scala.
-
----
 
 ## Beginner to advanced progression
 
@@ -58,8 +50,6 @@ Links live in each chapter’s **References** section (official hubs only).
 | Wrap | 21 | Competency map and consolidated staff checklist. |
 
 Suggested order: **01 → 12**, then **13 → 16**, then **17**, then **18 → 20**, then **21**. Revisit **11** before changing build/release; **12** before mixed Java/Scala boundaries; **15** / **20** before untrusted input or public artifacts; **18** / **19** before owning data-platform jobs.
-
----
 
 ## Chapters
 
@@ -87,8 +77,6 @@ Suggested order: **01 → 12**, then **13 → 16**, then **17**, then **18 → 2
 | 20 | DevSecOps threat modeling and hardening | [20](./20_DevSecOps_Threat_Modeling_And_Hardening.md) |
 | 21 | Whole-engineering wrap and staff checklist | [21](./21_Whole_Engineering_Wrap_And_Staff_Checklist.md) |
 
----
-
 ## Deep-study workflow
 
 1. After **01–07**, rewrite a small Java utility as Scala 3 and note where immutability and `Option` changed the design.
@@ -97,8 +85,6 @@ Suggested order: **01 → 12**, then **13 → 16**, then **17**, then **18 → 2
 4. After **17**, write a one-page decision note: Scala service vs Spark job vs “stay on Java/Kotlin” for one real workload.
 5. After **18–20**, extend that note with DAG/shuffle or topic/partition choices, delivery semantics, and a STRIDE-style threat row for the chosen lane; sign the wrap checklist in **21**.
 
----
-
 ## Further reading
 
 - [Scala Documentation](https://docs.scala-lang.org/)
@@ -106,8 +92,6 @@ Suggested order: **01 → 12**, then **13 → 16**, then **17**, then **18 → 2
 - [Tour of Scala](https://docs.scala-lang.org/tour/tour-of-scala.html)
 - [sbt Reference Manual](https://www.scala-sbt.org/1.x/docs/)
 - [Scala 3 Reference](https://docs.scala-lang.org/scala3/reference/index.html)
-
----
 
 ## References (hub links)
 

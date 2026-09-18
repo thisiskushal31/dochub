@@ -2,8 +2,6 @@
 
 [← Previous](./17_Private_Connectivity_And_On_Ramps.md) · [README](./README.md) · [Next: Portals and CLI →](./19_Portals_CLI_And_API_Patterns.md) · [Deploy shapes →](./28_Deployment_Shapes_On_Cloud.md)
 
----
-
 ## Mental map
 
 ```text
@@ -14,8 +12,6 @@ Image / machine type → instance
 ```
 
 *What to notice: instance SKUs differ; **fleet + health + identity** jobs transfer ([28](./28_Deployment_Shapes_On_Cloud.md)).*
-
----
 
 ## 1. Concepts
 
@@ -35,8 +31,6 @@ Hall metal depth stays [Datacenter Compute](../Datacenter/Compute/README.md)—c
 **Disconfirm:** One large VM is **not** HA. Spot/preemptible without checkpointing is **not** free reliability.
 
 **Confirm:** Where does state live? How many AZs? What metric scales the fleet?
-
----
 
 ## 2. Advanced concepts
 
@@ -73,8 +67,6 @@ Hall metal depth stays [Datacenter Compute](../Datacenter/Compute/README.md)—c
 
 Images/pipelines CiCd. Deploy shape choice [28](./28_Deployment_Shapes_On_Cloud.md). LB health [23](./23_Load_Balancing_Ingress_And_TLS.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -93,8 +85,6 @@ Images/pipelines CiCd. Deploy shape choice [28](./28_Deployment_Shapes_On_Cloud.
 - Quotas checked before launch day  
 
 **Good:** multi-AZ fleets, clear state story. **Bad:** one box prod; mystery disks.
-
----
 
 ## References
 

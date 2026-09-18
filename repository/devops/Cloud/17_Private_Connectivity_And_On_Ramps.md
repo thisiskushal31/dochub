@@ -2,8 +2,6 @@
 
 [← Previous](./16_VPC_And_Network_Constructs.md) · [README](./README.md) · [Next: Compute instances →](./18_Compute_Instances_And_Autoscaling.md) · [Hybrid →](./22_Hybrid_Colo_And_Cloud.md)
 
----
-
 ## Mental map
 
 ```text
@@ -14,8 +12,6 @@ Logical BGP/routes =  Networks + this chapter
 ```
 
 *What to notice: “on-ramp” is a **pair**—landlord physical path + tenant cloud attachment.*
-
----
 
 ## 1. Concepts
 
@@ -33,8 +29,6 @@ Physical XC + landlord jobs: [Datacenter Provider-Use/7](../Datacenter/Provider-
 **Disconfirm:** A green “connected” light on Fabric is **not** a routing design. VPN is **not** automatically DC-grade.
 
 **Confirm:** How many diverse paths? Who owns the colo ticket vs the cloud VIF? Are CIDRs conflict-checked ([16](./16_VPC_And_Network_Constructs.md))?
-
----
 
 ## 2. Advanced concepts
 
@@ -60,8 +54,6 @@ Physical XC + landlord jobs: [Datacenter Provider-Use/7](../Datacenter/Provider-
 
 Tenant vs landlord [Datacenter Markets/8](../Datacenter/Markets-And-Operators/8_Tenant_Cloud_Vs_Landlord.md). MMR physical [Datacenter Fabric-Physical/5](../Datacenter/Fabric-Physical/5_MMR_And_Cross_Connect_Physical.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -80,8 +72,6 @@ Tenant vs landlord [Datacenter Markets/8](../Datacenter/Markets-And-Operators/8_
 - RACI across cloud and colo teams written ([22](./22_Hybrid_Colo_And_Cloud.md))  
 
 **Good:** dual on-ramps, tested, owned. **Bad:** single VPN hope; physical-only diligence.
-
----
 
 ## References
 

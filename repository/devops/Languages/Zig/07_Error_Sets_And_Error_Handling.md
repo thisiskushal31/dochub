@@ -8,8 +8,6 @@ How failure looks in Zig source: **error sets**, **`!T`**, **`try`**, **`catch`*
 
 **Lens:** what you see → what it means → where you use it.
 
----
-
 ## 1. Concepts
 
 ### 1. Errors are values you can see in the signature
@@ -97,8 +95,6 @@ fn mustHave(x: ?i32) i32 {
 
 **Where you use it.** Assertions about internal invariants—not expected I/O.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Switch on errors at the edge
@@ -149,8 +145,6 @@ test "parseCount rejects junk" {
 
 If a function returns `!T`, a suite that never sees an error is incomplete (chapter **13**).
 
----
-
 ## 3. Applications and use cases
 
 | Angle | What you do |
@@ -163,8 +157,6 @@ If a function returns `!T`, a suite that never sees an error is incomplete (chap
 
 **Whole-engineering picture:** visible errors replace “check errno if you remember.”
 
----
-
 ## 4. Staff-level review checklist
 
 - Critical paths have no empty `catch`.
@@ -172,8 +164,6 @@ If a function returns `!T`, a suite that never sees an error is incomplete (chap
 - Expected I/O failures are errors, not panics.
 - Multi-allocate constructors use `errdefer`.
 - Tests include at least one failure case for fallible public APIs.
-
----
 
 ## References
 

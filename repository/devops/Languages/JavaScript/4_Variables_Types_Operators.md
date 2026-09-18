@@ -2,8 +2,6 @@
 
 This topic covers how to store values (variables and constants), the built-in data types, type conversion, and the operators you use to combine and compare values. Mastery here is essential for writing correct, predictable JavaScript in any environment—browser, Node, or tooling.
 
----
-
 ## Declaring variables: let and const
 
 A **variable** is a named storage for a value. You create one with **let** or **const**.
@@ -29,13 +27,9 @@ Declaring the same variable twice with `let` (or `const`) in the same scope is a
 
 **Naming rules:** Names can contain letters, digits, `$`, and `_`. They must not start with a digit. Reserved words (e.g. `let`, `class`, `return`) cannot be used as names. By convention, multi-word names use **camelCase**. Constants that are known before execution (e.g. config flags) are often written in **UPPER_SNAKE_CASE**; runtime constants (e.g. a computed result that does not change afterward) are usually camelCase.
 
----
-
 ## The old var keyword
 
 **var** is the legacy way to declare variables. It is function-scoped (or global), not block-scoped like `let` and `const`, and it allows redeclaration. In modern code, prefer **let** and **const**; use **var** only when maintaining old code or when you explicitly need its behavior. Strict mode and ES modules improve predictability; `var` is covered in more depth in later topics (e.g. scope and hoisting).
-
----
 
 ## Data types
 
@@ -70,8 +64,6 @@ console.log(typeof empty); // "object" (historical quirk; null is not an object)
 console.log(typeof u);    // "undefined"
 ```
 
----
-
 ## Type conversion
 
 Operators and functions often convert values automatically. You can also convert explicitly.
@@ -90,8 +82,6 @@ console.log(Boolean("0"));       // true (non-empty string)
 console.log(Boolean(0));         // false
 ```
 
----
-
 ## Arithmetic and assignment operators
 
 **Arithmetic:** `+` (addition), `-` (subtraction), `*` (multiplication), `/` (division), `%` (remainder), `**` (exponentiation). Operands are converted to numbers when needed. The binary **+** is special: if either operand is a string, the other is converted to string and the result is concatenation. So `1 + "2"` is `"12"`, not `3`. Other arithmetic operators always convert to number. **Remainder `%`:** The result has the sign of the dividend: `-5 % 2` is `-1`, `5 % -2` is `1`. For non-negative modulo (e.g. wrapping an index), use `((n % m) + m) % m` or a helper. **Exponentiation `**`:** Right-associative: `2 ** 3 ** 2` is `2 ** (3 ** 2)` (512), not 64.
@@ -107,8 +97,6 @@ let a = 1;
 let b = a++;  // b = 1, a = 2
 let c = ++a;  // c = 3, a = 3
 ```
-
----
 
 ## Comparison operators
 
@@ -128,8 +116,6 @@ console.log(null === undefined); // false
 console.log(null == undefined);  // true
 ```
 
----
-
 ## Logical operators
 
 **! (NOT):** Converts to boolean and negates. `!value` is the inverse; `!!value` converts to boolean.
@@ -147,25 +133,17 @@ console.log(0 ?? 100);             // 0
 console.log("" ?? "default");     // ""
 ```
 
----
-
 ## Operator precedence and grouping
 
 Operators have a defined **precedence**. When in doubt, use **parentheses** to make order explicit. Unary operators (e.g. `!`, `+`, `++`) typically have higher precedence than binary ones; multiplication and division higher than addition and subtraction; comparison higher than logical; assignment among the lowest. For example, unary `+` runs before binary `+`, so `+a + +b` converts both to numbers then adds them—a common pattern when summing string inputs.
-
----
 
 ## Summary
 
 Use **let** for reassignable variables and **const** for constants; prefer **const** when the reference will not change. JavaScript has seven primitive types (number, bigint, string, boolean, null, undefined, symbol) and the object type. Type conversion happens implicitly in expressions and can be done explicitly with **String**, **Number**, and **Boolean**. Key operators: arithmetic (with `+` doubling as string concatenation), assignment and compound assignment, increment/decrement, strict (`===`/`!==`) and loose (`==`/`!=`) comparison, and logical **!**, **||**, **&&**, and **??**. Use strict equality and nullish coalescing where appropriate to avoid subtle bugs. Operator precedence matters; use parentheses when it improves clarity.
 
----
-
 ## Comma operator and other edge cases
 
 The **comma operator** `,` evaluates each operand left to right and returns the last value. It has very low precedence (lower than `=`). Example: `let a = (1, 2, 3)` assigns `3` to `a`. It appears in `for` loops (e.g. `for (i = 0, j = 0; i < n; i++, j++)`) and sometimes in minified code; avoid in normal code for readability. **Void operator** `void expression` evaluates the expression and returns `undefined`; rarely needed. **Optional chaining** (`?.`) and **nullish coalescing** (`??`) are covered in the ES6+ topic; they help when dealing with possibly null/undefined values in property access and defaults.
-
----
 
 ## Further reading
 

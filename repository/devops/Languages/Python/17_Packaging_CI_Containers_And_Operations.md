@@ -6,8 +6,6 @@
 
 **`pyproject.toml`**, **build backends**, **wheels** and **sdists**, **containers**, **12-factor** configuration, **health** probes, **graceful shutdown**, and CI matrices—how Python services are built, configured, and run in production.
 
----
-
 ## 1. Concepts
 
 ### 1. pyproject.toml
@@ -34,8 +32,6 @@ Separate **config** from code: environment variables and secret managers for sen
 
 **SIGTERM** should drain in-flight requests where the stack supports it; set **timeouts** on Kubernetes **terminationGracePeriodSeconds** consistent with app drain logic.
 
----
-
 ## 2. Advanced concepts
 
 **Distroless** images reduce attack surface; debugging may need **ephemeral** debug containers.
@@ -43,8 +39,6 @@ Separate **config** from code: environment variables and secret managers for sen
 **Multi-arch** (**arm64**/**amd64**) wheel availability varies—test both in CI if you ship to heterogeneous fleets.
 
 **OpenTelemetry** agents often run as sidecars or injected SDKs—correlate logs with **trace ids** (see ecosystem chapter).
-
----
 
 ## 3. Applications and use cases
 
@@ -63,16 +57,12 @@ dependencies = []
 example = "example.cli:main"
 ```
 
----
-
 ## Staff-level review checklist
 
 - `requires-python` matches runtime images and CI matrix.
 - Build pipeline produces immutable artifacts and records provenance.
 - Runtime images are scanned and rebuilt on base CVE events.
 - Readiness, liveness, and shutdown behavior are tested in staging.
-
----
 
 ## References
 

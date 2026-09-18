@@ -37,8 +37,6 @@ nullify(p)
 
 **Why this matters.** Derived types make data layout explicit and improve readability. Pointers are powerful but require care (association, nullify, and avoiding dangling references). In security-sensitive or shared code, prefer allocatables and derived types without pointers where possible; document pointer ownership and lifetime when they are used.
 
----
-
 ## Further reading
 
 - [Fortran – Derived Data Types (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_derived_data_types.htm)

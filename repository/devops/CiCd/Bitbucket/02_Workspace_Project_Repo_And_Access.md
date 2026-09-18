@@ -2,8 +2,6 @@
 
 [← Previous](./01_What_Is_Bitbucket.md) · [README](./README.md) · [Next: PRs →](./03_Pull_Requests_Branch_Permissions_Merge_Checks.md)
 
----
-
 ## 1. Concepts — where code lives
 
 | Layer | Meaning |
@@ -50,8 +48,6 @@ That is “storing a repository”: Bitbucket holds the remote Git history; your
 | Search code; share snippets; insights on PRs | [21](./21_Snippets_Search_Code_Insights_And_Wiki.md) |
 | Link Jira issues | [14](./14_Jira_And_Atlassian_Integrations.md) |
 
----
-
 ## 2. Advanced concepts
 
 ### Access control
@@ -82,8 +78,6 @@ Repos can enable Bitbucket’s **branching model** (development/production/featu
 
 Workspace variables → many repos; repository variables → one repo; **deployment** variables → one environment ([07](./07_Variables_Secrets_And_OIDC.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Shape | When |
@@ -94,8 +88,6 @@ Workspace variables → many repos; repository variables → one repo; **deploym
 | Private product repo | Default for companies |
 
 **Good:** private by default; documented admins; SSH or scoped tokens. **Bad:** embedding tokens in clone URLs committed to disk forever.
-
----
 
 ## References
 

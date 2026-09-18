@@ -8,8 +8,6 @@ How to **prove** contract behavior: Foundry **unit / fuzz / fork / invariant** t
 
 Clicking Remix until it “looks right” is how you learn. A test file is how you *keep* the learning. If you cannot make the computer fail on purpose (`expectRevert`), you do not yet know the door is locked.
 
----
-
 ## 1. Concepts
 
 ### 1. A contract without tests is a draft
@@ -114,8 +112,6 @@ Hardhat shines when the assertion is about **ethers/viem + wallets + a dapp help
 
 `vm.createSelectFork(rpc)` runs against a copy of mainnet/testnet state. Use them to check integration with a **specific** token or pool you did not write. Pin a **block number** so CI is reproducible. Do not treat a fork test as a license to poke live systems.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Coverage is a flashlight, not a score
@@ -163,8 +159,6 @@ When Foundry prints a failing seed, add a **unit** test with that input. Do not 
 
 `forge snapshot` / gas reports catch accidental complexity. Fail CI on huge regressions for hot functions — not on every 10-gas wiggle. Optimizer settings in test must match **release** or the snapshot is a different program (chapter **16**).
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -175,8 +169,6 @@ When Foundry prints a failing seed, add a **unit** test with that input. Do not 
 | **Operations** | `forge test` / `hardhat test` is the merge gate |
 | **Software engineering** | One command in README; no “run these 9 files in Remix” |
 
----
-
 ## 4. Staff-level review checklist
 
 - Every external function has a success test and at least one **revert** test.
@@ -185,8 +177,6 @@ When Foundry prints a failing seed, add a **unit** test with that input. Do not 
 - Fork tests (if any) pin a block and do not need mainnet keys.
 - CI runs the same commands as the README.
 - Foundry vs Hardhat responsibilities are written down if both exist.
-
----
 
 ## References
 

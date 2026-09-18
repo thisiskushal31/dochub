@@ -26,8 +26,6 @@ if b, ok := r.(*bytes.Buffer); ok {
 
 **Why this matters.** Interfaces are the main abstraction mechanism in Go. Standard interfaces (**io.Reader**, **io.Writer**, **error**, **context.Context**) appear throughout the library and in your code. Choosing value vs pointer receiver affects mutability and copying; implementing small interfaces keeps code testable and composable. In DevOps and services, interfaces are used for clients (HTTP, DB), logging, and configuration; understanding how interface values work (including nil) avoids runtime panics and subtle bugs.
 
----
-
 ## Further reading
 
 - [The Go Programming Language Specification: Method declarations](https://go.dev/ref/spec#Method_declarations)

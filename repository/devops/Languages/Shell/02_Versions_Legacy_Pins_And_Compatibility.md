@@ -6,8 +6,6 @@
 
 Which shell **versions** matter for real scripts, how to read **added-in / works-through** constraints, and how to **detect** what is running on Linux, macOS, Windows, WSL, and minimal containers. Default narrative: **Bash 5.x**, POSIX `sh`, **zsh 5.x** (macOS interactive), **PowerShell 7.x**, with brownfield **Bash 3.2** (stock macOS), **dash**/BusyBox as `/bin/sh`, **Windows PowerShell 5.1**, and **cmd**. This is not a museum of every micro-release—only landmarks that change what you may write.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. An era story for absolute beginners (Bourne → Bash → today’s pins)
@@ -151,8 +149,6 @@ where pwsh
 ```
 
 On WSL, run the Unix kit **inside** the distro; on Git Bash, trust that environment’s Bash build, not Windows PowerShell’s version table.
-
----
 
 ## 2. Advanced concepts
 
@@ -306,8 +302,6 @@ Every undeclared pin accrues interest:
 
 Staff expectation: pay down debt with **matrix cells** and **shebang honesty**, not with more aliases.
 
----
-
 ## 3. Applications and use cases
 
 ### Pinning CI runners
@@ -401,8 +395,6 @@ Use this when onboarding a brownfield org, after a merger, or before claiming a 
 | Installer surface | Shebangs in bootstrap scripts customers run | `curl \| bash` plus unknown host Bash major |
 
 Output of the inventory should be a one-page pin table (section 2.8 template), not a slide saying “we use Bash.”
-
----
 
 ## References
 

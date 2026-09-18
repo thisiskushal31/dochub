@@ -2,8 +2,6 @@
 
 [README](./README.md) · [Next: Tiers →](./2_Tiers_Ratings_And_Concurrent_Maintainability.md)
 
----
-
 ## Mental map
 
 ![Site product types](../../Assets/Datacenter/Facility/site-product-types.svg)
@@ -28,8 +26,6 @@ Halls are sold as **products**, not just buildings.
 
 Operator kinds: [Markets/1](../Markets-And-Operators/1_Operator_Taxonomy.md).
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes
@@ -43,8 +39,6 @@ Operator kinds: [Markets/1](../Markets-And-Operators/1_Operator_Taxonomy.md).
 ### How it connects
 
 Rooms [3](./3_Rooms_Campus_And_Adjacencies.md). Buy units [4](./4_Cage_Cabinet_Suite_And_Hands.md). Qualify [Provider-Use/1](../Provider-Use/1_Qualify_A_Site.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -62,8 +56,6 @@ Rooms [3](./3_Rooms_Campus_And_Adjacencies.md). Buy units [4](./4_Cage_Cabinet_S
 - Never confuse campus MW with cage SKU  
 
 **Good:** type→product clarity. **Bad:** “DC” as one noun.
-
----
 
 ## References
 

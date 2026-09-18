@@ -47,8 +47,6 @@ In the shell after saving the file in the current directory:
 
 **Why this matters for DevOps.** You use the same VM and shell to run one-off commands, attach to a running node (remote shell), and debug. Releases built with Rebar3 or similar bundle the VM and your beams so you can deploy a single artifact without installing Erlang on the target.
 
----
-
 ## Further reading
 
 - [Getting Started With Erlang](https://www.erlang.org/doc/system/getting_started)

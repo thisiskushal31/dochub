@@ -2,8 +2,6 @@
 
 [← Previous](./05_Manifest_Sources_Tracking_And_Immutability.md) · [Argo CD](./README.md) · [Next: ApplicationSets →](./07_ApplicationSets_App_Of_Apps_And_Scale.md)
 
----
-
 ## 1. Concepts
 
 ### Automated vs manual sync
@@ -73,8 +71,6 @@ The **`default` Project** starts permitting everything. Safe for a five-minute d
 
 Map IdP groups (OIDC/OAuth/LDAP/SAML via Dex or external OIDC) to Argo CD roles: who can sync, who can create apps, who is read-only. Local `admin` is for bootstrap. CI uses **project role tokens**, local accounts with `apiKey`, or OIDC token exchange — not a shared human password ([08](./08_Secrets_CI_Integration_And_Operations.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### ApplicationSet-managed sync policy
@@ -101,8 +97,6 @@ Selective sync can skip hooks. Do not use selective sync as your normal prod pat
 
 Large apps need sensible diffing. Know that CRDs and server-side fields can create noisy diffs until ignore rules or health/customizations catch up.
 
----
-
 ## 3. Applications and use cases
 
 | Environment | Typical policy posture |
@@ -124,8 +118,6 @@ Large apps need sensible diffing. Know that CRDs and server-side fields can crea
 - Everyone in `default` Project forever  
 - Self-heal off *and* no process — silent permanent drift  
 - Sync hooks that run unboundedly expensive suites (belong in CI verify — [5](../5_Verify_Rollback_And_Synthetic_Tests.md))  
-
----
 
 ## References
 

@@ -6,8 +6,6 @@ DevOps is not one job description. Beginners get lost copying “DevOps Engineer
 
 Aligned with Foundation themes (roles, culture/operating models, enterprise adoption) and common Team Topologies language used in platform/VSM discussions.
 
----
-
 ## Common roles (overlap is normal)
 
 | Role / hat | Focus | Not the same as |
@@ -20,8 +18,6 @@ Aligned with Foundation themes (roles, culture/operating models, enterprise adop
 | **Value stream / flow owner** (where named) | End-to-end constraint removal | Local team micromanagement |
 
 Titles vary by company. Judge by **outcomes owned**, not LinkedIn labels.
-
----
 
 ## Team Topologies (enough to converse)
 
@@ -39,15 +35,11 @@ Four team types (Skelton/Pais — widely referenced in platform engineering):
 
 Handbook depth for platforms: [Cloud-Native/](../Cloud-Native/README.md).
 
----
-
 ## Cultural debt
 
 **Cultural debt** = shortcuts in how people work (blame, heroics, hidden knowledge, “we’ll document later”) that accrue interest as outages, burnout, and slow delivery.
 
 Like tech debt: sometimes intentional, always needs a paydown plan. Postmortems without actions, bus-factor-1 services, and chat-only tribal knowledge are cultural debt ([1](./1_DevOps_Culture_And_Collaboration.md), [7](./7_Docs_And_Runbooks.md)).
-
----
 
 ## Customer feedback (product capability)
 
@@ -61,8 +53,6 @@ Beginner practice:
 
 Deep product craft is outside this handbook; do not ignore the loop.
 
----
-
 ## Transformational leadership (what engineers should expect)
 
 Leaders who enable DevOps:
@@ -73,8 +63,6 @@ Leaders who enable DevOps:
 - Remove cross-team constraints they uniquely can unblock  
 
 If leadership only demands “do DevOps by next quarter” with no capacity, you have a naming problem, not a toolchain problem.
-
----
 
 ## Beginner career note
 

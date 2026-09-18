@@ -2,8 +2,6 @@
 
 [← Previous](./18_Results_And_Pruner.md) · [README](./README.md) · [Next: Operate →](./20_Observability_HA_Debug_And_Windows.md)
 
----
-
 ## 1. Concepts
 
 **Tekton Operator** installs and reconciles Tekton components via CRs such as:
@@ -38,8 +36,6 @@ spec:
 
 Prefer GitOps of Operator CRs over click-ops.
 
----
-
 ## 2. Advanced concepts
 
 **Air-gap** image configuration, **Proxy**, **NetworkPolicy**, OpenShift **SCC**, **OpenShift centralized TLS** management, **OpenShift Pipelines-as-Code** via Operator, **ManualApprovalGate**, **Kueue**, **TektonAddon**, Syncer/multicluster helpers — all are real Operator doc surfaces. Treat distro packs (OpenShift Pipelines + PAC) as the same product family with vendor CR names; still learn upstream Tekton CRDs.
@@ -51,8 +47,6 @@ Prefer GitOps of Operator CRs over click-ops.
 - Air-gap/proxy documented if used  
 - Approval/Kueue only with owners  
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -62,8 +56,6 @@ Prefer GitOps of Operator CRs over click-ops.
 | Multi-env | Separate clusters or namespaces + GitOps |
 
 **Good:** versioned Operator CRs. **Bad:** hand-applied release YAML drifting from Operator desired state.
-
----
 
 ## References
 

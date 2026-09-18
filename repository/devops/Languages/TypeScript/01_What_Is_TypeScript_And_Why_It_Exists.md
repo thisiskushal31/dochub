@@ -17,8 +17,6 @@ Chapter **00** is the hands-on smoke check (`tsc`, hello, version). This chapter
 
 Handbook default for *new* work: **TypeScript 5.9.x** with **`strict`: true**.
 
----
-
 ## 1. Concepts
 
 ### 1. What TypeScript is (plain language)
@@ -119,8 +117,6 @@ You can explain to a teammate, without slides:
 
 That shared vocabulary is the onboarding win.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Gradual typing and `any`
@@ -187,8 +183,6 @@ Even when your app is all `.ts`, you live next to **`.d.ts`**: Node types, depen
 
 Staff engineers who blame “TypeScript” for missing runtime checks usually skipped this table.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How “what TS is” shows up |
@@ -201,8 +195,6 @@ Staff engineers who blame “TypeScript” for missing runtime checks usually sk
 
 **Whole-engineering picture:** TypeScript is how many teams keep JavaScript *operable* at org scale. The erase model is why you still design **runtime** error handling, file I/O, and performance—not only prettier interfaces.
 
----
-
 ## Staff-level review checklist
 
 - Team can explain **erase to JS** in one sentence without hand-waving.
@@ -213,8 +205,6 @@ Staff engineers who blame “TypeScript” for missing runtime checks usually sk
 - Onboarding pairs this chapter with chapter **00** hello (emit shows erasure).
 - Pillars are named in the team’s engineering bar: **errors**, **runtime speed on the machine (13)**, **files**, **faster builds (15)**—not only React props.
 - Brownfield loose configs are tracked as debt, not as house style by accident.
-
----
 
 ## References
 

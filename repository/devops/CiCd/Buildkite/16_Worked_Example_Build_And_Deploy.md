@@ -2,8 +2,6 @@
 
 [← Previous](./15_Platform_Teams_SSO_And_Governance.md) · [README](./README.md) · [Next: Best practices →](./17_Best_Practices_And_When_Not_Buildkite.md)
 
----
-
 ## 1. Concepts
 
 Narrative for a small service:
@@ -16,8 +14,6 @@ Narrative for a small service:
 - `.buildkite/pipeline.yml` uploaded from Git  
 - Cloud identity via OIDC or scoped secrets  
 - Team that can unblock production  
-
----
 
 ## 2. Advanced concepts — pipeline shape
 
@@ -65,13 +61,9 @@ Replace echoes with real build/push/deploy (scripts or plugins). Prefer OIDC for
 - Production waits for unblock.  
 - Logs and artifacts visible on the build page.
 
----
-
 ## 3. Applications and use cases
 
 Split into test + deploy pipelines with a `trigger` step when teams or permissions differ ([12](./12_Deployments_And_Environments.md)).
-
----
 
 ## References
 

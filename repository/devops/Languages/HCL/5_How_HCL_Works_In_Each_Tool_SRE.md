@@ -2,8 +2,6 @@
 
 This topic explains how HCL is used in each HashiCorp tool so you can understand every word you write. As an SRE you may use Terraform, Packer, Vault, Nomad, Consul, Boundary, and Waypoint; in every case the syntax is HCL—arguments, blocks, expressions, types—but each tool defines its own block types and file conventions. Knowing the vocabulary (block names, labels, and typical arguments) lets you read and write config confidently across the stack.
 
----
-
 ## Terraform
 
 **Role:** Provision and manage infrastructure (cloud and on-prem). You declare resources, variables, and outputs; Terraform plans and applies changes.
@@ -23,8 +21,6 @@ resource "aws_instance" "example" {
   }
 }
 ```
-
----
 
 ## Packer
 
@@ -51,8 +47,6 @@ build {
 }
 ```
 
----
-
 ## Vault
 
 **Role:** Secrets management, encryption as a service, and identity-based access. Policies control who can read or write which paths.
@@ -72,8 +66,6 @@ path "secret/data/app/*" {
   capabilities = ["create", "read", "update", "delete", "list"]
 }
 ```
-
----
 
 ## Nomad
 
@@ -110,8 +102,6 @@ job "api" {
 }
 ```
 
----
-
 ## Consul
 
 **Role:** Service discovery, health checking, and service mesh. You register services, define intentions, and configure mesh behavior.
@@ -138,8 +128,6 @@ service {
 }
 ```
 
----
-
 ## Boundary
 
 **Role:** Identity-based access to infrastructure (SSH, RDP, databases, etc.) without exposing network details. You define scopes, targets, host catalogs, and credential stores.
@@ -162,8 +150,6 @@ resource "boundary_target" "ssh" {
   ]
 }
 ```
-
----
 
 ## Waypoint
 
@@ -190,13 +176,9 @@ app "web" {
 }
 ```
 
----
-
 ## Summary: one language, many vocabularies
 
 Across Terraform, Packer, Vault, Nomad, Consul, Boundary, and Waypoint you always write **HCL**: arguments assign values, blocks group configuration, and expressions produce values. What changes per tool is the **vocabulary**—block type names, labels, and allowed arguments. Learning that vocabulary for each tool (and referring to each tool’s docs for the full schema) lets you understand every word you write. For Terraform-specific workflow (state, modules, workspaces, pipelines), see the IAC and Terraform sections of the handbook.
-
----
 
 ## Further reading
 

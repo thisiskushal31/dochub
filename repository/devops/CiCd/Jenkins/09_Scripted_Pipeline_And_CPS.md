@@ -2,8 +2,6 @@
 
 [← Previous](./08_Declarative_Pipeline_Syntax.md) · [README](./README.md) · [Next: Multibranch →](./10_Multibranch_And_Organization_Folders.md)
 
----
-
 ## 1. Concepts
 
 **Scripted Pipeline** is Groovy running on Jenkins’ **CPS** (Continuation Passing Style) engine inside `node { }` / `stage { }` blocks.
@@ -18,8 +16,6 @@ node('linux') {
   }
 }
 ```
-
----
 
 ## 2. Advanced concepts
 
@@ -45,8 +41,6 @@ Pipeline durability settings trade crash-resume vs speed — platform concern fo
 
 Script security / sandbox approvals apply to Scripted and library code ([16](./16_Security_Folders_RBAC_And_Hardening.md)). Unapproved signatures block builds.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -56,8 +50,6 @@ Script security / sandbox approvals apply to Scripted and library code ([16](./1
 | Legacy Scripted estate | Wrap with libraries; migrate outward to Declarative |
 
 **Good:** thin Scripted, tested libraries. **Bad:** unreviwed Scripted with `Jenkins.instance` hacks.
-
----
 
 ## References
 

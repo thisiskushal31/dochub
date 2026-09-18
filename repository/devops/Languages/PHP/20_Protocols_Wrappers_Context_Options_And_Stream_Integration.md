@@ -6,8 +6,6 @@
 
 How PHP stream wrappers and context options unify filesystem, network, and process I/O; how protocol behaviors differ (`http`, `https`, `ftp`, `php://`, `phar://`); and how to set secure defaults for TLS and timeouts. This chapter fills a practical gap: teams often secure curl but forget stream-context-based calls in legacy code.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases**.
 
 ## 1. Concepts
@@ -23,8 +21,6 @@ PHP uses wrapper schemes to route operations:
 - filters (`php://filter`).
 
 The same APIs (`fopen`, `file_get_contents`, `copy`) can target many schemes.
-
----
 
 ### 2. Context options
 
@@ -48,13 +44,9 @@ $ctx = stream_context_create([
 $body = file_get_contents('https://example.com/health', false, $ctx);
 ```
 
----
-
 ### 3. Filters and transformation
 
 Filters can transform data streams (encode/decode/compress). They are useful for controlled pipelines but dangerous when filter chains include user input.
-
----
 
 ### 4. Wrapper-aware threat model
 
@@ -66,8 +58,6 @@ Any user-controlled path or URL consumed by wrapper-capable functions can become
 - filter abuse (`php://filter`).
 
 Validate scheme and destination, not only “looks like URL.”
-
----
 
 ## 2. Advanced concepts
 
@@ -81,8 +71,6 @@ Validate scheme and destination, not only “looks like URL.”
 
 **`allow_url_fopen`:** If enabled globally, many legacy functions become network-capable unexpectedly. Restrict by policy where possible.
 
----
-
 ## 3. Applications and use cases
 
 - **Legacy modernization:** Replace ad hoc URL fetches with a shared HTTP client wrapper that enforces TLS/timeouts.
@@ -90,8 +78,6 @@ Validate scheme and destination, not only “looks like URL.”
 - **Data ingestion:** Use stream reads for large feeds to avoid memory spikes.
 - **Compliance:** Ensure outbound calls log destination class (internal vs external) without leaking sensitive query params.
 - **Incident response:** Search for wrapper schemes in code and logs to triage SSRF blast radius quickly.
-
----
 
 ## References
 

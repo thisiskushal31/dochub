@@ -2,8 +2,6 @@
 
 [← Previous](./9_Allocation_Model_Socket_To_DIMM.md) · [README](./README.md) · [Next: Firmware trains →](./11_Firmware_Trains_And_Secure_Boot.md)
 
----
-
 ## 1. Concepts
 
 The **BMC** (Baseboard Management Controller) is the always-on microcontroller that provides out-of-band control: power, sensors, consoles, inventory, updates. **IPMI** is the older common protocol family; **Redfish** (DMTF) is the modern HTTP/JSON standard.
@@ -22,8 +20,6 @@ The **BMC** (Baseboard Management Controller) is the always-on microcontroller t
 ### Where it sits
 
 Dedicated management NIC or shared NIC in limited modes; on **OOB network**—not the production data plane ([on-ramp 5](../5_Fabric_Cross_Connect_And_OOB.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -53,8 +49,6 @@ Provisioning at scale: [15](./15_Imaging_And_Provisioning_At_Scale.md). Crash ca
 
 iDRAC / iLO / XClarity / ASMB / OpenBMC—different UIs, same jobs. Prefer Redfish for automation when available.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -73,8 +67,6 @@ iDRAC / iLO / XClarity / ASMB / OpenBMC—different UIs, same jobs. Prefer Redfi
 - Never expose IPMI to the internet  
 
 **Good:** Redfish automation, vaulted creds, clean OOB. **Bad:** default admin/admin; BMC on prod VLAN; ignored thermal alerts.
-
----
 
 ## References
 

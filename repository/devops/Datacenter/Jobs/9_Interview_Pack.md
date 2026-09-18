@@ -2,8 +2,6 @@
 
 [← Previous](./8_Capacity_Conversation.md) · [README](./README.md) · [Next: Career paths →](./10_Career_Paths.md)
 
----
-
 ## 1. Concepts
 
 Questions that transfer across Equinix-class, regional colo, enterprise, and hyperscale interviews—testing **jobs and independence**, not brand trivia.
@@ -22,8 +20,6 @@ Questions that transfer across Equinix-class, regional colo, enterprise, and hyp
 | Docs | Read this one-line: where is the SPOF? |
 | Honesty | What won’t a hyperscaler tell you? |
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes in interviews
@@ -38,8 +34,6 @@ Questions that transfer across Equinix-class, regional colo, enterprise, and hyp
 ### How it connects
 
 Role map [1](./1_Role_Map.md). Integration walks. Markets taxonomy [Markets/1](../Markets-And-Operators/1_Operator_Taxonomy.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -58,8 +52,6 @@ Role map [1](./1_Role_Map.md). Integration walks. Markets taxonomy [Markets/1](.
 - Never hire on buzzwords alone  
 
 **Good:** diagram-first answers. **Bad:** acronym salad; Equinox.
-
----
 
 ## References
 

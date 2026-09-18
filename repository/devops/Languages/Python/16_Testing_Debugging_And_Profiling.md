@@ -6,8 +6,6 @@
 
 **pytest**-style testing, **fixtures**, **mocks**, **pdb** / **breakpoint**, **cProfile**, **tracemalloc**, and **determinism** (time, randomness)—evidence-based quality and performance work.
 
----
-
 ## 1. Concepts
 
 ### 1. Tests
@@ -32,15 +30,11 @@
 
 **coverage.py** measures line coverage—gamed easily; pair critical paths with **contract tests** and selective **mutation testing**.
 
----
-
 ## 2. Advanced concepts
 
 **Determinism:** freeze **time** and seed **random** in flaky tests. **freezegun** / **pytest** monkeypatch **`datetime`**.
 
 **Hypothesis** (property-based) finds edge cases—use for parsers and validators.
-
----
 
 ## 3. Applications and use cases
 
@@ -56,16 +50,12 @@ def test_division():
 # python -m cProfile -o prof.out script.py
 ```
 
----
-
 ## Staff-level review checklist
 
 - Unit and integration layers are separated; failures indicate the layer clearly.
 - Flaky tests are tracked with owner and SLA, not ignored.
 - Profiles are captured before and after major dependency or architecture changes.
 - Incident retro includes reproducible failing test where possible.
-
----
 
 ## References
 

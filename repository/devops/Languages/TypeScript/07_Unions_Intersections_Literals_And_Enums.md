@@ -14,8 +14,6 @@
 
 Handbook default: **TS 5.9.x**, **`strict`: true**.
 
----
-
 ## 1. Concepts
 
 ### 1. Unions: “one of”
@@ -151,8 +149,6 @@ switch (msg.kind) { // discriminant — one cheap string compare per arm
 
 Deepen in chapter **13**.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Union property access rules
@@ -216,8 +212,6 @@ When touching brownfield enums:
 
 Do not half-migrate (numeric enum values still on the wire, union in types only).
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Unions / enums in practice |
@@ -230,8 +224,6 @@ Do not half-migrate (numeric enum values still on the wire, union in types only)
 
 **Whole-engineering picture:** a union is a **designed set of possibilities**. An open `string` is a shrug. Enums are a historical encoding of that idea—learn them, prefer unions for new designs.
 
----
-
 ## Staff-level review checklist
 
 - New closed sets use **literal unions** (or `as const` objects)—not numeric enums by default.
@@ -243,8 +235,6 @@ Do not half-migrate (numeric enum values still on the wire, union in types only)
 - Review comments reject “just make it `string`” when the set is known and finite.
 - Brownfield enums are documented if retained; migrations prefer unions when touching the area.
 - Hot-path variant handling prefers discriminants / flat switches over nested soup (ch **13**).
-
----
 
 ## References
 

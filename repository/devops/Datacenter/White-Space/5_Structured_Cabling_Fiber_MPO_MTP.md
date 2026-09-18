@@ -2,8 +2,6 @@
 
 [← Previous](./4_Structured_Cabling_Copper.md) · [README](./README.md) · [Next: Cable management →](./6_Cable_Management_And_Pathways.md)
 
----
-
 ## 1. Concepts
 
 Fiber carries most **leaf-spine and uplink** bandwidth in modern halls. **MPO/MTP** multi-fiber connectors enable trunk cables and parallel optics (40/100/400G-class) without hundreds of discrete duplex jumps.
@@ -24,8 +22,6 @@ Polarity (Type A/B/C and method schemes) decides whether Tx hits Rx. Wrong polar
 ### Where it sits
 
 MDA ↔ leaf/spine; spine ↔ spines; ToR uplinks; MMR/cross-connect handoffs ([Fabric-Physical](../Fabric-Physical/README.md), on-ramp [5](../5_Fabric_Cross_Connect_And_OOB.md)). Optics form factors: [Accelerators](../Accelerators/README.md) / Fabric optics chapters.
-
----
 
 ## 2. Advanced concepts
 
@@ -57,8 +53,6 @@ DAC/AOC vs optical transceiver choices live at the equipment edge; structured fi
 
 Same fiber physics. Color conventions and polarity methods must be **site-standard**—do not invent a second polarity scheme in one building.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -77,8 +71,6 @@ Same fiber physics. Color conventions and polarity methods must be **site-standa
 - Never coil fiber tighter than rating  
 
 **Good:** clean, labeled, polarity-standard plant. **Bad:** dirty MPO mated blind; mystery trunks; mixed polarity methods.
-
----
 
 ## References
 

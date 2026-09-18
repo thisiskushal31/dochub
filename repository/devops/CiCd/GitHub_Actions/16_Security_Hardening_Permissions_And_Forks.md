@@ -2,8 +2,6 @@
 
 [← Previous](./15_OIDC_And_Cloud_Federation.md) · [README](./README.md) · [Next: Deploy →](./17_Deploy_Environments_And_Promote.md)
 
----
-
 ## 1. Concepts
 
 | Risk | Practice |
@@ -22,8 +20,6 @@ permissions:
 ```
 
 Widen write scopes only on jobs that need them (separate jobs beat one god-job).
-
----
 
 ## 2. Advanced concepts
 
@@ -47,8 +43,6 @@ Org settings can require approval before first-time contributor workflows run �
 
 Writing workflows safely, mitigating untrusted checkouts, third-party actions, and GitHub security features — staff should skim the [secure use reference](https://docs.github.com/en/actions/reference/security/secure-use) once end-to-end.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -58,8 +52,6 @@ Writing workflows safely, mitigating untrusted checkouts, third-party actions, a
 | Release | Narrow perms + OIDC + environment + attestations |
 
 **Good:** workflow changes reviewed like app code. **Bad:** `permissions: write-all` + unpinned actions + `pull_request_target` “because caching was easier.”
-
----
 
 ## References
 

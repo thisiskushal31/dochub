@@ -4,8 +4,6 @@
 
 The Dart SDK includes **core libraries** that you use in almost every program: types and collections (**dart:core**), async (**dart:async**), math (**dart:math**), JSON and encoding (**dart:convert**), and I/O (**dart:io** on native/server). **dart:core** is always available; the rest you **import** when needed. This topic summarizes what each library provides and **when** to use it—so you can choose the right API for apps, servers, and CLI tools from beginner to advanced.
 
----
-
 ## dart:core
 
 **`dart:core`** is always available. It provides:
@@ -18,8 +16,6 @@ The Dart SDK includes **core libraries** that you use in almost every program: t
 - **Types and reflection:** `Type`, `runtimeType`, and (in supported contexts) reflection APIs.
 
 You do not need to write `import 'dart:core';`; it is implicit.
-
----
 
 ## dart:async
 
@@ -34,8 +30,6 @@ Future<void> main() async {
 }
 ```
 
----
-
 ## dart:math
 
 **`dart:math`** provides constants (**`pi`**, **`e`**), functions (**`sqrt`**, **`sin`**, **`cos`**, **`max`**, **`min`**, **`log`**, etc.), and **`Random`** for random number generation.
@@ -47,8 +41,6 @@ var n = sqrt(2);
 var r = Random().nextDouble();
 ```
 
----
-
 ## dart:convert
 
 **`dart:convert`** provides encoders and decoders for **JSON** (**`jsonEncode`**, **`jsonDecode`**) and **UTF-8** (**`utf8.encode`**, **`utf8.decode`**), plus other codecs. Essential for APIs and file I/O.
@@ -59,8 +51,6 @@ import 'dart:convert';
 var json = jsonEncode({'name': 'Dart'});
 var map = jsonDecode('{"name": "Dart"}');
 ```
-
----
 
 ## dart:io
 
@@ -75,19 +65,13 @@ void main() async {
 }
 ```
 
----
-
 ## Web: dart:js_interop and package:web
 
 On the **web**, **`dart:io`** is not available. Use **`dart:js_interop`** to call JavaScript and **`package:web`** (and related packages) for DOM and web APIs. The core libraries overview and web docs describe the mapping.
 
----
-
 ## Iterables and collections
 
 **`dart:core`** defines **`Iterable`**; lists and sets implement it. The **iterable collections** guide covers `where`, `map`, `toList`, `expand`, and other operations. For more collection types and utilities, see **`dart:collection`** (e.g. **`Queue`**, **`HashMap`**, **`LinkedHashSet`**).
-
----
 
 ## Further reading
 

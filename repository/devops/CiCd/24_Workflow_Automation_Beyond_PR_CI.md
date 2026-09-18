@@ -6,8 +6,6 @@
 
 Jobs are durable; YAML is not. Primers: [GitHub_Actions/](./GitHub_Actions/README.md), [GitLab_CI/](./GitLab_CI/README.md), [Bitbucket/](./Bitbucket/README.md), [Azure_DevOps/](./Azure_DevOps/README.md), [Jenkins/](./Jenkins/README.md), [CircleCI/](./CircleCI/README.md), [Buildkite/](./Buildkite/README.md), [Tekton/](./Tekton/README.md). Immutable promote: [4](./4_Artifacts_And_Registries.md). Version lanes + [semver.org](https://semver.org/): [12](./12_Release_Versioning_And_Changelogs.md). Tool map: [2](./2_CI_CD_Tools.md). Classical Jenkins ops: [20](./20_Classical_Jenkins_Host_And_Web_Deploy.md).
 
----
-
 ## Host-native CI vs self-operated CI
 
 | | **Host-native CI** (typical) | **Self-operated CI** (typical) |
@@ -19,8 +17,6 @@ Jobs are durable; YAML is not. Primers: [GitHub_Actions/](./GitHub_Actions/READM
 | Fit | Code already on that forge; want low CI-server ops | Air-gap, exotic agents, large existing estate |
 
 Durable rule: prefer **CI that sits next to your Git host** when you do not need to operate a separate automation server. Jenkins remains excellent when you already run it well or must keep builds inside a hard network boundary — see [20](./20_Classical_Jenkins_Host_And_Web_Deploy.md). This is an **ops-cost** choice, not a moral one.
-
----
 
 ## Use case A — scheduled / cron workflows (ops automation)
 
@@ -67,8 +63,6 @@ jobs:
 ```
 
 **Name it clearly:** these are still **workflows / pipelines** — scheduled delivery of *operational truth*, not application releases. Keep scripts in Git; prefer OIDC over long-lived cloud keys ([Security/5](../Security/5_OIDC_CI_And_Least_Privilege.md)).
-
----
 
 ## Use case B — promote release-candidate image → production tag
 
@@ -121,8 +115,6 @@ Many orgs map **git refs → image tags** so humans and Image Updaters share one
 
 Deploy path is usually **GitOps**: CI pushes the image; a reconciler (Argo CD Image Updater, Flux image automation, or a controlled values bump) writes the tag/digest into the desired-state repo — not `kubectl set image` in the build job ([Argo_CD](./Argo_CD/README.md), [8](./8_Environments_Promotion_And_Approvals.md)).
 
----
-
 ## Use case C — reusable CI templates (org paved road)
 
 Copy-pasting the same lint/test/build YAML into every service repo drifts. Prefer a **central templates / shared pipelines** repo (or group includes) that each service calls thinly:
@@ -156,8 +148,6 @@ on: PR/MR or push to main
 
 Primers: [GitHub_Actions](./GitHub_Actions/README.md), [GitLab_CI](./GitLab_CI/README.md), [Bitbucket](./Bitbucket/README.md), [Azure_DevOps](./Azure_DevOps/README.md), [CircleCI](./CircleCI/README.md), [Jenkins](./Jenkins/README.md), [Buildkite](./Buildkite/README.md), [Tekton](./Tekton/README.md).
 
----
-
 ## Putting it on the paved road
 
 | Pipeline (example) | Trigger | Job |
@@ -167,8 +157,6 @@ Primers: [GitHub_Actions](./GitHub_Actions/README.md), [GitLab_CI](./GitLab_CI/R
 | Promote (or GitOps updater) | Manual / Image Updater | RC → release pointer, **same digest** |
 | Inventory / cost audit | Cron + manual | Cloud inventory / spend |
 | Data or batch job repos | Same shared CI/build | Artifact + schedule/deploy like any service |
-
----
 
 ## Pitfalls
 

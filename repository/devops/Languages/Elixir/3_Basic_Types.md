@@ -4,8 +4,6 @@
 
 Elixir is dynamically typed: values have types, but variables do not. This topic covers the **basic types** you will use every day—integers, floats, booleans, atoms, and strings—plus **basic arithmetic**, **truthy/falsy** rules, and **structural comparison**. Understanding these is required before lists, pattern matching, and functions.
 
----
-
 ## The main basic types
 
 In IEx you can try:
@@ -17,8 +15,6 @@ In IEx you can try:
 - **Strings** — Double-quoted, **UTF-8** encoded, e.g. `"elixir"`. They are binaries under the hood; `byte_size/1` and `String.length/1` differ when characters use multiple bytes.
 
 Lists and tuples are also ubiquitous; they are covered in Topic 4.
-
----
 
 ## Basic arithmetic
 
@@ -55,8 +51,6 @@ trunc(3.58)   # => 3
 
 Predicates like `is_integer/1`, `is_float/1`, and `is_number/1` let you check types at runtime when needed. They are often used in guards (e.g. `when is_integer(x)`) to restrict function clauses or in validation logic at boundaries (e.g. parsing config or user input).
 
----
-
 ## Booleans and nil
 
 Elixir has `true` and `false` as booleans. Three operators expect **strict** booleans on the left: `and`, `or`, and `not`. Using a non-boolean there raises `BadBooleanError`.
@@ -82,8 +76,6 @@ true && 17   # => 17
 
 Use `and`/`or`/`not` when you expect booleans; use `&&`/`||`/`!` when you want to treat `nil` (or `false`) as falsy and anything else as truthy.
 
----
-
 ## Atoms
 
 Atoms are constants named by themselves. They are often used for status (`:ok`, `:error`), options, and as keys or tags. Two atoms are equal only if their names are equal.
@@ -96,8 +88,6 @@ Atoms are constants named by themselves. They are often used for status (`:ok`, 
 ```
 
 `true`, `false`, and `nil` are atoms; you can write them without a leading colon.
-
----
 
 ## Strings
 
@@ -113,8 +103,6 @@ name = "Elixir"
 
 Interpolation can contain any expression that implements the **String.Chars** protocol (e.g. numbers, atoms, structs that implement it). Strings are implemented as **binaries** (contiguous bytes); `byte_size/1` returns bytes and `String.length/1` returns the number of **graphemes** (what users see as characters), which can differ in UTF-8—for example `"hellö"` has 5 graphemes but 6 bytes because "ö" uses two bytes. The `String` module provides Unicode-aware functions (e.g. `String.upcase/1`, `String.split/2`, `String.graphemes/1`). Use `IO.puts/1` to print a string; it returns `:ok`. On Windows, the terminal may not use UTF-8 by default; you can run `chcp 65001` before starting IEx so that Unicode output is correct.
 
----
-
 ## Structural comparison
 
 Elixir provides `==`, `!=`, `<`, `<=`, `>`, `>=`. They perform **structural** comparison: any type can be compared to any other; the result is defined by the language. For numbers, `1 == 1.0` is `true`. If you need to distinguish integers from floats, use strict comparison:
@@ -125,8 +113,6 @@ Elixir provides `==`, `!=`, `<`, `<=`, `>`, `>=`. They perform **structural** co
 ```
 
 Understanding basic types, arithmetic, booleans, atoms, strings, and comparison is enough to move on to lists and tuples and then pattern matching.
-
----
 
 ## Further reading
 

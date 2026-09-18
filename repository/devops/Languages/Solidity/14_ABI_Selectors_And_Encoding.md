@@ -8,8 +8,6 @@ The **Application Binary Interface**: how names become **4-byte selectors**, how
 
 After compile, the EVM does not know your function is called `transfer`. It knows a **4-byte number** and a blob of 32-byte words. The ABI is the shared dictionary between your Solidity names and that blob.
 
----
-
 ## 1. Concepts
 
 ### 1. After compile, names are gone
@@ -93,8 +91,6 @@ Event topic0 is `keccak256("Transfer(address,address,uint256)")` (indexed flags 
 ### 6. What wallets actually send
 
 A MetaMask “write” is: your dapp builds calldata from the ABI + args, the user signs a tx to the contract address with that data (and maybe `value`). If the ABI is wrong, they sign the wrong thing. **Treat ABI JSON as a release artifact.**
-
----
 
 ## 2. Advanced concepts
 
@@ -211,8 +207,6 @@ Indexed event params do **not** appear in the signature string’s “indexed”
 
 Decoders may reject non-canonical encodings (oversized offsets, dirty high bits in a `bool` word that is not 0/1, etc.) depending on client. Solidity’s ABI decoder cleans / validates many cases and **reverts** on garbage. When you `abi.decode` returndata from an untrusted contract, a malicious encoding can force reverts (DoS) or, in sloppy hand parsers, mis-reads. Prefer high-level calls when the ABI is known.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -228,8 +222,6 @@ cast sig "transfer(address,uint256)"
 cast calldata "transfer(address,uint256)" 0x... 1ether
 ```
 
----
-
 ## 4. Staff-level review checklist
 
 - External calls use **interfaces** or `encodeCall`, not stringly selectors, unless justified.
@@ -237,8 +229,6 @@ cast calldata "transfer(address,uint256)" 0x... 1ether
 - ABI JSON is an artifact of the **same** `solc` pin as bytecode.
 - Overloads on the public ABI are rare and named clearly.
 - Error and event signatures are covered by the same ABI discipline.
-
----
 
 ## References
 

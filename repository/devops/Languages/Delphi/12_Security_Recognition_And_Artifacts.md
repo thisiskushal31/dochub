@@ -4,8 +4,6 @@
 
 Delphi (and Free Pascal) binaries show up in **threat intelligence** and **incident response** because a non-trivial share of **Windows malware** is written in Delphi. This topic summarizes **how to recognize** Delphi artifacts, **typical patterns** and **tooling**, and **security considerations** when maintaining or deploying Delphi applications. Content is for **defensive** and **analytical** use.
 
----
-
 ## Recognizing Delphi binaries
 
 - **Metadata and strings:** Delphi compilers often leave **unit names** (e.g. **SysUtils**, **Classes**, **Forms**, **Windows**, **Registry**, **IniFiles**), **class names** (e.g. **TForm**, **TApplication**, **TButton**, **TStringList**, **TRegistry**, **TIniFile**, **TStream**), and **RTL/VCL**-like string patterns in the binary. **PE** resources may include **form** data (**.dfm**-like), **RC** data, or **version** info mentioning **Delphi**, **Borland**, or **Embarcadero**.
@@ -13,8 +11,6 @@ Delphi (and Free Pascal) binaries show up in **threat intelligence** and **incid
 - **Structure:** Delphi uses a recognizable **object model** (VMT—virtual method table—constructor/destructor patterns, **TObject**-derived hierarchy). **Decompilers** and **IDA** scripts or plugins (e.g. **IDR** — Interactive Delphi Reconstructor, **Ghidra** with Delphi support) can recover class and method names and improve readability.
 
 Identifying that a sample is **Delphi** narrows the analysis: you can focus on Delphi-specific patterns, string decodings, and known Delphi malware families.
-
----
 
 ## Typical malware patterns (Delphi)
 
@@ -25,15 +21,11 @@ Identifying that a sample is **Delphi** narrows the analysis: you can focus on D
 
 Knowing these patterns helps with **IOC** creation, **hunting**, and **reverse engineering** of Delphi-based threats.
 
----
-
 ## Tooling for analysis
 
 - **Disassemblers/Decompilers:** **IDA Pro**, **Ghidra**, **x64dbg** with Delphi-aware plugins or scripts (e.g. **IDR** — Interactive Delphi Reconstructor) to resolve classes and VMTs.
 - **String and resource tools:** **strings**, **Resource Hacker**, **PE** explorers to extract **.dfm**, **RC**, and embedded strings.
 - **Dynamic analysis:** Run in a **sandbox** or **VM** and observe **file**, **registry**, **network**, and **process** behavior; compare with known Delphi RTL/VCL and WinAPI usage.
-
----
 
 ## Security for Delphi applications (defensive)
 
@@ -43,16 +35,12 @@ If you **maintain** or **deploy** Delphi applications:
 - **Build and deploy:** Use **Release** builds and remove or restrict **debug** info and **symbols** in production where appropriate. Harden the deployment (least privilege, signed binaries, secure config).
 - **Input and trust boundaries:** Validate and sanitize **input** (files, network, user input); avoid **unsafe** APIs or **hardcoded** secrets. Use **principle of least privilege** for the process and for **WinAPI** calls (e.g. registry, file system).
 
----
-
 ## Detection and hunting: what to look for
 
 - **String patterns:** Search for **SysUtils**, **Classes**, **TForm**, **TApplication**, **TStringList**, **TRegistry**, **.dfm**, **Borland**, **Delphi**. In packed samples, run **strings** or extract after unpacking.
 - **Imports:** **kernel32.dll** (CreateFile, WriteFile, CreateProcess, GetModuleFileName), **advapi32.dll** (RegOpenKeyEx, RegSetValueEx), **ws2_32.dll** (WSAStartup, connect, send, recv) are typical. **user32** if the sample has a GUI.
 - **YARA-style logic:** Rule on presence of multiple Delphi unit/class names in the binary or in unpacked memory; combine with behavioral or hash-based conditions for higher confidence.
 - **Unpacking:** Many Delphi samples are **UPX** or other packers. Unpack (e.g. **upx -d** or dynamic unpacking in a sandbox) to get clearer strings and structure; then re-run recognition and string extraction.
-
----
 
 ## Hardening checklist (defensive)
 
@@ -62,16 +50,12 @@ If you **maintain** or **deploy** Delphi applications:
 - Run with **least privilege** (no admin unless required); set **requestedExecutionLevel** in manifest appropriately.
 - Sign binaries and protect **deployment** (installer, updates) from tampering.
 
----
-
 ## Summary
 
 - **Recognition:** Unit/class names (RTL/VCL), PE resources, and structure (VMT, forms) indicate Delphi. Use decompilers and plugins to improve readability.
 - **Malware patterns:** Packing, string encoding, WinAPI for persistence/file/network, and threading are common. Map these to IOCs and behavior. **Detection:** string and import patterns; unpack when needed.
 - **Tooling:** IDA/Ghidra with Delphi support, IDR, strings, and PE/resource tools support analysis.
 - **Defensive:** Update runtimes and components; harden build and deploy; validate inputs and restrict privileges; use the hardening checklist above.
-
----
 
 ## Further reading
 

@@ -2,8 +2,6 @@
 
 [← Previous](./5_Raised_Floor_Vs_Slab.md) · [README](./README.md) · [Next: Leak detection →](./7_Leak_Detection_And_Fluid_Risk.md)
 
----
-
 ## 1. Concepts
 
 When air cannot economically remove rack heat, **liquid** carries heat from the rack or the silicon to a coolant distribution unit (**CDU**) and then to the facility loop.
@@ -24,8 +22,6 @@ When air cannot economically remove rack heat, **liquid** carries heat from the 
 | Facility CHW / glycol | Plant side of CDU |
 
 Facility water quality is often **not** allowed directly on chips—CDU primary/secondary loops exist for a reason.
-
----
 
 ## 2. Advanced concepts
 
@@ -62,8 +58,6 @@ Power density SKUs: [Electrical/14](../Electrical/14_High_Density_48V_HVDC_And_B
 
 OEM liquid ecosystems differ (OEM doors vs OCP-style). Colo “liquid ready” must specify **what** is ready: RDHX only, DTC, fluid type, CDU ownership, and who responds to leaks.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -82,8 +76,6 @@ OEM liquid ecosystems differ (OEM doors vs OCP-style). Colo “liquid ready” m
 - Never hot-swap hoses without procedure  
 
 **Good:** CDU-isolated loops, trained staff, tested leak response. **Bad:** facility water straight to plates; no leak plan; “air cooling will catch whatever liquid misses.”
-
----
 
 ## References
 

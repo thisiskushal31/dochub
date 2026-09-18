@@ -2,8 +2,6 @@
 
 [← Previous](./06_Sources_Git_OCI_Bucket_Helm.md) · [README](./README.md) · [Next: Kustomization →](./08_Kustomization_Controller.md)
 
----
-
 ## 1. Concepts
 
 Most teams never need this chapter on day one. Skim it; come back when a monorepo hurts.
@@ -17,8 +15,6 @@ Most teams never need this chapter on day one. Skim it; come back when a monorep
 
 Revisions are often based on **content hash**: same files ⇒ same revision (no useless churn).
 
----
-
 ## 2. Advanced concepts
 
 Copy rules support globs, exclusions, and YAML merge — see the ArtifactGenerator API for exact operators.
@@ -31,8 +27,6 @@ Building your own ExternalArtifact producer is a platform/Go exercise ([toolkit 
 
 One repo, one path, one Kustomization — stay on GitRepository ([06](./06_Sources_Git_OCI_Bucket_Helm.md)). Generators add moving parts; they need an owner and tests.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -42,8 +36,6 @@ One repo, one path, one Kustomization — stay on GitRepository ([06](./06_Sourc
 | Simple app | Skip this entirely |
 
 **Good:** platform-owned generators. **Bad:** clever generators nobody understands in the prod path.
-
----
 
 ## References
 

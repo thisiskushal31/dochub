@@ -2,8 +2,6 @@
 
 [← Previous](./16_Security_Folders_RBAC_And_Hardening.md) · [README](./README.md) · [Next: Classical deploy →](./18_Classical_Host_And_Web_Deploy.md)
 
----
-
 ## 1. Concepts
 
 Almost everything beyond bare Jenkins is a **plugin**: Git, credentials, Pipeline, mailer, Kubernetes, … Manage via **Plugin Manager** / Update Center (or as code).
@@ -16,8 +14,6 @@ Almost everything beyond bare Jenkins is a **plugin**: Git, credentials, Pipelin
 | Read plugin docs for *your* plugins | This track won’t enumerate plugins.jenkins.io |
 
 Pipeline **steps** come from plugins — Snippet Generator lists what’s installed.
-
----
 
 ## 2. Advanced concepts
 
@@ -43,8 +39,6 @@ Core evolves; some plugins detach or retire — follow LTS upgrade notes ([26](.
 
 Subscribe to security advisories; patch controllers like internet-facing apps when exposed.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -56,8 +50,6 @@ Subscribe to security advisories; patch controllers like internet-facing apps wh
 **Good:** small plugin set with owners. **Bad:** “Install all” from a blog checklist.
 
 **Upstream-only:** every plugin README on plugins.jenkins.io.
-
----
 
 ## References
 

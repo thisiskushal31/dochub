@@ -2,8 +2,6 @@
 
 [← Atlantis](./README.md)
 
----
-
 ## 1. Concepts
 
 Minimal path to a working Atlantis for one Terraform root:
@@ -16,8 +14,6 @@ Minimal path to a working Atlantis for one Terraform root:
 
 **Disconfirm:** Exposing Atlantis without auth webhook secrets is **unsafe**.
 
----
-
 ## 2. First checklist
 
 | Step | Done when |
@@ -29,8 +25,6 @@ Minimal path to a working Atlantis for one Terraform root:
 | Smoke PR | Plan comment posts successfully |
 
 Deep ops: [README](./README.md). State concepts: [../2_State_Modules_And_Backends.md](../2_State_Modules_And_Backends.md).
-
----
 
 ## References
 

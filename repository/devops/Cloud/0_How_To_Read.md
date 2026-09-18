@@ -2,8 +2,6 @@
 
 [README](./README.md) · [Shared concepts →](./1_Shared_Cloud_Concepts.md)
 
----
-
 ## 1. Concepts — who this is for
 
 You do **not** need a cloud certification to learn this folder. You need the habit: **same job, different wiring**.
@@ -45,8 +43,6 @@ Provider chapter (Floor 2) →  how THIS cloud names and defaults that job
 | 7 | [32](./32_Managed_Data_And_Databases_On_Cloud.md) + [34](./34_Multi_Tier_And_Reference_Topologies.md) |
 | Then | Remaining Floor 1; then your estate’s provider (4–14) + its [Catalog](./Catalogs/README.md) (full what / when / why not) |
 
----
-
 ## 2. Quality bar
 
 | Rule | Meaning |
@@ -64,8 +60,6 @@ Provider chapter (Floor 2) →  how THIS cloud names and defaults that job
 
 Not a cert cram or screenshot tour. Not kubeadm. Not Terraform tutorials. Not colo plant ops. (Full choose surface lives in [Catalogs/](./Catalogs/README.md).)
 
----
-
 ## 3. Applications
 
 **Staff checklist for newcomers**
@@ -75,8 +69,6 @@ Not a cert cram or screenshot tour. Not kubeadm. Not Terraform tutorials. Not co
 - Knows CI must federate, not store long-lived keys ([Security/5](../Security/5_OIDC_CI_And_Least_Privilege.md))  
 
 **Good:** job vocabulary → provider apply. **Bad:** console tourism without isolation or IAM story.
-
----
 
 ## References
 

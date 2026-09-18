@@ -96,8 +96,6 @@ Use this sequence for a deep pass without relying on external links:
 
 This keeps the handbook itself as the primary source while preserving references as optional validation.
 
----
-
 ## Chapters
 
 Each row lists where the **supplementary docs index** (blocks under [ocaml.org/docs](https://ocaml.org/docs)) and the OCaml **5.4 manual** language reference (starting from [core language](https://ocaml.org/manual/5.4/coreexamples.html)) are covered in the chapter body—not as separate tables elsewhere.
@@ -118,8 +116,6 @@ Each row lists where the **supplementary docs index** (blocks under [ocaml.org/d
 | 12 | Metaprogramming, operators, objects, compiler pipeline | [12_Metaprogramming_Operators_Objects_And_Compiler.md](./12_Metaprogramming_Operators_Objects_And_Compiler.md) | Advanced language (PPX, operators, objects); runtime and compiler (front/back) | **Objects in OCaml**; compiler front/back; with ch.3 for classes+modules |
 
 Each chapter ends with a **References** section. The supplementary link list earlier in this README is for bookmarking only; the **Coverage** columns above are the canonical map to chapter bodies.
-
----
 
 ## References hub (optional)
 

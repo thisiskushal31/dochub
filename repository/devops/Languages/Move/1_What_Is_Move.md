@@ -74,8 +74,6 @@ Real packages resolve **`my_package`** via **`Move.toml`** named addresses. **`p
 
 Topics **2–12** build **basic → advanced** language concepts; **13–28** split Aptos and Sui in depth and finish with platform comparison.
 
----
-
 ## Further reading
 
 - [The Move Book — Introduction](https://move-language.github.io/move/)

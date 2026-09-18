@@ -4,8 +4,6 @@
 
 This topic summarizes testing support (power assertions, mocking, JUnit, Spock), domain-specific languages (DSLs) in Groovy, and how to integrate Groovy into Java or Groovy applications (Eval, GroovyShell, Binding, GroovyClassLoader, JSR 223). It supports the goals of understanding the language and its use cases from a software-engineering perspective.
 
----
-
 ## 1. Testing
 
 **Power assertions.** Groovy’s **assert** is always enabled (unlike Java’s **-ea**). When an assertion fails, the error message shows the value of subexpressions, which helps debugging. Use **assert condition** or **assert condition : "message"** (the second form uses a custom message and does not show power-assert expansion).
@@ -18,13 +16,9 @@ This topic summarizes testing support (power assertions, mocking, JUnit, Spock),
 
 **Geb.** Geb is a browser automation and page-object framework built on Groovy and Selenium, useful for functional and UI tests.
 
----
-
 ## 2. Domain-specific languages (DSLs)
 
 Groovy’s syntax and runtime make it well suited for internal DSLs: closures, optional parentheses, **delegate** and **resolveStrategy**, and **with**/ **tap** allow API design that reads like a custom language. Build scripts (Gradle) and pipeline definitions (Jenkins) are examples: **dependencies { implementation 'x:y:z' }** and **stage('Build') { sh 'make' }** are Groovy with the closure’s **delegate** set to a context object. Command-chain expressions and **methodMissing**/ **propertyMissing** can extend the syntax further. AST transformations and compilation customizers support compile-time DSLs. When writing or reading such code, remember that the block is a closure and the “keywords” are methods on the delegate.
-
----
 
 ## 3. Integrating Groovy into applications
 
@@ -38,13 +32,9 @@ Groovy’s syntax and runtime make it well suited for internal DSLs: closures, o
 
 **JSR 223.** **ScriptEngineManager** and **engine = manager.getEngineByName("groovy")** provide the standard Java scripting API. **engine.eval("code")** and **engine.put**/ **get** for bindings work with Groovy. For Groovy-only integration, **GroovyShell** and **Binding** are more flexible; use JSR 223 when you need a language-agnostic API.
 
----
-
 ## 4. Why this matters
 
 Testing ensures that pipeline and build logic behave as expected; power assertions and Spock are common in Groovy projects. DSLs are how Jenkins and Gradle expose their configuration; integration APIs (GroovyShell, Binding) are how embedding and scripting work. Understanding these areas completes the picture from basics to advanced use and from software engineering to DevOps and automation.
-
----
 
 ## Further reading
 

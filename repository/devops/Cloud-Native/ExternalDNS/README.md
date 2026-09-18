@@ -2,8 +2,6 @@
 
 [← Back to Cloud-Native](../README.md) · [CNCF everyday tools](../4_CNCF_Everyday_Tools.md)
 
----
-
 ## 1. Concepts
 
 **ExternalDNS** watches Kubernetes resources (Ingress, Service, Gateway, …) and **creates/updates DNS records** in an external provider so hostnames point at the right load balancer or IP.
@@ -24,8 +22,6 @@ DNS protocol depth: [Networks-Deep-Dive](https://github.com/thisiskushal31/Netwo
 **Disconfirm:** Creating an Ingress object is **not** the same as publishing DNS. Without ExternalDNS (or automation), the name may not resolve.
 
 **Confirm:** Which object in *your* cluster is the source of truth for the hostname?
-
----
 
 ## 2. Advanced concepts
 
@@ -66,8 +62,6 @@ Private DNS zones (corp split-horizon) still use the same controller pattern—d
 | Wrong target | Ingress not assigned an address yet; pointing at ClusterIP by mistake |
 | Stale record after delete | `upsert-only` policy; or ownership TXT mismatch |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -97,8 +91,6 @@ Private DNS zones (corp split-horizon) still use the same controller pattern—d
 - ClusterIP is **not** a public DNS target.
 
 **Good:** filtered domains, clear ownership, least-privilege provider identity. **Bad:** cluster-admin keys; two writers; sync-delete with no runbook.
-
----
 
 ## References
 

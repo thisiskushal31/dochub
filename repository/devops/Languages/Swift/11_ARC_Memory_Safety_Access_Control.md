@@ -8,8 +8,6 @@
 
 Swift is memory-safe by default for ordinary code: no manual `free`, no unchecked pointer arithmetic in the happy path. ARC still means *you* manage ownership graphs for classes. Ownership features extend that story to **non-copyable** values. Access control is how libraries keep invariants private. Think of ARC as a guestbook of sticky name tags on class instances — when the last tag peels off, the object is gone. Cycles are two people each holding the other’s tag forever. `~Copyable` is a jar labeled “only one cook may hold this” — no photocopies.
 
----
-
 ## 1. Concepts
 
 ### 1. ARC tracks strong references
@@ -194,8 +192,6 @@ public struct Config {
 ```
 
 Default `internal` keeps app targets tidy; libraries must mark `public`/`open`/`package` deliberately.
-
----
 
 ## 2. Advanced concepts
 
@@ -469,8 +465,6 @@ func flow() {
 
 **What just happened.** After `consuming`, the binding is done — that is the point. APIs that both peek and take ownership should make the verb obvious in the name (`peek` vs `take` / `burn`). Exact `discard` / consume mechanics: confirm against TSPL for your **6.3.x** pin when writing library APIs.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -480,8 +474,6 @@ func flow() {
 | **Security** | Secrets not in `public` fields; avoid lingering strong refs to credential objects; audit unsafe / `assumingMemoryBound` blocks |
 | **Operations** | Leaks show as memory growth — Instruments / `deinit` logs for suspects; autoreleasepool only at measured ObjC peaks |
 | **Software engineering** | Library surface minimal `public`; `package` for multi-target packages; document `unowned` and `~Copyable`; refuse casual `open` |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -497,8 +489,6 @@ func flow() {
 - Library APIs mark `public`/`open`/`package` intentionally; default stay `internal`.
 - `open` subclassing surface is deliberate; prefer `public final` otherwise.
 - SPM targets use `package` for cross-target helpers instead of accidental `public`.
-
----
 
 ## References
 

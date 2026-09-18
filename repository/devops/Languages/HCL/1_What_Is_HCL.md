@@ -12,8 +12,6 @@ HCL (HashiCorp Configuration Language) is a configuration language designed to b
 
 **Use cases.** HCL is used for infrastructure definition (Terraform), image builds (Packer), policy and secrets config (Vault), job and cluster config (Nomad, Consul), and other HashiCorp product configs. Terraform-specific use cases—providers, state, modules, workspaces, remote backends, and use in multi-cloud and CI/CD pipelines—are covered in the handbook under **IAC (Infrastructure as Code)** and **Terraform**, not duplicated here.
 
----
-
 ## Further reading
 
 - [Terraform: Configuration Syntax](https://developer.hashicorp.com/terraform/language/syntax/configuration)

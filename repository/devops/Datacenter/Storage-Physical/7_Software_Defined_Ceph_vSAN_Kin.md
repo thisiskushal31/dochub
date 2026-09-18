@@ -2,8 +2,6 @@
 
 [← Previous](./6_Array_Controllers_And_Shelves.md) · [README](./README.md) · [Next: Object →](./8_Object_On_Prem.md)
 
----
-
 ## 1. Concepts
 
 **Software-defined storage (SDS)** places data planes on commodity servers: **Ceph**, **vSAN**, **Storage Spaces Direct**-class, and kin. Reliability comes from **replication/erasure + failure domain design**, not a dual-controller shelf alone.
@@ -22,8 +20,6 @@ Putting all replicas in one rack is the classic foot-gun.
 ### Where it sits
 
 Storage or hyperconverged nodes; JBOD disks ([1](./1_DAS_Local_Disks_And_RAID.md)); dedicated or shared fabric carefully designed ([Fabric-Physical/11](../Fabric-Physical/11_Storage_Network_Separation.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -45,8 +41,6 @@ Hypervisor map: [Compute/18](../Compute/18_Hypervisor_On_The_Box_Map.md). Object
 
 Ceph common on Linux estates; vSAN on VMware; cloud uses provider SDS behind APIs. Jobs—domains, recovery, capacity headroom—transfer.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -65,8 +59,6 @@ Ceph common on Linux estates; vSAN on VMware; cloud uses provider SDS behind API
 - Never place all copies in one PDU domain knowingly  
 
 **Good:** rack-aware placement, headroom, clean JBOD. **Bad:** all replicas one rack; 95% full forever; RAID+OSD.
-
----
 
 ## References
 

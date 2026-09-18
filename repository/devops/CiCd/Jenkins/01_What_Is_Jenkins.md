@@ -2,8 +2,6 @@
 
 [← Jenkins](./README.md) · [Next: Install →](./02_Install_Controller_And_LTS.md)
 
----
-
 ## 1. Concepts
 
 **Jenkins** is an open-source automation server. You install it, configure it, and it runs **jobs/pipelines** when events happen (SCM change, schedule, API, manual).
@@ -34,8 +32,6 @@ event → controller schedules work → agent executor runs steps → artifacts 
 
 You **operate** Jenkins (plugins, backups, HA, CVEs). That is the trade for control.
 
----
-
 ## 2. Advanced concepts
 
 ### Product surfaces
@@ -54,8 +50,6 @@ Freestyle = UI-configured steps (still everywhere in legacy). Pipeline = Jenkins
 | Classical stack map | [CiCd/23](../23_Classical_DevOps_Stack_Map.md) |
 | OIDC / cloud keys | Prefer short-lived patterns; [Security/5](../Security/5_OIDC_CI_And_Least_Privilege.md) |
 
----
-
 ## 3. Applications and use cases
 
 | Team | Use Jenkins for |
@@ -66,8 +60,6 @@ Freestyle = UI-configured steps (still everywhere in legacy). Pipeline = Jenkins
 | Brownfield | Keep Freestyle while migrating lane-by-lane |
 
 **Good:** Pipeline-as-code + agents + least privilege. **Bad:** one god-controller with every plugin and builds on the controller node.
-
----
 
 ## References
 

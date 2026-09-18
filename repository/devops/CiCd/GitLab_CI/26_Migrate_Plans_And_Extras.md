@@ -2,8 +2,6 @@
 
 [← Previous](./25_YAML_Catalog_And_Troubleshooting.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 ### Migration into GitLab CI
@@ -28,13 +26,9 @@ Free / Premium / Ultimate, compute minutes, Duo add-ons, Dedicated — **confirm
 | Wiki / Pages / snippets | Product doors — not CI depth |
 | Monitor / incidents | Operations door ([24](./24_Feature_And_Offering_Coverage_Map.md)) |
 
----
-
 ## 2. Advanced concepts
 
 Cross-host automation patterns stay in [CiCd/24](../24_Workflow_Automation_Beyond_PR_CI.md). Parent/child and multi-project pipelines sometimes replace “many Jenkins jobs” more cleanly than 1:1 ports.
-
----
 
 ## 3. Applications and use cases
 
@@ -47,8 +41,6 @@ Cross-host automation patterns stay in [CiCd/24](../24_Workflow_Automation_Beyon
 **Good:** migration MRs owned like product code. **Bad:** bulk-import 500 jobs with no runners capacity plan.
 
 **Upstream-only:** every per-scanner and per-cloud cookbook page.
-
----
 
 ## References
 

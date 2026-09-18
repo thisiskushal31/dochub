@@ -2,8 +2,6 @@
 
 [← Previous](./11_Agents_Clouds_Docker_And_Kubernetes.md) · [README](./README.md) · [Next: Shared libraries →](./13_Shared_Libraries_And_Job_DSL.md)
 
----
-
 ## 1. Concepts
 
 Jenkins **Credentials** store secrets in a credential domain — system, folder, or user scope.
@@ -53,8 +51,6 @@ pipeline {
 
 Never commit secrets to Jenkinsfile. Prefer external secret managers (Vault, cloud SM) via plugins where required.
 
----
-
 ## 2. Advanced concepts
 
 ### Scopes and folders
@@ -73,8 +69,6 @@ Which user identity builds run as affects credential visibility — security han
 
 Secrets in env can leak to child processes and plugins — minimize scope of `withCredentials` blocks.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -84,8 +78,6 @@ Secrets in env can leak to child processes and plugins — minimize scope of `wi
 | Org default | Folder creds for team; no system-wide prod keys |
 
 **Good:** least scope + rotated + audited. **Bad:** global username/password used by every Freestyle job.
-
----
 
 ## References
 

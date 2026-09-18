@@ -8,8 +8,6 @@ How TypeScript projects **split code into modules**: ESM vs CommonJS literacy, `
 
 You leave able to explain why a relative import needs an extension under `nodenext`, when to use type-only imports, and how to review dual-package hazards.
 
----
-
 ## 1. Concepts
 
 ### 1. A module is a file with import or export
@@ -97,8 +95,6 @@ import { answer } from "./a.js";
 ```
 
 **What just happened:** default and named exports are not interchangeable; match the export style.
-
----
 
 ## 2. Advanced concepts
 
@@ -272,8 +268,6 @@ const mod = await import("./heavy-report-plugin.js");
 
 Deepen in chapter **13**.
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Pattern |
@@ -320,8 +314,6 @@ When `tsc` or Node says it cannot find a module, walk this order before rewritin
 
 Most “TypeScript is broken” reports in review are **resolution config** problems, not type-system bugs.
 
----
-
 ## Staff-level review checklist
 
 - `module` / `moduleResolution` match the runtime (Node vs bundler).
@@ -340,8 +332,6 @@ Most “TypeScript is broken” reports in review are **resolution config** prob
 - JSON imports use `with { type: "json" }` (not `assert`) when attributes are in play; untrusted JSON still prefers parse + validate.
 - `import defer` only where host/bundler support is proven; otherwise dynamic `import()`.
 - Import cost treated as startup/load time; huge modules not dragged onto hot request cold-paths (ch **13**).
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Back to Security](../README.md) · [Gate chain](../4_Security_Gate_Chain.md)
 
----
-
 ## 1. Concepts
 
 **OWASP ZAP** (Zed Attack Proxy) is a **DAST** tool: it probes a **running** application (preview/staging) for common web vulnerabilities.
@@ -16,8 +14,6 @@ Kickoff primary DAST example with [SonarQube](../SonarQube/README.md) for SAST/q
 
 **Confirm:** Which environments should ZAP usually target?
 
----
-
 ## 2. Advanced concepts
 
 | Mode | Use |
@@ -29,8 +25,6 @@ Kickoff primary DAST example with [SonarQube](../SonarQube/README.md) for SAST/q
 
 Run after deploy to preview ([CiCd/5](../../CiCd/5_Verify_Rollback_And_Synthetic_Tests.md)); gate high findings before promote.
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -40,8 +34,6 @@ Run after deploy to preview ([CiCd/5](../../CiCd/5_Verify_Rollback_And_Synthetic
 | API-only service | OpenAPI import + auth token |
 
 **Staff checklist:** scoped URLs; dedicated test identity; rate limits; fail on agreed severities; store reports as CI artifacts.
-
----
 
 ## References
 

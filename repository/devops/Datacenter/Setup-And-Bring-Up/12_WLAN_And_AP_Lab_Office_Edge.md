@@ -2,8 +2,6 @@
 
 [← Previous](./11_Storage_Network_And_Array_Bring_Up.md) · [README](./README.md) · [Next: Petabyte thinking →](./13_Petabyte_Capacity_Thinking.md)
 
----
-
 ## Mental map
 
 ```text
@@ -24,8 +22,6 @@ Client device ──RF──► Access Point (PoE)
 
 **RF / 802.11 depth:** [Networks Advanced — Wireless](https://github.com/thisiskushal31/Networks-Deep-Dive/blob/main/Advanced/5_Wireless_Special_Networks.md).
 
----
-
 ## 1. Concepts
 
 Colo **white space** rarely runs guest Wi‑Fi by design. You still need AP literacy for **NOC rooms, offices, labs, edge sites, and temporary build-outs**.
@@ -42,8 +38,6 @@ Colo **white space** rarely runs guest Wi‑Fi by design. You still need AP lite
 
 **Confirm:** What VLAN should **never** be bridged to an open SSID?
 
----
-
 ## 2. Advanced concepts
 
 ### Operator experience
@@ -58,8 +52,6 @@ PoE budget kills APs when switches are undersized. Separate staff vs guest SSIDs
 | DHCP from wrong scope | Captive confusion |
 | Overlapping channels | Slow “Wi‑Fi broken” tickets |
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -69,8 +61,6 @@ PoE budget kills APs when switches are undersized. Separate staff vs guest SSIDs
 | Event-style NOC | Planned RF + wired backhaul + SOC VLAN |
 
 **Staff checklist:** PoE budget; SSID→VLAN matrix; no OOB on Wi‑Fi; RF survey for dense rooms; tear-down for temp SSIDs.
-
----
 
 ## References
 

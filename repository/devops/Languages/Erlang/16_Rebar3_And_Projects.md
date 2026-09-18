@@ -14,8 +14,6 @@
 
 **Why this matters.** Rebar3 is how you go from source to a runnable, deployable artifact. Understanding releases and config is essential for DevOps: you deploy the release, set environment variables or config for secrets and endpoints, and start the node with the right cookie and name for distribution.
 
----
-
 ## Further reading
 
 - [Rebar3](https://rebar3.org/)

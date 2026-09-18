@@ -18,8 +18,6 @@ Running Fortran in production or on HPC involves **build reproducibility**, **de
 
 **Why this matters.** Fortran powers critical scientific and HPC workloads. Build reproducibility and supply chain integrity ensure that what you run is what you expect. Data handling and access control protect inputs and results. Applying these practices helps you operate Fortran-based systems reliably and securely in research and production.
 
----
-
 ## Further reading
 
 - [Fortran Best Practices (fortran-lang.org)](https://fortran-lang.org/learn/best_practices/)

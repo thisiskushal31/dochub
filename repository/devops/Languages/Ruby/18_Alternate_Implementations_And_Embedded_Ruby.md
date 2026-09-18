@@ -6,8 +6,6 @@
 
 Ruby implementations beyond MRI, JRuby, and TruffleRuby: **mruby**, **Opal**, historical runtimes, and how to **choose** an engine for embedded, browser, or legacy contexts. The goal is engineering literacy—not cataloging every extinct interpreter.
 
----
-
 ## 1. Concepts
 
 ### 1. Why multiple Rubies exist
@@ -104,8 +102,6 @@ For each gem:
 
 Run **`bundle install`** on target engine in CI.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Language version targets
@@ -139,8 +135,6 @@ Many incidents start with “it’s a Ruby service” when the binary is actuall
 - **engine** and **language subset** if not MRI,
 - **who ships security patches** (you, JVM vendor, appliance vendor).
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -166,8 +160,6 @@ Many incidents start with “it’s a Ruby service” when the binary is actuall
 - **Appliances** with embedded mruby tracked in CMDB with vendor patch channel and EOL date.
 - **Opal** bundles scanned for known vulnerable npm peers; CSP enforced on pages shipping Opal output.
 - Alternate-engine experiments have **written rollback** to MRI and measurable SLO gates.
-
----
 
 ## References
 

@@ -8,8 +8,6 @@ Enough **Tk** literacy to recognize a GUI script, know why **`wish`** differs fr
 
 If chapter **11** taught the event loop for sockets and timers, this chapter shows the same loop powering buttons and windows. If you need pixel-perfect UI, open the official Tk command pages after you finish here.
 
----
-
 ## 1. Concepts
 
 ### 1. What Tk is
@@ -123,8 +121,6 @@ Out of scope for this chapter (open official TkCmd pages when needed):
 
 You are done with this chapter when you can open a `wish` script and say: *these are the widgets, this manager lays them out, these callbacks run on the event loop, and this change does or does not require a display.*
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Tcl 9 / Tk 9 versus brownfield 8.6
@@ -188,8 +184,6 @@ When the tool leaves your home directory:
 - Separate pure-Tcl packages from the UI script so headless tests can `package require` logic alone.
 - State whether the tool needs a real display or can run withdrawn for smoke tests.
 
----
-
 ## 3. Applications and use cases
 
 ### Application engineering
@@ -231,8 +225,6 @@ When the tool leaves your home directory:
 
 That seven-step pass is enough for most staff reviews without becoming a Tk designer.
 
----
-
 ## Staff-level review checklist
 
 - Change is intentional Tk work—not “drive-by” GUI added to a headless service.
@@ -245,8 +237,6 @@ That seven-step pass is enough for most staff reviews without becoming a Tk desi
 - CI/runtime display requirements documented when GUI is mandatory.
 - Logic under widgets is testable without opening a window where practical.
 - No expectation that this PR teaches full Tk layout craft—links to official TkCmd if reviewers need depth.
-
----
 
 ## References
 

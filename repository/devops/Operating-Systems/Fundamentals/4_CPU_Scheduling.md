@@ -4,8 +4,6 @@
 
 This topic covers **process schedulers**, **CPU scheduling**, **preemptive and non-preemptive scheduling**, **dispatcher vs scheduler**, **starvation and aging**, and scheduling algorithms — **OS-agnostic** (no platform-specific commands).
 
----
-
 ## 1. Process Schedulers and CPU Scheduling
 
 ### Why scheduling?
@@ -17,8 +15,6 @@ With one or a few CPUs and many ready processes, the OS must repeatedly decide:
 - **How** to actually switch the CPU to the chosen process (**dispatching** — the mechanism, i.e. context switch).
 
 The **scheduler** implements the policy (e.g. “run the one with highest priority,” “run each for one time slice in turn”). The **dispatcher** is the code that saves the current process’s context and loads the next one. Both are part of the kernel.
-
----
 
 ## 2. Dispatcher vs Scheduler
 
@@ -77,8 +73,6 @@ Flow of a job through the three levels (conceptual):
 
 *Image: [CPU Scheduling in Operating Systems](https://www.geeksforgeeks.org/operating-systems/cpu-scheduling-in-operating-systems/).*
 
----
-
 ## 3. Preemptive and Non-Preemptive Scheduling
 
 | Type | When can the CPU be taken away from the running process? |
@@ -87,8 +81,6 @@ Flow of a job through the three levels (conceptual):
 | **Preemptive** | The kernel can **take** the CPU away (e.g. on a timer interrupt). The process is moved to Ready; the scheduler picks another. So a process can be stopped in the middle of execution. |
 
 Most general-purpose OSs use **preemptive** scheduling so that one process cannot monopolize the CPU. Real-time systems may use either, depending on the policy (e.g. non-preemptive for simplicity, or preemptive with priority inheritance to avoid priority inversion).
-
----
 
 ## 4. Scheduling criteria (what we optimize for)
 
@@ -102,8 +94,6 @@ Common metrics:
 - **Predictability / deadlines** — In real-time systems, meeting deadlines.
 
 Different algorithms optimize different metrics. For example: FCFS minimizes context switches but can hurt response time; Round Robin improves response time but may increase turnaround; SJF minimizes average waiting time but can starve long jobs.
-
----
 
 ## 5. Scheduling algorithms (theory)
 
@@ -146,14 +136,10 @@ We assume a **ready queue** of processes (or threads) that are ready to run. “
 
 Real OSs use variants of priority + time-slicing (Round Robin within priority) and often multilevel feedback.
 
----
-
 ## 6. Starvation and Aging
 
 - **Starvation:** A process never (or rarely) gets the CPU because the scheduling policy always prefers others (e.g. in pure priority scheduling, low-priority jobs never run if higher-priority ones are always present).
 - **Aging:** Increase the priority (or effective priority) of processes that have been waiting a long time, so that eventually every process gets a chance. This is a common way to prevent starvation in priority-based systems.
-
----
 
 ## Summary
 
@@ -164,8 +150,6 @@ Real OSs use variants of priority + time-slicing (Round Robin within priority) a
 - **Starvation** = a process never runs; **aging** = increase priority over wait time to prevent it.
 
 This is **operating system basics**. How a particular OS implements the scheduler (e.g. CFS in Linux, the Windows scheduler) is covered in the [Linux](../Linux/README.md) and [Windows](../Windows/README.md) sections.
-
----
 
 ## Further reading
 

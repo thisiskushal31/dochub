@@ -4,188 +4,188 @@
     "path": "01_What_Is_GitLab.md",
     "type": "file",
     "sha": "",
-    "size": 3125
+    "size": 3105
   },
   {
     "name": "02_Groups_Projects_And_Namespaces.md",
     "path": "02_Groups_Projects_And_Namespaces.md",
     "type": "file",
     "sha": "",
-    "size": 2255
+    "size": 2235
   },
   {
     "name": "03_SCM_Merge_Requests_And_Code_Review.md",
     "path": "03_SCM_Merge_Requests_And_Code_Review.md",
     "type": "file",
     "sha": "",
-    "size": 2283
+    "size": 2263
   },
   {
     "name": "04_Planning_And_Work_Items_Literacy.md",
     "path": "04_Planning_And_Work_Items_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 1667
+    "size": 1647
   },
   {
     "name": "05_CI_Core_Model_Pipelines_Jobs_Stages.md",
     "path": "05_CI_Core_Model_Pipelines_Jobs_Stages.md",
     "type": "file",
     "sha": "",
-    "size": 2494
+    "size": 2474
   },
   {
     "name": "06_First_Pipeline_And_CI_UI.md",
     "path": "06_First_Pipeline_And_CI_UI.md",
     "type": "file",
     "sha": "",
-    "size": 2177
+    "size": 2157
   },
   {
     "name": "07_YAML_Mental_Model_And_Keywords.md",
     "path": "07_YAML_Mental_Model_And_Keywords.md",
     "type": "file",
     "sha": "",
-    "size": 3137
+    "size": 3117
   },
   {
     "name": "08_Rules_Workflow_And_Pipeline_Types.md",
     "path": "08_Rules_Workflow_And_Pipeline_Types.md",
     "type": "file",
     "sha": "",
-    "size": 2431
+    "size": 2411
   },
   {
     "name": "09_Needs_DAG_And_Downstream_Pipelines.md",
     "path": "09_Needs_DAG_And_Downstream_Pipelines.md",
     "type": "file",
     "sha": "",
-    "size": 2165
+    "size": 2145
   },
   {
     "name": "10_Runners_And_Executors.md",
     "path": "10_Runners_And_Executors.md",
     "type": "file",
     "sha": "",
-    "size": 2562
+    "size": 2542
   },
   {
     "name": "11_Images_Services_And_Docker_Build.md",
     "path": "11_Images_Services_And_Docker_Build.md",
     "type": "file",
     "sha": "",
-    "size": 2430
+    "size": 2410
   },
   {
     "name": "12_Caching_Artifacts_And_Job_Tokens.md",
     "path": "12_Caching_Artifacts_And_Job_Tokens.md",
     "type": "file",
     "sha": "",
-    "size": 2002
+    "size": 1982
   },
   {
     "name": "13_Includes_Components_And_CI_Catalog.md",
     "path": "13_Includes_Components_And_CI_Catalog.md",
     "type": "file",
     "sha": "",
-    "size": 1705
+    "size": 1685
   },
   {
     "name": "14_Variables_Secrets_And_OIDC.md",
     "path": "14_Variables_Secrets_And_OIDC.md",
     "type": "file",
     "sha": "",
-    "size": 2288
+    "size": 2268
   },
   {
     "name": "15_Environments_Deployments_And_Release.md",
     "path": "15_Environments_Deployments_And_Release.md",
     "type": "file",
     "sha": "",
-    "size": 2298
+    "size": 2278
   },
   {
     "name": "16_Packages_Container_Registry_And_Dependency_Proxy.md",
     "path": "16_Packages_Container_Registry_And_Dependency_Proxy.md",
     "type": "file",
     "sha": "",
-    "size": 1716
+    "size": 1696
   },
   {
     "name": "17_Security_Scanning_And_Compliance_Literacy.md",
     "path": "17_Security_Scanning_And_Compliance_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 2214
+    "size": 2194
   },
   {
     "name": "18_Agent_Auto_DevOps_And_Infrastructure.md",
     "path": "18_Agent_Auto_DevOps_And_Infrastructure.md",
     "type": "file",
     "sha": "",
-    "size": 1945
+    "size": 1925
   },
   {
     "name": "19_Duo_And_AI_Literacy.md",
     "path": "19_Duo_And_AI_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 1569
+    "size": 1549
   },
   {
     "name": "20_Self_Managed_Admin_Literacy.md",
     "path": "20_Self_Managed_Admin_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 1760
+    "size": 1740
   },
   {
     "name": "21_API_Webhooks_And_Integrations.md",
     "path": "21_API_Webhooks_And_Integrations.md",
     "type": "file",
     "sha": "",
-    "size": 1646
+    "size": 1626
   },
   {
     "name": "22_Worked_Example_CI_Build_And_Promote.md",
     "path": "22_Worked_Example_CI_Build_And_Promote.md",
     "type": "file",
     "sha": "",
-    "size": 1988
+    "size": 1968
   },
   {
     "name": "23_Best_Practices_And_When_Not_GitLab.md",
     "path": "23_Best_Practices_And_When_Not_GitLab.md",
     "type": "file",
     "sha": "",
-    "size": 1756
+    "size": 1736
   },
   {
     "name": "24_Feature_And_Offering_Coverage_Map.md",
     "path": "24_Feature_And_Offering_Coverage_Map.md",
     "type": "file",
     "sha": "",
-    "size": 7313
+    "size": 7293
   },
   {
     "name": "25_YAML_Catalog_And_Troubleshooting.md",
     "path": "25_YAML_Catalog_And_Troubleshooting.md",
     "type": "file",
     "sha": "",
-    "size": 2355
+    "size": 2335
   },
   {
     "name": "26_Migrate_Plans_And_Extras.md",
     "path": "26_Migrate_Plans_And_Extras.md",
     "type": "file",
     "sha": "",
-    "size": 2408
+    "size": 2388
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 5815
+    "size": 5810
   }
 ]

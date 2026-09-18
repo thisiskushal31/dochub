@@ -4,70 +4,70 @@
     "path": "1_GPU_Trays_And_Power.md",
     "type": "file",
     "sha": "",
-    "size": 3679
+    "size": 3659
   },
   {
     "name": "10_Accelerator_Failure_And_Spares.md",
     "path": "10_Accelerator_Failure_And_Spares.md",
     "type": "file",
     "sha": "",
-    "size": 2941
+    "size": 2921
   },
   {
     "name": "2_GPU_Interconnect_Ideas.md",
     "path": "2_GPU_Interconnect_Ideas.md",
     "type": "file",
     "sha": "",
-    "size": 3081
+    "size": 3061
   },
   {
     "name": "3_DPU_And_SmartNIC.md",
     "path": "3_DPU_And_SmartNIC.md",
     "type": "file",
     "sha": "",
-    "size": 2742
+    "size": 2722
   },
   {
     "name": "4_FPGA_And_IPU.md",
     "path": "4_FPGA_And_IPU.md",
     "type": "file",
     "sha": "",
-    "size": 2699
+    "size": 2679
   },
   {
     "name": "5_HBM_And_Accelerator_Memory.md",
     "path": "5_HBM_And_Accelerator_Memory.md",
     "type": "file",
     "sha": "",
-    "size": 2777
+    "size": 2757
   },
   {
     "name": "6_Optics_DAC_AOC_Transceivers.md",
     "path": "6_Optics_DAC_AOC_Transceivers.md",
     "type": "file",
     "sha": "",
-    "size": 2631
+    "size": 2611
   },
   {
     "name": "7_PTP_Grandmaster_And_Time.md",
     "path": "7_PTP_Grandmaster_And_Time.md",
     "type": "file",
     "sha": "",
-    "size": 2716
+    "size": 2696
   },
   {
     "name": "8_Serial_Console_Servers.md",
     "path": "8_Serial_Console_Servers.md",
     "type": "file",
     "sha": "",
-    "size": 2452
+    "size": 2432
   },
   {
     "name": "9_Environmental_Sensors_And_PDU_Meters.md",
     "path": "9_Environmental_Sensors_And_PDU_Meters.md",
     "type": "file",
     "sha": "",
-    "size": 2696
+    "size": 2676
   },
   {
     "name": "README.md",

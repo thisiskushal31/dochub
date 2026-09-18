@@ -12,8 +12,6 @@ let d = Domain.spawn (fun () -> 1 + 1) in
 Domain.join d
 ```
 
----
-
 ## 1. Domains (shared-memory parallelism)
 
 Domains are OS threads that execute OCaml code on multiple CPU cores in parallel. Any **shared mutable state** must use explicit synchronization: mutexes, atomics, or message passing—the same rules as other multithreaded native languages.
@@ -38,8 +36,6 @@ let () =
   Domain.join d
 ```
 
----
-
 ## 2. Effect handlers (overview)
 
 Effect handlers add structured, user-defined control effects (e.g. suspending computations, custom async). They change how **stacking** and **debugging** behave compared to plain functions. Library support and best practices vary by compiler version; treat effect-heavy code as **advanced** and pin toolchains until your team agrees on patterns.
@@ -48,8 +44,6 @@ Effect handlers add structured, user-defined control effects (e.g. suspending co
 (* Effect handlers: install with [match … with effect …] and resume continuations.
    Names and modules differ by OCaml version — follow the manual for your compiler pin. *)
 ```
-
----
 
 ## 3. Cooperative I/O: Lwt and Async
 
@@ -68,8 +62,6 @@ Pick **one** ecosystem per service. Mixing Lwt and Async without a bridge create
    the scheduler thread on synchronous OS calls without a thread pool. *)
 ```
 
----
-
 ## 4. FFI and threads
 
 C libraries may spawn threads or take internal locks. You must know whether callbacks **into** OCaml are allowed from those threads and whether the OCaml runtime lock rules are satisfied. Violations produce deadlocks or heap corruption—document the contract next to the binding.
@@ -79,8 +71,6 @@ C libraries may spawn threads or take internal locks. You must know whether call
    binding explicitly allows it — see the FFI chapter. */
 void worker(void (*cb)(void)) { /* ... */ }
 ```
-
----
 
 ## 5. Concurrency architecture patterns
 
@@ -100,8 +90,6 @@ let sum_pair (a, b) =
   Domain.join da + rb
 ```
 
----
-
 ## 6. Detecting data races (Thread Sanitizer and discipline)
 
 Parallel **domains** can introduce **data races** on shared **mutable** fields that looked “fine” on a single core. A dedicated **compiler switch** with **Thread Sanitizer** enabled can flag unsynchronized reads and writes with **stack traces** for both threads—useful in CI for regression tests of parallel code.
@@ -114,8 +102,6 @@ The **manual** parallel programming chapter matches the compiler version you pin
 # Example: TSan / sanitizer builds are a separate compiler configuration — not drop-in.
 # opam switch create . --packages=ocaml-variants.5.x.0+options,...
 ```
-
----
 
 ## 7. Parallel programming patterns (fork-join and pools)
 
@@ -143,8 +129,6 @@ let () =
   Domain.join d
 ```
 
----
-
 ## Advanced use cases and implementation
 
 **Observability:** Carry correlation IDs through async chains so logs match upstream requests or job IDs.
@@ -156,8 +140,6 @@ let () =
 let log_ctx req_id msg =
   Printf.printf "[%s] %s\n%!" req_id msg
 ```
-
----
 
 ## References
 

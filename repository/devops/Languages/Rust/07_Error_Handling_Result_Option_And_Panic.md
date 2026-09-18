@@ -6,8 +6,6 @@
 
 Rust’s primary model for **recoverable** failure (`Result`, `Option`), the **`?` operator**, converting errors with **`From`/`Into`**, and when **`panic!`** (and `unwrap`/`expect`) is appropriate versus catastrophic. Library boundaries, binaries, abort vs unwind at a high level, and staff discipline so expected errors never become panics in reusable crates.
 
----
-
 ## 1. Concepts
 
 ### 1. Two channels: recoverable vs unrecoverable
@@ -79,8 +77,6 @@ They are **not** acceptable as the default path for expected I/O, parse, or netw
 | Library public API for expected failures | **Never** panic as the contract |
 
 Document panic conditions if a function panics on misuse (for example slicing with a bad range)—same expectation as “panics on overflow in debug” for some arithmetic APIs.
-
----
 
 ## 2. Advanced concepts
 
@@ -206,8 +202,6 @@ Design `E` for both operators and programs:
 
 Staff practice: **library** error enums expose **matchable variants** (or stable codes) so callers can branch; attach **Display** text and optional context for logs. **Application** layers may wrap with extra context strings for humans while preserving a machine-readable root (`source` or an inner typed error). Avoid inventing a new string format as the only API (“parse our English message”); avoid opaque numeric codes with no documented mapping. Secrets and internal paths belong in logs under redaction policy—not in client-facing `Display` (see Security below).
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -254,8 +248,6 @@ Staff practice: **library** error enums expose **matchable variants** (or stable
 - `RUST_BACKTRACE` / debuginfo expectations documented for on-call triage of panics.
 - Errors carry matchable kinds/codes for machines and contextual `Display`/`source` for humans—neither alone.
 - User-facing error strings reviewed for information disclosure.
-
----
 
 ## References
 

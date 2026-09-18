@@ -6,8 +6,6 @@ To run and compile Crystal programs you need the **Crystal compiler**. Crystal p
 
 **Why install the compiler?** Crystal is **compiled**, not interpreted. The compiler (`crystal`) parses source, type-checks it, and generates native code. Commands like `crystal run` and `crystal build` invoke the compiler; without it you cannot build or run Crystal code.
 
----
-
 ## Installing the compiler
 
 Install the Crystal compiler using the recommended method for your platform:
@@ -21,8 +19,6 @@ After installation, verify:
 ```bash
 crystal --version
 ```
-
----
 
 ## Running code
 
@@ -41,13 +37,9 @@ crystal build app.cr --release
 
 The `--release` flag enables optimizations; omit it for faster compile times during development.
 
----
-
 ## Project layout
 
 A typical project has a `src/` directory for source files and a `shard.yml` for dependencies (Shards). The main file is often `src/<project_name>.cr` or `src/main.cr`. Use `crystal init app myapp` to scaffold an application or `crystal init lib mylib` for a library.
-
----
 
 ## Further reading
 

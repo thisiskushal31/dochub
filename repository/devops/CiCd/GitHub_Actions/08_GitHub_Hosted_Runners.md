@@ -2,8 +2,6 @@
 
 [← Previous](./07_Contexts_Expressions_And_Variables.md) · [README](./README.md) · [Next: Self-hosted →](./09_Self_Hosted_Runners_And_Groups.md)
 
----
-
 ## 1. Concepts
 
 **GitHub-hosted runners** are VMs GitHub provisions per job (`runs-on: ubuntu-latest`, `windows-latest`, `macos-latest`, …). Default low-ops path: ephemeral, patched by GitHub, billed by minutes (plan limits apply).
@@ -27,8 +25,6 @@ jobs:
 ```
 
 Steps run inside the container on the hosted VM — useful for pinned toolchains. Pair with `services:` for Postgres/Redis ([24](./24_Migrate_Packages_And_Extras.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -56,8 +52,6 @@ You can install extra software in the job, but heavy golden images push teams to
 
 Public pulls on GitHub-hosted runners are treated specially vs self-hosted (self-hosted always counts against Docker Hub rate limits). Private Hub pulls still rate-limit.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Choice |
@@ -68,8 +62,6 @@ Public pulls on GitHub-hosted runners are treated specially vs self-hosted (self
 | Private package registry | Private networking pattern or self-hosted |
 
 **Good:** smallest stable runner. **Bad:** macOS for jobs that do not need Apple toolchains.
-
----
 
 ## References
 

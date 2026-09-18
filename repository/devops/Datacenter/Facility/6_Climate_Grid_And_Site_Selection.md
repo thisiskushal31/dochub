@@ -2,8 +2,6 @@
 
 [← Previous](./5_Campus_Vs_Single_Building.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 Site selection jobs (global):
@@ -20,8 +18,6 @@ Site selection jobs (global):
 
 Qualify scorecard: [Provider-Use/1](../Provider-Use/1_Qualify_A_Site.md). Build lifecycle: [Markets/2](../Markets-And-Operators/2_How_Operators_Build_And_Run_Halls.md).
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes
@@ -35,8 +31,6 @@ Qualify scorecard: [Provider-Use/1](../Provider-Use/1_Qualify_A_Site.md). Build 
 ### Climate variants
 
 Desert, tropics, Nordics—same Mechanical jobs, different stress ([Mechanical/3](../Mechanical/3_Chillers_Towers_And_Free_Cooling.md)).
-
----
 
 ## 3. Applications and use cases
 
@@ -53,8 +47,6 @@ Desert, tropics, Nordics—same Mechanical jobs, different stress ([Mechanical/3
 - Never pick only on real-estate price  
 
 **Good:** multi-factor selection. **Bad:** cheap land, no megawatts.
-
----
 
 ## References
 

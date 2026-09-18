@@ -6,8 +6,6 @@ People say “CI/CD” as one word. Beginners need precise meanings — wrong de
 
 Industry sources (Atlassian, Google Cloud’s DevOps guidance, Foundation curricula) draw the same distinctions below.
 
----
-
 ## Definitions
 
 | Term | Meaning | Typical evidence |
@@ -24,23 +22,17 @@ Deployment      = actually release every good change automatically
 
 **You can practice Continuous Delivery without Continuous Deployment.** Many strong teams stop at Delivery (manual or scheduled prod approve) and that is still excellent DevOps. Atlassian and others note continuous *deployment* is optional and expensive in process maturity.
 
----
-
 ## Continuous testing
 
 Testing is not a phase after “dev complete.” **Continuous testing** means automated checks run throughout the stream: unit on commit, integration on merge, smoke/e2e on deploy, synthetics in prod.
 
 Shift-left: [2_Practices](./2_Practices_And_Workflows.md). Gate order: [Security/4](../Security/4_Security_Gate_Chain.md). Pipeline chapters: [CiCd/1](../CiCd/1_Pipelines_Build_Test_Deploy.md).
 
----
-
 ## Continuous delivery vs “we deploy on Fridays”
 
 If releases are rare because they are **risky**, you do not yet have Continuous Delivery — you have infrequent deployment. Fix: smaller batches ([11](./11_Value_Streams_And_Lean_Flow.md)), better tests, progressive delivery ([CiCd/3](../CiCd/3_Deployment_Strategies.md)), flags.
 
 If releases are rare because of **business choice** but any given change *could* ship safely today, you may still have Continuous Delivery capability.
-
----
 
 ## Related “continuous” practices (map)
 
@@ -51,8 +43,6 @@ If releases are rare because of **business choice** but any given change *could*
 | Monitoring / observability | [Observability/](../Observability/README.md) |
 | Security in the pipeline (DevSecOps delivery) | [Security/](../Security/README.md); full AppSec program → [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) |
 | Feedback / learning | [10 Three Ways](./10_Core_Principles_Three_Ways_CALMS.md) |
-
----
 
 ## Beginner path
 

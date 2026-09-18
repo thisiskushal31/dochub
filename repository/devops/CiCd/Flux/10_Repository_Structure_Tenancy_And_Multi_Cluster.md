@@ -2,8 +2,6 @@
 
 [← Previous](./09_HelmRelease_And_Helm_Delivery.md) · [README](./README.md) · [Next: Secrets →](./11_Secrets_SOPS_And_Sealed_Secrets.md)
 
----
-
 ## 1. Concepts
 
 Controllers are the easy part. **Where files live** decides who can break production.
@@ -29,8 +27,6 @@ Separate production Git access and smaller reviews. Promotion can be slower for 
 **Platform admins** install Flux, CRDs, shared operators, tenant namespaces, and RBAC.  
 **App teams** own their Sources and Kustomizations/HelmReleases — under a ServiceAccount the platform gives them ([16](./16_Scale_Multitenancy_And_Platform_Config.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### Multi-cluster
@@ -53,8 +49,6 @@ Git cannot hide `production/` from someone who can clone the repo. Use separate 
 
 There is an official Karmada + Flux use-case if you already run that multi-cluster plane — details upstream.
 
----
-
 ## 3. Applications and use cases
 
 | Org shape | Sensible start |
@@ -64,8 +58,6 @@ There is an official Karmada + Flux use-case if you already run that multi-clust
 | Many product teams | Platform fleet + tenant repos + SA impersonation |
 
 **Good:** each cluster path lists only what that cluster should run. **Bad:** every cluster pointed at the same prod overlay by mistake.
-
----
 
 ## References
 

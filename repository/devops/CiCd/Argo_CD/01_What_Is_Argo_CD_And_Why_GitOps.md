@@ -2,8 +2,6 @@
 
 [← Argo CD](./README.md) · [Next: Core concepts →](./02_Core_Concepts_Applications_Sync_And_Health.md)
 
----
-
 ## 1. Concepts
 
 ### The delivery problem Argo CD addresses
@@ -55,8 +53,6 @@ Contrast with push CD: CI holds kubeconfig and applies after build. With Argo CD
 - **Multi-cluster from one control plane.** One Argo CD can manage many registered clusters.
 - **Rollback.** Sync an older revision; Git is the timeline.
 
----
-
 ## 2. Advanced concepts
 
 ### GitOps is a contract, not a product logo
@@ -83,8 +79,6 @@ Argo CD will happily sync whatever you point it at. Discipline is organizational
 
 Many orgs run Argo CD for Kubernetes apps while **Jenkins**, host SSH, or cloud VM pipelines still ship other estates ([19](../19_Delivery_Spectrum_Legacy_Through_Modern.md)). That is normal. Argo CD does not need to own everything on day one — it needs a clear boundary: *these namespaces/clusters are GitOps-managed*.
 
----
-
 ## 3. Applications and use cases
 
 | Role | How this chapter lands |
@@ -95,8 +89,6 @@ Many orgs run Argo CD for Kubernetes apps while **Jenkins**, host SSH, or cloud 
 | **SE learning delivery** | Pair with [CiCd/1](../1_Pipelines_Build_Test_Deploy.md) (loop) then these chapters (Kubernetes CD mechanism) |
 
 **When not to force Argo CD:** non-Kubernetes primary runtimes; teams that cannot keep desired state in Git; environments where a pull reconciler is forbidden by policy (rare — then document the push path explicitly).
-
----
 
 ## References
 

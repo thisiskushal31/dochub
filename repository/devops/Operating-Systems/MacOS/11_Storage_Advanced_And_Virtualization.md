@@ -4,8 +4,6 @@
 
 This topic covers **APFS snapshots** and **advanced storage** usage, and **virtualization** on macOS: **Hypervisor.framework** (low-level) and **Virtualization.framework** (high-level, Apple Silicon–friendly).
 
----
-
 ## APFS snapshots and advanced storage
 
 **Snapshots** — APFS supports **read-only snapshots** of a volume at a point in time. Used by **Time Machine** (local snapshots) and **tmutil**. List snapshots: **`tmutil listlocalsnapshots /`** (or **`diskutil apfs listSnapshots /`** on supported versions). Delete local snapshot: **`tmutil deletelocalsnapshots <date>`**. Snapshots share space with the volume (copy-on-write); deleting data may not free space until snapshots that reference it are removed.
@@ -15,8 +13,6 @@ This topic covers **APFS snapshots** and **advanced storage** usage, and **virtu
 **Encryption** — APFS supports **per-volume encryption**. **FileVault** encrypts the whole boot volume (or volume group). **`diskutil apfs list`** shows encryption status. **`diskutil apfs unlockVolume`** — Unlock an encrypted volume (e.g. external).
 
 **References:** [APFS (Apple)](https://developer.apple.com/documentation/foundation/file_system), [tmutil(8)], [diskutil(8)].
-
----
 
 ## Virtualization on macOS
 
@@ -45,14 +41,10 @@ macOS provides two frameworks for running **virtual machines**:
 
 **References:** [Virtualization framework (Apple)](https://developer.apple.com/documentation/virtualization), [Creating a Linux VM (Apple)](https://developer.apple.com/documentation/virtualization/creating_a_linux_virtual_machine).
 
----
-
 ## Summary
 
 - **APFS advanced:** **Snapshots** (tmutil, Time Machine), **resize/add volume** (diskutil), **encryption** (FileVault, per-volume).
 - **Virtualization:** **Hypervisor.framework** — low-level C API, **hv_vm_***, vCPUs as threads; **Virtualization.framework** — high-level VM and device emulation (Linux/macOS guests on Apple Silicon).
-
----
 
 ## Further reading
 

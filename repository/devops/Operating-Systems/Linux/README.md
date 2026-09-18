@@ -27,8 +27,6 @@
 | 16 | [Security from the OS view](./16_Security_OS_View.md) | MAC (SELinux, AppArmor), PAM, SSH hardening, auditd |
 | — | [**Distributions (flavors)**](./Distributions/README.md) | **Fedora, CentOS, RHEL, Ubuntu, Debian, Arch, openSUSE, Alpine** — package managers (dnf, apt, pacman, zypper, apk), distro-specific commands |
 
----
-
 ## Documentation and further reading
 
 Each topic file above includes a **Further reading** section with links to relevant articles. For official and in-depth Linux documentation, use the following.
@@ -50,8 +48,6 @@ Each topic file above includes a **Further reading** section with links to relev
 - [Alpine](https://wiki.alpinelinux.org/) — Alpine Linux wiki and documentation.
 
 **Distro-specific coverage in this handbook:** See [Distributions](./Distributions/README.md) for RHEL/CentOS/Fedora, Debian/Ubuntu, Arch, openSUSE/SUSE, and Alpine — with package managers, release models, and links to official docs.
-
----
 
 ## Adding topics
 

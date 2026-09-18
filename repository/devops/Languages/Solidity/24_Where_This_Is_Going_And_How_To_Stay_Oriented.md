@@ -8,8 +8,6 @@ The **compass** for this track: what **00–23** already make you fluent in, **b
 
 You came here for Solidity. You should leave able to **write, test, review, and ship** contracts on an EVM chain — and able to say, without panic, “that next topic lives *there*, and this track already gave me the machine model I need to learn it.”
 
----
-
 ## 1. Concepts
 
 ### 1. What “all-in-one” means here
@@ -66,8 +64,6 @@ Read it **after 23** (or skim after **01** so you know the bullseye). Revisit wh
 - you bump `solc`,
 - someone says “we’re moving to an L2” or “we need AA,”
 - a release note mentions experimental codegen / EOF / Core Solidity.
-
----
 
 ## 2. Advanced concepts — where the platform is moving
 
@@ -191,8 +187,6 @@ If the chain is EVM, Solidity (this track) or Vyper. If it is not EVM, do not fo
 
 Finishing **00–24** means you are fluent in the **contract layer** and you can **name the door** for everything above. That is intentional, not unfinished.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | How “direction” shows up |
@@ -205,8 +199,6 @@ Finishing **00–24** means you are fluent in the **contract layer** and you can
 
 Use §2.7 as the **directory** when a teammate names an adjacent topic: one short paragraph of meaning, then the path.
 
----
-
 ## 4. Staff-level review checklist
 
 - Team can state in one paragraph what this track **owns** vs **hands off**, and can point to §2.7 for each handoff.
@@ -217,8 +209,6 @@ Use §2.7 as the **directory** when a teammate names an adjacent topic: one shor
 - Someone is assigned to read **Solidity blog + chain fork notes** on bumps (not “whoever noticed Twitter”).
 - Chapter **23** checklist is signed for the system you actually ship; this chapter is the **compass**, not a substitute.
 - Adjacent work (UI, L2 ops, AA wallet, DeFi product) has a named owner and a link from §2.7 — not a pretend Solidity chapter.
-
----
 
 ## References
 

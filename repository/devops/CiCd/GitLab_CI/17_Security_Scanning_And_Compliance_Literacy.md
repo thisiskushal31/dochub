@@ -2,8 +2,6 @@
 
 [← Previous](./16_Packages_Container_Registry_And_Dependency_Proxy.md) · [README](./README.md) · [Next: Agent →](./18_Agent_Auto_DevOps_And_Infrastructure.md)
 
----
-
 ## 1. Concepts
 
 GitLab’s **application security** area is large (hundreds of doc pages). This chapter is **literacy**: what exists and how it hooks into CI — not every scanner field.
@@ -13,8 +11,6 @@ Common CI-integrated scanners (availability/tier varies): SAST, DAST, dependency
 **Compliance / security policies** can require scanners or approvals across projects (Premium/Ultimate features — confirm).
 
 Pipeline security also means: protected variables, job token allowlists, secure MR pipelines for public projects, and not leaking secrets in logs ([14](./14_Variables_Secrets_And_OIDC.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -29,8 +25,6 @@ Pipeline security also means: protected variables, job token allowlists, secure 
 
 **Upstream-only:** every scanner’s configuration encyclopedia and every CVE feed integration page.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -40,8 +34,6 @@ Pipeline security also means: protected variables, job token allowlists, secure 
 | Platform | Central components wrap scanners consistently |
 
 **Good:** scanners as merge inputs with owners for triage. **Bad:** Ultimate checklist enabled with nobody reading findings.
-
----
 
 ## References
 

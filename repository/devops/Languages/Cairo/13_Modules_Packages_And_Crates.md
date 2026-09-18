@@ -4,8 +4,6 @@
 
 A **crate** is the unit of compilation; the crate root is **src/lib.cairo**, which forms the root module. A **package** is a directory with a **Scarb.toml** manifest and can contain one or more crates. **Modules** organize code inside a crate and control visibility: **mod** defines a module, **pub** makes items visible outside the module. This topic covers packages, crates, declaring modules, paths, and **use**.
 
----
-
 ## Packages and crates
 
 Create a package with **scarb new my_package**. The crate root is **src/lib.cairo**. The compiler starts there and builds the module tree. Scarb.toml defines the package name, version, edition, and dependencies.
@@ -20,8 +18,6 @@ my_package/
 └── src
     └── lib.cairo
 ```
-
----
 
 ## Declaring modules
 
@@ -50,8 +46,6 @@ pub mod vegetables;
 pub struct Asparagus {}
 ```
 
----
-
 ## Paths for referring to an item in the module tree
 
 A **path** identifies an item (function, struct, enum, constant, etc.) in the module tree. Paths can be absolute or relative.
@@ -74,8 +68,6 @@ fn main() {
 }
 ```
 
----
-
 ## Bringing paths into scope with the use keyword
 
 **use** brings a path into the current scope so you can refer to the item by a short name instead of the full path. You can **use** functions, structs, enums, traits, and submodules. **pub use** re-exports the item so callers of your module can use the short path too.
@@ -92,8 +84,6 @@ fn main() {
 
 Nested paths and globs (e.g. **use crate::garden::vegetables::***) let you bring multiple items from the same module into scope in one line.
 
----
-
 ## Separating modules into different files
 
 Modules can be declared **inline** (with **mod name { ... }**) or in a **separate file**. When you write **mod garden;**, the compiler looks for **src/garden.cairo**. Submodules of **garden** are declared inside **garden.cairo** (e.g. **mod vegetables;**) and the compiler looks for **src/garden/vegetables.cairo**. The directory structure mirrors the module tree.
@@ -109,8 +99,6 @@ my_package/
 ```
 
 Keeping one module per file (or per directory for a module and its children) keeps the codebase navigable. The crate root **lib.cairo** stays small and only declares top-level modules; implementation lives in the corresponding files.
-
----
 
 ## Further reading
 

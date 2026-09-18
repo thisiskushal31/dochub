@@ -2,8 +2,6 @@
 
 Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-purpose, query/config (HCL, JSON, YAML), niche/security (Assembly, Nim, VBA, R, Erlang, Zig, Delphi, COBOL, OCaml, F#, Ada, Julia, Dart, D, Haskell, Clojure, Crystal, VB.NET, Tcl, Fortran, Objective-C), **Web3** (Solidity, Vyper, Move, Cairo), and **LaTeX** for PDF generation. This section gives enough syntax, tooling, and patterns so you can read and write scripts, automation, and tooling; for deep language reference, use official docs or a dedicated language repo. **Shell** has a full cross-OS scripting track under [Languages/Shell](./Shell/README.md) (Bash/POSIX/zsh, PowerShell, cmd); Operating-Systems chapters keep OS-context companions. **Solidity** has a full EVM-contract track under [Languages/Solidity](./Solidity/README.md) (0.8.x language, Foundry/Hardhat, security review, delivery). **HCL** has a deep-dive in [Languages/HCL](./HCL/README.md) (the language); Terraform use cases (providers, state, modules, pipelines) are in [IAC](../IAC/README.md) and [Terraform](../IAC/Terraform/README.md). **Database query languages** (SQL, PromQL, Cypher, etc.) are covered in [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) alongside each engine — see [Database query and config languages](#database-query-and-config-languages) below.
 
----
-
 ## Why these languages (DevOps and security)
 
 | Language   | DevOps relevance |
@@ -56,8 +54,6 @@ Programming languages used in DevOps, **cybersecurity**, and **Web3**: general-p
 | **JSON**    | Config and APIs; used across CiCd, IAC, Cloud-Native, JavaScript; this folder signposts. |
 | **YAML**    | Config/serialization format deep-dive (syntax, types, anchors, 1.2 vs 1.1, tooling, security); K8s/CI/Ansible hosts in Cloud-Native, CiCd, IAC. |
 
----
-
 ## Content format (all languages)
 
 For **every concept** in every language section we use the same pattern so readers are not confused:
@@ -66,8 +62,6 @@ For **every concept** in every language section we use the same pattern so reade
 2. **Then a code block or visual** — Show the idea with real code (or a diagram) so people see syntax, structure, and flow.
 
 Topics go from **very basic to advanced**. Where possible, include **case studies or hands-on examples**: goal → approach/thought process → implementation (code) → expected behavior. This format applies to Ada and to every other language added to this handbook.
-
----
 
 ## Structure
 
@@ -166,15 +160,11 @@ For **SQL**, **PromQL**, and all other database languages above, use [Databases-
 
 **Solidity**, **Vyper**, **Move**, and **Cairo** have dedicated folders above. **Rust** and **Go** are also used in Web3 (e.g. Solana, Substrate, Hyperledger); see their folders. **JavaScript/TypeScript** are used for dapp frontends and ethers.js/web3.js; see [JavaScript](./JavaScript/README.md) and [TypeScript](./TypeScript/README.md).
 
----
-
 ## How to use
 
 - Pick the language you need for a task (e.g. Python for automation, Go for reading K8s/Terraform code).
 - Use each folder’s README as the entry point; add numbered topic files as content grows.
 - Cross-reference: [Automation](../Automation/README.md) for scripting patterns; [Operating-Systems](../Operating-Systems/README.md) for shell and OS context.
-
----
 
 ## Adding topics
 

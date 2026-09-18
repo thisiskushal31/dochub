@@ -11,8 +11,6 @@ xcodebuild test -scheme MyApp -destination 'platform=iOS Simulator,name=iPhone 1
   -enableAddressSanitizer YES
 ```
 
----
-
 ## 1. XCTest skeleton
 
 ```objc
@@ -36,8 +34,6 @@ xcodebuild test -scheme MyApp -destination 'platform=iOS Simulator,name=iPhone 1
 
 Prefer **hermetic** unit tests—no live network unless you use controlled record/replay.
 
----
-
 ## 2. lldb snippets
 
 ```
@@ -47,8 +43,6 @@ Prefer **hermetic** unit tests—no live network unless you use controlled recor
 ```
 
 Never paste production secrets into **lldb** expressions in shared screen shares or logged transcripts.
-
----
 
 ## 3. Sanitizers (test / nightly builds)
 
@@ -66,8 +60,6 @@ xcodebuild -scheme MyApp -destination 'platform=macOS' \
   -enableThreadSanitizer YES build
 ```
 
----
-
 ## 4. Production logging
 
 ```objc
@@ -77,8 +69,6 @@ os_log(log, "request id=%{public}@", requestId);
 ```
 
 Correlate logs with crash reports using **build version** and **binary UUID**.
-
----
 
 ## Advanced use cases and implementation
 
@@ -93,8 +83,6 @@ Correlate logs with crash reports using **build version** and **binary UUID**.
 ```bash
 instruments -t "Time Profiler" -D trace.trace MyApp.app
 ```
-
----
 
 ## References
 

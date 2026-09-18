@@ -4,8 +4,6 @@
 
 Clojure is built on the **reader**: text is read into **data structures** (lists, vectors, maps, sets, etc.), which are then evaluated. The reader understands **literals** for numbers, strings, characters, booleans, keywords, symbols, and collections. Most types come from the JVM; Clojure adds **persistent** collection types and **keywords**.
 
----
-
 ## Numbers
 
 **Integers** are written in decimal. They can be arbitrarily large (BigInt when beyond Long range). **Longs** are the default; suffix with `N` for BigInt. **Floats** are doubles; use `M` for BigDecimal. **Ratios** are written as `22/7`.
@@ -17,8 +15,6 @@ Clojure is built on the **reader**: text is read into **data structures** (lists
 22/7
 ```
 
----
-
 ## Strings and characters
 
 **Strings** are in double quotes; they are Java strings. **Characters** are prefixed with `\`: `\a`, `\newline`, `\space`. Single quotes are not used for strings.
@@ -28,13 +24,9 @@ Clojure is built on the **reader**: text is read into **data structures** (lists
 \c
 ```
 
----
-
 ## Booleans and nil
 
 **Booleans** are `true` and `false`. **nil** represents absence of a value (like null) and is logical false in conditionals.
-
----
 
 ## Keywords and symbols
 
@@ -46,8 +38,6 @@ Clojure is built on the **reader**: text is read into **data structures** (lists
 ```
 
 **Symbols** in code are resolved (e.g. to a function). To use a symbol as a value, quote it: `'sym`.
-
----
 
 ## Collections (reader forms)
 
@@ -65,8 +55,6 @@ Clojure is built on the **reader**: text is read into **data structures** (lists
 {:a 1, :b 2}
 #{1 2 3}
 ```
-
----
 
 ## Further reading
 

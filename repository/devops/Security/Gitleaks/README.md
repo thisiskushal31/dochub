@@ -2,8 +2,6 @@
 
 [← Back to Security](../README.md) · [Gate chain](../4_Security_Gate_Chain.md)
 
----
-
 ## 1. Concepts
 
 **Gitleaks** scans git history and diffs for **secrets** (API keys, tokens, passwords) so they do not land in a remote repo.
@@ -20,8 +18,6 @@
 
 **Confirm:** Which gate number is secret scanning? What do you do *after* a true positive in history?
 
----
-
 ## 2. Advanced concepts
 
 | Concern | Practice |
@@ -32,8 +28,6 @@
 | Platform scanners | GitHub/GitLab secret scanning complements Gitleaks; overlap is fine |
 
 Pipeline map: [CiCd/15](../../CiCd/15_Pipeline_Security_And_Gates.md).
-
----
 
 ## 3. Applications
 
@@ -46,8 +40,6 @@ Pipeline map: [CiCd/15](../../CiCd/15_Pipeline_Security_And_Gates.md).
 **Staff checklist:** pin version; fail CI on findings; rotate on leak; don’t commit `.gitleaks.toml` allowlists without review.
 
 **Confirm:** Why pin the scanner version? **Disconfirm:** Redacting a log is **not** the same as rotating the credential.
-
----
 
 ## References
 

@@ -28,8 +28,6 @@ From another file: **let r = Arithmetic.add 5 9** or **open Arithmetic** then **
 
 **Why this matters.** Well-organized modules and namespaces make large codebases navigable and reduce coupling. For libraries consumed from C#, namespaces and module names become the .NET API surface. Top-level vs local modules and indentation rules affect where code is placed; **module rec** is needed for mutually referential code. In DevOps and tooling, scripts often use a few targeted **open** statements and one or two modules.
 
----
-
 ## Further reading
 
 - [Modules (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/modules)

@@ -94,8 +94,6 @@ module 0xCAFE::payments {
 
 The point is architectural: your module owns business rules; framework modules own platform primitives.
 
----
-
 ## Further reading
 
 - [Aptos Framework (GitHub)](https://github.com/aptos-labs/aptos-core/tree/main/aptos-move/framework)

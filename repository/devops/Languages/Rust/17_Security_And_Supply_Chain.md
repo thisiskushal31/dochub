@@ -6,8 +6,6 @@
 
 What **safe Rust** actually guarantees (and what it does not), how **crates.io** and **Cargo.lock** shape dependency trust, how teams should treat **updates**, **yanks**, and **advisory** awareness, and how to keep **secrets** and **build privileges** out of the blast radius. This chapter is for reviewers signing off on Rust binaries and libraries in production.
 
----
-
 ## 1. Concepts
 
 ### 1. Memory safety claims—and their limits
@@ -79,8 +77,6 @@ Do not embed API keys, private keys, or customer data in published crates, examp
 ### 8. Least privilege for builds
 
 Compile and test as a non-root CI user. Limit network egress during builds when your platform allows. Treat `build.rs` and proc-macros as **code execution at build time**. For high-assurance pipelines, consider vendoring (`cargo vendor`) and offline builds after a reviewed resolve.
-
----
 
 ## 2. Advanced concepts
 
@@ -163,8 +159,6 @@ Before adding a **new** direct dependency (extends §2.7 typosquatting checks):
 
 Land via PR with lockfile diff; require the same checklist for “tiny” utilities—they often pull surprising transitive graphs.
 
----
-
 ## 3. Applications and use cases + staff checklist
 
 ### Software engineering
@@ -200,8 +194,6 @@ Land via PR with lockfile diff; require the same checklist for “tiny” utilit
 - Optional cargo-vet/crev-class review policy, if any, is documented—not assumed from this handbook.
 - Git/path/`[patch]` exceptions are inventoried.
 - Yank/CVE response playbook exists (lockfile bump + redeploy).
-
----
 
 ## References
 

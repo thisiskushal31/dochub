@@ -8,8 +8,6 @@ Where Zig shows up in real work, what “done” looks like by role, how to talk
 
 **Lens:** what you see on the job → what Zig is for → where you’ll actually use it.
 
----
-
 ## 1. Concepts
 
 ### 1. Typical homes for Zig
@@ -63,8 +61,6 @@ zig build test       # gates merges
 | Touch C safely | Wrapper module + ownership docs |
 | Release consciously | Mode/target logged; Fast justified if used |
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Polyglot estates are normal
@@ -92,8 +88,6 @@ Zig evolves. Product teams pin (0.16.x here). Libraries may track newer. Align e
 | Team has no systems background and no training plan | Ramp will dominate benefits |
 | Ecosystem critical library only exists elsewhere | Call it via C ABI or use that language |
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Example of good Zig use |
@@ -106,8 +100,6 @@ Zig evolves. Product teams pin (0.16.x here). Libraries may track newer. Align e
 
 **Whole-engineering picture:** Zig succeeds when the team wants **C-shaped control** with modern tooling—and commits to pins, modes, and tests.
 
----
-
 ## 4. Staff-level review checklist
 
 - Use case matches systems strengths (not a random rewrite).
@@ -115,8 +107,6 @@ Zig evolves. Product teams pin (0.16.x here). Libraries may track newer. Align e
 - Adoption includes pin + mode + test policy from day one.
 - Exit criteria versus C/Rust are written if this is a pilot.
 - Ownership of `build.zig` and upgrades is assigned.
-
----
 
 ## References
 

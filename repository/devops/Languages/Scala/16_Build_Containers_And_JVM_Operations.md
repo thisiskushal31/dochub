@@ -6,8 +6,6 @@
 
 How to ship Scala systems as **operable JVM products**: **reproducible sbt CI**, **JDK choice in images**, **fat jar vs thin** packaging, **memory and GC flag literacy**, **health and metrics** for services, and **graceful shutdown**. Language fluency without delivery discipline produces jars that only work on the author’s laptop.
 
----
-
 ## 1. Concepts
 
 ### 1. Reproducible sbt CI
@@ -189,8 +187,6 @@ def shutdown(state: HealthState, closeClients: () => Unit): Unit =
   state.markDead()
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Native images and alternate runtimes
@@ -320,8 +316,6 @@ def onSigterm(ready: HealthState, consumer: Consumer[String, Array[Byte]]): Unit
   consumer.close()
 ```
 
----
-
 ## 3. Applications and use cases
 
 | Workload | Packaging / ops focus |
@@ -352,8 +346,6 @@ def onSigterm(ready: HealthState, consumer: Consumer[String, Array[Byte]]): Unit
 - Kafka consumers commit (as required) and `close` under SIGTERM within the grace period.
 - Heap dumps, JFR, and `jcmd` artifacts have a privacy, access, and retention policy.
 - Spark/Kafka deploy paths follow platform packaging rules—not only local `java -jar` habits.
-
----
 
 ## References
 

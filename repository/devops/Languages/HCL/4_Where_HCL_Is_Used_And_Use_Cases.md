@@ -47,8 +47,6 @@ Terraform-specific workflow (state, remote backends, modules, workspaces, multi-
 - **[IAC (Infrastructure as Code)](../../IAC/README.md)** — IAC concepts, patterns, and tool index.
 - **[Terraform](../../IAC/Terraform/README.md)** — Terraform workflow: providers, state, modules, workspaces, remote backends, and use in multi-cloud and pipelines.
 
----
-
 ## Further reading
 
 - [Terraform documentation](https://developer.hashicorp.com/terraform/docs)

@@ -2,8 +2,6 @@
 
 [← Previous](./19_Worked_Example_Build_And_Deploy.md) · [README](./README.md) · [Next: Coverage map →](./21_Feature_And_Configuration_Coverage_Map.md)
 
----
-
 ## 1. Concepts — management checklist
 
 - `.circleci/config.yml` in Git; pin orbs and images  
@@ -14,8 +12,6 @@
 - SSO/roles for enterprise; config policies when available  
 - Cloud vs Server choice explicit  
 
----
-
 ## 2. Advanced concepts — spectrum
 
 | Job | CircleCI angle | Elsewhere if needed |
@@ -24,8 +20,6 @@
 | K8s progressive | Deploy + release agent / Argo | [Argo_Rollouts/](../Argo_Rollouts/README.md) |
 | Agent-first hybrid | Runners or | [Buildkite/](../Buildkite/README.md) |
 | Classical Jenkins | Don’t force rewrite | [Jenkins/](../Jenkins/README.md) |
-
----
 
 ## 3. Applications and use cases — when not
 
@@ -36,8 +30,6 @@
 | Already standardized elsewhere | Don’t add a second CI without cause |
 
 Staff review: walk [21](./21_Feature_And_Configuration_Coverage_Map.md).
-
----
 
 ## References
 

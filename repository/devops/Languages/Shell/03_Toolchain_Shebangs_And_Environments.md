@@ -6,8 +6,6 @@
 
 How to **find** which shell will run your commands, how **shebang** lines select an interpreter, how **login / interactive / non-interactive** modes change startup files and `PATH`, and how **WSL**, **Git Bash**, and native Windows shells coexist. You leave knowing how to make a script’s interpreter explicit and how to debug “command not found” across OSes—before quoting and control-flow chapters deepen the language itself.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. Discovering the shell you have
@@ -142,8 +140,6 @@ cmd:
 cmd /c package.bat
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Shebang length and portable interpreters
@@ -216,8 +212,6 @@ file script.sh
 | One-off Windows | `pwsh -NoProfile -Command '…'` sparingly; prefer files in repos |
 | Call Linux from Windows | `wsl.exe -e bash -lc '…'` with explicit distro when needed |
 
----
-
 ## 3. Applications and use cases
 
 ### Repository conventions
@@ -289,8 +283,6 @@ Toolchain and OS defaults also appear in Operating-Systems material such as [`..
 - PowerShell execution policy is solved on agents, not left as “works on my laptop.”
 - A doctor/preflight script exists for interpreter discovery on contributor machines.
 - Absolute paths or explicit PATH exports are used in scheduled jobs.
-
----
 
 ## References
 

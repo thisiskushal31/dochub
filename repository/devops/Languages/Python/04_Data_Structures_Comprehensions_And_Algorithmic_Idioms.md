@@ -6,8 +6,6 @@
 
 **list**, **tuple**, **set**, **dict**, **deque** patterns, **list/dict/set** comprehensions and **generator expressions**, **del**, copying versus aliasing, **Big-O** intuition, and practical choices for services, ETL, and in-memory indexes.
 
----
-
 ## 1. Concepts
 
 ### 1. Lists
@@ -48,8 +46,6 @@ Nested comprehensions read inside-out; prefer **explicit loops** when readabilit
 
 Sequences compare **lexicographically**. **`<`** between incompatible types raises **TypeError** in Python 3.
 
----
-
 ## 2. Advanced concepts
 
 **Shallow vs deep copy:** **`copy.copy`** duplicates the container but aliases inner mutable objects; **`copy.deepcopy`** walks the graph (handles cycles, can be expensive). **Slicing** **`[:]`** on lists is a shallow copy.
@@ -57,8 +53,6 @@ Sequences compare **lexicographically**. **`<`** between incompatible types rais
 **Key stability:** mutating an object that is a **dict** key while it is in the dict is undefined behavior for hashing—avoid.
 
 **Memory:** **generator** pipelines chain without building huge intermediates; **materialize** only at boundaries (sorting, random access).
-
----
 
 ## 3. Applications and use cases
 
@@ -83,8 +77,6 @@ for x in items:
         seen[x] = None
 unique = list(seen.keys())
 ```
-
----
 
 ## References
 

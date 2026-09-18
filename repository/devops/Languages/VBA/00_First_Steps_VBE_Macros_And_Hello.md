@@ -20,8 +20,6 @@ Handbook default for new work: **Microsoft 365 Apps VBA on Windows**, with **`Op
 
 Today’s picture: *one host + one module + something that shows a dialog*. Fuzzy Trust Center settings here make every later chapter feel cursed.
 
----
-
 ## 1. Concepts
 
 ### 1. What you are about to start
@@ -141,8 +139,6 @@ Malware still arrives as “invoice” workbooks. Chapters **15** and **16** tea
 
 If you need to inspect a suspicious file later, use a disposable VM or org-approved sandbox—not your daily profile with macros set to “Enable all.”
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Discover Office version roughly
@@ -224,8 +220,6 @@ While stepping (**F8**):
 
 Immediate (`?`) answers one-shot questions. Locals/Watch answer “what is this state *while* I step?” Do not treat open debug windows as a test plan—use them to understand a failing path, then fix and recompile.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | First-steps habits in practice |
@@ -250,8 +244,6 @@ Immediate (`?`) answers one-shot questions. Locals/Watch answer “what is this 
 
 Stop here if anything fails—fix the doorway before chapter **02**.
 
----
-
 ## Staff-level review checklist
 
 - Developer tab available (or documented alternate path) on the target desktops.
@@ -266,8 +258,6 @@ Stop here if anything fails—fix the doorway before chapter **02**.
 - Immediate Window used for smoke checks without leaving debug prints in production paths.
 - Object Browser (`F2`) used to confirm host library members before inventing names.
 - Locals / Watch known as break-mode inspection tools—not left as the only “test” of LOB behavior.
-
----
 
 ## References
 

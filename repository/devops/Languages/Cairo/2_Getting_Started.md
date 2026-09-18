@@ -4,8 +4,6 @@
 
 This topic covers installing Cairo, creating a project with Scarb, and writing a minimal program that prints "Hello, world!". Scarb is Cairo’s build tool and package manager; it bundles the compiler and language server so you can compile and run Cairo code from the command line.
 
----
-
 ## Installation
 
 Cairo is installed via **starkup**, a command-line tool that manages Cairo and related tools. You need an internet connection for the download. Starkup installs the latest stable **Scarb**, which includes the Cairo compiler and language server. Scarb is also the package manager (similar in role to Cargo for Rust). It builds code (pure Cairo or Starknet contracts), fetches dependencies, and works with the VSCode Cairo extension for syntax highlighting and completion.
@@ -28,8 +26,6 @@ snforge --version
 **VSCode:** Install the Cairo extension from the marketplace and enable "Enable Language Server" and "Enable Scarb" in the extension settings.
 
 For help with Cairo or Starknet, you can use community resources such as the Starknet Discord server. Starknet also offers an AI agent trained on Cairo and Starknet documentation for answering questions.
-
----
 
 ## Creating a project
 
@@ -87,8 +83,6 @@ fn main() {
 }
 ```
 
----
-
 ## Building and running
 
 From the project directory:
@@ -99,8 +93,6 @@ scarb execute
 ```
 
 `scarb build` compiles the project. `scarb execute` runs the executable and prints `Hello, World!` to the terminal.
-
----
 
 ## Anatomy of the program
 
@@ -113,8 +105,6 @@ fn main() {
 ```
 
 The line `println!("Hello, World!");` prints the text. `println!` is a macro (the `!` indicates a macro, not a normal function). The string is passed as an argument. The line ends with a semicolon, which marks the end of the statement. Cairo style is to indent with four spaces.
-
----
 
 ## Further reading
 

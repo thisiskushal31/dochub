@@ -4,8 +4,6 @@
 
 Contracts (pre/postconditions, predicates, invariants) document and enforce expectations. Interfacing with C allows binding to existing code. Tagged types provide object-oriented programming with type extension and runtime polymorphism.
 
----
-
 ## Design by contract
 
 **Preconditions** and **postconditions** express requirements on inputs and outputs of subprograms. They are specified with aspect clauses: **with Pre =>** *condition*, **with Post =>** *condition*. The precondition is a promise from the caller to the callee; the postcondition is a promise from the callee to the caller. If a precondition fails when the subprogram is called (or a postcondition when it returns), **Assertion_Error** is raised (when assertions are enabled, e.g. **-gnata** in GNAT).
@@ -19,13 +17,9 @@ procedure DB_Entry (Name : String; Age : Natural)
 
 **Subtype predicates** restrict the set of values of a subtype with **with Dynamic_Predicate =>** *expression*. **Type invariants** (on private types) state a property that must hold for every object of the type after any operation. These are checked at specified points and support both documentation and static analysis (e.g. in SPARK).
 
----
-
 ## Interfacing with C
 
 Ada can call C subprograms and expose subprograms to C using the **Interfaces.C** package and **pragma Import**, **pragma Export**, and **Convention => C**. Types (e.g. **int**, **char**), pointers, and structs can be mapped. Generated bindings and manual mapping are both used in practice. This is essential for system and embedded code that uses C libraries or the OS API.
-
----
 
 ## Object-oriented programming — tagged types
 
@@ -45,8 +39,6 @@ end record;
 ```
 
 **Overriding** uses **overriding** in the subprogram declaration. **Abstract** subprograms and **abstract** types defer implementation to derived types. **Limited** and **private** extend to tagged types for encapsulation. Ada’s OOP is based on **nominal** typing (by type name) and is designed to work with the rest of the language (generics, contracts, tasking). You can write Ada without tagged types; use them when type extension and polymorphism are the right fit.
-
----
 
 ## Further reading
 

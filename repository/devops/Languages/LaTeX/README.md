@@ -8,8 +8,6 @@ LaTeX is a document preparation system (markup and typesetting), not a general-p
 
 **Why LaTeX in DevOps and engineering:** LaTeX is widely used for **PDF generation**: technical reports, documentation, threat assessments, compliance write-ups, and formal deliverables. When you need programmatic or templated PDFs—from CI, from scripts, or for security and audit reports—LaTeX is a common choice. Understanding `.tex` source and the compilation pipeline helps you read, maintain, and automate document builds.
 
----
-
 ## How to read this section
 
 Read in **number order** for a single path: **basics first**, then **structure and formatting**, then **advanced and automation**.
@@ -19,8 +17,6 @@ Read in **number order** for a single path: **basics first**, then **structure a
 - **Content:** Mathematics, tables, figures, cross-references, bibliography.
 - **Build and automation:** Compilation engines and toolchains, CI and templated PDFs.
 - **Use cases:** Where LaTeX fits in practice—reports, docs, security, DevOps—and by role.
-
----
 
 ## Topic index
 
@@ -37,8 +33,6 @@ Read in **number order** for a single path: **basics first**, then **structure a
 | 9 | CI, automation, and templated PDFs | [9_CI_Automation_And_Templated_PDFs.md](./9_CI_Automation_And_Templated_PDFs.md) |
 | 10 | Use cases and engineering perspective | [10_Use_Cases_And_Engineering_Perspective.md](./10_Use_Cases_And_Engineering_Perspective.md) |
 
----
-
 ## Learning path
 
 | Stage | Topics | What you'll be able to do |
@@ -48,8 +42,6 @@ Read in **number order** for a single path: **basics first**, then **structure a
 | **Content** | 5 → 7 | Add math, tables, and figures; use labels and references; manage citations and bibliography. |
 | **Build and automation** | 8 → 9 | Choose and use compilation engines (pdflatex, xelatex, lualatex), use latexmk, run LaTeX in CI and scripts. |
 | **Use cases** | 10 | Decide when to use LaTeX, apply it to reports, docs, and Security/audit deliverables; understand relevance by role. |
-
----
 
 ## Topics (full list)
 
@@ -65,8 +57,6 @@ Read in **number order** for a single path: **basics first**, then **structure a
 | 8 | Compilation and toolchains | [8_Compilation_And_Toolchains.md](./8_Compilation_And_Toolchains.md) |
 | 9 | CI, automation, and templated PDFs | [9_CI_Automation_And_Templated_PDFs.md](./9_CI_Automation_And_Templated_PDFs.md) |
 | 10 | Use cases and engineering perspective | [10_Use_Cases_And_Engineering_Perspective.md](./10_Use_Cases_And_Engineering_Perspective.md) |
-
----
 
 ## Further reading
 

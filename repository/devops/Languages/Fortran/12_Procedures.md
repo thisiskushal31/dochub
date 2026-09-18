@@ -36,8 +36,6 @@ end function norm2
 
 **Why this matters.** Clear intent and small, focused procedures improve maintainability. Pure functions are easier to test and use in array expressions. Correct array argument handling avoids bounds errors and allows the compiler to optimize. In libraries, document the interface (argument types, intent, optional) so callers use them correctly.
 
----
-
 ## Further reading
 
 - [Fortran – Procedures (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_procedures.htm)

@@ -2,8 +2,6 @@
 
 [← Back to Security](../README.md) · [Gate chain](../4_Security_Gate_Chain.md)
 
----
-
 ## 1. Concepts
 
 **Semgrep** is a fast **SAST** (static application security testing) engine: pattern rules over source code without a full compiler setup for many languages.
@@ -16,8 +14,6 @@ Gate placement: SAST tier with [CodeQL](../CodeQL/README.md) / [SonarQube](../So
 
 **Confirm:** When would you pick Semgrep vs CodeQL on a PR?
 
----
-
 ## 2. Advanced concepts
 
 | Mode | Use |
@@ -29,8 +25,6 @@ Gate placement: SAST tier with [CodeQL](../CodeQL/README.md) / [SonarQube](../So
 
 Pair with SCA ([Trivy](../Trivy/README.md) / [Snyk](../Snyk/README.md))—different job (code vs dependencies).
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -40,8 +34,6 @@ Pair with SCA ([Trivy](../Trivy/README.md) / [Snyk](../Snyk/README.md))—differ
 | Monorepo | Path filters per language pack |
 
 **Staff checklist:** start with curated packs; tune ignores; fail on new high findings; don’t bury Semgrep output unread.
-
----
 
 ## References
 

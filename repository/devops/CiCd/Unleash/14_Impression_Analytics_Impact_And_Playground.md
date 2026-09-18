@@ -2,8 +2,6 @@
 
 [← Previous](./13_Change_Requests_Release_Management_And_Governance.md) · [README](./README.md) · [Next: Integrations →](./15_Integrations_Terraform_Webhooks_And_Chatops.md)
 
----
-
 ## 1. Concepts
 
 Flags without feedback become superstition. Unleash surfaces:
@@ -17,8 +15,6 @@ Flags without feedback become superstition. Unleash surfaces:
 | **Events** | Audit trail: **Event Log** (full, filter/export CSV/JSON) vs **Event Timeline** (Enterprise, ~48h debug + Signals) |
 
 Enable impressions when you run experiments or need “who saw what.” Ship them to your analytics stack — Unleash is not your warehouse. SDKs also **register** and send **usage metrics**; Client API has a custom-metrics path used by impact metrics.
-
----
 
 ## 2. Advanced concepts
 
@@ -38,8 +34,6 @@ Use Playground to validate constraints/segments before a prod change request. It
 
 Enterprise release automation may consume **signals** and fire **actions** (pause rollout, notify). Treat as governance extensions of metrics ([13](./13_Change_Requests_Release_Management_And_Governance.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -55,8 +49,6 @@ Enterprise release automation may consume **signals** and fire **actions** (paus
 - Playground used before risky targeting changes  
 
 **Good:** experiment flags emit impressions. **Bad:** every flag floods analytics at full cardinality.
-
----
 
 ## References
 

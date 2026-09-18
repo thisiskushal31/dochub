@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [Deploy shapes →](./28_Deployment_Shapes_On_Cloud.md) · [AI platforms →](./33_AI_And_ML_Platforms_On_Cloud.md)
 
----
-
 ## Mental map
 
 ```text
@@ -14,8 +12,6 @@ Event / HTTP request
 ```
 
 *What to notice: “serverless” is a **billing and ops shape**, not a religion. Pick by unit of deploy, timeout, and identity—not by fashion.*
-
----
 
 ## 1. Concepts
 
@@ -40,8 +36,6 @@ Event / HTTP request
 **Confirm:** What is the max execution time? Is the unit a function handler or a container? Who holds the runtime identity ([15](./15_Org_IAM_And_Identity_Federation.md))?
 
 Official decision framing examples: [AWS choosing serverless](https://docs.aws.amazon.com/decision-guides/latest/decision-guides/choosing-aws-serverless-service.html) · [GCP Cloud Run vs GKE](https://cloud.google.com/kubernetes-engine/docs/concepts/gke-and-cloud-run) · [Azure container options](https://learn.microsoft.com/azure/container-apps/compare-options).
-
----
 
 ## 2. Advanced concepts
 
@@ -71,8 +65,6 @@ Official decision framing examples: [AWS choosing serverless](https://docs.aws.a
 | Giant “one Lambda does everything” | Untestable ball of mud |
 | Public function URL + over-broad role | Instant compromise |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -90,8 +82,6 @@ Official decision framing examples: [AWS choosing serverless](https://docs.aws.a
 - Observability on invocations ([30](./30_Cloud_Observability_And_Audit_Doors.md))  
 
 **Good:** event-sized functions; container services for APIs. **Bad:** Lambda as the entire monolith; keys in environment variables.
-
----
 
 ## References
 

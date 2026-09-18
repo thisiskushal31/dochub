@@ -6,8 +6,6 @@
 
 A **competency map** tying chapters **01–21** to staff-level outcomes; **role lenses**; guidance on **when not to use Scala**; **migration** notes from Java (including code smells); a **brownfield Scala 2** reading path with an annotated mini-snippet; a **consolidated checklist**; and a clear split between what this track **integrates** vs what it **defers** to framework and platform manuals. Use this as a sign-off aid, not a substitute for earlier chapters.
 
----
-
 ## 1. Concepts
 
 ### 1. Competency map (chapters → outcomes)
@@ -77,8 +75,6 @@ import scala.jdk.CollectionConverters.*
 def emailsOf(javaUsers: java.util.List[JavaUser]): List[String] =
   javaUsers.asScala.toList.flatMap(u => Option(u.getEmail))
 ```
-
----
 
 ## 2. Advanced concepts
 
@@ -209,8 +205,6 @@ platform’s 2.13 line; contracts are Avro at the topic boundary. No second
 effect/actor stack without a staffing plan. Secrets via runtime injection only.
 ```
 
----
-
 ## 3. Applications and use cases
 
 Use this section as the track’s sign-off surface: hiring bars, promotion conversations, and release readiness reviews should be able to point at the checklist without reopening every earlier chapter.
@@ -280,8 +274,6 @@ Hiring bar (concurrency vs platforms): do not treat **service concurrency** (`Fu
 **Inside this track you should leave knowing:** Scala 3 language and modeling habits; sbt/dependency literacy; Java/JVM boundaries; futures/context literacy; testing/style/docs gates; Security/supply-chain habits; container/JVM ops basics; when to place services vs Spark vs Kafka; Spark/Kafka **architecture literacy** (DAGs, shuffles, topics, delivery semantics—not every operator); DevSecOps threat-modeling habits for services and data platforms; how to read Scala 2 brownfield and plan migration without drive-by rewrites.
 
 **This track does not replace:** Akka/Pekko or Cats Effect manuals; Play/http4s (or other) framework courses; full Spark operator/tuning curricula or cluster-admin runbooks; full Kafka admin/streams courses; Kubernetes/Terraform product docs; or your org’s secure-coding standards. Those stay in their official docs once you know what you are looking for.
-
----
 
 ## References
 

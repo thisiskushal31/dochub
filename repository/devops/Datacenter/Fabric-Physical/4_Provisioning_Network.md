@@ -2,8 +2,6 @@
 
 [← Previous](./3_OOB_Management_Network.md) · [README](./README.md) · [Next: MMR →](./5_MMR_And_Cross_Connect_Physical.md)
 
----
-
 ## 1. Concepts
 
 The **provisioning network** carries PXE/iPXE, DHCP for install, imaging APIs, and sometimes discovery—traffic that is powerful and dangerous on production VLANs.
@@ -11,8 +9,6 @@ The **provisioning network** carries PXE/iPXE, DHCP for install, imaging APIs, a
 ### Where it sits
 
 Isolated VLAN/segment reachable during bare-metal boot; DHCP helpers; image servers; often related to but not identical with OOB ([3](./3_OOB_Management_Network.md)). Imaging: [Compute/15](../Compute/15_Imaging_And_Provisioning_At_Scale.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -39,8 +35,6 @@ Secure Boot policies still apply ([Compute/11](../Compute/11_Firmware_Trains_And
 
 Some use OOB virtual media only (no PXE). Jobs: isolate, authenticate, disable when idle if policy says.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -59,8 +53,6 @@ Some use OOB virtual media only (no PXE). Jobs: isolate, authenticate, disable w
 - Never run org-wide DHCP from a laptop “temporarily”  
 
 **Good:** isolated provisioning, controlled windows, signed images. **Bad:** forever-open PXE on prod; mystery helpers.
-
----
 
 ## References
 

@@ -27,8 +27,6 @@ for i in 2..2..10 do printfn "%d" i   // 2, 4, 6, 8, 10
 
 **Why this matters.** Conditionals and loops are part of the language reference and appear in scripts and mixed-style code. Prefer **match** and higher-order functions where they simplify logic; use **if** and loops where they are the clearest. In DevOps scripts, **for** and **while** are common for iterating over files or retrying operations.
 
----
-
 ## Further reading
 
 - [Conditional expressions: if...then...else (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/conditional-expressions-if-then-else)

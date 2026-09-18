@@ -127,8 +127,6 @@ do {
 
 Inside a loop, **`break`** exits the innermost loop immediately. **`continue`** skips the rest of the current iteration and proceeds to the next one. These work in `for`, `while`, and `do-while` and are useful when you need to exit or skip based on a condition that is awkward to express in the loop condition itself. For more complex control (e.g. returning from a function or breaking out of nested loops with a label), see the topic on returns and jumps.
 
----
-
 ## Further reading
 
 - [Control flow](https://kotlinlang.org/docs/control-flow.html)

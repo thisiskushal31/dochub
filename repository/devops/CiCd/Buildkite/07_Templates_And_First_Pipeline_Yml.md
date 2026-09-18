@@ -2,8 +2,6 @@
 
 [← Previous](./06_Pipeline_YAML_And_Step_Types.md) · [README](./README.md) · [Next: Workflows →](./08_Workflows_Depends_Matrix_Schedules_And_Blocks.md)
 
----
-
 ## 1. Concepts
 
 Buildkite’s **New Pipeline** page offers helper templates (**Hello world**, **Pipeline upload**) and **Buildkite Examples**. Official docs also point at an [example gallery](https://buildkite.com/resources/examples). Below are handbook skeletons — adapt commands to your stack.
@@ -66,13 +64,9 @@ Without `depends_on`, independent steps can be scheduled concurrently on free ag
 
 More workflow shapes: [08](./08_Workflows_Depends_Matrix_Schedules_And_Blocks.md). Deploy lab: [16](./16_Worked_Example_Build_And_Deploy.md).
 
----
-
 ## 2. Advanced concepts
 
 Prefer pinned tool versions in images/scripts. For monorepos, generate steps dynamically ([11](./11_Dynamic_Pipelines_And_Pipeline_Upload.md)) instead of one giant static file.
-
----
 
 ## 3. Applications and use cases
 
@@ -83,8 +77,6 @@ Prefer pinned tool versions in images/scripts. For monorepos, generate steps dyn
 | Strict Git ownership | Pipeline upload |
 
 **Verify:** build page shows each step; artifacts downloadable when configured.
-
----
 
 ## References
 

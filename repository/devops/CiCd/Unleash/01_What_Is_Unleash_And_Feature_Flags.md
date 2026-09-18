@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [Next: Architecture →](./02_Architecture_Server_SDK_Edge_And_APIs.md)
 
----
-
 ## 1. Concepts
 
 **Unleash** is an open-source **feature management** platform: you ship binaries on your deploy schedule, then control **who sees what behavior** at runtime via **feature flags** (toggles), activation strategies, and SDKs.
@@ -49,8 +47,6 @@ They pair: ship a new digest under a Rollout **and** gate UX with a flag. Contro
 
 [OpenFeature](https://openfeature.dev/) is a **vendor-neutral app API** for flags. Unleash providers translate that API into Unleash evaluation. Use it when you want portable application code; use native Unleash SDKs when you need Unleash-specific surfaces (impression data, impact metrics, full strategy variants). Literacy: [09](./09_SDKs_Backend_Frontend_And_OpenFeature.md).
 
----
-
 ## 2. Advanced concepts
 
 ### FeatureOps vs “a boolean in Redis”
@@ -74,8 +70,6 @@ For kill switches, prefer **safe path when the flag is disabled** (or when the S
 
 Judgment depth: [20](./20_Best_Practices_And_When_Not_Unleash.md) (later in track).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -96,8 +90,6 @@ Judgment depth: [20](./20_Best_Practices_And_When_Not_Unleash.md) (later in trac
 
 **Good:** digest in prod with flag off; release via Admin UI / change request.  
 **Bad:** “we redeploy to turn the feature on.”
-
----
 
 ## References
 

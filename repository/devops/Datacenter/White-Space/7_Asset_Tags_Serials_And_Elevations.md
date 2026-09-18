@@ -2,8 +2,6 @@
 
 [← Previous](./6_Cable_Management_And_Pathways.md) · [README](./README.md) · [Next: Crash cart →](./8_Crash_Cart_KVM_And_Serial_Aggregation.md)
 
----
-
 ## 1. Concepts
 
 If you cannot name **which serial is in which U**, you do not own the estate—you rent chaos. **Asset tags**, **serial numbers**, and **rack elevations** are the inventory truth that tickets, remote hands, and audits use.
@@ -21,8 +19,6 @@ If you cannot name **which serial is in which U**, you do not own the estate—y
 ### Where it sits
 
 Tags on chassis front; elevations in DCIM/CMDB/spreadsheet (truth must be one place); labels on cables ([4](./4_Structured_Cabling_Copper.md), [5](./5_Structured_Cabling_Fiber_MPO_MTP.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -54,8 +50,6 @@ BMC/iLO/iDRAC inventory should match the tag ([Compute](../Compute/README.md)). 
 
 Colo landlords may require their cage inventory format. Your CMDB still needs OEM serials for break/fix.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -74,8 +68,6 @@ Colo landlords may require their cage inventory format. Your CMDB still needs OE
 - Never leave “unknown” in production racks  
 
 **Good:** scan-matched elevations, photo evidence, same-day updates. **Bad:** mystery boxes; spreadsheet from 2019; wrong U remote power cycle.
-
----
 
 ## References
 

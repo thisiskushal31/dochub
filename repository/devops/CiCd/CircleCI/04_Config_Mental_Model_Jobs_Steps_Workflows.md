@@ -2,8 +2,6 @@
 
 [← Previous](./03_Create_Project_Config_And_View_Pipelines.md) · [README](./README.md) · [Next: Templates →](./05_Templates_And_First_Config_Yml.md)
 
----
-
 ## 1. Concepts
 
 CircleCI config is YAML in **`.circleci/config.yml`**. Prefer **`version: 2.1`** for orbs and reusable config.
@@ -24,8 +22,6 @@ workflows:
 
 Jobs in a workflow that do not depend on each other can run **concurrently** (subject to plan limits).
 
----
-
 ## 2. Advanced concepts
 
 Install dependencies in the job that needs them — each job starts clean unless you pass **workspaces** or **caches** ([09](./09_Caches_Workspaces_And_Artifacts.md)).
@@ -33,8 +29,6 @@ Install dependencies in the job that needs them — each job starts clean unless
 Top-level reusable keys: `orbs`, `commands`, `executors`, parameters ([11](./11_Reusable_Config_Commands_Executors_Parameters.md)).
 
 Full key encyclopedia: configuration reference — don’t memorize; look up when implementing.
-
----
 
 ## 3. Applications and use cases
 
@@ -45,8 +39,6 @@ Full key encyclopedia: configuration reference — don’t memorize; look up whe
 | Shared platform | Orbs + org contexts |
 
 **Good:** workflows explicit in YAML. **Bad:** one mega-job that always deploys.
-
----
 
 ## References
 

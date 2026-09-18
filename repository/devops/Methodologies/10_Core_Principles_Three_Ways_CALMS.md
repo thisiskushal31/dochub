@@ -4,8 +4,6 @@
 
 If you only memorize tools, you will copy the wrong ones. These principles are what serious DevOps teaching starts with — from *The DevOps Handbook* / *The Phoenix Project* (Gene Kim et al.) and the widely used **CALMS** lens (often credited in the DevOps community to Jez Humble and others). Learn them before Jenkins vs GitHub Actions debates.
 
----
-
 ## What DevOps is (and is not)
 
 **DevOps** is a way of working so that building, shipping, and running software are one feedback system — culture, practices, and automation together — to deliver value to users **faster and safer**.
@@ -18,8 +16,6 @@ If you only memorize tools, you will copy the wrong ones. These principles are w
 | Measured improvement (DORA and friends) | A single vendor toolchain |
 
 Microsoft, Atlassian, AWS, and DORA all describe the same shape: **culture + practices + tools**, with culture as the hard part. Tools alone do not create DevOps.
-
----
 
 ## The Three Ways (DevOps Handbook)
 
@@ -62,8 +58,6 @@ Build a culture that experiments, practices recovery, and improves daily work.
   (First Way)          (Second Way)          (Third Way)
 ```
 
----
-
 ## CALMS (adoption lens)
 
 CALMS is a checklist for whether an org is adopting DevOps in balance — not a competing religion to the Three Ways.
@@ -78,8 +72,6 @@ CALMS is a checklist for whether an org is adopting DevOps in balance — not a 
 
 If you only automate (A) without culture (C) and measurement (M), you get a faster mess. See also TechTarget / industry CALMS summaries; treat vendor blogs as secondary to Handbook + DORA.
 
----
-
 ## Theory of Constraints (ToC) — enough for DevOps
 
 A system’s throughput is limited by its **bottleneck**. Improving non-bottlenecks does not improve the system.
@@ -87,8 +79,6 @@ A system’s throughput is limited by its **bottleneck**. Improving non-bottlene
 In delivery, common constraints: slow code review, flaky tests, waiting for environments, CAB queues, knowledge silos.
 
 **Practice:** map the value stream ([11](./11_Value_Streams_And_Lean_Flow.md)), find the constraint, fix that first. Do not “optimize” a step that is not limiting flow.
-
----
 
 ## How to use this as a beginner
 

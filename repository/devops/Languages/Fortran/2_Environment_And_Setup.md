@@ -42,8 +42,6 @@ For larger projects, use a Makefile or CMake so you only recompile changed files
 
 **Why this matters for DevOps.** On HPC clusters, compilers are often loaded via modules; the same code may be built with different compilers or flags per site. CI/CD for Fortran usually runs `gfortran` (or a vendor compiler) in a container or on a runner; understanding these commands is necessary for scripting builds and debugging failures.
 
----
-
 ## Further reading
 
 - [Fortran – Environment Setup (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_environment_setup.htm)

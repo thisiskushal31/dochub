@@ -2,8 +2,6 @@
 
 [← Previous](./07_Workspaces_Artifacts_And_Volumes.md) · [README](./README.md) · [Next: Pods →](./09_Pod_Templates_Compute_And_Affinity.md)
 
----
-
 ## 1. Concepts
 
 PipelineRuns/TaskRuns run Pods as a **ServiceAccount**. That SA’s RBAC and image-pull / registry-push credentials define blast radius.
@@ -36,8 +34,6 @@ metadata:
 
 Official Pipelines **auth** docs cover Docker config, Google Cloud, and related patterns.
 
----
-
 ## 2. Advanced concepts
 
 ### Trusted Resources
@@ -64,8 +60,6 @@ Pipelines-as-Code / Triggers must not grant prod push to fork PRs ([13](./13_Pip
 
 Some estates require FIPS-oriented builds of Tekton components themselves — that is a **platform binary** concern (see Pipelines developer/FIPS guidance), not a PipelineRun YAML switch. Own it with your security team if obligated ([20](./20_Observability_HA_Debug_And_Windows.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -82,8 +76,6 @@ Some estates require FIPS-oriented builds of Tekton components themselves — th
 - Fork/PR path cannot push prod  
 
 **Good:** one SA purpose per trust tier. **Bad:** default SA with cluster-admin for convenience.
-
----
 
 ## References
 

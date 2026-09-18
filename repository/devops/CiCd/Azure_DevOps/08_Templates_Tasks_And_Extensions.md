@@ -2,8 +2,6 @@
 
 [← Previous](./07_Triggers_Stages_Jobs_And_Strategies.md) · [README](./README.md) · [Next: Environments →](./09_Environments_Approvals_Checks_And_Classic_Releases.md)
 
----
-
 ## 1. Concepts
 
 **Templates** are reusable YAML fragments (stages, jobs, steps, variables) referenced with `template:`. **Tasks** are versioned units from Microsoft or the Marketplace. Together they form the **paved road**.
@@ -17,8 +15,6 @@ stages:
 ```
 
 Pin template repo refs (`@refs/tags/v3`) the same way you pin actions elsewhere ([CiCd/24](../24_Workflow_Automation_Beyond_PR_CI.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -40,8 +36,6 @@ Always specify `@major` (e.g. `DotNetCoreCLI@2`). Read task docs before major bu
 
 Org can install Marketplace extensions (extra tasks, Boards widgets, gates). Govern who can install; extensions widen the attack surface.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -51,8 +45,6 @@ Org can install Marketplace extensions (extra tasks, Boards widgets, gates). Gov
 | Disable cowboy YAML | Required template + branch policy |
 
 **Good:** versioned templates; changelog for template tags. **Bad:** every repo copies 400 lines of deploy YAML.
-
----
 
 ## References
 

@@ -6,8 +6,6 @@
 
 The minimum language surface to read and write Rust programs: **`fn main`**, bindings with **`let` / `mut`**, **scalar** and introductory **compound** types, **expressions versus statements**, **`loop` / `while` / `for`**, **shadowing**, type annotations at **boundaries**, the **never type `!`**, and a first encounter with **ownership** through moving a `String`—enough to understand compiler errors you will hit immediately, before the full ownership chapter deepens the model.
 
----
-
 ## 1. Concepts
 
 ### 1. Programs start at `main`
@@ -177,8 +175,6 @@ The last expression in a block is the return value when there is no semicolon (o
 
 **Inference limits:** rustc infers aggressively *inside* a function body from uses and annotations nearby, but **item boundaries** (function parameters, return types, `const`/`static` types, trait method signatures, and often struct fields you expose) generally need explicit types. Ambiguous literals (`Default::default()`, empty `vec![]` without a later use that pins `T`) also force annotations. When inference fails, annotate at the boundary rather than scattering turbofish everywhere.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `break` / `continue` and values from `loop`
@@ -313,8 +309,6 @@ A Rust **`char`** is a Unicode **scalar value** (roughly: a code point excluding
 
 `str` / `String` store **UTF-8 bytes**. `len()` is a **byte** count. Indexing by “character number” is not O(1): finding the *n*th scalar requires walking UTF-8 (or using iterators like `chars()`). Byte slicing (`get`, ranges) is only valid on **char boundaries**; mid-code-unit slices panic or return `None` depending on the API. Grapheme clusters (emoji with modifiers, combining marks) need Unicode-segmentation logic beyond `chars()`—know that “one user-perceived character” ≠ one `char` ≠ one byte.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -356,8 +350,6 @@ A Rust **`char`** is a Unicode **scalar value** (roughly: a code point excluding
 - Moves of owned buffers (`String`, `Vec`) are intentional; accidental use-after-move is fixed by borrow/redesign, not by sprinkling `.clone()` everywhere without thought.
 - New code avoids obsolete `try!` and 2015-only module noise unless maintaining that edition.
 - Team agrees on formatting (`rustfmt`) so expression-vs-statement style stays consistent.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./05_Templates_And_First_Config_Yml.md) · [README](./README.md) · [Next: Runners →](./07_Self_Hosted_Runners.md)
 
----
-
 ## 1. Concepts
 
 An **executor** is where a job’s steps run. On CircleCI Cloud, common managed options:
@@ -27,8 +25,6 @@ jobs:
 ```
 
 **resource_class** selects CPU/RAM (and availability) for that executor family. Classes and pricing/plan availability change — confirm current tables in docs.
-
----
 
 ## 2. Advanced concepts
 
@@ -57,8 +53,6 @@ Debug by SSHing into a job environment when enabled — revoke access habits lik
 
 If you need VPC residency or custom hardware → runners ([07](./07_Self_Hosted_Runners.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Need | Choice |
@@ -69,8 +63,6 @@ If you need VPC residency or custom hardware → runners ([07](./07_Self_Hosted_
 | Private build farm | Runner |
 
 **Good:** smallest resource_class that is stable. **Bad:** largest class “just in case” on every job.
-
----
 
 ## References
 

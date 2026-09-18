@@ -2,8 +2,6 @@
 
 [← Previous](./15_EPMS_BMS_And_Power_Monitoring.md) · [README](./README.md) · [Next: Failure walks →](./17_Power_Path_Failure_Walks.md)
 
----
-
 ## 1. Concepts
 
 **Power quality** is whether voltage and current stay within what equipment tolerates: magnitude, frequency, imbalance, distortion, and transients. **Harmonics** are currents/voltages at multiples of fundamental frequency, largely from non-linear loads (PSUs, VFDs, UPS electronics).
@@ -19,8 +17,6 @@ IT does not need to be a power-quality engineer. IT *does* need to recognize whe
 | Nuisance breaker trips | Distorted current, inrush |
 | UPS alarms | Input distortion / eco-mode transfers |
 | Motor/CRAH issues | Imbalance, harmonics from VFDs |
-
----
 
 ## 2. Advanced concepts
 
@@ -51,8 +47,6 @@ Generators have different impedance than utility—some sites see worse distorti
 
 50 Hz vs 60 Hz changes harmonic frequencies numerically; the management jobs stay: measure, compare to limits, fix plant or load, do not “set it in BIOS.”
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -71,8 +65,6 @@ Generators have different impedance than utility—some sites see worse distorti
 - Never add random PF correction without engineering  
 
 **Good:** measured events, correct XFMR/UPS design for IT loads. **Bad:** firmware churn for sag problems; ignored hot neutrals.
-
----
 
 ## References
 

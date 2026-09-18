@@ -4,8 +4,6 @@
 
 *Final choice page for Huawei Cloud (and Cloud Stack / HCS patterns where noted). Deeper API: [huaweicloud.com](https://support.huaweicloud.com/intl/en-us/index.html).*
 
----
-
 ## Compute
 
 | Product | What for | When | Why not |
@@ -58,8 +56,6 @@
 | **CES / LTS / APM** | Metrics / logs / APM | Default | — |
 | **SWR** | Container registry | CCE images | — |
 | **ModelArts / Pangu / AI APIs** | ML / FM | GenAI + train | DIY CCE when constrained |
-
----
 
 ## How to use
 

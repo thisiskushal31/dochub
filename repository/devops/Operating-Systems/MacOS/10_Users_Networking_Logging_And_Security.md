@@ -4,8 +4,6 @@
 
 This topic covers **services (launchd)**, **networking**, **Unified Logging** (event logs), and **security** (Gatekeeper, SIP, entitlements, sandbox). Security research and penetration-testing resources are listed in **Further reading** for deeper, offensive/defensive coverage.
 
----
-
 ## Services: launchd and launchctl
 
 **launchd** is the **init** process (PID 1) and the single service manager on macOS. It replaces traditional Unix init scripts and inetd.
@@ -30,8 +28,6 @@ This topic covers **services (launchd)**, **networking**, **Unified Logging** (e
 
 **References:** [Creating Launch Daemons and Agents (Apple)](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html), [launchd (Wikipedia)](https://en.wikipedia.org/wiki/Launchd).
 
----
-
 ## Networking
 
 **Stack:** BSD TCP/IP stack (sockets, routing, firewall). Same concepts as [Linux](../Linux/11_Networking_And_Firewall.md) and [Unix](../Unix/10_Users_Networking_Logging_And_Security.md) at the protocol level.
@@ -49,8 +45,6 @@ This topic covers **services (launchd)**, **networking**, **Unified Logging** (e
 **Firewall:** **Application Firewall** (System Settings → Network → Firewall) and/or **pf** (packet filter). **`sudo pfctl -sr`** — Show rules if pf is enabled. **`sudo pfctl -s all`** — State and rules.
 
 **References:** [Network Architecture (Apple Kernel)](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Networking/Networking.html).
-
----
 
 ## Event logging: Unified Logging
 
@@ -70,8 +64,6 @@ macOS uses **Unified Logging** (not traditional syslog files) for most system an
 
 **References:** [Unified Logging (Apple)](https://developer.apple.com/documentation/oslog), [Reviewing macOS Unified Logs (Google Cloud)](https://cloud.google.com/blog/topics/threat-intelligence/reviewing-macos-unified-logs), [Inside the Unified Log (Eclectic Light)](https://eclecticlight.co/2025/09/23/inside-the-unified-log-1-goals-and-architecture/), [log(1) — man page](https://developer.apple.com/library/archive/documentation/OpenSource/Conceptual/ShellScripting/).
 
----
-
 ## Security (overview)
 
 **System Integrity Protection (SIP)** — Kernel-level protection: restricts what even **root** can do (e.g. write to `/System`, inject into system processes, disable certain kexts). Controlled by **csrutil** (in Recovery); **`csrutil status`** shows current state. Disabling SIP is not recommended; security research and forensics often document its impact.
@@ -90,8 +82,6 @@ macOS uses **Unified Logging** (not traditional syslog files) for most system an
 
 **References:** [System Integrity Protection (Apple)](https://developer.apple.com/documentation/security/hardened_runtime), [Gatekeeper (Apple)](https://developer.apple.com/library/archive/documentation/security/Conceptual/CodeSigningGuide/), [Entitlements (Apple)](https://developer.apple.com/documentation/bundleresources/entitlements). For **offensive/defensive** and **red-team** coverage (privilege escalation, persistence, TCC, etc.), see **Further reading** below.
 
----
-
 ## Summary
 
 - **Services:** **launchd** (PID 1); **Launch Daemons** (boot, root) and **Launch Agents** (per user); **launchctl** to load/start/stop.
@@ -101,22 +91,16 @@ macOS uses **Unified Logging** (not traditional syslog files) for most system an
 - **Package management:** **xcode-select**, **Homebrew** (brew), **pkgutil**, **installer**.
 - **Preferences and metadata:** **defaults** (plist prefs), **xattr** (extended attributes, e.g. quarantine).
 
----
-
 ## Package management
 
 - **Xcode Command Line Tools** — **`xcode-select --install`** installs compilers (clang), git, and other CLI tools. Required for Homebrew.
 - **Homebrew** — Third-party package manager: **`brew install <formula>`**, **`brew upgrade`**, **`brew list`**. Installs to **`/opt/homebrew`** (Apple Silicon) or **`/usr/local`** (Intel). **`brew --prefix`** shows the prefix. [Homebrew](https://brew.sh/), [Installation](https://docs.brew.sh/Installation).
 - **Native .pkg** — **`installer -pkg <file.pkg> -target /`** installs a package. **`pkgutil --pkgs`** lists installed package IDs. **`pkgutil --pkg-info <id>`** shows info; **`pkgutil --files <id>`** lists files installed by a package.
 
----
-
 ## Preferences and extended attributes
 
 - **`defaults`** — Read/write **preferences** (plist-backed). **`defaults read <domain> [key]`**, **`defaults write <domain> <key> <value>`**, **`defaults delete <domain> [key]`**. Domains can be app bundle IDs (e.g. `com.apple.dock`) or paths to plist files. **`defaults find <word>`** searches prefs.
 - **`xattr`** — **Extended attributes** (metadata on files). **`xattr -l <file>`** list; **`xattr -w <name> <value> <file>`** write; **`xattr -d <name> <file>`** delete. **`com.apple.quarantine`** is set on downloaded files; Gatekeeper uses it. **`xattr -cr <dir>`** clears all xattrs recursively (use with care). **References:** [Edit property lists (Apple)](https://support.apple.com/guide/terminal/edit-property-lists-apda49a1bb2-577e-4721-8f25-ffc0836f6997/mac), [defaults (Shell Tips)](https://www.shell-tips.com/mac/defaults/).
-
----
 
 ## Further reading
 

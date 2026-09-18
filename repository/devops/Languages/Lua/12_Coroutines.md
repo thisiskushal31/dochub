@@ -34,8 +34,6 @@ print(coroutine.resume(co, "r"))     -- body r     then  true  11  -9
 print(coroutine.resume(co))          -- false  cannot resume dead coroutine
 ```
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §2.6 Coroutines](https://www.lua.org/manual/5.5/manual.html#2.6)

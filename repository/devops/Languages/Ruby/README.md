@@ -6,8 +6,6 @@ Ruby is a **dynamic**, **object-oriented** language built around **message passi
 
 This track teaches Ruby as **systems work**: language and runtime semantics, software design, API and domain modeling, data and integration boundaries, quality (testing, review, static analysis), security, reliability, performance, packaging and delivery, and ecosystem choices (Rails, Sinatra, automation DSLs, embedded runtimes)—**not** only as a syntax tour. **Chef** product workflow lives under **[IAC/Chef](../../IAC/Chef/README.md)**; language mechanics for reading cookbooks live here. **Rails** is a framework, not Ruby—learn chapters **01–13** before leaning on Rails guides alone.
 
----
-
 ## Ruby versions, MRI, and which documentation to read
 
 Ruby uses **major.minor.patch** releases (for example **3.4.x**). Behavior and the standard library are tied to the **minor** you run. This handbook defaults to **MRI 3.4**; pin the same minor in `.ruby-version`, `Gemfile`, CI, and production images. When you read API docs, match them to the Ruby you run—methods and defaults can differ across minors.
@@ -20,8 +18,6 @@ ruby -e 'puts RUBY_VERSION; puts RUBY_DESCRIPTION'
 which ruby
 ```
 
----
-
 ## Chapter structure
 
 Chapters `01`–`22` follow a consistent body shape:
@@ -33,8 +29,6 @@ Chapters `01`–`22` follow a consistent body shape:
 
 Links live in each chapter’s **References** section.
 
----
-
 ## Semantic model (why Ruby feels different)
 
 - **Everything is an object:** classes and modules are objects; `nil` is an object; methods are resolved at runtime.
@@ -42,8 +36,6 @@ Links live in each chapter’s **References** section.
 - **Blocks are structural:** not optional sugar; iterators, resource lifecycle, and DSLs depend on blocks, procs, and lambdas.
 - **GVL on MRI:** parallel CPU-bound Ruby in one process is limited; I/O and multi-process architectures compensate.
 - **Open classes and metaprogramming:** power for frameworks; risk for global monkey patches—governance required.
-
----
 
 ## Beginner to advanced progression
 
@@ -55,8 +47,6 @@ Links live in each chapter’s **References** section.
 | Production engineering | 19–22 | Testing, security, delivery, ecosystem strategy. |
 
 Suggested order: **01 → 13**, then **14 → 18**, then **19 → 22**. Revisit **07** for concurrency incidents; **08** before reviewing framework or DSL code; **20** before any untrusted input path.
-
----
 
 ## Chapters
 
@@ -85,16 +75,12 @@ Suggested order: **01 → 13**, then **14 → 18**, then **19 → 22**. Revisit 
 | 21 | CI, containers, and operations | [21](./21_CI_Containers_And_Operations.md) |
 | 22 | Ecosystem, engineering domains, and competency map | [22](./22_Ecosystem_DevOps_Tools_And_Competency_Map.md) |
 
----
-
 ## Deep-study workflow
 
 1. Read each chapter with a **notebook of invariants** for your org (encoding policy, hash key types, exception taxonomy, Bundler/Ruby pins, concurrency model).
 2. After chapters **04–08**, read framework or library code (Rails model, gem client, internal DSL) and label dispatch, `self`, and blocks.
 3. After chapters **13–15**, reproduce one production build locally (Dockerfile + lockfile + native gems).
 4. After chapters **19–20**, run tests, a dependency audit, and one threat-model pass on a real repo.
-
----
 
 ## Further reading
 
@@ -104,8 +90,6 @@ Suggested order: **01 → 13**, then **14 → 18**, then **19 → 22**. Revisit 
 - [Bundler documentation](https://bundler.io/)
 - [Rails Guides](https://guides.rubyonrails.org/)
 - [IAC: Chef](../../IAC/Chef/README.md)
-
----
 
 ## References (hub links)
 

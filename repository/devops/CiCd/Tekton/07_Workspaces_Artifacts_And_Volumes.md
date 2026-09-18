@@ -2,8 +2,6 @@
 
 [← Previous](./06_Pipelines_Ordering_And_Finally.md) · [README](./README.md) · [Next: Auth →](./08_Auth_ServiceAccounts_And_RBAC.md)
 
----
-
 ## 1. Concepts
 
 **Workspaces** declare filesystem inputs/outputs Tasks need. PipelineRuns bind them to `emptyDir`, PVC, ConfigMap, Secret, or volume claim templates.
@@ -35,8 +33,6 @@ spec:
 
 **Artifacts** (newer Pipelines surface) and classic volume mounts cover larger outputs than results. Prefer digest-addressed registry artifacts for deployables ([CiCd/4](../4_Artifacts_And_Registries.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### Isolation and trust
@@ -64,8 +60,6 @@ Tasks can mark workspaces optional for Catalog reuse.
 
 Results = small metadata; workspaces = filesystem; **Artifacts** = first-class larger outputs (confirm API maturity on your version). Prefer registry digests for deployables.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -81,8 +75,6 @@ Results = small metadata; workspaces = filesystem; **Artifacts** = first-class l
 - Artifacts vs results roles clear  
 
 **Good:** explicit bindings per Run. **Bad:** world-writable shared PVC across trust tiers.
-
----
 
 ## References
 

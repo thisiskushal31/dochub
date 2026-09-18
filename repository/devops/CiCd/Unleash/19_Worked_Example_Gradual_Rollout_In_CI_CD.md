@@ -2,8 +2,6 @@
 
 [← Previous](./18_Scale_Upgrade_Operate_And_Troubleshoot.md) · [README](./README.md) · [Next: Best practices →](./20_Best_Practices_And_When_Not_Unleash.md)
 
----
-
 ## 1. Concepts
 
 Lab goal: ship a binary with a feature **dark**, then open it safely.
@@ -18,8 +16,6 @@ Lab goal: ship a binary with a feature **dark**, then open it safely.
 ```
 
 Unleash owns **behavior**. If you also need pod canaries, add [Argo Rollouts](../Argo_Rollouts/README.md) for **binary** risk ([9](../9_Progressive_Delivery_Controllers.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -41,8 +37,6 @@ Test matrix grows with flags. At minimum: default-off and on at 100% in CI for c
 
 Pass stable `userId` (or session) so % buckets do not flicker mid-session ([07](./07_Activation_Strategies_Stickiness_And_Custom.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -59,8 +53,6 @@ Pass stable `userId` (or session) so % buckets do not flicker mid-session ([07](
 - Cleanup ticket after 100%  
 
 **Good:** dark deploy Monday, ramp Tuesday with eyes on graphs. **Bad:** 0→100% Friday night with no CR.
-
----
 
 ## References
 

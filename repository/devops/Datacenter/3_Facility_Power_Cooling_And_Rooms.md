@@ -2,8 +2,6 @@
 
 [← Previous](./2_Ownership_Colo_And_Contracts.md) · [README](./README.md) · [Next: Rack and BMC →](./4_Rack_BMC_And_Provisioning.md)
 
----
-
 ## Mental map
 
 ![Whole hall layers](../Assets/Datacenter/Integration/whole-hall-layers.svg)
@@ -41,8 +39,6 @@ Utility → transformer → **UPS** (covers the gap until generators start) → 
 
 IT turns watts into heat. Cold aisle supplies; hot aisle returns. Blanking panels matter. **Containment** stops hot air mixing. If you pack 20 kW into a rack designed for 5 kW, the breaker may hold and the dimms will still throttle.
 
----
-
 ## 2. Advanced concepts
 
 ### Redundancy language (use it correctly)
@@ -76,8 +72,6 @@ Physical security: mantraps, badges, cameras, visitor escorts, loading-dock chai
 
 Pre-action dry pipe vs wet. VESDA. Leak detection under raised floor. Know where the **emergency power off (EPO)** is and who is allowed to use it. Do not rack a tape library under a water pipe because the U was free.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -104,8 +98,6 @@ Pre-action dry pipe vs wet. VESDA. Leak detection under raised floor. Know where
 **Confirm:** Can you name the room types in a hall? What bridges the gap until generators start? Why do blanking panels matter?
 
 If any term above is foggy, read [0 — how to read](./0_How_To_Read_And_Quality_Bar.md) and [0b — equipment in plain language](./0b_Equipment_In_Plain_Language.md) before going deeper.
-
----
 
 ## Go deeper
 

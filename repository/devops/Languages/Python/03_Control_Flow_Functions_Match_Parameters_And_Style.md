@@ -6,8 +6,6 @@
 
 **if**, **for**, **while**, **break**, **continue**, **else** on loops, **pass**, **match** (structural pattern matching), **function** definition, **parameter** kinds (positional-only, keyword-only, **`*`**, **`/`**), **defaults**, **`*args` / `**kwargs`**, **lambda**, **docstrings**, **annotations**, and **PEP 8**-aligned readability. Control flow and call semantics determine how frameworks invoke handlers and how bugs appear under refactoring.
 
----
-
 ## 1. Concepts
 
 ### 1. Conditionals and loops
@@ -66,8 +64,6 @@ The first string literal in a function body is its **docstring**, stored in **`_
 
 Four-space indent; **snake_case** functions and variables; **PascalCase** classes; one statement per line for clarity; imports grouped stdlib / third-party / local. Line length is a team choice—**ruff** / **black** automate consistency.
 
----
-
 ## 2. Advanced concepts
 
 **Closures** close over **cells**: inner functions see outer variables by name; late binding in loops can surprise—bind loop variables via defaults **`lambda x=x: ...`** when needed.
@@ -75,8 +71,6 @@ Four-space indent; **snake_case** functions and variables; **PascalCase** classe
 **match** and **__match_protocol__**: custom classes can influence matching via **`__match_args__`** and related hooks—framework code uses this; application code should stay simple.
 
 **PEP 570** positional-only parameters help stabilize APIs: callers cannot rely on keyword names for parameters you may rename.
-
----
 
 ## 3. Applications and use cases
 
@@ -100,8 +94,6 @@ match status:
     case _:
         raise ValueError(f"unexpected status {status!r}")
 ```
-
----
 
 ## References
 

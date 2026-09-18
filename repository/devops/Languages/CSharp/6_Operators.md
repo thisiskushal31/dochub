@@ -6,8 +6,6 @@
 
 **Why precedence matters:** An expression like `a + b * c` is evaluated as `a + (b * c)` because `*` has higher precedence than `+`. When in doubt, use parentheses to make order explicit.
 
----
-
 ## Arithmetic and assignment
 
 Arithmetic operators work on numeric types. Assignment assigns a value; compound assignment (e.g. `+=`) combines an operation with assignment.
@@ -19,8 +17,6 @@ int remainder = a % b;
 a += 5;  // a = a + 5
 ```
 
----
-
 ## Comparison and logical
 
 Comparison operators return **bool**. Logical **&&** (and) and **||** (or) short-circuit: the second operand is not evaluated if the first determines the result. **!** negates a bool.
@@ -29,8 +25,6 @@ Comparison operators return **bool**. Logical **&&** (and) and **||** (or) short
 bool ok = a > 0 && b != 0;
 if (x == 0 || y == 0) { }
 ```
-
----
 
 ## Null-conditional and null-coalescing
 
@@ -41,8 +35,6 @@ string? s = GetName();
 int len = s?.Length ?? 0;
 ```
 
----
-
 ## Math
 
 The **Math** class provides static methods for common numeric operations: **Math.Max**, **Math.Min**, **Math.Sqrt**, **Math.Abs**, **Math.Round**, and others. Use them for comparisons, square roots, absolute value, and rounding without writing the logic yourself.
@@ -52,8 +44,6 @@ int larger = Math.Max(5, 10);
 double root = Math.Sqrt(64);
 double rounded = Math.Round(9.99);
 ```
-
----
 
 ## Further reading
 

@@ -46,8 +46,6 @@ let infinite = seq { while true do yield 1 }   // infinite; use with take
 
 **Why this matters.** Tuples and lists are the bread and butter of F# data flow. Familiarity with **map**, **filter**, **fold**, and the difference between list (immutable, cons), array (mutable, indexed), and sequence (lazy) is essential for reading and writing real F# code. In DevOps and data scripts, lists and sequences are common for processing lines or batches; arrays appear when interfacing with .NET or when performance requires indexing.
 
----
-
 ## Further reading
 
 - [Tuples (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/tuples)

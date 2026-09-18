@@ -2,8 +2,6 @@
 
 [← Previous](./09_SDKs_Backend_Frontend_And_OpenFeature.md) · [README](./README.md) · [Next: Tokens →](./11_API_Tokens_Keys_And_Service_Accounts.md)
 
----
-
 ## 1. Concepts
 
 **Unleash Edge** sits between applications and the Unleash server as a fast, cacheable front for **Client** and **Frontend** APIs — similar in spirit to a CDN for flag configuration.
@@ -17,8 +15,6 @@ Why Edge exists:
 **Unleash Proxy** is the older frontend helper. New designs should prefer **Edge**; migrate Proxy → Edge when you still run Proxy.
 
 **Edition literacy:** **Enterprise Edge** is where Unleash is investing (hosted or self-hosted, streaming, Admin topology views). **Unleash Edge OSS** is on long-term support with a documented end-of-life — plan migration if you still run the OSS Edge build ([OSS comparison](https://docs.getunleash.io/support/oss-comparison)).
-
----
 
 ## 2. Advanced concepts
 
@@ -43,8 +39,6 @@ Do not put Admin API on the public internet.
 
 Swap SDK endpoints from Proxy URL to Edge Frontend/Client endpoints; validate tokens; retire Proxy. Run both briefly only with a clear cutover checklist.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -60,8 +54,6 @@ Swap SDK endpoints from Proxy URL to Edge Frontend/Client endpoints; validate to
 - Proxy retirement planned if still present  
 
 **Good:** Edge as the only public flag endpoint. **Bad:** Client API open to the world “for convenience.”
-
----
 
 ## References
 

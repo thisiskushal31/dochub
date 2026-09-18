@@ -4,8 +4,6 @@
 
 When production hurts, people need **short, tested instructions** — not a wiki novel. Docs-as-code keeps those instructions next to the system they describe and subject to the same review culture as code.
 
----
-
 ## Docs next to code vs wiki
 
 | Approach | Pros | Cons |
@@ -17,8 +15,6 @@ When production hurts, people need **short, tested instructions** — not a wiki
 **House lean:** runbooks and on-call procedures in git (`/docs/runbooks` or service repo). Link them from alerts.
 
 Architecture decision records (ADRs): short “why we chose X” files in git. Deeper design discourse → [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts).
-
----
 
 ## Runbook structure
 
@@ -57,8 +53,6 @@ How to confirm recovery (SLI, synthetic check, user path).
 - Last tested: YYYY-MM-DD
 ```
 
----
-
 ## Example outline: high error rate on service X
 
 ```markdown
@@ -91,16 +85,12 @@ PagerDuty schedule `payments`; platform secondary if node/cluster issue
 
 Replace commands with your real paved-road commands — accuracy beats prose.
 
----
-
 ## Hygiene
 
 - **Short** — one alert family per runbook when possible  
 - **Test quarterly** — game day or shadow on-call walks the steps  
 - **Link from alert** — annotation / runbook_url  
 - **Update in the postmortem** — action item closes only when doc changed ([1](./1_DevOps_Culture_And_Collaboration.md))  
-
----
 
 ## Pitfalls
 

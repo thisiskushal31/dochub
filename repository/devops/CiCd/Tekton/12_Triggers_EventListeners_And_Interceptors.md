@@ -2,8 +2,6 @@
 
 [← Previous](./11_Resolvers_Bundles_And_Remote_Resources.md) · [README](./README.md) · [Next: PAC →](./13_Pipelines_As_Code.md)
 
----
-
 ## 1. Concepts
 
 **Tekton Triggers** turn events (usually webhooks) into PipelineRuns/TaskRuns.
@@ -26,8 +24,6 @@ EventListener → Interceptor(s) → TriggerBinding → TriggerTemplate → Pipe
 
 Install Triggers after Pipelines. Expose EventListener via Ingress/Service (`serviceType`, TLS); validate payloads. **CEL** interceptors are common for path/branch filters.
 
----
-
 ## 2. Advanced concepts
 
 ### CEL expressions
@@ -41,8 +37,6 @@ Powerful matching/filtering — keep expressions reviewed and tested ([CEL](http
 ### Vs Pipelines-as-Code
 
 Triggers are generic event → Run. PAC adds Git-provider opinionation and `.tekton/` in-repo ([13](./13_Pipelines_As_Code.md)). Many platforms use PAC for SCM CI and Triggers for non-Git events.
-
----
 
 ## 3. Applications and use cases
 
@@ -60,8 +54,6 @@ Triggers are generic event → Run. PAC adds Git-provider opinionation and `.tek
 - `tkn eventlistener` used for day-2 inspect ([15](./15_CLI_tkn.md))  
 
 **Good:** authenticated listeners. **Bad:** public EventListener with no interceptor creating privileged Runs.
-
----
 
 ## References
 

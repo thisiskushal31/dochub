@@ -4,9 +4,6 @@
 
 This topic covers **threads**: thread vs process, user-level vs kernel-level threads, multithreading models, and benefits — **OS-agnostic** (no platform-specific APIs).
 
-
----
-
 ## 1. Thread in Operating System / Process vs thread
 
 | Aspect | Process | Thread |
@@ -20,16 +17,12 @@ This topic covers **threads**: thread vs process, user-level vs kernel-level thr
 
 So: a **process** is a container for resources and protection; a **thread** is a schedulable flow of execution inside that container. One process can have many threads; the kernel (or a runtime) schedules threads (or processes that are “thread-like”) on the CPU(s).
 
----
-
 ## 2. Benefits of Multithreading / Why threads?
 
 - **Responsiveness** — One thread can block (e.g. on I/O) while others keep the program responsive (e.g. GUI stays active).
 - **Resource sharing** — Threads share memory by default; no need for explicit IPC for in-process data (but need synchronization).
 - **Economy** — Creating and switching threads is cheaper than creating and switching processes (no new address space, no new kernel “process” in the heavy sense, depending on the model).
 - **Scalability** — On a multi-CPU system, threads of the same process can run on different CPUs in parallel.
-
----
 
 ## 3. User-level vs Kernel-level threads
 
@@ -47,8 +40,6 @@ So: a **process** is a container for resources and protection; a **thread** is a
 
 **Hybrid:** Many systems use **kernel-level** threads as the only schedulable unit but expose a **user-level** API (e.g. “thread” = one kernel thread, or many user threads mapped to a pool of kernel threads). The 1:1 model (one user thread = one kernel thread) is common in modern OSs: simple, good parallelism and blocking behavior.
 
----
-
 ## 4. Multithreading Models
 
 How many **user-level** threads map to how many **kernel-level** threads?
@@ -61,8 +52,6 @@ How many **user-level** threads map to how many **kernel-level** threads?
 
 **Two-level:** Like many-to-many, but some user threads can be **bound** to a dedicated kernel thread (so they get true parallelism and no multiplexing). Combines flexibility with the ability to give important threads their own kernel entity.
 
----
-
 ## Summary
 
 - A **thread** is a flow of execution within a process; it shares the process’s address space and resources but has its own PC, registers, and stack.
@@ -71,8 +60,6 @@ How many **user-level** threads map to how many **kernel-level** threads?
 - **Models:** Many-to-one (one kernel thread); one-to-one (each user thread = one kernel thread); many-to-many (multiplexed). Modern OSs often use **1:1**.
 
 This is **operating system basics**. How a particular OS implements threads (e.g. clone() in Linux, Windows threads) is covered in the [Linux](../Linux/README.md) and [Windows](../Windows/README.md) sections.
-
----
 
 ## Further reading
 

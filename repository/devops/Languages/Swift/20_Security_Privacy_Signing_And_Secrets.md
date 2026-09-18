@@ -10,8 +10,6 @@ This chapter will **not** teach jailbreaks, DRM circumvention, Keychain theft, A
 
 If chapter **18** asked “what does CI build?”, this chapter asks “what *attests* that artifact, what data does it touch, and who can rotate the keys at 2 a.m.?”
 
----
-
 ## 1. Concepts
 
 ### 1. Threat model in one breath (why this chapter exists)
@@ -358,8 +356,6 @@ Do not paste “needed for app functionality” for every permission. Reviewers 
 
 If a PR adds either: require what the **server** does on failure/timeout, official API links, and no “bypass research” in the ticket.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Certificate taxonomy — pick the right plastic
@@ -701,8 +697,6 @@ App Attest/DeviceCheck: [ ] n/a  [ ] server policy linked
 Jailbreak-detection theater avoided: [ ] yes
 ```
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Practice |
@@ -728,8 +722,6 @@ Jailbreak-detection theater avoided: [ ] yes
 11. **Notary accepts but stapler fails** → ticket/container mismatch checklist (Apple notarization issues doc); do not “ship unstapled and hope online fetch.”
 12. **Privacy mail after adding a file-timestamp feature** → add honest required reason; do not copy a reason code from an unrelated SDK sample.
 
----
-
 ## 4. Staff-level review checklist
 
 - Reviewer can narrate the **provisioning chain** (team → App ID → cert → profile → entitlements → codesign → TCC).
@@ -751,8 +743,6 @@ Jailbreak-detection theater avoided: [ ] yes
 - Export compliance / encryption questions have a named non-engineering owner when needed.
 - App Attest / DeviceCheck (if present) have server failure policy—not folklore; no jailbreak-detection theater as a “control.”
 - On-call knows who can rotate signing secrets at 2 a.m.
-
----
 
 ## References
 

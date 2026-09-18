@@ -2,8 +2,6 @@
 
 [← Previous](./19_YAML_And_Configuration_Catalog.md) · [README](./README.md) · [Next: Source control →](./21_Source_Control_Providers_And_Code_Access.md)
 
----
-
 ## 1. Concepts — frequent failures
 
 | Symptom | Likely cause | Where |
@@ -18,8 +16,6 @@
 | Cannot clone private repo | Provider/code-access mismatch | [21](./21_Source_Control_Providers_And_Code_Access.md) |
 | Slow build unclear where | Need waterfall / queue wait | [24](./24_Integrations_Notifications_Observability_And_Insights.md) |
 
----
-
 ## 2. Advanced concepts — debug moves
 
 - Open build → failing job → full log.  
@@ -27,8 +23,6 @@
 - Re-run failed job after fixing agent capacity.  
 - For dynamic pipelines, inspect uploaded steps on the build page.  
 - Verify cluster assignment matches the agents you expect.
-
----
 
 ## 3. Applications and use cases — staff checklist
 
@@ -42,8 +36,6 @@
 - Source-control + clone credentials documented per agent type  
 - Hooks/images owned; permissions/teams on deploy pipelines  
 - Rollback / previous digest path known  
-
----
 
 ## References
 

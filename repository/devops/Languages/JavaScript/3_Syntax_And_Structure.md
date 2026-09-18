@@ -2,13 +2,9 @@
 
 JavaScript code is made of **statements**: declarations, expressions, and control flow. This topic covers how code is structured (statements, semicolons, automatic semicolon insertion), comments, strict mode, and **exception handling** in depth: `try/catch/finally`, the error object, `throw`, built-in and custom errors, and how to handle failures so scripts behave predictably in production and in automation.
 
----
-
 ## Statements
 
 A **statement** is a unit of code that performs an action: an expression (e.g. a function call), a declaration (variable, function), or a control construct (if, loop, try/catch). Statements are separated by semicolons or by line breaks where the engine inserts a semicolon automatically. Multiple statements can appear on one line separated by semicolons, but usually one statement per line is used for readability.
-
----
 
 ## Semicolons and automatic semicolon insertion (ASI)
 
@@ -25,19 +21,13 @@ alert("Hello");
 
 Without the semicolon after `alert("Hello")`, the second line is not treated as a new statement.
 
----
-
 ## Comments
 
 **Single-line comments** start with `//`; the rest of the line is ignored. **Block comments** start with `/*` and end with `*/`; everything between is ignored. Block comments cannot be nested: a `/*` inside another `/* ... */` is not allowed and will break parsing. Comments are for documentation and for temporarily disabling code; minifiers typically strip them in production builds.
 
----
-
 ## Strict mode
 
 The directive `"use strict"` (or `'use strict'`) enables **strict mode** for the script or for the function in which it appears. It must be at the very top of the script (only comments may appear before it); otherwise it has no effect. In strict mode, several legacy or error-prone behaviors are removed or turned into errors: for example, assigning to an undeclared variable throws instead of creating a global, and some syntax is disallowed. Classes and ES modules enable strict mode by default. For scripts that are not modules, putting `"use strict";` at the top is recommended so that mistakes are caught early. There is no way to turn strict mode off once it is on.
-
----
 
 ## Exception handling: try, catch, finally
 
@@ -79,8 +69,6 @@ setTimeout(() => {
 }, 100);
 ```
 
----
-
 ## The error object and optional catch binding
 
 When an error is thrown (by the engine or by your code), JavaScript typically provides an **error object** with at least:
@@ -100,8 +88,6 @@ try {
 }
 ```
 
----
-
 ## Throwing errors: throw
 
 Use the **throw** statement to signal an error. You can throw any value (number, string, object), but convention and tooling expect an **Error** instance or a subclass so that `name`, `message`, and `stack` are available. Built-in constructors include **Error**, **SyntaxError**, **ReferenceError**, **TypeError**, **RangeError**, **URIError**. Use them to create and throw errors.
@@ -114,8 +100,6 @@ throw new TypeError("Expected a number");
 ```
 
 After `throw`, execution stops and control jumps to the nearest enclosing `catch`, or the script terminates if there is none. So `throw` is a non-local exit.
-
----
 
 ## Built-in error types
 
@@ -143,8 +127,6 @@ try {
 if (!user.name) throw new Error("Missing field: name");
 ```
 
----
-
 ## Custom errors and extending Error
 
 You can define your own error classes by extending **Error**. That gives you a recognizable type (e.g. `ValidationError`, `NotFoundError`) and lets you add extra properties (e.g. `statusCode`, `field`). Always call **super(message)** in the constructor so `message` and the base behavior are set. Set **this.name** to the class name so that stack traces and `err.name` are correct. Then use **throw new MyError(...)** and in catch use **instanceof MyError** to distinguish your errors from others.
@@ -168,8 +150,6 @@ try {
 ```
 
 **Rethrowing:** If you cannot handle an error, rethrow it with `throw err` so that a higher-level catch or the environment can handle it. Do not swallow errors unless you intentionally ignore them (and log or document why).
-
----
 
 ## Wrapping exceptions and error chains
 
@@ -199,25 +179,17 @@ function readUser(json) {
 
 This keeps the public API of `readUser` simple (one error type) while preserving the chain of causes for logging or debugging.
 
----
-
 ## Uncaught errors and global handlers
 
 When an exception is never caught, it becomes an **uncaught** error. In the **browser**, the script stops and the error is reported in the console; you can also listen with **window.onerror** (and in some environments **window.onunhandledrejection** for promise rejections) to log or report errors to a service. In **Node.js**, uncaught exceptions and unhandled promise rejections can be handled with **process.on('uncaughtException')** and **process.on('unhandledRejection')**; these are last-resort handlers for logging or graceful shutdown—they do not replace proper try/catch and promise rejection handling in your code. For scripts that run in CI or as CLI tools, letting an uncaught exception exit the process with a non-zero code is the correct way to signal failure; for long-running servers, log the error and decide whether to exit or continue.
-
----
 
 ## finally and cleanup
 
 The **finally** block runs after the try (and catch, if present) complete—whether they complete normally, with return, or by throwing. If finally throws, that exception replaces any exception that was in progress. Use finally for releasing resources (e.g. closing a file handle or clearing a timer) so that cleanup runs even when an error occurs. Do not use finally to “fix” or swallow errors; use it only for side effects that must run.
 
----
-
 ## Summary
 
 Statements are separated by semicolons or by line breaks where ASI applies; be careful when the next line starts with `[` or `(`. Comments use `//` or `/* */`. Strict mode is enabled with `"use strict"` at the top of the script. Exception handling uses **try/catch/finally**: only runtime errors are caught, and only for code that runs synchronously inside the try block. The error object has **name**, **message**, and often **stack**. Use **throw** with **Error** or subclasses; extend **Error** for custom error types and use **instanceof** in catch. Wrap low-level errors in a higher-level type with a **cause** when that simplifies the caller. Use **finally** for cleanup; rethrow when you cannot handle an error so that callers or the environment can.
-
----
 
 ## Further reading
 

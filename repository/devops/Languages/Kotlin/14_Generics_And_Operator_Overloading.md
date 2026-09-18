@@ -83,8 +83,6 @@ Kotlin allows you to overload predefined operators by declaring member or extens
 
 Overloading should match the usual meaning of the operator so that code stays readable. The next topic covers coroutines and asynchronous programming.
 
----
-
 ## Further reading
 
 - [Generics: in, out, where](https://kotlinlang.org/docs/generics.html)

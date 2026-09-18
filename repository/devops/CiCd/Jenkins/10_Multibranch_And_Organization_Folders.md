@@ -2,8 +2,6 @@
 
 [← Previous](./09_Scripted_Pipeline_And_CPS.md) · [README](./README.md) · [Next: Agents →](./11_Agents_Clouds_Docker_And_Kubernetes.md)
 
----
-
 ## 1. Concepts
 
 | Item | Behavior |
@@ -32,8 +30,6 @@ pipeline {
 }
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### Securing org folders & Multibranch
@@ -59,8 +55,6 @@ Organization Folders add a layer: discover repos in a GitHub/GitLab/Bitbucket or
 
 Don’t let untrusted fork PRs run on privileged agents with production credentials ([16](./16_Security_Folders_RBAC_And_Hardening.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -70,8 +64,6 @@ Don’t let untrusted fork PRs run on privileged agents with production credenti
 | Legacy single trunk | Pipeline job from SCM on `main` only |
 
 **Good:** webhook-driven scans + tight credentials. **Bad:** org folder with admin SCM token and shared deploy credentials on all PR builds.
-
----
 
 ## References
 

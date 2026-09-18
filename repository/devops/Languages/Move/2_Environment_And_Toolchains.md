@@ -82,8 +82,6 @@ Core Move ships **modules** such as **`Vector`**, **`option`**, **`string`**, **
 - **Security:** reviewing `Move.toml` and lockfiles, auditing dependency repos, ensuring production builds use the same compiler as audit.
 - **Operations:** release pipelines that promote bytecode from CI to staging to mainnet, key management for publish transactions, network selection and RPC health.
 
----
-
 ## Further reading
 
 - [Move Book — Packages](https://move-language.github.io/move/packages.html)

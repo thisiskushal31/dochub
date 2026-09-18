@@ -6,8 +6,6 @@
 
 How R **evaluates** code: lexical scoping, **environments** as first-class objects, **lazy evaluation** of function arguments (promises), **closures**, and the boundary between “expressive metaprogramming” and “unmaintainable magic.” This chapter matters because much of the tidyverse and modeling APIs rely on **non-standard evaluation (NSE)**; production teams need explicit rules for where NSE is allowed, how to test it, and how to avoid hidden global state.
 
----
-
 ## 1. Concepts
 
 ### 1. Lexical scoping and the environment chain
@@ -33,8 +31,6 @@ Operational consequence: side effects in argument expressions can run **later th
 ### 5. Control flow primitives
 
 `if` requires a scalar-like logical decision (be careful with vectors—use `ifelse`, `dplyr::case_when`, or explicit indexing for vectorized decisions). `for` loops are clear and sometimes fastest after profiling; **vectorization** is not always the winning move—measure.
-
----
 
 ## 2. Advanced concepts
 
@@ -64,8 +60,6 @@ Use `on.exit()` to close connections, release files, and restore options when a 
 
 Generics like `print`, `summary`, `[`, and arithmetic dispatch methods based on **class** attributes. Debugging “why does `[` do that?” often ends at S3/S4 dispatch—chapter 4 ties structures to this behavior.
 
----
-
 ## 3. Applications and use cases
 
 - **Package design:** pure transforms + explicit I/O at boundaries; avoid globals.
@@ -91,8 +85,6 @@ add2(3)
 - NSE is scoped, tested, and paired with SE escape hatches where applicable.
 - Resource cleanup uses `on.exit` or equivalent patterns for connections and files.
 - Error handling preserves context and maps to non-zero exits for batch jobs.
-
----
 
 ## References
 

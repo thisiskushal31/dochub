@@ -2,8 +2,6 @@
 
 [← Previous](./11_Rack_PDU_A_And_B.md) · [README](./README.md) · [Next: EPO →](./13_EPO_And_Safety_Disconnects.md)
 
----
-
 ## 1. Concepts
 
 **Grounding** and **bonding** create intentional low-impedance paths for fault current and keep exposed metal near the same potential. **Surge protective devices (SPDs)** clamp transient overvoltages from lightning and switching.
@@ -21,8 +19,6 @@ This is safety and uptime literacy—not optional “nice to have” for IT.
 | SPD stages | Service, board, and sometimes rack/UPS |
 
 Signal reference and “clean ground” myths cause bad DIY. Follow the site design and local code—do not invent isolated ground trees for servers.
-
----
 
 ## 2. Advanced concepts
 
@@ -48,8 +44,6 @@ Lightning-prone and long utility feeder sites need SPD strategy at multiple stag
 
 IEC earthing systems (TN-S, TN-C-S, TT, IT) change *how* grounding is arranged. US NEC language differs. Learn the local system name on each site; do not force TN-S habits onto a TT site by folklore.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -68,8 +62,6 @@ IEC earthing systems (TN-S, TN-C-S, TT, IT) change *how* grounding is arranged. 
 - Never remove “extra” ground wires to “fix noise” without engineering  
 
 **Good:** continuous bonding, staged SPD, documented earthing type. **Bad:** floating racks; spent SPDs; DIY isolated grounds.
-
----
 
 ## References
 

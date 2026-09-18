@@ -2,8 +2,6 @@
 
 [← Previous](./8_Object_On_Prem.md) · [README](./README.md) · [Next: Encryption →](./10_Encryption_And_Key_Custody.md)
 
----
-
 ## 1. Concepts
 
 Three different jobs get confused constantly:
@@ -19,8 +17,6 @@ Ransomware literacy: attackers delete/encrypt what they can reach—**immutable 
 ### Where it sits
 
 Array snap schedules; backup clients/proxies; replication links between halls; object-lock buckets ([8](./8_Object_On_Prem.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -42,8 +38,6 @@ On-ramp survey: [../6_Storage_Backup_And_Restore.md](../6_Storage_Backup_And_Res
 
 3-2-1-style rules adapt to object-lock and cloud archive—jobs remain: independent copies, tested restore, separated control planes.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -62,8 +56,6 @@ On-ramp survey: [../6_Storage_Backup_And_Restore.md](../6_Storage_Backup_And_Res
 - Never declare DR without a restore drill  
 
 **Good:** layered snaps + backup + tested restore. **Bad:** “we have snaps”; async repl as only backup; never restored.
-
----
 
 ## References
 

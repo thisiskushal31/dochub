@@ -23,8 +23,6 @@ defer f.Close() // runs when function returns, even on panic
 
 **Why this matters.** **defer** keeps cleanup next to acquisition and ensures it runs; use it for every resource that must be released. Reserve **panic** for programmer errors and invariants; use **error** for operational failures. **recover** at boundaries (e.g. top of a goroutine or HTTP handler) can prevent one panicking goroutine from killing the whole process, but you must then handle the recovered value (log it, return an error) and not pretend the program is still in a valid state if you cannot guarantee it.
 
----
-
 ## Further reading
 
 - [The Go Programming Language Specification: Defer statements](https://go.dev/ref/spec#Defer_statements)

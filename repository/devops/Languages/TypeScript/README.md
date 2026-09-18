@@ -19,8 +19,6 @@ It is **not** a React/Next design course, a bundler encyclopedia, or a Deno/Bun 
 
 Start at chapter **00**. First goal: know which `tsc` is on your PATH, run a hello, and feel types disappear at emit. After chapter **12**, read **13** before you chase micro-syntax for “speed.”
 
----
-
 ## After this track — what you can write
 
 Finish **00–22** and you should be able to **author and review** real TypeScript work—not only recite syntax. Concrete targets:
@@ -35,8 +33,6 @@ Finish **00–22** and you should be able to **author and review** real TypeScri
 | A **UI PR review** (not a UI redesign) | Read `.tsx` props/events, keep DOM/`jsx` out of Node packages | **19** |
 
 Chapter **21** maps these to job roles. Chapter **22** tells you what this track does **not** replace.
-
----
 
 ## What to learn next (complement paths)
 
@@ -56,8 +52,6 @@ TypeScript is the **typed JS layer**. Product UIs and frameworks sit **on top**�
 
 **Track status (2026-08-16):** **Complete** for the in-scope staff curriculum on pin **TypeScript 5.9.x** + `strict`. A final internet coverage pass against the official Handbook / TSConfig / 5.8–5.9 notes found nothing further required; React/Next stay **complement doors**, not missing chapters. Revisit only on a new major pin or an explicit new audit.
 
----
-
 ## Versions and brownfield (default narrative)
 
 **Default for new work: TypeScript 5.9.x** with **`strict`: true**. Pin the exact patch CI uses (`tsc -v`). Looser legacy configs (`noImplicitAny: false`, old `moduleResolution: node`) are **brownfield literacy**—migrate deliberately.
@@ -76,8 +70,6 @@ tsc -v
 node -v
 ```
 
----
-
 ## Chapter structure
 
 Every chapter follows:
@@ -88,8 +80,6 @@ Every chapter follows:
 4. **Staff-level review checklist**
 
 Links live in each chapter’s **References** (official hubs only).
-
----
 
 ## Semantic model (five ideas)
 
@@ -107,15 +97,11 @@ Links live in each chapter’s **References** (official hubs only).
 | tsconfig honesty | Copy-pasted config nobody can explain | **02**, **15** |
 | Two clocks | Optimizing syntax while the DB waits; ignoring event-loop block | **13**, **14**, **15** |
 
----
-
 ## How to read this section
 
 Read in **number order**. Doorway → type system → **pillars (11–15)** → advanced types / decls / tests → surface / security → use cases → compass.
 
 If you already know modern JS well, you can move faster through **03–07**, but **do not skip 11–15**. Read the **Runtime cost** notes in **03–10** as you go; use chapter **13** when you want the full machine picture. Especially **13**—that is the senior “money” chapter in beginner language.
-
----
 
 ## Progression
 
@@ -126,8 +112,6 @@ If you already know modern JS well, you can move faster through **03–07**, but
 | **Pillars** | 11 → 15 | Errors, async, **runtime speed on the machine**, file I/O, faster builds |
 | **Advanced / ecosystem** | 16 → 20 | Mapped types, `.d.ts`, tests, DOM/React door, security |
 | **Synthesis** | 21 → 22 | What you can write now; roles; **what to learn next** |
-
----
 
 ## Chapters
 
@@ -156,8 +140,6 @@ If you already know modern JS well, you can move faster through **03–07**, but
 | 20 | Security, supply chain, and safe config | [20_Security_Supply_Chain_And_Safe_Config.md](./20_Security_Supply_Chain_And_Safe_Config.md) |
 | 21 | Use cases and engineering perspectives | [21_Use_Cases_And_Engineering_Perspectives.md](./21_Use_Cases_And_Engineering_Perspectives.md) |
 | 22 | Where TypeScript is going and adjacent doors | [22_Where_TypeScript_Is_Going_And_Adjacent_Doors.md](./22_Where_TypeScript_Is_Going_And_Adjacent_Doors.md) |
-
----
 
 ## Further reading
 

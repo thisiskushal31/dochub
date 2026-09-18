@@ -2,8 +2,6 @@
 
 [← Previous](./16_Azure_Boards.md) · [README](./README.md) · [Next: Test Plans →](./18_Azure_Test_Plans.md)
 
----
-
 ## 1. Concepts
 
 **Azure Repos** hosts code:
@@ -14,8 +12,6 @@
 | **TFVC** | Legacy centralized VCS; still in brownfield Server/Services estates |
 
 Most new work is Git. Know TFVC exists so migrations and old release docs make sense (similar spirit to CVS/SVN literacy in rule 9).
-
----
 
 ## 2. Advanced concepts
 
@@ -39,8 +35,6 @@ Skip Azure Repos entirely if GitHub is SoR; still use Pipelines + Boards ([20](.
 
 Import from GitHub/GitLab/TFVC tools exist — plan LFS, permissions, and pipeline rewiring.
 
----
-
 ## 3. Applications and use cases
 
 | Estate | Choice |
@@ -50,8 +44,6 @@ Import from GitHub/GitLab/TFVC tools exist — plan LFS, permissions, and pipeli
 | GitHub Enterprise already standard | GitHub + Azure Pipelines |
 
 **Good:** branch policies + YAML PR builds. **Bad:** everyone pushes to `main` with no policy.
-
----
 
 ## References
 

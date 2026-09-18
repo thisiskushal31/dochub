@@ -4,8 +4,6 @@
 
 This topic covers **numeric representation** (ASCII and BCD), **string** layout and **string instructions** (MOVS, LODS, STOS, CMPS, SCAS), and **arrays** in assembly. Same format: text first, then code. See **Further reading** for sources.
 
----
-
 ## Numbers: binary, ASCII, and BCD
 
 Arithmetic in the CPU works on **binary** data. When numbers are read from keyboard or shown on screen they are in **ASCII**. So input is often converted to binary (e.g. subtract `'0'` for a digit), you do the math, then convert the result back to ASCII for output.
@@ -14,8 +12,6 @@ Arithmetic in the CPU works on **binary** data. When numbers are read from keybo
 
 - **ASCII** — One character per digit (e.g. 1234 as bytes 31h, 32h, 33h, 34h). Instructions **AAA, AAS, AAM, AAD** adjust after/before arithmetic for ASCII digits (operand in AL).
 - **BCD (Binary Coded Decimal)** — Unpacked: one digit per byte; packed: two digits per byte (4 bits each). **DAA** and **DAS** adjust after addition/subtraction for packed BCD. **AAM** and **AAD** are used for unpacked BCD multiply/divide.
-
----
 
 ## Arrays: definition and traversal
 
@@ -52,8 +48,6 @@ x:   db 2, 4, 3
 sum: db 0
 ```
 
----
-
 ## Strings: length and sentinel
 
 Strings are byte sequences. You can represent length in two ways:
@@ -71,8 +65,6 @@ len  equ  $ - msg
 message db  'I am loving it!', 0
 ```
 
----
-
 ## String instructions (overview)
 
 String instructions use **ESI** (source) and **EDI** (destination); they advance ESI/EDI according to the **direction flag** (DF). **CLD** clears DF (forward); **STD** sets it (backward).
@@ -88,8 +80,6 @@ String instructions use **ESI** (source) and **EDI** (destination); they advance
 **Repetition prefixes:** **REP** repeats until **ECX** is zero. **REPE/REPZ** and **REPNE/REPNZ** repeat while ZF matches (e.g. for compare-and-scan). ECX is decremented each iteration.
 
 **Example (copy a string with REP MOVSB):** Set ESI to source, EDI to destination, ECX to length, then `cld` and `rep movsb`.
-
----
 
 ## Further reading
 

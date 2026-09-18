@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Fundamentals: Deadlock](../Fundamentals/7_Deadlock.md). Here: **how macOS handles** (or does not handle) **deadlock** — no kernel-level deadlock detection; avoidance and observation are up to the developer and admin.
 
----
-
 ## How the system handles deadlock (deep level)
 
 The **XNU kernel does not detect or resolve user-level deadlocks**. If two or more threads (in one process or across processes) hold locks and wait for each other, the kernel will not break the cycle. **Deadlock avoidance** is the programmer’s responsibility: use **lock ordering**, **trylock** with backoff, or **timeouts** so that cycles cannot form or can be broken by aborting and retrying.
@@ -20,16 +18,12 @@ The **XNU kernel does not detect or resolve user-level deadlocks**. If two or mo
 
 **References:** Standard OS/deadlock material; Apple does not document “deadlock detection” as a kernel feature because it is not provided.
 
----
-
 ## Summary
 
 - **Detection:** None at kernel level.
 - **Avoidance:** Lock ordering, trylock, timeouts in application code.
 - **Observation:** **`sample`**, Activity Monitor threads, **lldb** backtraces.
 - **Recovery:** Kill process or fix program.
-
----
 
 ## Further reading
 

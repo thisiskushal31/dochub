@@ -2,8 +2,6 @@
 
 [← Previous](./10_GitOps_Helm_Kustomize_And_Migrating.md) · [README](./README.md) · [Next: Worked example →](./12_Worked_Example_Canary_A_Service.md)
 
----
-
 ## 1. Concepts
 
 ### Notifications
@@ -29,15 +27,11 @@ The controller exposes Prometheus metrics for operational health (reconcile, rol
 
 Full command reference lives upstream — version-aligned with the controller.
 
----
-
 ## 2. Advanced concepts
 
 Prefer **automation** (analysis) over manual promote as the steady state. Notifications + metrics close the loop for on-call. Imperative CLI is for break-glass and labs.
 
 Dashboard is optional; never the only audit trail — Git + AnalysisRun objects are the record.
-
----
 
 ## 3. Applications and use cases
 
@@ -46,8 +40,6 @@ Dashboard is optional; never the only audit trail — Git + AnalysisRun objects 
 | Platform | Metrics + notifications defaults |
 | App team | `get --watch` during first canaries; then trust analysis |
 | On-call | Abort alerts; promote only with policy |
-
----
 
 ## References
 

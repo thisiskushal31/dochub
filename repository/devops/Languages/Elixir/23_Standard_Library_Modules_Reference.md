@@ -8,15 +8,11 @@ The standard library is the set of modules shipped with Elixir. Kernel is auto-i
 
 **How this reference is organized:** Kernel and special forms → Data types → Collections and enumerables → IO and system → Calendar → Processes and applications → Protocols → Code and macros → Exceptions and deprecated → Use cases → Security and DevOps → Further reading.
 
----
-
 ## Kernel and special forms
 
 **Kernel** provides the default environment: type-checking guards (`is_list/1`, `is_atom/1`), control-flow macros (`if`, `case`, `cond`, `unless`), arithmetic and comparison operators, process primitives (`spawn/1`, `send/2`, `self/0`), and basic type handling. Because it is auto-imported, you rarely write `Kernel.` in front of these. Use `import Kernel, except: [if: 2]` only when you want to override or exclude something.
 
 **Kernel.SpecialForms** are language constructs that are always in scope and cannot be overridden: `defmodule`, `def`, `defp`, `defmacro`, `receive`, `import`, `alias`, `require`, `use`, `quote`, `unquote`, `super`, `__MODULE__`, `__STACKTRACE__`, and a few others. They are the building blocks of the language; you use them when defining modules, functions, and when doing metaprogramming.
-
----
 
 ## Data types
 
@@ -46,8 +42,6 @@ Modules that work with built-in and common types.
 | **Version** | Parse and compare version strings. Use for dependency resolution or compatibility checks. |
 | **Version.Requirement** | Version requirement syntax (e.g. `~> 1.0`). Use when parsing or building requirement strings for dependencies. |
 
----
-
 ## Collections and enumerables
 
 Types that implement the Enumerable protocol can be used with Enum and Stream. Lists, maps, ranges, MapSet, and File.Stream are enumerables.
@@ -63,8 +57,6 @@ Types that implement the Enumerable protocol can be used with Enum and Stream. L
 | **MapSet** | Unordered set of unique elements. Use for membership, union, intersection, difference when you do not need order or duplicate keys. |
 | **Range** | Integer range (`1..10`, `1..10//2`). Enumerable; use for numeric ranges and as slice spec for strings and lists. |
 | **Stream** | Lazy enumerables: map, filter, take, cycle, zip, etc. Use for large or infinite data, or when composing many steps without building intermediate lists. |
-
----
 
 ## IO and system
 
@@ -84,8 +76,6 @@ File system, paths, standard I/O, and process environment.
 | **StringIO** | In-memory IO device. Use when you need something that behaves like IO but reads/writes to a string (e.g. testing or capturing output). |
 | **System** | System environment: cwd, env, argv, halt, find_executable, cmd, and build info. Use for environment and process control in scripts and releases. |
 
----
-
 ## Calendar
 
 Calendar behaviour and time-zone databases for Date, Time, DateTime, and NaiveDateTime.
@@ -96,8 +86,6 @@ Calendar behaviour and time-zone databases for Date, Time, DateTime, and NaiveDa
 | **Calendar.ISO** | ISO calendar used by default for Date and DateTime. |
 | **Calendar.TimeZoneDatabase** | Behaviour for time zone databases. Use when you need custom or updated time zone data. |
 | **Calendar.UTCOnlyTimeZoneDatabase** | Time zone database that only knows UTC. Use when you do not need other zones. |
-
----
 
 ## Processes and applications
 
@@ -120,8 +108,6 @@ OTP processes, application lifecycle, and configuration.
 | **Task** | One-off async work: async/await, start_link, yield. Use for parallel one-shot work (e.g. parallel HTTP requests). |
 | **Task.Supervisor** | Supervisor for tasks. Use when you want to limit or supervise short-lived tasks. |
 
----
-
 ## Protocols
 
 Protocols define one interface implemented by many types. You implement a protocol for your type; the same function name then works across types.
@@ -138,8 +124,6 @@ Protocols define one interface implemented by many types. You implement a protoc
 | **Protocol** | Functions to define and implement protocols (defprotocol, defimpl). Use when defining a new protocol. |
 | **String.Chars** | Protocol for converting to string. Implement to_string/1; it is used by string interpolation and Kernel.to_string/1. |
 
----
-
 ## Code and macros
 
 Compilation, evaluation, and macro/AST utilities.
@@ -152,19 +136,13 @@ Compilation, evaluation, and macro/AST utilities.
 | **Macro** | AST helpers: escape, unescape, expand, expand_once, quoted?, traverse. Use in macros and when analyzing or generating code. |
 | **Macro.Env** | Struct holding macro environment (module, function, file, line, vars, etc.). Use in macros to get context. |
 
----
-
 ## Exceptions
 
 Common exceptions: ArgumentError, ArithmeticError, BadArityError, BadBooleanError, BadFunctionError, BadMapError, CaseClauseError, CondClauseError, FunctionClauseError, KeyError, MatchError, RuntimeError, and module-specific ones (e.g. File.Error, OptionParser.ParseError, Protocol.UndefinedError). Each has a struct and message; use them in rescue or when raising. Custom exceptions use `defexception/1` and implement the Exception behaviour.
 
----
-
 ## Deprecated
 
 BadStructError, Behaviour, Dict, GenEvent, HashDict, HashSet, Set, Supervisor.Spec are deprecated. Use the recommended replacements (e.g. Map for Dict, MapSet for HashSet, Supervisor child_spec for Supervisor.Spec) as described in the language docs.
-
----
 
 ## Use cases
 
@@ -175,8 +153,6 @@ BadStructError, Behaviour, Dict, GenEvent, HashDict, HashSet, Set, Supervisor.Sp
 **Tooling and build:** Mix (external) and Config for project and release config. Code and Macro for analysis or code generation. Version and Version.Requirement for dependency and version checks.
 
 **Data and formats:** String, Integer, Float for parsing; JSON for APIs; Date, DateTime, NaiveDateTime, Time for timestamps. Regex for text extraction and validation.
-
----
 
 ## Security and DevOps
 
@@ -189,8 +165,6 @@ BadStructError, Behaviour, Dict, GenEvent, HashDict, HashSet, Set, Supervisor.Sp
 **Supply chain:** Version and Version.Requirement matter for dependency constraints. Lock dependencies and audit them; use mix hex.audit when available. Prefer well-maintained libraries and pin versions in production.
 
 **Logging and errors:** Exception (format, message, normalize) and Logger (external) for errors. Do not log secrets or PII at info level. Use inspect with structs: false when debugging to avoid recursive or sensitive output.
-
----
 
 ## Further reading
 

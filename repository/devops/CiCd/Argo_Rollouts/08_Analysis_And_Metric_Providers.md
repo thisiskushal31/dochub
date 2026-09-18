@@ -2,8 +2,6 @@
 
 [← Previous](./07_Traffic_Management.md) · [README](./README.md) · [Next: Experiments & extras →](./09_Experiments_HPA_Metadata_Restart_Rollback.md)
 
----
-
 ## 1. Concepts
 
 Analysis answers: **is this canary/blue-green good enough to continue?**
@@ -31,8 +29,6 @@ Providers (in-tree; new ones via **plugins**):
 
 Metrics are optional — manual promote still works — but **automated** progressive delivery needs KPIs that answer in minutes ([13](./13_Best_Practices_And_When_Not_To_Use.md)).
 
----
-
 ## 2. Advanced concepts
 
 | Idea | Detail |
@@ -48,8 +44,6 @@ Metrics are optional — manual promote still works — but **automated** progre
 
 Failed analysis → abort. Do not use flaky global SLOs as the only gate.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -60,8 +54,6 @@ Failed analysis → abort. Do not use flaky global SLOs as the only gate.
 | No metrics yet | Manual pause/promote while building Prom |
 
 **Good:** A/A-test analysis in staging. **Bad:** analysis that always passes; analysis that pages on noise.
-
----
 
 ## References
 

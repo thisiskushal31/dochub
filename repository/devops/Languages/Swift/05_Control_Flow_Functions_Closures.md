@@ -8,8 +8,6 @@
 
 Control flow shapes how failure exits early; functions and closures shape how work is named and passed around. Closures that capture `self` are a primary source of retain cycles in Apple app trees — treat them as a review concern, not sugar.
 
----
-
 ## 1. Concepts
 
 ### 1. Conditionals: `if`, `guard`, early exit
@@ -219,8 +217,6 @@ load(from: "https://example.com") {
     print(body)
 }
 ```
-
----
 
 ## 2. Advanced concepts
 
@@ -444,8 +440,6 @@ func twice(_ body: () throws -> Void) rethrows {
 }
 ```
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -457,8 +451,6 @@ func twice(_ body: () throws -> Void) rethrows {
 | **Software engineering** | Named functions for reusable logic; closures for short adapters; document escaping callbacks, Sendable, and ownership requirements |
 
 Callbacks and completion handlers remain common in older Apple APIs. New code prefers `async`/`await` (chapter **10**); still read closures fluently to review and migrate.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -473,8 +465,6 @@ Callbacks and completion handlers remain common in older Apple APIs. New code pr
 - No new `++` / C-style `for`; brownfield occurrences are migrated when the file is touched.
 - `@Sendable` / concurrency warnings are not silenced without an ownership story.
 - Closure-heavy APIs have a clear “who owns the callback?” answer.
-
----
 
 ## References
 

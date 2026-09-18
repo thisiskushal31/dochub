@@ -2,8 +2,6 @@
 
 [← Previous](./06_Runners_Cloud_And_Self_Hosted.md) · [README](./README.md) · [Next: Triggers →](./08_Triggers_Steps_Stages_Parallel.md)
 
----
-
 ## 1. Concepts
 
 | Surface | Use |
@@ -15,8 +13,6 @@
 | **Third-party secret providers** | Inject from external vaults at step runtime (when enabled) |
 
 Never commit secrets to YAML. Prefer OIDC/roles for cloud deploys ([Security/5](../../Security/5_OIDC_CI_And_Least_Privilege.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -36,8 +32,6 @@ Configure OIDC in Bitbucket and trust Bitbucket’s issuer in the cloud IAM prov
 
 When using provider middleware, secrets never rest in Bitbucket storage — validate JWTs and least-privilege paths.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -47,8 +41,6 @@ When using provider middleware, secrets never rest in Bitbucket storage — vali
 | Shared org registry auth | Workspace variable |
 
 **Good:** prod secrets only on production deployments. **Bad:** prod cloud keys available to every PR pipeline.
-
----
 
 ## References
 

@@ -178,8 +178,6 @@ Within math you can insert short text with `\text{...}` (amsmath), which keeps t
 
 The **amssymb** package adds extra math symbols (e.g. blackboard bold `\mathbb{N}`, various arrows and relations). With XeLaTeX or LuaLaTeX, **unicode-math** lets you use OpenType math fonts; setup is more involved and documented in the package manual. For very advanced math (theorem environments, custom structures), amsmath and related packages (amssymb, amsthm) provide more building blocks; see the amsmath user guide and Overleaf/CTAN math docs.
 
----
-
 ## Further reading
 
 - [User’s Guide for the amsmath Package](https://latex-project.org/help/documentation/amsldoc.pdf)

@@ -4,8 +4,6 @@
 
 **What this language does and why it's here:** Fortran (Formula Translation) is a general-purpose, imperative language designed for **numeric and scientific computing**. It is widely used in **HPC**, weather and climate modeling, physics, finance, and research. When you operate or secure HPC clusters, scientific pipelines, or research infrastructure, Fortran codebases and build systems often appear; understanding Fortran helps with integration, build, and deployment. This section is a deep dive: it goes from **very basic** (what Fortran is, setup, syntax, types) through **core and advanced** (arrays, procedures, modules, intrinsics, build) to **use-case driven** (where and how it is used, security and DevOps).
 
----
-
 ## How to read this section
 
 Read in **number order** for a single path from beginner to advanced to use cases.
@@ -15,8 +13,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 - **Topics 9–11 (Data and I/O):** Arrays and dynamic arrays, derived types and pointers, basic and file I/O.
 - **Topics 12–15 (Procedures and build):** Procedures (subroutines and functions), modules, intrinsic functions and precision, libraries and build, style and debugging.
 - **Topics 16–17 (Use cases and security):** Where Fortran is used (by domain and engineering role) and how to run it safely in production and HPC.
-
----
 
 ## Learning path: from basics to use cases
 
@@ -28,8 +24,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | **Procedures and build** | 12 → 13 → 14 → 15 | Write subroutines and functions, use modules, intrinsics, and build with make/CMake; apply style and debugging. |
 | **Use cases and applications** | 16 | See where Fortran is used: HPC, climate, physics, finance, and by engineering role. |
 | **Security and DevOps** | 17 | Apply security and DevOps practices for scientific and HPC environments. |
-
----
 
 ## Topics (in order)
 
@@ -58,8 +52,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | 16 | Use cases and applications | [16_Use_Cases_And_Applications.md](./16_Use_Cases_And_Applications.md) |
 | 17 | Security and DevOps | [17_Security_And_DevOps.md](./17_Security_And_DevOps.md) |
 
----
-
 ## By engineering role
 
 | Role | Focus | Where to go |
@@ -68,8 +60,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | **DevOps / SRE** | Build, deploy, run on clusters | 2, 11, 15, then **16**, **17**. |
 | **Security** | Supply chain, data, HPC hardening | 10, 15, then **16**, **17**. |
 | **Research / legacy maintenance** | Reading and extending existing code | 1–4, 9–10, 12–13, **16**, **17**. |
-
----
 
 ## Scope: what's covered and what's not
 
@@ -86,8 +76,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 - **Interoperability with C** — `bind(c)` and ISO_C_BINDING; important for mixed-language projects; see fortran-lang and compiler docs.
 
 If you need any of these, use the "Further reading" links in the relevant topic or the list below.
-
----
 
 ## Further reading
 

@@ -41,8 +41,6 @@ The unit of compilation is a **chunk**. Syntactically a chunk is just a block. S
 
 Execution works in two steps: Lua **loads** the chunk (compiling it to VM instructions) and then **runs** the compiled code. Chunks can be source (in a file or string) or precompiled binary (e.g. from `luac` or `string.dump`); `load` detects the form. Malicious binary chunks can be unsafe, so treat binary from untrusted sources with care.
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §3.1 Lexical Conventions](https://www.lua.org/manual/5.5/manual.html#3.1)

@@ -6,8 +6,6 @@
 
 **pprint**, **textwrap**, **string.Template**, **struct**, **threading**, **logging**, **weakref**, **itertools**, **functools**, **decimal**—patterns for readable output, binary protocols, concurrent **I/O**, production logs, and exact decimal arithmetic.
 
----
-
 ## 1. Concepts
 
 ### 1. pprint and textwrap
@@ -44,8 +42,6 @@ Reference objects without keeping them alive—caches, graphs, **finalize** hook
 
 **Decimal** with **Context** (precision, rounding mode) for **money** and audited arithmetic—see chapter 12 for float contrast.
 
----
-
 ## 2. Advanced concepts
 
 **logging** is thread-safe; **async** code may queue log records to avoid blocking the event loop.
@@ -53,8 +49,6 @@ Reference objects without keeping them alive—caches, graphs, **finalize** hook
 **QueueListener/QueueHandler** decouple logging threads from I/O latency.
 
 **Thread + async:** blocking calls in **async** stall the loop—**asyncio.to_thread** offloads (chapter 14).
-
----
 
 ## 3. Applications and use cases
 
@@ -74,8 +68,6 @@ header = struct.pack("!HH", 1, 256)
 typ, length = struct.unpack("!HH", header)
 log.info("parsed header type=%s len=%s", typ, length)
 ```
-
----
 
 ## References
 

@@ -30,8 +30,6 @@ deallocate(x)
 
 **Why this matters.** Fixed-size arrays are simple but can waste memory or limit flexibility; allocatable arrays are the standard for dynamic sizes. Bounds checking during development and correct handling of allocation failure improve reliability. Array operations and slicing keep code short and often faster.
 
----
-
 ## Further reading
 
 - [Fortran – Arrays (Tutorials Point)](https://www.tutorialspoint.com/fortran/fortran_arrays.htm)

@@ -89,8 +89,6 @@ nim c -r hello.nim
 - **Build provenance:** capture compiler flags and package lock state in build logs.
 - **Operational readiness:** document debug/rebuild commands for on-call workflows.
 
----
-
 ## Further reading
 
 - [Nim documentation portal](https://nim-lang.org/documentation.html)

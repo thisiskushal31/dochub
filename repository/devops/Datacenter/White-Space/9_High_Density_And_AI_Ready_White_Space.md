@@ -2,8 +2,6 @@
 
 [← Previous](./8_Crash_Cart_KVM_And_Serial_Aggregation.md) · [README](./README.md) · [Next: Safety →](./10_White_Space_Safety_And_Housekeeping.md)
 
----
-
 ## 1. Concepts
 
 **AI-ready / high-density** white space is not “the same cages with hotter servers.” It is a **coordinated SKU**: power, cooling (often liquid), weight, aisle width, busbars, and operations.
@@ -21,8 +19,6 @@
 ### Where it sits
 
 Purpose-built rows or zones in a hall; sometimes separate rooms. Colo sells it as a product—ask for the **zone manual**, not only a kW number.
-
----
 
 ## 2. Advanced concepts
 
@@ -51,8 +47,6 @@ Hyperscale AI halls may hide internal designs—use published principles and **y
 
 Liquid adoption varies by metro and operator. “AI-ready” marketing without liquid/power detail is a yellow flag.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -71,8 +65,6 @@ Liquid adoption varies by metro and operator. “AI-ready” marketing without l
 - Never land a DTC rack on “standard colo” assumptions  
 
 **Good:** matched density product, trained staff, tested leak/power. **Bad:** brochure “AI-ready”; adapters and hope; no manifold space.
-
----
 
 ## References
 

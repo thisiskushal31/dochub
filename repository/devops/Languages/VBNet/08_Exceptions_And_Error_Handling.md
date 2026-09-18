@@ -8,8 +8,6 @@ How VB.NET signals and handles failure: **`Try` / `Catch` / `Finally`**, **`Thro
 
 You leave able to place handlers at the right boundary, choose specific catch types, and review cleanup and logging for production readiness.
 
----
-
 ## 1. Concepts
 
 ### 1. Exceptions are control flow for failure
@@ -106,8 +104,6 @@ End Try
 
 If you catch, you must **log, translate, retry with policy, or rethrow**. “We’ll look at it later” is how production incidents go unexplained.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `Catch … When` filters
@@ -153,8 +149,6 @@ Derive from `Exception` (or a suitable base) when callers must `Catch` a closed 
 
 Prefer a filter or helper method over deep nested `Try` blocks that obscure the happy path. Nested try is fine for translating at a boundary once.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -166,8 +160,6 @@ Prefer a filter or helper method over deep nested `Try` blocks that obscure the 
 | **Software engineering** | Tests assert exception types for contracts; ban empty `Catch`; `Using` on every disposable |
 
 VBA macros often `Resume Next`; VB.NET staff code should not import that culture into services.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -182,8 +174,6 @@ VBA macros often `Resume Next`; VB.NET staff code should not import that culture
 - Unhandled-exception logging exists at the host edge.
 - Cancellation (`OperationCanceledException`) not mislabeled as hard failure when appropriate.
 - Custom exception types are stable and catchable where needed.
-
----
 
 ## References
 

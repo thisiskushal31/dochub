@@ -2,8 +2,6 @@
 
 [← Previous](./19_Worked_Example_CI_Build_And_Promote.md) · [README](./README.md) · [Next: Coverage map →](./21_Feature_And_Configuration_Coverage_Map.md)
 
----
-
 ## 1. Concepts — defaults that age well
 
 | Do | Don’t |
@@ -19,8 +17,6 @@
 | Own scheduled workflows | Orphan crons that fail silently |
 | Right-size runners | macOS/GPU for no reason |
 
----
-
 ## 2. Advanced — when *not* (or not only) Actions
 
 | Situation | Better fit |
@@ -33,8 +29,6 @@
 
 Actions vs Apps: [01](./01_What_Is_GitHub_Actions.md).
 
----
-
 ## 3. Applications and use cases
 
 | Decision | Ask |
@@ -43,8 +37,6 @@ Actions vs Apps: [01](./01_What_Is_GitHub_Actions.md).
 | Self-hosted / ARC? | Do we own patching and isolation? |
 | Reusable workflows? | Who versions and CODEOWNS the paved road? |
 | Larger runners? | Have we measured queue time and CPU need? |
-
----
 
 ## References
 

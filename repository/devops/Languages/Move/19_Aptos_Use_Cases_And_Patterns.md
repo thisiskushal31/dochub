@@ -96,8 +96,6 @@ In those cases, compare with Sui topics **20–27** before finalizing architectu
 4. Lock down upgrade/governance model before scale.
 5. Continuously monitor abort/error/latency profiles.
 
----
-
 ## Further reading
 
 - [Aptos — Build](https://aptos.dev/build)

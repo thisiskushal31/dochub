@@ -4,8 +4,6 @@
 
 The **CPU** is the hardware that executes instructions. Understanding its components and how instructions flow (fetch, decode, execute) and how **pipelining** and **parallelism** work helps explain why **context switches** are costly and how the OS interacts with the CPU (interrupts, traps). This topic is **OS-agnostic**: generic CPU architecture and instruction life cycle.
 
----
-
 ## Why this matters for the OS
 
 The OS **schedules** processes on the CPU. It does not execute instructions itself; the CPU does. So:
@@ -15,8 +13,6 @@ The OS **schedules** processes on the CPU. It does not execute instructions itse
 - **Atomicity and ordering** — The OS relies on **atomic** instructions (e.g. test-and-set, compare-and-swap) and memory ordering for synchronization. These are defined by the CPU architecture.
 
 So “inside the CPU” is not just computer architecture; it sets the rules for how the OS can use the hardware.
-
----
 
 ## CPU components (simplified)
 
@@ -31,8 +27,6 @@ A typical CPU includes:
 | **MMU (Memory Management Unit)** | Translates **virtual** addresses to **physical** addresses using the page tables the kernel sets up. On a context switch, the kernel switches the page-table base (and possibly flushes the TLB), so the same virtual address in the new process maps to different physical memory. |
 
 The CPU executes instructions one (or several, in a pipeline) at a time, using these components. The OS sees the CPU as the thing that runs user code until an **interrupt**, **exception**, or **system-call** trap occurs; then the CPU runs kernel code.
-
----
 
 ## Instruction life cycle
 
@@ -60,8 +54,6 @@ This is the **instruction life cycle**. In a simple CPU, one instruction complet
   → Context switch: pipeline may be flushed; cost is many cycles.
 ```
 
----
-
 ## Pipelining and parallelism
 
 **Pipelining** — Overlap the stages of different instructions. While instruction N is in “execute,” instruction N+1 is in “decode” and N+2 is in “fetch.” So the CPU can complete (in the best case) one instruction per cycle, even though each instruction takes several cycles from start to finish. **Hazards** (data dependency, control flow) can cause stalls or require forwarding; the CPU and compiler try to minimize them.
@@ -70,16 +62,12 @@ This is the **instruction life cycle**. In a simple CPU, one instruction complet
 
 **Why this matters for the OS:** Context switching causes **pipeline flushes** and **cache effects**. The OS tries to keep processes on the same core when beneficial (affinity) and to avoid switching too frequently. Interrupts and exceptions are the hardware mechanism that hands control to the kernel; the kernel’s handlers are part of “how the OS works” with the CPU.
 
----
-
 ## Summary
 
 - The **CPU** fetches, decodes, and executes instructions; it has a control unit, ALU, registers, caches, and an MMU. The OS schedules processes on the CPU and relies on traps (system calls, interrupts, exceptions) to run kernel code.
 - **Instruction life cycle:** Fetch → Decode → Execute → (Memory) → Write-back. Pipelining overlaps these stages across instructions to improve throughput.
 - **Parallelism:** Multiple cores run multiple threads/processes concurrently. The OS scheduler assigns work to cores; context switches have a cost (registers, TLB, cache, pipeline).
 - This is **how the operating system’s world interacts with the CPU** — not Linux or Windows specific. For how the OS decides *which* process runs next, see [CPU scheduling](./3_CPU_Scheduling.md).
-
----
 
 ## Further reading
 

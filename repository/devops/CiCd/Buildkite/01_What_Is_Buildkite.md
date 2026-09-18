@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [Next: Organization →](./02_Organization_Teams_And_Clusters.md)
 
----
-
 ## 1. Concepts
 
 If you are new to delivery tools: **CI/CD** means automating build, test, and deploy when code changes ([CiCd/1](../1_Pipelines_Build_Test_Deploy.md)). **Buildkite** runs that loop with a split:
@@ -54,15 +52,11 @@ Hybrid is the classic Buildkite pitch: orchestration in SaaS; source and secrets
 | Fully self-managed control plane | [Jenkins/](../Jenkins/README.md) (or similar) |
 | Already Azure DevOps–centric | [Azure_DevOps/](../Azure_DevOps/README.md) |
 
----
-
 ## 2. Advanced concepts
 
 Plan tiers and Enterprise-only capabilities (e.g. some hosted Docker builder features, cluster insights) change — name the **capability** and confirm on [pricing](https://buildkite.com/pricing) / docs; do not invent gates.
 
 Coding-agent / assisted pipeline features appear in current docs as product experiments — treat them as assisted automation on the same gated loop, not a replacement for human ownership of production.
-
----
 
 ## 3. Applications and use cases
 
@@ -74,8 +68,6 @@ Coding-agent / assisted pipeline features appear in current docs as product expe
 | SE learning delivery | Agent-centric CI mapped to the universal loop |
 
 **Good:** pipeline YAML in Git; agents least-privileged. **Bad:** one eternal agent with standing prod credentials.
-
----
 
 ## References
 

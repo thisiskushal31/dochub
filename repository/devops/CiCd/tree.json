@@ -10,133 +10,133 @@
         "path": "Argo_CD/01_What_Is_Argo_CD_And_Why_GitOps.md",
         "type": "file",
         "sha": "",
-        "size": 6124
+        "size": 6104
       },
       {
         "name": "02_Core_Concepts_Applications_Sync_And_Health.md",
         "path": "Argo_CD/02_Core_Concepts_Applications_Sync_And_Health.md",
         "type": "file",
         "sha": "",
-        "size": 6319
+        "size": 6299
       },
       {
         "name": "03_Architecture_Components_And_Multi_Cluster.md",
         "path": "Argo_CD/03_Architecture_Components_And_Multi_Cluster.md",
         "type": "file",
         "sha": "",
-        "size": 5743
+        "size": 5723
       },
       {
         "name": "04_Install_Access_And_First_Application.md",
         "path": "Argo_CD/04_Install_Access_And_First_Application.md",
         "type": "file",
         "sha": "",
-        "size": 6621
+        "size": 6601
       },
       {
         "name": "05_Manifest_Sources_Tracking_And_Immutability.md",
         "path": "Argo_CD/05_Manifest_Sources_Tracking_And_Immutability.md",
         "type": "file",
         "sha": "",
-        "size": 6298
+        "size": 6278
       },
       {
         "name": "06_Sync_Policies_Waves_Projects_And_RBAC.md",
         "path": "Argo_CD/06_Sync_Policies_Waves_Projects_And_RBAC.md",
         "type": "file",
         "sha": "",
-        "size": 5901
+        "size": 5881
       },
       {
         "name": "07_ApplicationSets_App_Of_Apps_And_Scale.md",
         "path": "Argo_CD/07_ApplicationSets_App_Of_Apps_And_Scale.md",
         "type": "file",
         "sha": "",
-        "size": 5920
+        "size": 5900
       },
       {
         "name": "08_Secrets_CI_Integration_And_Operations.md",
         "path": "Argo_CD/08_Secrets_CI_Integration_And_Operations.md",
         "type": "file",
         "sha": "",
-        "size": 6183
+        "size": 6163
       },
       {
         "name": "09_Use_Cases_Pitfalls_And_Staff_Checklist.md",
         "path": "Argo_CD/09_Use_Cases_Pitfalls_And_Staff_Checklist.md",
         "type": "file",
         "sha": "",
-        "size": 6903
+        "size": 6873
       },
       {
         "name": "10_Ownership_Diffing_Webhooks_And_Observability.md",
         "path": "Argo_CD/10_Ownership_Diffing_Webhooks_And_Observability.md",
         "type": "file",
         "sha": "",
-        "size": 7155
+        "size": 7135
       },
       {
         "name": "11_Security_Tenancy_Hydrator_And_Troubleshooting.md",
         "path": "Argo_CD/11_Security_Tenancy_Hydrator_And_Troubleshooting.md",
         "type": "file",
         "sha": "",
-        "size": 8851
+        "size": 8821
       },
       {
         "name": "12_Worked_Example_Simple_Website_GitOps.md",
         "path": "Argo_CD/12_Worked_Example_Simple_Website_GitOps.md",
         "type": "file",
         "sha": "",
-        "size": 7025
+        "size": 7005
       },
       {
         "name": "13_Best_Practices_Topology_And_App_Sizing.md",
         "path": "Argo_CD/13_Best_Practices_Topology_And_App_Sizing.md",
         "type": "file",
         "sha": "",
-        "size": 7680
+        "size": 7660
       },
       {
         "name": "14_Feature_And_Configuration_Coverage_Map.md",
         "path": "Argo_CD/14_Feature_And_Configuration_Coverage_Map.md",
         "type": "file",
         "sha": "",
-        "size": 11809
+        "size": 11789
       },
       {
         "name": "15_Application_And_Sync_Configuration_Catalog.md",
         "path": "Argo_CD/15_Application_And_Sync_Configuration_Catalog.md",
         "type": "file",
         "sha": "",
-        "size": 8248
+        "size": 8228
       },
       {
         "name": "16_Control_Plane_Configuration_Catalog.md",
         "path": "Argo_CD/16_Control_Plane_Configuration_Catalog.md",
         "type": "file",
         "sha": "",
-        "size": 6026
+        "size": 6006
       },
       {
         "name": "17_Sources_Private_Repos_And_Parameters.md",
         "path": "Argo_CD/17_Sources_Private_Repos_And_Parameters.md",
         "type": "file",
         "sha": "",
-        "size": 7123
+        "size": 7103
       },
       {
         "name": "18_Platform_Ingress_HA_UI_And_Extras.md",
         "path": "Argo_CD/18_Platform_Ingress_HA_UI_And_Extras.md",
         "type": "file",
         "sha": "",
-        "size": 8163
+        "size": 8143
       },
       {
         "name": "README.md",
         "path": "Argo_CD/README.md",
         "type": "file",
         "sha": "",
-        "size": 7946
+        "size": 7941
       }
     ]
   },
@@ -151,119 +151,119 @@
         "path": "Argo_Rollouts/01_What_Is_Argo_Rollouts_And_Progressive_Delivery.md",
         "type": "file",
         "sha": "",
-        "size": 3657
+        "size": 3637
       },
       {
         "name": "02_Core_Concepts_Rollout_Analysis_Experiment.md",
         "path": "Argo_Rollouts/02_Core_Concepts_Rollout_Analysis_Experiment.md",
         "type": "file",
         "sha": "",
-        "size": 2840
+        "size": 2820
       },
       {
         "name": "03_Architecture_And_Controller.md",
         "path": "Argo_Rollouts/03_Architecture_And_Controller.md",
         "type": "file",
         "sha": "",
-        "size": 2560
+        "size": 2540
       },
       {
         "name": "04_Install_Plugin_Dashboard_And_First_Rollout.md",
         "path": "Argo_Rollouts/04_Install_Plugin_Dashboard_And_First_Rollout.md",
         "type": "file",
         "sha": "",
-        "size": 2865
+        "size": 2845
       },
       {
         "name": "05_Blue_Green_Strategy.md",
         "path": "Argo_Rollouts/05_Blue_Green_Strategy.md",
         "type": "file",
         "sha": "",
-        "size": 3066
+        "size": 3046
       },
       {
         "name": "06_Canary_Strategy_And_Steps.md",
         "path": "Argo_Rollouts/06_Canary_Strategy_And_Steps.md",
         "type": "file",
         "sha": "",
-        "size": 7970
+        "size": 7950
       },
       {
         "name": "07_Traffic_Management.md",
         "path": "Argo_Rollouts/07_Traffic_Management.md",
         "type": "file",
         "sha": "",
-        "size": 3103
+        "size": 3083
       },
       {
         "name": "08_Analysis_And_Metric_Providers.md",
         "path": "Argo_Rollouts/08_Analysis_And_Metric_Providers.md",
         "type": "file",
         "sha": "",
-        "size": 2809
+        "size": 2789
       },
       {
         "name": "09_Experiments_HPA_Metadata_Restart_Rollback.md",
         "path": "Argo_Rollouts/09_Experiments_HPA_Metadata_Restart_Rollback.md",
         "type": "file",
         "sha": "",
-        "size": 3091
+        "size": 3071
       },
       {
         "name": "10_GitOps_Helm_Kustomize_And_Migrating.md",
         "path": "Argo_Rollouts/10_GitOps_Helm_Kustomize_And_Migrating.md",
         "type": "file",
         "sha": "",
-        "size": 2636
+        "size": 2616
       },
       {
         "name": "11_Notifications_Metrics_And_Kubectl_Plugin.md",
         "path": "Argo_Rollouts/11_Notifications_Metrics_And_Kubectl_Plugin.md",
         "type": "file",
         "sha": "",
-        "size": 2169
+        "size": 2149
       },
       {
         "name": "12_Worked_Example_Canary_A_Service.md",
         "path": "Argo_Rollouts/12_Worked_Example_Canary_A_Service.md",
         "type": "file",
         "sha": "",
-        "size": 3038
+        "size": 3018
       },
       {
         "name": "13_Best_Practices_And_When_Not_To_Use.md",
         "path": "Argo_Rollouts/13_Best_Practices_And_When_Not_To_Use.md",
         "type": "file",
         "sha": "",
-        "size": 2828
+        "size": 2808
       },
       {
         "name": "14_Feature_And_Configuration_Coverage_Map.md",
         "path": "Argo_Rollouts/14_Feature_And_Configuration_Coverage_Map.md",
         "type": "file",
         "sha": "",
-        "size": 6174
+        "size": 6154
       },
       {
         "name": "15_Rollout_Spec_And_Strategy_Configuration_Catalog.md",
         "path": "Argo_Rollouts/15_Rollout_Spec_And_Strategy_Configuration_Catalog.md",
         "type": "file",
         "sha": "",
-        "size": 3168
+        "size": 3148
       },
       {
         "name": "16_Troubleshooting_And_Staff_Checklist.md",
         "path": "Argo_Rollouts/16_Troubleshooting_And_Staff_Checklist.md",
         "type": "file",
         "sha": "",
-        "size": 3027
+        "size": 3007
       },
       {
         "name": "README.md",
         "path": "Argo_Rollouts/README.md",
         "type": "file",
         "sha": "",
-        "size": 6359
+        "size": 6354
       }
     ]
   },
@@ -278,182 +278,182 @@
         "path": "Azure_DevOps/01_What_Is_Azure_DevOps.md",
         "type": "file",
         "sha": "",
-        "size": 4771
+        "size": 4751
       },
       {
         "name": "02_Organization_Project_Process_And_Access.md",
         "path": "Azure_DevOps/02_Organization_Project_Process_And_Access.md",
         "type": "file",
         "sha": "",
-        "size": 4283
+        "size": 4263
       },
       {
         "name": "03_Pipelines_Mental_Model_YAML_And_Classic.md",
         "path": "Azure_DevOps/03_Pipelines_Mental_Model_YAML_And_Classic.md",
         "type": "file",
         "sha": "",
-        "size": 4271
+        "size": 4251
       },
       {
         "name": "04_First_Pipeline_And_Project_Setup.md",
         "path": "Azure_DevOps/04_First_Pipeline_And_Project_Setup.md",
         "type": "file",
         "sha": "",
-        "size": 2688
+        "size": 2668
       },
       {
         "name": "05_Agents_Hosted_And_Self_Hosted.md",
         "path": "Azure_DevOps/05_Agents_Hosted_And_Self_Hosted.md",
         "type": "file",
         "sha": "",
-        "size": 2524
+        "size": 2504
       },
       {
         "name": "06_Variables_Secrets_And_Library.md",
         "path": "Azure_DevOps/06_Variables_Secrets_And_Library.md",
         "type": "file",
         "sha": "",
-        "size": 2811
+        "size": 2791
       },
       {
         "name": "07_Triggers_Stages_Jobs_And_Strategies.md",
         "path": "Azure_DevOps/07_Triggers_Stages_Jobs_And_Strategies.md",
         "type": "file",
         "sha": "",
-        "size": 3979
+        "size": 3959
       },
       {
         "name": "08_Templates_Tasks_And_Extensions.md",
         "path": "Azure_DevOps/08_Templates_Tasks_And_Extensions.md",
         "type": "file",
         "sha": "",
-        "size": 2083
+        "size": 2063
       },
       {
         "name": "09_Environments_Approvals_Checks_And_Classic_Releases.md",
         "path": "Azure_DevOps/09_Environments_Approvals_Checks_And_Classic_Releases.md",
         "type": "file",
         "sha": "",
-        "size": 3581
+        "size": 3562
       },
       {
         "name": "10_Artifacts_Feeds_And_Packages.md",
         "path": "Azure_DevOps/10_Artifacts_Feeds_And_Packages.md",
         "type": "file",
         "sha": "",
-        "size": 2569
+        "size": 2549
       },
       {
         "name": "11_Deploy_App_Service_Functions_And_Static_Web.md",
         "path": "Azure_DevOps/11_Deploy_App_Service_Functions_And_Static_Web.md",
         "type": "file",
         "sha": "",
-        "size": 3235
+        "size": 3215
       },
       {
         "name": "12_Deploy_VMs_VMSS_And_Host_Patterns.md",
         "path": "Azure_DevOps/12_Deploy_VMs_VMSS_And_Host_Patterns.md",
         "type": "file",
         "sha": "",
-        "size": 2735
+        "size": 2715
       },
       {
         "name": "13_Deploy_Containers_ACR_Container_Apps_And_AKS.md",
         "path": "Azure_DevOps/13_Deploy_Containers_ACR_Container_Apps_And_AKS.md",
         "type": "file",
         "sha": "",
-        "size": 2824
+        "size": 2804
       },
       {
         "name": "14_Deploy_IaC_ARM_Bicep_Terraform_Ansible.md",
         "path": "Azure_DevOps/14_Deploy_IaC_ARM_Bicep_Terraform_Ansible.md",
         "type": "file",
         "sha": "",
-        "size": 2776
+        "size": 2756
       },
       {
         "name": "15_Observability_Hooks_And_Non_Azure_Targets.md",
         "path": "Azure_DevOps/15_Observability_Hooks_And_Non_Azure_Targets.md",
         "type": "file",
         "sha": "",
-        "size": 3132
+        "size": 3112
       },
       {
         "name": "16_Azure_Boards.md",
         "path": "Azure_DevOps/16_Azure_Boards.md",
         "type": "file",
         "sha": "",
-        "size": 2659
+        "size": 2639
       },
       {
         "name": "17_Azure_Repos_Git_And_TFVC.md",
         "path": "Azure_DevOps/17_Azure_Repos_Git_And_TFVC.md",
         "type": "file",
         "sha": "",
-        "size": 2212
+        "size": 2192
       },
       {
         "name": "18_Azure_Test_Plans.md",
         "path": "Azure_DevOps/18_Azure_Test_Plans.md",
         "type": "file",
         "sha": "",
-        "size": 1962
+        "size": 1942
       },
       {
         "name": "19_Security_Permissions_And_Service_Connections.md",
         "path": "Azure_DevOps/19_Security_Permissions_And_Service_Connections.md",
         "type": "file",
         "sha": "",
-        "size": 5460
+        "size": 5440
       },
       {
         "name": "20_Worked_Example_Build_And_Deploy.md",
         "path": "Azure_DevOps/20_Worked_Example_Build_And_Deploy.md",
         "type": "file",
         "sha": "",
-        "size": 3642
+        "size": 3622
       },
       {
         "name": "21_Best_Practices_And_Delivery_Spectrum.md",
         "path": "Azure_DevOps/21_Best_Practices_And_Delivery_Spectrum.md",
         "type": "file",
         "sha": "",
-        "size": 7108
+        "size": 7088
       },
       {
         "name": "22_Feature_And_Configuration_Coverage_Map.md",
         "path": "Azure_DevOps/22_Feature_And_Configuration_Coverage_Map.md",
         "type": "file",
         "sha": "",
-        "size": 5235
+        "size": 5215
       },
       {
         "name": "23_YAML_And_Task_Configuration_Catalog.md",
         "path": "Azure_DevOps/23_YAML_And_Task_Configuration_Catalog.md",
         "type": "file",
         "sha": "",
-        "size": 2931
+        "size": 2911
       },
       {
         "name": "24_Troubleshooting_And_Staff_Checklist.md",
         "path": "Azure_DevOps/24_Troubleshooting_And_Staff_Checklist.md",
         "type": "file",
         "sha": "",
-        "size": 3240
+        "size": 3220
       },
       {
         "name": "25_Platform_Management_Wiki_Analytics_Billing_Audit.md",
         "path": "Azure_DevOps/25_Platform_Management_Wiki_Analytics_Billing_Audit.md",
         "type": "file",
         "sha": "",
-        "size": 5111
+        "size": 5091
       },
       {
         "name": "README.md",
         "path": "Azure_DevOps/README.md",
         "type": "file",
         "sha": "",
-        "size": 7311
+        "size": 7306
       }
     ]
   },
@@ -468,154 +468,154 @@
         "path": "Bitbucket/01_What_Is_Bitbucket.md",
         "type": "file",
         "sha": "",
-        "size": 5015
+        "size": 4995
       },
       {
         "name": "02_Workspace_Project_Repo_And_Access.md",
         "path": "Bitbucket/02_Workspace_Project_Repo_And_Access.md",
         "type": "file",
         "sha": "",
-        "size": 4754
+        "size": 4734
       },
       {
         "name": "03_Pull_Requests_Branch_Permissions_Merge_Checks.md",
         "path": "Bitbucket/03_Pull_Requests_Branch_Permissions_Merge_Checks.md",
         "type": "file",
         "sha": "",
-        "size": 3590
+        "size": 3570
       },
       {
         "name": "04_Pipelines_Mental_Model_And_YAML.md",
         "path": "Bitbucket/04_Pipelines_Mental_Model_And_YAML.md",
         "type": "file",
         "sha": "",
-        "size": 2978
+        "size": 2958
       },
       {
         "name": "05_First_Pipeline_And_Enablement.md",
         "path": "Bitbucket/05_First_Pipeline_And_Enablement.md",
         "type": "file",
         "sha": "",
-        "size": 4631
+        "size": 4611
       },
       {
         "name": "06_Runners_Cloud_And_Self_Hosted.md",
         "path": "Bitbucket/06_Runners_Cloud_And_Self_Hosted.md",
         "type": "file",
         "sha": "",
-        "size": 1791
+        "size": 1771
       },
       {
         "name": "07_Variables_Secrets_And_OIDC.md",
         "path": "Bitbucket/07_Variables_Secrets_And_OIDC.md",
         "type": "file",
         "sha": "",
-        "size": 2192
+        "size": 2172
       },
       {
         "name": "08_Triggers_Steps_Stages_Parallel.md",
         "path": "Bitbucket/08_Triggers_Steps_Stages_Parallel.md",
         "type": "file",
         "sha": "",
-        "size": 4269
+        "size": 4249
       },
       {
         "name": "09_Caches_Artifacts_And_Services.md",
         "path": "Bitbucket/09_Caches_Artifacts_And_Services.md",
         "type": "file",
         "sha": "",
-        "size": 2473
+        "size": 2453
       },
       {
         "name": "10_Pipes_Anchors_And_Reuse.md",
         "path": "Bitbucket/10_Pipes_Anchors_And_Reuse.md",
         "type": "file",
         "sha": "",
-        "size": 2304
+        "size": 2284
       },
       {
         "name": "11_Deployments_And_Environments.md",
         "path": "Bitbucket/11_Deployments_And_Environments.md",
         "type": "file",
         "sha": "",
-        "size": 1964
+        "size": 1944
       },
       {
         "name": "12_Deploy_Targets_And_Pipes_Catalog.md",
         "path": "Bitbucket/12_Deploy_Targets_And_Pipes_Catalog.md",
         "type": "file",
         "sha": "",
-        "size": 2111
+        "size": 2091
       },
       {
         "name": "13_Dynamic_Pipelines_And_Advanced_YAML.md",
         "path": "Bitbucket/13_Dynamic_Pipelines_And_Advanced_YAML.md",
         "type": "file",
         "sha": "",
-        "size": 2271
+        "size": 2251
       },
       {
         "name": "14_Jira_And_Atlassian_Integrations.md",
         "path": "Bitbucket/14_Jira_And_Atlassian_Integrations.md",
         "type": "file",
         "sha": "",
-        "size": 1958
+        "size": 1938
       },
       {
         "name": "15_Security_Access_And_Workspace_Hardening.md",
         "path": "Bitbucket/15_Security_Access_And_Workspace_Hardening.md",
         "type": "file",
         "sha": "",
-        "size": 2370
+        "size": 2350
       },
       {
         "name": "16_Worked_Example_Build_And_Deploy.md",
         "path": "Bitbucket/16_Worked_Example_Build_And_Deploy.md",
         "type": "file",
         "sha": "",
-        "size": 2199
+        "size": 2179
       },
       {
         "name": "17_Best_Practices_And_Cloud_Vs_Data_Center.md",
         "path": "Bitbucket/17_Best_Practices_And_Cloud_Vs_Data_Center.md",
         "type": "file",
         "sha": "",
-        "size": 2678
+        "size": 2658
       },
       {
         "name": "18_Feature_And_Configuration_Coverage_Map.md",
         "path": "Bitbucket/18_Feature_And_Configuration_Coverage_Map.md",
         "type": "file",
         "sha": "",
-        "size": 3299
+        "size": 3279
       },
       {
         "name": "19_YAML_And_Configuration_Catalog.md",
         "path": "Bitbucket/19_YAML_And_Configuration_Catalog.md",
         "type": "file",
         "sha": "",
-        "size": 1756
+        "size": 1736
       },
       {
         "name": "20_Troubleshooting_And_Staff_Checklist.md",
         "path": "Bitbucket/20_Troubleshooting_And_Staff_Checklist.md",
         "type": "file",
         "sha": "",
-        "size": 2900
+        "size": 2880
       },
       {
         "name": "21_Snippets_Search_Code_Insights_And_Wiki.md",
         "path": "Bitbucket/21_Snippets_Search_Code_Insights_And_Wiki.md",
         "type": "file",
         "sha": "",
-        "size": 2431
+        "size": 2411
       },
       {
         "name": "README.md",
         "path": "Bitbucket/README.md",
         "type": "file",
         "sha": "",
-        "size": 5195
+        "size": 5190
       }
     ]
   },
@@ -630,189 +630,189 @@
         "path": "Buildkite/01_What_Is_Buildkite.md",
         "type": "file",
         "sha": "",
-        "size": 3612
+        "size": 3592
       },
       {
         "name": "02_Organization_Teams_And_Clusters.md",
         "path": "Buildkite/02_Organization_Teams_And_Clusters.md",
         "type": "file",
         "sha": "",
-        "size": 2040
+        "size": 2020
       },
       {
         "name": "03_Create_Pipeline_Connect_Git_And_View_Builds.md",
         "path": "Buildkite/03_Create_Pipeline_Connect_Git_And_View_Builds.md",
         "type": "file",
         "sha": "",
-        "size": 2968
+        "size": 2948
       },
       {
         "name": "04_Agents_Self_Hosted_And_Hosted.md",
         "path": "Buildkite/04_Agents_Self_Hosted_And_Hosted.md",
         "type": "file",
         "sha": "",
-        "size": 2428
+        "size": 2408
       },
       {
         "name": "05_Queues_Clusters_And_Targeting.md",
         "path": "Buildkite/05_Queues_Clusters_And_Targeting.md",
         "type": "file",
         "sha": "",
-        "size": 2073
+        "size": 2053
       },
       {
         "name": "06_Pipeline_YAML_And_Step_Types.md",
         "path": "Buildkite/06_Pipeline_YAML_And_Step_Types.md",
         "type": "file",
         "sha": "",
-        "size": 2216
+        "size": 2196
       },
       {
         "name": "07_Templates_And_First_Pipeline_Yml.md",
         "path": "Buildkite/07_Templates_And_First_Pipeline_Yml.md",
         "type": "file",
         "sha": "",
-        "size": 2334
+        "size": 2314
       },
       {
         "name": "08_Workflows_Depends_Matrix_Schedules_And_Blocks.md",
         "path": "Buildkite/08_Workflows_Depends_Matrix_Schedules_And_Blocks.md",
         "type": "file",
         "sha": "",
-        "size": 2146
+        "size": 2126
       },
       {
         "name": "09_Plugins_Artifacts_Cache_And_Annotations.md",
         "path": "Buildkite/09_Plugins_Artifacts_Cache_And_Annotations.md",
         "type": "file",
         "sha": "",
-        "size": 1897
+        "size": 1877
       },
       {
         "name": "10_Secrets_Environment_And_OIDC.md",
         "path": "Buildkite/10_Secrets_Environment_And_OIDC.md",
         "type": "file",
         "sha": "",
-        "size": 2328
+        "size": 2308
       },
       {
         "name": "11_Dynamic_Pipelines_And_Pipeline_Upload.md",
         "path": "Buildkite/11_Dynamic_Pipelines_And_Pipeline_Upload.md",
         "type": "file",
         "sha": "",
-        "size": 2002
+        "size": 1982
       },
       {
         "name": "12_Deployments_And_Environments.md",
         "path": "Buildkite/12_Deployments_And_Environments.md",
         "type": "file",
         "sha": "",
-        "size": 2932
+        "size": 2912
       },
       {
         "name": "13_Self_Hosted_Stacks_AWS_And_Kubernetes.md",
         "path": "Buildkite/13_Self_Hosted_Stacks_AWS_And_Kubernetes.md",
         "type": "file",
         "sha": "",
-        "size": 2432
+        "size": 2412
       },
       {
         "name": "14_Package_Registries_And_Test_Engine.md",
         "path": "Buildkite/14_Package_Registries_And_Test_Engine.md",
         "type": "file",
         "sha": "",
-        "size": 2410
+        "size": 2390
       },
       {
         "name": "15_Platform_Teams_SSO_And_Governance.md",
         "path": "Buildkite/15_Platform_Teams_SSO_And_Governance.md",
         "type": "file",
         "sha": "",
-        "size": 1862
+        "size": 1842
       },
       {
         "name": "16_Worked_Example_Build_And_Deploy.md",
         "path": "Buildkite/16_Worked_Example_Build_And_Deploy.md",
         "type": "file",
         "sha": "",
-        "size": 2007
+        "size": 1987
       },
       {
         "name": "17_Best_Practices_And_When_Not_Buildkite.md",
         "path": "Buildkite/17_Best_Practices_And_When_Not_Buildkite.md",
         "type": "file",
         "sha": "",
-        "size": 1640
+        "size": 1620
       },
       {
         "name": "18_Feature_And_Configuration_Coverage_Map.md",
         "path": "Buildkite/18_Feature_And_Configuration_Coverage_Map.md",
         "type": "file",
         "sha": "",
-        "size": 3667
+        "size": 3647
       },
       {
         "name": "19_YAML_And_Configuration_Catalog.md",
         "path": "Buildkite/19_YAML_And_Configuration_Catalog.md",
         "type": "file",
         "sha": "",
-        "size": 1865
+        "size": 1845
       },
       {
         "name": "20_Troubleshooting_And_Staff_Checklist.md",
         "path": "Buildkite/20_Troubleshooting_And_Staff_Checklist.md",
         "type": "file",
         "sha": "",
-        "size": 2603
+        "size": 2583
       },
       {
         "name": "21_Source_Control_Providers_And_Code_Access.md",
         "path": "Buildkite/21_Source_Control_Providers_And_Code_Access.md",
         "type": "file",
         "sha": "",
-        "size": 2494
+        "size": 2474
       },
       {
         "name": "22_Agent_Hooks_Lifecycle_And_Install_Spectrum.md",
         "path": "Buildkite/22_Agent_Hooks_Lifecycle_And_Install_Spectrum.md",
         "type": "file",
         "sha": "",
-        "size": 3265
+        "size": 3245
       },
       {
         "name": "23_Hosted_Agent_Operations.md",
         "path": "Buildkite/23_Hosted_Agent_Operations.md",
         "type": "file",
         "sha": "",
-        "size": 2589
+        "size": 2569
       },
       {
         "name": "24_Integrations_Notifications_Observability_And_Insights.md",
         "path": "Buildkite/24_Integrations_Notifications_Observability_And_Insights.md",
         "type": "file",
         "sha": "",
-        "size": 2339
+        "size": 2319
       },
       {
         "name": "25_Governance_Permissions_And_Migration.md",
         "path": "Buildkite/25_Governance_Permissions_And_Migration.md",
         "type": "file",
         "sha": "",
-        "size": 2350
+        "size": 2330
       },
       {
         "name": "26_APIs_CLI_Terraform_And_Platform_Extras.md",
         "path": "Buildkite/26_APIs_CLI_Terraform_And_Platform_Extras.md",
         "type": "file",
         "sha": "",
-        "size": 2555
+        "size": 2535
       },
       {
         "name": "README.md",
         "path": "Buildkite/README.md",
         "type": "file",
         "sha": "",
-        "size": 5733
+        "size": 5728
       }
     ]
   },
@@ -827,175 +827,175 @@
         "path": "CircleCI/01_What_Is_CircleCI.md",
         "type": "file",
         "sha": "",
-        "size": 3590
+        "size": 3570
       },
       {
         "name": "02_Organization_Project_And_VCS.md",
         "path": "CircleCI/02_Organization_Project_And_VCS.md",
         "type": "file",
         "sha": "",
-        "size": 2508
+        "size": 2488
       },
       {
         "name": "03_Create_Project_Config_And_View_Pipelines.md",
         "path": "CircleCI/03_Create_Project_Config_And_View_Pipelines.md",
         "type": "file",
         "sha": "",
-        "size": 2426
+        "size": 2406
       },
       {
         "name": "04_Config_Mental_Model_Jobs_Steps_Workflows.md",
         "path": "CircleCI/04_Config_Mental_Model_Jobs_Steps_Workflows.md",
         "type": "file",
         "sha": "",
-        "size": 2013
+        "size": 1993
       },
       {
         "name": "05_Templates_And_First_Config_Yml.md",
         "path": "CircleCI/05_Templates_And_First_Config_Yml.md",
         "type": "file",
         "sha": "",
-        "size": 2363
+        "size": 2343
       },
       {
         "name": "06_Managed_Executors_And_Resource_Classes.md",
         "path": "CircleCI/06_Managed_Executors_And_Resource_Classes.md",
         "type": "file",
         "sha": "",
-        "size": 2826
+        "size": 2806
       },
       {
         "name": "07_Self_Hosted_Runners.md",
         "path": "CircleCI/07_Self_Hosted_Runners.md",
         "type": "file",
         "sha": "",
-        "size": 2911
+        "size": 2891
       },
       {
         "name": "08_Workflows_Requires_Filters_Matrix_And_Triggers.md",
         "path": "CircleCI/08_Workflows_Requires_Filters_Matrix_And_Triggers.md",
         "type": "file",
         "sha": "",
-        "size": 2149
+        "size": 2129
       },
       {
         "name": "09_Caches_Workspaces_And_Artifacts.md",
         "path": "CircleCI/09_Caches_Workspaces_And_Artifacts.md",
         "type": "file",
         "sha": "",
-        "size": 1572
+        "size": 1552
       },
       {
         "name": "10_Orbs_Use_And_Author_Literacy.md",
         "path": "CircleCI/10_Orbs_Use_And_Author_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 1765
+        "size": 1745
       },
       {
         "name": "11_Reusable_Config_Commands_Executors_Parameters.md",
         "path": "CircleCI/11_Reusable_Config_Commands_Executors_Parameters.md",
         "type": "file",
         "sha": "",
-        "size": 1793
+        "size": 1773
       },
       {
         "name": "12_Contexts_Env_Vars_And_Secrets.md",
         "path": "CircleCI/12_Contexts_Env_Vars_And_Secrets.md",
         "type": "file",
         "sha": "",
-        "size": 1934
+        "size": 1914
       },
       {
         "name": "13_OIDC_And_Cloud_Federation.md",
         "path": "CircleCI/13_OIDC_And_Cloud_Federation.md",
         "type": "file",
         "sha": "",
-        "size": 1903
+        "size": 1883
       },
       {
         "name": "14_Dynamic_Config_And_Continuation.md",
         "path": "CircleCI/14_Dynamic_Config_And_Continuation.md",
         "type": "file",
         "sha": "",
-        "size": 1694
+        "size": 1674
       },
       {
         "name": "15_Deployments_Approvals_And_Markers.md",
         "path": "CircleCI/15_Deployments_Approvals_And_Markers.md",
         "type": "file",
         "sha": "",
-        "size": 4324
+        "size": 4304
       },
       {
         "name": "16_Security_Permissions_SSO_And_Policies.md",
         "path": "CircleCI/16_Security_Permissions_SSO_And_Policies.md",
         "type": "file",
         "sha": "",
-        "size": 2588
+        "size": 2568
       },
       {
         "name": "17_Insights_Test_Splitting_And_Optimize.md",
         "path": "CircleCI/17_Insights_Test_Splitting_And_Optimize.md",
         "type": "file",
         "sha": "",
-        "size": 1695
+        "size": 1675
       },
       {
         "name": "18_Server_CLI_API_And_Toolkit.md",
         "path": "CircleCI/18_Server_CLI_API_And_Toolkit.md",
         "type": "file",
         "sha": "",
-        "size": 1804
+        "size": 1784
       },
       {
         "name": "19_Worked_Example_Build_And_Deploy.md",
         "path": "CircleCI/19_Worked_Example_Build_And_Deploy.md",
         "type": "file",
         "sha": "",
-        "size": 2386
+        "size": 2366
       },
       {
         "name": "20_Best_Practices_And_When_Not_CircleCI.md",
         "path": "CircleCI/20_Best_Practices_And_When_Not_CircleCI.md",
         "type": "file",
         "sha": "",
-        "size": 1716
+        "size": 1696
       },
       {
         "name": "21_Feature_And_Configuration_Coverage_Map.md",
         "path": "CircleCI/21_Feature_And_Configuration_Coverage_Map.md",
         "type": "file",
         "sha": "",
-        "size": 3480
+        "size": 3460
       },
       {
         "name": "22_YAML_And_Configuration_Catalog.md",
         "path": "CircleCI/22_YAML_And_Configuration_Catalog.md",
         "type": "file",
         "sha": "",
-        "size": 1609
+        "size": 1589
       },
       {
         "name": "23_Troubleshooting_And_Staff_Checklist.md",
         "path": "CircleCI/23_Troubleshooting_And_Staff_Checklist.md",
         "type": "file",
         "sha": "",
-        "size": 2508
+        "size": 2488
       },
       {
         "name": "24_Integrations_Migrate_Plans_And_Extras.md",
         "path": "CircleCI/24_Integrations_Migrate_Plans_And_Extras.md",
         "type": "file",
         "sha": "",
-        "size": 2109
+        "size": 2089
       },
       {
         "name": "README.md",
         "path": "CircleCI/README.md",
         "type": "file",
         "sha": "",
-        "size": 5382
+        "size": 5377
       }
     ]
   },
@@ -1010,161 +1010,161 @@
         "path": "Flux/01_What_Is_Flux_And_GitOps_Toolkit.md",
         "type": "file",
         "sha": "",
-        "size": 4022
+        "size": 4002
       },
       {
         "name": "02_Core_Concepts_Sources_And_Reconciliation.md",
         "path": "Flux/02_Core_Concepts_Sources_And_Reconciliation.md",
         "type": "file",
         "sha": "",
-        "size": 3813
+        "size": 3793
       },
       {
         "name": "03_Architecture_And_Controllers.md",
         "path": "Flux/03_Architecture_And_Controllers.md",
         "type": "file",
         "sha": "",
-        "size": 3260
+        "size": 3240
       },
       {
         "name": "04_Install_Bootstrap_And_CLI.md",
         "path": "Flux/04_Install_Bootstrap_And_CLI.md",
         "type": "file",
         "sha": "",
-        "size": 3814
+        "size": 3794
       },
       {
         "name": "05_First_Reconcile_And_Day1_Loop.md",
         "path": "Flux/05_First_Reconcile_And_Day1_Loop.md",
         "type": "file",
         "sha": "",
-        "size": 2385
+        "size": 2365
       },
       {
         "name": "06_Sources_Git_OCI_Bucket_Helm.md",
         "path": "Flux/06_Sources_Git_OCI_Bucket_Helm.md",
         "type": "file",
         "sha": "",
-        "size": 3399
+        "size": 3379
       },
       {
         "name": "07_ExternalArtifact_And_ArtifactGenerator.md",
         "path": "Flux/07_ExternalArtifact_And_ArtifactGenerator.md",
         "type": "file",
         "sha": "",
-        "size": 2040
+        "size": 2020
       },
       {
         "name": "08_Kustomization_Controller.md",
         "path": "Flux/08_Kustomization_Controller.md",
         "type": "file",
         "sha": "",
-        "size": 5437
+        "size": 5417
       },
       {
         "name": "09_HelmRelease_And_Helm_Delivery.md",
         "path": "Flux/09_HelmRelease_And_Helm_Delivery.md",
         "type": "file",
         "sha": "",
-        "size": 3256
+        "size": 3236
       },
       {
         "name": "10_Repository_Structure_Tenancy_And_Multi_Cluster.md",
         "path": "Flux/10_Repository_Structure_Tenancy_And_Multi_Cluster.md",
         "type": "file",
         "sha": "",
-        "size": 2733
+        "size": 2713
       },
       {
         "name": "11_Secrets_SOPS_And_Sealed_Secrets.md",
         "path": "Flux/11_Secrets_SOPS_And_Sealed_Secrets.md",
         "type": "file",
         "sha": "",
-        "size": 2467
+        "size": 2447
       },
       {
         "name": "12_Security_Identity_And_Air_Gap.md",
         "path": "Flux/12_Security_Identity_And_Air_Gap.md",
         "type": "file",
         "sha": "",
-        "size": 2562
+        "size": 2542
       },
       {
         "name": "13_Image_Update_Automation.md",
         "path": "Flux/13_Image_Update_Automation.md",
         "type": "file",
         "sha": "",
-        "size": 2411
+        "size": 2391
       },
       {
         "name": "14_Notifications_Alerts_And_Receivers.md",
         "path": "Flux/14_Notifications_Alerts_And_Receivers.md",
         "type": "file",
         "sha": "",
-        "size": 1924
+        "size": 1904
       },
       {
         "name": "15_Monitoring_Events_Metrics_And_Upgrade.md",
         "path": "Flux/15_Monitoring_Events_Metrics_And_Upgrade.md",
         "type": "file",
         "sha": "",
-        "size": 1997
+        "size": 1977
       },
       {
         "name": "16_Scale_Multitenancy_And_Platform_Config.md",
         "path": "Flux/16_Scale_Multitenancy_And_Platform_Config.md",
         "type": "file",
         "sha": "",
-        "size": 2803
+        "size": 2783
       },
       {
         "name": "17_Flagger_Progressive_Delivery.md",
         "path": "Flux/17_Flagger_Progressive_Delivery.md",
         "type": "file",
         "sha": "",
-        "size": 3111
+        "size": 3091
       },
       {
         "name": "18_Worked_Example_Bootstrap_And_App.md",
         "path": "Flux/18_Worked_Example_Bootstrap_And_App.md",
         "type": "file",
         "sha": "",
-        "size": 2378
+        "size": 2358
       },
       {
         "name": "19_Best_Practices_And_When_Not_Flux.md",
         "path": "Flux/19_Best_Practices_And_When_Not_Flux.md",
         "type": "file",
         "sha": "",
-        "size": 2111
+        "size": 2091
       },
       {
         "name": "20_Feature_And_Configuration_Coverage_Map.md",
         "path": "Flux/20_Feature_And_Configuration_Coverage_Map.md",
         "type": "file",
         "sha": "",
-        "size": 2510
+        "size": 2490
       },
       {
         "name": "21_CRD_And_CLI_Catalog.md",
         "path": "Flux/21_CRD_And_CLI_Catalog.md",
         "type": "file",
         "sha": "",
-        "size": 2948
+        "size": 2928
       },
       {
         "name": "22_Troubleshooting_And_Staff_Checklist.md",
         "path": "Flux/22_Troubleshooting_And_Staff_Checklist.md",
         "type": "file",
         "sha": "",
-        "size": 3026
+        "size": 3006
       },
       {
         "name": "README.md",
         "path": "Flux/README.md",
         "type": "file",
         "sha": "",
-        "size": 5701
+        "size": 5696
       }
     ]
   },
@@ -1179,175 +1179,175 @@
         "path": "GitHub_Actions/01_What_Is_GitHub_Actions.md",
         "type": "file",
         "sha": "",
-        "size": 4029
+        "size": 4009
       },
       {
         "name": "02_Core_Model_Workflows_Jobs_Steps_Runners.md",
         "path": "GitHub_Actions/02_Core_Model_Workflows_Jobs_Steps_Runners.md",
         "type": "file",
         "sha": "",
-        "size": 3116
+        "size": 3096
       },
       {
         "name": "03_First_Workflow_And_Actions_UI.md",
         "path": "GitHub_Actions/03_First_Workflow_And_Actions_UI.md",
         "type": "file",
         "sha": "",
-        "size": 2875
+        "size": 2855
       },
       {
         "name": "04_Workflow_Syntax_Mental_Model.md",
         "path": "GitHub_Actions/04_Workflow_Syntax_Mental_Model.md",
         "type": "file",
         "sha": "",
-        "size": 3311
+        "size": 3291
       },
       {
         "name": "05_Events_And_Triggers.md",
         "path": "GitHub_Actions/05_Events_And_Triggers.md",
         "type": "file",
         "sha": "",
-        "size": 3207
+        "size": 3187
       },
       {
         "name": "06_Jobs_Needs_Concurrency_And_Matrix.md",
         "path": "GitHub_Actions/06_Jobs_Needs_Concurrency_And_Matrix.md",
         "type": "file",
         "sha": "",
-        "size": 3072
+        "size": 3052
       },
       {
         "name": "07_Contexts_Expressions_And_Variables.md",
         "path": "GitHub_Actions/07_Contexts_Expressions_And_Variables.md",
         "type": "file",
         "sha": "",
-        "size": 2800
+        "size": 2780
       },
       {
         "name": "08_GitHub_Hosted_Runners.md",
         "path": "GitHub_Actions/08_GitHub_Hosted_Runners.md",
         "type": "file",
         "sha": "",
-        "size": 3238
+        "size": 3218
       },
       {
         "name": "09_Self_Hosted_Runners_And_Groups.md",
         "path": "GitHub_Actions/09_Self_Hosted_Runners_And_Groups.md",
         "type": "file",
         "sha": "",
-        "size": 2788
+        "size": 2768
       },
       {
         "name": "10_Actions_Runner_Controller_ARC.md",
         "path": "GitHub_Actions/10_Actions_Runner_Controller_ARC.md",
         "type": "file",
         "sha": "",
-        "size": 2563
+        "size": 2543
       },
       {
         "name": "11_Actions_Marketplace_And_Pinning.md",
         "path": "GitHub_Actions/11_Actions_Marketplace_And_Pinning.md",
         "type": "file",
         "sha": "",
-        "size": 2435
+        "size": 2415
       },
       {
         "name": "12_Caches_And_Artifacts.md",
         "path": "GitHub_Actions/12_Caches_And_Artifacts.md",
         "type": "file",
         "sha": "",
-        "size": 2563
+        "size": 2543
       },
       {
         "name": "13_Reusable_Workflows_And_Composites.md",
         "path": "GitHub_Actions/13_Reusable_Workflows_And_Composites.md",
         "type": "file",
         "sha": "",
-        "size": 3535
+        "size": 3515
       },
       {
         "name": "14_Secrets_Variables_And_Environments.md",
         "path": "GitHub_Actions/14_Secrets_Variables_And_Environments.md",
         "type": "file",
         "sha": "",
-        "size": 2977
+        "size": 2957
       },
       {
         "name": "15_OIDC_And_Cloud_Federation.md",
         "path": "GitHub_Actions/15_OIDC_And_Cloud_Federation.md",
         "type": "file",
         "sha": "",
-        "size": 2891
+        "size": 2871
       },
       {
         "name": "16_Security_Hardening_Permissions_And_Forks.md",
         "path": "GitHub_Actions/16_Security_Hardening_Permissions_And_Forks.md",
         "type": "file",
         "sha": "",
-        "size": 3217
+        "size": 3197
       },
       {
         "name": "17_Deploy_Environments_And_Promote.md",
         "path": "GitHub_Actions/17_Deploy_Environments_And_Promote.md",
         "type": "file",
         "sha": "",
-        "size": 2850
+        "size": 2830
       },
       {
         "name": "18_Monitor_Metrics_And_Billing_Literacy.md",
         "path": "GitHub_Actions/18_Monitor_Metrics_And_Billing_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 2776
+        "size": 2756
       },
       {
         "name": "19_Worked_Example_CI_Build_And_Promote.md",
         "path": "GitHub_Actions/19_Worked_Example_CI_Build_And_Promote.md",
         "type": "file",
         "sha": "",
-        "size": 2708
+        "size": 2688
       },
       {
         "name": "20_Best_Practices_And_When_Not_Actions.md",
         "path": "GitHub_Actions/20_Best_Practices_And_When_Not_Actions.md",
         "type": "file",
         "sha": "",
-        "size": 2091
+        "size": 2071
       },
       {
         "name": "21_Feature_And_Configuration_Coverage_Map.md",
         "path": "GitHub_Actions/21_Feature_And_Configuration_Coverage_Map.md",
         "type": "file",
         "sha": "",
-        "size": 19563
+        "size": 19543
       },
       {
         "name": "22_YAML_And_Configuration_Catalog.md",
         "path": "GitHub_Actions/22_YAML_And_Configuration_Catalog.md",
         "type": "file",
         "sha": "",
-        "size": 2718
+        "size": 2698
       },
       {
         "name": "23_Troubleshooting_And_Staff_Checklist.md",
         "path": "GitHub_Actions/23_Troubleshooting_And_Staff_Checklist.md",
         "type": "file",
         "sha": "",
-        "size": 2925
+        "size": 2905
       },
       {
         "name": "24_Migrate_Packages_And_Extras.md",
         "path": "GitHub_Actions/24_Migrate_Packages_And_Extras.md",
         "type": "file",
         "sha": "",
-        "size": 3019
+        "size": 2999
       },
       {
         "name": "README.md",
         "path": "GitHub_Actions/README.md",
         "type": "file",
         "sha": "",
-        "size": 5733
+        "size": 5727
       }
     ]
   },
@@ -1362,189 +1362,189 @@
         "path": "GitLab_CI/01_What_Is_GitLab.md",
         "type": "file",
         "sha": "",
-        "size": 3125
+        "size": 3105
       },
       {
         "name": "02_Groups_Projects_And_Namespaces.md",
         "path": "GitLab_CI/02_Groups_Projects_And_Namespaces.md",
         "type": "file",
         "sha": "",
-        "size": 2255
+        "size": 2235
       },
       {
         "name": "03_SCM_Merge_Requests_And_Code_Review.md",
         "path": "GitLab_CI/03_SCM_Merge_Requests_And_Code_Review.md",
         "type": "file",
         "sha": "",
-        "size": 2283
+        "size": 2263
       },
       {
         "name": "04_Planning_And_Work_Items_Literacy.md",
         "path": "GitLab_CI/04_Planning_And_Work_Items_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 1667
+        "size": 1647
       },
       {
         "name": "05_CI_Core_Model_Pipelines_Jobs_Stages.md",
         "path": "GitLab_CI/05_CI_Core_Model_Pipelines_Jobs_Stages.md",
         "type": "file",
         "sha": "",
-        "size": 2494
+        "size": 2474
       },
       {
         "name": "06_First_Pipeline_And_CI_UI.md",
         "path": "GitLab_CI/06_First_Pipeline_And_CI_UI.md",
         "type": "file",
         "sha": "",
-        "size": 2177
+        "size": 2157
       },
       {
         "name": "07_YAML_Mental_Model_And_Keywords.md",
         "path": "GitLab_CI/07_YAML_Mental_Model_And_Keywords.md",
         "type": "file",
         "sha": "",
-        "size": 3137
+        "size": 3117
       },
       {
         "name": "08_Rules_Workflow_And_Pipeline_Types.md",
         "path": "GitLab_CI/08_Rules_Workflow_And_Pipeline_Types.md",
         "type": "file",
         "sha": "",
-        "size": 2431
+        "size": 2411
       },
       {
         "name": "09_Needs_DAG_And_Downstream_Pipelines.md",
         "path": "GitLab_CI/09_Needs_DAG_And_Downstream_Pipelines.md",
         "type": "file",
         "sha": "",
-        "size": 2165
+        "size": 2145
       },
       {
         "name": "10_Runners_And_Executors.md",
         "path": "GitLab_CI/10_Runners_And_Executors.md",
         "type": "file",
         "sha": "",
-        "size": 2562
+        "size": 2542
       },
       {
         "name": "11_Images_Services_And_Docker_Build.md",
         "path": "GitLab_CI/11_Images_Services_And_Docker_Build.md",
         "type": "file",
         "sha": "",
-        "size": 2430
+        "size": 2410
       },
       {
         "name": "12_Caching_Artifacts_And_Job_Tokens.md",
         "path": "GitLab_CI/12_Caching_Artifacts_And_Job_Tokens.md",
         "type": "file",
         "sha": "",
-        "size": 2002
+        "size": 1982
       },
       {
         "name": "13_Includes_Components_And_CI_Catalog.md",
         "path": "GitLab_CI/13_Includes_Components_And_CI_Catalog.md",
         "type": "file",
         "sha": "",
-        "size": 1705
+        "size": 1685
       },
       {
         "name": "14_Variables_Secrets_And_OIDC.md",
         "path": "GitLab_CI/14_Variables_Secrets_And_OIDC.md",
         "type": "file",
         "sha": "",
-        "size": 2288
+        "size": 2268
       },
       {
         "name": "15_Environments_Deployments_And_Release.md",
         "path": "GitLab_CI/15_Environments_Deployments_And_Release.md",
         "type": "file",
         "sha": "",
-        "size": 2298
+        "size": 2278
       },
       {
         "name": "16_Packages_Container_Registry_And_Dependency_Proxy.md",
         "path": "GitLab_CI/16_Packages_Container_Registry_And_Dependency_Proxy.md",
         "type": "file",
         "sha": "",
-        "size": 1716
+        "size": 1696
       },
       {
         "name": "17_Security_Scanning_And_Compliance_Literacy.md",
         "path": "GitLab_CI/17_Security_Scanning_And_Compliance_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 2214
+        "size": 2194
       },
       {
         "name": "18_Agent_Auto_DevOps_And_Infrastructure.md",
         "path": "GitLab_CI/18_Agent_Auto_DevOps_And_Infrastructure.md",
         "type": "file",
         "sha": "",
-        "size": 1945
+        "size": 1925
       },
       {
         "name": "19_Duo_And_AI_Literacy.md",
         "path": "GitLab_CI/19_Duo_And_AI_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 1569
+        "size": 1549
       },
       {
         "name": "20_Self_Managed_Admin_Literacy.md",
         "path": "GitLab_CI/20_Self_Managed_Admin_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 1760
+        "size": 1740
       },
       {
         "name": "21_API_Webhooks_And_Integrations.md",
         "path": "GitLab_CI/21_API_Webhooks_And_Integrations.md",
         "type": "file",
         "sha": "",
-        "size": 1646
+        "size": 1626
       },
       {
         "name": "22_Worked_Example_CI_Build_And_Promote.md",
         "path": "GitLab_CI/22_Worked_Example_CI_Build_And_Promote.md",
         "type": "file",
         "sha": "",
-        "size": 1988
+        "size": 1968
       },
       {
         "name": "23_Best_Practices_And_When_Not_GitLab.md",
         "path": "GitLab_CI/23_Best_Practices_And_When_Not_GitLab.md",
         "type": "file",
         "sha": "",
-        "size": 1756
+        "size": 1736
       },
       {
         "name": "24_Feature_And_Offering_Coverage_Map.md",
         "path": "GitLab_CI/24_Feature_And_Offering_Coverage_Map.md",
         "type": "file",
         "sha": "",
-        "size": 7313
+        "size": 7293
       },
       {
         "name": "25_YAML_Catalog_And_Troubleshooting.md",
         "path": "GitLab_CI/25_YAML_Catalog_And_Troubleshooting.md",
         "type": "file",
         "sha": "",
-        "size": 2355
+        "size": 2335
       },
       {
         "name": "26_Migrate_Plans_And_Extras.md",
         "path": "GitLab_CI/26_Migrate_Plans_And_Extras.md",
         "type": "file",
         "sha": "",
-        "size": 2408
+        "size": 2388
       },
       {
         "name": "README.md",
         "path": "GitLab_CI/README.md",
         "type": "file",
         "sha": "",
-        "size": 5815
+        "size": 5810
       }
     ]
   },
@@ -1559,189 +1559,189 @@
         "path": "Jenkins/01_What_Is_Jenkins.md",
         "type": "file",
         "sha": "",
-        "size": 2789
+        "size": 2769
       },
       {
         "name": "02_Install_Controller_And_LTS.md",
         "path": "Jenkins/02_Install_Controller_And_LTS.md",
         "type": "file",
         "sha": "",
-        "size": 2890
+        "size": 2870
       },
       {
         "name": "03_Architecture_Controller_Agents_Executors.md",
         "path": "Jenkins/03_Architecture_Controller_Agents_Executors.md",
         "type": "file",
         "sha": "",
-        "size": 2095
+        "size": 2075
       },
       {
         "name": "04_Configuration_Surfaces_UI_JCasC_And_Init.md",
         "path": "Jenkins/04_Configuration_Surfaces_UI_JCasC_And_Init.md",
         "type": "file",
         "sha": "",
-        "size": 5512
+        "size": 5492
       },
       {
         "name": "05_Job_Types_Freestyle_And_Matrix.md",
         "path": "Jenkins/05_Job_Types_Freestyle_And_Matrix.md",
         "type": "file",
         "sha": "",
-        "size": 2468
+        "size": 2448
       },
       {
         "name": "06_Pipeline_Core_And_Jenkinsfile.md",
         "path": "Jenkins/06_Pipeline_Core_And_Jenkinsfile.md",
         "type": "file",
         "sha": "",
-        "size": 2168
+        "size": 2148
       },
       {
         "name": "07_First_Pipeline_And_UI.md",
         "path": "Jenkins/07_First_Pipeline_And_UI.md",
         "type": "file",
         "sha": "",
-        "size": 2409
+        "size": 2389
       },
       {
         "name": "08_Declarative_Pipeline_Syntax.md",
         "path": "Jenkins/08_Declarative_Pipeline_Syntax.md",
         "type": "file",
         "sha": "",
-        "size": 4643
+        "size": 4623
       },
       {
         "name": "09_Scripted_Pipeline_And_CPS.md",
         "path": "Jenkins/09_Scripted_Pipeline_And_CPS.md",
         "type": "file",
         "sha": "",
-        "size": 2083
+        "size": 2063
       },
       {
         "name": "10_Multibranch_And_Organization_Folders.md",
         "path": "Jenkins/10_Multibranch_And_Organization_Folders.md",
         "type": "file",
         "sha": "",
-        "size": 2613
+        "size": 2593
       },
       {
         "name": "11_Agents_Clouds_Docker_And_Kubernetes.md",
         "path": "Jenkins/11_Agents_Clouds_Docker_And_Kubernetes.md",
         "type": "file",
         "sha": "",
-        "size": 4373
+        "size": 4353
       },
       {
         "name": "12_Credentials_Secrets_And_Binding.md",
         "path": "Jenkins/12_Credentials_Secrets_And_Binding.md",
         "type": "file",
         "sha": "",
-        "size": 2912
+        "size": 2892
       },
       {
         "name": "13_Shared_Libraries_And_Job_DSL.md",
         "path": "Jenkins/13_Shared_Libraries_And_Job_DSL.md",
         "type": "file",
         "sha": "",
-        "size": 2542
+        "size": 2522
       },
       {
         "name": "14_Triggers_Webhooks_Poll_SCM_And_Timers.md",
         "path": "Jenkins/14_Triggers_Webhooks_Poll_SCM_And_Timers.md",
         "type": "file",
         "sha": "",
-        "size": 1857
+        "size": 1837
       },
       {
         "name": "15_Artifacts_Fingerprints_And_Promotions.md",
         "path": "Jenkins/15_Artifacts_Fingerprints_And_Promotions.md",
         "type": "file",
         "sha": "",
-        "size": 2666
+        "size": 2646
       },
       {
         "name": "16_Security_Folders_RBAC_And_Hardening.md",
         "path": "Jenkins/16_Security_Folders_RBAC_And_Hardening.md",
         "type": "file",
         "sha": "",
-        "size": 4428
+        "size": 4408
       },
       {
         "name": "17_Plugins_Update_Center_And_Hygiene.md",
         "path": "Jenkins/17_Plugins_Update_Center_And_Hygiene.md",
         "type": "file",
         "sha": "",
-        "size": 2210
+        "size": 2190
       },
       {
         "name": "18_Classical_Host_And_Web_Deploy.md",
         "path": "Jenkins/18_Classical_Host_And_Web_Deploy.md",
         "type": "file",
         "sha": "",
-        "size": 2719
+        "size": 2699
       },
       {
         "name": "19_Managing_Tools_Nodes_Users_And_System.md",
         "path": "Jenkins/19_Managing_Tools_Nodes_Users_And_System.md",
         "type": "file",
         "sha": "",
-        "size": 2802
+        "size": 2782
       },
       {
         "name": "20_Scaling_HA_Backup_And_Monitoring.md",
         "path": "Jenkins/20_Scaling_HA_Backup_And_Monitoring.md",
         "type": "file",
         "sha": "",
-        "size": 4398
+        "size": 4378
       },
       {
         "name": "21_Blue_Ocean_CLI_And_Remote_API.md",
         "path": "Jenkins/21_Blue_Ocean_CLI_And_Remote_API.md",
         "type": "file",
         "sha": "",
-        "size": 2636
+        "size": 2616
       },
       {
         "name": "22_Worked_Example_Pipeline_Build_And_Deploy.md",
         "path": "Jenkins/22_Worked_Example_Pipeline_Build_And_Deploy.md",
         "type": "file",
         "sha": "",
-        "size": 3099
+        "size": 3079
       },
       {
         "name": "23_Best_Practices_And_When_Not_Jenkins.md",
         "path": "Jenkins/23_Best_Practices_And_When_Not_Jenkins.md",
         "type": "file",
         "sha": "",
-        "size": 2143
+        "size": 2123
       },
       {
         "name": "24_Feature_And_Offering_Coverage_Map.md",
         "path": "Jenkins/24_Feature_And_Offering_Coverage_Map.md",
         "type": "file",
         "sha": "",
-        "size": 24316
+        "size": 24296
       },
       {
         "name": "25_Jenkinsfile_JCasC_And_Config_Catalog.md",
         "path": "Jenkins/25_Jenkinsfile_JCasC_And_Config_Catalog.md",
         "type": "file",
         "sha": "",
-        "size": 5065
+        "size": 5045
       },
       {
         "name": "26_Migrate_LTS_Upgrades_And_Extras.md",
         "path": "Jenkins/26_Migrate_LTS_Upgrades_And_Extras.md",
         "type": "file",
         "sha": "",
-        "size": 2248
+        "size": 2228
       },
       {
         "name": "README.md",
         "path": "Jenkins/README.md",
         "type": "file",
         "sha": "",
-        "size": 5737
+        "size": 5732
       }
     ]
   },
@@ -1756,189 +1756,189 @@
         "path": "Tekton/01_What_Is_Tekton.md",
         "type": "file",
         "sha": "",
-        "size": 2746
+        "size": 2726
       },
       {
         "name": "02_Install_Pipelines_And_Operator.md",
         "path": "Tekton/02_Install_Pipelines_And_Operator.md",
         "type": "file",
         "sha": "",
-        "size": 2609
+        "size": 2589
       },
       {
         "name": "03_Core_Model_Tasks_Pipelines_Runs.md",
         "path": "Tekton/03_Core_Model_Tasks_Pipelines_Runs.md",
         "type": "file",
         "sha": "",
-        "size": 2155
+        "size": 2135
       },
       {
         "name": "04_First_Task_And_PipelineRun.md",
         "path": "Tekton/04_First_Task_And_PipelineRun.md",
         "type": "file",
         "sha": "",
-        "size": 2053
+        "size": 2033
       },
       {
         "name": "05_Tasks_Steps_Params_And_Results.md",
         "path": "Tekton/05_Tasks_Steps_Params_And_Results.md",
         "type": "file",
         "sha": "",
-        "size": 2877
+        "size": 2857
       },
       {
         "name": "06_Pipelines_Ordering_And_Finally.md",
         "path": "Tekton/06_Pipelines_Ordering_And_Finally.md",
         "type": "file",
         "sha": "",
-        "size": 2645
+        "size": 2625
       },
       {
         "name": "07_Workspaces_Artifacts_And_Volumes.md",
         "path": "Tekton/07_Workspaces_Artifacts_And_Volumes.md",
         "type": "file",
         "sha": "",
-        "size": 2567
+        "size": 2547
       },
       {
         "name": "08_Auth_ServiceAccounts_And_RBAC.md",
         "path": "Tekton/08_Auth_ServiceAccounts_And_RBAC.md",
         "type": "file",
         "sha": "",
-        "size": 3397
+        "size": 3377
       },
       {
         "name": "09_Pod_Templates_Compute_And_Affinity.md",
         "path": "Tekton/09_Pod_Templates_Compute_And_Affinity.md",
         "type": "file",
         "sha": "",
-        "size": 2046
+        "size": 2026
       },
       {
         "name": "10_Matrix_CustomRuns_And_StepActions.md",
         "path": "Tekton/10_Matrix_CustomRuns_And_StepActions.md",
         "type": "file",
         "sha": "",
-        "size": 2808
+        "size": 2788
       },
       {
         "name": "11_Resolvers_Bundles_And_Remote_Resources.md",
         "path": "Tekton/11_Resolvers_Bundles_And_Remote_Resources.md",
         "type": "file",
         "sha": "",
-        "size": 2151
+        "size": 2131
       },
       {
         "name": "12_Triggers_EventListeners_And_Interceptors.md",
         "path": "Tekton/12_Triggers_EventListeners_And_Interceptors.md",
         "type": "file",
         "sha": "",
-        "size": 2469
+        "size": 2449
       },
       {
         "name": "13_Pipelines_As_Code.md",
         "path": "Tekton/13_Pipelines_As_Code.md",
         "type": "file",
         "sha": "",
-        "size": 3772
+        "size": 3752
       },
       {
         "name": "14_Catalog_Hub_And_Reusable_Tasks.md",
         "path": "Tekton/14_Catalog_Hub_And_Reusable_Tasks.md",
         "type": "file",
         "sha": "",
-        "size": 1645
+        "size": 1625
       },
       {
         "name": "15_CLI_tkn.md",
         "path": "Tekton/15_CLI_tkn.md",
         "type": "file",
         "sha": "",
-        "size": 14417
+        "size": 14397
       },
       {
         "name": "16_Dashboard.md",
         "path": "Tekton/16_Dashboard.md",
         "type": "file",
         "sha": "",
-        "size": 2300
+        "size": 2280
       },
       {
         "name": "17_Chains_Supply_Chain_Security.md",
         "path": "Tekton/17_Chains_Supply_Chain_Security.md",
         "type": "file",
         "sha": "",
-        "size": 2515
+        "size": 2495
       },
       {
         "name": "18_Results_And_Pruner.md",
         "path": "Tekton/18_Results_And_Pruner.md",
         "type": "file",
         "sha": "",
-        "size": 2382
+        "size": 2362
       },
       {
         "name": "19_Operator_Platform_Config.md",
         "path": "Tekton/19_Operator_Platform_Config.md",
         "type": "file",
         "sha": "",
-        "size": 2447
+        "size": 2427
       },
       {
         "name": "20_Observability_HA_Debug_And_Windows.md",
         "path": "Tekton/20_Observability_HA_Debug_And_Windows.md",
         "type": "file",
         "sha": "",
-        "size": 3347
+        "size": 3327
       },
       {
         "name": "21_Worked_Example_Build_Test_Push.md",
         "path": "Tekton/21_Worked_Example_Build_Test_Push.md",
         "type": "file",
         "sha": "",
-        "size": 2826
+        "size": 2806
       },
       {
         "name": "22_Best_Practices_And_When_Not_Tekton.md",
         "path": "Tekton/22_Best_Practices_And_When_Not_Tekton.md",
         "type": "file",
         "sha": "",
-        "size": 2722
+        "size": 2702
       },
       {
         "name": "23_Feature_And_Offering_Coverage_Map.md",
         "path": "Tekton/23_Feature_And_Offering_Coverage_Map.md",
         "type": "file",
         "sha": "",
-        "size": 14376
+        "size": 14355
       },
       {
         "name": "24_YAML_CRD_Catalog_And_Troubleshooting.md",
         "path": "Tekton/24_YAML_CRD_Catalog_And_Troubleshooting.md",
         "type": "file",
         "sha": "",
-        "size": 3162
+        "size": 3142
       },
       {
         "name": "25_Migrate_Versioning_And_Extras.md",
         "path": "Tekton/25_Migrate_Versioning_And_Extras.md",
         "type": "file",
         "sha": "",
-        "size": 2185
+        "size": 2165
       },
       {
         "name": "26_GitOps_Handoff_And_Spectrum.md",
         "path": "Tekton/26_GitOps_Handoff_And_Spectrum.md",
         "type": "file",
         "sha": "",
-        "size": 2580
+        "size": 2560
       },
       {
         "name": "README.md",
         "path": "Tekton/README.md",
         "type": "file",
         "sha": "",
-        "size": 5397
+        "size": 5392
       }
     ]
   },
@@ -1953,168 +1953,168 @@
         "path": "Unleash/01_What_Is_Unleash_And_Feature_Flags.md",
         "type": "file",
         "sha": "",
-        "size": 5903
+        "size": 5883
       },
       {
         "name": "02_Architecture_Server_SDK_Edge_And_APIs.md",
         "path": "Unleash/02_Architecture_Server_SDK_Edge_And_APIs.md",
         "type": "file",
         "sha": "",
-        "size": 4610
+        "size": 4590
       },
       {
         "name": "03_Install_Hosting_And_Configuration.md",
         "path": "Unleash/03_Install_Hosting_And_Configuration.md",
         "type": "file",
         "sha": "",
-        "size": 3581
+        "size": 3561
       },
       {
         "name": "04_First_Flag_SDK_And_Toggle_Loop.md",
         "path": "Unleash/04_First_Flag_SDK_And_Toggle_Loop.md",
         "type": "file",
         "sha": "",
-        "size": 2678
+        "size": 2658
       },
       {
         "name": "05_Projects_Environments_And_Applications.md",
         "path": "Unleash/05_Projects_Environments_And_Applications.md",
         "type": "file",
         "sha": "",
-        "size": 3059
+        "size": 3039
       },
       {
         "name": "06_Feature_Flags_Variants_And_Strategy_Variants.md",
         "path": "Unleash/06_Feature_Flags_Variants_And_Strategy_Variants.md",
         "type": "file",
         "sha": "",
-        "size": 4072
+        "size": 4052
       },
       {
         "name": "07_Activation_Strategies_Stickiness_And_Custom.md",
         "path": "Unleash/07_Activation_Strategies_Stickiness_And_Custom.md",
         "type": "file",
         "sha": "",
-        "size": 3474
+        "size": 3454
       },
       {
         "name": "08_Context_Constraints_And_Segments.md",
         "path": "Unleash/08_Context_Constraints_And_Segments.md",
         "type": "file",
         "sha": "",
-        "size": 2621
+        "size": 2601
       },
       {
         "name": "09_SDKs_Backend_Frontend_And_OpenFeature.md",
         "path": "Unleash/09_SDKs_Backend_Frontend_And_OpenFeature.md",
         "type": "file",
         "sha": "",
-        "size": 15784
+        "size": 15764
       },
       {
         "name": "10_Edge_Proxy_And_Streaming.md",
         "path": "Unleash/10_Edge_Proxy_And_Streaming.md",
         "type": "file",
         "sha": "",
-        "size": 2812
+        "size": 2792
       },
       {
         "name": "11_API_Tokens_Keys_And_Service_Accounts.md",
         "path": "Unleash/11_API_Tokens_Keys_And_Service_Accounts.md",
         "type": "file",
         "sha": "",
-        "size": 3524
+        "size": 3504
       },
       {
         "name": "12_SSO_RBAC_SCIM_And_Provisioning.md",
         "path": "Unleash/12_SSO_RBAC_SCIM_And_Provisioning.md",
         "type": "file",
         "sha": "",
-        "size": 4139
+        "size": 4119
       },
       {
         "name": "13_Change_Requests_Release_Management_And_Governance.md",
         "path": "Unleash/13_Change_Requests_Release_Management_And_Governance.md",
         "type": "file",
         "sha": "",
-        "size": 4349
+        "size": 4329
       },
       {
         "name": "14_Impression_Analytics_Impact_And_Playground.md",
         "path": "Unleash/14_Impression_Analytics_Impact_And_Playground.md",
         "type": "file",
         "sha": "",
-        "size": 3014
+        "size": 2994
       },
       {
         "name": "15_Integrations_Terraform_Webhooks_And_Chatops.md",
         "path": "Unleash/15_Integrations_Terraform_Webhooks_And_Chatops.md",
         "type": "file",
         "sha": "",
-        "size": 4555
+        "size": 4535
       },
       {
         "name": "16_AI_Assistants_MCP_And_Assisted_Delivery.md",
         "path": "Unleash/16_AI_Assistants_MCP_And_Assisted_Delivery.md",
         "type": "file",
         "sha": "",
-        "size": 2578
+        "size": 2558
       },
       {
         "name": "17_Security_Privacy_And_Compliance.md",
         "path": "Unleash/17_Security_Privacy_And_Compliance.md",
         "type": "file",
         "sha": "",
-        "size": 2722
+        "size": 2702
       },
       {
         "name": "18_Scale_Upgrade_Operate_And_Troubleshoot.md",
         "path": "Unleash/18_Scale_Upgrade_Operate_And_Troubleshoot.md",
         "type": "file",
         "sha": "",
-        "size": 3606
+        "size": 3586
       },
       {
         "name": "19_Worked_Example_Gradual_Rollout_In_CI_CD.md",
         "path": "Unleash/19_Worked_Example_Gradual_Rollout_In_CI_CD.md",
         "type": "file",
         "sha": "",
-        "size": 2281
+        "size": 2261
       },
       {
         "name": "20_Best_Practices_And_When_Not_Unleash.md",
         "path": "Unleash/20_Best_Practices_And_When_Not_Unleash.md",
         "type": "file",
         "sha": "",
-        "size": 2554
+        "size": 2534
       },
       {
         "name": "21_Feature_And_Offering_Coverage_Map.md",
         "path": "Unleash/21_Feature_And_Offering_Coverage_Map.md",
         "type": "file",
         "sha": "",
-        "size": 7510
+        "size": 7490
       },
       {
         "name": "22_Config_Catalog_Migrate_And_Spectrum.md",
         "path": "Unleash/22_Config_Catalog_Migrate_And_Spectrum.md",
         "type": "file",
         "sha": "",
-        "size": 4340
+        "size": 4320
       },
       {
         "name": "23_Admin_Client_Frontend_And_Edge_APIs.md",
         "path": "Unleash/23_Admin_Client_Frontend_And_Edge_APIs.md",
         "type": "file",
         "sha": "",
-        "size": 43878
+        "size": 43855
       },
       {
         "name": "README.md",
         "path": "Unleash/README.md",
         "type": "file",
         "sha": "",
-        "size": 5859
+        "size": 5849
       }
     ]
   },
@@ -2123,174 +2123,174 @@
     "path": "1_Pipelines_Build_Test_Deploy.md",
     "type": "file",
     "sha": "",
-    "size": 6162
+    "size": 6122
   },
   {
     "name": "10_Testing_In_The_Pipeline.md",
     "path": "10_Testing_In_The_Pipeline.md",
     "type": "file",
     "sha": "",
-    "size": 3689
+    "size": 3664
   },
   {
     "name": "11_Pipeline_As_Code_Runners_Caching_Matrix.md",
     "path": "11_Pipeline_As_Code_Runners_Caching_Matrix.md",
     "type": "file",
     "sha": "",
-    "size": 3479
+    "size": 3444
   },
   {
     "name": "12_Release_Versioning_And_Changelogs.md",
     "path": "12_Release_Versioning_And_Changelogs.md",
     "type": "file",
     "sha": "",
-    "size": 5627
+    "size": 5597
   },
   {
     "name": "13_Config_Secrets_And_Env_Parity.md",
     "path": "13_Config_Secrets_And_Env_Parity.md",
     "type": "file",
     "sha": "",
-    "size": 3627
+    "size": 3597
   },
   {
     "name": "14_Monorepo_And_Multi_Repo_CI.md",
     "path": "14_Monorepo_And_Multi_Repo_CI.md",
     "type": "file",
     "sha": "",
-    "size": 3059
+    "size": 3029
   },
   {
     "name": "15_Pipeline_Security_And_Gates.md",
     "path": "15_Pipeline_Security_And_Gates.md",
     "type": "file",
     "sha": "",
-    "size": 3608
+    "size": 3583
   },
   {
     "name": "16_Notifications_Webhooks_And_ChatOps.md",
     "path": "16_Notifications_Webhooks_And_ChatOps.md",
     "type": "file",
     "sha": "",
-    "size": 2573
+    "size": 2548
   },
   {
     "name": "17_Static_Sites_And_CDN_Deploy.md",
     "path": "17_Static_Sites_And_CDN_Deploy.md",
     "type": "file",
     "sha": "",
-    "size": 4744
+    "size": 4709
   },
   {
     "name": "18_VM_MIG_And_Host_Based_Deploy.md",
     "path": "18_VM_MIG_And_Host_Based_Deploy.md",
     "type": "file",
     "sha": "",
-    "size": 6027
+    "size": 5987
   },
   {
     "name": "19_Delivery_Spectrum_Legacy_Through_Modern.md",
     "path": "19_Delivery_Spectrum_Legacy_Through_Modern.md",
     "type": "file",
     "sha": "",
-    "size": 7287
+    "size": 7242
   },
   {
     "name": "2_CI_CD_Tools.md",
     "path": "2_CI_CD_Tools.md",
     "type": "file",
     "sha": "",
-    "size": 5030
+    "size": 5005
   },
   {
     "name": "20_Classical_Jenkins_Host_And_Web_Deploy.md",
     "path": "20_Classical_Jenkins_Host_And_Web_Deploy.md",
     "type": "file",
     "sha": "",
-    "size": 5524
+    "size": 5479
   },
   {
     "name": "21_Compose_And_Swarm_Delivery.md",
     "path": "21_Compose_And_Swarm_Delivery.md",
     "type": "file",
     "sha": "",
-    "size": 4050
+    "size": 4015
   },
   {
     "name": "22_MLOps_And_AI_System_Delivery.md",
     "path": "22_MLOps_And_AI_System_Delivery.md",
     "type": "file",
     "sha": "",
-    "size": 6487
+    "size": 6442
   },
   {
     "name": "23_Classical_DevOps_Stack_Map.md",
     "path": "23_Classical_DevOps_Stack_Map.md",
     "type": "file",
     "sha": "",
-    "size": 4911
+    "size": 4896
   },
   {
     "name": "24_Workflow_Automation_Beyond_PR_CI.md",
     "path": "24_Workflow_Automation_Beyond_PR_CI.md",
     "type": "file",
     "sha": "",
-    "size": 11756
+    "size": 11726
   },
   {
     "name": "3_Deployment_Strategies.md",
     "path": "3_Deployment_Strategies.md",
     "type": "file",
     "sha": "",
-    "size": 5921
+    "size": 5886
   },
   {
     "name": "4_Artifacts_And_Registries.md",
     "path": "4_Artifacts_And_Registries.md",
     "type": "file",
     "sha": "",
-    "size": 6033
+    "size": 5993
   },
   {
     "name": "5_Verify_Rollback_And_Synthetic_Tests.md",
     "path": "5_Verify_Rollback_And_Synthetic_Tests.md",
     "type": "file",
     "sha": "",
-    "size": 5595
+    "size": 5555
   },
   {
     "name": "6_Supply_Chain_And_Signing.md",
     "path": "6_Supply_Chain_And_Signing.md",
     "type": "file",
     "sha": "",
-    "size": 5400
+    "size": 5365
   },
   {
     "name": "7_DB_Migrations_In_Pipelines.md",
     "path": "7_DB_Migrations_In_Pipelines.md",
     "type": "file",
     "sha": "",
-    "size": 5890
+    "size": 5850
   },
   {
     "name": "8_Environments_Promotion_And_Approvals.md",
     "path": "8_Environments_Promotion_And_Approvals.md",
     "type": "file",
     "sha": "",
-    "size": 8693
+    "size": 8653
   },
   {
     "name": "9_Progressive_Delivery_Controllers.md",
     "path": "9_Progressive_Delivery_Controllers.md",
     "type": "file",
     "sha": "",
-    "size": 4284
+    "size": 4249
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 9976
+    "size": 9941
   }
 ]

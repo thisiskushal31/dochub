@@ -2,8 +2,6 @@
 
 [← Previous](./20_Troubleshooting_And_Staff_Checklist.md) · [README](./README.md) · [Next: Agent hooks →](./22_Agent_Hooks_Lifecycle_And_Install_Spectrum.md)
 
----
-
 ## 1. Concepts
 
 Buildkite does **not** host your Git forge. It **connects** to providers so repository events create builds and so agents can clone code.
@@ -30,15 +28,11 @@ Connect from **Repository Providers** / **Git scope** on New Pipeline ([03](./03
 | Self-hosted | SSH keys on the agent machine |
 | GitHub App | Short-lived installation token via `pre-checkout` hook |
 
----
-
 ## 2. Advanced concepts
 
 - Separate **trigger** credentials (webhooks) from **clone** credentials (agent checkout).  
 - Fork/PR builds: assume untrusted code — isolate agents and secrets ([10](./10_Secrets_Environment_And_OIDC.md)).  
 - GitHub Merge Queue / Actions-from-Buildkite tutorials exist for migration estates — use when that is your workflow, not by default.
-
----
 
 ## 3. Applications and use cases
 
@@ -49,8 +43,6 @@ Connect from **Repository Providers** / **Git scope** on New Pipeline ([03](./03
 | Multi-forge company | One Buildkite org; multiple repository providers |
 
 **Good:** documented clone path per agent type. **Bad:** long-lived PATs in pipeline YAML.
-
----
 
 ## References
 

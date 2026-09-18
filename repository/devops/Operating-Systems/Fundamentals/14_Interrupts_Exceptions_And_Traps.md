@@ -4,8 +4,6 @@
 
 This topic covers how the **CPU hands control to the kernel** — via **interrupts** (hardware), **exceptions** (CPU-generated), and **traps** (e.g. system calls). All are OS-agnostic concepts. Understanding them is essential for how the OS integrates with hardware.
 
----
-
 ## Why the kernel needs to get control
 
 The kernel does not "run" in a loop. It runs only when:
@@ -15,8 +13,6 @@ The kernel does not "run" in a loop. It runs only when:
 3. **The CPU detects an exception** — e.g. page fault, divide-by-zero, illegal instruction. The CPU transfers control to the kernel’s **exception handler**.
 
 So **interrupts**, **exceptions**, and **traps** are the three ways the CPU gives control to the kernel. Without them, the OS could never run.
-
----
 
 ## Three classes
 
@@ -28,8 +24,6 @@ So **interrupts**, **exceptions**, and **traps** are the three ways the CPU give
 
 **Synchronous** = caused directly by the current instruction stream (trap or fault). **Asynchronous** = can happen at any time (hardware interrupt).
 
----
-
 ## What the CPU does when it happens
 
 1. **Save context** — The CPU saves enough state (e.g. program counter, status flags, possibly registers) so it can resume the interrupted code later.
@@ -39,8 +33,6 @@ So **interrupts**, **exceptions**, and **traps** are the three ways the CPU give
 5. **Return** — A special instruction (e.g. `iret` on x86) restores the saved context and returns to the interrupted code (user or kernel). The CPU switches back to the previous mode if returning to user space.
 
 So the **hardware** (CPU) is responsible for saving minimal state and jumping to the kernel; the **kernel** is responsible for saving full process state (e.g. in the PCB) if it will switch to another process or block the current one.
-
----
 
 ## Traps: system calls
 
@@ -53,8 +45,6 @@ When a process executes a **system call**:
 
 So **system calls are traps** — the only sanctioned way for user code to invoke the kernel.
 
----
-
 ## Exceptions: faults and errors
 
 - **Page fault** — The process accessed a virtual address that is not mapped or not present in RAM. The kernel’s **page-fault handler** may load the page from disk (demand paging), grow the stack, or signal the process (e.g. SIGSEGV) if the access is invalid.
@@ -62,21 +52,15 @@ So **system calls are traps** — the only sanctioned way for user code to invok
 
 The kernel’s exception handlers decide whether to fix the condition and resume or to deliver a signal to the process.
 
----
-
 ## Hardware interrupts (IRQs)
 
 Devices (timer, disk controller, network card) are connected to an **interrupt controller** (e.g. APIC on x86). When a device needs attention, it raises an **IRQ**. The controller notifies the CPU; the CPU then runs the **interrupt handler** registered for that IRQ. Handlers must be **short** (do minimal work, often just acknowledge the device and schedule work for later) so that other interrupts are not delayed too long. The kernel may **disable interrupts** briefly around critical sections (e.g. when updating a shared data structure) and then re-enable them.
-
----
 
 ## Summary
 
 - **Trap** = deliberate entry (e.g. system call); **exception** = CPU-detected fault (e.g. page fault); **interrupt** = hardware device (timer, I/O).
 - The CPU saves minimal state, switches to kernel mode, and jumps to the handler via a **vector table** (e.g. IDT). The kernel does the work and returns with a special instruction.
 - **System calls** are traps; **page faults** and other faults are exceptions; **timer and I/O** are hardware interrupts. Together they are how the OS integrates with the hardware.
-
----
 
 ## Further reading
 

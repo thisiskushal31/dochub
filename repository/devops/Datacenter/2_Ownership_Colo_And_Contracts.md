@@ -2,8 +2,6 @@
 
 [← Previous](./1_On_Prem_As_A_Solution.md) · [README](./README.md) · [Next: Facility →](./3_Facility_Power_Cooling_And_Rooms.md)
 
----
-
 ## 1. Concepts
 
 “We are in a datacenter” is not a design. The design is **who owns which layer** when the lights go out.
@@ -42,8 +40,6 @@ Write three names:
 
 If those three are “the vendor,” you will discover at 3am that the vendor is three companies.
 
----
-
 ## 2. Advanced concepts
 
 ### Contract gotchas (read before you rack)
@@ -77,8 +73,6 @@ A dedicated server (OVH Bare Metal and kin) is **metal you did not rack**. kubea
 
 A closet with a domestic UPS is not colo. It can still be **on-prem** ([1](./1_On_Prem_As_A_Solution.md)). Write it as a single failure domain. Do not sell it as a DR site for the hall.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -104,8 +98,6 @@ A closet with a domestic UPS is not colo. It can still be **on-prem** ([1](./1_O
 **Disconfirm:** Colo is **not** the same as hosted VMware or public IaaS. Two power cords are **not** two independent plants until the one-line says so.
 
 **Confirm:** Who owns the building, the iron, the OS, and the app in *your* deal? What does remote hands refuse to do?
-
----
 
 ## Go deeper
 

@@ -6,13 +6,9 @@
 
 **Format:** Each concept is explained in text first, then illustrated with a **code block** (or diagram) so you see the implementation and are not left guessing. Case studies and hands-on examples follow the same pattern: goal → approach → code → expected behavior. The same format is used for every language in this handbook.
 
----
-
 ## Why Ada was created
 
 In the 1970s the United States Department of Defense (DoD) faced an explosion of programming languages: different projects used different, non-standard dialects or subsets. The DoD issued a request for proposals for a **common, modern programming language**. The winning proposal was from Jean Ichbiah (CII Honeywell-Bull). The first Ada standard was published in **1983**; it was revised in **1995**, **2005**, **2012**, and **2022**, with each revision adding useful features. Ada is now an international standard (ISO/IEC 8652).
-
----
 
 ## Purpose and where it is used
 
@@ -25,8 +21,6 @@ Ada is designed for **reliable, maintainable software** where defects can have s
 
 It is also used in other domains (e.g. video games, real-time audio, kernel modules). In terms of level and targets, the closest modern relatives are **C++** and **Rust**.
 
----
-
 ## Why Ada is a good fit
 
 - **Readability over conciseness** — Keywords are preferred to symbols; no keyword is an abbreviation.
@@ -36,13 +30,9 @@ It is also used in other domains (e.g. video games, real-time audio, kernel modu
 - **Built-in concurrency** — **Tasks** and **protected objects** are part of the language, suitable for real-time and embedded systems.
 - **SPARK** — A provable subset of Ada supports formal verification (absence of run-time errors, compliance with requirements). Many Ada specification features feed directly into SPARK proofs.
 
----
-
 ## What is Ada?
 
 Ada is a **multi-paradigm** language: its core is a clear **procedural/imperative** language (akin to C or Pascal), with support for **object orientation**, **generics**, and some **functional-style** features. Programs are structured with **packages** (specification and body), **subprograms** (procedures and functions), **strong typing**, **subtypes** and **derived types**, **exceptions**, **tasking**, and (from Ada 2012) **contracts** (pre/postconditions, predicates, invariants).
-
----
 
 ## Topics (foundation → advanced)
 
@@ -63,8 +53,6 @@ Ada is a **multi-paradigm** language: its core is a clear **procedural/imperativ
 | 13 | Appendices (generic formal types) | [13_Appendices.md](./13_Appendices.md) |
 | 14 | Case studies and hands-on examples | [14_Case_Studies_And_Hands_On.md](./14_Case_Studies_And_Hands_On.md) |
 | 15 | Use cases: airborne and railway | [15_Use_Cases_Airborne_And_Railway.md](./15_Use_Cases_Airborne_And_Railway.md) |
-
----
 
 ## Further reading
 

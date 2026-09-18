@@ -2,8 +2,6 @@
 
 [← Previous](./12_Worked_Example_Canary_A_Service.md) · [README](./README.md) · [Next: Coverage map →](./14_Feature_And_Configuration_Coverage_Map.md)
 
----
-
 ## 1. Concepts — trade rules
 
 Upstream best practices (and platform experience) converge on:
@@ -20,8 +18,6 @@ Upstream best practices (and platform experience) converge on:
 | Start **blue-green**, then canary | Jump to mesh canary with no analysis |
 
 Not for: ephemeral PR environments (use GitOps PR apps); long experiments (use feature flags).
-
----
 
 ## 2. Advanced concepts — sizing and ownership
 
@@ -46,8 +42,6 @@ Platform provides Prometheus (or other) + template patterns; app teams own query
 | Who may sync prod | Argo CD Projects/RBAC |
 | Who may promote manually | Kubernetes RBAC + process |
 
----
-
 ## 3. Applications and use cases — decision cheatsheet
 
 **Use Rollouts when:** Kubernetes service, need blast-radius control, can invest in metrics or accept blue-green manual promote.
@@ -55,8 +49,6 @@ Platform provides Prometheus (or other) + template patterns; app teams own query
 **Do not use when:** non-K8s; platform add-ons; app cannot dual-run and blue-green is also unacceptable; you only needed a flag.
 
 **Flags + Rollouts:** ship dark code behind flags; canary the binary; open flags gradually.
-
----
 
 ## References
 

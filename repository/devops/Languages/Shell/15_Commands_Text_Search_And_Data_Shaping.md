@@ -24,8 +24,6 @@ printf 'b\na\na\nc\n' |    # Produce four lines on stdout
   Select-Object Count, Name
 ```
 
----
-
 ## 1. Concepts
 
 ### 1. Text streams vs objects
@@ -412,8 +410,6 @@ awk -F, '{print $2}' data.csv | head -n 5
 
 **Answer:** print the second comma-separated field for each row, then keep the first five outputs—fragile if CSV has quoted commas (use a real CSV tool then).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. GNU vs BSD flag traps (with examples)
@@ -636,8 +632,6 @@ grep -RIn -F 'AKIA' --exclude-dir=.git . 2>/dev/null | head -n 20
 
 Staff rule: searching for secrets is allowed for **defense**; publishing the matches is not.
 
----
-
 ## 3. Applications and use cases
 
 ### CI log gates
@@ -686,8 +680,6 @@ Unix text-tool culture in OS context: [`../../Operating-Systems/Unix/9_Shell_And
 - Beginners can decode `grep -RIn`, `sed -n '1,5p'`, `sed 's/a/b/g'`, `awk '{print $1}'`, `cut -d: -f1`, `sort -u`, `uniq -c`, `wc -l`, `head -n`, and `tail -f`.
 - `find … -print0 | xargs -0` used for weird filenames; `tee`/`diff`/`tr` understood when pipelines need them.
 - Team routes unknown text commands through atlas **27**.
-
----
 
 ## References
 

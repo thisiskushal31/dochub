@@ -2,8 +2,6 @@
 
 [← Previous](./12_Triggers_EventListeners_And_Interceptors.md) · [README](./README.md) · [Next: Catalog →](./14_Catalog_Hub_And_Reusable_Tasks.md)
 
----
-
 ## 1. Concepts
 
 **Pipelines-as-Code (PAC)** runs Tekton from **Git events** with pipeline definitions in the repo (typically `.tekton/`).
@@ -39,8 +37,6 @@ spec:
 
 Use annotations/CEL for event matching (paths, comments, labels) per current PAC guides.
 
----
-
 ## 2. Advanced concepts
 
 ### GitHub App vs webhook
@@ -71,8 +67,6 @@ Fork PRs: no prod credentials; use separate SA and pull policies. Operator / Ope
 
 PAC ships a **`tkn-pac`** plugin (`tkn pac …`): bootstrap, Repository create/delete/list/describe, `generate` / `resolve`, logs, CEL eval, webhook helpers. Full pre-install command map lives in [15](./15_CLI_tkn.md) — learn what it does before installing the plugin.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -91,8 +85,6 @@ PAC ships a **`tkn-pac`** plugin (`tkn pac …`): bootstrap, Repository create/d
 - Engineers know `tkn pac` surface before first plugin install ([15](./15_CLI_tkn.md)) 
 
 **Good:** pipelines reviewed in the same PR. **Bad:** PAC with cluster-admin and secrets on all fork PRs.
-
----
 
 ## References
 

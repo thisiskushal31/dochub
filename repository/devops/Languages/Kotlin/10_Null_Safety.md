@@ -124,8 +124,6 @@ In pure Kotlin, null pointer exceptions should be rare. They can still occur whe
 
 Designing APIs with clear nullability (preferring non-null types and `String?` only where null is meaningful) reduces the need for `!!` and makes NPEs less likely. The next topic covers collections and sequences, which often use nullable types in their APIs (e.g. `getOrNull()`).
 
----
-
 ## Further reading
 
 - [Null safety](https://kotlinlang.org/docs/null-safety.html)

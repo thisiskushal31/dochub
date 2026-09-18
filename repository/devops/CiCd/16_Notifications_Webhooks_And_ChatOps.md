@@ -6,8 +6,6 @@ Pipelines that fail silently waste lead time. Operators need **timely, actionabl
 
 Culture/tooling context: [Methodologies/6_ChatOps_And_Collaboration_Tools.md](../Methodologies/6_ChatOps_And_Collaboration_Tools.md).
 
----
-
 ## What to notify
 
 | Event | Who cares |
@@ -19,8 +17,6 @@ Culture/tooling context: [Methodologies/6_ChatOps_And_Collaboration_Tools.md](..
 | Nightly / flaky noise | Dashboard or digest — not @channel |
 
 Match urgency to blast radius. DORA recovery improves when the right humans see deploy failures fast ([Methodologies/5](../Methodologies/5_DORA_And_Delivery_Metrics.md)).
-
----
 
 ## Mechanisms
 
@@ -34,8 +30,6 @@ Match urgency to blast radius. DORA recovery improves when the right humans see 
 
 Prefer links back to **logs, digest, and run URL** over pasting walls of text.
 
----
-
 ## Webhooks from Git and CI
 
 ```text
@@ -47,15 +41,11 @@ deploy verify fail → page
 
 Secure webhooks: secrets/signatures, least privilege, no public unauthenticated deploy triggers.
 
----
-
 ## ChatOps guardrails
 
 - Authenticate who can run deploy commands  
 - Audit every chat-initiated production action  
 - Don’t bypass the pipeline (chat should *trigger* the same gated path)
-
----
 
 ## Pitfalls
 

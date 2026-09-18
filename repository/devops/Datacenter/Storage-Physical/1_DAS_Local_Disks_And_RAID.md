@@ -2,8 +2,6 @@
 
 [README](./README.md) · [Next: NAS →](./2_NAS_NFS_SMB.md)
 
----
-
 ## Mental map
 
 ![RAID levels](../../Assets/Datacenter/Storage-Physical/raid-levels-board.svg)
@@ -11,8 +9,6 @@
 ![Disk bays sketch](../../Assets/Datacenter/Storage-Physical/disk-bay-front.svg)
 
 Setup procedures (controller steps, hot-spare, JBOD vs RAID): [Setup-And-Bring-Up/10](../Setup-And-Bring-Up/10_RAID_And_Local_Disk_Setup.md).
-
----
 
 ## 1. Concepts
 
@@ -30,8 +26,6 @@ Setup procedures (controller steps, hot-spare, JBOD vs RAID): [Setup-And-Bring-U
 ### Where it sits
 
 Drive bays / NVMe slots; HBA/RAID in PCIe ([Compute/13](../Compute/13_NICs_HBAs_And_Slot_Planning.md)); boot path ([Compute/12](../Compute/12_Boot_UEFI_RAID_NVMe_SAN.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -53,8 +47,6 @@ SDS failure domains: [7](./7_Software_Defined_Ceph_vSAN_Kin.md). Multipath appea
 
 Same disk physics; OEM backplane quirks differ. Prefer OEM QVL drives for enterprise arrays/servers.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -73,8 +65,6 @@ Same disk physics; OEM backplane quirks differ. Prefer OEM QVL drives for enterp
 - Never yank a drive mid-rebuild without knowing role  
 
 **Good:** clear OS/data policy, QVL drives, tested rebuild. **Bad:** RAID+Ceph; single OS disk; mystery slots.
-
----
 
 ## References
 

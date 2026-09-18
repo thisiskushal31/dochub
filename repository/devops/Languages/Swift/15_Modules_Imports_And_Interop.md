@@ -10,8 +10,6 @@ Interop is how Swift sits on Apple’s existing stacks and native libraries. Thi
 
 Picture modules as **rooms with doors**. `import` is a key. SPM targets build rooms; products decide which doors outsiders may use. Bridging headers are **side doors into an older wing** of the building — useful, easy to leave unlocked. Module selectors (`::`) are name badges that say “I meant *that* room’s `View`.”
 
----
-
 ## 1. Concepts
 
 ### 1. Module vs target vs product
@@ -110,8 +108,6 @@ swift package describe
 ```
 
 **What just happened.** `describe` is the map. If a teammate “cannot import” a symbol, ask: missing product dependency, missing `public`/`package`, or wrong module name? Those are three different bugs.
-
----
 
 ## 2. Advanced concepts
 
@@ -359,8 +355,6 @@ public struct ExampleKitView { /* … */ }  // unambiguous name
 // SwiftUI::View vs MyGame::View collisions you do not control
 ```
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -370,8 +364,6 @@ public struct ExampleKitView { /* … */ }  // unambiguous name
 | **Security** | Audit bridged APIs for nullability and buffer lengths; distrust raw pointers from C |
 | **Operations** | Toolchain pin must match C++ interop and 6.3 `::` usage; document required flags |
 | **Software engineering** | Module graph acyclic; `@testable` only in tests; minimal `@_exported`; products match import story; `::` for collisions you do not control |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -387,8 +379,6 @@ public struct ExampleKitView { /* … */ }  // unambiguous name
 - C/C++ unsafe surfaces wrapped; ownership documented; expanded checklist applied; move-only C++ treated as unique.
 - Linux CI does not assume Darwin/ObjC-only modules without guards.
 - C++ interop enablement is explicit and version-pinned.
-
----
 
 ## References
 

@@ -10,8 +10,6 @@ Packages (chapter **14**) can live without an `.xcodeproj`. The moment you ship 
 
 You finish when you can draw an xcconfig include tree, explain Debug vs Release behavior that bites reviews, read a build timeline for “what actually rebuilt,” and paste the exact shared-scheme contract CI must run.
 
----
-
 ## 1. Concepts
 
 ### 1. Project → target → product
@@ -241,8 +239,6 @@ Staff habits:
 - After flipping `SWIFT_STRICT_CONCURRENCY` or `SWIFT_VERSION`, expect a one-time wide rebuild—not a forever tax if incremental works.
 - Teach juniors: the timeline is evidence; “feels slow” is not a ticket.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. What CI must invoke (minimum contract)
@@ -329,8 +325,6 @@ xcodebuild \
 
 If Staging only exists on one engineer’s scheme, it does not exist.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Practice |
@@ -340,8 +334,6 @@ If Staging only exists on one engineer’s scheme, it does not exist.
 | **Security** | Treat build settings that inject API endpoints / keys as **secrets** (ch **20**), not clever xcconfig |
 | **Operations** | Onboarding: `xcodebuild -list` expected schemes + the exact CI command pasted in README |
 | **Software engineering** | PR review: scheme shared? `SWIFT_VERSION` / concurrency consistent? Release not accidentally Debug flags? |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -357,8 +349,6 @@ If Staging only exists on one engineer’s scheme, it does not exist.
 - Workspace vs project choice matches how SPM / CocoaPods are actually wired.
 - Nobody ships from a scheme that skips the test action “to save time” without a documented waiver.
 - `#if DEBUG` / compilation conditions are not hiding security-critical checks.
-
----
 
 ## References
 

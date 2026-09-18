@@ -6,8 +6,6 @@
 
 How shell scripts handle **JSON** using **`jq`**: what JSON is in one clear paragraph, why scripts need a dedicated filter tool, install literacy (the package exists—focus on usage), baby-step filters (`.` , `.foo`, `.[]`, `select`), a flag-by-flag table for `-r` `-c` `-e` `-n` `-s` `-R`, pipelines such as `curl … | jq`, and PowerShell analogs (`ConvertFrom-Json` / `ConvertTo-Json`). Security notes cover untrusted huge input and secrets inside JSON logs. Official jq documentation lives only in **References**.
 
----
-
 ## 1. Concepts (basic)
 
 ### 1. What JSON is (one paragraph)
@@ -268,8 +266,6 @@ jq -n --arg n "$name" '{user: $n}'
 
 `--arg` binds a string safely into the jq program.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `--arg` and `--argjson`
@@ -376,8 +372,6 @@ fi
 
 `//` provides a default inside jq when the left side is `null` or `false`.
 
----
-
 ## 3. Applications and use cases
 
 ### Release automation
@@ -468,8 +462,6 @@ Same job as the `jq` asset filter above—choose the dialect your agent image al
 - Secrets in JSON are redacted before logs; sample fixtures are sanitized.  
 - Huge/untrusted inputs have size limits or are not slurped unbounded.  
 - PowerShell paths document `-Depth` where deep graphs appear.
-
----
 
 ## References
 

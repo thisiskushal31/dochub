@@ -19,8 +19,6 @@ Handbook default for new work: **Tcl 9.0.x**. Many servers still ship **8.6**—
 
 Today’s picture: *one process + one interpreter + something that prints*. Fuzzy PATH here makes every later chapter feel cursed.
 
----
-
 ## 1. Concepts
 
 ### 1. What you are about to start
@@ -302,8 +300,6 @@ puts "Hello, $name"
 # set stores a string; $name substitutes; puts writes one word to stdout
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Multiple installs and PATH discipline
@@ -362,8 +358,6 @@ Jobs fail when:
 
 Always use absolute paths or a known `PATH` export in unit files—and still log `info patchlevel`.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How first steps show up |
@@ -376,8 +370,6 @@ Always use absolute paths or a known `PATH` export in unit files—and still log
 
 **Whole-engineering picture:** hello is the reproducibility gate. Encoding, lists, and Expect reviews all assume you can name the interpreter that will run the change.
 
----
-
 ## Staff-level review checklist
 
 - Runbook states **full `info patchlevel`** (and binary path) per host class.
@@ -389,8 +381,6 @@ Always use absolute paths or a known `PATH` export in unit files—and still log
 - Newcomers have read chapter **01**’s Linux + command-lifecycle picture.
 - CLI scripts document how they read **`argv0` / `argc` / `argv`** (and treat `argv` as a list).
 - Onboarding lab runs a script with multi-word args (`"two words"`) so newcomers see list quoting in `argv`.
-
----
 
 ## References
 

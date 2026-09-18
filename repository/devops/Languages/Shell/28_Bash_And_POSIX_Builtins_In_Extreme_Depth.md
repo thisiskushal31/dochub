@@ -8,8 +8,6 @@ Every **Bash builtin** you fire without leaving the shell process—plus POSIX *
 
 **Why builtins matter:** `cd`, `export`, and `read` **must** be builtins to change the current shell. Scripts that accidentally run an external or an alias behave differently.
 
----
-
 ## If you are brand new
 
 ```bash
@@ -29,8 +27,6 @@ command -v jq || echo "jq not on PATH"
 | `alias` | Text expansion (avoid in scripts) |
 | `function` | Shell function |
 | `file` / hashed path | External on `PATH` |
-
----
 
 ## 1. Concepts — resolution order and special builtins
 
@@ -60,8 +56,6 @@ POSIX marks some builtins **special** (assignment persistence and error behavior
 | Jobs | `jobs`, `fg`, `bg`, `kill`, `disown`, `suspend` |
 | Interactive | `alias`/`unalias`, `bind`, `complete`, `compgen`, `history`, `fc`, `help`, `logout` |
 | Print / arith | `echo`, `printf`, `let`, `caller` |
-
----
 
 ## 2. Builtins in depth (A–Z)
 
@@ -588,8 +582,6 @@ wait "$pid"
 | `wait $pid` | Specific |
 | `wait -n` | Next (Bash 4.3+) |
 
----
-
 ## 3. Advanced concepts
 
 ### 1. Builtin vs external matrix (common twins)
@@ -661,8 +653,6 @@ sh -c 'echo interpreter=$0'
 | Advanced | `trap`, `getopts`, `declare`, `mapfile`, `eval` (avoid), `exec` redirects |
 | Staff | Prove same script under dash **and** Bash; ban interactive builtins in CI |
 
----
-
 ## 4. Applications
 
 ### Application — safe script preamble (Bash)
@@ -699,14 +689,10 @@ Any `eval` / `iex` requires threat model (chapter **18**).
 - Scripts tested under the estate’s real `/bin/sh` (dash vs Bash vs ash)—chapter **20**/**32**.
 - Bash 3.2 estates inventoried before using Bash 4+ builtins.
 
----
-
 ## References
 
 - [GNU Bash manual — Shell Builtin Commands](https://www.gnu.org/software/bash/manual/html_node/Shell-Builtin-Commands.html)
 - [POSIX special built-in utilities](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html)
 - [ShellCheck](https://www.shellcheck.net/)
-
----
 
 [← Back to Shell](./README.md)

@@ -8,8 +8,6 @@ How Vyper sources declare their language band, how **compiler version** and **EV
 
 Default pin: **Vyper 0.4.3** / band **0.4.x**. For **0.4.3**, the compiler’s default EVM target is **prague** unless overridden—record that beside the language pin. Sibling pragma culture for Solidity lives in the [Solidity](../Solidity/README.md) track—same *pin discipline*, different compiler.
 
----
-
 ## 1. Concepts
 
 ### 1. Why versions show up twice
@@ -81,8 +79,6 @@ Lock files (`requirements.txt`, `uv.lock`, poetry lock, etc.) should record the 
 | **EVM version** | `#pragma evm-version` and/or `--evm-version` | Wrong opcode set vs chain; verify fails; strange runtime |
 
 For **0.4.3**: default EVM target is **prague**. If your chain or verifier expects another fork ruleset, set it explicitly and document why. Compiling for the wrong EVM version can produce wrong or failing behavior—especially on private chains.
-
----
 
 ## 2. Advanced concepts
 
@@ -168,8 +164,6 @@ Do not rely on “everyone knows we use prague.” Write it where release and ve
 
 If any answer is “we think so,” the pin story is not done.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How versioning shows up |
@@ -184,8 +178,6 @@ If any answer is “we think so,” the pin story is not done.
 
 **Release sidecar (minimum):** compiler version, EVM version (explicitly `prague` if default), optimize mode, bytecode hash, ABI hash. If any field is missing from the release notes, the release is incomplete.
 
----
-
 ## 4. Staff-level review checklist
 
 - Sources declare `#pragma version` (or documented legacy `# @version`) compatible with the CI compiler.
@@ -198,8 +190,6 @@ If any answer is “we think so,” the pin story is not done.
 - Solidity and Vyper pins are tracked separately in mixed repos.
 - Verification / explorer submissions use the same compiler version and settings as the release build.
 - Patch bumps include compile + Titanoboa (or documented suite) green before merge.
-
----
 
 ## References
 

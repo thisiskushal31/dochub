@@ -8,8 +8,6 @@ How a Vyper contract is laid out on the page: pragma, declarations, state variab
 
 Pin: **Vyper 0.4.x** (**0.4.3**). For Solidity’s parallel “contract anatomy,” see [Solidity](../Solidity/README.md)—similar EVM object, different layout rules (no inheritance trees here). Modules and interfaces are covered in chapter **[11](./11_Interfaces_And_Modules.md)**; this chapter is the **single-file reading order** and the habits that survive multi-file composition.
 
----
-
 ## 1. Concepts
 
 ### 1. Top-to-bottom reading order
@@ -95,8 +93,6 @@ Unlike many Solidity codebases, you will **not** find:
 
 Reuse shows up as **interfaces**, **modules** (0.4+), and clear internal functions. Structure stays flatter; that is intentional (chapter **[01](./01_What_Vyper_Is_And_Is_Not.md)**).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Modules and multi-file shape (0.4+)
@@ -170,8 +166,6 @@ That pass answers “what is this?” before “is the math right?”
 
 Fix structure before optimizing gas.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | Structure habit |
@@ -186,8 +180,6 @@ Fix structure before optimizing gas.
 
 **PR template add-on:** “External surface added/changed: …” and “State ownership: …” — two sentences that save an hour of archaeology.
 
----
-
 ## 4. Staff-level review checklist
 
 - Pragma present; file order follows a documented house style.
@@ -201,8 +193,6 @@ Fix structure before optimizing gas.
 - ABI-facing names are stable and glossary-consistent.
 - Default/receive-style paths are obvious or absent.
 - Import/module paths match CI; no laptop-only layout.
-
----
 
 ## References
 

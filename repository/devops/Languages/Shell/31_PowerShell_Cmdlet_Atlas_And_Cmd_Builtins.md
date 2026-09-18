@@ -8,8 +8,6 @@ The **Windows-native command surface** for this track: **high-traffic PowerShell
 
 **Out of primary depth:** the full Microsoft Learn Windows commands hub (~750 admin utilities). Those are Windows OS administration—link to Learn / OS track when needed; they are not “missing shell chapters.”
 
----
-
 ## If you are brand new
 
 ```powershell
@@ -39,8 +37,6 @@ REM %CD% expands to the current directory string
 
 Discover first; then memorize families—not opaque one-liners.
 
----
-
 ## 1. Concepts
 
 ### 1. Cmdlet vs external vs alias
@@ -67,8 +63,6 @@ Chapter **23** habit still applies—read help text, do not treat the line as a 
 ### 3. Object pipeline vs text
 
 Bash pipes **bytes**. PowerShell pipes **objects**. Text/JSON depth: **15**, **24**.
-
----
 
 ## 2. PowerShell high-traffic families in depth
 
@@ -285,8 +279,6 @@ Threat model: chapter **18**.
 
 Pin `$PSVersionTable.PSVersion` in CI (chapter **02**, **12**).
 
----
-
 ## 3. cmd.exe builtins in depth
 
 Complete **builtin** set for DevOps batch literacy (chapter **13** for language). External Windows admin tools (`diskpart`, `bcdedit`, …) → Learn / OS track—not duplicated here.
@@ -353,8 +345,6 @@ Complete **builtin** set for DevOps batch literacy (chapter **13** for language)
 | Legacy installer constraints | Thin `cmd` / `.bat` calling `pwsh -File` |
 | Parsing JSON / HTTP | PowerShell, not `cmd` |
 
----
-
 ## 4. Advanced concepts
 
 ### 1. Alias collision table (Windows)
@@ -398,8 +388,6 @@ Every family above has Unix cousins in **27**. Perfect flag parity is false; per
 | Advanced | Object pipelines, `Invoke-RestMethod`, `Get-FileHash` |
 | Staff | Disambiguate aliases; pin `$PSVersionTable`; thin `cmd` → `pwsh -File` |
 
----
-
 ## 5. Applications
 
 ### Bootstrap pattern
@@ -431,8 +419,6 @@ Get-Command Get-ChildItem, Invoke-WebRequest, Get-FileHash |
 - `FOR`/`IF ERRORLEVEL` quirks reviewed in legacy bats.
 - Full Windows commands hub not mistaken for missing handbook gaps.
 
----
-
 ## References
 
 - [PowerShell documentation](https://learn.microsoft.com/powershell/)
@@ -440,7 +426,5 @@ Get-Command Get-ChildItem, Invoke-WebRequest, Get-FileHash |
 - [about_Aliases / about_Command_Precedence](https://learn.microsoft.com/powershell/)
 - [Windows Commands reference](https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands)
 - [cmd reference topics](https://learn.microsoft.com/windows-server/administration/windows-commands/cmd)
-
----
 
 [← Back to Shell](./README.md)

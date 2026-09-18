@@ -4,8 +4,6 @@
 
 Continuous Delivery needs a **path through environments** with clear promote rules — not ad-hoc “SSH to prod.” This chapter is the promotion model that sits on top of [1](./1_Pipelines_Build_Test_Deploy.md) and [4](./4_Artifacts_And_Registries.md).
 
----
-
 ## Typical ladder
 
 Names vary; the jobs do not:
@@ -26,15 +24,11 @@ Local / PR preview
 
 Twelve-Factor **dev/prod parity**: keep gaps small (same kind of DB, queue, runtime) so Continuous Delivery stays believable ([12factor.net/dev-prod-parity](https://12factor.net/dev-prod-parity)).
 
----
-
 ## Git strategy vs environment ladder (do not conflate them)
 
 The ladder above is **where software runs**. How code integrates (trunk vs long-lived env branches) is covered in [Methodologies/4](../Methodologies/4_Branching_And_PR_Practices.md).
 
 In the pipe: build once, pin environments to **tags/digests**, freeze an RC under test while trunk moves, then promote the **same digest** to release SemVer ([4](./4_Artifacts_And_Registries.md), [12](./12_Release_Versioning_And_Changelogs.md), [semver.org](https://semver.org/)).
-
----
 
 ## Shared DEV (default) and optional parallel DEV
 
@@ -83,8 +77,6 @@ Parallel stacks buy flow and cost compute/LB/DB ([Methodologies/8](../Methodolog
 
 Default path: build snapshot → **shared DEV** → merge → RC → staging → release digest. Parallel DEVs are a **side option**, not the trunk of the model.
 
----
-
 ## Promote the artifact, inject config
 
 ```text
@@ -94,8 +86,6 @@ Build once → store digest D
 ```
 
 Anti-pattern: rebuild “for production” or bake env-specific config into the image ([4](./4_Artifacts_And_Registries.md), [13](./13_Config_Secrets_And_Env_Parity.md)).
-
----
 
 ## Approvals (Continuous Delivery gates)
 
@@ -109,8 +99,6 @@ Humble & Farley: Continuous Delivery means you *could* release anytime; a human 
 
 Record who approved what digest for audit.
 
----
-
 ## Environment protection (platform features)
 
 Most CI / forge platforms (GitHub, GitLab, Bitbucket, Azure DevOps, and kin) offer:
@@ -121,8 +109,6 @@ Most CI / forge platforms (GitHub, GitLab, Bitbucket, Azure DevOps, and kin) off
 
 Use them so “prod credentials” are not available to every PR/MR job.
 
----
-
 ## Multi-service promotion
 
 When several services must move together:
@@ -132,8 +118,6 @@ When several services must move together:
 - Avoid silent skew: app A on v5 talking to B still on v3 without compatibility tests  
 
 Contract tests in CI help ([10](./10_Testing_In_The_Pipeline.md)).
-
----
 
 ## Pitfalls
 

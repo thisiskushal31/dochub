@@ -2,8 +2,6 @@
 
 [← Previous](./15_Rollout_Spec_And_Strategy_Configuration_Catalog.md) · [README](./README.md)
 
----
-
 ## 1. Concepts — playbook
 
 | Symptom | Likely causes | What to try |
@@ -19,15 +17,11 @@
 | Abort RS lingering | Scaledown policy | Check scaledown aborted settings |
 | CRD / install errors | Version skew; namespace install without CRDs | Pin version; apply CRDs |
 
----
-
 ## 2. Advanced concepts
 
 Use `kubectl argo rollouts get rollout NAME --watch` as the first pane. Inspect AnalysisRuns and Experiments next. Controller logs in `argo-rollouts` namespace for provider/patch errors.
 
 FAQ-class issues (health, providers) — see official FAQ; keep Git and live digest aligned after `undo`.
-
----
 
 ## 3. Applications and use cases — staff checklist
 
@@ -56,8 +50,6 @@ When reviewing a Rollout or progressive-delivery design:
 | Verify | [5](../5_Verify_Rollback_And_Synthetic_Tests.md) |
 | GitOps CD | [Argo_CD](../Argo_CD/README.md) |
 | Flags | [Unleash](../Unleash/README.md) |
-
----
 
 ## References
 

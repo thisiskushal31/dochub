@@ -2,8 +2,6 @@
 
 [← Previous](./15_CLI_tkn.md) · [README](./README.md) · [Next: Chains →](./17_Chains_Supply_Chain_Security.md)
 
----
-
 ## 1. Concepts
 
 **Tekton Dashboard** is the web UI for Pipelines (and Triggers) resources: browse Runs, inspect status/YAML, follow logs, and (with permissions) create/start Runs.
@@ -20,8 +18,6 @@ Install via release YAML or Operator (`TektonDashboard` / profile) ([19](./19_Op
 kubectl port-forward -n tekton-pipelines svc/tekton-dashboard 9097:9097
 # https://localhost:9097 after you put TLS/auth in front in real estates
 ```
-
----
 
 ## 2. Advanced concepts
 
@@ -45,8 +41,6 @@ Walkthroughs exist for kind-based labs; production still needs Ingress + TLS + S
 
 Some teams skip Dashboard entirely and use `tkn` + Grafana. That is valid — Dashboard is UX, not a control-plane requirement.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -62,8 +56,6 @@ Some teams skip Dashboard entirely and use `tkn` + Grafana. That is valid — Da
 - Create permissions limited; Git remains source of truth  
 
 **Good:** SSO-gated Dashboard. **Bad:** open create privileges on the public net.
-
----
 
 ## References
 

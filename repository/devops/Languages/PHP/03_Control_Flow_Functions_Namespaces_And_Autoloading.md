@@ -6,8 +6,6 @@
 
 Control structures, first-class functions and closures, namespaces and name resolution, how autoloading maps class names to paths, how Composer’s generated autoloaders differ from hand-rolled `require` trees, and failure modes that show up in bootstrap order, monorepos, and Opcache-heavy deploys. Later chapters assume you can trace where `vendor/autoload.php` runs relative to environment bootstrapping.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases** (see the PHP [README](./README.md#chapter-structure)).
 
 ## 1. Concepts
@@ -18,13 +16,9 @@ Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3
 
 `match` is strict, expression-based, and avoids switch fall-through—use it when comparing discrete values without needing C-style fall-through semantics.
 
----
-
 ### 2. Functions: signatures, defaults, variadics, named args
 
 Functions support default values, variadic `...$rest`, union/intersection types, and (PHP 8+) named arguments that reorder call sites safely. Arrow functions `fn($x) => $x + 1` auto-capture variables by value from the parent scope; long-form closures `function () use ($y)` allow reference captures—mind mutability across calls.
-
----
 
 ### 3. Namespaces and resolution rules
 
@@ -33,8 +27,6 @@ Namespaces segment symbols to avoid collisions (`Vendor\Package\Class`). Unquali
 Function and constant resolution has a fallback nuance: inside a namespace, unqualified function calls first look for a namespaced function and then may fall back to global if none exists. This is convenient for test doubles but dangerous when a namespaced helper shadows a global unexpectedly.
 
 `namespace` declarations must be the first statement after `declare`—bootstrap files must be ordered correctly.
-
----
 
 ### 4. Autoloading: PSR-4, classmap, files
 
@@ -53,19 +45,13 @@ require __DIR__ . '/vendor/autoload.php';
 
 Always anchor paths with `__DIR__`; cron and FPM may have unexpected working directories.
 
----
-
 ### 5. `include` vs `require` and `_once`
 
 `require` fatals on missing files; `include` warns and continues—almost never appropriate for bootstraps. `_once` guards against double-definition fatals in legacy procedural trees; namespaced autoloading reduces the need.
 
----
-
 ### 6. Constants, enums, and `define`
 
 Prefer `const` in classes for compile-time visibility. Global `define` persists process-wide—problematic in long-lived workers if abused for mutable configuration.
-
----
 
 ### 7. Autoloader chain order and `spl_autoload_call`
 
@@ -73,13 +59,9 @@ Multiple autoloaders register in a FIFO stack. When a class is missing, each cal
 
 Calling `spl_autoload_call('Fully\\Qualified\\Name')` explicitly exercises the chain—useful in rare metaprogramming, dangerous if class names are user-influenced.
 
----
-
 ### 8. Static variables in functions
 
 `static $x` inside a function retains value across invocations **within the same process**. In FPM, that means across HTTP requests in one worker—treat statics as a cache with explicit eviction or TTL, not as request-local storage.
-
----
 
 ## 2. Advanced concepts
 
@@ -99,8 +81,6 @@ Calling `spl_autoload_call('Fully\\Qualified\\Name')` explicitly exercises the c
 
 **Case sensitivity on Linux:** PSR-4 paths are case-sensitive; macOS default case-insensitive disks hide bugs until CI or production Linux fails `Class not found`.
 
----
-
 ## 3. Applications and use cases
 
 - **CI:** Cache Composer dirs keyed by lock hash; run `composer validate` and `composer install --no-interaction`; fail builds on autoload dump drift.
@@ -109,8 +89,6 @@ Calling `spl_autoload_call('Fully\\Qualified\\Name')` explicitly exercises the c
 - **Operations:** Keep `vendor/` out of writable mount points in containers—integrity checks and read-only rootfs reduce post-exploitation tampering.
 - **Framework boots:** Front controllers should remain thin: autoload → env → kernel; large procedural includes hide dependency graphs from static analysis.
 - **Debugging “class not found”:** Verify Composer dump, Opcache reset, **and** Linux path case; diff `composer.lock` when vendor subtree is vendored into a monorepo.
-
----
 
 ## References
 

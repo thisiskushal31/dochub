@@ -2,8 +2,6 @@
 
 [← GitLab CI](./README.md) · [Next: Groups and projects →](./02_Groups_Projects_And_Namespaces.md)
 
----
-
 ## 1. Concepts
 
 **GitLab** is a DevSecOps platform around one product surface: plan → create → verify (CI/CD) → secure → release → monitor → manage infrastructure. You can run it as:
@@ -27,8 +25,6 @@ Tiers (Free / Premium / Ultimate and add-ons such as Duo) **gate features**. Lis
 | Need self-managed / air-gapped forge | Self-Managed path |
 | Only need a job runner with no GitLab product | Other CI may be simpler |
 
----
-
 ## 2. Advanced concepts
 
 ### DevSecOps lifecycle (product map)
@@ -51,8 +47,6 @@ Official get-started lanes: projects, planning, code, **CI/CD**, secure, deploy/
 
 Cross-forge patterns (schedule, promote, reusable templates): [CiCd/24](../24_Workflow_Automation_Beyond_PR_CI.md).
 
----
-
 ## 3. Applications and use cases
 
 | Team | Use GitLab for |
@@ -63,8 +57,6 @@ Cross-forge patterns (schedule, promote, reusable templates): [CiCd/24](../24_Wo
 | Ops | Self-Managed ref-arch / admin literacy |
 
 **Good:** one system of record for code and delivery. **Bad:** treating GitLab as “only Jenkins YAML” and ignoring MR/environment gates.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./07_Templates_And_First_Pipeline_Yml.md) · [README](./README.md) · [Next: Plugins →](./09_Plugins_Artifacts_Cache_And_Annotations.md)
 
----
-
 ## 1. Concepts
 
 | Mechanism | Use |
@@ -29,8 +27,6 @@ steps:
     concurrency_group: "my-app-deploy"
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### Soft fail / retry / timeouts
@@ -45,8 +41,6 @@ Hosted and busy fleets can use priority so important jobs jump the queue (best-e
 
 Know branch configs and skip patterns so forks/docs-only commits don’t burn the fleet.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Shape |
@@ -57,8 +51,6 @@ Know branch configs and skip patterns so forks/docs-only commits don’t burn th
 | Matrix CI | build matrix docs |
 
 **Good:** fail-fast unit before expensive e2e. **Bad:** block steps nobody owns.
-
----
 
 ## References
 

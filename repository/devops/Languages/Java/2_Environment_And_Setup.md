@@ -35,8 +35,6 @@ You should see `Hello World` printed. If `javac` or `java` is not found, the JDK
 
 **Online compilers.** Many tutorial sites offer in-browser Java compilation and execution. Those are useful for trying small examples without a local install; for real development and for understanding the full toolchain, a local JDK and command-line (or IDE) workflow is recommended.
 
----
-
 ## Further reading
 
 - [TutorialsPoint Java – Environment Setup](https://www.tutorialspoint.com/java/java_environment_setup.htm)

@@ -19,8 +19,6 @@ Also cover **builtins / casting / `builtin`** (**18**) and **atomics / asm / Was
 
 **New to Zig?** Start at chapter **01**, then **00** (install + hello), then **02** onward. Finish with **[17](./17_Where_Zig_Is_Going_And_Adjacent_Doors.md)** for what to learn next.
 
----
-
 ## After this track — what you can write
 
 | You can write / do… | What “done” looks like | Spine chapters |
@@ -34,8 +32,6 @@ Also cover **builtins / casting / `builtin`** (**18**) and **atomics / asm / Was
 | A **C call or export** | ABI and headers intentional | **14** |
 | A **keep Zig vs C/Rust** decision | Host and team skill named | **01**, **16–17** |
 | **Read systems Zig** with `@` / atomics / Wasm | Builtins and doors recognized | **18–19** |
-
----
 
 ## What to learn next (complement paths)
 
@@ -59,8 +55,6 @@ Zig usually lands in **systems tooling**, **performance-sensitive libraries**, a
 | **Ops / release** | **00 → 02 → 12–13 → 15** |
 | **Interop / FFI** | **08 → 14 → 15** (+ C track) |
 
----
-
 ## Versions and brownfield (default narrative)
 
 **Default for new work: Zig 0.16.x**, pinned to the patch your CI ships (**0.16.0** in these chapters). Zig still moves quickly between minors—**pin the toolchain** the way you pin a compiler. Prefer the language reference for **your pin**, not only `master`. Older **0.14 / 0.15** trees are brownfield literacy.
@@ -77,8 +71,6 @@ zig version
 zig env
 ```
 
----
-
 ## Chapter structure
 
 Every chapter follows:
@@ -89,8 +81,6 @@ Every chapter follows:
 4. **Staff-level review checklist**
 
 Links live in each chapter’s **References** (official hubs only).
-
----
 
 ## Semantic model (six ideas)
 
@@ -110,15 +100,11 @@ Links live in each chapter’s **References** (official hubs only).
 | Toolchain pin | Untagged `zig` in CI | **00**, **02** |
 | C boundary | Unreviewed C import surface / leftover `@cImport` in new 0.16 code | **14** |
 
----
-
 ## How to read this section
 
 **Absolute beginners:** **01 → 00 → 02 → 03 → …**  
 If you know C already: **01** (Zig differences) → **00** → **07–09** → **14–15**—do not skip allocators and error sets.  
 If you know Rust: **01** (allocators vs ownership) → **09** → **10** → **14**.
-
----
 
 ## Progression
 
@@ -131,8 +117,6 @@ If you know Rust: **01** (allocators vs ownership) → **09** → **10** → **1
 | **Ship** | 12 → 14 | `build.zig`, tests, C interop |
 | **Safety / synthesis** | 15 → 17 | Review habits, roles, next skills |
 | **Systems doors** | **18 → 19** | Builtins/casts/`builtin`; atomics, asm, Wasm, `std.Io` / async status |
-
----
 
 ## Chapters
 
@@ -158,8 +142,6 @@ If you know Rust: **01** (allocators vs ownership) → **09** → **10** → **1
 | 17 | Where Zig is going and adjacent doors | [17_Where_Zig_Is_Going_And_Adjacent_Doors.md](./17_Where_Zig_Is_Going_And_Adjacent_Doors.md) |
 | 18 | Builtins, casting, and compile variables | [18_Builtins_Casting_And_Compile_Variables.md](./18_Builtins_Casting_And_Compile_Variables.md) |
 | 19 | Atomics, assembly, Wasm, and the `std.Io` / async door | [19_Atomics_Assembly_Wasm_And_Async_Door.md](./19_Atomics_Assembly_Wasm_And_Async_Door.md) |
-
----
 
 ## Further reading
 

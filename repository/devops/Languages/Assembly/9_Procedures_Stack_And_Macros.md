@@ -4,8 +4,6 @@
 
 This topic covers **procedures** (subroutines) with **CALL** and **RET**, the **stack** and **PUSH**/ **POP**, and **macros** in NASM. Same format: text first, then code. See **Further reading** for sources.
 
----
-
 ## Procedures (subroutines)
 
 A **procedure** is a named block of code that can be **called** from elsewhere and then **return** to the caller. In NASM you use a **label** for the procedure name, and end with **RET** (which pops the return address from the stack and jumps to it).
@@ -55,8 +53,6 @@ res resb 1
 
 Conventions for **which registers** hold parameters and return values are not enforced by the CPU; the programmer (or ABI) defines them. In the example above, ECX and EDX are inputs, EAX is the result.
 
----
-
 ## The stack
 
 The **stack** is a LIFO region of memory. It grows toward **lower** addresses. **SS** points to the stack segment; **ESP** (or SP) points to the **top** of the stack (the last pushed item).
@@ -81,8 +77,6 @@ pop  eax
 
 **Rules (typical for 32-bit):** Only word or dword are pushed/popped; stack must stay aligned (e.g. 4-byte aligned for 32-bit). The top of stack points to the **lowest byte** of the last pushed value.
 
----
-
 ## Stack example: save registers before syscall
 
 System calls (e.g. int 0x80) use EAX, EBX, ECX, EDX, etc. If you need to preserve them, save on stack before the call and restore after:
@@ -98,8 +92,6 @@ int  0x80
 pop  edx
 pop  ecx
 ```
-
----
 
 ## Macros
 
@@ -148,8 +140,6 @@ len3 equ $ - msg3
 When you invoke `write_string msg1, len1`, the assembler replaces it with the four mov instructions and int 80h, with %1 → msg1 and %2 → len1.
 
 **When to use macros:** Repeated short sequences (e.g. “print string”, “save/restore registers”). For longer or complex logic, procedures are often clearer and avoid code bloat.
-
----
 
 ## Further reading
 

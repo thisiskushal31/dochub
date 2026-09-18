@@ -4,13 +4,9 @@
 
 Variables are how you **store and refer to data** in your program. This topic explains how to declare and use variables in Dart and what **null safety** means in practice—so you can write clear, safe code from the start and avoid a whole class of runtime crashes.
 
----
-
 ## What is a variable?
 
 A **variable** is a **named container** for a value. You give it a **name** (e.g. **`name`**, **`count`**) and optionally a **type** (e.g. **`String`**, **`int`**). Once you put a value in it, you can use the name later to read or update that value (unless the variable is **`final`** or **`const`**). In Dart, variables hold **references** to **objects** (including numbers and booleans); they do not hold “raw” bytes. So when we say “the variable holds a string,” we mean it holds a reference to a **`String`** object.
-
----
 
 ## Declaring variables: var and explicit types
 
@@ -38,8 +34,6 @@ Object value = 42;   // Can hold any object.
 
 **When to use `var`:** For **local** variables, when the type is obvious from the right-hand side (e.g. **`var list = [1, 2, 3];`** → **`List<int>`**). **When to use an explicit type:** For **public** APIs (function parameters, return types, class fields) or when you want to document the type clearly. Effective Dart recommends **`var`** for local variables when the type is clear.
 
----
-
 ## Null safety: why it matters
 
 In many languages, “no value” is represented by **`null`**. If you forget to check for null and use the value anyway (e.g. call a method on it), the program **crashes** with a “null dereference” error. Dart’s **null safety** is designed to prevent that: the **compiler** and **analyzer** force you to be explicit about where **`null`** is allowed and to **check** or **handle** null before using a value. So:
@@ -48,8 +42,6 @@ In many languages, “no value” is represented by **`null`**. If you forget to
 - If a variable is **nullable** (e.g. **`String?`**), it *can* be **`null`**. Before you call methods or use properties on it, you must either **check** that it is not null, **provide a default** (e.g. with **`??`**), or **assert** non-null (e.g. **`!`**) when you are sure.
 
 So **null safety** moves many possible **runtime** crashes to **compile time**: you fix them before you run or ship.
-
----
 
 ## Nullable vs non-nullable types
 
@@ -64,8 +56,6 @@ String? nickname;       // Can be null; defaults to null.
 - **`String?`** — Can hold a **`String`** or **`null`**. If you do not initialize it, it starts as **`null`**.
 
 The compiler will report an error if you assign **`null`** to a non-nullable variable or pass a **`String?`** where a **`String`** is required without handling the null case. So you are forced to decide: “Can this be null or not?” and then write the code accordingly.
-
----
 
 ## Default value and initialization
 
@@ -87,8 +77,6 @@ print(lineCount);   // OK: lineCount is assigned on every path.
 ```
 
 If the compiler cannot prove that a non-nullable variable is assigned before use (e.g. a **top-level** or **instance** variable that is set later), you will get an error. In those cases you use **`late`** (see below).
-
----
 
 ## Late variables
 
@@ -116,8 +104,6 @@ late String temperature = readThermometer();
 
 Use **`late`** only when you are sure the variable will be set (or initialized) before access; otherwise you get a runtime error.
 
----
-
 ## Final and const
 
 - **`final`** — The variable can be set **once** (at declaration or later). After that, it cannot be changed. Use it for values that never change after initialization.
@@ -136,13 +122,9 @@ const double atm = 1.01325 * bar;
 
 You can also use **`const`** for **values** and **constructors** (e.g. **`const []`**, **`const Point(0, 0)`**). Const values are canonical: **`const [1,2]`** and another **`const [1,2]`** are the same object. Use **`const`** when you can to improve performance and express intent.
 
----
-
 ## Wildcard variables
 
 A variable named **`_`** (underscore) is a **non-binding** placeholder: you do not use its value. It is useful in **patterns**, **catch** clauses, or **callbacks** when you must write a variable but do not care about it. Multiple **`_`** in the same scope are allowed; they are independent placeholders.
-
----
 
 ## Summary for beginners
 
@@ -152,8 +134,6 @@ A variable named **`_`** (underscore) is a **non-binding** placeholder: you do n
 - Use **`final`** for “set once”; use **`const`** for compile-time constants. Use **`_`** when you need a name but do not use the value.
 
 Next, **Topic 5 (Types)** goes into the built-in types (numbers, strings, lists, maps, etc.) and how they work with variables and null safety.
-
----
 
 ## Further reading
 

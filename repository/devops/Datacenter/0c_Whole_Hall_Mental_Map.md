@@ -2,8 +2,6 @@
 
 [← How to read](./0_How_To_Read_And_Quality_Bar.md) · [0b Equipment](./0b_Equipment_In_Plain_Language.md) · [README](./README.md) · [Setup bring-up →](./Setup-And-Bring-Up/README.md)
 
----
-
 ## Mental map
 
 ![Whole hall layers](../Assets/Datacenter/Integration/whole-hall-layers.svg)
@@ -14,8 +12,6 @@
 POWER  →  COOLING  →  RACKS + SERVERS  →  NETWORK + STORAGE PLANES  →  PEOPLE + SCREENS
    Electrical           Mechanical     White-Space/Compute    Fabric/Storage/Setup      Jobs/Integration
 ```
-
----
 
 ## 1. Concepts — the whole product
 
@@ -33,8 +29,6 @@ A **datacenter** (or a colo cage inside one) is a machine that sells four promis
 
 **Confirm:** Name the five layers. Which track do you open first for *your* role ([Jobs/1](./Jobs/1_Role_Map.md))?
 
----
-
 ## 2. How the folders fit (no boredom path)
 
 | If you want… | Go |
@@ -47,13 +41,9 @@ A **datacenter** (or a colo cage inside one) is a machine that sells four promis
 
 Every deep chapter should show a **mental map** and, for physical gear, an **Asset** plate. If one does not, that is a gap—not your fault.
 
----
-
 ## 3. Applications
 
 **Staff checklist for newcomers:** print or save the whole-hall SVG; tick which layer you own; pair with the owner of the adjacent layer before your first change window.
-
----
 
 ## References
 

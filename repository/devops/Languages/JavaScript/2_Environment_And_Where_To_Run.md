@@ -2,8 +2,6 @@
 
 JavaScript runs in different environments: the browser, Node.js on your machine or a server, or embedded in other applications. This topic covers where you can run code (browser vs Node), how to put script into a web page (inline and external), how to run scripts with Node from the command line, and practical setup: code editors and the developer console. The goal is to get from “zero” to running your first script in at least one environment.
 
----
-
 ## Two main environments: browser and Node.js
 
 **Browser:** JavaScript is built into the browser. You open an HTML file (or a URL) that contains or references a script; the browser loads the page and runs the script. No separate install is needed for the language itself. The script can change the page, react to events, and call browser APIs (e.g. fetch, DOM).
@@ -11,8 +9,6 @@ JavaScript runs in different environments: the browser, Node.js on your machine 
 **Node.js:** Node is a JavaScript runtime that runs outside the browser. You install Node on your system, then run a script from the command line (e.g. `node script.js`). Node does not provide the DOM or browser APIs; it provides its own APIs (e.g. file system, network, modules). Node is used for servers, CLI tools, build scripts, and automation—and is common in DevOps and tooling.
 
 For learning the language itself, either environment works. The browser is convenient because you can open an HTML file and see results immediately; Node is convenient for scripts and for running the same code without a browser.
-
----
 
 ## Running JavaScript in the browser
 
@@ -47,8 +43,6 @@ Use external files for anything beyond a few lines: the browser can cache them, 
 
 **Script load errors.** If an external script fails to load (404, network error), the browser fires an `error` event on the script element; the script’s code does not run. There is no built-in exception from the page’s perspective that you can `try/catch` for "script failed to load"—you handle it with an `onerror` handler on the `<script>` tag or by checking in a later script that a expected global exists. For critical scripts, that pattern is important for robustness.
 
----
-
 ## Running JavaScript with Node.js
 
 With Node.js installed, you run a file from the command line:
@@ -59,8 +53,6 @@ node script.js
 
 Node executes the file. There is no DOM or `window`; you have Node’s APIs (e.g. `console`, `require` or `import` for modules, `process`). This is the usual way to run scripts for automation, tooling, or servers. For the rest of the handbook, “run in Node” means: save code in a `.js` file and run it with `node <file>`.
 
----
-
 ## Code editors
 
 You write JavaScript in any text editor. Two common categories:
@@ -70,8 +62,6 @@ You write JavaScript in any text editor. Two common categories:
 **Lightweight editors:** Simpler, often faster to start, good for single files or small tasks. Examples: Sublime Text, Notepad++. Many developers use one lightweight editor and one IDE depending on the task.
 
 Choice is personal and project-dependent. For JavaScript and web development, Visual Studio Code is widely used and supports JavaScript, Node, and the browser out of the box or via extensions.
-
----
 
 ## Developer console (browser)
 
@@ -89,13 +79,9 @@ In the browser, the **developer tools** give you a console where you can see err
 
 Using the console and debugger is the standard way to verify that the environment is working and to diagnose script and runtime errors.
 
----
-
 ## Summary
 
 JavaScript can run in the **browser** (via `<script>` inline or with `src` pointing to a file) or in **Node.js** (via `node script.js`). In the browser, scripts run in order and can use the DOM and browser APIs; in Node, they use Node’s APIs and are ideal for scripts and servers. Use a **code editor** (IDE or lightweight) to write code and the browser **developer console** (F12 or equivalent) to see errors and run snippets. Once one of these environments is set up, you can run the examples in the rest of the handbook.
-
----
 
 ## Further reading
 

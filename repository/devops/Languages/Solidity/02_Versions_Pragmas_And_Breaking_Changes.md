@@ -8,8 +8,6 @@ How Solidity versions work (`0.y.z`), what a **`pragma`** actually constrains, w
 
 The short version: the first line of almost every file is a promise about *which language* you wrote. The config file is a promise about *which compiler binary* you ran. Those are not the same promise.
 
----
-
 ## 1. Concepts
 
 ### 1. Why the version is `0.y.z`
@@ -111,8 +109,6 @@ Wrong `evmVersion` looks like “it compiled on my laptop and failed on the netw
 
 The compiler can codegen through **Yul IR** (`--via-ir` / `viaIR: true`). It can change gas and, historically, a few edge semantics. Two builds with the same `solc` and different via-IR settings are **different artifacts**. Verification and incident response need to know which one you shipped (chapter **16**).
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Three pins that must agree
@@ -177,8 +173,6 @@ The project publishes known compiler bugs by version. Pinning latest is how you 
 
 Remix may offer “latest” while `foundry.toml` says `0.8.24`. Bytecode will differ. Explorer verification will fail. Onboarding should say **the repo pin wins**.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Practice |
@@ -189,8 +183,6 @@ Remix may offer “latest” while `foundry.toml` says `0.8.24`. Bytecode will d
 | **Operations** | Same solc/via-IR/evmVersion in CI, scripts, and verify |
 | **Software engineering** | Changelog when bumping 0.8.z; tests re-run on the new compiler |
 
----
-
 ## 4. Staff-level review checklist
 
 - Application sources use a **0.8.x** pragma; CI installs an **exact** `solc`.
@@ -199,8 +191,6 @@ Remix may offer “latest” while `foundry.toml` says `0.8.24`. Bytecode will d
 - Pre-0.8 files are labeled brownfield; new modules are not added in 0.7 style.
 - A compiler bump is a reviewable change (lockfile / config diff), not a silent Remix click.
 - Someone can answer “which known-bug list applies to our pin?”
-
----
 
 ## References
 

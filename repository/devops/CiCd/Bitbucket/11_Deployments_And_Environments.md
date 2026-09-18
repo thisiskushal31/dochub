@@ -2,8 +2,6 @@
 
 [← Previous](./10_Pipes_Anchors_And_Reuse.md) · [README](./README.md) · [Next: Deploy targets →](./12_Deploy_Targets_And_Pipes_Catalog.md)
 
----
-
 ## 1. Concepts
 
 Bitbucket **deployment environments** (commonly `test`, `staging`, `production`, plus custom) track what is live where. Mark a step or stage with `deployment: production` to record history on the **Deployments** dashboard.
@@ -18,8 +16,6 @@ Bitbucket **deployment environments** (commonly `test`, `staging`, `production`,
 ```
 
 Align with [CiCd/8](../8_Environments_Promotion_And_Approvals.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -39,8 +35,6 @@ Deployments UI shows history, commits, diffs, linked Jira issues. You can roll b
 
 Manual steps on production encode Continuous Delivery (human promote), not Continuous Deployment.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -50,8 +44,6 @@ Manual steps on production encode Continuous Delivery (human promote), not Conti
 | Audit | Dashboard + Jira links |
 
 **Good:** same digest promoted. **Bad:** rebuild for prod “to be safe.”
-
----
 
 ## References
 

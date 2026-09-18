@@ -8,8 +8,6 @@ Enough **DOM and React typing literacy** to read UI PRs, configure **`lib` / JSX
 
 If you need component craft, open the React docs after you finish here. This track’s bullseye remains language + `tsc` + Node tooling; UI is a **surface door**—same as Tk literacy in other language tracks.
 
----
-
 ## 1. Concepts
 
 ### 1. Two runtimes, one language
@@ -117,8 +115,6 @@ That is chapter **17** ambient modules serving the bundler. Keep declarations al
 - Next.js routing and server components deep dive (compass: chapter **22**)  
 - Pixel-perfect accessibility audits (mention: types do not equal a11y)
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Split tsconfigs for UI vs Node
@@ -188,8 +184,6 @@ type Upload = BrowserUpload | NodeUpload;
 
 Discriminated unions keep the wrong helper from compiling in the wrong package.
 
----
-
 ## 3. Applications and use cases
 
 ### Application
@@ -227,8 +221,6 @@ Discriminated unions keep the wrong helper from compiling in the wrong package.
 | **Files** | Browser file inputs ≠ Node `fs`; type the `File` / bytes path explicitly |
 | **Speed** | Narrow props; abort `fetch` with `AbortSignal` on unmount; keep `tsc` light |
 
----
-
 ## 4. Staff-level review checklist
 
 - Packages that run in Node do **not** enable DOM libs “just in case.”
@@ -242,8 +234,6 @@ Discriminated unions keep the wrong helper from compiling in the wrong package.
 - No claim that TypeScript replaces a11y or security review.
 - Pin **TS 5.9.x** + `strict` for new UI packages.
 
----
-
 ## What you can do next (UI lane)
 
 After this literacy chapter you can **read and review** typed React surfaces and keep host boundaries honest. You are **not** done learning UI product craft.
@@ -253,8 +243,6 @@ After this literacy chapter you can **read and review** typed React surfaces and
 | Learn React properly | [react.dev](https://react.dev/) / [TypeScript in React](https://react.dev/learn/typescript) |
 | Add a meta-framework | [Next.js docs](https://nextjs.org/docs) (after React basics) |
 | Keep the TS spine | Capstone artifacts in **21**; full complement map in **22** |
-
----
 
 ## References
 

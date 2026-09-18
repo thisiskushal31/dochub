@@ -4,8 +4,6 @@
 
 By this point you have covered **very basic** (modules, types, expressions) through **advanced** (templates, contracts, traits, errors, GC, interop) to **implementation**. This topic ties those concepts to real use cases from **all sides of engineering**: software, DevOps, security, systems, and research. D is used in systems tooling, game development, scripting, and native libraries where performance and control matter.
 
----
-
 ## Use cases: where D appears
 
 | Domain | Typical use | Why D fits |
@@ -16,8 +14,6 @@ By this point you have covered **very basic** (modules, types, expressions) thro
 | **DevOps and automation** | Build tools, custom agents | Compile to native, no runtime dependency (with Better C) |
 | **Security and analysis** | Binary analysis, tooling | Direct memory, inline asm, interfacing to C |
 | **Legacy and niche** | Existing D codebases, research | Mature language, long-standing projects |
-
----
 
 ## By engineering perspective
 
@@ -33,19 +29,13 @@ Use cases and implementation focus depend on your role. The following maps **wha
 
 **Research / prototyping:** Experiments, performance studies, or metaprogramming. Focus on Topics 10 (templates, mixins), 11 (contracts), 12 (traits), 13–15. Implement: Compile-time code generation, numeric or SIMD experiments, or D as a scripting front end to C libraries.
 
----
-
 ## Implementation: building and deploying
 
 Use **dub** for application and library projects: **dub build**, **dub run**, **dub test**. Use **dmd**/ **ldc2**/ **gdc** for one-off compiles or custom build scripts. For **Better C**, build with **-betterC** and link only the C runtime. For **shared libraries**, use **-shared** and **extern(C)** exports for the public API.
 
----
-
 ## Implementation: reading and navigating a D codebase
 
 Start with **dub.json**/ **dub.sdl** for project layout and dependencies. Entry points are **main()** or the module specified as **mainSourceFile**. Follow **import** to see module structure. **unittest** blocks document expected behavior. Use **grep** or IDE "find references" for symbols and **__traits**/ templates to see generated code paths.
-
----
 
 ## Summary
 
@@ -58,8 +48,6 @@ Start with **dub.json**/ **dub.sdl** for project layout and dependencies. Entry 
 | By role | See “By engineering perspective” above; each role has a focused topic set and implementation angle. |
 
 For security, dependency hygiene, and safe deployment when working with D, see **[Topic 17 — Security and best practices](./17_Security_And_Best_Practices.md)**.
-
----
 
 ## Further reading
 

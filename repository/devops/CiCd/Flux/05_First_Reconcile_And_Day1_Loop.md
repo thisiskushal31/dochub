@@ -2,8 +2,6 @@
 
 [← Previous](./04_Install_Bootstrap_And_CLI.md) · [README](./README.md) · [Next: Sources →](./06_Sources_Git_OCI_Bucket_Helm.md)
 
----
-
 ## 1. Concepts
 
 After install, every normal change follows the same loop:
@@ -23,8 +21,6 @@ flux logs --follow
 ```
 
 The official get-started guide adds a sample app (podinfo) by committing YAML or using `flux create` helpers. Either is fine — what matters is that **Git keeps the history**.
-
----
 
 ## 2. Advanced concepts
 
@@ -55,8 +51,6 @@ Look at the artifact revision / `lastAppliedRevision`. If Git moved and the clus
 
 If prune/heal is on, a manual `kubectl edit` should get reverted. If it doesn’t, check `ignore` rules or suspend ([08](./08_Kustomization_Controller.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Checkpoint | Pass when |
@@ -67,8 +61,6 @@ If prune/heal is on, a manual `kubectl edit` should get reverted. If it doesn’
 | Undo | Git revert brings the old version back |
 
 **Good:** every fix is a commit. **Bad:** only running `flux reconcile` with nothing new in Git.
-
----
 
 ## References
 

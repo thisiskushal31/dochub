@@ -4,8 +4,6 @@
 
 This topic answers **what C is**, **what C++ is**, **why they were created**, and **why they matter** in cybersecurity and general engineering. Each idea is explained in text first, then illustrated so you can write and reason about C in an easy, readable way.
 
----
-
 ## What is C?
 
 **C** is a **general-purpose, procedural, imperative** programming language. It was developed in **1972** by **Dennis Ritchie** at **Bell Telephone Laboratories** (Bell Labs) to implement the **UNIX** operating system. C is:
@@ -18,8 +16,6 @@ This topic answers **what C is**, **what C++ is**, **why they were created**, an
 
 **Why C was created:** To write UNIX and system software in a language that was easier than assembly but still efficient and close to the machine. C succeeded B (and BCPL); it became the dominant language for OS kernels, compilers, and tools.
 
----
-
 ## What is C++?
 
 **C++** is an **extension of C** that adds **object-oriented** and **generic** programming. It was created by **Bjarne Stroustrup** in the 1980s. C++ keeps C’s **performance** and **memory model** but adds:
@@ -31,8 +27,6 @@ This topic answers **what C is**, **what C++ is**, **why they were created**, an
 
 **Relationship to C:** Most **valid C code** is also valid C++ (with a few exceptions). In practice, C is the **foundation**: learning C first gives you a clear model of **memory**, **pointers**, and **compilation**, which makes C++ and security analysis easier. This section focuses on **C**; C++ is used where it adds clarity (e.g. in use cases).
 
----
-
 ## Why learn C?
 
 - **Systems and DevOps** — Kernels, drivers, databases, runtimes, and infrastructure tools are written in C or C++. Reading and contributing to such projects requires C.
@@ -40,14 +34,10 @@ This topic answers **what C is**, **what C++ is**, **why they were created**, an
 - **Security** — Many vulnerabilities (buffer overflows, use-after-free) are in C/C++ code. Understanding C and its memory layout is essential for **auditing**, **reverse engineering**, and **exploit development**.
 - **Foundation for other languages** — C’s model (stack, heap, pointers, compilation) underlies how many languages are implemented or interoperate (e.g. Python’s C API, Rust’s FFI).
 
----
-
 ## Why learn C++?
 
 - **Where C++ is used** — Game engines, browsers, trading systems, and high-performance services are often in C++. The same **memory and performance** benefits as C, with richer abstractions.
 - **Backward compatibility** — You can call C from C++ and vice versa; many codebases mix both. Knowing C makes C++ easier.
-
----
 
 ## Facts about C (quick reference)
 
@@ -58,8 +48,6 @@ This topic answers **what C is**, **what C++ is**, **why they were created**, an
 | Predecessor | B language (early 1970s) |
 | Standardization | ANSI C 1989; ISO C90, C99, C11, C17, C23 |
 | Typical use | OS, compilers, drivers, embedded, systems |
-
----
 
 ## How this section is organized
 
@@ -75,8 +63,6 @@ The C/C++ section goes **basics first**, then **C++**, then **use cases and case
 8. **Case studies** (16) — Hands-on examples.
 
 Every topic uses **text first, then code blocks** so you can read and write C (and C++ in topics 13–14) in an easy, consistent format.
-
----
 
 ## Further reading
 

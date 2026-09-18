@@ -44,8 +44,6 @@ When JSON comes from the network, user input, or another service, validate it ag
 
 How to parse or generate JSON in a given language, how to use it in CI/CD, and how to work with Terraform state or cloud APIs is covered in the handbook sections for those areas. See **Languages/JavaScript** (package.json, `JSON.parse`/`JSON.stringify`), **CiCd** (pipelines, job config), **IAC** (Terraform state, provider config), and **Cloud-Native** (Kubernetes, APIs) for implementation details.
 
----
-
 ## Further reading
 
 - [RFC 8259 – Security Considerations](https://datatracker.ietf.org/doc/html/rfc8259#section-12)

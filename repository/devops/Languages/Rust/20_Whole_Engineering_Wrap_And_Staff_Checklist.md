@@ -6,8 +6,6 @@
 
 A **competency map** that ties chapters **01–19** into staff-level expectations across language, design, security, and delivery; a consolidated **checklist**; guidance on **when not to use Rust**; **migration** notes from C, Go, and Python scripts; and a **reading path** for brownfield `edition = "2018"` crates. Use this as a sign-off aid, not a substitute for the earlier chapters.
 
----
-
 ## 1. Concepts
 
 ### 1. Competency map (chapters → outcomes)
@@ -64,8 +62,6 @@ Rust is a poor trophy language. Choose it when failure modes (memory corruption,
 
 **From Python scripts:** Start with a small CLI binary and typed inputs/outputs. Avoid rewriting the data-science stack unless packaging and performance demand it. Use Python for orchestration if that is the team’s strength; use Rust for the hot or privileged helper.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Reading path for brownfield editions (including → 2024)
@@ -104,8 +100,6 @@ Keep a living note per product: edition, MSRV/`rust-version`, toolchain pin, fea
 - Nightly in production “for features” is a process smell; prefer stable.
 - Missing `Cargo.lock` on an application is a delivery bug.
 - “Safe Rust means secure product” is false (chapter 17).
-
----
 
 ## 3. Applications and use cases + staff checklist
 
@@ -167,8 +161,6 @@ Keep a living note per product: edition, MSRV/`rust-version`, toolchain pin, fea
 **Inside this track you should leave with a clear idea of what these things *are*:** writing a compile-time (procedural) macro; what an async runtime’s executor/reactor/waker do; what `unsafe` is promising; how to find your way around `std`; how embedded code is layered (PAC → HAL → board → optional RTOS); what WASM needs from a host; and how to *choose* a web/game/UI framework without confusing it for “learning Rust.”
 
 **This track does not replace:** step-by-step framework courses; full chip/RTOS catalogs; every page of `std`; Kubernetes/Terraform product manuals; formal verification; or your org’s own secure-coding rules. Those stay in their official docs once you know what you are looking for.
-
----
 
 ## References
 

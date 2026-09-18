@@ -4,8 +4,6 @@
 
 Cairo distinguishes **unrecoverable** errors (panic) from **recoverable** errors (**Result**). Panic stops execution; **Result** lets the caller handle success or failure. This topic covers **panic**, **panic!**, **nopanic**, **Result**, and the **?** operator.
 
----
-
 ## Unrecoverable errors: panic
 
 **panic** takes an array as the reason and terminates the program, dropping variables and squashing dictionaries. **panic_with_felt252(message)** is a one-argument helper for short messages (felt252). The **panic!** macro takes a string (can be longer than 31 characters) and is often the most convenient when you need a descriptive error message.
@@ -21,8 +19,6 @@ fn main() {
 }
 ```
 
----
-
 ## nopanic and panic_with
 
 A function that is guaranteed not to panic can be marked **nopanic**. Only **nopanic** functions can be called from another **nopanic** function. **#[panic_with('reason', wrap_name)]** on a function that returns **Option** or **Result** creates a wrapper that panics with the given reason when the result is **None** or **Err**.
@@ -32,8 +28,6 @@ fn function_never_panic() -> felt252 nopanic {
     42
 }
 ```
-
----
 
 ## Recoverable errors: Result
 
@@ -50,8 +44,6 @@ fn parse_u8(s: felt252) -> Result<u8, felt252> {
 
 **ResultTrait** provides **unwrap()**, **expect(err)**, **is_ok()**, **is_err()**, **unwrap_err()**, and **expect_err(err)**. Use **match** to handle both cases or **unwrap**/ **expect** when you want to panic on error.
 
----
-
 ## Propagating errors with ?
 
 The **?** operator on a **Result** (or **Option**) unwraps the value if **Ok** (or **Some**) and returns early with the error if **Err** (or **None**). It can only be used in a function whose return type is **Result** or **Option**.
@@ -63,8 +55,6 @@ fn mutate_byte(input: felt252) -> Result<u8, felt252> {
     Ok(res)
 }
 ```
-
----
 
 ## Further reading
 

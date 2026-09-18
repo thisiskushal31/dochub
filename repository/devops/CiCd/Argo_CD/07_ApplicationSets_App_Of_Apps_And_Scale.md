@@ -2,8 +2,6 @@
 
 [← Previous](./06_Sync_Policies_Waves_Projects_And_RBAC.md) · [Argo CD](./README.md) · [Next: Secrets and CI →](./08_Secrets_CI_Integration_And_Operations.md)
 
----
-
 ## 1. Concepts
 
 Once you have more than a handful of Applications, click-ops and copy-paste YAML become the bottleneck. Two first-class patterns fix that: **App-of-Apps** and **ApplicationSets**.
@@ -46,8 +44,6 @@ One ApplicationSet can keep hundreds of Applications consistent: same Project, s
 | **ApplicationSet** | Dynamic membership (new cluster → new apps); less duplicated YAML; safer self-service when template locks dangerous fields |
 | **Both** | Root App-of-Apps deploys ApplicationSets and Projects; ApplicationSets spawn team apps |
 
----
-
 ## 2. Advanced concepts
 
 ### Official-scale use cases
@@ -76,8 +72,6 @@ Treat ApplicationSet templates like privileged code: a mistaken `namespace: '{{n
 
 Parent Application health historically interacted awkwardly with child Applications (custom health for `Application` kind may be needed for sync-wave orchestration). If you orchestrate children with waves, verify parent health behavior on your Argo CD version.
 
----
-
 ## 3. Applications and use cases
 
 | Organization shape | Suggested approach |
@@ -94,8 +88,6 @@ Parent Application health historically interacted awkwardly with child Applicati
 - PR previews as the *only* DEV strategy  
 - Copy-pasting 80 near-identical Application manifests “because ApplicationSets looked scary”  
 - Letting every developer merge unrestricted Application CRs into the bootstrap repo  
-
----
 
 ## References
 

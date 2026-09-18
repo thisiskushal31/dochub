@@ -2,8 +2,6 @@
 
 [← Previous](./6_Customer_Portal_Patterns.md) · [README](./README.md) · [Next: Dedicated metal →](./8_Dedicated_Metal_Intake.md)
 
----
-
 ## 1. Concepts
 
 A **cloud on-ramp** joins colo iron to a public cloud region via physical interconnect + logical circuit products:
@@ -19,8 +17,6 @@ Jobs: order physical XC/port, complete cloud-side circuit, BGP/routing (Networks
 
 API/IAM inside the cloud → `Cloud/` advanced later.
 
----
-
 ## 2. Advanced concepts
 
 ### Failure modes
@@ -35,8 +31,6 @@ API/IAM inside the cloud → `Cloud/` advanced later.
 ### How it connects
 
 Physical XC [3](./3_Order_Interconnect.md), MMR [Fabric-Physical/5](../Fabric-Physical/5_MMR_And_Cross_Connect_Physical.md), tenant vs landlord [Markets/8](../Markets-And-Operators/8_Tenant_Cloud_Vs_Landlord.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -56,8 +50,6 @@ Physical XC [3](./3_Order_Interconnect.md), MMR [Fabric-Physical/5](../Fabric-Ph
 - Never assume Fabric click replaces routing design  
 
 **Good:** dual on-ramps, tested, owned. **Bad:** single path; physical-only diligence; cloud team unaware of XC.
-
----
 
 ## References
 

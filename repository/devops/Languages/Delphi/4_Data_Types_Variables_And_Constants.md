@@ -4,8 +4,6 @@
 
 Delphi is **statically typed**: every variable and parameter has a **type**, and the compiler enforces that values match their type. This topic goes deep on **built-in types**, **variables** and **constants**, **type declarations**, **strings**, **arrays** (static and dynamic), **records**, **sets**, **enumerations**, **pointers**, and **variants** so you can read and write typical Delphi code and understand type compatibility and when to use which type.
 
----
-
 ## Variable declarations
 
 Variables are declared in a **var** section. The syntax is **identifier list : type ;**. Multiple variables of the same type can be listed together. **Global** (unit-level or program-level) variables can be given an initial value with **= constantExpression**; **local** variables cannot be initialized in the declaration and start with an undefined value (or the type’s default) unless you assign them before use. Global variables are zero-initialized (or nil for pointers/classes) if not given an explicit initial value in many implementations.
@@ -17,8 +15,6 @@ var
   Name: string;
   Count: Integer = 0;  // allowed for global (unit-level) var
 ```
-
----
 
 ## Ordinal and numeric types
 
@@ -37,14 +33,10 @@ var
   S: string;
 ```
 
----
-
 ## Boolean and character
 
 - **Boolean** — **True** or **False**. Conditions in **if**, **while**, **until** must be Boolean. There is no implicit conversion from integer to Boolean; write **I <> 0** instead of **I** in conditions.
 - **Char** — Single character (often 16-bit Unicode in modern Delphi). **AnsiChar** (8-bit) and **WideChar** exist for compatibility and API calls. Character literals use single quotes: **'A'**.
-
----
 
 ## Strings in depth
 
@@ -61,8 +53,6 @@ begin
 end;
 ```
 
----
-
 ## Constants
 
 Constants are declared in a **const** section. **True constants** get a value at compile time and cannot be changed at runtime. **Typed constants** (with **: type = value**) may behave like initialized variables in some dialects (e.g. writable in Delphi; check your compiler). For true read-only constants, use untyped **const** or **resourcestring** for string constants that can be localized.
@@ -74,8 +64,6 @@ const
   PiApprox: Double = 3.14159;
 ```
 
----
-
 ## Type declarations and compatibility
 
 You can introduce **type aliases** or **new types** in a **type** section. A simple alias is **type TMyString = string;** — **TMyString** and **string** are then **compatible** for assignment and parameters. To create a **distinct** type (incompatible with its base for assignment), use **type NewName = type BaseType;** (e.g. **type TMyInt = type Integer;**). Then you cannot assign an **Integer** to a **TMyInt** without an explicit cast. Distinct types help avoid mixing semantics (e.g. “index” vs “count”) and improve type safety.
@@ -86,8 +74,6 @@ type
   TCount = Integer;
   TIndex = type Integer;  // distinct
 ```
-
----
 
 ## Enumerations and sets
 
@@ -107,8 +93,6 @@ begin
     WriteLn('Allowed');
 end;
 ```
-
----
 
 ## Records (structs)
 
@@ -133,8 +117,6 @@ begin
 end;
 ```
 
----
-
 ## Arrays: static and dynamic
 
 **Static arrays** have fixed bounds: **array[0..9] of Integer** or **array[1..10] of string**. The index type can be any ordinal type. **Dynamic arrays** are declared with **array of T** (e.g. **array of Integer**). They are allocated at runtime with **SetLength(A, N)**; **Length(A)** and **High(A)** give the count and upper bound. Dynamic arrays are **zero-based** and are reference-counted in many implementations. When you pass a dynamic array to a procedure, changes to elements are visible to the caller; to resize, you must call **SetLength** (or reassign). **Open array** parameters (**array of T**) accept both static and dynamic arrays and are passed by reference for efficiency.
@@ -152,8 +134,6 @@ begin
     Dyn[I] := I;
 end;
 ```
-
----
 
 ## Pointers
 
@@ -173,13 +153,9 @@ begin
 end;
 ```
 
----
-
 ## Variant type
 
 **Variant** is a type that can hold values of different kinds (integer, string, float, array, etc.) at runtime. It is used for **COM** automation, **scripting**, and when the type is not known at compile time. **VarType**, **VarAsType**, and **variant** operators let you inspect and convert. **Variant** is heavy (size and overhead) and not type-safe; use only when necessary (e.g. OLE/COM, dynamic data from external sources).
-
----
 
 ## When to use which type
 
@@ -195,16 +171,12 @@ end;
 | Low-level / API buffers | **Pointer**, **PByte**, **PChar** |
 | COM / scripting / unknown type | **Variant** (sparingly) |
 
----
-
 ## Summary
 
 - **var** declares variables with **identifier : type**; globals can have **= value**; locals are uninitialized unless assigned.
 - Built-in types: **Integer**, **Double**, **Boolean**, **Char**, **string**; plus **Int64**, **Cardinal**, **Single**, **AnsiString**, **WideChar**, etc.
 - **const** for constants; **type** for aliases or distinct types. **Enum** and **set of** for ordinals and flags.
 - **Records** for value structs; **static** and **dynamic** **arrays** for indexed data; **pointers** for low-level or API; **Variant** for dynamic/COM. Use **SysUtils** and **StrUtils** for string and conversion helpers.
-
----
 
 ## Further reading
 

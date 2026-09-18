@@ -2,8 +2,6 @@
 
 [← Back to Security](./README.md) · [Gate chain](./4_Security_Gate_Chain.md)
 
----
-
 ## 1. Concepts
 
 Tool folders map to **gates**, not brands. Prefer **one primary tool per gate** to keep triage sane.
@@ -28,8 +26,6 @@ CI map: [CiCd/15](../CiCd/15_Pipeline_Security_And_Gates.md). OIDC: [5](./5_OIDC
 
 **Confirm:** Which tool owns your secret-scan gate today?
 
----
-
 ## 2. Automation patterns
 
 | Pattern | Practice |
@@ -38,8 +34,6 @@ CI map: [CiCd/15](../CiCd/15_Pipeline_Security_And_Gates.md). OIDC: [5](./5_OIDC
 | Build | Image scan + SBOM + sign |
 | Staging | DAST selective + smoke |
 | Prod admit | Verify signature / policy |
-
----
 
 ## 3. Applications
 
@@ -50,8 +44,6 @@ CI map: [CiCd/15](../CiCd/15_Pipeline_Security_And_Gates.md). OIDC: [5](./5_OIDC
 | Infra-heavy | Checkov + OPA/Conftest on plans |
 
 Full cyber program: [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive).
-
----
 
 ## References
 

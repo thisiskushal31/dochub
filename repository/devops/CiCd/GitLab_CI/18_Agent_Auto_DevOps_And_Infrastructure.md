@@ -2,8 +2,6 @@
 
 [← Previous](./17_Security_Scanning_And_Compliance_Literacy.md) · [README](./README.md) · [Next: Duo →](./19_Duo_And_AI_Literacy.md)
 
----
-
 ## 1. Concepts
 
 | Offering | Plain meaning |
@@ -14,8 +12,6 @@
 | **Workspaces** | Remote dev environments literacy |
 
 CI still builds artifacts; Agent/GitOps often **apply** them. Compare [Flux/](../Flux/README.md) / [Argo_CD/](../Argo_CD/README.md) when cluster sync is the system of record.
-
----
 
 ## 2. Advanced concepts
 
@@ -34,8 +30,6 @@ Enable to learn; pin/replace with components when you outgrow defaults.
 
 Historically certificate-based cluster integration; Agent is the modern direction — confirm current docs for your version.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -45,8 +39,6 @@ Historically certificate-based cluster integration; Agent is the modern directio
 | Platform | Agent installs as a product with owners |
 
 **Good:** CI builds digests; cluster pulls desired state. **Bad:** unbounded `kubectl apply` from every MR pipeline.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./14_Catalog_Hub_And_Reusable_Tasks.md) · [README](./README.md) · [Next: Dashboard →](./16_Dashboard.md)
 
----
-
 ## 1. Concepts
 
 **`tkn`** is the Tekton command-line client. You do **not** need to install it to understand Tekton — but you **do** need to know what it can do, because day-2 ops, labs, Hub discovery, bundle publish, and break-glass debugging are CLI-shaped even when production applies YAML via GitOps / PAC.
@@ -251,8 +249,6 @@ tkn pipelinerun list
 tkn pipelinerun logs -f <name>
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### Plugins mechanism
@@ -294,8 +290,6 @@ Keep `tkn` roughly aligned with cluster Pipelines / Triggers / Dashboard / Chain
 | Dashboard | Browser browse / restart UX ([16](./16_Dashboard.md)) |
 | `kubectl` | Raw CRDs, pods, events, RBAC debug |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -319,8 +313,6 @@ Keep `tkn` roughly aligned with cluster Pipelines / Triggers / Dashboard / Chain
 - Bundle push credentials are CI secrets, not laptop forever-tokens  
 
 **Good:** CLI as ops and literacy. **Bad:** snowflake starts with no YAML in Git; “install first, discover later.”
-
----
 
 ## References
 

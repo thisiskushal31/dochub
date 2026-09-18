@@ -2,8 +2,6 @@
 
 [← Previous](./11_Middle_East_And_Africa_Hubs.md) · [README](./README.md) · [Next: China →](./13_China_Market.md)
 
----
-
 ## 1. Concepts
 
 APAC hubs outside the China and India deep chapters:
@@ -19,8 +17,6 @@ APAC hubs outside the China and India deep chapters:
 | Others | Osaka, Melbourne, KL, Bangkok—index as needed |
 
 Operators in kind: Equinix, AirTrunk (wholesale), NTT GDC, Digital Realty, NEXTDC/CDC (AU), Keppel, STT GDC, telcos (Singtel, Telstra InfraCo), …
-
----
 
 ## 2. Advanced concepts
 
@@ -38,8 +34,6 @@ China [13](./13_China_Market.md), India [14](./14_India_Market.md) as separate m
 ### Honesty
 
 No fake campus maps. Building-level carrier checks still required.
-
----
 
 ## 3. Applications and use cases
 
@@ -59,8 +53,6 @@ No fake campus maps. Building-level carrier checks still required.
 - Don’t assume one SG campus equals all SG  
 
 **Good:** metro+building diligence, cable-aware DR. **Bad:** APAC-as-one; ignoring power queues in SG.
-
----
 
 ## References
 

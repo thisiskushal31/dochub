@@ -4,16 +4,12 @@
 
 **Alpine Linux** is a minimal, security-focused distribution built around **musl libc** and **BusyBox**. It is widely used in **containers** (Docker base images) and embedded or resource-constrained environments. Package manager: **apk**. This section goes **in depth**: apk, repository and pinning, OpenRC, containers, and networking so you can run and administer Alpine confidently.
 
----
-
 ## Why Alpine matters
 
 - **Small footprint** — Minimal base image (often under 5 MB); fast to pull and run in containers.
 - **musl + BusyBox** — Different C library and userland than glibc-based distros; some binaries from other distros may not run without compatibility layers.
 - **Security** — Optional hardening (e.g. PaX); minimal attack surface; no unnecessary daemons.
 - **Release model** — Two releases per year (e.g. 3.18, 3.19); each supported ~2 years. **Edge** is the rolling branch (development).
-
----
 
 ## Package management: apk
 
@@ -65,8 +61,6 @@ apk add package@3.18.0
 
 **Cache** — By default apk keeps downloaded packages in `/var/Cache/apk/`. In containers you usually want `apk add --no-cache` and then `rm -rf /var/Cache/apk/*` (or use `--no-cache` so they aren’t cached) to keep the image small.
 
----
-
 ## OpenRC (init and services)
 
 Alpine uses **OpenRC**, not systemd. Services are **scripts** in **/etc/init.d/** and are enabled by adding them to runlevels (e.g. **default**).
@@ -88,8 +82,6 @@ rc-status
 
 **Runlevels:** `boot`, `default`, `shutdown`. Most daemons go in `default`. Config for a service is often in `/etc/conf.d/servicename`.
 
----
-
 ## Containers (Docker and others)
 
 The official **alpine** image on Docker Hub is the standard minimal base. In a Dockerfile:
@@ -110,8 +102,6 @@ CMD ["nginx", "-g", "daemon off;"]
 
 **Kubernetes / containerd:** Same idea — use the alpine image and apk when you need to install packages in the image.
 
----
-
 ## Networking
 
 Minimal installs often use **udhcpc** for DHCP and **ip** / **iptables** for the rest. No NetworkManager by default.
@@ -126,8 +116,6 @@ ip link set eth0 up
 
 **Persistent config** — Edit **/etc/network/interfaces** (or use **networking** OpenRC service). For wireless or complex setups you can install **wpa_supplicant** and related packages.
 
----
-
 ## Summary
 
 - **Alpine** = minimal, musl/BusyBox-based; **apk** for packages; **OpenRC** for init and services.
@@ -135,8 +123,6 @@ ip link set eth0 up
 - **Containers:** Use `alpine` image and `apk add --no-cache`; pin version for reproducibility.
 - **Services:** `rc-service`, `rc-update`, `rc-status`; no systemd.
 - **Networking:** udhcpc, ip, iptables; config in `/etc/network/interfaces`.
-
----
 
 ## Further reading
 

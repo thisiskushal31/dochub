@@ -8,8 +8,6 @@ A **role map** for the VB.NET track: what maintainers, ops, security reviewers, 
 
 Shared platform depth remains in the [C# track](../CSharp/README.md). Office macros remain [VBA](../VBA/README.md)—do not conflate hiring signals.
 
----
-
 ## 1. Concepts
 
 ### 1. What you can do after this track
@@ -88,8 +86,6 @@ Greenfield web APIs and cloud workers more often choose **C#** (or another moder
 
 Wrong-hammer smell: “we wrote a service that launches Excel because the report was an `.xlsx`.”
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Polyglot solutions are normal
@@ -115,8 +111,6 @@ An unsigned EXE on a shared drive with no repo is an **incident**. Export or sto
 
 Interview prompts: “How would you run this WinForms app as a service—and why shouldn’t you?” and “What do you check before adding a PackageReference?”
 
----
-
 ## 3. Applications and use cases
 
 | Path | Spine to emphasize |
@@ -127,8 +121,6 @@ Interview prompts: “How would you run this WinForms app as a service—and why
 | Planned rewrite | **17–18**, extract libraries, [C#](../CSharp/README.md) |
 
 Personal learning: language chapters first → **13** → **14** lightly → **15** door → **16** before production ownership → **18** when strategy debates start.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -142,8 +134,6 @@ Personal learning: language chapters first → **13** → **14** lightly → **1
 - Use [C# NuGet/testing](../CSharp/18_NuGet_And_Testing.md) expectations for quality bar on packages and tests.
 - Record wrong-hammer decisions so the next team does not re-litigate Excel-as-service.
 - Point strategy debates to chapter **18** instead of endless syntax comparisons.
-
----
 
 ## References
 

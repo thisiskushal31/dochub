@@ -4,13 +4,9 @@
 
 **Prerequisite:** [Fundamentals: Process and PCB](../Fundamentals/2_Process_And_PCB.md), [CPU scheduling](../Fundamentals/4_CPU_Scheduling.md), [Process synchronization](../Fundamentals/6_Process_Synchronization.md), [Deadlock](../Fundamentals/7_Deadlock.md), [Memory management](../Fundamentals/9_Memory_Management.md), [Storage and I/O](../Fundamentals/10_Storage_And_IO.md). Here: how **Windows** implements processes, **CPU scheduling**, **synchronization**, **deadlock**, **multithreading**, **memory**, **storage**, and **kernel-related tuning** — with commands and tools for DevOps.
 
----
-
 ## Windows process model
 
 Windows uses **processes** and **threads** as the main execution units. Each process has an address space, handles to resources (files, registry keys), and one or more threads. The kernel (NT kernel) **schedules threads**, not processes; the process is the container for address space and handles.
-
----
 
 ## CPU scheduling (Windows)
 
@@ -41,8 +37,6 @@ Get-Process -Name notepad | Select-Object Name, Id, BasePriority
 
 **Task Manager** (Details tab) shows base priority; right‑click a process → **Set priority** to change it. Use **Realtime** only with care — it can starve system threads (mouse, keyboard, disk) and make the system unresponsive.
 
----
-
 ## Process synchronization (Windows)
 
 ### How the system does it (deep level)
@@ -70,8 +64,6 @@ So synchronization is **enforced by the kernel**: a thread cannot “skip” the
 | **Event** | Dispatcher object | Signaled/Not-Signaled; set → Signaled; synchronization (auto-reset) event wakes one waiter then resets. |
 | **Critical section** | User-mode | In-process only; fast path without kernel; when blocking, may use a kernel object internally. |
 
----
-
 ## Deadlock management (Windows)
 
 At the **system level**, the kernel does **not** track lock-acquisition order across user-mode mutexes/semaphores or infer cycles. When a thread waits on a dispatcher object, it simply enters the **Waiting** state on that object’s queue; the kernel does not know whether another thread will eventually signal it or whether that other thread is itself waiting (forming a cycle). So Windows does **not** automatically detect or break user-mode deadlocks. Avoiding deadlock is the responsibility of the application (lock ordering, timeouts, etc.). As an admin you can:
@@ -81,8 +73,6 @@ At the **system level**, the kernel does **not** track lock-acquisition order ac
 - **Handles** — **Sysinternals Handle** can list open handles (files, mutexes, events) per process; useful to see what a stuck process is holding.
 
 So: **deadlock management on Windows** is mainly **observability** (wait chains, handles) and **recovery** (terminate the process); prevention is in application design.
-
----
 
 ## Multi-threading (Windows)
 
@@ -99,8 +89,6 @@ Get-Process -Id <pid> | Select-Object -ExpandProperty Threads
 ```
 
 **Task Manager** → **Details** tab shows a **Threads** column (enable via **View** → **Select columns**). **Performance** tab → **CPU** → **Open Resource Monitor** → **CPU** tab shows threads per process. So **how Windows does multithreading**: one process, many threads; kernel schedules threads by priority and quantum; applications use **CreateThread** or the **thread pool**; you observe with Get-Process, Task Manager, and Resource Monitor.
-
----
 
 ## Inspecting and managing processes
 
@@ -128,8 +116,6 @@ Get-Process -Id <pid> | Format-List *
 Stop-Process -Id <pid> -Force
 Stop-Process -Name notepad -Force
 ```
-
----
 
 ## Memory management (Windows)
 
@@ -171,8 +157,6 @@ Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 10 Nam
 ```
 
 **Configure page file:** **System** → **Advanced system settings** → **Performance** → **Settings** → **Advanced** → **Virtual memory** → **Change**. Set custom initial/maximum size or “System managed.” Scripting: WMI `Win32_PageFileSetting`; some changes require reboot.
-
----
 
 ## Storage and volumes
 
@@ -228,8 +212,6 @@ Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 10 Nam
 
 **Task Manager** (taskmgr) and **Resource Monitor** (resmon) give a GUI view of processes, memory, disk I/O, and network. For scripting, **Get-Process** and **Get-Counter** are the main tools.
 
----
-
 ## Kernel optimization and performance (Windows)
 
 Windows does not expose a single “sysctl-style” interface. Tuning is done via **power plans**, **virtual memory**, **performance options**, and (advanced) **registry** or **group policy**.
@@ -253,8 +235,6 @@ powercfg /setactive <scheme-guid>
 **Registry / policy** — Some behaviors are tunable only via registry or Group Policy (e.g. **LargeSystemCache** under `HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management` for file server behavior, **IoPriority** for I/O priority). Use only from documented sources (e.g. Microsoft, performance guides); wrong values can destabilize the system.
 
 So **kernel optimization on Windows**: power plan, virtual memory, performance options, and selective registry/policy; no single command like Linux **sysctl**.
-
----
 
 ## Storage scripting (PowerShell)
 
@@ -282,8 +262,6 @@ Get-Volume | Format-Table DriveLetter, HealthStatus, FileSystemLabel -AutoSize
 
 **Storage Spaces** (pool, virtual disk, format) are scripted in [Virtualization and storage advanced](./4_Virtualization_And_Storage_Advanced.md). For **backup/restore** and **robocopy** scripts, see [Windows commands and PowerShell](./1_Windows_Commands_And_PowerShell.md) and automation docs.
 
----
-
 ## Summary
 
 - **CPU scheduling (deep):** Dispatcher runs on events (thread ready/block/quantum/priority change). Thread states: Running, Ready, Waiting. **Base priority** 0–31 (process class + thread level); **dynamic priority** boosted (foreground, input, I/O completion) and decayed (one level per time slice) for base 1–15; round-robin within priority; strict preemption. **Quantum** = time slice.
@@ -294,8 +272,6 @@ Get-Volume | Format-Table DriveLetter, HealthStatus, FileSystemLabel -AutoSize
 - **Kernel optimization:** Power plans (powercfg), virtual memory, Performance options, registry/policy.
 - **Storage scripting:** Get-Volume, Get-Disk, Get-Partition, Format-Volume, Resize-Partition; Storage Spaces in topic 4.
 - **Processes:** tasklist, Get-Process, Stop-Process; **Storage:** Get-Volume, Get-Counter.
-
----
 
 ## Further reading
 

@@ -53,8 +53,6 @@ Reflection lets you inspect and call code at runtime. On the JVM, add the **`kot
 
 Reflection is useful for serialization, dependency injection, and dynamic dispatch. It has a runtime cost and is less type-safe than direct calls; use it when the structure of types is not known at compile time. The next topic covers interoperability with Java, which affects how annotations and reflection appear on both sides.
 
----
-
 ## Further reading
 
 - [Annotations](https://kotlinlang.org/docs/annotations.html)

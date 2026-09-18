@@ -2,8 +2,6 @@
 
 [← Previous](./9_Load_Balancer_Appliances.md) · [README](./README.md) · [Next: Storage network separation →](./11_Storage_Network_Separation.md)
 
----
-
 ## 1. Concepts
 
 **DNS** and **NTP** (and PTP grandmasters elsewhere) are tiny services with hall-wide blast radius. Place them like infrastructure, not afterthought VMs on a laptop hypervisor.
@@ -19,8 +17,6 @@
 ### Where it sits
 
 Mgmt or services racks; reachable from OOB and prod as policy requires; dual power; monitored.
-
----
 
 ## 2. Advanced concepts
 
@@ -42,8 +38,6 @@ Provisioning DHCP options point here ([4](./4_Provisioning_Network.md)). Object/
 
 Anycast DNS common at scale; small halls still need two boxes minimum. PTP where regulated.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -62,8 +56,6 @@ Anycast DNS common at scale; small halls still need two boxes minimum. PTP where
 - Never host sole DNS on the vCenter it resolves  
 
 **Good:** diverse DNS/NTP, monitored, documented. **Bad:** one DNS VM; NTP=laptop; circular dependencies.
-
----
 
 ## References
 

@@ -26,8 +26,6 @@ u = append(u, 5, 6)            // no realloc; u is [0 0 5 6]
 
 **Why this matters.** Slices are the primary collection type for ordered data. Sharing of the backing array means that sub-slices and the original slice can see each other’s updates to elements; that is useful but can surprise if you assume a copy. **append** can invalidate other slices that shared the old array when it reallocates. In DevOps and services, slices are used for buffers, lines of output, and lists of items; understanding length, capacity, and **append** avoids panics and unnecessary allocations.
 
----
-
 ## Further reading
 
 - [The Go Programming Language Specification: Array types](https://go.dev/ref/spec#Array_types)

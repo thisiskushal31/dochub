@@ -4,8 +4,6 @@
 
 This topic covers **arrays** and **strings** in C: declaring and using arrays, **multi-dimensional arrays**, and **strings** as character arrays. Each concept is explained in text first, then with code blocks so you can write clear, easy-to-read C.
 
----
-
 ## Arrays
 
 An **array** is a contiguous sequence of elements of the **same type**. You declare it as `type name[size]`. Elements are indexed from **0** to **size - 1**. C does not check bounds; out-of-range access is undefined behavior (and a common source of bugs and security issues).
@@ -26,8 +24,6 @@ int a[5] = { 1, 2, 3 };
 
 int b[] = { 10, 20, 30 };   /* size 3 inferred */
 ```
-
----
 
 ## Passing arrays to functions
 
@@ -52,8 +48,6 @@ int main(void) {
 
 You can write the parameter as `int p[]`; it still means “pointer to int”.
 
----
-
 ## Multi-dimensional arrays
 
 A **2D array** is an “array of arrays”: `type name[rows][cols]`. Elements are accessed as `arr[i][j]`. In memory they are stored row by row.
@@ -68,8 +62,6 @@ printf("%d\n", grid[1][2]);   /* 6 */
 
 For passing to functions, you must specify all dimensions except the first (which can be omitted), e.g. `void f(int a[][3], int rows)`.
 
----
-
 ## Variable length arrays (VLA)
 
 A **variable length array** has a size that is not a constant; the size is determined at runtime (e.g. **`int a[n];`** where **`n`** is a variable). VLAs are supported in C99; they are allocated on the stack and their size cannot be changed after creation. Some coding standards avoid VLAs; **malloc** is an alternative for dynamic sizing.
@@ -81,8 +73,6 @@ int vla[n];
 for (int i = 0; i < n; i++) vla[i] = i;
 ```
 
----
-
 ## Array of strings
 
 An **array of strings** is an array of **`char *`** (each element points to a string) or a 2D **`char`** array **`char arr[N][MAXLEN]`**. With **`char *arr[]`**, each **arr[i]** points to a (possibly read-only) string; with **`char arr[][MAXLEN]`**, each row holds one string with space for **MAXLEN** characters.
@@ -91,8 +81,6 @@ An **array of strings** is an array of **`char *`** (each element points to a st
 const char *names[] = { "Alice", "Bob", "Carol" };
 for (int i = 0; i < 3; i++) printf("%s\n", names[i]);
 ```
-
----
 
 ## Strings as character arrays
 
@@ -112,8 +100,6 @@ printf("%s\n", s1);
 char msg[] = "C";
 printf("%zu\n", strlen(msg));   /* 1 */
 ```
-
----
 
 ## String functions (standard library)
 
@@ -137,8 +123,6 @@ if (strcmp(buf, "Hello world") == 0)
    printf("equal\n");
 ```
 
----
-
 ## User input: scanf and getchar
 
 **`scanf`** (from `<stdio.h>`) reads formatted input. You pass a format string and **addresses** of variables (using `&`) so `scanf` can store the read values. **`getchar()`** reads a single character from **stdin**; **`getc(stream)`** reads from any **FILE *** (e.g. **getc(stdin)**). **`getch`** and **`getche`** are **non-standard** (e.g. in `<conio.h>` on some systems) and are not in portable C. Always check return values and ensure buffers are large enough to avoid overflows.
@@ -155,8 +139,6 @@ c = getchar();
 
 For string input with a length limit, use **`scanf("%99s", buf)`** (limit minus one for `'\0'`) or **`fgets(buf, size, stdin)`** to read a line safely.
 
----
-
 ## Summary
 
 - **Arrays** are fixed-size sequences of the same type; index from 0; no built-in bounds checking. **Properties:** contiguous storage, name decays to pointer, **sizeof** for byte size.
@@ -166,8 +148,6 @@ For string input with a length limit, use **`scanf("%99s", buf)`** (limit minus 
 - **Variable length arrays (VLA):** size can be a runtime value (e.g. **`int a[n];`**); C99; stack-allocated.
 - **Strings** are `char` arrays ending with `'\0'`; use `<string.h>` for length, copy, compare, and concatenate, and ensure buffers are large enough.
 - **Input:** **scanf**, **getchar**/ **getc** for stdin; **getch**/ **getche** are non-standard.
-
----
 
 ## Further reading
 

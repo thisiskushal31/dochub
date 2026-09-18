@@ -2,8 +2,6 @@
 
 [← Previous](./17_Plugins_Update_Center_And_Hygiene.md) · [README](./README.md) · [Next: Managing →](./19_Managing_Tools_Nodes_Users_And_System.md)
 
----
-
 ## 1. Concepts
 
 Jenkins still runs the **classical** industry path: Poll SCM → Maven/Gradle → archive WAR/JAR → copy to VM → restart Apache/Tomcat/systemd. That path is taught in depth in:
@@ -19,8 +17,6 @@ This chapter is the door from the Jenkins product track into that lab — don’
 | Archive artifacts | WAR/JAR for deploy job |
 | SSH publish / scripts | Deploy over SSH |
 | Rolling on VMs | Serial host update ([CiCd/18](../18_VM_MIG_And_Host_Based_Deploy.md)) |
-
----
 
 ## 2. Advanced concepts
 
@@ -57,8 +53,6 @@ pipeline {
 
 (`copyArtifacts` needs the Copy Artifact plugin — common in classical estates.) Full host/systemd lab: [CiCd/20](../20_Classical_Jenkins_Host_And_Web_Deploy.md). Stack map: [CiCd/23](../23_Classical_DevOps_Stack_Map.md).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -67,8 +61,6 @@ pipeline {
 | Modernize without big-bang | Multibranch + same SSH deploy stage |
 
 **Good:** classical ops with Pipeline-as-code. **Bad:** ignoring classical estates because “GitOps only.”
-
----
 
 ## References
 

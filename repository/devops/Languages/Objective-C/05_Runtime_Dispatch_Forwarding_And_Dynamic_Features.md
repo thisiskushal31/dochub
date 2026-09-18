@@ -12,8 +12,6 @@
 /* objc_msgSend(receiver, _cmd, …) — see Apple libobjc */
 ```
 
----
-
 ## 1. Dispatch path (conceptual)
 
 1. Message send → cache lookup for **(class, SEL)**.
@@ -26,8 +24,6 @@ Stacks often show **`objc_msgSend`** at the top; the **next** frames show the re
 NSString *obj = @"hi";
 id r = ((id (*)(id, SEL))objc_msgSend)(obj, @selector(description));
 ```
-
----
 
 ## 2. Dynamic resolution
 
@@ -45,8 +41,6 @@ You can install a method at runtime when a selector is first missing—powerful 
 
 Any dynamically installed **IMP** must be accounted for in security and maintenance reviews.
 
----
-
 ## 3. Forwarding
 
 **Fast forwarding** redirects to another object (cheaper):
@@ -62,8 +56,6 @@ Any dynamically installed **IMP** must be accounted for in security and maintena
 
 **Full forwarding** uses **`forwardInvocation:`** and **`NSInvocation`** (slower, flexible). Do not forward arbitrary **selectors** toward **untrusted** targets.
 
----
-
 ## 4. Method swizzling (illustrative)
 
 ```objc
@@ -78,8 +70,6 @@ static void Swizzle(Class cls, SEL orig, SEL alt) {
 
 Swizzling affects the **whole class**; order relative to other libraries and **reentrancy** inside swapped methods must be designed. Prefer explicit instrumentation hooks in **security-sensitive** products.
 
----
-
 ## 5. `+load` vs `+initialize`
 
 - **`+load`** runs during image load (per class and category), before **`main`**—order is not fully under your control; avoid heavy work and fragile dependencies.
@@ -89,8 +79,6 @@ Swizzling affects the **whole class**; order relative to other libraries and **r
 + (void)load { /* runs at image load — keep minimal */ }
 + (void)initialize { /* first use of class — prefer for setup */ }
 ```
-
----
 
 ## Advanced use cases and implementation
 
@@ -109,8 +97,6 @@ IMP imp = imp_implementationWithBlock(^id(id self, SEL _cmd) {
   return @42;
 });
 ```
-
----
 
 ## References
 

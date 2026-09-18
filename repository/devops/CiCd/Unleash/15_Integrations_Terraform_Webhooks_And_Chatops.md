@@ -2,8 +2,6 @@
 
 [← Previous](./14_Impression_Analytics_Impact_And_Playground.md) · [README](./README.md) · [Next: AI assistants and MCP →](./16_AI_Assistants_MCP_And_Assisted_Delivery.md)
 
----
-
 ## 1. Concepts
 
 Unleash integrates in two directions:
@@ -22,8 +20,6 @@ Post flag changes to channels your responders already watch ([CiCd/16](../16_Not
 ### Terraform
 
 The Unleash Terraform provider is for **platform setup**: projects, environments, API tokens, users/roles, SSO wiring, context fields, project access and change-request config — reviewed in PR like other platform config. It is **not** the path for day-to-day feature flags (those stay short-lived in the Admin UI / Admin API / MCP). Pair provider credentials with **service accounts** ([11](./11_API_Tokens_Keys_And_Service_Accounts.md)).
-
----
 
 ## 2. Advanced concepts
 
@@ -51,8 +47,6 @@ Stale-flag events can open PRs or break builds via webhook ([20](./20_Best_Pract
 
 Slack/Teams “enable flag” bots are powerful. Require prod path through change requests / break-glass roles — not unrestricted workspace commands.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -73,8 +67,6 @@ Slack/Teams “enable flag” bots are powerful. Require prod path through chang
 - Chatops cannot silently 100% prod  
 
 **Good:** ChatOps for awareness + CR for authority. **Bad:** chatbot with Admin token that toggles prod from any message.
-
----
 
 ## References
 

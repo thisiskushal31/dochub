@@ -4,8 +4,6 @@
 
 This section is a **deep dive** into Go: factually correct, standalone, and written so you can go from zero knowledge to using the language in real projects. It answers four things: **What is this language?** **Why is it used?** **How can I use it?** **What are the use cases?** Everything is ordered for someone who knows nothing at the start: you learn the **basics** (concepts, syntax, types, control flow), then **advanced concepts** (composite types, methods, interfaces, concurrency, error handling), then **where and how Go is used** across engineering—**software engineering**, **DevOps**, **security**, **cybersecurity**, and **infrastructure**. Each topic is self-contained: explanations come first, then code examples only when they illustrate the idea. For more depth, use the links in the Further reading section at the end of each file.
 
----
-
 ## How to read this section
 
 Read in **number order** for a single path from beginner to advanced to use cases.
@@ -16,8 +14,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 - **Topics 13–16 (Concurrency and robustness):** Goroutines and channels, select and concurrent patterns, error handling, defer and panic/recover.
 - **Topics 17–18 (Packages and tooling):** Packages and imports, build and modules.
 - **Topics 19–20 (Use cases and security):** Where Go is used (by domain and engineering role) and how to run it safely in production and DevOps.
-
----
 
 ## Learning path: from basics to use cases
 
@@ -30,8 +26,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | **Packages and tooling** | 17 → 18 | Organize code in packages, use modules, and build and test with the go command. |
 | **Use cases and applications** | 19 | See where Go is used: cloud, DevOps, CLIs, services, and by engineering role. |
 | **Security and DevOps** | 20 | Apply security and DevOps practices for Go in production. |
-
----
 
 ## Topics (in order)
 
@@ -63,8 +57,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | 19 | Use cases and applications | [19_Use_Cases_And_Applications.md](./19_Use_Cases_And_Applications.md) |
 | 20 | Security and DevOps | [20_Security_And_DevOps.md](./20_Security_And_DevOps.md) |
 
----
-
 ## By engineering role
 
 | Role | Focus | Where to go |
@@ -73,8 +65,6 @@ Read in **number order** for a single path from beginner to advanced to use case
 | **DevOps / SRE** | Build, deploy, operate Go services and tooling | 2, 3, 17, 18, then **19**, **20**. |
 | **Security** | Supply chain, safe defaults, hardening | 15, 17, 18, then **19**, **20**. |
 | **Infrastructure / platform** | Reading and extending tools (e.g. K8s, Terraform) | 1–7, 9–12, 13–14, 17–18, **19**, **20**. |
-
----
 
 ## Topic index: where each subject is covered
 
@@ -93,16 +83,11 @@ The table below shows where each language subject appears in this section.
 | Statements (if, for, switch, select, defer, go, return, break, continue, goto, fallthrough) | **6**, **14**, **16** |
 | Packages, imports, built-in functions, build and tooling | **17**, **18** |
 
----
-
 ## Scope: what's covered and what's not
 
 **Covered:** This section gives a full path from zero to use: what Go is, why and how to use it, and where it fits (use cases, security, DevOps). It includes lexical basics (comments, identifiers, keywords, literals), types and variables, control flow, functions, composite types (arrays, slices, structs, maps), methods and interfaces, concurrency (goroutines, channels, select), error handling, defer/panic/recover, packages and modules, build and tooling, use cases, and Security/DevOps. That is enough to read and write Go, build and test with the go command, and operate in cloud and DevOps contexts from software, DevOps, and security perspectives.
 
 **Not covered in depth here (by design):** Generics (Go 1.18+), reflection, cgo, and the full standard library are only introduced or pointed to in further reading so the section stays focused on the core language and typical DevOps use.
-
-
----
 
 ## Further reading
 

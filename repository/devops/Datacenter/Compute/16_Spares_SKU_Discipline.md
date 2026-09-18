@@ -2,8 +2,6 @@
 
 [← Previous](./15_Imaging_And_Provisioning_At_Scale.md) · [README](./README.md) · [Next: Failure walks →](./17_Compute_Failure_Walks.md)
 
----
-
 ## 1. Concepts
 
 **SKU discipline** means the fleet is composed of a small set of approved configurations. **Spares** are cold/hot replacements that match those SKUs—DIMMs, PSUs, fans, NICs, whole nodes.
@@ -20,8 +18,6 @@ Without discipline, every failure becomes an engineering project.
 | Firmware train | Compatibility |
 | Rail kit / U height | White space fit |
 | Image profile | Provisioning |
-
----
 
 ## 2. Advanced concepts
 
@@ -49,8 +45,6 @@ Asset tags/elevations: [White-Space/7](../White-Space/7_Asset_Tags_Serials_And_E
 
 Lead times differ by region; keep spares near the hall that needs them. Colo remote hands can swap only if SKU parts are on-site or shipped with ticket.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -69,8 +63,6 @@ Lead times differ by region; keep spares near the hall that needs them. Colo rem
 - Never raid production spares for “temporary lab” without tracking  
 
 **Good:** few SKUs, kits on site, CMDB match. **Bad:** 40 unique snowflakes; empty spare cage; mystery risers.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./20_Best_Practices_And_When_Not_Unleash.md) · [README](./README.md) · [Next: Catalog & spectrum →](./22_Config_Catalog_Migrate_And_Spectrum.md)
 
----
-
 ## 1. Concepts
 
 Inventory of **offering classes** Unleash documents → this track. Use it in reviews: every major surface should map to a chapter.
@@ -22,8 +20,6 @@ flowchart TB
   EDGE --> API
   GOV --> UI
 ```
-
----
 
 ## 2. Advanced concepts
 
@@ -109,8 +105,6 @@ flowchart TB
 | Admin search / filters / favorites | [18](./18_Scale_Upgrade_Operate_And_Troubleshoot.md) |
 | Sunset flag type | [01](./01_What_Is_Unleash_And_Feature_Flags.md) |
 
----
-
 ## 3. Applications and use cases
 
 Walk **A–E** plus **G** for your estate: **use / later / N/A**. Gaps in tokens (B), governance (D), and Edge (B) beat collecting more SDK languages. SDK **methods** are [09](./09_SDKs_Backend_Frontend_And_OpenFeature.md); HTTP **endpoints** are [23](./23_Admin_Client_Frontend_And_Edge_APIs.md). **F** is schemas, tutorials, and marketing — not the method/endpoint lists.
@@ -121,8 +115,6 @@ Walk **A–E** plus **G** for your estate: **use / later / N/A**. Gaps in tokens
 - Upstream exceptions understood (F)  
 
 **Good:** every prod surface has a chapter owner. **Bad:** “we use Unleash” with no Edge/token/CR story.
-
----
 
 ## References
 

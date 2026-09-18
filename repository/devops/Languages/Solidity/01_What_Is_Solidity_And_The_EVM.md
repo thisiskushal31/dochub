@@ -8,8 +8,6 @@ Four words people mash together — **Solidity**, **solc**, the **EVM**, the **c
 
 Assumes **Solidity 0.8.x** (snapshot **0.8.36**).
 
----
-
 ## 1. Concepts
 
 ### 1. Four layers (keep them separate and life gets easier)
@@ -121,8 +119,6 @@ Pick **Vyper** when you want a smaller language. Pick **not a chain** when a dat
 | **Security** | Assume adversarial callers and public state |
 | **Operations** | Pin compilers, verify source, custody keys |
 | **Software engineering** | Tests, interfaces, NatSpec, reviewable diffs |
-
----
 
 ## 2. Advanced concepts
 
@@ -239,8 +235,6 @@ Every public/external function (and public getter) costs dispatcher comparisons.
 
 Successful writes and logs are journaled. On `REVERT`, the journal for that frame is discarded. On success, some schedules **refund** gas for clearing storage (nonzero→zero), capped (historically ≤ gas_used/2, then EIP-3529 tightened). Refunds are not income; they only reduce the gas you pay for *this* tx. Do not design “clear slots to mint ETH.”
 
----
-
 ## 3. Applications and use cases
 
 | Domain | Why Solidity shows up | What this track will not become |
@@ -255,8 +249,6 @@ If the problem is “our service should do X for logged-in users,” you want a 
 
 For **what this track deliberately does not become** (L2 encyclopedias, wallet UI, consensus) and **where the EVM/compiler are moving** (forks, EIP-7702, AA, EOF’s removal), see chapter **24** — the compass after you have the machine model.
 
----
-
 ## 4. Staff-level review checklist
 
 - Design docs name **language vs EVM vs chain vs account** without treating them as synonyms.
@@ -264,8 +256,6 @@ For **what this track deliberately does not become** (L2 encyclopedias, wallet U
 - Off-chain inputs (prices, randomness, identity) are listed as **trust assumptions**.
 - Sibling languages (Vyper) and client stacks (JS/TS) are not pretended to be in scope here.
 - New work targets **0.8.x**, not a pre-0.8 tutorial estate, unless the repo is explicitly brownfield.
-
----
 
 ## References
 

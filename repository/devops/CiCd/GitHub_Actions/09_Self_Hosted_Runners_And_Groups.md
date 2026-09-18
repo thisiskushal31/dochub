@@ -2,8 +2,6 @@
 
 [← Previous](./08_GitHub_Hosted_Runners.md) · [README](./README.md) · [Next: ARC →](./10_Actions_Runner_Controller_ARC.md)
 
----
-
 ## 1. Concepts
 
 **Self-hosted runners** are machines (VM, bare metal, container) **you** register with GitHub. Jobs target them with labels:
@@ -15,8 +13,6 @@ runs-on: [self-hosted, linux, gpu]
 You own OS patching, tooling, network exposure, and isolation. Use when hosted cannot reach a network, needs special hardware/licenses, or policy demands it.
 
 Registration scopes: repository, organization, or enterprise. **Runner groups** control which repos/workflows may use which runners.
-
----
 
 ## 2. Advanced concepts
 
@@ -47,8 +43,6 @@ Manual self-hosted pools vs **Actions Runner Controller** elastic scale sets on 
 
 GitHub documents assessing moves back to hosted when the original constraints fade — useful brownfield literacy.
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -58,8 +52,6 @@ GitHub documents assessing moves back to hosted when the original constraints fa
 | Org isolation | Runner groups per sensitivity tier |
 
 **Good:** ephemeral, patched, grouped. **Bad:** one beefy always-on runner shared by every repo with write credentials.
-
----
 
 ## References
 

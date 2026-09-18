@@ -134,8 +134,6 @@ public entry fun ping(ctx: &mut TxContext) {
 - **Security:** Friend lists and minimal **`public`** surface reduce exploitability.
 - **Operations:** Upgrades change module code; entry names stable across client SDKs matter for compatibility.
 
----
-
 ## Further reading
 
 - [The Move Book — Variables](https://move-language.github.io/move/variables.html)

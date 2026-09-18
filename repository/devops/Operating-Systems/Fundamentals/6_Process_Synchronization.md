@@ -4,8 +4,6 @@
 
 This topic covers **race condition**, **critical section**, solutions (hardware and software), **semaphores**, **mutex vs semaphore**, **monitors**, and classical IPC problems — **OS-agnostic** (no platform-specific APIs).
 
----
-
 ## 1. Introduction: Race condition and Critical section
 
 - **Critical section** — A segment of code that accesses **shared resources** (variables, data structures, devices). Only one process (or thread) should be executing its critical section at a time for that resource.
@@ -17,8 +15,6 @@ This topic covers **race condition**, **critical section**, solutions (hardware 
 
 *Image: [Critical Section in Synchronization](https://www.geeksforgeeks.org/operating-systems/critical-section-in-synchronization/).*
 
----
-
 ## 2. Requirements for a correct solution
 
 A solution to the critical-section problem should satisfy:
@@ -28,8 +24,6 @@ A solution to the critical-section problem should satisfy:
 3. **Bounded waiting** — After a process has requested to enter its critical section, there is a bound on how many other processes may enter before it does. So no **starvation**: no process waits forever.
 
 (Some treatments also include “no assumption about relative speeds of processes” and “no busy-waiting” as desirable.)
-
----
 
 ## 3. Hardware-based solutions (and software: Peterson's, Dekker's, Bakery)
 
@@ -49,8 +43,6 @@ Implementing mutual exclusion correctly with only shared memory and no special i
 
 - On a uniprocessor, the kernel can disable interrupts before entering a critical section and re-enable after leaving. No other process can run (no preemption), so no race. **Does not work** on multiprocessors (other CPUs can still run). Used only in limited kernel contexts, not as a general solution.
 
----
-
 ## 4. Semaphores
 
 A **semaphore** is an integer variable (or a more complex structure) that the OS maintains and that processes access only through two **atomic** operations, traditionally called **P** (wait, decrement) and **V** (signal, increment).
@@ -64,8 +56,6 @@ A **semaphore** is an integer variable (or a more complex structure) that the OS
 
 The OS implements P and V in the kernel (or in a runtime that uses atomic instructions and system calls) so that the check-and-block and the wake-up are **atomic** with respect to other P/V operations. Semaphores are a fundamental building block for synchronization; mutexes and monitors can be implemented with them (or with similar primitives).
 
----
-
 ## 5. Mutex vs Semaphore
 
 A **mutex** (or **lock**) is a synchronization primitive that provides **mutual exclusion**. Typically:
@@ -75,8 +65,6 @@ A **mutex** (or **lock**) is a synchronization primitive that provides **mutual 
 
 Difference from a binary semaphore (in typical usage): a **mutex** often has a notion of **ownership** — only the process that locked it may unlock it. This allows the OS to prevent “wrong” unlocks and to support features like priority inheritance (to avoid priority inversion). A **semaphore** has no owner; any process can do V. So: use a **mutex** for “one at a time” critical sections; use a **semaphore** when you need counting or when a different process must release (e.g. signaling).
 
----
-
 ## 6. Monitors
 
 A **monitor** is a higher-level language construct that combines:
@@ -85,8 +73,6 @@ A **monitor** is a higher-level language construct that combines:
 - **Condition variables** — For waiting and signaling. A process that needs to wait (e.g. “buffer empty”) does **wait(cond)** on a condition variable; it leaves the monitor (releases the lock) and blocks. Another process that makes the condition true (e.g. “I added an item”) does **signal(cond)** to wake one waiter (or **broadcast** to wake all). The woken process re-acquires the monitor lock and continues.
 
 Monitors are often implemented using mutexes and condition variables (or semaphores) underneath. They simplify reasoning about synchronization by encapsulating shared state and the operations on it in one place.
-
----
 
 ## 7. Classical IPC problems
 
@@ -107,8 +93,6 @@ These illustrate how to use the primitives above.
 - N philosophers, N forks (or chopsticks). Each philosopher needs **two** forks to eat. If each picks up one fork and waits for the other, **deadlock** can occur (everyone holds one fork, everyone waits).
 - **Solutions:** Impose an **order** on forks (e.g. always take the lower-numbered fork first) to break circular wait; or use a **semaphore** that allows at most N-1 philosophers to try to eat at once; or use **try-lock** (non-blocking) and back off if the second fork is not available.
 
----
-
 ## 8. Inter-Process Communication (IPC) — concepts
 
 Processes (and sometimes threads) need to **communicate** or **share data**. Main approaches:
@@ -120,8 +104,6 @@ Processes (and sometimes threads) need to **communicate** or **share data**. Mai
 
 The choice depends on performance (shared memory vs copy), complexity, and whether the OS provides shared memory or only message passing (e.g. some microkernels push everything to message passing).
 
----
-
 ## Summary
 
 - **Critical section** = code that uses shared resources. **Race condition** = unsynchronized concurrent access; outcome is wrong or non-deterministic. **Mutual exclusion** = at most one process in the critical section at a time.
@@ -132,8 +114,6 @@ The choice depends on performance (shared memory vs copy), complexity, and wheth
 - **Monitor** = mutual exclusion + condition variables for waiting/signaling; language-level construct.
 - **Classical problems:** Producer–consumer (empty/full semaphores); readers–writers (reader count + write lock); dining philosophers (ordering or try-lock to avoid deadlock).
 - **IPC:** shared memory + synchronization; message passing; signals; pipes. All are **OS-agnostic** concepts; actual APIs are OS-specific (see [Linux](../Linux/README.md) and [Windows](../Windows/README.md)).
-
----
 
 ## Further reading
 

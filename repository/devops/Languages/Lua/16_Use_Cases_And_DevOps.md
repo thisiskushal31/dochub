@@ -38,8 +38,6 @@ The following is a **whole-engineering** view: whatever your role, pick the line
 - **Security and hardening:** Sandboxed script execution, safe subsets, and validation of untrusted input. Focus on environments and _ENV (topic 4), load/require and binary chunks (topics 5, 14), and what is excluded in embedded builds (e.g. debug, os). Understand that binary chunks can be unsafe; restrict or validate script source and use custom environments (topic 15) to limit what scripts can access.
 - **DevOps and infrastructure:** Nginx/OpenResty, Redis, HAProxy, deployment, and operations. Focus on how the product loads Lua (paths, LUA_PATH/LUA_CPATH), which phases or hooks run scripts, and how errors and timeouts are reported. Use the language topics to read and tweak existing scripts; for non-blocking hosts (e.g. OpenResty), avoid blocking I/O and request-specific state in globals (see “Web and reverse proxies” above).
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §7 Lua Standalone](https://www.lua.org/manual/5.5/manual.html#7)

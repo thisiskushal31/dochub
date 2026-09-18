@@ -31,8 +31,6 @@ pong ! {ping, self()}.
 
 **Why this matters for security and DevOps.** Starting a distributed node without TLS exposes it to anyone on the network who can guess or obtain the cookie. Use a strong cookie (e.g. from a secrets manager), restrict network access, and consider TLS distribution for production. Registration gives you stable names for servers; distribution is how you scale across machines. Understanding cookies and node naming is essential for deploying and securing Erlang clusters.
 
----
-
 ## Further reading
 
 - [Distributed Erlang](https://www.erlang.org/doc/system/distributed)

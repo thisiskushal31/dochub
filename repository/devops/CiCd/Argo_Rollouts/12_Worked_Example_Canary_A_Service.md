@@ -2,8 +2,6 @@
 
 [← Previous](./11_Notifications_Metrics_And_Kubectl_Plugin.md) · [README](./README.md) · [Next: Best practices →](./13_Best_Practices_And_When_Not_To_Use.md)
 
----
-
 ## 1. Concepts — what we build
 
 Ship a simple HTTP service with a **canary** Rollout (no mesh first), then optionally add Prometheus analysis. Same judgment bar as the Argo CD website lab: Git-owned digests, clear promote/abort.
@@ -17,8 +15,6 @@ gitops/apps/demo/
   service-canary.yaml   # optional until trafficRouting
   analysis-success-rate.yaml
 ```
-
----
 
 ## 2. Advanced concepts — steps
 
@@ -96,8 +92,6 @@ Commit Rollout + template; Argo CD Application syncs; CI only writes new digest 
 
 Add stable/canary Services + Istio/NGINX/… per [07](./07_Traffic_Management.md) when you need true percentages.
 
----
-
 ## 3. Applications and use cases — good vs bad in this lab
 
 | Practice | Verdict |
@@ -108,8 +102,6 @@ Add stable/canary Services + Istio/NGINX/… per [07](./07_Traffic_Management.md
 | `:latest` + hope | **Bad** |
 | Canary without abort path tested | **Bad** |
 | kubectl set image as only prod path | **Bad** |
-
----
 
 ## References
 

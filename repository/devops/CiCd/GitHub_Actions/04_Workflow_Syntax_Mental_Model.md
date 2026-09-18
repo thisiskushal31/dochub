@@ -2,8 +2,6 @@
 
 [← Previous](./03_First_Workflow_And_Actions_UI.md) · [README](./README.md) · [Next: Events →](./05_Events_And_Triggers.md)
 
----
-
 ## 1. Concepts
 
 A workflow file is YAML. Core keys:
@@ -50,8 +48,6 @@ Full field encyclopedia: [workflow syntax](https://docs.github.com/en/actions/re
 
 **File size gate:** each workflow file must be **≤ 500 KB** or it will not start. Push shared logic into reusable workflows or composites when YAML grows.
 
----
-
 ## 2. Advanced concepts
 
 ### Permissions
@@ -80,8 +76,6 @@ That is the paved-road shape ([13](./13_Reusable_Workflows_And_Composites.md)).
 
 Within a file, YAML anchors/aliases can reduce duplication — also documented under reusing configurations. Prefer reusable workflows for **cross-repo** standards.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Syntax focus |
@@ -92,8 +86,6 @@ Within a file, YAML anchors/aliases can reduce duplication — also documented u
 | Controlled toolchain | `container:` / `services:` |
 
 **Good:** explicit permissions + small files. **Bad:** `permissions: write-all` and 2,000-line workflows.
-
----
 
 ## References
 

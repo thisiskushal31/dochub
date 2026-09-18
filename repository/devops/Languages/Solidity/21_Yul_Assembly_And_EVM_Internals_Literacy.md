@@ -8,8 +8,6 @@ When **inline assembly** and **Yul** are justified, what **Storage/memory/callda
 
 High-level Solidity is the grown-up default: checked math, memory rules, readable calls. An `assembly` block is you taking the steering wheel and the airbags at once. That can be the right move for a well-tested `muldiv`. It is a poor personality.
 
----
-
 ## 1. Concepts
 
 ### 1. High-level Solidity is the default
@@ -64,8 +62,6 @@ Memory is a byte array. Solidity keeps a **free-memory pointer** at `0x40`. Scra
 ### 6. Calldata literacy
 
 Calldata is the input tape: selector + ABI words. Assembly that parses calldata by hand must match the ABI spec or you will read the wrong word.
-
----
 
 ## 2. Advanced concepts
 
@@ -186,8 +182,6 @@ That is “bubble the revert.” Swallowing `ok` without looking at returndata i
 
 EOF did not land as some compiler experiments assumed; later 0.8.x **removed** that backend. Do not write application code against experimental codegen (chapter **02**, **16**).
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -198,8 +192,6 @@ EOF did not land as some compiler experiments assumed; later 0.8.x **removed** t
 | **Operations** | Source maps kept for traces |
 | **Software engineering** | Comment *why* above every `assembly` keyword |
 
----
-
 ## 4. Staff-level review checklist
 
 - Each `assembly` block has a **written reason** and a test.
@@ -207,8 +199,6 @@ EOF did not land as some compiler experiments assumed; later 0.8.x **removed** t
 - Memory-safe annotations are true or absent.
 - Storage packing / proxy slots have a layout test.
 - New hires are not told “real Solidity is assembly.”
-
----
 
 ## References
 

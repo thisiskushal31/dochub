@@ -47,8 +47,6 @@ return M
 
 Then **require "mymod"** returns that table. You can also set **package.loaded[modname] = M** and then return M (or leave return for the loader to assign). C modules expose a **luaopen_*** function and are found via **package.cpath**.
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §6.4 Modules](https://www.lua.org/manual/5.5/manual.html#6.4)

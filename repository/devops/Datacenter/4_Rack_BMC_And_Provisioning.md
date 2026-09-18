@@ -2,8 +2,6 @@
 
 [← Previous](./3_Facility_Power_Cooling_And_Rooms.md) · [README](./README.md) · [Next: Fabric →](./5_Fabric_Cross_Connect_And_OOB.md)
 
----
-
 ## Mental map
 
 ![Rack elevation](../Assets/Datacenter/White-Space/rack-elevation-sketch.svg)
@@ -48,8 +46,6 @@ Rack + dual PSU + labeled cables
   → Automation (Ansible, …) or cluster bootstrap
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### Firmware is part of the OS
@@ -87,8 +83,6 @@ Same SKU, same NIC, same RAID. A “close” spare that needs a different driver
 
 Serial-over-LAN, HTML5 KVM on the BMC, physical crash cart. Test it **before** the OS is dead. Some BMCs share a NIC with production (sideband) — know if OOB dies when the prod bond dies.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -111,8 +105,6 @@ Serial-over-LAN, HTML5 KVM on the BMC, physical crash cart. Test it **before** t
 - Serial/KVM tested  
 
 **Good:** Redfish inventory, PXE on a provisioning VLAN, firmware as a change ticket. **Bad:** BMC on the prod LAN with `admin/admin`, USB imaging in production, no spare, unlabeled patch cords.
-
----
 
 ## Go deeper
 

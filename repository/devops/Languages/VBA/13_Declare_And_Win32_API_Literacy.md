@@ -8,8 +8,6 @@
 
 This track does **not** teach how to weaponize API calls, bypass ASR, or evade controls. Prefer host **object-model** methods whenever they exist.
 
----
-
 ## 1. Concepts
 
 ### 1. What `Declare` is
@@ -89,8 +87,6 @@ Decision order for staff:
 4. **Out-of-proc tooling** owned by ops (scheduled task, approved script host)—not embedded Win32.
 5. **`Declare`** only with written justification, bitness-correct signatures, and security sign-off.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Marshaling pitfalls (literacy, not a P/Invoke course)
@@ -153,8 +149,6 @@ VBScript historically reached OS power via **COM** (`WScript.Shell`, FSO) more t
 
 Literacy stops at **recognition, preference for OM, and policy awareness**.
 
----
-
 ## 3. Applications and use cases
 
 ### Application
@@ -190,8 +184,6 @@ Literacy stops at **recognition, preference for OM, and policy awareness**.
 | Security | What native capability does this Declare unlock? |
 | App owner | Is this exception worth support forever? |
 
----
-
 ## Staff-level review checklist
 
 - Every `Declare` has a business justification; default outcome is **delete and use OM**.
@@ -207,8 +199,6 @@ Literacy stops at **recognition, preference for OM, and policy awareness**.
 - Hostile-sample readers treat Declares as high-signal without enabling macros on the endpoint of record (**16**).
 - No secret or token handling introduced “because the API can read memory/files.”
 - Change reviewed by someone who can say “this is not needed” and make it stick.
-
----
 
 ## References
 

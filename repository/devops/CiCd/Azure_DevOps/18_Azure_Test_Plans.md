@@ -2,8 +2,6 @@
 
 [← Previous](./17_Azure_Repos_Git_And_TFVC.md) · [README](./README.md) · [Next: Security →](./19_Security_Permissions_And_Service_Connections.md)
 
----
-
 ## 1. Concepts
 
 **Azure Test Plans** adds structured **manual** and exploratory testing on top of automated CI results.
@@ -19,8 +17,6 @@ Access often needs **Basic + Test Plans** (or Visual Studio subscription benefit
 
 Automated unit/integration tests still belong in Pipelines first ([CiCd/10](../10_Testing_In_The_Pipeline.md)); Test Plans shines when humans must sign off.
 
----
-
 ## 2. Advanced concepts
 
 ### Traceability
@@ -35,8 +31,6 @@ Test Plans UI evolved; Server versions lag — confirm features on your Server r
 
 If all verification is automated in CI/CD and auditors accept pipeline evidence, you may not need Test Plans. Don’t adopt it only because it exists.
 
----
-
 ## 3. Applications and use cases
 
 | Context | Use |
@@ -46,8 +40,6 @@ If all verification is automated in CI/CD and auditors accept pipeline evidence,
 | Pure startup CI | Skip; rely on automated gates |
 
 **Good:** manual tests against a **known build/digest**. **Bad:** manual test on “whatever is on staging” with no build id.
-
----
 
 ## References
 

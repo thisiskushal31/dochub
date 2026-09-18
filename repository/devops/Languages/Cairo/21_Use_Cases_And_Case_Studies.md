@@ -8,8 +8,6 @@ This topic describes **where Cairo is used** and **how it fits** into verifiable
 
 This topic is organized so that **every engineering perspective** is covered: software engineering (design, testing, performance, tooling), DevOps and platform engineering (CI/CD, build, deploy), cybersecurity engineering (secure SDLC, audits, threat modeling, static analysis, formal methods), smart contracts and Starknet applications, and research/verifiable systems. Use the section that matches your role; the case studies at the end tie multiple perspectives together.
 
----
-
 ## Software engineering: design, testing, performance, tooling
 
 Cairo is used to build applications, libraries, and tooling where correctness or provability matters. From a **software engineering** perspective:
@@ -22,8 +20,6 @@ Cairo is used to build applications, libraries, and tooling where correctness or
 | **Tooling** | Scarb for build and deps; Cairo language server for IDE support; **scarb fmt** for formatting. Same toolchain for programs and contracts. Topic 2 (getting started) and 13 (modules) cover the workflow. |
 
 Writing clear, testable, and maintainable Cairo code follows the same principles as in other languages; the added dimension is proof and (for contracts) on-chain cost.
-
----
 
 ## DevOps and platform engineering: CI/CD, build, deploy
 
@@ -38,8 +34,6 @@ From a **DevOps / platform engineering** perspective, Cairo projects need build,
 | **Observability and operations** | Contract events (topic 19) and indexers for logs; monitor proof generation time and success rate for provable pipelines. |
 
 Adopting Scarb, a single test runner, and a clear prove/verify pipeline keeps DevOps consistent across programs and contracts.
-
----
 
 ## Cybersecurity engineering: secure SDLC, audits, threat modeling, tooling
 
@@ -57,8 +51,6 @@ From a **cybersecurity engineering** perspective, Cairo and Starknet contracts r
 
 Security work on Starknet is largely security work on Cairo contracts: input validation, access control, and careful handling of cross-contract and L1–L2 flows.
 
----
-
 ## Verifiable computation and zero-knowledge proofs
 
 Cairo is built for **computational integrity**: a program runs once, and a **STARK proof** attests that the execution was correct. Verifiers can check the proof without re-running the program. Use cases include:
@@ -70,8 +62,6 @@ Cairo is built for **computational integrity**: a program runs once, and a **STA
 | **Proof of computation** | Any setting where one party runs code and another must trust the result (e.g. outsourced compute, oracles) can use Cairo to produce a verifiable proof. |
 
 Cairo’s design (immutable memory, deterministic execution, builtins) is aligned with the STARK proof system so that every run can be turned into a proof.
-
----
 
 ## Starknet: DeFi, NFTs, gaming, identity
 
@@ -86,8 +76,6 @@ On **Starknet**, Cairo is the contract language. Typical use cases:
 
 Contracts interact via the ABI, dispatchers, and library calls; L1–L2 messaging and oracles extend what contracts can do.
 
----
-
 ## DevOps and tooling (see also DevOps and platform engineering above)
 
 Cairo’s toolchain supports the full lifecycle:
@@ -101,8 +89,6 @@ Cairo’s toolchain supports the full lifecycle:
 
 Adopting Scarb, a single test runner, and a clear prove/verify pipeline keeps DevOps consistent across programs and contracts.
 
----
-
 ## Security (see also Cybersecurity engineering above)
 
 | Use case | How Cairo fits |
@@ -112,8 +98,6 @@ Adopting Scarb, a single test runner, and a clear prove/verify pipeline keeps De
 | **Static analysis** | Linters and static analyzers can target Cairo and Sierra to find common bugs before deployment. Use them in CI. |
 
 Security work on Starknet is largely security work on Cairo contracts: input validation, access control, and careful handling of cross-contract and L1–L2 flows.
-
----
 
 ## Case study: proving a number is prime
 
@@ -142,8 +126,6 @@ fn main(input: u32) -> bool {
 
 Run with **scarb execute -p prime_prover --print-program-output --arguments 17**; then **scarb prove --execution-id 1** and **scarb verify --execution-id 1**. The proof attests that the program was run correctly for the given execution.
 
----
-
 ## Case study: voting contract
 
 A **voting contract** stores proposals, options, and votes. Only eligible addresses can vote; each address votes at most once. When the voting period ends, results are final. Implementation details:
@@ -153,8 +135,6 @@ A **voting contract** stores proposals, options, and votes. Only eligible addres
 - **Events**: proposal created, vote cast, voting ended.
 
 Testing should cover: voting twice, voting when ineligible, reading results before/after end, and multiple proposals. Deploying and interacting with a voting contract is a standard use case for composable governance.
-
----
 
 ## Case study: ERC20-style token
 
@@ -166,13 +146,9 @@ An **ERC20-style token** contract holds balances and allowances. **transfer**, *
 
 Consider reentrancy (e.g. call pattern and guards), rounding when dividing amounts, and access control for mint/burn if present. An ERC20-style token is the base for many DeFi and app tokens on Starknet.
 
----
-
 ## Summary
 
 Cairo is used across **every engineering perspective**: **software engineering** (design, testing, performance, tooling), **DevOps and platform** (CI/CD, build, test, prove, deploy), **cybersecurity** (secure SDLC, threat modeling, audits, static analysis, formal methods, incident response), **smart contracts and Starknet** (DeFi, NFTs, gaming, identity), and **verifiable computation** (provable programs, ZK). The **prime prover**, **voting contract**, and **ERC20-style token** are three concrete case studies that tie these together. Use the sections above that match your role; the same language and handbook support all of them.
-
----
 
 ## Further reading
 

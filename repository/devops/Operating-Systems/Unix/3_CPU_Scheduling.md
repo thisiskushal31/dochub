@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Fundamentals: CPU scheduling](../Fundamentals/4_CPU_Scheduling.md). Here: how **Unix** and Unix-like systems schedule threads or processes — at the **system level** — and which commands to use.
 
----
-
 ## How the system does it (deep level)
 
 Unix and Unix-like kernels use **priority-based**, **preemptive** scheduling. There is no single “Unix scheduler”: each OS has its own implementation (e.g. **FreeBSD ULE**, **Solaris** dispatcher, **4.3BSD**-derived). The following describes the **common ideas** and, where useful, **FreeBSD** as a concrete reference (see [ULE: A Modern Scheduler for FreeBSD](https://www.usenix.org/legacy/event/bsdcon03/tech/full_papers/roberson/roberson.pdf) and [FreeBSD runqueue(9)](https://man.freebsd.org/cgi/man.cgi?query=runqueue)).
@@ -18,13 +16,9 @@ Unix and Unix-like kernels use **priority-based**, **preemptive** scheduling. Th
 
 **References:** [FreeBSD: Scheduling Priorities (EuroBSDCon 2024)](https://papers.freebsd.org/2024/eurobsdcon/certner-scheduling_priorities_and_freebsd/), [runqueue(9)](https://man.freebsd.org/cgi/man.cgi?query=runqueue), [ULE scheduler paper (USENIX)](https://www.usenix.org/legacy/event/bsdcon03/tech/full_papers/roberson/roberson.pdf).
 
----
-
 ## Scheduling on Unix (commands and concepts)
 
 Unix and Unix-like kernels use **priority-based** scheduling. Lower **nice** value (in the time-sharing class) typically means higher priority (more CPU). **nice** and **renice** change the nice value. Real-time priorities (e.g. **rtprio** on BSD, **chrt** on Linux) are available and sit above the time-sharing class.
-
----
 
 ## Commands
 
@@ -40,14 +34,10 @@ chrt -p <pid>
 chrt -f 50 command
 ```
 
----
-
 ## Summary
 
 - **Nice** values influence CPU share; **renice** adjusts running processes.
 - Real-time scheduling: **chrt** (Linux), **rtprio** (BSD).
-
----
 
 ## Further reading
 

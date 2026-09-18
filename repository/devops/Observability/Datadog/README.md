@@ -1,16 +1,49 @@
 # Datadog
 
-[← Back to Observability](../README.md)
+[← Back to Observability](../README.md) · [Logs & traces](../2_Logging_And_Tracing.md) · [Tools index](../3_Observability_Tools.md) · [Cloud/30](../../Cloud/30_Cloud_Observability_And_Audit_Doors.md)
 
-*(Content TBD)* — Datadog: APM, metrics, logs, traces, monitoring and observability for DevOps.
+## 1. Concepts
 
-## Planned coverage
+**Datadog** is a commercial **observability SaaS**: metrics, logs, traces/APM, RUM, synthetics, dashboards, and alerting in one vendor UI—typically via a host/container **agent** and language integrations (also OTLP in modern setups).
 
-- Datadog overview (APM, metrics, logs, traces)
-- Agent and integration; dashboards and alerting
-- Use in DevOps pipelines and production monitoring
+**Plain language:** Rent the whole glass cockpit—fast to adopt, bill scales with volume and cardinality.
 
-## Documentation
+**What for:** Unified APM + infra + logs without running Prom/Loki/Tempo yourself.  
+**When:** Small platform team, need speed, org already standardizes on Datadog.  
+**Why not:** Cost/cardinality at scale without governance; want PromQL-native OSS skill path; still must keep cloud **audit** trails ([Cloud/30](../../Cloud/30_Cloud_Observability_And_Audit_Doors.md)).
 
-- Official docs: [docs.datadoghq.com](https://docs.datadoghq.com/)
-- If you have a preferred doc link, open an issue or PR to add it here.
+**Disconfirm:** Datadog is **not** a replacement for SLOs you refuse to define. It is **not** your IAM audit log.
+
+**Confirm:** What is billed (hosts, custom metrics, ingest)? Where do pages go ([PagerDuty](../PagerDuty/README.md))?
+
+## 2. Advanced concepts
+
+| Topic | Judgment |
+|-------|----------|
+| **Custom metrics / tags** | Tag explosion = bill explosion—same cardinality lesson as Prom |
+| **Agent + OTel** | Prefer one instrumentation path; avoid double counting |
+| **Monitors vs SLOs** | Use product SLO objects; wire to pages sparingly |
+| **Sensitive data** | Scrubbing / exclusion rules before ship |
+
+### Failure modes
+
+| Failure | What you see |
+|---------|----------------|
+| Unbounded tags | Surprise invoice |
+| Dual agent + full OSS export | Duplicate telemetry, confusion |
+| All-warning monitors | Alert fatigue |
+
+## 3. Applications
+
+| Goal | Pattern |
+|------|---------|
+| First service | Official language integration + standard service tags |
+| Hybrid | OTel → Datadog exporter *or* agent—not both blindly |
+| Exit ramp | Keep OTel; point collector elsewhere later ([OpenTelemetry](../OpenTelemetry/README.md)) |
+
+**Staff checklist:** tag policy; budget alerts; monitor ownership; cloud audit still enabled.
+
+## References
+
+- [Datadog documentation](https://docs.datadoghq.com/)  
+- [OpenTelemetry](../OpenTelemetry/README.md) · [New Relic](../New_Relic/README.md) · [PagerDuty](../PagerDuty/README.md)  

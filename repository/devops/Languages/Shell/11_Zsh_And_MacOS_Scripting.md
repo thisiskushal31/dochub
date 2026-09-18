@@ -6,8 +6,6 @@
 
 How **zsh** became the default **interactive** shell on macOS (Catalina onward), why stock **`/bin/bash` remains Bash 3.2**, how **BSD userland** flags differ from GNU/Linux, and when to install **Homebrew Bash** for modern scripting. This is not a zsh configuration cookbook—it is the macOS scripting reality check so shared automation does not silently depend on your laptop’s interactive shell.
 
----
-
 ## 1. Concepts
 
 ### 1. Two different questions on a Mac
@@ -134,8 +132,6 @@ Shell language ≠ userland. Chapter 14–15 expand commands; here the rule is: 
 7. “We migrated to zsh, so Bash profiles are gone.” — Leftover `.bash_profile` files still appear in IR and confusing dual configs.
 
 Memorize those; they explain most Mac scripting incidents.
-
----
 
 ## 2. Advanced concepts
 
@@ -264,8 +260,6 @@ Security engineers care about stock `/bin/bash` even when nobody “writes for 3
 
 Pair this section with chapter **02** (version gates) and **18**/**21** (injection and legacy timelines).
 
----
-
 ## 3. Applications and use cases
 
 ### Migration playbook (applications)
@@ -351,8 +345,6 @@ macOS admin and shell context beyond dialect depth: [`../../Operating-Systems/Ma
 - Pre-Catalina Bash rc files inventoried if the host predates migration—or dual configs documented.
 - Reviewers distinguish `$SHELL` (preference) from shebang (script runtime).
 - Timeline pin stated for the Mac estate (pre-10.15 habits vs 10.15+ zsh default vs current Homebrew reality).
-
----
 
 ## References
 

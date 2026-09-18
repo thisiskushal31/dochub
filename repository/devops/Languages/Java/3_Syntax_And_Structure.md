@@ -64,8 +64,6 @@ public class FreshJuiceTest {
 
 **Reserved keywords.** Keywords such as `class`, `public`, `static`, `void`, `if`, `for`, `return`, `try`, `catch`, `new`, and others are reserved and cannot be used as identifiers. A full list is available in the language specification; the topic on data types and operators will refer to type-related keywords (`int`, `boolean`, etc.).
 
----
-
 ## Further reading
 
 - [TutorialsPoint Java – Basic Syntax](https://www.tutorialspoint.com/java/java_basic_syntax.htm)

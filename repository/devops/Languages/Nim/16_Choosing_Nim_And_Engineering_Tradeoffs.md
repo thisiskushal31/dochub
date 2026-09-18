@@ -41,8 +41,6 @@ Adopting Nim is a **trade-off** between **delivery speed**, **runtime performanc
 - **Memory** mode and **debug** vs **release** flags documented for **on-call**?
 - **Interop** with C tested under **ASan**, **Valgrind**, or equivalent tooling when you ship risky code paths?
 
----
-
 ## Further reading
 
 - [Nim documentation portal](https://nim-lang.org/documentation.html)

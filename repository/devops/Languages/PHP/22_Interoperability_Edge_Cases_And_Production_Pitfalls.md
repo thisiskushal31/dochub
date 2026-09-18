@@ -6,8 +6,6 @@
 
 Topics that sit *between* earlier chapters and day-to-day staff work: **PHP-FIG PSR** contracts for HTTP, middleware, and shared libraries; **Composer** supply-chain controls that evolve after your first `composer install`; **async and application-server** stacks (pure PHP event loops, extension-based coroutines, Go-backed workers); **OpenTelemetry** as the default way to get traces, metrics, and log correlation in modern observability stacks; **intl/ICU** mismatches that break dates and locales in production; and a **tight FPM hardening checklist** beyond generic pool sizing. Use this chapter after **07**, **11**, **14**, **15**, **16**, **18**, **20**, and **21** so the references land on already-built mental models.
 
----
-
 Each chapter follows: **1 — Concepts** → **2 — Advanced concepts** → **3 — Applications and use cases**.
 
 ## 1. Concepts
@@ -27,13 +25,9 @@ The PHP Framework Interoperability Group publishes **PSRs**: small interface con
 
 Adopting these at boundaries (HTTP in/out, outbound HTTP, logging, cache) reduces lock-in and makes **test doubles** and **OpenTelemetry auto-instrumentation** easier, because many instrumentations hook PSR-shaped APIs.
 
----
-
 ### 2. Composer security beyond the lockfile
 
 Modern Composer adds **audit** behavior and **repository-level** controls: advisory databases, optional blocking of known-bad versions, and **plugin allow-lists** so install-time code execution is explicit. Custom **Composer repositories** can advertise **filter lists** used during resolution and auditing. Treat **`allow-plugins`** as a security control: empty or deny-by-default, then explicitly approve trusted plugin packages. **`--no-plugins`** remains a valid escape hatch in compromised or untrusted trees.
-
----
 
 ### 3. Async and long-lived runtimes (landscape, not one true stack)
 
@@ -47,8 +41,6 @@ Rough categories:
 
 Choosing among them is an **architecture and operations** decision: FPM remains the default for stateless web; long-lived stacks demand explicit reset hooks, health checks, and observability parity.
 
----
-
 ### 4. OpenTelemetry for PHP services
 
 OpenTelemetry is the cross-language standard for **traces**, **metrics**, and **logs** correlation. PHP support typically combines:
@@ -58,8 +50,6 @@ OpenTelemetry is the cross-language standard for **traces**, **metrics**, and **
 - **Environment variables** (`OTEL_*`) to enable exporters, service name, and endpoints without recompiling.
 
 Automatic instrumentation attaches to framework and library entry points (where available); manual spans remain necessary for domain logic. The goal in production is **consistent trace context** across inbound HTTP, outbound HTTP (PSR-18), database calls, and queue work so incidents show *which* layer dominated latency.
-
----
 
 ### 5. intl/ICU versus `DateTime` / `date`
 
@@ -73,8 +63,6 @@ PHP’s **`ext/date`** uses **timelib** for `DateTime`, `DateTimeZone`, and the 
 
 Staff need a **single policy**: store **UTC** in databases, convert at display boundaries, and document whether user-facing strings come from **ICU** or **strftime-style** formatting. Operations may need to refresh ICU data or set documented environment hooks when legal zones change mid-cycle.
 
----
-
 ### 6. PHP-FPM hardening (security-adjacent directives)
 
 Beyond `pm.*` tuning (chapter 11), several pool directives reduce entire classes of misconfiguration and abuse:
@@ -86,8 +74,6 @@ Beyond `pm.*` tuning (chapter 11), several pool directives reduce entire classes
 - **`chdir`** — consistent working directory for relative includes.
 
 Remember: **pools are not full multi-tenant isolation**; shared opcode caches and kernel resources still apply. Combine with OS-level controls (AppArmor/SELinux, namespaces) for strong isolation.
-
----
 
 ## 2. Advanced concepts
 
@@ -103,8 +89,6 @@ Remember: **pools are not full multi-tenant isolation**; shared opcode caches an
 
 **ICU timezone updates:** When legal zones change, systems with stale ICU data mis-format “today” in affected regions. Mitigations include OS/package updates, shipping updated ICU resource bundles where supported, and monitoring **ICU tzdata version** alongside PHP version in environment dashboards.
 
----
-
 ## 3. Applications and use cases
 
 - **Architecture reviews:** Require PSR-7/15/17 at HTTP boundaries for public packages; document which framework bridge is canonical.
@@ -114,8 +98,6 @@ Remember: **pools are not full multi-tenant isolation**; shared opcode caches an
 - **SRE / observability:** Standardize `OTEL_SERVICE_NAME`, deployment environment, and trace propagation headers; link logs to traces via trace/span IDs in structured logs.
 - **International products:** Add integration tests for **locale + timezone** formatting when `intl` is enabled; fail builds when ICU reports outdated tzdata in staging.
 - **Incidents:** When “wrong time” or “wrong offset” appears only in formatted output, compare **system tzdata**, **PHP date**, and **ICU** versions before chasing application logic.
-
----
 
 Minimal examples below anchor behaviors that are otherwise easy to misconfigure.
 
@@ -149,8 +131,6 @@ clear_env = yes
 ```
 
 The JSON fragment shows the *shape* of root-only `config` entries; exact keys and defaults change with Composer versions—validate against your installed Composer and lock policy.
-
----
 
 ## References
 

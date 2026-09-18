@@ -90,8 +90,6 @@ for i in 0 .. 4:
 - Validate external input before it reaches business logic.
 - Use small procedures to keep control flow auditable.
 
----
-
 ## Further reading
 
 - [Nim documentation portal](https://nim-lang.org/documentation.html)

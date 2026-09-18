@@ -74,8 +74,6 @@ groovyc MyScript.groovy
 
 **Why this matters for DevOps.** In CI, Jenkins provides its own Groovy runtime for Jenkinsfile; Gradle uses its bundled Groovy for build.gradle. For local pipeline or script development, a local Groovy install and **groovy** / **groovysh** let you test snippets and scripts quickly.
 
----
-
 ## Further reading
 
 - [Install Groovy](https://groovy-lang.org/install.html)

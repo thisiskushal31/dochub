@@ -2,8 +2,6 @@
 
 [← Previous](./15_Deployments_Approvals_And_Markers.md) · [README](./README.md) · [Next: Insights →](./17_Insights_Test_Splitting_And_Optimize.md)
 
----
-
 ## 1. Concepts
 
 | Surface | Job |
@@ -16,8 +14,6 @@
 | **SSO / MFA** | Enterprise login |
 | **Config policies** | Enforce required config shapes (plan-gated) |
 | **Supply chain** | Orb/image trust |
-
----
 
 ## 2. Advanced concepts
 
@@ -37,8 +33,6 @@ Enable policy evaluation for the organization, keep policies in a reviewed repo,
 
 Hybrid connectivity docs exist for private network patterns — use with runners when needed.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -48,8 +42,6 @@ Hybrid connectivity docs exist for private network patterns — use with runners
 | Enforce “must scan” | Config policies |
 
 **Good:** least privilege on contexts and OIDC roles. **Bad:** secrets in config YAML.
-
----
 
 ## References
 

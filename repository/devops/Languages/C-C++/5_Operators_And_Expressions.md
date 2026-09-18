@@ -4,8 +4,6 @@
 
 This topic covers **operators** and **expressions** in C: arithmetic, relational, logical, bitwise, assignment, and more. Each is explained in text first, then with code blocks so you can write and read C in an easy format.
 
----
-
 ## Arithmetic operators
 
 Arithmetic operators work on numeric types and produce a value.
@@ -29,8 +27,6 @@ double x = 17.0, y = 5.0;
 printf("%f\n", x / y);   /* 3.400000 */
 ```
 
----
-
 ## Increment and decrement
 
 **`++`** and **`--`** add or subtract 1. They can be **prefix** (`++i`) or **suffix** (`i++`). With prefix, the value used in the expression is the value *after* the increment; with suffix, the value *before*.
@@ -44,8 +40,6 @@ int j = 10;
 printf("%d\n", --j);   /* 9 */
 printf("%d\n", j--);   /* 9 */
 ```
-
----
 
 ## Relational and logical operators
 
@@ -77,8 +71,6 @@ printf("%d %d\n", x && y, x || y);  /* 0 1 */
 printf("%d\n", !x);                 /* 0 */
 ```
 
----
-
 ## Bitwise operators
 
 Bitwise operators work on the **bits** of integers. They are used in low-level code, flags, and embedded systems.
@@ -101,8 +93,6 @@ unsigned int c = 1;
 printf("%u\n", c << 4);   /* 16 (shift left by 4) */
 ```
 
----
-
 ## Assignment and compound assignment
 
 **`=`** assigns the value on the right to the variable on the left. **Compound assignment** combines an operator with assignment: `a += b` is equivalent to `a = a + b`.
@@ -113,8 +103,6 @@ n += 5;    /* n is 15 */
 n *= 2;    /* n is 30 */
 n %= 7;    /* n is 2 */
 ```
-
----
 
 ## Ternary operator and sizeof
 
@@ -133,8 +121,6 @@ printf("%zu %zu\n", sizeof(int), sizeof(double));
 printf("%zu\n", sizeof("hello"));   /* 6: 5 chars + '\0' */
 ```
 
----
-
 ## Operator precedence (brief)
 
 Operators have **precedence** and **associativity**. Multiplication and division bind tighter than addition and subtraction; parentheses override. When in doubt, use parentheses to make intent clear.
@@ -143,8 +129,6 @@ Operators have **precedence** and **associativity**. Multiplication and division
 int r = 2 + 3 * 4;      /* 14: 3*4 first */
 int s = (2 + 3) * 4;    /* 20 */
 ```
-
----
 
 ## Further reading
 

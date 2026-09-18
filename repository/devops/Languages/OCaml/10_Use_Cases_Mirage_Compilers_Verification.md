@@ -10,8 +10,6 @@ Where OCaml ships in industry and research, and what that implies for operations
 dune build @install
 ```
 
----
-
 ## 1. Compilers and language tooling
 
 OCaml is a common implementation language for compilers, linters, and static analyzers. Teams operating custom languages inherit opam/dune workflows and CI patterns from the broader ecosystem.
@@ -20,8 +18,6 @@ OCaml is a common implementation language for compilers, linters, and static ana
 (* Tooling shape: AST in, AST out *)
 type expr = Var of string | App of expr * expr
 ```
-
----
 
 ## 2. MirageOS and unikernels
 
@@ -34,8 +30,6 @@ MirageOS builds specialized unikernel images for cloud and edge: one application
 mirage configure -t virtio
 ```
 
----
-
 ## 3. Formal methods and proof assistants
 
 Coq and many verification tools are implemented in OCaml. Adoption paths often include extracting code to OCaml or linking OCaml libraries—supply-chain and maintenance burden tracks proof maintenance, not only application releases.
@@ -43,8 +37,6 @@ Coq and many verification tools are implemented in OCaml. Adoption paths often i
 ```ocaml
 (* Extraction / plugin stacks pin OCaml versions alongside proof assistant versions *)
 ```
-
----
 
 ## 4. Web, systems, and services
 
@@ -57,8 +49,6 @@ let handle_request path =
   if String.length path > 2048 then Error `too_large else Ok path
 ```
 
----
-
 ## 5. When OCaml is the right choice
 
 OCaml is a strong fit when your priorities are:
@@ -69,8 +59,6 @@ OCaml is a strong fit when your priorities are:
 - Teams comfortable with functional and module-oriented design.
 
 It is a weaker fit when your critical path depends on ecosystem breadth in domains where bindings are thin or unsupported; in those cases, a polyglot boundary may be the pragmatic architecture.
-
----
 
 ## 6. What “industrial users” implies for engineering
 
@@ -87,8 +75,6 @@ This handbook’s chapters are written as the **standalone** narrative; if exter
 git tag -a v1.0.0 -m "release"
 ```
 
----
-
 ## Advanced use cases and implementation
 
 Engineers from imperative backgrounds should work through the early handbook chapters in order before diving into large Mirage or proof-assistant repositories—not every role requires those domains on day one.
@@ -98,8 +84,6 @@ Vendor SDKs that expose OCaml bindings warrant the same review as any native SDK
 ```ocaml
 external vendor_init : unit -> int = "vendor_init"
 ```
-
----
 
 ## References
 

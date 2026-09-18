@@ -6,8 +6,6 @@
 
 Where a working **`swift`** comes from: **swift.org** downloads and **Swiftly**, **Xcode-bundled** toolchains, **Linux** (including **official Docker images** with hands-on lab commands), **Windows** installs, and editor literacy with **VS Code + SourceKit-LSP**. You will practice diagnosing **two Swifts** with `type -a` / `xcrun --find swift`, and keep an **Xcode ↔ Swift version table** as a living habit. The staff question this chapter answers is always: **which `swift` is on PATH in CI?** Handbook pin: develop and ship against **Swift 6.3.x**-class toolchains unless a waiver says otherwise.
 
----
-
 ## 1. Concepts
 
 ### 1. A toolchain is a product, not a vibe
@@ -192,8 +190,6 @@ Literacy points:
 which swift
 swift --version
 ```
-
----
 
 ## 2. Advanced concepts
 
@@ -412,8 +408,6 @@ A green `swift:6.3` compile does not prove Darwin-identical Foundation behavior.
 - Treat `import Foundation` as a **portability surface**—file paths, time zones, and some APIs differ on corelibs.
 - Keep UIKit/SwiftUI out of packages you claim are Linux-portable (category error, not a toolchain bug).
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Practice |
@@ -423,8 +417,6 @@ A green `swift:6.3` compile does not prove Darwin-identical Foundation behavior.
 | **Security** | Obtain toolchains from official channels; verify checksums/digests; treat random mirrored tarballs as supply-chain risk |
 | **Operations** | Inventory: every pipeline prints toolchain identity; rotate images on a calendar; keep the Xcode↔Swift card current |
 | **Software engineering** | Editor setup guide includes SourceKit-LSP + expected `swift --version`; onboarding is incomplete without two-Swift diagnosis skills |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -443,8 +435,6 @@ A green `swift:6.3` compile does not prove Darwin-identical Foundation behavior.
 - `DEVELOPER_DIR` / `TOOLCHAINS` / PATH steerers are documented for Mac jobs.
 - Multi-Xcode / beta usage is labeled; release jobs cannot silently pick beta.
 - SourceKit-LSP users know how to restart/rebind after `swiftly use` or Xcode switches.
-
----
 
 ## References
 

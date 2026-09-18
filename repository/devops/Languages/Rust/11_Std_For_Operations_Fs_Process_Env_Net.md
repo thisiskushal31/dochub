@@ -6,8 +6,6 @@
 
 How the Rust standard library surfaces **files**, **paths**, **environment**, **child processes**, **I/O traits**, **sockets**, and **time** for operational code—CLIs, agents, health checkers, and deploy helpers. After this chapter you should treat every fallible call as a **`Result`**, design for **timeouts** at the architecture level, and know which `std` modules own which failure modes.
 
----
-
 ## 1. Concepts
 
 ### 1. Operational `std` is `Result`-shaped
@@ -115,8 +113,6 @@ Engineering rules that hold across delivery models:
 - Prefer short-lived handles in memory; avoid writing secrets into temp files that survive the process.
 
 `std` gives you the I/O and process primitives; secret *stores* (vault agents, cloud secret managers) sit above this layer.
-
----
 
 ## 2. Advanced concepts
 
@@ -284,8 +280,6 @@ Think of it as a street map:
 
 Use the map to find the door, then return to the handbook chapter for the *engineering* rules (timeouts, cancellation, FFI ownership). Prefer what `std` already gives you over inventing a second filesystem or process API.
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -329,8 +323,6 @@ Use the map to find the door, then return to the handbook chapter for the *engin
 - Config loading via serde (ecosystem) has size limits and an explicit unknown-field policy for untrusted input.
 - Control-loop timeouts use **`Instant` + `Duration`**; wall clock is for logs/mtime only; FFI string edges use **`CString`/`CStr`** with lifetime-clear pointers.
 - Authors can point to the right corner of `std` for a job (section 15 map) without pretending they memorized the whole library.
-
----
 
 ## References
 

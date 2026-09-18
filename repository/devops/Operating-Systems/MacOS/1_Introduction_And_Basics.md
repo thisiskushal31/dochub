@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Architecture and structure](./0_MacOS_Architecture_And_Structure.md). This topic covers **boot process**, **system calls**, **file system hierarchy** (domains and key directories), and **essential commands** for day-to-day use and scripting.
 
----
-
 ## Boot process (high level)
 
 1. **Firmware** — UEFI (Intel) or iBoot/Apple firmware (Apple Silicon) runs from ROM. It initializes hardware and selects the boot volume.
@@ -28,8 +26,6 @@ Details (e.g. **BootX**, **kernelcache**, **kext** loading) depend on architectu
 
 **References:** [Mac startup key combinations (Apple)](https://support.apple.com/en-lamr/102603), [Reset NVRAM (Apple)](https://support.apple.com/en-us/102539).
 
----
-
 ## System calls
 
 User programs interact with the kernel via **system calls**. On macOS, the **BSD layer** exposes the **POSIX/BSD syscall** interface (e.g. `open`, `read`, `fork`, `execve`, `mach_*` for Mach APIs). Many higher-level APIs (Cocoa, Foundation) ultimately use these syscalls. The **Mach** layer also exposes **Mach traps** (e.g. for VM or IPC) used by the system libraries. So: **syscalls** → **BSD** (and sometimes **Mach**) → **kernel**.
@@ -38,8 +34,6 @@ User programs interact with the kernel via **system calls**. On macOS, the **BSD
 
 - **`dtruss`** (or **`sudo dtruss`**) — Trace syscalls of a process (similar to `strace` on Linux). Example: `sudo dtruss -f -p <pid>`.
 - **`fs_usage`**, **`opensnoop`** — Observe file system and file open activity (for debugging and understanding what an app does).
-
----
 
 ## File system hierarchy and domains
 
@@ -78,8 +72,6 @@ macOS organizes files into **domains** (search order when resolving paths):
 
 **References:** [File System Programming Guide: File System Domains (Apple)](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html), [MacOSX Directories (Apple)](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/MacOSXDirectories/MacOSXDirectories.html).
 
----
-
 ## Essential commands (quick reference)
 
 | Task           | Command / tool                               |
@@ -95,16 +87,12 @@ macOS organizes files into **domains** (search order when resolving paths):
 
 See [Process management](./2_Process_Management.md), [Users, networking, logging, and security](./10_Users_Networking_Logging_And_Security.md), and [Storage and I/O](./8_Storage_And_IO.md) for details.
 
----
-
 ## Summary
 
 - **Boot:** Firmware → bootloader → XNU → **launchd** (PID 1) → services and login.
 - **Syscalls:** BSD/POSIX (and Mach) interface; trace with **dtruss**, **fs_usage**, **opensnoop**.
 - **File hierarchy:** **Domains** (User, Local, Network, System); key paths: `/System`, `/Library`, `/Applications`, `/Users`, `~/Library`.
 - **Essentials:** `ps`, `top`, `kill`, `launchctl`, `df`, `diskutil`, `ifconfig`, `log stream` / `log show`, `uname`, `sw_vers`.
-
----
 
 ## Further reading
 

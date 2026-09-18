@@ -4,8 +4,6 @@
 
 This topic covers **why we need an OS**, **types of operating systems**, the **kernel**, and **system calls** — all OS-agnostic. For boot (what happens when we turn on the computer), see [15_Boot_Process_Detailed](./15_Boot_Process_Detailed.md).
 
----
-
 ## 1. Introduction to Operating System
 
 ### Why do we need an operating system?
@@ -94,8 +92,6 @@ So: **kernel is a subset of the OS**. The kernel is what talks directly to the h
 - **System software** — Software that supports the operation of the machine and of other software: the **operating system** (kernel, libraries, services), **loaders**, **linkers**, **device drivers** (when not inside the kernel), **firmware**. It is not primarily for end-user tasks but for making the system run.
 - **Operating system** — A central part of system software: it manages hardware and provides the environment (processes, files, memory, protection) in which application software runs. So: **application software** runs on top of the **OS**; the **OS** (and its kernel) is **system software**.
 
----
-
 ## 2. Types of Operating Systems
 
 Common types include batch, multiprogramming, multitasking (time-sharing), multiprocessing, real-time, and distributed. The diagram below summarizes how the OS is viewed and how it manages resources.
@@ -156,8 +152,6 @@ Both are **fundamental types** of how multiple machines can be organized; networ
                                  └─────────────────────────────┘
 ```
 
----
-
 ## 3. Kernel in Operating System
 
 ### What is the kernel?
@@ -216,8 +210,6 @@ How much code runs in the privileged kernel? This is the main design split.
 
 **Summary:** The kernel is the only (or the main) privileged component. In a monolithic design it does almost everything; in a microkernel it does very little and delegates to user-mode servers. Both are valid; the distinction is *what runs in privileged mode*, not “Linux vs Windows.”
 
----
-
 ## 4. System Call
 
 **System calls** are the **only** way user programs can request kernel services (create process, allocate memory, read file, send network packet, etc.). From the program’s point of view, a system call looks like a function call; underneath, it is implemented as:
@@ -247,19 +239,13 @@ So the kernel does **not** “call into user space.” User space calls into the
 
 The exact set and names of system calls are **OS-specific** (and sometimes CPU-specific). The *concept* — controlled, trap-based entry into the kernel — is universal.
 
----
-
 ## Request flow within the system
 
 A **request** (e.g. read a file, send a packet) flows: **user space → trap → kernel entry → subsystem → driver (and possibly hardware/interrupt) → back to user.** The kernel is **event-driven**: it runs in response to system calls, interrupts, and exceptions. For a **standalone, visual treatment** of how this works on **any** system (x86, x64, ARM) — with code-block diagrams, I/O and interrupt path, and architecture comparison — see [Request flow and system architecture](./19_Request_Flow_And_System_Architecture.md). For traps and interrupts in detail, see [Interrupts, exceptions, and traps](./14_Interrupts_Exceptions_And_Traps.md); for drivers and I/O, see [Device drivers and I/O subsystem](./16_Device_Drivers_And_IO_Subsystem.md).
 
----
-
 ## What happens when we turn on computer?
 
 The full sequence (firmware → boot loader → kernel → first user process) is covered in **[15_Boot_Process_Detailed](./15_Boot_Process_Detailed.md)** (“What happens when we turn on computer?”). That topic covers firmware (BIOS/UEFI), boot loader (MBR/GPT), kernel load, and init.
-
----
 
 ## Summary
 
@@ -271,8 +257,6 @@ The full sequence (firmware → boot loader → kernel → first user process) i
 - **Request flow**: user → trap → kernel → subsystem → driver/hardware → back. For full flow and architecture (x86, x64, ARM) with diagrams, see [Request flow and system architecture](./19_Request_Flow_And_System_Architecture.md).
 
 This is **operating system basics**: the kernel is not “Linux” or “Windows” — it is the concept that every general-purpose OS has such a privileged core. How a particular OS implements it (e.g. Linux’s monolithic design, Windows’ layered design) is the next step, covered in the [Linux](../Linux/README.md) and [Windows](../Windows/README.md) sections.
-
----
 
 ## Further reading
 

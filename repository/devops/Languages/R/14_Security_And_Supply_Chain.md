@@ -6,8 +6,6 @@
 
 R in security-sensitive environments: **untrusted code execution** (Shiny, Rmarkdown render farms, `source()` of external scripts), **package supply chain** (CRAN is not a signed pnpm world—integrity is process-driven), **secrets** in `.Renviron` and rendered documents, and **data exfiltration** via `readLines(url(...))` style calls. The goal is practical threat modeling, not fear.
 
----
-
 ## 1. Concepts
 
 ### 1. R is a full programming language
@@ -29,8 +27,6 @@ Never commit secrets. Prefer orchestrator-injected environment variables, short-
 ### 5. Reproducible attacks
 
 If an attacker can change your `renv.lock` in a pull request, they can shift you to a malicious fork—treat lockfile changes as high sensitivity.
-
----
 
 ## 2. Advanced concepts
 
@@ -54,8 +50,6 @@ If your code ever calls out to the shell, you inherit shell injection issues. Ba
 
 Logging `sessionInfo()` is good; logging full data frames is not. Build redaction rules for PII/PHI.
 
----
-
 ## 3. Applications and use cases
 
 - **Regulated analytics:** internal CRAN-like mirror, lockfile review, no open internet on production runners.
@@ -73,8 +67,6 @@ if (is.na(token) || !nzchar(token)) stop("API_TOKEN not set")
 - Dependency additions require security review and lockfile approval.
 - Secrets never appear in git, logs, or rendered artifacts.
 - Network egress from R jobs is controlled and monitored.
-
----
 
 ## References
 

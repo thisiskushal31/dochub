@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Fundamentals: Storage and I/O](../Fundamentals/10_Storage_And_IO.md). Here: **how Linux** does storage (VFS, ext4/XFS, block layer, I/O scheduler) and **commands** (df, du, lsblk, iostat, iotop).
 
----
-
 ## How the Linux filesystem is arranged (FHS)
 
 Linux follows the **Filesystem Hierarchy Standard (FHS)**: a common layout so that config, programs, data, and temporary files live in predictable places across distros. Understanding this layout tells you **where to find** and **where to put** files.
@@ -133,8 +131,6 @@ Examples you will see often:
 - **Paths in docs** (e.g. “edit /etc/Nginx/nginx.conf”) assume this layout. Same layout across most distros (RHEL, Debian, Arch, etc.) with small differences (e.g. /usr/bin vs /bin symlinks).
 
 For the full spec, see [FHS (Filesystem Hierarchy Standard)](https://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html). Distro docs may describe minor variations.
-
----
 
 ## Essential file and directory commands (hands-on)
 
@@ -405,8 +401,6 @@ grep -E "pattern1|pattern2" file.txt
 zgrep -i error /var/log/syslog.2.gz
 ```
 
----
-
 ## File systems
 
 A **file system** organizes data on disk (or other storage) into **files** and **directories**. The OS provides:
@@ -418,8 +412,6 @@ A **file system** organizes data on disk (or other storage) into **files** and *
 
 Common Linux file systems: **ext4**, **XFS**, **Btrfs**, **ZFS** (on some platforms). Network and virtual file systems: **NFS**, **tmpfs**, **procfs**, **sysfs**.
 
----
-
 ## Primary vs secondary memory
 
 | Type | Examples | Role |
@@ -428,8 +420,6 @@ Common Linux file systems: **ext4**, **XFS**, **Btrfs**, **ZFS** (on some platfo
 | **Secondary** | SSD, HDD, network storage | Persistent; larger; slower. |
 
 The OS moves data between primary and secondary (e.g. page cache, buffer cache, swap). File operations are often buffered in RAM before being written to disk.
-
----
 
 ## Disk scheduling
 
@@ -445,8 +435,6 @@ When multiple I/O requests are pending, the OS **schedules** them to minimize se
 
 Modern systems use more sophisticated schedulers (e.g. in the block layer) and SSDs change the trade-offs (no seek for flash, but queue depth and wear matter).
 
----
-
 ## Device management
 
 The OS **device management** includes:
@@ -458,8 +446,6 @@ The OS **device management** includes:
 
 In Linux, devices are under `/dev`; block devices (disks) and character devices (terminals, raw) are distinguished. **udev** manages device nodes and permissions.
 
----
-
 ## Spooling vs buffering
 
 | Term | Meaning | Typical use |
@@ -468,8 +454,6 @@ In Linux, devices are under `/dev`; block devices (disks) and character devices 
 | **Spooling** (Simultaneous Peripheral Operations On-Line) | Put data (e.g. print jobs) on disk or a queue so the slow device can process it later while the application continues. | Print queues, batch jobs. |
 
 So: **buffer** = short-term in-memory smoothing; **spool** = queue (often on disk) for a shared device like a printer.
-
----
 
 ## Essential Linux commands for storage and I/O
 
@@ -504,8 +488,6 @@ fuser -vm /path
 swapon --show
 cat /proc/swaps
 ```
-
----
 
 ## More Linux storage and I/O commands
 
@@ -592,8 +574,6 @@ sudo rsnapshot daily
 # Cron example: 0 */4 * * * root /usr/bin/rsnapshot hourly
 ```
 
----
-
 ## Summary
 
 - **File system** = organization of files and directories on storage; provides naming, structure, and protection.
@@ -602,8 +582,6 @@ sudo rsnapshot daily
 - **Device management**: abstraction (/dev), drivers, scheduling, buffering.
 - **Buffering** = in-memory smoothing; **spooling** = queuing (e.g. to disk) for shared devices.
 - On Linux: `df`, `du`, `lsblk`, `mount`, `iostat`, `iotop`, `lsof`, `fuser`.
-
----
 
 ## Further reading
 

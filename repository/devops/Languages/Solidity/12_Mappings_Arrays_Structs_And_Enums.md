@@ -8,8 +8,6 @@ Composite data: **mappings**, **arrays**, **`bytes`/`string`**, **structs**, **e
 
 A mapping is a coat-check: you hand in a ticket (the key), you get a coat (the value). There is **no list of all tickets**. If you need “everyone who has a coat,” you keep your own guest list — and you accept that the guest list can get too long to walk in one transaction.
 
----
-
 ## 1. Concepts
 
 ### 0. A scoreboard you can actually picture
@@ -140,8 +138,6 @@ function _addHolder(address a) internal {
 
 This is honest: you pay for the array. It is not “mapping grew a `.keys()`.” Chapter **09** still applies—do not loop the whole array in one user-paid tx if it can grow without bound.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Mapping slots — the real formula
@@ -241,8 +237,6 @@ Lots of hashes? `bytes32[]` or a mapping. One blob? `bytes`. A `string` you neve
 
 **Memory structs do not pack** the way storage structs do: each value type typically occupies a full 32-byte memory word. `uint128` + `uint128` that shared a storage slot become two words in memory. Assembly that `mload`s a memory struct as if it were storage layout is a classic bug.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -253,8 +247,6 @@ Lots of hashes? `bytes32[]` or a mapping. One blob? `bytes`. A `string` you neve
 | **Operations** | Indexers listen to events, not storage walks |
 | **Software engineering** | Structs named; enums exhaustive in `if`/`revert` |
 
----
-
 ## 4. Staff-level review checklist
 
 - No code assumes it can list mapping keys without an auxiliary structure.
@@ -262,8 +254,6 @@ Lots of hashes? `bytes32[]` or a mapping. One blob? `bytes`. A `string` you neve
 - Removal semantics (swap-and-pop vs gap) are documented and tested.
 - Enum transitions are explicit; invalid raw casts cannot be forced.
 - Packing in structs is intentional (names + comment or a layout test).
-
----
 
 ## References
 

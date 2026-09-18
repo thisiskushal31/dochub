@@ -11,8 +11,6 @@
 // File extension .mm = Objective-C++ translation unit
 ```
 
----
-
 ## 1. Objective-C++ translation unit
 
 ```objc
@@ -33,8 +31,6 @@
 
 **Exception safety:** do not let C++ exceptions propagate through Objective-C frames you do not control. Destructors in mixed code paths need explicit boundaries.
 
----
-
 ## 2. `extern "C"` for C headers in C++
 
 ```cpp
@@ -44,8 +40,6 @@ extern "C" {
 ```
 
 Prevents C++ name mangling mismatches when linking C static libraries.
-
----
 
 ## 3. Migration strategy (incremental)
 
@@ -59,8 +53,6 @@ Prevents C++ name mangling mismatches when linking C static libraries.
 @end
 /* New Swift module calls this facade until the leaf migrates */
 ```
-
----
 
 ## 4. Swift vs Objective-C
 
@@ -78,8 +70,6 @@ id obj = @"dynamic";
 NSArray<NSString *> *xs = @[ @"typed", @"collection" ];
 ```
 
----
-
 ## 5. Production patterns
 
 - **XPC** to split UI from privileged workers.
@@ -92,8 +82,6 @@ NSArray<NSString *> *xs = @[ @"typed", @"collection" ];
 @end
 /* Actual work in XPC service or helper tool — not in the sandboxed app */
 ```
-
----
 
 ## Advanced use cases and implementation
 
@@ -110,8 +98,6 @@ NSArray<NSString *> *xs = @[ @"typed", @"collection" ];
 ```bash
 OTHER_LDFLAGS=-ObjC
 ```
-
----
 
 ## References
 

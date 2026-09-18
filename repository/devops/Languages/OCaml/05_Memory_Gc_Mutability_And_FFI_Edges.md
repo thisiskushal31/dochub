@@ -11,8 +11,6 @@ let _ = Gc.minor ()
 (* Force a minor collection — use profiling, not production control flow *)
 ```
 
----
-
 ## 1. Garbage collection and allocation
 
 OCaml allocates **heap** objects for most structured values. **Short-lived** allocations are cheap in typical functional style: many small objects die young and are reclaimed quickly. **Long-lived** graphs (caches, large ASTs) increase GC work and **pause** times.
@@ -30,8 +28,6 @@ For **services** with latency SLOs, profile before optimizing: hot loops that al
 let rec sum acc = function [] -> acc | x :: xs -> sum (acc + x) xs
 ```
 
----
-
 ## 2. Mutability: refs, records, arrays
 
 Immutability is the default: `let` binds a name to a value; **rebinding** with another `let` **shadows** the name in inner scopes only.
@@ -46,8 +42,6 @@ counter := !counter + 1;
 
 **Mutable record fields** and **arrays** support algorithms that need in-place update. **Arrays** are fixed-length and zero-indexed; **bounds errors** raise exceptions unless you guard indices—important when handling **untrusted** input.
 
----
-
 ## 3. Bigarray and C memory
 
 **Bigarray** exposes **flat** memory with **layouts** compatible with **numeric** C APIs and **binary** protocols. Unlike ordinary OCaml arrays, Bigarrays are the usual bridge for **bulk** data to **FFI**. Wrong **length** or **lifetime** assumptions at the boundary are **use-after-free** or **overflow** bugs—**treat** FFI like C.
@@ -57,8 +51,6 @@ open Bigarray
 
 let buf = Array1.create char c_layout 4096
 ```
-
----
 
 ## 4. FFI and memory safety
 
@@ -75,8 +67,6 @@ Inside OCaml, the type checker and GC cooperate. At the **FFI** boundary you **m
 value stub_example(value v);
 ```
 
----
-
 ## 5. Finalizers, resource ownership, and leaks
 
 GC frees OCaml heap objects, but it does not automatically close every external resource at the right time. File descriptors, sockets, and foreign handles still need explicit ownership rules:
@@ -92,8 +82,6 @@ let with_in path f =
   let ic = open_in path in
   Fun.protect ~finally:(fun () -> close_in ic) ~f:(fun () -> f ic)
 ```
-
----
 
 ## 6. How values look at runtime (and why it matters for FFI and tooling)
 
@@ -122,8 +110,6 @@ The **`Gc`** module and **`OCAMLRUNPARAM`** expose heap sizes, verbosity, and re
 Gc.set { (Gc.get ()) with minor_heap_size = 256 * 1024 }
 ```
 
----
-
 ## 7. Memory model and domains (the “hard bits”, operationally)
 
 With **multiple** **domains**, the intuitive **sequential** story for **refs**, **mutable fields**, and **arrays** breaks unless you add **synchronization**. Informally:
@@ -145,8 +131,6 @@ let safe_bump m =
   Mutex.unlock m
 ```
 
----
-
 ## Advanced use cases and implementation
 
 **Profiling:** Use allocation and time profilers when optimizing; GC noise can dominate microbenchmarks—run longer scenarios or production-like inputs.
@@ -158,8 +142,6 @@ let s = Gc.quick_stat () in
 Printf.printf "minor_collections=%d major_collections=%d\n" s.minor_collections
   s.major_collections
 ```
-
----
 
 ## References
 

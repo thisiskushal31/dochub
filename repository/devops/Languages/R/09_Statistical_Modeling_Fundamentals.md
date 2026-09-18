@@ -6,8 +6,6 @@
 
 Classical **linear models**, **GLMs**, and the surrounding workflow: formula interfaces, **contrasts** for factors, **diagnostics** (residuals, influence, heteroskedasticity checks where applicable), and the difference between a statistically “significant” coefficient and a **useful** model in production. This chapter emphasizes **leakage**, **target definition**, and **stability**—the reasons models pass offline tests and fail in deployment.
 
----
-
 ## 1. Concepts
 
 ### 1. Formula notation is a domain-specific language
@@ -29,8 +27,6 @@ p-values and confidence intervals answer **population inference** questions; RMS
 ### 5. Separation and numeric pathology in GLMs
 
 Logistic regression can exhibit **complete separation**; optimization behaves badly without regularization. Staff workflows recognize when to switch to **penalized** approaches (`glmnet`) or different likelihood formulations.
-
----
 
 ## 2. Advanced concepts
 
@@ -56,8 +52,6 @@ High-dimensional settings benefit from **ridge/lasso/elastic net** via `glmnet` 
 
 Heavy linear algebra can yield tiny platform differences; keep tolerance-aware tests and avoid brittle golden coefficients unless justified.
 
----
-
 ## 3. Applications and use cases
 
 - **Credit/risk:** calibrated probabilities and monitored drift.
@@ -76,8 +70,6 @@ plot(fit, which = 1)
 - Factor/contrast policy is stable across train/score snapshots.
 - Diagnostics are archived alongside produced coefficients/reports.
 - Metric selection matches business costs and regulatory constraints.
-
----
 
 ## References
 

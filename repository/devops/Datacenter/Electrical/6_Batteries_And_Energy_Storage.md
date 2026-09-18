@@ -2,8 +2,6 @@
 
 [← Previous](./5_UPS_Topologies.md) · [README](./README.md) · [Next: Generators →](./7_Generators_And_Fuel_Systems.md)
 
----
-
 ## 1. Concepts
 
 Energy storage on the UPS **DC link** supplies power until generators start—or until a planned short autonomy ends. Chemistry and maintenance culture decide whether “five minutes” is real.
@@ -29,8 +27,6 @@ Runtime is a **curve**, not a constant:
 - End-of-life capacity < nameplate new  
 - Temperature and age change available Ah  
 - Manufacturer tables beat napkin math for design; ops uses **measured** discharge tests
-
----
 
 ## 2. Advanced concepts
 
@@ -66,8 +62,6 @@ Generators ([7](./7_Generators_And_Fuel_Systems.md)) must start within autonomy 
 
 Battery room HVAC setpoints matter worldwide. Hot metros (Middle East, India summers, US South) punish VRLA. Li-ion changes footprint and fire strategy—site acceptance is a facilities decision, not a “swap SKU in the rack.”
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -86,8 +80,6 @@ Battery room HVAC setpoints matter worldwide. Hot metros (Middle East, India sum
 - Never bridge or jumper around BMS/protection “to get runtime”  
 
 **Good:** tested autonomy > generator start SLA with margin. **Bad:** decade-old VRLA, no discharge history, eco mode + weak batteries.
-
----
 
 ## References
 

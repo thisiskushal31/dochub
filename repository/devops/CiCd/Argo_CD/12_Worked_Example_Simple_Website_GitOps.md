@@ -2,8 +2,6 @@
 
 [← Previous](./11_Security_Tenancy_Hydrator_And_Troubleshooting.md) · [Argo CD](./README.md) · [Next: Best practices →](./13_Best_Practices_Topology_And_App_Sizing.md)
 
----
-
 ## 1. Concepts — what we are building
 
 Goal: a person who has never used Argo CD ships a **static website** (nginx serving HTML) the **right** way:
@@ -37,8 +35,6 @@ website-gitops/          # manifests only (preferred separate repo)
 ```
 
 **Bad practice for learning-and-keeping:** everything only clicked in the UI with no Git Application CR — you cannot rebuild the control plane story.
-
----
 
 ## 2. Advanced concepts — step-by-step lab
 
@@ -221,8 +217,6 @@ argocd app rollback website-prod <history-id>
 
 Then make Git match what you rolled to — otherwise the next sync re-applies the bad commit.
 
----
-
 ## 3. Applications and use cases — good vs bad for this pattern
 
 | Practice | Verdict |
@@ -245,8 +239,6 @@ Point `source` at a chart (`chart:` + `helm.valueFiles`) instead of a path. Same
 ### Variant: OCI-stored manifests
 
 Push rendered YAML to an OCI registry; Application `source` uses OCI. Same sync policies.
-
----
 
 ## References
 

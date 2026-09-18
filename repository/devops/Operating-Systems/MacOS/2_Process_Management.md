@@ -4,13 +4,9 @@
 
 **Prerequisite:** [Fundamentals: Process management](../Fundamentals/2_Process_Management.md). Here: **how macOS implements** processes — **BSD process model**, **commands** (`ps`, `top`, `kill`), and **Activity Monitor**.
 
----
-
 ## Process model (BSD layer)
 
 macOS uses the **BSD process model**: each process has a **PID**, **parent PID (PPID)**, **user/group IDs**, **address space**, and **file descriptors**. Processes are created via **fork** and **exec** (or **posix_spawn**). The **Mach** layer provides **tasks** (address spaces) and **threads** (schedulable units); the BSD layer maps **process** = one task + one or more threads, and exposes **PIDs**, **signals**, and **wait** semantics. So: **process** in Unix terms is the BSD view; **task/thread** is the Mach view.
-
----
 
 ## Listing and inspecting processes
 
@@ -38,8 +34,6 @@ macOS uses the **BSD process model**: each process has a **PID**, **parent PID (
 - **`pgrep -fl <pattern>`** — PIDs and command lines matching pattern (e.g. `pgrep -fl Chrome`).
 - **`pidof <name>`** — PID(s) of processes with given name (if available).
 
----
-
 ## Terminating processes
 
 - **`kill <pid>`** — Sends **SIGTERM** (15); process can catch and exit cleanly.
@@ -62,15 +56,11 @@ kill -9 12345
 kill -HUP $(pgrep -f "nginx")
 ```
 
----
-
 ## Summary
 
 - **Model:** BSD process (PID, PPID, fork/exec); Mach provides task/thread underneath.
 - **List:** **`ps aux`**, **`ps -ef`**, **`top`**, **Activity Monitor**, **`pgrep`**.
 - **Kill:** **`kill`** (SIGTERM), **`kill -9`** (SIGKILL), **`pkill`**, **`killall`**.
-
----
 
 ## Further reading
 

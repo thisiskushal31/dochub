@@ -2,8 +2,6 @@
 
 [← Previous](./11_Secrets_SOPS_And_Sealed_Secrets.md) · [README](./README.md) · [Next: Image automation →](./13_Image_Update_Automation.md)
 
----
-
 ## 1. Concepts
 
 Anyone who can push to the fleet path Flux watches can change the cluster. Treat that Git path like production access.
@@ -17,8 +15,6 @@ Anyone who can push to the fleet path Flux watches can change the cluster. Treat
 | **Remote Kustomize bases** | Disable so only Flux Sources can change the cluster |
 | **Verification** | Verify artifacts/commits when policy requires |
 | **Air-gap** | Mirror images/charts/OCI; no surprise internet calls |
-
----
 
 ## 2. Advanced concepts
 
@@ -38,8 +34,6 @@ First-class docs — use them in constrained networks and OpenShift clusters.
 
 Security docs go beyond naive RBAC for who may reconcile what — read when building a shared platform.
 
----
-
 ## 3. Applications and use cases
 
 | Threat | Mitigation |
@@ -50,8 +44,6 @@ Security docs go beyond naive RBAC for who may reconcile what — read when buil
 | Offline cluster | Mirrored registries + tested upgrades |
 
 **Good:** fleet PRs reviewed like production code. **Bad:** cluster-admin kubeconfig checked into CI “for Flux debugging.”
-
----
 
 ## References
 

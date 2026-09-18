@@ -2,8 +2,6 @@
 
 [← Previous](./8_IBM_Cloud.md) · [README](./README.md) · [Next: Tencent →](./10_Tencent_Cloud.md) · [Full catalog](./Catalogs/Alibaba_Products.md) · [Jobs: IAM](./15_Org_IAM_And_Identity_Federation.md)
 
----
-
 ## Mental map — Floor 1 jobs on Alibaba Cloud
 
 | Job | Alibaba wiring | Depth |
@@ -17,24 +15,17 @@
 | K8s | **ACK** | [3](./3_Managed_Kubernetes.md) |
 | Registry | ACR | [27](./27_Container_Registries_And_Artifacts.md) |
 
----
-
 ## 1. Concepts
 
 **Alibaba Cloud** (Aliyun) is the large public cloud in **China** with a growing **international** footprint. Assume **Mainland China ≠ international** for accounts, ICP, networking, and SKUs. Many global companies run a **dedicated China account** plus AWS/GCP elsewhere.
 
 ACK is the GKE/EKS analog. **ACK managed** = they run the control plane. **ACK dedicated** ≈ masters on your ECS (closer to [Kubernetes 6](https://github.com/thisiskushal31/Containerization-Deep-Dive/blob/main/Orchestration/Kubernetes/6_Self_Managed.md)).
 
----
-
 ## 2. Advanced concepts
 
 **RAM roles** for ECS and ACK worker identities are the IRSA/WI family ([15](./15_Org_IAM_And_Identity_Federation.md)). RAM users with long-lived AccessKey IDs are the CI anti-pattern ([Security/5](../Security/5_OIDC_CI_And_Least_Privilege.md)).
 
 China networking: **ICP filing** for public websites, different CDN/DNS ([25](./25_DNS_CDN_And_Edge_HTTP.md)), and cross-border links are first-class design. Do not copy a `us-east-1` VPC diagram into `cn-hangzhou`.
-
----
-
 
 ### How you grant permission on Alibaba Cloud (quick)
 
@@ -52,7 +43,6 @@ China networking: **ICP filing** for public websites, different CDN/DNS ([25](./
 | Observability | CloudMonitor / SLS-class logs (current docs) | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
 | N-tier | [34](./34_Multi_Tier_And_Reference_Topologies.md) | |
 
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -69,8 +59,6 @@ China networking: **ICP filing** for public websites, different CDN/DNS ([25](./
 - ACK managed vs dedicated vs kubeadm-on-ECS chosen  
 
 **Good:** separate China estate + RAM roles + ACK. **Bad:** one global VPC fantasy; AccessKeys in CI.
-
----
 
 ## References
 

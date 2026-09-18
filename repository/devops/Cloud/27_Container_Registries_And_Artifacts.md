@@ -2,8 +2,6 @@
 
 [← README](./README.md) · [Managed K8s →](./3_Managed_Kubernetes.md) · [Deploy shapes →](./28_Deployment_Shapes_On_Cloud.md)
 
----
-
 ## Mental map
 
 ```text
@@ -13,8 +11,6 @@ CI build → push image/artifact by digest → registry
 ```
 
 *What to notice: the registry is part of the **promote** path—not a dump folder for `:latest`.*
-
----
 
 ## 1. Concepts
 
@@ -32,8 +28,6 @@ A **container registry** stores images (and often OCI artifacts). Cloud registri
 **Confirm:** Do deploys reference digest? Who can push vs pull? Where do scan results block promote?
 
 Delivery jobs: [CiCd/](../CiCd/README.md). Scan/SCA: [Security/](../Security/README.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -61,8 +55,6 @@ Delivery jobs: [CiCd/](../CiCd/README.md). Scan/SCA: [Security/](../Security/REA
 | No scan gate | Known CVEs ship |
 | Public repo by mistake | Image leak / abuse |
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -80,8 +72,6 @@ Delivery jobs: [CiCd/](../CiCd/README.md). Scan/SCA: [Security/](../Security/REA
 - No long-lived pull passwords in git  
 
 **Good:** digest promote + scan gate. **Bad:** `:latest` from a shared public repo.
-
----
 
 ## References
 

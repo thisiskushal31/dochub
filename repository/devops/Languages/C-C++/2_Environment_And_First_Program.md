@@ -4,8 +4,6 @@
 
 This topic covers **setting up a C environment** and writing your **first program** (Hello World). You need a **compiler** and, optionally, an editor or IDE. Each step is explained in text first, then shown with commands or code so you can write and run C in an easy way.
 
----
-
 ## What you need
 
 - A **C compiler** — Translates C source (`.c` files) into an executable. Common choices:
@@ -13,8 +11,6 @@ This topic covers **setting up a C environment** and writing your **first progra
   - **Clang** — On macOS, Linux, Windows.
   - **MSVC** — Microsoft Visual C++ (can compile C with proper flags).
 - A **text editor or IDE** — Any editor (VS Code, Vim, etc.) or an IDE (Code::Blocks, Visual Studio) that lets you edit `.c` files and run the compiler.
-
----
 
 ## Installing a compiler
 
@@ -36,8 +32,6 @@ xcode-select --install
 Or install Clang via Homebrew. Use `clang --version` or `gcc --version`.
 
 **Windows:** Install [MinGW-w64](https://www.mingw-w64.org/) or use **WSL** (Windows Subsystem for Linux) and then use GCC as on Linux. Alternatively, install **Visual Studio** with the "Desktop development with C++" workload and use the Visual Studio Developer Command Prompt.
-
----
 
 ## Your first C program: Hello World
 
@@ -63,8 +57,6 @@ int main() {
 
 **Expected output:** The program prints `Hello, World!` followed by a newline, then exits. The `return 0` is the exit status (0 = success).
 
----
-
 ## Compilation process (brief)
 
 When you run `gcc -o hello hello.c`, the compiler:
@@ -76,13 +68,9 @@ When you run `gcc -o hello hello.c`, the compiler:
 
 You can stop after compilation to see assembly: `gcc -S -o hello.s hello.c` produces `hello.s`. This illustrates how C maps to the machine and ties to the Assembly section of this handbook.
 
----
-
 ## Online C compiler
 
 If you don’t want to install a compiler yet, you can use an **online C compiler**: paste the code, click Run, and see the output. For real projects and security work, a local toolchain is better. See **Further reading** for links.
-
----
 
 ## Summary
 
@@ -90,8 +78,6 @@ If you don’t want to install a compiler yet, you can use an **online C compile
 - A minimal C program has **`#include <stdio.h>`** and a **`main`** function that calls **`printf`** and **returns 0**.
 - Compile with **`gcc -o hello hello.c`**; run with **`./hello`** (or the equivalent on your OS).
 - The same program is the basis for all later examples; we will add variables, loops, pointers, and more in the next topics.
-
----
 
 ## Further reading
 

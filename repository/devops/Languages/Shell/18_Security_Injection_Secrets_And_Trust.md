@@ -6,8 +6,6 @@
 
 Shell-specific **trust boundaries**: unquoted expansions, `eval`, `curl | sh`, PowerShell `Invoke-Expression`, secrets in environment and process lists, and **Constrained Language Mode** literacy. Goal: staff-level instincts to reject dangerous patterns in review—not a full red-team curriculum.
 
----
-
 ## 1. Concepts
 
 ### 1. The shell is a command constructor
@@ -141,8 +139,6 @@ Decade-old glue fails closed less often than modern templates. Reviewers should 
 | **Interactive-only fixes** | “We aliased that away in `.bashrc`” never protected CI or MDM | Require non-interactive reproduction |
 
 Do not turn this chapter into payload recipes. Do turn every legacy tree into a **quoting + trust + interpreter pin** review.
-
----
 
 ## 2. Advanced concepts
 
@@ -329,8 +325,6 @@ Add these rows to security review templates (pair with the staff checklist in §
 | **Pentest / IR** | macOS era → Bash vs zsh rc inventory; Linux `/etc/profile.d` listed for persistence hypotheses |
 | **All** | Living-off-the-land paths named (Bash vs `pwsh` vs cmd) for the OS under test |
 
----
-
 ## 3. Applications and use cases
 
 ### Code review (SE)
@@ -388,8 +382,6 @@ Windows command and PowerShell security context: [`../../Operating-Systems/Windo
 - macOS hosts: Bash **and** zsh rc paths considered per era; Linux: `/etc/profile.d` inventoried when persistence is in scope.
 - LOL contrast (Bash vs PowerShell vs cmd) named for the estate—controls and logging matched to dialect.
 - AppSec templates include shell-from-input and bootstrap/install trust rows (see §2.21).
-
----
 
 ## References
 

@@ -6,8 +6,6 @@
 
 How Scala organizes code into **packages**, brings names into scope with **imports**, re-exports with Scala 3 **`export`**, and restricts access with **`private`** / **`protected`**. Nested packages and companion visibility round out the module story you need before sbt layouts and Java interop. After this chapter you should place types in intentional packages, keep imports readable, and encode trust boundaries with `private[pkg]` rather than hope.
 
----
-
 ## 1. Concepts
 
 ### 1. Packages group related types
@@ -153,8 +151,6 @@ object Api:
   // callers import com.example.app.Api.* for a curated surface
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Package objects (Scala 2 legacy)
@@ -255,8 +251,6 @@ src/main/scala/com/example/billing/Invoice.scala
 src/test/scala/com/example/billing/InvoiceSuite.scala
 ```
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering
@@ -307,8 +301,6 @@ private[app] object DebugHooks:
 - Public API types live in documented packages; internals marked and enforced.
 - Brownfield package objects understood before editing.
 - Source paths mirror packages under `src/main/scala` and `src/test/scala`.
-
----
 
 ## References
 

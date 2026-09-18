@@ -2,8 +2,6 @@
 
 [← Previous](./1_Site_Types_And_Products.md) · [README](./README.md) · [Next: Rooms →](./3_Rooms_Campus_And_Adjacencies.md)
 
----
-
 ## 1. Concepts
 
 **Uptime Institute Tiers** and **TIA-942 Rated** language describe *site topology ideas*—not magic stickers.
@@ -16,8 +14,6 @@
 | **Fault tolerant** | Survive worst-case single failure (design-specific) |
 
 Honest use: walk the one-line; don’t stop at brochure Tier IV.
-
----
 
 ## 2. Advanced concepts
 
@@ -32,8 +28,6 @@ Honest use: walk the one-line; don’t stop at brochure Tier IV.
 ### How it connects
 
 Electrical independence [Electrical](../Electrical/README.md). Integration one-line [Integration/9](../Integration/9_Reading_A_One_Line_And_Elevation.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -50,8 +44,6 @@ Electrical independence [Electrical](../Electrical/README.md). Integration one-l
 - Never buy on sticker alone  
 
 **Good:** concurrent maintainability proven for *your* path. **Bad:** Tier cosplay.
-
----
 
 ## References
 

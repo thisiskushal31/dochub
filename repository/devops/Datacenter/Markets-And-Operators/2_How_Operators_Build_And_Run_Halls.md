@@ -2,8 +2,6 @@
 
 [← Previous](./1_Operator_Taxonomy.md) · [README](./README.md) · [Next: Research any operator →](./3_Research_Any_Operator.md)
 
----
-
 ## 1. Concepts
 
 Whether Equinix-class, wholesale, or regional colo, the **lifecycle jobs** rhyme:
@@ -17,8 +15,6 @@ Whether Equinix-class, wholesale, or regional colo, the **lifecycle jobs** rhyme
 7. **Interconnect product** (if sold) — cross-connects, Fabric/IX vs pure power+space  
 
 Device depth stays in Electrical–Fabric tracks; this chapter is **who does which step**.
-
----
 
 ## 2. Advanced concepts
 
@@ -44,8 +40,6 @@ Permitting, emissions, and water rules differ; lifecycle order does not.
 
 Internal campus wiring is mostly secret—use region/AZ literacy, not invented floor plans ([8](./8_Tenant_Cloud_Vs_Landlord.md), [16](./16_Architecture_Shapes_By_Operator_Class.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -64,8 +58,6 @@ Internal campus wiring is mostly secret—use region/AZ literacy, not invented f
 - Never assume “open” means commissioned  
 
 **Good:** staged delivery, tested plant, clear operate model. **Bad:** pre-IST sales; no change notices; MMR marketing only.
-
----
 
 ## References
 

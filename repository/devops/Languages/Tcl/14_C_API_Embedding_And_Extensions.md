@@ -8,8 +8,6 @@ Why hosts **embed** Tcl, the door around **`Tcl_CreateInterp`** / evaluation, ho
 
 Default narrative: **Tcl 9.0.x** headers and stubs. Brownfield **8.6** extensions still dominate many products—plan rebuilds deliberately.
 
----
-
 ## 1. Concepts
 
 ### 1. Why embed Tcl at all?
@@ -104,8 +102,6 @@ int App_Init(Tcl_Interp *interp) {
 
 Hosts differ: some call `Tcl_Main`, some own the event loop, some never run interactively. Always read the product’s init path—do not assume `tclsh`’s startup.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Tcl 9 and `Tcl_Size` (migration door)
@@ -198,8 +194,6 @@ Keep a “repro with stock `tclsh`” step in the runbook when the host allows i
 | Script corpus encoding assumptions | Interp defaults (ch **02**) |
 | Tk (if any) | Same family as Tcl where required |
 
----
-
 ## 3. Applications and use cases
 
 ### Application
@@ -238,8 +232,6 @@ Keep a “repro with stock `tclsh`” step in the runbook when the host allows i
 
 If any answer is “unknown,” the PR is not ready.
 
----
-
 ## Staff-level review checklist
 
 - PR role is clear: embedder, extension, or packaging-only.
@@ -252,8 +244,6 @@ If any answer is “unknown,” the PR is not ready.
 - Threading model documented if Tcl is touched outside a single owner thread.
 - Untrusted script paths use restricted interps / command hiding (see ch **16**).
 - Encoding assumptions at C↔Tcl boundary stated for binary and file data.
-
----
 
 ## References
 

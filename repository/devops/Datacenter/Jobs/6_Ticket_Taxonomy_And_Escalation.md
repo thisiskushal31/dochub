@@ -2,8 +2,6 @@
 
 [← Previous](./5_Day_In_The_Life_Bare_Metal_Admin.md) · [README](./README.md) · [Next: Safety →](./7_Safety_LOTO_And_EPO.md)
 
----
-
 ## 1. Concepts
 
 Sort tickets so the right skill arrives:
@@ -17,8 +15,6 @@ Sort tickets so the right skill arrives:
 | **Compute / bare metal** | BMC, DIMM, image, hypervisor | Bare-metal |
 | **Security / access** | Badge, mantrap, camera | Security |
 | **Hands / colo product** | Smart Hands scope | Landlord hands + your SOP |
-
----
 
 ## 2. Advanced concepts
 
@@ -34,8 +30,6 @@ Sort tickets so the right skill arrives:
 ### How it connects
 
 NOC day [4](./4_Day_In_The_Life_NOC.md). Integration failures suggest class quickly. Provider portals for colo classes.
-
----
 
 ## 3. Applications and use cases
 
@@ -54,8 +48,6 @@ NOC day [4](./4_Day_In_The_Life_NOC.md). Integration failures suggest class quic
 - Never open five tickets without a bridge scribe  
 
 **Good:** fast correct routing. **Bad:** page-all; class roulette.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 [← Previous](./3_Disk_To_Array_To_Host.md) · [README](./README.md) · [Next: Lose PDU A →](./5_Failure_Lose_PDU_A.md)
 
----
-
 ## 1. Concepts
 
 The **out-of-band plane** reaches BMCs, console servers, PDU meters, and often switch mgmt—when production networking or OS is dead.
@@ -13,8 +11,6 @@ Operator → jump host → OOB network → BMC / console server / PDU / mgmt por
 ```
 
 Parallel to [2](./2_NIC_To_MMR.md). Homes: [Fabric-Physical/3](../Fabric-Physical/3_OOB_Management_Network.md), [Compute/10](../Compute/10_BMC_IPMI_And_Redfish_Deep.md), [Accelerators/8](../Accelerators/8_Serial_Console_Servers.md).
-
----
 
 ## 2. Advanced concepts
 
@@ -35,8 +31,6 @@ OOB down during data outage = flying blind. Provisioning VLAN related but distin
 
 iDRAC/iLO/Redfish UIs differ; plane jobs identical.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -54,8 +48,6 @@ iDRAC/iLO/Redfish UIs differ; plane jobs identical.
 - Never expose BMC to internet  
 
 **Good:** isolated, dual-powered OOB. **Bad:** BMC on prod; single mgmt switch.
-
----
 
 ## References
 

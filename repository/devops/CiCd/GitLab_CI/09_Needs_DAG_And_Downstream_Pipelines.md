@@ -2,8 +2,6 @@
 
 [← Previous](./08_Rules_Workflow_And_Pipeline_Types.md) · [README](./README.md) · [Next: Runners →](./10_Runners_And_Executors.md)
 
----
-
 ## 1. Concepts
 
 ### `needs` — run without waiting for the whole stage
@@ -30,8 +28,6 @@ test:
 
 Use downstream when graphs get large or ownership splits across repos.
 
----
-
 ## 2. Advanced concepts
 
 ### Artifact/needs interplay
@@ -50,8 +46,6 @@ Combine `parallel:matrix` with `needs` so fan-out jobs still form a clear DAG (e
 
 `resource_group` serializes deployments to the same environment — related deploy safety ([15](./15_Environments_Deployments_And_Release.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -61,8 +55,6 @@ Combine `parallel:matrix` with `needs` so fan-out jobs still form a clear DAG (e
 | Huge monolith | Parent pipeline fans out children |
 
 **Good:** shallow DAGs with clear outputs. **Bad:** deep trigger chains nobody can debug.
-
----
 
 ## References
 

@@ -8,8 +8,6 @@ Where Solidity **shows up** in real systems: **token and interface literacy** (E
 
 Most useful contracts are boring on purpose: a vault, a registry, a token that only mints when *your* rule says so. The ERC numbers are shared menus so wallets do not need a custom UI for every address. Your job is the rule, not another `balanceOf` from memory.
 
----
-
 ## 1. Concepts
 
 ### 1. Standards are interfaces plus social contract
@@ -90,8 +88,6 @@ Wallets and dapps speak **ABI** via **ethers.js** or **viem** (JS/TS track). Sol
 
 Do not grow this folder into a React course.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. ERC-20, mechanically
@@ -132,8 +128,6 @@ Your `view` share price may be called by someone else **in the same transaction*
 
 Minimal proxies (EIP-1167) `delegatecall` a singleton implementation. Each clone has its own storage and its own `initialize`. Same review as chapter **20**, multiplied by N addresses. Factories must record implementation + salt + init args.
 
----
-
 ## 3. Applications and use cases
 
 ### Application
@@ -164,8 +158,6 @@ Interfaces in their own files, OZ version pinned, tests for the **policy** (who 
 | Security | Review checklist **18** signed |
 | Auditor | Frozen commit + spec |
 
----
-
 ## 4. Staff-level review checklist
 
 - Token integrations name the **standard** and the **weirdness** they assume away (or handle).
@@ -174,8 +166,6 @@ Interfaces in their own files, OZ version pinned, tests for the **policy** (who 
 - Off-chain data is not faked as on-chain truth.
 - JS/TS client work is linked, not duplicated here.
 - “Use case” PRs still passed chapters **17**–**20**, not only a demo UI.
-
----
 
 ## References
 

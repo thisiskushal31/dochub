@@ -2,8 +2,6 @@
 
 [← Previous](./02_Organization_Teams_And_Clusters.md) · [README](./README.md) · [Next: Agents →](./04_Agents_Self_Hosted_And_Hosted.md)
 
----
-
 ## 1. Concepts
 
 ### Create a pipeline (UI path)
@@ -40,8 +38,6 @@ That is “seeing a pipeline”: pipelines list → one build → job logs.
 
 Preferred long-term path: commit `.buildkite/pipeline.yml` and use a **Pipeline upload** bootstrap step so the UI only uploads the file from Git ([06](./06_Pipeline_YAML_And_Step_Types.md), [07](./07_Templates_And_First_Pipeline_Yml.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### Build triggers
@@ -56,8 +52,6 @@ YAML steps are the durable model. Older visual step editor paths are legacy — 
 
 Create/update pipelines via REST or GraphQL when bootstrapping many repos ([15](./15_Platform_Teams_SSO_And_Governance.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Milestone |
@@ -67,8 +61,6 @@ Create/update pipelines via REST or GraphQL when bootstrapping many repos ([15](
 | PR checks | Provider integration reports status |
 
 **Verify:** agent online (hosted or self-hosted); build finishes; logs show your commands.
-
----
 
 ## References
 

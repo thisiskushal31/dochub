@@ -2,8 +2,6 @@
 
 [README](./README.md) · [Next: Colo tech day →](./2_Day_In_The_Life_Colo_Tech.md)
 
----
-
 ## Mental map
 
 ![Whole hall layers](../../Assets/Datacenter/Integration/whole-hall-layers.svg)
@@ -27,7 +25,6 @@ Who needs which Datacenter tracks:
 | **Colo customer engineer** | Provider-Use, Markets, contracts |
 | **Hyperscale / cloud DC ops** | Same vocabulary; different tooling/secrecy ([12](./12_Hyperscale_Ops_Honesty.md)) |
 | **Lab / office / edge WLAN** | [Setup/12](../Setup-And-Bring-Up/12_WLAN_And_AP_Lab_Office_Edge.md) + Networks Wireless |
----
 
 ## 2. Advanced concepts
 
@@ -43,8 +40,6 @@ Who needs which Datacenter tracks:
 ### How it connects
 
 Integration walks are shared literacy. Career paths: [10](./10_Career_Paths.md).
-
----
 
 ## 3. Applications and use cases
 
@@ -63,8 +58,6 @@ Integration walks are shared literacy. Career paths: [10](./10_Career_Paths.md).
 - Never assume one person owns plant+BGP+BMC  
 
 **Good:** clear RACI + learning paths. **Bad:** hero culture; unsafe improvisation.
-
----
 
 ## References
 

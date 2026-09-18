@@ -4,8 +4,6 @@
 
 Clojure uses **Java’s** date and time APIs. **java.util.Date** represents an instant; **java.text.SimpleDateFormat** formats and parses strings. For more modern APIs, use **java.time** (Java 8+): **Instant**, **LocalDate**, **LocalDateTime**, **ZonedDateTime**, and **DateTimeFormatter**. Prefer **java.time** for new code.
 
----
-
 ## java.util.Date and SimpleDateFormat
 
 **java.util.Date.** creates a **Date** for the current instant. **.toString** gives a default string. **SimpleDateFormat** formats a **Date** with a pattern string (e.g. **"yyyy-MM-dd"**, **"MM/dd/yyyy"**).
@@ -22,8 +20,6 @@ Clojure uses **Java’s** date and time APIs. **java.util.Date** represents an i
 
 **.parse** on a **SimpleDateFormat** parses a string into a **Date**. **SimpleDateFormat** is not thread-safe; create a new instance per use or synchronize.
 
----
-
 ## java.time (Java 8+)
 
 **java.time.Instant/now** returns the current instant. **LocalDate**, **LocalDateTime**, **ZonedDateTime** represent date and time without or with zone. **DateTimeFormatter** formats and parses; use **.format** and **.parse** with the appropriate type.
@@ -35,8 +31,6 @@ Clojure uses **Java’s** date and time APIs. **java.util.Date** represents an i
 (def f (java.time.format.DateTimeFormatter/ofPattern "yyyy-MM-dd"))
 (java.time.LocalDate/parse "2024-01-15" f)
 ```
-
----
 
 ## Further reading
 

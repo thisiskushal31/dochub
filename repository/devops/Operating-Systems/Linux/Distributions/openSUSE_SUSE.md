@@ -4,8 +4,6 @@
 
 This covers **openSUSE** (Leap, Tumbleweed) and **SUSE Linux Enterprise** (SLE). They use **zypper** as the primary package manager, **RPM** packages, and **YaST** for many admin tasks. This section goes **in depth**: zypper, repo management, YaST, transactional updates (SUSE), and systemd so you can administer these distros confidently.
 
----
-
 ## Variants and release model
 
 | Variant | Role | Release model |
@@ -15,8 +13,6 @@ This covers **openSUSE** (Leap, Tumbleweed) and **SUSE Linux Enterprise** (SLE).
 | **SUSE Linux Enterprise (SLE)** | Enterprise, paid support. | Long support cycles. |
 
 Leap shares a lot with SLE; Tumbleweed is rolling and often has newer packages.
-
----
 
 ## Package management: zypper
 
@@ -56,8 +52,6 @@ zypper lr -u
 sudo zypper modifyrepo -p 10 repo_alias
 ```
 
----
-
 ## YaST (administration)
 
 **YaST** (Yet another Setup Tool) is the main admin interface: GUI (`yast2`) or ncurses (`yast`). It edits configs and runs the underlying commands (zypper, firewall, user, etc.).
@@ -73,13 +67,9 @@ yast2 software          # Software management (repos, install/remove)
 
 Many settings can also be done by editing config files and using systemctl/zypper/firewall-cmd directly; YaST is a central place for common tasks.
 
----
-
 ## Firewall and services
 
 openSUSE/SLE use **firewalld** (same concepts as RHEL). Commands: `firewall-cmd --list-all`, `firewall-cmd --add-service=http --permanent`, `firewall-cmd --reload`. Services are managed with **systemd**: `systemctl start/enable Nginx`.
-
----
 
 ## Transactional updates (SUSE / openSUSE MicroOS)
 
@@ -97,8 +87,6 @@ transactional-update shell
 
 On traditional Leap/Tumbleweed (read-write root), use `zypper update` or `zypper dup` as above; no transactional-update.
 
----
-
 ## Summary
 
 - **openSUSE** = Leap (fixed, aligned with SLE) and Tumbleweed (rolling); **SLE** = enterprise.
@@ -106,8 +94,6 @@ On traditional Leap/Tumbleweed (read-write root), use `zypper update` or `zypper
 - **YaST** (yast2 / yast) for GUI/TUI admin (network, users, firewall, software).
 - **Transactional updates** on MicroOS/SLE Micro: `transactional-update up` and reboot.
 - **Firewall and services:** firewalld, systemd.
-
----
 
 ## Further reading
 

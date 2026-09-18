@@ -10,8 +10,6 @@ Pair with the **Master Command Atlas** (**27**) for *which* command, depth chapt
 
 Every major idea below ends with a **commented command** and a **breakdown** of what you just ran.
 
----
-
 ## If you are brand new (do this today)
 
 1. Open a **terminal app** (not “the internet”).
@@ -55,8 +53,6 @@ ECHO %ComSpec%
 ```
 
 **Breakdown:** `CD` with no args prints the current directory in cmd. `%ComSpec%` is usually `C:\Windows\system32\cmd.exe`—the cmd interpreter path.
-
----
 
 ## 1. Concepts — the stack you must never confuse
 
@@ -174,8 +170,6 @@ Set-Content -Path .\out\a.txt -Value 'hi'
 Get-ChildItem -Force .\out
 Get-Content .\out\a.txt
 ```
-
----
 
 ## 2. Command eras — Unix/Linux (landmarks, not every micro-release)
 
@@ -310,8 +304,6 @@ command -v rc-service && echo "era=openrc"
 
 **Breakdown:** These commands are **recognition** literacy for scripts and IR. Privilege and blast radius belong in OS/service runbooks—not casual paste into shared hosts.
 
----
-
 ## 3. Command eras — macOS
 
 | Period | Interactive default | Scripting reality | Userland |
@@ -334,8 +326,6 @@ date -r 1700000000 '+%Y-%m-%d' 2>/dev/null || echo "use BSD -r or install GNU da
 ```
 
 **Breakdown:** `sw_vers` is macOS-specific system info. Bash **3.2** means no `declare -A` / `mapfile` (**28**). Prefer `shasum -a 256` when `sha256sum` is missing (**30**).
-
----
 
 ## 4. Command eras — Windows
 
@@ -368,8 +358,6 @@ WHERE pwsh
 
 **Breakdown:** `Get-Command` shows **Alias vs Application**. `WHERE` in cmd searches `PATH`. Windows Terminal is only the **emulator**—open a profile, then identify the shell inside it.
 
----
-
 ## 4b. Terminal emulator cheat-sheet (keys & habits)
 
 | Habit | Unix terminal | Windows Terminal / console |
@@ -392,8 +380,6 @@ Get-History | Select-Object -Last 5
 ```
 
 Interactive-only: do not put these in CI scripts.
-
----
 
 ## 5. Advanced — “works on my distro” failure modes
 
@@ -427,8 +413,6 @@ rm -f /tmp/bashism-probe.sh
 ```
 
 **Breakdown:** The shebang says `sh`, but the body uses Bash `[[`. On Ubuntu, `/bin/sh` → dash → syntax error. On some RHEL images, `/bin/sh` → Bash → false confidence. Always test portable scripts under **dash** or BusyBox ash when you claim `#!/bin/sh` (**10**, **20**).
-
----
 
 ## 6. Applications
 
@@ -484,8 +468,6 @@ ps -ef 2>/dev/null | head -n 5 || ps aux | head -n 5
 - Progressive labs exist for absolute beginners—not only staff checklists.
 - Teaching snippets use **commented code** and letter/parameter breakdowns (this chapter’s pattern).
 
----
-
 ## References
 
 - [GNU coreutils documentation](https://www.gnu.org/software/coreutils/manual/)
@@ -498,7 +480,5 @@ ps -ef 2>/dev/null | head -n 5 || ps aux | head -n 5
 - [Windows Terminal](https://learn.microsoft.com/windows/terminal/)
 - [WSL documentation](https://learn.microsoft.com/windows/wsl/)
 - [Apple — zsh as default shell](https://support.apple.com/kb/HT208050)
-
----
 
 [← Back to Shell](./README.md)

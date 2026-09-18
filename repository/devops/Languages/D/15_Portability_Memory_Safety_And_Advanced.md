@@ -6,8 +6,6 @@
 
 **Why memory safety?** @safe code avoids raw pointers and unchecked casts so the compiler can enforce safety. **Why Better C?** It allows D syntax and features where only a C runtime is acceptable.
 
----
-
 ## Memory safety
 
 **@safe** functions may not use certain operations (e.g. raw pointer arithmetic, unsafe casts). **@system** is the default and allows everything. **@trusted** marks code that is manually verified safe and callable from @safe. Use @safe by default and narrow @trusted to small, audited boundaries.
@@ -17,19 +15,13 @@
 @trusted void wrapLegacy() { legacyUnsafeCall(); }
 ```
 
----
-
 ## Portability and ABI
 
 The **portability** guide and **ABI** spec describe platform differences (sizes, alignment, calling conventions). Use **version (Windows)**, **version (Linux)**, etc., and **static if** with **size_t.sizeof** or **traits** when you need platform-specific code. Stick to standard types and documented interfaces for portability.
 
----
-
 ## Better C and ImportC
 
 **Better C** compiles D without the D runtime (no GC, no D main). Use **-betterC** (or equivalent) and restrict the code to the subset that works. **ImportC** parses C headers for interop. Both support gradual migration from C to D.
-
----
 
 ## Inline assembler and embedded documentation
 
@@ -37,13 +29,9 @@ The **portability** guide and **ABI** spec describe platform differences (sizes,
 
 **Live Functions** are a feature for dynamic or interactive execution contexts; the spec describes their semantics. Refer to the language reference for details when you need them.
 
----
-
 ## Editions, Windows, and glossary
 
 **Editions** (e.g. default, **preview**) enable or disable language features for compatibility. **Windows** programming covers Win32 API and D-specific support. The **glossary** and **legacy** sections define terms and deprecated behavior. Refer to the spec when targeting a specific platform or edition.
-
----
 
 ## Further reading
 

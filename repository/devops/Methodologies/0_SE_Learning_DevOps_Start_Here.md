@@ -6,14 +6,10 @@
 
 Climb the **Methodologies staircase** first (mindset), then the **[CiCd staircase](../CiCd/README.md)** (how to ship). One story, two flights — not scattered blog posts.
 
----
-
 ## Two promises
 
 1. **Learn it here** when the topic is delivery, platforms, OS literacy, or languages-as-tools.  
 2. **Get a clear door** to a related deep-dive when depth lives elsewhere — never a silent gap.
-
----
 
 ## The climb in one page
 
@@ -29,8 +25,6 @@ Floor 6  Amplifiers              →  19       (after foundations)
 ```
 
 Full table: [Methodologies README — The staircase](./README.md).
-
----
 
 ## What this repo owns vs what it points to
 
@@ -51,8 +45,6 @@ Full table: [Methodologies README — The staircase](./README.md).
 | Language syntax | [Languages/](../Languages/README.md) | — |
 | Git / Make | Tooling `Utility/` | — |
 
----
-
 ## Prerequisites (grow in parallel)
 
 | Skill | Where |
@@ -61,8 +53,6 @@ Full table: [Methodologies README — The staircase](./README.md).
 | Networking basics | [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive) |
 | Git | Tooling `Utility/` |
 | Scripting | [Languages/](../Languages/README.md) (Shell, Python, …) |
-
----
 
 ## Paths by role (same staircase, different depth)
 
@@ -82,8 +72,6 @@ Full Methodologies staircase → full CiCd staircase (including classical + K8s 
 
 [Operating-Systems/](../Operating-Systems/README.md) or [Languages/](../Languages/README.md), then return at Floor 1 ([10](./10_Core_Principles_Three_Ways_CALMS.md)).
 
----
-
 ## Delivery mental model (the loop)
 
 ```text
@@ -102,8 +90,6 @@ Idea / ticket
 
 Own the loop, then attach tools. Estate does not change the questions — only the adapter ([20](./20_Delivery_Reality_Full_Spectrum.md)).
 
----
-
 ## Monthly checklist
 
 - [ ] Climb or deepen one Methodologies floor  
@@ -111,8 +97,6 @@ Own the loop, then attach tools. Estate does not change the questions — only t
 - [ ] Add or fix one gate / alert / runbook you use  
 - [ ] Tick syllabus when a note is defendable  
 - [ ] After push: `npm run update-repos` in `dochub/` if the public site should refresh  
-
----
 
 ## Pitfalls
 
@@ -122,8 +106,6 @@ Own the loop, then attach tools. Estate does not change the questions — only t
 | Skipping Floor 5 (legacy/spectrum) | Most value is brownfield |
 | Amplifiers before foundations | Floor 6 only after 1–5 |
 | Fragments from the internet only | Consolidate here; then go deeper via doors |
-
----
 
 ## Next on the staircase
 

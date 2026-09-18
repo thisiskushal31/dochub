@@ -8,8 +8,6 @@ Where VB.NET work actually lives, how the language’s future usually plays out 
 
 You should leave able to **maintain and review** VB.NET estates **and** pick a next skill without pretending every problem is another `.vb` form.
 
----
-
 ## 1. Concepts
 
 ### 1. What this track already owns
@@ -82,8 +80,6 @@ VB.NET, C#, and F# all compile to IL. VBA does **not**. PowerShell is an automat
 | Shared libraries already consume VB IL fine | Greenfield API with C#-only team norms |
 | Migration budget is below COM/UI risk | Security findings require structural rewrite anyway |
 | Incremental strangler is funded | Business wants cross-platform UI next quarter |
-
----
 
 ## 2. Advanced concepts
 
@@ -280,8 +276,6 @@ Read after **17**, or skim early to set direction. Revisit when:
 - a ticket confuses VBA macros with VB.NET executables,
 - you finished the spine and need a **single** next skill.
 
----
-
 ## 3. Applications and use cases
 
 | Situation | What to do |
@@ -303,8 +297,6 @@ VB spine → 13 NuGet literacy → 14–15 doors → 16 security → 17 roles �
         ↘ ASP.NET / WPF-WinUI / EF / Azure only when that host is the job
 ```
 
----
-
 ## 4. Staff-level review checklist
 
 - State whether the workload is VB.NET, C#, F#, PowerShell, or VBA—before debating syntax.
@@ -319,8 +311,6 @@ VB spine → 13 NuGet literacy → 14–15 doors → 16 security → 17 roles �
 - Keep this track’s scope clear: maintain and review VB estates—this chapter does not replace every Microsoft learning path.
 - Re-read **15** when someone confuses Worker Services with “hidden forms.”
 - For greenfield HTTP, prefer ASP.NET + C# samples unless policy mandates VB.
-
----
 
 ## References
 

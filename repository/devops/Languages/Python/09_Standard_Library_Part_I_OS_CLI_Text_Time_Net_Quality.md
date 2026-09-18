@@ -6,8 +6,6 @@
 
 **os**, **sys**, **glob**, **argparse**, **re**, **math** / **random** / **statistics**, **urllib**, **datetime** / **zoneinfo**, compression, **timeit**, **doctest**—the first “batteries included” tour, with operational and security notes for automation and services.
 
----
-
 ## 1. Concepts
 
 ### 1. Operating system interface
@@ -56,8 +54,6 @@ Micro-benchmarks; real workloads need **profilers** (chapter 16).
 
 Executable docstring examples—great for pure helpers; not a substitute for **pytest** coverage.
 
----
-
 ## 2. Advanced concepts
 
 **Environment inheritance:** child processes inherit **`os.environ`** unless you pass a scrubbed **`env`** to **subprocess**.
@@ -65,8 +61,6 @@ Executable docstring examples—great for pure helpers; not a substitute for **p
 **Locale vs explicit encoding:** **strftime** can follow locale rules—explicit formats and **UTC** reduce surprises in logs.
 
 **SSRF:** server-side fetches must block **metadata** IPs and **internal** ranges when URLs are user-influenced.
-
----
 
 ## 3. Applications and use cases
 
@@ -86,8 +80,6 @@ args = p.parse_args()
 
 token = secrets.token_urlsafe(32)
 ```
-
----
 
 ## References
 

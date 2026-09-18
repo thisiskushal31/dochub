@@ -4,8 +4,6 @@
 
 **Prerequisite:** [Introduction and basics](./1_Introduction_And_Basics.md), [Storage and I/O](./8_Storage_And_IO.md). Here: **where logs live**, **system and NTP time**, **kernel parameters and tuning**, **where to look when troubleshooting**, and **real-time and low-latency** on Linux.
 
----
-
 ## Logging: where logs live and how to read them
 
 On modern Linux, logs come from **systemd journal** (primary) and often **rsyslog** (traditional files under `/var/log`). Knowing both lets you debug services, boot, and security events.
@@ -92,8 +90,6 @@ logrotate -d /etc/logrotate.conf
 logrotate -f /etc/logrotate.d/nginx
 ```
 
----
-
 ## Time: NTP and system time
 
 Correct **system time** is required for logs, certificates, and clusters. Linux uses **systemd-timesyncd** (simple NTP client), **chrony**, or **ntpd** to keep time in sync.
@@ -143,8 +139,6 @@ sudo hwclock -w
 sudo hwclock -s
 ```
 
----
-
 ## Kernel parameters and tuning (sysctl)
 
 Runtime kernel parameters live under **/proc/sys/** and can be read/set with **sysctl**. Persistent config: **/etc/sysctl.conf** or files in **/etc/sysctl.d/**.
@@ -177,8 +171,6 @@ sudo sysctl -p /etc/sysctl.d/99-tuning.conf
 
 **Persistent:** Add lines to `/etc/sysctl.d/99-myname.conf` (e.g. `vm.swappiness=10`), then `sysctl -p /etc/sysctl.d/99-myname.conf` or reboot.
 
----
-
 ## /proc and /sys: where to look
 
 **/proc** and **/sys** are virtual filesystems exposing kernel and process state. Use them to inspect the running system.
@@ -209,8 +201,6 @@ free -h
 cat /sys/block/sda/queue/scheduler
 ```
 
----
-
 ## Troubleshooting: where to look (quick map)
 
 When something is wrong, use this map to find the right place:
@@ -227,8 +217,6 @@ When something is wrong, use this map to find the right place:
 | **Kernel / driver** | `dmesg`, `journalctl -k`, `lsmod`, `modinfo`. |
 
 **Useful commands:** `strace -p <pid>` (syscalls), `lsof -p <pid>` (open files), `ss -tunap` (sockets), `iostat -x 1 5` (disk), `vmstat 1 5` (memory, I/O, CPU).
-
----
 
 ## Real-time and low-latency (Linux)
 
@@ -263,8 +251,6 @@ renice -n 5 -p <pid>
 
 **PREEMPT_RT** is a patch set that makes the kernel more preemptible and reduces latency; used in industrial and embedded systems. It is not the default in most distros. For RT kernel builds and **cyclictest**, see kernel and real-time documentation. This handbook only flags that **real-time scheduling** (chrt, nice) and **RT kernel** options exist for low-latency workloads.
 
----
-
 ## Summary
 
 - **Logging:** **journalctl** (systemd journal) and **rsyslog** → **/var/log**; **logrotate** for rotation.
@@ -272,8 +258,6 @@ renice -n 5 -p <pid>
 - **Kernel:** **sysctl** and **/etc/sysctl.d/** for tuning; **/proc** and **/sys** for inspection.
 - **Troubleshooting:** Use the map above (journal, status, /proc, dmesg, iostat, strace, etc.) to find the right place.
 - **Real-time:** **chrt** for scheduling policy; **nice**/ **renice** for priority; **PREEMPT_RT** for hard real-time (separate kernel/docs).
-
----
 
 ## Further reading
 

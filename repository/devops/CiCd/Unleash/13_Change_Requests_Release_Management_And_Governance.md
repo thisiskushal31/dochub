@@ -2,8 +2,6 @@
 
 [← Previous](./12_SSO_RBAC_SCIM_And_Provisioning.md) · [README](./README.md) · [Next: Impression and analytics →](./14_Impression_Analytics_Impact_And_Playground.md)
 
----
-
 ## 1. Concepts
 
 **Deploy** puts a binary in an environment. **Release** opens behavior to users. Unleash governance sits on the release side: who may change a flag in prod, how many eyes must approve, and how a standard rollout sequence is reused.
@@ -24,8 +22,6 @@ Anyone with project access can open a draft; **approve / apply / skip** need **c
 
 **Signals** are HTTP endpoints that external systems POST to (“something happened”). **Actions** in a project react to matching signal payloads (filters like strategy constraints) — e.g. disable an environment on an alert webhook. Pair with ChatOps/webhooks ([15](./15_Integrations_Terraform_Webhooks_And_Chatops.md)).
 
----
-
 ## 2. Advanced concepts
 
 ### Scheduling vs DATE_AFTER constraints
@@ -43,8 +39,6 @@ Track CR state in ServiceNow via the official integration. Pair with event/audit
 ### Templates vs ad-hoc strategies
 
 Templates encode org standard (“internal → 10% → 50% → 100%”). Ad-hoc flexible rollout is fine for labs; prod should prefer one approved template family so operators do not invent percentages under pressure ([19](./19_Worked_Example_Gradual_Rollout_In_CI_CD.md)).
-
----
 
 ## 3. Applications and use cases
 
@@ -64,8 +58,6 @@ Templates encode org standard (“internal → 10% → 50% → 100%”). Ad-hoc 
 - Signal/action endpoints tokenized and least-privilege  
 
 **Good:** four-eyes on prod strategies; skip for incident only. **Bad:** CR everywhere including local labs, or no skip path during outage.
-
----
 
 ## References
 

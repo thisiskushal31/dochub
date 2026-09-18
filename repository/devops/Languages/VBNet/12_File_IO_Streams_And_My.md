@@ -8,8 +8,6 @@
 
 You leave able to choose API layers, dispose streams, and review path handling for security and ops safety.
 
----
-
 ## 1. Concepts
 
 ### 1. Paths are strings until validated
@@ -99,8 +97,6 @@ End Function
 
 (Adjust separator edge cases carefully on all OSes you target.)
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Sync vs async I/O
@@ -138,8 +134,6 @@ Huge files may need streaming or memory-mapped IO—do not `ReadAllBytes` multi-
 
 Log file **names** and outcome codes, not necessarily full contents. Redact user home directories in shared telemetry if policy requires.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Habit |
@@ -149,8 +143,6 @@ Log file **names** and outcome codes, not necessarily full contents. Redact user
 | **Security** | Path traversal checks; no secrets in repo; least-privilege file ACLs |
 | **Operations** | Clear error messages for access denied vs not found; metrics on IO failures |
 | **Software engineering** | `Using` everywhere; abstract `IFileStore` for tests; prefer `System.IO` in shared libs |
-
----
 
 ## 4. Staff-level review checklist
 
@@ -165,8 +157,6 @@ Log file **names** and outcome codes, not necessarily full contents. Redact user
 - File share/lock behavior considered for multi-process scenarios.
 - Temp + atomic replace used for critical config/state writes.
 - Errors distinguished (not found vs access denied vs path illegal) for runbooks.
-
----
 
 ## References
 

@@ -2,8 +2,6 @@
 
 Modern JavaScript (ES2015/ES6 and later) adds syntax and features that make code shorter, clearer, and easier to structure. This topic covers **rest and spread**, **destructuring**, **template literals**, **optional chaining** and **nullish coalescing**, and **ES modules** (import/export). These features are supported in current browsers and in Node.js and are the basis for most contemporary codebases and tooling.
 
----
-
 ## Rest parameters and spread syntax
 
 **Rest parameters** gather the “rest” of the function arguments into a single array. Put `...paramName` as the last parameter; it receives all remaining arguments as a real array. That avoids using the legacy `arguments` object and makes the signature explicit.
@@ -24,8 +22,6 @@ let merged = [0, ...arr, 9]; // [0, 3, 5, 1, 9]
 let copy = { ...obj };       // shallow copy of obj
 ```
 
----
-
 ## Destructuring assignment
 
 **Destructuring** unpacks values from arrays or properties from objects into variables.
@@ -40,8 +36,6 @@ let { name, age: a = 0 } = user;
 function draw({ width = 100, height = 100 } = {}) { ... }
 ```
 
----
-
 ## Template literals
 
 **Template literals** use backticks and allow **interpolation** with `${expression}`. The expression is evaluated and converted to string. They support multi-line strings without extra syntax. Use them for dynamic strings, SQL or shell snippets (still sanitize inputs), and messages.
@@ -52,8 +46,6 @@ console.log(`Hello, ${name}!`);
 console.log(`Sum: ${1 + 2}`);
 ```
 
----
-
 ## Optional chaining and nullish coalescing
 
 **Optional chaining** (`?.`) short-circuits when the value before it is `null` or `undefined`: `obj?.prop`, `obj?.[expr]`, `fn?.()`. If the base is nullish, the whole expression is `undefined` instead of throwing. Use it when a property or method might not exist (e.g. API responses, DOM nodes).
@@ -63,8 +55,6 @@ console.log(`Sum: ${1 + 2}`);
 ```javascript
 let name = user?.profile?.name ?? "Guest";
 ```
-
----
 
 ## ES modules: export and import
 
@@ -87,19 +77,13 @@ import User, { version, greet } from './lib.js';
 const mod = await import('./heavy.js');
 ```
 
----
-
 ## Module behavior and tooling
 
 Modules run in **strict mode**. Top-level `this` is `undefined`. In the browser, module scripts are **deferred**: they run after the document is parsed and do not block parsing. Cross-origin module scripts require CORS. In production, **bundlers** (e.g. Webpack, Vite) often bundle modules into one or a few files, resolve bare specifiers, and apply tree-shaking and minification; the runtime may not see raw `import`/`export` in the final script.
 
----
-
 ## Summary
 
 **Rest parameters** (`...rest`) collect remaining arguments into an array; **spread** (`...arr` or `...obj`) expands iterables or copies/merges arrays and objects. **Destructuring** unpacks arrays and objects into variables and is often used for parameters. **Template literals** provide interpolation and multi-line strings. **Optional chaining** (`?.`) and **nullish coalescing** (`??`) simplify access and defaults when values may be nullish. **ES modules** use `export` and `import` for a file-based, strict-mode scope; default and named exports support different usage patterns. Use these features for clearer, maintainable code in both browser and Node.js.
-
----
 
 ## Further reading
 

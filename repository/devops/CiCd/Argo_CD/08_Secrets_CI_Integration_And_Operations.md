@@ -2,8 +2,6 @@
 
 [← Previous](./07_ApplicationSets_App_Of_Apps_And_Scale.md) · [Argo CD](./README.md) · [Next: Use cases and checklist →](./09_Use_Cases_Pitfalls_And_Staff_Checklist.md)
 
----
-
 ## 1. Concepts
 
 ### Secrets: preferred model
@@ -49,8 +47,6 @@ Companion project: watches registries and writes new tags/digests into Git (or u
 
 Wire sync failures and degraded health to ChatOps / Pager ([Methodologies](../../Methodologies/README.md) on-call patterns). Watching only CI green is not enough once CD is pull-based — the failure may be sync/health after merge.
 
----
-
 ## 2. Advanced concepts
 
 ### Why render-time secrets hurt
@@ -81,8 +77,6 @@ Argo CD syncs a **Rollout** (or Deployment). Rollouts controller shifts traffic 
 
 Day-2 includes version upgrades (read upgrade notes), HA replica counts, repo-server resources for heavy Helm, and metrics from Argo CD’s own endpoints for controller lag.
 
----
-
 ## 3. Applications and use cases
 
 | Role | Day-2 focus |
@@ -99,8 +93,6 @@ Day-2 includes version upgrades (read upgrade notes), HA replica counts, repo-se
 - Image Updater writing `:latest` into prod  
 - Ignoring OutOfSync in prod because “the site works”  
 - One shared `admin` password for the whole company  
-
----
 
 ## References
 

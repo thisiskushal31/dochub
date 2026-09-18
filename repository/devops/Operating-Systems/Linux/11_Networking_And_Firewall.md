@@ -4,13 +4,9 @@
 
 **Prerequisite:** [Fundamentals: Sockets and network I/O](../Fundamentals/12_Sockets_And_Network_IO.md). Here: **how Linux** configures networking (interfaces, IP, routing, DNS), **firewall** (firewalld, iptables/nftables), and **remote access** (SSH, scp, rsync) — with commands for DevOps.
 
----
-
 ## Networking basics (Linux)
 
 The kernel provides **TCP/IP** (sockets, interfaces, routing). Interfaces are named (e.g. `eth0`, `ens33`, `enp0s3`). IP address, route, and DNS can be static (config files) or dynamic (DHCP). **NetworkManager** (`nmcli`) or **ip** + **resolve** are used to configure.
-
----
 
 ## Inspecting and configuring network
 
@@ -40,8 +36,6 @@ cat /etc/hosts
 resolvectl status   # systemd-resolved
 getent hosts example.com
 ```
-
----
 
 ## SSH and secure transfer
 
@@ -85,8 +79,6 @@ scp user@host:/path/file ./
 scp -r dir/ user@host:/path/
 scp -P 2222 -C file user@host:./
 ```
-
----
 
 ## Firewall: firewalld and iptables
 
@@ -167,15 +159,11 @@ Config: `/etc/ufw/ufw.conf`, `/etc/default/ufw`, `/etc/ufw/before.rules`, `/etc/
 
 **nftables** (newer replacement for iptables on some distros): `nft list ruleset`.
 
----
-
 ## Summary
 
 - **Network:** `ip`, `nmcli`, `hostnamectl`, `/etc/resolv.conf`, `/etc/hosts`.
 - **SSH:** `ssh`, `scp`, `rsync -e ssh`; server: `sshd`, `/etc/ssh/sshd_config`.
 - **Firewall:** `firewall-cmd` (firewalld) or `iptables`/`nftables`; open only what is needed.
-
----
 
 ## Further reading
 

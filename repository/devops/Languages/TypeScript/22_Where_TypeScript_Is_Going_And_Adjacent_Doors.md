@@ -10,8 +10,6 @@ You came here for TypeScript. You should leave able to **read, fix, review, migr
 
 The pillars that staff hire for do not change with fashion: **error handling**, **file/I/O honesty**, and **faster runtime plus faster builds**. New runtimes and compilers are doors around that bullseye—not replacements for it.
 
----
-
 ## 1. Concepts
 
 ### 1. What this track already owns
@@ -97,8 +95,6 @@ Read after **21** (or skim early so you know the bullseye). Revisit when:
 - Node gains another native TS story,
 - CI typecheck time becomes a political issue,
 - a rumor about a compiler rewrite hits social media.
-
----
 
 ## 2. Advanced concepts
 
@@ -281,8 +277,6 @@ Non-goals: rewriting the monorepo mid-spike
 
 If the ADR cannot name a rollback, it is not a spike—it is a hostage situation.
 
----
-
 ## 3. Applications and use cases
 
 ### Application teams
@@ -317,8 +311,6 @@ If the ADR cannot name a rollback, it is not a spike—it is a hostage situation
 | Rumor | Wait for official ship; continue chapters **13** / **15** hygiene |
 | Always | Errors, files, speed as non-negotiable review lenses |
 
----
-
 ## 4. Staff-level review checklist
 
 - Team pin documented (**TS 5.9.x** or justified older).
@@ -334,8 +326,6 @@ If the ADR cannot name a rollback, it is not a spike—it is a hostage situation
 - “Best practice” reviews route errors/files/speed to pillars **11** / **13** / **14** / **15**.
 - Compass doors used as **routing**, not infinite scope creep.
 - Reader can point to **one complement path** (React, Next, Nest, CLI deepen, …) without treating it as unfinished TypeScript.
-
----
 
 ## References
 

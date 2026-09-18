@@ -2,8 +2,6 @@
 
 [← Previous](./20_Troubleshooting_And_Staff_Checklist.md) · [README](./README.md)
 
----
-
 ## 1. Concepts
 
 Beyond repos and Pipelines, Bitbucket Cloud includes collaboration and quality surfaces:
@@ -15,8 +13,6 @@ Beyond repos and Pipelines, Bitbucket Cloud includes collaboration and quality s
 | **Snippets** | Small Git-backed multi-file shares (public or workspace-private) |
 | **Wiki** | Per-repo documentation (many teams prefer Confluence) |
 | **Issues** | Lightweight tracker (many teams prefer Jira) |
-
----
 
 ## 2. Advanced concepts
 
@@ -39,8 +35,6 @@ Create via **Create → Snippet**. Built on Git (clone/push main only for remote
 
 Available on Cloud for simple needs. Atlassian’s own comparison often points product planning to **Jira** and long-form docs to **Confluence** ([14](./14_Jira_And_Atlassian_Integrations.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Need | Pattern |
@@ -51,8 +45,6 @@ Available on Cloud for simple needs. Atlassian’s own comparison often points p
 | Team runbook | Wiki or Confluence |
 
 **Good:** insights that block merge only when wired into merge checks/builds. **Bad:** public snippets with credentials.
-
----
 
 ## References
 

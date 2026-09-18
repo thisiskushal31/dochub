@@ -2,8 +2,6 @@
 
 [← Previous](./04_First_Task_And_PipelineRun.md) · [README](./README.md) · [Next: Pipelines →](./06_Pipelines_Ordering_And_Finally.md)
 
----
-
 ## 1. Concepts
 
 A **Task** declares:
@@ -42,8 +40,6 @@ spec:
 
 Variable substitution: `$(params.name)`, `$(results.name.path)`, workspace paths — see variables docs.
 
----
-
 ## 2. Advanced concepts
 
 ### Scripts vs command/args
@@ -74,8 +70,6 @@ String and array params; substitution rules differ in `script` vs `args` — see
 
 Run as non-root where images allow; do not mount Docker socket casually ([08](./08_Auth_ServiceAccounts_And_RBAC.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -91,8 +85,6 @@ Run as non-root where images allow; do not mount Docker socket casually ([08](./
 - Results only for small metadata  
 
 **Good:** small Tasks, clear params. **Bad:** secret values as params logged in status.
-
----
 
 ## References
 

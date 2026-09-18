@@ -2,8 +2,6 @@
 
 [← Previous](./9_Deploy_On_The_Estate.md) · [README](./README.md) · [Next: Identity →](./11_Identity_Access_And_Change.md)
 
----
-
 ## 1. Concepts
 
 A cluster in the hall is **Kubernetes (or OpenShift) on the fabric in chapters 3–8**. This chapter is the **map**. Internals stay in Containerization.
@@ -29,8 +27,6 @@ OpenShift on metal vs ROSA is the same fork as kubeadm-on-box vs EKS. Do not ins
 - **Time sync**  
 - **Failure domains** as racks/feeds, expressed as Kubernetes topology labels  
 - **BMC/image** story for node replace ([4](./4_Rack_BMC_And_Provisioning.md))  
-
----
 
 ## 2. Advanced concepts
 
@@ -64,8 +60,6 @@ On-prem etcd on a contended NFS datastore is a classic outage. Fast local SSD or
 
 Device plugins, VFIO, SR-IOV. Firmware and drivers are node images, not `apt` in a Job. Spare SKU is a GPU node ([4](./4_Rack_BMC_And_Provisioning.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -87,8 +81,6 @@ Device plugins, VFIO, SR-IOV. Firmware and drivers are node images, not `apt` in
 - Disconnected: mirror and cert story if required  
 
 **Good:** VIP, rack topology, CSI, etcd restore, one installer family. **Bad:** `kubeadm init` on one VM, hostPath, public 6443, three CP on one ESXi, expecting `type: LoadBalancer` to invent a cloud.
-
----
 
 ## Go deeper
 

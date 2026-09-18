@@ -6,13 +6,9 @@ C# is **statically typed**: every variable must be declared with a data type bef
 
 **Why types matter:** The compiler uses types to check operations and prevent invalid use. Converting between types (e.g. int to long, or string to int) is done explicitly when the conversion might lose data or fail, so you control when and how conversion happens.
 
----
-
 ## Value types and reference types
 
 **Value types** hold the value directly; they are derived from **System.ValueType**. When you copy a value-type variable, you get a copy of the data. **Reference types** (e.g. class instances, string, arrays) hold a reference to the data; copying the variable copies the reference, not the object. **Nullable value types** (e.g. **int?**) can represent null for value types.
-
----
 
 ## Integral and floating-point types
 
@@ -29,8 +25,6 @@ string name = "C#";
 var inferred = 42;
 ```
 
----
-
 ## Type conversion
 
 **Implicit conversion** happens when the conversion is safe (e.g. int to long). **Explicit conversion** (cast) is required when data might be lost (e.g. double to int) or when the conversion is not built-in. Use **Convert** or **Parse** methods for string-to-numeric conversion.
@@ -40,8 +34,6 @@ long big = count;           // implicit
 int small = (int)rate;      // explicit cast
 int parsed = int.Parse("123");
 ```
-
----
 
 ## Further reading
 

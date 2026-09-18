@@ -6,8 +6,6 @@ Open curriculum check against widely taught **classical DevOps** specializations
 
 Timeless guardrail: syllabus Part A rule 9. Spectrum: [19](./19_Delivery_Spectrum_Legacy_Through_Modern.md).
 
----
-
 ## Topic → handbook home
 
 | Classical / LinuxWorld-style topic | Home in this ecosystem |
@@ -33,8 +31,6 @@ Timeless guardrail: syllabus Part A rule 9. Spectrum: [19](./19_Delivery_Spectru
 | MLOps / model & distributed AI delivery | **[22](./22_MLOps_And_AI_System_Delivery.md)** → DS-AI / DE related repos |
 | Agentic / assisted coding on the loop | [Methodologies/19](../Methodologies/19_Durable_Mindsets_And_Evolving_Toolsets.md), [19](./19_Delivery_Spectrum_Legacy_Through_Modern.md) |
 
----
-
 ## What their syllabus emphasizes that we must keep visible
 
 1. **Host-first CI** — Jenkins on Linux, agents, Poll SCM, deploy to web servers — not only Actions→GKE.  
@@ -44,8 +40,6 @@ Timeless guardrail: syllabus Part A rule 9. Spectrum: [19](./19_Delivery_Spectru
 5. **Cloud VM primitives** — EC2/ASG/LB/S3 as first-class, not footnotes.  
 
 AI/ML delivery ([22](./22_MLOps_And_AI_System_Delivery.md)) extends the same promote/verify discipline to **models** and **distributed** train/serve — beyond typical classical course outlines, required for an open modern handbook.
-
----
 
 ## Honesty check
 

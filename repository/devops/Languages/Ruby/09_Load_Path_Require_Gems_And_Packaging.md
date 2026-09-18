@@ -6,8 +6,6 @@
 
 How Ruby **finds and loads** code: `$LOAD_PATH`, `require` vs `load`, **gems** as packaged libraries, and the **layout** of a typical Ruby project (lib/, bin/, gemspec). This is the bridge between language chapters and real repos—Chef cookbooks, Vagrant plugins, internal tools, and Rails apps all depend on load semantics.
 
----
-
 ## 1. Concepts
 
 ### 1. `$LOAD_PATH` and `$LOADED_FEATURES`
@@ -81,8 +79,6 @@ Mytool::CLI.run(ARGV)
 - Prefer **`bundle exec`** so Bundler sets paths consistently.
 - Log **`$LOAD_PATH.first(5)`** in debug mode for “wrong gem version” incidents.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. `Kernel#require` and autoload
@@ -135,8 +131,6 @@ Typical Rails boot: Bundler → Rails → initializers → eager_load in product
 - Use autoload/Zeitwerk instead of manual cross-require
 - `require` at bottom of file (last resort)
 
----
-
 ## 3. Applications and use cases
 
 ### Software engineering and modularization
@@ -168,8 +162,6 @@ Chef Client ships its own Ruby and gem set; cookbooks declare **dependencies** i
 - No `gem install` in Docker `CMD`; bake gems at build.
 - Native extension gems documented with OS packages required.
 - Load path mutations in application code are justified and tested.
-
----
 
 ## References
 

@@ -8,8 +8,6 @@ The **members** of a contract: state, constructor, functions, modifiers, events,
 
 If chapter **00** was “a sticky note,” this chapter is “everything that can live in the box.”
 
----
-
 ## 1. Concepts
 
 ### 1. A contract is the deployable unit
@@ -114,8 +112,6 @@ Every function and non-constant state variable has visibility (`public`, `extern
 
 `contract Child is Parent` merges parents’ members into one layout. Slot order depends on inheritance order. You must understand this before you upgrade or `delegatecall` (chapters **13**, **20**). For day-one structure: **inheritance is not a Java classpath**; it is a storage-layout decision.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Creation bytecode vs runtime bytecode
@@ -161,8 +157,6 @@ Same “declared on the contract” feeling as storage, different location (chap
 
 `immutable` values are written **once** in the constructor and then **inlined into runtime bytecode** (a `PUSH32` of the value, typically). They are not `SLOAD`s. Changing an immutable requires a new deploy (or a proxy that does not use immutables for that field). You cannot read another contract’s immutables via `eth_getStorageAt`.
 
----
-
 ## 3. Applications and use cases
 
 | Lens | Structural habit |
@@ -173,8 +167,6 @@ Same “declared on the contract” feeling as storage, different location (chap
 | **Operations** | Constructor args recorded in the deploy script / runbook |
 | **Software engineering** | One primary contract per file; types/errors grouped on purpose |
 
----
-
 ## 4. Staff-level review checklist
 
 - State that never changes after deploy is `constant` or `immutable`, not a writable slot.
@@ -183,8 +175,6 @@ Same “declared on the contract” feeling as storage, different location (chap
 - Inheritance list is short enough to draw on a whiteboard, including storage order.
 - ETH-acceptance policy is intentional (`receive`/`fallback` present or absent on purpose).
 - No initializer-without-constructor unless an upgrade pattern is an explicit project choice.
-
----
 
 ## References
 

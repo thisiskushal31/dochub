@@ -2,8 +2,6 @@
 
 [← Previous](./20_Best_Practices_And_When_Not_Actions.md) · [README](./README.md) · [Next: YAML catalog →](./22_YAML_And_Configuration_Catalog.md)
 
----
-
 ## 1. Concepts
 
 This chapter is the **final product-offering map** for GitHub Actions: every major surface the product exposes — whether it ships on Free, Pro, Team, Enterprise, or is plan-/SKU-gated. Plan names and minute tables change; **the feature still belongs on the map**. Confirm current availability and quotas in References when you implement.
@@ -94,8 +92,6 @@ flowchart TB
 ```
 
 **How to read plan gates:** everything on the diagram is a real product surface. Larger runners, custom images, some private-networking modes, enterprise sharing, GHE.com namespace tooling, and concurrency/minute ceilings vary by plan or SKU — list them here; buy/enable them when you need them. Do not omit a capability because it is paid.
-
----
 
 ## 2. Advanced — full offering inventory
 
@@ -279,15 +275,11 @@ flowchart TB
 | ARC Helm values / error-code runbooks | Platform ops |
 | Agentic workflow deep recipes | Optional assisted lane |
 
----
-
 ## 3. Applications and use cases
 
 Walk **A–L** for your estate. Mark each row **use / later / N/A**. Include paid/SKU rows even if you are on Free today — that is how you know what to buy when queue time, macOS concurrency, custom images, or VNet injection show up.
 
 Prefer closing gaps in **H–J** (deploy, OIDC, hardening) before collecting more language tutorials.
-
----
 
 ## References
 

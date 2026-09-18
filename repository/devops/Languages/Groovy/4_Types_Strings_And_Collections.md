@@ -4,8 +4,6 @@
 
 Groovy supports both explicit typing (as in Java) and optional typing with **def** or **var** (Groovy 3+). This topic covers strings (including all literal forms and GString interpolation), numbers (integral and decimal, bases, suffixes, math), booleans, lists, arrays, and maps in enough depth to read and write scripts and DSLs correctly.
 
----
-
 ## 1. Strings
 
 **Single-quoted string.** **'...'** is a plain **java.lang.String**. It does not support interpolation.
@@ -64,8 +62,6 @@ assert /a ${color} car/ == 'a blue car'
 
 **String summary.** Single-quoted and triple-single-quoted: no interpolation, escape **\\**. Double and triple-double: interpolation, escape **\\**. Slashy: interpolation, escape only **/**. Dollar-slashy: interpolation, escape **$**.
 
----
-
 ## 2. Numbers
 
 **Integral literals.** Supported types: **byte**, **char**, **short**, **int**, **long**, **java.math.BigInteger**. With **def**, the type is chosen by capacity: up to **Integer.MAX_VALUE** → **Integer**, then **Long**, then **BigInteger** (same for negatives).
@@ -80,13 +76,9 @@ assert /a ${color} car/ == 'a blue car'
 
 **Math operations.** Binary operations between **byte**, **char**, **short**, **int** → **int**. With **long** → **long**. With **BigInteger** → **BigInteger**. With **BigDecimal** and integral types → **BigDecimal**. Between **float**, **double**, **BigDecimal** → **double** (except two **BigDecimal** → **BigDecimal**). Division **/**: if either operand is **float** or **double**, result is **double**; otherwise **BigDecimal** (using **divide()** with appropriate scale). For integer division use **intdiv()**, not **/**. Power **\*\***: result type depends on base and exponent (Integer, Long, BigInteger, BigDecimal, or Double per language rules).
 
----
-
 ## 3. Booleans
 
 **true** and **false** are the two boolean literals. They can be stored in variables or fields. Groovy also applies “Groovy truth” when coercing non-boolean values to boolean (e.g. empty string, empty collection, null).
-
----
 
 ## 4. Lists
 
@@ -106,8 +98,6 @@ assert letters[2..4] == ['C', 'd', 'e']
 
 **Multidimensional.** **[[0, 1], [2, 3]]** and **multi[1][0]** for nested access.
 
----
-
 ## 5. Arrays
 
 Groovy uses list notation for array literals; the type must be explicit via declaration or coercion. **{ }** is reserved for closures, so use **[1, 2, 3]** or (Groovy 3+) **new int[] {2, 3, 5, 7}**.
@@ -119,8 +109,6 @@ def primes = new int[] {2, 3, 5, 7, 11}
 ```
 
 Multi-dimensional: **new Integer[3][3]** or **Integer[][] matrix2 = [[1, 2], [3, 4]]**. Element access and assignment use the same **[]** notation as lists.
-
----
 
 ## 6. Maps
 
@@ -136,13 +124,9 @@ assert person.containsKey('name')
 
 Numeric or other unambiguous expressions as keys are used as-is: **[1: 'one', 2: 'two']**.
 
----
-
 ## 7. Ranges
 
 **..** creates an inclusive range (**1..3** is 1, 2, 3). **..<** (where supported) creates a half-open range. Use with **for**-in and **in** operator: **2 in 1..3** is true.
-
----
 
 ## Further reading
 

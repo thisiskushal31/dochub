@@ -26,8 +26,6 @@ Tables and full userdata can have a **__gc** metamethod (finalizer). You **mark*
 
 A **weak table** has weak references: the GC ignores them when deciding if an object is live. The metatable’s **__mode** must be `"k"` (weak keys), `"v"` (weak values), or `"kv"` (both). If the only reference to an object is weak, the object can be collected and the corresponding entry is removed from the table. A table with weak keys and strong values is an **ephemeron** table: a value is considered reachable only if its key is reachable. Only objects with explicit construction (tables, functions, threads, full userdata) are removed from weak tables; numbers, light userdata, and strings are not removed as keys/values in the same way (see manual). Changes to `__mode` can take effect at the next collection. Resurrected objects are removed from weak values before finalizers run, and from weak keys after.
 
----
-
 ## Further reading
 
 - [Lua 5.5 — §2.5 Garbage Collection](https://www.lua.org/manual/5.5/manual.html#2.5)

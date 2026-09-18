@@ -6,8 +6,6 @@
 
 How R represents tabular and multidimensional data under the hood: **lists** as generic containers, **matrices/arrays** as vector + `dim`, **data.frame** as list-with-constraints, and **factors** as integer-coded categoricals. You also need the **object-oriented** reality of most user-facing behavior: **S3** dispatch via `class` + **methods** for generics like `[`, `[[`, `merge`, `print`, `summary`. This chapter connects “why did subsetting do that?” to **attributes** and **dispatch**.
 
----
-
 ## 1. Concepts
 
 ### 1. Lists: heterogeneous, recursive, reference-ish
@@ -29,8 +27,6 @@ A factor’s **levels** define the allowed categories; **contrasts** connect fac
 ### 5. Names, dimnames, and stable keys
 
 Row/column names are convenient and dangerous as keys: they are not a database primary key unless you enforce uniqueness. Duplicate row names are allowed in base data frames—**never** assume uniqueness without checking.
-
----
 
 ## 2. Advanced concepts
 
@@ -56,8 +52,6 @@ Factor missingness is represented as **NA in the integer codes**; `levels` do no
 
 Mixing packages that attach different conventions can create subtle **class** differences (`tbl_df`, `data.table`). Standardize a single table type per pipeline stage or convert explicitly at boundaries.
 
----
-
 ## 3. Applications and use cases
 
 - **Modeling:** define factor handling (baseline, rare levels, missing category) before `lm`/`glm`/`surv` workflows.
@@ -82,8 +76,6 @@ dimnames(m) <- list(c("r1", "r2"), c("c1", "c2", "c3"))
 - Factor policy is explicit for modeling and reporting outputs.
 - Dimension dropping and key uniqueness are tested at transform boundaries.
 - S3/S4 class expectations are documented for exported objects between teams.
-
----
 
 ## References
 

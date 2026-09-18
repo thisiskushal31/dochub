@@ -2,8 +2,6 @@
 
 [← Back to IAC](../README.md) · [Terraform](../Terraform/README.md) · [OpenTofu](../OpenTofu/README.md)
 
----
-
 ## 1. Concepts
 
 **Atlantis** runs **Terraform/OpenTofu plan and apply from pull requests**—comments `atlantis plan` / `atlantis apply` so changes are reviewed as code with remote state locking.
@@ -16,8 +14,6 @@ First-use notes: [1_Install_And_First_Use](./1_Install_And_First_Use.md).
 
 **Confirm:** Who is allowed to `atlantis apply` on `prod`?
 
----
-
 ## 2. Advanced concepts
 
 | Concern | Practice |
@@ -28,8 +24,6 @@ First-use notes: [1_Install_And_First_Use](./1_Install_And_First_Use.md).
 | Secrets | Workflow runners use OIDC/roles—not static keys in repo |
 | Multi-account | Separate projects / roles per env |
 
----
-
 ## 3. Applications
 
 | Goal | Pattern |
@@ -39,8 +33,6 @@ First-use notes: [1_Install_And_First_Use](./1_Install_And_First_Use.md).
 | OpenTofu | Same PR UX when configured for `tofu` |
 
 **Staff checklist:** protect apply permissions; audit logs; remote state; never disable locking “temporarily.”
-
----
 
 ## References
 

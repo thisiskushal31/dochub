@@ -2,8 +2,6 @@
 
 [← Previous](./11_Actions_Marketplace_And_Pinning.md) · [README](./README.md) · [Next: Reusable →](./13_Reusable_Workflows_And_Composites.md)
 
----
-
 ## 1. Concepts
 
 Two different handoff tools:
@@ -27,8 +25,6 @@ Two different handoff tools:
 
 Caches are keyed; restore can be partial via `restore-keys`. Artifacts pass between jobs in a run or persist after completion.
 
----
-
 ## 2. Advanced concepts
 
 ### Cache correctness
@@ -49,8 +45,6 @@ CI artifacts are for workflow plumbing and humans. **Release truth** for deploya
 
 UI/API can list/delete caches and artifacts to reclaim storage. Retention settings matter for compliance and cost ([18](./18_Monitor_Metrics_And_Billing_Literacy.md)).
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Use |
@@ -60,8 +54,6 @@ UI/API can list/delete caches and artifacts to reclaim storage. Retention settin
 | Image to prod | Registry + digest, not cache |
 
 **Good:** cache dependencies only. **Bad:** caching secrets or treating cache as a reliable artifact store.
-
----
 
 ## References
 

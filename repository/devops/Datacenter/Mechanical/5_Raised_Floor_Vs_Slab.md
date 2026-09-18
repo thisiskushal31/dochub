@@ -2,8 +2,6 @@
 
 [← Previous](./4_Containment_Hot_And_Cold_Aisle.md) · [README](./README.md) · [Next: Liquid cooling →](./6_Liquid_Cooling_Rear_Door_And_Direct_To_Chip.md)
 
----
-
 ## 1. Concepts
 
 White-space floors are usually one of:
@@ -27,8 +25,6 @@ Raised floor: pedestals, stringers, tiles; underfloor power/data in older design
 | **Tile cutouts** | Cable openings = bypass air if unsealed |
 | **Ramp / lift path** | How iron enters |
 | **Leak path** | Water under raised floor spreads ([7](./7_Leak_Detection_And_Fluid_Risk.md)) |
-
----
 
 ## 2. Advanced concepts
 
@@ -54,8 +50,6 @@ Many high-density halls prefer **slab + overhead** for airflow predictability an
 
 Seismic pedestals, humidity effects on tiles, and flood risk differ by metro. Coastal and monsoon sites make underfloor leak detection non-optional.
 
----
-
 ## 3. Applications and use cases
 
 | Goal | Pattern |
@@ -74,8 +68,6 @@ Seismic pedestals, humidity effects on tiles, and flood risk differ by metro. Co
 - Never “borrow” tiles from another aisle permanently  
 
 **Good:** managed tile map, sealed cutouts, known loading. **Bad:** random perforations; cable landfill underfloor; overweight rack “because it fit.”
-
----
 
 ## References
 

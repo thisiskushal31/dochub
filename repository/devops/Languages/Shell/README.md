@@ -12,8 +12,6 @@ This is the **Languages** deep track for shell scripting. Operating-Systems chap
 - [macOS: Shell and scripting](../../Operating-Systems/MacOS/9_Shell_And_Scripting.md)
 - [Windows: Commands and PowerShell](../../Operating-Systems/Windows/1_Windows_Commands_And_PowerShell.md)
 
----
-
 ## Shell vs scripting (read this once)
 
 | Term | Meaning |
@@ -27,8 +25,6 @@ This is the **Languages** deep track for shell scripting. Operating-Systems chap
 | **cmd** | Windows batch shell; legacy automation |
 
 People say “shell script” when they often mean Bash. This track always names the **dialect** and the **OS**. Start at chapter **00** if you have never used a terminal.
-
----
 
 ## Versions and brownfield (default narrative)
 
@@ -62,8 +58,6 @@ $PSVersionTable
 Get-Host
 ```
 
----
-
 ## Chapter structure
 
 Chapters follow:
@@ -74,8 +68,6 @@ Chapters follow:
 4. **Staff-level review checklist**
 
 Links live in each chapter’s **References** (official hubs only).
-
----
 
 ## Beginner to advanced progression
 
@@ -93,8 +85,6 @@ Links live in each chapter’s **References** (official hubs only).
 | Wrap | **26** | Whole-engineering wrap and staff checklist (read **after** **27–32** for command fluency sign-off) |
 
 Suggested order: **00 → 01 → 22** (subsets), then **02–11**, then **12 → 13**, then **14 → 18**, then **19 → 21**, then **23 → 25**, then **27 → 32** (command encyclopedia + eras), then **26**. Revisit **02** before pinning CI images; **10**/**20** before `#!/bin/sh` portability; **18**/**21** before untrusted input / legacy estates; **15**/**24** for JSON depth; **22** whenever “it works in my shell” is ambiguous; **27**/**32** whenever you need the full list of commands **or** which era/distro you are on.
-
----
 
 ## Chapters
 
@@ -134,8 +124,6 @@ Suggested order: **00 → 01 → 22** (subsets), then **02–11**, then **12 →
 | 31 | PowerShell cmdlet atlas and cmd.exe builtins | [31](./31_PowerShell_Cmdlet_Atlas_And_Cmd_Builtins.md) |
 | 32 | Terminal, TTY, and command eras across OS and distros | [32](./32_Terminal_TTY_And_Command_Eras_Across_OS.md) |
 
----
-
 ## Deep-study workflow
 
 1. Start at **00**, then after **01–03**, on each OS you use, record shell path + version in a one-page lab note.
@@ -146,8 +134,6 @@ Suggested order: **00 → 01 → 22** (subsets), then **02–11**, then **12 →
 6. After **23–25**, decode one opaque flag cluster, one `jq` transform, and one recon checklist for your OS.
 7. After **27–32**, pick ten atlas commands you use weekly and expand each flag/parameter table from the depth chapter; prove BusyBox/BSD/Windows glyphs on a real agent; run the Stage 0–2 lab from **32** on one foreign OS/distro.
 8. After **26**, sign the wrap checklist for your primary OS *and* one foreign OS—including command-catalog and era/distro items.
-
----
 
 ## Further reading
 
@@ -163,8 +149,6 @@ Suggested order: **00 → 01 → 22** (subsets), then **02–11**, then **12 →
 - [Debian Policy — Files (incl. `/bin/sh` expectations)](https://www.debian.org/doc/debian-policy/ch-files.html)
 - [jq manual](https://jqlang.github.io/jq/manual/)
 - [ss(8) — Linux man page](https://man7.org/linux/man-pages/man8/ss.8.html)
-
----
 
 ## References (hub links)
 

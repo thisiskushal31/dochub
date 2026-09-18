@@ -2,8 +2,6 @@
 
 [← Previous](./23_Best_Practices_And_When_Not_GitLab.md) · [README](./README.md) · [Next: Catalog →](./25_YAML_Catalog_And_Troubleshooting.md)
 
----
-
 ## 1. Concepts
 
 Final **product-offering map**: CI deeply, plus the majority of GitLab’s platform surface as literacy. Tier/offering gates (Free/Premium/Ultimate, Duo add-ons, Dedicated) change — **list the capability anyway**; confirm availability in References when implementing.
@@ -46,8 +44,6 @@ flowchart TB
   ADM --> RUN
   API --> CI
 ```
-
----
 
 ## 2. Advanced — inventory
 
@@ -134,13 +130,9 @@ Every `doc/ci/` area maps here or upstream:
 | Full API resource list | API docs |
 | Duo prompt encyclopedias | Product moves fast |
 
----
-
 ## 3. Applications and use cases
 
 Walk A–C for your estate: **use / later / N/A**. Include Ultimate/Duo rows even on Free — that is how you know what to buy later.
-
----
 
 ## References
 

@@ -14,8 +14,6 @@
 
 Fuzzy config here is the #1 reason teams say “TypeScript is broken.” It usually isn’t—the project file is.
 
----
-
 ## 1. Concepts
 
 ### 1. What `tsconfig.json` is
@@ -117,8 +115,6 @@ npx tsc -p .
 node dist/index.js
 ```
 
----
-
 ## 2. Advanced concepts
 
 ### 1. What `strict` actually turns on
@@ -197,8 +193,6 @@ Pair with **`verbatimModuleSyntax`** when you care about honest import emit. Sta
 
 Stable **`module` / `moduleResolution`: `node18`** (TS 5.8+) freezes Node-18-era rules. **`nodenext`** tracks newer Node interop (including `require()` of many ESM graphs on supported Node lines). Library authors on older Node stay on a stable `node16`/`node18` pin; apps on Node 22+ often want `nodenext` and verify against current release notes.
 
----
-
 ## 3. Applications and use cases
 
 | Angle | How tsconfig shows up |
@@ -210,8 +204,6 @@ Stable **`module` / `moduleResolution`: `node18`** (TS 5.8+) freezes Node-18-era
 | **SE** | Config is reviewed like code—drive-by `strict: false` is a process failure. |
 
 **Whole-engineering picture:** module settings are an **interface** between TypeScript and the host. Get them wrong and every import error looks like a language bug.
-
----
 
 ## Staff-level review checklist
 
@@ -225,8 +217,6 @@ Stable **`module` / `moduleResolution`: `node18`** (TS 5.8+) freezes Node-18-era
 - Init leftovers that do not apply (`jsx` in a pure Node lib, etc.) are cleaned or justified.
 - If the runtime strips types, `erasableSyntaxOnly` (and honest module syntax) are considered—not only “it typechecks under full `tsc` emit.”
 - Reviewers can answer: “What does this config emit, and who runs it?”
-
----
 
 ## References
 

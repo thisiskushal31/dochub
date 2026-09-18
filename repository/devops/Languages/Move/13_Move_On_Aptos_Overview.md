@@ -105,8 +105,6 @@ If your product is fundamentally object-graph centric with PTB-heavy composition
 - **Security:** define signer/capability boundaries and upgrade policy early.
 - **Operations:** pin CLI/compiler versions and formalize publish/rollback runbooks.
 
----
-
 ## Further reading
 
 - [Move on Aptos](https://aptos.dev/move/move-on-aptos)

@@ -10,8 +10,6 @@ Solidity developers often reach for base contracts and modifiers. Vyper’s answ
 
 Shared EVM call semantics: [Solidity](../Solidity/README.md). Interface *files* and module *storage layout* are Vyper-specific—stay here.
 
----
-
 ## 1. Concepts
 
 ### 1. Composition, not inheritance
@@ -172,8 +170,6 @@ def call_ownable(addr: address):
 
 Do not confuse **in-process module state** (composed into *this* deploy) with **another address’s storage**.
 
----
-
 ## 2. Advanced concepts
 
 ### 1. Interfaces vs modules (choose deliberately)
@@ -205,8 +201,6 @@ Pre-0.4 codebases often duplicated logic or used different reuse patterns. When 
 
 External functions with defaults generate multiple selectors. Interface definitions and clients must match the selector you intend—especially when calling into Solidity-authored ERC surfaces. See control-structures notes in official docs when debugging “wrong function hit.”
 
----
-
 ## 3. Applications and use cases
 
 | Role | Practice |
@@ -218,8 +212,6 @@ External functions with defaults generate multiple selectors. Interface definiti
 | **Solidity sibling teams** | Map “base contract” instincts to modules; map “IERC20” to interfaces |
 
 **Smell:** huge contracts that paste the same ownership code five times because “Vyper has no inheritance.” 0.4 modules exist so you do not have to.
-
----
 
 ## 4. Staff-level review checklist
 
@@ -234,8 +226,6 @@ External functions with defaults generate multiple selectors. Interface definiti
 - Pure vs stateful module usage distinguished (no silent state touch).
 - Brownfield 0.3 vs 0.4 differences named when reviewing older trees.
 - Remote `__at__` usage not confused with local module storage.
-
----
 
 ## References
 
