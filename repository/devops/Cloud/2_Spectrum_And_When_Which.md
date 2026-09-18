@@ -1,6 +1,6 @@
 # 2 — Spectrum and when which
 
-[← Previous](./1_Shared_Cloud_Concepts.md) · [README](./README.md) · [Next: Managed Kubernetes →](./3_Managed_Kubernetes.md)
+[← Previous](./1_Shared_Cloud_Concepts.md) · [README](./README.md) · [Next: Managed Kubernetes →](./3_Managed_Kubernetes.md) · [Deploy shapes →](./28_Deployment_Shapes_On_Cloud.md)
 
 ---
 

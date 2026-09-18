@@ -11,10 +11,10 @@
 | Interface | Home |
 |-----------|------|
 | Cage, kW, hands, XC | [Datacenter Provider-Use](../Datacenter/Provider-Use/README.md) |
-| IAM, VPC, instances, K8s SKUs | This `Cloud/` track |
+| IAM, VPC, LB, storage, deploy shapes, K8s SKUs | This `Cloud/` track (Floor 1 jobs + Floor 2 providers) |
 | On-ramp physical+logical | [17](./17_Private_Connectivity_And_On_Ramps.md) + Provider-Use/7 |
 | Packets/BGP | Networks-Deep-Dive |
-| App delivery | CiCd / Servers |
+| App delivery | CiCd / Servers / [28](./28_Deployment_Shapes_On_Cloud.md) |
 
 ---
 

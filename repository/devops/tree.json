@@ -2627,165 +2627,355 @@
     "sha": "",
     "children": [
       {
+        "name": "Catalogs",
+        "path": "Cloud/Catalogs",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "Akamai_Linode_Products.md",
+            "path": "Cloud/Catalogs/Akamai_Linode_Products.md",
+            "type": "file",
+            "sha": "",
+            "size": 2729
+          },
+          {
+            "name": "Alibaba_Products.md",
+            "path": "Cloud/Catalogs/Alibaba_Products.md",
+            "type": "file",
+            "sha": "",
+            "size": 4537
+          },
+          {
+            "name": "AWS_Products.md",
+            "path": "Cloud/Catalogs/AWS_Products.md",
+            "type": "file",
+            "sha": "",
+            "size": 10906
+          },
+          {
+            "name": "Azure_Products.md",
+            "path": "Cloud/Catalogs/Azure_Products.md",
+            "type": "file",
+            "sha": "",
+            "size": 7943
+          },
+          {
+            "name": "GCP_Products.md",
+            "path": "Cloud/Catalogs/GCP_Products.md",
+            "type": "file",
+            "sha": "",
+            "size": 7790
+          },
+          {
+            "name": "Huawei_Products.md",
+            "path": "Cloud/Catalogs/Huawei_Products.md",
+            "type": "file",
+            "sha": "",
+            "size": 3392
+          },
+          {
+            "name": "IBM_Products.md",
+            "path": "Cloud/Catalogs/IBM_Products.md",
+            "type": "file",
+            "sha": "",
+            "size": 3771
+          },
+          {
+            "name": "India_CtrlS_Yotta_Products.md",
+            "path": "Cloud/Catalogs/India_CtrlS_Yotta_Products.md",
+            "type": "file",
+            "sha": "",
+            "size": 4816
+          },
+          {
+            "name": "OCI_Products.md",
+            "path": "Cloud/Catalogs/OCI_Products.md",
+            "type": "file",
+            "sha": "",
+            "size": 4933
+          },
+          {
+            "name": "OTC_Products.md",
+            "path": "Cloud/Catalogs/OTC_Products.md",
+            "type": "file",
+            "sha": "",
+            "size": 3190
+          },
+          {
+            "name": "OVH_Products.md",
+            "path": "Cloud/Catalogs/OVH_Products.md",
+            "type": "file",
+            "sha": "",
+            "size": 3505
+          },
+          {
+            "name": "README.md",
+            "path": "Cloud/Catalogs/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 1594
+          },
+          {
+            "name": "Tencent_Products.md",
+            "path": "Cloud/Catalogs/Tencent_Products.md",
+            "type": "file",
+            "sha": "",
+            "size": 3334
+          }
+        ]
+      },
+      {
+        "name": "0_How_To_Read.md",
+        "path": "Cloud/0_How_To_Read.md",
+        "type": "file",
+        "sha": "",
+        "size": 4132
+      },
+      {
         "name": "1_Shared_Cloud_Concepts.md",
         "path": "Cloud/1_Shared_Cloud_Concepts.md",
         "type": "file",
         "sha": "",
-        "size": 6614
+        "size": 9654
       },
       {
         "name": "10_Tencent_Cloud.md",
         "path": "Cloud/10_Tencent_Cloud.md",
         "type": "file",
         "sha": "",
-        "size": 1831
+        "size": 3353
       },
       {
         "name": "11_Huawei_Cloud.md",
         "path": "Cloud/11_Huawei_Cloud.md",
         "type": "file",
         "sha": "",
-        "size": 2123
+        "size": 3121
       },
       {
         "name": "12_OVHcloud.md",
         "path": "Cloud/12_OVHcloud.md",
         "type": "file",
         "sha": "",
-        "size": 2725
+        "size": 3732
       },
       {
         "name": "13_Deutsche_Telekom.md",
         "path": "Cloud/13_Deutsche_Telekom.md",
         "type": "file",
         "sha": "",
-        "size": 2725
+        "size": 3728
       },
       {
         "name": "14_CtrlS_And_Yotta.md",
         "path": "Cloud/14_CtrlS_And_Yotta.md",
         "type": "file",
         "sha": "",
-        "size": 3669
+        "size": 5122
       },
       {
         "name": "15_Org_IAM_And_Identity_Federation.md",
         "path": "Cloud/15_Org_IAM_And_Identity_Federation.md",
         "type": "file",
         "sha": "",
-        "size": 2149
+        "size": 9396
       },
       {
         "name": "16_VPC_And_Network_Constructs.md",
         "path": "Cloud/16_VPC_And_Network_Constructs.md",
         "type": "file",
         "sha": "",
-        "size": 2031
+        "size": 3736
       },
       {
         "name": "17_Private_Connectivity_And_On_Ramps.md",
         "path": "Cloud/17_Private_Connectivity_And_On_Ramps.md",
         "type": "file",
         "sha": "",
-        "size": 2097
+        "size": 3566
       },
       {
         "name": "18_Compute_Instances_And_Autoscaling.md",
         "path": "Cloud/18_Compute_Instances_And_Autoscaling.md",
         "type": "file",
         "sha": "",
-        "size": 1947
+        "size": 3533
       },
       {
         "name": "19_Portals_CLI_And_API_Patterns.md",
         "path": "Cloud/19_Portals_CLI_And_API_Patterns.md",
         "type": "file",
         "sha": "",
-        "size": 1911
+        "size": 2915
       },
       {
         "name": "2_Spectrum_And_When_Which.md",
         "path": "Cloud/2_Spectrum_And_When_Which.md",
         "type": "file",
         "sha": "",
-        "size": 4779
+        "size": 4838
       },
       {
         "name": "20_FinOps_And_Cost_Controls.md",
         "path": "Cloud/20_FinOps_And_Cost_Controls.md",
         "type": "file",
         "sha": "",
-        "size": 2144
+        "size": 3329
       },
       {
         "name": "21_Akamai_Linode_And_VPS_Kin.md",
         "path": "Cloud/21_Akamai_Linode_And_VPS_Kin.md",
         "type": "file",
         "sha": "",
-        "size": 1925
+        "size": 2224
       },
       {
         "name": "22_Hybrid_Colo_And_Cloud.md",
         "path": "Cloud/22_Hybrid_Colo_And_Cloud.md",
         "type": "file",
         "sha": "",
-        "size": 2159
+        "size": 2254
+      },
+      {
+        "name": "23_Load_Balancing_Ingress_And_TLS.md",
+        "path": "Cloud/23_Load_Balancing_Ingress_And_TLS.md",
+        "type": "file",
+        "sha": "",
+        "size": 4958
+      },
+      {
+        "name": "24_Object_Block_And_File_Storage.md",
+        "path": "Cloud/24_Object_Block_And_File_Storage.md",
+        "type": "file",
+        "sha": "",
+        "size": 3959
+      },
+      {
+        "name": "25_DNS_CDN_And_Edge_HTTP.md",
+        "path": "Cloud/25_DNS_CDN_And_Edge_HTTP.md",
+        "type": "file",
+        "sha": "",
+        "size": 3279
+      },
+      {
+        "name": "26_Secrets_KMS_And_Encryption.md",
+        "path": "Cloud/26_Secrets_KMS_And_Encryption.md",
+        "type": "file",
+        "sha": "",
+        "size": 3489
+      },
+      {
+        "name": "27_Container_Registries_And_Artifacts.md",
+        "path": "Cloud/27_Container_Registries_And_Artifacts.md",
+        "type": "file",
+        "sha": "",
+        "size": 2833
+      },
+      {
+        "name": "28_Deployment_Shapes_On_Cloud.md",
+        "path": "Cloud/28_Deployment_Shapes_On_Cloud.md",
+        "type": "file",
+        "sha": "",
+        "size": 5633
+      },
+      {
+        "name": "29_Landing_Zones_And_Org_Guardrails.md",
+        "path": "Cloud/29_Landing_Zones_And_Org_Guardrails.md",
+        "type": "file",
+        "sha": "",
+        "size": 3400
       },
       {
         "name": "3_Managed_Kubernetes.md",
         "path": "Cloud/3_Managed_Kubernetes.md",
         "type": "file",
         "sha": "",
-        "size": 4938
+        "size": 5020
+      },
+      {
+        "name": "30_Cloud_Observability_And_Audit_Doors.md",
+        "path": "Cloud/30_Cloud_Observability_And_Audit_Doors.md",
+        "type": "file",
+        "sha": "",
+        "size": 8189
+      },
+      {
+        "name": "31_Serverless_Functions_And_Containers.md",
+        "path": "Cloud/31_Serverless_Functions_And_Containers.md",
+        "type": "file",
+        "sha": "",
+        "size": 5351
+      },
+      {
+        "name": "32_Managed_Data_And_Databases_On_Cloud.md",
+        "path": "Cloud/32_Managed_Data_And_Databases_On_Cloud.md",
+        "type": "file",
+        "sha": "",
+        "size": 5051
+      },
+      {
+        "name": "33_AI_And_ML_Platforms_On_Cloud.md",
+        "path": "Cloud/33_AI_And_ML_Platforms_On_Cloud.md",
+        "type": "file",
+        "sha": "",
+        "size": 6840
+      },
+      {
+        "name": "34_Multi_Tier_And_Reference_Topologies.md",
+        "path": "Cloud/34_Multi_Tier_And_Reference_Topologies.md",
+        "type": "file",
+        "sha": "",
+        "size": 4360
       },
       {
         "name": "4_GCP_Literacy.md",
         "path": "Cloud/4_GCP_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 4410
+        "size": 8299
       },
       {
         "name": "5_AWS_Literacy.md",
         "path": "Cloud/5_AWS_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 4439
+        "size": 8017
       },
       {
         "name": "6_Azure_Literacy.md",
         "path": "Cloud/6_Azure_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 4441
+        "size": 8148
       },
       {
         "name": "7_Oracle_Cloud.md",
         "path": "Cloud/7_Oracle_Cloud.md",
         "type": "file",
         "sha": "",
-        "size": 2531
+        "size": 4459
       },
       {
         "name": "8_IBM_Cloud.md",
         "path": "Cloud/8_IBM_Cloud.md",
         "type": "file",
         "sha": "",
-        "size": 2263
+        "size": 3703
       },
       {
         "name": "9_Alibaba_Cloud.md",
         "path": "Cloud/9_Alibaba_Cloud.md",
         "type": "file",
         "sha": "",
-        "size": 2398
+        "size": 3995
       },
       {
         "name": "README.md",
         "path": "Cloud/README.md",
         "type": "file",
         "sha": "",
-        "size": 5452
+        "size": 10466
       }
     ]
   },

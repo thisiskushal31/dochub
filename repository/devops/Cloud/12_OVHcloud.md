@@ -1,61 +1,80 @@
 # 12 — OVHcloud
 
-[← Previous](./11_Huawei_Cloud.md) · [README](./README.md) · [Next: Deutsche Telekom →](./13_Deutsche_Telekom.md)
+[← Previous](./11_Huawei_Cloud.md) · [README](./README.md) · [Next: Deutsche Telekom →](./13_Deutsche_Telekom.md) · [Full catalog](./Catalogs/OVH_Products.md) · [Jobs: IAM](./15_Org_IAM_And_Identity_Federation.md)
+
+---
+
+## Mental map — Floor 1 jobs on OVHcloud
+
+| Job | OVH wiring | Depth |
+|-----|------------|-------|
+| Isolation | Customer account / Public Cloud project | [15](./15_Org_IAM_And_Identity_Federation.md) |
+| Identity | OVHcloud IAM | [15](./15_Org_IAM_And_Identity_Federation.md) |
+| Network | vRack / Private Network / Public Cloud networking | [16](./16_VPC_And_Network_Constructs.md) |
+| Compute | Public Cloud instance; Bare Metal | [18](./18_Compute_Instances_And_Autoscaling.md) |
+| Storage | Object Storage (S3-compatible APIs) | [24](./24_Object_Block_And_File_Storage.md) |
+| K8s | **MKS** | [3](./3_Managed_Kubernetes.md) |
+| DNS | OVHcloud DNS | [25](./25_DNS_CDN_And_Edge_HTTP.md) |
+| Hosted private | VMware Hosted Private Cloud | [Datacenter/7](../Datacenter/7_VMware_vSphere.md) |
 
 ---
 
 ## 1. Concepts
 
-**OVHcloud** is a European hyperscaler: **Public Cloud** (OpenStack-based IaaS), **Bare Metal** (dedicated servers), **Hosted Private Cloud** (typically VMware-based), and **Managed Kubernetes Service (MKS)**. Identity is the OVHcloud customer account + IAM (users, roles) on the control panel / API.
+**OVHcloud** is a European hyperscaler: **Public Cloud** (OpenStack-based IaaS), **Bare Metal**, **Hosted Private Cloud** (typically VMware), and **Managed Kubernetes Service (MKS)**. Full public cloud — not colo — and **not** AWS with French branding.
 
-This is a full public cloud, not a colo. It is also **not** AWS with French branding: APIs, Terraform providers, and Kubernetes CCM are OVH-specific.
+Three estates people mix up ([2](./2_Spectrum_And_When_Which.md)):
 
-| Job | OVHcloud name |
-|-----|----------------|
-| VM (public cloud) | Public Cloud instance (OpenStack) |
-| Dedicated | Bare Metal |
-| VMware DC-as-a-service | Hosted Private Cloud |
-| Object storage | Object Storage (S3-compatible APIs in current products) |
-| Managed K8s | MKS (Managed Kubernetes Service) |
-| DNS | OVHcloud DNS |
+1. **Public Cloud VM** + MKS — closest to “AWS lite.”  
+2. **Bare Metal** — vanilla kubeadm is [Kubernetes 7](https://github.com/thisiskushal31/Containerization-Deep-Dive/blob/main/Orchestration/Kubernetes/7_Vanilla_On_Bare_Metal.md).  
+3. **Hosted Private Cloud** — VMware as a service ([Datacenter/2](../Datacenter/2_Ownership_Colo_And_Contracts.md)).
 
 ---
 
 ## 2. Advanced concepts
 
-Three estates people mix up:
-
-1. **Public Cloud VM** + managed K8s — closest to “AWS lite.”  
-2. **Bare Metal** — you get a server; vanilla kubeadm on it is [Kubernetes 7](https://github.com/thisiskushal31/Containerization-Deep-Dive/blob/main/Orchestration/Kubernetes/7_Vanilla_On_Bare_Metal.md) (metal in someone else’s DC).  
-3. **Hosted Private Cloud** — VMware ([Datacenter/7](../Datacenter/7_VMware_vSphere.md)) operated as a service ([Datacenter/2](../Datacenter/2_Ownership_Colo_And_Contracts.md)).
-
-Managed Kubernetes on OVH is [3](./3_Managed_Kubernetes.md)-class (they run the control plane). kubeadm on Public Cloud instances is [Kubernetes 6](https://github.com/thisiskushal31/Containerization-Deep-Dive/blob/main/Orchestration/Kubernetes/6_Self_Managed.md).
-
-Data residency in EU regions is a common **why**. Terraform: use the current OVH provider; do not assume AWS resource names.
+EU residency is a common **why**. Terraform: current OVH provider — do not assume AWS resource names ([19](./19_Portals_CLI_And_API_Patterns.md)). LB and deploy knobs still follow Floor 1 jobs ([23](./23_Load_Balancing_Ingress_And_TLS.md), [28](./28_Deployment_Shapes_On_Cloud.md)).
 
 ---
+
+
+### How you grant permission on OVHcloud (quick)
+
+Customer IAM users/roles on Public Cloud projects — thinner than hyperscaler IAM; compensate with IdP + bastion. Depth: [15](./15_Org_IAM_And_Identity_Federation.md).
+
+### Choose your deploy on OVHcloud
+
+| Need | Product | See |
+|------|---------|-----|
+| VMs | Public Cloud instance | [18](./18_Compute_Instances_And_Autoscaling.md) |
+| Dedicated | Bare Metal | [2](./2_Spectrum_And_When_Which.md) |
+| Kubernetes | MKS | [3](./3_Managed_Kubernetes.md) |
+| VMware | Hosted Private Cloud | [Datacenter/7](../Datacenter/7_VMware_vSphere.md) |
+| AI | Often DIY GPU instance + open models | [33](./33_AI_And_ML_Platforms_On_Cloud.md) |
+| Observability | Native metrics/logs where offered; else DIY/SaaS | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
+| N-tier | [34](./34_Multi_Tier_And_Reference_Topologies.md) | |
+
 
 ## 3. Applications and use cases
 
 | Goal | Pattern |
 |------|---------|
-| EU public cloud | Public Cloud + Managed Kubernetes |
+| EU public cloud | Public Cloud + MKS |
 | Dedicated performance | Bare Metal + your installer |
-| Lift VMware | Hosted Private Cloud |
+| VMware comfort | Hosted Private Cloud |
 
 **Staff checklist**
 
-- Public Cloud vs Bare Metal vs Hosted Private Cloud named  
-- Managed K8s vs kubeadm named  
-- API users least-privilege; 2FA on the account  
+- Which of the three estates is contracted  
+- MKS vs kubeadm-on-instance vs bare-metal kubeadm named  
+- IAM users/roles; no shared root for CI  
 
-**Good:** Managed Kubernetes on Public Cloud for apps; Bare Metal only with a metal runbook. **Bad:** one dedicated box, public kube-apiserver, called “OVH EKS.”
+**Good:** estate named + MKS or deliberate metal path. **Bad:** “OVH” without saying Public vs Bare Metal vs VMware.
 
 ---
 
 ## References
 
-- [OVHcloud docs](https://help.ovhcloud.com/)  
-- [Public Cloud](https://www.ovhcloud.com/en/public-cloud/)  
-- [Managed Kubernetes (MKS)](https://www.ovhcloud.com/en/public-cloud/kubernetes/)  
-- [Bare Metal](https://www.ovhcloud.com/en/bare-metal/)  
+- **Choose surface:** [OVH product catalog (what / when / why not)](./Catalogs/OVH_Products.md)  
+- [OVHcloud help](https://help.ovhcloud.com/) *(API depth after you chose)*  
+- [Managed Kubernetes](https://help.ovhcloud.com/csm/en-public-cloud-kubernetes)  

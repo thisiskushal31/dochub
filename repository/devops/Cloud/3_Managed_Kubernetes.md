@@ -1,6 +1,6 @@
 # 3 — Managed Kubernetes (cloud product map)
 
-[← Previous](./2_Spectrum_And_When_Which.md) · [README](./README.md) · [Next: GCP →](./4_GCP_Literacy.md)
+[← Previous](./2_Spectrum_And_When_Which.md) · [README](./README.md) · [Suggested next: IAM jobs →](./15_Org_IAM_And_Identity_Federation.md) · [Or provider: GCP →](./4_GCP_Literacy.md)
 
 ---
 

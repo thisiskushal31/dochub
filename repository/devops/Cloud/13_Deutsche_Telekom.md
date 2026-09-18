@@ -1,59 +1,76 @@
 # 13 — Deutsche Telekom (Open Telekom Cloud)
 
-[← Previous](./12_OVHcloud.md) · [README](./README.md) · [Next: CtrlS & Yotta →](./14_CtrlS_And_Yotta.md)
+[← Previous](./12_OVHcloud.md) · [README](./README.md) · [Next: CtrlS & Yotta →](./14_CtrlS_And_Yotta.md) · [Full catalog](./Catalogs/OTC_Products.md) · [Jobs: IAM](./15_Org_IAM_And_Identity_Federation.md)
+
+---
+
+## Mental map — Floor 1 jobs on OTC / T-Systems
+
+| Job | Typical OTC / T-Systems name | Depth |
+|-----|------------------------------|-------|
+| Isolation | Domain / project (OpenStack) | [15](./15_Org_IAM_And_Identity_Federation.md) |
+| Identity | Keystone / IAM; federation to IdP | [15](./15_Org_IAM_And_Identity_Federation.md) |
+| Network | VPC (OpenStack networking wrapped) | [16](./16_VPC_And_Network_Constructs.md) |
+| Compute | Elastic Cloud Server / Nova instance | [18](./18_Compute_Instances_And_Autoscaling.md) |
+| Storage | Object Storage Service | [24](./24_Object_Block_And_File_Storage.md) |
+| K8s | **CCE** | [3](./3_Managed_Kubernetes.md) |
+| Private DC | T-Systems managed private / colo | [Datacenter/](../Datacenter/README.md) |
 
 ---
 
 ## 1. Concepts
 
-**Deutsche Telekom** cloud work for engineers usually means **T-Systems** and **Open Telekom Cloud (OTC)** — a **public OpenStack cloud** aimed at European data residency — plus **private / managed** estates T-Systems runs in Telekom DCs, and sometimes **partner hyperscalers** (AWS/Azure) sold under a Telekom contract.
+**Deutsche Telekom** cloud work usually means **T-Systems** and **Open Telekom Cloud (OTC)** — a **public OpenStack cloud** aimed at European data residency — plus private/managed estates, and sometimes partner hyperscalers sold under a Telekom contract.
 
-OTC is the literacy target when someone says “Telekom cloud” as an IaaS API. It is T-Systems’ **public OpenStack cloud** (Huawei Cloud technology): projects, IAM, Elastic Cloud Server VMs, VPC, object storage. Managed Kubernetes is **Cloud Container Engine (CCE)** — they host the master; you run workers.
-
-| Job | Typical OTC / T-Systems name |
-|-----|------------------------------|
-| Org | Domain / project (OpenStack) |
-| VM | Elastic Cloud Server / Nova instance |
-| Network | VPC (OpenStack networking wrapped) |
-| Object | Object Storage Service |
-| Managed K8s | CCE (Cloud Container Engine) |
-| Private DC | T-Systems managed private cloud / colocation |
+OTC is the literacy target when someone says “Telekom cloud” as an IaaS API (Huawei Cloud technology under the hood — related to [11](./11_Huawei_Cloud.md), different operator).
 
 ---
 
 ## 2. Advanced concepts
 
-OpenStack clouds use **Keystone** identity. Federation to a corporate IdP is the human path. Application credentials / EC2-style keys for Terraform exist — treat them like AWS keys.
+OpenStack **Keystone** identity; federation for humans; application credentials for Terraform — treat like cloud keys ([15](./15_Org_IAM_And_Identity_Federation.md), [19](./19_Portals_CLI_And_API_Patterns.md)). Do not assume AWS Terraform modules apply.
 
-Do not assume AWS Terraform modules apply. Use the OTC/OpenStack provider.
-
-Telekom also operates **5G/edge** and campus networks. That is Networks + this folder’s hybrid story, not “another AZ in `eu-central-1`.”
-
-If the contract is “T-Systems runs our VMware,” you are in [Datacenter/2](../Datacenter/2_Ownership_Colo_And_Contracts.md) + [vSphere](../Datacenter/7_VMware_vSphere.md), not OTC public.
+If the contract is “T-Systems runs our VMware,” you are in [Datacenter/2](../Datacenter/2_Ownership_Colo_And_Contracts.md) + [vSphere](../Datacenter/7_VMware_vSphere.md), not OTC public. Telekom **5G/edge** is Networks + hybrid ([22](./22_Hybrid_Colo_And_Cloud.md)), not “another AZ in `eu-central-1`.”
 
 ---
+
+
+### How you grant permission on OTC (quick)
+
+OpenStack **Keystone** projects/roles; federate corporate IdP; treat app credentials like cloud keys. Depth: [15](./15_Org_IAM_And_Identity_Federation.md).
+
+### Choose your deploy on OTC / T-Systems
+
+| Need | Product | See |
+|------|---------|-----|
+| VMs | ECS / Nova | [18](./18_Compute_Instances_And_Autoscaling.md) |
+| Kubernetes | CCE | [3](./3_Managed_Kubernetes.md) |
+| Managed VMware | T-Systems private (not OTC API) | [Datacenter/](../Datacenter/README.md) |
+| AI | Limited catalog — GPU instances / partner | [33](./33_AI_And_ML_Platforms_On_Cloud.md) |
+| Observability | OTC/CES-class monitoring (current docs) + export | [30](./30_Cloud_Observability_And_Audit_Doors.md) |
+| N-tier | [34](./34_Multi_Tier_And_Reference_Topologies.md) | |
+
 
 ## 3. Applications and use cases
 
 | Goal | Pattern |
 |------|---------|
-| German/EU public IaaS | OTC project + VPC + managed K8s or VMs |
-| Telco-managed private | T-Systems private cloud; you still own app IAM |
-| Hyperscaler via Telekom | AWS/Azure account under their org — still [3](./5_AWS_Literacy.md)/[4](./6_Azure_Literacy.md) |
+| EU OpenStack public | OTC project + CCE or VMs |
+| Telekom-managed VMware | Datacenter path, not OTC API |
+| Partner hyperscaler under Telekom paper | Still AWS/Azure literacy ([5](./5_AWS_Literacy.md)/[6](./6_Azure_Literacy.md)) |
 
 **Staff checklist**
 
-- OTC public vs T-Systems private vs resold AWS/Azure named  
-- OpenStack project quotas (they bite)  
-- Kubernetes SKU vs kubeadm on VMs named  
+- OTC public vs T-Systems private vs partner hyperscaler named  
+- Keystone/IAM federation for humans  
+- CCE vs self-managed chosen  
 
-**Good:** OTC project-per-env, IdP federation, documented K8s SKU. **Bad:** one OpenStack user with admin, VMs in the default network, no AZ story.
+**Good:** clear OTC project + CCE. **Bad:** Telekom contract with unknown control plane.
 
 ---
 
 ## References
 
-- [Open Telekom Cloud](https://www.open-telekom-cloud.com/)  
-- [OTC documentation](https://docs.otc.t-systems.com/)  
+- **Choose surface:** [OTC product catalog (what / when / why not)](./Catalogs/OTC_Products.md)  
+- [Open Telekom Cloud docs](https://docs.otc.t-systems.com/) *(API depth after you chose)*  
 - [OTC CCE](https://docs.otc.t-systems.com/cloud-container-engine/)  
-- [T-Systems](https://www.t-systems.com/)  

@@ -1,6 +1,6 @@
 # 21 — Akamai Linode and VPS kin
 
-[← Previous](./20_FinOps_And_Cost_Controls.md) · [README](./README.md) · [Next: Hybrid →](./22_Hybrid_Colo_And_Cloud.md)
+[← Previous](./20_FinOps_And_Cost_Controls.md) · [README](./README.md) · [Next: Hybrid →](./22_Hybrid_Colo_And_Cloud.md) · [Full catalog](./Catalogs/Akamai_Linode_Products.md)
 
 ---
 
@@ -30,7 +30,7 @@ Classify first: [Datacenter Markets/8](../Datacenter/Markets-And-Operators/8_Ten
 
 ### How it connects
 
-Shared IAM/VPC patterns still apply at smaller scale ([15](./15_Org_IAM_And_Identity_Federation.md)–[16](./16_VPC_And_Network_Constructs.md)). Plant hosting them is Datacenter physics—you don’t operate it.
+Shared IAM/VPC/LB/storage patterns still apply at smaller scale ([15](./15_Org_IAM_And_Identity_Federation.md)–[16](./16_VPC_And_Network_Constructs.md), [23](./23_Load_Balancing_Ingress_And_TLS.md)–[28](./28_Deployment_Shapes_On_Cloud.md)). Plant hosting them is Datacenter physics—you don’t operate it.
 
 ---
 
@@ -56,7 +56,8 @@ Shared IAM/VPC patterns still apply at smaller scale ([15](./15_Org_IAM_And_Iden
 
 ## References
 
-- [Akamai Linode docs](https://www.linode.com/docs/)  
+- **Choose surface:** [Linode / VPS kin catalog (what / when / why not)](./Catalogs/Akamai_Linode_Products.md)  
+- [Akamai Linode docs](https://www.linode.com/docs/) *(API depth after you chose)*  
 - [DigitalOcean docs](https://docs.digitalocean.com/)  
 - [Vultr docs](https://docs.vultr.com/)  
 - [Datacenter Markets/8](../Datacenter/Markets-And-Operators/8_Tenant_Cloud_Vs_Landlord.md)  
