@@ -35,10 +35,24 @@
     "size": 8443
   },
   {
+    "name": "6_Self_Managed.md",
+    "path": "6_Self_Managed.md",
+    "type": "file",
+    "sha": "",
+    "size": 5918
+  },
+  {
+    "name": "7_Vanilla_On_Bare_Metal.md",
+    "path": "7_Vanilla_On_Bare_Metal.md",
+    "type": "file",
+    "sha": "",
+    "size": 3891
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2772
+    "size": 3535
   }
 ]

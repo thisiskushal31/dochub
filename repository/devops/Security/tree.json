@@ -10,7 +10,7 @@
         "path": "Checkov/README.md",
         "type": "file",
         "sha": "",
-        "size": 276
+        "size": 1534
       }
     ]
   },
@@ -25,7 +25,7 @@
         "path": "CodeQL/README.md",
         "type": "file",
         "sha": "",
-        "size": 452
+        "size": 1628
       }
     ]
   },
@@ -40,7 +40,7 @@
         "path": "Cosign/README.md",
         "type": "file",
         "sha": "",
-        "size": 512
+        "size": 1725
       }
     ]
   },
@@ -55,7 +55,7 @@
         "path": "Gitleaks/README.md",
         "type": "file",
         "sha": "",
-        "size": 509
+        "size": 2019
       }
     ]
   },
@@ -70,7 +70,7 @@
         "path": "OPA/README.md",
         "type": "file",
         "sha": "",
-        "size": 276
+        "size": 1737
       }
     ]
   },
@@ -85,7 +85,7 @@
         "path": "Semgrep/README.md",
         "type": "file",
         "sha": "",
-        "size": 412
+        "size": 1674
       }
     ]
   },
@@ -100,7 +100,7 @@
         "path": "Snyk/README.md",
         "type": "file",
         "sha": "",
-        "size": 242
+        "size": 1470
       }
     ]
   },
@@ -115,7 +115,7 @@
         "path": "SonarQube/README.md",
         "type": "file",
         "sha": "",
-        "size": 471
+        "size": 1748
       }
     ]
   },
@@ -130,7 +130,7 @@
         "path": "Trivy/README.md",
         "type": "file",
         "sha": "",
-        "size": 250
+        "size": 1683
       }
     ]
   },
@@ -145,7 +145,22 @@
         "path": "Vault/README.md",
         "type": "file",
         "sha": "",
-        "size": 276
+        "size": 1873
+      }
+    ]
+  },
+  {
+    "name": "WAF",
+    "path": "WAF",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "WAF/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 5306
       }
     ]
   },
@@ -160,7 +175,7 @@
         "path": "ZAP/README.md",
         "type": "file",
         "sha": "",
-        "size": 680
+        "size": 1606
       }
     ]
   },
@@ -183,7 +198,7 @@
     "path": "3_Security_Tools_And_Automation.md",
     "type": "file",
     "sha": "",
-    "size": 745
+    "size": 2026
   },
   {
     "name": "4_Security_Gate_Chain.md",
@@ -204,6 +219,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1927
+    "size": 2063
   }
 ]

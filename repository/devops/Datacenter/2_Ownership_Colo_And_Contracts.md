@@ -101,7 +101,17 @@ A closet with a domestic UPS is not colo. It can still be **on-prem** ([1](./1_O
 
 **Good:** contract maps to the table; remote-hands SOP with serials; MMR circuit IDs in the runbook. **Bad:** “we’re in CtrlS” with one PDU, shared cabinet, no LOA, app team holding the only cage key.
 
+**Disconfirm:** Colo is **not** the same as hosted VMware or public IaaS. Two power cords are **not** two independent plants until the one-line says so.
+
+**Confirm:** Who owns the building, the iron, the OS, and the app in *your* deal? What does remote hands refuse to do?
+
 ---
+
+## Go deeper
+
+- Order and interconnect jobs: [Provider-Use/](./Provider-Use/README.md)  
+- Operator kinds and regions: [Markets-And-Operators/](./Markets-And-Operators/README.md)  
+- Reading landlord reports: [Jobs/13](./Jobs/13_Reading_Dashboards_Reports_And_Steering.md)  
 
 ## References
 

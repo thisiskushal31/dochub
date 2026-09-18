@@ -302,7 +302,7 @@
         "path": "Managed-Services/README.md",
         "type": "file",
         "sha": "",
-        "size": 2008
+        "size": 2168
       }
     ]
   },
@@ -390,11 +390,25 @@
             "size": 8443
           },
           {
+            "name": "6_Self_Managed.md",
+            "path": "Orchestration/Kubernetes/6_Self_Managed.md",
+            "type": "file",
+            "sha": "",
+            "size": 5918
+          },
+          {
+            "name": "7_Vanilla_On_Bare_Metal.md",
+            "path": "Orchestration/Kubernetes/7_Vanilla_On_Bare_Metal.md",
+            "type": "file",
+            "sha": "",
+            "size": 3891
+          },
+          {
             "name": "README.md",
             "path": "Orchestration/Kubernetes/README.md",
             "type": "file",
             "sha": "",
-            "size": 2772
+            "size": 3535
           }
         ]
       },
@@ -499,6 +513,28 @@
         ]
       },
       {
+        "name": "Rancher",
+        "path": "Orchestration/Rancher",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Overview_And_Concepts.md",
+            "path": "Orchestration/Rancher/1_Overview_And_Concepts.md",
+            "type": "file",
+            "sha": "",
+            "size": 2298
+          },
+          {
+            "name": "README.md",
+            "path": "Orchestration/Rancher/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 1266
+          }
+        ]
+      },
+      {
         "name": "Swarm",
         "path": "Orchestration/Swarm",
         "type": "dir",
@@ -560,7 +596,7 @@
         "path": "Orchestration/README.md",
         "type": "file",
         "sha": "",
-        "size": 1660
+        "size": 1948
       }
     ]
   },
@@ -792,7 +828,7 @@
         "path": "Serverless-Containers/2_Google_Cloud_Run.md",
         "type": "file",
         "sha": "",
-        "size": 619
+        "size": 660
       },
       {
         "name": "3_AWS_Fargate_and_ECS.md",
@@ -822,6 +858,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 8468
+    "size": 8707
   }
 ]

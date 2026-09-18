@@ -2591,7 +2591,42 @@
         "path": "Cloud/14_CtrlS_And_Yotta.md",
         "type": "file",
         "sha": "",
-        "size": 3596
+        "size": 3669
+      },
+      {
+        "name": "15_Org_IAM_And_Identity_Federation.md",
+        "path": "Cloud/15_Org_IAM_And_Identity_Federation.md",
+        "type": "file",
+        "sha": "",
+        "size": 2149
+      },
+      {
+        "name": "16_VPC_And_Network_Constructs.md",
+        "path": "Cloud/16_VPC_And_Network_Constructs.md",
+        "type": "file",
+        "sha": "",
+        "size": 2031
+      },
+      {
+        "name": "17_Private_Connectivity_And_On_Ramps.md",
+        "path": "Cloud/17_Private_Connectivity_And_On_Ramps.md",
+        "type": "file",
+        "sha": "",
+        "size": 2097
+      },
+      {
+        "name": "18_Compute_Instances_And_Autoscaling.md",
+        "path": "Cloud/18_Compute_Instances_And_Autoscaling.md",
+        "type": "file",
+        "sha": "",
+        "size": 1947
+      },
+      {
+        "name": "19_Portals_CLI_And_API_Patterns.md",
+        "path": "Cloud/19_Portals_CLI_And_API_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 1911
       },
       {
         "name": "2_Spectrum_And_When_Which.md",
@@ -2599,6 +2634,27 @@
         "type": "file",
         "sha": "",
         "size": 4779
+      },
+      {
+        "name": "20_FinOps_And_Cost_Controls.md",
+        "path": "Cloud/20_FinOps_And_Cost_Controls.md",
+        "type": "file",
+        "sha": "",
+        "size": 2144
+      },
+      {
+        "name": "21_Akamai_Linode_And_VPS_Kin.md",
+        "path": "Cloud/21_Akamai_Linode_And_VPS_Kin.md",
+        "type": "file",
+        "sha": "",
+        "size": 1925
+      },
+      {
+        "name": "22_Hybrid_Colo_And_Cloud.md",
+        "path": "Cloud/22_Hybrid_Colo_And_Cloud.md",
+        "type": "file",
+        "sha": "",
+        "size": 2159
       },
       {
         "name": "3_Managed_Kubernetes.md",
@@ -2654,7 +2710,7 @@
         "path": "Cloud/README.md",
         "type": "file",
         "sha": "",
-        "size": 3958
+        "size": 5452
       }
     ]
   },
@@ -2675,7 +2731,7 @@
             "path": "Cloud-Native/Backstage/README.md",
             "type": "file",
             "sha": "",
-            "size": 469
+            "size": 4297
           }
         ]
       },
@@ -2690,7 +2746,7 @@
             "path": "Cloud-Native/Cert-Manager/README.md",
             "type": "file",
             "sha": "",
-            "size": 373
+            "size": 4997
           }
         ]
       },
@@ -2705,7 +2761,7 @@
             "path": "Cloud-Native/ExternalDNS/README.md",
             "type": "file",
             "sha": "",
-            "size": 411
+            "size": 4608
           }
         ]
       },
@@ -2755,6 +2811,21 @@
         ]
       },
       {
+        "name": "Kyverno",
+        "path": "Cloud-Native/Kyverno",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Cloud-Native/Kyverno/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 4776
+          }
+        ]
+      },
+      {
         "name": "Linkerd",
         "path": "Cloud-Native/Linkerd",
         "type": "dir",
@@ -2788,21 +2859,21 @@
         "path": "Cloud-Native/3_Platform_Engineering.md",
         "type": "file",
         "sha": "",
-        "size": 280
+        "size": 4234
       },
       {
         "name": "4_CNCF_Everyday_Tools.md",
         "path": "Cloud-Native/4_CNCF_Everyday_Tools.md",
         "type": "file",
         "sha": "",
-        "size": 1045
+        "size": 5812
       },
       {
         "name": "README.md",
         "path": "Cloud-Native/README.md",
         "type": "file",
         "sha": "",
-        "size": 1867
+        "size": 2039
       }
     ]
   },
@@ -2813,95 +2884,1325 @@
     "sha": "",
     "children": [
       {
+        "name": "Accelerators",
+        "path": "Datacenter/Accelerators",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_GPU_Trays_And_Power.md",
+            "path": "Datacenter/Accelerators/1_GPU_Trays_And_Power.md",
+            "type": "file",
+            "sha": "",
+            "size": 3187
+          },
+          {
+            "name": "10_Accelerator_Failure_And_Spares.md",
+            "path": "Datacenter/Accelerators/10_Accelerator_Failure_And_Spares.md",
+            "type": "file",
+            "sha": "",
+            "size": 2941
+          },
+          {
+            "name": "2_GPU_Interconnect_Ideas.md",
+            "path": "Datacenter/Accelerators/2_GPU_Interconnect_Ideas.md",
+            "type": "file",
+            "sha": "",
+            "size": 3081
+          },
+          {
+            "name": "3_DPU_And_SmartNIC.md",
+            "path": "Datacenter/Accelerators/3_DPU_And_SmartNIC.md",
+            "type": "file",
+            "sha": "",
+            "size": 2742
+          },
+          {
+            "name": "4_FPGA_And_IPU.md",
+            "path": "Datacenter/Accelerators/4_FPGA_And_IPU.md",
+            "type": "file",
+            "sha": "",
+            "size": 2699
+          },
+          {
+            "name": "5_HBM_And_Accelerator_Memory.md",
+            "path": "Datacenter/Accelerators/5_HBM_And_Accelerator_Memory.md",
+            "type": "file",
+            "sha": "",
+            "size": 2777
+          },
+          {
+            "name": "6_Optics_DAC_AOC_Transceivers.md",
+            "path": "Datacenter/Accelerators/6_Optics_DAC_AOC_Transceivers.md",
+            "type": "file",
+            "sha": "",
+            "size": 2631
+          },
+          {
+            "name": "7_PTP_Grandmaster_And_Time.md",
+            "path": "Datacenter/Accelerators/7_PTP_Grandmaster_And_Time.md",
+            "type": "file",
+            "sha": "",
+            "size": 2716
+          },
+          {
+            "name": "8_Serial_Console_Servers.md",
+            "path": "Datacenter/Accelerators/8_Serial_Console_Servers.md",
+            "type": "file",
+            "sha": "",
+            "size": 2452
+          },
+          {
+            "name": "9_Environmental_Sensors_And_PDU_Meters.md",
+            "path": "Datacenter/Accelerators/9_Environmental_Sensors_And_PDU_Meters.md",
+            "type": "file",
+            "sha": "",
+            "size": 2696
+          },
+          {
+            "name": "README.md",
+            "path": "Datacenter/Accelerators/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 1712
+          }
+        ]
+      },
+      {
+        "name": "Compute",
+        "path": "Datacenter/Compute",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Server_Form_Factors.md",
+            "path": "Datacenter/Compute/1_Server_Form_Factors.md",
+            "type": "file",
+            "sha": "",
+            "size": 2989
+          },
+          {
+            "name": "10_BMC_IPMI_And_Redfish_Deep.md",
+            "path": "Datacenter/Compute/10_BMC_IPMI_And_Redfish_Deep.md",
+            "type": "file",
+            "sha": "",
+            "size": 2863
+          },
+          {
+            "name": "11_Firmware_Trains_And_Secure_Boot.md",
+            "path": "Datacenter/Compute/11_Firmware_Trains_And_Secure_Boot.md",
+            "type": "file",
+            "sha": "",
+            "size": 2615
+          },
+          {
+            "name": "12_Boot_UEFI_RAID_NVMe_SAN.md",
+            "path": "Datacenter/Compute/12_Boot_UEFI_RAID_NVMe_SAN.md",
+            "type": "file",
+            "sha": "",
+            "size": 2699
+          },
+          {
+            "name": "13_NICs_HBAs_And_Slot_Planning.md",
+            "path": "Datacenter/Compute/13_NICs_HBAs_And_Slot_Planning.md",
+            "type": "file",
+            "sha": "",
+            "size": 2579
+          },
+          {
+            "name": "14_Thermal_And_Power_Of_The_Box.md",
+            "path": "Datacenter/Compute/14_Thermal_And_Power_Of_The_Box.md",
+            "type": "file",
+            "sha": "",
+            "size": 2727
+          },
+          {
+            "name": "15_Imaging_And_Provisioning_At_Scale.md",
+            "path": "Datacenter/Compute/15_Imaging_And_Provisioning_At_Scale.md",
+            "type": "file",
+            "sha": "",
+            "size": 2788
+          },
+          {
+            "name": "16_Spares_SKU_Discipline.md",
+            "path": "Datacenter/Compute/16_Spares_SKU_Discipline.md",
+            "type": "file",
+            "sha": "",
+            "size": 2576
+          },
+          {
+            "name": "17_Compute_Failure_Walks.md",
+            "path": "Datacenter/Compute/17_Compute_Failure_Walks.md",
+            "type": "file",
+            "sha": "",
+            "size": 2685
+          },
+          {
+            "name": "18_Hypervisor_On_The_Box_Map.md",
+            "path": "Datacenter/Compute/18_Hypervisor_On_The_Box_Map.md",
+            "type": "file",
+            "sha": "",
+            "size": 3079
+          },
+          {
+            "name": "2_CPU_Platforms_Intel_Xeon.md",
+            "path": "Datacenter/Compute/2_CPU_Platforms_Intel_Xeon.md",
+            "type": "file",
+            "sha": "",
+            "size": 3275
+          },
+          {
+            "name": "3_CPU_Platforms_AMD_EPYC.md",
+            "path": "Datacenter/Compute/3_CPU_Platforms_AMD_EPYC.md",
+            "type": "file",
+            "sha": "",
+            "size": 2969
+          },
+          {
+            "name": "4_CPU_Platforms_ARM_And_Others.md",
+            "path": "Datacenter/Compute/4_CPU_Platforms_ARM_And_Others.md",
+            "type": "file",
+            "sha": "",
+            "size": 3031
+          },
+          {
+            "name": "5_Chipset_PCIe_And_Platform_IO.md",
+            "path": "Datacenter/Compute/5_Chipset_PCIe_And_Platform_IO.md",
+            "type": "file",
+            "sha": "",
+            "size": 2694
+          },
+          {
+            "name": "6_CPU_Interconnect_Ideas.md",
+            "path": "Datacenter/Compute/6_CPU_Interconnect_Ideas.md",
+            "type": "file",
+            "sha": "",
+            "size": 2840
+          },
+          {
+            "name": "7_Memory_DIMM_Types_And_Channels.md",
+            "path": "Datacenter/Compute/7_Memory_DIMM_Types_And_Channels.md",
+            "type": "file",
+            "sha": "",
+            "size": 2704
+          },
+          {
+            "name": "8_Memory_Population_And_NUMA.md",
+            "path": "Datacenter/Compute/8_Memory_Population_And_NUMA.md",
+            "type": "file",
+            "sha": "",
+            "size": 2834
+          },
+          {
+            "name": "9_Allocation_Model_Socket_To_DIMM.md",
+            "path": "Datacenter/Compute/9_Allocation_Model_Socket_To_DIMM.md",
+            "type": "file",
+            "sha": "",
+            "size": 2847
+          },
+          {
+            "name": "README.md",
+            "path": "Datacenter/Compute/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 3088
+          }
+        ]
+      },
+      {
+        "name": "Electrical",
+        "path": "Datacenter/Electrical",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Utility_Intake_And_Service_Entrance.md",
+            "path": "Datacenter/Electrical/1_Utility_Intake_And_Service_Entrance.md",
+            "type": "file",
+            "sha": "",
+            "size": 5592
+          },
+          {
+            "name": "10_Floor_And_Row_PDUs.md",
+            "path": "Datacenter/Electrical/10_Floor_And_Row_PDUs.md",
+            "type": "file",
+            "sha": "",
+            "size": 3068
+          },
+          {
+            "name": "11_Rack_PDU_A_And_B.md",
+            "path": "Datacenter/Electrical/11_Rack_PDU_A_And_B.md",
+            "type": "file",
+            "sha": "",
+            "size": 3279
+          },
+          {
+            "name": "12_Grounding_Bonding_And_Surge.md",
+            "path": "Datacenter/Electrical/12_Grounding_Bonding_And_Surge.md",
+            "type": "file",
+            "sha": "",
+            "size": 3289
+          },
+          {
+            "name": "13_EPO_And_Safety_Disconnects.md",
+            "path": "Datacenter/Electrical/13_EPO_And_Safety_Disconnects.md",
+            "type": "file",
+            "sha": "",
+            "size": 3635
+          },
+          {
+            "name": "14_High_Density_48V_HVDC_And_Busbar.md",
+            "path": "Datacenter/Electrical/14_High_Density_48V_HVDC_And_Busbar.md",
+            "type": "file",
+            "sha": "",
+            "size": 3640
+          },
+          {
+            "name": "15_EPMS_BMS_And_Power_Monitoring.md",
+            "path": "Datacenter/Electrical/15_EPMS_BMS_And_Power_Monitoring.md",
+            "type": "file",
+            "sha": "",
+            "size": 4468
+          },
+          {
+            "name": "16_Power_Quality_And_Harmonics.md",
+            "path": "Datacenter/Electrical/16_Power_Quality_And_Harmonics.md",
+            "type": "file",
+            "sha": "",
+            "size": 3225
+          },
+          {
+            "name": "17_Power_Path_Failure_Walks.md",
+            "path": "Datacenter/Electrical/17_Power_Path_Failure_Walks.md",
+            "type": "file",
+            "sha": "",
+            "size": 3470
+          },
+          {
+            "name": "18_Commissioning_And_IST_Power.md",
+            "path": "Datacenter/Electrical/18_Commissioning_And_IST_Power.md",
+            "type": "file",
+            "sha": "",
+            "size": 3357
+          },
+          {
+            "name": "2_Transformers.md",
+            "path": "Datacenter/Electrical/2_Transformers.md",
+            "type": "file",
+            "sha": "",
+            "size": 4095
+          },
+          {
+            "name": "3_MV_And_LV_Switchgear.md",
+            "path": "Datacenter/Electrical/3_MV_And_LV_Switchgear.md",
+            "type": "file",
+            "sha": "",
+            "size": 4181
+          },
+          {
+            "name": "4_ATS_And_STS.md",
+            "path": "Datacenter/Electrical/4_ATS_And_STS.md",
+            "type": "file",
+            "sha": "",
+            "size": 3913
+          },
+          {
+            "name": "5_UPS_Topologies.md",
+            "path": "Datacenter/Electrical/5_UPS_Topologies.md",
+            "type": "file",
+            "sha": "",
+            "size": 4094
+          },
+          {
+            "name": "6_Batteries_And_Energy_Storage.md",
+            "path": "Datacenter/Electrical/6_Batteries_And_Energy_Storage.md",
+            "type": "file",
+            "sha": "",
+            "size": 3913
+          },
+          {
+            "name": "7_Generators_And_Fuel_Systems.md",
+            "path": "Datacenter/Electrical/7_Generators_And_Fuel_Systems.md",
+            "type": "file",
+            "sha": "",
+            "size": 3767
+          },
+          {
+            "name": "8_Paralleling_And_Transfer_Sequences.md",
+            "path": "Datacenter/Electrical/8_Paralleling_And_Transfer_Sequences.md",
+            "type": "file",
+            "sha": "",
+            "size": 3735
+          },
+          {
+            "name": "9_Busway_Vs_Cable_Distribution.md",
+            "path": "Datacenter/Electrical/9_Busway_Vs_Cable_Distribution.md",
+            "type": "file",
+            "sha": "",
+            "size": 3409
+          },
+          {
+            "name": "README.md",
+            "path": "Datacenter/Electrical/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 3449
+          }
+        ]
+      },
+      {
+        "name": "Fabric-Physical",
+        "path": "Datacenter/Fabric-Physical",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Leaf_Spine_And_Classic_Three_Tier.md",
+            "path": "Datacenter/Fabric-Physical/1_Leaf_Spine_And_Classic_Three_Tier.md",
+            "type": "file",
+            "sha": "",
+            "size": 2355
+          },
+          {
+            "name": "10_DNS_NTP_Physical_Placement.md",
+            "path": "Datacenter/Fabric-Physical/10_DNS_NTP_Physical_Placement.md",
+            "type": "file",
+            "sha": "",
+            "size": 2365
+          },
+          {
+            "name": "11_Storage_Network_Separation.md",
+            "path": "Datacenter/Fabric-Physical/11_Storage_Network_Separation.md",
+            "type": "file",
+            "sha": "",
+            "size": 2291
+          },
+          {
+            "name": "12_Fabric_Failure_Walks.md",
+            "path": "Datacenter/Fabric-Physical/12_Fabric_Failure_Walks.md",
+            "type": "file",
+            "sha": "",
+            "size": 2229
+          },
+          {
+            "name": "2_ToR_EoR_MoR.md",
+            "path": "Datacenter/Fabric-Physical/2_ToR_EoR_MoR.md",
+            "type": "file",
+            "sha": "",
+            "size": 2148
+          },
+          {
+            "name": "3_OOB_Management_Network.md",
+            "path": "Datacenter/Fabric-Physical/3_OOB_Management_Network.md",
+            "type": "file",
+            "sha": "",
+            "size": 2280
+          },
+          {
+            "name": "4_Provisioning_Network.md",
+            "path": "Datacenter/Fabric-Physical/4_Provisioning_Network.md",
+            "type": "file",
+            "sha": "",
+            "size": 2257
+          },
+          {
+            "name": "5_MMR_And_Cross_Connect_Physical.md",
+            "path": "Datacenter/Fabric-Physical/5_MMR_And_Cross_Connect_Physical.md",
+            "type": "file",
+            "sha": "",
+            "size": 2488
+          },
+          {
+            "name": "6_Border_And_Edge_Roles.md",
+            "path": "Datacenter/Fabric-Physical/6_Border_And_Edge_Roles.md",
+            "type": "file",
+            "sha": "",
+            "size": 2523
+          },
+          {
+            "name": "7_Bonding_MLAG_And_Dual_Home.md",
+            "path": "Datacenter/Fabric-Physical/7_Bonding_MLAG_And_Dual_Home.md",
+            "type": "file",
+            "sha": "",
+            "size": 2138
+          },
+          {
+            "name": "8_Optics_And_Transceiver_Roles.md",
+            "path": "Datacenter/Fabric-Physical/8_Optics_And_Transceiver_Roles.md",
+            "type": "file",
+            "sha": "",
+            "size": 2016
+          },
+          {
+            "name": "9_Load_Balancer_Appliances.md",
+            "path": "Datacenter/Fabric-Physical/9_Load_Balancer_Appliances.md",
+            "type": "file",
+            "sha": "",
+            "size": 2012
+          },
+          {
+            "name": "README.md",
+            "path": "Datacenter/Fabric-Physical/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 2166
+          }
+        ]
+      },
+      {
+        "name": "Facility",
+        "path": "Datacenter/Facility",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Site_Types_And_Products.md",
+            "path": "Datacenter/Facility/1_Site_Types_And_Products.md",
+            "type": "file",
+            "sha": "",
+            "size": 1843
+          },
+          {
+            "name": "2_Tiers_Ratings_And_Concurrent_Maintainability.md",
+            "path": "Datacenter/Facility/2_Tiers_Ratings_And_Concurrent_Maintainability.md",
+            "type": "file",
+            "sha": "",
+            "size": 1777
+          },
+          {
+            "name": "3_Rooms_Campus_And_Adjacencies.md",
+            "path": "Datacenter/Facility/3_Rooms_Campus_And_Adjacencies.md",
+            "type": "file",
+            "sha": "",
+            "size": 1685
+          },
+          {
+            "name": "4_Cage_Cabinet_Suite_And_Hands.md",
+            "path": "Datacenter/Facility/4_Cage_Cabinet_Suite_And_Hands.md",
+            "type": "file",
+            "sha": "",
+            "size": 1678
+          },
+          {
+            "name": "5_Campus_Vs_Single_Building.md",
+            "path": "Datacenter/Facility/5_Campus_Vs_Single_Building.md",
+            "type": "file",
+            "sha": "",
+            "size": 1591
+          },
+          {
+            "name": "6_Climate_Grid_And_Site_Selection.md",
+            "path": "Datacenter/Facility/6_Climate_Grid_And_Site_Selection.md",
+            "type": "file",
+            "sha": "",
+            "size": 1681
+          },
+          {
+            "name": "README.md",
+            "path": "Datacenter/Facility/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 1715
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "path": "Datacenter/Integration",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Utility_To_DIMM.md",
+            "path": "Datacenter/Integration/1_Utility_To_DIMM.md",
+            "type": "file",
+            "sha": "",
+            "size": 1952
+          },
+          {
+            "name": "10_Units_Voltage_Frequency_Literacy.md",
+            "path": "Datacenter/Integration/10_Units_Voltage_Frequency_Literacy.md",
+            "type": "file",
+            "sha": "",
+            "size": 2003
+          },
+          {
+            "name": "11_Aggregate_Telemetry_Reports_And_Steering.md",
+            "path": "Datacenter/Integration/11_Aggregate_Telemetry_Reports_And_Steering.md",
+            "type": "file",
+            "sha": "",
+            "size": 7357
+          },
+          {
+            "name": "2_NIC_To_MMR.md",
+            "path": "Datacenter/Integration/2_NIC_To_MMR.md",
+            "type": "file",
+            "sha": "",
+            "size": 1956
+          },
+          {
+            "name": "3_Disk_To_Array_To_Host.md",
+            "path": "Datacenter/Integration/3_Disk_To_Array_To_Host.md",
+            "type": "file",
+            "sha": "",
+            "size": 1891
+          },
+          {
+            "name": "4_OOB_Plane_Walk.md",
+            "path": "Datacenter/Integration/4_OOB_Plane_Walk.md",
+            "type": "file",
+            "sha": "",
+            "size": 1890
+          },
+          {
+            "name": "5_Failure_Lose_PDU_A.md",
+            "path": "Datacenter/Integration/5_Failure_Lose_PDU_A.md",
+            "type": "file",
+            "sha": "",
+            "size": 1893
+          },
+          {
+            "name": "6_Failure_Lose_ToR.md",
+            "path": "Datacenter/Integration/6_Failure_Lose_ToR.md",
+            "type": "file",
+            "sha": "",
+            "size": 1712
+          },
+          {
+            "name": "7_Failure_Lose_CRAH_Row.md",
+            "path": "Datacenter/Integration/7_Failure_Lose_CRAH_Row.md",
+            "type": "file",
+            "sha": "",
+            "size": 1882
+          },
+          {
+            "name": "8_Failure_Lose_MMR_Cross_Connect.md",
+            "path": "Datacenter/Integration/8_Failure_Lose_MMR_Cross_Connect.md",
+            "type": "file",
+            "sha": "",
+            "size": 1922
+          },
+          {
+            "name": "9_Reading_A_One_Line_And_Elevation.md",
+            "path": "Datacenter/Integration/9_Reading_A_One_Line_And_Elevation.md",
+            "type": "file",
+            "sha": "",
+            "size": 1855
+          },
+          {
+            "name": "README.md",
+            "path": "Datacenter/Integration/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 1854
+          }
+        ]
+      },
+      {
+        "name": "Jobs",
+        "path": "Datacenter/Jobs",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Role_Map.md",
+            "path": "Datacenter/Jobs/1_Role_Map.md",
+            "type": "file",
+            "sha": "",
+            "size": 2157
+          },
+          {
+            "name": "10_Career_Paths.md",
+            "path": "Datacenter/Jobs/10_Career_Paths.md",
+            "type": "file",
+            "sha": "",
+            "size": 2040
+          },
+          {
+            "name": "11_Reading_Foreign_Site_Docs.md",
+            "path": "Datacenter/Jobs/11_Reading_Foreign_Site_Docs.md",
+            "type": "file",
+            "sha": "",
+            "size": 2161
+          },
+          {
+            "name": "12_Hyperscale_Ops_Honesty.md",
+            "path": "Datacenter/Jobs/12_Hyperscale_Ops_Honesty.md",
+            "type": "file",
+            "sha": "",
+            "size": 2334
+          },
+          {
+            "name": "13_Reading_Dashboards_Reports_And_Steering.md",
+            "path": "Datacenter/Jobs/13_Reading_Dashboards_Reports_And_Steering.md",
+            "type": "file",
+            "sha": "",
+            "size": 5192
+          },
+          {
+            "name": "2_Day_In_The_Life_Colo_Tech.md",
+            "path": "Datacenter/Jobs/2_Day_In_The_Life_Colo_Tech.md",
+            "type": "file",
+            "sha": "",
+            "size": 1930
+          },
+          {
+            "name": "3_Day_In_The_Life_Critical_Facilities.md",
+            "path": "Datacenter/Jobs/3_Day_In_The_Life_Critical_Facilities.md",
+            "type": "file",
+            "sha": "",
+            "size": 1953
+          },
+          {
+            "name": "4_Day_In_The_Life_NOC.md",
+            "path": "Datacenter/Jobs/4_Day_In_The_Life_NOC.md",
+            "type": "file",
+            "sha": "",
+            "size": 1848
+          },
+          {
+            "name": "5_Day_In_The_Life_Bare_Metal_Admin.md",
+            "path": "Datacenter/Jobs/5_Day_In_The_Life_Bare_Metal_Admin.md",
+            "type": "file",
+            "sha": "",
+            "size": 2061
+          },
+          {
+            "name": "6_Ticket_Taxonomy_And_Escalation.md",
+            "path": "Datacenter/Jobs/6_Ticket_Taxonomy_And_Escalation.md",
+            "type": "file",
+            "sha": "",
+            "size": 1949
+          },
+          {
+            "name": "7_Safety_LOTO_And_EPO.md",
+            "path": "Datacenter/Jobs/7_Safety_LOTO_And_EPO.md",
+            "type": "file",
+            "sha": "",
+            "size": 2057
+          },
+          {
+            "name": "8_Capacity_Conversation.md",
+            "path": "Datacenter/Jobs/8_Capacity_Conversation.md",
+            "type": "file",
+            "sha": "",
+            "size": 1942
+          },
+          {
+            "name": "9_Interview_Pack.md",
+            "path": "Datacenter/Jobs/9_Interview_Pack.md",
+            "type": "file",
+            "sha": "",
+            "size": 2049
+          },
+          {
+            "name": "README.md",
+            "path": "Datacenter/Jobs/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 2642
+          }
+        ]
+      },
+      {
+        "name": "Markets-And-Operators",
+        "path": "Datacenter/Markets-And-Operators",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Operator_Taxonomy.md",
+            "path": "Datacenter/Markets-And-Operators/1_Operator_Taxonomy.md",
+            "type": "file",
+            "sha": "",
+            "size": 2967
+          },
+          {
+            "name": "10_Europe_UK_Hubs.md",
+            "path": "Datacenter/Markets-And-Operators/10_Europe_UK_Hubs.md",
+            "type": "file",
+            "sha": "",
+            "size": 2059
+          },
+          {
+            "name": "11_Middle_East_And_Africa_Hubs.md",
+            "path": "Datacenter/Markets-And-Operators/11_Middle_East_And_Africa_Hubs.md",
+            "type": "file",
+            "sha": "",
+            "size": 2154
+          },
+          {
+            "name": "12_APAC_Hubs.md",
+            "path": "Datacenter/Markets-And-Operators/12_APAC_Hubs.md",
+            "type": "file",
+            "sha": "",
+            "size": 2082
+          },
+          {
+            "name": "13_China_Market.md",
+            "path": "Datacenter/Markets-And-Operators/13_China_Market.md",
+            "type": "file",
+            "sha": "",
+            "size": 2291
+          },
+          {
+            "name": "14_India_Market.md",
+            "path": "Datacenter/Markets-And-Operators/14_India_Market.md",
+            "type": "file",
+            "sha": "",
+            "size": 2255
+          },
+          {
+            "name": "15_Latin_America_And_Other_Hubs.md",
+            "path": "Datacenter/Markets-And-Operators/15_Latin_America_And_Other_Hubs.md",
+            "type": "file",
+            "sha": "",
+            "size": 2211
+          },
+          {
+            "name": "16_Architecture_Shapes_By_Operator_Class.md",
+            "path": "Datacenter/Markets-And-Operators/16_Architecture_Shapes_By_Operator_Class.md",
+            "type": "file",
+            "sha": "",
+            "size": 2448
+          },
+          {
+            "name": "2_How_Operators_Build_And_Run_Halls.md",
+            "path": "Datacenter/Markets-And-Operators/2_How_Operators_Build_And_Run_Halls.md",
+            "type": "file",
+            "sha": "",
+            "size": 2864
+          },
+          {
+            "name": "3_Research_Any_Operator.md",
+            "path": "Datacenter/Markets-And-Operators/3_Research_Any_Operator.md",
+            "type": "file",
+            "sha": "",
+            "size": 2828
+          },
+          {
+            "name": "4_Equinix_Class_Interconnection.md",
+            "path": "Datacenter/Markets-And-Operators/4_Equinix_Class_Interconnection.md",
+            "type": "file",
+            "sha": "",
+            "size": 2821
+          },
+          {
+            "name": "5_Wholesale_And_Hyperscale_Landlords.md",
+            "path": "Datacenter/Markets-And-Operators/5_Wholesale_And_Hyperscale_Landlords.md",
+            "type": "file",
+            "sha": "",
+            "size": 2630
+          },
+          {
+            "name": "6_Regional_Colo_And_Telco_DCs.md",
+            "path": "Datacenter/Markets-And-Operators/6_Regional_Colo_And_Telco_DCs.md",
+            "type": "file",
+            "sha": "",
+            "size": 2518
+          },
+          {
+            "name": "7_Bare_Metal_Cloud_Factories.md",
+            "path": "Datacenter/Markets-And-Operators/7_Bare_Metal_Cloud_Factories.md",
+            "type": "file",
+            "sha": "",
+            "size": 2367
+          },
+          {
+            "name": "8_Tenant_Cloud_Vs_Landlord.md",
+            "path": "Datacenter/Markets-And-Operators/8_Tenant_Cloud_Vs_Landlord.md",
+            "type": "file",
+            "sha": "",
+            "size": 2328
+          },
+          {
+            "name": "9_Americas_Hubs.md",
+            "path": "Datacenter/Markets-And-Operators/9_Americas_Hubs.md",
+            "type": "file",
+            "sha": "",
+            "size": 2225
+          },
+          {
+            "name": "README.md",
+            "path": "Datacenter/Markets-And-Operators/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 3016
+          }
+        ]
+      },
+      {
+        "name": "Mechanical",
+        "path": "Datacenter/Mechanical",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Heat_Load_And_Airflow_Path.md",
+            "path": "Datacenter/Mechanical/1_Heat_Load_And_Airflow_Path.md",
+            "type": "file",
+            "sha": "",
+            "size": 3965
+          },
+          {
+            "name": "10_Humidity_Water_Treatment_And_Plumbing.md",
+            "path": "Datacenter/Mechanical/10_Humidity_Water_Treatment_And_Plumbing.md",
+            "type": "file",
+            "sha": "",
+            "size": 3515
+          },
+          {
+            "name": "11_Mechanical_Failure_Walks.md",
+            "path": "Datacenter/Mechanical/11_Mechanical_Failure_Walks.md",
+            "type": "file",
+            "sha": "",
+            "size": 3278
+          },
+          {
+            "name": "12_Commissioning_Mechanical.md",
+            "path": "Datacenter/Mechanical/12_Commissioning_Mechanical.md",
+            "type": "file",
+            "sha": "",
+            "size": 3249
+          },
+          {
+            "name": "2_CRAH_And_CRAC.md",
+            "path": "Datacenter/Mechanical/2_CRAH_And_CRAC.md",
+            "type": "file",
+            "sha": "",
+            "size": 3614
+          },
+          {
+            "name": "3_Chillers_Towers_And_Free_Cooling.md",
+            "path": "Datacenter/Mechanical/3_Chillers_Towers_And_Free_Cooling.md",
+            "type": "file",
+            "sha": "",
+            "size": 3676
+          },
+          {
+            "name": "4_Containment_Hot_And_Cold_Aisle.md",
+            "path": "Datacenter/Mechanical/4_Containment_Hot_And_Cold_Aisle.md",
+            "type": "file",
+            "sha": "",
+            "size": 3092
+          },
+          {
+            "name": "5_Raised_Floor_Vs_Slab.md",
+            "path": "Datacenter/Mechanical/5_Raised_Floor_Vs_Slab.md",
+            "type": "file",
+            "sha": "",
+            "size": 3238
+          },
+          {
+            "name": "6_Liquid_Cooling_Rear_Door_And_Direct_To_Chip.md",
+            "path": "Datacenter/Mechanical/6_Liquid_Cooling_Rear_Door_And_Direct_To_Chip.md",
+            "type": "file",
+            "sha": "",
+            "size": 3591
+          },
+          {
+            "name": "7_Leak_Detection_And_Fluid_Risk.md",
+            "path": "Datacenter/Mechanical/7_Leak_Detection_And_Fluid_Risk.md",
+            "type": "file",
+            "sha": "",
+            "size": 3309
+          },
+          {
+            "name": "8_Fire_Detection_VESDA.md",
+            "path": "Datacenter/Mechanical/8_Fire_Detection_VESDA.md",
+            "type": "file",
+            "sha": "",
+            "size": 3349
+          },
+          {
+            "name": "9_Fire_Suppression_Clean_Agent_And_Pre_Action.md",
+            "path": "Datacenter/Mechanical/9_Fire_Suppression_Clean_Agent_And_Pre_Action.md",
+            "type": "file",
+            "sha": "",
+            "size": 3520
+          },
+          {
+            "name": "README.md",
+            "path": "Datacenter/Mechanical/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 2190
+          }
+        ]
+      },
+      {
+        "name": "Provider-Use",
+        "path": "Datacenter/Provider-Use",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Qualify_A_Site.md",
+            "path": "Datacenter/Provider-Use/1_Qualify_A_Site.md",
+            "type": "file",
+            "sha": "",
+            "size": 1997
+          },
+          {
+            "name": "10_Exit_Relocation_And_Decommission.md",
+            "path": "Datacenter/Provider-Use/10_Exit_Relocation_And_Decommission.md",
+            "type": "file",
+            "sha": "",
+            "size": 1970
+          },
+          {
+            "name": "2_Contract_Capacity.md",
+            "path": "Datacenter/Provider-Use/2_Contract_Capacity.md",
+            "type": "file",
+            "sha": "",
+            "size": 2021
+          },
+          {
+            "name": "3_Order_Interconnect.md",
+            "path": "Datacenter/Provider-Use/3_Order_Interconnect.md",
+            "type": "file",
+            "sha": "",
+            "size": 2002
+          },
+          {
+            "name": "4_Access_Badges_And_Change_Windows.md",
+            "path": "Datacenter/Provider-Use/4_Access_Badges_And_Change_Windows.md",
+            "type": "file",
+            "sha": "",
+            "size": 1959
+          },
+          {
+            "name": "5_Remote_Hands_Tickets.md",
+            "path": "Datacenter/Provider-Use/5_Remote_Hands_Tickets.md",
+            "type": "file",
+            "sha": "",
+            "size": 2118
+          },
+          {
+            "name": "6_Customer_Portal_Patterns.md",
+            "path": "Datacenter/Provider-Use/6_Customer_Portal_Patterns.md",
+            "type": "file",
+            "sha": "",
+            "size": 1893
+          },
+          {
+            "name": "7_Land_Cloud_On_Ramp.md",
+            "path": "Datacenter/Provider-Use/7_Land_Cloud_On_Ramp.md",
+            "type": "file",
+            "sha": "",
+            "size": 2197
+          },
+          {
+            "name": "8_Dedicated_Metal_Intake.md",
+            "path": "Datacenter/Provider-Use/8_Dedicated_Metal_Intake.md",
+            "type": "file",
+            "sha": "",
+            "size": 2211
+          },
+          {
+            "name": "9_Bandwidth_And_Cross_Connect_Lifecycle.md",
+            "path": "Datacenter/Provider-Use/9_Bandwidth_And_Cross_Connect_Lifecycle.md",
+            "type": "file",
+            "sha": "",
+            "size": 2039
+          },
+          {
+            "name": "README.md",
+            "path": "Datacenter/Provider-Use/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 2068
+          }
+        ]
+      },
+      {
+        "name": "Storage-Physical",
+        "path": "Datacenter/Storage-Physical",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_DAS_Local_Disks_And_RAID.md",
+            "path": "Datacenter/Storage-Physical/1_DAS_Local_Disks_And_RAID.md",
+            "type": "file",
+            "sha": "",
+            "size": 2342
+          },
+          {
+            "name": "10_Encryption_And_Key_Custody.md",
+            "path": "Datacenter/Storage-Physical/10_Encryption_And_Key_Custody.md",
+            "type": "file",
+            "sha": "",
+            "size": 2565
+          },
+          {
+            "name": "11_Latency_For_Etcd_And_Databases.md",
+            "path": "Datacenter/Storage-Physical/11_Latency_For_Etcd_And_Databases.md",
+            "type": "file",
+            "sha": "",
+            "size": 2215
+          },
+          {
+            "name": "12_Storage_Failure_Walks.md",
+            "path": "Datacenter/Storage-Physical/12_Storage_Failure_Walks.md",
+            "type": "file",
+            "sha": "",
+            "size": 2131
+          },
+          {
+            "name": "2_NAS_NFS_SMB.md",
+            "path": "Datacenter/Storage-Physical/2_NAS_NFS_SMB.md",
+            "type": "file",
+            "sha": "",
+            "size": 2549
+          },
+          {
+            "name": "3_SAN_Fibre_Channel.md",
+            "path": "Datacenter/Storage-Physical/3_SAN_Fibre_Channel.md",
+            "type": "file",
+            "sha": "",
+            "size": 2404
+          },
+          {
+            "name": "4_SAN_iSCSI_And_NVMe_oF.md",
+            "path": "Datacenter/Storage-Physical/4_SAN_iSCSI_And_NVMe_oF.md",
+            "type": "file",
+            "sha": "",
+            "size": 2325
+          },
+          {
+            "name": "5_HBA_HCA_And_Multipath.md",
+            "path": "Datacenter/Storage-Physical/5_HBA_HCA_And_Multipath.md",
+            "type": "file",
+            "sha": "",
+            "size": 2188
+          },
+          {
+            "name": "6_Array_Controllers_And_Shelves.md",
+            "path": "Datacenter/Storage-Physical/6_Array_Controllers_And_Shelves.md",
+            "type": "file",
+            "sha": "",
+            "size": 2451
+          },
+          {
+            "name": "7_Software_Defined_Ceph_vSAN_Kin.md",
+            "path": "Datacenter/Storage-Physical/7_Software_Defined_Ceph_vSAN_Kin.md",
+            "type": "file",
+            "sha": "",
+            "size": 2475
+          },
+          {
+            "name": "8_Object_On_Prem.md",
+            "path": "Datacenter/Storage-Physical/8_Object_On_Prem.md",
+            "type": "file",
+            "sha": "",
+            "size": 2360
+          },
+          {
+            "name": "9_Snapshots_Vs_Backups_Vs_Replication.md",
+            "path": "Datacenter/Storage-Physical/9_Snapshots_Vs_Backups_Vs_Replication.md",
+            "type": "file",
+            "sha": "",
+            "size": 2534
+          },
+          {
+            "name": "README.md",
+            "path": "Datacenter/Storage-Physical/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 2029
+          }
+        ]
+      },
+      {
+        "name": "White-Space",
+        "path": "Datacenter/White-Space",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "1_Rack_Standards_And_Form_Factors.md",
+            "path": "Datacenter/White-Space/1_Rack_Standards_And_Form_Factors.md",
+            "type": "file",
+            "sha": "",
+            "size": 3227
+          },
+          {
+            "name": "10_White_Space_Safety_And_Housekeeping.md",
+            "path": "Datacenter/White-Space/10_White_Space_Safety_And_Housekeeping.md",
+            "type": "file",
+            "sha": "",
+            "size": 2988
+          },
+          {
+            "name": "2_Cabinet_Airflow_And_Chimneys.md",
+            "path": "Datacenter/White-Space/2_Cabinet_Airflow_And_Chimneys.md",
+            "type": "file",
+            "sha": "",
+            "size": 2911
+          },
+          {
+            "name": "3_Power_Density_And_Floor_Loading.md",
+            "path": "Datacenter/White-Space/3_Power_Density_And_Floor_Loading.md",
+            "type": "file",
+            "sha": "",
+            "size": 3007
+          },
+          {
+            "name": "4_Structured_Cabling_Copper.md",
+            "path": "Datacenter/White-Space/4_Structured_Cabling_Copper.md",
+            "type": "file",
+            "sha": "",
+            "size": 3251
+          },
+          {
+            "name": "5_Structured_Cabling_Fiber_MPO_MTP.md",
+            "path": "Datacenter/White-Space/5_Structured_Cabling_Fiber_MPO_MTP.md",
+            "type": "file",
+            "sha": "",
+            "size": 3198
+          },
+          {
+            "name": "6_Cable_Management_And_Pathways.md",
+            "path": "Datacenter/White-Space/6_Cable_Management_And_Pathways.md",
+            "type": "file",
+            "sha": "",
+            "size": 3055
+          },
+          {
+            "name": "7_Asset_Tags_Serials_And_Elevations.md",
+            "path": "Datacenter/White-Space/7_Asset_Tags_Serials_And_Elevations.md",
+            "type": "file",
+            "sha": "",
+            "size": 2817
+          },
+          {
+            "name": "8_Crash_Cart_KVM_And_Serial_Aggregation.md",
+            "path": "Datacenter/White-Space/8_Crash_Cart_KVM_And_Serial_Aggregation.md",
+            "type": "file",
+            "sha": "",
+            "size": 2879
+          },
+          {
+            "name": "9_High_Density_And_AI_Ready_White_Space.md",
+            "path": "Datacenter/White-Space/9_High_Density_And_AI_Ready_White_Space.md",
+            "type": "file",
+            "sha": "",
+            "size": 3105
+          },
+          {
+            "name": "README.md",
+            "path": "Datacenter/White-Space/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 1957
+          }
+        ]
+      },
+      {
+        "name": "0_How_To_Read_And_Quality_Bar.md",
+        "path": "Datacenter/0_How_To_Read_And_Quality_Bar.md",
+        "type": "file",
+        "sha": "",
+        "size": 4010
+      },
+      {
+        "name": "0b_Equipment_In_Plain_Language.md",
+        "path": "Datacenter/0b_Equipment_In_Plain_Language.md",
+        "type": "file",
+        "sha": "",
+        "size": 7202
+      },
+      {
         "name": "1_On_Prem_As_A_Solution.md",
         "path": "Datacenter/1_On_Prem_As_A_Solution.md",
         "type": "file",
         "sha": "",
-        "size": 9164
+        "size": 9976
       },
       {
         "name": "10_Clusters_On_Prem.md",
         "path": "Datacenter/10_Clusters_On_Prem.md",
         "type": "file",
         "sha": "",
-        "size": 6082
+        "size": 6629
       },
       {
         "name": "11_Identity_Access_And_Change.md",
         "path": "Datacenter/11_Identity_Access_And_Change.md",
         "type": "file",
         "sha": "",
-        "size": 5447
+        "size": 5578
       },
       {
         "name": "12_Sites_DR_Hybrid_And_The_Job.md",
         "path": "Datacenter/12_Sites_DR_Hybrid_And_The_Job.md",
         "type": "file",
         "sha": "",
-        "size": 6039
+        "size": 6190
       },
       {
         "name": "2_Ownership_Colo_And_Contracts.md",
         "path": "Datacenter/2_Ownership_Colo_And_Contracts.md",
         "type": "file",
         "sha": "",
-        "size": 6115
+        "size": 6665
       },
       {
         "name": "3_Facility_Power_Cooling_And_Rooms.md",
         "path": "Datacenter/3_Facility_Power_Cooling_And_Rooms.md",
         "type": "file",
         "sha": "",
-        "size": 5412
+        "size": 6173
       },
       {
         "name": "4_Rack_BMC_And_Provisioning.md",
         "path": "Datacenter/4_Rack_BMC_And_Provisioning.md",
         "type": "file",
         "sha": "",
-        "size": 5291
+        "size": 5430
       },
       {
         "name": "5_Fabric_Cross_Connect_And_OOB.md",
         "path": "Datacenter/5_Fabric_Cross_Connect_And_OOB.md",
         "type": "file",
         "sha": "",
-        "size": 5344
+        "size": 5548
       },
       {
         "name": "6_Storage_Backup_And_Restore.md",
         "path": "Datacenter/6_Storage_Backup_And_Restore.md",
         "type": "file",
         "sha": "",
-        "size": 5335
+        "size": 5404
       },
       {
         "name": "7_VMware_vSphere.md",
         "path": "Datacenter/7_VMware_vSphere.md",
         "type": "file",
         "sha": "",
-        "size": 6331
+        "size": 6464
       },
       {
         "name": "8_Other_Hypervisors_And_Private_IaaS.md",
         "path": "Datacenter/8_Other_Hypervisors_And_Private_IaaS.md",
         "type": "file",
         "sha": "",
-        "size": 5875
+        "size": 5989
       },
       {
         "name": "9_Deploy_On_The_Estate.md",
         "path": "Datacenter/9_Deploy_On_The_Estate.md",
         "type": "file",
         "sha": "",
-        "size": 5323
+        "size": 5456
       },
       {
         "name": "README.md",
         "path": "Datacenter/README.md",
         "type": "file",
         "sha": "",
-        "size": 4369
+        "size": 7854
       }
     ]
   },
@@ -2937,14 +4238,14 @@
             "path": "IAC/Atlantis/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 473
+            "size": 1098
           },
           {
             "name": "README.md",
             "path": "IAC/Atlantis/README.md",
             "type": "file",
             "sha": "",
-            "size": 268
+            "size": 1779
           }
         ]
       },
@@ -3004,7 +4305,7 @@
             "path": "IAC/OpenTofu/README.md",
             "type": "file",
             "sha": "",
-            "size": 480
+            "size": 1758
           }
         ]
       },
@@ -3019,7 +4320,7 @@
             "path": "IAC/Packer/README.md",
             "type": "file",
             "sha": "",
-            "size": 466
+            "size": 1781
           }
         ]
       },
@@ -3094,7 +4395,7 @@
         "path": "IAC/README.md",
         "type": "file",
         "sha": "",
-        "size": 2062
+        "size": 2081
       }
     ]
   },
@@ -9971,7 +11272,7 @@
             "path": "Observability/Loki/README.md",
             "type": "file",
             "sha": "",
-            "size": 512
+            "size": 1762
           }
         ]
       },
@@ -10016,14 +11317,14 @@
             "path": "Observability/PagerDuty/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
-            "size": 445
+            "size": 890
           },
           {
             "name": "README.md",
             "path": "Observability/PagerDuty/README.md",
             "type": "file",
             "sha": "",
-            "size": 270
+            "size": 1957
           }
         ]
       },
@@ -10061,14 +11362,14 @@
         "path": "Observability/3_Observability_Tools.md",
         "type": "file",
         "sha": "",
-        "size": 1245
+        "size": 1750
       },
       {
         "name": "README.md",
         "path": "Observability/README.md",
         "type": "file",
         "sha": "",
-        "size": 2027
+        "size": 2108
       }
     ]
   },
@@ -10727,7 +12028,7 @@
             "path": "Security/Checkov/README.md",
             "type": "file",
             "sha": "",
-            "size": 276
+            "size": 1534
           }
         ]
       },
@@ -10742,7 +12043,7 @@
             "path": "Security/CodeQL/README.md",
             "type": "file",
             "sha": "",
-            "size": 452
+            "size": 1628
           }
         ]
       },
@@ -10757,7 +12058,7 @@
             "path": "Security/Cosign/README.md",
             "type": "file",
             "sha": "",
-            "size": 512
+            "size": 1725
           }
         ]
       },
@@ -10772,7 +12073,7 @@
             "path": "Security/Gitleaks/README.md",
             "type": "file",
             "sha": "",
-            "size": 509
+            "size": 2019
           }
         ]
       },
@@ -10787,7 +12088,7 @@
             "path": "Security/OPA/README.md",
             "type": "file",
             "sha": "",
-            "size": 276
+            "size": 1737
           }
         ]
       },
@@ -10802,7 +12103,7 @@
             "path": "Security/Semgrep/README.md",
             "type": "file",
             "sha": "",
-            "size": 412
+            "size": 1674
           }
         ]
       },
@@ -10817,7 +12118,7 @@
             "path": "Security/Snyk/README.md",
             "type": "file",
             "sha": "",
-            "size": 242
+            "size": 1470
           }
         ]
       },
@@ -10832,7 +12133,7 @@
             "path": "Security/SonarQube/README.md",
             "type": "file",
             "sha": "",
-            "size": 471
+            "size": 1748
           }
         ]
       },
@@ -10847,7 +12148,7 @@
             "path": "Security/Trivy/README.md",
             "type": "file",
             "sha": "",
-            "size": 250
+            "size": 1683
           }
         ]
       },
@@ -10862,7 +12163,22 @@
             "path": "Security/Vault/README.md",
             "type": "file",
             "sha": "",
-            "size": 276
+            "size": 1873
+          }
+        ]
+      },
+      {
+        "name": "WAF",
+        "path": "Security/WAF",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Security/WAF/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 5306
           }
         ]
       },
@@ -10877,7 +12193,7 @@
             "path": "Security/ZAP/README.md",
             "type": "file",
             "sha": "",
-            "size": 680
+            "size": 1606
           }
         ]
       },
@@ -10900,7 +12216,7 @@
         "path": "Security/3_Security_Tools_And_Automation.md",
         "type": "file",
         "sha": "",
-        "size": 745
+        "size": 2026
       },
       {
         "name": "4_Security_Gate_Chain.md",
@@ -10921,7 +12237,7 @@
         "path": "Security/README.md",
         "type": "file",
         "sha": "",
-        "size": 1927
+        "size": 2063
       }
     ]
   },
@@ -11057,6 +12373,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 9342
+    "size": 9644
   }
 ]

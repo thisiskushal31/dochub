@@ -1,19 +1,36 @@
-# PagerDuty — Install and first use
+# PagerDuty — install and first use
 
 [← PagerDuty](./README.md)
 
-*(Content TBD — stub created September 2026)*
+---
 
-## Planned coverage
+## 1. Concepts
 
-- What it is (Ops)
-- Install
-- Pointer: Methodologies/3
+Minimal path:
 
-## Checklist before marking done
+1. Create a **Service** (your app or platform component).  
+2. Add an **integration** (Events API / Prometheus / Grafana contact point).  
+3. Create a **schedule** and **escalation policy**.  
+4. Send a test event; confirm mobile/push.  
+5. Attach a runbook URL on the service.
 
-- [ ] A reader who knows nothing can finish this file
-- [ ] Install / first command if this is a tool
-- [ ] Next file in this repo (basic → advanced)
-- [ ] Related home linked if the deep *slice* lives elsewhere
+**Disconfirm:** Routing everything to one person 24×7 is **not** a schedule.
 
+---
+
+## 2. First checklist
+
+| Step | Done when |
+|------|-----------|
+| Test page acknowledged | Mobile works |
+| Escalation | Second ping if no ack |
+| Low-urgency path | Email/Slack only for non-wake |
+| Noise review | Flappy alert fixed or retuned |
+
+Practice depth: [Methodologies/3](../../Methodologies/3_Team_Patterns_SRE_Incident.md).
+
+---
+
+## References
+
+- [PagerDuty getting started](https://support.pagerduty.com/)  

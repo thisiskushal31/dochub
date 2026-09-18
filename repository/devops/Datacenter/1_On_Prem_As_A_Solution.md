@@ -1,6 +1,6 @@
 # 1 — On-prem as a solution
 
-[← Datacenter](./README.md) · [Next: Ownership and colo →](./2_Ownership_Colo_And_Contracts.md)
+[← How to read](./0_How_To_Read_And_Quality_Bar.md) · [README](./README.md) · [Next: Ownership and colo →](./2_Ownership_Colo_And_Contracts.md)
 
 ---
 
@@ -114,7 +114,19 @@ Disconnected does not mean “we turned off the NIC.” It means: how images ent
 
 **Good:** two rooms or two feeds, documented BMC, IdP for humans, lead time on the capacity plan. **Bad:** one tower under a desk, DHCP from office Wi-Fi, called “private GKE.”
 
+**Disconfirm:** Two VMs on one chassis are **not** two availability zones. “We have Kubernetes” is **not** a facility story.
+
+**Confirm:** Name three physical failure domains you would write in a runbook. What do you buy instead of an API quota when you need more capacity?
+
+New to the vocabulary? Start at [0](./0_How_To_Read_And_Quality_Bar.md) · [0b](./0b_Equipment_In_Plain_Language.md).
+
 ---
+
+## Go deeper
+
+- Site types and markets: [Facility/](./Facility/README.md) · [Markets-And-Operators/](./Markets-And-Operators/README.md)  
+- Power / cooling device depth: [Electrical/](./Electrical/README.md) · [Mechanical/](./Mechanical/README.md)  
+- Reports that steer capacity: [Integration/11](./Integration/11_Aggregate_Telemetry_Reports_And_Steering.md)  
 
 ## References
 

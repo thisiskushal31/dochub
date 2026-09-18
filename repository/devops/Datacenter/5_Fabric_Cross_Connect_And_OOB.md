@@ -104,6 +104,11 @@ Many halls are IPv4-only by inertia. Dual-stack is fine if DHCP/RA, DNS, and LB 
 
 ---
 
+## Go deeper
+
+- [Fabric-Physical/](./Fabric-Physical/README.md) · [Provider-Use/](./Provider-Use/README.md)  
+- Packets/BGP: [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive)  
+
 ## References
 
 - [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive)  

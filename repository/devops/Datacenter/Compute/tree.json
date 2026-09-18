@@ -1,0 +1,135 @@
+[
+  {
+    "name": "1_Server_Form_Factors.md",
+    "path": "1_Server_Form_Factors.md",
+    "type": "file",
+    "sha": "",
+    "size": 2989
+  },
+  {
+    "name": "10_BMC_IPMI_And_Redfish_Deep.md",
+    "path": "10_BMC_IPMI_And_Redfish_Deep.md",
+    "type": "file",
+    "sha": "",
+    "size": 2863
+  },
+  {
+    "name": "11_Firmware_Trains_And_Secure_Boot.md",
+    "path": "11_Firmware_Trains_And_Secure_Boot.md",
+    "type": "file",
+    "sha": "",
+    "size": 2615
+  },
+  {
+    "name": "12_Boot_UEFI_RAID_NVMe_SAN.md",
+    "path": "12_Boot_UEFI_RAID_NVMe_SAN.md",
+    "type": "file",
+    "sha": "",
+    "size": 2699
+  },
+  {
+    "name": "13_NICs_HBAs_And_Slot_Planning.md",
+    "path": "13_NICs_HBAs_And_Slot_Planning.md",
+    "type": "file",
+    "sha": "",
+    "size": 2579
+  },
+  {
+    "name": "14_Thermal_And_Power_Of_The_Box.md",
+    "path": "14_Thermal_And_Power_Of_The_Box.md",
+    "type": "file",
+    "sha": "",
+    "size": 2727
+  },
+  {
+    "name": "15_Imaging_And_Provisioning_At_Scale.md",
+    "path": "15_Imaging_And_Provisioning_At_Scale.md",
+    "type": "file",
+    "sha": "",
+    "size": 2788
+  },
+  {
+    "name": "16_Spares_SKU_Discipline.md",
+    "path": "16_Spares_SKU_Discipline.md",
+    "type": "file",
+    "sha": "",
+    "size": 2576
+  },
+  {
+    "name": "17_Compute_Failure_Walks.md",
+    "path": "17_Compute_Failure_Walks.md",
+    "type": "file",
+    "sha": "",
+    "size": 2685
+  },
+  {
+    "name": "18_Hypervisor_On_The_Box_Map.md",
+    "path": "18_Hypervisor_On_The_Box_Map.md",
+    "type": "file",
+    "sha": "",
+    "size": 3079
+  },
+  {
+    "name": "2_CPU_Platforms_Intel_Xeon.md",
+    "path": "2_CPU_Platforms_Intel_Xeon.md",
+    "type": "file",
+    "sha": "",
+    "size": 3275
+  },
+  {
+    "name": "3_CPU_Platforms_AMD_EPYC.md",
+    "path": "3_CPU_Platforms_AMD_EPYC.md",
+    "type": "file",
+    "sha": "",
+    "size": 2969
+  },
+  {
+    "name": "4_CPU_Platforms_ARM_And_Others.md",
+    "path": "4_CPU_Platforms_ARM_And_Others.md",
+    "type": "file",
+    "sha": "",
+    "size": 3031
+  },
+  {
+    "name": "5_Chipset_PCIe_And_Platform_IO.md",
+    "path": "5_Chipset_PCIe_And_Platform_IO.md",
+    "type": "file",
+    "sha": "",
+    "size": 2694
+  },
+  {
+    "name": "6_CPU_Interconnect_Ideas.md",
+    "path": "6_CPU_Interconnect_Ideas.md",
+    "type": "file",
+    "sha": "",
+    "size": 2840
+  },
+  {
+    "name": "7_Memory_DIMM_Types_And_Channels.md",
+    "path": "7_Memory_DIMM_Types_And_Channels.md",
+    "type": "file",
+    "sha": "",
+    "size": 2704
+  },
+  {
+    "name": "8_Memory_Population_And_NUMA.md",
+    "path": "8_Memory_Population_And_NUMA.md",
+    "type": "file",
+    "sha": "",
+    "size": 2834
+  },
+  {
+    "name": "9_Allocation_Model_Socket_To_DIMM.md",
+    "path": "9_Allocation_Model_Socket_To_DIMM.md",
+    "type": "file",
+    "sha": "",
+    "size": 2847
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 3088
+  }
+]

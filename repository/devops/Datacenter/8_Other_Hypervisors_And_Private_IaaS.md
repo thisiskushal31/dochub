@@ -99,6 +99,10 @@ LXC on Proxmox, Kata, OpenShift virtualization ([OpenShift 7](https://github.com
 
 ---
 
+## Go deeper
+
+- [Compute/](./Compute/README.md) · [Markets-And-Operators/](./Markets-And-Operators/README.md)  
+
 ## References
 
 - [KVM](https://www.linux-kvm.org/) · [libvirt](https://libvirt.org/)  

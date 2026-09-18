@@ -12,18 +12,18 @@ IAC concepts, patterns, and tools. **Each tool has its own folder**; add new too
 
 ## Tools (one folder per tool)
 
-| Tool | Description |
-|------|-------------|
-| [**Terraform**](./Terraform/README.md) | HCL, providers, state, modules, multi-cloud |
-| [**Ansible**](./Ansible/README.md) | Playbooks, roles, config management |
-| [**Puppet**](./Puppet/README.md) | Manifests, modules, agent/master |
-| [**Chef**](./Chef/README.md) | Cookbooks, recipes, infrastructure automation |
-| [**Crossplane**](./Crossplane/README.md) | Cloud-native control plane, Kubernetes-native infra |
-| [**CloudFormation**](./CloudFormation/README.md) | AWS stacks, templates, drift |
-| [**Pulumi**](./Pulumi/README.md) | IaC in TypeScript, Python, Go |
-| [**OpenTofu**](./OpenTofu/README.md) | Terraform-compatible fork | stub |
-| [**Packer**](./Packer/README.md) | Machine image baking | stub |
-| [**Atlantis**](./Atlantis/README.md) | Terraform PR apply | stub |
+| Tool | Description | Status |
+|------|-------------|--------|
+| [Terraform](./Terraform/README.md) | HCL, providers, state, modules, multi-cloud | expand |
+| [Ansible](./Ansible/README.md) | Playbooks, roles, config management | expand |
+| [Puppet](./Puppet/README.md) | Manifests, modules, agent/master | expand |
+| [Chef](./Chef/README.md) | Cookbooks, recipes | expand |
+| [Crossplane](./Crossplane/README.md) | K8s-native control plane | expand |
+| [CloudFormation](./CloudFormation/README.md) | AWS stacks, templates, drift | expand |
+| [Pulumi](./Pulumi/README.md) | IaC in TypeScript, Python, Go | expand |
+| [OpenTofu](./OpenTofu/README.md) | Terraform-compatible fork | **filled** |
+| [Packer](./Packer/README.md) | Machine image baking | **filled** |
+| [Atlantis](./Atlantis/README.md) | Terraform/OpenTofu PR plan/apply | **filled** |
 
 Cloud provider literacy (not full cert content): [Cloud/](../Cloud/README.md). Metal, colo, and vSphere: [Datacenter/](../Datacenter/README.md).
 

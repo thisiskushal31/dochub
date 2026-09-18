@@ -89,7 +89,18 @@ Pre-action dry pipe vs wet. VESDA. Leak detection under raised floor. Know where
 
 **Good:** path drawing, dual feed tested, containment intact, notices subscribed. **Bad:** 15 kW in a 5 kW footprint, both PSUs in one PDU, generator test as a surprise outage.
 
+**Disconfirm:** Two PDU colors are **not** proof of two UPS plants. A Tier sticker is **not** a substitute for walking where paths join.
+
+**Confirm:** Can you name the room types in a hall? What bridges the gap until generators start? Why do blanking panels matter?
+
+If any term above is foggy, read [0 — how to read](./0_How_To_Read_And_Quality_Bar.md) and [0b — equipment in plain language](./0b_Equipment_In_Plain_Language.md) before going deeper.
+
 ---
+
+## Go deeper
+
+- [Facility/](./Facility/README.md) · [Electrical/](./Electrical/README.md) · [Mechanical/](./Mechanical/README.md)  
+- Reports & steering: [Integration/11](./Integration/11_Aggregate_Telemetry_Reports_And_Steering.md) · [Jobs/13](./Jobs/13_Reading_Dashboards_Reports_And_Steering.md)  
 
 ## References
 

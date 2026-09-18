@@ -106,6 +106,10 @@ Image ESXi from a known ISO/vLCM image, not “next/next” per box. vLCM (vSphe
 
 ---
 
+## Go deeper
+
+- [Compute/](./Compute/README.md) · [Jobs/](./Jobs/README.md) · [Storage-Physical/](./Storage-Physical/README.md)  
+
 ## References
 
 - [vSphere documentation](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere.html)  

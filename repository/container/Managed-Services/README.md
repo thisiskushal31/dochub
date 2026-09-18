@@ -16,7 +16,7 @@ Content in this section is based on **official provider documentation**; each to
 
 **Learning path:** 1 → 2 or 3 or 4 (by cloud) → 5.
 
-**Related:** [Kubernetes](../Orchestration/Kubernetes/README.md) · [OpenShift](../Orchestration/OpenShift/README.md) · [Containerization basics](../Containerization-Basic/README.md) · [Runtimes](../Runtimes/README.md) · [Swarm](../Orchestration/Swarm/README.md) · [Local dev](../Local-Dev/README.md) · [Serverless containers](../Serverless-Containers/README.md)
+**Related:** [Kubernetes](../Orchestration/Kubernetes/README.md) · [OpenShift](../Orchestration/OpenShift/README.md) · [Rancher](../Orchestration/Rancher/README.md) · [Containerization basics](../Containerization-Basic/README.md) · [Runtimes](../Runtimes/README.md) · [Swarm](../Orchestration/Swarm/README.md) · [Local dev](../Local-Dev/README.md) · [Serverless containers](../Serverless-Containers/README.md) · DevOps [Cloud/3](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/Cloud/3_Managed_Kubernetes.md)
 
 **Turnkey index only:** [5_OpenShift_Managed_and_Turnkey.md](./5_OpenShift_Managed_and_Turnkey.md) — for **hands-on local clusters**, use [Local-Dev/](../Local-Dev/README.md).
 

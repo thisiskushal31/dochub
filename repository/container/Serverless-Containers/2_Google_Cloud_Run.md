@@ -15,7 +15,7 @@
 ## Cross-links
 
 - [Managed-Services/GKE/](../Managed-Services/GKE/README.md)
-- [DevOps-Handbook Cloud/2_GCP](../DevOps-Handbook/Cloud/2_GCP_Literacy.md)
+- [DevOps-Handbook Cloud/4 GCP](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/Cloud/4_GCP_Literacy.md)
 
 ## Checklist before marking done
 

@@ -12,9 +12,9 @@ This handbook is how software is **delivered**. Start at [Methodologies/0 — SE
 - **[`CiCd/`](./CiCd/)** — Continuous Integration and Continuous Delivery pipelines, practices, and tools
 - **[`IAC/`](./IAC/)** — Infrastructure as Code: Terraform, CloudFormation, Pulumi, and best practices
 - **[`Automation/`](./Automation/)** — Config-management automation (Ansible and kin), not app workflow tools
-- **[`Cloud/`](./Cloud/)** — Named provider solutions (AWS/GCP/Azure/OCI/IBM/Aliyun/Tencent/Huawei/OVH/Telekom/CtrlS/Yotta, including GKE/EKS/AKS and ROSA/ARO/ROKS as SKUs — not cert dumps, not kubeadm)
-- **[`Datacenter/`](./Datacenter/)** — On-prem as a solution: colo/contracts, facility, BMC, fabric, storage, vSphere and other hypervisors, deploy, clusters-on-prem, identity, DR/hybrid
-- **[`Cloud-Native/`](./Cloud-Native/)** — Cloud-native architectures, patterns, and platform engineering
+- **[`Cloud/`](./Cloud/)** — Provider solutions literacy **1–22** (1–14 named providers incl. GKE/EKS/AKS and ROSA/ARO/ROKS as SKUs; **15–22** tenant how-to: IAM, VPC, on-ramps, instances, CLI/API, FinOps, VPS kin, hybrid — not cert dumps, not kubeadm). Colo plant/on-ramp jobs → `Datacenter/Provider-Use/`
+- **[`Datacenter/`](./Datacenter/)** — On-prem and colo physical depth: start with **0 / 0b** (plain language + Disconfirm/Confirm quality bar), on-ramp 1–12, then Facility → Jobs (**filled**; includes **Integration/11** + **Jobs/13** report→steer). API cloud tenant use stays in `Cloud/`
+- **[`Cloud-Native/`](./Cloud-Native/)** — Architectures, platform engineering, CNCF everyday tools (**cert-manager**, **ExternalDNS**, **Backstage** filled); mesh/Helm/K8s entries remain
 - **[`Servers/`](./Servers/)** — Web servers, reverse proxies, host lifecycle (nginx, Apache, …)
 - **[`Observability/`](./Observability/)** — Monitoring, logging, tracing, SLO/SLI; one folder per tool (Prometheus, Grafana, OpenTelemetry, etc.)
 - **[`Security/`](./Security/)** — Pipeline gates, secrets, compliance — not the full cyber program

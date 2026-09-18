@@ -1,34 +1,35 @@
 # Security
 
-Practices, compliance, threat mitigation, and tools. **Each tool has its own folder**; add new tools as new folders. *Stub — see [gate chain](./4_Security_Gate_Chain.md).*
+Practices, compliance, threat mitigation, and **delivery-pipeline tools**. Tool folders map to the [gate chain](./4_Security_Gate_Chain.md). Full cyber program: [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive).
 
 ## Concept overviews
 
-| # | Topic | Description |
-|---|--------|-------------|
-| 1 | [Security practices and secrets](./1_Security_Practices_And_Secrets.md) | expand — secrets, IAM, zero-trust (DevOps scope) |
-| 2 | [Compliance and threat mitigation](./2_Compliance_And_Threat_Mitigation.md) | expand — scanning, WAF, DDoS |
-| 3 | [Security tools index](./3_Security_Tools_And_Automation.md) | expand — link all tool folders |
-| 4 | [**Security gate chain (overview)**](./4_Security_Gate_Chain.md) | stub — full PR→prod gate order |
-| 5 | [OIDC, cloud IAM, and CI least privilege](./5_OIDC_CI_And_Least_Privilege.md) | stub |
+| # | Topic | Description | Status |
+|---|--------|-------------|--------|
+| 1 | [Security practices and secrets](./1_Security_Practices_And_Secrets.md) | Secrets, IAM, zero-trust (DevOps scope) | expand |
+| 2 | [Compliance and threat mitigation](./2_Compliance_And_Threat_Mitigation.md) | Scanning, WAF, DDoS literacy | expand |
+| 3 | [Security tools index](./3_Security_Tools_And_Automation.md) | Gate → tool map | **filled** |
+| 4 | [Security gate chain](./4_Security_Gate_Chain.md) | Ordered PR→prod controls | **filled** |
+| 5 | [OIDC, cloud IAM, and CI least privilege](./5_OIDC_CI_And_Least_Privilege.md) | Federated CI identity | **filled** |
 
 ## Tools (one folder per tool)
 
-| Tool | Description | Status |
-|------|-------------|--------|
-| [**Vault**](./Vault/README.md) | Secrets management | expand |
-| [**OPA**](./OPA/README.md) | Policy as code | expand |
-| [**Checkov**](./Checkov/README.md) | IaC / K8s scan | expand |
-| [**Snyk**](./Snyk/README.md) | SCA, containers, IaC | expand |
-| [**Trivy**](./Trivy/README.md) | Container / IaC scan | expand |
-| [**SonarQube**](./SonarQube/README.md) | SAST / quality gates | stub |
-| [**Semgrep**](./Semgrep/README.md) | Fast SAST rules | stub |
-| [**CodeQL**](./CodeQL/README.md) | Deep SAST (GitHub) | stub |
-| [**ZAP**](./ZAP/README.md) | DAST | stub |
-| [**Gitleaks**](./Gitleaks/README.md) | Secrets in git | stub |
-| [**Cosign**](./Cosign/README.md) | Sign artifacts | stub |
+| Tool | Gate / job | Status |
+|------|------------|--------|
+| [Gitleaks](./Gitleaks/README.md) | Secrets in git | **filled** |
+| [Semgrep](./Semgrep/README.md) | Fast SAST | **filled** |
+| [CodeQL](./CodeQL/README.md) | Deep SAST | **filled** |
+| [SonarQube](./SonarQube/README.md) | Quality + SAST gate | **filled** |
+| [Trivy](./Trivy/README.md) | Image / SCA / IaC scan | **filled** |
+| [Snyk](./Snyk/README.md) | SCA / container / IaC | **filled** |
+| [Checkov](./Checkov/README.md) | IaC misconfig | **filled** |
+| [OPA](./OPA/README.md) | Policy as code | **filled** |
+| [Cosign](./Cosign/README.md) | Sign / verify | **filled** |
+| [ZAP](./ZAP/README.md) | DAST | **filled** |
+| [Vault](./Vault/README.md) | Runtime secrets | **filled** |
+| [WAF](./WAF/README.md) | Runtime HTTP edge (open-source + cloud) | literacy |
 
 ## Scope
 
-- **Covered here:** Security from a DevOps / delivery perspective (pipelines, secrets, gates).
-- **Go deeper:** [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive) (network security); [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) (full cyber program).
+- **Covered here:** DevOps / delivery security (pipelines, secrets, gates, tool literacy).  
+- **Go deeper:** [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive); [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive).  

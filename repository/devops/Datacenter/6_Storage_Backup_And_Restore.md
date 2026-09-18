@@ -96,6 +96,10 @@ NetApp, EMC/PowerMax, Pure, HPE, IBM FlashSystem, Hitachi — you will meet them
 
 ---
 
+## Go deeper
+
+- [Storage-Physical/](./Storage-Physical/README.md)  
+
 ## References
 
 - [SNIA](https://www.snia.org/)  

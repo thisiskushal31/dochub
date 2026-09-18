@@ -24,6 +24,14 @@ Create a learning cluster; deploy an app; explore Pods and nodes; expose with a 
 
 High availability with kubeadm; best practices (large clusters, multiple zones, Pod Security, PKI); administration (add nodes, upgrade, certificates, secure cluster); reference and checklist.
 
+### [6. Self-managed Kubernetes](./6_Self_Managed.md)
+
+You run the control plane (kubeadm / CAPI / kops / RKE2) on cloud VMs or metal. Managed SKUs (GKE/EKS/AKS) live in [Managed-Services](../../Managed-Services/README.md) and DevOps [Cloud/3](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/Cloud/3_Managed_Kubernetes.md).
+
+### [7. Vanilla Kubernetes on bare metal](./7_Vanilla_On_Bare_Metal.md)
+
+kubeadm on physical servers in a hall or colo. The facility around the rack: DevOps [Datacenter/](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/Datacenter/README.md).
+
 ## Learning path
 
 1. [Getting started & install](./1_Getting_Started_Install.md)
@@ -31,6 +39,8 @@ High availability with kubeadm; best practices (large clusters, multiple zones, 
 3. [Tasks](./3_Tasks.md)
 4. [Tutorials](./4_Tutorials.md)
 5. [Production & operations](./5_Production_Operations.md)
+6. [Self-managed](./6_Self_Managed.md)
+7. [Vanilla on bare metal](./7_Vanilla_On_Bare_Metal.md)
 
 ## Quick reference (kubectl)
 
@@ -52,6 +62,7 @@ kubectl rollout status deployment/myapp
 - **[Docker](../../Runtimes/Docker/README.md)** – images and containers
 - **[Swarm](../Swarm/README.md)** – Docker’s built-in orchestration
 - **[Managed services](../../Managed-Services/README.md)** – GKE, EKS, AKS, OpenShift
+- **[Rancher](../Rancher/README.md)** – multi-cluster manager, RKE2, k3s
 
 ## References
 

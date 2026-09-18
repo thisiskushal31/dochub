@@ -1,6 +1,6 @@
 # Containerization Deep Dive
 
-Hands-on notes and guides for containerization from zero to advanced: fundamentals, container runtimes (Docker, Podman, containerd), orchestration (Kubernetes, Swarm), managed services (GKE, EKS, AKS, OpenShift), **local dev clusters**, and **serverless containers**. **Everything you need is written here**—concepts, commands, and step-by-step instructions. Read deeply in this repo first; use the links at the end of each topic only if you want more detail or the latest official wording.
+Hands-on notes and guides for containerization from zero to advanced: fundamentals, container runtimes (Docker, Podman, containerd), orchestration (Kubernetes, OpenShift, Rancher, Swarm), managed services (GKE, EKS, AKS, ROSA/ARO), **local dev clusters**, and **serverless containers**. **Everything you need is written here**—concepts, commands, and step-by-step instructions. Read deeply in this repo first; use the links at the end of each topic only if you want more detail or the latest official wording.
 
 This repo is what **containers and clusters are**. Delivery of a container image (CI, GitOps, scanners in a pipeline) lives in [DevOps-Handbook](https://github.com/thisiskushal31/DevOps-Handbook). Named CLIs (`kubectl`, `k9s`, Helm) live in [Tooling Containers](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive/tree/main/Containers). Packet-level Kubernetes networking lives in [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive).
 
@@ -43,8 +43,9 @@ Running containerized workloads at scale: scheduling, scaling, networking.
 
 | Platform | Description |
 |----------|-------------|
-| [**Kubernetes**](./Orchestration/Kubernetes/README.md) | Setup to production: concepts, tasks, tutorials, operations. |
+| [**Kubernetes**](./Orchestration/Kubernetes/README.md) | Setup to production: concepts, tasks, tutorials, operations, self-managed kubeadm, vanilla on metal. |
 | [**OpenShift Container Platform**](./Orchestration/OpenShift/README.md) | Red Hat’s Kubernetes-based platform: overview, install, configure, develop, Operators, networking, security, observability. |
+| [**Rancher**](./Orchestration/Rancher/README.md) | SUSE Rancher multi-cluster manager, RKE2, k3s. |
 | [**Docker Swarm**](./Orchestration/Swarm/README.md) | Docker’s built-in orchestration. Overview, initialize and nodes, services and tasks, stacks and Compose, networking and secrets, scaling and when to use. |
 
 New orchestrators can be added as subfolders under `Orchestration/`.
@@ -83,13 +84,13 @@ Helm, Kustomize, GitOps — links [DevOps-Handbook CiCd](https://github.com/this
 
 1. **[Containerization basics](./Containerization-Basic/README.md)** – concepts, images, runtimes, registries
 2. **[Docker](./Runtimes/Docker/README.md)** – get Docker, first container, workshop (containerize → push → persist → Compose)
-3. **[Kubernetes](./Orchestration/Kubernetes/README.md)** – getting started, concepts, tasks, tutorials, production
+3. **[Kubernetes](./Orchestration/Kubernetes/README.md)** – getting started, concepts, tasks, tutorials, production, self-managed, vanilla on metal
 4. **[Managed services](./Managed-Services/README.md)** – Overview, GKE, EKS, AKS, OpenShift managed (ROSA/ARO), turnkey Kubernetes (k3s, k0s, etc.)
 5. **[Local dev clusters](./Local-Dev/README.md)** – kind, minikube, k3d (stubs to fill)
 6. **[Serverless containers](./Serverless-Containers/README.md)** – Cloud Run, Fargate, etc. (stubs to fill)
 7. **[Security advanced](./Security-Advanced/README.md)** + **[Networking advanced](./Networking-Advanced/README.md)** when operating prod clusters
 
-Optional: [Podman](./Runtimes/Podman/README.md), [containerd](./Runtimes/Containerd/README.md), [OpenShift](./Orchestration/OpenShift/README.md), [Swarm](./Orchestration/Swarm/README.md), [Nomad](./Orchestration/Nomad/README.md).
+Optional: [Podman](./Runtimes/Podman/README.md), [containerd](./Runtimes/Containerd/README.md), [OpenShift](./Orchestration/OpenShift/README.md), [Rancher](./Orchestration/Rancher/README.md), [Swarm](./Orchestration/Swarm/README.md), [Nomad](./Orchestration/Nomad/README.md).
 
 ## How to use this guide
 
