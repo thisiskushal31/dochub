@@ -10,21 +10,21 @@
         "path": "ArangoDB/1_Overview_Multi_Model.md",
         "type": "file",
         "sha": "",
-        "size": 327
+        "size": 328
       },
       {
         "name": "2_Aql_and_Graph.md",
         "path": "ArangoDB/2_Aql_and_Graph.md",
         "type": "file",
         "sha": "",
-        "size": 320
+        "size": 321
       },
       {
         "name": "3_Operations.md",
         "path": "ArangoDB/3_Operations.md",
         "type": "file",
         "sha": "",
-        "size": 308
+        "size": 309
       },
       {
         "name": "README.md",
@@ -46,21 +46,21 @@
         "path": "Neo4j/1_Overview_and_Model.md",
         "type": "file",
         "sha": "",
-        "size": 333
+        "size": 334
       },
       {
         "name": "2_Cypher_Queries.md",
         "path": "Neo4j/2_Cypher_Queries.md",
         "type": "file",
         "sha": "",
-        "size": 326
+        "size": 327
       },
       {
         "name": "3_Operations.md",
         "path": "Neo4j/3_Operations.md",
         "type": "file",
         "sha": "",
-        "size": 311
+        "size": 312
       },
       {
         "name": "README.md",
@@ -82,21 +82,21 @@
         "path": "Neptune/1_Overview.md",
         "type": "file",
         "sha": "",
-        "size": 324
+        "size": 325
       },
       {
         "name": "2_Data_and_Queries.md",
         "path": "Neptune/2_Data_and_Queries.md",
         "type": "file",
         "sha": "",
-        "size": 333
+        "size": 334
       },
       {
         "name": "3_Operations.md",
         "path": "Neptune/3_Operations.md",
         "type": "file",
         "sha": "",
-        "size": 308
+        "size": 309
       },
       {
         "name": "README.md",

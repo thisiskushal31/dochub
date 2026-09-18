@@ -96,7 +96,7 @@ Fundamental concepts that apply across all database systems, regardless of type 
 ### [`Data-Platform/`](./Data-Platform/README.md) *(new — stubs)*
 Backups to object storage, CDC/replication for analytics, schema migrations — links [Data-Engineering-Deep-Dive](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive) without duplicating pipeline authoring.
 
-Sister repos: [Data-Engineering-Deep-Dive](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive) · [Data-Science-AI-Deep-Dive](https://github.com/thisiskushal31/Data-Science-AI-Deep-Dive) · [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) · [DevOps-Handbook](https://github.com/thisiskushal31/DevOps-Handbook).
+Related repos: [Data-Engineering-Deep-Dive](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive) · [Data-Science-AI-Deep-Dive](https://github.com/thisiskushal31/Data-Science-AI-Deep-Dive) · [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts) · [DevOps-Handbook](https://github.com/thisiskushal31/DevOps-Handbook).
 
 ### [`Cloud-Managed/`](./Cloud-Managed/README.md)
 Guide to managed database services across major cloud providers, covering provisioning, operations, migrations, and cost optimization.

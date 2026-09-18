@@ -23,7 +23,7 @@ Official docs: [https://duckdb.org/docs/](https://duckdb.org/docs/)
 - [x] Operational checklist in last ops topic
 - [ ] Re-read after a DuckDB minor version bump (execution and extensions move)
 
-## Sister
+## Related home
 
 | Slice | Home |
 |-------|------|

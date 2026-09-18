@@ -14,4 +14,4 @@
 
 - [ ] Copy-paste commands verified
 - [ ] References section at end (official docs)
-- [ ] Link related engines or sister repos where relevant
+- [ ] Link related engines or related repos where relevant

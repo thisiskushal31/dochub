@@ -10,28 +10,28 @@
         "path": "CouchDB/1_Overview_Architecture.md",
         "type": "file",
         "sha": "",
-        "size": 342
+        "size": 343
       },
       {
         "name": "2_Queries_and_Views.md",
         "path": "CouchDB/2_Queries_and_Views.md",
         "type": "file",
         "sha": "",
-        "size": 340
+        "size": 341
       },
       {
         "name": "3_Replication.md",
         "path": "CouchDB/3_Replication.md",
         "type": "file",
         "sha": "",
-        "size": 340
+        "size": 341
       },
       {
         "name": "4_Operations.md",
         "path": "CouchDB/4_Operations.md",
         "type": "file",
         "sha": "",
-        "size": 333
+        "size": 334
       },
       {
         "name": "README.md",
@@ -53,28 +53,28 @@
         "path": "Firestore/1_Overview_and_Data_Model.md",
         "type": "file",
         "sha": "",
-        "size": 362
+        "size": 363
       },
       {
         "name": "2_Queries_and_Indexes.md",
         "path": "Firestore/2_Queries_and_Indexes.md",
         "type": "file",
         "sha": "",
-        "size": 342
+        "size": 343
       },
       {
         "name": "3_Security_and_Rules.md",
         "path": "Firestore/3_Security_and_Rules.md",
         "type": "file",
         "sha": "",
-        "size": 333
+        "size": 334
       },
       {
         "name": "4_Operations_and_Pricing.md",
         "path": "Firestore/4_Operations_and_Pricing.md",
         "type": "file",
         "sha": "",
-        "size": 343
+        "size": 344
       },
       {
         "name": "README.md",

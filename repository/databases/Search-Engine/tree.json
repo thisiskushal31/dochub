@@ -74,21 +74,21 @@
         "path": "Meilisearch/1_Overview.md",
         "type": "file",
         "sha": "",
-        "size": 319
+        "size": 320
       },
       {
         "name": "2_Indexing_and_Search.md",
         "path": "Meilisearch/2_Indexing_and_Search.md",
         "type": "file",
         "sha": "",
-        "size": 323
+        "size": 324
       },
       {
         "name": "3_Operations.md",
         "path": "Meilisearch/3_Operations.md",
         "type": "file",
         "sha": "",
-        "size": 300
+        "size": 301
       },
       {
         "name": "README.md",
@@ -110,21 +110,21 @@
         "path": "Solr/1_Overview_Architecture.md",
         "type": "file",
         "sha": "",
-        "size": 319
+        "size": 320
       },
       {
         "name": "2_Indexing_and_Queries.md",
         "path": "Solr/2_Indexing_and_Queries.md",
         "type": "file",
         "sha": "",
-        "size": 315
+        "size": 316
       },
       {
         "name": "3_Operations.md",
         "path": "Solr/3_Operations.md",
         "type": "file",
         "sha": "",
-        "size": 310
+        "size": 311
       },
       {
         "name": "README.md",

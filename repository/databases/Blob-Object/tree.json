@@ -10,21 +10,21 @@
         "path": "Azure-Blob/1_Overview.md",
         "type": "file",
         "sha": "",
-        "size": 341
+        "size": 342
       },
       {
         "name": "2_Tiers_and_Lifecycle.md",
         "path": "Azure-Blob/2_Tiers_and_Lifecycle.md",
         "type": "file",
         "sha": "",
-        "size": 329
+        "size": 330
       },
       {
         "name": "3_Security_and_Ops.md",
         "path": "Azure-Blob/3_Security_and_Ops.md",
         "type": "file",
         "sha": "",
-        "size": 321
+        "size": 322
       },
       {
         "name": "README.md",
@@ -46,28 +46,28 @@
         "path": "GCS/1_Overview_and_Concepts.md",
         "type": "file",
         "sha": "",
-        "size": 347
+        "size": 348
       },
       {
         "name": "2_Storage_Classes_and_Lifecycle.md",
         "path": "GCS/2_Storage_Classes_and_Lifecycle.md",
         "type": "file",
         "sha": "",
-        "size": 340
+        "size": 341
       },
       {
         "name": "3_Security_and_IAM.md",
         "path": "GCS/3_Security_and_IAM.md",
         "type": "file",
         "sha": "",
-        "size": 326
+        "size": 327
       },
       {
         "name": "4_Operations_and_Patterns.md",
         "path": "GCS/4_Operations_and_Patterns.md",
         "type": "file",
         "sha": "",
-        "size": 345
+        "size": 346
       },
       {
         "name": "README.md",
@@ -89,21 +89,21 @@
         "path": "MinIO/1_Overview_S3_Compatible.md",
         "type": "file",
         "sha": "",
-        "size": 326
+        "size": 327
       },
       {
         "name": "2_Deployment_and_Security.md",
         "path": "MinIO/2_Deployment_and_Security.md",
         "type": "file",
         "sha": "",
-        "size": 321
+        "size": 322
       },
       {
         "name": "3_Operations.md",
         "path": "MinIO/3_Operations.md",
         "type": "file",
         "sha": "",
-        "size": 306
+        "size": 307
       },
       {
         "name": "README.md",
@@ -125,28 +125,28 @@
         "path": "S3/1_Overview_and_Concepts.md",
         "type": "file",
         "sha": "",
-        "size": 347
+        "size": 348
       },
       {
         "name": "2_Storage_Classes_and_Lifecycle.md",
         "path": "S3/2_Storage_Classes_and_Lifecycle.md",
         "type": "file",
         "sha": "",
-        "size": 335
+        "size": 336
       },
       {
         "name": "3_Security_and_IAM.md",
         "path": "S3/3_Security_and_IAM.md",
         "type": "file",
         "sha": "",
-        "size": 344
+        "size": 345
       },
       {
         "name": "4_Operations_and_Patterns.md",
         "path": "S3/4_Operations_and_Patterns.md",
         "type": "file",
         "sha": "",
-        "size": 341
+        "size": 342
       },
       {
         "name": "README.md",

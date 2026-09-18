@@ -4,28 +4,28 @@
     "path": "1_Overview_Architecture.md",
     "type": "file",
     "sha": "",
-    "size": 347
+    "size": 348
   },
   {
     "name": "2_Data_Model_and_CQL.md",
     "path": "2_Data_Model_and_CQL.md",
     "type": "file",
     "sha": "",
-    "size": 360
+    "size": 361
   },
   {
     "name": "3_Replication_and_Tuning.md",
     "path": "3_Replication_and_Tuning.md",
     "type": "file",
     "sha": "",
-    "size": 339
+    "size": 340
   },
   {
     "name": "4_Operations.md",
     "path": "4_Operations.md",
     "type": "file",
     "sha": "",
-    "size": 324
+    "size": 325
   },
   {
     "name": "README.md",

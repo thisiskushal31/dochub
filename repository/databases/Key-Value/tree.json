@@ -74,35 +74,35 @@
         "path": "DynamoDB/1_Overview_and_Data_Model.md",
         "type": "file",
         "sha": "",
-        "size": 360
+        "size": 361
       },
       {
         "name": "2_Capacity_and_Throttling.md",
         "path": "DynamoDB/2_Capacity_and_Throttling.md",
         "type": "file",
         "sha": "",
-        "size": 351
+        "size": 352
       },
       {
         "name": "3_Patterns_and_Access.md",
         "path": "DynamoDB/3_Patterns_and_Access.md",
         "type": "file",
         "sha": "",
-        "size": 345
+        "size": 346
       },
       {
         "name": "4_Backup_and_Global.md",
         "path": "DynamoDB/4_Backup_and_Global.md",
         "type": "file",
         "sha": "",
-        "size": 340
+        "size": 341
       },
       {
         "name": "5_Operations_and_Cost.md",
         "path": "DynamoDB/5_Operations_and_Cost.md",
         "type": "file",
         "sha": "",
-        "size": 326
+        "size": 327
       },
       {
         "name": "README.md",
