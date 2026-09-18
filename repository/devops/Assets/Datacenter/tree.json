@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Accelerators",
+    "path": "Accelerators",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Compute",
+    "path": "Compute",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Electrical",
+    "path": "Electrical",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Fabric-Physical",
+    "path": "Fabric-Physical",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Facility",
+    "path": "Facility",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Integration",
+    "path": "Integration",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Mechanical",
+    "path": "Mechanical",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Setup-And-Bring-Up",
+    "path": "Setup-And-Bring-Up",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "Storage-Physical",
+    "path": "Storage-Physical",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "White-Space",
+    "path": "White-Space",
+    "type": "dir",
+    "sha": ""
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 3241
+  }
+]

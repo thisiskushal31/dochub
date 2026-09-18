@@ -4,6 +4,16 @@
 
 ---
 
+## Mental map
+
+![Whole hall layers](../Assets/Datacenter/Integration/whole-hall-layers.svg)
+
+![Power path](../Assets/Datacenter/Electrical/power-path-street-to-chip.svg)
+
+![Heat airflow](../Assets/Datacenter/Mechanical/heat-airflow-loop.svg)
+
+*What to notice: rooms are **jobs**, not labels. Power and cool must both survive or IT dies with breakers still closed. Deeper: [Electrical/](./Electrical/README.md) · [Mechanical/](./Mechanical/README.md) · build path: [Setup-And-Bring-Up/](./Setup-And-Bring-Up/README.md).*
+
 ## 1. Concepts
 
 A **datacenter** is a building (or a hall inside one) whose product is **reliable power, cooling, connectivity, and physical security** for computers. Public cloud is many of these buildings behind an API. This chapter is the **hall**. The cage contract is [2](./2_Ownership_Colo_And_Contracts.md). What you put in the rack is [4](./4_Rack_BMC_And_Provisioning.md).

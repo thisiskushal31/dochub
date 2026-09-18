@@ -4,6 +4,14 @@
 
 ---
 
+## Mental map
+
+![Hall planes](../Assets/Datacenter/Setup-And-Bring-Up/hall-planes-map.svg)
+
+![Leaf-spine](../Assets/Datacenter/Fabric-Physical/leaf-spine-concept.svg)
+
+*What to notice: production fabric and OOB are **different planes**. Bring-up: [Setup/1](./Setup-And-Bring-Up/1_Hall_Network_Mental_Map.md)–[6](./Setup-And-Bring-Up/6_LAN_Segmentation_Jobs.md).*
+
 ## 1. Concepts
 
 In a hall, the network is **cables, BGP, and failure domains**, not a VPC checkbox. Packet-level depth lives in [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive). This chapter is what a DevOps/SE must name so software can land.

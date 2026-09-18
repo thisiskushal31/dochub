@@ -4,6 +4,14 @@
 
 ---
 
+## Mental map
+
+![RAID levels](../Assets/Datacenter/Storage-Physical/raid-levels-board.svg)
+
+![Disk bays](../Assets/Datacenter/Storage-Physical/disk-bay-front.svg)
+
+*What to notice: DAS/NAS/SAN are **where bits live**—snapshots on the same array are not a restore story. Bring-up: [Setup/10–11](./Setup-And-Bring-Up/10_RAID_And_Local_Disk_Setup.md).*
+
 ## 1. Concepts
 
 On-prem storage is **where bits live when the VM or pod is gone**. Cloud disks hide the array. Here you name it.

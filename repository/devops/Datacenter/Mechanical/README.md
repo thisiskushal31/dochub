@@ -27,6 +27,8 @@ Concepts → Advanced → Applications → References (official only).
 
 On-ramp survey: [../3_Facility_Power_Cooling_And_Rooms.md](../3_Facility_Power_Cooling_And_Rooms.md).
 
+Visual start: [ch1 mental map](./1_Heat_Load_And_Airflow_Path.md) · plate [`heat-airflow-loop.svg`](../../Assets/Datacenter/Mechanical/heat-airflow-loop.svg) · whole hall [0c](../0c_Whole_Hall_Mental_Map.md).
+
 ## Related
 
 - [Electrical/](../Electrical/README.md) · [White-Space/](../White-Space/README.md) · [Accelerators/](../Accelerators/README.md) · [Jobs/](../Jobs/README.md)  

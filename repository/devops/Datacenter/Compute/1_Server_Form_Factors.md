@@ -4,6 +4,14 @@
 
 ---
 
+## Mental map
+
+![Server anatomy](../../Assets/Datacenter/Compute/server-anatomy.svg)
+
+*What to notice: form factor is a **package deal**—power cords, airflow, BMC, NICs, disks. Imaging and OOB: [Setup/7–9](../Setup-And-Bring-Up/7_OOB_BMC_Plane_Bring_Up.md).*
+
+**Operator experience (verify locally):** Spares hell starts when “2U server” means three incompatible generations on the same shelf.
+
 ## 1. Concepts
 
 A **server** is a chassis that packages CPU, memory, storage, NICs, BMC, and power into a rackable (or blade) unit. Form factor decides density, serviceability, and thermal/power headroom.

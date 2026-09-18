@@ -22,7 +22,7 @@ Building a network with enterprise devices; Cisco switches, IOS, routers; consol
 
 ### [5. Wireless & special networks](./5_Wireless_Special_Networks.md)
 
-Wi-Fi standards, Bluetooth, generations of wireless (1G–5G), 6G (emerging), WLAN, Zigbee.
+Wi-Fi standards, Bluetooth, generations of wireless (1G–5G), 6G (emerging), WLAN, Zigbee. AP/PoE **setup jobs** in halls/labs → DevOps-Handbook `Datacenter/Setup-And-Bring-Up/12`.
 
 ## Learning path
 

@@ -4,6 +4,16 @@
 
 ---
 
+## Mental map
+
+![RAID levels](../../Assets/Datacenter/Storage-Physical/raid-levels-board.svg)
+
+![Disk bays sketch](../../Assets/Datacenter/Storage-Physical/disk-bay-front.svg)
+
+Setup procedures (controller steps, hot-spare, JBOD vs RAID): [Setup-And-Bring-Up/10](../Setup-And-Bring-Up/10_RAID_And_Local_Disk_Setup.md).
+
+---
+
 ## 1. Concepts
 
 **DAS** (direct-attached storage) is disks in or cabled to the server—NVMe, SAS, SATA—owned by that host. Clusters often prefer **JBOD + software** over shared hardware RAID for data planes; OS disks may still use hardware or software mirrors.

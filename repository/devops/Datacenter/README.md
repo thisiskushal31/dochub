@@ -15,12 +15,12 @@ How software lands on **metal and in a hall**: physical plant, colo and wholesal
 
 Each numbered chapter: **Concepts → Advanced → Applications/use cases → References** (official docs only). No Archive paths. No author-process narrative.
 
-**Quality bar (accessibility):** define every term on first use in plain language; **Disconfirm** common myths; **Confirm** with short self-checks; show where the thing sits and why IT cares. Start here if you are new: [0 — How to read](./0_How_To_Read_And_Quality_Bar.md) · [0b — Equipment in plain language](./0b_Equipment_In_Plain_Language.md).
+**Quality bar (accessibility):** define every term on first use in plain language; **mental map + asset plate** for physical topics; **Disconfirm** common myths; **Confirm** with short self-checks; show where the thing sits and why IT cares. Start here if you are new: [0 — How to read](./0_How_To_Read_And_Quality_Bar.md) · [0b — Equipment in plain language](./0b_Equipment_In_Plain_Language.md) · [0c — Whole hall mental map](./0c_Whole_Hall_Mental_Map.md).
 
 ### Staircase
 
 ```text
-Floor −1 How to read + plain glossary →  0, 0b (everyone starts here if unsure)
+Floor −1 How to read + plain glossary + whole-hall map →  0, 0b, 0c
 Floor 0  On-ramp 1–12     →  estate, hall survey, hypervisor, deploy, DR
 Floor 1  Facility         →  site types, tiers, rooms, business models
 Floor 2  Electrical       →  utility → rack PDU (device encyclopedia)
@@ -30,13 +30,16 @@ Floor 5  Compute          →  servers, CPU, chipset, memory, NUMA, BMC
 Floor 6  Accelerators     →  GPU, DPU, FPGA, optics, rare gear
 Floor 7  Storage-Physical →  DAS/SAN/NAS/object iron + paths
 Floor 8  Fabric-Physical  →  ToR/spine, MMR, OOB, optics
+Floor 8b Setup-And-Bring-Up →  rack→cable→LAN→OOB→image→RAID (**how engineers build**)
 Floor 9  Markets          →  operator kinds, regions, how halls are built/run
 Floor 10 Provider-Use     →  order capacity, interconnect, remote hands, portals
 Floor 11 Integration      →  end-to-end diagrams, failure walks, **reports & steering**
 Floor 12 Jobs             →  role knowledge base + **reading dashboards**
 ```
 
-**Suggested path:** If terms feel dense → **0 → 0b**, then on-ramp **1 → 12**. Add [Integration/11](./Integration/11_Aggregate_Telemetry_Reports_And_Steering.md) early—most practical work is reading aggregates and steering. Then deep tracks by role ([Jobs/1](./Jobs/1_Role_Map.md)).
+**Suggested path:** If terms feel dense → **0 → 0b → 0c**, then on-ramp **1 → 12**. For **hands-on build literacy**, climb [Setup-And-Bring-Up/](./Setup-And-Bring-Up/README.md) early (after on-ramp 3–6). Add [Integration/11](./Integration/11_Aggregate_Telemetry_Reports_And_Steering.md) for aggregates. Then deep tracks by role ([Jobs/1](./Jobs/1_Role_Map.md)).
+
+**Visual plates:** [Assets/Datacenter/](../Assets/Datacenter/README.md) — power, cool, rack, fabric, RAID, whole-hall layers. Each deep-track chapter **1** opens with a mental map.
 
 ---
 
@@ -44,8 +47,9 @@ Floor 12 Jobs             →  role knowledge base + **reading dashboards**
 
 | # | File | Focus |
 |---|------|--------|
-| 0 | [How to read + quality bar](./0_How_To_Read_And_Quality_Bar.md) | How chapters work; Disconfirm/Confirm; first-week path |
+| 0 | [How to read + quality bar](./0_How_To_Read_And_Quality_Bar.md) | How chapters work; maps/assets; Disconfirm/Confirm; first-week path |
 | 0b | [Equipment in plain language](./0b_Equipment_In_Plain_Language.md) | Power, cool, rack, net, storage, screens—without jargon fog |
+| 0c | [Whole hall mental map](./0c_Whole_Hall_Mental_Map.md) | Five layers; which folder owns which; where to start by goal |
 
 ---
 
@@ -80,6 +84,7 @@ Floor 12 Jobs             →  role knowledge base + **reading dashboards**
 | [Accelerators/](./Accelerators/README.md) | GPU, DPU, FPGA, rare gear | **5 filled** (10) |
 | [Storage-Physical/](./Storage-Physical/README.md) | Arrays, fabrics, paths | **6 filled** (12) |
 | [Fabric-Physical/](./Fabric-Physical/README.md) | ToR, spine, MMR, OOB, optics | **6 filled** (12) |
+| [Setup-And-Bring-Up/](./Setup-And-Bring-Up/README.md) | How engineers rack, cable, LAN, image, RAID | **filled** (15) |
 | [Markets-And-Operators/](./Markets-And-Operators/README.md) | Operator kinds, regions, build/run | **7 filled** (16) |
 | [Provider-Use/](./Provider-Use/README.md) | Order, interconnect, hands, portals | **7 filled** (10) |
 | [Integration/](./Integration/README.md) | End-to-end + failure walks + **reports/steering** | **filled** (11) |

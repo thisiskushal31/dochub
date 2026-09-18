@@ -4,7 +4,7 @@
     "path": "1_Utility_To_DIMM.md",
     "type": "file",
     "sha": "",
-    "size": 1952
+    "size": 2497
   },
   {
     "name": "10_Units_Voltage_Frequency_Literacy.md",
@@ -18,7 +18,7 @@
     "path": "11_Aggregate_Telemetry_Reports_And_Steering.md",
     "type": "file",
     "sha": "",
-    "size": 7357
+    "size": 7831
   },
   {
     "name": "2_NIC_To_MMR.md",
@@ -81,6 +81,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1854
+    "size": 2047
   }
 ]

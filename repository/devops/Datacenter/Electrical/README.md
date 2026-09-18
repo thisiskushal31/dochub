@@ -34,7 +34,8 @@ Concepts → Advanced → Applications → References (official only).
 | 18 | [Commissioning and IST (power)](./18_Commissioning_And_IST_Power.md) | IST; integrated testing expectations | **filled** |
 
 On-ramp survey: [../3_Facility_Power_Cooling_And_Rooms.md](../3_Facility_Power_Cooling_And_Rooms.md), [../4_Rack_BMC_And_Provisioning.md](../4_Rack_BMC_And_Provisioning.md).  
-Plain language first: [../0_How_To_Read_And_Quality_Bar.md](../0_How_To_Read_And_Quality_Bar.md) · [../0b_Equipment_In_Plain_Language.md](../0b_Equipment_In_Plain_Language.md).  
+Visual start: [ch1 mental map](./1_Utility_Intake_And_Service_Entrance.md) · plate [`power-path-street-to-chip.svg`](../../Assets/Datacenter/Electrical/power-path-street-to-chip.svg) · whole hall [0c](../0c_Whole_Hall_Mental_Map.md).
+Plain language first: [../0_How_To_Read_And_Quality_Bar.md](../0_How_To_Read_And_Quality_Bar.md) · [../0b_Equipment_In_Plain_Language.md](../0b_Equipment_In_Plain_Language.md) · [../0c_Whole_Hall_Mental_Map.md](../0c_Whole_Hall_Mental_Map.md).  
 Reports & steering (EPMS aggregates): [15](./15_EPMS_BMS_And_Power_Monitoring.md) · [Integration/11](../Integration/11_Aggregate_Telemetry_Reports_And_Steering.md).
 
 ## Related

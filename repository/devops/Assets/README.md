@@ -8,6 +8,7 @@ Images and diagrams used in the DevOps Handbook. **Credit is given in the topic 
 
 | Folder | Use for |
 |--------|---------|
+| `Datacenter/` | Hall plant, racks, fabric gear, setup/bring-up plates |  
 | `Operating-Systems/` | OS, kernel, process, memory, request flow, data transmission, RAID (e.g. GeeksforGeeks, ByteByteGo). |
 | `Methodologies/` | DevOps culture, SRE, platform engineering (e.g. ByteByteGo DevOps vs SRE). |
 | `CiCd/` | CI/CD pipelines, deployment strategies (e.g. ByteByteGo CI/CD, deployment guides). |

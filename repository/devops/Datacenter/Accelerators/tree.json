@@ -4,7 +4,7 @@
     "path": "1_GPU_Trays_And_Power.md",
     "type": "file",
     "sha": "",
-    "size": 3187
+    "size": 3679
   },
   {
     "name": "10_Accelerator_Failure_And_Spares.md",
@@ -74,6 +74,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1712
+    "size": 1919
   }
 ]

@@ -4,6 +4,14 @@
 
 ---
 
+## Mental map
+
+![Site product types](../../Assets/Datacenter/Facility/site-product-types.svg)
+
+*What to notice: taxonomy starts with **what they sell** (space/power/XC vs shell vs cloud), not with who has the biggest logo. Qualify: [Provider-Use/1](../Provider-Use/1_Qualify_A_Site.md).*
+
+**Operator experience (verify locally):** Sales decks collapse kinds; your RFP should not.
+
 ## 1. Concepts
 
 Not every “data center company” sells the same product. Classify the logo before comparing it to Equinix, AWS, or a local colo.

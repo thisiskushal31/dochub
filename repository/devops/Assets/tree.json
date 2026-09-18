@@ -1,5 +1,80 @@
 [
   {
+    "name": "Datacenter",
+    "path": "Datacenter",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Accelerators",
+        "path": "Datacenter/Accelerators",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Compute",
+        "path": "Datacenter/Compute",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Electrical",
+        "path": "Datacenter/Electrical",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Fabric-Physical",
+        "path": "Datacenter/Fabric-Physical",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Facility",
+        "path": "Datacenter/Facility",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Integration",
+        "path": "Datacenter/Integration",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Mechanical",
+        "path": "Datacenter/Mechanical",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Setup-And-Bring-Up",
+        "path": "Datacenter/Setup-And-Bring-Up",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "Storage-Physical",
+        "path": "Datacenter/Storage-Physical",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "White-Space",
+        "path": "Datacenter/White-Space",
+        "type": "dir",
+        "sha": ""
+      },
+      {
+        "name": "README.md",
+        "path": "Datacenter/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 3241
+      }
+    ]
+  },
+  {
     "name": "Languages",
     "path": "Languages",
     "type": "dir",
@@ -159,6 +234,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3609
+    "size": 3685
   }
 ]

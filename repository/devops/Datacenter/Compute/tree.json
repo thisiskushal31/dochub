@@ -4,7 +4,7 @@
     "path": "1_Server_Form_Factors.md",
     "type": "file",
     "sha": "",
-    "size": 2989
+    "size": 3392
   },
   {
     "name": "10_BMC_IPMI_And_Redfish_Deep.md",
@@ -46,7 +46,7 @@
     "path": "15_Imaging_And_Provisioning_At_Scale.md",
     "type": "file",
     "sha": "",
-    "size": 2788
+    "size": 3345
   },
   {
     "name": "16_Spares_SKU_Discipline.md",
@@ -130,6 +130,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3088
+    "size": 3284
   }
 ]

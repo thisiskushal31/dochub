@@ -4,6 +4,20 @@
 
 ---
 
+## Mental map
+
+![Whole hall layers](../../Assets/Datacenter/Integration/whole-hall-layers.svg)
+
+```text
+sensors / meters / BMC / fabric counters
+        ↓
+   telemetry bus / historians
+        ↓
+  dashboards + scheduled reports   →   steering (capacity, change, tickets)
+```
+
+*What to notice: screens sit on the **people layer** but must tell the truth about power, cool, and packets. Jobs practice: [Jobs/13](../Jobs/13_Reading_Dashboards_Reports_And_Steering.md).*
+
 ## 1. Concepts — from sensor to decision
 
 A hall produces thousands of measurements. **Nobody steers from raw sensor spam.** Practical ops works in two layers:

@@ -25,6 +25,8 @@ Concepts → Advanced → Applications → References (official only).
 
 On-ramp survey: [../4_Rack_BMC_And_Provisioning.md](../4_Rack_BMC_And_Provisioning.md).
 
+Visual start: [ch1 mental map](./1_Rack_Standards_And_Form_Factors.md) · plate [`rack-elevation-sketch.svg`](../../Assets/Datacenter/White-Space/rack-elevation-sketch.svg) · whole hall [0c](../0c_Whole_Hall_Mental_Map.md).
+
 ## Related
 
 - [Electrical/](../Electrical/README.md) · [Fabric-Physical/](../Fabric-Physical/README.md) · [Compute/](../Compute/README.md) · [Jobs/](../Jobs/README.md)  

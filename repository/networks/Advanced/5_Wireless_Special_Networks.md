@@ -135,3 +135,4 @@ Use these so you’re not running commands blindly: you’re either **listing in
 - [GeeksforGeeks – What is Bluetooth?](https://www.geeksforgeeks.org/computer-networks/bluetooth/)
 - [GeeksforGeeks – Generations of Wireless Communication](https://www.geeksforgeeks.org/computer-networks/generations-of-wireless-communication/)
 - [Cloud-Native/4_Iot_5g](../Cloud-Native/4_Iot_5g.md); [Security/3_Cybersecurity_Threats_Config](../Security/3_Cybersecurity_Threats_Config.md)
+- **Datacenter setup (AP / PoE / SSID→gateway jobs):** [DevOps-Handbook Setup-And-Bring-Up/12](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/Datacenter/Setup-And-Bring-Up/12_WLAN_And_AP_Lab_Office_Edge.md) — this file owns RF/standards; Datacenter owns hall/lab bring-up jobs  

@@ -1,6 +1,6 @@
 # 0 — How to read this track (plain language + quality bar)
 
-[README](./README.md) · [Next: On-prem as a solution →](./1_On_Prem_As_A_Solution.md) · [Foundations glossary →](./0b_Equipment_In_Plain_Language.md)
+[README](./README.md) · [0b glossary →](./0b_Equipment_In_Plain_Language.md) · [0c whole-hall map →](./0c_Whole_Hall_Mental_Map.md) · [On-ramp 1 →](./1_On_Prem_As_A_Solution.md)
 
 ---
 
@@ -23,11 +23,11 @@ You do **not** need to be an electrician, mechanical engineer, or network PE to 
 
 | Day | Read |
 |-----|------|
-| 1 | This file + [0b plain-language equipment](./0b_Equipment_In_Plain_Language.md) |
+| 1 | This file + [0b](./0b_Equipment_In_Plain_Language.md) + [0c whole-hall map](./0c_Whole_Hall_Mental_Map.md) |
 | 2–3 | On-ramp [1](./1_On_Prem_As_A_Solution.md)–[3](./3_Facility_Power_Cooling_And_Rooms.md) |
-| 4 | [Integration/11 reports & steering](./Integration/11_Aggregate_Telemetry_Reports_And_Steering.md) |
-| 5–7 | On-ramp [4](./4_Rack_BMC_And_Provisioning.md)–[6](./6_Storage_Backup_And_Restore.md) |
-| Later | Deep tracks as your role needs ([Jobs/1](./Jobs/1_Role_Map.md)) |
+| 4 | [Setup-And-Bring-Up/1](./Setup-And-Bring-Up/1_Hall_Network_Mental_Map.md) (planes) + [Integration/11](./Integration/11_Aggregate_Telemetry_Reports_And_Steering.md) |
+| 5–7 | On-ramp [4](./4_Rack_BMC_And_Provisioning.md)–[6](./6_Storage_Backup_And_Restore.md) or Setup [2](./Setup-And-Bring-Up/2_Crate_To_Live_Rack.md)–[8](./Setup-And-Bring-Up/8_Server_Setup_Playbook.md) |
+| Later | Deep tracks by role ([Jobs/1](./Jobs/1_Role_Map.md)) |
 
 ---
 
@@ -38,11 +38,14 @@ Every Datacenter article aims for this bar. If a chapter fails it, that is a bug
 | Rule | Meaning |
 |------|---------|
 | **Define on first use** | Spell the acronym, then say what it *does* in one plain sentence |
+| **Mental map** | Diagram or ASCII near the top—planes/paths, not only paragraphs |
+| **Asset plate** | For physical gear: photo or labeled SVG under `Assets/Datacenter/` with “what to notice” |
 | **Where it sits** | Room, rack, or screen—so you can picture it |
 | **Why IT/apps care** | Link to outage, throttle, ticket, or bill |
 | **Disconfirm** | Explicit “this is **not** …” for common mix-ups |
 | **Confirm** | 2–4 questions you can answer without looking |
 | **Failure mode** | What breaks and what you see |
+| **Operator experience** | Optional lore (verify locally)—never a substitute for standards |
 | **Global variant** | Same job, different voltage/name—skills transfer |
 | **No persona meta** | Teach jobs, not “customer vs employee” storytelling |
 | **Official References** | Pointers to standards/vendor docs—not scraped blogs |

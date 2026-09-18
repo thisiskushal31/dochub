@@ -1,6 +1,14 @@
 # 0b — Equipment in plain language
 
-[← How to read](./0_How_To_Read_And_Quality_Bar.md) · [README](./README.md) · [On-ramp 1 →](./1_On_Prem_As_A_Solution.md)
+[← How to read](./0_How_To_Read_And_Quality_Bar.md) · [0c whole-hall map](./0c_Whole_Hall_Mental_Map.md) · [README](./README.md) · [On-ramp 1 →](./1_On_Prem_As_A_Solution.md)
+
+---
+
+## Mental map
+
+![Whole hall layers](../Assets/Datacenter/Integration/whole-hall-layers.svg)
+
+*What to notice: jargon below names pieces **inside** these layers. If a word feels foggy, find which layer it belongs to first.*
 
 ---
 
@@ -13,11 +21,13 @@ Think of the hall as four machines working together:
 3. **Network machine** — moves packets from server to the world  
 4. **People/process machine** — badges, tickets, screens, change windows  
 
-If any one fails hard, software fails—even if the code is perfect.
+If any one fails hard, software fails—even if the code is perfect. Full folder map: [0c](./0c_Whole_Hall_Mental_Map.md).
 
 ---
 
 ## 2. Power path (street → chip)
+
+![Power path](../Assets/Datacenter/Electrical/power-path-street-to-chip.svg)
 
 Read top to bottom. Each line is “what it is” in everyday words.
 
@@ -50,6 +60,8 @@ Deep track: [Electrical/](./Electrical/README.md). Walk: [Integration/1](./Integ
 
 ## 3. Cooling path (chips → outdoors)
 
+![Heat airflow](../Assets/Datacenter/Mechanical/heat-airflow-loop.svg)
+
 Computers turn almost all electricity into **heat**. Cooling moves that heat away.
 
 | Name | Plain meaning | Why you care |
@@ -71,6 +83,8 @@ Deep track: [Mechanical/](./Mechanical/README.md).
 ---
 
 ## 4. White space and the rack
+
+![Rack elevation](../Assets/Datacenter/White-Space/rack-elevation-sketch.svg)
 
 | Name | Plain meaning | Why you care |
 |------|---------------|--------------|

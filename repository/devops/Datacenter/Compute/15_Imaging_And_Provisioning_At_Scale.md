@@ -4,6 +4,22 @@
 
 ---
 
+## Mental map
+
+```text
+PXE VLAN ──► install ──► port flip ──► prod
+     or
+BMC Redfish virtual media ──► install (OOB)
+```
+
+Playbook depth: [Setup-And-Bring-Up/9](../Setup-And-Bring-Up/9_Imaging_Path.md) · VLAN flip: [Setup/6](../Setup-And-Bring-Up/6_LAN_Segmentation_Jobs.md).
+
+### Operator experience (verify locally)
+
+Operators often PXE on a dedicated VLAN then automate the switchport to production; others invent with Redfish and skip in-band PXE. Pin images; don’t share DHCP across BMC and prod. Pilot before 100×.
+
+---
+
 ## 1. Concepts
 
 **Provisioning** turns empty metal into a known OS/firmware state repeatedly. At scale you need identity (which serial?), network boot or virtual media, config, and verification—not USB sticks per node.

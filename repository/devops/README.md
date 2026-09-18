@@ -13,7 +13,7 @@ This handbook is how software is **delivered**. Start at [Methodologies/0 — SE
 - **[`IAC/`](./IAC/)** — Infrastructure as Code: Terraform, CloudFormation, Pulumi, and best practices
 - **[`Automation/`](./Automation/)** — Config-management automation (Ansible and kin), not app workflow tools
 - **[`Cloud/`](./Cloud/)** — Provider solutions literacy **1–22** (1–14 named providers incl. GKE/EKS/AKS and ROSA/ARO/ROKS as SKUs; **15–22** tenant how-to: IAM, VPC, on-ramps, instances, CLI/API, FinOps, VPS kin, hybrid — not cert dumps, not kubeadm). Colo plant/on-ramp jobs → `Datacenter/Provider-Use/`
-- **[`Datacenter/`](./Datacenter/)** — On-prem and colo physical depth: start with **0 / 0b** (plain language + Disconfirm/Confirm quality bar), on-ramp 1–12, then Facility → Jobs (**filled**; includes **Integration/11** + **Jobs/13** report→steer). API cloud tenant use stays in `Cloud/`
+- **[`Datacenter/`](./Datacenter/)** — On-prem/colo physical depth + **Setup-And-Bring-Up** (rack→LAN→image→RAID→WLAN jobs, diagrams/photos). Start **0 / 0b**; on-ramp 1–12; Facility → Jobs. API cloud stays in `Cloud/`
 - **[`Cloud-Native/`](./Cloud-Native/)** — Architectures, platform engineering, CNCF everyday tools (**cert-manager**, **ExternalDNS**, **Backstage** filled); mesh/Helm/K8s entries remain
 - **[`Servers/`](./Servers/)** — Web servers, reverse proxies, host lifecycle (nginx, Apache, …)
 - **[`Observability/`](./Observability/)** — Monitoring, logging, tracing, SLO/SLI; one folder per tool (Prometheus, Grafana, OpenTelemetry, etc.)

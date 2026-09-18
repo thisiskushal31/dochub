@@ -4,6 +4,16 @@
 
 ---
 
+## Mental map
+
+![Site product types](../../Assets/Datacenter/Facility/site-product-types.svg)
+
+![Whole hall layers](../../Assets/Datacenter/Integration/whole-hall-layers.svg)
+
+*What to notice: qualification is “can this product deliver the layers I need?”—power, cool, interconnect, hands—not a campus tour selfie. Taxonomy: [Markets/1](../Markets-And-Operators/1_Operator_Taxonomy.md).*
+
+**Operator experience (verify locally):** Ask for a sample elevation + power one-line before you fall in love with the lobby.
+
 ## 1. Concepts
 
 **Qualify** means decide whether a hall/campus fits the workload before signing. Durable checklist—not a persona story.

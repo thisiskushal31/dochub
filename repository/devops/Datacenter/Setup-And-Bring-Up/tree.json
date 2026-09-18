@@ -1,0 +1,114 @@
+[
+  {
+    "name": "1_Hall_Network_Mental_Map.md",
+    "path": "1_Hall_Network_Mental_Map.md",
+    "type": "file",
+    "sha": "",
+    "size": 3109
+  },
+  {
+    "name": "10_RAID_And_Local_Disk_Setup.md",
+    "path": "10_RAID_And_Local_Disk_Setup.md",
+    "type": "file",
+    "sha": "",
+    "size": 2462
+  },
+  {
+    "name": "11_Storage_Network_And_Array_Bring_Up.md",
+    "path": "11_Storage_Network_And_Array_Bring_Up.md",
+    "type": "file",
+    "sha": "",
+    "size": 2076
+  },
+  {
+    "name": "12_WLAN_And_AP_Lab_Office_Edge.md",
+    "path": "12_WLAN_And_AP_Lab_Office_Edge.md",
+    "type": "file",
+    "sha": "",
+    "size": 2747
+  },
+  {
+    "name": "13_Petabyte_Capacity_Thinking.md",
+    "path": "13_Petabyte_Capacity_Thinking.md",
+    "type": "file",
+    "sha": "",
+    "size": 2138
+  },
+  {
+    "name": "14_Role_Playbooks_Bring_Up_Week.md",
+    "path": "14_Role_Playbooks_Bring_Up_Week.md",
+    "type": "file",
+    "sha": "",
+    "size": 2538
+  },
+  {
+    "name": "15_Bring_Up_Failure_Walks.md",
+    "path": "15_Bring_Up_Failure_Walks.md",
+    "type": "file",
+    "sha": "",
+    "size": 2195
+  },
+  {
+    "name": "2_Crate_To_Live_Rack.md",
+    "path": "2_Crate_To_Live_Rack.md",
+    "type": "file",
+    "sha": "",
+    "size": 2266
+  },
+  {
+    "name": "3_Structured_Cabling_Bring_Up.md",
+    "path": "3_Structured_Cabling_Bring_Up.md",
+    "type": "file",
+    "sha": "",
+    "size": 2098
+  },
+  {
+    "name": "4_Switch_Roles_In_Practice.md",
+    "path": "4_Switch_Roles_In_Practice.md",
+    "type": "file",
+    "sha": "",
+    "size": 2659
+  },
+  {
+    "name": "5_Gateway_Border_Firewall_Boxes.md",
+    "path": "5_Gateway_Border_Firewall_Boxes.md",
+    "type": "file",
+    "sha": "",
+    "size": 2346
+  },
+  {
+    "name": "6_LAN_Segmentation_Jobs.md",
+    "path": "6_LAN_Segmentation_Jobs.md",
+    "type": "file",
+    "sha": "",
+    "size": 2223
+  },
+  {
+    "name": "7_OOB_BMC_Plane_Bring_Up.md",
+    "path": "7_OOB_BMC_Plane_Bring_Up.md",
+    "type": "file",
+    "sha": "",
+    "size": 1866
+  },
+  {
+    "name": "8_Server_Setup_Playbook.md",
+    "path": "8_Server_Setup_Playbook.md",
+    "type": "file",
+    "sha": "",
+    "size": 2017
+  },
+  {
+    "name": "9_Imaging_Path.md",
+    "path": "9_Imaging_Path.md",
+    "type": "file",
+    "sha": "",
+    "size": 1966
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 3258
+  }
+]

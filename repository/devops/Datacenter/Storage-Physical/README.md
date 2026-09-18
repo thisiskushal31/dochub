@@ -25,6 +25,8 @@ Concepts → Advanced → Applications → References (official only).
 | 11 | [Latency for etcd and databases](./11_Latency_For_Etcd_And_Databases.md) | Disk latency expectations | **filled** |
 | 12 | [Storage failure walks](./12_Storage_Failure_Walks.md) | Path down; shelf loss; restore drill | **filled** |
 
+Visual start: [ch1 mental map](./1_DAS_Local_Disks_And_RAID.md) · RAID/bay plates under Assets · whole hall [0c](../0c_Whole_Hall_Mental_Map.md).
+
 ## Related
 
 - [Fabric-Physical/](../Fabric-Physical/README.md) · [Compute/](../Compute/README.md) · [Integration/](../Integration/README.md) · Databases-Deep-Dive (engines)  

@@ -33,6 +33,8 @@ Concepts → Advanced → Applications → References (official only).
 
 On-ramp survey: [../4_Rack_BMC_And_Provisioning.md](../4_Rack_BMC_And_Provisioning.md), [../7_VMware_vSphere.md](../7_VMware_vSphere.md), [../8_Other_Hypervisors_And_Private_IaaS.md](../8_Other_Hypervisors_And_Private_IaaS.md).
 
+Visual start: [ch1 mental map](./1_Server_Form_Factors.md) · plate [`server-anatomy.svg`](../../Assets/Datacenter/Compute/server-anatomy.svg) · whole hall [0c](../0c_Whole_Hall_Mental_Map.md).
+
 ## Related
 
 - [Accelerators/](../Accelerators/README.md) · [White-Space/](../White-Space/README.md) · [Jobs/](../Jobs/README.md) · [Integration/](../Integration/README.md)  

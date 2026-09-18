@@ -4,6 +4,16 @@
 
 ---
 
+## Mental map
+
+![Whole hall layers](../../Assets/Datacenter/Integration/whole-hall-layers.svg)
+
+![Power path street to chip](../../Assets/Datacenter/Electrical/power-path-street-to-chip.svg)
+
+*What to notice: this walk is the **power spine** of the hall. Layers above (cooling, fabric) fail differently—practice [5](./5_Failure_Lose_PDU_A.md) and Mechanical/Electrical failure chapters together.*
+
+**Operator experience (verify locally):** The best RCA board is a printed path with “shared board?” checkboxes—not a slide full of logos.
+
 ## 1. Concepts
 
 End-to-end **power path** from the grid to the silicon:

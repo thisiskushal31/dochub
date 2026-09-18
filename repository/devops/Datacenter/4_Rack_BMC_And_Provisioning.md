@@ -4,6 +4,14 @@
 
 ---
 
+## Mental map
+
+![Rack elevation](../Assets/Datacenter/White-Space/rack-elevation-sketch.svg)
+
+![Server anatomy](../Assets/Datacenter/Compute/server-anatomy.svg)
+
+*What to notice: U plan + A/B power + BMC plane before any OS. Hands-on: [Setup/2](./Setup-And-Bring-Up/2_Crate_To_Live_Rack.md), [Setup/7–9](./Setup-And-Bring-Up/7_OOB_BMC_Plane_Bring_Up.md).*
+
 ## 1. Concepts
 
 The **rack** is the unit of deploy. Cloud instance replace is an API. Here, replace is **BMC + image + hands**.

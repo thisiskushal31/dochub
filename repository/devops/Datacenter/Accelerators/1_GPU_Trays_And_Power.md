@@ -4,6 +4,14 @@
 
 ---
 
+## Mental map
+
+![GPU power density](../../Assets/Datacenter/Accelerators/gpu-power-density.svg)
+
+*What to notice: GPUs move the constraint from **U count** to **kW + cooling**. A filled elevation can still be illegal for the row’s power/cooling budget. White-space density: [White-Space/9](../White-Space/9_High_Density_And_AI_Ready_White_Space.md).*
+
+**Operator experience (verify locally):** Training jobs that “just needed one more node” are how rows trip breakers at shift change.
+
 ## 1. Concepts
 
 **GPU servers / trays** pack one or many GPUs into a chassis (PCIe cards, SXM/board trays, or OEM multi-GPU systems). They are ordinary servers until you confront **kW, airflow/liquid, weight, and PCIe/baseboard power**.

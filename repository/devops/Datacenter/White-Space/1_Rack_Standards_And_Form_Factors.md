@@ -4,6 +4,14 @@
 
 ---
 
+## Mental map
+
+![Rack elevation sketch](../../Assets/Datacenter/White-Space/rack-elevation-sketch.svg)
+
+*What to notice: the rack is the **unit of work**—U numbers, A/B PDUs, ToR, patch. Elevation must match reality or remote hands will land the wrong U. Bring-up: [Setup/2](../Setup-And-Bring-Up/2_Crate_To_Live_Rack.md).*
+
+**Operator experience (verify locally):** Photos of the elevation after every change beat arguments with last week’s spreadsheet.
+
 ## 1. Concepts
 
 White space is organized around **racks** (open frames) and **cabinets** (enclosed). Most IT gear mounts in a **19-inch** EIA/IEC rail opening; height is measured in **U** (1 U ≈ 1.75 in / 44.45 mm).

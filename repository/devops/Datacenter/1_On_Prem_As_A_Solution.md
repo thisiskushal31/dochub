@@ -4,6 +4,12 @@
 
 ---
 
+## Mental map
+
+![Whole hall layers](../Assets/Datacenter/Integration/whole-hall-layers.svg)
+
+*What to notice: choosing on-prem means you inherit **all five layers**—or you pay a landlord for some of them. Product types: [Facility/1](./Facility/1_Site_Types_And_Products.md) · map: [0c](./0c_Whole_Hall_Mental_Map.md).*
+
 ## 1. Concepts
 
 **On-prem** means the computers that run production are **yours to fail**: physical servers (or VMs on a hypervisor **you** operate) sitting in a building you own, lease, or colo. There is no cloud account that can spawn a replacement in another availability zone. Capacity is **purchase, rack, power, and lead time**, not an API quota.

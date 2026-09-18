@@ -4,6 +4,14 @@
 
 ---
 
+## Mental map
+
+![Leaf-spine sketch](../../Assets/Datacenter/Fabric-Physical/leaf-spine-concept.svg)
+
+*What to notice: every leaf uplinks to every spine; dual-home servers to a ToR pair. Bring-up jobs: [Setup-And-Bring-Up/4](../Setup-And-Bring-Up/4_Switch_Roles_In_Practice.md).*
+
+---
+
 ## 1. Concepts
 
 Hall fabrics are topologies of **failure domains**, not just drawings.

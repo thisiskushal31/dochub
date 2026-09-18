@@ -25,6 +25,7 @@ Concepts → Advanced → Applications → References (official only).
 | 9 | [Bandwidth and cross-connect lifecycle](./9_Bandwidth_And_Cross_Connect_Lifecycle.md) | Lead times; diversity; LOA renewals | **filled** |
 | 10 | [Exit, relocation, and decommission](./10_Exit_Relocation_And_Decommission.md) | Leaving a cage; asset removal | **filled** |
 
+Visual start: [ch1 qualify](./1_Qualify_A_Site.md) · product + hall plates · whole hall [0c](../0c_Whole_Hall_Mental_Map.md).
 On-ramp contracts: [../2_Ownership_Colo_And_Contracts.md](../2_Ownership_Colo_And_Contracts.md).
 
 ## Related

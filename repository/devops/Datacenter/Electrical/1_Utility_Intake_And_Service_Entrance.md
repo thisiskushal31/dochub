@@ -4,6 +4,14 @@
 
 ---
 
+## Mental map
+
+![Power path street to chip](../../Assets/Datacenter/Electrical/power-path-street-to-chip.svg)
+
+*What to notice: this chapter is the **left edge**—utility and service entrance. Everything to the right (UPS, PDU, PSU) assumes feeds arrive clean and labeled. Whole-hall context: [0c](../0c_Whole_Hall_Mental_Map.md).*
+
+**Operator experience (verify locally):** Night tickets often start with “is it us or the utility?”—know your demarcation sticker and who owns the first customer breaker before you page someone.
+
 ## 1. Concepts
 
 **Utility intake** is where the public (or campus) grid becomes *your* site’s power. Everything downstream—transformers, switchgear, UPS, generators, PDUs—depends on what arrives here: how many feeds, at what voltage, with what metering and protection.

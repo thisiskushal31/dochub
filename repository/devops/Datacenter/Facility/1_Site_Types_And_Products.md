@@ -4,6 +4,14 @@
 
 ---
 
+## Mental map
+
+![Site product types](../../Assets/Datacenter/Facility/site-product-types.svg)
+
+*What to notice: halls are **products**—retail colo ≠ wholesale shell ≠ edge POP. Buy the motion you need (cross-connects vs MW shells), not a logo. Markets: [Markets/1](../Markets-And-Operators/1_Operator_Taxonomy.md).*
+
+**Operator experience (verify locally):** The wrong product conversation wastes a quarter before anyone racks a server.
+
 ## 1. Concepts
 
 Halls are sold as **products**, not just buildings.

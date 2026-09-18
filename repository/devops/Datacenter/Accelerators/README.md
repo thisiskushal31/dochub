@@ -23,6 +23,8 @@ Concepts → Advanced → Applications → References (official only).
 | 9 | [Environmental sensors and PDU meters](./9_Environmental_Sensors_And_PDU_Meters.md) | Row sensors; metered PDU data | **filled** |
 | 10 | [Accelerator failure and spares](./10_Accelerator_Failure_And_Spares.md) | GPU node spares; optics sparing | **filled** |
 
+Visual start: [ch1 mental map](./1_GPU_Trays_And_Power.md) · plate [`gpu-power-density.svg`](../../Assets/Datacenter/Accelerators/gpu-power-density.svg) · whole hall [0c](../0c_Whole_Hall_Mental_Map.md).
+
 ## Related
 
 - [Compute/](../Compute/README.md) · [Mechanical/](../Mechanical/README.md) · [Fabric-Physical/](../Fabric-Physical/README.md) · [Electrical/](../Electrical/README.md)  

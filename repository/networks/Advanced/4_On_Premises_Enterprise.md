@@ -23,6 +23,8 @@ Building networks with enterprise devices; Cisco switches, IOS, routers; console
 
 For **home lab**, **SOHO**, or **data center** scale from a network perspective (same concepts, different topology and protocols), see [Routing-Switching/5_Switching_Resiliency_Design](../Routing-Switching/5_Switching_Resiliency_Design.md#network-scale-spectrum-home-lab-to-data-center) (Network scale spectrum). For **virtualized** hosts (VMware, KVM, Hyper-V) and how VM traffic hits the physical network (vSwitch, port groups, uplinks), see [Cloud-Native/1_Cloud_Networking_Overview](../Cloud-Native/1_Cloud_Networking_Overview.md) (Virtualized hosts: network perspective).
 
+**Datacenter bring-up jobs** (rack → ToR → VLAN → BMC → image): [DevOps-Handbook Setup-And-Bring-Up](https://github.com/thisiskushal31/DevOps-Handbook/tree/main/Datacenter/Setup-And-Bring-Up) — physical + setup playbooks; this Advanced track stays CLI/protocol literacy.
+
 ---
 
 ## Cisco switches

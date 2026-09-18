@@ -4,7 +4,7 @@
     "path": "1_DAS_Local_Disks_And_RAID.md",
     "type": "file",
     "sha": "",
-    "size": 2342
+    "size": 2667
   },
   {
     "name": "10_Encryption_And_Key_Custody.md",
@@ -88,6 +88,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2029
+    "size": 2178
   }
 ]

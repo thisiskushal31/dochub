@@ -27,6 +27,8 @@ Concepts → Advanced → Applications → References (official only).
 
 Landlord interconnect *products* (Fabric portals, order jobs): [Provider-Use/](../Provider-Use/README.md).
 
+Visual start: [ch1 mental map](./1_Leaf_Spine_And_Classic_Three_Tier.md) · plate [`leaf-spine-concept.svg`](../../Assets/Datacenter/Fabric-Physical/leaf-spine-concept.svg) · whole hall [0c](../0c_Whole_Hall_Mental_Map.md).
+
 ## Related
 
 - [White-Space/](../White-Space/README.md) · [Storage-Physical/](../Storage-Physical/README.md) · [Provider-Use/](../Provider-Use/README.md) · Networks-Deep-Dive  

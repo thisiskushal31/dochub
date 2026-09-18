@@ -21,6 +21,8 @@ Concepts → Advanced → Applications → References (official only).
 
 On-ramp survey: [../3_Facility_Power_Cooling_And_Rooms.md](../3_Facility_Power_Cooling_And_Rooms.md).
 
+Visual start: [ch1 mental map](./1_Site_Types_And_Products.md) · plate [`site-product-types.svg`](../../Assets/Datacenter/Facility/site-product-types.svg) · whole hall [0c](../0c_Whole_Hall_Mental_Map.md).
+
 ## Related
 
 - [Electrical/](../Electrical/README.md) · [Mechanical/](../Mechanical/README.md) · [Markets-And-Operators/](../Markets-And-Operators/README.md) · [Provider-Use/](../Provider-Use/README.md)  

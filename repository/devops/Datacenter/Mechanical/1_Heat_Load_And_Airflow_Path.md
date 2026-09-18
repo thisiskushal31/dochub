@@ -4,6 +4,14 @@
 
 ---
 
+## Mental map
+
+![Heat and airflow loop](../../Assets/Datacenter/Mechanical/heat-airflow-loop.svg)
+
+*What to notice: heat is the **byproduct of power**. Cold aisle → inlet → exhaust → return → plant. Bypass and recirculation steal capacity without tripping a breaker. Whole-hall: [0c](../0c_Whole_Hall_Mental_Map.md).*
+
+**Operator experience (verify locally):** The first “mystery throttle” after a cable party is often missing blanking panels—not a bad CPU.
+
 ## 1. Concepts
 
 Almost all IT electrical power becomes **heat**. Cooling’s job is to move that heat out of the white space before inlet temperatures force throttling or shutdown.

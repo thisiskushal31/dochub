@@ -31,6 +31,8 @@ Concepts → Advanced → Applications → References (official only).
 | 15 | [Latin America and other hubs](./15_Latin_America_And_Other_Hubs.md) | Additional metros as index grows | **filled** |
 | 16 | [Architecture shapes by operator class](./16_Architecture_Shapes_By_Operator_Class.md) | What each class generally runs (no fake hyperscale floor plans) | **filled** |
 
+Visual start: [ch1 + product types](./1_Operator_Taxonomy.md) · plate [`site-product-types.svg`](../../Assets/Datacenter/Facility/site-product-types.svg) · whole hall [0c](../0c_Whole_Hall_Mental_Map.md).
+
 ## Related
 
 - [Provider-Use/](../Provider-Use/README.md) · [Facility/](../Facility/README.md) · [Jobs/](../Jobs/README.md) · [Cloud/](../../Cloud/README.md)  

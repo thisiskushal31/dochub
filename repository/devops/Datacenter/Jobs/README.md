@@ -26,9 +26,20 @@ Concepts → Advanced → Applications → References (official only).
 | 12 | [Hyperscale ops honesty](./12_Hyperscale_Ops_Honesty.md) | Same vocabulary; secrecy and tooling differences | **filled** |
 | 13 | [Reading dashboards, reports, and steering](./13_Reading_Dashboards_Reports_And_Steering.md) | Practical screen/report → decision loop | **filled** |
 
+### Whole-hall path (with Jobs)
+
+| Step | Why |
+|------|-----|
+| [0c whole-hall map](../0c_Whole_Hall_Mental_Map.md) | See which layer you own |
+| [1 Role map](./1_Role_Map.md) | Track list for your title |
+| [Setup/14](../Setup-And-Bring-Up/14_Role_Playbooks_Bring_Up_Week.md) | First bring-up week by role |
+| [13 Dashboards](./13_Reading_Dashboards_Reports_And_Steering.md) | Screen → decision loop |
+
 On-ramp first week: [../12_Sites_DR_Hybrid_And_The_Job.md](../12_Sites_DR_Hybrid_And_The_Job.md).  
-Plain language: [../0](../0_How_To_Read_And_Quality_Bar.md) · [../0b](../0b_Equipment_In_Plain_Language.md). Aggregates theory: [Integration/11](../Integration/11_Aggregate_Telemetry_Reports_And_Steering.md).
+Plain language: [../0](../0_How_To_Read_And_Quality_Bar.md) · [../0b](../0b_Equipment_In_Plain_Language.md) · [../0c](../0c_Whole_Hall_Mental_Map.md). Aggregates theory: [Integration/11](../Integration/11_Aggregate_Telemetry_Reports_And_Steering.md).
 
 ## Related
 
 - [Integration/](../Integration/README.md) · [Electrical/](../Electrical/README.md) · [Compute/](../Compute/README.md) · [Provider-Use/](../Provider-Use/README.md) · [Markets-And-Operators/](../Markets-And-Operators/README.md)  
+- **Bring-up week:** [Setup-And-Bring-Up/](../Setup-And-Bring-Up/README.md) (esp. [14 Role playbooks](../Setup-And-Bring-Up/14_Role_Playbooks_Bring_Up_Week.md))  
+- **Plates:** [Assets/Datacenter/](../../Assets/Datacenter/README.md)  

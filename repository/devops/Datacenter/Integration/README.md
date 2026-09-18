@@ -24,6 +24,8 @@ Concepts → Advanced → Applications → References (official only).
 | 10 | [Units, voltage, and frequency literacy](./10_Units_Voltage_Frequency_Literacy.md) | kW, ton, U, psf; 120/208/400/415; 50/60 Hz | **filled** |
 | 11 | [Aggregate telemetry, reports, and steering](./11_Aggregate_Telemetry_Reports_And_Steering.md) | EPMS/BMS/DCIM roll-ups → decisions | **filled** |
 
+Visual start: [ch1 + whole-hall](./1_Utility_To_DIMM.md) · plate [`whole-hall-layers.svg`](../../Assets/Datacenter/Integration/whole-hall-layers.svg) · [0c](../0c_Whole_Hall_Mental_Map.md).
+
 ## Related
 
 - All plant tracks · [Jobs/](../Jobs/README.md) (esp. [13](../Jobs/13_Reading_Dashboards_Reports_And_Steering.md)) · [Provider-Use/](../Provider-Use/README.md) · [Electrical/15](../Electrical/15_EPMS_BMS_And_Power_Monitoring.md)  
