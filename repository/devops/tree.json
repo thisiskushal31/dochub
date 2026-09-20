@@ -11645,11 +11645,67 @@
         "sha": "",
         "children": [
           {
+            "name": "01_What_Is_Grafana_And_When.md",
+            "path": "Monitoring-And-Observability/Grafana/01_What_Is_Grafana_And_When.md",
+            "type": "file",
+            "sha": "",
+            "size": 2221
+          },
+          {
+            "name": "02_LGTM_Stack_And_Modern_Setup.md",
+            "path": "Monitoring-And-Observability/Grafana/02_LGTM_Stack_And_Modern_Setup.md",
+            "type": "file",
+            "sha": "",
+            "size": 3221
+          },
+          {
+            "name": "03_Grafana_Alloy_Collector.md",
+            "path": "Monitoring-And-Observability/Grafana/03_Grafana_Alloy_Collector.md",
+            "type": "file",
+            "sha": "",
+            "size": 4127
+          },
+          {
+            "name": "04_Alloy_Topologies_And_LGTM_Pipelines.md",
+            "path": "Monitoring-And-Observability/Grafana/04_Alloy_Topologies_And_LGTM_Pipelines.md",
+            "type": "file",
+            "sha": "",
+            "size": 4552
+          },
+          {
+            "name": "05_Datasources_Explore_And_Correlation.md",
+            "path": "Monitoring-And-Observability/Grafana/05_Datasources_Explore_And_Correlation.md",
+            "type": "file",
+            "sha": "",
+            "size": 1996
+          },
+          {
+            "name": "06_Dashboards_Provisioning_As_Code.md",
+            "path": "Monitoring-And-Observability/Grafana/06_Dashboards_Provisioning_As_Code.md",
+            "type": "file",
+            "sha": "",
+            "size": 1482
+          },
+          {
+            "name": "07_Alerting_OnCall_And_Boundaries.md",
+            "path": "Monitoring-And-Observability/Grafana/07_Alerting_OnCall_And_Boundaries.md",
+            "type": "file",
+            "sha": "",
+            "size": 1870
+          },
+          {
+            "name": "08_Worked_Example_Alloy_To_Grafana.md",
+            "path": "Monitoring-And-Observability/Grafana/08_Worked_Example_Alloy_To_Grafana.md",
+            "type": "file",
+            "sha": "",
+            "size": 3255
+          },
+          {
             "name": "README.md",
             "path": "Monitoring-And-Observability/Grafana/README.md",
             "type": "file",
             "sha": "",
-            "size": 2603
+            "size": 4179
           }
         ]
       },
@@ -11742,11 +11798,102 @@
         "sha": "",
         "children": [
           {
+            "name": "01_What_Is_Prometheus_And_When.md",
+            "path": "Monitoring-And-Observability/Prometheus/01_What_Is_Prometheus_And_When.md",
+            "type": "file",
+            "sha": "",
+            "size": 5256
+          },
+          {
+            "name": "02_Data_Model_Types_And_Labels.md",
+            "path": "Monitoring-And-Observability/Prometheus/02_Data_Model_Types_And_Labels.md",
+            "type": "file",
+            "sha": "",
+            "size": 8111
+          },
+          {
+            "name": "03_Architecture_Scrape_And_Pushgateway.md",
+            "path": "Monitoring-And-Observability/Prometheus/03_Architecture_Scrape_And_Pushgateway.md",
+            "type": "file",
+            "sha": "",
+            "size": 4188
+          },
+          {
+            "name": "04_Configuration_Service_Discovery_And_Relabeling.md",
+            "path": "Monitoring-And-Observability/Prometheus/04_Configuration_Service_Discovery_And_Relabeling.md",
+            "type": "file",
+            "sha": "",
+            "size": 4084
+          },
+          {
+            "name": "05_Exporters_And_Common_Targets.md",
+            "path": "Monitoring-And-Observability/Prometheus/05_Exporters_And_Common_Targets.md",
+            "type": "file",
+            "sha": "",
+            "size": 9333
+          },
+          {
+            "name": "06_PromQL_Essentials.md",
+            "path": "Monitoring-And-Observability/Prometheus/06_PromQL_Essentials.md",
+            "type": "file",
+            "sha": "",
+            "size": 5000
+          },
+          {
+            "name": "07_Recording_Rules_And_SLIs.md",
+            "path": "Monitoring-And-Observability/Prometheus/07_Recording_Rules_And_SLIs.md",
+            "type": "file",
+            "sha": "",
+            "size": 4800
+          },
+          {
+            "name": "08_Alerting_Rules_And_Alertmanager.md",
+            "path": "Monitoring-And-Observability/Prometheus/08_Alerting_Rules_And_Alertmanager.md",
+            "type": "file",
+            "sha": "",
+            "size": 5198
+          },
+          {
+            "name": "09_Storage_Remote_Write_Federation_And_HA.md",
+            "path": "Monitoring-And-Observability/Prometheus/09_Storage_Remote_Write_Federation_And_HA.md",
+            "type": "file",
+            "sha": "",
+            "size": 4670
+          },
+          {
+            "name": "10_Kubernetes_Operator_And_Monitors.md",
+            "path": "Monitoring-And-Observability/Prometheus/10_Kubernetes_Operator_And_Monitors.md",
+            "type": "file",
+            "sha": "",
+            "size": 3767
+          },
+          {
+            "name": "11_Operations_Pitfalls_And_Staff_Checklist.md",
+            "path": "Monitoring-And-Observability/Prometheus/11_Operations_Pitfalls_And_Staff_Checklist.md",
+            "type": "file",
+            "sha": "",
+            "size": 3917
+          },
+          {
+            "name": "12_Worked_Example_First_Service.md",
+            "path": "Monitoring-And-Observability/Prometheus/12_Worked_Example_First_Service.md",
+            "type": "file",
+            "sha": "",
+            "size": 4917
+          },
+          {
+            "name": "13_Writing_Exporters_And_Native_Metrics.md",
+            "path": "Monitoring-And-Observability/Prometheus/13_Writing_Exporters_And_Native_Metrics.md",
+            "type": "file",
+            "sha": "",
+            "size": 6655
+          },
+          {
             "name": "README.md",
             "path": "Monitoring-And-Observability/Prometheus/README.md",
             "type": "file",
             "sha": "",
-            "size": 2916
+            "size": 6249
           }
         ]
       },
@@ -11896,7 +12043,7 @@
         "path": "Monitoring-And-Observability/25_Named_Stack_Shapes_ELK_PLG_LGTM.md",
         "type": "file",
         "sha": "",
-        "size": 2381
+        "size": 2563
       },
       {
         "name": "26_OSS_Managed_SaaS_And_Hybrid.md",
@@ -11966,7 +12113,7 @@
         "path": "Monitoring-And-Observability/34_Reference_Topologies_End_To_End.md",
         "type": "file",
         "sha": "",
-        "size": 3445
+        "size": 3536
       },
       {
         "name": "35_Runtime_And_Language_Specific_Signals.md",
@@ -12036,7 +12183,7 @@
         "path": "Monitoring-And-Observability/README.md",
         "type": "file",
         "sha": "",
-        "size": 7553
+        "size": 7873
       }
     ]
   },

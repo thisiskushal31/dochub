@@ -6,18 +6,23 @@
 
 This chapter **assembles** the track. Copy a topology that matches your estate; replace logos with your choices from [25](./25_Named_Stack_Shapes_ELK_PLG_LGTM.md)–[27](./27_Tool_Kinds_By_Job.md).
 
-### Topology A — metrics-first LGTM-ish
+### Topology A — modern LGTM (Alloy)
 
 ```text
-Apps (OTel) ──► Collector ──► Prometheus/Mimir
-                    │              │
-                    ├────────► Loki
-                    ├────────► Tempo
-                    └────────► Grafana Explore
+Apps / nodes / exporters
+        │
+        ▼
+ Grafana Alloy  (scrape / OTLP / log tail)
+        ├─ metrics ──► Mimir or Prometheus
+        ├─ logs    ──► Loki
+        ├─ traces  ──► Tempo
+        └─► Grafana Explore + dashboards
 Cloud audit ──► Cloud trail (door 31)
-Alerts ──► Alertmanager ──► Pager (door 32)
+Alerts ──► Alertmanager or Grafana Alerting ──► Pager (door 32)  [one path]
 Synthetics ──► from user region ──► pages on path fail
 ```
+
+Product depth: [Grafana/](./Grafana/README.md) (Alloy + LGTM chapters).
 
 ### Topology B — SaaS APM + cloud audit
 

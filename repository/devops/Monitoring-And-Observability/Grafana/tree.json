@@ -1,9 +1,65 @@
 [
   {
+    "name": "01_What_Is_Grafana_And_When.md",
+    "path": "01_What_Is_Grafana_And_When.md",
+    "type": "file",
+    "sha": "",
+    "size": 2221
+  },
+  {
+    "name": "02_LGTM_Stack_And_Modern_Setup.md",
+    "path": "02_LGTM_Stack_And_Modern_Setup.md",
+    "type": "file",
+    "sha": "",
+    "size": 3221
+  },
+  {
+    "name": "03_Grafana_Alloy_Collector.md",
+    "path": "03_Grafana_Alloy_Collector.md",
+    "type": "file",
+    "sha": "",
+    "size": 4127
+  },
+  {
+    "name": "04_Alloy_Topologies_And_LGTM_Pipelines.md",
+    "path": "04_Alloy_Topologies_And_LGTM_Pipelines.md",
+    "type": "file",
+    "sha": "",
+    "size": 4552
+  },
+  {
+    "name": "05_Datasources_Explore_And_Correlation.md",
+    "path": "05_Datasources_Explore_And_Correlation.md",
+    "type": "file",
+    "sha": "",
+    "size": 1996
+  },
+  {
+    "name": "06_Dashboards_Provisioning_As_Code.md",
+    "path": "06_Dashboards_Provisioning_As_Code.md",
+    "type": "file",
+    "sha": "",
+    "size": 1482
+  },
+  {
+    "name": "07_Alerting_OnCall_And_Boundaries.md",
+    "path": "07_Alerting_OnCall_And_Boundaries.md",
+    "type": "file",
+    "sha": "",
+    "size": 1870
+  },
+  {
+    "name": "08_Worked_Example_Alloy_To_Grafana.md",
+    "path": "08_Worked_Example_Alloy_To_Grafana.md",
+    "type": "file",
+    "sha": "",
+    "size": 3255
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2603
+    "size": 4179
   }
 ]

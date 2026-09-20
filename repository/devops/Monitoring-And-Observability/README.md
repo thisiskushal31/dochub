@@ -94,17 +94,19 @@ Floor 7    tools/   Product literacy (after gate)
 
 Each chapter: **Concepts → Disconfirm/Confirm → Advanced → Applications → References** (syllabus / handbook quality bar). Official docs only for API depth.
 
-## Tool folders (later)
+## Tool folders
 
-| Tool | Job |
-|------|-----|
-| [Prometheus](./Prometheus/README.md) | Metrics / PromQL / Alertmanager |
-| [Grafana](./Grafana/README.md) | Unify / Explore |
-| [OpenTelemetry](./OpenTelemetry/README.md) | Instrumentation |
-| [Loki](./Loki/README.md) / [Tempo](./Tempo/README.md) / [Jaeger](./Jaeger/README.md) | Logs / traces |
-| [Elastic](./Elastic/README.md) | Search-centric logs |
-| [Datadog](./Datadog/README.md) / [New Relic](./New_Relic/README.md) | SaaS APM |
-| [PagerDuty](./PagerDuty/README.md) | Page routing |
+Concept gate first ([README checklist](#before-any-tool-folder)). Tool folders teach **products** (what / when / why not / how).
+
+| Tool | Status | Job |
+|------|--------|-----|
+| [Prometheus](./Prometheus/README.md) | **Deep track 01–13** | Metrics / PromQL / Alertmanager / Operator / **exporter ecosystem** |
+| [Grafana](./Grafana/README.md) | **Deep track 01–08** | UI + **Alloy** + LGTM modern setup |
+| [OpenTelemetry](./OpenTelemetry/README.md) | Primer → deepen next | Instrumentation |
+| [Loki](./Loki/README.md) / [Tempo](./Tempo/README.md) / [Jaeger](./Jaeger/README.md) | Primers | Logs / traces |
+| [Elastic](./Elastic/README.md) | Primer | Search-centric logs |
+| [Datadog](./Datadog/README.md) / [New Relic](./New_Relic/README.md) | Primers | SaaS APM |
+| [PagerDuty](./PagerDuty/README.md) | Primer + first-use | Page routing |
 
 ## Further reading
 

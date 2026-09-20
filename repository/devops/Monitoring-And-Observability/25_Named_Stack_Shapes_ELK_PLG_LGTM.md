@@ -10,7 +10,7 @@ Named stacks are **shortcuts for shapes**, not religions. Learn the jobs inside;
 |-------|----------------|-------------------|
 | **ELK / Elastic** | Elasticsearch, Logstash/Beats/Agent, Kibana (+ APM optional) | Search-centric logs; analytics |
 | **PLG** | Prometheus, Loki, Grafana | Metrics-first; log streams by labels |
-| **LGTM** | Loki, Grafana, Tempo, Mimir/Prometheus | Grafana-unified metrics/logs/traces |
+| **LGTM** | Loki, Grafana, Tempo, Mimir/Prometheus + **Grafana Alloy** (collector; not Agent) | Grafana-unified metrics/logs/traces |
 | **Cloud native suite** | CloudWatch / Cloud Monitoring / Azure Monitor | Provider-integrated ([31](./31_Cloud_Managed_Sinks_And_Audit_Door.md)) |
 | **SaaS APM** | Datadog, New Relic, … | Bundled UX ([24](./24_APM_As_A_Product_Shape.md)) |
 
@@ -23,6 +23,8 @@ Choose shape by: query culture (PromQL vs search), ops staff, multi-cloud need, 
 **Confirm:** Which shape is your primary? What job is weakest in that shape on your estate?
 
 ## 2. Advanced — mixing and migration
+
+**Modern LGTM collector:** use **Grafana Alloy** (Grafana Agent is deprecated). Depth: [Grafana/02–04](./Grafana/02_LGTM_Stack_And_Modern_Setup.md).
 
 **Mixes are normal:** Prometheus metrics + Elastic logs; or Grafana frontend on cloud backends.
 
@@ -44,5 +46,5 @@ Choose shape by: query culture (PromQL vs search), ops staff, multi-cloud need, 
 
 ## References
 
-- [Grafana LGTM](https://grafana.com/docs/grafana/latest/) · [Elastic Observability](https://www.elastic.co/observability) · [Prometheus](https://prometheus.io/docs/introduction/overview/)  
+- [Grafana LGTM + Alloy](./Grafana/README.md) · [Elastic Observability](https://www.elastic.co/observability) · [Prometheus](https://prometheus.io/docs/introduction/overview/)  
 - [26 OSS/SaaS](./26_OSS_Managed_SaaS_And_Hybrid.md) · [27 Tool kinds](./27_Tool_Kinds_By_Job.md)

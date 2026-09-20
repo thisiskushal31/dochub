@@ -1,9 +1,100 @@
 [
   {
+    "name": "01_What_Is_Prometheus_And_When.md",
+    "path": "01_What_Is_Prometheus_And_When.md",
+    "type": "file",
+    "sha": "",
+    "size": 5256
+  },
+  {
+    "name": "02_Data_Model_Types_And_Labels.md",
+    "path": "02_Data_Model_Types_And_Labels.md",
+    "type": "file",
+    "sha": "",
+    "size": 8111
+  },
+  {
+    "name": "03_Architecture_Scrape_And_Pushgateway.md",
+    "path": "03_Architecture_Scrape_And_Pushgateway.md",
+    "type": "file",
+    "sha": "",
+    "size": 4188
+  },
+  {
+    "name": "04_Configuration_Service_Discovery_And_Relabeling.md",
+    "path": "04_Configuration_Service_Discovery_And_Relabeling.md",
+    "type": "file",
+    "sha": "",
+    "size": 4084
+  },
+  {
+    "name": "05_Exporters_And_Common_Targets.md",
+    "path": "05_Exporters_And_Common_Targets.md",
+    "type": "file",
+    "sha": "",
+    "size": 9333
+  },
+  {
+    "name": "06_PromQL_Essentials.md",
+    "path": "06_PromQL_Essentials.md",
+    "type": "file",
+    "sha": "",
+    "size": 5000
+  },
+  {
+    "name": "07_Recording_Rules_And_SLIs.md",
+    "path": "07_Recording_Rules_And_SLIs.md",
+    "type": "file",
+    "sha": "",
+    "size": 4800
+  },
+  {
+    "name": "08_Alerting_Rules_And_Alertmanager.md",
+    "path": "08_Alerting_Rules_And_Alertmanager.md",
+    "type": "file",
+    "sha": "",
+    "size": 5198
+  },
+  {
+    "name": "09_Storage_Remote_Write_Federation_And_HA.md",
+    "path": "09_Storage_Remote_Write_Federation_And_HA.md",
+    "type": "file",
+    "sha": "",
+    "size": 4670
+  },
+  {
+    "name": "10_Kubernetes_Operator_And_Monitors.md",
+    "path": "10_Kubernetes_Operator_And_Monitors.md",
+    "type": "file",
+    "sha": "",
+    "size": 3767
+  },
+  {
+    "name": "11_Operations_Pitfalls_And_Staff_Checklist.md",
+    "path": "11_Operations_Pitfalls_And_Staff_Checklist.md",
+    "type": "file",
+    "sha": "",
+    "size": 3917
+  },
+  {
+    "name": "12_Worked_Example_First_Service.md",
+    "path": "12_Worked_Example_First_Service.md",
+    "type": "file",
+    "sha": "",
+    "size": 4917
+  },
+  {
+    "name": "13_Writing_Exporters_And_Native_Metrics.md",
+    "path": "13_Writing_Exporters_And_Native_Metrics.md",
+    "type": "file",
+    "sha": "",
+    "size": 6655
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2916
+    "size": 6249
   }
 ]
