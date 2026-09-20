@@ -96,20 +96,21 @@ Each chapter: **Concepts → Disconfirm/Confirm → Advanced → Applications �
 
 ## Tool folders
 
-Concept gate first ([README checklist](#before-any-tool-folder)). Tool folders teach **products** (what / when / why not / how).
+Concept gate first ([README checklist](#before-any-tool-folder)). Each folder is a **product track**: open it when you need that tool’s shape, not as a substitute for chapters `0–37`.
 
-| Tool | Status | Job |
-|------|--------|-----|
-| [Prometheus](./Prometheus/README.md) | **Deep track 01–13** | Metrics / PromQL / Alertmanager / Operator / **exporter ecosystem** |
-| [Grafana](./Grafana/README.md) | **Deep track 01–08** | UI + **Alloy** + LGTM modern setup |
-| [Loki](./Loki/README.md) | **Deep track 01–06** | LogQL / labels / Alloy shippers |
-| [Tempo](./Tempo/README.md) | **Deep track 01–06** | OTLP / TraceQL / metrics-generator |
-| [Mimir](./Mimir/README.md) | **Deep track 01–06** | Multi-tenant PromQL / remote_write |
-| [OpenTelemetry](./OpenTelemetry/README.md) | Primer → deepen next | Instrumentation |
-| [Jaeger](./Jaeger/README.md) | Primer | Traces (alt to Tempo) |
-| [Elastic](./Elastic/README.md) | Primer | Search-centric logs |
-| [Datadog](./Datadog/README.md) / [New Relic](./New_Relic/README.md) | Primers | SaaS APM |
-| [PagerDuty](./PagerDuty/README.md) | Primer + first-use | Page routing |
+| Tool | What it does | What you’ll find |
+|------|--------------|------------------|
+| [Prometheus](./Prometheus/README.md) | Pull-based metrics, PromQL, alerting into Alertmanager | Data model, scrape/SD, exporters, PromQL, rules, K8s Operator, first-service path |
+| [Grafana](./Grafana/README.md) | Explore/dashboards across metrics, logs, traces | UI + **Alloy** collector, LGTM wiring, datasources, alerting boundaries |
+| [OpenTelemetry](./OpenTelemetry/README.md) | Vendor-neutral instrumentation and export | Signals, SDK/Collector literacy, how it feeds backends |
+| [Loki](./Loki/README.md) | Label-oriented log aggregation | Streams/labels, LogQL, shippers, tenancy |
+| [Tempo](./Tempo/README.md) | Trace warehouse (OTLP) | Ingest, TraceQL, metrics-generator, sampling/ops |
+| [Mimir](./Mimir/README.md) | Multi-tenant long-term PromQL metrics | remote_write, tenants/limits, HA dedup, storage |
+| [Jaeger](./Jaeger/README.md) | Distributed tracing UI/backend (classic CNCF path) | When Jaeger fits vs Tempo/SaaS |
+| [Elastic](./Elastic/README.md) | Search-centric logs / Elastic Observability | ELK-shaped logging when full-text search is the job |
+| [Datadog](./Datadog/README.md) | SaaS observability + security platform (Agent, APM, logs, RUM, CI, AI, Security, …) | Full product track **01–26**: install → dig → page, then serverless/DBM/NPM/security/CI/pipelines/LLM/flags/IDP/API |
+| [New Relic](./New_Relic/README.md) | SaaS APM / observability | Fit, agent model, when it compares to Datadog/OTel |
+| [PagerDuty](./PagerDuty/README.md) | Page routing and incident response | How alerts become human pages |
 
 ## Further reading
 
