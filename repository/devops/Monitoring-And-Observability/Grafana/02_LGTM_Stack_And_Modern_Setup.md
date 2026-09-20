@@ -6,12 +6,12 @@
 
 **LGTM** (common shorthand):
 
-| Letter | Product | Signal |
-|--------|---------|--------|
-| **L** | **Loki** | Logs (label-indexed streams) |
-| **G** | **Grafana** | UI / Explore / dashboards |
-| **T** | **Tempo** | Traces |
-| **M** | **Mimir** (or Prometheus) | Metrics (PromQL-compatible at scale) |
+| Letter | Product | Signal | Deep track |
+|--------|---------|--------|------------|
+| **L** | **Loki** | Logs (label-indexed streams) | [Loki/](../Loki/README.md) |
+| **G** | **Grafana** | UI / Explore / dashboards | this folder |
+| **T** | **Tempo** | Traces | [Tempo/](../Tempo/README.md) |
+| **M** | **Mimir** (or Prometheus) | Metrics (PromQL-compatible at scale) | [Mimir/](../Mimir/README.md) · [Prometheus/](../Prometheus/README.md) |
 
 Often extended with **Pyroscope** (continuous profiles) and collected by **Grafana Alloy**.
 
@@ -66,6 +66,6 @@ This is the **named stack shape** from parent [25](../25_Named_Stack_Shapes_ELK_
 
 ## References
 
-- [Parent 25 stack shapes](../25_Named_Stack_Shapes_ELK_PLG_LGTM.md) · [Grafana Alloy track](../Grafana/README.md)  
+- [Parent 25 stack shapes](../25_Named_Stack_Shapes_ELK_PLG_LGTM.md) · [Loki](../Loki/README.md) · [Tempo](../Tempo/README.md) · [Mimir](../Mimir/README.md)  
 - [Alloy — how it works](https://grafana.com/docs/alloy/latest/introduction/)  
 - [03 Alloy](./03_Grafana_Alloy_Collector.md)

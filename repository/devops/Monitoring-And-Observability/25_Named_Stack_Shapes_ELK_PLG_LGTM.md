@@ -24,7 +24,7 @@ Choose shape by: query culture (PromQL vs search), ops staff, multi-cloud need, 
 
 ## 2. Advanced — mixing and migration
 
-**Modern LGTM collector:** use **Grafana Alloy** (Grafana Agent is deprecated). Depth: [Grafana/02–04](./Grafana/02_LGTM_Stack_And_Modern_Setup.md).
+**Modern LGTM collector:** use **Grafana Alloy** (Grafana Agent is deprecated). Depth: [Grafana/02–04](./Grafana/02_LGTM_Stack_And_Modern_Setup.md). Backends: [Loki](./Loki/README.md) · [Tempo](./Tempo/README.md) · [Mimir](./Mimir/README.md).
 
 **Mixes are normal:** Prometheus metrics + Elastic logs; or Grafana frontend on cloud backends.
 
@@ -46,5 +46,6 @@ Choose shape by: query culture (PromQL vs search), ops staff, multi-cloud need, 
 
 ## References
 
-- [Grafana LGTM + Alloy](./Grafana/README.md) · [Elastic Observability](https://www.elastic.co/observability) · [Prometheus](https://prometheus.io/docs/introduction/overview/)  
+- [Grafana LGTM + Alloy](./Grafana/README.md) · [Loki](./Loki/README.md) · [Tempo](./Tempo/README.md) · [Mimir](./Mimir/README.md)  
+- [Elastic Observability](https://www.elastic.co/observability) · [Prometheus](https://prometheus.io/docs/introduction/overview/)  
 - [26 OSS/SaaS](./26_OSS_Managed_SaaS_And_Hybrid.md) · [27 Tool kinds](./27_Tool_Kinds_By_Job.md)

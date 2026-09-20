@@ -11,7 +11,7 @@
     "path": "02_LGTM_Stack_And_Modern_Setup.md",
     "type": "file",
     "sha": "",
-    "size": 3221
+    "size": 3438
   },
   {
     "name": "03_Grafana_Alloy_Collector.md",
@@ -25,7 +25,7 @@
     "path": "04_Alloy_Topologies_And_LGTM_Pipelines.md",
     "type": "file",
     "sha": "",
-    "size": 4552
+    "size": 4654
   },
   {
     "name": "05_Datasources_Explore_And_Correlation.md",
@@ -60,6 +60,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 4179
+    "size": 4432
   }
 ]

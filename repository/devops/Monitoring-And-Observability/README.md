@@ -102,8 +102,11 @@ Concept gate first ([README checklist](#before-any-tool-folder)). Tool folders t
 |------|--------|-----|
 | [Prometheus](./Prometheus/README.md) | **Deep track 01–13** | Metrics / PromQL / Alertmanager / Operator / **exporter ecosystem** |
 | [Grafana](./Grafana/README.md) | **Deep track 01–08** | UI + **Alloy** + LGTM modern setup |
+| [Loki](./Loki/README.md) | **Deep track 01–06** | LogQL / labels / Alloy shippers |
+| [Tempo](./Tempo/README.md) | **Deep track 01–06** | OTLP / TraceQL / metrics-generator |
+| [Mimir](./Mimir/README.md) | **Deep track 01–06** | Multi-tenant PromQL / remote_write |
 | [OpenTelemetry](./OpenTelemetry/README.md) | Primer → deepen next | Instrumentation |
-| [Loki](./Loki/README.md) / [Tempo](./Tempo/README.md) / [Jaeger](./Jaeger/README.md) | Primers | Logs / traces |
+| [Jaeger](./Jaeger/README.md) | Primer | Traces (alt to Tempo) |
 | [Elastic](./Elastic/README.md) | Primer | Search-centric logs |
 | [Datadog](./Datadog/README.md) / [New Relic](./New_Relic/README.md) | Primers | SaaS APM |
 | [PagerDuty](./PagerDuty/README.md) | Primer + first-use | Page routing |

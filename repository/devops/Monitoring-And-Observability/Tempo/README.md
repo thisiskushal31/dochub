@@ -1,50 +1,43 @@
 # Tempo (Grafana Tempo)
 
-[← Back to Monitoring & observability](../README.md) · [Grafana](../Grafana/README.md) · [OpenTelemetry](../OpenTelemetry/README.md) · [Tracing](../18_Distributed_Tracing.md)
+[← Back to Monitoring & observability](../README.md) · [Grafana](../Grafana/README.md) · [Mimir](../Mimir/README.md) · [Loki](../Loki/README.md) · [OpenTelemetry](../OpenTelemetry/README.md)
 
-## 1. Concepts
+**Tempo** is Grafana’s **distributed tracing backend**: ingest spans (prefer **OTLP**), store in object storage (Parquet blocks), query by **trace ID** or **TraceQL** in Grafana.
 
-**Tempo** is Grafana’s **trace backend**: store and query traces (often via OTLP), cheap object-storage oriented, designed to sit beside Prometheus and Loki in the Grafana stack.
+```text
+Apps (OTel) ──► Alloy ──► Tempo ──► Grafana Explore
+                 │              ▲
+                 └─ trace_id in Loki / exemplars in Mimir
+```
 
-**Plain language:** The trace warehouse for Grafana Explore—find a trace ID from a metric or log, open the waterfall.
+| | |
+|--|--|
+| **What for** | Trace warehouse in LGTM; cheap object-store retention |
+| **When** | Grafana + OTel; correlate with Loki/Mimir |
+| **Why not** | Team standardized on Jaeger-only UI and won’t move; SaaS APM is sole pane |
 
-**What for:** Trace storage in an OSS Grafana-shaped stack.  
-**When:** You already (or will) run Grafana + OTel and want traces without Elastic/SaaS.  
-**Why not:** Team already standardized on Jaeger and doesn’t want two trace stores; SaaS APM is the chosen primary UI.
+**Disconfirm:** Tempo ≠ metrics DB (though metrics-generator can *emit* metrics). 100% sampling forever ≠ free ([parent 20](../20_Sampling_Strategies.md)).
 
-**Disconfirm:** Tempo is **not** metrics. It is **not** full-text log search.
+### Progression
 
-**Confirm:** How do you jump from a Prometheus exemplar / log line to a Tempo trace?
+| Phase | Chapters | Outcome |
+|-------|----------|---------|
+| Foundation | [01](./01_What_Is_Tempo_And_When.md)–[02](./02_Ingest_OTLP_And_Architecture.md) | Fit; ingest path |
+| Query | [03](./03_TraceQL_And_Grafana.md) | TraceQL / dig |
+| Amplifiers | [04](./04_Metrics_Generator_And_Service_Graph.md) | RED from traces |
+| Ops & ship | [05](./05_Sampling_Retention_And_Ops.md)–[06](./06_Worked_Example_Traces_In_Grafana.md) | Limits; e2e |
 
-## 2. Advanced concepts
+## Chapters
 
-| Piece | Job |
-|-------|-----|
-| Ingest (OTLP/Zipkin/Jaeger protocols) | Accept spans from collectors/SDKs |
-| Object storage backend | Cost-effective retention |
-| Metrics generator (optional) | Derive span metrics—watch cardinality |
-| Grafana TraceQL / search | Query UX |
-
-Pair with [Loki](../Loki/README.md) and [Prometheus](../Prometheus/README.md) using shared labels / trace IDs ([2](../21_Correlation_And_Dig_Methodology.md)).
-
-### Failure modes
-
-| Failure | What you see |
-|---------|----------------|
-| No object store config | Ops pain / data loss risk |
-| 100% sampling at scale | Bill + slow queries |
-| Missing `service.name` | Useless service graph |
-
-## 3. Applications
-
-| Goal | Pattern |
-|------|---------|
-| Grafana stack | OTel collector → Tempo; Grafana Tempo datasource |
-| Correlate | Exemplars / derived fields from logs to `trace_id` |
-
-**Staff checklist:** sampling policy; retention; only one trace backend per env.
+| # | File | Focus |
+|---|------|--------|
+| 01 | [What is Tempo and when](./01_What_Is_Tempo_And_When.md) | vs Jaeger; LGTM role |
+| 02 | [Ingest, OTLP, architecture](./02_Ingest_OTLP_And_Architecture.md) | Distributor; object store |
+| 03 | [TraceQL and Grafana](./03_TraceQL_And_Grafana.md) | Search; correlation |
+| 04 | [Metrics-generator and service graph](./04_Metrics_Generator_And_Service_Graph.md) | Derived RED |
+| 05 | [Sampling, retention, ops](./05_Sampling_Retention_And_Ops.md) | Cost; HA |
+| 06 | [Worked example](./06_Worked_Example_Traces_In_Grafana.md) | OTLP → Tempo → Explore |
 
 ## References
 
-- [Grafana Tempo docs](https://grafana.com/docs/tempo/latest/)  
-- [OpenTelemetry](../OpenTelemetry/README.md) · [Jaeger](../Jaeger/README.md) (alternative)  
+- [Tempo docs](https://grafana.com/docs/tempo/latest/) · [Architecture](https://grafana.com/docs/tempo/latest/introduction/architecture/)  

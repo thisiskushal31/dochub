@@ -1,9 +1,51 @@
 [
   {
+    "name": "01_What_Is_Tempo_And_When.md",
+    "path": "01_What_Is_Tempo_And_When.md",
+    "type": "file",
+    "sha": "",
+    "size": 1020
+  },
+  {
+    "name": "02_Ingest_OTLP_And_Architecture.md",
+    "path": "02_Ingest_OTLP_And_Architecture.md",
+    "type": "file",
+    "sha": "",
+    "size": 1338
+  },
+  {
+    "name": "03_TraceQL_And_Grafana.md",
+    "path": "03_TraceQL_And_Grafana.md",
+    "type": "file",
+    "sha": "",
+    "size": 1218
+  },
+  {
+    "name": "04_Metrics_Generator_And_Service_Graph.md",
+    "path": "04_Metrics_Generator_And_Service_Graph.md",
+    "type": "file",
+    "sha": "",
+    "size": 1237
+  },
+  {
+    "name": "05_Sampling_Retention_And_Ops.md",
+    "path": "05_Sampling_Retention_And_Ops.md",
+    "type": "file",
+    "sha": "",
+    "size": 937
+  },
+  {
+    "name": "06_Worked_Example_Traces_In_Grafana.md",
+    "path": "06_Worked_Example_Traces_In_Grafana.md",
+    "type": "file",
+    "sha": "",
+    "size": 558
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2115
+    "size": 2228
   }
 ]

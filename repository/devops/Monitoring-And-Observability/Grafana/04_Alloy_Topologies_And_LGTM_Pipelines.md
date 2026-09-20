@@ -101,4 +101,5 @@ Watch refused/failed export metrics (e.g. OTel receiver refused spans, exporter 
 
 - [Deploy Alloy](https://grafana.com/docs/alloy/latest/set-up/deploy/)  
 - [Alloy as proxy / aggregation](https://grafana.com/docs/alloy/latest/configure/proxy/)  
+- Backends: [Loki](../Loki/README.md) · [Tempo](../Tempo/README.md) · [Mimir](../Mimir/README.md)  
 - [05 Explore](./05_Datasources_Explore_And_Correlation.md)

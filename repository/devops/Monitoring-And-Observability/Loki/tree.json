@@ -1,9 +1,51 @@
 [
   {
+    "name": "01_What_Is_Loki_And_When.md",
+    "path": "01_What_Is_Loki_And_When.md",
+    "type": "file",
+    "sha": "",
+    "size": 1448
+  },
+  {
+    "name": "02_Streams_Labels_And_Cardinality.md",
+    "path": "02_Streams_Labels_And_Cardinality.md",
+    "type": "file",
+    "sha": "",
+    "size": 2117
+  },
+  {
+    "name": "03_LogQL_Essentials.md",
+    "path": "03_LogQL_Essentials.md",
+    "type": "file",
+    "sha": "",
+    "size": 1413
+  },
+  {
+    "name": "04_Shippers_Alloy_And_Pipeline.md",
+    "path": "04_Shippers_Alloy_And_Pipeline.md",
+    "type": "file",
+    "sha": "",
+    "size": 1329
+  },
+  {
+    "name": "05_Multi_Tenant_Retention_And_Ops.md",
+    "path": "05_Multi_Tenant_Retention_And_Ops.md",
+    "type": "file",
+    "sha": "",
+    "size": 1144
+  },
+  {
+    "name": "06_Worked_Example_Logs_In_Grafana.md",
+    "path": "06_Worked_Example_Logs_In_Grafana.md",
+    "type": "file",
+    "sha": "",
+    "size": 715
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2361
+    "size": 2427
   }
 ]

@@ -1,6 +1,6 @@
 # Grafana
 
-[← Back to Monitoring & observability](../README.md) · [Prometheus](../Prometheus/README.md) · [OpenTelemetry](../OpenTelemetry/README.md) · [Loki](../Loki/README.md) · [Tempo](../Tempo/README.md) · [Stack shapes](../25_Named_Stack_Shapes_ELK_PLG_LGTM.md)
+[← Back to Monitoring & observability](../README.md) · [Prometheus](../Prometheus/README.md) · [OpenTelemetry](../OpenTelemetry/README.md) · [Loki](../Loki/README.md) · [Tempo](../Tempo/README.md) · [Mimir](../Mimir/README.md) · [Stack shapes](../25_Named_Stack_Shapes_ELK_PLG_LGTM.md)
 
 **Grafana** is the **visualization and exploration** UI for metrics, logs, traces, and profiles. In a **modern Grafana stack**, you rarely run “Grafana alone”: you collect with **Grafana Alloy**, store in **Mimir** (or Prometheus), **Loki**, **Tempo**, and optionally **Pyroscope**, then explore in Grafana.
 
@@ -19,7 +19,7 @@ Apps / nodes / exporters
      Grafana  (dashboards, Explore, optional Grafana Alerting)
 ```
 
-This folder is a **standalone product track**. Parent `0–37` teach jobs (SLI, dig path); [Prometheus/](../Prometheus/README.md) teaches PromQL/TSDB depth. Here: **Grafana UI + Alloy collector + LGTM wiring**.
+This folder is a **standalone product track**. Parent `0–37` teach jobs (SLI, dig path); [Prometheus/](../Prometheus/README.md) teaches PromQL/TSDB depth. Here: **Grafana UI + Alloy collector + LGTM wiring**. Backend depth: [Loki/](../Loki/README.md) · [Tempo/](../Tempo/README.md) · [Mimir/](../Mimir/README.md).
 
 | | |
 |--|--|
@@ -66,4 +66,5 @@ This folder is a **standalone product track**. Parent `0–37` teach jobs (SLI, 
 
 - [Grafana docs](https://grafana.com/docs/grafana/latest/)  
 - [Grafana Alloy](https://grafana.com/docs/alloy/latest/)  
-- [Mimir](https://grafana.com/docs/mimir/latest/) · [Loki](https://grafana.com/docs/loki/latest/) · [Tempo](https://grafana.com/docs/tempo/latest/)  
+- Deep tracks: [Loki](../Loki/README.md) · [Tempo](../Tempo/README.md) · [Mimir](../Mimir/README.md)  
+- Official: [Mimir](https://grafana.com/docs/mimir/latest/) · [Loki](https://grafana.com/docs/loki/latest/) · [Tempo](https://grafana.com/docs/tempo/latest/)  

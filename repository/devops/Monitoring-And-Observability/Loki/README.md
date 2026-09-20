@@ -1,46 +1,41 @@
 # Loki (Grafana Loki)
 
-[← Back to Monitoring & observability](../README.md) · [Grafana](../Grafana/README.md) · [Structured logging](../16_Structured_Logging.md) · [Elastic](../Elastic/README.md) · [Stack shapes](../25_Named_Stack_Shapes_ELK_PLG_LGTM.md)
+[← Back to Monitoring & observability](../README.md) · [Grafana](../Grafana/README.md) · [Mimir](../Mimir/README.md) · [Tempo](../Tempo/README.md) · [Structured logging](../16_Structured_Logging.md)
 
-## 1. Concepts
+**Loki** is Grafana’s **log aggregation** system. It indexes **labels** (Prometheus-style streams), stores compressed **chunks** in object storage, and searches line content at query time—not a full Elasticsearch-style inverted index of every token by default.
 
-**Loki** is a **log aggregation** system from the Grafana ecosystem. It indexes **labels** (like Prometheus) rather than full-text indexing every line by default—cheap to store, query by stream labels + filter.
+```text
+Apps / nodes ──► Alloy (or Promtail) ──► Loki ──► Grafana Explore (LogQL)
+                      shared labels with Mimir / Tempo
+```
 
-**Plain language:** A warehouse for logs that works like metrics tags: `job=api`, `namespace=prod`, then search lines inside those streams.
+| | |
+|--|--|
+| **What for** | Cheap, label-oriented logs beside Prom/Mimir |
+| **When** | LGTM / Grafana Cloud; K8s logs; correlate via labels + `trace_id` |
+| **Why not** | Primary need is heavy full-text / SIEM search → [Elastic](../Elastic/README.md) |
 
-Pairs with [Grafana](../Grafana/README.md) for explore/dashboards and [Prometheus](../Prometheus/README.md) for metrics correlation. Trace jump targets: [Tempo](../Tempo/README.md).
+**Disconfirm:** Loki ≠ Elasticsearch. High-cardinality **labels** (user/trace/order IDs) ≠ “more power”—they melt the index. Structured logging in the app is still required ([16](../16_Structured_Logging.md)).
 
-**What for:** Cheap, label-oriented logs beside Prometheus.  
-**When:** Grafana stack; K8s logs; correlate with metrics via shared labels.  
-**Why not:** Need heavy full-text / security search as primary → [Elastic](../Elastic/README.md); SaaS-only estate → Datadog/New Relic logs.
+### Progression
 
-**Disconfirm:** Loki is **not** Elasticsearch—different indexing/cost model. “We have Loki” is **not** structured logging by itself—you still emit useful fields.
+| Phase | Chapters | Outcome |
+|-------|----------|---------|
+| Foundation | [01](./01_What_Is_Loki_And_When.md)–[02](./02_Streams_Labels_And_Cardinality.md) | Fit; label budget |
+| Query & ship | [03](./03_LogQL_Essentials.md)–[04](./04_Shippers_Alloy_And_Pipeline.md) | LogQL; Alloy |
+| Ops | [05](./05_Multi_Tenant_Retention_And_Ops.md)–[06](./06_Worked_Example_Logs_In_Grafana.md) | Tenants; end-to-end |
 
-**Confirm:** What do you index (labels) vs filter at query time?
+## Chapters
 
-## 2. Advanced concepts
-
-| Piece | Job |
-|-------|-----|
-| Promtail / Alloy / agents | Ship logs to Loki |
-| Label set | Keep cardinality low (no user_id as label) |
-| LogQL | Query language |
-| Retention / multi-tenancy | Ops cost controls |
-
-High cardinality labels explode cost/memory—same lesson as Prometheus ([metrics/SLO](../8_SLI_SLO_SLA_And_Error_Budgets.md)).
-
-## 3. Applications
-
-| Goal | Pattern |
-|------|---------|
-| K8s logs | Daemonset agent → Loki → Grafana Explore |
-| Correlate | Same labels as metrics (`pod`, `app`); `trace_id` field for Tempo |
-| Alert | Log-based rules sparingly; prefer metrics for SLOs |
-
-**Staff checklist:** label budget; retention; PII redaction; don’t use Loki as a forever legal archive without policy.
+| # | File | Focus |
+|---|------|--------|
+| 01 | [What is Loki and when](./01_What_Is_Loki_And_When.md) | Index vs chunks; vs Elastic |
+| 02 | [Streams, labels, cardinality](./02_Streams_Labels_And_Cardinality.md) | Official label BP; structured metadata |
+| 03 | [LogQL essentials](./03_LogQL_Essentials.md) | Selectors, filters, metric queries |
+| 04 | [Shippers — Alloy and pipeline](./04_Shippers_Alloy_And_Pipeline.md) | Agents; processing |
+| 05 | [Multi-tenant, retention, ops](./05_Multi_Tenant_Retention_And_Ops.md) | Object store; limits |
+| 06 | [Worked example](./06_Worked_Example_Logs_In_Grafana.md) | Alloy → Loki → Explore |
 
 ## References
 
-- [Grafana Loki docs](https://grafana.com/docs/loki/latest/)  
-- [LogQL](https://grafana.com/docs/loki/latest/query/)  
-- [Grafana](../Grafana/README.md) · [Elastic](../Elastic/README.md) · [16 Structured logging](../16_Structured_Logging.md)  
+- [Loki docs](https://grafana.com/docs/loki/latest/) · [LogQL](https://grafana.com/docs/loki/latest/query/) · [Labels](https://grafana.com/docs/loki/latest/get-started/labels/)  
