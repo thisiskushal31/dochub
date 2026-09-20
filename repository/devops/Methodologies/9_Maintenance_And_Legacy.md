@@ -57,7 +57,7 @@ Strangling toward GitOps/K8s is optional and incremental — not a moral require
 ## Practical playbook for “we can’t rewrite it”
 
 1. **Stabilize delivery** — scripted build, artifact, deploy; even if deploy is SSH + copy.  
-2. **Add observability** — logs and a health check beat flying blind ([Observability/](../Observability/README.md)).  
+2. **Add observability** — logs and a health check beat flying blind ([Monitoring-And-Observability/](../Monitoring-And-Observability/README.md)).  
 3. **Wrap, don’t rewrite** — strangler facade, async sync, API front door ([System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts)).  
 4. **Contain risk** — network segments, least privilege ([Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive), [Security/](../Security/README.md)).  
 5. **Plan retirement** — data escape hatch + date; maintenance without an exit is a career trap.  

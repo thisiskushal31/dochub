@@ -73,7 +73,7 @@
         "path": "Argo_CD/10_Ownership_Diffing_Webhooks_And_Observability.md",
         "type": "file",
         "sha": "",
-        "size": 7135
+        "size": 7165
       },
       {
         "name": "11_Security_Tenancy_Hydrator_And_Troubleshooting.md",
@@ -376,7 +376,7 @@
         "path": "Azure_DevOps/15_Observability_Hooks_And_Non_Azure_Targets.md",
         "type": "file",
         "sha": "",
-        "size": 3112
+        "size": 3157
       },
       {
         "name": "16_Azure_Boards.md",
@@ -2172,7 +2172,7 @@
     "path": "16_Notifications_Webhooks_And_ChatOps.md",
     "type": "file",
     "sha": "",
-    "size": 2548
+    "size": 2578
   },
   {
     "name": "17_Static_Sites_And_CDN_Deploy.md",
@@ -2228,7 +2228,7 @@
     "path": "23_Classical_DevOps_Stack_Map.md",
     "type": "file",
     "sha": "",
-    "size": 4896
+    "size": 4926
   },
   {
     "name": "24_Workflow_Automation_Beyond_PR_CI.md",
@@ -2256,7 +2256,7 @@
     "path": "5_Verify_Rollback_And_Synthetic_Tests.md",
     "type": "file",
     "sha": "",
-    "size": 5555
+    "size": 5615
   },
   {
     "name": "6_Supply_Chain_And_Signing.md",
@@ -2291,6 +2291,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 9941
+    "size": 9971
   }
 ]

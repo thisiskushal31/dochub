@@ -1,6 +1,6 @@
 # 30 — Managed observability on cloud (when which)
 
-[← README](./README.md) · [IAM →](./15_Org_IAM_And_Identity_Federation.md) · [Landing zones →](./29_Landing_Zones_And_Org_Guardrails.md) · [FinOps →](./20_FinOps_And_Cost_Controls.md) · [Observability/](../Observability/README.md)
+[← README](./README.md) · [IAM →](./15_Org_IAM_And_Identity_Federation.md) · [Landing zones →](./29_Landing_Zones_And_Org_Guardrails.md) · [FinOps →](./20_FinOps_And_Cost_Controls.md) · [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md)
 
 ## Mental map
 
@@ -8,10 +8,10 @@
 Audit / control-plane trail     →  who changed IAM, VPC, buckets (security RCA)
 Platform resource signals       →  managed metrics/logs/traces (CloudWatch / Monitoring / Monitor)
 App / service telemetry         →  OTel → native sink OR Managed Prometheus OR SaaS APM
-Paging / on-call                →  cloud alarms → PagerDuty-class ([Observability/PagerDuty](../Observability/PagerDuty/README.md))
+Paging / on-call                →  cloud alarms → PagerDuty-class ([Monitoring-And-Observability/PagerDuty](../Monitoring-And-Observability/PagerDuty/README.md))
 ```
 
-*What to notice: **managed observability** is a cloud product family (like managed DB). SLO craft, PromQL, and OTel depth live in [Observability/](../Observability/README.md)—this chapter is **which product when** on a named cloud.*
+*What to notice: **managed observability** is a cloud product family (like managed DB). SLO craft, PromQL, and OTel depth live in [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md)—this chapter is **which product when** on a named cloud.*
 
 ## 1. Concepts
 
@@ -23,7 +23,7 @@ Paging / on-call                →  cloud alarms → PagerDuty-class ([Observab
 | **Distributed traces** | Request spans across services | X-Ray / Cloud Trace / Application Insights |
 | **Managed Prometheus** | Prom-compatible metrics without running Thanos yourself | AMP / Managed Service for Prometheus / Azure Monitor managed Prometheus |
 | **Dashboards & alerts** | Graphs + fire conditions | Native consoles; Grafana Cloud / managed Grafana |
-| **SaaS APM** | Vendor agents + UI (multi-cloud common) | Datadog / New Relic / … ([Observability tools](../Observability/3_Observability_Tools.md)) |
+| **SaaS APM** | Vendor agents + UI (multi-cloud common) | Datadog / New Relic / … ([Named stack shapes](../Monitoring-And-Observability/25_Named_Stack_Shapes_ELK_PLG_LGTM.md)) |
 
 ### When which (durable decision table)
 
@@ -33,7 +33,7 @@ Paging / on-call                →  cloud alarms → PagerDuty-class ([Observab
 | Default signal for VMs, LBs, managed DBs, functions | **Native cloud suite** (CloudWatch / Cloud Monitoring / Azure Monitor) | Ignoring native until an outage |
 | PromQL + existing Grafana culture across clouds | **Managed Prometheus** (+ Grafana) | Standing a fragile self-hosted stack on day one without owners |
 | Deep APM / multi-cloud one pane / rich UX budget | **SaaS APM** (Datadog, New Relic, …) | Buying SaaS *and* never turning on trails |
-| Full control, open stack, platform team | Self-managed Prometheus/Grafana/Loki/Tempo ([Observability/](../Observability/README.md)) | Pretending “free” has no ops cost |
+| Full control, open stack, platform team | Self-managed Prometheus/Grafana/Loki/Tempo ([Monitoring-And-Observability/](../Monitoring-And-Observability/README.md)) | Pretending “free” has no ops cost |
 | Page a human | Alarm → notification channel → on-call tool | Email-only forever |
 
 **Disconfirm:** A pretty dashboard is **not** an observability program. Managed Prometheus is **not** a substitute for CloudTrail. SaaS APM does **not** replace org audit logs.
@@ -107,7 +107,7 @@ Who may read logs/metrics, put metric filters, or disable trails is an IAM job (
 - When-which chosen: native vs Managed Prom vs SaaS vs DIY  
 - Retention and log volume budgeted  
 - Alarms owned; page path tested  
-- Door to [Observability/](../Observability/README.md) for SLO/OTel/tool depth  
+- Door to [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md) for SLO/OTel/tool depth  
 
 **Good:** locked trail + native platform signals + deliberate app telemetry sink. **Bad:** dashboards tourism; trails off; unbounded flow logs.
 
@@ -116,4 +116,4 @@ Who may read logs/metrics, put metric filters, or disable trails is an IAM job (
 - [CloudWatch](https://docs.aws.amazon.com/cloudwatch/) · [CloudTrail](https://docs.aws.amazon.com/cloudtrail/) · [X-Ray](https://docs.aws.amazon.com/xray/) · [AMP](https://docs.aws.amazon.com/prometheus/) · [Managed Grafana](https://docs.aws.amazon.com/grafana/)  
 - [Cloud Monitoring](https://cloud.google.com/monitoring/docs) · [Cloud Logging](https://cloud.google.com/logging/docs) · [Cloud Trace](https://cloud.google.com/trace/docs) · [Cloud Audit Logs](https://cloud.google.com/logging/docs/audit) · [Managed Prometheus](https://cloud.google.com/stackdriver/docs/managed-prometheus)  
 - [Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/) · [Activity Log](https://learn.microsoft.com/azure/azure-monitor/essentials/activity-log) · [Application Insights](https://learn.microsoft.com/azure/azure-monitor/app/app-insights-overview) · [Azure Managed Grafana](https://learn.microsoft.com/azure/managed-grafana/)  
-- [Observability/](../Observability/README.md) · [Security/](../Security/README.md)  
+- [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md) · [Security/](../Security/README.md)  

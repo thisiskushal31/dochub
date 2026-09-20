@@ -240,7 +240,7 @@
         "path": "Assets/README.md",
         "type": "file",
         "sha": "",
-        "size": 3685
+        "size": 3756
       }
     ]
   },
@@ -398,7 +398,7 @@
             "path": "CiCd/Argo_CD/10_Ownership_Diffing_Webhooks_And_Observability.md",
             "type": "file",
             "sha": "",
-            "size": 7135
+            "size": 7165
           },
           {
             "name": "11_Security_Tenancy_Hydrator_And_Troubleshooting.md",
@@ -701,7 +701,7 @@
             "path": "CiCd/Azure_DevOps/15_Observability_Hooks_And_Non_Azure_Targets.md",
             "type": "file",
             "sha": "",
-            "size": 3112
+            "size": 3157
           },
           {
             "name": "16_Azure_Boards.md",
@@ -2497,7 +2497,7 @@
         "path": "CiCd/16_Notifications_Webhooks_And_ChatOps.md",
         "type": "file",
         "sha": "",
-        "size": 2548
+        "size": 2578
       },
       {
         "name": "17_Static_Sites_And_CDN_Deploy.md",
@@ -2553,7 +2553,7 @@
         "path": "CiCd/23_Classical_DevOps_Stack_Map.md",
         "type": "file",
         "sha": "",
-        "size": 4896
+        "size": 4926
       },
       {
         "name": "24_Workflow_Automation_Beyond_PR_CI.md",
@@ -2581,7 +2581,7 @@
         "path": "CiCd/5_Verify_Rollback_And_Synthetic_Tests.md",
         "type": "file",
         "sha": "",
-        "size": 5555
+        "size": 5615
       },
       {
         "name": "6_Supply_Chain_And_Signing.md",
@@ -2616,7 +2616,7 @@
         "path": "CiCd/README.md",
         "type": "file",
         "sha": "",
-        "size": 9941
+        "size": 9971
       }
     ]
   },
@@ -2898,7 +2898,7 @@
         "path": "Cloud/30_Cloud_Observability_And_Audit_Doors.md",
         "type": "file",
         "sha": "",
-        "size": 8164
+        "size": 8371
       },
       {
         "name": "31_Serverless_Functions_And_Containers.md",
@@ -2975,7 +2975,7 @@
         "path": "Cloud/README.md",
         "type": "file",
         "sha": "",
-        "size": 10431
+        "size": 10474
       }
     ]
   },
@@ -3131,7 +3131,7 @@
         "path": "Cloud-Native/4_CNCF_Everyday_Tools.md",
         "type": "file",
         "sha": "",
-        "size": 5792
+        "size": 5822
       },
       {
         "name": "README.md",
@@ -11451,7 +11451,7 @@
         "path": "Methodologies/0_SE_Learning_DevOps_Start_Here.md",
         "type": "file",
         "sha": "",
-        "size": 5650
+        "size": 5680
       },
       {
         "name": "1_DevOps_Culture_And_Collaboration.md",
@@ -11465,7 +11465,7 @@
         "path": "Methodologies/10_Core_Principles_Three_Ways_CALMS.md",
         "type": "file",
         "sha": "",
-        "size": 5327
+        "size": 5357
       },
       {
         "name": "11_Value_Streams_And_Lean_Flow.md",
@@ -11486,7 +11486,7 @@
         "path": "Methodologies/13_Continuous_Everything.md",
         "type": "file",
         "sha": "",
-        "size": 4637
+        "size": 4667
       },
       {
         "name": "14_DevSecOps_Mindset.md",
@@ -11500,7 +11500,7 @@
         "path": "Methodologies/15_DORA_Capabilities_Map.md",
         "type": "file",
         "sha": "",
-        "size": 4646
+        "size": 4676
       },
       {
         "name": "16_Roles_Teams_And_Platforms.md",
@@ -11514,7 +11514,7 @@
         "path": "Methodologies/17_Toolchain_Stages.md",
         "type": "file",
         "sha": "",
-        "size": 2569
+        "size": 2599
       },
       {
         "name": "18_Value_Stream_Management.md",
@@ -11528,7 +11528,7 @@
         "path": "Methodologies/19_Durable_Mindsets_And_Evolving_Toolsets.md",
         "type": "file",
         "sha": "",
-        "size": 9770
+        "size": 9830
       },
       {
         "name": "2_Practices_And_Workflows.md",
@@ -11549,7 +11549,7 @@
         "path": "Methodologies/3_Team_Patterns_SRE_Incident.md",
         "type": "file",
         "sha": "",
-        "size": 5387
+        "size": 5454
       },
       {
         "name": "4_Branching_And_PR_Practices.md",
@@ -11591,7 +11591,7 @@
         "path": "Methodologies/9_Maintenance_And_Legacy.md",
         "type": "file",
         "sha": "",
-        "size": 5977
+        "size": 6007
       },
       {
         "name": "README.md",
@@ -11603,202 +11603,419 @@
     ]
   },
   {
-    "name": "Observability",
-    "path": "Observability",
+    "name": "Monitoring-And-Observability",
+    "path": "Monitoring-And-Observability",
     "type": "dir",
     "sha": "",
     "children": [
       {
         "name": "Datadog",
-        "path": "Observability/Datadog",
+        "path": "Monitoring-And-Observability/Datadog",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "README.md",
-            "path": "Observability/Datadog/README.md",
+            "path": "Monitoring-And-Observability/Datadog/README.md",
             "type": "file",
             "sha": "",
-            "size": 2388
+            "size": 2407
           }
         ]
       },
       {
         "name": "Elastic",
-        "path": "Observability/Elastic",
+        "path": "Monitoring-And-Observability/Elastic",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "README.md",
-            "path": "Observability/Elastic/README.md",
+            "path": "Monitoring-And-Observability/Elastic/README.md",
             "type": "file",
             "sha": "",
-            "size": 2631
+            "size": 2676
           }
         ]
       },
       {
         "name": "Grafana",
-        "path": "Observability/Grafana",
+        "path": "Monitoring-And-Observability/Grafana",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "README.md",
-            "path": "Observability/Grafana/README.md",
+            "path": "Monitoring-And-Observability/Grafana/README.md",
             "type": "file",
             "sha": "",
-            "size": 2563
+            "size": 2603
           }
         ]
       },
       {
         "name": "Jaeger",
-        "path": "Observability/Jaeger",
+        "path": "Monitoring-And-Observability/Jaeger",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "README.md",
-            "path": "Observability/Jaeger/README.md",
+            "path": "Monitoring-And-Observability/Jaeger/README.md",
             "type": "file",
             "sha": "",
-            "size": 2173
+            "size": 2181
           }
         ]
       },
       {
         "name": "Loki",
-        "path": "Observability/Loki",
+        "path": "Monitoring-And-Observability/Loki",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "README.md",
-            "path": "Observability/Loki/README.md",
+            "path": "Monitoring-And-Observability/Loki/README.md",
             "type": "file",
             "sha": "",
-            "size": 2313
+            "size": 2361
           }
         ]
       },
       {
         "name": "New_Relic",
-        "path": "Observability/New_Relic",
+        "path": "Monitoring-And-Observability/New_Relic",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "README.md",
-            "path": "Observability/New_Relic/README.md",
+            "path": "Monitoring-And-Observability/New_Relic/README.md",
             "type": "file",
             "sha": "",
-            "size": 2186
+            "size": 2218
           }
         ]
       },
       {
         "name": "OpenTelemetry",
-        "path": "Observability/OpenTelemetry",
+        "path": "Monitoring-And-Observability/OpenTelemetry",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "README.md",
-            "path": "Observability/OpenTelemetry/README.md",
+            "path": "Monitoring-And-Observability/OpenTelemetry/README.md",
             "type": "file",
             "sha": "",
-            "size": 2793
+            "size": 2818
           }
         ]
       },
       {
         "name": "PagerDuty",
-        "path": "Observability/PagerDuty",
+        "path": "Monitoring-And-Observability/PagerDuty",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "1_Install_And_First_Use.md",
-            "path": "Observability/PagerDuty/1_Install_And_First_Use.md",
+            "path": "Monitoring-And-Observability/PagerDuty/1_Install_And_First_Use.md",
             "type": "file",
             "sha": "",
             "size": 875
           },
           {
             "name": "README.md",
-            "path": "Observability/PagerDuty/README.md",
+            "path": "Monitoring-And-Observability/PagerDuty/README.md",
             "type": "file",
             "sha": "",
-            "size": 2373
+            "size": 2416
           }
         ]
       },
       {
         "name": "Prometheus",
-        "path": "Observability/Prometheus",
+        "path": "Monitoring-And-Observability/Prometheus",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "README.md",
-            "path": "Observability/Prometheus/README.md",
+            "path": "Monitoring-And-Observability/Prometheus/README.md",
             "type": "file",
             "sha": "",
-            "size": 2894
+            "size": 2916
           }
         ]
       },
       {
         "name": "Tempo",
-        "path": "Observability/Tempo",
+        "path": "Monitoring-And-Observability/Tempo",
         "type": "dir",
         "sha": "",
         "children": [
           {
             "name": "README.md",
-            "path": "Observability/Tempo/README.md",
+            "path": "Monitoring-And-Observability/Tempo/README.md",
             "type": "file",
             "sha": "",
-            "size": 2094
+            "size": 2115
           }
         ]
       },
       {
         "name": "0_How_To_Read.md",
-        "path": "Observability/0_How_To_Read.md",
+        "path": "Monitoring-And-Observability/0_How_To_Read.md",
         "type": "file",
         "sha": "",
-        "size": 4182
+        "size": 3754
       },
       {
-        "name": "1_Monitoring_And_Metrics.md",
-        "path": "Observability/1_Monitoring_And_Metrics.md",
+        "name": "1_Paired_Practice_Monitoring_And_Observability.md",
+        "path": "Monitoring-And-Observability/1_Paired_Practice_Monitoring_And_Observability.md",
         "type": "file",
         "sha": "",
-        "size": 5178
+        "size": 3639
       },
       {
-        "name": "2_Logging_And_Tracing.md",
-        "path": "Observability/2_Logging_And_Tracing.md",
+        "name": "10_Alert_Hygiene_And_Burn_Rates.md",
+        "path": "Monitoring-And-Observability/10_Alert_Hygiene_And_Burn_Rates.md",
         "type": "file",
         "sha": "",
-        "size": 5075
+        "size": 2635
       },
       {
-        "name": "3_Observability_Tools.md",
-        "path": "Observability/3_Observability_Tools.md",
+        "name": "11_Infrastructure_And_Host_Monitoring.md",
+        "path": "Monitoring-And-Observability/11_Infrastructure_And_Host_Monitoring.md",
         "type": "file",
         "sha": "",
-        "size": 3992
+        "size": 2617
+      },
+      {
+        "name": "12_Application_And_Service_Monitoring.md",
+        "path": "Monitoring-And-Observability/12_Application_And_Service_Monitoring.md",
+        "type": "file",
+        "sha": "",
+        "size": 2595
+      },
+      {
+        "name": "13_Dependency_And_Peer_Monitoring.md",
+        "path": "Monitoring-And-Observability/13_Dependency_And_Peer_Monitoring.md",
+        "type": "file",
+        "sha": "",
+        "size": 2758
+      },
+      {
+        "name": "14_Batch_Cron_And_Async_Monitoring.md",
+        "path": "Monitoring-And-Observability/14_Batch_Cron_And_Async_Monitoring.md",
+        "type": "file",
+        "sha": "",
+        "size": 2422
+      },
+      {
+        "name": "15_Capacity_And_Saturation.md",
+        "path": "Monitoring-And-Observability/15_Capacity_And_Saturation.md",
+        "type": "file",
+        "sha": "",
+        "size": 2426
+      },
+      {
+        "name": "16_Structured_Logging.md",
+        "path": "Monitoring-And-Observability/16_Structured_Logging.md",
+        "type": "file",
+        "sha": "",
+        "size": 2424
+      },
+      {
+        "name": "17_Log_Planes_Retention_And_Volume.md",
+        "path": "Monitoring-And-Observability/17_Log_Planes_Retention_And_Volume.md",
+        "type": "file",
+        "sha": "",
+        "size": 2403
+      },
+      {
+        "name": "18_Distributed_Tracing.md",
+        "path": "Monitoring-And-Observability/18_Distributed_Tracing.md",
+        "type": "file",
+        "sha": "",
+        "size": 2377
+      },
+      {
+        "name": "19_Context_Propagation_And_Async.md",
+        "path": "Monitoring-And-Observability/19_Context_Propagation_And_Async.md",
+        "type": "file",
+        "sha": "",
+        "size": 2415
+      },
+      {
+        "name": "2_Mindset_And_Anti_Patterns.md",
+        "path": "Monitoring-And-Observability/2_Mindset_And_Anti_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 3492
+      },
+      {
+        "name": "20_Sampling_Strategies.md",
+        "path": "Monitoring-And-Observability/20_Sampling_Strategies.md",
+        "type": "file",
+        "sha": "",
+        "size": 2350
+      },
+      {
+        "name": "21_Correlation_And_Dig_Methodology.md",
+        "path": "Monitoring-And-Observability/21_Correlation_And_Dig_Methodology.md",
+        "type": "file",
+        "sha": "",
+        "size": 2289
+      },
+      {
+        "name": "22_Instrumentation_Collectors_And_Backends.md",
+        "path": "Monitoring-And-Observability/22_Instrumentation_Collectors_And_Backends.md",
+        "type": "file",
+        "sha": "",
+        "size": 2306
+      },
+      {
+        "name": "23_Continuous_Profiling_And_Events.md",
+        "path": "Monitoring-And-Observability/23_Continuous_Profiling_And_Events.md",
+        "type": "file",
+        "sha": "",
+        "size": 2193
+      },
+      {
+        "name": "24_APM_As_A_Product_Shape.md",
+        "path": "Monitoring-And-Observability/24_APM_As_A_Product_Shape.md",
+        "type": "file",
+        "sha": "",
+        "size": 2359
+      },
+      {
+        "name": "25_Named_Stack_Shapes_ELK_PLG_LGTM.md",
+        "path": "Monitoring-And-Observability/25_Named_Stack_Shapes_ELK_PLG_LGTM.md",
+        "type": "file",
+        "sha": "",
+        "size": 2381
+      },
+      {
+        "name": "26_OSS_Managed_SaaS_And_Hybrid.md",
+        "path": "Monitoring-And-Observability/26_OSS_Managed_SaaS_And_Hybrid.md",
+        "type": "file",
+        "sha": "",
+        "size": 2168
+      },
+      {
+        "name": "27_Tool_Kinds_By_Job.md",
+        "path": "Monitoring-And-Observability/27_Tool_Kinds_By_Job.md",
+        "type": "file",
+        "sha": "",
+        "size": 2179
+      },
+      {
+        "name": "28_Shape_Scorecard_Drills_And_Maturity.md",
+        "path": "Monitoring-And-Observability/28_Shape_Scorecard_Drills_And_Maturity.md",
+        "type": "file",
+        "sha": "",
+        "size": 2478
+      },
+      {
+        "name": "29_Multi_Env_And_Multi_Tenant_Patterns.md",
+        "path": "Monitoring-And-Observability/29_Multi_Env_And_Multi_Tenant_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 2128
+      },
+      {
+        "name": "3_Monitoring_Program_Anatomy.md",
+        "path": "Monitoring-And-Observability/3_Monitoring_Program_Anatomy.md",
+        "type": "file",
+        "sha": "",
+        "size": 3519
+      },
+      {
+        "name": "30_Telemetry_Cost_And_FinOps.md",
+        "path": "Monitoring-And-Observability/30_Telemetry_Cost_And_FinOps.md",
+        "type": "file",
+        "sha": "",
+        "size": 2189
+      },
+      {
+        "name": "31_Cloud_Managed_Sinks_And_Audit_Door.md",
+        "path": "Monitoring-And-Observability/31_Cloud_Managed_Sinks_And_Audit_Door.md",
+        "type": "file",
+        "sha": "",
+        "size": 2396
+      },
+      {
+        "name": "32_On_Call_And_Human_Loop_Door.md",
+        "path": "Monitoring-And-Observability/32_On_Call_And_Human_Loop_Door.md",
+        "type": "file",
+        "sha": "",
+        "size": 2234
+      },
+      {
+        "name": "33_Kubernetes_Workload_Observability_Patterns.md",
+        "path": "Monitoring-And-Observability/33_Kubernetes_Workload_Observability_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 2486
+      },
+      {
+        "name": "34_Reference_Topologies_End_To_End.md",
+        "path": "Monitoring-And-Observability/34_Reference_Topologies_End_To_End.md",
+        "type": "file",
+        "sha": "",
+        "size": 3043
+      },
+      {
+        "name": "4_Golden_Signals_RED_And_USE.md",
+        "path": "Monitoring-And-Observability/4_Golden_Signals_RED_And_USE.md",
+        "type": "file",
+        "sha": "",
+        "size": 3303
+      },
+      {
+        "name": "5_Black_Box_White_Box_And_Synthetics.md",
+        "path": "Monitoring-And-Observability/5_Black_Box_White_Box_And_Synthetics.md",
+        "type": "file",
+        "sha": "",
+        "size": 3130
+      },
+      {
+        "name": "6_Metric_Types_And_Aggregation.md",
+        "path": "Monitoring-And-Observability/6_Metric_Types_And_Aggregation.md",
+        "type": "file",
+        "sha": "",
+        "size": 2991
+      },
+      {
+        "name": "7_Cardinality_And_Label_Contracts.md",
+        "path": "Monitoring-And-Observability/7_Cardinality_And_Label_Contracts.md",
+        "type": "file",
+        "sha": "",
+        "size": 3033
+      },
+      {
+        "name": "8_SLI_SLO_SLA_And_Error_Budgets.md",
+        "path": "Monitoring-And-Observability/8_SLI_SLO_SLA_And_Error_Budgets.md",
+        "type": "file",
+        "sha": "",
+        "size": 2790
+      },
+      {
+        "name": "9_Dashboards_Alerts_And_Pages.md",
+        "path": "Monitoring-And-Observability/9_Dashboards_Alerts_And_Pages.md",
+        "type": "file",
+        "sha": "",
+        "size": 2595
       },
       {
         "name": "README.md",
-        "path": "Observability/README.md",
+        "path": "Monitoring-And-Observability/README.md",
         "type": "file",
         "sha": "",
-        "size": 3418
+        "size": 6751
       }
     ]
   },
@@ -12607,7 +12824,7 @@
             "path": "Security/WAF/README.md",
             "type": "file",
             "sha": "",
-            "size": 5286
+            "size": 5316
           }
         ]
       },
@@ -12802,6 +13019,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 9580
+    "size": 9660
   }
 ]

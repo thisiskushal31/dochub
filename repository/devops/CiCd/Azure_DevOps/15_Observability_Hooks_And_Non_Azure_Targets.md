@@ -10,7 +10,7 @@ Pipelines should **emit signals** and can deploy **beyond Azure**.
 |---------|----------------|
 | Build/deploy notifications | Service hooks, Teams/Slack, email |
 | Test / coverage results | Publish test results tasks |
-| Azure Monitor / App Insights | Post-deploy checks; alert hooks (deep observability → [Observability/](../../Observability/README.md)) |
+| Azure Monitor / App Insights | Post-deploy checks; alert hooks (deep observability → [Monitoring-And-Observability/](../../Monitoring-And-Observability/README.md)) |
 | Non-Azure clouds | Service connections / OIDC to AWS/GCP; generic SSH/K8s |
 | GitOps handoff | Push image + open PR / commit digest; CD elsewhere |
 
@@ -55,4 +55,4 @@ Assistants (including Azure DevOps MCP-style helpers) may draft YAML or queries;
 - [Service hooks](https://learn.microsoft.com/en-us/azure/devops/service-hooks/overview)  
 - [Publish test results](https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/publish-test-results-v2)  
 - [Build ecosystems overview](https://learn.microsoft.com/en-us/azure/devops/pipelines/ecosystems/ecosystems)  
-- [Observability handbook](../../Observability/README.md)  
+- [Observability handbook](../../Monitoring-And-Observability/README.md)  

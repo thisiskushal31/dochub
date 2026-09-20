@@ -41,7 +41,7 @@ This handbook **includes open-source WAF** as a first-class DevOps option—not 
 |---------|----------|
 | OWASP CRS | Start in **detection / anomaly** mode; promote blocking carefully |
 | App-specific allows | Tuned exceptions for known-good APIs—not “disable CRS” |
-| Logging | Log blocks with request id; feed [Observability](../../Observability/README.md) |
+| Logging | Log blocks with request id; feed [Monitoring and observability](../../Monitoring-And-Observability/README.md) |
 | Staging first | Run WAF on preview/staging before prod block mode |
 
 ### Where it plugs into delivery

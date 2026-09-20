@@ -14,7 +14,7 @@ SRE (Site Reliability Engineering) is not a job title you paste on ops. It is a 
 | **Toil** | Manual, repetitive, automatable work — shrink it |
 | **Reliability as a feature** | Same backlog priority rules as product work when budget is burned |
 
-Observability implements SLIs: [Observability/1](../Observability/1_Monitoring_And_Metrics.md). Design trade-offs: [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts).
+Observability implements SLIs: [Monitoring-And-Observability/8](../Monitoring-And-Observability/8_SLI_SLO_SLA_And_Error_Budgets.md). Design trade-offs: [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts).
 
 ## On-call rotations
 
@@ -62,7 +62,7 @@ What to configure everywhere:
 3. **Integrations** — alertmanager / monitoring → create incident  
 4. **Chat bridge** — optional notify to Slack/Teams ([6_ChatOps](./6_ChatOps_And_Notifications.md))  
 
-Folder stubs for install/first use: [Observability/PagerDuty](../Observability/PagerDuty/README.md). Deep product docs stay with the vendor; you need routing that matches your severity model.
+Folder stubs for install/first use: [Monitoring-And-Observability/PagerDuty](../Monitoring-And-Observability/PagerDuty/README.md). Deep product docs stay with the vendor; you need routing that matches your severity model.
 
 ```text
 Alert fires (Prometheus / cloud monitor / synthetic)

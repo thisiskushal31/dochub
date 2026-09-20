@@ -33,7 +33,7 @@ Full table: [Methodologies README — The staircase](./README.md).
 | Culture, branching, on-call, DORA, FinOps, legacy posture | [Methodologies/](./README.md) | — |
 | Build → test → deploy → verify (all targets) | [CiCd/](../CiCd/README.md) | — |
 | Terraform / Pulumi / state | [IAC/](../IAC/README.md) | — |
-| Metrics, logs, traces, paging | [Observability/](../Observability/README.md) | — |
+| Metrics, logs, traces, paging | [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md) | — |
 | Pipeline secrets, SAST/DAST gates | [Security/](../Security/README.md) | [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) |
 | nginx / host deploy | [Servers/](../Servers/README.md) | — |
 | Named cloud (AWS / GCP / Azure / …) | [Cloud/](../Cloud/README.md) | — |

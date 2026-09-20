@@ -46,7 +46,7 @@ DORA / *Accelerate* research identified **24 capabilities** that predict softwar
 | # | Capability | Learn here |
 |---|------------|------------|
 | 15 | Lightweight change approval | [11](./11_Value_Streams_And_Lean_Flow.md), [12 ITSM](./12_Agile_Lean_ITSM_And_DevOps.md) |
-| 16 | Monitor app + infrastructure for decisions | [Observability/](../Observability/README.md) |
+| 16 | Monitor app + infrastructure for decisions | [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md) |
 | 17 | Proactive system health checks | Observability + synthetics ([CiCd/5](../CiCd/5_Verify_Rollback_And_Synthetic_Tests.md)) |
 | 18 | WIP limits | [11](./11_Value_Streams_And_Lean_Flow.md) |
 | 19 | Visualize work | [11](./11_Value_Streams_And_Lean_Flow.md) (board / stream) |

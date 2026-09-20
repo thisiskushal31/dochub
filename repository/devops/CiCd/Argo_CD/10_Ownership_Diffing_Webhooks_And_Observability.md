@@ -52,7 +52,7 @@ Argo CD exposes Prometheus metrics (application sync/health, reconcile timing, c
 - reconcile/sync duration regressions  
 - cluster connection failures  
 
-This is how platform teams see GitOps health the same way they see CI queue health ([Observability](../../Observability/README.md) door for Prom/Grafana depth).
+This is how platform teams see GitOps health the same way they see CI queue health ([Monitoring and observability](../../Monitoring-And-Observability/README.md) door for Prom/Grafana depth).
 
 ### Disaster recovery
 

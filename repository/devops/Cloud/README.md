@@ -120,7 +120,7 @@ Floor 3   Kin / hybrid         →  21–22 (VPS kin; hybrid colo+cloud)
 - FinOps program: [Methodologies/8](../Methodologies/8_FinOps_Literacy.md)  
 - VM deploys: [CiCd/18](../CiCd/18_VM_MIG_And_Host_Based_Deploy.md) · delivery spectrum: [CiCd/19](../CiCd/19_Delivery_Spectrum_Legacy_Through_Modern.md)  
 - Cluster internals: [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive)  
-- Observability depth: [Observability/](../Observability/README.md)  
+- Monitoring & observability depth: [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md)  
 
 ## Further reading
 

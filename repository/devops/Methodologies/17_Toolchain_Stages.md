@@ -20,7 +20,7 @@ Plan → Code → Build → Test → Release → Deploy → Operate → Monitor
 | **Release** | Make a version releasable / promotable | [13](./13_Continuous_Everything.md) Continuous Delivery |
 | **Deploy** | Install into an environment | [CiCd/1](../CiCd/1_Pipelines_Build_Test_Deploy.md), [CiCd/3](../CiCd/3_Deployment_Strategies.md) |
 | **Operate** | Run, patch, respond | [3](./3_Team_Patterns_SRE_Incident.md), [Servers/](../Servers/README.md), OS |
-| **Monitor** | Metrics, logs, traces, product signals | [Observability/](../Observability/README.md) |
+| **Monitor** | Metrics, logs, traces, product signals | [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md) |
 
 Infra as code, cloud, and containers cut across stages: [IAC/](../IAC/README.md), [Cloud/](../Cloud/README.md), [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive).
 

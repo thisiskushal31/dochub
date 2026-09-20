@@ -23,7 +23,7 @@ Timeless guardrail: syllabus Part A rule 9. Spectrum: [19](./19_Delivery_Spectru
 | Kubernetes CKA/CKAD depth | [Containerization-Deep-Dive](https://github.com/thisiskushal31/Containerization-Deep-Dive) |
 | K8s deploy strategies / rollouts | [3](./3_Deployment_Strategies.md), [9](./9_Progressive_Delivery_Controllers.md) |
 | Mirantis/MKE / UCP / MSR | Niche vendor — learn Swarm+registry concepts in Containerization; no separate MKE book required |
-| Prometheus / Grafana | [Observability/](../Observability/README.md) |
+| Prometheus / Grafana | [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md) |
 | Terraform / CloudFormation / AWS IaC | [IAC/](../IAC/README.md), [Cloud/](../Cloud/README.md) |
 | AWS EC2, ASG, ELB, S3, IAM | [Cloud/](../Cloud/README.md); VM delivery [18](./18_VM_MIG_And_Host_Based_Deploy.md); static/S3 [17](./17_Static_Sites_And_CDN_Deploy.md) |
 | Static sites / CDN | [17](./17_Static_Sites_And_CDN_Deploy.md) |

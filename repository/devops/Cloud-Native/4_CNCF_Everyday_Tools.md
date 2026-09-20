@@ -14,7 +14,7 @@ After you have a working Kubernetes API, most teams still need a **small set of 
 |------|-----|--------------------------|-----------|
 | **Core** | Schedule and package workloads | Kubernetes, Helm | [Kubernetes/](./Kubernetes/README.md), [Helm/](./Helm/README.md) |
 | **Delivery** | Desired state + progressive ship | Argo CD, Flux, Rollouts/Flagger | [CiCd/](../CiCd/README.md) |
-| **Observe** | Metrics / logs / traces | Prometheus, Grafana, OTel, Loki… | [Observability/](../Observability/README.md) |
+| **Observe** | Metrics / logs / traces | Prometheus, Grafana, OTel, Loki… | [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md) |
 | **Edge of cluster** | TLS + DNS for Ingress/Gateway | **cert-manager**, **ExternalDNS** | folders below |
 | **Platform UX** | Catalog / paved road | **Backstage** (or Port / custom) | [Backstage/](./Backstage/README.md), [3](./3_Platform_Engineering.md) |
 | **Next** | Mesh / eBPF net / policy | Istio, Linkerd, Cilium, Kyverno | mesh folders · Networks / Security doors |

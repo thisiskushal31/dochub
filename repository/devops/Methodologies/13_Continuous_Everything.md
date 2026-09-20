@@ -40,7 +40,7 @@ If releases are rare because of **business choice** but any given change *could*
 |----------|----------------|
 | Continuous integration / delivery / deploy | This file + [CiCd/](../CiCd/README.md) |
 | Infrastructure as Code | [IAC/](../IAC/README.md) |
-| Monitoring / observability | [Observability/](../Observability/README.md) |
+| Monitoring / observability | [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md) |
 | Security in the pipeline (DevSecOps delivery) | [Security/](../Security/README.md); full AppSec program → [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) |
 | Feedback / learning | [10 Three Ways](./10_Core_Principles_Three_Ways_CALMS.md) |
 

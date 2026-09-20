@@ -4,7 +4,7 @@
 
 Deploying is not finishing. Continuous Delivery expects **evidence** the new version works in the target environment — then a clear path if it does not.
 
-Related: strategies ([3](./3_Deployment_Strategies.md)), observability ([Observability/](../Observability/README.md)), DORA recovery ([Methodologies/5](../Methodologies/5_DORA_And_Delivery_Metrics.md)).
+Related: strategies ([3](./3_Deployment_Strategies.md)), observability ([Monitoring-And-Observability/](../Monitoring-And-Observability/README.md)), DORA recovery ([Methodologies/5](../Methodologies/5_DORA_And_Delivery_Metrics.md)).
 
 ## Verification layers
 
@@ -102,7 +102,7 @@ Each promote moves the **same artifact** ([4](./4_Artifacts_And_Registries.md)).
 - Alert on synthetic failure and SLO burn, not only CPU.  
 - Feed canary dimensions (version/track labels) into metrics.
 
-Deeper: [Observability/](../Observability/README.md).
+Deeper: [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md).
 
 ## Pitfalls
 

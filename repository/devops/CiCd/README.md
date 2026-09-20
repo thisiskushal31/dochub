@@ -20,7 +20,7 @@ Floor 3  Ship safely         →  environments (shared DEV default), strategies,
 Floor 4  Harden              →  security gates, supply chain, DB migrations
 Floor 5  Engine room         →  runners, monorepo, notifications, host CI automation, tools
 Floor 6  Target adapters     →  map first, then classical → hosts → containers → static → K8s PD → AI
-         Next spine          →  Security / IAC / Observability as needed
+         Next spine          →  Security / IAC / Monitoring-And-Observability as needed
 ```
 
 | Floor | Step | File | You should leave able to… |
@@ -130,4 +130,4 @@ Mindset for all estates: [Methodologies/20](../Methodologies/20_Delivery_Reality
 ## Scope
 
 - **Here:** Delivery loop + classical through AI target adapters.  
-- **Else:** Container engines → Containerization · Prom/Grafana → Observability · Terraform/Ansible → IAC/Automation · Cloud VMs → Cloud · ML science → Data-Science-AI.  
+- **Else:** Container engines → Containerization · Prom/Grafana → Monitoring-And-Observability · Terraform/Ansible → IAC/Automation · Cloud VMs → Cloud · ML science → Data-Science-AI.  

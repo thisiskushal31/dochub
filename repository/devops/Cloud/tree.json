@@ -271,7 +271,7 @@
     "path": "30_Cloud_Observability_And_Audit_Doors.md",
     "type": "file",
     "sha": "",
-    "size": 8164
+    "size": 8371
   },
   {
     "name": "31_Serverless_Functions_And_Containers.md",
@@ -348,6 +348,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 10431
+    "size": 10474
   }
 ]

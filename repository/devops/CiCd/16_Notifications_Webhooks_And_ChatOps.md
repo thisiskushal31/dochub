@@ -24,7 +24,7 @@ Match urgency to blast radius. DORA recovery improves when the right humans see 
 |-----------|-----|
 | **CI native notifications** | Email, GitHub/GitLab checks on PRs |
 | **Chat webhooks** | Slack/Teams incoming webhooks or apps |
-| **Incident tools** | Page on prod verify failure (PagerDuty, etc. — [Observability](../Observability/README.md)) |
+| **Incident tools** | Page on prod verify failure (PagerDuty, etc. — [Monitoring and observability](../Monitoring-And-Observability/README.md)) |
 | **CD / GitOps hooks** | Sync failure, health degraded (Argo/Flux alerts) |
 | **ChatOps commands** | Controlled “deploy / rollback / pipeline status” from chat — with auth |
 

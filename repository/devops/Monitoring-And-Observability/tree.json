@@ -1,0 +1,411 @@
+[
+  {
+    "name": "Datadog",
+    "path": "Datadog",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Datadog/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2407
+      }
+    ]
+  },
+  {
+    "name": "Elastic",
+    "path": "Elastic",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Elastic/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2676
+      }
+    ]
+  },
+  {
+    "name": "Grafana",
+    "path": "Grafana",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Grafana/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2603
+      }
+    ]
+  },
+  {
+    "name": "Jaeger",
+    "path": "Jaeger",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Jaeger/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2181
+      }
+    ]
+  },
+  {
+    "name": "Loki",
+    "path": "Loki",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Loki/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2361
+      }
+    ]
+  },
+  {
+    "name": "New_Relic",
+    "path": "New_Relic",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "New_Relic/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2218
+      }
+    ]
+  },
+  {
+    "name": "OpenTelemetry",
+    "path": "OpenTelemetry",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "OpenTelemetry/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2818
+      }
+    ]
+  },
+  {
+    "name": "PagerDuty",
+    "path": "PagerDuty",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "PagerDuty/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 875
+      },
+      {
+        "name": "README.md",
+        "path": "PagerDuty/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2416
+      }
+    ]
+  },
+  {
+    "name": "Prometheus",
+    "path": "Prometheus",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Prometheus/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2916
+      }
+    ]
+  },
+  {
+    "name": "Tempo",
+    "path": "Tempo",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Tempo/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 2115
+      }
+    ]
+  },
+  {
+    "name": "0_How_To_Read.md",
+    "path": "0_How_To_Read.md",
+    "type": "file",
+    "sha": "",
+    "size": 3754
+  },
+  {
+    "name": "1_Paired_Practice_Monitoring_And_Observability.md",
+    "path": "1_Paired_Practice_Monitoring_And_Observability.md",
+    "type": "file",
+    "sha": "",
+    "size": 3639
+  },
+  {
+    "name": "10_Alert_Hygiene_And_Burn_Rates.md",
+    "path": "10_Alert_Hygiene_And_Burn_Rates.md",
+    "type": "file",
+    "sha": "",
+    "size": 2635
+  },
+  {
+    "name": "11_Infrastructure_And_Host_Monitoring.md",
+    "path": "11_Infrastructure_And_Host_Monitoring.md",
+    "type": "file",
+    "sha": "",
+    "size": 2617
+  },
+  {
+    "name": "12_Application_And_Service_Monitoring.md",
+    "path": "12_Application_And_Service_Monitoring.md",
+    "type": "file",
+    "sha": "",
+    "size": 2595
+  },
+  {
+    "name": "13_Dependency_And_Peer_Monitoring.md",
+    "path": "13_Dependency_And_Peer_Monitoring.md",
+    "type": "file",
+    "sha": "",
+    "size": 2758
+  },
+  {
+    "name": "14_Batch_Cron_And_Async_Monitoring.md",
+    "path": "14_Batch_Cron_And_Async_Monitoring.md",
+    "type": "file",
+    "sha": "",
+    "size": 2422
+  },
+  {
+    "name": "15_Capacity_And_Saturation.md",
+    "path": "15_Capacity_And_Saturation.md",
+    "type": "file",
+    "sha": "",
+    "size": 2426
+  },
+  {
+    "name": "16_Structured_Logging.md",
+    "path": "16_Structured_Logging.md",
+    "type": "file",
+    "sha": "",
+    "size": 2424
+  },
+  {
+    "name": "17_Log_Planes_Retention_And_Volume.md",
+    "path": "17_Log_Planes_Retention_And_Volume.md",
+    "type": "file",
+    "sha": "",
+    "size": 2403
+  },
+  {
+    "name": "18_Distributed_Tracing.md",
+    "path": "18_Distributed_Tracing.md",
+    "type": "file",
+    "sha": "",
+    "size": 2377
+  },
+  {
+    "name": "19_Context_Propagation_And_Async.md",
+    "path": "19_Context_Propagation_And_Async.md",
+    "type": "file",
+    "sha": "",
+    "size": 2415
+  },
+  {
+    "name": "2_Mindset_And_Anti_Patterns.md",
+    "path": "2_Mindset_And_Anti_Patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 3492
+  },
+  {
+    "name": "20_Sampling_Strategies.md",
+    "path": "20_Sampling_Strategies.md",
+    "type": "file",
+    "sha": "",
+    "size": 2350
+  },
+  {
+    "name": "21_Correlation_And_Dig_Methodology.md",
+    "path": "21_Correlation_And_Dig_Methodology.md",
+    "type": "file",
+    "sha": "",
+    "size": 2289
+  },
+  {
+    "name": "22_Instrumentation_Collectors_And_Backends.md",
+    "path": "22_Instrumentation_Collectors_And_Backends.md",
+    "type": "file",
+    "sha": "",
+    "size": 2306
+  },
+  {
+    "name": "23_Continuous_Profiling_And_Events.md",
+    "path": "23_Continuous_Profiling_And_Events.md",
+    "type": "file",
+    "sha": "",
+    "size": 2193
+  },
+  {
+    "name": "24_APM_As_A_Product_Shape.md",
+    "path": "24_APM_As_A_Product_Shape.md",
+    "type": "file",
+    "sha": "",
+    "size": 2359
+  },
+  {
+    "name": "25_Named_Stack_Shapes_ELK_PLG_LGTM.md",
+    "path": "25_Named_Stack_Shapes_ELK_PLG_LGTM.md",
+    "type": "file",
+    "sha": "",
+    "size": 2381
+  },
+  {
+    "name": "26_OSS_Managed_SaaS_And_Hybrid.md",
+    "path": "26_OSS_Managed_SaaS_And_Hybrid.md",
+    "type": "file",
+    "sha": "",
+    "size": 2168
+  },
+  {
+    "name": "27_Tool_Kinds_By_Job.md",
+    "path": "27_Tool_Kinds_By_Job.md",
+    "type": "file",
+    "sha": "",
+    "size": 2179
+  },
+  {
+    "name": "28_Shape_Scorecard_Drills_And_Maturity.md",
+    "path": "28_Shape_Scorecard_Drills_And_Maturity.md",
+    "type": "file",
+    "sha": "",
+    "size": 2478
+  },
+  {
+    "name": "29_Multi_Env_And_Multi_Tenant_Patterns.md",
+    "path": "29_Multi_Env_And_Multi_Tenant_Patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 2128
+  },
+  {
+    "name": "3_Monitoring_Program_Anatomy.md",
+    "path": "3_Monitoring_Program_Anatomy.md",
+    "type": "file",
+    "sha": "",
+    "size": 3519
+  },
+  {
+    "name": "30_Telemetry_Cost_And_FinOps.md",
+    "path": "30_Telemetry_Cost_And_FinOps.md",
+    "type": "file",
+    "sha": "",
+    "size": 2189
+  },
+  {
+    "name": "31_Cloud_Managed_Sinks_And_Audit_Door.md",
+    "path": "31_Cloud_Managed_Sinks_And_Audit_Door.md",
+    "type": "file",
+    "sha": "",
+    "size": 2396
+  },
+  {
+    "name": "32_On_Call_And_Human_Loop_Door.md",
+    "path": "32_On_Call_And_Human_Loop_Door.md",
+    "type": "file",
+    "sha": "",
+    "size": 2234
+  },
+  {
+    "name": "33_Kubernetes_Workload_Observability_Patterns.md",
+    "path": "33_Kubernetes_Workload_Observability_Patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 2486
+  },
+  {
+    "name": "34_Reference_Topologies_End_To_End.md",
+    "path": "34_Reference_Topologies_End_To_End.md",
+    "type": "file",
+    "sha": "",
+    "size": 3043
+  },
+  {
+    "name": "4_Golden_Signals_RED_And_USE.md",
+    "path": "4_Golden_Signals_RED_And_USE.md",
+    "type": "file",
+    "sha": "",
+    "size": 3303
+  },
+  {
+    "name": "5_Black_Box_White_Box_And_Synthetics.md",
+    "path": "5_Black_Box_White_Box_And_Synthetics.md",
+    "type": "file",
+    "sha": "",
+    "size": 3130
+  },
+  {
+    "name": "6_Metric_Types_And_Aggregation.md",
+    "path": "6_Metric_Types_And_Aggregation.md",
+    "type": "file",
+    "sha": "",
+    "size": 2991
+  },
+  {
+    "name": "7_Cardinality_And_Label_Contracts.md",
+    "path": "7_Cardinality_And_Label_Contracts.md",
+    "type": "file",
+    "sha": "",
+    "size": 3033
+  },
+  {
+    "name": "8_SLI_SLO_SLA_And_Error_Budgets.md",
+    "path": "8_SLI_SLO_SLA_And_Error_Budgets.md",
+    "type": "file",
+    "sha": "",
+    "size": 2790
+  },
+  {
+    "name": "9_Dashboards_Alerts_And_Pages.md",
+    "path": "9_Dashboards_Alerts_And_Pages.md",
+    "type": "file",
+    "sha": "",
+    "size": 2595
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 6751
+  }
+]

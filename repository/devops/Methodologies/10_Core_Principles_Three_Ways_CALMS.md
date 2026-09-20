@@ -40,7 +40,7 @@ Shorten and amplify feedback from prod and users back to builders.
 - Peer review that teaches, not theater  
 - Stop the line when quality is wrong  
 
-→ Practices: observability, shift-left tests/security, on-call ([3](./3_Team_Patterns_SRE_Incident.md), [Observability/](../Observability/README.md), [Security/](../Security/README.md)).
+→ Practices: observability, shift-left tests/security, on-call ([3](./3_Team_Patterns_SRE_Incident.md), [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md), [Security/](../Security/README.md)).
 
 ### Third Way — Continual learning and experimentation
 

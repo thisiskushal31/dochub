@@ -112,9 +112,9 @@ Learn the **mindset column** first. Treat the **examples** as current illustrati
 | Policy-as-code | OPA / Kyverno / Checkov-class | [Security/](../Security/README.md) |
 | Artifact provenance | SBOM, signing (e.g. cosign / Sigstore-class) | [CiCd/6](../CiCd/6_Supply_Chain_And_Signing.md) |
 | Progressive release | Feature-flag platforms | [CiCd/](../CiCd/README.md), [2](./2_Practices_And_Workflows.md) |
-| Deep telemetry | OpenTelemetry-class pipelines | [Observability/](../Observability/README.md) |
+| Deep telemetry | OpenTelemetry-class pipelines | [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md) |
 | Assisted coding | IDE / chat assistants | Stance in this file; Tooling `Data-ML/` when needed |
-| Assisted operations | Alert correlation / IR assistants | [Observability/](../Observability/README.md) + [3](./3_Team_Patterns_SRE_Incident.md) |
+| Assisted operations | Alert correlation / IR assistants | [Monitoring-And-Observability/](../Monitoring-And-Observability/README.md) + [3](./3_Team_Patterns_SRE_Incident.md) |
 | Agent–tool protocols | Standards for tool-using agents | Adopt when your platform needs them — DS-AI / Tooling Specs |
 | Runtime insight | eBPF-class telemetry | Networks / Containerization — after Linux + CI basics |
 | Alternate runtimes | WASM / edge runtimes | Cloud-Native survey when the job appears |

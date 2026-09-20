@@ -16,7 +16,7 @@ This handbook is how software is **delivered**. Start at [Methodologies/0 — SE
 - **[`Datacenter/`](./Datacenter/)** — On-prem/colo physical depth + **Setup-And-Bring-Up** (rack→LAN→image→RAID→WLAN jobs, diagrams/photos). Start **0 / 0b**; on-ramp 1–12; Facility → Jobs. API cloud stays in `Cloud/`
 - **[`Cloud-Native/`](./Cloud-Native/)** — Architectures, platform engineering, CNCF everyday tools (**cert-manager**, **ExternalDNS**, **Backstage** filled); mesh/Helm/K8s entries remain
 - **[`Servers/`](./Servers/)** — Web servers, reverse proxies, host lifecycle (nginx, Apache, …)
-- **[`Observability/`](./Observability/)** — Monitoring, logging, tracing, SLO/SLI; one folder per tool (Prometheus, Grafana, OpenTelemetry, etc.)
+- **[`Monitoring-And-Observability/`](./Monitoring-And-Observability/)** — **Monitoring and observability together** (detect + explain): SLOs, metrics/logs/traces, stack shapes; tool folders later
 - **[`Security/`](./Security/)** — Pipeline gates, secrets, compliance — not the full cyber program
 - **[`Operating-Systems/`](./Operating-Systems/)** — **Fundamentals/** (OS-agnostic theory), **Linux/**, **Windows/**, **Unix/**, **MacOS/**
 - **[`Languages/`](./Languages/)** — General-purpose and niche languages (syntax depth lives here)
@@ -30,7 +30,7 @@ We use **diagrams and images** where they help (stored under `Assets/<Section>/`
 
 - **[GeeksforGeeks — Operating System Tutorial](https://www.geeksforgeeks.org/operating-systems/operating-systems/)** — OS basics, kernel, process states, system call, deadlock, memory, file systems, disk scheduling, and more. Many articles include diagrams; we use and credit them in **Operating-Systems** topics (e.g. kernel, process and PCB, request flow).
 - **[ByteByteGo — Computer Fundamentals](https://bytebytego.com/guides/computer-fundamentals/)** — Process vs thread, deadlock, paging vs segmentation, memory and storage, boot process. Great for **Operating Systems** and fundamentals.
-- **[ByteByteGo — DevOps and CI/CD](https://bytebytego.com/guides/devops-cicd/)** — CI/CD pipelines, Docker, Kubernetes, deployment strategies, logging/tracing/metrics, Terraform, and more. Use as visual reference for **CiCd**, **Cloud-Native**, **IAC**, and **Observability** as we add content.
+- **[ByteByteGo — DevOps and CI/CD](https://bytebytego.com/guides/devops-cicd/)** — CI/CD pipelines, Docker, Kubernetes, deployment strategies, logging/tracing/metrics, Terraform, and more. Use as visual reference for **CiCd**, **Cloud-Native**, **IAC**, and **Monitoring-And-Observability** as we add content.
 - **[Tecmint — RAID series](https://www.tecmint.com/?s=RAID)** — Introduction to RAID, RAID levels, and Linux **mdadm** tutorials (RAID 0/1/5/6/10, grow array, recover/rebuild). Linked as further reading in **Operating-Systems** RAID topics.
 
 Images from these sources can be downloaded into the right `Assets/` subfolder and linked from topic files (with credit). This keeps the handbook engaging and consistent with our content guidelines.
@@ -43,7 +43,7 @@ Images from these sources can be downloaded into the right `Assets/` subfolder a
 4. Jump into [`CiCd/`](./CiCd/) or [`IAC/`](./IAC/) based on your immediate needs
 5. Use `Servers/` for web tier; `Cloud/` for provider literacy; `Datacenter/` for metal and the hall; related repos in the table below
 6. Use `Automation/` for workflow and orchestration patterns
-7. Reference `Observability/` and `Security/` for production operations
+7. Reference `Monitoring-And-Observability/` and `Security/` for production operations
 8. Keep checklists and commands handy — [Commands-and-Cheatsheets](https://github.com/thisiskushal31/Commands-and-Cheatsheets)
 
 ## Where to go deeper
