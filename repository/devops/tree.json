@@ -11717,84 +11717,84 @@
             "path": "Monitoring-And-Observability/Datadog/15_Serverless_And_Cloud_Integrations.md",
             "type": "file",
             "sha": "",
-            "size": 2038
+            "size": 7770
           },
           {
             "name": "16_Database_Data_Streams_And_Data_Jobs.md",
             "path": "Monitoring-And-Observability/Datadog/16_Database_Data_Streams_And_Data_Jobs.md",
             "type": "file",
             "sha": "",
-            "size": 2010
+            "size": 6348
           },
           {
             "name": "17_Network_USM_And_GPU_Monitoring.md",
             "path": "Monitoring-And-Observability/Datadog/17_Network_USM_And_GPU_Monitoring.md",
             "type": "file",
             "sha": "",
-            "size": 2060
+            "size": 5692
           },
           {
             "name": "18_Profiler_Error_Tracking_Watchdog_And_Events.md",
             "path": "Monitoring-And-Observability/Datadog/18_Profiler_Error_Tracking_Watchdog_And_Events.md",
             "type": "file",
             "sha": "",
-            "size": 1926
+            "size": 5895
           },
           {
             "name": "19_Incident_Workflows_And_Collaboration.md",
             "path": "Monitoring-And-Observability/Datadog/19_Incident_Workflows_And_Collaboration.md",
             "type": "file",
             "sha": "",
-            "size": 2005
+            "size": 5368
           },
           {
             "name": "20_Security_Products.md",
             "path": "Monitoring-And-Observability/Datadog/20_Security_Products.md",
             "type": "file",
             "sha": "",
-            "size": 2389
+            "size": 5848
           },
           {
             "name": "21_CI_Visibility_Testing_And_Delivery_Gates.md",
             "path": "Monitoring-And-Observability/Datadog/21_CI_Visibility_Testing_And_Delivery_Gates.md",
             "type": "file",
             "sha": "",
-            "size": 2049
+            "size": 5584
           },
           {
             "name": "22_Observability_Pipelines.md",
             "path": "Monitoring-And-Observability/Datadog/22_Observability_Pipelines.md",
             "type": "file",
             "sha": "",
-            "size": 1835
+            "size": 4967
           },
           {
             "name": "23_LLM_Observability_Bits_AI_And_MCP.md",
             "path": "Monitoring-And-Observability/Datadog/23_LLM_Observability_Bits_AI_And_MCP.md",
             "type": "file",
             "sha": "",
-            "size": 2153
+            "size": 5494
           },
           {
             "name": "24_Feature_Flags_Experiments_And_Product_Analytics.md",
             "path": "Monitoring-And-Observability/Datadog/24_Feature_Flags_Experiments_And_Product_Analytics.md",
             "type": "file",
             "sha": "",
-            "size": 1935
+            "size": 5285
           },
           {
             "name": "25_Cloud_Cost_IDP_And_Platform_Services.md",
             "path": "Monitoring-And-Observability/Datadog/25_Cloud_Cost_IDP_And_Platform_Services.md",
             "type": "file",
             "sha": "",
-            "size": 2346
+            "size": 5443
           },
           {
             "name": "26_API_Terraform_CLI_And_Account_Admin.md",
             "path": "Monitoring-And-Observability/Datadog/26_API_Terraform_CLI_And_Account_Admin.md",
             "type": "file",
             "sha": "",
-            "size": 1863
+            "size": 5770
           },
           {
             "name": "README.md",
