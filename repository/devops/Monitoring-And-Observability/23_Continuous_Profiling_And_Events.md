@@ -8,7 +8,7 @@ Metrics, logs, and traces are the core explain/detect set. Two common amplifiers
 
 ### Continuous profiling
 
-**Profiles** sample stack traces over time (CPU, heap, alloc) so you see *which code* burns resources—not only which service.
+**Profiles** sample stack traces over time (CPU, heap, alloc) so you see *which code* burns resources—not only which service. On Linux estates, **eBPF**-based continuous profilers/agents are a common way to get this with less app change—still an amplifier ([37](./37_Client_RUM_Coverage_And_EBPF_Amplifiers.md)).
 
 | Use when | Example |
 |----------|---------|

@@ -2,7 +2,7 @@
 
 **One track for both.** Monitoring *detects* known bad states; observability *explains* new questions from telemetry. They usually ship together.
 
-**Concept staircase `0–34` first** (jobs, mindset, stacks, shape checks). **Tool folders later** (Prometheus, Grafana, …)—open them only after the gate below.
+**Concept staircase `0–37` first** (jobs, mindset, stacks, runtime/estate shapes, shape checks). **Tool folders later** (Prometheus, Grafana, …)—open them only after the gate below.
 
 | Door | Home |
 |------|------|
@@ -30,10 +30,11 @@ Floor 2    16–23    Observability / explain craft (logs → profiling)
 Floor 3    24–30    Assemble & govern (APM shape → FinOps)
 Floor 4    31–32    Doors (cloud audit; on-call)
 Floor 5    33–34    K8s patterns + end-to-end topologies
-Floor 6    tools/   Product literacy (after gate)
+Floor 6    35–37    Runtime/language; classical↔distributed; RUM/coverage/eBPF
+Floor 7    tools/   Product literacy (after gate)
 ```
 
-**Suggested first stretch:** 0 → 1 → 3 → 4 → 8 → 9 → 16 → 18 → 21 → 25 → 28 → 34, then fill remaining numbers, then tools.
+**Suggested first stretch:** 0 → 1 → 3 → 4 → 8 → 9 → 16 → 18 → 21 → 25 → 28 → 34 → 35 → 36 → 37, then fill remaining numbers, then tools.
 
 ## Before any tool folder
 
@@ -45,8 +46,10 @@ Floor 6    tools/   Product literacy (after gate)
 | 4 | Dig path metric→trace→log ([21](./21_Correlation_And_Dig_Methodology.md)) |
 | 5 | Named stack + commercial model ([25](./25_Named_Stack_Shapes_ELK_PLG_LGTM.md), [26](./26_OSS_Managed_SaaS_And_Hybrid.md)) |
 | 6 | Scorecard attempt ([28](./28_Shape_Scorecard_Drills_And_Maturity.md)) |
+| 7 | Runtime signals named for your languages ([35](./35_Runtime_And_Language_Specific_Signals.md)) |
+| 8 | Estate shape + coverage honesty ([36](./36_Classical_Monolith_And_Distributed_Estates.md), [37](./37_Client_RUM_Coverage_And_EBPF_Amplifiers.md)) |
 
-## Concept chapters (0–34)
+## Concept chapters (0–37)
 
 | # | File | Focus |
 |---|------|--------|
@@ -85,6 +88,9 @@ Floor 6    tools/   Product literacy (after gate)
 | 32 | [On-call and human loop door](./32_On_Call_And_Human_Loop_Door.md) | → Methodologies/3 |
 | 33 | [Kubernetes workload patterns](./33_Kubernetes_Workload_Observability_Patterns.md) | Workload/node/control plane jobs |
 | 34 | [Reference topologies end-to-end](./34_Reference_Topologies_End_To_End.md) | Put it together |
+| 35 | [Runtime and language-specific signals](./35_Runtime_And_Language_Specific_Signals.md) | Node event loop, JVM GC, Go, Python, .NET |
+| 36 | [Classical, monolith, and distributed estates](./36_Classical_Monolith_And_Distributed_Estates.md) | Same jobs; different wiring |
+| 37 | [Client RUM, coverage, eBPF amplifiers](./37_Client_RUM_Coverage_And_EBPF_Amplifiers.md) | Browser reality; inventory; kernel aids |
 
 Each chapter: **Concepts → Disconfirm/Confirm → Advanced → Applications → References** (syllabus / handbook quality bar). Official docs only for API depth.
 

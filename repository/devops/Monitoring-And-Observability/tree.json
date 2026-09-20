@@ -161,7 +161,7 @@
     "path": "0_How_To_Read.md",
     "type": "file",
     "sha": "",
-    "size": 3754
+    "size": 4031
   },
   {
     "name": "1_Paired_Practice_Monitoring_And_Observability.md",
@@ -189,7 +189,7 @@
     "path": "12_Application_And_Service_Monitoring.md",
     "type": "file",
     "sha": "",
-    "size": 2595
+    "size": 2722
   },
   {
     "name": "13_Dependency_And_Peer_Monitoring.md",
@@ -273,7 +273,7 @@
     "path": "23_Continuous_Profiling_And_Events.md",
     "type": "file",
     "sha": "",
-    "size": 2193
+    "size": 2382
   },
   {
     "name": "24_APM_As_A_Product_Shape.md",
@@ -308,7 +308,7 @@
     "path": "28_Shape_Scorecard_Drills_And_Maturity.md",
     "type": "file",
     "sha": "",
-    "size": 2478
+    "size": 2854
   },
   {
     "name": "29_Multi_Env_And_Multi_Tenant_Patterns.md",
@@ -357,7 +357,28 @@
     "path": "34_Reference_Topologies_End_To_End.md",
     "type": "file",
     "sha": "",
-    "size": 3043
+    "size": 3445
+  },
+  {
+    "name": "35_Runtime_And_Language_Specific_Signals.md",
+    "path": "35_Runtime_And_Language_Specific_Signals.md",
+    "type": "file",
+    "sha": "",
+    "size": 5197
+  },
+  {
+    "name": "36_Classical_Monolith_And_Distributed_Estates.md",
+    "path": "36_Classical_Monolith_And_Distributed_Estates.md",
+    "type": "file",
+    "sha": "",
+    "size": 4364
+  },
+  {
+    "name": "37_Client_RUM_Coverage_And_EBPF_Amplifiers.md",
+    "path": "37_Client_RUM_Coverage_And_EBPF_Amplifiers.md",
+    "type": "file",
+    "sha": "",
+    "size": 4130
   },
   {
     "name": "4_Golden_Signals_RED_And_USE.md",
@@ -371,7 +392,7 @@
     "path": "5_Black_Box_White_Box_And_Synthetics.md",
     "type": "file",
     "sha": "",
-    "size": 3130
+    "size": 3354
   },
   {
     "name": "6_Metric_Types_And_Aggregation.md",
@@ -406,6 +427,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 6751
+    "size": 7553
   }
 ]

@@ -25,6 +25,7 @@ Jobs 16–23  → explain craft (logs, traces, dig path, instrumentation)
 Jobs 24–30  → assemble & govern (APM shape, stacks, cost, maturity)
 Jobs 31–32  → doors (cloud sinks/audit; on-call culture)
 Jobs 33–34  → K8s patterns + end-to-end topologies
+Jobs 35–37  → runtime/language signals; classical↔distributed estates; RUM/coverage/eBPF
 Tool folders → later (what / when / why not for named products)
 ```
 
@@ -37,6 +38,7 @@ Tool folders → later (what / when / why not for named products)
 | Packets / NetOps signals | Networks Observability |
 | Synthetic / e2e in CI | CiCd verify |
 | System-design “why monitor” | System-Design-Concepts Observability |
+| Why Node/JVM/Python behave that way | [`Languages/`](../Languages/) (runtime chapters); prod signals → [35](./35_Runtime_And_Language_Specific_Signals.md) |
 
 **What this folder is *not*:** a cert dump, a logo tour, or a paste of every PromQL function. **What it *is*:** the place you finish choosing *what to measure, when to page, and how to dig* before you pick vendors.
 
@@ -60,7 +62,7 @@ Pass the [README](./README.md) gate before tool folders. If you cannot draft an 
 
 ## 3. Applications
 
-**Suggested first stretch:** **0 → 1 → 3 → 4 → 8 → 9 → 16 → 18 → 21 → 25 → 28 → 34**, then remaining numbers, then tool folders.
+**Suggested first stretch:** **0 → 1 → 3 → 4 → 8 → 9 → 16 → 18 → 21 → 25 → 28 → 34 → 35 → 36 → 37**, then remaining numbers, then tool folders.
 
 **Staff checklist for newcomers**
 

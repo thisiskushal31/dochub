@@ -34,7 +34,7 @@ Client → edge → your service (RED + SLI)
 
 **Version labels:** bounded `version` or `revision` helps canary comparison; do not explode with commit SHA high cardinality if series volume hurts ([7](./7_Cardinality_And_Label_Contracts.md)).
 
-**Runtime specifics:** JVM/Go/Python runtime metrics are white-box aids—pair with SLIs, do not replace them.
+**Runtime specifics:** Node event-loop, JVM GC, Go goroutines, Python workers, .NET thread pool—**first-class** white-box aids beside RED. Depth: [35](./35_Runtime_And_Language_Specific_Signals.md). Pair with SLIs; do not replace them.
 
 **Failure mode:** Health checks included in success ratio → SLO lies ([8](./8_SLI_SLO_SLA_And_Error_Budgets.md)).
 

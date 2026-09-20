@@ -18,6 +18,9 @@ A **shape scorecard** checks whether the *practice* works—independent of vendo
 | Peer + async coverage | [13](./13_Dependency_And_Peer_Monitoring.md)–[14](./14_Batch_Cron_And_Async_Monitoring.md) |
 | Cost owner + retention | [17](./17_Log_Planes_Retention_And_Volume.md), [30](./30_Telemetry_Cost_And_FinOps.md) |
 | Observability plane owned | [26](./26_OSS_Managed_SaaS_And_Hybrid.md) |
+| Runtime signals per language | [35](./35_Runtime_And_Language_Specific_Signals.md) |
+| Estate shape + coverage matrix | [36](./36_Classical_Monolith_And_Distributed_Estates.md), [37](./37_Client_RUM_Coverage_And_EBPF_Amplifiers.md) |
+| Client / synthetic for UX paths | [5](./5_Black_Box_White_Box_And_Synthetics.md), [37](./37_Client_RUM_Coverage_And_EBPF_Amplifiers.md) |
 
 ### Drills
 

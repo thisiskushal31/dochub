@@ -21,6 +21,8 @@ Internet / client region
 
 **Probes vs synthetics:** a probe might be `GET /healthz`; a synthetic might be “login → search → checkout step.” Health endpoints that bypass real dependencies lie—prefer dependency-aware readiness for *orchestration*, and user-path checks for *monitoring*.
 
+**Synthetics vs RUM:** synthetics are controlled outside-in checks; **real user monitoring** captures actual browsers/devices/geos. Use both when UX matters—depth in [37](./37_Client_RUM_Coverage_And_EBPF_Amplifiers.md).
+
 **Disconfirm:** `/health` returning 200 from inside the VPC ≠ users can buy. White-box only ≠ you will catch DNS/TLS/edge failures. Synthetics ≠ load tests (different job).
 
 **Confirm:** Where do you probe from (region, network path)? What user journey is scripted? What white-box signal pairs with a synthetic failure?

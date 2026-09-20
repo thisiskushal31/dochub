@@ -1,6 +1,6 @@
 # 34 — Reference topologies end-to-end
 
-[← Previous](./33_Kubernetes_Workload_Observability_Patterns.md) · [README](./README.md)
+[← Previous](./33_Kubernetes_Workload_Observability_Patterns.md) · [README](./README.md) · [Next →](./35_Runtime_And_Language_Specific_Signals.md)
 
 ## 1. Concepts — put the jobs on one diagram
 
@@ -65,7 +65,9 @@ Correlate via trace_id / shared service labels in Grafana or Kibana
 - Gaps listed against scorecard  
 - README tool gate passed before product deep-dives  
 
-**You are ready for tool folders when:** detect vs explain is crisp, one SLI/SLO exists, dig path works in a drill, and a named shape is chosen.
+**Before tools, also finish:** runtime signals for your languages ([35](./35_Runtime_And_Language_Specific_Signals.md)), estate-shape honesty ([36](./36_Classical_Monolith_And_Distributed_Estates.md)), and RUM/coverage/eBPF gaps ([37](./37_Client_RUM_Coverage_And_EBPF_Amplifiers.md)).
+
+**You are ready for tool folders when:** detect vs explain is crisp, one SLI/SLO exists, dig path works in a drill, named shape is chosen, and runtime/coverage gaps are on a backlog (not invisible).
 
 ## References
 
