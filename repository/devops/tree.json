@@ -11615,11 +11615,123 @@
         "sha": "",
         "children": [
           {
+            "name": "01_What_Is_AppDynamics_And_When.md",
+            "path": "Monitoring-And-Observability/AppDynamics/01_What_Is_AppDynamics_And_When.md",
+            "type": "file",
+            "sha": "",
+            "size": 8566
+          },
+          {
+            "name": "02_Architecture_Controller_Apps_Tiers_Nodes.md",
+            "path": "Monitoring-And-Observability/AppDynamics/02_Architecture_Controller_Apps_Tiers_Nodes.md",
+            "type": "file",
+            "sha": "",
+            "size": 7794
+          },
+          {
+            "name": "03_SaaS_Vs_On_Prem_Controller.md",
+            "path": "Monitoring-And-Observability/AppDynamics/03_SaaS_Vs_On_Prem_Controller.md",
+            "type": "file",
+            "sha": "",
+            "size": 9035
+          },
+          {
+            "name": "04_Install_App_Server_Agents.md",
+            "path": "Monitoring-And-Observability/AppDynamics/04_Install_App_Server_Agents.md",
+            "type": "file",
+            "sha": "",
+            "size": 8441
+          },
+          {
+            "name": "05_Business_Transactions.md",
+            "path": "Monitoring-And-Observability/AppDynamics/05_Business_Transactions.md",
+            "type": "file",
+            "sha": "",
+            "size": 9121
+          },
+          {
+            "name": "06_Snapshots_Call_Graphs_And_Troubleshooting.md",
+            "path": "Monitoring-And-Observability/AppDynamics/06_Snapshots_Call_Graphs_And_Troubleshooting.md",
+            "type": "file",
+            "sha": "",
+            "size": 10634
+          },
+          {
+            "name": "07_Infrastructure_And_Machine_Agents.md",
+            "path": "Monitoring-And-Observability/AppDynamics/07_Infrastructure_And_Machine_Agents.md",
+            "type": "file",
+            "sha": "",
+            "size": 8472
+          },
+          {
+            "name": "08_EUM_Browser_And_Mobile.md",
+            "path": "Monitoring-And-Observability/AppDynamics/08_EUM_Browser_And_Mobile.md",
+            "type": "file",
+            "sha": "",
+            "size": 9345
+          },
+          {
+            "name": "09_Database_Visibility_Literacy.md",
+            "path": "Monitoring-And-Observability/AppDynamics/09_Database_Visibility_Literacy.md",
+            "type": "file",
+            "sha": "",
+            "size": 9063
+          },
+          {
+            "name": "10_Health_Rules_Policies_And_Alerting.md",
+            "path": "Monitoring-And-Observability/AppDynamics/10_Health_Rules_Policies_And_Alerting.md",
+            "type": "file",
+            "sha": "",
+            "size": 9017
+          },
+          {
+            "name": "11_Analytics_And_Log_Literacy.md",
+            "path": "Monitoring-And-Observability/AppDynamics/11_Analytics_And_Log_Literacy.md",
+            "type": "file",
+            "sha": "",
+            "size": 8204
+          },
+          {
+            "name": "12_OpenTelemetry_To_AppDynamics.md",
+            "path": "Monitoring-And-Observability/AppDynamics/12_OpenTelemetry_To_AppDynamics.md",
+            "type": "file",
+            "sha": "",
+            "size": 9014
+          },
+          {
+            "name": "13_Operations_License_And_Pitfalls.md",
+            "path": "Monitoring-And-Observability/AppDynamics/13_Operations_License_And_Pitfalls.md",
+            "type": "file",
+            "sha": "",
+            "size": 8101
+          },
+          {
+            "name": "14_Worked_Example_First_Service.md",
+            "path": "Monitoring-And-Observability/AppDynamics/14_Worked_Example_First_Service.md",
+            "type": "file",
+            "sha": "",
+            "size": 8127
+          },
+          {
+            "name": "15_What_To_Enable_Next_And_When_Not.md",
+            "path": "Monitoring-And-Observability/AppDynamics/15_What_To_Enable_Next_And_When_Not.md",
+            "type": "file",
+            "sha": "",
+            "size": 7670
+          },
+          {
+            "name": "16_API_Automation_And_RBAC.md",
+            "path": "Monitoring-And-Observability/AppDynamics/16_API_Automation_And_RBAC.md",
+            "type": "file",
+            "sha": "",
+            "size": 9358
+          },
+          {
             "name": "README.md",
             "path": "Monitoring-And-Observability/AppDynamics/README.md",
             "type": "file",
             "sha": "",
-            "size": 3657
+            "size": 5374
           }
         ]
       },
@@ -11922,7 +12034,7 @@
             "path": "Monitoring-And-Observability/Elastic/14_What_To_Enable_Next_And_When_Not.md",
             "type": "file",
             "sha": "",
-            "size": 7800
+            "size": 8044
           },
           {
             "name": "15_Cloud_Integrations.md",
@@ -11978,14 +12090,21 @@
             "path": "Monitoring-And-Observability/Elastic/22_CI_CD_Observability.md",
             "type": "file",
             "sha": "",
-            "size": 4760
+            "size": 4826
+          },
+          {
+            "name": "23_ELK_Classic_Setup_And_Monitoring_Placement.md",
+            "path": "Monitoring-And-Observability/Elastic/23_ELK_Classic_Setup_And_Monitoring_Placement.md",
+            "type": "file",
+            "sha": "",
+            "size": 6335
           },
           {
             "name": "README.md",
             "path": "Monitoring-And-Observability/Elastic/README.md",
             "type": "file",
             "sha": "",
-            "size": 5507
+            "size": 5721
           }
         ]
       },
@@ -12535,7 +12654,7 @@
         "path": "Monitoring-And-Observability/25_Named_Stack_Shapes_ELK_PLG_LGTM.md",
         "type": "file",
         "sha": "",
-        "size": 2761
+        "size": 2897
       },
       {
         "name": "26_OSS_Managed_SaaS_And_Hybrid.md",
@@ -12549,7 +12668,7 @@
         "path": "Monitoring-And-Observability/27_Tool_Kinds_By_Job.md",
         "type": "file",
         "sha": "",
-        "size": 2205
+        "size": 2497
       },
       {
         "name": "28_Shape_Scorecard_Drills_And_Maturity.md",
@@ -12675,7 +12794,7 @@
         "path": "Monitoring-And-Observability/README.md",
         "type": "file",
         "sha": "",
-        "size": 9100
+        "size": 9166
       }
     ]
   },

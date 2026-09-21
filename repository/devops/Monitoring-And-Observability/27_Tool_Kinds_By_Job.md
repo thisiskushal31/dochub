@@ -18,7 +18,7 @@ Before opening tool folders, name the **kind** of tool you need. Logos implement
 | Synthetic | Outside-in checks | Provider synthetics, scripted probes |
 | APM suite | Bundled app obs | Datadog, New Relic, AppDynamics, Elastic APM |
 
-**Map to folders in this repo (later depth):** Prometheus, Grafana, Loki, Tempo, Jaeger, OpenTelemetry, Elastic, Datadog, New Relic, AppDynamics, PagerDuty.
+**Map to folders in this repo:** [Prometheus](./Prometheus/README.md), [Grafana](./Grafana/README.md), [Loki](./Loki/README.md), [Tempo](./Tempo/README.md), [Jaeger](./Jaeger/README.md), [OpenTelemetry](./OpenTelemetry/README.md), [Elastic](./Elastic/README.md) (**01–23**), [Datadog](./Datadog/README.md) (**01–26**), [New Relic](./New_Relic/README.md), [AppDynamics](./AppDynamics/README.md) (**01–16**), [PagerDuty](./PagerDuty/README.md).
 
 **Disconfirm:** Picking Grafana before knowing metrics backend ≠ a plan. Paging tool as metrics DB ≠ kind literacy.
 

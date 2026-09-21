@@ -38,6 +38,7 @@ Finish the **core reliability loop** first ([13](./13_Worked_Example_First_Servi
 |----------|---------|
 | Discover, ES\|QL, Kibana dig patterns | [21](./21_Discover_ESQL_And_Kibana_Digs.md) |
 | CI/CD observability (OTel pipelines) | [22](./22_CI_CD_Observability.md) |
+| Classic ELK setup / monitoring placement | [23](./23_ELK_Classic_Setup_And_Monitoring_Placement.md) |
 
 ### Named capabilities to place on the map
 
@@ -87,6 +88,7 @@ Finish the **core reliability loop** first ([13](./13_Worked_Example_First_Servi
 | LLM product in prod | LLM observability (metrics + traces) | [19](./19_Observability_AI.md) |
 | Flaky CI / no deploy correlation | CI/CD Observability | [22](./22_CI_CD_Observability.md) |
 | Dig UI fluency | Discover / ES\|QL | [21](./21_Discover_ESQL_And_Kibana_Digs.md) |
+| “How do we wire ELK / where does Elastic sit?” | Classic ELK + placement | [23](./23_ELK_Classic_Setup_And_Monitoring_Placement.md) |
 | Multi-project serverless digs | CPS literacy + scope training | [21](./21_Discover_ESQL_And_Kibana_Digs.md) |
 | Policy drift / key sprawl | Fleet API + RBAC | [20](./20_API_Fleet_Automation_And_RBAC.md) |
 

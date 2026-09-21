@@ -28,7 +28,7 @@ Hosts · K8s · apps · cloud APIs · synthetics
 | What is Elastic Observability? | [01](./01_What_Is_Elastic_Observability_And_When.md) |
 | How do I run it? | [03](./03_Deploy_Self_Managed_Cloud_And_Serverless.md) → [04](./04_Agent_Fleet_Beats_And_Logstash.md) → [13](./13_Worked_Example_First_Service.md) |
 | How do I dig without drowning the cluster? | [02](./02_Architecture_Stack_And_Data_Plane.md), [05](./05_Logs_Ingest_Discover_And_Streams.md), [11](./11_ILM_Data_Tiers_Retention_And_Cost.md) |
-| How do I dig in Kibana? | [21](./21_Discover_ESQL_And_Kibana_Digs.md) · [05](./05_Logs_Ingest_Discover_And_Streams.md) |
+| How do I set up classic ELK / place Elastic in the stack? | [23](./23_ELK_Classic_Setup_And_Monitoring_Placement.md) · [03](./03_Deploy_Self_Managed_Cloud_And_Serverless.md) |
 | What else does Elastic offer? | [14](./14_What_To_Enable_Next_And_When_Not.md) → [15](./15_Cloud_Integrations.md)–[22](./22_CI_CD_Observability.md) |
 
 Parent `0–37` = monitoring/observability **jobs**. This folder = **Elastic the product**, end to end. Label-cheap logs: [Loki](../Loki/README.md). SaaS peer: [Datadog](../Datadog/README.md).
@@ -74,6 +74,7 @@ Parent `0–37` = monitoring/observability **jobs**. This folder = **Elastic the
 | 20 | [API, Fleet automation, RBAC](./20_API_Fleet_Automation_And_RBAC.md) | Automation; access |
 | 21 | [Discover, ES\|QL, Kibana digs](./21_Discover_ESQL_And_Kibana_Digs.md) | Ad-hoc search; dashboards |
 | 22 | [CI/CD observability](./22_CI_CD_Observability.md) | Pipelines as OTel traces |
+| 23 | [Classic ELK setup and monitoring placement](./23_ELK_Classic_Setup_And_Monitoring_Placement.md) | ELK stand-up; where Elastic sits vs Prom/Loki/SaaS |
 
 ## References
 

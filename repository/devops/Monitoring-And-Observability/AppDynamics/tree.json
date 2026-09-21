@@ -1,9 +1,121 @@
 [
   {
+    "name": "01_What_Is_AppDynamics_And_When.md",
+    "path": "01_What_Is_AppDynamics_And_When.md",
+    "type": "file",
+    "sha": "",
+    "size": 8566
+  },
+  {
+    "name": "02_Architecture_Controller_Apps_Tiers_Nodes.md",
+    "path": "02_Architecture_Controller_Apps_Tiers_Nodes.md",
+    "type": "file",
+    "sha": "",
+    "size": 7794
+  },
+  {
+    "name": "03_SaaS_Vs_On_Prem_Controller.md",
+    "path": "03_SaaS_Vs_On_Prem_Controller.md",
+    "type": "file",
+    "sha": "",
+    "size": 9035
+  },
+  {
+    "name": "04_Install_App_Server_Agents.md",
+    "path": "04_Install_App_Server_Agents.md",
+    "type": "file",
+    "sha": "",
+    "size": 8441
+  },
+  {
+    "name": "05_Business_Transactions.md",
+    "path": "05_Business_Transactions.md",
+    "type": "file",
+    "sha": "",
+    "size": 9121
+  },
+  {
+    "name": "06_Snapshots_Call_Graphs_And_Troubleshooting.md",
+    "path": "06_Snapshots_Call_Graphs_And_Troubleshooting.md",
+    "type": "file",
+    "sha": "",
+    "size": 10634
+  },
+  {
+    "name": "07_Infrastructure_And_Machine_Agents.md",
+    "path": "07_Infrastructure_And_Machine_Agents.md",
+    "type": "file",
+    "sha": "",
+    "size": 8472
+  },
+  {
+    "name": "08_EUM_Browser_And_Mobile.md",
+    "path": "08_EUM_Browser_And_Mobile.md",
+    "type": "file",
+    "sha": "",
+    "size": 9345
+  },
+  {
+    "name": "09_Database_Visibility_Literacy.md",
+    "path": "09_Database_Visibility_Literacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 9063
+  },
+  {
+    "name": "10_Health_Rules_Policies_And_Alerting.md",
+    "path": "10_Health_Rules_Policies_And_Alerting.md",
+    "type": "file",
+    "sha": "",
+    "size": 9017
+  },
+  {
+    "name": "11_Analytics_And_Log_Literacy.md",
+    "path": "11_Analytics_And_Log_Literacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 8204
+  },
+  {
+    "name": "12_OpenTelemetry_To_AppDynamics.md",
+    "path": "12_OpenTelemetry_To_AppDynamics.md",
+    "type": "file",
+    "sha": "",
+    "size": 9014
+  },
+  {
+    "name": "13_Operations_License_And_Pitfalls.md",
+    "path": "13_Operations_License_And_Pitfalls.md",
+    "type": "file",
+    "sha": "",
+    "size": 8101
+  },
+  {
+    "name": "14_Worked_Example_First_Service.md",
+    "path": "14_Worked_Example_First_Service.md",
+    "type": "file",
+    "sha": "",
+    "size": 8127
+  },
+  {
+    "name": "15_What_To_Enable_Next_And_When_Not.md",
+    "path": "15_What_To_Enable_Next_And_When_Not.md",
+    "type": "file",
+    "sha": "",
+    "size": 7670
+  },
+  {
+    "name": "16_API_Automation_And_RBAC.md",
+    "path": "16_API_Automation_And_RBAC.md",
+    "type": "file",
+    "sha": "",
+    "size": 9358
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3657
+    "size": 5374
   }
 ]

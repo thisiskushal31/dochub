@@ -1,6 +1,6 @@
 # 22 — CI/CD observability
 
-[← Previous](./21_Discover_ESQL_And_Kibana_Digs.md) · [README](./README.md)
+[← Previous](./21_Discover_ESQL_And_Kibana_Digs.md) · [README](./README.md) · [Next →](./23_ELK_Classic_Setup_And_Monitoring_Placement.md)
 
 ## 1. Concepts — pipelines as a production system
 

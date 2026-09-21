@@ -95,7 +95,7 @@
     "path": "14_What_To_Enable_Next_And_When_Not.md",
     "type": "file",
     "sha": "",
-    "size": 7800
+    "size": 8044
   },
   {
     "name": "15_Cloud_Integrations.md",
@@ -151,13 +151,20 @@
     "path": "22_CI_CD_Observability.md",
     "type": "file",
     "sha": "",
-    "size": 4760
+    "size": 4826
+  },
+  {
+    "name": "23_ELK_Classic_Setup_And_Monitoring_Placement.md",
+    "path": "23_ELK_Classic_Setup_And_Monitoring_Placement.md",
+    "type": "file",
+    "sha": "",
+    "size": 6335
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 5507
+    "size": 5721
   }
 ]

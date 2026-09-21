@@ -8,11 +8,11 @@ Named stacks are **shortcuts for shapes**, not religions. Learn the jobs inside;
 
 | Shape | Typical pieces | Center of gravity |
 |-------|----------------|-------------------|
-| **ELK / Elastic** | Elasticsearch, Logstash/Beats/Agent, Kibana (+ APM optional) | Search-centric logs; analytics |
+| **ELK / Elastic** | Elasticsearch, Logstash/Beats/Agent, Kibana (+ APM optional) | Search-centric logs; analytics ([Elastic](./Elastic/README.md), [23 ELK setup](./Elastic/23_ELK_Classic_Setup_And_Monitoring_Placement.md)) |
 | **PLG** | Prometheus, Loki, Grafana | Metrics-first; log streams by labels |
 | **LGTM** | Loki, Grafana, Tempo, Mimir/Prometheus + **Grafana Alloy** (collector; not Agent) | Grafana-unified metrics/logs/traces |
 | **Cloud native suite** | CloudWatch / Cloud Monitoring / Azure Monitor | Provider-integrated ([31](./31_Cloud_Managed_Sinks_And_Audit_Door.md)) |
-| **SaaS APM** | Datadog, New Relic, AppDynamics, … | Bundled UX ([24](./24_APM_As_A_Product_Shape.md)) |
+| **SaaS APM** | Datadog, New Relic, [AppDynamics](./AppDynamics/README.md), … | Bundled UX ([24](./24_APM_As_A_Product_Shape.md)) |
 
 ```text
 Choose shape by: query culture (PromQL vs search), ops staff, multi-cloud need, budget
