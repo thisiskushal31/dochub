@@ -58,6 +58,10 @@ Datadog recommends the **Extension** for Lambda function telemetry. Keep the For
 
 **Step Functions.** Enable when orchestration failures are opaque in single-function traces; correlate state machine executions with child Lambda spans via shared tags.
 
+**Azure / GCP quirks.** Site extensions and Cloud Run sidecars have their own version pins — treat them like Agent upgrades: canary one app, then fleet. Cloud integration metrics for App Service / Cloud Run are still control-plane; request traces still need the extension/sidecar path.
+
+**Dig path reminder.** Serverless monitor → Serverless view (errors/throttles/cold starts) → APM trace → log line with same `request_id` / span id. If that chain breaks, fix tagging before adding more dashboards.
+
 ## 3. Applications — use cases and staff checklist
 
 **Use case 1 — Critical checkout Lambda.** Extension + library tracing + structured logs; dashboard: errors, duration p95, throttles, cold starts, downstream dependency errors; monitor on error rate and throttle, not every duration blip.

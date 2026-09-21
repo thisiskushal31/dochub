@@ -49,6 +49,10 @@ Change and system events (deploys, Agent, integrations, feature flags) as a **ti
 
 **Cost / privacy.** Profiler and Error Tracking are SKUs; enable on SLO services first. Stack traces and profiles can include sensitive strings — SDS and log scrubbing still apply ([20](./20_Security_Products.md)).
 
+**Language runtime notes.** JVM/Go/Python profilers differ in what “CPU” means (wall vs on-CPU) and how allocations appear — read the language page once per stack you run ([parent 35](../35_Runtime_And_Language_Specific_Signals.md) for runtime context). Don’t compare a Go profile percentage to a JVM one as if units matched.
+
+**Regression workflow.** Error Tracking issue “regressed” after deploy + Watchdog faulty deployment + Events spike is one incident, not three pages. Collapse to a single Sev with the deploy `version` in the title; fix or roll back; resolve the issue so reopen detection works next time.
+
 ## 3. Applications — use cases and staff checklist
 
 **Use case 1 — Slow checkout endpoint.** Trace Explorer → Continuous Profiler → fix hot serialization path; confirm p95 drop; keep a monitor on that endpoint SLO.
@@ -67,8 +71,12 @@ Change and system events (deploys, Agent, integrations, feature flags) as a **ti
 - [ ] Watchdog reviewed; not the sole paging path  
 - [ ] Dynamic Instrumentation gated by RBAC  
 - [ ] Usage checked after enable ([11](./11_Cost_Governance_And_Account_Hygiene.md))  
+- [ ] Weekly Watchdog review on the calendar (not “when we remember”)  
+- [ ] Ignore rules for noisy third-party stacks documented  
 
 **Good:** symptom → profile/issue/event → fix → durable monitor. **Bad:** Watchdog spam as culture and Profiler never opened in an incident.
+
+**Dig path.** Slow endpoint → Trace Explorer → Continuous Profiler hot method → fix → confirm p95. Error spike → Error Tracking issue by `version` → Events/Watchdog for deploy → roll back or patch → resolve issue.
 
 ## References
 

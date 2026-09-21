@@ -49,6 +49,12 @@ Three products answer questions APM and host metrics miss: **is the path broken?
 
 **GPU + AI stack.** Utilization alone is not an SLO; pair with job queue lag and LLM latency/token cost. Idle GPUs after batch windows are a Cloud Cost story as much as a Monitoring story.
 
+**CNM vs cloud network metrics.** VPC Flow Logs / cloud firewall metrics via integrations are useful inventory; Network Monitoring’s value is **app-correlated** path performance. Prefer the product that answers the incident question — don’t enable both blindly and double cost.
+
+**USM → APM graduation.** Track a backlog: every USM-only service with an SLO or revenue tag gets a target quarter for real tracing. Leave USM on during graduation so you don’t go blind mid-migration; reconcile Catalog duplicates when both emit.
+
+**Kernel / platform limits.** USM and some network features depend on eBPF / kernel versions — validate on the oldest node pool before declaring “cluster covered.” Document unsupported nodes so on-call doesn’t chase empty metrics.
+
 ## 3. Applications — use cases and staff checklist
 
 **Use case 1 — Uninstrumented legacy API.** Enable USM on one cluster; find the service in Service Map; decide APM instrumentation this sprint or leave USM with clear ownership.
@@ -66,8 +72,12 @@ Three products answer questions APM and host metrics miss: **is the path broken?
 - [ ] Plan to add real APM for top USM services by revenue/SLO  
 - [ ] GPU Monitoring on accelerated node pools; idle + health monitors  
 - [ ] Cost review after enable; RBAC for network maps  
+- [ ] Oldest node pool validated for USM/eBPF prerequisites  
+- [ ] USM→APM graduation backlog exists for SLO services  
 
 **Good:** path proof + golden signals + GPU utilization with owners. **Bad:** org-wide NPM “because we bought it” and USM forever with no APM backlog.
+
+**Dig path.** Page on dependency errors → Service Map (USM or APM) → Network Monitoring for the edge if “connection refused” / DNS → Profiler/APM if the path is healthy but slow. GPU page → utilization + job queue + Cloud Cost allocation tag before buying more cards.
 
 ## References
 

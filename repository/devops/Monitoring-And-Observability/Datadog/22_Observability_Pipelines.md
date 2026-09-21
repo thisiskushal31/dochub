@@ -45,6 +45,12 @@ Use when Agent-side scrubbing isn’t enough, multiple sinks are mandatory, FinO
 
 **BYOC / constrained networks.** When Agent cannot speak to SaaS directly, workers in-VPC forward allowed subsets — document which signals never leave the boundary for compliance.
 
+**Packs and templates.** Start from official Packs for common sources rather than hand-rolled grok for every vendor. Fork a Pack when you need lasting diffs; track upstream Pack upgrades like dependency bumps.
+
+**Metrics and traces through pipelines.** Logs are the common first win; routing metrics/traces adds failure modes (cardinality explosion after remap, broken trace IDs). Prove log dual-ship first; expand signal types with a canary service.
+
+**Ownership boundary.** Platform owns workers and routing policy; app teams own which attributes their services emit. A shared Slack channel for “pipeline dropped my field” beats silent tickets.
+
 ## 3. Applications — use cases and staff checklist
 
 **Use case 1 — Noisy debug source.** One verbose microservice: sample/drop debug before index; keep errors+warnings 100%; verify dig path still works for Sev1.
@@ -63,8 +69,12 @@ Use when Agent-side scrubbing isn’t enough, multiple sinks are mandatory, FinO
 - [ ] Pipeline health dashboards and monitors live  
 - [ ] No unintentional duplicate Agent + pipeline shipping  
 - [ ] Redaction/SDS still on; secrets for sinks rotated  
+- [ ] Before/after indexed GB recorded for FinOps  
+- [ ] SecOps signed off on fields dropped from SIEM route  
 
 **Good:** reduce and route with ownership and simulation. **Bad:** unowned workers dropping fields that audits need.
+
+**When not to reach for Pipelines.** A single noisy debug logger is often fixed with Agent/intake exclusion ([05](./05_Logs_Pipelines_And_Indexes.md)). Reach for Observability Pipelines when you need multi-sink policy, heavy transform, or network-bound collection — not as the default for every exclusion.
 
 ## References
 

@@ -9,26 +9,39 @@
 | **Dashboard** | Explore and explain (not a page by itself) |
 | **Monitor** | Condition → notify (chat, email, PagerDuty) |
 | **SLO** | Target + error budget / burn |
-| **Incident** | Coordinate humans when it matters |
+| **Incident** | Coordinate humans when it matters ([19](./19_Incident_Workflows_And_Collaboration.md)) |
 
-Write **symptom-first** monitors (user-facing latency/errors), not “disk 70%” pages unless that disk is the product ([parent 9](../9_Dashboards_Alerts_And_Pages.md), [10](../10_Alert_Hygiene_And_Burn_Rates.md)). One page path per symptom—don’t also page from three overlapping monitors.
+Write **symptom-first** monitors (user-facing latency/errors), not “disk 70%” pages unless that disk *is* the product ([parent 9](../9_Dashboards_Alerts_And_Pages.md), [10](../10_Alert_Hygiene_And_Burn_Rates.md)). One page path per symptom—do not also page from three overlapping monitors.
 
-SLOs can be metric- or monitor-based. Burn alerts wake people; dashboards don’t.
+SLOs can be metric- or monitor-based (and synthetic-backed). Burn alerts wake people; dashboards do not.
 
-**Disconfirm:** A wall of green dashboards = reliability. Hundreds of warning monitors = coverage.
+**Disconfirm:** A wall of green dashboards = reliability. Hundreds of warning monitors = coverage. SLO without a page = operated SLO.
 
-**Confirm:** Named owner and runbook link on every paging monitor?
+**Confirm:** Named owner and runbook link on every paging monitor? Notification tests into a quiet channel first?
 
-## 2. Advanced
+## 2. Advanced — as-code, composites, noise
 
-Manage monitors as code (Terraform / API) for reviewable change. Composite, anomaly, and Watchdog signals are helpers—not a substitute for knowing your SLIs. Downtime/maintenance windows reduce false pages during deploys.
+Manage monitors and dashboards as code (Terraform / API) once the UI path works ([26](./26_API_Terraform_CLI_And_Account_Admin.md)). Composite, anomaly, outlier, and Watchdog signals are helpers—not a substitute for knowing your SLIs ([18](./18_Profiler_Error_Tracking_Watchdog_And_Events.md)).
 
-## 3. Applications — minimal set for one service
+**Downtime / maintenance** windows reduce false pages during deploys. Tag monitors with `team`/`service` for ownership and mute hygiene.
 
-1. RED dashboard filtered by `service:` + `env:`.  
-2. Latency and error-rate monitors with clear thresholds.  
-3. One SLO on the user journey you care about.  
-4. Notification → on-call only ([PagerDuty](../PagerDuty/README.md)).
+**Evaluation delay and missing data** settings matter for sparse metrics—wrong choices flap or go silent. Log and trace monitors have different query costs than metric monitors—budget Explore abuse.
+
+## 3. Applications — use cases
+
+| Use case | Minimal set |
+|----------|-------------|
+| One HTTP service | RED dashboard; latency + error monitors; one availability/latency SLO |
+| Synthetic journey | Synthetic monitor → page on consecutive failures |
+| Multi-team platform | Terraform monitors; RBAC so only owners edit paging alerts |
+| Burn | Fast-burn page; slow-burn ticket—not both paging |
+
+**Staff checklist**
+
+1. Monitor → runbook link.  
+2. Mute policy during deploys.  
+3. SLO list matches real user journeys from [13](./13_Worked_Example_First_Service.md).  
+4. Quarterly delete unused dashboards and warning-only spam.
 
 ## References
 

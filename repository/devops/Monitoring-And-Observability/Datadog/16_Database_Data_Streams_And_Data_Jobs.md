@@ -55,6 +55,10 @@ Use when checkout, notifications, or ledger updates are event-driven. Pair with 
 
 **Data jobs.** Treat freshness SLOs like availability SLOs: define “data by 06:00” explicitly; page on missed watermark, not job CPU.
 
+**Managed vs self-hosted.** On RDS/Aurora/Cloud SQL, cloud integration metrics (CPU, free storage, connections) still matter — DBM adds the query layer on top. Don’t disable the cloud tile when you turn on DBM; use both in one dashboard. For Kafka, broker integration metrics + Data Streams pathway latency answer different questions (cluster health vs end-to-end lag).
+
+**Change management.** Schema migrations and consumer group rebalances are Events ([18](./18_Profiler_Error_Tracking_Watchdog_And_Events.md)) worth emitting. On-call should open DBM/Data Streams with the deploy timeline visible before guessing.
+
 ## 3. Applications — use cases and staff checklist
 
 **Use case 1 — Checkout OLTP.** DBM on primary Postgres/MySQL; monitors on top time-consuming queries and replication lag; after each schema migration, compare explain plans for the hottest statements.
@@ -73,8 +77,12 @@ Use when checkout, notifications, or ledger updates are event-driven. Pair with 
 - [ ] If async at scale: Data Streams on critical pathways + lag monitors  
 - [ ] `custom_queries` reviewed for PII and tag cardinality  
 - [ ] Data jobs freshness only where user/finance impact is real  
+- [ ] Cloud integration metrics still on dashboards beside DBM  
+- [ ] Consumer lag pages the owning team via Catalog  
 
 **Good:** query name + plan + calling service in one dig. **Bad:** host CPU page while the bad query stays invisible.
+
+**Dig path.** APM dependency slow → DBM Query Metrics / Samples / Explain → calling service deploy Event. User “eventual” pain → Data Streams pathway latency → lagging consumer → scale or fix; broker CPU alone is not the answer.
 
 ## References
 

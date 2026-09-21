@@ -62,6 +62,12 @@ Orgs, users, roles/**RBAC**, SAML/SSO, Teams, **Audit Trail**, API key rotation,
 
 **Cost.** Audit Trail and multi-org multiply seats/usage visibility work — still cheaper than an unowned admin estate ([11](./11_Cost_Governance_And_Account_Hygiene.md)).
 
+**Site and org topology.** Pick `DD_SITE` once per org and document it; Agents pointed at the wrong site look “healthy locally” and send nowhere useful. Multi-org splits (prod vs security, or regional) need written rules for what crosses orgs — telemetry sharing is not automatic.
+
+**Terraform resource classes.** Decide which resource types are code-owned (paging monitors, SLOs, log indexes, security detection rules) vs UI-ok (ad-hoc scratch dashboards). Publish the list; enforce with codeowners on the Terraform repo.
+
+**Emergency access.** Break-glass accounts bypass SSO — store credentials offline, alert Audit Trail on use, rotate after each use. Test restoration of a deleted monitor from Terraform before you need it in a Sev1.
+
 ## 3. Applications — use cases and staff checklist
 
 **Use case 1 — Secrets baseline.** API + app keys in secrets manager; inventory quarterly; alert Audit Trail on key create/delete and admin role grants.

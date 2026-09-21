@@ -54,6 +54,12 @@ User-journey oriented monitoring across multi-step digital experiences — beyon
 
 **Governance.** Who can create prod flags? Who approves 100% promote? Document kill-switch runbooks in Notebooks/IDP ([19](./19_Incident_Workflows_And_Collaboration.md), [25](./25_Cloud_Cost_IDP_And_Platform_Services.md)).
 
+**Exposure and stickiness.** Misconfigured sticky bucketing makes experiments unreadable (users flip variants mid-session). Align flag evaluation with analytics identity (anonymous vs logged-in) before declaring statistical results.
+
+**RUM + analytics overlap.** Don’t double-count the same click as RUM action and Product Analytics event without a plan — pick a primary product signal per funnel step to avoid conflicting conversion numbers in leadership reviews.
+
+**Kill-switch drill.** Quarterly: flip off a non-critical flag in prod via the primary system; confirm Event appears and error rate dashboard filters by variant. If the drill fails, the real incident will too.
+
 ## 3. Applications — use cases and staff checklist
 
 **Use case 1 — Low-risk flag migration.** If Datadog is the flag store: one non-critical flag; wire change Events; dashboard error rate by variant.

@@ -53,6 +53,12 @@ Agentic help for alert triage and ops tasks ([23](./23_LLM_Observability_Bits_AI
 
 **Cost.** Workflow runs and Bits AI credits are usage — constrain who can create high-fan-out automations ([11](./11_Cost_Governance_And_Account_Hygiene.md)).
 
+**Declare early, update often.** Empty timelines usually mean people fear “making it official.” Culture fix: declaring an incident is coordination, not blame. Update status at fixed intervals (e.g. every 15 minutes on Sev1) even when the dig is stuck.
+
+**Handoff.** When night → day, the Notebook + Incident timeline is the handoff artifact — not a verbal Slack summary. Require the outgoing commander to leave “current hypothesis / next action / who is waiting on what.”
+
+**Actions catalog hygiene.** Review custom Actions quarterly: dead webhooks, over-privileged tokens, and workflows tied to retired monitors. Treat them like cron jobs in prod.
+
 ## 3. Applications — use cases and staff checklist
 
 **Use case 1 — Sev1 API outage.** Monitor pages PD → commander declares Datadog Incident → Notebook template opened → timeline captures deploy Event and Watchdog story → postmortem linked from Catalog.
@@ -71,6 +77,8 @@ Agentic help for alert triage and ops tasks ([23](./23_LLM_Observability_Bits_AI
 - [ ] At least one enrich-only workflow; mutation actions gated  
 - [ ] Investigation notebook template for top SLO service  
 - [ ] Postmortem location agreed (Datadog vs wiki)  
+- [ ] Security vs availability incident types separated  
+- [ ] Workflow mutation actions require human approval  
 
 **Good:** one timeline next to telemetry; automation that gathers context. **Bad:** auto-remediate without approval; incidents that live only in chat scrollback.
 

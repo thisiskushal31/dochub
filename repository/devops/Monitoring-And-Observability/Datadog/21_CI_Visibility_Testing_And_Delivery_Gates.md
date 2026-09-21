@@ -51,6 +51,12 @@ Codeless / resilient **Synthetic-style** tests (browser recorder, API, mobile, p
 
 **Cost.** Pipeline spans, test runs, and synthetic CI batches all usage-bill. Instrument main + release pipelines first; sample noisy matrix jobs ([11](./11_Cost_Governance_And_Account_Hygiene.md)).
 
+**Flaky-test economics.** A flake that fails 5% of main builds costs more than a slow suite. Quarantine with an owner and expiry; CI Visibility flake views are the backlog, not a shame board. Reintroduce quarantined tests only with a fix commit.
+
+**Deployment Gates vs PR Gates.** PR Gates protect merge; Deployment Gates protect promote-to-prod. Use both only when each has a distinct signal (unit/integration vs staging Continuous Testing / SLO burn). Duplicate gates on the same flaky suite train people to skip.
+
+**IDE plugins.** Useful for shifting left; they must use the same site/org and not embed long-lived org-admin keys on laptops ([26](./26_API_Terraform_CLI_And_Account_Admin.md)).
+
 ## 3. Applications — use cases and staff checklist
 
 **Use case 1 — Main pipeline visibility.** Enable Pipeline Visibility on the primary CI; dashboard: duration, fail rate, flake rate; weekly flake triage owned by platform + team leads.

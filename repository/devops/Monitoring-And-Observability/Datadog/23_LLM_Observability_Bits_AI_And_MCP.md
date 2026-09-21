@@ -52,6 +52,12 @@ Agentic teammate inside Datadog for development, security, and ops workflows (ch
 
 **RBAC.** Separate who can read LLM traces (may contain user content) from who can manage Bits/MCP. Audit Trail for config changes initiated via agents.
 
+**Agent loops.** Multi-tool agents can recurse into huge token bills and span trees. Cap max tool iterations in app code; monitor span count per trace and token totals; page on runaway loops the same way you page on memory leaks.
+
+**Eval ≠ offline only.** Shadow traffic or sampled prod transcripts (privacy-approved) catch drift that golden datasets miss. Annotate failures; feed them back into the dataset so evals track real incidents.
+
+**Bits / MCP blast radius.** Start read-only (query metrics, summarize monitors). Mutating Actions (mute, edit dashboard) only behind the same approval gates as Workflow Automation ([19](./19_Incident_Workflows_And_Collaboration.md)).
+
 ## 3. Applications — use cases and staff checklist
 
 **Use case 1 — Support chatbot.** Instrument model + retrieval + tool spans; dashboard latency/error/token cost; monitor tool failure rate; AI Guard on untrusted user text.

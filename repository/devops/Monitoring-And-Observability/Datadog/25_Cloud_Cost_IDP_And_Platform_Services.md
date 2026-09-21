@@ -56,6 +56,12 @@ Managed portal: live **Catalog**, ownership metadata, **Scorecards**, self-servi
 
 **Extend / DDSQL governance.** Custom apps and powerful queries need RBAC; treat Extend like internal software (review, owners, secrets).
 
+**Cloud Cost vs Usage.** Weekly ritual: (1) Cloud Cost top unallocated / idle, (2) Datadog Usage top custom metrics and log indexes ([11](./11_Cost_Governance_And_Account_Hygiene.md)). Different invoices, same meeting — otherwise each org blames the other bill.
+
+**Catalog completeness.** Aim for coverage of SLO services first, not 100% of every USM blip. Empty ownership fields should fail Scorecards. Sync Teams from IdP/GitHub so pager routing and Catalog don’t drift.
+
+**Integrations as attack surface.** Each enabled integration is credentials + data pull. Prefer least-privilege roles; disable tiles after POCs; review Marketplace publishers like you review vendors.
+
 ## 3. Applications — use cases and staff checklist
 
 **Use case 1 — Chargeback v1.** Connect one cloud billing account; allocate by `team` tag; share monthly report; fix top untagged spenders.

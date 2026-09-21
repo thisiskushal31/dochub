@@ -2,13 +2,13 @@
 
 [← Previous](./06_APM_Tracing_And_Correlation.md) · [README](./README.md) · [Next →](./08_Monitors_SLOs_And_Dashboards.md)
 
-## 1. Concepts
+## 1. Concepts — users and probes
 
 ### Real User Monitoring (RUM)
 
-Sees **real** browser/mobile sessions: performance, errors, usage, and support digs (what one user did). A session bundles views, actions, resources, and errors. Official limits include max session length **4 hours**, idle timeout **15 minutes**, and intake size caps—over-limit events are dropped.
+Sees **real** browser/mobile sessions: performance, errors, usage, and support digs. A session bundles views, actions, resources, and errors. Official limits include max session length **4 hours**, idle timeout **15 minutes**, and intake size caps—over-limit events are dropped.
 
-**Session Replay** plays back web sessions; mask passwords and PII before you enable it widely.
+**Session Replay** plays back web sessions. Mask passwords and PII before wide enablement.
 
 ### Synthetics
 
@@ -20,21 +20,34 @@ Sees **real** browser/mobile sessions: performance, errors, usage, and support d
 | Is the critical journey up from region X? | Synthetics |
 | Concept jobs | [5](../5_Black_Box_White_Box_And_Synthetics.md), [37](../37_Client_RUM_Coverage_And_EBPF_Amplifiers.md) |
 
-**Disconfirm:** Synthetics green ⇒ users happy. Replay without a privacy review.
+**Product Analytics** and **Journey Monitoring** build on client events for funnels and adoption ([24](./24_Feature_Flags_Experiments_And_Product_Analytics.md))—often share RUM SDK setup.
 
-**Confirm:** Which journeys are synthetic SLOs? Is RUM sampling approved?
+**Disconfirm:** Synthetics green ⇒ users happy. Replay without a privacy review. RUM as a substitute for APM.
 
-## 2. Advanced
+**Confirm:** Which journeys are synthetic SLOs? Is RUM sampling/privacy approved by legal?
 
-Private locations for internal apps. Browser tests ↔ APM header injection for end-to-end digs. Organize tests into suites; run batches in CI when Continuous Testing is in scope ([14](./14_What_To_Enable_Next_And_When_Not.md)).
+## 2. Advanced — private locations, CI, correlation
 
-## 3. Applications — what to do
+**Private locations** run synthetics against internal apps. Size capacity like any worker fleet.
 
-1. Add one synthetic API check on the health/login endpoint.  
-2. Add RUM to staging with masking defaults.  
-3. Wire synthetic failure → monitor → page sparingly.
+**CI batches** run Continuous Testing suites in pipelines ([21](./21_CI_Visibility_Testing_And_Delivery_Gates.md)). Flaky browser tests need ownership or they train people to ignore red.
+
+**Correlation.** Browser tests ↔ APM header injection; RUM ↔ backend traces with matching `service`/`env`. Session Replay storage and retention are cost and privacy dimensions—treat like logs.
+
+Mobile RUM (iOS/Android) has its own SDK setup and mapping-file limits—follow current mobile docs.
+
+## 3. Applications — use cases
+
+| Use case | Pattern |
+|----------|---------|
+| Outside-in SLO | Synthetic API check on `/health` or login from two regions |
+| Checkout UX | Browser synthetic + RUM on staging; mask PII; link to APM |
+| Support ticket | RUM session + Replay for one user; then backend trace |
+| Privacy rollout | Staging Replay with masking → legal sign-off → prod sample rate |
+
+**Staff checklist:** mask sensitive inputs; private location capacity; synthetic failure → monitor sparingly; RUM `service`/`env` aligned with APM.
 
 ## References
 
-- [RUM](https://docs.datadoghq.com/real_user_monitoring/) · [Synthetics](https://docs.datadoghq.com/synthetics/)  
+- [RUM](https://docs.datadoghq.com/real_user_monitoring/) · [Session Replay](https://docs.datadoghq.com/real_user_monitoring/session_replay/) · [Synthetics](https://docs.datadoghq.com/synthetics/)  
 - [08 Monitors](./08_Monitors_SLOs_And_Dashboards.md)

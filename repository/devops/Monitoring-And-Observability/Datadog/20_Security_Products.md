@@ -43,6 +43,12 @@
 
 **Routing.** Findings → Workflow Actions → ticket/Slack for SecOps; critical runtime blocks page security on-call, not every availability engineer. Keep evidence export paths for audits that still need cloud-native logs.
 
+**Workload Protection vs host metrics.** Runtime threats (cryptominer, suspicious exec) are not the same as CPU saturation pages. Wire Workload signals to SecOps; keep infra CPU with SRE. Shared hosts need clear dual-routing so neither team drops the page.
+
+**Code Security in the delivery loop.** SCA/SAST findings should appear where developers already work (PR / IDP scorecards ([25](./25_Cloud_Cost_IDP_And_Platform_Services.md))), not only in a security console. Severity without a fix owner becomes wallpaper.
+
+**AI Guard + LLM Observability.** Guard blocks/alerts without traces make tuning guesswork; traces without Guard leave prompt injection as a pure app bug. Enable both on the same `service` before public launch ([23](./23_LLM_Observability_Bits_AI_And_MCP.md)).
+
 ## 3. Applications — use cases and staff checklist
 
 **Use case 1 — SDS on day zero.** Enable Sensitive Data Scanner on log pipelines (and spans if APM is on); fix top findings; make SDS a gate for new indexes.
@@ -61,8 +67,12 @@
 - [ ] Security vs availability paging paths separated  
 - [ ] Code Security/SCA backlog owned by eng, not ignored in Datadog UI  
 - [ ] Cloud audit retention still satisfied outside Datadog where required  
+- [ ] Workload Protection signals routed to SecOps, not only SRE  
+- [ ] AI Guard planned for any public LLM/`agent` service  
 
 **Good:** detect + posture + runtime with named security owners. **Bad:** enable every Security tile, page SRE for all of it, skip SDS.
+
+**Enable order that usually works.** SDS → Cloud Security (primary account) → AAP on one public APM service → Workload on critical node pools → SIEM detections with triage tiers → Code Security in PR → AI Guard with LLM Observability. Skip ahead only when a concrete threat model demands it.
 
 ## References
 

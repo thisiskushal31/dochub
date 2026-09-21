@@ -4,9 +4,9 @@
 
 ## 1. Concepts — the whole platform in one place
 
-Finish the **core reliability loop** first ([13](./13_Worked_Example_First_Service.md)): Agent → unified tags → metrics/APM/logs → monitors/SLOs. Then enable **one** row below with an owner and a Usage check ([11](./11_Cost_Governance_And_Account_Hygiene.md)).
+Finish the **core reliability loop** first ([13](./13_Worked_Example_First_Service.md)): Agent → unified tags → metrics/APM/logs → monitors/SLOs. Then enable **one** adjacent capability at a time with an owner and a Usage check ([11](./11_Cost_Governance_And_Account_Hygiene.md)).
 
-### Core observability (chapters 01–13)
+### Core observability (01–13)
 
 | Need | Chapter |
 |------|---------|
@@ -21,7 +21,7 @@ Finish the **core reliability loop** first ([13](./13_Worked_Example_First_Servi
 | OpenTelemetry | [10](./10_OpenTelemetry_To_Datadog.md) |
 | Day-2 ops | [12](./12_Operations_Pitfalls_And_Staff_Checklist.md) |
 
-### Application & data depth
+### Application and data depth (15–18)
 
 | Offering | Chapter |
 |----------|---------|
@@ -30,16 +30,16 @@ Finish the **core reliability loop** first ([13](./13_Worked_Example_First_Servi
 | Network Monitoring, USM, GPU | [17](./17_Network_USM_And_GPU_Monitoring.md) |
 | Profiler, Error Tracking, Watchdog, Events | [18](./18_Profiler_Error_Tracking_Watchdog_And_Events.md) |
 
-### Respond, secure, ship
+### Respond, secure, ship (19–22)
 
 | Offering | Chapter |
 |----------|---------|
 | Incident, Workflows/Actions, Notebooks | [19](./19_Incident_Workflows_And_Collaboration.md) |
 | Security (SIEM, Cloud Security, AAP, Code Security, AI Guard, SDS, Workload) | [20](./20_Security_Products.md) |
-| CI Visibility, Continuous Testing, gates, test optimization | [21](./21_CI_Visibility_Testing_And_Delivery_Gates.md) |
-| Observability Pipelines / BYOC-style routing | [22](./22_Observability_Pipelines.md) |
+| CI Visibility, Continuous Testing, gates | [21](./21_CI_Visibility_Testing_And_Delivery_Gates.md) |
+| Observability Pipelines | [22](./22_Observability_Pipelines.md) |
 
-### AI, product, platform, admin
+### AI, product, platform, admin (23–26)
 
 | Offering | Chapter |
 |----------|---------|
@@ -48,21 +48,44 @@ Finish the **core reliability loop** first ([13](./13_Worked_Example_First_Servi
 | Cloud Cost, IDP, Cloudcraft, DDSQL, Extend, Integrations | [25](./25_Cloud_Cost_IDP_And_Platform_Services.md) |
 | API, Terraform, CLI, account/RBAC/audit | [26](./26_API_Terraform_CLI_And_Account_Admin.md) |
 
-### Also part of Datadog (covered inside the chapters above)
+**Disconfirm:** Enabling five products in one week without owners. Using this map as a substitute for finishing [13](./13_Worked_Example_First_Service.md).
 
-Session Replay, Mobile app, Reference tables, Change/Deployment/PR gates, Delivery performance, Source code integration, Sensitive Data Scanner, Marketplace integrations, Partner/MSP patterns, Administrators guide topics, Disaster-recovery/org topology notes—see the linked chapter rather than a separate file for each doc bucket.
+**Confirm:** Core loop green? Named owner + Usage baseline before the next enable?
 
-## 2. When Datadog should not be the only answer
+## 2. Advanced — enablement order and pitfalls
 
-- PromQL + self-hosted LGTM is the mandated skill/stack ([Grafana](../Grafana/README.md)).  
-- Budget cannot absorb SaaS cardinality/ingest.  
-- Compliance **audit** evidence must live in cloud-native audit products even if Datadog is present ([Cloud/30](../../Cloud/30_Cloud_Observability_And_Audit_Doors.md)).
+**Suggested order after the core loop:** (1) Error Tracking / Watchdog insights you will act on, (2) DBM or Data Streams if those are your digs, (3) Synthetics on the SLO journey, (4) Security SDS early if logs are broad, (5) CI Visibility when pipeline flakiness burns you, (6) everything else with a written why.
 
-## 3. Applications — pick next week’s enable
+**Pitfalls**
 
-1. Core loop green for one service.  
-2. Choose **one** non-core chapter (15–26).  
-3. Re-check Usage before/after; keep a named owner.
+| Pitfall | Why it hurts |
+|---------|----------------|
+| NPM/DBM org-wide day one | Cost + alert noise without owners |
+| Security paging SRE by default | Wrong on-call; alert fatigue |
+| LLM Observability without PII policy | Compliance incident |
+| Observability Pipelines without on-call | Second platform nobody owns |
+| Feature Flags as second system of record | Split-brain releases |
+
+When Datadog should not be the only answer: PromQL/LGTM mandate ([Grafana](../Grafana/README.md)); budget cannot absorb SaaS cardinality; cloud **audit** evidence must stay in cloud-native audit products ([Cloud/30](../../Cloud/30_Cloud_Observability_And_Audit_Doors.md)).
+
+## 3. Applications — use-case driven picks
+
+| If this is your pain… | Enable next | Chapter |
+|-----------------------|-------------|---------|
+| “DB is slow” without query truth | Database Monitoring | [16](./16_Database_Data_Streams_And_Data_Jobs.md) |
+| Kafka/SQS lag cascades | Data Streams | [16](./16_Database_Data_Streams_And_Data_Jobs.md) |
+| Uninstrumented brownfield services | USM, then APM on critical paths | [17](./17_Network_USM_And_GPU_Monitoring.md) |
+| Same exception 10k times | Error Tracking | [18](./18_Profiler_Error_Tracking_Watchdog_And_Events.md) |
+| Hot method after slow trace | Continuous Profiler | [18](./18_Profiler_Error_Tracking_Watchdog_And_Events.md) |
+| Sev1 chaos in Slack threads | Incident Response | [19](./19_Incident_Workflows_And_Collaboration.md) |
+| Cloud misconfig / runtime threats | Security suite (scoped) | [20](./20_Security_Products.md) |
+| Flaky CI / no deploy correlation | CI Visibility + deploy events | [21](./21_CI_Visibility_Testing_And_Delivery_Gates.md) |
+| Log bill dominates | Observability Pipelines / exclusions | [22](./22_Observability_Pipelines.md) |
+| LLM features in prod | LLM Observability + AI Guard | [23](./23_LLM_Observability_Bits_AI_And_MCP.md) |
+| Chargeback fights | Cloud Cost + tag rules | [25](./25_Cloud_Cost_IDP_And_Platform_Services.md) |
+| Monitor drift / key sprawl | Terraform + Audit Trail | [26](./26_API_Terraform_CLI_And_Account_Admin.md) |
+
+**Staff checklist:** one enable per week max; Usage before/after; kill criteria written; link back to core dig path.
 
 ## References
 

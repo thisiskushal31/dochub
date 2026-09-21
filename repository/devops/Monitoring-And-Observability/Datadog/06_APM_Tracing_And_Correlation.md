@@ -8,33 +8,44 @@ APM needs an **Agent** that accepts traces **and** **instrumentation** in the ap
 
 | Approach | When |
 |----------|------|
-| **Single Step Instrumentation (SSI)** | Fastest path—install/configure libraries with Agent install flags; little or no code change |
+| **Single Step Instrumentation (SSI)** | Fastest path—install/configure libraries with Agent install; little or no code change |
 | **Language tracing libraries** (`ddtrace`, etc.) | Need control, custom spans, or SSI not available |
-| **OpenTelemetry** | Vendor-neutral SDKs; export OTLP to Datadog ([10](./10_OpenTelemetry_To_Datadog.md)) |
-| **Dynamic Instrumentation** | Add spans from the UI without redeploy—use carefully in prod |
+| **OpenTelemetry** | Vendor-neutral SDKs; export to Datadog ([10](./10_OpenTelemetry_To_Datadog.md)) |
+| **Dynamic Instrumentation** | Add spans from the UI without redeploy—gate who can use it |
 
-### Minimal host flow (official getting-started shape)
+### Minimal flow
 
-1. Agent 7 with APM instrumentation enabled for your language (SSI install script sets `DD_APM_INSTRUMENTATION_*` and API key/site).  
+1. Agent 7 with APM enabled (SSI install sets `DD_APM_INSTRUMENTATION_*` plus API key/site).  
 2. Set `DD_SERVICE` (and `DD_ENV` / `DD_VERSION`).  
 3. Generate traffic.  
 4. **APM → Services** then **APM → Traces**; open a flame graph.
 
-Custom spans: install the language SDK, create spans/tags in code, run under the tracer launcher when required (e.g. `ddtrace-run` for Python).
-
-Control cost with **ingestion sampling** and **retention filters**—100% forever is a choice, not a default ([parent 20](../20_Sampling_Strategies.md)).
+Custom spans: install the language SDK, create spans/tags in code, run under the tracer launcher when required (e.g. `ddtrace-run` for Python). Control cost with **ingestion sampling** and **retention filters**—100% forever is a choice ([parent 20](../20_Sampling_Strategies.md)).
 
 **Disconfirm:** Agent installed, zero library/SSI ⇒ empty APM. Full Datadog SDK **and** full OTel export with no plan ⇒ double spans and double cost.
 
-**Confirm:** Same `service`/`env`/`version` on metrics, logs, and traces?
+**Confirm:** Same `service`/`env`/`version` on metrics, logs, and traces? Sampling policy written?
 
-## 2. Advanced
+## 2. Advanced — catalog, sampling, correlation
 
-Service Catalog / ownership metadata (`service.datadog.yaml`, tags) helps on-call. Continuous Profiler sits beside APM for CPU/memory hotspots. Error Tracking aggregates exceptions across signals.
+**Service Catalog / ownership** metadata (`service.datadog.yaml`, tags) helps on-call. Continuous Profiler sits beside APM for CPU/memory hotspots ([18](./18_Profiler_Error_Tracking_Watchdog_And_Events.md)). Error Tracking aggregates exceptions across APM/logs/RUM.
 
-## 3. Applications — dig path
+**Ingestion vs retention.** Agent/SDK sampling decides what is sent; retention filters decide what stays searchable. Tune both or FinOps and engineers fight.
 
-Page → monitor → dashboard → **trace** → **log** / error ([parent 21](../21_Correlation_And_Dig_Methodology.md)). Practice once in staging before you need it at 3am.
+**Correlation.** Unified tags + log injection + RUM/Synthetics link headers make metric→trace→log→user digs possible ([parent 21](../21_Correlation_And_Dig_Methodology.md)). Database and cache spans may omit host on purpose—do not “fix” that away blindly.
+
+**Universal Service Monitoring** can show golden signals without code ([17](./17_Network_USM_And_GPU_Monitoring.md))—use as a bridge to real APM, not a permanent substitute for critical paths.
+
+## 3. Applications — use cases
+
+| Use case | What to do |
+|----------|------------|
+| First traced service | SSI or SDK on staging; confirm Service Catalog entry ([13](./13_Worked_Example_First_Service.md)) |
+| Custom business span | Code instrumentation + meaningful span tags (bounded) |
+| Latency regression | Compare by `version`; Watchdog faulty deploy ([18](./18_Profiler_Error_Tracking_Watchdog_And_Events.md)) |
+| On-call dig | Page → monitor → dashboard → trace → log |
+
+**Staff checklist:** one instrumentation path per runtime; sampling/retention documented; exemplars/trace links from RED monitors; practice dig in staging.
 
 ## References
 
