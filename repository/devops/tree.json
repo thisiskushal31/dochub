@@ -11731,7 +11731,7 @@
             "path": "Monitoring-And-Observability/AppDynamics/README.md",
             "type": "file",
             "sha": "",
-            "size": 5374
+            "size": 5443
           }
         ]
       },
@@ -12104,7 +12104,7 @@
             "path": "Monitoring-And-Observability/Elastic/README.md",
             "type": "file",
             "sha": "",
-            "size": 5721
+            "size": 5771
           }
         ]
       },
@@ -12119,63 +12119,119 @@
             "path": "Monitoring-And-Observability/Grafana/01_What_Is_Grafana_And_When.md",
             "type": "file",
             "sha": "",
-            "size": 2221
+            "size": 6578
           },
           {
-            "name": "02_LGTM_Stack_And_Modern_Setup.md",
-            "path": "Monitoring-And-Observability/Grafana/02_LGTM_Stack_And_Modern_Setup.md",
+            "name": "02_Architecture_UI_Datasources_And_Plugins.md",
+            "path": "Monitoring-And-Observability/Grafana/02_Architecture_UI_Datasources_And_Plugins.md",
             "type": "file",
             "sha": "",
-            "size": 3438
+            "size": 5564
           },
           {
-            "name": "03_Grafana_Alloy_Collector.md",
-            "path": "Monitoring-And-Observability/Grafana/03_Grafana_Alloy_Collector.md",
+            "name": "03_LGTM_Stack_And_Collector_Generations.md",
+            "path": "Monitoring-And-Observability/Grafana/03_LGTM_Stack_And_Collector_Generations.md",
             "type": "file",
             "sha": "",
-            "size": 4127
+            "size": 5792
           },
           {
-            "name": "04_Alloy_Topologies_And_LGTM_Pipelines.md",
-            "path": "Monitoring-And-Observability/Grafana/04_Alloy_Topologies_And_LGTM_Pipelines.md",
+            "name": "04_Grafana_Alloy_Concepts.md",
+            "path": "Monitoring-And-Observability/Grafana/04_Grafana_Alloy_Concepts.md",
             "type": "file",
             "sha": "",
-            "size": 4654
+            "size": 5855
           },
           {
-            "name": "05_Datasources_Explore_And_Correlation.md",
-            "path": "Monitoring-And-Observability/Grafana/05_Datasources_Explore_And_Correlation.md",
+            "name": "05_Grafana_Agent_Legacy_Static_Flow_Operator.md",
+            "path": "Monitoring-And-Observability/Grafana/05_Grafana_Agent_Legacy_Static_Flow_Operator.md",
             "type": "file",
             "sha": "",
-            "size": 1996
+            "size": 5691
           },
           {
-            "name": "06_Dashboards_Provisioning_As_Code.md",
-            "path": "Monitoring-And-Observability/Grafana/06_Dashboards_Provisioning_As_Code.md",
+            "name": "06_Topologies_And_Signal_Pipelines.md",
+            "path": "Monitoring-And-Observability/Grafana/06_Topologies_And_Signal_Pipelines.md",
             "type": "file",
             "sha": "",
-            "size": 1482
+            "size": 5689
           },
           {
-            "name": "07_Alerting_OnCall_And_Boundaries.md",
-            "path": "Monitoring-And-Observability/Grafana/07_Alerting_OnCall_And_Boundaries.md",
+            "name": "07_Explore_Correlation_And_Dashboard_Model.md",
+            "path": "Monitoring-And-Observability/Grafana/07_Explore_Correlation_And_Dashboard_Model.md",
             "type": "file",
             "sha": "",
-            "size": 1870
+            "size": 5549
           },
           {
-            "name": "08_Worked_Example_Alloy_To_Grafana.md",
-            "path": "Monitoring-And-Observability/Grafana/08_Worked_Example_Alloy_To_Grafana.md",
+            "name": "08_Alerting_Boundaries_And_Access_Model.md",
+            "path": "Monitoring-And-Observability/Grafana/08_Alerting_Boundaries_And_Access_Model.md",
             "type": "file",
             "sha": "",
-            "size": 3255
+            "size": 5506
+          },
+          {
+            "name": "09_Deploy_Grafana_OSS_Enterprise_Cloud.md",
+            "path": "Monitoring-And-Observability/Grafana/09_Deploy_Grafana_OSS_Enterprise_Cloud.md",
+            "type": "file",
+            "sha": "",
+            "size": 6378
+          },
+          {
+            "name": "10_Implement_Alloy_Datasources_And_Explore.md",
+            "path": "Monitoring-And-Observability/Grafana/10_Implement_Alloy_Datasources_And_Explore.md",
+            "type": "file",
+            "sha": "",
+            "size": 5361
+          },
+          {
+            "name": "11_Dashboards_Variables_And_First_Alert.md",
+            "path": "Monitoring-And-Observability/Grafana/11_Dashboards_Variables_And_First_Alert.md",
+            "type": "file",
+            "sha": "",
+            "size": 6229
+          },
+          {
+            "name": "12_Worked_Example_First_Grafana_Dig.md",
+            "path": "Monitoring-And-Observability/Grafana/12_Worked_Example_First_Grafana_Dig.md",
+            "type": "file",
+            "sha": "",
+            "size": 6302
+          },
+          {
+            "name": "13_Scale_Topologies_Migrate_Agent_To_Alloy.md",
+            "path": "Monitoring-And-Observability/Grafana/13_Scale_Topologies_Migrate_Agent_To_Alloy.md",
+            "type": "file",
+            "sha": "",
+            "size": 5867
+          },
+          {
+            "name": "14_Provisioning_As_Code_And_GitOps.md",
+            "path": "Monitoring-And-Observability/Grafana/14_Provisioning_As_Code_And_GitOps.md",
+            "type": "file",
+            "sha": "",
+            "size": 5951
+          },
+          {
+            "name": "15_IRM_OnCall_SSO_And_RBAC_In_Practice.md",
+            "path": "Monitoring-And-Observability/Grafana/15_IRM_OnCall_SSO_And_RBAC_In_Practice.md",
+            "type": "file",
+            "sha": "",
+            "size": 5890
+          },
+          {
+            "name": "16_What_To_Enable_Next_And_When_Not.md",
+            "path": "Monitoring-And-Observability/Grafana/16_What_To_Enable_Next_And_When_Not.md",
+            "type": "file",
+            "sha": "",
+            "size": 6812
           },
           {
             "name": "README.md",
             "path": "Monitoring-And-Observability/Grafana/README.md",
             "type": "file",
             "sha": "",
-            "size": 4432
+            "size": 7365
           }
         ]
       },
@@ -12467,6 +12523,21 @@
         ]
       },
       {
+        "name": "Splunk",
+        "path": "Monitoring-And-Observability/Splunk",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Monitoring-And-Observability/Splunk/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 5121
+          }
+        ]
+      },
+      {
         "name": "Tempo",
         "path": "Monitoring-And-Observability/Tempo",
         "type": "dir",
@@ -12654,7 +12725,7 @@
         "path": "Monitoring-And-Observability/25_Named_Stack_Shapes_ELK_PLG_LGTM.md",
         "type": "file",
         "sha": "",
-        "size": 2897
+        "size": 3056
       },
       {
         "name": "26_OSS_Managed_SaaS_And_Hybrid.md",
@@ -12668,7 +12739,7 @@
         "path": "Monitoring-And-Observability/27_Tool_Kinds_By_Job.md",
         "type": "file",
         "sha": "",
-        "size": 2497
+        "size": 2544
       },
       {
         "name": "28_Shape_Scorecard_Drills_And_Maturity.md",
@@ -12794,7 +12865,7 @@
         "path": "Monitoring-And-Observability/README.md",
         "type": "file",
         "sha": "",
-        "size": 9166
+        "size": 9420
       }
     ]
   },

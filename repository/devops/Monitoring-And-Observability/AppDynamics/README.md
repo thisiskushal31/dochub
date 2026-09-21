@@ -29,7 +29,7 @@ Apps · tiers · nodes · browsers / mobile · hosts
 | Host digs / real-user correlation? | [07](./07_Infrastructure_And_Machine_Agents.md) · [08](./08_EUM_Browser_And_Mobile.md) |
 | What else does AppD offer? | [15](./15_What_To_Enable_Next_And_When_Not.md) → [09](./09_Database_Visibility_Literacy.md)–[16](./16_API_Automation_And_RBAC.md) |
 
-Parent `0–37` = monitoring/observability **jobs**. This folder = **AppDynamics the product**, end to end. SaaS peers: [Datadog](../Datadog/README.md), [New Relic](../New_Relic/README.md). Exit / dual-export literacy: [OpenTelemetry](../OpenTelemetry/README.md).
+Parent `0–37` = monitoring/observability **jobs**. This folder = **AppDynamics the product**, end to end. SaaS peers: [Datadog](../Datadog/README.md), [New Relic](../New_Relic/README.md). Classic SPL search (not this folder): [Splunk](../Splunk/README.md). Exit / dual-export literacy: [OpenTelemetry](../OpenTelemetry/README.md).
 
 | | |
 |--|--|

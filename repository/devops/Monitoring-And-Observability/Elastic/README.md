@@ -31,7 +31,7 @@ Hosts · K8s · apps · cloud APIs · synthetics
 | How do I set up classic ELK / place Elastic in the stack? | [23](./23_ELK_Classic_Setup_And_Monitoring_Placement.md) · [03](./03_Deploy_Self_Managed_Cloud_And_Serverless.md) |
 | What else does Elastic offer? | [14](./14_What_To_Enable_Next_And_When_Not.md) → [15](./15_Cloud_Integrations.md)–[22](./22_CI_CD_Observability.md) |
 
-Parent `0–37` = monitoring/observability **jobs**. This folder = **Elastic the product**, end to end. Label-cheap logs: [Loki](../Loki/README.md). SaaS peer: [Datadog](../Datadog/README.md).
+Parent `0–37` = monitoring/observability **jobs**. This folder = **Elastic the product**, end to end. Label-cheap logs: [Loki](../Loki/README.md). Search peer (SPL): [Splunk](../Splunk/README.md). SaaS peer: [Datadog](../Datadog/README.md).
 
 | | |
 |--|--|

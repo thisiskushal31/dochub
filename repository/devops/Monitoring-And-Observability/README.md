@@ -101,13 +101,14 @@ Concept gate first ([README checklist](#before-any-tool-folder)). Each folder is
 | Tool | What it does | What you’ll find |
 |------|--------------|------------------|
 | [Prometheus](./Prometheus/README.md) | Pull-based metrics, PromQL, alerting into Alertmanager | Data model, scrape/SD, exporters, PromQL, rules, K8s Operator, first-service path |
-| [Grafana](./Grafana/README.md) | Explore/dashboards across metrics, logs, traces | UI + **Alloy** collector, LGTM wiring, datasources, alerting boundaries |
+| [Grafana](./Grafana/README.md) | Pane of glass + Alloy/Agent collectors (LGTM wiring, Explore, dashboards, alerting boundaries) | Full product track **01–16**: A basic concepts → B advanced concepts → C basic impl → D advanced impl |
 | [OpenTelemetry](./OpenTelemetry/README.md) | Vendor-neutral instrumentation and export | Signals, SDK/Collector literacy, how it feeds backends |
 | [Loki](./Loki/README.md) | Label-oriented log aggregation | Streams/labels, LogQL, shippers, tenancy |
 | [Tempo](./Tempo/README.md) | Trace warehouse (OTLP) | Ingest, TraceQL, metrics-generator, sampling/ops |
 | [Mimir](./Mimir/README.md) | Multi-tenant long-term PromQL metrics | remote_write, tenants/limits, HA dedup, storage |
 | [Jaeger](./Jaeger/README.md) | Distributed tracing UI/backend (classic CNCF path) | When Jaeger fits vs Tempo/SaaS |
 | [Elastic](./Elastic/README.md) | Search-centric logs / Elastic Observability (Stack, Agent/Fleet, APM, ILM, OTel, CI, ELK setup) | Full product track **01–23**: deploy → Agent → dig → page, plus classic ELK placement |
+| [Splunk](./Splunk/README.md) | Classic Splunk Enterprise / Cloud (forwarders, indexes, SPL) | Primer / stub: fit, data plane, vs Elastic/Loki/AppD; chapters planned |
 | [Datadog](./Datadog/README.md) | SaaS observability + security platform (Agent, APM, logs, RUM, CI, AI, Security, …) | Full product track **01–26**: install → dig → page, then serverless/DBM/NPM/security/CI/pipelines/LLM/flags/IDP/API |
 | [New Relic](./New_Relic/README.md) | SaaS APM / observability | Fit, agent model, when it compares to Datadog/OTel |
 | [AppDynamics](./AppDynamics/README.md) | Enterprise APM (Cisco / Splunk AppD — BTs, Controller, EUM, health rules, OTel) | Full product track **01–16**: Wizard → agents → BT dig → page, then DB/Analytics/API |
