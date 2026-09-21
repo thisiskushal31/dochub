@@ -12,7 +12,7 @@ Named stacks are **shortcuts for shapes**, not religions. Learn the jobs inside;
 | **PLG** | Prometheus, Loki, Grafana | Metrics-first; log streams by labels |
 | **LGTM** | Loki, Grafana, Tempo, Mimir/Prometheus + **Grafana Alloy** (collector; not Agent) | Grafana-unified metrics/logs/traces |
 | **Cloud native suite** | CloudWatch / Cloud Monitoring / Azure Monitor | Provider-integrated ([31](./31_Cloud_Managed_Sinks_And_Audit_Door.md)) |
-| **SaaS APM** | Datadog, New Relic, … | Bundled UX ([24](./24_APM_As_A_Product_Shape.md)) |
+| **SaaS APM** | Datadog, New Relic, AppDynamics, … | Bundled UX ([24](./24_APM_As_A_Product_Shape.md)) |
 
 ```text
 Choose shape by: query culture (PromQL vs search), ops staff, multi-cloud need, budget

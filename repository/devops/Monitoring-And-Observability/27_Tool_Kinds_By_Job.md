@@ -16,9 +16,9 @@ Before opening tool folders, name the **kind** of tool you need. Logos implement
 | Alertmanager / routing | Group/inhibit/route | Alertmanager, cloud alert routers |
 | Incident / paging | Wake humans | PagerDuty, Opsgenie, … |
 | Synthetic | Outside-in checks | Provider synthetics, scripted probes |
-| APM suite | Bundled app obs | Datadog, New Relic, Elastic APM |
+| APM suite | Bundled app obs | Datadog, New Relic, AppDynamics, Elastic APM |
 
-**Map to folders in this repo (later depth):** Prometheus, Grafana, Loki, Tempo, Jaeger, OpenTelemetry, Elastic, Datadog, New Relic, PagerDuty.
+**Map to folders in this repo (later depth):** Prometheus, Grafana, Loki, Tempo, Jaeger, OpenTelemetry, Elastic, Datadog, New Relic, AppDynamics, PagerDuty.
 
 **Disconfirm:** Picking Grafana before knowing metrics backend ≠ a plan. Paging tool as metrics DB ≠ kind literacy.
 

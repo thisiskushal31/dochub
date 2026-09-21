@@ -107,9 +107,10 @@ Concept gate first ([README checklist](#before-any-tool-folder)). Each folder is
 | [Tempo](./Tempo/README.md) | Trace warehouse (OTLP) | Ingest, TraceQL, metrics-generator, sampling/ops |
 | [Mimir](./Mimir/README.md) | Multi-tenant long-term PromQL metrics | remote_write, tenants/limits, HA dedup, storage |
 | [Jaeger](./Jaeger/README.md) | Distributed tracing UI/backend (classic CNCF path) | When Jaeger fits vs Tempo/SaaS |
-| [Elastic](./Elastic/README.md) | Search-centric logs / Elastic Observability | ELK-shaped logging when full-text search is the job |
+| [Elastic](./Elastic/README.md) | Search-centric logs / Elastic Observability (Stack, Agent/Fleet, APM, ILM, OTel, CI) | Full product track **01–22**: deploy → Agent → dig → page, then cloud/streams/profiling/security/AI/API/Discover/CI |
 | [Datadog](./Datadog/README.md) | SaaS observability + security platform (Agent, APM, logs, RUM, CI, AI, Security, …) | Full product track **01–26**: install → dig → page, then serverless/DBM/NPM/security/CI/pipelines/LLM/flags/IDP/API |
 | [New Relic](./New_Relic/README.md) | SaaS APM / observability | Fit, agent model, when it compares to Datadog/OTel |
+| [AppDynamics](./AppDynamics/README.md) | Enterprise APM (Cisco AppD) | Primer: business transactions, Controller, vs Datadog/NR/OTel |
 | [PagerDuty](./PagerDuty/README.md) | Page routing and incident response | How alerts become human pages |
 
 ## Further reading

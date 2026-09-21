@@ -1,6 +1,6 @@
 # New Relic
 
-[← Back to Monitoring & observability](../README.md) · [APM shape](../24_APM_As_A_Product_Shape.md) · [OSS/SaaS](../26_OSS_Managed_SaaS_And_Hybrid.md) · [Datadog](../Datadog/README.md)
+[← Back to Monitoring & observability](../README.md) · [APM shape](../24_APM_As_A_Product_Shape.md) · [OSS/SaaS](../26_OSS_Managed_SaaS_And_Hybrid.md) · [Datadog](../Datadog/README.md) · [AppDynamics](../AppDynamics/README.md)
 
 ## 1. Concepts
 
@@ -23,7 +23,7 @@
 | **APM agent vs OTel** | Prefer one path; OTel helps exit/migrate |
 | **Cardinality / attribute rules** | Drop high-churn attributes at ingest |
 | **Alert policies** | Symptom-based; link runbooks |
-| **Vs Datadog** | Pick one primary SaaS ([3](../25_Named_Stack_Shapes_ELK_PLG_LGTM.md)) |
+| **Vs Datadog / AppDynamics** | Pick one primary SaaS ([3](../25_Named_Stack_Shapes_ELK_PLG_LGTM.md)) |
 
 ### Failure modes
 
@@ -46,4 +46,4 @@
 ## References
 
 - [New Relic docs](https://docs.newrelic.com/)  
-- [OpenTelemetry](../OpenTelemetry/README.md) · [Datadog](../Datadog/README.md) · [PagerDuty](../PagerDuty/README.md)  
+- [OpenTelemetry](../OpenTelemetry/README.md) · [Datadog](../Datadog/README.md) · [AppDynamics](../AppDynamics/README.md) · [PagerDuty](../PagerDuty/README.md)  

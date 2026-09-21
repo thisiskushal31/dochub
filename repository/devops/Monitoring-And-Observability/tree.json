@@ -1,5 +1,20 @@
 [
   {
+    "name": "AppDynamics",
+    "path": "AppDynamics",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "AppDynamics/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 3657
+      }
+    ]
+  },
+  {
     "name": "Datadog",
     "path": "Datadog",
     "type": "dir",
@@ -203,11 +218,165 @@
     "sha": "",
     "children": [
       {
+        "name": "01_What_Is_Elastic_Observability_And_When.md",
+        "path": "Elastic/01_What_Is_Elastic_Observability_And_When.md",
+        "type": "file",
+        "sha": "",
+        "size": 8815
+      },
+      {
+        "name": "02_Architecture_Stack_And_Data_Plane.md",
+        "path": "Elastic/02_Architecture_Stack_And_Data_Plane.md",
+        "type": "file",
+        "sha": "",
+        "size": 8331
+      },
+      {
+        "name": "03_Deploy_Self_Managed_Cloud_And_Serverless.md",
+        "path": "Elastic/03_Deploy_Self_Managed_Cloud_And_Serverless.md",
+        "type": "file",
+        "sha": "",
+        "size": 7485
+      },
+      {
+        "name": "04_Agent_Fleet_Beats_And_Logstash.md",
+        "path": "Elastic/04_Agent_Fleet_Beats_And_Logstash.md",
+        "type": "file",
+        "sha": "",
+        "size": 8480
+      },
+      {
+        "name": "05_Logs_Ingest_Discover_And_Streams.md",
+        "path": "Elastic/05_Logs_Ingest_Discover_And_Streams.md",
+        "type": "file",
+        "sha": "",
+        "size": 8280
+      },
+      {
+        "name": "06_Metrics_Infra_And_Hosts.md",
+        "path": "Elastic/06_Metrics_Infra_And_Hosts.md",
+        "type": "file",
+        "sha": "",
+        "size": 8687
+      },
+      {
+        "name": "07_APM_Tracing_And_RUM.md",
+        "path": "Elastic/07_APM_Tracing_And_RUM.md",
+        "type": "file",
+        "sha": "",
+        "size": 8787
+      },
+      {
+        "name": "08_Synthetics_And_Uptime.md",
+        "path": "Elastic/08_Synthetics_And_Uptime.md",
+        "type": "file",
+        "sha": "",
+        "size": 7580
+      },
+      {
+        "name": "09_Alerting_SLOs_And_Incident_Management.md",
+        "path": "Elastic/09_Alerting_SLOs_And_Incident_Management.md",
+        "type": "file",
+        "sha": "",
+        "size": 8116
+      },
+      {
+        "name": "10_OpenTelemetry_To_Elastic.md",
+        "path": "Elastic/10_OpenTelemetry_To_Elastic.md",
+        "type": "file",
+        "sha": "",
+        "size": 7722
+      },
+      {
+        "name": "11_ILM_Data_Tiers_Retention_And_Cost.md",
+        "path": "Elastic/11_ILM_Data_Tiers_Retention_And_Cost.md",
+        "type": "file",
+        "sha": "",
+        "size": 10475
+      },
+      {
+        "name": "12_Operations_Pitfalls_And_Staff_Checklist.md",
+        "path": "Elastic/12_Operations_Pitfalls_And_Staff_Checklist.md",
+        "type": "file",
+        "sha": "",
+        "size": 8795
+      },
+      {
+        "name": "13_Worked_Example_First_Service.md",
+        "path": "Elastic/13_Worked_Example_First_Service.md",
+        "type": "file",
+        "sha": "",
+        "size": 9572
+      },
+      {
+        "name": "14_What_To_Enable_Next_And_When_Not.md",
+        "path": "Elastic/14_What_To_Enable_Next_And_When_Not.md",
+        "type": "file",
+        "sha": "",
+        "size": 7800
+      },
+      {
+        "name": "15_Cloud_Integrations.md",
+        "path": "Elastic/15_Cloud_Integrations.md",
+        "type": "file",
+        "sha": "",
+        "size": 8296
+      },
+      {
+        "name": "16_Streams_Processors_And_Data_Quality.md",
+        "path": "Elastic/16_Streams_Processors_And_Data_Quality.md",
+        "type": "file",
+        "sha": "",
+        "size": 9342
+      },
+      {
+        "name": "17_Profiling_And_Network_Topology.md",
+        "path": "Elastic/17_Profiling_And_Network_Topology.md",
+        "type": "file",
+        "sha": "",
+        "size": 8596
+      },
+      {
+        "name": "18_Security_SIEM_Literacy.md",
+        "path": "Elastic/18_Security_SIEM_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 8397
+      },
+      {
+        "name": "19_Observability_AI.md",
+        "path": "Elastic/19_Observability_AI.md",
+        "type": "file",
+        "sha": "",
+        "size": 8188
+      },
+      {
+        "name": "20_API_Fleet_Automation_And_RBAC.md",
+        "path": "Elastic/20_API_Fleet_Automation_And_RBAC.md",
+        "type": "file",
+        "sha": "",
+        "size": 7503
+      },
+      {
+        "name": "21_Discover_ESQL_And_Kibana_Digs.md",
+        "path": "Elastic/21_Discover_ESQL_And_Kibana_Digs.md",
+        "type": "file",
+        "sha": "",
+        "size": 5159
+      },
+      {
+        "name": "22_CI_CD_Observability.md",
+        "path": "Elastic/22_CI_CD_Observability.md",
+        "type": "file",
+        "sha": "",
+        "size": 4760
+      },
+      {
         "name": "README.md",
         "path": "Elastic/README.md",
         "type": "file",
         "sha": "",
-        "size": 2676
+        "size": 5507
       }
     ]
   },
@@ -422,7 +591,7 @@
         "path": "New_Relic/README.md",
         "type": "file",
         "sha": "",
-        "size": 2218
+        "size": 2318
       }
     ]
   },
@@ -757,7 +926,7 @@
     "path": "25_Named_Stack_Shapes_ELK_PLG_LGTM.md",
     "type": "file",
     "sha": "",
-    "size": 2748
+    "size": 2761
   },
   {
     "name": "26_OSS_Managed_SaaS_And_Hybrid.md",
@@ -771,7 +940,7 @@
     "path": "27_Tool_Kinds_By_Job.md",
     "type": "file",
     "sha": "",
-    "size": 2179
+    "size": 2205
   },
   {
     "name": "28_Shape_Scorecard_Drills_And_Maturity.md",
@@ -897,6 +1066,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 8850
+    "size": 9100
   }
 ]
