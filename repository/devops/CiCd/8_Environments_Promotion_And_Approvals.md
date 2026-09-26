@@ -28,13 +28,15 @@ Twelve-Factor **dev/prod parity**: keep gaps small (same kind of DB, queue, runt
 
 The ladder above is **where software runs**. How code integrates (trunk vs long-lived env branches) is covered in [Methodologies/4](../Methodologies/4_Branching_And_PR_Practices.md).
 
-In the pipe: build once, pin environments to **tags/digests**, freeze an RC under test while trunk moves, then promote the **same digest** to release SemVer ([4](./4_Artifacts_And_Registries.md), [12](./12_Release_Versioning_And_Changelogs.md), [semver.org](https://semver.org/)).
+In the pipe: build once; pin environments to **named tags** (and keep digests in the audit trail). DEV uses **snapshot tags**; staging/prod use **SemVer** (RC → release) on the **same artifact**. Freeze an RC under test while trunk moves, then promote — never `:latest` ([4](./4_Artifacts_And_Registries.md), [12](./12_Release_Versioning_And_Changelogs.md), [semver.org](https://semver.org/)).
 
 ## Shared DEV (default) and optional parallel DEV
 
-Most teams run **one shared DEV / integration** environment. Snapshot images from the integration line (or PR builds) land there; people coordinate soaks on that stack. That is the normal case — expect it.
+Most teams run **one shared DEV / integration** environment. Snapshot images from the integration line (or PR builds) land there; people coordinate soaks on that stack. That is the normal case — expect it. Snapshot tag formats (date/run/sha — sometimes called “untagged” informally because they are **not** SemVer releases) live in [4](./4_Artifacts_And_Registries.md) and [12](./12_Release_Versioning_And_Changelogs.md). Never point DEV at `:latest`.
 
 **Optional later:** if shared DEV often blocks the team (one long soak freezes everyone else), you *may* stand up short-lived parallel DEVs on the **same snapshot tag** via GitOps, then destroy them. Do not treat parallel stacks as required platform maturity.
+
+**A concrete pool shape when you do add them:** keep **one sticky (long-lived) shared DEV**, plus a small number of **TTL ephemeral DEVs** (often **2 extras**, cap around **3** total). Ephemerals run the same snapshot tag format as shared DEV. When the soak or spike is done, delete the ephemeral (TTL / remove GitOps Application → prune). The sticky DEV stays. That way the team can deploy in parallel without forever-clones burning budget — the idea holds even if a given org has not automated every piece yet.
 
 **Prefer GitOps for every env you do run.** Shared DEV, staging, prod — and any optional ephemeral — should be Argo CD **Applications** (or ApplicationSet children) whose desired state lives in Git (or OCI). Create = sync; destroy = remove desired state and prune. Same idea with Flux or another reconciler. IaC still owns cluster/network/DB when needed; Argo owns *what apps run where*.
 
@@ -43,17 +45,18 @@ Usual:
   apps/dev-shared/     → always on (snapshot tags roll here)
   apps/staging/ … prod/
 
-Optional when contention hurts:
-  apps/dev-<task>/     → ephemeral Application (same snapshot tag)
-       └── remove from Git → Argo prunes → shared DEV untouched
+Optional when contention hurts (example pool):
+  apps/dev-ephemeral-a/   → TTL / destroy when finished
+  apps/dev-ephemeral-b/   → TTL / destroy when finished
+       └── remove from Git → reconciler prunes → sticky DEV untouched
 ```
 
 | Piece | Role |
 |-------|------|
-| **Shared DEV** | Default integration lane; one Application in Git |
-| **Ephemeral DEV** | Optional extra Application when shared DEV is saturated |
-| **Argo CD** | Sync / prune from desired state — not hand `kubectl` |
-| **CI/CD** | Produces digests/tags; envs consume them via Git values |
+| **Shared / sticky DEV** | Default integration lane; one Application in Git |
+| **Ephemeral DEVs (small N)** | Optional extras on the **same snapshot tags**; TTL then prune |
+| **Argo CD / Flux** | Sync / prune from desired state — not hand `kubectl` |
+| **CI/CD** | Produces snapshot / SemVer tags (and digests); Image Updater or CI writes tags into values |
 
 After soak on shared DEV (or an optional parallel), merge and cut an RC when ready ([Methodologies/4](../Methodologies/4_Branching_And_PR_Practices.md), [12](./12_Release_Versioning_And_Changelogs.md)). Destroying an Application does **not** delete the registry image.
 
@@ -66,7 +69,7 @@ Parallel stacks buy flow and cost compute/LB/DB ([Methodologies/8](../Methodolog
 | Guardrail | Why |
 |-----------|-----|
 | TTL / destroy when Git desired state is removed | Orphans are the bill shock |
-| Cap concurrent ephemerals (small N) | Hard budget |
+| Cap concurrent ephemerals (e.g. 2 extras) | Hard budget |
 | Sleep / scale-to-zero when idle | Keeps spend low |
 | Labels: `env=dev-ephemeral`, `owner=…` | Attribution |
 | Smaller than staging | Not a second prod |
@@ -75,14 +78,14 @@ Parallel stacks buy flow and cost compute/LB/DB ([Methodologies/8](../Methodolog
 
 **Deploying** a monolith preview is usually simpler (one app + one DB). **Assembling** a microservices preview is harder. On a **shared DEV**, the hard part is coordination and data pollution — not spinning stacks. If you do run parallels, isolate **writable state** (especially monolith DB); never point ephemerals at shared DEV’s writable DB or at production data.
 
-Default path: build snapshot → **shared DEV** → merge → RC → staging → release digest. Parallel DEVs are a **side option**, not the trunk of the model.
+Default path: build snapshot → **shared / sticky DEV** → merge → RC SemVer → staging → release SemVer (same bytes; digest in the audit trail). Parallel / TTL DEVs are a **side option**, not the trunk of the model.
 
 ## Promote the artifact, inject config
 
 ```text
-Build once → store digest D
-  → deploy D + staging config → verify
-  → deploy D + prod config → verify
+Build once → named tag T (+ digest D for audit)
+  → deploy T + staging config → verify
+  → promote same bytes to release SemVer → deploy + prod config → verify
 ```
 
 Anti-pattern: rebuild “for production” or bake env-specific config into the image ([4](./4_Artifacts_And_Registries.md), [13](./13_Config_Secrets_And_Env_Parity.md)).
@@ -124,12 +127,12 @@ Contract tests in CI help ([10](./10_Testing_In_The_Pipeline.md)).
 | Pitfall | Better |
 |---------|--------|
 | Staging that is nothing like prod | Close parity where it matters (data shape, auth, deps) |
-| Manual promote with a different build | Same digest |
+| Manual promote with a different build | Same artifact (SemVer tag / digest) |
 | Prod secrets on every PR runner | Environment-scoped secrets + OIDC |
 | Approval theater with no automated gates | Automate first; humans for residual risk |
-| Promote by merging `staging` → `prod` branch | Retag digest / update GitOps to the soaked RC |
+| Promote by merging `staging` → `prod` branch | Retag SemVer on soaked bytes / update GitOps to the soaked RC |
 | Staging follows branch tip during RC soak | Pin `v*-rc.*` or digest ([Methodologies/4](../Methodologies/4_Branching_And_PR_Practices.md)) |
-| Fighting over one shared DEV | Coordinate soaks; flags; or *optionally* a short-lived parallel DEV ([Argo_CD](./Argo_CD/README.md)) |
+| Fighting over one shared DEV | Coordinate soaks; flags; or *optionally* sticky + TTL ephemeral DEVs ([Argo_CD](./Argo_CD/README.md)) |
 | Hand-`kubectl` for any env | Desired state in Git; Argo sync / prune |
 | Standing up parallel DEVs by default | One shared DEV first; parallels only when contention is chronic |
 | Ephemeral env without TTL / owner tags | Auto-destroy + FinOps labels ([Methodologies/8](../Methodologies/8_FinOps_Literacy.md)) |

@@ -363,7 +363,7 @@
             "path": "CiCd/Argo_CD/05_Manifest_Sources_Tracking_And_Immutability.md",
             "type": "file",
             "sha": "",
-            "size": 6278
+            "size": 6484
           },
           {
             "name": "06_Sync_Policies_Waves_Projects_And_RBAC.md",
@@ -1391,7 +1391,7 @@
             "path": "CiCd/Flux/09_HelmRelease_And_Helm_Delivery.md",
             "type": "file",
             "sha": "",
-            "size": 3236
+            "size": 3698
           },
           {
             "name": "10_Repository_Structure_Tenancy_And_Multi_Cluster.md",
@@ -1419,7 +1419,7 @@
             "path": "CiCd/Flux/13_Image_Update_Automation.md",
             "type": "file",
             "sha": "",
-            "size": 2391
+            "size": 2474
           },
           {
             "name": "14_Notifications_Alerts_And_Receivers.md",
@@ -2448,7 +2448,7 @@
         "path": "CiCd/1_Pipelines_Build_Test_Deploy.md",
         "type": "file",
         "sha": "",
-        "size": 6122
+        "size": 6435
       },
       {
         "name": "10_Testing_In_The_Pipeline.md",
@@ -2469,7 +2469,7 @@
         "path": "CiCd/12_Release_Versioning_And_Changelogs.md",
         "type": "file",
         "sha": "",
-        "size": 5597
+        "size": 5904
       },
       {
         "name": "13_Config_Secrets_And_Env_Parity.md",
@@ -2574,7 +2574,7 @@
         "path": "CiCd/4_Artifacts_And_Registries.md",
         "type": "file",
         "sha": "",
-        "size": 5993
+        "size": 11942
       },
       {
         "name": "5_Verify_Rollback_And_Synthetic_Tests.md",
@@ -2602,7 +2602,7 @@
         "path": "CiCd/8_Environments_Promotion_And_Approvals.md",
         "type": "file",
         "sha": "",
-        "size": 8653
+        "size": 9844
       },
       {
         "name": "9_Progressive_Delivery_Controllers.md",
@@ -2616,7 +2616,7 @@
         "path": "CiCd/README.md",
         "type": "file",
         "sha": "",
-        "size": 9971
+        "size": 10013
       }
     ]
   },

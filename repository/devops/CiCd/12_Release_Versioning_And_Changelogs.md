@@ -30,7 +30,7 @@ pipeline green on release branch
   → generate/attach notes
 ```
 
-Deploy/prod should still prefer **digest** for exact bytes; the version tag is the human handle.
+Deploy every environment (DEV included) by a **changing SemVer or build tag**; keep the digest in the audit trail for exact bytes. **Never** use `:latest` — it breaks debugging, and Helm often will not refresh the image when the tag string stays `latest` ([4](./4_Artifacts_And_Registries.md)).
 
 ### Container lanes: snapshot → RC → release (trunk-friendly)
 
@@ -38,24 +38,23 @@ SemVer for **services** is usually **git tags + image tags**, not three long-liv
 
 | Source | Image tag idea | Where it runs |
 |--------|----------------|---------------|
-| Integration / `dev` branch (or PR builds) | Snapshot `YYYY.MM.DD.run-….sha-…` | Shared DEV — noisy, continuous |
-| Trunk (`main`) + tag `vX.Y.Z-rc.N` | Pre-release SemVer | Staging soak — **pinned**, immutable |
-| Same digest + tag `vX.Y.Z` | Release SemVer | Production |
+| Trunk (`main`) | **DEV snapshot** (not SemVer release) — e.g. `YYYY.MM.DD.run-00042.sha-<sha7>` (sortable for Image Updater). People sometimes call these “untagged” informally; they are still **real tags**. | Sticky DEV + optional TTL ephemeral DEVs ([8](./8_Environments_Promotion_And_Approvals.md)) |
+| Tag `vX.Y.Z-rc.N` | Pre-release SemVer `X.Y.Z-rc.N` | Staging soak — **pinned**, immutable |
+| Tag `vX.Y.Z` | Release SemVer `X.Y.Z` | Production |
 
 ```text
-dev/integration pushes → many snapshot images (developers keep trying)
+main pushes → many DEV snapshot images (team keeps integrating)
        │
-       ▼ PR merge when “good enough for a candidate”
-main (trunk) ── tag v1.4.0-rc.20 ── image :1.4.0-rc.20 ── staging pins THIS
-       │                              (main may move; RC does not)
-       │ more fixes → v1.4.0-rc.21 → staging moves to rc.21
-       ▼
-approve rc.21 → retag SAME digest → :1.4.0 (+ git tag v1.4.0) → prod
+       ▼ when ready for a candidate
+tag v1.4.0-rc.20 ── image :1.4.0-rc.20 ── staging pins THIS
+       │
+       ▼ approve
+retag SAME bytes → :1.4.0 (+ git tag v1.4.0) → prod
 ```
 
 - **RC and prod share one artifact lineage** — prod is the tested RC, not a cousin rebuild.  
-- **Keep** `v1.4.0-rc.21` after release (audit); automation **adds** the release tag / GitOps prod pointer. Deleting the RC tag is optional cleanup, not the promote mechanism.  
-- Prefer **retag / Image Updater** of the soaked digest over rebuilding on the release tag ([4](./4_Artifacts_And_Registries.md), [24](./24_Workflow_Automation_Beyond_PR_CI.md)).  
+- **Never** deploy `:latest` on any lane (including DEV) — see [4](./4_Artifacts_And_Registries.md).  
+- Prefer **retag / Image Updater** of the soaked artifact over rebuilding on the release tag ([4](./4_Artifacts_And_Registries.md), [24](./24_Workflow_Automation_Beyond_PR_CI.md)).  
 
 Annotated tags (`git tag -a vX.Y.Z -m "…"`) feed release notes and ChatOps ([16](./16_Notifications_Webhooks_And_ChatOps.md)).
 
@@ -96,7 +95,8 @@ Useful when the team agrees on the convention; not mandatory for Continuous Deli
 | Empty “bug fixes” notes forever | Keep a Changelog discipline |
 | Shipping without a rollback identifier | Always know previous good version/digest ([5](./5_Verify_Rollback_And_Synthetic_Tests.md)) |
 | Promote by deleting the RC tag | Add release tag on the **same digest**; keep RC for history |
-| Snapshot “untagged” with no handle | Always keep run/sha (or digest) for what DEV ran |
+| Snapshot “untagged” with no handle | Always use a **DEV snapshot tag** (date/run/sha) — not SemVer, still named ([4](./4_Artifacts_And_Registries.md)) |
+| `:latest` on DEV “because it’s fine” | Snapshot tags + Image Updater allow-list; never deploy `:latest` |
 
 ## Next
 

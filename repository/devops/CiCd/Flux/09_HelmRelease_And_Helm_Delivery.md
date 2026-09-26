@@ -27,9 +27,13 @@ spec:
         namespace: flux-system
   values:
     replicaCount: 2
+    # image.tag: "1.4.0"   # always a changing SemVer/build tag — never "latest"
+                              # (:latest + unchanged values → Helm may not pull new layers)
 ```
 
 Charts can also come from Git or OCI — see the HelmRelease reference for `chartRef` / chart template shapes.
+
+Pin **chart version** and **image tag** separately. Image tags should move via Git commits (CI, Image Automation, Image Updater) — see [CiCd/4](../4_Artifacts_And_Registries.md) and [13](./13_Image_Update_Automation.md). Never set `image.tag: latest` in values for any environment.
 
 ## 2. Advanced concepts
 

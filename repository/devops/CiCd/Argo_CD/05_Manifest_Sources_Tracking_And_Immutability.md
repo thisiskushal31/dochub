@@ -42,7 +42,7 @@ Promotion often means: CI or a human updates `targetRevision` or the image diges
 
 ### Image references
 
-Prefer **digest** (`image@sha256:…`) or immutable SemVer tags in GitOps. Floating `:latest` makes “Synced” meaningless as a security and rollback claim ([4](../4_Artifacts_And_Registries.md), [12](../12_Release_Versioning_And_Changelogs.md)).
+Prefer **changing SemVer or build tags** (or digests) in GitOps — every environment, including DEV. Floating `:latest` makes “Synced” meaningless for debug, security, and rollback; Helm values stuck on `latest` often **do not refresh** the image because the tag string never changes ([4](../4_Artifacts_And_Registries.md), [12](../12_Release_Versioning_And_Changelogs.md)). Use Image Updater / Flux image automation / CI MRs to keep the tag moving.
 
 ### Example GitOps layout
 

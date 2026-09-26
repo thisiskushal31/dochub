@@ -27,10 +27,10 @@ Floor 6  Target adapters     →  map first, then classical → hosts → contai
 |-------|------|------|---------------------------|
 | **1** | Core narrative | [1 — Pipelines: build, test, deploy](./1_Pipelines_Build_Test_Deploy.md) | Draw the loop end-to-end |
 | **2** | Tests in CI | [10 — Testing in the pipeline](./10_Testing_In_The_Pipeline.md) | Map unit→e2e→prod signals to stages |
-| **2** | Immutable output | [4 — Artifacts and registries](./4_Artifacts_And_Registries.md) | Build once; promote by digest |
+| **2** | Immutable output | [4 — Artifacts and registries](./4_Artifacts_And_Registries.md) | Snapshot tags on DEV; SemVer promote; never `:latest` |
 | **2** | Config vs artifact | [13 — Config, secrets, env parity](./13_Config_Secrets_And_Env_Parity.md) | Inject config; no bake-in secrets |
-| **2** | Name releases | [12 — Versioning and changelogs](./12_Release_Versioning_And_Changelogs.md) | SemVer snapshot → RC → release |
-| **3** | Promote path | [8 — Environments, promotion, approvals](./8_Environments_Promotion_And_Approvals.md) | Ladder; shared DEV; optional parallel DEVs |
+| **2** | Name releases | [12 — Versioning and changelogs](./12_Release_Versioning_And_Changelogs.md) | DEV snapshot → SemVer RC → release |
+| **3** | Promote path | [8 — Environments, promotion, approvals](./8_Environments_Promotion_And_Approvals.md) | Ladder; shared DEV; optional sticky + TTL ephemeral DEVs |
 | **3** | How traffic moves | [3 — Deployment strategies](./3_Deployment_Strategies.md) | Rolling / blue-green / canary / flags |
 | **3** | Prove it worked | [5 — Verify, rollback, synthetics](./5_Verify_Rollback_And_Synthetic_Tests.md) | Smoke, rollback vs roll-forward |
 | **4** | Security in the pipe | [15 — Pipeline security and gates](./15_Pipeline_Security_And_Gates.md) | Map gates → [Security/4](../Security/4_Security_Gate_Chain.md) |

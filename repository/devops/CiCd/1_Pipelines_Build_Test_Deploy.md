@@ -43,8 +43,8 @@ Anti-pattern: rebuild “for staging” then again “for production.” That br
 Correct pattern ([4](./4_Artifacts_And_Registries.md)):
 
 1. Build **one** artifact from the commit.  
-2. Identify it by **content digest** (e.g. container `@sha256:…`), not a mutable `:latest` tag alone.  
-3. Deploy/promote **that digest** through environments.
+2. Name it with a **lane tag**: DEV → **snapshot** (`YYYY.MM.DD.run-….sha-…`); staging/prod → **SemVer**. **Never** `:latest`, including DEV.  
+3. Promote RC SemVer → release SemVer on the **same** bytes. Keep updating GitOps/Helm values to the new tag (CI, Argo CD Image Updater, Flux, or a bot). Optional: sticky DEV + TTL ephemeral DEVs on the same snapshot tags ([8](./8_Environments_Promotion_And_Approvals.md)). Details: [4](./4_Artifacts_And_Registries.md).
 
 ## Pipeline as code
 

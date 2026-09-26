@@ -60,7 +60,7 @@
     "path": "09_HelmRelease_And_Helm_Delivery.md",
     "type": "file",
     "sha": "",
-    "size": 3236
+    "size": 3698
   },
   {
     "name": "10_Repository_Structure_Tenancy_And_Multi_Cluster.md",
@@ -88,7 +88,7 @@
     "path": "13_Image_Update_Automation.md",
     "type": "file",
     "sha": "",
-    "size": 2391
+    "size": 2474
   },
   {
     "name": "14_Notifications_Alerts_And_Receivers.md",

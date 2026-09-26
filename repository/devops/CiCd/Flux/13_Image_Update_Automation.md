@@ -55,7 +55,7 @@ Only automate tags that already passed CI. Image automation is not a test suite.
 | Gated production | Automation opens a PR |
 | Fully manual digests | Don’t install image components |
 
-**Good:** every deploy is a Git commit. **Bad:** automate mutable `latest` into production.
+**Good:** every deploy is a Git commit of a **new named tag** (SemVer / filter-matched build tag). **Bad:** automate `:latest` into any environment — including staging/DEV.
 
 ## References
 
