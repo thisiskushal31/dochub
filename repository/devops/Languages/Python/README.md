@@ -12,8 +12,6 @@ This section is written as **whole-engineering** material: **language and runtim
 
 The language evolves by **major** and **minor** releases: syntax (e.g. **`match`**, **`async`/`await`**), **stdlib** additions, and **typing** features are tied to a **minimum** version in **`pyproject.toml`** or policy docs. **CPython**’s **bugfix** and **security** support windows determine how long you can stay on a minor in production before upgrade pressure. Unqualified **`docs.python.org/3/...`** tracks the **current stable** Python 3 docs; for an interpreter you actually run, **`docs.python.org/3.N/...`** matches **`sys.version_info`** and avoids surprises when reading behavior tables. **Python 2.7**-era codebases still appear in operations and legacy services; that line is **frozen** and must not be the target for new design, but staff still need literacy for migration and incident triage.
 
-Authoring link inventories (including **per-minor** doc roots and **2.7** hubs) live under **`DevOps-Handbook-Source`** for scrape passes; the learner-facing handbook does not depend on that tree.
-
 The handbook is **standalone prose**: each chapter explains **what** a topic is, **why** it behaves that way, and **how** to apply it. Narrative is **text first**; **Python**, **shell**, **toml**, or **ini** appear in fenced blocks only where they anchor behavior. Optional figures live under `../../Assets/Languages/Python/`.
 
 ### Chapter structure

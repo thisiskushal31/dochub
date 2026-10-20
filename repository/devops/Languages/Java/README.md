@@ -4,8 +4,6 @@
 
 This section is a **deep dive** into Java: factually correct, standalone, and written so you can go from zero knowledge to using the language in real projects. It answers four things: **What is this language?** **Why is it used?** **How can I use it?** **What are the use cases?** The section is organized as **concepts first, then use cases**. You learn the basics (what Java is, environment, syntax, data types, control flow), then core language (OOP, exceptions, I/O), then concurrency and collections, then build tools and JVM basics, and finally where and how Java is used—DevOps, CI/CD (Jenkins), microservices, security, and use cases by engineering role. Each topic is self-contained and in-depth: the body never attributes content to external sources; explanations come first, then code only when it illustrates the idea. For more depth, use the links in the Further reading section at the end of each file.
 
-**Sources for scraping:** Links used to build this section are listed in [DevOps-Handbook-Source/Languages/scraped/java/java_LINKS.md](../../../DevOps-Handbook-Source/Languages/scraped/java/java_LINKS.md). Content is added in batches from those sources.
-
 ## How to read this section
 
 Read in **number order** for a single path: **concepts first**, then **use cases**.

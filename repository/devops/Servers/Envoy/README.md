@@ -13,7 +13,7 @@
 ## Cross-links
 
 - [Cloud-Native/Istio](../Cloud-Native/Istio/README.md)
-- [Networks Deep Dive](../../../Networks-Deep-Dive/README.md)
+- [Networks Deep Dive](https://github.com/thisiskushal31/Networks-Deep-Dive/blob/main/README.md)
 
 ## Checklist before marking done
 

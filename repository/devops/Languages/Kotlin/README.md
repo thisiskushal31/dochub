@@ -99,10 +99,6 @@ Read in **number order** for a single path: **concepts first**, then **use cases
 
 **Not covered in depth here (by design):** Every Android or framework API, and every KMP platform detail, are only introduced or pointed to in Further reading so the section stays focused and navigable.
 
-## Sources for this section
-
-Link inventory and scraping plan: **DevOps-Handbook-Source/Languages/scraped/kotlin/kotlin_LINKS.md**. Batches are defined there for scraping the official Kotlin docs (Language and Multiplatform) and merging into the handbook.
-
 ## Further reading
 
 - [Kotlin documentation](https://kotlinlang.org/docs/home.html)

@@ -25,7 +25,7 @@ Chapters `01`–`16` follow a consistent body shape:
 3. **Applications and use cases** (production and governance patterns)
 4. **Staff-level review checklist** (what staff actually enforce in review)
 
-**Guardrails:** body text is standalone; code appears only where it clarifies behavior; links live in each chapter’s **References** section; no internal source-map files in the learner-facing handbook.
+**Guardrails:** body text is standalone; code appears only where it clarifies behavior; links live in each chapter’s **References** section.
 
 ## Semantic model (why R feels different from “a normal scripting language”)
 

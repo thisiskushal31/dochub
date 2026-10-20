@@ -314,7 +314,7 @@
         "path": "Automation/README.md",
         "type": "file",
         "sha": "",
-        "size": 1471
+        "size": 1509
       }
     ]
   },
@@ -7487,7 +7487,7 @@
             "path": "Languages/Java/README.md",
             "type": "file",
             "sha": "",
-            "size": 6169
+            "size": 5914
           }
         ]
       },
@@ -7967,7 +7967,7 @@
             "path": "Languages/Kotlin/README.md",
             "type": "file",
             "sha": "",
-            "size": 9410
+            "size": 9153
           }
         ]
       },
@@ -9159,7 +9159,7 @@
             "path": "Languages/Python/README.md",
             "type": "file",
             "sha": "",
-            "size": 12319
+            "size": 12121
           }
         ]
       },
@@ -9286,7 +9286,7 @@
             "path": "Languages/R/README.md",
             "type": "file",
             "sha": "",
-            "size": 6703
+            "size": 6642
           }
         ]
       },
@@ -13784,7 +13784,7 @@
             "path": "Servers/Envoy/README.md",
             "type": "file",
             "sha": "",
-            "size": 504
+            "size": 539
           }
         ]
       },
@@ -13860,7 +13860,7 @@
         "path": "Servers/README.md",
         "type": "file",
         "sha": "",
-        "size": 1804
+        "size": 1842
       }
     ]
   },

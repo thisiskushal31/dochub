@@ -72,7 +72,7 @@
             "path": "DevOps-And-Cloud-Essentials/AWS-Notes/Readme.md",
             "type": "file",
             "sha": "",
-            "size": 933
+            "size": 724
           }
         ]
       },
@@ -156,7 +156,7 @@
                         "path": "DevOps-And-Cloud-Essentials/GCP-Notes/Cloud_Architect/Challenge_GCP_Architecture/Scale_Out_and_Update_a_Containerized_Application_on_a_Kubernetes_Cluster/README.md",
                         "type": "file",
                         "sha": "",
-                        "size": 4812
+                        "size": 4813
                       }
                     ]
                   },
@@ -626,7 +626,7 @@
         "path": "DevOps-And-Cloud-Essentials/Readme.md",
         "type": "file",
         "sha": "",
-        "size": 1004
+        "size": 814
       }
     ]
   },
@@ -653,7 +653,7 @@
             "path": "Languages/Cpp/Readme.md",
             "type": "file",
             "sha": "",
-            "size": 666
+            "size": 504
           }
         ]
       },
@@ -718,7 +718,7 @@
             "path": "Languages/Java/Readme.md",
             "type": "file",
             "sha": "",
-            "size": 579
+            "size": 333
           }
         ]
       },
@@ -771,7 +771,7 @@
         "path": "Machine-Learning/Readme.md",
         "type": "file",
         "sha": "",
-        "size": 566
+        "size": 482
       }
     ]
   },
@@ -786,7 +786,7 @@
         "path": "Markdown-Resources/Readme.md",
         "type": "file",
         "sha": "",
-        "size": 134
+        "size": 135
       }
     ]
   },
@@ -1293,7 +1293,7 @@
             "path": "Web-Dev-Essentials/React/Readme.md",
             "type": "file",
             "sha": "",
-            "size": 662
+            "size": 516
           }
         ]
       }
@@ -1304,6 +1304,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2635
+    "size": 1755
   }
 ]

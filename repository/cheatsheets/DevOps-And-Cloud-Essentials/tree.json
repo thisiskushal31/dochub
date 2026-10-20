@@ -24,7 +24,7 @@
         "path": "AWS-Notes/Readme.md",
         "type": "file",
         "sha": "",
-        "size": 933
+        "size": 724
       }
     ]
   },
@@ -108,7 +108,7 @@
                     "path": "GCP-Notes/Cloud_Architect/Challenge_GCP_Architecture/Scale_Out_and_Update_a_Containerized_Application_on_a_Kubernetes_Cluster/README.md",
                     "type": "file",
                     "sha": "",
-                    "size": 4812
+                    "size": 4813
                   }
                 ]
               },
@@ -578,6 +578,6 @@
     "path": "Readme.md",
     "type": "file",
     "sha": "",
-    "size": 1004
+    "size": 814
   }
 ]
