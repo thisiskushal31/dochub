@@ -18,5 +18,5 @@ After [Security/1_Security_Overview.md](../Security/1_Security_Overview.md): 1 �
 
 ## Cross-references
 
-- [Networks-Deep-Dive/Security/](../Networks-Deep-Dive/Security/README.md) — wire-level TLS, firewalls
-- [DevOps-Handbook/Security/](../DevOps-Handbook/Security/README.md) — pipeline gates, secrets
+- [Networks-Deep-Dive/Security/](https://github.com/thisiskushal31/Networks-Deep-Dive/blob/main/Security/README.md) — wire-level TLS, firewalls
+- [DevOps-Handbook/Security/](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/Security/README.md) — pipeline gates, secrets

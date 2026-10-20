@@ -391,7 +391,7 @@
         "path": "Data-Platform/README.md",
         "type": "file",
         "sha": "",
-        "size": 865
+        "size": 944
       }
     ]
   },
@@ -944,7 +944,7 @@
             "path": "Relational/DuckDB/4_Ops_and_When_to_Use.md",
             "type": "file",
             "sha": "",
-            "size": 3008
+            "size": 2806
           },
           {
             "name": "5_Install_and_First_Use.md",
@@ -958,7 +958,7 @@
             "path": "Relational/DuckDB/README.md",
             "type": "file",
             "sha": "",
-            "size": 2108
+            "size": 2036
           }
         ]
       },
@@ -1294,7 +1294,7 @@
             "path": "Search-Engine/Elasticsearch/3_Searching.md",
             "type": "file",
             "sha": "",
-            "size": 22241
+            "size": 22248
           },
           {
             "name": "4_Joining_Queries.md",

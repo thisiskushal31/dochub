@@ -3,9 +3,9 @@
 </div>   
 
 <p align="center">
-<a href="https://github.com/thisiskushal31/Datastructures-and-Algorithms"><img src="https://img.shields.io/github/workflow/status/dwyl/auth_plug/Elixir%20CI?label=build&style=flat-square&logo=github"></a>
-<a href="https://github.com/thisiskushal31/Datastructures-and-Algorithms"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
-<a href="https://github.com/thisiskushal31/Datastructures-and-Algorithms"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>
+<a href="./README.md"><img src="https://img.shields.io/github/workflow/status/dwyl/auth_plug/Elixir%20CI?label=build&style=flat-square&logo=github"></a>
+<a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
+<a href="./README.md"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>
 </p>   
 
 Interview coding prep and pattern reference. Theory and solutions live **here**; scale trade-offs live in [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts). The join between a coding pattern and a design interview is [SystemDesignBridge](./SystemDesignBridge/README.md).

@@ -15,7 +15,7 @@
 
 ## Cross-references
 
-- [Networks-Deep-Dive/Service-Mesh/](../Networks-Deep-Dive/Service-Mesh/README.md) · [Security/2_Federated_Identity.md](../Security/2_Federated_Identity.md)
+- [Networks-Deep-Dive/Service-Mesh/](https://github.com/thisiskushal31/Networks-Deep-Dive/blob/main/Service-Mesh/README.md) · [Security/2_Federated_Identity.md](../Security/2_Federated_Identity.md)
 
 ## Checklist before marking done
 

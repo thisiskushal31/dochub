@@ -10,7 +10,7 @@
 
 ## Cross-references
 
-- [Performance/2_Rate_Limiting.md](../Performance/2_Rate_Limiting.md) · [Networks-Deep-Dive/Security/](../Networks-Deep-Dive/Security/README.md)
+- [Performance/2_Rate_Limiting.md](../Performance/2_Rate_Limiting.md) · [Networks-Deep-Dive/Security/](https://github.com/thisiskushal31/Networks-Deep-Dive/blob/main/Security/README.md)
 
 ## Checklist before marking done
 

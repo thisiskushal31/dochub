@@ -30,4 +30,4 @@ Official docs: [https://duckdb.org/docs/](https://duckdb.org/docs/)
 | Engine internals, SQL, files, when vs SQLite / Postgres | **This folder** |
 | Local compute inside a pipeline (vs Spark) | [DE Systems/DuckDB](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/blob/main/Systems/DuckDB/README.md) |
 | GUI to browse a `.DuckDB` file | [Tooling Database-Clients](https://github.com/thisiskushal31/Tooling-and-Frameworks-Deep-Dive/tree/main/Database-Clients) (DBeaver) |
-| SQLite (embedded OLTP) | [Relational/sqlite](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Relational/sqlite) |
+| SQLite (embedded OLTP) | [Relational/sqlite](../SQLite) |

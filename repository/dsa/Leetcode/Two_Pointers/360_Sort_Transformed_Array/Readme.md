@@ -1,6 +1,6 @@
 ### 360_Sort_Transformed_Array
 
-![Problem Statement](https://github.com/thisiskushal31/Datastructures-and-Algorithms/blob/main/Leetcode/Two_Pointers/360_Sort_Transformed_Array/Sort_Transformed_Array_Leetcode_Problem_Statement.png?raw=true)
+![Problem Statement](./Sort_Transformed_Array_Leetcode_Problem_Statement.png)
 
 **As this problem is for premium you will be able to solve it only if you have a premium account, for free user there is a screenshot of the problem statement.**   [Problem Statement](https://www.tutorialspoint.com/sort-transformed-array-in-cplusplus)     
 

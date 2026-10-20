@@ -149,7 +149,7 @@
         "path": "Algorithms/Readme.md",
         "type": "file",
         "sha": "",
-        "size": 3714
+        "size": 1971
       }
     ]
   },
@@ -331,7 +331,7 @@
         "path": "DataStructures/Readme.md",
         "type": "file",
         "sha": "",
-        "size": 3982
+        "size": 1981
       }
     ]
   },
@@ -533,7 +533,7 @@
         "path": "GeekforGeeks/Readme.md",
         "type": "file",
         "sha": "",
-        "size": 1686
+        "size": 920
       }
     ]
   },
@@ -838,7 +838,7 @@
                 "path": "Leetcode/Two_Pointers/360_Sort_Transformed_Array/Readme.md",
                 "type": "file",
                 "sha": "",
-                "size": 1950
+                "size": 1820
               }
             ]
           },
@@ -864,7 +864,7 @@
         "path": "Leetcode/Readme.md",
         "type": "file",
         "sha": "",
-        "size": 26069
+        "size": 14074
       }
     ]
   },
@@ -935,7 +935,7 @@
         "path": "SystemDesignBridge/README.md",
         "type": "file",
         "sha": "",
-        "size": 1743
+        "size": 1986
       }
     ]
   },
@@ -1057,6 +1057,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3312
+    "size": 3154
   }
 ]

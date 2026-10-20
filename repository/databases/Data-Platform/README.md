@@ -12,7 +12,7 @@ How **data stores connect to pipelines and platforms** — without duplicating [
 
 ## Cross-links
 
-- [Blob-Object/](../Blob-Object/README.md) · [DevOps CiCd/7](../DevOps-Handbook/CiCd/7_DB_Migrations_In_Pipelines.md) · [Data Engineering Deep Dive](../../Data-Engineering-Deep-Dive/README.md)
+- [Blob-Object/](../Blob-Object/README.md) · [DevOps CiCd/7](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/CiCd/7_DB_Migrations_In_Pipelines.md) · [Data Engineering Deep Dive](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/blob/main/README.md)
 
 ## v1 done when
 

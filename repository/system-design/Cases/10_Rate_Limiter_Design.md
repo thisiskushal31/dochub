@@ -28,7 +28,7 @@ Design a **rate limiter** for an API gateway or multi-tenant SaaS: per-user, per
 
 ### Further reading
 
-- Link [Datastructures-and-Algorithms](../../Datastructures-and-Algorithms/README.md) for algorithmic variants
+- Link [Datastructures-and-Algorithms](https://github.com/thisiskushal31/Datastructures-and-Algorithms/blob/main/README.md) for algorithmic variants
 
 ## Checklist before marking done
 

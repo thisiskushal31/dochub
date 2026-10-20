@@ -24,4 +24,4 @@ Add a **Failure modes** section in each [Cases/](../Cases/README.md) file linkin
 ## Cross-references
 
 - [DevOps-Handbook](https://github.com/thisiskushal31/DevOps-Handbook) — incident response ops
-- [Networks-Deep-Dive](../Networks-Deep-Dive/Failure-Modes/) — *(future)* network-specific failures
+- [Networks-Deep-Dive — resource limits and failure modes](https://github.com/thisiskushal31/Networks-Deep-Dive/blob/main/Advanced/2_Resource_Limits_Failure_Modes.md) — network-specific failures

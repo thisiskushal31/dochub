@@ -11,7 +11,7 @@
 - Key rotation without downtime (dual keys, gradual re-encrypt)
 - [Valet key](../Security/4_Valet_Key.md) and pre-signed URLs — scope and expiry
 - Compliance drivers (PCI boundaries) at architecture sketch level
-- Wire detail → [Networks Security/TLS](../Networks-Deep-Dive/Security/2_Encryption_Tls.md)
+- Wire detail → [Networks Security/TLS](https://github.com/thisiskushal31/Networks-Deep-Dive/blob/main/Security/2_Encryption_Tls.md)
 
 ## Cross-references
 

@@ -24,11 +24,11 @@
 
 | You need | Use instead |
 |----------|-------------|
-| Many concurrent writers / app OLTP | PostgreSQL / MySQL — [Relational/postgresql](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Relational/postgresql) |
-| Tiny embedded OLTP, mobile, single-row updates | SQLite — [Relational/sqlite](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Relational/sqlite) |
+| Many concurrent writers / app OLTP | PostgreSQL / MySQL — [Relational/postgresql](../PostgreSQL) |
+| Tiny embedded OLTP, mobile, single-row updates | SQLite — [Relational/sqlite](../SQLite) |
 | Shuffle/compute that does not fit one machine | Spark — [DE Systems/Spark](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Systems/Spark) |
 | Shared always-on warehouse with governance | Warehouse / lakehouse (BigQuery, Snowflake, Iceberg+engine) — DE `Systems/` + this repo’s cloud-managed notes |
-| Sub-ms cache | Redis — [Key-Value/redis](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Key-Value/redis) |
+| Sub-ms cache | Redis — [Key-Value/redis](../../Key-Value/Redis) |
 
 ## vs SQLite (same process model, different type of work)
 

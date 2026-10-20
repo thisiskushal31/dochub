@@ -544,7 +544,7 @@ GET /products/_search
 
 ## Importing test data
 
-Follow [these instructions](/Managing%20Documents/importing-data-with-curl.md) and specify `recipes-bulk.json` as the file name.
+Follow [these instructions](./1_Overview_Getting_Started.md#importing-data-with-curl) and specify `recipes-bulk.json` as the file name.
 
 ## Searching arrays of objects (the wrong way)
 
