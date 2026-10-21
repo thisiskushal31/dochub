@@ -29,19 +29,36 @@ Red Hat and others describe both. Neither replaces the other.
 | Threat model for new feature | Owns with Sec | — | Facilitates |
 | Prod detection / response | Joins incident | Joins / runs platform | Joins / leads SEV1 security |
 
-Full AppSec program, offensive methods, GRC: [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive).  
-Pipeline gate order and scanner literacy: [Security/](../Security/README.md) especially [4_Security_Gate_Chain](../Security/4_Security_Gate_Chain.md).
+Full AppSec program, offensive methods, GRC: [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive).
+
+Every delivery gate, scan, check, and test — not only SAST and DAST — is listed in [Security/6](../Security/6_AST_Methods_And_Tools.md) and ordered in [Security/4](../Security/4_Security_Gate_Chain.md). Tool folders: [Security/](../Security/README.md).
+
+That list is the whole loop:
+
+| When | What runs |
+|------|-----------|
+| Design | Threat model, data class |
+| PR | Secrets, SAST, quality, SCA, license, dependency review, IaC or policy if those files changed |
+| Build | Image and binary scan, secrets and malware in the artifact, SBOM, sign and attest |
+| Preview | Smoke, DAST, API tests; IAST only when the test suite already hits the code |
+| Nightly | Deep SAST, authenticated DAST, fuzz, benchmark (CIS-class) |
+| Prod admit | Verify signature and provenance, admission policy, approval when the environment requires it |
+| Runtime | WAF, sensors, cloud and cluster posture, secret broker, cert expiry, patch SLA — controls, not a second test pass |
+| On a cadence | Human test in scope (pen test or bounty) |
 
 ## Minimum DevSecOps loop (conceptual)
 
 ```text
 Design (threats, data class)
   → Code (secure patterns, secrets never committed)
-  → PR / CI (secrets scan, SAST, SCA, unit tests)
-  → Build (signed artifacts, SBOM when ready — CiCd/6)
-  → Deploy (least privilege, policy-as-code)
+  → PR / CI (secrets, SAST, SCA, license, dependency review, unit tests)
+  → Build (image scan, SBOM, sign — CiCd/6)
+  → Preview (smoke, DAST, API tests)
+  → Admit (signature, admission policy)
   → Operate (detect, patch, incident → postmortem)
 ```
+
+The row-by-row set is the table above. This loop is only the shape.
 
 Supply chain (SBOM, signing): [CiCd/6](../CiCd/6_Supply_Chain_And_Signing.md) when filled. Do not confuse “we run Trivy once” with a supply-chain program.
 
@@ -56,6 +73,7 @@ Supply chain (SBOM, signing): [CiCd/6](../CiCd/6_Supply_Chain_And_Signing.md) wh
 
 ## Next
 
+- Testing methods (AST, SAST, DAST, and the rest): [Security/6_AST_Methods_And_Tools.md](../Security/6_AST_Methods_And_Tools.md)  
 - Gate chain: [Security/4_Security_Gate_Chain.md](../Security/4_Security_Gate_Chain.md)  
 - DORA capability map: [15_DORA_Capabilities_Map.md](./15_DORA_Capabilities_Map.md)
 

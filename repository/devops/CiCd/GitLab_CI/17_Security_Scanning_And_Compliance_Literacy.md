@@ -6,7 +6,7 @@
 
 GitLab’s **application security** area is large (hundreds of doc pages). This chapter is **literacy**: what exists and how it hooks into CI — not every scanner field.
 
-Common CI-integrated scanners (availability/tier varies): SAST, DAST, dependency/container scanning, secret detection, IaC scanning, fuzz testing, and related reports in MRs.
+Common CI-integrated scanners (availability/tier varies): SAST, DAST, dependency/container scanning, secret detection, IaC scanning, fuzz testing, and related reports in MRs. What those method names mean, and which tool owns each gate in this handbook: [Security/6](../../Security/6_AST_Methods_And_Tools.md).
 
 **Compliance / security policies** can require scanners or approvals across projects (Premium/Ultimate features — confirm).
 

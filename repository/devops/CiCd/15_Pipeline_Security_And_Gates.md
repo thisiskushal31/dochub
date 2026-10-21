@@ -5,6 +5,7 @@
 Delivery without security gates ships known risk at high speed. This is the **CI/CD map** of where controls sit; tool-by-tool depth and the ordered gate chain live under [Security/](../Security/README.md).
 
 Detailed ordered chain: [Security/4_Security_Gate_Chain.md](../Security/4_Security_Gate_Chain.md).  
+Every gate, scan, check, and test (SAST and DAST are only two rows): [Security/6](../Security/6_AST_Methods_And_Tools.md).  
 OIDC / least privilege from CI: [Security/5_OIDC_CI_And_Least_Privilege.md](../Security/5_OIDC_CI_And_Least_Privilege.md).  
 Signing/SBOM: [6](./6_Supply_Chain_And_Signing.md).  
 Mindset: [Methodologies/14](../Methodologies/14_DevSecOps_Mindset.md).
@@ -14,17 +15,17 @@ Mindset: [Methodologies/14](../Methodologies/14_DevSecOps_Mindset.md).
 ```text
 Developer laptop / pre-commit (optional)
         │
-PR / commit stage ── secret scan, SAST, unit, lint
+PR / commit stage ── secrets, fast SAST, SCA, license, dependency review, IaC if those files changed
         │
-Build ── SCA (dependencies), IaC policy (if infra in repo)
+Package ── image CVE, secrets and malware in the artifact, SBOM, sign / attest
         │
-Package ── image/binary scan, SBOM, sign / attest
+Deploy preview / staging ── smoke, DAST, API tests
         │
-Deploy preview / staging ── DAST (as appropriate), smoke
+Nightly ── deep SAST, fuzz, benchmark
         │
-Prod admit ── signature/provenance policy, progressive delivery
+Prod admit ── signature/provenance, admission, progressive delivery
         │
-Runtime ── WAF/runtime controls (ops) — not a substitute for earlier gates
+Runtime ── WAF, sensors, posture — not a substitute for earlier gates
 ```
 
 Shift-left: find issues near the author. Shift-right: verify in real environments ([5](./5_Verify_Rollback_And_Synthetic_Tests.md)).
@@ -35,11 +36,11 @@ Shift-left: find issues near the author. Shift-right: verify in real environment
 |------|-----------|-------------------------|
 | Secrets in git | Block commit/PR | [Gitleaks](../Security/Gitleaks/README.md) |
 | SAST / quality | PR + main | [Semgrep](../Security/Semgrep/README.md), [CodeQL](../Security/CodeQL/README.md), [SonarQube](../Security/SonarQube/README.md) |
-| SCA / deps | PR + main | [Snyk](../Security/Snyk/README.md), [Trivy](../Security/Trivy/README.md), Dependabot/Renovate |
+| SCA / license / dependency review | PR + main | [Snyk](../Security/Snyk/README.md), [Trivy](../Security/Trivy/README.md), Dependabot/Renovate |
 | IaC / policy as code | When Terraform/K8s manifests change | [Checkov](../Security/Checkov/README.md), [OPA](../Security/OPA/README.md) |
 | Image scan | After build, before promote | [Trivy](../Security/Trivy/README.md) |
 | Sign / SBOM / provenance | After build | [Cosign](../Security/Cosign/README.md), [6](./6_Supply_Chain_And_Signing.md) |
-| DAST | Preview/staging | [ZAP](../Security/ZAP/README.md) |
+| DAST / API tests | Preview/staging; authenticated on a schedule | [ZAP](../Security/ZAP/README.md), [Security/6](../Security/6_AST_Methods_And_Tools.md) |
 | Runtime secrets | App deploy | [Vault](../Security/Vault/README.md), [13](./13_Config_Secrets_And_Env_Parity.md) |
 
 ## Policy choices

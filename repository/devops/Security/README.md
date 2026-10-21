@@ -7,10 +7,11 @@ Practices, compliance, threat mitigation, and **delivery-pipeline tools**. Tool 
 | # | Topic | Description | Status |
 |---|--------|-------------|--------|
 | 1 | [Security practices and secrets](./1_Security_Practices_And_Secrets.md) | Secrets, IAM, zero-trust (DevOps scope) | expand |
-| 2 | [Compliance and threat mitigation](./2_Compliance_And_Threat_Mitigation.md) | Scanning, WAF, DDoS literacy | expand |
+| 2 | [Compliance and threat mitigation](./2_Compliance_And_Threat_Mitigation.md) | Posture, patch SLA, WAF, DDoS, sensors | **filled** |
 | 3 | [Security tools index](./3_Security_Tools_And_Automation.md) | Gate → tool map | **filled** |
 | 4 | [Security gate chain](./4_Security_Gate_Chain.md) | Ordered PR→prod controls | **filled** |
 | 5 | [OIDC, cloud IAM, and CI least privilege](./5_OIDC_CI_And_Least_Privilege.md) | Federated CI identity | **filled** |
+| 6 | [AST methods and tools](./6_AST_Methods_And_Tools.md) | Every delivery gate, scan, check, and test | **filled** |
 
 ## Tools (one folder per tool)
 

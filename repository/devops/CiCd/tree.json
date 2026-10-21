@@ -1474,7 +1474,7 @@
         "path": "GitLab_CI/17_Security_Scanning_And_Compliance_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 2194
+        "size": 2329
       },
       {
         "name": "18_Agent_Auto_DevOps_And_Infrastructure.md",
@@ -2165,7 +2165,7 @@
     "path": "15_Pipeline_Security_And_Gates.md",
     "type": "file",
     "sha": "",
-    "size": 3583
+    "size": 3877
   },
   {
     "name": "16_Notifications_Webhooks_And_ChatOps.md",

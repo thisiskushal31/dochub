@@ -191,21 +191,21 @@
     "path": "2_Compliance_And_Threat_Mitigation.md",
     "type": "file",
     "sha": "",
-    "size": 356
+    "size": 3996
   },
   {
     "name": "3_Security_Tools_And_Automation.md",
     "path": "3_Security_Tools_And_Automation.md",
     "type": "file",
     "sha": "",
-    "size": 2006
+    "size": 2503
   },
   {
     "name": "4_Security_Gate_Chain.md",
     "path": "4_Security_Gate_Chain.md",
     "type": "file",
     "sha": "",
-    "size": 3796
+    "size": 5275
   },
   {
     "name": "5_OIDC_CI_And_Least_Privilege.md",
@@ -215,10 +215,17 @@
     "size": 5085
   },
   {
+    "name": "6_AST_Methods_And_Tools.md",
+    "path": "6_AST_Methods_And_Tools.md",
+    "type": "file",
+    "sha": "",
+    "size": 13068
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2063
+    "size": 2197
   }
 ]
