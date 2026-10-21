@@ -7,6 +7,7 @@ import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import GistEmbed from './GistEmbed';
 import YouTubeEmbed from './YouTubeEmbed';
+import { classifyDocLink } from '@/utils/docLinks';
 import 'prismjs/themes/prism-tomorrow.css';
 import 'prismjs/components/prism-bash';
 import 'prismjs/components/prism-javascript';
@@ -23,12 +24,39 @@ import '@/styles/markdown.css';
 
 interface MarkdownViewerProps {
   content: string;
+  repoId: string;
+  filePath: string;
+  section?: string | null;
   className?: string;
   onContentLoaded?: () => void;
 }
 
+function rewriteDocumentLinks(html: string, repoId: string, filePath: string): string {
+  return html.replace(/<a\b([^>]*?)href="([^"]+)"([^>]*)>/gi, (match, before: string, href: string, after: string) => {
+    const decoded = href.replace(/&amp;/g, '&');
+    const classified = classifyDocLink(decoded, repoId, filePath);
+
+    if (classified.kind === 'anchor') {
+      return match;
+    }
+
+    const nextHref = classified.href.replace(/&/g, '&amp;');
+    const cleanedBefore = before.replace(/\s*target="[^"]*"/gi, '').replace(/\s*rel="[^"]*"/gi, '');
+    const cleanedAfter = after.replace(/\s*target="[^"]*"/gi, '').replace(/\s*rel="[^"]*"/gi, '');
+
+    if (classified.kind === 'doc') {
+      return `<a${cleanedBefore}href="${nextHref}"${cleanedAfter}>`;
+    }
+
+    return `<a${cleanedBefore}href="${nextHref}"${cleanedAfter} target="_blank" rel="noopener noreferrer">`;
+  });
+}
+
 const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
   content,
+  repoId,
+  filePath,
+  section = null,
   className = '',
   onContentLoaded
 }) => {
@@ -39,7 +67,7 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
   const parserRef = useRef<Renderer | null>(null);
 
   useEffect(() => {
-    parserRef.current = new Renderer(true);
+    parserRef.current = new Renderer(false);
   }, []);
 
   // Normalize custom math notation to proper LaTeX
@@ -169,29 +197,7 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
         KEEP_CONTENT: true,
       });
 
-      // Post-process to ensure all external links have target="_blank" and rel="noopener noreferrer"
-      sanitizedHtml = sanitizedHtml.replace(/<a\s+([^>]*?)href="([^"]+)"([^>]*?)>(.*?)<\/a>/gs, (match, beforeHref, href, afterHref, content) => {
-        // Skip anchor links (internal page navigation)
-        if (href.startsWith('#')) {
-          return match;
-        }
-        
-        // Check if target and rel already exist
-        const hasTarget = beforeHref.includes('target=') || afterHref.includes('target=');
-        const hasRel = beforeHref.includes('rel=') || afterHref.includes('rel=');
-        
-        if (!hasTarget && !hasRel) {
-          // Add both target and rel
-          return `<a ${beforeHref}href="${href}"${afterHref} target="_blank" rel="noopener noreferrer">${content}</a>`;
-        } else if (!hasTarget) {
-          // Add target only
-          return `<a ${beforeHref}href="${href}"${afterHref} target="_blank">${content}</a>`;
-        } else if (!hasRel) {
-          // Add rel only
-          return `<a ${beforeHref}href="${href}"${afterHref} rel="noopener noreferrer">${content}</a>`;
-        }
-        return match;
-      });
+      sanitizedHtml = rewriteDocumentLinks(sanitizedHtml, repoId, filePath);
 
       setHtmlContent(sanitizedHtml);
       setIsLoading(false);
@@ -200,7 +206,7 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
       setHtmlContent('<div class="error text-destructive">Error parsing markdown content</div>');
       setIsLoading(false);
     }
-  }, [content]);
+  }, [content, repoId, filePath]);
 
   // Re-render math after HTML is set (for dynamic content)
   useEffect(() => {
@@ -261,14 +267,20 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
       const link = target.closest('a[href]') as HTMLAnchorElement;
 
       if (link) {
+        const href = link.getAttribute('href') || '';
+
         if (link.target === '_blank') {
           e.preventDefault();
           window.open(link.href, '_blank', 'noopener,noreferrer');
           return;
         }
 
-        const href = link.getAttribute('href');
-        if (href && href.startsWith('#')) {
+        // `#/repo/file.md` is an in-app document route. Leave it for the hash router.
+        if (href.startsWith('#/')) {
+          return;
+        }
+
+        if (href.startsWith('#')) {
           e.preventDefault();
           const id = href.slice(1);
           const element = document.getElementById(id) || document.getElementById(`user-content-${id}`);
@@ -287,10 +299,13 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
   }, [htmlContent]);
 
   useEffect(() => {
-    if (!isLoading && onContentLoaded) {
-      onContentLoaded();
+    if (isLoading) return;
+    if (section && containerRef.current) {
+      const element = document.getElementById(section) || document.getElementById(`user-content-${section}`);
+      element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }, [isLoading, onContentLoaded]);
+    onContentLoaded?.();
+  }, [isLoading, onContentLoaded, section, htmlContent]);
 
   if (isLoading) {
     return (

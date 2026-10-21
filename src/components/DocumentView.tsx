@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import MarkdownViewer from './MarkdownViewer';
 import TableOfContents from './TableOfContents';
+import { useSearchParams } from 'react-router-dom';
 import { fetchMarkdown, processImagePaths, getFileDisplayName, calculateReadingTime } from '@/utils/github';
 import { getRepositoryById, getRawGitHubUrl, type RepositoryConfig } from '@/config/repositories';
 import { getCached, clearCache } from '@/utils/cache';
@@ -23,6 +24,8 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
   const [linkCopied, setLinkCopied] = useState(false);
   const [readingTime, setReadingTime] = useState<number | null>(null);
   const { toast } = useToast();
+  const [searchParams] = useSearchParams();
+  const section = searchParams.get('section');
 
   const loadContent = useCallback(async (forceRefresh = false) => {
       setIsLoading(true);
@@ -286,7 +289,7 @@ const DocumentView: React.FC<DocumentViewProps> = ({ repoId, filePath, onBack })
           </div>
         </div>
 
-        <MarkdownViewer content={content} />
+        <MarkdownViewer content={content} repoId={repoId} filePath={filePath} section={section} />
       </article>
 
       {/* Table of Contents - Desktop only, positioned on right */}
