@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Renderer } from '@/lib/marked/renderer';
 import { useTheme } from '@/hooks/useTheme';
 import DOMPurify from 'dompurify';
@@ -61,6 +62,7 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
   onContentLoaded
 }) => {
   const { theme } = useTheme();
+  const navigate = useNavigate();
   const [htmlContent, setHtmlContent] = useState<string>('');
   const [isLoading, setIsLoading] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -287,6 +289,14 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
           if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
+          return;
+        }
+
+        // `./` stays in this folder. `../` steps up. Either way, stay on the docs route.
+        const classified = classifyDocLink(href, repoId, filePath);
+        if (classified.kind === 'doc') {
+          e.preventDefault();
+          navigate(classified.href.replace(/^#/, ''));
         }
       }
     };
@@ -296,7 +306,7 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
       container.addEventListener('click', handleLinkClick);
       return () => container.removeEventListener('click', handleLinkClick);
     }
-  }, [htmlContent]);
+  }, [htmlContent, filePath, navigate, repoId]);
 
   useEffect(() => {
     if (isLoading) return;

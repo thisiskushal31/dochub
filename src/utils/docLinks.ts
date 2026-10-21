@@ -32,6 +32,11 @@ export function docHash(repoId: string, filePath: string | null, section?: strin
   return section ? `${route}?section=${encodeURIComponent(section)}` : route;
 }
 
+/**
+ * Resolve a markdown link against the note that contains it.
+ * `./file.md` and a bare `file.md` stay in the current folder.
+ * Each `../` steps up one folder, including several in a row (`../../`).
+ */
 function resolveAgainstFile(currentFilePath: string, hrefPath: string): string {
   const fromRepoRoot = hrefPath.startsWith('/');
   const currentDir = currentFilePath.includes('/')
@@ -40,7 +45,9 @@ function resolveAgainstFile(currentFilePath: string, hrefPath: string): string {
   const parts = fromRepoRoot ? [] : currentDir.split('/').filter(Boolean);
 
   for (const segment of hrefPath.split('/')) {
-    if (!segment || segment === '.') continue;
+    if (!segment || segment === '.') {
+      continue;
+    }
     let decoded = segment;
     try {
       decoded = decodeURIComponent(segment);
@@ -49,9 +56,9 @@ function resolveAgainstFile(currentFilePath: string, hrefPath: string): string {
     }
     if (decoded === '..') {
       parts.pop();
-    } else {
-      parts.push(decoded);
+      continue;
     }
+    parts.push(decoded);
   }
 
   return parts.join('/');
