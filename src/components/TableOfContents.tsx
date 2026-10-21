@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { slugifyHeading } from '@/utils/slug';
 
 interface TocItem {
   id: string;
@@ -24,13 +25,8 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ content, className })
 
     while ((match = headingRegex.exec(content)) !== null) {
       const level = match[1].length;
-      const text = match[2].replace(/\*\*|`/g, ''); // Remove bold and code formatting
-      const id = text
-        .toLowerCase()
-        .replace(/[^\w\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .replace(/-+/g, '-')
-        .trim();
+      const text = match[2].replace(/\*\*|`/g, '');
+      const id = slugifyHeading(match[2]);
       
       headings.push({ id, text, level });
     }

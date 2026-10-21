@@ -1,4 +1,5 @@
 import { marked } from 'marked';
+import { slugifyHeading } from '@/utils/slug';
 
 export class Renderer {
   private marked: typeof marked;
@@ -33,8 +34,7 @@ export class Renderer {
 
     // Headings with anchor links
     html = html.replace(/<h([1-6])>(.*?)<\/h[1-6]>/g, (match, level, content) => {
-      const cleanContent = content.replace(/<[^>]*>/g, '');
-      const id = this.slugify(cleanContent);
+      const id = slugifyHeading(content);
       const headingClass = this.getHeadingClass(parseInt(level));
 
       return `
@@ -146,14 +146,6 @@ export class Renderer {
     return html;
   }
 
-  private slugify(text: string): string {
-    return text
-      .toLowerCase()
-      .replace(/[^\w\s-]/g, '')
-      .replace(/\s+/g, '-')
-      .replace(/-+/g, '-')
-      .trim();
-  }
 }
 
 export default Renderer;
