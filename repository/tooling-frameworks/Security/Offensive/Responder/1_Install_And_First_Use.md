@@ -1,21 +1,26 @@
-# Responder — Install and first use
+# Responder — install and first use
 
 [← Responder](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+LLMNR/NBT-NS/mDNS poisoner for lab credential capture demos. **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Post-ex)
-- Install on the lab VM
-- Why it works
-- Detection
-- Related: Offensive/ for the phase; Networks if the wire matters
+```bash
+# Kali: responder; else clone https://github.com/lgandx/Responder
+sudo python3 Responder.py -h
+```
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+Run only on an isolated lab LAN you own:
+```bash
+sudo python3 Responder.py -I eth0
+```
+Trigger name resolution from a lab Windows client; capture hashes for **lab** cracking practice. Defend with disabling LLMNR/NBT-NS.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Lab poisoning demos | Poisoning office/café networks |

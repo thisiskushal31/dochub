@@ -4,27 +4,27 @@
     "path": "1_CSPM_And_Posture.md",
     "type": "file",
     "sha": "",
-    "size": 669
+    "size": 1297
   },
   {
     "name": "2_Secrets_And_K8s.md",
     "path": "2_Secrets_And_K8s.md",
     "type": "file",
     "sha": "",
-    "size": 676
+    "size": 1496
   },
   {
     "name": "3_Supply_Chain.md",
     "path": "3_Supply_Chain.md",
     "type": "file",
     "sha": "",
-    "size": 671
+    "size": 1360
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 437
+    "size": 409
   }
 ]

@@ -1,24 +1,16 @@
-# Wireshark — 2 First Capture
+# Wireshark — 2 First capture
 
 [← Wireshark](./README.md)
 
-*(Content TBD — stub created September 2026)*
+## Capture
 
-## Planned coverage
+1. Pick the lab interface (VM host-only / NAT as appropriate).  
+2. Start capture.  
+3. Generate traffic (e.g. `curl https://example.com` from the lab — or better, curl your lab web app).  
+4. Stop capture; save a `.pcap` if useful.
 
-- Install + permission to capture
-- Pick an interface, start/stop
-- Follow a TCP stream on *lab* traffic
-- When to open Networks Observability/3 for filters and protocol decode
+Display filter examples: `http`, `dns`, `tcp.port == 443`, `ip.addr == LAB_IP`.
 
-## Related home
+## Privilege note
 
-- Wire / protocol depth → Networks-Deep-Dive (do not copy that book here)
-- Use only on an isolated lab (never the public internet).
-
-## Checklist before marking done
-
-- [ ] A reader who knows nothing can finish this file
-- [ ] Install / first command if this is a tool
-- [ ] Advanced pointer or next file in this repo
-- [ ] Related home linked if full *slice* depth lives elsewhere
+Capturing often needs elevated rights. Prefer a dedicated lab user/group setup over daily-driving as root.

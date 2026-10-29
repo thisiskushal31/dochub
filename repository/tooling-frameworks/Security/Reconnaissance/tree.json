@@ -10,14 +10,14 @@
         "path": "Amass/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 559
+        "size": 564
       },
       {
         "name": "README.md",
         "path": "Amass/README.md",
         "type": "file",
         "sha": "",
-        "size": 313
+        "size": 183
       }
     ]
   },
@@ -32,14 +32,14 @@
         "path": "ffuf/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 565
+        "size": 718
       },
       {
         "name": "README.md",
         "path": "ffuf/README.md",
         "type": "file",
         "sha": "",
-        "size": 306
+        "size": 182
       }
     ]
   },
@@ -54,14 +54,14 @@
         "path": "Gobuster/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 561
+        "size": 502
       },
       {
         "name": "README.md",
         "path": "Gobuster/README.md",
         "type": "file",
         "sha": "",
-        "size": 315
+        "size": 186
       }
     ]
   },
@@ -76,14 +76,14 @@
         "path": "GVM/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 556
+        "size": 590
       },
       {
         "name": "README.md",
         "path": "GVM/README.md",
         "type": "file",
         "sha": "",
-        "size": 313
+        "size": 181
       }
     ]
   },
@@ -98,14 +98,14 @@
         "path": "Maltego/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 581
+        "size": 494
       },
       {
         "name": "README.md",
         "path": "Maltego/README.md",
         "type": "file",
         "sha": "",
-        "size": 346
+        "size": 185
       }
     ]
   },
@@ -120,14 +120,14 @@
         "path": "Masscan/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 578
+        "size": 635
       },
       {
         "name": "README.md",
         "path": "Masscan/README.md",
         "type": "file",
         "sha": "",
-        "size": 332
+        "size": 185
       }
     ]
   },
@@ -142,14 +142,14 @@
         "path": "Nikto/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 547
+        "size": 474
       },
       {
         "name": "README.md",
         "path": "Nikto/README.md",
         "type": "file",
         "sha": "",
-        "size": 309
+        "size": 183
       }
     ]
   },
@@ -164,28 +164,28 @@
         "path": "Nmap/1_Install.md",
         "type": "file",
         "sha": "",
-        "size": 738
+        "size": 1103
       },
       {
         "name": "2_First_Scan.md",
         "path": "Nmap/2_First_Scan.md",
         "type": "file",
         "sha": "",
-        "size": 741
+        "size": 663
       },
       {
         "name": "3_Read_The_Output.md",
         "path": "Nmap/3_Read_The_Output.md",
         "type": "file",
         "sha": "",
-        "size": 746
+        "size": 782
       },
       {
         "name": "README.md",
         "path": "Nmap/README.md",
         "type": "file",
         "sha": "",
-        "size": 316
+        "size": 366
       }
     ]
   },
@@ -200,14 +200,14 @@
         "path": "Nuclei/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 582
+        "size": 850
       },
       {
         "name": "README.md",
         "path": "Nuclei/README.md",
         "type": "file",
         "sha": "",
-        "size": 305
+        "size": 184
       }
     ]
   },
@@ -222,14 +222,14 @@
         "path": "Recon-ng/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 590
+        "size": 469
       },
       {
         "name": "README.md",
         "path": "Recon-ng/README.md",
         "type": "file",
         "sha": "",
-        "size": 329
+        "size": 186
       }
     ]
   },
@@ -244,14 +244,14 @@
         "path": "Shodan/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 587
+        "size": 590
       },
       {
         "name": "README.md",
         "path": "Shodan/README.md",
         "type": "file",
         "sha": "",
-        "size": 339
+        "size": 184
       }
     ]
   },
@@ -266,14 +266,14 @@
         "path": "SpiderFoot/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 566
+        "size": 507
       },
       {
         "name": "README.md",
         "path": "SpiderFoot/README.md",
         "type": "file",
         "sha": "",
-        "size": 310
+        "size": 188
       }
     ]
   },
@@ -288,14 +288,14 @@
         "path": "theHarvester/1_Install_And_First_Use.md",
         "type": "file",
         "sha": "",
-        "size": 594
+        "size": 574
       },
       {
         "name": "README.md",
         "path": "theHarvester/README.md",
         "type": "file",
         "sha": "",
-        "size": 329
+        "size": 190
       }
     ]
   },

@@ -1,23 +1,29 @@
-# tcpdump — 1 Install And First Capture
+# tcpdump — install and first capture
 
 [← tcpdump](./README.md)
 
-*(Content TBD — stub created September 2026)*
+CLI packet capture. Same legal rule as Wireshark: **only networks you may monitor.**
 
-## Planned coverage
+## Install
 
-- Why CLI capture exists next to Wireshark
-- First `-i` / `-w` / `-r` on the lab host
-- Pointer: Networks Labs + Observability
+| OS | Typical |
+|----|---------|
+| macOS | Built-in / `brew install tcpdump` |
+| Linux | `sudo apt install tcpdump` |
 
-## Related home
+## First capture
 
-- Wire / protocol depth → Networks-Deep-Dive (do not copy that book here)
-- Use only on an isolated lab (never the public internet).
+```bash
+sudo tcpdump -i any -n -c 20
+# write a file
+sudo tcpdump -i eth0 -w lab.pcap host LAB_IP
+```
 
-## Checklist before marking done
+Open `lab.pcap` in Wireshark for GUI analysis.
 
-- [ ] A reader who knows nothing can finish this file
-- [ ] Install / first command if this is a tool
-- [ ] Advanced pointer or next file in this repo
-- [ ] Related home linked if full *slice* depth lives elsewhere
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Quick CLI capture on a lab box | Silent tapping of corporate nets without authorization |
+| Scripts/remote labs without GUI | Long-term full-packet retention without policy |

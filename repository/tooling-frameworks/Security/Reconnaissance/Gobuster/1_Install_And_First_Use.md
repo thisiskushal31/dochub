@@ -1,21 +1,25 @@
-# Gobuster — Install and first use
+# Gobuster — install and first use
 
 [← Gobuster](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Directory/DNS/vhost brute forcing. **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Recon)
-- Install on the lab VM
-- wordlists
-- Lab web root only
-- Related: Offensive/ for the phase; Networks if the wire matters
+```bash
+go install github.com/OJ/gobuster/v3@latest
+# or: brew install gobuster
+gobuster version
+```
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+```bash
+gobuster dir -u https://LAB -w /path/to/wordlist.txt
+```
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Path discovery on lab web apps | Brute-forcing sites outside scope |

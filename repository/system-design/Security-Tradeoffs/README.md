@@ -2,15 +2,13 @@
 
 Architecture-level security decisions — extends [Security/](../Security/README.md). Full program depth → [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive).
 
-*(New section — stubs August 2026)*
-
 ## Topics
 
-| # | File | Focus |
-|---|------|--------|
-| 1 | [Threat modeling at design time](./1_Threat_Modeling_At_Design_Time.md) | STRIDE-lite, trust boundaries in HLD |
-| 2 | [Auth design vs zero trust](./2_Auth_Design_vs_Zero_Trust.md) | Session vs JWT, mTLS, service identity |
-| 3 | [Encryption, performance, and key rotation](./3_Encryption_Performance_and_Key_Rotation.md) | TLS overhead, field-level encryption, KMS |
+| # | File | Focus | Status |
+|---|------|--------|--------|
+| 1 | [Threat modeling at design time](./1_Threat_Modeling_At_Design_Time.md) | STRIDE-lite, trust boundaries in HLD | **filled** |
+| 2 | [Auth design vs zero trust](./2_Auth_Design_vs_Zero_Trust.md) | Session vs JWT, mTLS, service identity | **filled** |
+| 3 | [Encryption, performance, and key rotation](./3_Encryption_Performance_and_Key_Rotation.md) | TLS overhead, field-level encryption, KMS | **filled** |
 
 ## Learning path
 

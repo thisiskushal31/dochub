@@ -10,21 +10,21 @@
         "path": "AppSec/1_OWASP_And_Secure_SDLC.md",
         "type": "file",
         "sha": "",
-        "size": 667
+        "size": 2152
       },
       {
         "name": "2_API_Security.md",
         "path": "AppSec/2_API_Security.md",
         "type": "file",
         "sha": "",
-        "size": 652
+        "size": 1986
       },
       {
         "name": "README.md",
         "path": "AppSec/README.md",
         "type": "file",
         "sha": "",
-        "size": 363
+        "size": 556
       }
     ]
   },
@@ -39,28 +39,28 @@
         "path": "Cloud-Security/1_CSPM_And_Posture.md",
         "type": "file",
         "sha": "",
-        "size": 669
+        "size": 1297
       },
       {
         "name": "2_Secrets_And_K8s.md",
         "path": "Cloud-Security/2_Secrets_And_K8s.md",
         "type": "file",
         "sha": "",
-        "size": 676
+        "size": 1496
       },
       {
         "name": "3_Supply_Chain.md",
         "path": "Cloud-Security/3_Supply_Chain.md",
         "type": "file",
         "sha": "",
-        "size": 671
+        "size": 1360
       },
       {
         "name": "README.md",
         "path": "Cloud-Security/README.md",
         "type": "file",
         "sha": "",
-        "size": 437
+        "size": 409
       }
     ]
   },
@@ -75,14 +75,14 @@
         "path": "Cryptography/1_Practical_Pitfalls.md",
         "type": "file",
         "sha": "",
-        "size": 669
+        "size": 1731
       },
       {
         "name": "README.md",
         "path": "Cryptography/README.md",
         "type": "file",
         "sha": "",
-        "size": 321
+        "size": 267
       }
     ]
   },
@@ -97,28 +97,28 @@
         "path": "Defensive-Ops/1_SIEM_And_Detection.md",
         "type": "file",
         "sha": "",
-        "size": 635
+        "size": 1726
       },
       {
         "name": "2_Incident_Response.md",
         "path": "Defensive-Ops/2_Incident_Response.md",
         "type": "file",
         "sha": "",
-        "size": 646
+        "size": 1562
       },
       {
         "name": "3_Forensics.md",
         "path": "Defensive-Ops/3_Forensics.md",
         "type": "file",
         "sha": "",
-        "size": 637
+        "size": 1530
       },
       {
         "name": "README.md",
         "path": "Defensive-Ops/README.md",
         "type": "file",
         "sha": "",
-        "size": 430
+        "size": 993
       }
     ]
   },
@@ -133,28 +133,28 @@
         "path": "Foundations/1_CIA_And_Risk.md",
         "type": "file",
         "sha": "",
-        "size": 653
+        "size": 2627
       },
       {
         "name": "2_STRIDE_And_Threat_Modeling.md",
         "path": "Foundations/2_STRIDE_And_Threat_Modeling.md",
         "type": "file",
         "sha": "",
-        "size": 647
+        "size": 2400
       },
       {
         "name": "3_Controls_And_Physical.md",
         "path": "Foundations/3_Controls_And_Physical.md",
         "type": "file",
         "sha": "",
-        "size": 572
+        "size": 2284
       },
       {
         "name": "README.md",
         "path": "Foundations/README.md",
         "type": "file",
         "sha": "",
-        "size": 443
+        "size": 649
       }
     ]
   },
@@ -169,14 +169,14 @@
         "path": "GRC/1_NIST_ISO_And_ATTCK.md",
         "type": "file",
         "sha": "",
-        "size": 647
+        "size": 2460
       },
       {
         "name": "README.md",
         "path": "GRC/README.md",
         "type": "file",
         "sha": "",
-        "size": 299
+        "size": 558
       }
     ]
   },
@@ -191,21 +191,21 @@
         "path": "Identity/1_OAuth_OIDC_SAML.md",
         "type": "file",
         "sha": "",
-        "size": 718
+        "size": 1846
       },
       {
         "name": "2_Zero_Trust.md",
         "path": "Identity/2_Zero_Trust.md",
         "type": "file",
         "sha": "",
-        "size": 667
+        "size": 1418
       },
       {
         "name": "README.md",
         "path": "Identity/README.md",
         "type": "file",
         "sha": "",
-        "size": 357
+        "size": 342
       }
     ]
   },
@@ -220,14 +220,14 @@
         "path": "Labs/1_Paths.md",
         "type": "file",
         "sha": "",
-        "size": 616
+        "size": 1290
       },
       {
         "name": "README.md",
         "path": "Labs/README.md",
         "type": "file",
         "sha": "",
-        "size": 282
+        "size": 247
       }
     ]
   },
@@ -242,70 +242,70 @@
         "path": "Offensive/1_Methodology_Lab_Only.md",
         "type": "file",
         "sha": "",
-        "size": 680
+        "size": 1357
       },
       {
         "name": "2_Planning_And_Scope.md",
         "path": "Offensive/2_Planning_And_Scope.md",
         "type": "file",
         "sha": "",
-        "size": 428
+        "size": 959
       },
       {
         "name": "3_OSINT.md",
         "path": "Offensive/3_OSINT.md",
         "type": "file",
         "sha": "",
-        "size": 434
+        "size": 1061
       },
       {
         "name": "4_Scanning_And_Enumeration.md",
         "path": "Offensive/4_Scanning_And_Enumeration.md",
         "type": "file",
         "sha": "",
-        "size": 422
+        "size": 1140
       },
       {
         "name": "5_Web_Application_Attacks.md",
         "path": "Offensive/5_Web_Application_Attacks.md",
         "type": "file",
         "sha": "",
-        "size": 439
+        "size": 1349
       },
       {
         "name": "6_Exploitation_Lab_Only.md",
         "path": "Offensive/6_Exploitation_Lab_Only.md",
         "type": "file",
         "sha": "",
-        "size": 453
+        "size": 1243
       },
       {
         "name": "7_Post_Exploitation.md",
         "path": "Offensive/7_Post_Exploitation.md",
         "type": "file",
         "sha": "",
-        "size": 441
+        "size": 1045
       },
       {
         "name": "8_Wireless_And_RF.md",
         "path": "Offensive/8_Wireless_And_RF.md",
         "type": "file",
         "sha": "",
-        "size": 423
+        "size": 900
       },
       {
         "name": "9_Reporting.md",
         "path": "Offensive/9_Reporting.md",
         "type": "file",
         "sha": "",
-        "size": 407
+        "size": 1115
       },
       {
         "name": "README.md",
         "path": "Offensive/README.md",
         "type": "file",
         "sha": "",
-        "size": 935
+        "size": 1084
       }
     ]
   },
@@ -320,35 +320,35 @@
         "path": "Threats/1_Actors_And_Motivations.md",
         "type": "file",
         "sha": "",
-        "size": 451
+        "size": 1533
       },
       {
         "name": "2_Vectors_And_Surfaces.md",
         "path": "Threats/2_Vectors_And_Surfaces.md",
         "type": "file",
         "sha": "",
-        "size": 463
+        "size": 1692
       },
       {
         "name": "3_Vulnerabilities.md",
         "path": "Threats/3_Vulnerabilities.md",
         "type": "file",
         "sha": "",
-        "size": 414
+        "size": 1956
       },
       {
         "name": "4_Mitigations.md",
         "path": "Threats/4_Mitigations.md",
         "type": "file",
         "sha": "",
-        "size": 422
+        "size": 1843
       },
       {
         "name": "README.md",
         "path": "Threats/README.md",
         "type": "file",
         "sha": "",
-        "size": 590
+        "size": 712
       }
     ]
   },

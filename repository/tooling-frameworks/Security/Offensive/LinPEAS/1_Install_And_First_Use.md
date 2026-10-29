@@ -1,21 +1,23 @@
-# LinPEAS — Install and first use
+# LinPEAS — install and first use
 
 [← LinPEAS](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Linux privilege-escalation enumeration scripts (PEASS). **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Post-ex)
-- Install on the lab VM
-- Lab VM
-- WinPEAS is the Windows sibling
-- Related: Offensive/ for the phase; Networks if the wire matters
+Download release script from [PEASS-ng](https://github.com/peass-ng/PEASS-ng) into the **lab** host.
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+```bash
+chmod +x linpeas.sh
+./linpeas.sh | tee linpeas.out
+```
+Review findings; escalate only per lab goals; clean up.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Post-ex enum on lab Linux | Running on machines without authorization |

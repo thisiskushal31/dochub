@@ -1,21 +1,26 @@
-# Amass — Install and first use
+# Amass — install and first use
 
 [← Amass](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Attack-surface / subdomain enumeration (OWASP Amass). **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (OSINT)
-- Install on the lab VM
-- enum -d
-- Passive vs active modes
-- Related: Offensive/ for the phase; Networks if the wire matters
+```bash
+go install -v github.com/owasp-amass/amass/v4/...@master
+# or: brew install amass
+amass -version
+```
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+```bash
+amass enum -d lab-example.test -o amass-out.txt
+```
+Use only domains in your lab/RoE.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Subdomain enum in scope | Enumerating third-party brands without authorization |

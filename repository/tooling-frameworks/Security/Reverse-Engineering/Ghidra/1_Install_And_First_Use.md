@@ -1,21 +1,19 @@
-# Ghidra — Install and first use
+# Ghidra — install and first use
 
 [← Ghidra](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+NSA-published reverse-engineering suite. **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Reverse)
-- Install on the lab VM
-- Open a lab binary
-- Pointer: DevOps Languages/Assembly
-- Related: Offensive/ for the phase; Networks if the wire matters
+Download from [ghidra-sre.org](https://ghidra-sre.org/); requires JDK. Launch `ghidraRun`.
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+Create a project; import a **lab** binary (e.g. crackme you may analyze); run auto-analysis; browse Listing/Decompiler.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Malware/crackme study in lab | Reversing software against license/ToS you must respect |

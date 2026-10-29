@@ -2,7 +2,7 @@
 
 [← README](../README.md)
 
-Named **lab software** (install + first use). The *program* (CIA, AppSec, SOC, GRC, PTES phases) stays in [Security-Deep-Dive](../../Security-Deep-Dive/README.md). Packet depth stays in Networks. **Isolated lab only — never scan the public internet.**
+Named **lab software** (install + first use). The *program* (CIA, AppSec, SOC, GRC, PTES phases) stays in [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive/blob/main/README.md). Packet depth stays in Networks. **Isolated lab only — never scan the public internet.**
 
 | Job | Folder |
 |-----|--------|

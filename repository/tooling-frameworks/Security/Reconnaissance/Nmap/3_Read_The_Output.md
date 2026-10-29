@@ -1,25 +1,24 @@
-# Nmap — 3 Read The Output
+# Nmap — 3 Read the output
 
 [← Nmap](./README.md)
 
-*(Content TBD — stub created September 2026)*
+## Port states (practical)
 
-## Planned coverage
+| State | Meaning |
+|-------|---------|
+| **open** | Something accepted the connection |
+| **closed** | Host reachable; port has no listener |
+| **filtered** | No useful reply (firewall/drop); inconclusive |
 
-- Install on macOS / Linux / Windows
-- What a port is, in one paragraph
-- First scan of the *lab* target only (`nmap -sV`)
-- Read: open / closed / filtered
-- When to open Networks Security/8 for scan types on the wire
+Version lines are **hints**, not ground truth — banners lie. Confirm in the app or with a proper client.
 
-## Related home
+## What to do next in the lab
 
-- Wire / protocol depth → Networks-Deep-Dive (do not copy that book here)
-- Use only on an isolated lab (never the public internet).
+1. List open ports and likely services.  
+2. Browse/HTTP only if web ports and RoE allow.  
+3. Deeper wire behavior → Networks Security notes.  
+4. Web path fuzz → [ffuf](../ffuf/README.md) / Gobuster.
 
-## Checklist before marking done
+## Advanced pointer
 
-- [ ] A reader who knows nothing can finish this file
-- [ ] Install / first command if this is a tool
-- [ ] Advanced pointer or next file in this repo
-- [ ] Related home linked if full *slice* depth lives elsewhere
+NSE scripts (`--script`) are powerful and noisy — learn defaults first; only enable scripts you understand on lab hosts.

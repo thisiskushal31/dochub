@@ -1,21 +1,22 @@
-# Recon-ng — Install and first use
+# Recon-ng — install and first use
 
 [← Recon-ng](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Modular web recon framework. **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (OSINT)
-- Install on the lab VM
-- marketplace / workspace
-- One module on an in-scope domain
-- Related: Offensive/ for the phase; Networks if the wire matters
+```bash
+pipx install recon-ng
+recon-ng
+```
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+Inside recon-ng: create workspace; `marketplace install` a module; run against lab domain only.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Structured OSINT modules | Third-party recon without authorization |

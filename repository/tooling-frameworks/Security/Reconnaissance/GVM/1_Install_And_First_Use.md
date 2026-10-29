@@ -1,20 +1,19 @@
-# GVM — Install and first use
+# GVM — install and first use
 
 [← GVM](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Greenbone Vulnerability Management (OpenVAS family). **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Recon)
-- Install on the lab VM
-- First authenticated scan of lab VM
-- Related: Offensive/ for the phase; Networks if the wire matters
+Prefer the Greenbone community containers/docs: [greenbone](https://greenbone.github.io/docs/). Heavy install — use a dedicated lab VM.
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+Start stack; create a task targeting **lab IP range only**; review CVEs; feed patch SLA practice.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Authenticated/unauth lab vuln scans | Scanning internet space you do not own |

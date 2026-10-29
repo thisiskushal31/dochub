@@ -1,21 +1,25 @@
-# John — Install and first use
+# John the Ripper — install and first use
 
 [← John](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+CPU-oriented password cracker. **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Creds)
-- Install on the lab VM
-- unshadow / wordlist
-- Your lab hashes only
-- Related: Offensive/ for the phase; Networks if the wire matters
+```bash
+brew install john-jumbo   # or apt install john
+john --help
+```
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+```bash
+john lab_hashes.txt
+john --show lab_hashes.txt
+```
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Lab hash cracking / format learning | Unauthorized credential recovery |

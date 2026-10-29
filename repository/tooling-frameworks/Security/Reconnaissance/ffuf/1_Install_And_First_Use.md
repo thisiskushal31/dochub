@@ -1,21 +1,35 @@
-# ffuf — Install and first use
+# ffuf — install and first use
 
 [← ffuf](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Fast web fuzzer for directories, vhosts, parameters. **Lab only.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Recon)
-- Install on the lab VM
-- u -w
-- Same job as Gobuster, different UX
-- Related: Offensive/ for the phase; Networks if the wire matters
+```bash
+go install github.com/ffuf/ffuf/v2@latest
+# or: brew install ffuf
+ffuf -V
+```
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+Wordlist + URL with `FUZZ` keyword:
 
+```bash
+ffuf -u https://LAB/FUZZ -w /path/to/wordlist.txt -mc 200,301,302,403
+```
+
+Tune match codes so noise drops. Respect lab rate limits (`-rate`).
+
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Finding hidden paths on lab apps | Hammering third-party sites |
+| Parameter discovery in scope | Credential stuffing without RoE |
+
+## Related
+
+- Gobuster (similar job) → sibling folder  
+- Burp/ZAP for interactive proxy work

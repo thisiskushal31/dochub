@@ -2,12 +2,12 @@
 
 [← Reconnaissance](../README.md)
 
-*(Content TBD — stub created September 2026)*
+Host/port discovery for **lab** targets. Phase context: Security-Deep-Dive Offensive scanning.
 
 ## Topic files
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [1_Install.md](./1_Install.md) | stub |
-| 2 | [2_First_Scan.md](./2_First_Scan.md) | stub |
-| 3 | [3_Read_The_Output.md](./3_Read_The_Output.md) | stub |
+| 1 | [Install](./1_Install.md) | **filled** |
+| 2 | [First scan](./2_First_Scan.md) | **filled** |
+| 3 | [Read the output](./3_Read_The_Output.md) | **filled** |

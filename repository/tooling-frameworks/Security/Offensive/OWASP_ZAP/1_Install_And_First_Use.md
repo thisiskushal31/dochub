@@ -1,21 +1,30 @@
-# OWASP_ZAP — Install and first use
+# OWASP ZAP — install and first use
 
-[← OWASP_ZAP](./README.md)
+[← OWASP ZAP](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Open-source web app scanner / proxy (DAST). **Lab or approved staging only.** Pipeline packaging: [Handbook ZAP](https://github.com/thisiskushal31/DevOps-Handbook/tree/main/Security/ZAP).
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Web)
-- Install on the lab VM
-- Automated scan of lab app
-- Pointer: Burp_Suite/
-- Related: Offensive/ for the phase; Networks if the wire matters
+- Download from [zaproxy.org](https://www.zaproxy.org/download/)  
+- Or container image for CI (see Handbook)
 
-## Checklist before marking done
+GUI: `zap.sh` / Windows launcher. Check version in Help → About.
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+## First lab use
 
+1. Point lab browser at ZAP proxy (or use ZAP’s browser).  
+2. Manual explore the lab app (spider lightly).  
+3. Run a **baseline** automated scan against the lab URL only.
+
+```bash
+# example CLI baseline against lab
+zap-baseline.py -t https://LAB_WEB_APP
+```
+
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Finding common web issues in lab/CI | Unscoped internet scanning |
+| Complementing SAST | Replacing authZ design review |

@@ -1,21 +1,19 @@
-# Maltego — Install and first use
+# Maltego — install and first use
 
 [← Maltego](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Graph OSINT / link analysis (CE available). **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (OSINT)
-- Install on the lab VM
-- Community edition
-- One graph from a domain you own
-- Related: Offensive/ for the phase; Networks if the wire matters
+Install from [maltego.com](https://www.maltego.com/); create CE account; launch.
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+Run a transform on a lab domain entity; explore graph. Stay within transform ToS and RoE.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| OSINT graphing in scope | Doxxing / harassment |

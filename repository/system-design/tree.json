@@ -1194,28 +1194,28 @@
         "path": "Security-Tradeoffs/1_Threat_Modeling_At_Design_Time.md",
         "type": "file",
         "sha": "",
-        "size": 870
+        "size": 2598
       },
       {
         "name": "2_Auth_Design_vs_Zero_Trust.md",
         "path": "Security-Tradeoffs/2_Auth_Design_vs_Zero_Trust.md",
         "type": "file",
         "sha": "",
-        "size": 898
+        "size": 2499
       },
       {
         "name": "3_Encryption_Performance_and_Key_Rotation.md",
         "path": "Security-Tradeoffs/3_Encryption_Performance_and_Key_Rotation.md",
         "type": "file",
         "sha": "",
-        "size": 936
+        "size": 2538
       },
       {
         "name": "README.md",
         "path": "Security-Tradeoffs/README.md",
         "type": "file",
         "sha": "",
-        "size": 1139
+        "size": 1157
       }
     ]
   },

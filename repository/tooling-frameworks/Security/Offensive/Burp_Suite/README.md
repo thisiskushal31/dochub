@@ -1,12 +1,10 @@
-# Burp_Suite
+# Burp Suite
 
 [← Offensive](../README.md)
-
-*(Content TBD — stub created September 2026)*
 
 ## Topic files
 
 | # | Topic | Status |
 |---|--------|--------|
-| 1 | [1_Install_And_Proxy.md](./1_Install_And_Proxy.md) | stub |
-| 2 | [2_First_Intercept.md](./2_First_Intercept.md) | stub |
+| 1 | [Install and proxy](./1_Install_And_Proxy.md) | **filled** |
+| 2 | [First intercept](./2_First_Intercept.md) | **filled** |

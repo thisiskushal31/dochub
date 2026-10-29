@@ -1,20 +1,20 @@
-# Caido — Install and first use
+# Caido — install and first use
 
 [← Caido](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Modern web proxy alternative to Burp. **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Web)
-- Install on the lab VM
-- When people pick it vs Burp
-- Related: Offensive/ for the phase; Networks if the wire matters
+Download from [caido.io](https://caido.io/); install for your OS; launch desktop app.
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+Configure lab browser proxy to Caido’s local port; browse LAB; inspect HTTP history.
+Same ethics as Burp.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Manual web testing in lab | MITM without authorization |

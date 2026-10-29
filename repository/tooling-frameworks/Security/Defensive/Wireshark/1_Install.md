@@ -2,23 +2,23 @@
 
 [← Wireshark](./README.md)
 
-*(Content TBD — stub created September 2026)*
+GUI packet analyzer. Capture only on interfaces/networks you are allowed to monitor (usually your lab VM).
 
-## Planned coverage
+## Install
 
-- Install + permission to capture
-- Pick an interface, start/stop
-- Follow a TCP stream on *lab* traffic
-- When to open Networks Observability/3 for filters and protocol decode
+| OS | Typical |
+|----|---------|
+| macOS | `brew install --cask wireshark` |
+| Debian/Ubuntu | `sudo apt install wireshark` (add user to `wireshark` group) |
+| Windows | Installer from [wireshark.org](https://www.wireshark.org/download.html) |
 
-## Related home
+Open Wireshark; confirm interfaces list. On macOS you may need ChmodBPF permissions as documented by the installer.
 
-- Wire / protocol depth → Networks-Deep-Dive (do not copy that book here)
-- Use only on an isolated lab (never the public internet).
+## Related
 
-## Checklist before marking done
+- Wire protocols → Networks-Deep-Dive  
+- CLI cousin → [tcpdump](../tcpdump/README.md)
 
-- [ ] A reader who knows nothing can finish this file
-- [ ] Install / first command if this is a tool
-- [ ] Advanced pointer or next file in this repo
-- [ ] Related home linked if full *slice* depth lives elsewhere
+## Next
+
+- [2 First capture](./2_First_Capture.md)

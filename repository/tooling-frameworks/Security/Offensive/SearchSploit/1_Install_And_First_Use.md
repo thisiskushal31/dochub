@@ -1,21 +1,27 @@
-# SearchSploit — Install and first use
+# SearchSploit — install and first use
 
 [← SearchSploit](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+CLI search of Exploit-DB archive. **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Exploitation)
-- Install on the lab VM
-- searchsploit apache
-- Read, do not spray
-- Related: Offensive/ for the phase; Networks if the wire matters
+```bash
+# Kali includes it; else: git clone https://gitlab.com/exploit-database/exploitdb
+# symlink searchsploit into PATH
+searchsploit -h
+```
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+```bash
+searchsploit apache 2.4
+searchsploit -m PATH/TO/EDB-ID   # copy into lab workspace
+```
+Run PoCs only inside your lab VMs.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Finding public PoCs for lab CVEs | Blind-fire exploits at live third parties |

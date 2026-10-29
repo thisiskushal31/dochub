@@ -1,21 +1,27 @@
-# Shodan — Install and first use
+# Shodan — install and first use
 
 [← Shodan](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Internet device search engine (API/CLI). **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (OSINT)
-- Install on the lab VM
-- Account, filters
-- Never treat random internet hosts as lab
-- Related: Offensive/ for the phase; Networks if the wire matters
+Create account at shodan.io; install CLI:
+```bash
+pipx install shodan
+shodan init YOUR_API_KEY
+```
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+```bash
+shodan host LAB_PUBLIC_IP   # only IPs you own / RoE allows
+shodan search 'org:"Your Lab Org"'
+```
+Do not use Shodan results as permission to attack.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Internet exposure awareness | Picking random hosts to exploit |

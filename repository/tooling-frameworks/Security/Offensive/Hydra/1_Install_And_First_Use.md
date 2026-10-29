@@ -1,21 +1,26 @@
-# Hydra — Install and first use
+# Hydra — install and first use
 
 [← Hydra](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Online login brute-force tool. **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Creds)
-- Install on the lab VM
-- lockout risk
-- Tiny wordlist on lab SSH
-- Related: Offensive/ for the phase; Networks if the wire matters
+```bash
+brew install hydra   # or apt install hydra
+hydra -h
+```
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+```bash
+# lab SSH with tiny wordlist you created
+hydra -l labuser -P tiny.txt ssh://LAB_IP
+```
+Rate-limit; fragile services break easily.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Auth strength demos in lab | Credential stuffing real user accounts |

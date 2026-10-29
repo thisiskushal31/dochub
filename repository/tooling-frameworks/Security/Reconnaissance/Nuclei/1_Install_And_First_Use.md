@@ -1,21 +1,36 @@
-# Nuclei — Install and first use
+# Nuclei — install and first use
 
 [← Nuclei](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Template-based vulnerability scanner. **Lab / authorized targets only.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Recon)
-- Install on the lab VM
-- Severity filter
-- Intrusive templates only if in scope
-- Related: Offensive/ for the phase; Networks if the wire matters
+```bash
+# common: Go install or GitHub release binary
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+nuclei -version
+nuclei -update-templates
+```
 
-## Checklist before marking done
+(Or download a release for your OS from ProjectDiscovery.)
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+## First lab use
 
+```bash
+nuclei -u https://LAB_WEB_APP -severity
+```
+
+Start with severity filters when learning (`-severity critical,high`) so output is readable.
+
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Known-issue templates on lab apps | Blind-firing at the internet |
+| Regression checks in a harness | Replacing code review / threat models |
+
+## Related
+
+- Phase → Security-Deep-Dive Offensive/4  
+- CI DAST cousin → Handbook ZAP (different job)

@@ -1,20 +1,25 @@
-# Nikto — Install and first use
+# Nikto — install and first use
 
 [← Nikto](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Noisy web server vulnerability scanner. **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Recon)
-- Install on the lab VM
-- First run on lab HTTP
-- Related: Offensive/ for the phase; Networks if the wire matters
+```bash
+# Kali/apt: sudo apt install nikto
+nikto -Version
+```
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+```bash
+nikto -h https://LAB_WEB_APP
+```
+Expect volume; lab or approved windows only.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Quick lab web misconfig hints | Unscoped production scans |

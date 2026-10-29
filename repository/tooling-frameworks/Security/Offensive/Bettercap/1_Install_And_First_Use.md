@@ -1,21 +1,26 @@
-# Bettercap — Install and first use
+# Bettercap — install and first use
 
 [← Bettercap](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Network/MITM reconnaissance framework. **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Wireless)
-- Install on the lab VM
-- Lab LAN
-- Pointer: Networks for ARP/MitM theory
-- Related: Offensive/ for the phase; Networks if the wire matters
+```bash
+# releases: https://github.com/bettercap/bettercap
+bettercap -h
+```
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+On isolated lab network only:
+```bash
+sudo bettercap -iface eth0
+```
+Explore `net.probe on` style discovery; do not ARP-spoof networks you do not own.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Lab LAN recon / MITM demos | Attacking shared/public Wi-Fi users |

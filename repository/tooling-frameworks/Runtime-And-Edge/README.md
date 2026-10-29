@@ -14,5 +14,5 @@
 
 ## Related home
 
-- Cloud Run / Fargate / Container Apps → [Containerization Serverless-Containers](../../Containerization-Deep-Dive/Serverless-Containers/README.md)
+- Cloud Run / Fargate / Container Apps → [Containerization Serverless-Containers](https://github.com/thisiskushal31/Containerization-Deep-Dive/blob/main/Serverless-Containers/README.md)
 - CDN / edge as *distribution* → System Design `Fundamentals/4_CDN.md`

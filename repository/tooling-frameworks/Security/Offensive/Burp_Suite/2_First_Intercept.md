@@ -1,24 +1,19 @@
-# Burp_Suite — 2 First Intercept
+# Burp Suite — first intercept
 
-[← Burp_Suite](./README.md)
+[← Burp Suite](./README.md)
 
-*(Content TBD — stub created September 2026)*
+## Minimal lab exercise
 
-## Planned coverage
+1. Intercept a GET to your lab app.  
+2. Forward unchanged; confirm page loads.  
+3. Intercept again; change a **harmless** query param; Forward; observe.  
+4. Turn Intercept **off** so browsing is not blocked; use HTTP history.
 
-- Install Community
-- Browser proxy to localhost lab app
-- Intercept one request
-- Pointer: AppSec/ in this repo
+## Repeater
 
-## Related home
+Send a history item to Repeater; change one input; compare responses. This is how you study **issue classes** ([Security-Deep-Dive Offensive/5](https://github.com/thisiskushal31/Security-Deep-Dive/blob/main/Offensive/5_Web_Application_Attacks.md)) without automated spray.
 
-- Wire / protocol depth → Networks-Deep-Dive (do not copy that book here)
-- Use only on an isolated lab (never the public internet).
+## When not to use
 
-## Checklist before marking done
-
-- [ ] A reader who knows nothing can finish this file
-- [ ] Install / first command if this is a tool
-- [ ] Advanced pointer or next file in this repo
-- [ ] Related home linked if full *slice* depth lives elsewhere
+- Accounts/data outside scope  
+- Intruder-style floods against fragile lab mates without agreement  

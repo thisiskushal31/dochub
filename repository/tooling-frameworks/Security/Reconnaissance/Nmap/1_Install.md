@@ -2,24 +2,37 @@
 
 [← Nmap](./README.md)
 
-*(Content TBD — stub created September 2026)*
+Network mapper for host and port discovery. **Isolated lab only — never scan the public internet.**
 
-## Planned coverage
+## Install
 
-- Install on macOS / Linux / Windows
-- What a port is, in one paragraph
-- First scan of the *lab* target only (`nmap -sV`)
-- Read: open / closed / filtered
-- When to open Networks Security/8 for scan types on the wire
+| OS | Typical |
+|----|---------|
+| macOS | `brew install nmap` |
+| Debian/Ubuntu | `sudo apt install nmap` |
+| Windows | Installer from [nmap.org](https://nmap.org/download.html) |
+
+Check: `nmap --version`
+
+## What a port is (one paragraph)
+
+A **port** is a numbered endpoint on a host (0–65535) where a service may listen (e.g. 22 SSH, 443 HTTPS). Nmap asks which ports answer, and optionally what service/version they claim to be.
+
+## First lab command
+
+Against a lab IP you own (example `192.168.56.10`):
+
+```bash
+nmap -sV 192.168.56.10
+```
+
+`-sV` probes open ports for service/version hints. Read open / closed / filtered in [3](./3_Read_The_Output.md).
 
 ## Related home
 
-- Wire / protocol depth → Networks-Deep-Dive (do not copy that book here)
-- Use only on an isolated lab (never the public internet).
+- Scan types on the wire → Networks-Deep-Dive Security  
+- Phase context → [Security-Deep-Dive Offensive/4](https://github.com/thisiskushal31/Security-Deep-Dive/blob/main/Offensive/4_Scanning_And_Enumeration.md)
 
-## Checklist before marking done
+## Next
 
-- [ ] A reader who knows nothing can finish this file
-- [ ] Install / first command if this is a tool
-- [ ] Advanced pointer or next file in this repo
-- [ ] Related home linked if full *slice* depth lives elsewhere
+- [2 First scan](./2_First_Scan.md)

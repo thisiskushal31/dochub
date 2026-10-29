@@ -2,7 +2,7 @@
 
 [← README](../README.md)
 
-How you **draw** a system — not what to design. Open one of these **while** you read [System-Design-Concepts](../../System-Design-Concepts/README.md). The ideas (HLD, caching, CAP) stay there.
+How you **draw** a system — not what to design. Open one of these **while** you read [System-Design-Concepts](https://github.com/thisiskushal31/System-Design-Concepts/blob/main/README.md). The ideas (HLD, caching, CAP) stay there.
 
 Industry split: *diagramming* (boxes and lines: draw.io, Excalidraw), *diagrams-as-code* (Mermaid, PlantUML), *notation* (C4). All of that lives here.
 

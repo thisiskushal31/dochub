@@ -1,21 +1,26 @@
-# Hashcat — Install and first use
+# Hashcat — install and first use
 
 [← Hashcat](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+GPU/CPU password recovery / hash cracking. **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Creds)
-- Install on the lab VM
-- hash type
-- Policy test, not other people's dumps
-- Related: Offensive/ for the phase; Networks if the wire matters
+```bash
+# Linux/macOS: https://hashcat.net/hashcat/ releases or brew install hashcat
+hashcat --version
+```
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+```bash
+# crack a lab-generated hash file you created
+hashcat -m 0 lab_hashes.txt rockyou.txt
+```
+Only hashes you are authorized to recover.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Lab password audits | Cracking stolen third-party dumps |

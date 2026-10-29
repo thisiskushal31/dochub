@@ -1,24 +1,15 @@
-# Wireshark — 3 Read A Stream
+# Wireshark — 3 Read a stream
 
 [← Wireshark](./README.md)
 
-*(Content TBD — stub created September 2026)*
+## Follow a conversation
 
-## Planned coverage
+1. Find a TCP packet of interest.  
+2. Right-click → Follow → TCP Stream (or HTTP/TLS where applicable).  
+3. Read request/response payloads for **cleartext** lab HTTP.
 
-- Install + permission to capture
-- Pick an interface, start/stop
-- Follow a TCP stream on *lab* traffic
-- When to open Networks Observability/3 for filters and protocol decode
+TLS payloads are encrypted — you see handshake metadata unless you have keys configured for decryption (advanced; lab only).
 
-## Related home
+## Defender habit
 
-- Wire / protocol depth → Networks-Deep-Dive (do not copy that book here)
-- Use only on an isolated lab (never the public internet).
-
-## Checklist before marking done
-
-- [ ] A reader who knows nothing can finish this file
-- [ ] Install / first command if this is a tool
-- [ ] Advanced pointer or next file in this repo
-- [ ] Related home linked if full *slice* depth lives elsewhere
+Ask: would my SIEM have shown this connection? Correlate IPs/ports with [Security-Deep-Dive Defensive-Ops](https://github.com/thisiskushal31/Security-Deep-Dive/tree/main/Defensive-Ops).

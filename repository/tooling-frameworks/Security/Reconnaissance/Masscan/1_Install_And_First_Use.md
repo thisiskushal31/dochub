@@ -1,21 +1,27 @@
-# Masscan — Install and first use
+# Masscan — install and first use
 
 [← Masscan](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+Very fast port scanner. **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Recon)
-- Install on the lab VM
-- Rate limits
-- Never point at the public internet
-- Related: Offensive/ for the phase; Networks if the wire matters
+```bash
+# Linux common: build from https://github.com/robertdavidgraham/masscan
+# or distro package if available
+masscan --version
+```
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+```bash
+# LAB subnet you own only — rate-limit!
+sudo masscan LAB_CIDR -p80,443 --rate 1000
+```
+Prefer Nmap for version detection after Masscan finds open ports.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Wide lab port discovery | Internet-wide scanning; high-rate DoS of fragile hosts |

@@ -1,21 +1,37 @@
-# Netcat — Install and first use
+# Netcat — install and first use
 
 [← Netcat](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+TCP/UDP Swiss army knife for lab connectivity checks and simple listeners. **Lab only.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Post-ex)
-- Install on the lab VM
-- lvnp
-- What a reverse shell looks like to a defender
-- Related: Offensive/ for the phase; Networks if the wire matters
+| OS | Typical |
+|----|---------|
+| macOS | `brew install netcat` or use `nc` (BSD) |
+| Linux | `sudo apt install netcat-openbsd` (or nmap-ncat) |
 
-## Checklist before marking done
+`nc -h` / `man nc` — flags differ between implementations; read your local man page.
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+## First lab use
 
+Listen on lab VM:
+
+```bash
+nc -l 4444
+```
+
+From another lab host:
+
+```bash
+nc LAB_IP 4444
+```
+
+Type text; confirm bidirectional. This teaches ports/sockets — not a backdoor tutorial for live systems.
+
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Connectivity / banner grabs in lab | Persistence on systems you do not own |
+| Debugging simple TCP services | Replacing proper C2 study in authorized labs with care |

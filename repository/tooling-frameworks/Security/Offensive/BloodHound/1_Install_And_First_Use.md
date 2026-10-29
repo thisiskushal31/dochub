@@ -1,21 +1,22 @@
-# BloodHound — Install and first use
+# BloodHound — install and first use
 
 [← BloodHound](./README.md)
 
-*(Content TBD — stub created September 2026 — lab only, systems you own)*
+AD attack-path visualization (collectors + GUI/CE). **Lab / authorized targets only — never against systems you do not own.**
 
-## Planned coverage
+## Install
 
-- What it is and which pentest *phase* it belongs to (Post-ex)
-- Install on the lab VM
-- SharpHound in a lab AD
-- Choke points for defenders too
-- Related: Offensive/ for the phase; Networks if the wire matters
+Follow current docs at [BloodHound docs](https://bloodhound.specterops.io/) (Community Edition / legacy). Install collector (SharpHound/AzureHound) **only** in lab AD.
 
-## Checklist before marking done
+## First lab use
 
-- [ ] Install + first command on the isolated lab
-- [ ] What the tool is *for* in the pentest path
-- [ ] When *not* to use it
-- [ ] No writeups against systems you do not own
+1. Collect from lab domain with authorized account.
+2. Ingest into BloodHound.
+3. Mark owned nodes; study shortest paths to Domain Admin.
+4. Fix paths as the blue team.
 
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| AD path analysis in lab | Collecting from production AD without RoE |

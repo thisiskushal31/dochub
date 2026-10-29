@@ -1,24 +1,27 @@
-# Metasploit — 1 Lab Only
+# Metasploit — lab only
 
 [← Metasploit](./README.md)
 
-*(Content TBD — stub created September 2026)*
+Exploitation framework. **Only against machines you own or have written permission to test.**
 
-## Planned coverage
+## Install
 
-- Lab-only. Isolated VMs.
-- What the framework is
-- No writeups against systems you do not own
-- Pointer: Offensive/ + Labs/
+Prefer a dedicated Kali/lab VM. Framework installers: [docs.metasploit.com](https://docs.metasploit.com/).
 
-## Related home
+```bash
+msfconsole -v
+```
 
-- Wire / protocol depth → Networks-Deep-Dive (do not copy that book here)
-- Use only on an isolated lab (never the public internet).
+## First lab use
 
-## Checklist before marking done
+1. Snapshot the lab victim VM.  
+2. `msfconsole`  
+3. Use a module aimed at an **intentionally vulnerable** lab service you already know is present.  
+4. Document detection opportunities; revert snapshot.
 
-- [ ] A reader who knows nothing can finish this file
-- [ ] Install / first command if this is a tool
-- [ ] Advanced pointer or next file in this repo
-- [ ] Related home linked if full *slice* depth lives elsewhere
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Controlled exploit demos in lab | Attacking the public internet |
+| Purple-team detection tests | “Trying exploits” on random Shodan hits |

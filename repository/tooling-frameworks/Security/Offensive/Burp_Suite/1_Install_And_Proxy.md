@@ -1,24 +1,28 @@
-# Burp_Suite — 1 Install And Proxy
+# Burp Suite — install and proxy
 
-[← Burp_Suite](./README.md)
+[← Burp Suite](./README.md)
 
-*(Content TBD — stub created September 2026)*
+HTTP(S) intercepting proxy for web testing. **Lab apps only.** Community Edition is enough to learn.
 
-## Planned coverage
+## Install
 
-- Install Community
-- Browser proxy to localhost lab app
-- Intercept one request
-- Pointer: AppSec/ in this repo
+Download from [portswigger.net](https://portswigger.net/burp/communitydownload). Launch Burp → use the built-in browser or system proxy `127.0.0.1:8080`.
 
-## Related home
+Install Burp's CA in the lab browser so HTTPS intercept works (Burp docs: Proxy → TLS).
 
-- Wire / protocol depth → Networks-Deep-Dive (do not copy that book here)
-- Use only on an isolated lab (never the public internet).
+## First proxy check
 
-## Checklist before marking done
+1. Proxy → Intercept **on**.  
+2. Browse `http://LAB` (or HTTPS after CA trust).  
+3. See the request pause in Intercept.
 
-- [ ] A reader who knows nothing can finish this file
-- [ ] Install / first command if this is a tool
-- [ ] Advanced pointer or next file in this repo
-- [ ] Related home linked if full *slice* depth lives elsewhere
+## For / not for
+
+| For | Not for |
+|-----|---------|
+| Manual web testing in lab | MITM of networks you do not own |
+| Learning request/response editing | Production traffic without RoE |
+
+## Next
+
+- [2 First intercept](./2_First_Intercept.md)

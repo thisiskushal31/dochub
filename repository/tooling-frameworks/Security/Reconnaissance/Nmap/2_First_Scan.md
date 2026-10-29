@@ -1,25 +1,27 @@
-# Nmap — 2 First Scan
+# Nmap — 2 First scan
 
 [← Nmap](./README.md)
 
-*(Content TBD — stub created September 2026)*
+**Lab target only.** Replace `LAB` with your VM IP.
 
-## Planned coverage
+## Useful first scans
 
-- Install on macOS / Linux / Windows
-- What a port is, in one paragraph
-- First scan of the *lab* target only (`nmap -sV`)
-- Read: open / closed / filtered
-- When to open Networks Security/8 for scan types on the wire
+| Intent | Example |
+|--------|---------|
+| Quick common ports | `nmap LAB` |
+| Service versions | `nmap -sV LAB` |
+| All TCP (slow) | `nmap -p- LAB` |
+| Specific ports | `nmap -p 22,80,443 LAB` |
+| Skip ping (if ICMP blocked) | `nmap -Pn -sV LAB` |
 
-## Related home
+Save output: `nmap -sV -oA lab1 LAB` (writes `.nmap` / `.xml` / `.gnmap`).
 
-- Wire / protocol depth → Networks-Deep-Dive (do not copy that book here)
-- Use only on an isolated lab (never the public internet).
+## When not to use Nmap
 
-## Checklist before marking done
+- Targets outside written scope  
+- Timing so aggressive it becomes a DoS  
+- “Just checking” a vendor or neighbor network  
 
-- [ ] A reader who knows nothing can finish this file
-- [ ] Install / first command if this is a tool
-- [ ] Advanced pointer or next file in this repo
-- [ ] Related home linked if full *slice* depth lives elsewhere
+## Next
+
+- [3 Read the output](./3_Read_The_Output.md)
