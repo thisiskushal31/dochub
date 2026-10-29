@@ -13,7 +13,7 @@ Run a threat model when you add a **trust boundary**, a **new data class**, or a
 | New trust boundary | Vendor webhook, mobile client, admin console |
 | Major redesign | Split monolith; multi-tenant |
 
-Light STRIDE vocabulary: [Security-Deep-Dive Foundations/2](https://github.com/thisiskushal31/Security-Deep-Dive/blob/main/Foundations/2_STRIDE_And_Threat_Modeling.md). This page is the **HLD habit**.
+Light STRIDE vocabulary: [Security-Deep-Dive Foundations/12](https://github.com/thisiskushal31/Security-Deep-Dive/blob/main/Foundations/12_STRIDE_And_Threat_Modeling.md). This page is the **HLD habit**.
 
 ## STRIDE on common components
 

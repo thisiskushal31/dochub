@@ -10,7 +10,7 @@
         "path": "AppSec/1_OWASP_And_Secure_SDLC.md",
         "type": "file",
         "sha": "",
-        "size": 2152
+        "size": 2154
       },
       {
         "name": "2_API_Security.md",
@@ -25,6 +25,29 @@
         "type": "file",
         "sha": "",
         "size": 556
+      }
+    ]
+  },
+  {
+    "name": "Assets",
+    "path": "Assets",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Foundations",
+        "path": "Assets/Foundations",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Assets/Foundations/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 168
+          }
+        ]
       }
     ]
   },
@@ -133,28 +156,154 @@
         "path": "Foundations/1_CIA_And_Risk.md",
         "type": "file",
         "sha": "",
-        "size": 2627
+        "size": 9376
       },
       {
-        "name": "2_STRIDE_And_Threat_Modeling.md",
-        "path": "Foundations/2_STRIDE_And_Threat_Modeling.md",
+        "name": "10_Secure_Design_Principles.md",
+        "path": "Foundations/10_Secure_Design_Principles.md",
         "type": "file",
         "sha": "",
-        "size": 2400
+        "size": 3914
       },
       {
-        "name": "3_Controls_And_Physical.md",
-        "path": "Foundations/3_Controls_And_Physical.md",
+        "name": "11_Security_Models_And_Architecture_Literacy.md",
+        "path": "Foundations/11_Security_Models_And_Architecture_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 2284
+        "size": 4618
+      },
+      {
+        "name": "12_STRIDE_And_Threat_Modeling.md",
+        "path": "Foundations/12_STRIDE_And_Threat_Modeling.md",
+        "type": "file",
+        "sha": "",
+        "size": 8282
+      },
+      {
+        "name": "13_Zero_Trust_And_Deception_Basics.md",
+        "path": "Foundations/13_Zero_Trust_And_Deception_Basics.md",
+        "type": "file",
+        "sha": "",
+        "size": 5591
+      },
+      {
+        "name": "14_Defensible_Network_Architecture_Literacy.md",
+        "path": "Foundations/14_Defensible_Network_Architecture_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 3845
+      },
+      {
+        "name": "15_Endpoint_And_System_Hardening_Literacy.md",
+        "path": "Foundations/15_Endpoint_And_System_Hardening_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 3667
+      },
+      {
+        "name": "16_Human_Security_Literacy.md",
+        "path": "Foundations/16_Human_Security_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 3149
+      },
+      {
+        "name": "17_Privacy_Literacy.md",
+        "path": "Foundations/17_Privacy_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 3423
+      },
+      {
+        "name": "18_Adversary_Models_Kill_Chain_And_ATTCK.md",
+        "path": "Foundations/18_Adversary_Models_Kill_Chain_And_ATTCK.md",
+        "type": "file",
+        "sha": "",
+        "size": 5215
+      },
+      {
+        "name": "19_Threat_Intelligence_Literacy.md",
+        "path": "Foundations/19_Threat_Intelligence_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 5301
+      },
+      {
+        "name": "2_Controls_And_Physical.md",
+        "path": "Foundations/2_Controls_And_Physical.md",
+        "type": "file",
+        "sha": "",
+        "size": 7644
+      },
+      {
+        "name": "20_Vulnerability_Management_Literacy.md",
+        "path": "Foundations/20_Vulnerability_Management_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 3346
+      },
+      {
+        "name": "21_Resilience_Continuity_And_Recovery_Literacy.md",
+        "path": "Foundations/21_Resilience_Continuity_And_Recovery_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 3631
+      },
+      {
+        "name": "3_Ethics_Authorization_And_Lab_Rules.md",
+        "path": "Foundations/3_Ethics_Authorization_And_Lab_Rules.md",
+        "type": "file",
+        "sha": "",
+        "size": 3850
+      },
+      {
+        "name": "4_Security_Policy_Governance_And_Roles.md",
+        "path": "Foundations/4_Security_Policy_Governance_And_Roles.md",
+        "type": "file",
+        "sha": "",
+        "size": 5536
+      },
+      {
+        "name": "5_Risk_Management_Process_And_RMF.md",
+        "path": "Foundations/5_Risk_Management_Process_And_RMF.md",
+        "type": "file",
+        "sha": "",
+        "size": 4876
+      },
+      {
+        "name": "6_Assets_Data_States_And_Assurance.md",
+        "path": "Foundations/6_Assets_Data_States_And_Assurance.md",
+        "type": "file",
+        "sha": "",
+        "size": 4348
+      },
+      {
+        "name": "7_AAA_And_Access_Fundamentals.md",
+        "path": "Foundations/7_AAA_And_Access_Fundamentals.md",
+        "type": "file",
+        "sha": "",
+        "size": 7085
+      },
+      {
+        "name": "8_Cryptographic_Solutions_Literacy.md",
+        "path": "Foundations/8_Cryptographic_Solutions_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 7219
+      },
+      {
+        "name": "9_Change_Management_And_Security.md",
+        "path": "Foundations/9_Change_Management_And_Security.md",
+        "type": "file",
+        "sha": "",
+        "size": 4369
       },
       {
         "name": "README.md",
         "path": "Foundations/README.md",
         "type": "file",
         "sha": "",
-        "size": 649
+        "size": 5881
       }
     ]
   },
@@ -242,7 +391,7 @@
         "path": "Offensive/1_Methodology_Lab_Only.md",
         "type": "file",
         "sha": "",
-        "size": 1357
+        "size": 1477
       },
       {
         "name": "2_Planning_And_Scope.md",
@@ -310,6 +459,50 @@
     ]
   },
   {
+    "name": "Threat-Intelligence",
+    "path": "Threat-Intelligence",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Analytic_Tradecraft.md",
+        "path": "Threat-Intelligence/1_Analytic_Tradecraft.md",
+        "type": "file",
+        "sha": "",
+        "size": 368
+      },
+      {
+        "name": "README.md",
+        "path": "Threat-Intelligence/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1020
+      }
+    ]
+  },
+  {
+    "name": "Threat-Modeling",
+    "path": "Threat-Modeling",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Workshop_Process.md",
+        "path": "Threat-Modeling/1_Workshop_Process.md",
+        "type": "file",
+        "sha": "",
+        "size": 340
+      },
+      {
+        "name": "README.md",
+        "path": "Threat-Modeling/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 955
+      }
+    ]
+  },
+  {
     "name": "Threats",
     "path": "Threats",
     "type": "dir",
@@ -353,10 +546,32 @@
     ]
   },
   {
+    "name": "Vulnerability-Management",
+    "path": "Vulnerability-Management",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Program_Design.md",
+        "path": "Vulnerability-Management/1_Program_Design.md",
+        "type": "file",
+        "sha": "",
+        "size": 376
+      },
+      {
+        "name": "README.md",
+        "path": "Vulnerability-Management/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 943
+      }
+    ]
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2030
+    "size": 2429
   }
 ]
