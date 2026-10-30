@@ -1,5 +1,27 @@
 [
   {
+    "name": "AI-Security",
+    "path": "AI-Security",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Placeholder.md",
+        "path": "AI-Security/1_Placeholder.md",
+        "type": "file",
+        "sha": "",
+        "size": 186
+      },
+      {
+        "name": "README.md",
+        "path": "AI-Security/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1945
+      }
+    ]
+  },
+  {
     "name": "AppSec",
     "path": "AppSec",
     "type": "dir",
@@ -46,6 +68,51 @@
             "type": "file",
             "sha": "",
             "size": 168
+          }
+        ]
+      },
+      {
+        "name": "GRC",
+        "path": "Assets/GRC",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Assets/GRC/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 152
+          }
+        ]
+      },
+      {
+        "name": "Threats",
+        "path": "Assets/Threats",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Assets/Threats/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 392
+          }
+        ]
+      },
+      {
+        "name": "Vulnerability-Management",
+        "path": "Assets/Vulnerability-Management",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Assets/Vulnerability-Management/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 458
           }
         ]
       }
@@ -205,7 +272,7 @@
         "path": "Foundations/16_Human_Security_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 3149
+        "size": 3732
       },
       {
         "name": "17_Privacy_Literacy.md",
@@ -219,7 +286,7 @@
         "path": "Foundations/18_Adversary_Models_Kill_Chain_And_ATTCK.md",
         "type": "file",
         "sha": "",
-        "size": 5215
+        "size": 5495
       },
       {
         "name": "19_Threat_Intelligence_Literacy.md",
@@ -240,14 +307,14 @@
         "path": "Foundations/20_Vulnerability_Management_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 3346
+        "size": 3515
       },
       {
         "name": "21_Resilience_Continuity_And_Recovery_Literacy.md",
         "path": "Foundations/21_Resilience_Continuity_And_Recovery_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 3631
+        "size": 3632
       },
       {
         "name": "3_Ethics_Authorization_And_Lab_Rules.md",
@@ -303,7 +370,7 @@
         "path": "Foundations/README.md",
         "type": "file",
         "sha": "",
-        "size": 5881
+        "size": 5882
       }
     ]
   },
@@ -318,14 +385,56 @@
         "path": "GRC/1_NIST_ISO_And_ATTCK.md",
         "type": "file",
         "sha": "",
-        "size": 2460
+        "size": 7543
+      },
+      {
+        "name": "2_NIST_CSF_2_Outcomes.md",
+        "path": "GRC/2_NIST_CSF_2_Outcomes.md",
+        "type": "file",
+        "sha": "",
+        "size": 8842
+      },
+      {
+        "name": "3_NIST_RMF_Lifecycle.md",
+        "path": "GRC/3_NIST_RMF_Lifecycle.md",
+        "type": "file",
+        "sha": "",
+        "size": 8642
+      },
+      {
+        "name": "4_Control_Catalogs_800-53_And_CIS.md",
+        "path": "GRC/4_Control_Catalogs_800-53_And_CIS.md",
+        "type": "file",
+        "sha": "",
+        "size": 7518
+      },
+      {
+        "name": "5_ISO_27001_ISMS_Literacy.md",
+        "path": "GRC/5_ISO_27001_ISMS_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 6024
+      },
+      {
+        "name": "6_SOC2_And_Evidence.md",
+        "path": "GRC/6_SOC2_And_Evidence.md",
+        "type": "file",
+        "sha": "",
+        "size": 7337
+      },
+      {
+        "name": "7_NICE_Workforce_Literacy.md",
+        "path": "GRC/7_NICE_Workforce_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 6166
       },
       {
         "name": "README.md",
         "path": "GRC/README.md",
         "type": "file",
         "sha": "",
-        "size": 558
+        "size": 3349
       }
     ]
   },
@@ -491,14 +600,28 @@
         "path": "Threat-Modeling/1_Workshop_Process.md",
         "type": "file",
         "sha": "",
-        "size": 340
+        "size": 5192
+      },
+      {
+        "name": "2_DFD_And_STRIDE_In_Practice.md",
+        "path": "Threat-Modeling/2_DFD_And_STRIDE_In_Practice.md",
+        "type": "file",
+        "sha": "",
+        "size": 5556
+      },
+      {
+        "name": "3_PASTA_Staged_Walkthrough.md",
+        "path": "Threat-Modeling/3_PASTA_Staged_Walkthrough.md",
+        "type": "file",
+        "sha": "",
+        "size": 5143
       },
       {
         "name": "README.md",
         "path": "Threat-Modeling/README.md",
         "type": "file",
         "sha": "",
-        "size": 955
+        "size": 2044
       }
     ]
   },
@@ -513,35 +636,63 @@
         "path": "Threats/1_Actors_And_Motivations.md",
         "type": "file",
         "sha": "",
-        "size": 1533
+        "size": 10322
       },
       {
         "name": "2_Vectors_And_Surfaces.md",
         "path": "Threats/2_Vectors_And_Surfaces.md",
         "type": "file",
         "sha": "",
-        "size": 1692
+        "size": 11315
       },
       {
         "name": "3_Vulnerabilities.md",
         "path": "Threats/3_Vulnerabilities.md",
         "type": "file",
         "sha": "",
-        "size": 1956
+        "size": 8601
       },
       {
-        "name": "4_Mitigations.md",
-        "path": "Threats/4_Mitigations.md",
+        "name": "4_Malware.md",
+        "path": "Threats/4_Malware.md",
         "type": "file",
         "sha": "",
-        "size": 1843
+        "size": 7662
+      },
+      {
+        "name": "5_Attack_Classes.md",
+        "path": "Threats/5_Attack_Classes.md",
+        "type": "file",
+        "sha": "",
+        "size": 7975
+      },
+      {
+        "name": "6_Indicators_And_Analysis.md",
+        "path": "Threats/6_Indicators_And_Analysis.md",
+        "type": "file",
+        "sha": "",
+        "size": 6570
+      },
+      {
+        "name": "7_Mitigations.md",
+        "path": "Threats/7_Mitigations.md",
+        "type": "file",
+        "sha": "",
+        "size": 9357
+      },
+      {
+        "name": "8_AI_Era_Threats.md",
+        "path": "Threats/8_AI_Era_Threats.md",
+        "type": "file",
+        "sha": "",
+        "size": 27573
       },
       {
         "name": "README.md",
         "path": "Threats/README.md",
         "type": "file",
         "sha": "",
-        "size": 712
+        "size": 8590
       }
     ]
   },
@@ -556,14 +707,49 @@
         "path": "Vulnerability-Management/1_Program_Design.md",
         "type": "file",
         "sha": "",
-        "size": 376
+        "size": 8884
+      },
+      {
+        "name": "2_Scanning_Architecture_And_Coverage.md",
+        "path": "Vulnerability-Management/2_Scanning_Architecture_And_Coverage.md",
+        "type": "file",
+        "sha": "",
+        "size": 10495
+      },
+      {
+        "name": "3_Risk_Based_Prioritization_KEV_EPSS_SSVC.md",
+        "path": "Vulnerability-Management/3_Risk_Based_Prioritization_KEV_EPSS_SSVC.md",
+        "type": "file",
+        "sha": "",
+        "size": 13565
+      },
+      {
+        "name": "4_Exception_And_Acceptance_Workflows.md",
+        "path": "Vulnerability-Management/4_Exception_And_Acceptance_Workflows.md",
+        "type": "file",
+        "sha": "",
+        "size": 5843
+      },
+      {
+        "name": "5_Metrics_And_Reporting.md",
+        "path": "Vulnerability-Management/5_Metrics_And_Reporting.md",
+        "type": "file",
+        "sha": "",
+        "size": 6792
+      },
+      {
+        "name": "6_Vulnerability_Disclosure_Literacy.md",
+        "path": "Vulnerability-Management/6_Vulnerability_Disclosure_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 5641
       },
       {
         "name": "README.md",
         "path": "Vulnerability-Management/README.md",
         "type": "file",
         "sha": "",
-        "size": 943
+        "size": 2660
       }
     ]
   },
@@ -572,6 +758,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2429
+    "size": 2783
   }
 ]

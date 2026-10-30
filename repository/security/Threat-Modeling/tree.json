@@ -4,13 +4,27 @@
     "path": "1_Workshop_Process.md",
     "type": "file",
     "sha": "",
-    "size": 340
+    "size": 5192
+  },
+  {
+    "name": "2_DFD_And_STRIDE_In_Practice.md",
+    "path": "2_DFD_And_STRIDE_In_Practice.md",
+    "type": "file",
+    "sha": "",
+    "size": 5556
+  },
+  {
+    "name": "3_PASTA_Staged_Walkthrough.md",
+    "path": "3_PASTA_Staged_Walkthrough.md",
+    "type": "file",
+    "sha": "",
+    "size": 5143
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 955
+    "size": 2044
   }
 ]

@@ -53,7 +53,7 @@
     "path": "16_Human_Security_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 3149
+    "size": 3732
   },
   {
     "name": "17_Privacy_Literacy.md",
@@ -67,7 +67,7 @@
     "path": "18_Adversary_Models_Kill_Chain_And_ATTCK.md",
     "type": "file",
     "sha": "",
-    "size": 5215
+    "size": 5495
   },
   {
     "name": "19_Threat_Intelligence_Literacy.md",
@@ -88,14 +88,14 @@
     "path": "20_Vulnerability_Management_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 3346
+    "size": 3515
   },
   {
     "name": "21_Resilience_Continuity_And_Recovery_Literacy.md",
     "path": "21_Resilience_Continuity_And_Recovery_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 3631
+    "size": 3632
   },
   {
     "name": "3_Ethics_Authorization_And_Lab_Rules.md",
@@ -151,6 +151,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 5881
+    "size": 5882
   }
 ]

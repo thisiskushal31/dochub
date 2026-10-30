@@ -4,34 +4,62 @@
     "path": "1_Actors_And_Motivations.md",
     "type": "file",
     "sha": "",
-    "size": 1533
+    "size": 10322
   },
   {
     "name": "2_Vectors_And_Surfaces.md",
     "path": "2_Vectors_And_Surfaces.md",
     "type": "file",
     "sha": "",
-    "size": 1692
+    "size": 11315
   },
   {
     "name": "3_Vulnerabilities.md",
     "path": "3_Vulnerabilities.md",
     "type": "file",
     "sha": "",
-    "size": 1956
+    "size": 8601
   },
   {
-    "name": "4_Mitigations.md",
-    "path": "4_Mitigations.md",
+    "name": "4_Malware.md",
+    "path": "4_Malware.md",
     "type": "file",
     "sha": "",
-    "size": 1843
+    "size": 7662
+  },
+  {
+    "name": "5_Attack_Classes.md",
+    "path": "5_Attack_Classes.md",
+    "type": "file",
+    "sha": "",
+    "size": 7975
+  },
+  {
+    "name": "6_Indicators_And_Analysis.md",
+    "path": "6_Indicators_And_Analysis.md",
+    "type": "file",
+    "sha": "",
+    "size": 6570
+  },
+  {
+    "name": "7_Mitigations.md",
+    "path": "7_Mitigations.md",
+    "type": "file",
+    "sha": "",
+    "size": 9357
+  },
+  {
+    "name": "8_AI_Era_Threats.md",
+    "path": "8_AI_Era_Threats.md",
+    "type": "file",
+    "sha": "",
+    "size": 27573
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 712
+    "size": 8590
   }
 ]

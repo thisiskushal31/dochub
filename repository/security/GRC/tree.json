@@ -4,13 +4,55 @@
     "path": "1_NIST_ISO_And_ATTCK.md",
     "type": "file",
     "sha": "",
-    "size": 2460
+    "size": 7543
+  },
+  {
+    "name": "2_NIST_CSF_2_Outcomes.md",
+    "path": "2_NIST_CSF_2_Outcomes.md",
+    "type": "file",
+    "sha": "",
+    "size": 8842
+  },
+  {
+    "name": "3_NIST_RMF_Lifecycle.md",
+    "path": "3_NIST_RMF_Lifecycle.md",
+    "type": "file",
+    "sha": "",
+    "size": 8642
+  },
+  {
+    "name": "4_Control_Catalogs_800-53_And_CIS.md",
+    "path": "4_Control_Catalogs_800-53_And_CIS.md",
+    "type": "file",
+    "sha": "",
+    "size": 7518
+  },
+  {
+    "name": "5_ISO_27001_ISMS_Literacy.md",
+    "path": "5_ISO_27001_ISMS_Literacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 6024
+  },
+  {
+    "name": "6_SOC2_And_Evidence.md",
+    "path": "6_SOC2_And_Evidence.md",
+    "type": "file",
+    "sha": "",
+    "size": 7337
+  },
+  {
+    "name": "7_NICE_Workforce_Literacy.md",
+    "path": "7_NICE_Workforce_Literacy.md",
+    "type": "file",
+    "sha": "",
+    "size": 6166
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 558
+    "size": 3349
   }
 ]
