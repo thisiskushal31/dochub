@@ -6,18 +6,67 @@
     "sha": "",
     "children": [
       {
-        "name": "1_Placeholder.md",
-        "path": "AI-Security/1_Placeholder.md",
+        "name": "1_LLM_App_Threat_Model_In_Practice.md",
+        "path": "AI-Security/1_LLM_App_Threat_Model_In_Practice.md",
         "type": "file",
         "sha": "",
-        "size": 186
+        "size": 11798
+      },
+      {
+        "name": "2_Prompt_Injection_Defenses.md",
+        "path": "AI-Security/2_Prompt_Injection_Defenses.md",
+        "type": "file",
+        "sha": "",
+        "size": 12440
+      },
+      {
+        "name": "3_RAG_And_Memory_Hardening.md",
+        "path": "AI-Security/3_RAG_And_Memory_Hardening.md",
+        "type": "file",
+        "sha": "",
+        "size": 9475
+      },
+      {
+        "name": "4_Agentic_Controls.md",
+        "path": "AI-Security/4_Agentic_Controls.md",
+        "type": "file",
+        "sha": "",
+        "size": 9499
+      },
+      {
+        "name": "5_Model_And_Data_Supply_Chain.md",
+        "path": "AI-Security/5_Model_And_Data_Supply_Chain.md",
+        "type": "file",
+        "sha": "",
+        "size": 9853
+      },
+      {
+        "name": "6_Authorized_AI_Evaluation.md",
+        "path": "AI-Security/6_Authorized_AI_Evaluation.md",
+        "type": "file",
+        "sha": "",
+        "size": 8474
+      },
+      {
+        "name": "7_Shadow_AI_And_Private_GenAI.md",
+        "path": "AI-Security/7_Shadow_AI_And_Private_GenAI.md",
+        "type": "file",
+        "sha": "",
+        "size": 7945
+      },
+      {
+        "name": "8_Attack_Mechanisms_For_Defenders.md",
+        "path": "AI-Security/8_Attack_Mechanisms_For_Defenders.md",
+        "type": "file",
+        "sha": "",
+        "size": 21311
       },
       {
         "name": "README.md",
         "path": "AI-Security/README.md",
         "type": "file",
         "sha": "",
-        "size": 1945
+        "size": 3525
       }
     ]
   },
@@ -46,7 +95,7 @@
         "path": "AppSec/README.md",
         "type": "file",
         "sha": "",
-        "size": 556
+        "size": 512
       }
     ]
   },
@@ -56,6 +105,21 @@
     "type": "dir",
     "sha": "",
     "children": [
+      {
+        "name": "AI-Security",
+        "path": "Assets/AI-Security",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Assets/AI-Security/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 814
+          }
+        ]
+      },
       {
         "name": "Foundations",
         "path": "Assets/Foundations",
@@ -83,6 +147,36 @@
             "type": "file",
             "sha": "",
             "size": 152
+          }
+        ]
+      },
+      {
+        "name": "Threat-Intelligence",
+        "path": "Assets/Threat-Intelligence",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Assets/Threat-Intelligence/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 313
+          }
+        ]
+      },
+      {
+        "name": "Threat-Modeling",
+        "path": "Assets/Threat-Modeling",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Assets/Threat-Modeling/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 470
           }
         ]
       },
@@ -150,7 +244,7 @@
         "path": "Cloud-Security/README.md",
         "type": "file",
         "sha": "",
-        "size": 409
+        "size": 352
       }
     ]
   },
@@ -172,7 +266,7 @@
         "path": "Cryptography/README.md",
         "type": "file",
         "sha": "",
-        "size": 267
+        "size": 236
       }
     ]
   },
@@ -208,7 +302,7 @@
         "path": "Defensive-Ops/README.md",
         "type": "file",
         "sha": "",
-        "size": 993
+        "size": 936
       }
     ]
   },
@@ -244,7 +338,7 @@
         "path": "Foundations/12_STRIDE_And_Threat_Modeling.md",
         "type": "file",
         "sha": "",
-        "size": 8282
+        "size": 8359
       },
       {
         "name": "13_Zero_Trust_And_Deception_Basics.md",
@@ -293,7 +387,7 @@
         "path": "Foundations/19_Threat_Intelligence_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 5301
+        "size": 5371
       },
       {
         "name": "2_Controls_And_Physical.md",
@@ -314,7 +408,7 @@
         "path": "Foundations/21_Resilience_Continuity_And_Recovery_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 3632
+        "size": 3614
       },
       {
         "name": "3_Ethics_Authorization_And_Lab_Rules.md",
@@ -370,7 +464,7 @@
         "path": "Foundations/README.md",
         "type": "file",
         "sha": "",
-        "size": 5882
+        "size": 5567
       }
     ]
   },
@@ -434,7 +528,7 @@
         "path": "GRC/README.md",
         "type": "file",
         "sha": "",
-        "size": 3349
+        "size": 3268
       }
     ]
   },
@@ -463,7 +557,7 @@
         "path": "Identity/README.md",
         "type": "file",
         "sha": "",
-        "size": 342
+        "size": 298
       }
     ]
   },
@@ -485,7 +579,7 @@
         "path": "Labs/README.md",
         "type": "file",
         "sha": "",
-        "size": 247
+        "size": 216
       }
     ]
   },
@@ -563,7 +657,7 @@
         "path": "Offensive/README.md",
         "type": "file",
         "sha": "",
-        "size": 1084
+        "size": 949
       }
     ]
   },
@@ -578,14 +672,49 @@
         "path": "Threat-Intelligence/1_Analytic_Tradecraft.md",
         "type": "file",
         "sha": "",
-        "size": 368
+        "size": 25345
+      },
+      {
+        "name": "2_Intrusion_Analysis_Models.md",
+        "path": "Threat-Intelligence/2_Intrusion_Analysis_Models.md",
+        "type": "file",
+        "sha": "",
+        "size": 11649
+      },
+      {
+        "name": "3_Finished_Intelligence_Products.md",
+        "path": "Threat-Intelligence/3_Finished_Intelligence_Products.md",
+        "type": "file",
+        "sha": "",
+        "size": 10041
+      },
+      {
+        "name": "4_STIX_And_TAXII_Practice.md",
+        "path": "Threat-Intelligence/4_STIX_And_TAXII_Practice.md",
+        "type": "file",
+        "sha": "",
+        "size": 9789
+      },
+      {
+        "name": "5_Detection_Oriented_Handoff.md",
+        "path": "Threat-Intelligence/5_Detection_Oriented_Handoff.md",
+        "type": "file",
+        "sha": "",
+        "size": 10740
+      },
+      {
+        "name": "6_Malware_Reverse_Engineering_For_CTI.md",
+        "path": "Threat-Intelligence/6_Malware_Reverse_Engineering_For_CTI.md",
+        "type": "file",
+        "sha": "",
+        "size": 17440
       },
       {
         "name": "README.md",
         "path": "Threat-Intelligence/README.md",
         "type": "file",
         "sha": "",
-        "size": 1020
+        "size": 2820
       }
     ]
   },
@@ -600,28 +729,49 @@
         "path": "Threat-Modeling/1_Workshop_Process.md",
         "type": "file",
         "sha": "",
-        "size": 5192
+        "size": 14002
       },
       {
         "name": "2_DFD_And_STRIDE_In_Practice.md",
         "path": "Threat-Modeling/2_DFD_And_STRIDE_In_Practice.md",
         "type": "file",
         "sha": "",
-        "size": 5556
+        "size": 13751
       },
       {
         "name": "3_PASTA_Staged_Walkthrough.md",
         "path": "Threat-Modeling/3_PASTA_Staged_Walkthrough.md",
         "type": "file",
         "sha": "",
-        "size": 5143
+        "size": 8248
+      },
+      {
+        "name": "4_Attack_Trees_And_LINDDUN.md",
+        "path": "Threat-Modeling/4_Attack_Trees_And_LINDDUN.md",
+        "type": "file",
+        "sha": "",
+        "size": 8636
+      },
+      {
+        "name": "5_Tooling_And_Closing_The_Loop.md",
+        "path": "Threat-Modeling/5_Tooling_And_Closing_The_Loop.md",
+        "type": "file",
+        "sha": "",
+        "size": 10967
+      },
+      {
+        "name": "6_AI_And_Agentic_Threat_Modeling.md",
+        "path": "Threat-Modeling/6_AI_And_Agentic_Threat_Modeling.md",
+        "type": "file",
+        "sha": "",
+        "size": 18350
       },
       {
         "name": "README.md",
         "path": "Threat-Modeling/README.md",
         "type": "file",
         "sha": "",
-        "size": 2044
+        "size": 2656
       }
     ]
   },
@@ -678,21 +828,21 @@
         "path": "Threats/7_Mitigations.md",
         "type": "file",
         "sha": "",
-        "size": 9357
+        "size": 9346
       },
       {
         "name": "8_AI_Era_Threats.md",
         "path": "Threats/8_AI_Era_Threats.md",
         "type": "file",
         "sha": "",
-        "size": 27573
+        "size": 27849
       },
       {
         "name": "README.md",
         "path": "Threats/README.md",
         "type": "file",
         "sha": "",
-        "size": 8590
+        "size": 8692
       }
     ]
   },
@@ -749,7 +899,7 @@
         "path": "Vulnerability-Management/README.md",
         "type": "file",
         "sha": "",
-        "size": 2660
+        "size": 2236
       }
     ]
   },
@@ -758,6 +908,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2783
+    "size": 2910
   }
 ]

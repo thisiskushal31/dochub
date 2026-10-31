@@ -4,13 +4,48 @@
     "path": "1_Analytic_Tradecraft.md",
     "type": "file",
     "sha": "",
-    "size": 368
+    "size": 25345
+  },
+  {
+    "name": "2_Intrusion_Analysis_Models.md",
+    "path": "2_Intrusion_Analysis_Models.md",
+    "type": "file",
+    "sha": "",
+    "size": 11649
+  },
+  {
+    "name": "3_Finished_Intelligence_Products.md",
+    "path": "3_Finished_Intelligence_Products.md",
+    "type": "file",
+    "sha": "",
+    "size": 10041
+  },
+  {
+    "name": "4_STIX_And_TAXII_Practice.md",
+    "path": "4_STIX_And_TAXII_Practice.md",
+    "type": "file",
+    "sha": "",
+    "size": 9789
+  },
+  {
+    "name": "5_Detection_Oriented_Handoff.md",
+    "path": "5_Detection_Oriented_Handoff.md",
+    "type": "file",
+    "sha": "",
+    "size": 10740
+  },
+  {
+    "name": "6_Malware_Reverse_Engineering_For_CTI.md",
+    "path": "6_Malware_Reverse_Engineering_For_CTI.md",
+    "type": "file",
+    "sha": "",
+    "size": 17440
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1020
+    "size": 2820
   }
 ]

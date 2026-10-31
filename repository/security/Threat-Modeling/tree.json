@@ -4,27 +4,48 @@
     "path": "1_Workshop_Process.md",
     "type": "file",
     "sha": "",
-    "size": 5192
+    "size": 14002
   },
   {
     "name": "2_DFD_And_STRIDE_In_Practice.md",
     "path": "2_DFD_And_STRIDE_In_Practice.md",
     "type": "file",
     "sha": "",
-    "size": 5556
+    "size": 13751
   },
   {
     "name": "3_PASTA_Staged_Walkthrough.md",
     "path": "3_PASTA_Staged_Walkthrough.md",
     "type": "file",
     "sha": "",
-    "size": 5143
+    "size": 8248
+  },
+  {
+    "name": "4_Attack_Trees_And_LINDDUN.md",
+    "path": "4_Attack_Trees_And_LINDDUN.md",
+    "type": "file",
+    "sha": "",
+    "size": 8636
+  },
+  {
+    "name": "5_Tooling_And_Closing_The_Loop.md",
+    "path": "5_Tooling_And_Closing_The_Loop.md",
+    "type": "file",
+    "sha": "",
+    "size": 10967
+  },
+  {
+    "name": "6_AI_And_Agentic_Threat_Modeling.md",
+    "path": "6_AI_And_Agentic_Threat_Modeling.md",
+    "type": "file",
+    "sha": "",
+    "size": 18350
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2044
+    "size": 2656
   }
 ]

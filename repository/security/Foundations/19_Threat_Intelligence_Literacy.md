@@ -4,7 +4,7 @@
 
 > **Progression:** concept → advanced → apply. *Apply* here means foundation literacy and builder habits — not a specialty lab.
 
-Cyber threat intelligence (CTI) turns raw data about adversaries into **decisions** — what to block, hunt, patch, or brief. This is foundation vocabulary for SOC, IR, and CTI courses. Adversary models: [18](./18_Adversary_Models_Kill_Chain_And_ATTCK.md). Detection/response operations: [Defensive-Ops](../Defensive-Ops/README.md). Analytic depth beyond literacy: [Threat-Intelligence](../Threat-Intelligence/README.md) (stub).
+Cyber threat intelligence (CTI) turns raw data about adversaries into **decisions** — what to block, hunt, patch, or brief. This is foundation vocabulary for SOC, IR, and CTI courses. Adversary models: [18](./18_Adversary_Models_Kill_Chain_And_ATTCK.md). Detection/response operations: [Defensive-Ops](../Defensive-Ops/README.md). Analytic depth beyond literacy: [Threat-Intelligence](../Threat-Intelligence/README.md).
 
 ## Concept
 
@@ -108,6 +108,7 @@ Use the self-check below as the apply gate for this note.
 
 ## Next
 
+- Practice depth → [Threat-Intelligence](../Threat-Intelligence/README.md)
 - [Vulnerability management literacy](./20_Vulnerability_Management_Literacy.md)
 
 ## Further reading
