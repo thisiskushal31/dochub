@@ -31,8 +31,8 @@ A **fact** still moves through Capture → Movement → Transformation → Stora
 ## Patterns that do not
 
 - Treating DuckDB as the **system of record** for an app (writers, HA, authn). That is Postgres. [https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Relational/postgresql](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Relational/postgresql)
-- Replacing **Spark** because “SQL is SQL.” Spark is distributed compute: [https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Systems/Spark](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Systems/Spark)
-- Replacing **Iceberg** as the table format. DuckDB can *scan* Iceberg; the catalog/table contract still lives in [Systems/Iceberg](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Systems/Iceberg)
+- Replacing **Spark** because “SQL is SQL.” Spark is distributed compute: [https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Systems/Spark](../Spark)
+- Replacing **Iceberg** as the table format. DuckDB can *scan* Iceberg; the catalog/table contract still lives in [Systems/Iceberg](../Iceberg)
 
 ## Sketch (bounded job)
 
@@ -56,6 +56,6 @@ If the worker cannot finish with spill + one host, the **same SQL** moves to Spa
 | What | URL |
 |------|-----|
 | DuckDB engine | [https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Relational/duckdb](https://github.com/thisiskushal31/Databases-Deep-Dive/tree/main/Relational/duckdb) |
-| Spark | [https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Systems/Spark](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Systems/Spark) |
-| Transformation layer | [https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Transformation](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Transformation) |
+| Spark | [https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Systems/Spark](../Spark) |
+| Transformation layer | [https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Transformation](../../Transformation) |
 | Databases home | [https://github.com/thisiskushal31/Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive) |

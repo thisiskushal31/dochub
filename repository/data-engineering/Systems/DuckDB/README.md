@@ -14,4 +14,4 @@ Start at the README:
 |-------------|------|
 | When to embed DuckDB in a job vs Spark / a warehouse | [1_In_A_Pipeline.md](./1_In_A_Pipeline.md) |
 
-**Primary layer (as a *use*, not as ownership):** [Transformation](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Transformation) — local SQL compute. Storage of the lake still [Iceberg](./Iceberg/README.md) / object store; orchestration still [Airflow](./Airflow/README.md).
+**Primary layer (as a *use*, not as ownership):** [Transformation](../../Transformation) — local SQL compute. Storage of the lake still [Iceberg](./Iceberg/README.md) / object store; orchestration still [Airflow](./Airflow/README.md).

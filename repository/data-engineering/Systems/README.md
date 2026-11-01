@@ -2,7 +2,7 @@
 
 [← README](../README.md) · [Use cases](../Use-Cases/README.md)
 
-One folder per **named system** — same idea as [DevOps-Handbook/Languages](../../DevOps-Handbook/Languages/README.md) (one folder per language).
+One folder per **named system** — same idea as [DevOps-Handbook/Languages](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/Languages/README.md) (one folder per language).
 
 Layers (`Capture/`, `Movement/`, …) are the **jobs**. This directory is the **catalog of engines/frameworks** that implement those jobs. A new Spark, a new bus, a new scheduler: **add a folder here**. Do not add a new top-level layer.
 

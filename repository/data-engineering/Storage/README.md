@@ -16,7 +16,7 @@ Roles of stores along the path — landing, system of record, analytical, servin
 
 ## Systems that implement this layer (table-on-files)
 
-Database *engines* are not here — [Databases-Deep-Dive](../../Databases-Deep-Dive/README.md).
+Database *engines* are not here — [Databases-Deep-Dive](https://github.com/thisiskushal31/Databases-Deep-Dive/blob/main/README.md).
 
 | System | Role here |
 |--------|-----------|
