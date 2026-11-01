@@ -4,69 +4,69 @@
     "path": "1_LLM_App_Threat_Model_In_Practice.md",
     "type": "file",
     "sha": "",
-    "size": 11798
+    "size": 12024
   },
   {
     "name": "2_Prompt_Injection_Defenses.md",
     "path": "2_Prompt_Injection_Defenses.md",
     "type": "file",
     "sha": "",
-    "size": 12440
+    "size": 12498
   },
   {
     "name": "3_RAG_And_Memory_Hardening.md",
     "path": "3_RAG_And_Memory_Hardening.md",
     "type": "file",
     "sha": "",
-    "size": 9475
+    "size": 9508
   },
   {
     "name": "4_Agentic_Controls.md",
     "path": "4_Agentic_Controls.md",
     "type": "file",
     "sha": "",
-    "size": 9499
+    "size": 9687
   },
   {
     "name": "5_Model_And_Data_Supply_Chain.md",
     "path": "5_Model_And_Data_Supply_Chain.md",
     "type": "file",
     "sha": "",
-    "size": 10270
+    "size": 10501
   },
   {
     "name": "6_Authorized_AI_Evaluation.md",
     "path": "6_Authorized_AI_Evaluation.md",
     "type": "file",
     "sha": "",
-    "size": 9201
+    "size": 9386
   },
   {
     "name": "7_Shadow_AI_And_Private_GenAI.md",
     "path": "7_Shadow_AI_And_Private_GenAI.md",
     "type": "file",
     "sha": "",
-    "size": 7945
+    "size": 8185
   },
   {
     "name": "8_Attack_Mechanisms_For_Defenders.md",
     "path": "8_Attack_Mechanisms_For_Defenders.md",
     "type": "file",
     "sha": "",
-    "size": 21413
+    "size": 21483
   },
   {
     "name": "9_Model_Confidentiality_And_Classical_AML.md",
     "path": "9_Model_Confidentiality_And_Classical_AML.md",
     "type": "file",
     "sha": "",
-    "size": 8802
+    "size": 9027
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 4278
+    "size": 4845
   }
 ]

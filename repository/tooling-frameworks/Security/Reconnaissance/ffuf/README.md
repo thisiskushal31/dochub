@@ -2,6 +2,8 @@
 
 [← Reconnaissance](../README.md)
 
+Capability: **web surface mappers** (fast HTTP fuzzing).
+
 ## Topic files
 
 | # | Topic | Status |

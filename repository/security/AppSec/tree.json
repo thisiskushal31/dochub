@@ -4,55 +4,55 @@
     "path": "1_Secure_SDLC_And_AppSec_Program.md",
     "type": "file",
     "sha": "",
-    "size": 14510
+    "size": 15146
   },
   {
     "name": "2_OWASP_Top_10_2025_In_Practice.md",
     "path": "2_OWASP_Top_10_2025_In_Practice.md",
     "type": "file",
     "sha": "",
-    "size": 17282
+    "size": 18007
   },
   {
     "name": "3_Access_Control_And_Authentication.md",
     "path": "3_Access_Control_And_Authentication.md",
     "type": "file",
     "sha": "",
-    "size": 14381
+    "size": 14845
   },
   {
     "name": "4_Injection_And_Output_Encoding.md",
     "path": "4_Injection_And_Output_Encoding.md",
     "type": "file",
     "sha": "",
-    "size": 16383
+    "size": 16752
   },
   {
     "name": "5_API_Security_Top_10_2023.md",
     "path": "5_API_Security_Top_10_2023.md",
     "type": "file",
     "sha": "",
-    "size": 16109
+    "size": 16345
   },
   {
     "name": "6_ASVS_Verification_Practice.md",
     "path": "6_ASVS_Verification_Practice.md",
     "type": "file",
     "sha": "",
-    "size": 12213
+    "size": 12686
   },
   {
     "name": "7_Proactive_Controls_And_Testing_Literacy.md",
     "path": "7_Proactive_Controls_And_Testing_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 16284
+    "size": 16860
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3013
+    "size": 3538
   }
 ]

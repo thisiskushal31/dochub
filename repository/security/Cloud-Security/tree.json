@@ -4,55 +4,62 @@
     "path": "1_Cloud_Models_And_Shared_Responsibility.md",
     "type": "file",
     "sha": "",
-    "size": 10313
+    "size": 10415
   },
   {
     "name": "2_Identity_Network_And_Data_Controls.md",
     "path": "2_Identity_Network_And_Data_Controls.md",
     "type": "file",
     "sha": "",
-    "size": 8693
+    "size": 9123
   },
   {
     "name": "3_CSPM_And_Posture.md",
     "path": "3_CSPM_And_Posture.md",
     "type": "file",
     "sha": "",
-    "size": 9248
+    "size": 11664
   },
   {
     "name": "4_Securing_Cloud_Resources_And_Workloads.md",
     "path": "4_Securing_Cloud_Resources_And_Workloads.md",
     "type": "file",
     "sha": "",
-    "size": 10996
+    "size": 11518
   },
   {
     "name": "5_Containers_Serverless_And_Managed_Runtimes.md",
     "path": "5_Containers_Serverless_And_Managed_Runtimes.md",
     "type": "file",
     "sha": "",
-    "size": 5943
+    "size": 6007
   },
   {
     "name": "6_Supply_Chain_And_Delivery_Integrity.md",
     "path": "6_Supply_Chain_And_Delivery_Integrity.md",
     "type": "file",
     "sha": "",
-    "size": 11088
+    "size": 11304
   },
   {
     "name": "7_Logging_Detection_And_Cloud_IR.md",
     "path": "7_Logging_Detection_And_Cloud_IR.md",
     "type": "file",
     "sha": "",
-    "size": 7614
+    "size": 8947
+  },
+  {
+    "name": "8_AI_Workloads_And_Cloud_AI_Security.md",
+    "path": "8_AI_Workloads_And_Cloud_AI_Security.md",
+    "type": "file",
+    "sha": "",
+    "size": 10869
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3616
+    "size": 4632
   }
 ]

@@ -2,6 +2,8 @@
 
 [← Defensive](../README.md)
 
+Capability: **memory forensics**. Methodology: [Security-Deep-Dive — Digital forensics for IR](https://github.com/thisiskushal31/Security-Deep-Dive/blob/main/Defensive-Ops/9_Digital_Forensics_For_IR.md).
+
 ## Topic files
 
 | # | Topic | Status |

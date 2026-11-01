@@ -2546,7 +2546,7 @@
         "path": "CiCd/22_MLOps_And_AI_System_Delivery.md",
         "type": "file",
         "sha": "",
-        "size": 6442
+        "size": 6704
       },
       {
         "name": "23_Classical_DevOps_Stack_Map.md",
@@ -13619,6 +13619,21 @@
         ]
       },
       {
+        "name": "SonarCloud",
+        "path": "Security/SonarCloud",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Security/SonarCloud/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 1550
+          }
+        ]
+      },
+      {
         "name": "SonarQube",
         "path": "Security/SonarQube",
         "type": "dir",
@@ -13629,7 +13644,7 @@
             "path": "Security/SonarQube/README.md",
             "type": "file",
             "sha": "",
-            "size": 1728
+            "size": 1840
           }
         ]
       },
@@ -13645,6 +13660,21 @@
             "type": "file",
             "sha": "",
             "size": 1663
+          }
+        ]
+      },
+      {
+        "name": "TruffleHog",
+        "path": "Security/TruffleHog",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Security/TruffleHog/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 845
           }
         ]
       },
@@ -13698,7 +13728,7 @@
         "path": "Security/1_Security_Practices_And_Secrets.md",
         "type": "file",
         "sha": "",
-        "size": 382
+        "size": 3368
       },
       {
         "name": "2_Compliance_And_Threat_Mitigation.md",
@@ -13740,7 +13770,7 @@
         "path": "Security/README.md",
         "type": "file",
         "sha": "",
-        "size": 2197
+        "size": 2406
       }
     ]
   },

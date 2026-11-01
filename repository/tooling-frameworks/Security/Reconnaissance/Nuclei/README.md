@@ -2,6 +2,8 @@
 
 [← Reconnaissance](../README.md)
 
+Capability: **web surface mappers** / template checks (also overlaps vuln scanning).
+
 ## Topic files
 
 | # | Topic | Status |

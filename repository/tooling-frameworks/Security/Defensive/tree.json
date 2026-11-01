@@ -1,5 +1,137 @@
 [
   {
+    "name": "Autopsy",
+    "path": "Autopsy",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "Autopsy/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 872
+      },
+      {
+        "name": "README.md",
+        "path": "Autopsy/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 408
+      }
+    ]
+  },
+  {
+    "name": "ClamAV",
+    "path": "ClamAV",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "ClamAV/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 522
+      },
+      {
+        "name": "README.md",
+        "path": "ClamAV/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 328
+      }
+    ]
+  },
+  {
+    "name": "CyberChef",
+    "path": "CyberChef",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "CyberChef/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 984
+      },
+      {
+        "name": "README.md",
+        "path": "CyberChef/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 430
+      }
+    ]
+  },
+  {
+    "name": "Falco",
+    "path": "Falco",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "Falco/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 610
+      },
+      {
+        "name": "README.md",
+        "path": "Falco/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 317
+      }
+    ]
+  },
+  {
+    "name": "osquery",
+    "path": "osquery",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "osquery/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 781
+      },
+      {
+        "name": "README.md",
+        "path": "osquery/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 371
+      }
+    ]
+  },
+  {
+    "name": "Suricata",
+    "path": "Suricata",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "Suricata/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 790
+      },
+      {
+        "name": "README.md",
+        "path": "Suricata/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 398
+      }
+    ]
+  },
+  {
     "name": "tcpdump",
     "path": "tcpdump",
     "type": "dir",
@@ -17,7 +149,51 @@
         "path": "tcpdump/README.md",
         "type": "file",
         "sha": "",
-        "size": 188
+        "size": 291
+      }
+    ]
+  },
+  {
+    "name": "TheHive",
+    "path": "TheHive",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "TheHive/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 765
+      },
+      {
+        "name": "README.md",
+        "path": "TheHive/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 356
+      }
+    ]
+  },
+  {
+    "name": "Velociraptor",
+    "path": "Velociraptor",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "Velociraptor/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 742
+      },
+      {
+        "name": "README.md",
+        "path": "Velociraptor/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 332
       }
     ]
   },
@@ -39,7 +215,29 @@
         "path": "Volatility/README.md",
         "type": "file",
         "sha": "",
-        "size": 183
+        "size": 390
+      }
+    ]
+  },
+  {
+    "name": "Wazuh",
+    "path": "Wazuh",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "Wazuh/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 3474
+      },
+      {
+        "name": "README.md",
+        "path": "Wazuh/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 634
       }
     ]
   },
@@ -75,7 +273,51 @@
         "path": "Wireshark/README.md",
         "type": "file",
         "sha": "",
-        "size": 272
+        "size": 495
+      }
+    ]
+  },
+  {
+    "name": "YARA",
+    "path": "YARA",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "YARA/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 677
+      },
+      {
+        "name": "README.md",
+        "path": "YARA/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 559
+      }
+    ]
+  },
+  {
+    "name": "Zeek",
+    "path": "Zeek",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "Zeek/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 850
+      },
+      {
+        "name": "README.md",
+        "path": "Zeek/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 432
       }
     ]
   },
@@ -84,6 +326,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 385
+    "size": 2304
   }
 ]

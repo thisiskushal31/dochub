@@ -8,4 +8,4 @@ Workflow products you click or graph: alert → ticket → enrich, form → API,
 |--------|-----|
 | [n8n](./n8n/README.md) | Workflow automation |
 
-Security *playbooks* are one use of n8n, not a second home.
+Security *playbooks* are one use of n8n, not a second home — do **not** create `Security/n8n` or a Security-Deep-Dive install tree for it.

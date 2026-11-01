@@ -32,7 +32,7 @@
         "path": "Automation/README.md",
         "type": "file",
         "sha": "",
-        "size": 395
+        "size": 476
       }
     ]
   },
@@ -1221,6 +1221,138 @@
         "sha": "",
         "children": [
           {
+            "name": "Autopsy",
+            "path": "Security/Defensive/Autopsy",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Defensive/Autopsy/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 872
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Defensive/Autopsy/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 408
+              }
+            ]
+          },
+          {
+            "name": "ClamAV",
+            "path": "Security/Defensive/ClamAV",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Defensive/ClamAV/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 522
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Defensive/ClamAV/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 328
+              }
+            ]
+          },
+          {
+            "name": "CyberChef",
+            "path": "Security/Defensive/CyberChef",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Defensive/CyberChef/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 984
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Defensive/CyberChef/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 430
+              }
+            ]
+          },
+          {
+            "name": "Falco",
+            "path": "Security/Defensive/Falco",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Defensive/Falco/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 610
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Defensive/Falco/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 317
+              }
+            ]
+          },
+          {
+            "name": "osquery",
+            "path": "Security/Defensive/osquery",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Defensive/osquery/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 781
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Defensive/osquery/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 371
+              }
+            ]
+          },
+          {
+            "name": "Suricata",
+            "path": "Security/Defensive/Suricata",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Defensive/Suricata/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 790
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Defensive/Suricata/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 398
+              }
+            ]
+          },
+          {
             "name": "tcpdump",
             "path": "Security/Defensive/tcpdump",
             "type": "dir",
@@ -1238,7 +1370,51 @@
                 "path": "Security/Defensive/tcpdump/README.md",
                 "type": "file",
                 "sha": "",
-                "size": 188
+                "size": 291
+              }
+            ]
+          },
+          {
+            "name": "TheHive",
+            "path": "Security/Defensive/TheHive",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Defensive/TheHive/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 765
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Defensive/TheHive/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 356
+              }
+            ]
+          },
+          {
+            "name": "Velociraptor",
+            "path": "Security/Defensive/Velociraptor",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Defensive/Velociraptor/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 742
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Defensive/Velociraptor/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 332
               }
             ]
           },
@@ -1260,7 +1436,29 @@
                 "path": "Security/Defensive/Volatility/README.md",
                 "type": "file",
                 "sha": "",
-                "size": 183
+                "size": 390
+              }
+            ]
+          },
+          {
+            "name": "Wazuh",
+            "path": "Security/Defensive/Wazuh",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Defensive/Wazuh/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 3474
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Defensive/Wazuh/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 634
               }
             ]
           },
@@ -1296,7 +1494,51 @@
                 "path": "Security/Defensive/Wireshark/README.md",
                 "type": "file",
                 "sha": "",
-                "size": 272
+                "size": 495
+              }
+            ]
+          },
+          {
+            "name": "YARA",
+            "path": "Security/Defensive/YARA",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Defensive/YARA/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 677
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Defensive/YARA/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 559
+              }
+            ]
+          },
+          {
+            "name": "Zeek",
+            "path": "Security/Defensive/Zeek",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Defensive/Zeek/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 850
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Defensive/Zeek/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 432
               }
             ]
           },
@@ -1305,7 +1547,7 @@
             "path": "Security/Defensive/README.md",
             "type": "file",
             "sha": "",
-            "size": 385
+            "size": 2304
           }
         ]
       },
@@ -1429,6 +1671,50 @@
                 "type": "file",
                 "sha": "",
                 "size": 178
+              }
+            ]
+          },
+          {
+            "name": "Evil-WinRM",
+            "path": "Security/Offensive/Evil-WinRM",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Offensive/Evil-WinRM/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 429
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Offensive/Evil-WinRM/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 310
+              }
+            ]
+          },
+          {
+            "name": "feroxbuster",
+            "path": "Security/Offensive/feroxbuster",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Offensive/feroxbuster/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 542
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Offensive/feroxbuster/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 281
               }
             ]
           },
@@ -1565,6 +1851,28 @@
             ]
           },
           {
+            "name": "Mimikatz",
+            "path": "Security/Offensive/Mimikatz",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Offensive/Mimikatz/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 805
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Offensive/Mimikatz/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 352
+              }
+            ]
+          },
+          {
             "name": "Netcat",
             "path": "Security/Offensive/Netcat",
             "type": "dir",
@@ -1583,6 +1891,28 @@
                 "type": "file",
                 "sha": "",
                 "size": 179
+              }
+            ]
+          },
+          {
+            "name": "NetExec",
+            "path": "Security/Offensive/NetExec",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Offensive/NetExec/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 722
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Offensive/NetExec/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 321
               }
             ]
           },
@@ -1675,11 +2005,33 @@
             ]
           },
           {
+            "name": "WinPEAS",
+            "path": "Security/Offensive/WinPEAS",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Offensive/WinPEAS/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 863
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Offensive/WinPEAS/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 286
+              }
+            ]
+          },
+          {
             "name": "README.md",
             "path": "Security/Offensive/README.md",
             "type": "file",
             "sha": "",
-            "size": 1343
+            "size": 2924
           }
         ]
       },
@@ -1712,6 +2064,28 @@
             ]
           },
           {
+            "name": "Censys",
+            "path": "Security/Reconnaissance/Censys",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Reconnaissance/Censys/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 1056
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Reconnaissance/Censys/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 494
+              }
+            ]
+          },
+          {
             "name": "ffuf",
             "path": "Security/Reconnaissance/ffuf",
             "type": "dir",
@@ -1729,7 +2103,7 @@
                 "path": "Security/Reconnaissance/ffuf/README.md",
                 "type": "file",
                 "sha": "",
-                "size": 182
+                "size": 240
               }
             ]
           },
@@ -1751,7 +2125,7 @@
                 "path": "Security/Reconnaissance/Gobuster/README.md",
                 "type": "file",
                 "sha": "",
-                "size": 186
+                "size": 407
               }
             ]
           },
@@ -1774,6 +2148,28 @@
                 "type": "file",
                 "sha": "",
                 "size": 181
+              }
+            ]
+          },
+          {
+            "name": "httpx",
+            "path": "Security/Reconnaissance/httpx",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Reconnaissance/httpx/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 428
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Reconnaissance/httpx/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 328
               }
             ]
           },
@@ -1817,7 +2213,7 @@
                 "path": "Security/Reconnaissance/Masscan/README.md",
                 "type": "file",
                 "sha": "",
-                "size": 185
+                "size": 321
               }
             ]
           },
@@ -1839,7 +2235,7 @@
                 "path": "Security/Reconnaissance/Nikto/README.md",
                 "type": "file",
                 "sha": "",
-                "size": 183
+                "size": 265
               }
             ]
           },
@@ -1875,7 +2271,7 @@
                 "path": "Security/Reconnaissance/Nmap/README.md",
                 "type": "file",
                 "sha": "",
-                "size": 366
+                "size": 716
               }
             ]
           },
@@ -1897,7 +2293,7 @@
                 "path": "Security/Reconnaissance/Nuclei/README.md",
                 "type": "file",
                 "sha": "",
-                "size": 184
+                "size": 270
               }
             ]
           },
@@ -1941,7 +2337,7 @@
                 "path": "Security/Reconnaissance/Shodan/README.md",
                 "type": "file",
                 "sha": "",
-                "size": 184
+                "size": 466
               }
             ]
           },
@@ -1968,6 +2364,28 @@
             ]
           },
           {
+            "name": "subfinder",
+            "path": "Security/Reconnaissance/subfinder",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Reconnaissance/subfinder/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 539
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Reconnaissance/subfinder/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 303
+              }
+            ]
+          },
+          {
             "name": "theHarvester",
             "path": "Security/Reconnaissance/theHarvester",
             "type": "dir",
@@ -1985,7 +2403,29 @@
                 "path": "Security/Reconnaissance/theHarvester/README.md",
                 "type": "file",
                 "sha": "",
-                "size": 190
+                "size": 461
+              }
+            ]
+          },
+          {
+            "name": "WhatWeb",
+            "path": "Security/Reconnaissance/WhatWeb",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Reconnaissance/WhatWeb/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 845
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Reconnaissance/WhatWeb/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 405
               }
             ]
           },
@@ -1994,7 +2434,7 @@
             "path": "Security/Reconnaissance/README.md",
             "type": "file",
             "sha": "",
-            "size": 946
+            "size": 2356
           }
         ]
       },
@@ -2004,6 +2444,72 @@
         "type": "dir",
         "sha": "",
         "children": [
+          {
+            "name": "Binary-Ninja",
+            "path": "Security/Reverse-Engineering/Binary-Ninja",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Reverse-Engineering/Binary-Ninja/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 407
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Reverse-Engineering/Binary-Ninja/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 305
+              }
+            ]
+          },
+          {
+            "name": "binwalk",
+            "path": "Security/Reverse-Engineering/binwalk",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Reverse-Engineering/binwalk/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 569
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Reverse-Engineering/binwalk/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 248
+              }
+            ]
+          },
+          {
+            "name": "Cutter",
+            "path": "Security/Reverse-Engineering/Cutter",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Reverse-Engineering/Cutter/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 456
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Reverse-Engineering/Cutter/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 307
+              }
+            ]
+          },
           {
             "name": "Ghidra",
             "path": "Security/Reverse-Engineering/Ghidra",
@@ -2027,11 +2533,55 @@
             ]
           },
           {
+            "name": "IDA",
+            "path": "Security/Reverse-Engineering/IDA",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Reverse-Engineering/IDA/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 470
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Reverse-Engineering/IDA/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 300
+              }
+            ]
+          },
+          {
+            "name": "radare2",
+            "path": "Security/Reverse-Engineering/radare2",
+            "type": "dir",
+            "sha": "",
+            "children": [
+              {
+                "name": "1_Install_And_First_Use.md",
+                "path": "Security/Reverse-Engineering/radare2/1_Install_And_First_Use.md",
+                "type": "file",
+                "sha": "",
+                "size": 550
+              },
+              {
+                "name": "README.md",
+                "path": "Security/Reverse-Engineering/radare2/README.md",
+                "type": "file",
+                "sha": "",
+                "size": 328
+              }
+            ]
+          },
+          {
             "name": "README.md",
             "path": "Security/Reverse-Engineering/README.md",
             "type": "file",
             "sha": "",
-            "size": 215
+            "size": 975
           }
         ]
       },
@@ -2040,7 +2590,7 @@
         "path": "Security/README.md",
         "type": "file",
         "sha": "",
-        "size": 779
+        "size": 2685
       }
     ]
   },
@@ -2680,6 +3230,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3690
+    "size": 4189
   }
 ]

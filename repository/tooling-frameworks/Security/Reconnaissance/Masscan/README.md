@@ -2,6 +2,8 @@
 
 [← Reconnaissance](../README.md)
 
+Capability: **network scanners** (fast port sweep — lab / approved windows). Pair with [Nmap](../Nmap/README.md) for service detail.
+
 ## Topic files
 
 | # | Topic | Status |

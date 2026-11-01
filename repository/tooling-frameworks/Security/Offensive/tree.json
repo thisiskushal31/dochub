@@ -117,6 +117,50 @@
     ]
   },
   {
+    "name": "Evil-WinRM",
+    "path": "Evil-WinRM",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "Evil-WinRM/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 429
+      },
+      {
+        "name": "README.md",
+        "path": "Evil-WinRM/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 310
+      }
+    ]
+  },
+  {
+    "name": "feroxbuster",
+    "path": "feroxbuster",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "feroxbuster/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 542
+      },
+      {
+        "name": "README.md",
+        "path": "feroxbuster/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 281
+      }
+    ]
+  },
+  {
     "name": "Hashcat",
     "path": "Hashcat",
     "type": "dir",
@@ -249,6 +293,28 @@
     ]
   },
   {
+    "name": "Mimikatz",
+    "path": "Mimikatz",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "Mimikatz/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 805
+      },
+      {
+        "name": "README.md",
+        "path": "Mimikatz/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 352
+      }
+    ]
+  },
+  {
     "name": "Netcat",
     "path": "Netcat",
     "type": "dir",
@@ -267,6 +333,28 @@
         "type": "file",
         "sha": "",
         "size": 179
+      }
+    ]
+  },
+  {
+    "name": "NetExec",
+    "path": "NetExec",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "NetExec/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 722
+      },
+      {
+        "name": "README.md",
+        "path": "NetExec/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 321
       }
     ]
   },
@@ -359,10 +447,32 @@
     ]
   },
   {
+    "name": "WinPEAS",
+    "path": "WinPEAS",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_Install_And_First_Use.md",
+        "path": "WinPEAS/1_Install_And_First_Use.md",
+        "type": "file",
+        "sha": "",
+        "size": 863
+      },
+      {
+        "name": "README.md",
+        "path": "WinPEAS/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 286
+      }
+    ]
+  },
+  {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 1343
+    "size": 2924
   }
 ]

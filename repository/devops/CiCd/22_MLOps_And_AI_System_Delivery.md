@@ -99,7 +99,9 @@ Do not skip model CD because “we use an API vendor model” — still version 
 
 - App loop: [1](./1_Pipelines_Build_Test_Deploy.md)  
 - Spectrum map: [19](./19_Delivery_Spectrum_Legacy_Through_Modern.md)  
-- Science depth: Data-Science-AI Deep Dive  
+- Science depth: [Data-Science-AI Deep Dive](https://github.com/thisiskushal31/Data-Science-AI-Deep-Dive)  
+- Cluster LLM serving / scale concepts: [Inference-And-Serving/5](https://github.com/thisiskushal31/Data-Science-AI-Deep-Dive/blob/main/Inference-And-Serving/5_Cluster_Serving_Scaling_And_Ops.md)  
+
 
 ## Further reading
 

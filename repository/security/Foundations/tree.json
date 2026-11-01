@@ -4,153 +4,153 @@
     "path": "1_CIA_And_Risk.md",
     "type": "file",
     "sha": "",
-    "size": 9376
+    "size": 9476
   },
   {
     "name": "10_Secure_Design_Principles.md",
     "path": "10_Secure_Design_Principles.md",
     "type": "file",
     "sha": "",
-    "size": 3914
+    "size": 3975
   },
   {
     "name": "11_Security_Models_And_Architecture_Literacy.md",
     "path": "11_Security_Models_And_Architecture_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 4618
+    "size": 4669
   },
   {
     "name": "12_STRIDE_And_Threat_Modeling.md",
     "path": "12_STRIDE_And_Threat_Modeling.md",
     "type": "file",
     "sha": "",
-    "size": 8359
+    "size": 8517
   },
   {
     "name": "13_Zero_Trust_And_Deception_Basics.md",
     "path": "13_Zero_Trust_And_Deception_Basics.md",
     "type": "file",
     "sha": "",
-    "size": 5591
+    "size": 5754
   },
   {
     "name": "14_Defensible_Network_Architecture_Literacy.md",
     "path": "14_Defensible_Network_Architecture_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 3845
+    "size": 3916
   },
   {
     "name": "15_Endpoint_And_System_Hardening_Literacy.md",
     "path": "15_Endpoint_And_System_Hardening_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 3667
+    "size": 3784
   },
   {
     "name": "16_Human_Security_Literacy.md",
     "path": "16_Human_Security_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 3732
+    "size": 3751
   },
   {
     "name": "17_Privacy_Literacy.md",
     "path": "17_Privacy_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 3423
+    "size": 3544
   },
   {
     "name": "18_Adversary_Models_Kill_Chain_And_ATTCK.md",
     "path": "18_Adversary_Models_Kill_Chain_And_ATTCK.md",
     "type": "file",
     "sha": "",
-    "size": 5495
+    "size": 5663
   },
   {
     "name": "19_Threat_Intelligence_Literacy.md",
     "path": "19_Threat_Intelligence_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 5371
+    "size": 5565
   },
   {
     "name": "2_Controls_And_Physical.md",
     "path": "2_Controls_And_Physical.md",
     "type": "file",
     "sha": "",
-    "size": 7644
+    "size": 7858
   },
   {
     "name": "20_Vulnerability_Management_Literacy.md",
     "path": "20_Vulnerability_Management_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 3515
+    "size": 3815
   },
   {
     "name": "21_Resilience_Continuity_And_Recovery_Literacy.md",
     "path": "21_Resilience_Continuity_And_Recovery_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 3614
+    "size": 3740
   },
   {
     "name": "3_Ethics_Authorization_And_Lab_Rules.md",
     "path": "3_Ethics_Authorization_And_Lab_Rules.md",
     "type": "file",
     "sha": "",
-    "size": 3850
+    "size": 4046
   },
   {
     "name": "4_Security_Policy_Governance_And_Roles.md",
     "path": "4_Security_Policy_Governance_And_Roles.md",
     "type": "file",
     "sha": "",
-    "size": 5536
+    "size": 5545
   },
   {
     "name": "5_Risk_Management_Process_And_RMF.md",
     "path": "5_Risk_Management_Process_And_RMF.md",
     "type": "file",
     "sha": "",
-    "size": 4922
+    "size": 4939
   },
   {
     "name": "6_Assets_Data_States_And_Assurance.md",
     "path": "6_Assets_Data_States_And_Assurance.md",
     "type": "file",
     "sha": "",
-    "size": 4348
+    "size": 4427
   },
   {
     "name": "7_AAA_And_Access_Fundamentals.md",
     "path": "7_AAA_And_Access_Fundamentals.md",
     "type": "file",
     "sha": "",
-    "size": 7085
+    "size": 7242
   },
   {
     "name": "8_Cryptographic_Solutions_Literacy.md",
     "path": "8_Cryptographic_Solutions_Literacy.md",
     "type": "file",
     "sha": "",
-    "size": 7219
+    "size": 7367
   },
   {
     "name": "9_Change_Management_And_Security.md",
     "path": "9_Change_Management_And_Security.md",
     "type": "file",
     "sha": "",
-    "size": 4369
+    "size": 4550
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 5567
+    "size": 6088
   }
 ]

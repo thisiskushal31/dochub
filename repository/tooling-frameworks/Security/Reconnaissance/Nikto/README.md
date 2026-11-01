@@ -2,6 +2,8 @@
 
 [← Reconnaissance](../README.md)
 
+Capability: **web surface mappers** (known-misconfig / banner checks — noisy).
+
 ## Topic files
 
 | # | Topic | Status |

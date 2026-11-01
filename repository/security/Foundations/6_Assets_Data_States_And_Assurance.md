@@ -15,17 +15,17 @@ You cannot protect what you have not identified. This note covers asset and data
 | Information | Databases, files, secrets, backups, logs |
 | Software | Applications, containers, firmware, models |
 | Hardware | Laptops, servers, phones, tokens, network gear |
-| Services | APIs, identity providers, SaaS, pipelines |
+| Services | APIs, identity providers, SaaS (Software as a Service), pipelines |
 | People and facilities | Operators, badges, datacenter space (physical) |
 
-Inventory needs owners, data class ([1](./1_CIA_And_Risk.md)), and criticality (from BIA thinking in [5](./5_Risk_Management_Process_And_RMF.md)). Shadow IT is an asset discovery problem as much as a policy problem.
+Inventory needs owners, data class ([1](./1_CIA_And_Risk.md)), and criticality (from BIA (Business Impact Analysis) thinking in [5](./5_Risk_Management_Process_And_RMF.md)). Shadow IT is an asset discovery problem as much as a policy problem.
 
 ## Data states
 
 | State | Meaning | Typical controls |
 |-------|---------|------------------|
 | **At rest** | Stored on disk, object store, backup, laptop | Access control; encryption at rest; key management |
-| **In transit** | Moving across a network | TLS/IPsec; authenticated channels; certificate validation |
+| **In transit** | Moving across a network | TLS (Transport Layer Security)/IPsec; authenticated channels; certificate validation |
 | **In use** | Being processed in memory / CPU | Least privilege; isolation; careful logging; confidential-computing options where required |
 
 ```text
@@ -44,10 +44,10 @@ A control that only covers “in transit” leaves backups and snapshots exposed
 | Minimization | Collect and keep only what the mission needs |
 | Retention | Keep for the required period; delete or archive on schedule |
 | Disposal | Crypto-erase or destroy media; revoke tokens |
-| Sharing / DLP | Control egress for sensitive classes |
+| Sharing / DLP (data loss prevention) | Control egress for sensitive classes |
 | Anonymization / pseudonymization | Reduce identifiability when full identity is not required for the job |
 
-| Data flavor (literacy) | Why it matters |
+| Data flavor | Why it matters |
 |------------------------|----------------|
 | PII / personal data | Privacy duties and breach impact ([17](./17_Privacy_Literacy.md)) |
 | Secrets / credentials | Compromise impersonates people or workloads ([8](./8_Cryptographic_Solutions_Literacy.md)) |
@@ -55,7 +55,7 @@ A control that only covers “in transit” leaves backups and snapshots exposed
 
 Privacy overlays purpose limitation and individual rights on top of these technical handling rules ([4](./4_Security_Policy_Governance_And_Roles.md)).
 
-## Baselines and hardening (literacy)
+## Baselines and hardening
 
 A **secure baseline** is a documented, approved configuration for a platform (OS image, container, cloud account guardrails). Drift away from baseline is a detective signal. CIS-class benchmarks and cloud posture tools implement this idea. Endpoint/system literacy: [15](./15_Endpoint_And_System_Hardening_Literacy.md). Cloud posture: [Cloud-Security](../Cloud-Security/README.md).
 

@@ -6,7 +6,7 @@ Practices, compliance, threat mitigation, and **delivery-pipeline tools**. Tool 
 
 | # | Topic | Description | Status |
 |---|--------|-------------|--------|
-| 1 | [Security practices and secrets](./1_Security_Practices_And_Secrets.md) | Secrets, IAM, zero-trust (DevOps scope) | expand |
+| 1 | [Security practices and secrets](./1_Security_Practices_And_Secrets.md) | Secrets, IAM, zero-trust (DevOps scope) | **filled** |
 | 2 | [Compliance and threat mitigation](./2_Compliance_And_Threat_Mitigation.md) | Posture, patch SLA, WAF, DDoS, sensors | **filled** |
 | 3 | [Security tools index](./3_Security_Tools_And_Automation.md) | Gate → tool map | **filled** |
 | 4 | [Security gate chain](./4_Security_Gate_Chain.md) | Ordered PR→prod controls | **filled** |
@@ -18,9 +18,11 @@ Practices, compliance, threat mitigation, and **delivery-pipeline tools**. Tool 
 | Tool | Gate / job | Status |
 |------|------------|--------|
 | [Gitleaks](./Gitleaks/README.md) | Secrets in git | **filled** |
+| [TruffleHog](./TruffleHog/README.md) | Secrets in git (alternative/complement) | **filled** |
 | [Semgrep](./Semgrep/README.md) | Fast SAST | **filled** |
 | [CodeQL](./CodeQL/README.md) | Deep SAST | **filled** |
-| [SonarQube](./SonarQube/README.md) | Quality + SAST gate | **filled** |
+| [SonarQube](./SonarQube/README.md) | Quality + SAST gate (self-hosted) | **filled** |
+| [SonarCloud](./SonarCloud/README.md) | Quality + SAST gate (SaaS alternative) | **filled** |
 | [Trivy](./Trivy/README.md) | Image / SCA / IaC scan | **filled** |
 | [Snyk](./Snyk/README.md) | SCA / container / IaC | **filled** |
 | [Checkov](./Checkov/README.md) | IaC misconfig | **filled** |

@@ -2,6 +2,8 @@
 
 [← Defensive](../README.md)
 
+Capability: **packet capture** (CLI). Pair with [Wireshark](../Wireshark/README.md) for GUI analysis.
+
 ## Topic files
 
 | # | Topic | Status |

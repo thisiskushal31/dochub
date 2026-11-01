@@ -4,35 +4,35 @@
     "path": "1_Methodology_Lab_Only.md",
     "type": "file",
     "sha": "",
-    "size": 1477
+    "size": 1545
   },
   {
     "name": "2_Planning_And_Scope.md",
     "path": "2_Planning_And_Scope.md",
     "type": "file",
     "sha": "",
-    "size": 959
+    "size": 986
   },
   {
     "name": "3_OSINT.md",
     "path": "3_OSINT.md",
     "type": "file",
     "sha": "",
-    "size": 1061
+    "size": 1829
   },
   {
     "name": "4_Scanning_And_Enumeration.md",
     "path": "4_Scanning_And_Enumeration.md",
     "type": "file",
     "sha": "",
-    "size": 1140
+    "size": 2263
   },
   {
     "name": "5_Web_Application_Attacks.md",
     "path": "5_Web_Application_Attacks.md",
     "type": "file",
     "sha": "",
-    "size": 1349
+    "size": 1549
   },
   {
     "name": "6_Exploitation_Lab_Only.md",
@@ -46,27 +46,27 @@
     "path": "7_Post_Exploitation.md",
     "type": "file",
     "sha": "",
-    "size": 1045
+    "size": 1109
   },
   {
     "name": "8_Wireless_And_RF.md",
     "path": "8_Wireless_And_RF.md",
     "type": "file",
     "sha": "",
-    "size": 900
+    "size": 923
   },
   {
     "name": "9_Reporting.md",
     "path": "9_Reporting.md",
     "type": "file",
     "sha": "",
-    "size": 1115
+    "size": 1196
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 949
+    "size": 1280
   }
 ]

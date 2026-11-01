@@ -1,0 +1,86 @@
+[
+  {
+    "name": "1_What_Reconnaissance_Is.md",
+    "path": "1_What_Reconnaissance_Is.md",
+    "type": "file",
+    "sha": "",
+    "size": 7231
+  },
+  {
+    "name": "10_Tooling_Map.md",
+    "path": "10_Tooling_Map.md",
+    "type": "file",
+    "sha": "",
+    "size": 5091
+  },
+  {
+    "name": "11_Detect_Harden_And_Continuous_Recon.md",
+    "path": "11_Detect_Harden_And_Continuous_Recon.md",
+    "type": "file",
+    "sha": "",
+    "size": 5141
+  },
+  {
+    "name": "2_Scope_Authorization_And_Evidence.md",
+    "path": "2_Scope_Authorization_And_Evidence.md",
+    "type": "file",
+    "sha": "",
+    "size": 4967
+  },
+  {
+    "name": "3_Passive_Vs_Active_And_OPSEC.md",
+    "path": "3_Passive_Vs_Active_And_OPSEC.md",
+    "type": "file",
+    "sha": "",
+    "size": 4679
+  },
+  {
+    "name": "4_Passive_OSINT_And_Public_Sources.md",
+    "path": "4_Passive_OSINT_And_Public_Sources.md",
+    "type": "file",
+    "sha": "",
+    "size": 5831
+  },
+  {
+    "name": "5_Internet_Exposure_And_ASM.md",
+    "path": "5_Internet_Exposure_And_ASM.md",
+    "type": "file",
+    "sha": "",
+    "size": 5004
+  },
+  {
+    "name": "6_Network_And_Host_Discovery.md",
+    "path": "6_Network_And_Host_Discovery.md",
+    "type": "file",
+    "sha": "",
+    "size": 4975
+  },
+  {
+    "name": "7_Web_And_App_Surface.md",
+    "path": "7_Web_And_App_Surface.md",
+    "type": "file",
+    "sha": "",
+    "size": 5457
+  },
+  {
+    "name": "8_People_Org_And_Identity_Surface.md",
+    "path": "8_People_Org_And_Identity_Surface.md",
+    "type": "file",
+    "sha": "",
+    "size": 4447
+  },
+  {
+    "name": "9_Cloud_And_SaaS_Footprint.md",
+    "path": "9_Cloud_And_SaaS_Footprint.md",
+    "type": "file",
+    "sha": "",
+    "size": 4192
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "type": "file",
+    "sha": "",
+    "size": 4613
+  }
+]

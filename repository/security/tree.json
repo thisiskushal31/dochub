@@ -10,70 +10,70 @@
         "path": "AI-Security/1_LLM_App_Threat_Model_In_Practice.md",
         "type": "file",
         "sha": "",
-        "size": 11798
+        "size": 12024
       },
       {
         "name": "2_Prompt_Injection_Defenses.md",
         "path": "AI-Security/2_Prompt_Injection_Defenses.md",
         "type": "file",
         "sha": "",
-        "size": 12440
+        "size": 12498
       },
       {
         "name": "3_RAG_And_Memory_Hardening.md",
         "path": "AI-Security/3_RAG_And_Memory_Hardening.md",
         "type": "file",
         "sha": "",
-        "size": 9475
+        "size": 9508
       },
       {
         "name": "4_Agentic_Controls.md",
         "path": "AI-Security/4_Agentic_Controls.md",
         "type": "file",
         "sha": "",
-        "size": 9499
+        "size": 9687
       },
       {
         "name": "5_Model_And_Data_Supply_Chain.md",
         "path": "AI-Security/5_Model_And_Data_Supply_Chain.md",
         "type": "file",
         "sha": "",
-        "size": 10270
+        "size": 10501
       },
       {
         "name": "6_Authorized_AI_Evaluation.md",
         "path": "AI-Security/6_Authorized_AI_Evaluation.md",
         "type": "file",
         "sha": "",
-        "size": 9201
+        "size": 9386
       },
       {
         "name": "7_Shadow_AI_And_Private_GenAI.md",
         "path": "AI-Security/7_Shadow_AI_And_Private_GenAI.md",
         "type": "file",
         "sha": "",
-        "size": 7945
+        "size": 8185
       },
       {
         "name": "8_Attack_Mechanisms_For_Defenders.md",
         "path": "AI-Security/8_Attack_Mechanisms_For_Defenders.md",
         "type": "file",
         "sha": "",
-        "size": 21413
+        "size": 21483
       },
       {
         "name": "9_Model_Confidentiality_And_Classical_AML.md",
         "path": "AI-Security/9_Model_Confidentiality_And_Classical_AML.md",
         "type": "file",
         "sha": "",
-        "size": 8802
+        "size": 9027
       },
       {
         "name": "README.md",
         "path": "AI-Security/README.md",
         "type": "file",
         "sha": "",
-        "size": 4278
+        "size": 4845
       }
     ]
   },
@@ -88,56 +88,56 @@
         "path": "AppSec/1_Secure_SDLC_And_AppSec_Program.md",
         "type": "file",
         "sha": "",
-        "size": 14510
+        "size": 15146
       },
       {
         "name": "2_OWASP_Top_10_2025_In_Practice.md",
         "path": "AppSec/2_OWASP_Top_10_2025_In_Practice.md",
         "type": "file",
         "sha": "",
-        "size": 17282
+        "size": 18007
       },
       {
         "name": "3_Access_Control_And_Authentication.md",
         "path": "AppSec/3_Access_Control_And_Authentication.md",
         "type": "file",
         "sha": "",
-        "size": 14381
+        "size": 14845
       },
       {
         "name": "4_Injection_And_Output_Encoding.md",
         "path": "AppSec/4_Injection_And_Output_Encoding.md",
         "type": "file",
         "sha": "",
-        "size": 16383
+        "size": 16752
       },
       {
         "name": "5_API_Security_Top_10_2023.md",
         "path": "AppSec/5_API_Security_Top_10_2023.md",
         "type": "file",
         "sha": "",
-        "size": 16109
+        "size": 16345
       },
       {
         "name": "6_ASVS_Verification_Practice.md",
         "path": "AppSec/6_ASVS_Verification_Practice.md",
         "type": "file",
         "sha": "",
-        "size": 12213
+        "size": 12686
       },
       {
         "name": "7_Proactive_Controls_And_Testing_Literacy.md",
         "path": "AppSec/7_Proactive_Controls_And_Testing_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 16284
+        "size": 16860
       },
       {
         "name": "README.md",
         "path": "AppSec/README.md",
         "type": "file",
         "sha": "",
-        "size": 3013
+        "size": 3538
       }
     ]
   },
@@ -189,6 +189,21 @@
             "type": "file",
             "sha": "",
             "size": 1182
+          }
+        ]
+      },
+      {
+        "name": "Cryptography",
+        "path": "Assets/Cryptography",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Assets/Cryptography/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 130
           }
         ]
       },
@@ -295,56 +310,63 @@
         "path": "Cloud-Security/1_Cloud_Models_And_Shared_Responsibility.md",
         "type": "file",
         "sha": "",
-        "size": 10313
+        "size": 10415
       },
       {
         "name": "2_Identity_Network_And_Data_Controls.md",
         "path": "Cloud-Security/2_Identity_Network_And_Data_Controls.md",
         "type": "file",
         "sha": "",
-        "size": 8693
+        "size": 9123
       },
       {
         "name": "3_CSPM_And_Posture.md",
         "path": "Cloud-Security/3_CSPM_And_Posture.md",
         "type": "file",
         "sha": "",
-        "size": 9248
+        "size": 11664
       },
       {
         "name": "4_Securing_Cloud_Resources_And_Workloads.md",
         "path": "Cloud-Security/4_Securing_Cloud_Resources_And_Workloads.md",
         "type": "file",
         "sha": "",
-        "size": 10996
+        "size": 11518
       },
       {
         "name": "5_Containers_Serverless_And_Managed_Runtimes.md",
         "path": "Cloud-Security/5_Containers_Serverless_And_Managed_Runtimes.md",
         "type": "file",
         "sha": "",
-        "size": 5943
+        "size": 6007
       },
       {
         "name": "6_Supply_Chain_And_Delivery_Integrity.md",
         "path": "Cloud-Security/6_Supply_Chain_And_Delivery_Integrity.md",
         "type": "file",
         "sha": "",
-        "size": 11088
+        "size": 11304
       },
       {
         "name": "7_Logging_Detection_And_Cloud_IR.md",
         "path": "Cloud-Security/7_Logging_Detection_And_Cloud_IR.md",
         "type": "file",
         "sha": "",
-        "size": 7614
+        "size": 8947
+      },
+      {
+        "name": "8_AI_Workloads_And_Cloud_AI_Security.md",
+        "path": "Cloud-Security/8_AI_Workloads_And_Cloud_AI_Security.md",
+        "type": "file",
+        "sha": "",
+        "size": 10869
       },
       {
         "name": "README.md",
         "path": "Cloud-Security/README.md",
         "type": "file",
         "sha": "",
-        "size": 3616
+        "size": 4632
       }
     ]
   },
@@ -355,18 +377,88 @@
     "sha": "",
     "children": [
       {
-        "name": "1_Practical_Pitfalls.md",
-        "path": "Cryptography/1_Practical_Pitfalls.md",
+        "name": "1_Goals_Threat_Model_And_Misuse.md",
+        "path": "Cryptography/1_Goals_Threat_Model_And_Misuse.md",
         "type": "file",
         "sha": "",
-        "size": 1731
+        "size": 11271
+      },
+      {
+        "name": "10_Hashing_MACs_And_Key_Derivation.md",
+        "path": "Cryptography/10_Hashing_MACs_And_Key_Derivation.md",
+        "type": "file",
+        "sha": "",
+        "size": 7726
+      },
+      {
+        "name": "11_Applied_Patterns_Tokens_And_Signing.md",
+        "path": "Cryptography/11_Applied_Patterns_Tokens_And_Signing.md",
+        "type": "file",
+        "sha": "",
+        "size": 6712
+      },
+      {
+        "name": "2_Symmetric_AEAD_And_Modes.md",
+        "path": "Cryptography/2_Symmetric_AEAD_And_Modes.md",
+        "type": "file",
+        "sha": "",
+        "size": 10116
+      },
+      {
+        "name": "3_Asymmetric_Signatures_And_Certificates.md",
+        "path": "Cryptography/3_Asymmetric_Signatures_And_Certificates.md",
+        "type": "file",
+        "sha": "",
+        "size": 8902
+      },
+      {
+        "name": "4_Randomness_And_Key_Generation.md",
+        "path": "Cryptography/4_Randomness_And_Key_Generation.md",
+        "type": "file",
+        "sha": "",
+        "size": 7700
+      },
+      {
+        "name": "5_Key_Management_And_Modules.md",
+        "path": "Cryptography/5_Key_Management_And_Modules.md",
+        "type": "file",
+        "sha": "",
+        "size": 9185
+      },
+      {
+        "name": "6_Password_Verifiers_And_KDF.md",
+        "path": "Cryptography/6_Password_Verifiers_And_KDF.md",
+        "type": "file",
+        "sha": "",
+        "size": 7934
+      },
+      {
+        "name": "7_Cryptographic_Storage_And_Secrets.md",
+        "path": "Cryptography/7_Cryptographic_Storage_And_Secrets.md",
+        "type": "file",
+        "sha": "",
+        "size": 8310
+      },
+      {
+        "name": "8_TLS_And_PKI_Builder_Pitfalls.md",
+        "path": "Cryptography/8_TLS_And_PKI_Builder_Pitfalls.md",
+        "type": "file",
+        "sha": "",
+        "size": 8880
+      },
+      {
+        "name": "9_Algorithm_Transition_And_PQC.md",
+        "path": "Cryptography/9_Algorithm_Transition_And_PQC.md",
+        "type": "file",
+        "sha": "",
+        "size": 8560
       },
       {
         "name": "README.md",
         "path": "Cryptography/README.md",
         "type": "file",
         "sha": "",
-        "size": 236
+        "size": 5249
       }
     ]
   },
@@ -377,32 +469,116 @@
     "sha": "",
     "children": [
       {
-        "name": "1_SIEM_And_Detection.md",
-        "path": "Defensive-Ops/1_SIEM_And_Detection.md",
+        "name": "1_Defensive_Ops_And_SOC_Shape.md",
+        "path": "Defensive-Ops/1_Defensive_Ops_And_SOC_Shape.md",
         "type": "file",
         "sha": "",
-        "size": 1726
+        "size": 6309
       },
       {
-        "name": "2_Incident_Response.md",
-        "path": "Defensive-Ops/2_Incident_Response.md",
+        "name": "10_Cloud_Identity_And_SaaS_IR.md",
+        "path": "Defensive-Ops/10_Cloud_Identity_And_SaaS_IR.md",
         "type": "file",
         "sha": "",
-        "size": 1562
+        "size": 3802
       },
       {
-        "name": "3_Forensics.md",
-        "path": "Defensive-Ops/3_Forensics.md",
+        "name": "11_Metrics_Purple_And_Improvement.md",
+        "path": "Defensive-Ops/11_Metrics_Purple_And_Improvement.md",
         "type": "file",
         "sha": "",
-        "size": 1530
+        "size": 4123
+      },
+      {
+        "name": "12_Alert_Triage_And_Case_Management.md",
+        "path": "Defensive-Ops/12_Alert_Triage_And_Case_Management.md",
+        "type": "file",
+        "sha": "",
+        "size": 4220
+      },
+      {
+        "name": "13_Automation_And_SOAR_Boundaries.md",
+        "path": "Defensive-Ops/13_Automation_And_SOAR_Boundaries.md",
+        "type": "file",
+        "sha": "",
+        "size": 3964
+      },
+      {
+        "name": "14_Comms_Notification_And_External_Reporting.md",
+        "path": "Defensive-Ops/14_Comms_Notification_And_External_Reporting.md",
+        "type": "file",
+        "sha": "",
+        "size": 3571
+      },
+      {
+        "name": "15_Tabletop_And_Purple_Exercises.md",
+        "path": "Defensive-Ops/15_Tabletop_And_Purple_Exercises.md",
+        "type": "file",
+        "sha": "",
+        "size": 3707
+      },
+      {
+        "name": "2_Telemetry_And_Log_Management.md",
+        "path": "Defensive-Ops/2_Telemetry_And_Log_Management.md",
+        "type": "file",
+        "sha": "",
+        "size": 4904
+      },
+      {
+        "name": "3_SIEM_And_Detection_Platforms.md",
+        "path": "Defensive-Ops/3_SIEM_And_Detection_Platforms.md",
+        "type": "file",
+        "sha": "",
+        "size": 5669
+      },
+      {
+        "name": "4_Detection_Engineering_And_ATTCK.md",
+        "path": "Defensive-Ops/4_Detection_Engineering_And_ATTCK.md",
+        "type": "file",
+        "sha": "",
+        "size": 4844
+      },
+      {
+        "name": "5_Threat_Hunting.md",
+        "path": "Defensive-Ops/5_Threat_Hunting.md",
+        "type": "file",
+        "sha": "",
+        "size": 3840
+      },
+      {
+        "name": "6_Network_And_Endpoint_Detection.md",
+        "path": "Defensive-Ops/6_Network_And_Endpoint_Detection.md",
+        "type": "file",
+        "sha": "",
+        "size": 5321
+      },
+      {
+        "name": "7_Incident_Response_Lifecycle.md",
+        "path": "Defensive-Ops/7_Incident_Response_Lifecycle.md",
+        "type": "file",
+        "sha": "",
+        "size": 5601
+      },
+      {
+        "name": "8_Contain_Eradicate_Recover.md",
+        "path": "Defensive-Ops/8_Contain_Eradicate_Recover.md",
+        "type": "file",
+        "sha": "",
+        "size": 4940
+      },
+      {
+        "name": "9_Digital_Forensics_For_IR.md",
+        "path": "Defensive-Ops/9_Digital_Forensics_For_IR.md",
+        "type": "file",
+        "sha": "",
+        "size": 4855
       },
       {
         "name": "README.md",
         "path": "Defensive-Ops/README.md",
         "type": "file",
         "sha": "",
-        "size": 936
+        "size": 6355
       }
     ]
   },
@@ -417,154 +593,154 @@
         "path": "Foundations/1_CIA_And_Risk.md",
         "type": "file",
         "sha": "",
-        "size": 9376
+        "size": 9476
       },
       {
         "name": "10_Secure_Design_Principles.md",
         "path": "Foundations/10_Secure_Design_Principles.md",
         "type": "file",
         "sha": "",
-        "size": 3914
+        "size": 3975
       },
       {
         "name": "11_Security_Models_And_Architecture_Literacy.md",
         "path": "Foundations/11_Security_Models_And_Architecture_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 4618
+        "size": 4669
       },
       {
         "name": "12_STRIDE_And_Threat_Modeling.md",
         "path": "Foundations/12_STRIDE_And_Threat_Modeling.md",
         "type": "file",
         "sha": "",
-        "size": 8359
+        "size": 8517
       },
       {
         "name": "13_Zero_Trust_And_Deception_Basics.md",
         "path": "Foundations/13_Zero_Trust_And_Deception_Basics.md",
         "type": "file",
         "sha": "",
-        "size": 5591
+        "size": 5754
       },
       {
         "name": "14_Defensible_Network_Architecture_Literacy.md",
         "path": "Foundations/14_Defensible_Network_Architecture_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 3845
+        "size": 3916
       },
       {
         "name": "15_Endpoint_And_System_Hardening_Literacy.md",
         "path": "Foundations/15_Endpoint_And_System_Hardening_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 3667
+        "size": 3784
       },
       {
         "name": "16_Human_Security_Literacy.md",
         "path": "Foundations/16_Human_Security_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 3732
+        "size": 3751
       },
       {
         "name": "17_Privacy_Literacy.md",
         "path": "Foundations/17_Privacy_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 3423
+        "size": 3544
       },
       {
         "name": "18_Adversary_Models_Kill_Chain_And_ATTCK.md",
         "path": "Foundations/18_Adversary_Models_Kill_Chain_And_ATTCK.md",
         "type": "file",
         "sha": "",
-        "size": 5495
+        "size": 5663
       },
       {
         "name": "19_Threat_Intelligence_Literacy.md",
         "path": "Foundations/19_Threat_Intelligence_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 5371
+        "size": 5565
       },
       {
         "name": "2_Controls_And_Physical.md",
         "path": "Foundations/2_Controls_And_Physical.md",
         "type": "file",
         "sha": "",
-        "size": 7644
+        "size": 7858
       },
       {
         "name": "20_Vulnerability_Management_Literacy.md",
         "path": "Foundations/20_Vulnerability_Management_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 3515
+        "size": 3815
       },
       {
         "name": "21_Resilience_Continuity_And_Recovery_Literacy.md",
         "path": "Foundations/21_Resilience_Continuity_And_Recovery_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 3614
+        "size": 3740
       },
       {
         "name": "3_Ethics_Authorization_And_Lab_Rules.md",
         "path": "Foundations/3_Ethics_Authorization_And_Lab_Rules.md",
         "type": "file",
         "sha": "",
-        "size": 3850
+        "size": 4046
       },
       {
         "name": "4_Security_Policy_Governance_And_Roles.md",
         "path": "Foundations/4_Security_Policy_Governance_And_Roles.md",
         "type": "file",
         "sha": "",
-        "size": 5536
+        "size": 5545
       },
       {
         "name": "5_Risk_Management_Process_And_RMF.md",
         "path": "Foundations/5_Risk_Management_Process_And_RMF.md",
         "type": "file",
         "sha": "",
-        "size": 4922
+        "size": 4939
       },
       {
         "name": "6_Assets_Data_States_And_Assurance.md",
         "path": "Foundations/6_Assets_Data_States_And_Assurance.md",
         "type": "file",
         "sha": "",
-        "size": 4348
+        "size": 4427
       },
       {
         "name": "7_AAA_And_Access_Fundamentals.md",
         "path": "Foundations/7_AAA_And_Access_Fundamentals.md",
         "type": "file",
         "sha": "",
-        "size": 7085
+        "size": 7242
       },
       {
         "name": "8_Cryptographic_Solutions_Literacy.md",
         "path": "Foundations/8_Cryptographic_Solutions_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 7219
+        "size": 7367
       },
       {
         "name": "9_Change_Management_And_Security.md",
         "path": "Foundations/9_Change_Management_And_Security.md",
         "type": "file",
         "sha": "",
-        "size": 4369
+        "size": 4550
       },
       {
         "name": "README.md",
         "path": "Foundations/README.md",
         "type": "file",
         "sha": "",
-        "size": 5567
+        "size": 6088
       }
     ]
   },
@@ -579,56 +755,56 @@
         "path": "GRC/1_NIST_ISO_And_ATTCK.md",
         "type": "file",
         "sha": "",
-        "size": 7543
+        "size": 7751
       },
       {
         "name": "2_NIST_CSF_2_Outcomes.md",
         "path": "GRC/2_NIST_CSF_2_Outcomes.md",
         "type": "file",
         "sha": "",
-        "size": 8842
+        "size": 9024
       },
       {
         "name": "3_NIST_RMF_Lifecycle.md",
         "path": "GRC/3_NIST_RMF_Lifecycle.md",
         "type": "file",
         "sha": "",
-        "size": 8642
+        "size": 8710
       },
       {
         "name": "4_Control_Catalogs_800-53_And_CIS.md",
         "path": "GRC/4_Control_Catalogs_800-53_And_CIS.md",
         "type": "file",
         "sha": "",
-        "size": 7518
+        "size": 7688
       },
       {
         "name": "5_ISO_27001_ISMS_Literacy.md",
         "path": "GRC/5_ISO_27001_ISMS_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 6024
+        "size": 6169
       },
       {
         "name": "6_SOC2_And_Evidence.md",
         "path": "GRC/6_SOC2_And_Evidence.md",
         "type": "file",
         "sha": "",
-        "size": 7337
+        "size": 7630
       },
       {
         "name": "7_NICE_Workforce_Literacy.md",
         "path": "GRC/7_NICE_Workforce_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 6166
+        "size": 6297
       },
       {
         "name": "README.md",
         "path": "GRC/README.md",
         "type": "file",
         "sha": "",
-        "size": 3268
+        "size": 3600
       }
     ]
   },
@@ -643,21 +819,21 @@
         "path": "Identity/1_OAuth_OIDC_SAML.md",
         "type": "file",
         "sha": "",
-        "size": 1846
+        "size": 1944
       },
       {
         "name": "2_Zero_Trust.md",
         "path": "Identity/2_Zero_Trust.md",
         "type": "file",
         "sha": "",
-        "size": 1418
+        "size": 1493
       },
       {
         "name": "README.md",
         "path": "Identity/README.md",
         "type": "file",
         "sha": "",
-        "size": 298
+        "size": 352
       }
     ]
   },
@@ -672,7 +848,7 @@
         "path": "Labs/1_Paths.md",
         "type": "file",
         "sha": "",
-        "size": 1290
+        "size": 1342
       },
       {
         "name": "README.md",
@@ -694,35 +870,35 @@
         "path": "Offensive/1_Methodology_Lab_Only.md",
         "type": "file",
         "sha": "",
-        "size": 1477
+        "size": 1545
       },
       {
         "name": "2_Planning_And_Scope.md",
         "path": "Offensive/2_Planning_And_Scope.md",
         "type": "file",
         "sha": "",
-        "size": 959
+        "size": 986
       },
       {
         "name": "3_OSINT.md",
         "path": "Offensive/3_OSINT.md",
         "type": "file",
         "sha": "",
-        "size": 1061
+        "size": 1829
       },
       {
         "name": "4_Scanning_And_Enumeration.md",
         "path": "Offensive/4_Scanning_And_Enumeration.md",
         "type": "file",
         "sha": "",
-        "size": 1140
+        "size": 2263
       },
       {
         "name": "5_Web_Application_Attacks.md",
         "path": "Offensive/5_Web_Application_Attacks.md",
         "type": "file",
         "sha": "",
-        "size": 1349
+        "size": 1549
       },
       {
         "name": "6_Exploitation_Lab_Only.md",
@@ -736,28 +912,120 @@
         "path": "Offensive/7_Post_Exploitation.md",
         "type": "file",
         "sha": "",
-        "size": 1045
+        "size": 1109
       },
       {
         "name": "8_Wireless_And_RF.md",
         "path": "Offensive/8_Wireless_And_RF.md",
         "type": "file",
         "sha": "",
-        "size": 900
+        "size": 923
       },
       {
         "name": "9_Reporting.md",
         "path": "Offensive/9_Reporting.md",
         "type": "file",
         "sha": "",
-        "size": 1115
+        "size": 1196
       },
       {
         "name": "README.md",
         "path": "Offensive/README.md",
         "type": "file",
         "sha": "",
-        "size": 949
+        "size": 1280
+      }
+    ]
+  },
+  {
+    "name": "Reconnaissance",
+    "path": "Reconnaissance",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "1_What_Reconnaissance_Is.md",
+        "path": "Reconnaissance/1_What_Reconnaissance_Is.md",
+        "type": "file",
+        "sha": "",
+        "size": 7231
+      },
+      {
+        "name": "10_Tooling_Map.md",
+        "path": "Reconnaissance/10_Tooling_Map.md",
+        "type": "file",
+        "sha": "",
+        "size": 5091
+      },
+      {
+        "name": "11_Detect_Harden_And_Continuous_Recon.md",
+        "path": "Reconnaissance/11_Detect_Harden_And_Continuous_Recon.md",
+        "type": "file",
+        "sha": "",
+        "size": 5141
+      },
+      {
+        "name": "2_Scope_Authorization_And_Evidence.md",
+        "path": "Reconnaissance/2_Scope_Authorization_And_Evidence.md",
+        "type": "file",
+        "sha": "",
+        "size": 4967
+      },
+      {
+        "name": "3_Passive_Vs_Active_And_OPSEC.md",
+        "path": "Reconnaissance/3_Passive_Vs_Active_And_OPSEC.md",
+        "type": "file",
+        "sha": "",
+        "size": 4679
+      },
+      {
+        "name": "4_Passive_OSINT_And_Public_Sources.md",
+        "path": "Reconnaissance/4_Passive_OSINT_And_Public_Sources.md",
+        "type": "file",
+        "sha": "",
+        "size": 5831
+      },
+      {
+        "name": "5_Internet_Exposure_And_ASM.md",
+        "path": "Reconnaissance/5_Internet_Exposure_And_ASM.md",
+        "type": "file",
+        "sha": "",
+        "size": 5004
+      },
+      {
+        "name": "6_Network_And_Host_Discovery.md",
+        "path": "Reconnaissance/6_Network_And_Host_Discovery.md",
+        "type": "file",
+        "sha": "",
+        "size": 4975
+      },
+      {
+        "name": "7_Web_And_App_Surface.md",
+        "path": "Reconnaissance/7_Web_And_App_Surface.md",
+        "type": "file",
+        "sha": "",
+        "size": 5457
+      },
+      {
+        "name": "8_People_Org_And_Identity_Surface.md",
+        "path": "Reconnaissance/8_People_Org_And_Identity_Surface.md",
+        "type": "file",
+        "sha": "",
+        "size": 4447
+      },
+      {
+        "name": "9_Cloud_And_SaaS_Footprint.md",
+        "path": "Reconnaissance/9_Cloud_And_SaaS_Footprint.md",
+        "type": "file",
+        "sha": "",
+        "size": 4192
+      },
+      {
+        "name": "README.md",
+        "path": "Reconnaissance/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 4613
       }
     ]
   },
@@ -772,49 +1040,49 @@
         "path": "Threat-Intelligence/1_Analytic_Tradecraft.md",
         "type": "file",
         "sha": "",
-        "size": 25345
+        "size": 25739
       },
       {
         "name": "2_Intrusion_Analysis_Models.md",
         "path": "Threat-Intelligence/2_Intrusion_Analysis_Models.md",
         "type": "file",
         "sha": "",
-        "size": 11649
+        "size": 11780
       },
       {
         "name": "3_Finished_Intelligence_Products.md",
         "path": "Threat-Intelligence/3_Finished_Intelligence_Products.md",
         "type": "file",
         "sha": "",
-        "size": 10041
+        "size": 10268
       },
       {
         "name": "4_STIX_And_TAXII_Practice.md",
         "path": "Threat-Intelligence/4_STIX_And_TAXII_Practice.md",
         "type": "file",
         "sha": "",
-        "size": 9789
+        "size": 10096
       },
       {
         "name": "5_Detection_Oriented_Handoff.md",
         "path": "Threat-Intelligence/5_Detection_Oriented_Handoff.md",
         "type": "file",
         "sha": "",
-        "size": 10740
+        "size": 11067
       },
       {
         "name": "6_Malware_Reverse_Engineering_For_CTI.md",
         "path": "Threat-Intelligence/6_Malware_Reverse_Engineering_For_CTI.md",
         "type": "file",
         "sha": "",
-        "size": 17440
+        "size": 17709
       },
       {
         "name": "README.md",
         "path": "Threat-Intelligence/README.md",
         "type": "file",
         "sha": "",
-        "size": 2820
+        "size": 3009
       }
     ]
   },
@@ -829,49 +1097,49 @@
         "path": "Threat-Modeling/1_Workshop_Process.md",
         "type": "file",
         "sha": "",
-        "size": 14002
+        "size": 14119
       },
       {
         "name": "2_DFD_And_STRIDE_In_Practice.md",
         "path": "Threat-Modeling/2_DFD_And_STRIDE_In_Practice.md",
         "type": "file",
         "sha": "",
-        "size": 13751
+        "size": 14030
       },
       {
         "name": "3_PASTA_Staged_Walkthrough.md",
         "path": "Threat-Modeling/3_PASTA_Staged_Walkthrough.md",
         "type": "file",
         "sha": "",
-        "size": 8248
+        "size": 8444
       },
       {
         "name": "4_Attack_Trees_And_LINDDUN.md",
         "path": "Threat-Modeling/4_Attack_Trees_And_LINDDUN.md",
         "type": "file",
         "sha": "",
-        "size": 8636
+        "size": 8746
       },
       {
         "name": "5_Tooling_And_Closing_The_Loop.md",
         "path": "Threat-Modeling/5_Tooling_And_Closing_The_Loop.md",
         "type": "file",
         "sha": "",
-        "size": 10967
+        "size": 11160
       },
       {
         "name": "6_AI_And_Agentic_Threat_Modeling.md",
         "path": "Threat-Modeling/6_AI_And_Agentic_Threat_Modeling.md",
         "type": "file",
         "sha": "",
-        "size": 18350
+        "size": 18685
       },
       {
         "name": "README.md",
         "path": "Threat-Modeling/README.md",
         "type": "file",
         "sha": "",
-        "size": 2656
+        "size": 2886
       }
     ]
   },
@@ -886,63 +1154,63 @@
         "path": "Threats/1_Actors_And_Motivations.md",
         "type": "file",
         "sha": "",
-        "size": 10322
+        "size": 10393
       },
       {
         "name": "2_Vectors_And_Surfaces.md",
         "path": "Threats/2_Vectors_And_Surfaces.md",
         "type": "file",
         "sha": "",
-        "size": 11315
+        "size": 11629
       },
       {
         "name": "3_Vulnerabilities.md",
         "path": "Threats/3_Vulnerabilities.md",
         "type": "file",
         "sha": "",
-        "size": 8601
+        "size": 8806
       },
       {
         "name": "4_Malware.md",
         "path": "Threats/4_Malware.md",
         "type": "file",
         "sha": "",
-        "size": 7662
+        "size": 7650
       },
       {
         "name": "5_Attack_Classes.md",
         "path": "Threats/5_Attack_Classes.md",
         "type": "file",
         "sha": "",
-        "size": 7975
+        "size": 8106
       },
       {
         "name": "6_Indicators_And_Analysis.md",
         "path": "Threats/6_Indicators_And_Analysis.md",
         "type": "file",
         "sha": "",
-        "size": 6570
+        "size": 6805
       },
       {
         "name": "7_Mitigations.md",
         "path": "Threats/7_Mitigations.md",
         "type": "file",
         "sha": "",
-        "size": 9346
+        "size": 9590
       },
       {
         "name": "8_AI_Era_Threats.md",
         "path": "Threats/8_AI_Era_Threats.md",
         "type": "file",
         "sha": "",
-        "size": 27872
+        "size": 28241
       },
       {
         "name": "README.md",
         "path": "Threats/README.md",
         "type": "file",
         "sha": "",
-        "size": 8692
+        "size": 9083
       }
     ]
   },
@@ -957,49 +1225,49 @@
         "path": "Vulnerability-Management/1_Program_Design.md",
         "type": "file",
         "sha": "",
-        "size": 8884
+        "size": 8947
       },
       {
         "name": "2_Scanning_Architecture_And_Coverage.md",
         "path": "Vulnerability-Management/2_Scanning_Architecture_And_Coverage.md",
         "type": "file",
         "sha": "",
-        "size": 10495
+        "size": 10783
       },
       {
         "name": "3_Risk_Based_Prioritization_KEV_EPSS_SSVC.md",
         "path": "Vulnerability-Management/3_Risk_Based_Prioritization_KEV_EPSS_SSVC.md",
         "type": "file",
         "sha": "",
-        "size": 13565
+        "size": 13802
       },
       {
         "name": "4_Exception_And_Acceptance_Workflows.md",
         "path": "Vulnerability-Management/4_Exception_And_Acceptance_Workflows.md",
         "type": "file",
         "sha": "",
-        "size": 5843
+        "size": 6032
       },
       {
         "name": "5_Metrics_And_Reporting.md",
         "path": "Vulnerability-Management/5_Metrics_And_Reporting.md",
         "type": "file",
         "sha": "",
-        "size": 6792
+        "size": 6901
       },
       {
         "name": "6_Vulnerability_Disclosure_Literacy.md",
         "path": "Vulnerability-Management/6_Vulnerability_Disclosure_Literacy.md",
         "type": "file",
         "sha": "",
-        "size": 5641
+        "size": 5757
       },
       {
         "name": "README.md",
         "path": "Vulnerability-Management/README.md",
         "type": "file",
         "sha": "",
-        "size": 2236
+        "size": 2644
       }
     ]
   },
@@ -1008,6 +1276,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3063
+    "size": 3701
   }
 ]

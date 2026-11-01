@@ -105,6 +105,21 @@
     ]
   },
   {
+    "name": "SonarCloud",
+    "path": "SonarCloud",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "SonarCloud/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1550
+      }
+    ]
+  },
+  {
     "name": "SonarQube",
     "path": "SonarQube",
     "type": "dir",
@@ -115,7 +130,7 @@
         "path": "SonarQube/README.md",
         "type": "file",
         "sha": "",
-        "size": 1728
+        "size": 1840
       }
     ]
   },
@@ -131,6 +146,21 @@
         "type": "file",
         "sha": "",
         "size": 1663
+      }
+    ]
+  },
+  {
+    "name": "TruffleHog",
+    "path": "TruffleHog",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "TruffleHog/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 845
       }
     ]
   },
@@ -184,7 +214,7 @@
     "path": "1_Security_Practices_And_Secrets.md",
     "type": "file",
     "sha": "",
-    "size": 382
+    "size": 3368
   },
   {
     "name": "2_Compliance_And_Threat_Mitigation.md",
@@ -226,6 +256,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2197
+    "size": 2406
   }
 ]

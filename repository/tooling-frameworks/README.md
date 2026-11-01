@@ -2,6 +2,8 @@
 
 **Named software** — frameworks, CLIs, libraries, scanners, diagramming. What it *is*, when to pick it, hello-world, how it ships.
 
+**One tool, one home:** before adding a folder, search this repo. If it exists (e.g. [n8n](./Automation/n8n/README.md) under Automation, [Nmap](./Security/Reconnaissance/Nmap/README.md) under Security/Reconnaissance), **link it** — do not create a second tree under another domain. Capability grouping = README tables, not cloned directories. Program methodology stays in [Security-Deep-Dive](https://github.com/thisiskushal31/Security-Deep-Dive) (and peers); those repos link here for installs.
+
 This is the backend / frontend / mobile door. Other homes keep the *jobs*: packets (Networks), engines (Data Engineering / Databases), HLD (System Design), AppSec *program* (Security-Deep-Dive). **Not** language syntax → [DevOps Languages](https://github.com/thisiskushal31/DevOps-Handbook/tree/main/Languages). **Not** CI/CD internals → [DevOps-Handbook](https://github.com/thisiskushal31/DevOps-Handbook). **Not** Spark or Kafka → [Data-Engineering Systems](https://github.com/thisiskushal31/Data-Engineering-Deep-Dive/tree/main/Systems).
 
 New here? Open the domain you are staring at. Day-one utilities: [Utility](./Utility/README.md) (Git, Make), [Network-Utilities](./Network-Utilities/README.md) (ping, dig, curl), [Containers](./Containers/README.md) (`kubectl`, `k9s`, Helm). Backend: [Web-Backend](./Web-Backend/README.md). Frontend: [Web-Frontend](./Web-Frontend/README.md). Add a framework folder when you actually use one. Same four topics: what/when, hello-world, delivery, use cases.

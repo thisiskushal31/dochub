@@ -4,20 +4,20 @@
     "path": "1_OAuth_OIDC_SAML.md",
     "type": "file",
     "sha": "",
-    "size": 1846
+    "size": 1944
   },
   {
     "name": "2_Zero_Trust.md",
     "path": "2_Zero_Trust.md",
     "type": "file",
     "sha": "",
-    "size": 1418
+    "size": 1493
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 298
+    "size": 352
   }
 ]

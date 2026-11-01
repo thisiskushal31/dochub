@@ -4,11 +4,11 @@
 
 ## 1. Concepts
 
-**SonarQube** (and SonarCloud) is a **quality + security** platform: static analysis, coverage gates, duplication, and issue tracking with a quality-gate pass/fail for CI.
+**SonarQube** is a **self-hosted** quality + security platform: static analysis, coverage gates, duplication, and issue tracking with a quality-gate pass/fail for CI. SaaS alternative: [SonarCloud](../SonarCloud/README.md).
 
 **Plain language:** A report card for the codebase. Pipelines often **fail the build** if the quality gate fails (new bugs, coverage drop, security hotspots).
 
-Kickoff primary SAST/quality example alongside [ZAP](../ZAP/README.md) for DAST.
+Kickoff primary SAST/quality example alongside [ZAP](../ZAP/README.md) for DAST. Prefer SonarCloud when you do not want to operate a server.
 
 **Disconfirm:** A green Sonar gate is **not** a penetration test. Coverage % is **not** proof of useful tests.
 

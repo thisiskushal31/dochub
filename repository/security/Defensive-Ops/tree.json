@@ -1,30 +1,114 @@
 [
   {
-    "name": "1_SIEM_And_Detection.md",
-    "path": "1_SIEM_And_Detection.md",
+    "name": "1_Defensive_Ops_And_SOC_Shape.md",
+    "path": "1_Defensive_Ops_And_SOC_Shape.md",
     "type": "file",
     "sha": "",
-    "size": 1726
+    "size": 6309
   },
   {
-    "name": "2_Incident_Response.md",
-    "path": "2_Incident_Response.md",
+    "name": "10_Cloud_Identity_And_SaaS_IR.md",
+    "path": "10_Cloud_Identity_And_SaaS_IR.md",
     "type": "file",
     "sha": "",
-    "size": 1562
+    "size": 3802
   },
   {
-    "name": "3_Forensics.md",
-    "path": "3_Forensics.md",
+    "name": "11_Metrics_Purple_And_Improvement.md",
+    "path": "11_Metrics_Purple_And_Improvement.md",
     "type": "file",
     "sha": "",
-    "size": 1530
+    "size": 4123
+  },
+  {
+    "name": "12_Alert_Triage_And_Case_Management.md",
+    "path": "12_Alert_Triage_And_Case_Management.md",
+    "type": "file",
+    "sha": "",
+    "size": 4220
+  },
+  {
+    "name": "13_Automation_And_SOAR_Boundaries.md",
+    "path": "13_Automation_And_SOAR_Boundaries.md",
+    "type": "file",
+    "sha": "",
+    "size": 3964
+  },
+  {
+    "name": "14_Comms_Notification_And_External_Reporting.md",
+    "path": "14_Comms_Notification_And_External_Reporting.md",
+    "type": "file",
+    "sha": "",
+    "size": 3571
+  },
+  {
+    "name": "15_Tabletop_And_Purple_Exercises.md",
+    "path": "15_Tabletop_And_Purple_Exercises.md",
+    "type": "file",
+    "sha": "",
+    "size": 3707
+  },
+  {
+    "name": "2_Telemetry_And_Log_Management.md",
+    "path": "2_Telemetry_And_Log_Management.md",
+    "type": "file",
+    "sha": "",
+    "size": 4904
+  },
+  {
+    "name": "3_SIEM_And_Detection_Platforms.md",
+    "path": "3_SIEM_And_Detection_Platforms.md",
+    "type": "file",
+    "sha": "",
+    "size": 5669
+  },
+  {
+    "name": "4_Detection_Engineering_And_ATTCK.md",
+    "path": "4_Detection_Engineering_And_ATTCK.md",
+    "type": "file",
+    "sha": "",
+    "size": 4844
+  },
+  {
+    "name": "5_Threat_Hunting.md",
+    "path": "5_Threat_Hunting.md",
+    "type": "file",
+    "sha": "",
+    "size": 3840
+  },
+  {
+    "name": "6_Network_And_Endpoint_Detection.md",
+    "path": "6_Network_And_Endpoint_Detection.md",
+    "type": "file",
+    "sha": "",
+    "size": 5321
+  },
+  {
+    "name": "7_Incident_Response_Lifecycle.md",
+    "path": "7_Incident_Response_Lifecycle.md",
+    "type": "file",
+    "sha": "",
+    "size": 5601
+  },
+  {
+    "name": "8_Contain_Eradicate_Recover.md",
+    "path": "8_Contain_Eradicate_Recover.md",
+    "type": "file",
+    "sha": "",
+    "size": 4940
+  },
+  {
+    "name": "9_Digital_Forensics_For_IR.md",
+    "path": "9_Digital_Forensics_For_IR.md",
+    "type": "file",
+    "sha": "",
+    "size": 4855
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 936
+    "size": 6355
   }
 ]

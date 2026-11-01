@@ -1,16 +1,86 @@
 [
   {
-    "name": "1_Practical_Pitfalls.md",
-    "path": "1_Practical_Pitfalls.md",
+    "name": "1_Goals_Threat_Model_And_Misuse.md",
+    "path": "1_Goals_Threat_Model_And_Misuse.md",
     "type": "file",
     "sha": "",
-    "size": 1731
+    "size": 11271
+  },
+  {
+    "name": "10_Hashing_MACs_And_Key_Derivation.md",
+    "path": "10_Hashing_MACs_And_Key_Derivation.md",
+    "type": "file",
+    "sha": "",
+    "size": 7726
+  },
+  {
+    "name": "11_Applied_Patterns_Tokens_And_Signing.md",
+    "path": "11_Applied_Patterns_Tokens_And_Signing.md",
+    "type": "file",
+    "sha": "",
+    "size": 6712
+  },
+  {
+    "name": "2_Symmetric_AEAD_And_Modes.md",
+    "path": "2_Symmetric_AEAD_And_Modes.md",
+    "type": "file",
+    "sha": "",
+    "size": 10116
+  },
+  {
+    "name": "3_Asymmetric_Signatures_And_Certificates.md",
+    "path": "3_Asymmetric_Signatures_And_Certificates.md",
+    "type": "file",
+    "sha": "",
+    "size": 8902
+  },
+  {
+    "name": "4_Randomness_And_Key_Generation.md",
+    "path": "4_Randomness_And_Key_Generation.md",
+    "type": "file",
+    "sha": "",
+    "size": 7700
+  },
+  {
+    "name": "5_Key_Management_And_Modules.md",
+    "path": "5_Key_Management_And_Modules.md",
+    "type": "file",
+    "sha": "",
+    "size": 9185
+  },
+  {
+    "name": "6_Password_Verifiers_And_KDF.md",
+    "path": "6_Password_Verifiers_And_KDF.md",
+    "type": "file",
+    "sha": "",
+    "size": 7934
+  },
+  {
+    "name": "7_Cryptographic_Storage_And_Secrets.md",
+    "path": "7_Cryptographic_Storage_And_Secrets.md",
+    "type": "file",
+    "sha": "",
+    "size": 8310
+  },
+  {
+    "name": "8_TLS_And_PKI_Builder_Pitfalls.md",
+    "path": "8_TLS_And_PKI_Builder_Pitfalls.md",
+    "type": "file",
+    "sha": "",
+    "size": 8880
+  },
+  {
+    "name": "9_Algorithm_Transition_And_PQC.md",
+    "path": "9_Algorithm_Transition_And_PQC.md",
+    "type": "file",
+    "sha": "",
+    "size": 8560
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 236
+    "size": 5249
   }
 ]
