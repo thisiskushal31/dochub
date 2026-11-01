@@ -97,7 +97,7 @@ export const repositories: RepositoryConfig[] = [
     owner: 'thisiskushal31',
     repo: 'Security-Deep-Dive',
     branch: 'main',
-    description: 'Cybersecurity: AppSec, IAM, cloud posture, forensics, and defensive operations',
+    description: 'Cybersecurity program: foundations, identity, AppSec, cloud, defensive-ops, offensive labs',
     icon: 'fas fa-shield-alt'
   },
   {
