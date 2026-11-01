@@ -10,7 +10,8 @@ Map **today's** names onto timeless layers. When the market moves, edit this fol
 
 - Snapshot date on every file
 - Table: current name → layer file in this repo
-- 2026 examples might include: specific tokenizers, embedding APIs, PEFT recipes, serving runtimes, tool protocols, OWASP LLM list
+- 2026 examples might include: specific tokenizers, embedding APIs, PEFT recipes, serving runtimes (**vLLM**, Ollama, TGI), cluster tools (KServe, KEDA, Helm), tool protocols, OWASP LLM list  
+- Serving *concepts* stay in [Inference-And-Serving](../Inference-And-Serving/README.md); only dated names live here
 
 ## Checklist before marking done
 

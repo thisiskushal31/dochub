@@ -18,7 +18,7 @@ Layers in this tree are meant to outlive a model family. Today’s product names
 | 6 | [Control-And-Agency/](./Control-And-Agency/README.md) | Tools and multi-step work |
 | 7 | [Evaluation/](./Evaluation/README.md) | Know if it works |
 | 8 | [Safety-And-Adversaries/](./Safety-And-Adversaries/README.md) | Untrusted context |
-| 9 | [Inference-And-Serving/](./Inference-And-Serving/README.md) | Memory, latency, cost |
+| 9 | [Inference-And-Serving/](./Inference-And-Serving/README.md) | Memory, latency, cost; cluster LLM serving / scale stop |
 | 10 | [Applied/](./Applied/README.md) | Systems using the layers |
 | 11 | [Instances/](./Instances/README.md) | Dated market map (will rot) |
 | — | [Assets/](./Assets/README.md) | Diagrams, notebooks |

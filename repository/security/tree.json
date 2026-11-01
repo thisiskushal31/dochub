@@ -38,14 +38,14 @@
         "path": "AI-Security/5_Model_And_Data_Supply_Chain.md",
         "type": "file",
         "sha": "",
-        "size": 9853
+        "size": 10270
       },
       {
         "name": "6_Authorized_AI_Evaluation.md",
         "path": "AI-Security/6_Authorized_AI_Evaluation.md",
         "type": "file",
         "sha": "",
-        "size": 8474
+        "size": 9201
       },
       {
         "name": "7_Shadow_AI_And_Private_GenAI.md",
@@ -59,14 +59,21 @@
         "path": "AI-Security/8_Attack_Mechanisms_For_Defenders.md",
         "type": "file",
         "sha": "",
-        "size": 21311
+        "size": 21413
+      },
+      {
+        "name": "9_Model_Confidentiality_And_Classical_AML.md",
+        "path": "AI-Security/9_Model_Confidentiality_And_Classical_AML.md",
+        "type": "file",
+        "sha": "",
+        "size": 8802
       },
       {
         "name": "README.md",
         "path": "AI-Security/README.md",
         "type": "file",
         "sha": "",
-        "size": 3525
+        "size": 4278
       }
     ]
   },
@@ -77,25 +84,60 @@
     "sha": "",
     "children": [
       {
-        "name": "1_OWASP_And_Secure_SDLC.md",
-        "path": "AppSec/1_OWASP_And_Secure_SDLC.md",
+        "name": "1_Secure_SDLC_And_AppSec_Program.md",
+        "path": "AppSec/1_Secure_SDLC_And_AppSec_Program.md",
         "type": "file",
         "sha": "",
-        "size": 2154
+        "size": 14510
       },
       {
-        "name": "2_API_Security.md",
-        "path": "AppSec/2_API_Security.md",
+        "name": "2_OWASP_Top_10_2025_In_Practice.md",
+        "path": "AppSec/2_OWASP_Top_10_2025_In_Practice.md",
         "type": "file",
         "sha": "",
-        "size": 1986
+        "size": 17282
+      },
+      {
+        "name": "3_Access_Control_And_Authentication.md",
+        "path": "AppSec/3_Access_Control_And_Authentication.md",
+        "type": "file",
+        "sha": "",
+        "size": 14381
+      },
+      {
+        "name": "4_Injection_And_Output_Encoding.md",
+        "path": "AppSec/4_Injection_And_Output_Encoding.md",
+        "type": "file",
+        "sha": "",
+        "size": 16383
+      },
+      {
+        "name": "5_API_Security_Top_10_2023.md",
+        "path": "AppSec/5_API_Security_Top_10_2023.md",
+        "type": "file",
+        "sha": "",
+        "size": 16109
+      },
+      {
+        "name": "6_ASVS_Verification_Practice.md",
+        "path": "AppSec/6_ASVS_Verification_Practice.md",
+        "type": "file",
+        "sha": "",
+        "size": 12213
+      },
+      {
+        "name": "7_Proactive_Controls_And_Testing_Literacy.md",
+        "path": "AppSec/7_Proactive_Controls_And_Testing_Literacy.md",
+        "type": "file",
+        "sha": "",
+        "size": 16284
       },
       {
         "name": "README.md",
         "path": "AppSec/README.md",
         "type": "file",
         "sha": "",
-        "size": 512
+        "size": 3013
       }
     ]
   },
@@ -117,6 +159,36 @@
             "type": "file",
             "sha": "",
             "size": 814
+          }
+        ]
+      },
+      {
+        "name": "AppSec",
+        "path": "Assets/AppSec",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Assets/AppSec/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 534
+          }
+        ]
+      },
+      {
+        "name": "Cloud-Security",
+        "path": "Assets/Cloud-Security",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Assets/Cloud-Security/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 1182
           }
         ]
       },
@@ -219,32 +291,60 @@
     "sha": "",
     "children": [
       {
-        "name": "1_CSPM_And_Posture.md",
-        "path": "Cloud-Security/1_CSPM_And_Posture.md",
+        "name": "1_Cloud_Models_And_Shared_Responsibility.md",
+        "path": "Cloud-Security/1_Cloud_Models_And_Shared_Responsibility.md",
         "type": "file",
         "sha": "",
-        "size": 1297
+        "size": 10313
       },
       {
-        "name": "2_Secrets_And_K8s.md",
-        "path": "Cloud-Security/2_Secrets_And_K8s.md",
+        "name": "2_Identity_Network_And_Data_Controls.md",
+        "path": "Cloud-Security/2_Identity_Network_And_Data_Controls.md",
         "type": "file",
         "sha": "",
-        "size": 1496
+        "size": 8693
       },
       {
-        "name": "3_Supply_Chain.md",
-        "path": "Cloud-Security/3_Supply_Chain.md",
+        "name": "3_CSPM_And_Posture.md",
+        "path": "Cloud-Security/3_CSPM_And_Posture.md",
         "type": "file",
         "sha": "",
-        "size": 1360
+        "size": 9248
+      },
+      {
+        "name": "4_Securing_Cloud_Resources_And_Workloads.md",
+        "path": "Cloud-Security/4_Securing_Cloud_Resources_And_Workloads.md",
+        "type": "file",
+        "sha": "",
+        "size": 10996
+      },
+      {
+        "name": "5_Containers_Serverless_And_Managed_Runtimes.md",
+        "path": "Cloud-Security/5_Containers_Serverless_And_Managed_Runtimes.md",
+        "type": "file",
+        "sha": "",
+        "size": 5943
+      },
+      {
+        "name": "6_Supply_Chain_And_Delivery_Integrity.md",
+        "path": "Cloud-Security/6_Supply_Chain_And_Delivery_Integrity.md",
+        "type": "file",
+        "sha": "",
+        "size": 11088
+      },
+      {
+        "name": "7_Logging_Detection_And_Cloud_IR.md",
+        "path": "Cloud-Security/7_Logging_Detection_And_Cloud_IR.md",
+        "type": "file",
+        "sha": "",
+        "size": 7614
       },
       {
         "name": "README.md",
         "path": "Cloud-Security/README.md",
         "type": "file",
         "sha": "",
-        "size": 352
+        "size": 3616
       }
     ]
   },
@@ -429,7 +529,7 @@
         "path": "Foundations/5_Risk_Management_Process_And_RMF.md",
         "type": "file",
         "sha": "",
-        "size": 4876
+        "size": 4922
       },
       {
         "name": "6_Assets_Data_States_And_Assurance.md",
@@ -835,7 +935,7 @@
         "path": "Threats/8_AI_Era_Threats.md",
         "type": "file",
         "sha": "",
-        "size": 27849
+        "size": 27872
       },
       {
         "name": "README.md",
@@ -908,6 +1008,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2910
+    "size": 3063
   }
 ]

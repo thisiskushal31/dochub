@@ -32,14 +32,14 @@
     "path": "5_Model_And_Data_Supply_Chain.md",
     "type": "file",
     "sha": "",
-    "size": 9853
+    "size": 10270
   },
   {
     "name": "6_Authorized_AI_Evaluation.md",
     "path": "6_Authorized_AI_Evaluation.md",
     "type": "file",
     "sha": "",
-    "size": 8474
+    "size": 9201
   },
   {
     "name": "7_Shadow_AI_And_Private_GenAI.md",
@@ -53,13 +53,20 @@
     "path": "8_Attack_Mechanisms_For_Defenders.md",
     "type": "file",
     "sha": "",
-    "size": 21311
+    "size": 21413
+  },
+  {
+    "name": "9_Model_Confidentiality_And_Classical_AML.md",
+    "path": "9_Model_Confidentiality_And_Classical_AML.md",
+    "type": "file",
+    "sha": "",
+    "size": 8802
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3525
+    "size": 4278
   }
 ]

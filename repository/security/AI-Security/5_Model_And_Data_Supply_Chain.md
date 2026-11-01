@@ -125,9 +125,13 @@ Confirm integrity of training, testing, fine-tuning, and alignment data before u
 | License / privacy | Can we legally and ethically use it? |
 | Promote dual-control | High-impact fine-tunes need a second reviewer |
 
+### Unsafe model files (deserialize = code)
+
+Some model formats execute code on load. Treat untrusted `.pkl` / unrestricted checkpoint loads as **RCE candidates**: scan, sandbox evaluate, prefer safe/weights-only loaders, never open random hub files on hosts with secrets. Full confidentiality + Model Ops treatment: [9](./9_Model_Confidentiality_And_Classical_AML.md).
+
 ### Classic cloud supply chain still applies
 
-Dependency scanning, base images, secrets — AI stacks inherit all of it. Link [Cloud-Security/3](../Cloud-Security/3_Supply_Chain.md); do not invent a parallel universe where “it’s just weights.”
+Dependency scanning, base images, secrets — AI stacks inherit all of it. Link [Cloud-Security/6](../Cloud-Security/6_Supply_Chain_And_Delivery_Integrity.md); do not invent a parallel universe where “it’s just weights.”
 
 ## Apply
 
@@ -161,4 +165,4 @@ Dependency scanning, base images, secrets — AI stacks inherit all of it. Link 
 - [OWASP — MCP Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/MCP_Security_Cheat_Sheet.html)
 - [CycloneDX — ML-BOM](https://cyclonedx.org/capabilities/mlbom/)
 - [OWASP LLM04 / ASI04 (Top 10 2026 hubs)](https://genai.owasp.org/llm-top-10/)
-- [Cloud-Security/3 — Supply chain](../Cloud-Security/3_Supply_Chain.md)
+- [Cloud-Security/6 — Supply chain](../Cloud-Security/6_Supply_Chain_And_Delivery_Integrity.md)

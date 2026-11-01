@@ -15,6 +15,36 @@
     ]
   },
   {
+    "name": "AppSec",
+    "path": "AppSec",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "AppSec/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 534
+      }
+    ]
+  },
+  {
+    "name": "Cloud-Security",
+    "path": "Cloud-Security",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "Cloud-Security/README.md",
+        "type": "file",
+        "sha": "",
+        "size": 1182
+      }
+    ]
+  },
+  {
     "name": "Foundations",
     "path": "Foundations",
     "type": "dir",

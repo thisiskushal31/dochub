@@ -248,14 +248,14 @@
         "path": "Inference-And-Serving/1_Memory_And_Compute.md",
         "type": "file",
         "sha": "",
-        "size": 352
+        "size": 870
       },
       {
         "name": "2_Serving_Patterns.md",
         "path": "Inference-And-Serving/2_Serving_Patterns.md",
         "type": "file",
         "sha": "",
-        "size": 375
+        "size": 1037
       },
       {
         "name": "3_Cost_And_Resources.md",
@@ -272,11 +272,18 @@
         "size": 429
       },
       {
+        "name": "5_Cluster_Serving_Scaling_And_Ops.md",
+        "path": "Inference-And-Serving/5_Cluster_Serving_Scaling_And_Ops.md",
+        "type": "file",
+        "sha": "",
+        "size": 7052
+      },
+      {
         "name": "README.md",
         "path": "Inference-And-Serving/README.md",
         "type": "file",
         "sha": "",
-        "size": 724
+        "size": 4255
       }
     ]
   },
@@ -298,7 +305,7 @@
         "path": "Instances/README.md",
         "type": "file",
         "sha": "",
-        "size": 612
+        "size": 791
       }
     ]
   },
@@ -458,6 +465,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 2655
+    "size": 2689
   }
 ]
