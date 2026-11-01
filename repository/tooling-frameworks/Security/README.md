@@ -18,6 +18,7 @@ Named **lab software** (install + first use). The *program* (CIA, AppSec, SOC, G
 | Find systems and public facts | [Reconnaissance/](./Reconnaissance/README.md) |
 | Attack in a lab you own | [Offensive/](./Offensive/README.md) |
 | Capture, memory, blue-team kit | [Defensive/](./Defensive/README.md) |
+| IdP / CIAM / directories / workload identity / authZ / IGA | [Identity/](./Identity/README.md) |
 | Binaries / firmware | [Reverse-Engineering/](./Reverse-Engineering/README.md) |
 
 ### CI / delivery security tools (not duplicated here)

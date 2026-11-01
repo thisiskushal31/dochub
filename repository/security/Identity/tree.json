@@ -1,23 +1,121 @@
 [
   {
-    "name": "1_OAuth_OIDC_SAML.md",
-    "path": "1_OAuth_OIDC_SAML.md",
+    "name": "1_Digital_Identity_And_Assurance_Levels.md",
+    "path": "1_Digital_Identity_And_Assurance_Levels.md",
     "type": "file",
     "sha": "",
-    "size": 1944
+    "size": 4865
   },
   {
-    "name": "2_Zero_Trust.md",
-    "path": "2_Zero_Trust.md",
+    "name": "10_Zero_Trust_Maturity_And_Identity_Pillar.md",
+    "path": "10_Zero_Trust_Maturity_And_Identity_Pillar.md",
     "type": "file",
     "sha": "",
-    "size": 1493
+    "size": 4403
+  },
+  {
+    "name": "11_Workload_And_Non_Human_Identity.md",
+    "path": "11_Workload_And_Non_Human_Identity.md",
+    "type": "file",
+    "sha": "",
+    "size": 4175
+  },
+  {
+    "name": "12_Identity_Threats_Detect_And_Harden.md",
+    "path": "12_Identity_Threats_Detect_And_Harden.md",
+    "type": "file",
+    "sha": "",
+    "size": 6053
+  },
+  {
+    "name": "13_Lifecycle_SCIM_And_Directories.md",
+    "path": "13_Lifecycle_SCIM_And_Directories.md",
+    "type": "file",
+    "sha": "",
+    "size": 4521
+  },
+  {
+    "name": "14_Authorization_Beyond_Tokens.md",
+    "path": "14_Authorization_Beyond_Tokens.md",
+    "type": "file",
+    "sha": "",
+    "size": 4613
+  },
+  {
+    "name": "15_Privileged_Access_And_IGA.md",
+    "path": "15_Privileged_Access_And_IGA.md",
+    "type": "file",
+    "sha": "",
+    "size": 3993
+  },
+  {
+    "name": "16_Identity_Tooling_Map.md",
+    "path": "16_Identity_Tooling_Map.md",
+    "type": "file",
+    "sha": "",
+    "size": 6318
+  },
+  {
+    "name": "2_Identity_Proofing_And_Enrollment.md",
+    "path": "2_Identity_Proofing_And_Enrollment.md",
+    "type": "file",
+    "sha": "",
+    "size": 4877
+  },
+  {
+    "name": "3_Authenticators_MFA_And_WebAuthn.md",
+    "path": "3_Authenticators_MFA_And_WebAuthn.md",
+    "type": "file",
+    "sha": "",
+    "size": 5712
+  },
+  {
+    "name": "4_OAuth_Authorization.md",
+    "path": "4_OAuth_Authorization.md",
+    "type": "file",
+    "sha": "",
+    "size": 4732
+  },
+  {
+    "name": "5_OpenID_Connect.md",
+    "path": "5_OpenID_Connect.md",
+    "type": "file",
+    "sha": "",
+    "size": 4313
+  },
+  {
+    "name": "6_SAML_Enterprise_SSO.md",
+    "path": "6_SAML_Enterprise_SSO.md",
+    "type": "file",
+    "sha": "",
+    "size": 4599
+  },
+  {
+    "name": "7_Federation_Assurance_And_RP_Validation.md",
+    "path": "7_Federation_Assurance_And_RP_Validation.md",
+    "type": "file",
+    "sha": "",
+    "size": 4469
+  },
+  {
+    "name": "8_Tokens_Sessions_And_Client_Patterns.md",
+    "path": "8_Tokens_Sessions_And_Client_Patterns.md",
+    "type": "file",
+    "sha": "",
+    "size": 4654
+  },
+  {
+    "name": "9_Zero_Trust_Architecture.md",
+    "path": "9_Zero_Trust_Architecture.md",
+    "type": "file",
+    "sha": "",
+    "size": 4398
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 352
+    "size": 4783
   }
 ]

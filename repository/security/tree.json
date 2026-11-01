@@ -238,6 +238,21 @@
         ]
       },
       {
+        "name": "Labs",
+        "path": "Assets/Labs",
+        "type": "dir",
+        "sha": "",
+        "children": [
+          {
+            "name": "README.md",
+            "path": "Assets/Labs/README.md",
+            "type": "file",
+            "sha": "",
+            "size": 166
+          }
+        ]
+      },
+      {
         "name": "Threat-Intelligence",
         "path": "Assets/Threat-Intelligence",
         "type": "dir",
@@ -621,7 +636,7 @@
         "path": "Foundations/13_Zero_Trust_And_Deception_Basics.md",
         "type": "file",
         "sha": "",
-        "size": 5754
+        "size": 5843
       },
       {
         "name": "14_Defensible_Network_Architecture_Literacy.md",
@@ -719,7 +734,7 @@
         "path": "Foundations/7_AAA_And_Access_Fundamentals.md",
         "type": "file",
         "sha": "",
-        "size": 7242
+        "size": 7257
       },
       {
         "name": "8_Cryptographic_Solutions_Literacy.md",
@@ -815,25 +830,123 @@
     "sha": "",
     "children": [
       {
-        "name": "1_OAuth_OIDC_SAML.md",
-        "path": "Identity/1_OAuth_OIDC_SAML.md",
+        "name": "1_Digital_Identity_And_Assurance_Levels.md",
+        "path": "Identity/1_Digital_Identity_And_Assurance_Levels.md",
         "type": "file",
         "sha": "",
-        "size": 1944
+        "size": 4865
       },
       {
-        "name": "2_Zero_Trust.md",
-        "path": "Identity/2_Zero_Trust.md",
+        "name": "10_Zero_Trust_Maturity_And_Identity_Pillar.md",
+        "path": "Identity/10_Zero_Trust_Maturity_And_Identity_Pillar.md",
         "type": "file",
         "sha": "",
-        "size": 1493
+        "size": 4403
+      },
+      {
+        "name": "11_Workload_And_Non_Human_Identity.md",
+        "path": "Identity/11_Workload_And_Non_Human_Identity.md",
+        "type": "file",
+        "sha": "",
+        "size": 4175
+      },
+      {
+        "name": "12_Identity_Threats_Detect_And_Harden.md",
+        "path": "Identity/12_Identity_Threats_Detect_And_Harden.md",
+        "type": "file",
+        "sha": "",
+        "size": 6053
+      },
+      {
+        "name": "13_Lifecycle_SCIM_And_Directories.md",
+        "path": "Identity/13_Lifecycle_SCIM_And_Directories.md",
+        "type": "file",
+        "sha": "",
+        "size": 4521
+      },
+      {
+        "name": "14_Authorization_Beyond_Tokens.md",
+        "path": "Identity/14_Authorization_Beyond_Tokens.md",
+        "type": "file",
+        "sha": "",
+        "size": 4613
+      },
+      {
+        "name": "15_Privileged_Access_And_IGA.md",
+        "path": "Identity/15_Privileged_Access_And_IGA.md",
+        "type": "file",
+        "sha": "",
+        "size": 3993
+      },
+      {
+        "name": "16_Identity_Tooling_Map.md",
+        "path": "Identity/16_Identity_Tooling_Map.md",
+        "type": "file",
+        "sha": "",
+        "size": 6318
+      },
+      {
+        "name": "2_Identity_Proofing_And_Enrollment.md",
+        "path": "Identity/2_Identity_Proofing_And_Enrollment.md",
+        "type": "file",
+        "sha": "",
+        "size": 4877
+      },
+      {
+        "name": "3_Authenticators_MFA_And_WebAuthn.md",
+        "path": "Identity/3_Authenticators_MFA_And_WebAuthn.md",
+        "type": "file",
+        "sha": "",
+        "size": 5712
+      },
+      {
+        "name": "4_OAuth_Authorization.md",
+        "path": "Identity/4_OAuth_Authorization.md",
+        "type": "file",
+        "sha": "",
+        "size": 4732
+      },
+      {
+        "name": "5_OpenID_Connect.md",
+        "path": "Identity/5_OpenID_Connect.md",
+        "type": "file",
+        "sha": "",
+        "size": 4313
+      },
+      {
+        "name": "6_SAML_Enterprise_SSO.md",
+        "path": "Identity/6_SAML_Enterprise_SSO.md",
+        "type": "file",
+        "sha": "",
+        "size": 4599
+      },
+      {
+        "name": "7_Federation_Assurance_And_RP_Validation.md",
+        "path": "Identity/7_Federation_Assurance_And_RP_Validation.md",
+        "type": "file",
+        "sha": "",
+        "size": 4469
+      },
+      {
+        "name": "8_Tokens_Sessions_And_Client_Patterns.md",
+        "path": "Identity/8_Tokens_Sessions_And_Client_Patterns.md",
+        "type": "file",
+        "sha": "",
+        "size": 4654
+      },
+      {
+        "name": "9_Zero_Trust_Architecture.md",
+        "path": "Identity/9_Zero_Trust_Architecture.md",
+        "type": "file",
+        "sha": "",
+        "size": 4398
       },
       {
         "name": "README.md",
         "path": "Identity/README.md",
         "type": "file",
         "sha": "",
-        "size": 352
+        "size": 4783
       }
     ]
   },
@@ -844,18 +957,109 @@
     "sha": "",
     "children": [
       {
-        "name": "1_Paths.md",
-        "path": "Labs/1_Paths.md",
+        "name": "1_Authorized_Practice_And_Ethics.md",
+        "path": "Labs/1_Authorized_Practice_And_Ethics.md",
         "type": "file",
         "sha": "",
-        "size": 1342
+        "size": 3760
+      },
+      {
+        "name": "10_Wargames_And_CTF_Fundamentals.md",
+        "path": "Labs/10_Wargames_And_CTF_Fundamentals.md",
+        "type": "file",
+        "sha": "",
+        "size": 2884
+      },
+      {
+        "name": "11_Purple_Detect_What_You_Did.md",
+        "path": "Labs/11_Purple_Detect_What_You_Did.md",
+        "type": "file",
+        "sha": "",
+        "size": 3007
+      },
+      {
+        "name": "12_Path_Map.md",
+        "path": "Labs/12_Path_Map.md",
+        "type": "file",
+        "sha": "",
+        "size": 3891
+      },
+      {
+        "name": "13_Labs_Tooling_Map.md",
+        "path": "Labs/13_Labs_Tooling_Map.md",
+        "type": "file",
+        "sha": "",
+        "size": 3182
+      },
+      {
+        "name": "14_Security_Engineer_Lab_Tracks.md",
+        "path": "Labs/14_Security_Engineer_Lab_Tracks.md",
+        "type": "file",
+        "sha": "",
+        "size": 8296
+      },
+      {
+        "name": "2_Practice_Loop_And_Notes.md",
+        "path": "Labs/2_Practice_Loop_And_Notes.md",
+        "type": "file",
+        "sha": "",
+        "size": 3298
+      },
+      {
+        "name": "3_Local_Lab_Hygiene.md",
+        "path": "Labs/3_Local_Lab_Hygiene.md",
+        "type": "file",
+        "sha": "",
+        "size": 3213
+      },
+      {
+        "name": "4_Guided_Platforms_THM_HTB_Academy.md",
+        "path": "Labs/4_Guided_Platforms_THM_HTB_Academy.md",
+        "type": "file",
+        "sha": "",
+        "size": 3269
+      },
+      {
+        "name": "5_Unguided_Boxes_And_Pro_Labs.md",
+        "path": "Labs/5_Unguided_Boxes_And_Pro_Labs.md",
+        "type": "file",
+        "sha": "",
+        "size": 3123
+      },
+      {
+        "name": "6_Web_AppSec_Labs.md",
+        "path": "Labs/6_Web_AppSec_Labs.md",
+        "type": "file",
+        "sha": "",
+        "size": 3347
+      },
+      {
+        "name": "7_Blue_SOC_And_DFIR_Labs.md",
+        "path": "Labs/7_Blue_SOC_And_DFIR_Labs.md",
+        "type": "file",
+        "sha": "",
+        "size": 3167
+      },
+      {
+        "name": "8_AD_And_Windows_Estates.md",
+        "path": "Labs/8_AD_And_Windows_Estates.md",
+        "type": "file",
+        "sha": "",
+        "size": 3104
+      },
+      {
+        "name": "9_Cloud_Vulnerable_By_Design.md",
+        "path": "Labs/9_Cloud_Vulnerable_By_Design.md",
+        "type": "file",
+        "sha": "",
+        "size": 3064
       },
       {
         "name": "README.md",
         "path": "Labs/README.md",
         "type": "file",
         "sha": "",
-        "size": 216
+        "size": 4682
       }
     ]
   },
@@ -926,7 +1130,7 @@
         "path": "Offensive/9_Reporting.md",
         "type": "file",
         "sha": "",
-        "size": 1196
+        "size": 1203
       },
       {
         "name": "README.md",
@@ -1276,6 +1480,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 3701
+    "size": 4290
   }
 ]
