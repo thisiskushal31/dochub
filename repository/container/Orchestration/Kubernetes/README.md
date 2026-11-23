@@ -60,6 +60,8 @@ kubectl rollout status deployment/myapp
 
 - **[Containerization basics](../../Containerization-Basic/README.md)** – concepts
 - **[Docker](../../Runtimes/Docker/README.md)** – images and containers
+- **[Scenario bank](../../Scenarios/Docker_Kubernetes_Scenario_Bank.md)** – numbered incidents; [worked answers](../../Scenarios/Core_Scenarios_Worked.md)
+- **[Scenario bank](../../Scenarios/Docker_Kubernetes_Scenario_Bank.md)** – numbered incidents; [worked answers](../../Scenarios/Core_Scenarios_Worked.md)
 - **[Swarm](../Swarm/README.md)** – Docker’s built-in orchestration
 - **[Managed services](../../Managed-Services/README.md)** – GKE, EKS, AKS, OpenShift
 - **[Rancher](../Rancher/README.md)** – multi-cluster manager, RKE2, k3s

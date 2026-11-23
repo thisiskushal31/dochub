@@ -50,6 +50,8 @@ docker image prune -a
 - **[Containerization basics](../../Containerization-Basic/README.md)** – concepts before Docker
 - **[Podman](../Podman/README.md)** – daemonless alternative
 - **[Kubernetes](../../Orchestration/Kubernetes/README.md)** – orchestration
+- **[Scenario bank](../../Scenarios/Docker_Kubernetes_Scenario_Bank.md)** – numbered Docker and Kubernetes incidents; [worked answers](../../Scenarios/Core_Scenarios_Worked.md)
+- **[Scenario bank](../../Scenarios/Docker_Kubernetes_Scenario_Bank.md)** – numbered Docker and Kubernetes incidents; [worked answers](../../Scenarios/Core_Scenarios_Worked.md)
 - **[Managed services](../../Managed-Services/README.md)** – GKE, EKS, AKS, OpenShift
 
 ## References

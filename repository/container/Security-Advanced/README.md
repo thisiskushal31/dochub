@@ -2,7 +2,7 @@
 
 Beyond [Containerization-Basic/4_Security_Basics.md](../Containerization-Basic/4_Security_Basics.md). *Stub section August 2026.*
 
-[← README](../README.md) · [Security-Deep-Dive entry](../../Security-Deep-Dive/README.md)
+[← README](../README.md) · [Security-Deep-Dive entry](https://github.com/thisiskushal31/Security-Deep-Dive/blob/main/README.md)
 
 ## Topics
 

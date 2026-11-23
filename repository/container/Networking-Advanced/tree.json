@@ -4,7 +4,7 @@
     "path": "1_Cilium_and_eBPF.md",
     "type": "file",
     "sha": "",
-    "size": 629
+    "size": 667
   },
   {
     "name": "2_Network_Policies_in_Practice.md",
@@ -25,6 +25,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 719
+    "size": 757
   }
 ]

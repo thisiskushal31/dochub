@@ -14,7 +14,7 @@
 ## Cross-links
 
 - Packet depth → [Networks-Deep-Dive](https://github.com/thisiskushal31/Networks-Deep-Dive)
-- [DevOps Cloud-Native Istio/Linkerd](../../DevOps-Handbook/Cloud-Native/README.md)
+- [DevOps Cloud-Native Istio/Linkerd](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/Cloud-Native/README.md)
 
 ## Checklist before marking done
 

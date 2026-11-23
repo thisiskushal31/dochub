@@ -11,9 +11,9 @@ Helm, Kustomize, and GitOps delivery for container workloads. *Stub section — 
 
 ## Cross-links
 
-- [DevOps-Handbook CiCd/Argo_CD](../../DevOps-Handbook/CiCd/Argo_CD/README.md)
-- [DevOps-Handbook CiCd/Flux](../../DevOps-Handbook/CiCd/Flux/README.md)
-- [DevOps-Handbook Cloud-Native/Helm](../../DevOps-Handbook/Cloud-Native/Helm/README.md)
+- [DevOps-Handbook CiCd/Argo_CD](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/CiCd/Argo_CD/README.md)
+- [DevOps-Handbook CiCd/Flux](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/CiCd/Flux/README.md)
+- [DevOps-Handbook Cloud-Native/Helm](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/Cloud-Native/Helm/README.md)
 
 ## v1 done when
 

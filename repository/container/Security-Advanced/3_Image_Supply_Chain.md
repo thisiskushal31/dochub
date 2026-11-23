@@ -14,8 +14,8 @@
 
 ## Cross-links
 
-- [DevOps-Handbook CiCd/6](../../DevOps-Handbook/CiCd/6_Supply_Chain_And_Signing.md)
-- [DevOps-Handbook Security/Cosign](../../DevOps-Handbook/Security/Cosign/README.md)
+- [DevOps-Handbook CiCd/6](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/CiCd/6_Supply_Chain_And_Signing.md)
+- [DevOps-Handbook Security/Cosign](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/Security/Cosign/README.md)
 
 ## Checklist before marking done
 

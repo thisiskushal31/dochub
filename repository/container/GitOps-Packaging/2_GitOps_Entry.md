@@ -13,7 +13,7 @@
 
 ## Cross-links
 
-- Full tool docs → [DevOps-Handbook CiCd](../../DevOps-Handbook/CiCd/README.md)
+- Full tool docs → [DevOps-Handbook CiCd](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/CiCd/README.md)
 
 ## Checklist before marking done
 

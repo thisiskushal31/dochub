@@ -66,14 +66,14 @@
         "path": "GitOps-Packaging/2_GitOps_Entry.md",
         "type": "file",
         "sha": "",
-        "size": 584
+        "size": 622
       },
       {
         "name": "README.md",
         "path": "GitOps-Packaging/README.md",
         "type": "file",
         "sha": "",
-        "size": 705
+        "size": 819
       }
     ]
   },
@@ -116,14 +116,14 @@
         "path": "Local-Dev/5_DevContainers_and_Compose.md",
         "type": "file",
         "sha": "",
-        "size": 412
+        "size": 450
       },
       {
         "name": "README.md",
         "path": "Local-Dev/README.md",
         "type": "file",
         "sha": "",
-        "size": 958
+        "size": 996
       }
     ]
   },
@@ -317,7 +317,7 @@
         "path": "Networking-Advanced/1_Cilium_and_eBPF.md",
         "type": "file",
         "sha": "",
-        "size": 629
+        "size": 667
       },
       {
         "name": "2_Network_Policies_in_Practice.md",
@@ -338,7 +338,7 @@
         "path": "Networking-Advanced/README.md",
         "type": "file",
         "sha": "",
-        "size": 719
+        "size": 757
       }
     ]
   },
@@ -408,7 +408,7 @@
             "path": "Orchestration/Kubernetes/README.md",
             "type": "file",
             "sha": "",
-            "size": 3535
+            "size": 3849
           }
         ]
       },
@@ -711,7 +711,7 @@
             "path": "Runtimes/Docker/README.md",
             "type": "file",
             "sha": "",
-            "size": 2437
+            "size": 2795
           }
         ]
       },
@@ -775,6 +775,28 @@
     ]
   },
   {
+    "name": "Scenarios",
+    "path": "Scenarios",
+    "type": "dir",
+    "sha": "",
+    "children": [
+      {
+        "name": "Core_Scenarios_Worked.md",
+        "path": "Scenarios/Core_Scenarios_Worked.md",
+        "type": "file",
+        "sha": "",
+        "size": 27114
+      },
+      {
+        "name": "Docker_Kubernetes_Scenario_Bank.md",
+        "path": "Scenarios/Docker_Kubernetes_Scenario_Bank.md",
+        "type": "file",
+        "sha": "",
+        "size": 399148
+      }
+    ]
+  },
+  {
     "name": "Security-Advanced",
     "path": "Security-Advanced",
     "type": "dir",
@@ -785,7 +807,7 @@
         "path": "Security-Advanced/1_Admission_and_Policy.md",
         "type": "file",
         "sha": "",
-        "size": 468
+        "size": 506
       },
       {
         "name": "2_Hardening_Checklist_Prod.md",
@@ -799,14 +821,14 @@
         "path": "Security-Advanced/3_Image_Supply_Chain.md",
         "type": "file",
         "sha": "",
-        "size": 618
+        "size": 694
       },
       {
         "name": "README.md",
         "path": "Security-Advanced/README.md",
         "type": "file",
         "sha": "",
-        "size": 862
+        "size": 900
       }
     ]
   },
@@ -858,6 +880,6 @@
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 8707
+    "size": 9109
   }
 ]

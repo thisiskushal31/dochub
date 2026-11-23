@@ -2,7 +2,7 @@
 
 Operator depth beyond K8s concepts in [Orchestration/Kubernetes/2_Concepts.md](../Orchestration/Kubernetes/2_Concepts.md). *Stub section August 2026.*
 
-[← README](../README.md) · [Networks entry](../../Networks-Deep-Dive/README.md)
+[← README](../README.md) · [Networks entry](https://github.com/thisiskushal31/Networks-Deep-Dive/blob/main/README.md)
 
 ## Topics
 

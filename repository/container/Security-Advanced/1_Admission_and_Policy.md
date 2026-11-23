@@ -9,7 +9,7 @@
 - Pod Security Admission (baseline, restricted)
 - Validating/mutating webhooks overview
 - Kyverno and OPA Gatekeeper — policy examples (non-root, latest tag ban)
-- Link [DevOps-Handbook Security/OPA](../../DevOps-Handbook/Security/OPA/README.md)
+- Link [DevOps-Handbook Security/OPA](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/Security/OPA/README.md)
 
 ## Checklist before marking done
 

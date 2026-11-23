@@ -89,6 +89,8 @@ Helm, Kustomize, GitOps — links [DevOps-Handbook CiCd](https://github.com/this
 5. **[Local dev clusters](./Local-Dev/README.md)** – kind, minikube, k3d (stubs to fill)
 6. **[Serverless containers](./Serverless-Containers/README.md)** – Cloud Run, Fargate, etc. (stubs to fill)
 7. **[Security advanced](./Security-Advanced/README.md)** + **[Networking advanced](./Networking-Advanced/README.md)** when operating prod clusters
+8. **[Scenario bank](./Scenarios/Docker_Kubernetes_Scenario_Bank.md)** — 1,639 numbered Docker and Kubernetes incidents. Start with the [worked core scenarios](./Scenarios/Core_Scenarios_Worked.md).
+8. **[Scenario bank](./Scenarios/Docker_Kubernetes_Scenario_Bank.md)** — 1,639 numbered Docker and Kubernetes incidents. Start with the [worked core scenarios](./Scenarios/Core_Scenarios_Worked.md).
 
 Optional: [Podman](./Runtimes/Podman/README.md), [containerd](./Runtimes/Containerd/README.md), [OpenShift](./Orchestration/OpenShift/README.md), [Rancher](./Orchestration/Rancher/README.md), [Swarm](./Orchestration/Swarm/README.md), [Nomad](./Orchestration/Nomad/README.md).
 

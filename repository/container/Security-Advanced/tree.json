@@ -4,7 +4,7 @@
     "path": "1_Admission_and_Policy.md",
     "type": "file",
     "sha": "",
-    "size": 468
+    "size": 506
   },
   {
     "name": "2_Hardening_Checklist_Prod.md",
@@ -18,13 +18,13 @@
     "path": "3_Image_Supply_Chain.md",
     "type": "file",
     "sha": "",
-    "size": 618
+    "size": 694
   },
   {
     "name": "README.md",
     "path": "README.md",
     "type": "file",
     "sha": "",
-    "size": 862
+    "size": 900
   }
 ]

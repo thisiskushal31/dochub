@@ -17,7 +17,7 @@ Hands-on depth for **laptop/CI Kubernetes** — expands the short index in [Mana
 - When to use kind vs minikube vs k3d vs microk8s
 - CI patterns (kind in GitHub Actions)
 - Resource limits on Mac/Windows
-- Link [DevOps Handbook](../../DevOps-Handbook/README.md)
+- Link [DevOps Handbook](https://github.com/thisiskushal31/DevOps-Handbook/blob/main/README.md)
 
 ## v1 done when
 
